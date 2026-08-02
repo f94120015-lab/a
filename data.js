@@ -32,10 +32,10 @@ rawTopics.push(
     }
   ],
   "subtitles": [
-    "1. Bildirim Cümlecikleri: That, The Fact That & Vurgu Yapıları",
-    "2. Dolaylı Sorular: Wh- Kelimeleri, -ever & Whether/If Yapıları",
-    "3. Akademik Zorunluluk (Subjunctive) & Kritik Ayrım Refleksleri",
-    "4. Karma Akademik Noun Clause Testi ve Metin Okuma"
+    "1. That & The Fact That Cümlecikleri",
+    "2. Wh- Soru Kelimeleri, Whether / If & -ever Yapıları",
+    "3. Subjunctive (Yalın Fiil) & Edat/Sıfat Arkası Cümlecikler",
+    "4. Noun Clause vs. Relative Clause & That vs. What Farkı"
   ],
   "originalNumLessons": 4
 },
@@ -11002,7 +11002,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u28l88_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'that the commission resolved the dispute'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"that the commission resolved the dispute\"</span>",
             "options": [
               "komisyonun anlaşmazlığı çözdüğü",
               "anlaşmazlığı çözen komisyon",
@@ -11015,40 +11015,22 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'that psychologists evaluate behavior objectively'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "psikologların davranışı tarafsız değerlendirdiği",
               "psikologların incelediği tarafsız davranış",
+              "psikologların davranışı tarafsız değerlendirdiği",
               "davranışları kısıtlayan psikologlar",
               "psikologların davranışları gözlemlemesi"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "that psychologists evaluate behavior objectively",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'that primary sources require access'</strong>",
-            "options": [
-              "birincil kaynakların erişim gerektirdiği",
-              "kaynaklara erişimi kısıtlayan kurallar",
-              "birincil kaynakların kısıtladığı erişim",
-              "güvenilir kaynaklardan elde edilen erişim"
-            ],
-            "correctIndex": 0,
-            "enSentence": "that primary sources require access",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
@@ -11058,172 +11040,61 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u28l88_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'that empirical data indicates a crisis'</strong>",
+            "id": "u28l88_ex1_q4",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"that primary sources require access\"</span>",
             "options": [
-              "ampirik verilerin bir krizi gösterdiği",
+              "kaynaklara erişimi kısıtlayan kurallar",
+              "birincil kaynakların kısıtladığı erişim",
+              "birincil kaynakların erişim gerektirdiği",
+              "güvenilir kaynaklardan elde edilen erişim"
+            ],
+            "correctIndex": 2,
+            "enSentence": "that primary sources require access",
+            "isEngToTr": true,
+            "grammarTags": [
+              "İsim Cümlecikleri",
+              "Noun Clauses",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
+            ]
+          },
+          {
+            "id": "u28l88_ex1_q5",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"that empirical data indicates a crisis\"</span>",
+            "options": [
               "verilerin gösterdiği ampirik kriz",
               "krizi tetikleyen deneysel veriler",
-              "ampirik verilerin kısıtladığı kriz"
+              "ampirik verilerin kısıtladığı kriz",
+              "ampirik verilerin bir krizi gösterdiği"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "that empirical data indicates a crisis",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Historians agree ___ the commission resolved the dispute.",
-            "options": [
-              "that",
-              "which",
-              "whether",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler komisyonun anlaşmazlığı çözdüğü konusunda hemfikirdir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The survey shows ___ psychologists evaluate behavior objectively.",
-            "options": [
-              "that",
-              "who",
-              "which",
-              "whose"
-            ],
-            "correctIndex": 0,
-            "translation": "Anket, psikologların davranışı tarafsız bir şekilde değerlendirdiğini gösteriyor.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ primary sources require access is widely accepted.",
-            "options": [
-              "That",
-              "What",
-              "Whether",
-              "Which"
-            ],
-            "correctIndex": 0,
-            "translation": "Birincil kaynakların erişim gerektirdiği yaygın olarak kabul edilmektedir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "İktisatçılar finansal krizin şiddetli olduğunu onayladı.",
-            "enSentence": "The economists confirmed that the financial crisis was severe.",
-            "words": [
-              "İktisatçılar",
-              "finansal",
-              "krizin",
-              "şiddetli",
-              "olduğunu",
-              "onayladı.",
-              "anlaşmazlık",
-              "görüşler"
-            ],
-            "correctOrder": [
-              "İktisatçılar",
-              "finansal",
-              "krizin",
-              "şiddetli",
-              "olduğunu",
-              "onayladı."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Komisyonun anlaşmazlığı çözmüş olması yadsınamaz.",
-            "enSentence": "That the commission resolved the dispute is undeniable.",
-            "words": [
-              "That",
-              "the",
-              "commission",
-              "resolved",
-              "the",
-              "dispute",
-              "is",
-              "undeniable.",
-              "which",
-              "whether"
-            ],
-            "correctOrder": [
-              "That",
-              "the",
-              "commission",
-              "resolved",
-              "the",
-              "dispute",
-              "is",
-              "undeniable."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q11",
-            "type": "translation-text",
-            "prompt": "The anonymous survey confirmed that access was restricted. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The anonymous survey confirmed that access was restricted.",
-            "correctSentence": "İsimsiz anket erişimin sınırlandırıldığını onayladı.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex1_q12",
-            "type": "translation-text",
-            "prompt": "Sociological surveys indicate that public opinions change. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Sociological surveys indicate that public opinions change.",
-            "correctSentence": "Sosyolojik anketler kamuoyu görüşlerinin değiştiğini gösteriyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
             ]
           }
         ]
@@ -11259,13 +11130,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'They believe that economists specified the guidelines.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"They believe that economists specified the guidelines.\"</span>",
             "options": [
               "İktisatçıların yönergeleri belirttiğine inanıyorlar.",
               "Yönergeleri belirten iktisatçılara inanıyorlar.",
@@ -11278,220 +11150,92 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The researchers proved that the data was distributed efficiently.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Araştırmacılar verilerin verimli bir şekilde dağıtıldığını kanıtladılar.",
               "Araştırmacılar verimli dağıtılan verileri kanıtladılar.",
+              "Araştırmacılar verilerin verimli bir şekilde dağıtıldığını kanıtladılar.",
               "Verilerin verimli dağıtılması araştırmacılarca kanıtlandı.",
               "Araştırmacılar verilerin dağıtımını verimli şekilde yaptılar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "The researchers proved that the data was distributed efficiently.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'That the monograph was finalized last term is clear.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"That the monograph was finalized last term is clear.\"</span>",
             "options": [
-              "Monografinin geçen dönem kesinleştirildiği açıktır.",
               "Geçen dönem kesinleşen monografi nettir.",
               "Monografinin geçen dönem kesinleşmesi bekleniyor.",
+              "Monografinin geçen dönem kesinleştirildiği açıktır.",
               "Kesinleşen monografinin geçen dönem yazıldığı açıktır."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "That the monograph was finalized last term is clear.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l88_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We assume that collective behavior is complex.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We assume that collective behavior is complex.\"</span>",
             "options": [
-              "Kolektif davranışın karmaşık olduğunu varsayıyoruz.",
               "Kolektif davranışın karmaşık olacağını düşünüyoruz.",
               "Karmaşık kolektif davranışları gözlemliyoruz.",
-              "Kolektif davranışın karmaşık yapısını inceliyoruz."
+              "Kolektif davranışın karmaşık yapısını inceliyoruz.",
+              "Kolektif davranışın karmaşık olduğunu varsayıyoruz."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "We assume that collective behavior is complex.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The history professor noted ___ classical economists specified the guidelines.",
-            "options": [
-              "that",
-              "which",
-              "whether",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih profesörü, klasik iktisatçıların yönergeleri belirttiğini kaydetti.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ the empirical research was distributed efficiently is crucial.",
-            "options": [
-              "That",
-              "Which",
-              "What",
-              "Whether"
-            ],
-            "correctIndex": 0,
-            "translation": "Ampirik araştırmanın verimli bir şekilde dağıtılmış olması çok önemlidir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Psychologists assume ___ collective behavior is highly complex.",
-            "options": [
-              "that",
-              "who",
-              "which",
-              "whether"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikologlar, ortak davranışın son derece karmaşık olduğunu varsayarlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Komisyon anlaşmazlığın çözüldüğünü duyurdu.",
-            "enSentence": "The commission announced that the dispute was resolved.",
-            "words": [
-              "Komisyon",
-              "anlaşmazlığın",
-              "çözüldüğünü",
-              "duyurdu.",
-              "araştırma",
-              "kriz"
-            ],
-            "correctOrder": [
-              "Komisyon",
-              "anlaşmazlığın",
-              "çözüldüğünü",
-              "duyurdu."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Güvenilir fonun verimli bir şekilde dağıtıldığı doğrulandı.",
-            "enSentence": "That the reliable funding was distributed efficiently is verified.",
-            "words": [
-              "That",
-              "the",
-              "reliable",
-              "funding",
-              "was",
-              "distributed",
-              "efficiently",
-              "is",
-              "verified.",
-              "which",
-              "whether"
-            ],
-            "correctOrder": [
-              "That",
-              "the",
-              "reliable",
-              "funding",
-              "was",
-              "distributed",
-              "efficiently",
-              "is",
-              "verified."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q11",
-            "type": "translation-text",
-            "prompt": "The sociological monograph proved that behavior changes. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The sociological monograph proved that behavior changes.",
-            "correctSentence": "Sosyolojik monografi davranışın değiştiğini kanıtladı.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex2_q12",
-            "type": "translation-text",
-            "prompt": "We believe that primary sources require access. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "We believe that primary sources require access.",
-            "correctSentence": "Birincil kaynakların erişim gerektirdiğine inanıyoruz.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -11528,13 +11272,14 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Sıfat Cümlecikleri (Relative Clauses)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'That the unresolved academic dispute damaged the research funding is regrettable.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"That the unresolved academic dispute damaged the research funding is regrettable.\"</span>",
             "options": [
               "Çözülmemiş akademik anlaşmazlığın araştırma finansmanına zarar vermiş olması üzüntü vericidir.",
               "Araştırma finansmanının çözülmemiş akademik anlaşmazlığa zarar vermesi üzüntü vericidir.",
@@ -11548,40 +11293,43 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Anonymous surveys indicate that psychologists evaluate behavior more objectively now.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "İsimsiz anketler, psikologların artık davranışı daha tarafsız değerlendirdiğini gösteriyor.",
               "Anketler psikologların davranışı tarafsız değerlendirme yöntemlerini gösteriyor.",
+              "İsimsiz anketler, psikologların artık davranışı daha tarafsız değerlendirdiğini gösteriyor.",
               "Psikologlar, isimsiz anketlerin davranışları daha tarafsız gösterdiğini belirtiyor.",
               "İsimsiz anketler, psikologların taraflı davranışları değerlendirdiğini gösteriyor."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "Anonymous surveys indicate that psychologists evaluate behavior more objectively now.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Derecelendirme (Comparison)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l88_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The economists confirmed that empirical data was distributed according to new guidelines.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The economists confirmed that empirical data was distributed according to new guidelines.\"</span>",
             "options": [
-              "İktisatçılar ampirik verilerin yeni yönergelere göre dağıtıldığını onayladılar.",
               "İktisatçılar ampirik verilerin dağıtımından sonra yeni yönergeleri onayladılar.",
               "Yeni yönergelere göre dağıtılan ampirik veriler iktisatçılarca doğrulandı.",
+              "İktisatçılar ampirik verilerin yeni yönergelere göre dağıtıldığını onayladılar.",
               "İktisatçılar verimli dağıtılan verilerin yeni yönergeler getirdiğini onayladılar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "The economists confirmed that empirical data was distributed according to new guidelines.",
             "isEngToTr": true,
             "grammarTags": [
@@ -11589,183 +11337,47 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l88_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'That access to primary sources remains restricted concerns historians.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"That access to primary sources remains restricted concerns historians.\"</span>",
             "options": [
-              "Birincil kaynaklara erişimin kısıtlı kalmaya devam etmesi tarihçileri endişelendiriyor.",
               "Tarihçiler, birincil kaynaklara erişim kısıtlamalarının kaldırılmasını istiyor.",
               "Birincil kaynakların kısıtlı kalması tarihçilerin erişimini engelliyor.",
-              "Erişimi kısıtlayan birincil kaynaklar tarihçileri endişelendirmektedir."
+              "Erişimi kısıtlayan birincil kaynaklar tarihçileri endişelendirmektedir.",
+              "Birincil kaynaklara erişimin kısıtlı kalmaya devam etmesi tarihçileri endişelendiriyor."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "That access to primary sources remains restricted concerns historians.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The sociological survey proved ___ the anonymous opinions were distributed efficiently.",
-            "options": [
-              "that",
-              "which",
-              "whether",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "Sosyolojik anket, isimsiz görüşlerin verimli bir şekilde dağıtıldığını kanıtladı.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ the commission resolved the academic dispute was expected.",
-            "options": [
-              "That",
-              "Which",
-              "What",
-              "Whether"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyonun akademik anlaşmazlığı çözmüş olması bekleniyordu.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Classical economists specified ___ the financial crisis would affect the collective behavior.",
-            "options": [
-              "that",
-              "which",
-              "whether",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "Klasik iktisatçılar, finansal krizin kolektif davranışı etkileyeceğini belirttiler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Zamanlar",
               "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Tarihçiler birincil kaynaklara erişimin çözüldüğünü onayladılar.",
-            "enSentence": "The historians confirmed that access to primary sources was resolved.",
-            "words": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "çözüldüğünü",
-              "onayladılar.",
-              "anlaşmazlık",
-              "görüşler"
-            ],
-            "correctOrder": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "çözüldüğünü",
-              "onayladılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l88_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Ampirik verilerin verimli bir şekilde dağıtıldığı gerçeği doğrulandı.",
-            "enSentence": "That empirical data was distributed efficiently is verified.",
-            "words": [
-              "That",
-              "empirical",
-              "data",
-              "was",
-              "distributed",
-              "efficiently",
-              "is",
-              "verified.",
-              "which",
-              "whether"
-            ],
-            "correctOrder": [
-              "That",
-              "empirical",
-              "data",
-              "was",
-              "distributed",
-              "efficiently",
-              "is",
-              "verified."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l88_ex3_q11",
-            "type": "translation-text",
-            "prompt": "The psychologists proved that collective behavior changes under crisis. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The psychologists proved that collective behavior changes under crisis.",
-            "correctSentence": "Psikologlar, kolektif davranışın kriz altında değiştiğini kanıtladılar.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l88_ex3_q12",
-            "type": "translation-text",
-            "prompt": "That the unresolved dispute was resolved efficiently is clear. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "That the unresolved dispute was resolved efficiently is clear.",
-            "correctSentence": "Çözülmemiş anlaşmazlığın verimli bir şekilde çözüldüğü açıktır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
             ]
           }
         ]
@@ -11805,13 +11417,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whether the commission resolved the dispute'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"whether the commission resolved the dispute\"</span>",
             "options": [
               "komisyonun anlaşmazlığı çözüp çözmediği",
               "komisyonun anlaşmazlığı çözdüğü gerçeği",
@@ -11824,222 +11437,90 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whether economists will specify the guidelines'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "iktisatçıların yönergeleri belirtip belirtmeyeceği",
               "iktisatçıların yönergeleri belirtmiş olması",
+              "iktisatçıların yönergeleri belirtip belirtmeyeceği",
               "yönergeleri belirtecek olan iktisatçılar",
               "iktisatçıların yönergeleri belirtme zorunluluğu"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "whether economists will specify the guidelines",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whether collective behavior can be evaluated objectively'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"whether collective behavior can be evaluated objectively\"</span>",
             "options": [
-              "kolektif davranışın tarafsız değerlendirilip değerlendirilemeyeceği",
               "kolektif davranışın tarafsız olarak değerlendirildiği gerçeği",
               "tarafsız değerlendirilen kolektif davranışlar",
+              "kolektif davranışın tarafsız değerlendirilip değerlendirilemeyeceği",
               "kolektif davranışı tarafsız değerlendirme yöntemi"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "whether collective behavior can be evaluated objectively",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l89_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whether research funding is distributed efficiently'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"whether research funding is distributed efficiently\"</span>",
             "options": [
-              "araştırma fonunun verimli dağıtılıp dağıtılmadığı",
               "araştırma fonunun verimli dağıtılması gerçeği",
               "araştırma fonunu verimli dağıtan kuruluş",
-              "verimli dağıtılması gereken araştırma fonu"
+              "verimli dağıtılması gereken araştırma fonu",
+              "araştırma fonunun verimli dağıtılıp dağıtılmadığı"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "whether research funding is distributed efficiently",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin (Cümle başında 'if' kullanılamaz!):",
-            "sentence": "___ the financial crisis can be resolved remains highly doubtful.",
-            "options": [
-              "Whether",
-              "If",
-              "That",
-              "What"
-            ],
-            "correctIndex": 0,
-            "translation": "Finansal krizin çözülüp çözülemeyeceği son derece şüpheli kalmaktadır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The historians inquired ___ access to primary sources was granted.",
-            "options": [
-              "whether",
-              "that",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler, birincil kaynaklara erişim verilip verilmediğini araştırdılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The psychologists debated ___ collective behavior is voluntary.",
-            "options": [
-              "whether",
-              "that",
-              "who",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikologlar, ortak davranışın gönüllü olup olmadığını tartıştılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "İktisatçılar verilerin verimli bir şekilde dağıtılıp dağıtılmadığını tartıştılar.",
-            "enSentence": "The economists discussed whether the data was distributed efficiently.",
-            "words": [
-              "İktisatçılar",
-              "verilerin",
-              "verimli",
-              "bir",
-              "şekilde",
-              "dağıtılıp",
-              "dağıtılmadığını",
-              "tartıştılar.",
-              "kriz",
-              "yönergeler"
-            ],
-            "correctOrder": [
-              "İktisatçılar",
-              "verilerin",
-              "verimli",
-              "bir",
-              "şekilde",
-              "dağıtılıp",
-              "dağıtılmadığını",
-              "tartıştılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Anketin isimsiz olup olmadığı belirsizdir.",
-            "enSentence": "Whether the survey is anonymous is uncertain.",
-            "words": [
-              "Whether",
-              "the",
-              "survey",
-              "is",
-              "anonymous",
-              "is",
-              "uncertain.",
-              "that",
-              "if"
-            ],
-            "correctOrder": [
-              "Whether",
-              "the",
-              "survey",
-              "is",
-              "anonymous",
-              "is",
-              "uncertain."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q11",
-            "type": "translation-text",
-            "prompt": "The commission is investigating whether the reliable funding was distributed efficiently. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The commission is investigating whether the reliable funding was distributed efficiently.",
-            "correctSentence": "Komisyon, güvenilir fonun verimli bir şekilde dağıtılıp dağıtılmadığını araştırıyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l89_ex1_q12",
-            "type": "translation-text",
-            "prompt": "Sociological surveys reveal whether public opinions align with the new guidelines. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Sociological surveys reveal whether public opinions align with the new guidelines.",
-            "correctSentence": "Sosyolojik anketler, kamuoyu görüşlerinin yeni yönergelere uyup uymadığını ortaya koyuyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -12075,13 +11556,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Zamanlar",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'They wondered if the commission resolved the dispute.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"They wondered if the commission resolved the dispute.\"</span>",
             "options": [
               "Komisyonun anlaşmazlığı çözüp çözmediğini merak ettiler.",
               "Komisyonun anlaşmazlığı çözdüğünden şüphelendiler.",
@@ -12094,222 +11576,92 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whether economists finalized the guidelines is unknown.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "İktisatçıların yönergeleri kesinleştirip kesinleştirmediği bilinmiyor.",
               "İktisatçıların yönergeleri kesinleştirdiği gerçeği bilinmiyor.",
+              "İktisatçıların yönergeleri kesinleştirip kesinleştirmediği bilinmiyor.",
               "Yönergeleri kesinleştirecek olan iktisatçılar henüz bilinmiyor.",
               "İktisatçıların kesinleştirdiği yönergeler bilinmemektedir."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "Whether economists finalized the guidelines is unknown.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The psychologists evaluated whether behavior was objective.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The psychologists evaluated whether behavior was objective.\"</span>",
             "options": [
-              "Psikologlar davranışın tarafsız olup olmadığını değerlendirdiler.",
               "Psikologlar tarafsız davranışı değerlendirmek için anket yaptılar.",
               "Davranışın tarafsız olması psikologlarca değerlendirildi.",
+              "Psikologlar davranışın tarafsız olup olmadığını değerlendirdiler.",
               "Psikologlar davranışların ne ölçüde tarafsız olduğunu araştırdılar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "The psychologists evaluated whether behavior was objective.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Zamanlar",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l89_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We doubt if access to primary sources will be granted.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We doubt if access to primary sources will be granted.\"</span>",
             "options": [
-              "Birincil kaynaklara erişim verilip verilmeyeceğinden şüphe duyuyoruz.",
               "Birincil kaynaklara erişimin kısıtlanacağından şüpheleniyoruz.",
               "Erişim verilen birincil kaynaklardan şüphe ediyoruz.",
-              "Birincil kaynakların erişim gerektirdiğine şüphe yoktur."
+              "Birincil kaynakların erişim gerektirdiğine şüphe yoktur.",
+              "Birincil kaynaklara erişim verilip verilmeyeceğinden şüphe duyuyoruz."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "We doubt if access to primary sources will be granted.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The economists questioned ___ the severe crisis could be avoided.",
-            "options": [
-              "whether",
-              "that",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, şiddetli krizin önlenip önlenemeyeceğini sorguladılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ the unresolved academic dispute will affect funding remains unclear.",
-            "options": [
-              "Whether",
-              "If",
-              "That",
-              "Which"
-            ],
-            "correctIndex": 0,
-            "translation": "Çözülmemiş akademik anlaşmazlığın fonu etkileyip etkilemeyeceği belirsizliğini koruyor.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
+              "İsim ve Edat Yapıları",
               "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "We must confirm ___ the survey results are completely anonymous.",
-            "options": [
-              "whether",
-              "who",
-              "which",
-              "whose"
-            ],
-            "correctIndex": 0,
-            "translation": "Anket sonuçlarının tamamen isimsiz olup olmadığını doğrulamalıyız.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Sosyologlar kolektif davranışın ölçülüp ölçülemeyeceğini sorguladılar.",
-            "enSentence": "Sociologists questioned whether collective behavior could be measured.",
-            "words": [
-              "Sosyologlar",
-              "kolektif",
-              "davranışın",
-              "ölçülüp",
-              "ölçülemeyeceğini",
-              "sorguladılar.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Sosyologlar",
-              "kolektif",
-              "davranışın",
-              "ölçülüp",
-              "ölçülemeyeceğini",
-              "sorguladılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Yeni yönergelerin uygulanıp uygulanmayacağını sordular.",
-            "enSentence": "They asked whether the new guidelines would be implemented.",
-            "words": [
-              "They",
-              "asked",
-              "whether",
-              "the",
-              "new",
-              "guidelines",
-              "would",
-              "be",
-              "implemented.",
-              "that",
-              "if"
-            ],
-            "correctOrder": [
-              "They",
-              "asked",
-              "whether",
-              "the",
-              "new",
-              "guidelines",
-              "would",
-              "be",
-              "implemented."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q11",
-            "type": "translation-text",
-            "prompt": "Whether empirical data supports the hypothesis remains controversial. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whether empirical data supports the hypothesis remains controversial.",
-            "correctSentence": "Ampirik verilerin hipotezi destekleyip desteklemediği tartışmalı kalmaya devam ediyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex2_q12",
-            "type": "translation-text",
-            "prompt": "The psychologists inquired if the behavior was evaluated objectively. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The psychologists inquired if the behavior was evaluated objectively.",
-            "correctSentence": "Psikologlar davranışın tarafsız bir şekilde değerlendirilip değerlendirilmediğini sordular.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
             ]
           }
         ]
@@ -12346,13 +11698,14 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "İsim Tamlamaları",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whether the unresolved academic dispute will affect the empirical research is uncertain.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Whether the unresolved academic dispute will affect the empirical research is uncertain.\"</span>",
             "options": [
               "Çözülmemiş akademik anlaşmazlığın ampirik araştırmayı etkileyip etkilemeyeceği belirsizdir.",
               "Ampirik araştırmanın çözülmemiş akademik anlaşmazlıktan etkilenmesi belirsizdir.",
@@ -12366,224 +11719,90 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whether access to primary sources was restricted determines the validity of the monograph.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Birincil kaynaklara erişimin sınırlandırılıp sınırlandırılmadığı monografinin geçerliliğini belirler.",
               "Monografinin geçerli olması birincil kaynaklara kısıtlamasız erişim verilmesine bağlıdır.",
+              "Birincil kaynaklara erişimin sınırlandırılıp sınırlandırılmadığı monografinin geçerliliğini belirler.",
               "Sınırlandırılmış birincil kaynaklara erişim monografinin geçerliliğini tehlikeye atar.",
               "Birincil kaynakların geçerliliği, sınırlandırılmış monografilere erişimle belirlenir."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "Whether access to primary sources was restricted determines the validity of the monograph.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l89_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The commission is investigating whether the reliable funding was distributed efficiently.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Whether the reliable funding was distributed efficiently is being investigated by the commission.\"</span>",
             "options": [
-              "Komisyon, güvenilir fonun verimli bir şekilde dağıtılıp dağıtılmadığını araştırıyor.",
               "Komisyon güvenilir fonların verimli dağıtımı için araştırma başlattı.",
               "Verimli dağıtılan fonların güvenilirliği komisyonca araştırılıyor.",
+              "Komisyon, güvenilir fonun verimli bir şekilde dağıtılıp dağıtılmadığını araştırıyor.",
               "Komisyon, fonların güvenilir ve verimli bir şekilde dağıtıldığını doğruladı."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "Whether the reliable funding was distributed efficiently is being investigated by the commission.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l89_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Sociological surveys reveal whether public opinions align with the new guidelines.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Sociological surveys reveal whether public opinions align with the new guidelines.\"</span>",
             "options": [
-              "Sosyolojik anketler, kamuoyu görüşlerinin yeni yönergelere uyup uymadığını ortaya koyuyor.",
               "Kamuoyu görüşlerinin yeni yönergelere uyumu sosyolojik anketleri etkiliyor.",
               "Sosyolojik anketler yeni yönergelerin kamuoyu görüşlerini değiştirdiğini gösteriyor.",
-              "Yeni yönergeler kamuoyunun sosyolojik anketlere uyup uymadığını gösterir."
+              "Yeni yönergeler kamuoyunun sosyolojik anketlere uyup uymadığını gösterir.",
+              "Sosyolojik anketler, kamuoyu görüşlerinin yeni yönergelere uyup uymadığını ortaya koyuyor."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "Sociological surveys reveal whether public opinions align with the new guidelines.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Economists debate ___ the severe financial crisis will subside.",
-            "options": [
-              "whether",
-              "that",
-              "which",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, şiddetli finansal krizin hafifleyip hafiflemeyeceğini tartışıyorlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ psychologists evaluate collective behavior objectively determines the funding.",
-            "options": [
-              "Whether",
-              "If",
-              "That",
-              "Which"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikologların kolektif davranışı tarafsız değerlendirip değerlendirmediği fonu belirler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The commission must verify ___ the anonymous survey is valid.",
-            "options": [
-              "whether",
-              "that",
-              "who",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyon, isimsiz anketin geçerli olup olmadığını doğrulamalıdır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Tarihçiler birincil kaynaklara erişimin kısıtlanıp kısıtlanmadığını araştırdılar.",
-            "enSentence": "The historians investigated whether access to primary sources was restricted.",
-            "words": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "kısıtlanıp",
-              "kısıtlanmadığını",
-              "araştırdılar.",
-              "dispute",
-              "crisis"
-            ],
-            "correctOrder": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "kısıtlanıp",
-              "kısıtlanmadığını",
-              "araştırdılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Akademik anlaşmazlığın çözülüp çözülmediği belirsizdir.",
-            "enSentence": "Whether the academic dispute was resolved is uncertain.",
-            "words": [
-              "Whether",
-              "the",
-              "academic",
-              "dispute",
-              "was",
-              "resolved",
-              "is",
-              "uncertain.",
-              "that",
-              "if"
-            ],
-            "correctOrder": [
-              "Whether",
-              "the",
-              "academic",
-              "dispute",
-              "was",
-              "resolved",
-              "is",
-              "uncertain."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q11",
-            "type": "translation-text",
-            "prompt": "Whether empirical data supports the new guidelines will be analyzed. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whether empirical data supports the new guidelines will be analyzed.",
-            "correctSentence": "Ampirik verilerin yeni yönergeleri destekleyip desteklemediği analiz edilecektir.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l89_ex3_q12",
-            "type": "translation-text",
-            "prompt": "The psychologists proved whether collective behavior changed under crisis. cümlesini İngilizce'ye çevirin:",
-            "enSentence": "The psychologists proved whether collective behavior changed under crisis.",
-            "correctSentence": "The psychologists proved whether collective behavior changed under crisis.",
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Zamanlar",
-              "İsim Tamlamaları"
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -12623,13 +11842,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'why the financial crisis occurred'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"why the financial crisis occurred\"</span>",
             "options": [
               "finansal krizin neden meydana geldiği",
               "finansal krizin meydana gelme şekli",
@@ -12642,216 +11862,87 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'how psychologists evaluate behavior'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "psikologların davranışı nasıl değerlendirdiği",
               "psikologların davranışı değerlendirme yöntemi",
+              "psikologların davranışı nasıl değerlendirdiği",
               "davranışın psikologlarca nasıl değerlendirildiği",
               "psikologların değerlendirdiği davranışlar"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "how psychologists evaluate behavior",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whatever the commission decides'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"whatever the commission decides\"</span>",
             "options": [
-              "komisyon her neye karar verirse versin",
               "komisyonun karar verdiği her şey",
               "komisyonun kararı ne olursa olsun",
+              "komisyon her neye karar verirse versin",
               "komisyonun kararına bağlı olarak"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "whatever the commission decides",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l90_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whoever finalized the monograph'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"whoever finalized the monograph\"</span>",
             "options": [
-              "monografiyi her kim kesinleştirdiyse",
               "monografiyi kesinleştiren kişi",
               "monografinin kesinleştirilme süreci",
-              "monografiyi kesinleştiren herkes"
+              "monografiyi kesinleştiren herkes",
+              "monografiyi her kim kesinleştirdiyse"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "whoever finalized the monograph",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The economists explained ___ the empirical data was analyzed.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar ampirik verinin nasıl analiz edildiğini açıkladılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ guidelines the commission specifies will be controversial.",
-            "options": [
-              "Whatever",
-              "Whoever",
-              "Whenever",
-              "However"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyonun belirteceği her ne yönerge olursa olsun tartışmalı olacaktır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The survey shows ___ the distributed funding was allocated.",
-            "options": [
-              "where",
-              "who",
-              "which",
-              "whoever"
-            ],
-            "correctIndex": 0,
-            "translation": "Anket, dağıtılan fonun nereye tahsis edildiğini gösteriyor.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Araştırmacılar birincil kaynaklara nasıl erişim sağlayacaklarını biliyorlar.",
-            "enSentence": "The researchers know how they will access primary sources.",
-            "words": [
-              "Araştırmacılar",
-              "birincil",
-              "kaynaklara",
-              "nasıl",
-              "erişim",
-              "sağlayacaklarını",
-              "biliyorlar.",
-              "anlaşmazlık",
-              "fon"
-            ],
-            "correctOrder": [
-              "Araştırmacılar",
-              "birincil",
-              "kaynaklara",
-              "nasıl",
-              "erişim",
-              "sağlayacaklarını",
-              "biliyorlar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Monografiyi her kim kesinleştirdiyse komisyona katıldı.",
-            "enSentence": "Whoever finalized the monograph joined the commission.",
-            "words": [
-              "Whoever",
-              "finalized",
-              "the",
-              "monograph",
-              "joined",
-              "the",
-              "commission.",
-              "whatever",
-              "who"
-            ],
-            "correctOrder": [
-              "Whoever",
-              "finalized",
-              "the",
-              "monograph",
-              "joined",
-              "the",
-              "commission."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q11",
-            "type": "translation-text",
-            "prompt": "Why the unresolved academic dispute escalated remains a subject of intense debate. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Why the unresolved academic dispute escalated remains a subject of intense debate.",
-            "correctSentence": "Çözülmemiş akademik anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex1_q12",
-            "type": "translation-text",
-            "prompt": "Whoever finalized the empirical research had access to primary sources. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whoever finalized the empirical research had access to primary sources.",
-            "correctSentence": "Deneysel araştırmayı her kim kesinleştirdiyse birincil kaynaklara erişimi vardı.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -12887,13 +11978,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Zamanlar",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'They explained why the financial crisis occurred.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"They explained why the financial crisis occurred.\"</span>",
             "options": [
               "Finansal krizin neden meydana geldiğini açıkladılar.",
               "Finansal kriz meydana geldiğinde açıklama yaptılar.",
@@ -12906,213 +11998,89 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whatever they distribute will support the research.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Her ne dağıtırlarsa dağıtsınlar araştırmayı destekleyecektir.",
               "Araştırmayı destekleyen her şeyi dağıtacaklar.",
+              "Her ne dağıtırlarsa dağıtsınlar araştırmayı destekleyecektir.",
               "Dağıttıkları şeyler araştırmaya destek sağladı.",
               "Araştırmayı desteklemek için her şeyi dağıtacaklar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "Whatever they distribute will support the research.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We analyzed how psychologists evaluate behavior.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We analyzed how psychologists evaluate behavior.\"</span>",
             "options": [
-              "Psikologların davranışı nasıl değerlendirdiğini analiz ettik.",
               "Davranışı tarafsız değerlendiren psikologları analiz ettik.",
               "Psikologların davranışı değerlendirme yöntemi analiz ettik.",
+              "Psikologların davranışı nasıl değerlendirdiğini analiz ettik.",
               "Analiz ettiğimiz psikologlar davranışları değerlendirdi."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "We analyzed how psychologists evaluate behavior.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l90_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whoever resolved the dispute received academic funding.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Whoever resolved the dispute received academic funding.\"</span>",
             "options": [
-              "Anlaşmazlığı her kim çözdüyse akademik fon aldı.",
               "Akademik fon alan herkes anlaşmazlığı çözdü.",
               "Anlaşmazlığın çözülmesiyle akademik fon alındı.",
-              "Anlaşmazlığı çözen kişi akademik fonu aldı."
+              "Anlaşmazlığı çözen kişi akademik fonu aldı.",
+              "Anlaşmazlığı her kim çözdüyse akademik fon aldı."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "Whoever resolved the dispute received academic funding.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The historians documented ___ the primary sources were lost.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler birincil kaynakların nasıl kaybolduğunu belgelediler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ guidelines classical economists specified will be evaluated objectively.",
-            "options": [
-              "Whatever",
-              "Whoever",
-              "Whenever",
-              "However"
-            ],
-            "correctIndex": 0,
-            "translation": "Klasik iktisatçıların belirteceği her ne yönerge olursa olsun tarafsızca değerlendirilecektir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Sociologists investigate ___ collective behavior is influenced by surveys.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "Sosyologlar, ortak davranışın anketlerden nasıl etkilendiğini araştırıyorlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Tarihçiler birincil kaynakların nerede saklandığını açıkladılar.",
-            "enSentence": "The historians explained where the primary sources were stored.",
-            "words": [
-              "Tarihçiler",
-              "birincil",
-              "kaynakların",
-              "nerede",
-              "saklandığını",
-              "açıkladılar.",
-              "anlaşmazlık"
-            ],
-            "correctOrder": [
-              "Tarihçiler",
-              "birincil",
-              "kaynakların",
-              "nerede",
-              "saklandığını",
-              "açıkladılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Görüşleri her kim değerlendirdiyse isimsiz kaldı.",
-            "enSentence": "Whoever evaluated the opinions remained anonymous.",
-            "words": [
-              "Whoever",
-              "evaluated",
-              "the",
-              "opinions",
-              "remained",
-              "anonymous.",
-              "whatever",
-              "who"
-            ],
-            "correctOrder": [
-              "Whoever",
-              "evaluated",
-              "the",
-              "opinions",
-              "remained",
-              "anonymous."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q11",
-            "type": "translation-text",
-            "prompt": "Whichever sociological survey you evaluate will show similar behavior. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whichever sociological survey you evaluate will show similar behavior.",
-            "correctSentence": "Hangi sosyolojik anketi değerlendirirseniz değerlendirin, benzer davranış gösterecektir.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex2_q12",
-            "type": "translation-text",
-            "prompt": "The psychologists explained why collective behavior fluctuates under crisis. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The psychologists explained why collective behavior fluctuates under crisis.",
-            "correctSentence": "Psikologlar, kolektif davranışın kriz altında neden dalgalandığını açıkladılar.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -13149,13 +12117,14 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l90_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whoever finalized the empirical research had access to primary sources.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Whoever finalized the empirical research had access to primary sources.\"</span>",
             "options": [
               "Deneysel araştırmayı her kim kesinleştirdiyse birincil kaynaklara erişimi vardı.",
               "Ampirik araştırmayı kesinleştiren kişinin birincil kaynaklara erişimi sınırlandırıldı.",
@@ -13169,223 +12138,91 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim ve Edat Yapıları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l90_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Whichever sociological survey you evaluate will show similar collective behavior.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Hangi sosyolojik anketi değerlendirirseniz değerlendirin, benzer kolektif davranışı gösterecektir.",
               "Benzer kolektif davranışları gösteren sosyolojik anketleri değerlendirmeliyiz.",
+              "Hangi sosyolojik anketi değerlendirirseniz değerlendirin, benzer kolektif davranışı gösterecektir.",
               "Sosyolojik anketleri değerlendiren herkes benzer ortak davranışlar görür.",
               "Benzer ortak davranışlar gösteren sosyolojik anketler değerlendirilecektir."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "Whichever sociological survey you evaluate will show similar collective behavior.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Derecelendirme (Comparison)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l90_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Why the unresolved academic dispute escalated remains a subject of intense debate.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Why the unresolved academic dispute escalated remains a subject of intense debate.\"</span>",
             "options": [
-              "Çözülmemiş akademik anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor.",
               "Akademik anlaşmazlıkların neden tırmandığı konusu yoğun şekilde tartışılmaktadır.",
               "Yoğun tartışma konusu olan çözülmemiş akademik anlaşmazlık tırmanmaya devam ediyor.",
+              "Çözülmemiş akademik anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor.",
               "Anlaşmazlıkların neden tırmandığını araştıran akademik çalışmalar tartışılıyor."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "Why the unresolved academic dispute escalated remains a subject of intense debate.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l90_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The psychologists showed how collective behavior is evaluated objectively.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The psychologists showed how collective behavior is evaluated objectively.\"</span>",
             "options": [
-              "Psikologlar, ortak davranışın tarafsız olarak nasıl değerlendirildiğini gösterdiler.",
               "Ortak davranışı tarafsız değerlendiren psikologlar yöntemlerini gösterdiler.",
               "Psikologların tarafsız değerlendirdiği ortak davranışlar gösterildi.",
-              "Ortak davranışların nasıl tarafsız değerlendirileceği psikologlarca gösterildi."
+              "Ortak davranışların nasıl tarafsız değerlendirileceği psikologlarca gösterildi.",
+              "Psikologlar, ortak davranışın tarafsız olarak nasıl değerlendirildiğini gösterdiler."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "The psychologists showed how collective behavior is evaluated objectively.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Economists explained ___ the severe financial crisis was resolved efficiently.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, şiddetli finansal krizin verimli bir şekilde nasıl çözüldüğünü açıkladılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ finalized the monograph evaluated the sociological survey data.",
-            "options": [
-              "Whoever",
-              "Whatever",
-              "Whichever",
-              "However"
-            ],
-            "correctIndex": 0,
-            "translation": "Monografiyi her kim kesinleştirdiyse sosyolojik anket verilerini değerlendirdi.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "We must analyze ___ the distributed funding was utilized by the commission.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "Dağıtılan fonun komisyon tarafından nasıl kullanıldığını analiz etmeliyiz.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Komisyon, çözülmemiş anlaşmazlığı nasıl çözeceğini tartışıyor.",
-            "enSentence": "The commission is discussing how they will resolve the unresolved dispute.",
-            "words": [
-              "Komisyon",
-              "çözülmemiş",
-              "anlaşmazlığı",
-              "nasıl",
-              "çözeceğini",
-              "tartışıyor.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Komisyon",
-              "çözülmemiş",
-              "anlaşmazlığı",
-              "nasıl",
-              "çözeceğini",
-              "tartışıyor."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Birincil kaynaklara her kim eriştiyse ampirik verileri doğruladı.",
-            "enSentence": "Whoever accessed primary sources verified the empirical data.",
-            "words": [
-              "Whoever",
-              "accessed",
-              "primary",
-              "sources",
-              "verified",
-              "the",
-              "empirical",
-              "data.",
-              "whatever",
-              "who"
-            ],
-            "correctOrder": [
-              "Whoever",
-              "accessed",
-              "primary",
-              "sources",
-              "verified",
-              "the",
-              "empirical",
-              "data."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q11",
-            "type": "translation-text",
-            "prompt": "Why economists specified the new guidelines remains a key question in history. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Why economists specified the new guidelines remains a key question in history.",
-            "correctSentence": "İktisatçıların yeni yönergeleri neden belirttiği tarihte kilit bir soru olmaya devam ediyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
+              "Derecelendirme (Comparison)",
               "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l90_ex3_q12",
-            "type": "translation-text",
-            "prompt": "Whatever psychologists recommend will affect collective behavior. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whatever psychologists recommend will affect collective behavior.",
-            "correctSentence": "Psikologlar her ne tavsiye ederse etsin kolektif davranışı etkileyecektir.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -13425,13 +12262,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Edilgen Yapı (Passive)"
+              "Edilgen Yapı (Passive)",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'the fact that the crisis is severe'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"the fact that the crisis is severe\"</span>",
             "options": [
               "krizin şiddetli olduğu gerçeği",
               "krizin ne kadar şiddetli olduğu",
@@ -13444,221 +12282,89 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is clear that access is restricted'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "erişimin kısıtlı olduğu açıktır",
               "erişim kısıtlamalarının netleştiği",
+              "erişimin kısıtlı olduğu açıktır",
               "erişimin kısıtlı olması bekleniyor",
               "erişimin kısıtlandığını netleştirdiler"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "It is clear that access is restricted",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Edilgen Yapı (Passive)"
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is believed that behavior is collective'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is believed that behavior is collective\"</span>",
             "options": [
-              "davranışın kolektif olduğuna inanılır",
               "kolektif davranışların inanılırlığı",
               "davranışın kolektif olacağına inanılıyor",
+              "davranışın kolektif olduğuna inanılır",
               "ortak davranışın inançları etkilediği"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "It is believed that behavior is collective",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Edilgen Yapı (Passive)"
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l91_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'the fact that the dispute was resolved'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"the fact that the dispute was resolved\"</span>",
             "options": [
-              "anlaşmazlığın çözüldüğü gerçeği",
               "anlaşmazlığı çözen gerçekler",
               "anlaşmazlığın nasıl çözüldüğü",
-              "anlaşmazlığın çözüleceği gerçeği"
+              "anlaşmazlığın çözüleceği gerçeği",
+              "anlaşmazlığın çözüldüğü gerçeği"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "the fact that the dispute was resolved",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "___ that economists specified the guidelines resolved the dispute.",
-            "options": [
-              "The fact",
-              "It is",
-              "Whether",
-              "What"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçıların yönergeleri belirtmiş olması gerçeği anlaşmazlığı çözdü.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "It is regrettable ___ the research funding was distributed inefficiently.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma fonunun verimsiz bir şekilde dağıtılmış olması üzüntü vericidir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "It stands to reason ___ collective behavior requires extensive research.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Kolektif davranışın kapsamlı araştırma gerektirmesi mantıklıdır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Deneysel verilerin kesinleştirilmiş olması gerçeği onaylandı.",
-            "enSentence": "The fact that empirical data was finalized was confirmed.",
-            "words": [
-              "Deneysel",
-              "verilerin",
-              "kesinleştirilmiş",
-              "olması",
-              "gerçeği",
-              "onaylandı.",
-              "anlaşmazlık",
-              "görüşler"
-            ],
-            "correctOrder": [
-              "Deneysel",
-              "verilerin",
-              "kesinleştirilmiş",
-              "olması",
-              "gerçeği",
-              "onaylandı."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Anketin isimsiz olduğu gerçeği önemlidir.",
-            "enSentence": "The fact that the survey is anonymous is significant.",
-            "words": [
-              "The",
-              "fact",
-              "that",
-              "the",
-              "survey",
-              "is",
-              "anonymous",
-              "is",
-              "significant.",
-              "whether",
-              "if"
-            ],
-            "correctOrder": [
-              "The",
-              "fact",
-              "that",
-              "the",
-              "survey",
-              "is",
-              "anonymous",
-              "is",
-              "significant."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q11",
-            "type": "translation-text",
-            "prompt": "It is clear that access to primary sources was restricted by the commission. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is clear that access to primary sources was restricted by the commission.",
-            "correctSentence": "Birincil kaynaklara erişimin komisyon tarafından sınırlandırıldığı açıktır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l91_ex1_q12",
-            "type": "translation-text",
-            "prompt": "The fact that psychologists evaluate behavior objectively is verified. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The fact that psychologists evaluate behavior objectively is verified.",
-            "correctSentence": "Psikologların davranışı tarafsız değerlendirdiği gerçeği doğrulandı.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
             ]
           }
         ]
@@ -13694,13 +12400,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is believed that the commission resolved the dispute.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is believed that the commission resolved the dispute.\"</span>",
             "options": [
               "Komisyonun anlaşmazlığı çözdüğüne inanılır.",
               "Komisyonun anlaşmazlığı çözeceğine inanılıyor.",
@@ -13714,223 +12421,91 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The fact that funding is restricted concerns psychologists.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Fonların sınırlandırılmış olması gerçeği psikologları endişelendiriyor.",
               "Psikologlar fonların sınırlandırılması gerçeğiyle ilgileniyorlar.",
+              "Fonların sınırlandırılmış olması gerçeği psikologları endişelendiriyor.",
               "Kısıtlı fonlar psikologları endişelendirmeye devam ediyor.",
               "Sınırlandırılan fonların psikologları endişelendirdiği gerçeği açıktır."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "The fact that funding is restricted concerns psychologists.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is clear that the guidelines were finalized.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is clear that the guidelines were finalized.\"</span>",
             "options": [
-              "Yönergelerin kesinleştirildiği açıktır.",
               "Yönergeleri kesinleştirdikleri açıkça görülüyor.",
               "Kesinleşen yönergelerin açık olduğu belirtildi.",
+              "Yönergelerin kesinleştirildiği açıktır.",
               "Yönergelerin kesinleşmesiyle her şey netleşti."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "It is clear that the guidelines were finalized.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l91_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The fact that access was denied surprised historians.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The fact that access was denied surprised historians.\"</span>",
             "options": [
-              "Erişimin reddedilmiş olması gerçeği tarihçileri şaşırttı.",
               "Tarihçiler erişimin reddedilmesine şaşırdılar.",
               "Reddedilen erişim hakları tarihçileri şaşırtmaya yetti.",
-              "Tarihçileri şaşırtan gerçek erişimin engellenmesiydi."
+              "Tarihçileri şaşırtan gerçek erişimin engellenmesiydi.",
+              "Erişimin reddedilmiş olması gerçeği tarihçileri şaşırttı."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "The fact that access was denied surprised historians.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "It is extensively documented ___ collective behavior changes during a severe financial crisis.",
-            "options": [
-              "that",
-              "whether",
-              "which",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "Kolektif davranışın şiddetli bir finansal kriz sırasında değiştiği kapsamlı bir şekilde belgelenmiştir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim ve Edat Yapıları",
               "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "___ that the primary sources were anonymous protected the research participants.",
-            "options": [
-              "The fact",
-              "It is",
-              "Whether",
-              "What"
-            ],
-            "correctIndex": 0,
-            "translation": "Birincil kaynakların isimsiz olması gerçeği araştırmaya katılanları korudu.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "It is widely expected ___ the commission will distribute the funding efficiently.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyonun fonu verimli bir şekilde dağıtacağı yaygın olarak beklenmektedir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Yönergelerin klasik iktisatçılarca belirtildiği açıktır.",
-            "enSentence": "It is clear that the guidelines were specified by classical economists.",
-            "words": [
-              "Yönergelerin",
-              "klasik",
-              "iktisatçılarca",
-              "belirtildiği",
-              "açıktır.",
-              "anlaşmazlık",
-              "fon"
-            ],
-            "correctOrder": [
-              "Yönergelerin",
-              "klasik",
-              "iktisatçılarca",
-              "belirtildiği",
-              "açıktır."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Anlaşmazlığın verimli bir şekilde çözüldüğü gerçeği doğrulandı.",
-            "enSentence": "The fact that the dispute was resolved efficiently was verified.",
-            "words": [
-              "The",
-              "fact",
-              "that",
-              "the",
-              "dispute",
-              "was",
-              "resolved",
-              "efficiently",
-              "was",
-              "verified.",
-              "whether",
-              "if"
-            ],
-            "correctOrder": [
-              "The",
-              "fact",
-              "that",
-              "the",
-              "dispute",
-              "was",
-              "resolved",
-              "efficiently",
-              "was",
-              "verified."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q11",
-            "type": "translation-text",
-            "prompt": "It is believed that collective behavior is evaluated more objectively now. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is believed that collective behavior is evaluated more objectively now.",
-            "correctSentence": "Kolektif davranışın artık daha tarafsız değerlendirildiğine inanılır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l91_ex2_q12",
-            "type": "translation-text",
-            "prompt": "The fact that empirical data supports the survey is clear. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The fact that empirical data supports the survey is clear.",
-            "correctSentence": "Ampirik verilerin anketi desteklediği gerçeği açıktır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
             ]
           }
         ]
@@ -13967,13 +12542,14 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l91_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The fact that the commission resolved the unresolved academic dispute is verified.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The fact that the commission resolved the unresolved academic dispute is verified.\"</span>",
             "options": [
               "Komisyonun çözülmemiş akademik anlaşmazlığı çözdüğü gerçeği doğrulandı.",
               "Çözülmemiş akademik anlaşmazlığın komisyonca çözüleceği gerçeği doğrulandı.",
@@ -13987,231 +12563,90 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is widely believed that psychologists evaluate collective behavior more objectively now.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Psikologların artık ortak davranışı daha tarafsız değerlendirdiğine yaygın olarak inanılır.",
               "Psikologların ortak davranışı tarafsız değerlendirmesi gerektiğine yaygın olarak inanılır.",
+              "Psikologların artık ortak davranışı daha tarafsız değerlendirdiğine yaygın olarak inanılır.",
               "Psikologların artık davranışları değerlendirirken tarafsız kaldıklarına inanılıyor.",
               "Ortak davranışların psikologlarca daha tarafsız değerlendirilmesi gerektiği inancı yaygındır."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "It is widely believed that psychologists evaluate collective behavior more objectively now.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l91_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The fact that access to primary sources remains restricted concerns the historians.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The fact that access to primary sources remains restricted concerns the historians.\"</span>",
             "options": [
-              "Birincil kaynaklara erişimin kısıtlı kalmaya devam etmesi gerçeği tarihçileri endişelendiriyor.",
               "Tarihçiler, birincil kaynaklara erişim kısıtlamalarının devam etmesini endişeyle izliyorlar.",
               "Birincil kaynakların kısıtlı kalması tarihçilerin erişimini engellemeye devam ediyor.",
+              "Birincil kaynaklara erişimin kısıtlı kalmaya devam etmesi gerçeği tarihçileri endişelendiriyor.",
               "Erişimi kısıtlı olan birincil kaynaklar tarihçilerin endişelerini artırıyor."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "The fact that access to primary sources remains restricted concerns the historians.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim ve Edat Yapıları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l91_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is apparent that the reliable funding was distributed according to new guidelines.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is apparent that the reliable funding was distributed according to new guidelines.\"</span>",
             "options": [
-              "Güvenilir fonun yeni yönergelere göre dağıtıldığı açıktır.",
               "Fonların yeni yönergelere göre dağıtılması gerektiği açıktır.",
               "Yeni yönergelere göre dağıtılan fonların güvenilirliği açıktır.",
-              "Fonların güvenilir ve verimli bir şekilde dağıtıldığı açıkça görülüyor."
+              "Fonların güvenilir ve verimli bir şekilde dağıtıldığı açıkça görülüyor.",
+              "Güvenilir fonun yeni yönergelere göre dağıtıldığı açıktır."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "It is apparent that the reliable funding was distributed according to new guidelines.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "It has been demonstrated ___ classical economists specified the guidelines under financial crisis.",
-            "options": [
-              "that",
-              "whether",
-              "which",
-              "what"
-            ],
-            "correctIndex": 0,
-            "translation": "Klasik iktisatçıların finansal kriz altında yönergeleri belirttiği kanıtlanmıştır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun ifadeyi seçin:",
-            "sentence": "___ that the anonymous survey was distributed efficiently resolved the debate.",
-            "options": [
-              "The fact",
-              "It is",
-              "Whether",
-              "What"
-            ],
-            "correctIndex": 0,
-            "translation": "İsimsiz anketin verimli bir şekilde dağıtılmış olması gerçeği tartışmayı çözdü.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin:",
-            "sentence": "___ access to primary sources remains denied is regrettable.",
-            "options": [
-              "That",
-              "Whether",
-              "What",
-              "Which"
-            ],
-            "correctIndex": 0,
-            "translation": "Birincil kaynaklara erişimin reddedilmeye devam etmesi üzüntü vericidir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Sosyolojik anketin verimli bir şekilde dağıtıldığı gerçeği doğrulandı.",
-            "enSentence": "The fact that the sociological survey was distributed efficiently was verified.",
-            "words": [
-              "Sosyolojik",
-              "anketin",
-              "verimli",
-              "bir",
-              "şekilde",
-              "dağıtıldığı",
-              "gerçeği",
-              "doğrulandı.",
-              "dispute",
-              "crisis"
-            ],
-            "correctOrder": [
-              "Sosyolojik",
-              "anketin",
-              "verimli",
-              "bir",
-              "şekilde",
-              "dağıtıldığı",
-              "gerçeği",
-              "doğrulandı."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Anlaşmazlığın çözüldüğü gerçeği iktisatçıları rahatlattı.",
-            "enSentence": "The fact that the dispute was resolved relieved the economists.",
-            "words": [
-              "The",
-              "fact",
-              "that",
-              "the",
-              "dispute",
-              "was",
-              "resolved",
-              "relieved",
-              "the",
-              "economists.",
-              "whether",
-              "if"
-            ],
-            "correctOrder": [
-              "The",
-              "fact",
-              "that",
-              "the",
-              "dispute",
-              "was",
-              "resolved",
-              "relieved",
-              "the",
-              "economists."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q11",
-            "type": "translation-text",
-            "prompt": "It is believed that the monograph was finalized by classical economists. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is believed that the monograph was finalized by classical economists.",
-            "correctSentence": "Monografinin klasik iktisatçılar tarafından kesinleştirildiğine inanılır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l91_ex3_q12",
-            "type": "translation-text",
-            "prompt": "The fact that psychologists evaluated behavior objectively is undeniable. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The fact that psychologists evaluated behavior objectively is undeniable.",
-            "correctSentence": "Psikologların davranışı tarafsız değerlendirdiği gerçeği yadsınamaz.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "Zamanlar"
             ]
           }
         ]
@@ -14251,13 +12686,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'demand that the commission resolve the dispute'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"demand that the commission resolve the dispute\"</span>",
             "options": [
               "komisyonun anlaşmazlığı çözmesini talep etmek",
               "komisyonun çözdüğü anlaşmazlığı talep etmek",
@@ -14270,227 +12706,87 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'recommend that psychologists evaluate behavior objectively'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "psikologların davranışı tarafsız değerlendirmesini tavsiye etmek",
               "psikologların tarafsız davranışları değerlendirmesini önermek",
+              "psikologların davranışı tarafsız değerlendirmesini tavsiye etmek",
               "tarafsız davranışı değerlendiren psikologları tavsiye etmek",
               "psikologlarca tarafsız değerlendirilen davranışları önermek"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "recommend that psychologists evaluate behavior objectively",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Derecelendirme (Comparison)"
+              "Derecelendirme (Comparison)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'essential that access be granted'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"essential that access be granted\"</span>",
             "options": [
-              "erişim sağlanmasının esası/zorunluluğu",
               "erişimin kısıtlanmasının önemi",
               "sağlanan erişimin temel özellikleri",
+              "erişim sağlanmasının esası/zorunluluğu",
               "erişim izninin verilme olasılığı"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "essential that access be granted",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l92_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'insist that the guidelines be specified'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"insist that the guidelines be specified\"</span>",
             "options": [
-              "yönergelerin belirtilmesinde ısrar etmek",
               "belirtilen yönergelere uymakta ısrar etmek",
               "yönergelerin belirtilmesini gereksiz bulmak",
-              "yönergeler üzerinde ısrarla durmak"
+              "yönergeler üzerinde ısrarla durmak",
+              "yönergelerin belirtilmesinde ısrar etmek"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "insist that the guidelines be specified",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin (Subjunctive yapıda fiil yalın olmalıdır!):",
-            "sentence": "The economists recommended that the financial crisis ___ managed immediately.",
-            "options": [
-              "be",
-              "is",
-              "was",
-              "will be"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar finansal krizin derhal yönetilmesini tavsiye ettiler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin (Subjunctive yapıda fiil yalın olmalıdır!):",
-            "sentence": "It is crucial that every researcher ___ the ethical guidelines.",
-            "options": [
-              "follow",
-              "follows",
-              "followed",
-              "should follow"
-            ],
-            "correctIndex": 0,
-            "translation": "Her araştırmacının etik yönergelere uyması kritik öneme sahiptir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin (Olumsuz subjunctive yapıda 'not' yalın fiilin önüne gelir!):",
-            "sentence": "The commission insisted that the unresolved dispute ___ publicized.",
-            "options": [
-              "not be",
-              "is not",
-              "was not",
-              "will not be"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyon, çözülmemiş anlaşmazlığın kamuoyuna duyurulmamasında ısrar etti.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Komisyon finansmanın verimli bir şekilde dağıtılmasını talep etti.",
-            "enSentence": "The commission demanded that funding be distributed efficiently.",
-            "words": [
-              "Komisyon",
-              "finansmanın",
-              "verimli",
-              "bir",
-              "şekilde",
-              "dağıtılmasını",
-              "talep",
-              "etti.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Komisyon",
-              "finansmanın",
-              "verimli",
-              "bir",
-              "şekilde",
-              "dağıtılmasını",
-              "talep",
-              "etti."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Sosyoloğun anketin isimsiz kalmasında ısrar etmesi esastır.",
-            "enSentence": "It is essential that the sociologist insist the survey remain anonymous.",
-            "words": [
-              "It",
-              "is",
-              "essential",
-              "that",
-              "the",
-              "sociologist",
-              "insist",
-              "the",
-              "survey",
-              "remain",
-              "anonymous.",
-              "remains",
-              "to remain"
-            ],
-            "correctOrder": [
-              "It",
-              "is",
-              "essential",
-              "that",
-              "the",
-              "sociologist",
-              "insist",
-              "the",
-              "survey",
-              "remain",
-              "anonymous."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q11",
-            "type": "translation-text",
-            "prompt": "The historians demanded that access to primary sources be granted without delay. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The historians demanded that access to primary sources be granted without delay.",
-            "correctSentence": "Tarihçiler, birincil kaynaklara erişimin gecikmeden sağlanmasını talep ettiler.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l92_ex1_q12",
-            "type": "translation-text",
-            "prompt": "It is essential that empirical data be distributed efficiently among economists. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is essential that empirical data be distributed efficiently among economists.",
-            "correctSentence": "Ampirik verilerin iktisatçılar arasında verimli bir şekilde dağıtılması esastır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
             ]
           }
         ]
@@ -14526,13 +12822,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'They request that the commission resolve the dispute.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"They request that the commission resolve the dispute.\"</span>",
             "options": [
               "Komisyonun anlaşmazlığı çözmesini talep ediyorlar.",
               "Komisyonun anlaşmazlığı çözmesini bekliyorlar.",
@@ -14545,230 +12842,89 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is critical that the research funding be secured.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Araştırma fonunun güvence altına alınması kritik öneme sahiptir.",
               "Güvence altına alınan araştırma fonu kritik öneme sahiptir.",
+              "Araştırma fonunun güvence altına alınması kritik öneme sahiptir.",
               "Kritik araştırma fonlarının güvence altına alınması gerekiyor.",
               "Araştırma fonunun kritik durumlarda güvenceye alınması esastır."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "It is critical that the research funding be secured.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The psychologist recommended that behavior be analyzed.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The psychologist recommended that behavior be analyzed.\"</span>",
             "options": [
-              "Psikolog davranışın analiz edilmesini tavsiye etti.",
               "Psikolog davranışı analiz etmek için tavsiyede bulundu.",
               "Davranışın analiz edilmesi psikologca önerildi.",
+              "Psikolog davranışın analiz edilmesini tavsiye etti.",
               "Psikolog analiz edilmiş davranışları önerdi."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "The psychologist recommended that behavior be analyzed.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l92_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We insist that primary sources be accessible.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We insist that primary sources be accessible.\"</span>",
             "options": [
-              "Birincil kaynakların erişilebilir olmasında ısrar ediyoruz.",
               "Birincil kaynaklara erişilmesinde ısrarcıyız.",
               "Erişilebilir birincil kaynakların kullanılmasında ısrar ediyoruz.",
-              "Birincil kaynakların erişim kolaylığı sağlamasını istiyoruz."
+              "Birincil kaynakların erişim kolaylığı sağlamasını istiyoruz.",
+              "Birincil kaynakların erişilebilir olmasında ısrar ediyoruz."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "We insist that primary sources be accessible.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin (Subjunctive yapıda fiil yalın olmalıdır!):",
-            "sentence": "It was essential that the anonymous survey ___ conducted objectively.",
-            "options": [
-              "be",
-              "is",
-              "was",
-              "will be"
-            ],
-            "correctIndex": 0,
-            "translation": "İsimsiz anketin tarafsız bir şekilde yürütülmesi esastı.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin:",
-            "sentence": "Economists urge that the severe financial crisis ___ ignored.",
-            "options": [
-              "not be",
-              "is not",
-              "was not",
-              "should not be"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, şiddetli finansal krizin göz ardı edilmemesini ısrarla talep ediyorlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin:",
-            "sentence": "The university guidelines require that the monograph ___ peer-reviewed.",
-            "options": [
-              "be",
-              "is",
-              "was",
-              "has been"
-            ],
-            "correctIndex": 0,
-            "translation": "Üniversite yönergeleri, monografinin akran denetiminden geçmesini şart koşar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Psikologlar grubun ortak davranışının tarafsız olarak değerlendirilmesini önerdiler.",
-            "enSentence": "The psychologists suggested that the collective behavior of the group be evaluated objectively.",
-            "words": [
-              "Psikologlar",
-              "grubun",
-              "ortak",
-              "davranışının",
-              "tarafsız",
-              "olarak",
-              "değerlendirilmesini",
-              "önerdiler.",
-              "kriz",
-              "fon"
-            ],
-            "correctOrder": [
-              "Psikologlar",
-              "grubun",
-              "ortak",
-              "davranışının",
-              "tarafsız",
-              "olarak",
-              "değerlendirilmesini",
-              "önerdiler."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Tarihçiler komisyonun çözülmemiş akademik anlaşmazlığı çözmesini talep ettiler.",
-            "enSentence": "The historians demanded that the commission resolve the unresolved academic dispute.",
-            "words": [
-              "The",
-              "historians",
-              "demanded",
-              "that",
-              "the",
-              "commission",
-              "resolve",
-              "the",
-              "unresolved",
-              "academic",
-              "dispute.",
-              "resolves",
-              "resolved"
-            ],
-            "correctOrder": [
-              "The",
-              "historians",
-              "demanded",
-              "that",
-              "the",
-              "commission",
-              "resolve",
-              "the",
-              "unresolved",
-              "academic",
-              "dispute."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q11",
-            "type": "translation-text",
-            "prompt": "It is recommended that the distributed funding be monitored regularly. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is recommended that the distributed funding be monitored regularly.",
-            "correctSentence": "Dağıtılan fonun düzenli olarak izlenmesi tavsiye edilir.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l92_ex2_q12",
-            "type": "translation-text",
-            "prompt": "We suggest that empirical data be distributed according to guidelines. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "We suggest that empirical data be distributed according to guidelines.",
-            "correctSentence": "Ampirik verilerin yönergelere göre dağıtılmasını öneriyoruz.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim ve Edat Yapıları",
               "İsim Tamlamaları"
             ]
           }
@@ -14806,13 +12962,14 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is crucial that the commission resolve the unresolved academic dispute.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is crucial that the commission resolve the unresolved academic dispute.\"</span>",
             "options": [
               "Komisyonun çözülmemiş akademik anlaşmazlığı çözmesi kritik öneme sahiptir.",
               "Kritik akademik anlaşmazlığın komisyon tarafından çözülmesi gerekiyor.",
@@ -14825,20 +12982,21 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Psychologists recommended that behavior be evaluated objectively in sociological surveys.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Psikologlar, sosyolojik anketlerde davranışın tarafsız olarak değerlendirilmesini tavsiye ettiler.",
               "Sosyolojik anketlerde tarafsız değerlendirilen davranışlar psikologlarca önerildi.",
+              "Psikologlar, sosyolojik anketlerde davranışın tarafsız olarak değerlendirilmesini tavsiye ettiler.",
               "Psikologlar davranışları tarafsız değerlendirmek amacıyla sosyolojik anketler önerdiler.",
               "Psikologlar, davranışları değerlendirirken sosyolojik anketlerin tarafsız kalmasını tavsiye ettiler."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "Psychologists recommended that behavior be evaluated objectively in sociological surveys.",
             "isEngToTr": true,
             "grammarTags": [
@@ -14846,39 +13004,59 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l92_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Historians insist that access to primary sources remain unrestricted.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Historians insist that access to primary sources remain unrestricted.\"</span>",
             "options": [
-              "Tarihçiler, birincil kaynaklara erişimin kısıtlanmamış kalmasında ısrar ediyorlar.",
               "Tarihçiler birincil kaynaklara erişim kısıtlamalarının kaldırılmasını istiyorlar.",
               "Birincil kaynaklara erişimin kısıtlanmamış olması tarihçiler için esastır.",
+              "Tarihçiler, birincil kaynaklara erişimin kısıtlanmamış kalmasında ısrar ediyorlar.",
               "Tarihçilerin ısrarıyla birincil kaynaklara erişim kısıtlamasız hale getirildi."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "Historians insist that access to primary sources remain unrestricted.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l92_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The economists demanded that the distributed funding be managed efficiently.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The economists demanded that the distributed funding be managed efficiently.\"</span>",
             "options": [
-              "İktisatçılar, dağıtılan fonun verimli bir şekilde yönetilmesini talep ettiler.",
               "İktisatçılar verimli dağıtılan fonların yönetilmesini talep ediyorlar.",
               "Fonların verimli yönetilmesi iktisatçılar tarafından talep edildi.",
-              "İktisatçılar dağıtılan fonların verimli yönetileceğini doğruladılar."
+              "İktisatçılar dağıtılan fonların verimli yönetileceğini doğruladılar.",
+              "İktisatçılar, dağıtılan fonun verimli bir şekilde yönetilmesini talep ettiler."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "The economists demanded that the distributed funding be managed efficiently.",
             "isEngToTr": true,
             "grammarTags": [
@@ -14886,172 +13064,8 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin:",
-            "sentence": "It is essential that the guidelines specified by economists ___ followed strictly.",
-            "options": [
-              "be",
-              "is",
-              "was",
-              "will be"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar tarafından belirtilen yönergelere sıkı sıkıya uyulması esastır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin:",
-            "sentence": "The university board requested that the monograph ___ finalized this semester.",
-            "options": [
-              "be",
-              "is",
-              "was",
-              "has been"
-            ],
-            "correctIndex": 0,
-            "translation": "Üniversite kurulu, monografinin bu dönem kesinleştirilmesini talep etti.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause yapısını seçin:",
-            "sentence": "The law requires that access to primary sources ___ denied without legal ground.",
-            "options": [
-              "not be",
-              "is not",
-              "was not",
-              "will not be"
-            ],
-            "correctIndex": 0,
-            "translation": "Yasa, yasal gerekçe olmaksızın birincil kaynaklara erişimin reddedilmemesini şart koşar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Sosyologlar isimsiz anketin tarafsız bir şekilde yürütülmesini talep ettiler.",
-            "enSentence": "The sociologists demanded that the anonymous survey be conducted objectively.",
-            "words": [
-              "Sosyologlar",
-              "isimsiz",
-              "anketin",
-              "tarafsız",
-              "bir",
-              "şekilde",
-              "yürütülmesini",
-              "talep",
-              "ettiler.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Sosyologlar",
-              "isimsiz",
-              "anketin",
-              "tarafsız",
-              "bir",
-              "şekilde",
-              "yürütülmesini",
-              "talep",
-              "ettiler."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Komisyon, deneysel verilerin verimli bir şekilde dağıtılmasını önerdi.",
-            "enSentence": "The commission suggested that empirical data be distributed efficiently.",
-            "words": [
-              "The",
-              "commission",
-              "suggested",
-              "that",
-              "empirical",
-              "data",
-              "be",
-              "distributed",
-              "efficiently.",
-              "is",
-              "was"
-            ],
-            "correctOrder": [
-              "The",
-              "commission",
-              "suggested",
-              "that",
-              "empirical",
-              "data",
-              "be",
-              "distributed",
-              "efficiently."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q11",
-            "type": "translation-text",
-            "prompt": "It is vital that collective behavior of consumers be monitored during a financial crisis. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is vital that collective behavior of consumers be monitored during a financial crisis.",
-            "correctSentence": "Tüketicilerin ortak davranışlarının bir finansal kriz sırasında izlenmesi hayati önem taşır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l92_ex3_q12",
-            "type": "translation-text",
-            "prompt": "The psychologists insisted that we evaluate behavior objectively. cümlesini İngilizce'ye çevirin:",
-            "enSentence": "The psychologists insisted that we evaluate behavior objectively.",
-            "correctSentence": "The psychologists insisted that we evaluate behavior objectively.",
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "Zamanlar"
             ]
           }
         ]
@@ -15091,13 +13105,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim ve Edat Yapıları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l93_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'concerned about whether the crisis will end'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"concerned about whether the crisis will end\"</span>",
             "options": [
               "krizin bitip bitmeyeceği konusunda endişeli",
               "kriz bittiğinde duyulacak endişe",
@@ -15110,228 +13125,88 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l93_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'confident that the dispute will be resolved'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "anlaşmazlığın çözüleceğinden emin",
               "anlaşmazlığı çözen kararlardan emin",
+              "anlaşmazlığın çözüleceğinden emin",
               "anlaşmazlığın çözülmesi durumunda duyulan güven",
               "anlaşmazlığı çözecek komisyona güvenen"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "confident that the dispute will be resolved",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Edilgen Yapı (Passive)"
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l93_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'clue as to how behavior is collective'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"clue as to how behavior is collective\"</span>",
             "options": [
-              "davranışın nasıl kolektif olduğuna dair ipucu",
               "kolektif davranışları açıklayan ipuçları",
               "davranışın kolektif olmasıyla ilgili veriler",
+              "davranışın nasıl kolektif olduğuna dair ipucu",
               "davranışın kolektif özelliklerini gösteren bulgular"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "clue as to how behavior is collective",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l93_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'aware that access is restricted'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"aware that access is restricted\"</span>",
             "options": [
-              "erişimin kısıtlı olduğunun farkında",
               "kısıtlı erişimin farkına varan",
               "erişimi kısıtlayan kuralların farkında",
-              "erişim kısıtlamalarını kaldıran"
+              "erişim kısıtlamalarını kaldıran",
+              "erişimin kısıtlı olduğunun farkında"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "aware that access is restricted",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Edilgen Yapı (Passive)"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The economists are confident ___ the new guidelines will work.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar yeni yönergelerin işe yarayacağından eminler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The historians have no clue as to ___ the primary sources are stored.",
-            "options": [
-              "where",
-              "that",
-              "whether",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçilerin birincil kaynakların nerede saklandığına dair hiçbir ipuçları yok.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The commission is aware ___ the research funding is limited.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyon, araştırma fonunun sınırlı olduğunun farkındadır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Psikologlar anketin isimsiz olup olmadığı konusunda endişeliydiler.",
-            "enSentence": "The psychologists were concerned about whether the survey was anonymous.",
-            "words": [
-              "Psikologlar",
-              "anketin",
-              "isimsiz",
-              "olup",
-              "olmadığı",
-              "konusunda",
-              "endişeliydiler.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Psikologlar",
-              "anketin",
-              "isimsiz",
-              "olup",
-              "olmadığı",
-              "konusunda",
-              "endişeliydiler."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "İktisatçılar dağıtılan fonun nasıl değerlendirildiğine kayıtsızdırlar.",
-            "enSentence": "The economists are indifferent to how the distributed funding is evaluated.",
-            "words": [
-              "The",
-              "economists",
-              "are",
-              "indifferent",
-              "to",
-              "how",
-              "the",
-              "distributed",
-              "funding",
-              "is",
-              "evaluated.",
-              "that",
-              "whether"
-            ],
-            "correctOrder": [
-              "The",
-              "economists",
-              "are",
-              "indifferent",
-              "to",
-              "how",
-              "the",
-              "distributed",
-              "funding",
-              "is",
-              "evaluated."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q11",
-            "type": "translation-text",
-            "prompt": "We are convinced that the unresolved academic dispute can be resolved efficiently. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "We are convinced that the unresolved academic dispute can be resolved efficiently.",
-            "correctSentence": "Çözülmemiş akademik anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex1_q12",
-            "type": "translation-text",
-            "prompt": "The researchers are aware that access to primary sources requires validation. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The researchers are aware that access to primary sources requires validation.",
-            "correctSentence": "Araştırmacılar, birincil kaynaklara erişimin doğrulama gerektirdiğinin farkındadırlar.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
             ]
           }
         ]
@@ -15367,13 +13242,14 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l93_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'They are concerned about whether the crisis will expand.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"They are concerned about whether the crisis will expand.\"</span>",
             "options": [
               "Krizin büyüyüp büyümeyeceği konusunda endişeliler.",
               "Krizin büyüyeceği beklentisi endişe yaratıyor.",
@@ -15386,39 +13262,42 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l93_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The psychologist is sure that collective behavior is measurable.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Psikolog, kolektif davranışın ölçülebilir olduğundan emindir.",
               "Kolektif davranışın ölçülebilir olmasını sağlayan psikolog emindir.",
+              "Psikolog, kolektif davranışın ölçülebilir olduğundan emindir.",
               "Psikolog kolektif davranışları ölçmek için emindir.",
               "Psikoloğun emin olduğu şey kolektif davranışların ölçülmesidir."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "The psychologist is sure that collective behavior is measurable.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l93_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We have no agreement on how to distribute funding.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We have no agreement on how to distribute funding.\"</span>",
             "options": [
-              "Fonun nasıl dağıtılacağı konusunda hiçbir anlaşmamız yok.",
               "Fonun dağıtılmasını onaylayan hiçbir anlaşma yoktur.",
               "Fonların dağıtımı konusunda anlaşmaya varmaya çalışıyoruz.",
+              "Fonun nasıl dağıtılacağı konusunda hiçbir anlaşmamız yok.",
               "Fonun nasıl dağıtıldığını gösteren hiçbir anlaşma yapılmadı."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "We have no agreement on how to distribute funding.",
             "isEngToTr": true,
             "grammarTags": [
@@ -15426,191 +13305,46 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "İsim ve Edat Yapıları",
               "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l93_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'Historians are aware that access was denied.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Historians are aware that access was denied.\"</span>",
             "options": [
-              "Tarihçiler erişimin reddedildiğinin farkındadırlar.",
               "Tarihçiler erişimin engelleneceğinin farkına vardılar.",
               "Erişimin reddedilmesi tarihçileri farkında kıldı.",
-              "Tarihçiler reddedilen erişim haklarının farkındadırlar."
+              "Tarihçiler reddedilen erişim haklarının farkındadırlar.",
+              "Tarihçiler erişimin reddedildiğinin farkındadırlar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "Historians are aware that access was denied.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin (Edattan sonra 'that' gelemez!):",
-            "sentence": "Economists are concerned about ___ the severe crisis will affect guidelines.",
-            "options": [
-              "how",
-              "that",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, şiddetli krizin yönergeleri nasıl etkileyeceği konusunda endişeliler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The commission is certain ___ the academic dispute was resolved.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyon, akademik anlaşmazlığın çözüldüğünden emindir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin (Edattan sonra 'that' gelemez!):",
-            "sentence": "The historians argued about ___ access to primary sources was restricted.",
-            "options": [
-              "whether",
-              "that",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler, birincil kaynaklara erişimin kısıtlanıp kısıtlanmadığı hakkında tartıştılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "Zamanlar",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Sosyologlar anketin isimsiz olup olmadığına odaklandılar.",
-            "enSentence": "Sociologists focused on whether the survey was anonymous.",
-            "words": [
-              "Sosyologlar",
-              "anketin",
-              "isimsiz",
-              "olup",
-              "olmadığına",
-              "odaklandılar.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Sosyologlar",
-              "anketin",
-              "isimsiz",
-              "olup",
-              "olmadığına",
-              "odaklandılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Tarihçi birincil kaynaklara erişimin kısıtlı kalacağından emindir.",
-            "enSentence": "The historian is confident that access to primary sources will remain restricted.",
-            "words": [
-              "The",
-              "historian",
-              "is",
-              "confident",
-              "that",
-              "access",
-              "to",
-              "primary",
-              "sources",
-              "will",
-              "remain",
-              "restricted.",
-              "whether",
-              "if"
-            ],
-            "correctOrder": [
-              "The",
-              "historian",
-              "is",
-              "confident",
-              "that",
-              "access",
-              "to",
-              "primary",
-              "sources",
-              "will",
-              "remain",
-              "restricted."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q11",
-            "type": "translation-text",
-            "prompt": "The psychologists are concerned about how collective behavior is evaluated. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The psychologists are concerned about how collective behavior is evaluated.",
-            "correctSentence": "Psikologlar, kolektif davranışın nasıl değerlendirildiği konusunda endişeliler.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex2_q12",
-            "type": "translation-text",
-            "prompt": "The commission is indifferent to whether economists finalise the new guidelines. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The commission is indifferent to whether economists finalise the new guidelines.",
-            "correctSentence": "Komisyon, iktisatçıların yeni yönergeleri kesinleştirip kesinleştirmeyeceğine kayıtsızdır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları"
             ]
           }
         ]
@@ -15653,7 +13387,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u28l93_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The psychologists were concerned about whether the sociological survey was anonymous.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The psychologists were concerned about whether the sociological survey was anonymous.\"</span>",
             "options": [
               "Psikologlar, sosyolojik anketin isimsiz olup olmadığı konusunda endişeliydiler.",
               "Sosyolojik anketin isimsiz olması psikologların endişelerini giderdi.",
@@ -15672,15 +13406,15 @@ Object.assign(unitSentencesMap, {
           },
           {
             "id": "u28l93_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The economists are indifferent to how the distributed funding is evaluated.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "İktisatçılar, dağıtılan fonun nasıl değerlendirildiğine kayıtsızdırlar.",
               "İktisatçılar dağıtılan fonların değerlendirilmesini gereksiz buluyorlar.",
+              "İktisatçılar, dağıtılan fonun nasıl değerlendirildiğine kayıtsızdırlar.",
               "Dağıtılan fonların değerlendirilmesi iktisatçıların ilgisini çekmiyor.",
               "İktisatçılar fon dağıtımının nasıl değerlendirileceğini umursamıyorlar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "The economists are indifferent to how the distributed funding is evaluated.",
             "isEngToTr": true,
             "grammarTags": [
@@ -15693,15 +13427,15 @@ Object.assign(unitSentencesMap, {
           },
           {
             "id": "u28l93_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We are convinced that the unresolved academic dispute can be resolved efficiently.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We are convinced that the unresolved academic dispute can be resolved efficiently.\"</span>",
             "options": [
-              "Çözülmemiş akademik anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk.",
               "Akademik anlaşmazlığı verimli çözmek için çözülmemiş konuları inceledik.",
               "İkna olduğumuz şey çözülmemiş akademik anlaşmazlığın çözülmesidir.",
+              "Çözülmemiş akademik anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk.",
               "Akademik anlaşmazlığın verimli çözülmesiyle ilgili konulara ikna olduk."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "We are convinced that the unresolved academic dispute can be resolved efficiently.",
             "isEngToTr": true,
             "grammarTags": [
@@ -15709,195 +13443,46 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l93_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The historians are aware that access to primary sources remains restricted.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The historians are aware that access to primary sources remains restricted.\"</span>",
             "options": [
-              "Tarihçiler, birincil kaynaklara erişimin kısıtlı kalmaya devam ettiğinin farkındadırlar.",
               "Tarihçiler birincil kaynaklara erişim kısıtlamalarının farkına vardılar.",
               "Kısıtlı kalan birincil kaynaklara erişim tarihçilerin kontrolündedir.",
-              "Tarihçiler, birincil kaynaklara erişimin kısıtlanacağından haberdardırlar."
+              "Tarihçiler, birincil kaynaklara erişimin kısıtlanacağından haberdardırlar.",
+              "Tarihçiler, birincil kaynaklara erişimin kısıtlı kalmaya devam ettiğinin farkındadırlar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "The historians are aware that access to primary sources remains restricted.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Psychologists are confident ___ their extensive surveys will evaluate behavioral patterns.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikologlar, kapsamlı anketlerinin davranış kalıplarını değerlendireceğinden eminler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Historians debated on ___ the empirical data was distributed according to rules.",
-            "options": [
-              "whether",
-              "that",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler, ampirik verilerin kurallara göre dağıtılıp dağıtılmadığı üzerine tartıştılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The economists are aware ___ the severe financial crisis is far from resolved.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, şiddetli finansal krizin çözülmekten uzak olduğunun farkındadırlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Komisyon, dağıtılan fonun verimli bir şekilde yönetildiğinden emindir.",
-            "enSentence": "The commission is confident that the distributed funding is managed efficiently.",
-            "words": [
-              "Komisyon",
-              "dağıtılan",
-              "fonun",
-              "verimli",
-              "bir",
-              "şekilde",
-              "yönetildiğinden",
-              "emindir.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Komisyon",
-              "dağıtılan",
-              "fonun",
-              "verimli",
-              "bir",
-              "şekilde",
-              "yönetildiğinden",
-              "emindir."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Tarihçiler birincil kaynakların nerede bulunduğuna dair hiçbir ipucuna sahip değiller.",
-            "enSentence": "The historians have no clue as to where primary sources are located.",
-            "words": [
-              "The",
-              "historians",
-              "have",
-              "no",
-              "clue",
-              "as",
-              "to",
-              "where",
-              "primary",
-              "sources",
-              "are",
-              "located.",
-              "that",
-              "whether"
-            ],
-            "correctOrder": [
-              "The",
-              "historians",
-              "have",
-              "no",
-              "clue",
-              "as",
-              "to",
-              "where",
-              "primary",
-              "sources",
-              "are",
-              "located."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q11",
-            "type": "translation-text",
-            "prompt": "The psychologists are aware that collective behavior fluctuates under a severe crisis. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The psychologists are aware that collective behavior fluctuates under a severe crisis.",
-            "correctSentence": "Psikologlar, kolektif davranışın şiddetli bir kriz altında dalgalandığının farkındadırlar.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l93_ex3_q12",
-            "type": "translation-text",
-            "prompt": "We are certain that the unresolved dispute can be resolved with empirical data. cümlesini İngilizce'ye çevirin:",
-            "enSentence": "We are certain that the unresolved dispute can be resolved with empirical data.",
-            "correctSentence": "We are certain that the unresolved dispute can be resolved with empirical data.",
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "Zamanlar",
               "İsim Tamlamaları"
             ]
           }
@@ -15937,13 +13522,15 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'the finding that was published last term'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"the finding that was published last term\"</span>",
             "options": [
               "geçen dönem yayımlanan bulgu (Sıfat Cümleciği)",
               "bulgunun geçen dönem yayımlandığı gerçeği (İsim Cümleciği)",
@@ -15956,218 +13543,88 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'the finding that empirical data was leaked'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "ampirik verilerin sızdırıldığı bulgusu (İsim Cümleciği)",
               "sızdırılan ampirik verilerin bulguları (Sıfat Cümleciği)",
+              "ampirik verilerin sızdırıldığı bulgusu (İsim Cümleciği)",
               "ampirik verilerin sızdırılacağını gösteren bulgular",
               "verilerin sızmasıyla elde edilen ampirik bulgular"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "the finding that empirical data was leaked",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'what the psychologists finalized yesterday'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"what the psychologists finalized yesterday\"</span>",
             "options": [
-              "psikologların dün kesinleştirdiği şey (İsim Cümleciği)",
               "psikologların dün kesinleştirdiği monografi (Sıfat Cümleciği)",
               "psikologların dün kesinleştirme kararı alması",
+              "psikologların dün kesinleştirdiği şey (İsim Cümleciği)",
               "dün kesinleşen psikolojik bulgular"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "what the psychologists finalized yesterday",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l94_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'the monograph that they finalized yesterday'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"the monograph that they finalized yesterday\"</span>",
             "options": [
-              "dün kesinleştirdikleri monografi (Sıfat Cümleciği)",
               "monografiyi dün kesinleştirdikleri gerçeği (İsim Cümleciği)",
               "dün kesinleşmesi gereken monografi",
-              "monografinin dün kesinleştiği beklentisi"
+              "monografinin dün kesinleştiği beklentisi",
+              "dün kesinleştirdikleri monografi (Sıfat Cümleciği)"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "the monograph that they finalized yesterday",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin (Cümle eksiktir, nesne düşmüştür!):",
-            "sentence": "The economists analyzed the guidelines ___ the commission finalized last week.",
-            "options": [
-              "that",
-              "what",
-              "whether",
-              "how"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar komisyonun geçen hafta kesinleştirdiği yönergeleri analiz ettiler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin (Cümle tamdır, isim cümleciği nesnesidir!):",
-            "sentence": "The economists explained ___ they finalized the new guidelines.",
-            "options": [
-              "that",
-              "what",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar yeni yönergeleri kesinleştirdiklerini açıkladılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin (Nesne görevi gören bir wh- kelimesi gerekmektedir!):",
-            "sentence": "We want to know ___ the commission resolved during the meeting.",
-            "options": [
-              "what",
-              "that",
-              "which",
-              "whether"
-            ],
-            "correctIndex": 0,
-            "translation": "Toplantı sırasında komisyonun neyi çözdüğünü bilmek istiyoruz.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Tarihçiler komisyonun çözdüğü anlaşmazlığı analiz ettiler.",
-            "enSentence": "The historians analyzed the dispute that the commission resolved.",
-            "words": [
-              "Tarihçiler",
-              "komisyonun",
-              "çözdüğü",
-              "anlaşmazlığı",
-              "analiz",
-              "ettiler.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Tarihçiler",
-              "komisyonun",
-              "çözdüğü",
-              "anlaşmazlığı",
-              "analiz",
-              "ettiler."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Sıfat Cümlecikleri (Relative Clauses)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Tarihçiler komisyonun anlaşmazlığı çözdüğünü biliyorlar.",
-            "enSentence": "The historians know that the commission resolved the dispute.",
-            "words": [
-              "The",
-              "historians",
-              "know",
-              "that",
-              "the",
-              "commission",
-              "resolved",
-              "the",
-              "dispute.",
-              "what",
-              "which"
-            ],
-            "correctOrder": [
-              "The",
-              "historians",
-              "know",
-              "that",
-              "the",
-              "commission",
-              "resolved",
-              "the",
-              "dispute."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q11",
-            "type": "translation-text",
-            "prompt": "The psychologists evaluated what the survey indicated about collective behavior. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The psychologists evaluated what the survey indicated about collective behavior.",
-            "correctSentence": "Psikologlar, anketin kolektif davranış hakkında neyi gösterdiğini değerlendirdiler.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex1_q12",
-            "type": "translation-text",
-            "prompt": "The survey that evaluates opinions was distributed anonymous. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The survey that evaluates opinions was distributed anonymous.",
-            "correctSentence": "Görüşleri değerlendiren anket isimsiz olarak dağıtıldı.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "Edilgen Yapı (Passive)"
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -16202,13 +13659,15 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The monograph that the psychologist finalized was controversial.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The monograph that the psychologist finalized was controversial.\"</span>",
             "options": [
               "Psikoloğun kesinleştirdiği monografi tartışmalıydı (Sıfat Cümleciği)",
               "Psikoloğun monografiyi kesinleştirdiği gerçeği tartışmalıydı (İsim Cümleciği)",
@@ -16221,222 +13680,90 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The psychologist explained what he finalized last term.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Psikolog geçen dönem neyi kesinleştirdiğini açıkladı (İsim Cümleciği)",
               "Psikolog geçen dönem kesinleştirdiği monografiyi açıkladı (Sıfat Cümleciği)",
+              "Psikolog geçen dönem neyi kesinleştirdiğini açıkladı (İsim Cümleciği)",
               "Psikoloğun geçen dönem kesinleştirdiği şeyler açıklandı",
               "Geçen dönem kesinleşen monografi psikologca açıklandı"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "The psychologist explained what he finalized last term.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The survey that evaluates opinions was anonymous.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The survey that evaluates opinions was anonymous.\"</span>",
             "options": [
-              "Görüşleri değerlendiren anket isimsizdi (Sıfat Cümleciği)",
               "Anketin görüşleri değerlendirdiği gerçeği isimsizdi (İsim Cümleciği)",
               "İsimsiz anket kamuoyu görüşlerini değerlendirdi",
+              "Görüşleri değerlendiren anket isimsizdi (Sıfat Cümleciği)",
               "Kamuoyu görüşlerini değerlendirmek amacıyla anket isimsiz yapıldı"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "The survey that evaluates opinions was anonymous.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l94_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We know what the survey evaluates.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We know what the survey evaluates.\"</span>",
             "options": [
-              "Anketin neyi değerlendirdiğini biliyoruz (İsim Cümleciği)",
               "Anketin değerlendirdiği kamuoyu görüşlerini biliyoruz (Sıfat Cümleciği)",
               "Değerlendirilen anketin sonuçlarını biliyoruz",
-              "Bizce anketin neyi değerlendireceği biliniyor"
+              "Bizce anketin neyi değerlendireceği biliniyor",
+              "Anketin neyi değerlendirdiğini biliyoruz (İsim Cümleciği)"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "We know what the survey evaluates.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
-            "sentence": "The historians confirmed ___ primary sources had been stored in the archive.",
-            "options": [
-              "that",
-              "what",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler, birincil kaynakların arşivde saklanmış olduğunu onayladılar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
               "Zamanlar",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
-            "sentence": "The historians evaluated the primary sources ___ had been stored in the archive.",
-            "options": [
-              "that",
-              "what",
-              "whether",
-              "how"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler, arşivde saklanmış olan birincil kaynakları değerlendirdiler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
-            "sentence": "Economists are debating ___ the distributed funding will support the research efficiently.",
-            "options": [
-              "whether",
-              "that",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, dağıtılan fonun araştırmayı verimli bir şekilde destekleyip desteklemeyeceğini tartışıyorlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "İktisatçıların dağıttığı ampirik verileri analiz ettik.",
-            "enSentence": "We analyzed the empirical data that economists distributed.",
-            "words": [
-              "İktisatçıların",
-              "dağıttığı",
-              "ampirik",
-              "verileri",
-              "analiz",
-              "ettik.",
-              "kriz",
-              "anlaşmazlık"
-            ],
-            "correctOrder": [
-              "İktisatçıların",
-              "dağıttığı",
-              "ampirik",
-              "verileri",
-              "analiz",
-              "ettik."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Ampirik verilerin verimli bir şekilde dağıtılıp dağıtılmadığını tartıştık.",
-            "enSentence": "We debated whether empirical data was distributed efficiently.",
-            "words": [
-              "We",
-              "debated",
-              "whether",
-              "empirical",
-              "data",
-              "was",
-              "distributed",
-              "efficiently.",
-              "that",
-              "which"
-            ],
-            "correctOrder": [
-              "We",
-              "debated",
-              "whether",
-              "empirical",
-              "data",
-              "was",
-              "distributed",
-              "efficiently."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q11",
-            "type": "translation-text",
-            "prompt": "The guidelines that the economists specified resolved the severe financial crisis. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The guidelines that the economists specified resolved the severe financial crisis.",
-            "correctSentence": "İktisatçıların belirttiği yönergeler şiddetli finansal krizi çözdü.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l94_ex2_q12",
-            "type": "translation-text",
-            "prompt": "The economists specified that the guidelines would resolve the severe financial crisis. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "The economists specified that the guidelines would resolve the severe financial crisis.",
-            "correctSentence": "İktisatçılar yönergelerin şiddetli finansal krizi çözeceğini belirttiler.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -16474,13 +13801,14 @@ Object.assign(unitSentencesMap, {
               "Sıfat Cümlecikleri (Relative Clauses)",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The announcement that the commission resolved the dispute surprised the economists.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The announcement that the commission resolved the dispute surprised the economists.\"</span>",
             "options": [
               "Komisyonun anlaşmazlığı çözdüğü duyurusu iktisatçıları şaşırttı.",
               "Anlaşmazlığı çözen komisyonun duyurusu iktisatçıları şaşırttı.",
@@ -16493,231 +13821,91 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The commission that resolved the dispute received reliable funding.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Anlaşmazlığı çözen komisyon güvenilir fon aldı.",
               "Komisyonun anlaşmazlığı çözdüğü gerçeği fon sağladı.",
+              "Anlaşmazlığı çözen komisyon güvenilir fon aldı.",
               "Anlaşmazlığı çözmek amacıyla komisyon güvenilir fon aldı.",
               "Güvenilir fon alan komisyon anlaşmazlıkları çözdü."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "The commission that resolved the dispute received reliable funding.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Sıfat Cümlecikleri (Relative Clauses)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l94_ex3_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We analyzed the empirical data that they distributed.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We analyzed the empirical data that they distributed.\"</span>",
             "options": [
-              "Dağıttıkları ampirik verileri analiz ettik.",
               "Dağıtılması gereken ampirik verileri analiz ettik.",
               "Ampirik verilerin nasıl dağıtıldığını analiz ettik.",
+              "Dağıttıkları ampirik verileri analiz ettik.",
               "Verilerin ampirik olarak dağıtıldığını doğruladık."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "We analyzed the empirical data that they distributed.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Sıfat Cümlecikleri (Relative Clauses)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l94_ex3_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We debated whether the empirical data was distributed efficiently.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We debated whether the empirical data was distributed efficiently.\"</span>",
             "options": [
-              "Ampirik verilerin verimli dağıtılıp dağıtılmadığını tartıştık.",
               "Ampirik verileri verimli dağıtan komisyonla tartıştık.",
               "Deneysel verilerin verimli dağıtılmasının önemini tartıştık.",
-              "Verimli dağıtılan ampirik verilerin analizini tartıştık."
+              "Verimli dağıtılan ampirik verilerin analizini tartıştık.",
+              "Ampirik verilerin verimli dağıtılıp dağıtılmadığını tartıştık."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "We debated whether the empirical data was distributed efficiently.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
-            "sentence": "The survey ___ the psychologist finalized yesterday was anonymous.",
-            "options": [
-              "that",
-              "what",
-              "whether",
-              "how"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikoloğun dün kesinleştirdiği anket isimsizdi.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
-            "sentence": "The psychologist finalized ___ the survey questions required.",
-            "options": [
-              "what",
-              "that",
-              "whether",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikolog, anket sorularının gerektirdiği şeyi kesinleştirdi.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
-            "sentence": "The commission ___ resolved the unresolved academic dispute received the funding.",
-            "options": [
-              "that",
-              "what",
-              "whether",
-              "how"
-            ],
-            "correctIndex": 0,
-            "translation": "Çözülmemiş akademik anlaşmazlığı çözen komisyon fonu aldı.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Tarihçiler birincil kaynaklara erişimin kısıtlı kalmaya devam etmesini tartıştılar.",
-            "enSentence": "The historians discussed that access to primary sources remains restricted.",
-            "words": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "kısıtlı",
-              "kalmaya",
-              "devam",
-              "etmesini",
-              "tartıştılar.",
-              "anlaşmazlık",
-              "veri"
-            ],
-            "correctOrder": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "kısıtlı",
-              "kalmaya",
-              "devam",
-              "etmesini",
-              "tartıştılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim ve Edat Yapıları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Tarihçiler erişimi kısıtlayan birincil kaynakları değerlendirdiler.",
-            "enSentence": "The historians evaluated the primary sources that restricted access.",
-            "words": [
-              "The",
-              "historians",
-              "evaluated",
-              "the",
-              "primary",
-              "sources",
-              "that",
-              "restricted",
-              "access.",
-              "what",
-              "whether"
-            ],
-            "correctOrder": [
-              "The",
-              "historians",
-              "evaluated",
-              "the",
-              "primary",
-              "sources",
-              "that",
-              "restricted",
-              "access."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q11",
-            "type": "translation-text",
-            "prompt": "Whether psychologists evaluate behavior objectively determines the validity of the monograph. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whether psychologists evaluate behavior objectively determines the validity of the monograph.",
-            "correctSentence": "Psikologların davranışı tarafsız değerlendirip değerlendirmesi monografinin geçerliliğini belirler.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l94_ex3_q12",
-            "type": "translation-text",
-            "prompt": "The psychologists evaluated the monograph that was finalized by the commission. cümlesini İngilizce'ye çevirin:",
-            "enSentence": "The psychologists evaluated the monograph that was finalized by the commission.",
-            "correctSentence": "The psychologists evaluated the monograph that was finalized by the commission.",
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -16764,7 +13952,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u28l95_ex1_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'whether the financial crisis can be resolved'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"whether the financial crisis can be resolved\"</span>",
             "options": [
               "finansal krizin çözülüp çözülemeyeceği",
               "finansal krizin nasıl çözüleceği gerçeği",
@@ -16777,226 +13965,88 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Edilgen Yapı (Passive)"
+              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l95_ex1_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'that the commission resolve the dispute'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "komisyonun anlaşmazlığı çözmesi (tavsiye/talep)",
               "komisyonun çözdüğü anlaşmazlık",
+              "komisyonun anlaşmazlığı çözmesi (tavsiye/talep)",
               "komisyonun anlaşmazlığı çözeceği gerçeği",
               "anlaşmazlığı çözen komisyon kararı"
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "that the commission resolve the dispute",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l95_ex1_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'why access to primary sources was denied'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"why access to primary sources was denied\"</span>",
             "options": [
-              "birincil kaynaklara erişimin neden reddedildiği",
               "birincil kaynaklara erişim reddedildiğinde",
               "erişimi reddeden birincil kaynakların nedenleri",
+              "birincil kaynaklara erişimin neden reddedildiği",
               "birincil kaynakların neden kısıtlandığı gerçeği"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "why access to primary sources was denied",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l95_ex1_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'the fact that collective behavior changes'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"the fact that collective behavior changes\"</span>",
             "options": [
-              "kolektif davranışın değiştiği gerçeği",
               "ortak davranışların değişme şekli",
               "kolektif davranışın değişeceği beklentisi",
-              "ortak davranışları değiştiren gerçekler"
+              "ortak davranışları değiştiren gerçekler",
+              "kolektif davranışın değiştiği gerçeği"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "the fact that collective behavior changes",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Economists are evaluating ___ the distributed funding supported the research.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçılar, dağıtılan fonun araştırmayı nasıl desteklediğini değerlendiriyorlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "___ psychologists evaluate behavior objectively determines the valid outcomes.",
-            "options": [
-              "Whether",
-              "If",
-              "That",
-              "Which"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikologların davranışı tarafsız değerlendirip değerlendirmesi geçerli sonuçları belirler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "It is crucial that the commission ___ the unresolved dispute immediately.",
-            "options": [
-              "resolve",
-              "resolves",
-              "resolved",
-              "should resolve"
-            ],
-            "correctIndex": 0,
-            "translation": "Komisyonun çözülmemiş anlaşmazlığı derhal çözmesi kritik öneme sahiptir.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Tarihçiler birincil kaynaklara erişimin neden kısıtlandığını tartıştılar.",
-            "enSentence": "The historians discussed why access to primary sources was restricted.",
-            "words": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "neden",
-              "kısıtlandığını",
-              "tartıştılar.",
-              "anlaşmazlık",
-              "kriz"
-            ],
-            "correctOrder": [
-              "Tarihçiler",
-              "birincil",
-              "kaynaklara",
-              "erişimin",
-              "neden",
-              "kısıtlandığını",
-              "tartıştılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
+              "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Güvenilir fonun verimli bir şekilde dağıtıldığı gerçeği kanıtlandı.",
-            "enSentence": "The fact that reliable funding was distributed efficiently was proved.",
-            "words": [
-              "The",
-              "fact",
-              "that",
-              "reliable",
-              "funding",
-              "was",
-              "distributed",
-              "efficiently",
-              "was",
-              "proved.",
-              "whether",
-              "if"
-            ],
-            "correctOrder": [
-              "The",
-              "fact",
-              "that",
-              "reliable",
-              "funding",
-              "was",
-              "distributed",
-              "efficiently",
-              "was",
-              "proved."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q11",
-            "type": "translation-text",
-            "prompt": "Whether empirical data was evaluated objectively remains a key controversial issue. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whether empirical data was evaluated objectively remains a key controversial issue.",
-            "correctSentence": "Ampirik verilerin tarafsız değerlendirilip değerlendirilmediği kilit ve tartışmalı bir konu olmaya devam ediyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l95_ex1_q12",
-            "type": "translation-text",
-            "prompt": "It is apparent that the monograph finalized last term resolved the dispute. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "It is apparent that the monograph finalized last term resolved the dispute.",
-            "correctSentence": "Geçen dönem kesinleştirilen monografinin anlaşmazlığı çözdüğü açıktır.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)",
-              "İsim Tamlamaları"
             ]
           }
         ]
@@ -17033,13 +14083,14 @@ Object.assign(unitSentencesMap, {
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
               "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l95_ex2_q2",
             "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'We asked how the distributed funding was utilized.'</strong>",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We asked how the distributed funding was utilized.\"</span>",
             "options": [
               "Dağıtılan fonun nasıl kullanıldığını sorduk.",
               "Dağıtılacak olan fonun verimliliğini sorduk.",
@@ -17053,223 +14104,90 @@ Object.assign(unitSentencesMap, {
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l95_ex2_q3",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'They demand that primary sources be accessible.'</strong>",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "Birincil kaynakların erişilebilir olmasını talep ediyorlar.",
               "Erişilebilir birincil kaynakların getirilmesini talep ediyorlar.",
+              "Birincil kaynakların erişilebilir olmasını talep ediyorlar.",
               "Birincil kaynaklara erişilmesinde ısrar ediyorlar.",
               "Erişim sağlanan birincil kaynakları talep ediyorlar."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "They demand that primary sources be accessible.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l95_ex2_q4",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'It is clear that public opinions fluctuate under crisis.'</strong>",
+            "type": "word-bank",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is clear that public opinions fluctuate under crisis.\"</span>",
             "options": [
-              "Kamuoyu görüşlerinin kriz altında dalgalandığı açıktır.",
               "Kamuoyunun görüşlerini kısıtlayan bir kriz olduğu açıktır.",
               "Kriz döneminde kamuoyu görüşlerinin değişmesi bekleniyor.",
+              "Kamuoyu görüşlerinin kriz altında dalgalandığı açıktır.",
               "Kamuoyunun kriz durumunda farklı görüşler belirttiği açıktır."
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "It is clear that public opinions fluctuate under crisis.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "İsim Tamlamaları",
-              "Zamanlar"
+              "Zamanlar",
+              "İsim ve Edat Yapıları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l95_ex2_q5",
-            "type": "multiple-choice",
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:<br><br><strong>'The survey reveals whether behavior is evaluated objectively.'</strong>",
+            "type": "translation-text",
+            "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The survey reveals whether behavior is evaluated objectively.\"</span>",
             "options": [
-              "Anket, davranışın tarafsız olarak değerlendirilip değerlendirilmediğini ortaya koyuyor.",
               "Davranışı tarafsız değerlendiren anket sonuçları açıklandı.",
               "Anket, tarafsız davranışların değerlendirildiğini gösterir.",
-              "Ortak davranışların tarafsız değerlendirilmesi gerektiği anketle anlaşıldı."
+              "Ortak davranışların tarafsız değerlendirilmesi gerektiği anketle anlaşıldı.",
+              "Anket, davranışın tarafsız olarak değerlendirilip değerlendirilmediğini ortaya koyuyor."
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "The survey reveals whether behavior is evaluated objectively.",
             "isEngToTr": true,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
               "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "Psychologists are investigating ___ collective behavior is affected by financial crisis.",
-            "options": [
-              "how",
-              "who",
-              "which",
-              "whatever"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikologlar, kolektif davranışın finansal krizden nasıl etkilendiğini araştırıyorlar.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "It is essential that economists ___ the new guidelines without delay.",
-            "options": [
-              "specify",
-              "specifies",
-              "specified",
-              "should specify"
-            ],
-            "correctIndex": 0,
-            "translation": "İktisatçıların yeni yönergeleri gecikmeden belirtmeleri esastır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The historians are concerned about ___ access to primary sources was denied.",
-            "options": [
-              "why",
-              "that",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçiler, birincil kaynaklara erişimin neden reddedildiği konusunda endişeliler.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Komisyon, güvenilir fonların nasıl dağıtılacağını duyurdu.",
-            "enSentence": "The commission announced how the reliable funding would be distributed.",
-            "words": [
-              "Komisyon",
-              "güvenilir",
-              "fonların",
-              "nasıl",
-              "dağıtılacağını",
-              "duyurdu.",
-              "kriz",
-              "anlaşmazlık"
-            ],
-            "correctOrder": [
-              "Komisyon",
-              "güvenilir",
-              "fonların",
-              "nasıl",
-              "dağıtılacağını",
-              "duyurdu."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Deneysel verilerin verimli bir şekilde analiz edildiği açıktır.",
-            "enSentence": "It is clear that empirical data was analyzed efficiently.",
-            "words": [
-              "It",
-              "is",
-              "clear",
-              "that",
-              "empirical",
-              "data",
-              "was",
-              "analyzed",
-              "efficiently.",
-              "whether",
-              "if"
-            ],
-            "correctOrder": [
-              "It",
-              "is",
-              "clear",
-              "that",
-              "empirical",
-              "data",
-              "was",
-              "analyzed",
-              "efficiently."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q11",
-            "type": "translation-text",
-            "prompt": "Whether the unresolved dispute will affect the academic monograph is uncertain. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whether the unresolved dispute will affect the academic monograph is uncertain.",
-            "correctSentence": "Çözülmemiş anlaşmazlığın akademik monografiyi etkileyip etkilemeyeceği belirsizdir.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "İsim Tamlamaları",
-              "Zamanlar"
-            ]
-          },
-          {
-            "id": "u28l95_ex2_q12",
-            "type": "translation-text",
-            "prompt": "The psychologists proved that collective behavior changed objectively under crisis. cümlesini İngilizce'ye çevirin:",
-            "enSentence": "The psychologists proved that collective behavior changed objectively under crisis.",
-            "correctSentence": "The psychologists proved that collective behavior changed objectively under crisis.",
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "Derecelendirme (Comparison)",
-              "Zamanlar"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           }
         ]
@@ -17295,7 +14213,8 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim Tamlamaları"
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
@@ -17303,61 +14222,83 @@ Object.assign(unitSentencesMap, {
             "type": "multiple-choice",
             "prompt": "[Akademik Metin] Paragraftaki 'that' yapılarının dil bilgisel işlevini belirleyin:<br><br>'The finding that was published last term resolving the academic dispute proved that empirical data must be distributed efficiently. It is crucial that the commission follow these guidelines.'",
             "options": [
-              "İlk 'that' sıfat cümleciği (Adjective Clause), ikinci 'that' ise isim cümleciğidir (Noun Clause).",
               "Her iki 'that' de isim cümleciğidir (Noun Clause).",
+              "İlk 'that' sıfat cümleciği (Adjective Clause), ikinci 'that' ise isim cümleciğidir (Noun Clause).",
               "İlk 'that' isim cümleciği, ikinci 'that' sıfat cümleciği.",
               "Her iki 'that' de sıfat cümleciğidir."
             ],
-            "correctIndex": 0,
+            "correctIndex": 1,
             "enSentence": "that",
             "isEngToTr": false,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "Sıfat Cümlecikleri (Relative Clauses)"
+              "Sıfat Cümlecikleri (Relative Clauses)",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
             ]
           },
           {
             "id": "u28l95_ex3_q3",
-            "type": "multiple-choice",
-            "prompt": "[Akademik Metin] Paragrafa göre boşluğa gelecek en uygun subjunctive yapıyı bulun:<br><br>'Historians insist that the commission ___ access to primary sources. Whether this will resolve the unresolved academic dispute remains controversial.'",
+            "type": "fill-blank-dropdown",
+            "prompt": "Cümledeki boşluğa gelebilecek en uygun Noun Clause bağlacını / yapısını seçiniz:",
             "options": [
-              "grant",
               "grants",
               "granted",
+              "grant",
               "will grant"
             ],
-            "correctIndex": 0,
+            "correctIndex": 2,
             "enSentence": "grant",
             "isEngToTr": false,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
             ]
           },
           {
             "id": "u28l95_ex3_q4",
-            "type": "multiple-choice",
+            "type": "word-bank",
             "prompt": "[Akademik Metin] Paragrafa göre boşluğa gelecek en uygun edat arkası isim cümleciği bağlacını seçin:<br><br>'Classical economists are concerned about ___ the severe financial crisis will subside. They specified that the guidelines must be implemented immediately.'",
             "options": [
-              "whether",
               "that",
               "which",
-              "whom"
+              "whom",
+              "whether"
             ],
-            "correctIndex": 0,
+            "correctIndex": 3,
             "enSentence": "whether",
             "isEngToTr": false,
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
+              "İsim ve Edat Yapıları",
+              "İsim Tamlamaları"
+            ],
+            "words": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute",
+              "because",
+              "although"
+            ],
+            "correctOrder": [
+              "that",
+              "the",
+              "commission",
+              "resolved",
+              "the",
+              "dispute"
             ]
           },
           {
             "id": "u28l95_ex3_q5",
-            "type": "multiple-choice",
+            "type": "translation-text",
             "prompt": "[Akademik Metin] Paragrafta 'whoever' kelimesinin işlevini belirleyin:<br><br>'Whoever finalized the empirical research had access to primary sources. The monograph proved that the funding was distributed efficiently.'",
             "options": [
               "Cümlenin öznesi konumunda bir isim cümleciği (Noun Clause)",
@@ -17371,169 +14312,8 @@ Object.assign(unitSentencesMap, {
             "grammarTags": [
               "İsim Cümlecikleri",
               "Noun Clauses",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q6",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "It is widely believed ___ the severe financial crisis will end soon.",
-            "options": [
-              "that",
-              "whether",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli finansal krizin yakında sona ereceğine yaygın olarak inanılmaktadır.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q7",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "We debated ___ access to primary sources was restricted.",
-            "options": [
-              "whether",
-              "that",
-              "what",
-              "which"
-            ],
-            "correctIndex": 0,
-            "translation": "Birincil kaynaklara erişimin kısıtlanıp kısıtlanmadığını tartıştık.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Boşluğa gelecek en uygun Noun Clause bağlacını seçin:",
-            "sentence": "The university guidelines demand that the researcher ___ behavior objectively.",
-            "options": [
-              "evaluate",
-              "evaluates",
-              "evaluated",
-              "should evaluate"
-            ],
-            "correctIndex": 0,
-            "translation": "Üniversite yönergeleri, araştırmacının davranışı tarafsız bir şekilde değerlendirmesini talep eder.",
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q9",
-            "type": "word-bank",
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "translation": "Psikologlar, isimsiz anketin davranışı tarafsız değerlendirdiğini kanıtladılar.",
-            "enSentence": "The psychologists proved that the anonymous survey evaluated behavior objectively.",
-            "words": [
-              "Psikologlar,",
-              "isimsiz",
-              "anketin",
-              "davranışı",
-              "tarafsız",
-              "değerlendirdiğini",
-              "kanıtladılar.",
-              "kriz",
-              "veri"
-            ],
-            "correctOrder": [
-              "Psikologlar,",
-              "isimsiz",
-              "anketin",
-              "davranışı",
-              "tarafsız",
-              "değerlendirdiğini",
-              "kanıtladılar."
-            ],
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q10",
-            "type": "word-bank",
-            "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Klasik iktisatçılar, güvenilir fonun verimli bir şekilde dağıtılıp dağıtılmadığını sorguladılar.",
-            "enSentence": "Classical economists questioned whether reliable funding was distributed efficiently.",
-            "words": [
-              "Classical",
-              "economists",
-              "questioned",
-              "whether",
-              "reliable",
-              "funding",
-              "was",
-              "distributed",
-              "efficiently.",
-              "that",
-              "which"
-            ],
-            "correctOrder": [
-              "Classical",
-              "economists",
-              "questioned",
-              "whether",
-              "reliable",
-              "funding",
-              "was",
-              "distributed",
-              "efficiently."
-            ],
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "Derecelendirme (Comparison)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q11",
-            "type": "translation-text",
-            "prompt": "Whether the unresolved academic dispute can be resolved with empirical data remains uncertain. cümlesini Türkçe'ye çevirin:",
-            "enSentence": "Whether the unresolved academic dispute can be resolved with empirical data remains uncertain.",
-            "correctSentence": "Çözülmemiş akademik anlaşmazlığın ampirik verilerle çözülüp çözülebileceği belirsizliğini koruyor.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
-              "Edilgen Yapı (Passive)",
-              "İsim Tamlamaları"
-            ]
-          },
-          {
-            "id": "u28l95_ex3_q12",
-            "type": "translation-text",
-            "prompt": "The historians verified that access to primary sources was resolved efficiently. cümlesini İngilizce'ye çevirin:",
-            "enSentence": "The historians verified that access to primary sources was resolved efficiently.",
-            "correctSentence": "The historians verified that access to primary sources was resolved efficiently.",
-            "isEngToTr": false,
-            "grammarTags": [
-              "İsim Cümlecikleri",
-              "Noun Clauses",
               "İsim ve Edat Yapıları",
-              "Derecelendirme (Comparison)",
-              "Zamanlar"
+              "İsim Tamlamaları"
             ]
           }
         ]
@@ -47723,21 +44503,15 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l1_ex1",
-                "title": "Alıştırma 1: Bildirim Cümlecikleri — Öbek Düzeyi",
-                "description": "That ve The Fact That yapılarının öbek düzeyinde tanınması.",
-                "questions": [...rawNC["1"].exercises[0].questions, ...rawNC["4"].exercises[0].questions]
+                "title": "Alıştırma 1: Bildirim Cümlecikleri — Yapısal Giriş & Öbek Tanıma (15 Soru)",
+                "description": "That ve The Fact That yapılarının öbek ve temel cümle düzeyinde kavranması (Soru tipleri: Eşleştirme, Çeviri, Çoktan Seçmeli, Boşluk Doldurma, Kelime Dizilimi).",
+                "questions": [...rawNC["1"].exercises[0].questions, ...rawNC["1"].exercises[1].questions, ...rawNC["1"].exercises[2].questions]
               },
               {
                 "id": "nc_l1_ex2",
-                "title": "Alıştırma 2: Bildirim Cümlecikleri — Cümle Düzeyi",
-                "description": "That ve The Fact That yapılarında özne ve nesne konumlarının kavranması.",
-                "questions": [...rawNC["1"].exercises[1].questions, ...rawNC["4"].exercises[1].questions]
-              },
-              {
-                "id": "nc_l1_ex3",
-                "title": "Alıştırma 3: Bildirim Cümlecikleri — Akademik Düzey",
-                "description": "That ve The Fact That yapılarının akademik düzeyde pekiştirilmesi.",
-                "questions": [...rawNC["1"].exercises[2].questions, ...rawNC["4"].exercises[2].questions]
+                "title": "Alıştırma 2: Bildirim Cümlecikleri — Akademik Analiz & Çeviri Sentezi (15 Soru)",
+                "description": "The Fact That ve sahte özne bloklarının ileri düzey akademik metinlerde analizi ve çevirisi (Soru tipleri: Çoktan Seçmeli, Açılır Menü, Kelime Havuzu, Yazma & Çeviri).",
+                "questions": [...rawNC["4"].exercises[0].questions, ...rawNC["4"].exercises[1].questions, ...rawNC["4"].exercises[2].questions]
               }
             ]
           },
@@ -47745,21 +44519,15 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l2_ex1",
-                "title": "Alıştırma 1: Dolaylı Sorular — Öbek Düzeyi",
-                "description": "Whether, if, wh- ve -ever yapılarının öbek düzeyinde tanınması.",
-                "questions": [...rawNC["2"].exercises[0].questions, ...rawNC["3"].exercises[0].questions]
+                "title": "Alıştırma 1: Dolaylı Sorular — Yapısal Giriş & Öbek Tanıma (15 Soru)",
+                "description": "Whether, If, Wh- ve -ever yapılarının temel cümle düzeyinde tanınması ve ayırt edilmesi.",
+                "questions": [...rawNC["2"].exercises[0].questions, ...rawNC["2"].exercises[1].questions, ...rawNC["2"].exercises[2].questions]
               },
               {
                 "id": "nc_l2_ex2",
-                "title": "Alıştırma 2: Dolaylı Sorular — Cümle Düzeyi",
-                "description": "Whether, if, wh- ve -ever yapılarında özne ve nesne konumlarının kavranması.",
-                "questions": [...rawNC["2"].exercises[1].questions, ...rawNC["3"].exercises[1].questions]
-              },
-              {
-                "id": "nc_l2_ex3",
-                "title": "Alıştırma 3: Dolaylı Sorular — Akademik Düzey",
-                "description": "Whether, if, wh- ve -ever yapılarının akademik düzeyde pekiştirilmesi.",
-                "questions": [...rawNC["2"].exercises[2].questions, ...rawNC["3"].exercises[2].questions]
+                "title": "Alıştırma 2: Dolaylı Sorular — Akademik Analiz & Çeviri Sentezi (15 Soru)",
+                "description": "Dolaylı soru ve -ever yapılarının karmaşık akademik pasajlarda analizi.",
+                "questions": [...rawNC["3"].exercises[0].questions, ...rawNC["3"].exercises[1].questions, ...rawNC["3"].exercises[2].questions]
               }
             ]
           },
@@ -47767,21 +44535,15 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l3_ex1",
-                "title": "Alıştırma 1: Akademik Zorunluluk & Edat-Sıfat Sonrası — Öbek Düzeyi",
-                "description": "Subjunctive ve edat/sıfat sonrası isim cümleciği yapılarının öbek düzeyinde tanınması.",
-                "questions": [...rawNC["5"].exercises[0].questions, ...rawNC["6"].exercises[0].questions]
+                "title": "Alıştırma 1: Akademik Zorunluluk & Edat-Sıfat Sonrası — Temel Uygulama (15 Soru)",
+                "description": "Subjunctive (yalın fiil) ve edat/sıfat arkası isim cümleciklerinin kavranması.",
+                "questions": [...rawNC["5"].exercises[0].questions, ...rawNC["5"].exercises[1].questions, ...rawNC["5"].exercises[2].questions]
               },
               {
                 "id": "nc_l3_ex2",
-                "title": "Alıştırma 2: Akademik Zorunluluk & Edat-Sıfat Sonrası — Cümle Düzeyi",
-                "description": "Subjunctive ve edat/sıfat sonrası isim cümleciği yapılarında özne/nesne konumlarının kavranması.",
-                "questions": [...rawNC["5"].exercises[1].questions, ...rawNC["6"].exercises[1].questions]
-              },
-              {
-                "id": "nc_l3_ex3",
-                "title": "Alıştırma 3: Akademik Zorunluluk & Edat-Sıfat Sonrası — Akademik Düzey",
-                "description": "Subjunctive ve edat/sıfat sonrası isim cümleciği yapılarının akademik düzeyde pekiştirilmesi.",
-                "questions": [...rawNC["5"].exercises[2].questions, ...rawNC["6"].exercises[2].questions]
+                "title": "Alıştırma 2: Akademik Zorunluluk & Edat-Sıfat Sonrası — Akademik Derinleşme (15 Soru)",
+                "description": "İleri düzey subjunctive ve edatlı blokların akademik metinlerde kullanımı ve çevirisi.",
+                "questions": [...rawNC["6"].exercises[0].questions, ...rawNC["6"].exercises[1].questions, ...rawNC["6"].exercises[2].questions]
               }
             ]
           },
@@ -47789,21 +44551,15 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l4_ex1",
-                "title": "Alıştırma 1: Kritik Ayrım Refleksleri — Öbek Düzeyi",
-                "description": "Noun Clause ve Relative Clause ayırt etme alıştırmaları.",
-                "questions": [...rawNC["7"].exercises[0].questions, ...rawNC["8"].exercises[0].questions]
+                "title": "Alıştırma 1: Noun Clause vs Relative Clause — Yapısal Ayrım Refleksleri (15 Soru)",
+                "description": "That/What farkı ile Relative Clause ve Noun Clause ayırt etme alıştırmaları.",
+                "questions": [...rawNC["7"].exercises[0].questions, ...rawNC["7"].exercises[1].questions, ...rawNC["7"].exercises[2].questions]
               },
               {
                 "id": "nc_l4_ex2",
-                "title": "Alıştırma 2: Kritik Ayrım Refleksleri — Cümle Düzeyi",
-                "description": "Noun Clause ve Relative Clause yapısal farklarının cümle düzeyinde pekiştirilmesi.",
-                "questions": [...rawNC["7"].exercises[1].questions, ...rawNC["8"].exercises[1].questions]
-              },
-              {
-                "id": "nc_l4_ex3",
-                "title": "Alıştırma 3: Kritik Ayrım Refleksleri — Akademik Düzey",
-                "description": "Karma akademik noun clause ve relative clause ayırt etme refleksleri.",
-                "questions": [...rawNC["7"].exercises[2].questions, ...rawNC["8"].exercises[2].questions]
+                "title": "Alıştırma 2: Noun Clause vs Relative Clause — Karma Akademik Sentez (15 Soru)",
+                "description": "Karma Noun Clause yapılarının akademik paragraflarda sentezi, çevirisi ve sınav refleksleri.",
+                "questions": [...rawNC["8"].exercises[0].questions, ...rawNC["8"].exercises[1].questions, ...rawNC["8"].exercises[2].questions]
               }
             ]
           }
@@ -47816,7 +44572,7 @@ const unit37 = { lessons: [] };
       
       const titlesMap = {
         "1": { 
-          title: "1. Bildirim Cümlecikleri: That, The Fact That & Vurgu Yapıları", 
+          title: "1. That & The Fact That Cümlecikleri", 
           subtitle: "Nesne, Özne ve Vurgu Konumundaki Declarative Bloklar", 
           icon: "🔋", 
           formula: "Subject + Verb + that + Clause / The fact that + Clause... / It is + Adj + that + Clause", 
@@ -47824,7 +44580,7 @@ const unit37 = { lessons: [] };
           description: "Declarative that cümleleri, the fact that soyut isim blokları, impersonal/vurgulu sahte özne yapımları ve sıfat arkası that kullanımları." 
         },
         "2": { 
-          title: "2. Dolaylı Sorular: Wh- Kelimeleri, -ever & Whether/If Yapıları", 
+          title: "2. Wh- Soru Kelimeleri, Whether / If & -ever Yapıları", 
           subtitle: "İhtimal, İkilem, Wh- Kelimeleri ve Genelleştirilmiş Cümlecikler", 
           icon: "❓", 
           formula: "Subject + Verb + if / whether + Clause / Wh- Word + Subject + Verb", 
@@ -47832,7 +44588,7 @@ const unit37 = { lessons: [] };
           description: "If/whether dolaylı soru yapıları, wh- soru kelimeleri, -ever genellemeleri ve edat sonrası isim cümlecikleri." 
         },
         "3": { 
-          title: "3. Akademik Zorunluluk & Edat-Sıfat Sonrası Cümlecikler", 
+          title: "3. Subjunctive (Yalın Fiil) & Edat/Sıfat Arkası Cümlecikler", 
           subtitle: "Subjunctive Yapılar ve Edat/Sıfat Sonrası Konumlar", 
           icon: "📜", 
           formula: "Demand / Recommend / Essential + that + Subject + V1 (base form) & Preposition + Wh- / Whether + Clause", 
@@ -47840,7 +44596,7 @@ const unit37 = { lessons: [] };
           description: "Tavsiye, emir ve zorunluluk bildiren subjunctive (yalın fiilli) that cümleleri ile edat/sıfat arkası isim cümlecikleri." 
         },
         "4": { 
-          title: "4. Kritik Ayrım Refleksleri & Karma Akademik Test", 
+          title: "4. Noun Clause vs. Relative Clause & That vs. What Farkı", 
           subtitle: "Cümle Yapısı Ayırt Etme, Sınav Refleksleri ve Genel Değerlendirme", 
           icon: "🎯", 
           formula: "Noun Clause vs. Adjective Clause / That vs. What & Mixed Syntax", 

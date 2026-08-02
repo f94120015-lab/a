@@ -19066,6 +19066,11 @@ const rawTopics = [
     "originalIndex": 6,
     "edits": [
       {
+        "date": "2026-08-02T22:25:00+03:00",
+        "desc": "Bölüm Yeniden Tasarımı & Birleştirme: Bölüm 1 (Temel Cümle Yapıları) ünitesi soru eksiltilmeden 2 kapsayıcı derse (1. Ders: 38 soru, 2. Ders: 37 soru) indirgendi.",
+        "type": "custom"
+      },
+      {
         "date": "2026-07-20T16:30:00+03:00",
         "desc": "Kelimeleri Türkçe karşılıklarıyla eşleştirin soruları kaldırıldı, 'İfadeleri Türkçe karşılıklarıyla eşleştirin' (öbek eşleştirme) soruları muhafaza edildi. Her derste alıştırma sayısı 1'e, soru sayısı 15'e düşürüldü. Farklı soru tipleriyle basitten zora pedagojik ilerleme kurgulandı.",
         "type": "custom"
@@ -19074,35 +19079,22 @@ const rawTopics = [
     "title": "VI. Temel Yapılar",
     "desc": "Özne + to be + İsim/Sıfat/Sıfat+İsim/Edat Takımı ile temel cümle yapıları",
     "icon": "⭐",
-    "numLessons": 4,
+    "numLessons": 2,
     "formulas": [
       {
-        "formula": "Subject + Be + Noun",
-        "example": "The student is a doctor: Öğrenci bir doktordur"
+        "formula": "Subject + Be + Noun / Adjective",
+        "example": "The student is a doctor: Öğrenci bir doktordur | The ground is wet: Zemin ıslaktır",
+        "description": "Temel isim ve sıfat durum cümleleri: Özne + am/is/are + İsim / Sıfat."
       },
       {
-        "formula": "Subject + Be + Adjective",
-        "example": "The ground is wet: Zemin ıslaktır"
-      },
-      {
-        "formula": "Subject + Be + Adjective + Noun",
-        "example": "The student is an English doctor: Öğrenci İngiliz bir doktordur"
-      },
-      {
-        "formula": "Subject + Be + Prepositional Phrase",
-        "example": "The student is in the train: Öğrenci trendedir"
-      },
-      {
-        "formula": "Karma Yapılar",
-        "example": "Bölüm Sonu Karma Test",
-        "description": "Bölüm 1'deki ilk 4 dersin yapılarının (isim, sıfat, sıfat+isim ve edat takımları) karışık olarak sunulduğu genel tekrar ve pekiştirme testi."
+        "formula": "Subject + Be + Adjective + Noun / Prepositional Phrase",
+        "example": "The student is an English doctor | The student is in the train",
+        "description": "Sıfat+İsim tamlamaları ve yer/durum belirten edat takımları ile zenginleştirilmiş temel cümle yapıları."
       }
     ],
     "subtitles": [
-      "A. Özne + to be + isim (Sayfa 1)",
-      "B. Özne + to be + sıfat (Sayfa 2)",
-      "C. Özne + to be + sıfat + isim (Sayfa 4)",
-      "D. Özne + to be + edat takımı (Sayfa 6)"
+      "A. Özne + to be + İsim ve Sıfat Yapıları",
+      "B. Özne + to be + Sıfat+İsim, Edat Takımları ve Karma Yapılar"
     ],
     "originalNumLessons": 4
   },
@@ -35126,8 +35118,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u6l16_ex1",
-          "title": "Alıştırma 1: Özne + to be + isim",
-          "description": "Temel isim cümleleri ve özne-yüklem uyumu (15 Soru)",
+          "title": "Alıştırma 1: Özne + to be + İsim ve Sıfat Yapıları",
+          "description": "Temel isim ve sıfat cümleleri, özne-yüklem uyumu",
           "createdAt": "2026-07-20T16:30:00+03:00",
           "questions": [
             {
@@ -35439,19 +35431,7 @@ const unitSentencesMap = {
               ],
               "enSentence": "The formula is a definition.",
               "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "2": {
-      "exercises": [
-        {
-          "id": "u6l17_ex1",
-          "title": "Alıştırma 1: Özne + to be + sıfat",
-          "description": "Öznelerin nitelik ve durum bildiren sıfatlarla kullanımı (15 Soru)",
-          "createdAt": "2026-07-20T16:30:00+03:00",
-          "questions": [
+            },
             {
               "id": "u6l17_q1",
               "type": "multiple-choice",
@@ -35752,19 +35732,7 @@ const unitSentencesMap = {
               ],
               "enSentence": "The explanation is long",
               "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "3": {
-      "exercises": [
-        {
-          "id": "u6l18_ex1",
-          "title": "Alıştırma 1: Özne + to be + sıfat + isim",
-          "description": "Sıfat tamlamalarının cümle içindeki kullanımı ve dizilimi (15 Soru)",
-          "createdAt": "2026-07-20T16:30:00+03:00",
-          "questions": [
+            },
             {
               "id": "u6l18_q1",
               "type": "matching",
@@ -35992,7 +35960,19 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Bu koşullar altında, nihai sonuç beklenen bir çıktıdır."
-            },
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "exercises": [
+        {
+          "id": "u6l2_ex1",
+          "title": "Alıştırma 1: Sıfat+İsim, Edat Takımları ve Karma Yapılar",
+          "description": "Sıfat+İsim tamlamaları, edat grupları ve genel karma pekiştirme",
+          "createdAt": "2026-07-20T16:30:00+03:00",
+          "questions": [
             {
               "id": "u6l18_q9",
               "grammarTags": [
@@ -36118,19 +36098,7 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Bu durumda, ana hedef gerçekçi bir amaçtır."
-            }
-          ]
-        }
-      ]
-    },
-    "4": {
-      "exercises": [
-        {
-          "id": "u6l19_ex1",
-          "title": "Alıştırma 1: Özne + to be + edat yapısı",
-          "description": "Konum ve bulunma bildiren edat öbekleri (15 Soru)",
-          "createdAt": "2026-07-20T16:30:00+03:00",
-          "questions": [
+            },
             {
               "id": "u6l19_q1",
               "type": "multiple-choice",
@@ -36433,19 +36401,7 @@ const unitSentencesMap = {
               ],
               "enSentence": "The substance is in the test-tube",
               "isEngToTr": true
-            }
-          ]
-        }
-      ]
-    },
-    "5": {
-      "exercises": [
-        {
-          "id": "u6l20_ex1",
-          "title": "Alıştırma 1: Genel Tekrar",
-          "description": "Temel cümle yapılarının karma çalışması (15 Soru)",
-          "createdAt": "2026-07-20T16:30:00+03:00",
-          "questions": [
+            },
             {
               "id": "u6l20_q1",
               "type": "multiple-choice",

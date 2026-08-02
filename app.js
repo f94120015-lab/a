@@ -6963,6 +6963,31 @@ function cleanExerciseDescription(desc) {
   return rangeStr || 'Genel Pratik';
 }
 
+function isGenericDescription(desc) {
+  if (!desc) return true;
+  const clean = desc.toLowerCase().trim();
+  const keywords = [
+    "boşluk doldurma",
+    "kelime havuzu",
+    "çoktan seçmeli",
+    "eşleştirme",
+    "cümle çevir",
+    "kelime sıralama",
+    "blok sıralama",
+    "yapısal kalıplar",
+    "cümle girişleri",
+    "pratikleri",
+    "çalışmaları",
+    "analizi",
+    "tanıma çalışmaları",
+    "çeviri pratikleri"
+  ];
+  if (desc.includes("<li>") || desc.includes("<strong>") || desc.includes("🧠") || desc.includes("💡") || desc.length > 150) {
+    return false;
+  }
+  return keywords.some(k => clean.includes(k));
+}
+
 function togglePopover(button, lessonId, unitId, pctX, pxY) {
   // Remove existing popover if any
   const existingPopover = document.querySelector('.lesson-popover');
@@ -6989,29 +7014,29 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       previewHTML = `
         <div class="grammar-preview-box">
           ${formula ? `<div class="grammar-formula"><span class="formula-badge">Formül</span> ${formula}</div>` : ''}
-          ${description ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${formula ? 'margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);' : ''} line-height: 1.4;">${description}</div>` : ''}
+          ${description && !isGenericDescription(description) ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${formula ? 'margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);' : ''} line-height: 1.4;">${description}</div>` : ''}
         </div>
       `;
     } else if (lesson.formula && lesson.example) {
       previewHTML = `
         <div class="grammar-preview-box">
           <div class="grammar-formula"><span class="formula-badge">Formül</span> ${lesson.formula}</div>
-          ${lesson.description ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.4; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);">${lesson.description}</div>` : ''}
+          ${lesson.description && !isGenericDescription(lesson.description) ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.4; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);">${lesson.description}</div>` : ''}
         </div>
       `;
-    } else if (lesson.description) {
+    } else if (lesson.description && !isGenericDescription(lesson.description)) {
       previewHTML = `
         <div class="grammar-preview-box">
           <div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">${lesson.description}</div>
         </div>
       `;
-    } else if (lessonIndex === 0 && topic.vocab) {
+    } else if (lessonIndex === 0 && topic.vocab && topic.vocab.length > 0) {
       const wordsList = topic.vocab.map(w => `<span class="preview-word-badge">${w.en}: ${w.tr}</span>`).join('');
       previewHTML = `
         <div class="lesson-preview-title">Öğrenilecek kelimeler:</div>
         <div class="lesson-preview-words">${wordsList}</div>
       `;
-    } else if (lessonIndex === 1 && topic.sentences) {
+    } else if (lessonIndex === 1 && topic.sentences && topic.sentences.length > 0) {
       const sentencesList = topic.sentences.map(s => `<div class="preview-sentence-item"><strong>${s.en}</strong>: ${s.tr}</div>`).join('');
       previewHTML = `
         <div class="lesson-preview-title">Örnek cümle kalıpları:</div>
