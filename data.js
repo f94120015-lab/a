@@ -48007,11 +48007,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex1_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki miktar belirteçli cümleyi Türkçe'ye pürüzsüzce çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Konsey, çoğu kentsel dönüşümle ilgili olan beş yapısal teklifi onayladı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The council approved five structural proposals, most of which were related to urban transformation.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Konsey,",
+                "çoğu kentsel dönüşümle ilgili olan",
+                "beş yapısal teklifi",
+                "onayladı.",
+                "reddetti.",
+                "beşer"
+              ],
+              "correctOrder": [
+                "Konsey,",
+                "çoğu kentsel dönüşümle ilgili olan",
+                "beş yapısal teklifi",
+                "onayladı."
+              ]
             }
           ]
         },
@@ -48118,11 +48131,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex2_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki cümleyi Türkçe'ye pürüzsüzce aktarın:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Arkeologlar, ikisi antik hiyeroglifleri okuyabilen üç uzmanı davet etti.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The archeologists invited three experts, two of whom could read ancient hieroglyphs.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Arkeologlar,",
+                "ikisi antik hiyeroglifleri okuyabilen",
+                "üç uzmanı",
+                "davet etti.",
+                "sürgün etti.",
+                "uzmandan"
+              ],
+              "correctOrder": [
+                "Arkeologlar,",
+                "ikisi antik hiyeroglifleri okuyabilen",
+                "üç uzmanı",
+                "davet etti."
+              ]
             }
           ]
         },
@@ -48229,11 +48255,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex3_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki derece bildiren miktar cümlesini Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Düşünür üç makale yayınladı, ki bunların ilki feodalizmi analiz ediyordu.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The thinker published three essays, the first of which analyzed feudalism.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Düşünür üç makale yayınladı,",
+                "ki bunların ilki",
+                "feodalizmi",
+                "analiz ediyordu.",
+                "kapitalizmi",
+                "destekliyordu."
+              ],
+              "correctOrder": [
+                "Düşünür üç makale yayınladı,",
+                "ki bunların ilki",
+                "feodalizmi",
+                "analiz ediyordu."
+              ]
             }
           ]
         },
@@ -48340,11 +48379,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex4_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki ileri seviye cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Müze, eserlerinin hiçbirisi orijinal olmayan üç sergiyi kapattı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The museum closed three exhibitions, none of whose artifacts were original.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Müze,",
+                "eserlerinin hiçbirisi orijinal olmayan",
+                "üç sergiyi",
+                "kapattı.",
+                "açtı.",
+                "sahte"
+              ],
+              "correctOrder": [
+                "Müze,",
+                "eserlerinin hiçbirisi orijinal olmayan",
+                "üç sergiyi",
+                "kapattı."
+              ]
             }
           ]
         },
@@ -48451,11 +48503,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex5_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki edatlı akademik cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Sosyolog, çoğuna tamamen katıldığım teoriler ortaya koydu.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The sociologist advanced theories, with most of which I completely agreed.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Sosyolog,",
+                "çoğuna tamamen katıldığım",
+                "teoriler",
+                "ortaya koydu.",
+                "kanıtlar",
+                "karşı çıktığım"
+              ],
+              "correctOrder": [
+                "Sosyolog,",
+                "çoğuna tamamen katıldığım",
+                "teoriler",
+                "ortaya koydu."
+              ]
             }
           ]
         },
@@ -48562,11 +48627,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex6_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki ağır akademik cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Kral iki elçi görevlendirdi, ki bunların diplomatik çabaları sayesinde savaş önlendi.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The king appointed two envoys, through the diplomatic efforts of whom the war was avoided.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Kral iki elçi görevlendirdi,",
+                "ki bunların diplomatik çabaları sayesinde",
+                "savaş",
+                "önlendi.",
+                "başladı.",
+                "anlaşmazlık"
+              ],
+              "correctOrder": [
+                "Kral iki elçi görevlendirdi,",
+                "ki bunların diplomatik çabaları sayesinde",
+                "savaş",
+                "önlendi."
+              ]
             }
           ]
         },
@@ -48673,11 +48751,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex7_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki tarihsel geçiş cümlesini Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Anlaşma 1945'te imzalandı, ki o zamana kadar birçok şehir harabeye dönmüştü.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The treaty was signed in 1945, by which time many cities had been turned into ruins.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Anlaşma 1945'te imzalandı,",
+                "ki o zamana kadar",
+                "birçok şehir",
+                "harabeye dönmüştü.",
+                "imar edilmişti.",
+                "ülke"
+              ],
+              "correctOrder": [
+                "Anlaşma 1945'te imzalandı,",
+                "ki o zamana kadar",
+                "birçok şehir",
+                "harabeye dönmüştü."
+              ]
             }
           ]
         },
@@ -48784,11 +48875,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex8_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki gelişmiş nedensellik cümlesini Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Yasa temel özgürlükleri kısıtladı, ki bu nedenden ötürü anayasa mahkemesi tarafından iptal edildi.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The law restricted basic liberties, for which reason it was annulled by the constitutional court.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Yasa temel özgürlükleri kısıtladı,",
+                "ki bu nedenden ötürü",
+                "anayasa mahkemesi tarafından",
+                "iptal edildi.",
+                "onaylandı.",
+                "hükümet"
+              ],
+              "correctOrder": [
+                "Yasa temel özgürlükleri kısıtladı,",
+                "ki bu nedenden ötürü",
+                "anayasa mahkemesi tarafından",
+                "iptal edildi."
+              ]
             }
           ]
         },
@@ -48895,11 +48999,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex9_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki işlevsel akademik cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Hükümet gümrük tarifelerini yükseltti, ki bunun sonucu bir ticaret savaşı oldu.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The government raised tariffs, the result of which was a trade war.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Hükümet gümrük tarifelerini yükseltti,",
+                "ki bunun sonucu",
+                "bir ticaret savaşı",
+                "oldu.",
+                "barışı",
+                "azaldı."
+              ],
+              "correctOrder": [
+                "Hükümet gümrük tarifelerini yükseltti,",
+                "ki bunun sonucu",
+                "bir ticaret savaşı",
+                "oldu."
+              ]
             }
           ]
         },
@@ -49006,11 +49123,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex10_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki soyut akademik cümleyi Türkçe'ye aktarın:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Bakanlık bütçeyi başarıyla yönetti, ki bunun geri kalanı eğitim reformuna aktarıldı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The ministry managed the budget successfully, the rest of which was transferred to education reform.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Bakanlık bütçeyi başarıyla yönetti,",
+                "ki bunun geri kalanı",
+                "eğitim reformuna",
+                "aktarıldı.",
+                "harcandı.",
+                "sağlık"
+              ],
+              "correctOrder": [
+                "Bakanlık bütçeyi başarıyla yönetti,",
+                "ki bunun geri kalanı",
+                "eğitim reformuna",
+                "aktarıldı."
+              ]
             }
           ]
         },
@@ -49117,11 +49247,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex11_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki YDS ayarındaki karmaşık cümleyi Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Arkeologlar üç eski yazıt keşfettiler, bunların ilki tamamen hanedan soyu ile ilgilidir.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The archeologists discovered three ancient inscriptions, the first of which is completely related to dynastic lineage.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Arkeologlar üç eski yazıt keşfettiler,",
+                "bunların ilki",
+                "tamamen hanedan soyu ile",
+                "ilgilidir.",
+                "alakası yoktur.",
+                "kraliyet"
+              ],
+              "correctOrder": [
+                "Arkeologlar üç eski yazıt keşfettiler,",
+                "bunların ilki",
+                "tamamen hanedan soyu ile",
+                "ilgilidir."
+              ]
             }
           ]
         },
@@ -49228,11 +49371,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l1_ex12_q7",
-              "type": "translation-text",
-              "prompt": "Bu zorlu felsefi final cümlesini pürüzsüzce Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Düşünür iki yeni felsefi tez öne sürdü, ki bunların amacı dogmatik inançları engellemektir.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The thinker proposed two new philosophical theses, the purpose of which is to inhibit dogmatic beliefs.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Düşünür iki yeni felsefi tez öne sürdü,",
+                "ki bunların amacı",
+                "dogmatik inançları",
+                "engellemektir.",
+                "yaymaktır.",
+                "bilimsel"
+              ],
+              "correctOrder": [
+                "Düşünür iki yeni felsefi tez öne sürdü,",
+                "ki bunların amacı",
+                "dogmatik inançları",
+                "engellemektir."
+              ]
             }
           ]
         }
@@ -49346,11 +49502,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex13_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki teknik cümleyi pürüzsüzce Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Tarihçiler, tamamı arşiv belgelerine dayanan üç alternatif teori geliştirdiler.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The historians developed three alternative theories, all of which were based on archival documents.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Tarihçiler,",
+                "tamamı arşiv belgelerine dayanan",
+                "üç alternatif teori",
+                "geliştirdiler.",
+                "çürüttüler.",
+                "kaynaklarına"
+              ],
+              "correctOrder": [
+                "Tarihçiler,",
+                "tamamı arşiv belgelerine dayanan",
+                "üç alternatif teori",
+                "geliştirdiler."
+              ]
             }
           ]
         },
@@ -49456,11 +49625,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex14_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki psikoloji içerikli cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Araştırmacılar, ikisi davranışsal kalıpları inceleyen üç psikoloğu davet ettiler.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The researchers invited three psychologists, two of whom studied behavioral patterns.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Araştırmacılar,",
+                "ikisi davranışsal kalıpları inceleyen",
+                "üç psikoloğu",
+                "davet ettiler.",
+                "reddettiler.",
+                "psikologdan"
+              ],
+              "correctOrder": [
+                "Araştırmacılar,",
+                "ikisi davranışsal kalıpları inceleyen",
+                "üç psikoloğu",
+                "davet ettiler."
+              ]
             }
           ]
         },
@@ -49566,11 +49748,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex15_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki sanat tarihi cümlesini Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Müze, ikisi Rönesans dönemine ait olan üç yeni sergi açtı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The museum opened three new exhibitions, two of which belong to the Renaissance era.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Müze,",
+                "ikisi Rönesans dönemine ait olan",
+                "üç yeni sergi",
+                "açtı.",
+                "kapattı.",
+                "klasik"
+              ],
+              "correctOrder": [
+                "Müze,",
+                "ikisi Rönesans dönemine ait olan",
+                "üç yeni sergi",
+                "açtı."
+              ]
             }
           ]
         },
@@ -49675,11 +49870,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex16_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki antropoloji içerikli cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Sosyolog beş topluluk inceledi, bunların üyelerinin hepsi tarımla uğraşıyordu.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The sociologist studied five communities, all of whose members were engaged in agriculture.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Sosyolog beş topluluk inceledi,",
+                "bunların üyelerinin hepsi",
+                "tarımla",
+                "uğraşıyordu.",
+                "sanayiyle",
+                "kaçınıyordu."
+              ],
+              "correctOrder": [
+                "Sosyolog beş topluluk inceledi,",
+                "bunların üyelerinin hepsi",
+                "tarımla",
+                "uğraşıyordu."
+              ]
             }
           ]
         },
@@ -49784,11 +49992,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex17_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki edatlı cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Antropolog, çoğuna katıldığım teoriler ortaya koydu.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The anthropologist advanced theories, with most of which I agreed.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Antropolog,",
+                "çoğuna katıldığım",
+                "teoriler",
+                "ortaya koydu.",
+                "makaleler",
+                "karşı çıktığım"
+              ],
+              "correctOrder": [
+                "Antropolog,",
+                "çoğuna katıldığım",
+                "teoriler",
+                "ortaya koydu."
+              ]
             }
           ]
         },
@@ -49895,11 +50116,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex18_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki akademik cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Yönetim iki danışman görevlendirdi, ki bunların diplomatik çabaları sayesinde anlaşmazlık çözüldü.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The management appointed two consultants, through the diplomatic efforts of whom the dispute was resolved.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Yönetim iki danışman görevlendirdi,",
+                "ki bunların diplomatik çabaları sayesinde",
+                "anlaşmazlık",
+                "çözüldü.",
+                "büyüdü.",
+                "savaş"
+              ],
+              "correctOrder": [
+                "Yönetim iki danışman görevlendirdi,",
+                "ki bunların diplomatik çabaları sayesinde",
+                "anlaşmazlık",
+                "çözüldü."
+              ]
             }
           ]
         },
@@ -50006,11 +50240,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex19_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki coğrafi geçiş cümlesini Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Deprem 1999'da meydana geldi, ki o zamana kadar şehir önlemler almıştı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The earthquake occurred in 1999, by which time the city had taken precautions.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Deprem 1999'da meydana geldi,",
+                "ki o zamana kadar",
+                "şehir",
+                "önlemler almıştı.",
+                "hasar görmüştü.",
+                "hükümet"
+              ],
+              "correctOrder": [
+                "Deprem 1999'da meydana geldi,",
+                "ki o zamana kadar",
+                "şehir",
+                "önlemler almıştı."
+              ]
             }
           ]
         },
@@ -50117,11 +50364,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex20_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki iktisadi nedensellik cümlesini Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Hükümet gümrük vergilerini artırdı, ki bu nedenden ötürü ticaret hacmi azaldı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The government increased tariffs, for which reason the trade volume decreased.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Hükümet gümrük vergilerini artırdı,",
+                "ki bu nedenden ötürü",
+                "ticaret hacmi",
+                "azaldı.",
+                "arttı.",
+                "sanayi"
+              ],
+              "correctOrder": [
+                "Hükümet gümrük vergilerini artırdı,",
+                "ki bu nedenden ötürü",
+                "ticaret hacmi",
+                "azaldı."
+              ]
             }
           ]
         },
@@ -50226,11 +50486,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex21_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki sinema içerikli cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Stüdyo bütçeyi kıstı, ki bunun sonucu filmin gecikmesi oldu.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The studio cut the budget, the result of which was the delay of the film.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Stüdyo bütçeyi kıstı,",
+                "ki bunun sonucu",
+                "filmin gecikmesi",
+                "oldu.",
+                "iptal edilmesi",
+                "artışı"
+              ],
+              "correctOrder": [
+                "Stüdyo bütçeyi kıstı,",
+                "ki bunun sonucu",
+                "filmin gecikmesi",
+                "oldu."
+              ]
             }
           ]
         },
@@ -50337,11 +50610,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex22_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki soyut psikoloji cümlesini Türkçe'ye aktarın:<br><br>Translate to Turkish:",
-              "correctSentence": "Klinik bütçeyi başarıyla yönetti, ki bunun geri kalanı psikolojik araştırmalara aktarıldı.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The clinic managed the budget successfully, the rest of which was transferred to psychological research.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Klinik bütçeyi başarıyla yönetti,",
+                "ki bunun geri kalanı",
+                "psikolojik araştırmalara",
+                "aktarıldı.",
+                "harcandı.",
+                "tıbbi"
+              ],
+              "correctOrder": [
+                "Klinik bütçeyi başarıyla yönetti,",
+                "ki bunun geri kalanı",
+                "psikolojik araştırmalara",
+                "aktarıldı."
+              ]
             }
           ]
         },
@@ -50448,11 +50734,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex23_q7",
-              "type": "translation-text",
-              "prompt": "Aşağıdaki YDS ayarındaki cümleyi Türkçe'ye çevirin:<br><br>Translate to Turkish:",
-              "correctSentence": "Tarihçiler üç eski el yazması keşfettiler, bunların ilki tamamen hanedan tarihi ile ilgilidir.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The historians discovered three ancient manuscripts, the first of which is completely related to dynastic history.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Tarihçiler üç eski el yazması keşfettiler,",
+                "bunların ilki",
+                "tamamen hanedan tarihi ile",
+                "ilgilidir.",
+                "belgeleriydi.",
+                "kralın"
+              ],
+              "correctOrder": [
+                "Tarihçiler üç eski el yazması keşfettiler,",
+                "bunların ilki",
+                "tamamen hanedan tarihi ile",
+                "ilgilidir."
+              ]
             }
           ]
         },
@@ -50559,11 +50858,24 @@ const unit37_advanced_relative = {
             },
             {
               "id": "c37_l2_ex24_q7",
-              "type": "translation-text",
-              "prompt": "Bu zorlu final cümlesini pürüzsüzce Türkçe'ye çevirin:<br><br>Translate the sentence to Turkish:",
-              "correctSentence": "Avukat iki yeni yasal savunma öne sürdü, ki bunların amacı davanın seyrini değiştirmektir.",
+              "type": "word-bank",
+              "prompt": "Kelimeleri doğru sıraya dizerek Türkçe cümleyi oluşturun:<br><br>Construct the Turkish sentence:",
               "enSentence": "The lawyer proposed two new legal defenses, the purpose of which is to alter the course of the lawsuit.",
-              "isEngToTr": true
+              "isEngToTr": true,
+              "words": [
+                "Avukat iki yeni yasal savunma öne sürdü,",
+                "ki bunların amacı",
+                "davanın seyrini",
+                "değiştirmektir.",
+                "uzatmaktır.",
+                "kararını"
+              ],
+              "correctOrder": [
+                "Avukat iki yeni yasal savunma öne sürdü,",
+                "ki bunların amacı",
+                "davanın seyrini",
+                "değiştirmektir."
+              ]
             }
           ]
         }
@@ -50571,6 +50883,8 @@ const unit37_advanced_relative = {
     }
   ]
 };
+
+
 
 // Register Unit 37 (Advanced Relative Clauses)
 (function () {
@@ -50648,8 +50962,8 @@ const unit37_advanced_relative = {
         formula: "Noun + , + [Preposition] + [Quantifier] + of which/whom + Clause",
         example: "The delegation proposed two amendments, to neither of which the parliament agreed.",
         description: "in some of which, by many of whom, with most of whom, to neither of which gibi edatlı miktar ve ilgi yapılarının sentezi.",
-        teorikMantik: "Fiilin veya sıfatın gerektirdiği edat (preposition), miktar belirtecinin ve 'which/whom' zamirinin en önüne gelerek 'to neither of which' (ikisinden hiçbirine de) veya 'with most of whom' (çoğu ile birlikte) yapılarını oluşturur.",
-        altinKural: "Edat seçimi, nitelenen isme değil, yan cümledeki fiilin veya sıfatın aldığı edata göre belirlenir (Örn: 'agree to' -> 'to which').",
+        teorikMantik: "Akademik dilde, bir relative clause içindeki fiil (Örn: agree to, depend on) veya sıfat (Örn: familiar with) bir edat gerektirdiğinde, bu edat miktar belirtecinin de en başına taşınabilir. Bu durum, 'Preposition + Quantifier + of which/whom' yapısını doğurur. Örneğin: 'the amendments, to most of which they objected...' (çoğuna itiraz ettikleri değişiklikler).",
+        altinKural: "Sınavlarda doğru edatı bulmak için yan cümledeki fiile/sıfata odaklanın. Eğer yan cümle 'I completely agreed with them' ise, edat 'with' olmalıdır: 'the theories, with most of which I agreed'. Edatı nitelediğiniz isme bakarak tahmin etmeye çalışmayın.",
         exerciseIds: ["c37_l1_ex5", "c37_l2_ex17"],
         tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Edat Takımı (Prepositional Phrase)"]
       },
@@ -50662,8 +50976,8 @@ const unit37_advanced_relative = {
         formula: "Noun + , + [Preposition] + the + [Noun] + of which/whom + Clause",
         example: "The foundation employs five junior researchers, under the supervision of whom the field study is conducted.",
         description: "under the supervision of whom, through the analysis of which, under the leadership of whom gibi gelişmiş yönetsel ve akademik niteleme öbekleri.",
-        teorikMantik: "Akademik ve kurumsal dilde, yönetsel hiyerarşi veya bilimsel süreç nitelemek için 'under the supervision of whom' (kimin gözetimi altında) veya 'through the analysis of which' (analizi vasıtasıyla) gibi uzun edat öbekleri kullanılır.",
-        altinKural: "Bu yapılar birer isim tamlaması gibi sondan başa doğru çevrilir ve akademik yazımda en prestijli cümle kurma biçimlerindendir.",
+        teorikMantik: "Bu yapılar, 'Preposition + the + Noun + of + which/whom' formülüyle kurulur ve akademik raporlarda yönetsel/bilimsel ilişkileri bağlamak için kullanılır. Örneğin: 'under the leadership of whom' (kimin liderliği altında) veya 'by means of which' (bunun vasıtasıyla). Bu dizilimler karmaşık hiyerarşileri tek cümlede özetlemeyi sağlar.",
+        altinKural: "Bu yapılarda 'of' edatından sonra cansızlar/kavramlar için 'which', insanlar için 'whom' kullanımı zorunludur. 'of that' veya 'of them' kesinlikle kullanılamaz. Çeviri yaparken sondan başa doğru (isim tamlaması gibi) okuma refleksini geliştirin.",
         exerciseIds: ["c37_l1_ex6", "c37_l2_ex18"],
         tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Edat Takımı (Prepositional Phrase)"]
       },
@@ -50759,17 +51073,37 @@ const unit37_advanced_relative = {
 
     // Push Consolidated Lessons
     masterLessonsDefs.forEach(ml => {
-      const matchedExs = allExercises.filter(ex => ml.exerciseIds.includes(ex.id));
-      const sortedQs = processAndSortQuestions(matchedExs, ml.tags);
+      const structuredExercises = [];
 
-      const structuredExercises = [
-        {
+      if (ml.id === "c37_ml8") {
+        // Group the 10 exercises into 5 pairs
+        const pairs = [
+          { ids: ["c37_l1_ex8", "c37_l2_ex20"], title: "1. Aşama: Temel Nicelik ve Aitlik Sentezi" },
+          { ids: ["c37_l1_ex9", "c37_l2_ex21"], title: "2. Aşama: Sıralama ve Hiyerarşi Sentezi" },
+          { ids: ["c37_l1_ex10", "c37_l2_ex22"], title: "3. Aşama: Edat ve Karma Zaman Sentezi" },
+          { ids: ["c37_l1_ex11", "c37_l2_ex23"], title: "4. Aşama: Akademik Çeviri ve Yapısal Uyum" },
+          { ids: ["c37_l1_ex12", "c37_l2_ex24"], title: "5. Aşama: İleri Düzey Sentaks Zirvesi" }
+        ];
+        pairs.forEach((pair, pIdx) => {
+          const matchedExs = allExercises.filter(ex => pair.ids.includes(ex.id));
+          const sortedQs = processAndSortQuestions(matchedExs, ml.tags);
+          structuredExercises.push({
+            id: ml.id + "_ex" + (pIdx + 1),
+            title: pair.title,
+            description: "Akademik Zirve Karma Soruları",
+            questions: sortedQs
+          });
+        });
+      } else {
+        const matchedExs = allExercises.filter(ex => ml.exerciseIds.includes(ex.id));
+        const sortedQs = processAndSortQuestions(matchedExs, ml.tags);
+        structuredExercises.push({
           id: ml.id + "_ex",
           title: ml.title.split(":")[1].trim() + " Pratiği",
           description: ml.subtitle,
           questions: sortedQs
-        }
-      ];
+        });
+      }
 
       lessons.push({
         id: ml.id,
