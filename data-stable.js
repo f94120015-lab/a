@@ -35431,7 +35431,15 @@ const unitSentencesMap = {
               ],
               "enSentence": "The formula is a definition.",
               "isEngToTr": true
-            },
+            }
+          ]
+        },
+        {
+          "id": "u6l16_ex2",
+          "title": "Alıştırma 2: Özne + to be + İsim ve Sıfat Yapıları - İleri Düzey",
+          "description": "İleri düzey isim ve sıfat cümleleri ile pekiştirme",
+          "createdAt": "2026-07-20T16:30:00+03:00",
+          "questions": [
             {
               "id": "u6l17_q1",
               "type": "multiple-choice",
@@ -35732,234 +35740,6 @@ const unitSentencesMap = {
               ],
               "enSentence": "The explanation is long",
               "isEngToTr": true
-            },
-            {
-              "id": "u6l18_q1",
-              "type": "matching",
-              "prompt": "Aşağıdaki öbekleri metindeki bağlamlarına uygun Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "experimental subject",
-                  "right": "deneysel denek"
-                },
-                {
-                  "left": "active variable",
-                  "right": "aktif değişken"
-                },
-                {
-                  "left": "expected outcome",
-                  "right": "beklenen çıktı"
-                },
-                {
-                  "left": "unstable isotope",
-                  "right": "kararsız izotop"
-                },
-                {
-                  "left": "sterile container",
-                  "right": "steril kap"
-                }
-              ]
-            },
-            {
-              "id": "u6l18_q2",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "matching",
-              "prompt": "Aşağıdaki öbekleri metindeki bağlamlarına uygun Türkçe karşılıklarıyla eşleştirin:",
-              "pairs": [
-                {
-                  "left": "initial reaction",
-                  "right": "ilk reaksiyon"
-                },
-                {
-                  "left": "positive response",
-                  "right": "olumlu tepki"
-                },
-                {
-                  "left": "slow process",
-                  "right": "yavaş süreç"
-                },
-                {
-                  "left": "laboratory research",
-                  "right": "laboratuvar araştırması"
-                },
-                {
-                  "left": "pure substance",
-                  "right": "saf madde"
-                }
-              ]
-            },
-            {
-              "id": "u6l18_q3",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "word-bank",
-              "prompt": "Bu öbeğin Türkçe çevirisini oluşturun:",
-              "translation": "In laboratory research",
-              "words": [
-                "deney",
-                "izole",
-                "aktif",
-                "araştırmalarında",
-                "Laboratuvar"
-              ],
-              "correctOrder": [
-                "Laboratuvar",
-                "araştırmalarında"
-              ],
-              "enSentence": "In laboratory research",
-              "isEngToTr": true
-            },
-            {
-              "id": "u6l18_q4",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "word-bank",
-              "prompt": "Bu cümlenin Türkçe çevirisini oluşturun:",
-              "translation": "the experimental subject is an active variable",
-              "words": [
-                "saf",
-                "denek",
-                "değişkendir",
-                "beklenen",
-                "deneysel",
-                "aktif",
-                "laboratuvar",
-                "bir"
-              ],
-              "correctOrder": [
-                "deneysel",
-                "denek",
-                "aktif",
-                "bir",
-                "değişkendir"
-              ],
-              "enSentence": "the experimental subject is an active variable",
-              "isEngToTr": true
-            },
-            {
-              "id": "u6l18_q5",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "word-bank",
-              "prompt": "Bu cümlenin Türkçe çevirisini oluşturun:",
-              "translation": "and the initial reaction is a positive response",
-              "words": [
-                "çıkış",
-                "reaksiyon",
-                "kararsız",
-                "tepkidir",
-                "bir",
-                "ve",
-                "olumlu",
-                "izotop",
-                "ilk"
-              ],
-              "correctOrder": [
-                "ve",
-                "ilk",
-                "reaksiyon",
-                "olumlu",
-                "bir",
-                "tepkidir"
-              ],
-              "enSentence": "and the initial reaction is a positive response",
-              "isEngToTr": true
-            },
-            {
-              "id": "u6l18_q6",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "word-bank",
-              "prompt": "Şimdi tüm cümlenin Türkçe çevirisini sırayla oluşturun:",
-              "translation": "In laboratory research, the experimental subject is an active variable, and the initial reaction is a positive response.",
-              "words": [
-                "bir",
-                "denek",
-                "saf",
-                "Laboratuvar",
-                "ilk",
-                "beklenen",
-                "araştırmalarında",
-                "deneysel",
-                "ve",
-                "bir",
-                "aktif",
-                "reaksiyon",
-                "olumlu",
-                "yavaş",
-                "değişkendir",
-                "tepkidir",
-                "izotop"
-              ],
-              "correctOrder": [
-                "Laboratuvar",
-                "araştırmalarında",
-                "deneysel",
-                "denek",
-                "aktif",
-                "bir",
-                "değişkendir",
-                "ve",
-                "ilk",
-                "reaksiyon",
-                "olumlu",
-                "bir",
-                "tepkidir"
-              ],
-              "enSentence": "In laboratory research, the experimental subject is an active variable, and the initial reaction is a positive response.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u6l18_q7",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "word-bank",
-              "prompt": "Bu öbeğin Türkçe çevirisini oluşturun:",
-              "translation": "In scientific analysis",
-              "words": [
-                "karar",
-                "analizlerde",
-                "yöntem",
-                "deneysel",
-                "Bilimsel"
-              ],
-              "correctOrder": [
-                "Bilimsel",
-                "analizlerde"
-              ],
-              "enSentence": "In scientific analysis",
-              "isEngToTr": true
-            },
-            {
-              "id": "u6l18_q8",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "Under these conditions, the final result is an ___ outcome.",
-              "options": [
-                "expected",
-                "expectantly",
-                "expectation",
-                "expecting"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu koşullar altında, nihai sonuç beklenen bir çıktıdır."
             }
           ]
         }
@@ -35973,132 +35753,6 @@ const unitSentencesMap = {
           "description": "Sıfat+İsim tamlamaları, edat grupları ve genel karma pekiştirme",
           "createdAt": "2026-07-20T16:30:00+03:00",
           "questions": [
-            {
-              "id": "u6l18_q9",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "Furthermore, the newly synthesized compound is an ___ isotope.",
-              "options": [
-                "unstable",
-                "unstably",
-                "instability",
-                "stabilize"
-              ],
-              "correctIndex": 0,
-              "translation": "Ayrıca, yeni sentezlenen bileşik kararsız bir izotoptur."
-            },
-            {
-              "id": "u6l18_q10",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "Within the sterile container, the isolated specimen is a ___ substance.",
-              "options": [
-                "pure",
-                "purely",
-                "purity",
-                "purify"
-              ],
-              "correctIndex": 0,
-              "translation": "Steril kap içerisinde, izole edilmiş numune saf bir maddedir."
-            },
-            {
-              "id": "u6l18_q11",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "In most cases, the experimental subject is a ___ variable.",
-              "options": [
-                "critical",
-                "critically",
-                "criticism",
-                "criticize"
-              ],
-              "correctIndex": 0,
-              "translation": "Çoğu durumda, deneysel denek kritik bir değişkendir."
-            },
-            {
-              "id": "u6l18_q12",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "In addition, the final measurement is a ___ calculation.",
-              "options": [
-                "precise",
-                "precisely",
-                "precision",
-                "preciseness"
-              ],
-              "correctIndex": 0,
-              "translation": "Buna ek olarak, nihai ölçüm kesin bir hesaplamadır."
-            },
-            {
-              "id": "u6l18_q13",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "According to the latest report, the primary factor is a ___ element.",
-              "options": [
-                "significant",
-                "significantly",
-                "significance",
-                "signify"
-              ],
-              "correctIndex": 0,
-              "translation": "Son rapora göre, birincil faktör önemli bir unsurdur."
-            },
-            {
-              "id": "u6l18_q14",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "For the research team, the empirical evidence is a ___ source.",
-              "options": [
-                "reliable",
-                "reliably",
-                "reliability",
-                "rely"
-              ],
-              "correctIndex": 0,
-              "translation": "Araştırma ekibi için, deneysel kanıt güvenilir bir kaynaktır."
-            },
-            {
-              "id": "u6l18_q15",
-              "grammarTags": [
-                "Temel Yapılar",
-                "To Be + İsim / Sıfat"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (sıfat formuna dikkat edin):",
-              "sentence": "In this situation, the main objective is a ___ goal.",
-              "options": [
-                "realistic",
-                "realistically",
-                "realism",
-                "realize"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu durumda, ana hedef gerçekçi bir amaçtır."
-            },
             {
               "id": "u6l19_q1",
               "type": "multiple-choice",
@@ -36401,7 +36055,15 @@ const unitSentencesMap = {
               ],
               "enSentence": "The substance is in the test-tube",
               "isEngToTr": true
-            },
+            }
+          ]
+        },
+        {
+          "id": "u6l2_ex2",
+          "title": "Alıştırma 2: Sıfat+İsim, Edat Takımları ve Karma Yapılar - İleri Düzey",
+          "description": "İleri düzey edat grupları ve genel karma pekiştirme",
+          "createdAt": "2026-07-20T16:30:00+03:00",
+          "questions": [
             {
               "id": "u6l20_q1",
               "type": "multiple-choice",

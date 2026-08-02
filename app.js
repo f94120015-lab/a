@@ -806,6 +806,16 @@ function sanitizeAllQuestions() {
   uniqueQs.forEach(q => {
     if (!q) return;
 
+    // Normalise misconfigured multiple-choice question types (e.g. from Unit 28 template copy-pastes)
+    if (q.options && typeof q.correctIndex === 'number' && q.type !== 'multiple-choice' && q.type !== 'matching') {
+      if (!q.sentence || !q.sentence.includes('___')) {
+        q.type = 'multiple-choice';
+        delete q.words;
+        delete q.correctOrder;
+        delete q.correctSentence;
+      }
+    }
+
     // Fix squished words after closing span tag globally
     if (q.sentence && typeof q.sentence === 'string') {
       q.sentence = q.sentence.replace(/<\/span>([a-zA-Z0-9])/g, '</span> $1');
@@ -8335,7 +8345,7 @@ function renderQuestion() {
   if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) && question.sentence) {
     question.sentence = colorCodeUnit101Sentence(question.sentence);
   }
-  if (currentLesson && (currentLesson.unitId === 29 || currentLesson.originalUnitId === 29 || currentLesson.unitId === 39 || (currentLesson.id && currentLesson.id.includes('c40_l')))) {
+  if (currentLesson && (currentLesson.unitId === 29 || currentLesson.originalUnitId === 29 || currentLesson.unitId === 39 || (currentLesson.id && String(currentLesson.id).includes('c40_l')))) {
     if (question.sentence) question.sentence = colorCodeUnit29Sentence(question.sentence);
     if (question.enSentence) question.enSentence = colorCodeUnit29Sentence(question.enSentence);
     if (question.paragraph) question.paragraph = colorCodeUnit29Sentence(question.paragraph);

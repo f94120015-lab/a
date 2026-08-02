@@ -47,6 +47,14 @@ for (const uId in map) {
           q.correctIndex = q.tokens.indexOf(q.correctAnswer);
         }
 
+        if (options && typeof q.correctIndex === 'number' && type !== 'multiple-choice' && type !== 'matching') {
+          if (!sentence || !sentence.includes('___')) {
+            type = 'multiple-choice';
+            words = undefined;
+            correctOrder = undefined;
+          }
+        }
+
         if ((type === 'fill-blank' || type === 'fill-blank-dropdown') && !options && q.correctAnswer) {
           type = 'fill-blank-text';
         }
