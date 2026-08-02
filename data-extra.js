@@ -5282,14 +5282,13 @@ if (typeof lessons !== 'undefined') {
   const newMergedUnits = [
     {
       id: "35",
-      title: "Master Reductions & Participles",
-      description: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles), Gerund/Infinitive ayrımı, edilgen kısaltmalar ve reduction geometrisi.",
+      title: "YÖKDİL Kısaltma (Reduction) ve Gerund & Infinitive Master Class",
+      description: "Sıfat fiil (Relative Clause), zarf fiil (Conjunction) kısaltmaları, Gerund & Infinitive yapıları ile ileri düzey sınav refleks egzersizleri.",
       pages: "300-339",
-      sourceUnitIds: ["35", "39_2", "200", "201", "52"],
+      sourceUnitIds: ["35", "200", "201", "52"],
       icon: "🧪",
       lessonFilter: (l, origUnitId) => {
         if (origUnitId === "35") return true;
-        if (origUnitId === "39_2" && ["c40_l5_merged", "c40_l6_merged", "c40_l7_merged"].includes(l.id)) return true;
         if (origUnitId === "200") return true;
         if (origUnitId === "201") return true;
         if (origUnitId === "52" && l.id === "c52_l1") return true;
@@ -5378,8 +5377,8 @@ if (typeof lessons !== 'undefined') {
     },
     {
       id: "66",
-      title: "Sınav Kilitleri & Hızlı Refleks Stratejileri",
-      description: "Zaman kilitleri, esnek zaman alanları, since/for dünyası, recently/lately refleksleri ve 10 altın kural karma testleri.",
+      title: "YÖKDİL Sınav Stratejileri & Hızlı Çözüm Teknikleri",
+      description: "Zaman kazandıran sınav kısayolları, tense-bağlaç soru taktikleri, since/for ve by kuralları ile 10 altın sınav kuralı karma testleri.",
       pages: "560-579",
       sourceUnitIds: ["41", "66"],
       icon: "🔑",
@@ -5459,6 +5458,40 @@ if (typeof lessons !== 'undefined') {
 
   lessons.length = 0;
   lessons.push(...prefixLessons, ...finalLessons);
+
+  // Programmatic consolidation for Unit 35 lessons
+  const u35Obj = units.find(u => String(u.id) === '35');
+  if (u35Obj) {
+    // 1. Combine u35_l3 into u35_l2 (Adverbial reductions)
+    const l2 = lessons.find(l => l.id === "u35_l2");
+    const l3 = lessons.find(l => l.id === "u35_l3");
+    if (l2 && l3) {
+      l2.exercises = [...(l2.exercises || []), ...(l3.exercises || [])];
+      u35Obj.lessons = u35Obj.lessons.filter(lId => lId !== "u35_l3");
+      const idx = lessons.findIndex(l => l.id === "u35_l3");
+      if (idx !== -1) lessons.splice(idx, 1);
+    }
+
+    // 2. Combine c59_l1 into c58_l1 (Gerund & Infinitive Master Class)
+    const c58 = lessons.find(l => l.id === "c58_l1");
+    const c59 = lessons.find(l => l.id === "c59_l1");
+    if (c58 && c59) {
+      c58.exercises = [...(c58.exercises || []), ...(c59.exercises || [])];
+      u35Obj.lessons = u35Obj.lessons.filter(lId => lId !== "c59_l1");
+      const idx = lessons.findIndex(l => l.id === "c59_l1");
+      if (idx !== -1) lessons.splice(idx, 1);
+    }
+
+    // 3. Combine c52_l1 into u35_l6 (Karma Kısaltmalar)
+    const l6 = lessons.find(l => l.id === "u35_l6");
+    const c52 = lessons.find(l => l.id === "c52_l1");
+    if (l6 && c52) {
+      l6.exercises = [...(l6.exercises || []), ...(c52.exercises || [])];
+      u35Obj.lessons = u35Obj.lessons.filter(lId => lId !== "c52_l1");
+      const idx = lessons.findIndex(l => l.id === "c52_l1");
+      if (idx !== -1) lessons.splice(idx, 1);
+    }
+  }
 
   units.forEach(u => {
     u.lessons.forEach((lId, idx) => {
@@ -46282,11 +46315,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c41_l1",
     "unitId": 66,
-    "title": "Sınav Kısayolları ve Diyalog Refleksleri",
-    "subtitle": "Sınavlarda Zaman Kazandıran Yapılar ve Karşılıklı Konuşma Kalıpları",
+    "title": "YÖKDİL Gramer Kısayolları ve Diyalog Soruları",
+    "subtitle": "Zaman Kazandıran Yapılar ve Karşılıklı Konuşma Kalıpları",
     "konuAnlatimi": {
-      "baslik": "Sınav Kısayolları ve Diyalog Refleksleri",
-      "teorikMantik": "Akademik sınavlarda zaman kazandıran fiil çekimleri ve diyalog tamamlama reflekslerini inceler.",
+      "baslik": "YÖKDİL Gramer Kısayolları ve Diyalog Soruları",
+      "teorikMantik": "YÖKDİL ve YDS sınavlarında zaman kazandıran dil bilgisi kısayolları ile diyalog tamamlama sorularında olumlu/olumsuz onaylama reflekslerini kapsar.",
       "formul": "suggest doing | neither did I | so do I",
       "altinKural": "Diyalog tamamlama sorularında ve onaylama reflekslerinde, olumlu ifadelere 'so + yardımcı fiil + özne' (So do I), olumsuz ifadelere ise 'neither/nor + yardımcı fiil + özne' (Neither did I) kalıbıyla katılım sağlanır."
     },
@@ -46295,7 +46328,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c41_l1_ex1",
         "createdAt": "2026-07-05T22:00:00Z",
         "title": "Alıştırma 1: Sınav Kısayolları ve Yapı Refleksleri",
-        "description": "1. Sınav Kısayolları ve Yapı Refleksleri (suggest doing, insist on, it is no use)",
+        "description": "suggest doing, insist on, it is no use gibi sınavlarda sıkça sorulan yapısal kalıpları test edin.",
         "questions": [
           {
             "id": "c41_l01_e1_q1",
@@ -46648,19 +46681,19 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c66_l3",
     "unitId": 66,
-    "title": "Tarih Belirteçleri, Çapalar ve Perfect Zaman Matrisi",
-    "subtitle": "Recently, Lately, Since, For ve By Yapılarının Sınav Tuzakları",
+    "title": "Tense ve Zaman Soruları (Since, For, By & Lately Tuzakları)",
+    "subtitle": "Zaman Sorularında Puan Kazandıran Tarih Çapaları",
     "konuAnlatimi": {
-      "baslik": "Tarih Belirteçleri, Çapalar ve Perfect Zaman Matrisi",
-      "teorikMantik": "Recently, lately ve 'by' edatının zaman sınırları ile tarih belirteçlerinin tuzaklarını inceler.",
+      "baslik": "Tense ve Zaman Soruları (Since, For, By & Lately Tuzakları)",
+      "teorikMantik": "Zaman (Tense) sorularında belirleyici olan since, for, by, recently, lately gibi edatların ve zaman bağlaçlarının sınav tuzaklarını deşifre eder.",
       "formul": "recently / lately ➔ present perfect | by + past ➔ had V3 | since + V2, for + duration",
       "altinKural": "'By + Geçmiş Zaman' (by 1990) bizi Past Perfect'e (had V3) götürürken, 'By + Gelecek Zaman' (by 2050) Future Perfect'e (will have V3) yönlendirir."
     },
     "exercises": [
       {
         "id": "c66_l3_ex1",
-        "title": "Alıştırma 1: Tarih Belirteçleri vs. Genel Betimleme",
-        "description": "3. Tarih Belirteçleri vs. Genel Betimleme Tuzağı (in 1990 vs present simple)",
+        "title": "Alıştırma 1: Zaman Soruları ve Tarih Belirteçleri",
+        "description": "Net geçmiş zaman belirteçleri ile present/past perfect zaman yapılarını ayırt etme pratiği yapın.",
         "questions": [
           {
             "id": "c66_l3_q1",
@@ -48062,19 +48095,19 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c66_l7",
     "unitId": 66,
-    "title": "Sıralama Sıfatları ve Kısaltma Yapıları",
-    "subtitle": "The First, The Only ve Karma Sınav Simülasyonu",
+    "title": "Kısaltma (Reduction) Soruları ve Sıralama Sıfatları",
+    "subtitle": "The First, The Only Kalıpları ve Karma Sınav Soruları",
     "konuAnlatimi": {
-      "baslik": "Sıralama Sıfatları ve Kısaltma Yapıları",
-      "teorikMantik": "The first, the only gibi niteleyicilerden sonra gelen infinitive (to V1) kısaltmaları ile karma refleks testlerini içerir.",
+      "baslik": "Kısaltma (Reduction) Soruları ve Sıralama Sıfatları",
+      "teorikMantik": "YÖKDİL/YDS'nin en çok seçici sorusunu barındıran relative clause/noun clause kısaltmalarında (the first/only -> to V1) uygulanan pratik kuralları öğretir.",
       "formul": "the first / the only ➔ to + V1",
       "altinKural": "Sıralama sıfatlarından (the first, the only, the last vb.) ve superlative (en üstünlük derecesi) sıfatlardan sonra relative clause kısaltması olarak daima 'to + V1' kullanılır."
     },
     "exercises": [
       {
         "id": "c66_l7_ex1",
-        "title": "Alıştırma 1: Sıralama Sıfatları & Infinitive Kısaltmaları",
-        "description": "7. Sıralama Sıfatları & Infinitive Kısaltmaları (the first, the only ➔ to + V1)",
+        "title": "Alıştırma 1: Sıralama Sıfatları ve Kısaltma Kuralları",
+        "description": "the first, the only, the last gibi yapılardan sonra 'to' kullanımını ve kısaltma reflekslerini test edin.",
         "questions": [
           {
             "id": "c66_l7_q1",
@@ -48648,11 +48681,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c49_l1",
     "unitId": 49,
-    "title": "YDS, YÖKDİL ve Uluslararası Sınav Simülasyonları",
-    "subtitle": "TOEFL, IELTS ve Akademik Metin Çözümleme Pratikleri",
+    "title": "YÖKDİL & YDS Karma Dil Bilgisi Simülasyonu",
+    "subtitle": "Sınav Tipi Karma Dil Bilgisi Soruları (Gramer Simülasyonu)",
     "konuAnlatimi": {
-      "baslik": "YDS, YÖKDİL ve Uluslararası Sınav Simülasyonları",
-      "teorikMantik": "Akademik YDS, YÖKDİL ve TOEFL/IELTS düzeyindeki karma dil bilgisi kilitlerini ve çözümleme tekniklerini kapsar.",
+      "baslik": "YÖKDİL & YDS Karma Dil Bilgisi Simülasyonu",
+      "teorikMantik": "YÖKDİL ve YDS sınavlarında karşımıza çıkan tüm karma dil bilgisi (tense, modal, passive, reduction, bağlaç) yapılarını ve pratik çözüm yollarını içerir.",
       "formul": "Grammar & Reading Simulation",
       "altinKural": "Akademik sınavlarda çeldiricileri elemek için cümlenin ana fiilini ve bağlaç dengesini (artı/eksi analizi) hızla tespit edin."
     },
@@ -48660,8 +48693,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c49_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 1: YDS/YÖKDİL Gramer Simülasyonu",
-        "description": "Ultimate Academic Exam Simulation morfolojik refleks testi.",
+        "title": "Alıştırma 1: YÖKDİL/YDS Gramer Denemesi (Seviye 1)",
+        "description": "Karma gramer sorularıyla sınav öncesi dil bilgisi reflekslerinizi test edin.",
         "questions": [
           {
             "id": "c49_l1_ex1_q1",
@@ -48832,8 +48865,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c49_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 2: YDS/YÖKDİL Gramer Simülasyonu",
-        "description": "Zaman kaymaları ve büküm hatalarının tespiti.",
+        "title": "Alıştırma 2: YÖKDİL/YDS Gramer Denemesi (Seviye 2)",
+        "description": "İleri düzey karma gramer yapılarını ve çeldiricileri eleme pratikleri yapın.",
         "questions": [
           {
             "id": "c49_l1_ex2_q1",
@@ -49602,11 +49635,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c50_l1",
     "unitId": 49,
-    "title": "Büyük Usta Sentez ve Hata Avcılığı Zirvesi",
-    "subtitle": "Karma Cümlelerde Dil Bilgisi Hatalarını Yakalama ve Düzeltme",
+    "title": "Cümle Yapısı ve Hata Avcılığı (Sentaks Analizi)",
+    "subtitle": "Cümle Tamamlama ve Çeviri Soruları için Hata Yakalama",
     "konuAnlatimi": {
-      "baslik": "Büyük Usta Sentez ve Hata Avcılığı Zirvesi",
-      "teorikMantik": "Akademik cümlelerde yapılan yaygın sentaktik ve morfolojik hataları avlama taktiklerini içerir.",
+      "baslik": "Cümle Yapısı ve Hata Avcılığı (Sentaks Analizi)",
+      "teorikMantik": "Cümle tamamlama ve çeviri sorularında yanlış seçeneği hızla elemek için özne-yüklem uyumu, bağlaç dengesi ve yapısal hataları tespit etme teknikleri.",
       "formul": "Error Hunting & Grammar Synthesis",
       "altinKural": "Hata tespiti yaparken özellikle zaman uyumsuzluklarına, tekil-çoğul özne-yüklem uyumuna ve edat (preposition) tuzaklarına odaklanın."
     },
@@ -49614,8 +49647,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c50_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 1: Büyük Usta Sentezi (The Grand Master Synthesis)",
-        "description": "Grand Master Final Challenge morfolojik refleks testi.",
+        "title": "Alıştırma 1: Cümle Analizi ve Hata Yakalama (Başlangıç)",
+        "description": "Cümlelerdeki gizli özne-yüklem uyumsuzluklarını ve yapısal bozuklukları bulun.",
         "questions": [
           {
             "id": "c50_l1_ex1_q1",
@@ -49765,8 +49798,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c50_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 2: Büyük Usta Sentezi (The Grand Master Synthesis)",
-        "description": "Zaman kaymaları ve büküm hatalarının tespiti.",
+        "title": "Alıştırma 2: Cümle Analizi ve Hata Yakalama (İleri Seviye)",
+        "description": "En karmaşık akademik cümle yapılarında çeldiricilerin elenmesini sağlayan sinsi hataları avlayın.",
         "questions": [
           {
             "id": "c50_l1_ex2_q1",
@@ -50529,11 +50562,11 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c49_l3",
     "unitId": 49,
-    "title": "Büyük Usta Çeviri ve Okuma Pratikleri",
-    "subtitle": "İleri Düzey Metin Analizi ve Cümle Çeviri Egzersizleri",
+    "title": "YÖKDİL Çeviri ve Paragraf Okuma Stratejileri",
+    "subtitle": "İngilizce-Türkçe Çeviri ve Paragraf Analiz Egzersizleri",
     "konuAnlatimi": {
-      "baslik": "Büyük Usta Çeviri ve Okuma Pratikleri",
-      "teorikMantik": "İleri düzey akademik metinlerin Türkçe çevirisini ve anlamsal çözümleme pratiklerini kapsar.",
+      "baslik": "YÖKDİL Çeviri ve Paragraf Okuma Stratejileri",
+      "teorikMantik": "YÖKDİL sınavında en yüksek puan getiren İngilizce-Türkçe / Türkçe-İngilizce çeviri soruları ve paragraf okuma anlama taktikleri.",
       "formul": "Translation & Comprehension",
       "altinKural": "İngilizce-Türkçe çeviri yaparken ana fiilin (yüklem) Türkçe cümlenin en sonunda yer alması gerektiğini unutmayın."
     },
@@ -50541,8 +50574,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c49_l3_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 1: Akademik Metin Okuma Pratikleri",
-        "description": "Ultimate Academic Exam Simulation morfolojik refleks testi.",
+        "title": "Alıştırma 1: İngilizce-Türkçe Cümle Çevirisi",
+        "description": "İngilizce cümlelerin Türkçe karşılıklarını yüklem ve bağlaç takibi yaparak eşleştirin.",
         "questions": [
           {
             "id": "c49_l3_ex1_q1",
@@ -50717,8 +50750,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c49_l3_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 2: Akademik Metin Okuma Pratikleri",
-        "description": "Zaman kaymaları ve büküm hatalarının tespiti.",
+        "title": "Alıştırma 2: Paragraf Okuma ve Soru Çözümleme",
+        "description": "Akademik metinleri okuma, ana fikir çıkarma ve paragraf sorularını doğru yanıtlama pratikleri yapın.",
         "questions": [
           {
             "id": "c49_l3_ex2_q1",
@@ -51519,6 +51552,58 @@ if (typeof lessons !== 'undefined') {
     });
 
     if (typeof units !== 'undefined') {
+      // 1. Unit 35 (Master Reductions & Participles)
+      const u35 = units.find(u => String(u.id) === '35');
+      if (u35) {
+        u35.title = "YÖKDİL Kısaltma (Reduction) ve Gerund & Infinitive Master Class";
+        u35.description = "Sıfat fiil (Relative Clause), zarf fiil (Conjunction) kısaltmaları, Gerund & Infinitive yapıları ile ileri düzey sınav refleks egzersizleri.";
+        
+        // Define title/subtitle map for the 13 lessons of Unit 35
+        const lessonTitleUpdates = {
+          "u35_l1": {
+            title: "Sıfat Cümleciği Kısaltmaları (Relative Clause Reductions)",
+            subtitle: "Active V-ing, Passive V3 ve Sıralama Sıfatları (the first/only -> to V1) Kısaltma Kuralları"
+          },
+          "u35_l2": {
+            title: "Zaman, Sebep, Koşul ve Zıtlık Zarf Cümlesi Kısaltmaları",
+            subtitle: "Zaman, Sebep, Koşul ve Zıtlık Bağlaçlı Kısaltmaların Sentezi"
+          },
+          "u35_l4": {
+            title: "Farklı Özneli Kısaltmalar ve Sonuç Bildiren Participle Yapıları (..., thus V-ing)",
+            subtitle: "Absolute Clause (Farklı Özneli Kısaltmalar) ve thereby / thus ile Sonuç Bildirme"
+          },
+          "u35_l5": {
+            title: "Akademik Cümle Çözümleme ve Böl-Parçala-Yönet Stratejisi",
+            subtitle: "Uzun ve Karmaşık Sınav Cümlelerinde Özne, Yüklem ve Bağlaç Analizi"
+          },
+          "c58_l1": {
+            title: "İsim-Fiil ve Mastar Yapıları (Gerund & Infinitive Master Class)",
+            subtitle: "Gerund & Infinitive Farkları, Anlamsal Değişimler ve İleri Düzey -ing Takısı Analizi"
+          },
+          "c60_l1_extra": {
+            title: "Edilgen (Passive) Kısaltmalar ve Ettirgen (Causative) Yapılar",
+            subtitle: "Past Participle (V3) Kullanımı, Edilgen Kısaltmalar ve Have/Get Something Done Kalıbı"
+          },
+          "u35_l6": {
+            title: "Sınav Tipi Karma Kısaltmalar ve Dil Bilgisi Dedektifliği",
+            subtitle: "V-ing, V3, Having V3 ve to V1 Yapılarını Bir Araya Getiren Sentez ve Teşhis Testleri"
+          }
+        };
+
+        Object.keys(lessonTitleUpdates).forEach(lId => {
+          const l = lessons.find(less => less.id === lId);
+          if (l) {
+            l.title = lessonTitleUpdates[lId].title;
+            l.subtitle = lessonTitleUpdates[lId].subtitle;
+          }
+        });
+      }
+      const t35 = rawTopics.find(t => String(t.id) === '35');
+      if (t35) {
+        t35.title = "XXV. YÖKDİL Kısaltma (Reduction) ve Gerund & Infinitive Master Class";
+        t35.desc = "Sıfat fiil (Relative Clause), zarf fiil (Conjunction) kısaltmaları, Gerund & Infinitive yapıları ile ileri düzey sınav refleks egzersizleri.";
+      }
+
       // 1. Unit 57 (Academic Phrasal Verbs)
       const u57 = units.find(u => String(u.id) === '57');
       if (u57) {
@@ -51544,13 +51629,24 @@ if (typeof lessons !== 'undefined') {
       const u66 = units.find(u => String(u.id) === '66');
       if (u66) {
         u66.lessons = ["c41_l1", "c66_l3", "c66_l7"];
+        u66.title = "YÖKDİL Sınav Stratejileri & Hızlı Çözüm Teknikleri";
+      }
+      const t66 = rawTopics.find(t => String(t.id) === '66');
+      if (t66) {
+        t66.title = "XXXIII. YÖKDİL Sınav Stratejileri & Hızlı Çözüm Teknikleri";
+        t66.desc = "Zaman kazandıran sınav kısayolları, tense-bağlaç soru taktikleri, since/for ve by kuralları ile 10 altın sınav kuralı karma testleri.";
       }
 
       // 5. Unit 49 (Ultimate Academic Exam Simulation & Challenge)
       const u49 = units.find(u => String(u.id) === '49');
       if (u49) {
         u49.lessons = ["c49_l1", "c50_l1", "c49_l3"];
-        u49.title = "Akademik Sınav Simülasyonu ve Büyük Final";
+        u49.title = "YÖKDİL Karma Sınav Simülasyonu ve Büyük Final";
+      }
+      const t49 = rawTopics.find(t => String(t.id) === '49');
+      if (t49) {
+        t49.title = "XXXIV. YÖKDİL Karma Sınav Simülasyonu ve Büyük Final";
+        t49.desc = "YÖKDİL ve YDS sınavlarında çıkan tüm karma gramer, cümle tamamlama, çeviri ve okuma parçası soru tiplerinin simülasyonu.";
       }
 
       // Re-execute displayId and title numbering for all units to make sure everything matches
@@ -51577,8 +51673,8 @@ if (typeof lessons !== 'undefined') {
     // 1. Create and push the new unit
     const u50 = {
       id: 50,
-      title: "Paragraf Okuma ve Cümle Yapısı Çözümlemesi",
-      description: "Beşeri ve sosyal bilimler metinleri üzerinden referans kelime takibi, akışı bozan cümle analizi, paragraf sıralama ve geçiş bağlaçları pratikleri.",
+      title: "Paragraf Okuma ve YÖKDİL Soru Tipleri",
+      description: "YÖKDİL ve YDS odaklı; referans kelime takibi (zamir soruları), akışı bozan cümle analizi (Roma rakamlı sorular), paragraf sıralama ve bağlaçlı geçiş pratikleri.",
       lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3"],
       formulas: [
         {
@@ -51601,8 +51697,8 @@ if (typeof lessons !== 'undefined') {
     if (!rawTopics.some(t => String(t.id) === '50')) {
       rawTopics.push({
         id: 50,
-        title: "XXXV. Paragraf Okuma ve Cümle Yapısı Çözümlemesi",
-        desc: "Beşeri ve sosyal bilimler metinleri üzerinden referans kelime takibi, akışı bozan cümle analizi, paragraf sıralama ve geçiş bağlaçları pratikleri.",
+        title: "XXXV. Paragraf Okuma ve YÖKDİL Soru Tipleri",
+        desc: "YÖKDİL ve YDS odaklı; referans kelime takibi (zamir soruları), akışı bozan cümle analizi (Roma rakamlı sorular), paragraf sıralama ve bağlaçlı geçiş pratikleri.",
         icon: "📖",
         numLessons: 3,
         formulas: u50.formulas
@@ -51614,19 +51710,19 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c50_p_l1",
     "unitId": 50,
-    "title": "Referans ve Geçiş Analizi",
-    "subtitle": "Reference & Cloze",
+    "title": "Paragrafta Referans Kelimeler ve Zamir Takibi",
+    "subtitle": "Zamir & Bağlaç Soruları (Cloze Test)",
     "konuAnlatimi": {
-      "baslik": "Referans ve Geçiş Analizi",
-      "teorikMantik": "Akademik metinlerdeki referans ifadeleri ve paragraflar arası geçiş bağlaçlarını analiz eder.",
+      "baslik": "Paragrafta Referans Kelimeler ve Zamir Takibi",
+      "teorikMantik": "YÖKDİL ve YDS paragraflarında sıkça sorulan zamirlerin (this, the former, the latter vb.) hangi kelimelere atıfta bulunduğunu ve cümleler arası geçiş bağlaçlarını analiz eder.",
       "formul": "Reference Mapping & Context Clues",
       "altinKural": "Referans ifadeler (this, the former, the latter) daima önceki cümlelerdeki isim bloklarına bağlanır."
     },
     "exercises": [
       {
         "id": "u50_l1_ex1",
-        "title": "Alıştırma 1: Referans Kelime Takibi (Reference Mapping)",
-        "description": "Metindeki vurgulu zamir ve sıfatların önceki cümlelerde hangi kavramlara atıfta bulunduğunu tespit edin.",
+        "title": "Alıştırma 1: Zamir ve Referans İfade Takibi (Zamir Soruları)",
+        "description": "Paragraftaki 'this', 'the former', 'the latter' gibi referans zamirlerinin hangi isimlerin yerini tuttuğunu tespit edin.",
         "questions": [
           {
             "id": "u50_l1_q1",
@@ -51800,8 +51896,8 @@ if (typeof lessons !== 'undefined') {
       },
       {
         "id": "u50_l1_ex2",
-        "title": "Alıştırma 2: Paragraflar Arası Geçiş Bağlaçları (Transition Blanks)",
-        "description": "Paragraflar ve düşünceler arasındaki mantıksal ilişkiyi kuran en uygun geçiş kelimesini seçin.",
+        "title": "Alıştırma 2: Paragrafta Geçiş Bağlaçları (Cloze Test)",
+        "description": "Paragraftaki cümleler ve düşünceler arasındaki mantıksal geçişi sağlayan en uygun bağlacı (However, Consequently, Furthermore vb.) bulun.",
         "questions": [
           {
             "id": "u50_l1_q13",
@@ -51990,19 +52086,19 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c50_p_l2",
     "unitId": 50,
-    "title": "Paragraf Akışı ve Uyum",
-    "subtitle": "Reordering & Irrelevant Sentence",
+    "title": "Akışı Bozan Cümle ve Paragraf Sıralama",
+    "subtitle": "Roma Rakamlı Sorular & Paragraf Oluşturma",
     "konuAnlatimi": {
-      "baslik": "Paragraf Akışı ve Uyum",
-      "teorikMantik": "Paragraftaki cümlelerin anlamlı ve tutarlı bir şekilde sıralanması ile bütünlüğü bozan cümleleri analiz eder.",
+      "baslik": "Akışı Bozan Cümle ve Paragraf Sıralama",
+      "teorikMantik": "YÖKDİL sınavının vazgeçilmez soru tiplerinden olan; anlam bütünlüğünü bozan cümleyi bulma (Roma rakamlı sorular) ve karışık verilen cümlelerden anlamlı bir paragraf oluşturma becerilerini geliştirir.",
       "formul": "Coherence & Sentence Insertion",
       "altinKural": "Paragrafın akışını takip ederken cümleler arasındaki bağlaçlara ve konu kapsamına dikkat edin."
     },
     "exercises": [
       {
         "id": "u50_l2_ex1",
-        "title": "Alıştırma 1: Akışı Bozan Cümleyi Bulma (Irrelevant Sentence)",
-        "description": "Paragrafın genel anlam bütünlüğünü ve tutarlılığını bozan numaralandırılmış cümleyi tespit edin.",
+        "title": "Alıştırma 1: Akışı Bozan Cümleyi Bulma (İlgisiz Cümle Soruları)",
+        "description": "Paragrafın genel anlam bütünlüğünü ve tutarlılığını bozan (akışı bozan) numaralandırılmış cümleyi tespit edin.",
         "questions": [
           {
             "id": "u50_l2_q1",
@@ -52188,8 +52284,8 @@ if (typeof lessons !== 'undefined') {
       },
       {
         "id": "u50_l2_ex2",
-        "title": "Alıştırma 2: Paragraf Sıralama (Scrambled Paragraph)",
-        "description": "Karışık olarak verilen cümleleri mantıklı bir paragraf akışı oluşturacak şekilde sıralayın.",
+        "title": "Alıştırma 2: Karışık Cümleleri Sıralama (Paragraf Oluşturma)",
+        "description": "Karışık olarak verilen cümleleri mantıklı ve tutarlı bir paragraf akışı oluşturacak şekilde (giriş, gelişme, sonuç olarak) sıralayın.",
         "questions": [
           {
             "id": "u50_l2_q13",
@@ -52414,19 +52510,19 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c50_p_l3",
     "unitId": 50,
-    "title": "Makro Okuma ve Sentez",
-    "subtitle": "Main Idea Matching & Exam Prep",
+    "title": "YÖKDİL Paragraf Soruları ve Ana Fikir Analizi",
+    "subtitle": "Okuduğunu Anlama & Ana Fikri Bulma",
     "konuAnlatimi": {
-      "baslik": "Makro Okuma ve Sentez",
-      "teorikMantik": "Akademik metinlerin makro düzeyde özetlenmesi ve YDS/YÖKDİL düzeyindeki okuma reflekslerini kapsar.",
+      "baslik": "YÖKDİL Paragraf Soruları ve Ana Fikir Analizi",
+      "teorikMantik": "YÖKDİL ve YDS sınavlarındaki paragraf (okuma parçası) sorularına yönelik; akademik metni hızlı tarama, ana fikri tespit etme ve yazarın amacını sentezleme stratejilerini kapsar.",
       "formul": "Macro Reading & Synthesis",
       "altinKural": "Paragrafların ilk ve son cümleleri genellikle ana fikri barındırır."
     },
     "exercises": [
       {
         "id": "u50_l3_ex1",
-        "title": "Alıştırma 1: Paragraf-Ana Fikir Eşleştirme (Main Idea Matching)",
-        "description": "Akademik metnin paragraflarını en uygun özet/ana fikir cümleleriyle eşleştirin.",
+        "title": "Alıştırma 1: Paragrafı Ana Fikriyle Eşleştirme (Ana Fikir Bulma)",
+        "description": "Akademik paragrafı en doğru şekilde özetleyen ana fikir/başlık cümlesiyle eşleştirerek okuduğunu anlama pratiği yapın.",
         "questions": [
           {
             "id": "u50_l3_q1",

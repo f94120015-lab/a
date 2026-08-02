@@ -208,6 +208,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -2780,6 +2781,9 @@ input {
 
 /* Tablet */
 @media (max-width: 768px) {
+  html {
+    font-size: 14.5px;
+  }
   .top-bar {
     padding: 10px 16px;
   }
@@ -2813,6 +2817,9 @@ input {
 
 /* Mobil */
 @media (max-width: 480px) {
+  html {
+    font-size: 13.5px;
+  }
   .top-bar-brand {
     display: none;
   }
@@ -2890,6 +2897,9 @@ input {
 
 /* Çok küçük ekranlar */
 @media (max-width: 360px) {
+  html {
+    font-size: 12.5px;
+  }
   .stat-pill .stat-icon {
     font-size: 0.85rem;
   }
@@ -3193,12 +3203,15 @@ input {
 
 /* Mobil (820px altı) */
 @media (max-width: 819px) {
+  html {
+    font-size: 15px;
+  }
   .sidebar-nav {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 64px;
+    height: 56px;
     background: rgba(255, 255, 255, 0.75) !important;
     border-top: 1px solid rgba(232, 227, 238, 0.5);
     border-right: none;
@@ -3275,7 +3288,7 @@ input {
   
   .home-main-wrapper {
     margin-left: 0;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
   }
 
   .top-bar-center {

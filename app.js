@@ -6461,7 +6461,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
 
     points.push({
       x: 50 + offsetPercent,
-      y: idx * 190 + 95
+      y: idx * 130 + 65
     });
   }
 
@@ -6487,7 +6487,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
     }
 
     const svgHTML = `
-      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 190}" preserveAspectRatio="none">
+      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 130}" preserveAspectRatio="none">
         <path class="path-bg" d="${pathD}" />
         ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
       </svg>
@@ -6557,7 +6557,6 @@ function renderUnitPathAndNodes(pContainer, unitId) {
       </button>
       <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'} ${isLocked ? 'label-blur-mask' : ''}">
         <strong>${lesson.title.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</strong>
-        <div class="lesson-label-subtitle" style="font-size: 0.72rem; font-weight: normal; opacity: 0.85; margin-top: 2px; line-height: 1.2; font-family: var(--font-body); white-space: normal; max-width: 170px; margin-left: auto; margin-right: auto;">${lesson.subtitle}</div>
         ${lessonOriginalTagHTML}
         ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Ders eklenmemiştir</div>' : ''}
       </div>
@@ -6799,7 +6798,7 @@ function renderLessonTree() {
 
     const pathContainer = document.createElement('div');
     pathContainer.className = `unit-path-container unit-path-color-${colorIndex}`;
-    pathContainer.style.height = `${totalInUnit * 190}px`;
+    pathContainer.style.height = `${totalInUnit * 130}px`;
     pathContainer.dataset.rendered = "false";
 
     unitSection.appendChild(pathContainer);
@@ -7019,8 +7018,8 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const popover = document.createElement('div');
   popover.className = 'lesson-popover';
   popover.dataset.lessonId = lessonId;
-  // Positioned directly below the scaled-up labels (pxY + 95px) to prevent overlap with the smaller pins/labels
-  popover.style.top = `${pxY + 95}px`;
+  // Positioned directly below the scaled-up labels (pxY + 65px) to prevent overlap with the smaller pins/labels
+  popover.style.top = `${pxY + 65}px`;
   
   popover.style.left = `${pctX}%`;
 
