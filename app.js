@@ -444,368 +444,365 @@ function translatePromptToTurkish(prompt, question) {
   return prompt;
 }
 
+// Precompiled translation mappings and regexes
+const engToTrMap = {
+  "abstracts": "özetler",
+  "accepted": "kabul edilen",
+  "academic": "akademik",
+  "account": "hesap",
+  "achieve": "başarı",
+  "dispute": "anlaşmazlık",
+  "disputes": "anlaşmazlıklar",
+  "occurred": "ortaya çıktı",
+  "reform": "reform",
+  "reforms": "reformlar",
+  "approved": "onay",
+  "adaptation": "uyum",
+  "adapting": "uyum sağlama",
+  "adhere": "bağlılık",
+  "adjectival": "sıfatsal",
+  "administration": "yönetim",
+  "admired": "hayran olunan",
+  "advanced": "ileri düzey",
+  "adverb": "zarf",
+  "adverbial": "zarfsal",
+  "affected": "etkilenen",
+  "after": "sonra",
+  "against": "karşı",
+  "agree": "anlaşma",
+  "agreed": "anlaşma",
+  "community": "topluluk",
+  "maintained": "sürdürdü",
+  "allow": "izin",
+  "along": "boyunca",
+  "also": "ayrıca",
+  "alter": "değişiklik",
+  "altered": "değişiklik",
+  "although": "rağmen",
+  "amended": "düzeltme",
+  "among": "arasında",
+  "analysis": "analiz",
+  "concluded": "sonucuna vardı",
+  "stable": "istikrarlı",
+  "taking": "alma",
+  "ancient": "antik",
+  "announced": "duyurulmuş",
+  "anthropologist": "antropolog",
+  "anthropologists": "antropologlar",
+  "anticipate": "öngörü",
+  "applied": "uygulamalı",
+  "approve": "onay",
+  "archaeological": "arkeolojik",
+  "archaeologist": "arkeolog",
+  "architecture": "mimari",
+  "archival": "arşivsel",
+  "archives": "arşivler",
+  "artifacts": "tarihi eserler",
+  "audience": "izleyici",
+  "audit": "denetim",
+  "author": "yazar",
+  "authority": "yetki",
+  "authorize": "yetkilendirmek",
+  "auxiliary": "yardımcı",
+  "avoided": "kaçınılmış",
+  "barriers": "engeller",
+  "behavior": "davranış",
+  "behavioral": "davranışsal",
+  "board": "kurul",
+  "boundary": "sınır",
+  "broadcast": "yayın",
+  "broadcasted": "yayınlanmış",
+  "cause": "sebep",
+  "certificate": "sertifika",
+  "challenged": "meydan okuma",
+  "changes": "değişiklikler",
+  "civilization": "uygarlık",
+  "claims": "iddialar",
+  "clear": "açık",
+  "collapse": "çöküş",
+  "collapsed": "çökmüş",
+  "columns": "sütunlar",
+  "comparative": "karşılaştırmalı",
+  "completed": "tamamlanmış",
+  "complex": "karmaşık",
+  "condition": "koşul",
+  "conditionals": "koşul cümleleri",
+  "conducting": "yürütme",
+  "connection": "bağlantı",
+  "consequences": "sonuçlar",
+  "contact": "temas",
+  "contained": "içerilen",
+  "contract": "sözleşme",
+  "convene": "toplanma",
+  "corrupted": "bozulmuş",
+  "council": "konsey",
+  "critic": "eleştirmen",
+  "critics": "eleştirmenler",
+  "cultural": "kültürel",
+  "decade": "on yıl",
+  "decrease": "azalma",
+  "definitive": "kesin",
+  "demonstrate": "gösterme",
+  "deployment": "dağıtım",
+  "directional": "yönsel",
+  "director": "yönetmen",
+  "documentary": "belgesel",
+  "dramatically": "büyük ölçüde",
+  "during": "sırasında",
+  "earlier": "daha önce",
+  "economists": "ekonomistler",
+  "effective": "etkili",
+  "emphasize": "vurgu",
+  "empirical": "deneysel",
+  "endorse": "onay",
+  "errors": "hatalar",
+  "ethnographic": "etnografik",
+  "evidence": "kanıt",
+  "examine": "inceleme",
+  "excavations": "kazılar",
+  "expanded": "genişletilmiş",
+  "experiments": "deneyler",
+  "explained": "açıklanmış",
+  "faced": "yüzleşilmiş",
+  "fails": "başarısızlık",
+  "feedback": "geri bildirim",
+  "film": "film",
+  "find": "bulgu",
+  "finished": "bitiş",
+  "furthermore": "dahası",
+  "gardens": "bahçeler",
+  "golden": "altın",
+  "grand": "büyük",
+  "guides": "rehberler",
+  "hardly": "neredeyse hiç",
+  "hidden": "gizli",
+  "historians": "tarihçiler",
+  "historical": "tarihsel",
+  "hundred": "yüz",
+  "ignored": "göz ardı edilmiş",
+  "immense": "muazzam",
+  "implement": "uygulama",
+  "important": "önemli",
+  "improves": "gelişme",
+  "indicator": "gösterge",
+  "instability": "istikrarsızlık",
+  "institutional": "kurumsal",
+  "intervened": "müdahale edilmiş",
+  "into": "içine",
+  "inversions": "devriklikler",
+  "judicial": "yargısal",
+  "leaders": "liderler",
+  "little": "az",
+  "locative": "bulunma",
+  "main": "ana",
+  "manuscripts": "el yazmaları",
+  "market": "piyasa",
+  "media": "medya",
+  "merchants": "tüccarlar",
+  "methodology": "metodoloji",
+  "migration": "göç",
+  "modern": "modern",
+  "monographs": "monografiler",
+  "municipal": "belediyeye ait",
+  "must": "gereklilik",
+  "neighboring": "komşu",
+  "observe": "gözlem",
+  "observes": "gözlemler",
+  "organized": "organize edilmiş",
+  "origins": "kökenler",
+  "other": "diğer",
+  "paintings": "tablolar",
+  "paragraph": "paragraf",
+  "passive": "edilgen",
+  "patterns": "örüntüler",
+  "peer": "akran",
+  "perform": "gerçekleştirme",
+  "platform": "platform",
+  "policy": "politika",
+  "positive": "olumlu",
+  "predicted": "öngörülen",
+  "present": "şimdiki",
+  "preserved": "korunmuş",
+  "production": "üretim",
+  "protested": "protesto edilmiş",
+  "provided": "sağlanan",
+  "psychological": "psikolojik",
+  "psychologists": "psikologlar",
+  "published": "yayınlanmış",
+  "rapidly": "hızla",
+  "rarely": "nadiren",
+  "reached": "ulaşılmış",
+  "receive": "alma",
+  "recent": "son zamanlardaki",
+  "referenced": "atıfta bulunulmuş",
+  "regulations": "yönetmelikler",
+  "rejected": "reddedilmiş",
+  "represent": "temsil",
+  "require": "gereklilik",
+  "resolve": "çözüm",
+  "review": "inceleme",
+  "revolutionary": "devrimsel",
+  "screening": "tarama",
+  "seasonal": "mevsimsel",
+  "seldom": "nadiren",
+  "shifted": "kaydırılmış",
+  "sign": "işaret",
+  "significant": "önemli",
+  "simple": "basit",
+  "social": "sosyal",
+  "sovereign": "egemen",
+  "spite": "rağmen",
+  "standards": "standartlar",
+  "stands": "duruyor",
+  "states": "devletler",
+  "stop": "durdurma",
+  "strong": "güçlü",
+  "student": "öğrenci",
+  "study": "çalışma",
+  "sudden": "ani",
+  "support": "destek",
+  "survey": "anket",
+  "unesco": "UNESCO",
+  "early": "erken",
+  "economic": "ekonomik",
+  "economics": "ekonomi",
+  "association": "dernek",
+  "containing": "içeren",
+  "demonstrated": "gösterilmiş",
+  "examined": "incelenmiş",
+  "fiscal": "mali",
+  "increase": "artış",
+  "its": "onun",
+  "knew": "biliyordu",
+  "logical": "mantıksal",
+  "observing": "gözlemleme",
+  "strict": "sert",
+  "subject": "özne",
+  "border": "sınır",
+  "cooperation": "iş birliği"
+};
+
+const trToEngMap = {
+  "akademik": "academic",
+  "alarak": "taking",
+  "antropoloji": "anthropology",
+  "belirleyin": "determine",
+  "bilgisi": "knowledge",
+  "bulun": "find",
+  "devrikliklerini": "inversions",
+  "dizerek": "arranging",
+  "doldurun": "fill",
+  "edebiyat": "literature",
+  "ekilde": "manner",
+  "fiilinin": "verb",
+  "formda": "form",
+  "gelecek": "future",
+  "gerektirdi": "required",
+  "getirin": "bring",
+  "hangisi": "which",
+  "ifadelerle": "expressions",
+  "ifadesiyle": "expression",
+  "iniz": "your",
+  "kelimeleri": "words",
+  "kilitlerini": "locks",
+  "konum": "position",
+  "kullanılamaz": "cannot be used",
+  "kural": "rule",
+  "kuran": "establishing",
+  "layayan": "providing",
+  "leri": "plural suffix",
+  "mledeki": "in the sentence",
+  "mleleri": "sentences",
+  "mlelerle": "with sentences",
+  "mlesini": "sentence",
+  "ndan": "from",
+  "nelimsel": "relative",
+  "ntem": "method",
+  "olumlu": "positive",
+  "paragraf": "paragraph",
+  "rleyin": "determine",
+  "soru": "question"
+};
+
+let engToTrRegex = null;
+let trToEngRegex = null;
+
+function escapeRegExp(string) {
+  return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+}
+
+const wordChars = "a-zA-Z0-9ğüşöçıİĞÜŞÖÇ";
+
+function initTranslationRegexes() {
+  if (engToTrRegex) return;
+  const engKeysSorted = Object.keys(engToTrMap).sort((a, b) => b.length - a.length);
+  const escapedEngKeys = engKeysSorted.map(k => escapeRegExp(k));
+  const engPattern = `(?<![${wordChars}])(${escapedEngKeys.join('|')})(?![${wordChars}])`;
+  engToTrRegex = new RegExp(engPattern, 'gi');
+  
+  const trKeysSorted = Object.keys(trToEngMap).sort((a, b) => b.length - a.length);
+  const escapedTrKeys = trKeysSorted.map(k => escapeRegExp(k));
+  const trPattern = `(?<![${wordChars}])(${escapedTrKeys.join('|')})(?![${wordChars}])`;
+  trToEngRegex = new RegExp(trPattern, 'gi');
+}
+
+function capitalizeTurkish(str) {
+  if (!str) return str;
+  let first = str.charAt(0);
+  if (first === 'i') first = 'İ';
+  else if (first === 'ı') first = 'I';
+  else first = first.toUpperCase();
+  return first + str.slice(1);
+}
+
+function uppercaseTurkish(str) {
+  if (!str) return str;
+  return str.replace(/i/g, 'İ').replace(/ı/g, 'I').toUpperCase();
+}
+
 function translateEnglishPlaceholdersInTurkish(text) {
   if (!text || typeof text !== 'string') return text;
-
-  const engToTrMap = {
-    "abstracts": "özetler",
-    "accepted": "kabul edilen",
-    "academic": "akademik",
-    "account": "hesap",
-    "achieve": "başarı",
-    "dispute": "anlaşmazlık",
-    "disputes": "anlaşmazlıklar",
-    "occurred": "ortaya çıktı",
-    "reform": "reform",
-    "reforms": "reformlar",
-    "approved": "onay",
-    "adaptation": "uyum",
-    "adapting": "uyum sağlama",
-    "adhere": "bağlılık",
-    "adjectival": "sıfatsal",
-    "administration": "yönetim",
-    "admired": "hayran olunan",
-    "advanced": "ileri düzey",
-    "adverb": "zarf",
-    "adverbial": "zarfsal",
-    "affected": "etkilenen",
-    "after": "sonra",
-    "against": "karşı",
-    "agree": "anlaşma",
-    "agreed": "anlaşma",
-    "community": "topluluk",
-    "maintained": "sürdürdü",
-    "allow": "izin",
-    "along": "boyunca",
-    "also": "ayrıca",
-    "alter": "değişiklik",
-    "altered": "değişiklik",
-    "although": "rağmen",
-    "amended": "düzeltme",
-    "among": "arasında",
-    "analysis": "analiz",
-    "concluded": "sonucuna vardı",
-    "stable": "istikrarlı",
-    "taking": "alma",
-    "ancient": "antik",
-    "announced": "duyurulmuş",
-    "anthropologist": "antropolog",
-    "anthropologists": "antropologlar",
-    "anticipate": "öngörü",
-    "applied": "uygulamalı",
-    "approve": "onay",
-    "archaeological": "arkeolojik",
-    "archaeologist": "arkeolog",
-    "architecture": "mimari",
-    "archival": "arşivsel",
-    "archives": "arşivler",
-    "artifacts": "tarihi eserler",
-    "audience": "izleyici",
-    "audit": "denetim",
-    "author": "yazar",
-    "authority": "yetki",
-    "authorize": "yetkilendirmek",
-    "auxiliary": "yardımcı",
-    "avoided": "kaçınılmış",
-    "barriers": "engeller",
-    "behavior": "davranış",
-    "behavioral": "davranışsal",
-    "board": "kurul",
-    "boundary": "sınır",
-    "broadcast": "yayın",
-    "broadcasted": "yayınlanmış",
-    "cause": "sebep",
-    "certificate": "sertifika",
-    "challenged": "meydan okuma",
-    "changes": "değişiklikler",
-    "civilization": "uygarlık",
-    "claims": "iddialar",
-    "clear": "açık",
-    "collapse": "çöküş",
-    "collapsed": "çökmüş",
-    "columns": "sütunlar",
-    "comparative": "karşılaştırmalı",
-    "completed": "tamamlanmış",
-    "complex": "karmaşık",
-    "condition": "koşul",
-    "conditionals": "koşul cümleleri",
-    "conducting": "yürütme",
-    "connection": "bağlantı",
-    "consequences": "sonuçlar",
-    "contact": "temas",
-    "contained": "içerilen",
-    "contract": "sözleşme",
-    "convene": "toplanma",
-    "corrupted": "bozulmuş",
-    "council": "konsey",
-    "critic": "eleştirmen",
-    "critics": "eleştirmenler",
-    "cultural": "kültürel",
-    "decade": "on yıl",
-    "decrease": "azalma",
-    "definitive": "kesin",
-    "demonstrate": "gösterme",
-    "deployment": "dağıtım",
-    "directional": "yönsel",
-    "director": "yönetmen",
-    "documentary": "belgesel",
-    "dramatically": "büyük ölçüde",
-    "during": "sırasında",
-    "earlier": "daha önce",
-    "economists": "ekonomistler",
-    "effective": "etkili",
-    "emphasize": "vurgu",
-    "empirical": "deneysel",
-    "endorse": "onay",
-    "errors": "hatalar",
-    "ethnographic": "etnografik",
-    "evidence": "kanıt",
-    "examine": "inceleme",
-    "excavations": "kazılar",
-    "expanded": "genişletilmiş",
-    "experiments": "deneyler",
-    "explained": "açıklanmış",
-    "faced": "yüzleşilmiş",
-    "fails": "başarısızlık",
-    "feedback": "geri bildirim",
-    "film": "film",
-    "find": "bulgu",
-    "finished": "bitiş",
-    "furthermore": "dahası",
-    "gardens": "bahçeler",
-    "golden": "altın",
-    "grand": "büyük",
-    "guides": "rehberler",
-    "hardly": "neredeyse hiç",
-    "hidden": "gizli",
-    "historians": "tarihçiler",
-    "historical": "tarihsel",
-    "hundred": "yüz",
-    "ignored": "göz ardı edilmiş",
-    "immense": "muazzam",
-    "implement": "uygulama",
-    "important": "önemli",
-    "improves": "gelişme",
-    "indicator": "gösterge",
-    "instability": "istikrarsızlık",
-    "institutional": "kurumsal",
-    "intervened": "müdahale edilmiş",
-    "into": "içine",
-    "inversions": "devriklikler",
-    "judicial": "yargısal",
-    "leaders": "liderler",
-    "little": "az",
-    "locative": "bulunma",
-    "main": "ana",
-    "manuscripts": "el yazmaları",
-    "market": "piyasa",
-    "media": "medya",
-    "merchants": "tüccarlar",
-    "methodology": "metodoloji",
-    "migration": "göç",
-    "modern": "modern",
-    "monographs": "monografiler",
-    "municipal": "belediyeye ait",
-    "must": "gereklilik",
-    "neighboring": "komşu",
-    "observe": "gözlem",
-    "observes": "gözlemler",
-    "organized": "organize edilmiş",
-    "origins": "kökenler",
-    "other": "diğer",
-    "paintings": "tablolar",
-    "paragraph": "paragraf",
-    "passive": "edilgen",
-    "patterns": "örüntüler",
-    "peer": "akran",
-    "perform": "gerçekleştirme",
-    "platform": "platform",
-    "policy": "politika",
-    "positive": "olumlu",
-    "predicted": "öngörülen",
-    "present": "şimdiki",
-    "preserved": "korunmuş",
-    "production": "üretim",
-    "protested": "protesto edilmiş",
-    "provided": "sağlanan",
-    "psychological": "psikolojik",
-    "psychologists": "psikologlar",
-    "published": "yayınlanmış",
-    "rapidly": "hızla",
-    "rarely": "nadiren",
-    "reached": "ulaşılmış",
-    "receive": "alma",
-    "recent": "son zamanlardaki",
-    "referenced": "atıfta bulunulmuş",
-    "regulations": "yönetmelikler",
-    "rejected": "reddedilmiş",
-    "represent": "temsil",
-    "require": "gereklilik",
-    "resolve": "çözüm",
-    "review": "inceleme",
-    "revolutionary": "devrimsel",
-    "screening": "tarama",
-    "seasonal": "mevsimsel",
-    "seldom": "nadiren",
-    "shifted": "kaydırılmış",
-    "sign": "işaret",
-    "significant": "önemli",
-    "simple": "basit",
-    "social": "sosyal",
-    "sovereign": "egemen",
-    "spite": "rağmen",
-    "standards": "standartlar",
-    "stands": "duruyor",
-    "states": "devletler",
-    "stop": "durdurma",
-    "strong": "güçlü",
-    "student": "öğrenci",
-    "study": "çalışma",
-    "sudden": "ani",
-    "support": "destek",
-    "survey": "anket",
-    "unesco": "UNESCO",
-    "early": "erken",
-    "economic": "ekonomik",
-    "economics": "ekonomi",
-    "association": "dernek",
-    "containing": "içeren",
-    "demonstrated": "gösterilmiş",
-    "examined": "incelenmiş",
-    "fiscal": "mali",
-    "increase": "artış",
-    "its": "onun",
-    "knew": "biliyordu",
-    "logical": "mantıksal",
-    "observing": "gözlemleme",
-    "strict": "sert",
-    "subject": "özne",
-    "border": "sınır",
-    "cooperation": "iş birliği"
-  };
-
-  let processedText = text;
-  const wordChars = "a-zA-Z0-9ğüşöçıİĞÜŞÖÇ";
-  for (const [eng, tr] of Object.entries(engToTrMap)) {
-    const regexUpper = new RegExp(`(?<![${wordChars}])${eng.toUpperCase()}(?![${wordChars}])`, 'g');
-    processedText = processedText.replace(regexUpper, tr.toUpperCase());
-
-    const engLower = eng.toLowerCase();
-    const trLower = tr.toLowerCase();
+  initTranslationRegexes();
+  
+  return text.replace(engToTrRegex, (match) => {
+    const key = match.toLowerCase();
+    const tr = engToTrMap[key];
+    if (!tr) return match;
     
-    const engCapitalized = engLower.charAt(0).toUpperCase() + engLower.slice(1);
-    const trCapitalized = trLower.charAt(0).toUpperCase() + trLower.slice(1);
-    
-    const regexCap = new RegExp(`(?<![${wordChars}])${engCapitalized}(?![${wordChars}])`, 'g');
-    processedText = processedText.replace(regexCap, trCapitalized);
-    
-    const regexLower = new RegExp(`(?<![${wordChars}])${engLower}(?![${wordChars}])`, 'g');
-    processedText = processedText.replace(regexLower, trLower);
-  }
-
-  return processedText;
+    if (match === match.toUpperCase()) {
+      return uppercaseTurkish(tr);
+    }
+    if (match.charAt(0) === match.charAt(0).toUpperCase()) {
+      return capitalizeTurkish(tr);
+    }
+    return tr;
+  });
 }
 
 function translateTurkishPlaceholdersInEnglish(text) {
   if (!text || typeof text !== 'string') return text;
-
-  const trToEngMap = {
-    "akademik": "academic",
-    "alarak": "taking",
-    "antropoloji": "anthropology",
-    "belirleyin": "determine",
-    "bilgisi": "knowledge",
-    "bulun": "find",
-    "devrikliklerini": "inversions",
-    "dizerek": "arranging",
-    "doldurun": "fill",
-    "edebiyat": "literature",
-    "ekilde": "manner",
-    "fiilinin": "verb",
-    "formda": "form",
-    "gelecek": "future",
-    "gerektirdi": "required",
-    "getirin": "bring",
-    "hangisi": "which",
-    "ifadelerle": "expressions",
-    "ifadesiyle": "expression",
-    "iniz": "your",
-    "kelimeleri": "words",
-    "kilitlerini": "locks",
-    "konum": "position",
-    "kullanılamaz": "cannot be used",
-    "kural": "rule",
-    "kuran": "establishing",
-    "layayan": "providing",
-    "leri": "plural suffix",
-    "mledeki": "in the sentence",
-    "mleleri": "sentences",
-    "mlelerle": "with sentences",
-    "mlesini": "sentence",
-    "ndan": "from",
-    "nelimsel": "relative",
-    "ntem": "method",
-    "olumlu": "positive",
-    "paragraf": "paragraph",
-    "rleyin": "determine",
-    "soru": "question"
-  };
-
-  let processedText = text;
-  const wordChars = "a-zA-Z0-9ğüşöçıİĞÜŞÖÇ";
-  for (const [tr, eng] of Object.entries(trToEngMap)) {
-    const regexUpper = new RegExp(`(?<![${wordChars}])${tr.toUpperCase()}(?![${wordChars}])`, 'g');
-    processedText = processedText.replace(regexUpper, eng.toUpperCase());
-
-    const trLower = tr.toLowerCase();
-    const engLower = eng.toLowerCase();
+  initTranslationRegexes();
+  
+  return text.replace(trToEngRegex, (match) => {
+    let key = match.replace(/İ/g, 'i').replace(/I/g, 'ı').toLowerCase();
+    const eng = trToEngMap[key];
+    if (!eng) return match;
     
-    const trCapitalized = trLower.charAt(0).toUpperCase() + trLower.slice(1);
-    const engCapitalized = engLower.charAt(0).toUpperCase() + engLower.slice(1);
-    
-    const regexCap = new RegExp(`(?<![${wordChars}])${trCapitalized}(?![${wordChars}])`, 'g');
-    processedText = processedText.replace(regexCap, engCapitalized);
-    
-    const regexLower = new RegExp(`(?<![${wordChars}])${trLower}(?![${wordChars}])`, 'g');
-    processedText = processedText.replace(regexLower, engLower);
-  }
-
-  return processedText;
+    if (match === match.toUpperCase()) {
+      return eng.toUpperCase();
+    }
+    if (match.charAt(0) === match.charAt(0).toUpperCase()) {
+      return eng.charAt(0).toUpperCase() + eng.slice(1);
+    }
+    return eng;
+  });
 }
 
-function sanitizeAllQuestions() {
-  const allQs = [];
-
-  if (typeof lessons !== 'undefined') {
-    lessons.forEach(l => {
-      if (l.questions) {
-        l.questions.forEach(q => allQs.push(q));
-      }
-      if (l.exercises) {
-        l.exercises.forEach(ex => {
-          if (ex.questions) {
-            ex.questions.forEach(q => allQs.push(q));
-          }
-        });
-      }
-    });
-  }
-
-  if (typeof FORMATION_QUESTIONS !== 'undefined' && FORMATION_QUESTIONS) {
-    FORMATION_QUESTIONS.forEach(q => allQs.push(q));
-  }
-
-  if (typeof placementQuestionsList !== 'undefined' && placementQuestionsList) {
-    placementQuestionsList.forEach(q => allQs.push(q));
-  }
-  if (typeof placementQuestions !== 'undefined' && placementQuestions) {
-    placementQuestions.forEach(q => allQs.push(q));
-  }
-
-  const uniqueQs = Array.from(new Set(allQs));
-  uniqueQs.forEach(q => {
-    if (!q) return;
-
+function sanitizeQuestions(questions) {
+  if (!questions || !Array.isArray(questions)) return;
+  questions.forEach(q => {
+    if (!q || q._sanitized) return;
+    
     // Normalise misconfigured multiple-choice question types (e.g. from Unit 28 template copy-pastes)
     if (q.options && typeof q.correctIndex === 'number' && q.type !== 'multiple-choice' && q.type !== 'matching') {
       if (!q.sentence || !q.sentence.includes('___')) {
@@ -884,7 +881,6 @@ function sanitizeAllQuestions() {
       q.turkishTranslation = translateEnglishPlaceholdersInTurkish(q.turkishTranslation);
     }
     if (q.correctAnswer && q.type === 'translation-text') {
-      // In translation-text, if correctAnswer is Turkish, translate it
       q.correctAnswer = translateEnglishPlaceholdersInTurkish(q.correctAnswer);
     }
 
@@ -954,7 +950,16 @@ function sanitizeAllQuestions() {
         q.prompt = parts.join("<br>");
       }
     }
+    
+    q._sanitized = true;
   });
+}
+
+function sanitizeAllQuestions() {
+  // We do NOT sanitize all questions at startup to prevent browser freeze/slow reloads.
+  // Instead, questions are sanitized lazily/on-demand when the corresponding lesson, 
+  // simulator, or placement test is started.
+  console.log("DEBUG: sanitizeAllQuestions bypassed at startup for performance.");
 }
 
 function getOrCreateDeviceId() {
@@ -6471,7 +6476,8 @@ function renderUnitPathAndNodes(pContainer, unitId) {
   const unit = units.find(u => u.id === parseInt(unitId, 10));
   if (!unit) return;
 
-  const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
+  const uIdx = units.findIndex(u => u.id === parseInt(unitId, 10));
+  const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
   const totalInUnit = unit.lessons.length;
   const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
 
@@ -6788,7 +6794,7 @@ function renderLessonTree() {
     unitSection.dataset.unitId = unit.id;
 
     const banner = document.createElement('div');
-    const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
+    const colorIndex = (uIdx % 10) + 1;
     banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
     
     const noDescUnitIds = [31, 32, 33, 34, 38, 36, 35, 37];
@@ -7074,7 +7080,9 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   let popoverSubtitleHTML = lesson.subtitle;
   if (lesson.formula && lesson.example) {
-    popoverSubtitleHTML = `${lesson.subtitle}<br><span class="popover-example-translation" style="font-size: 0.8rem; display: block; margin-top: 4px; font-weight: normal; opacity: 0.9; color: var(--text-secondary);">Örnek Çeviri: <strong>${lesson.example}</strong></span>`;
+    const isThereUnit = lesson.unitId === 8;
+    const labelText = isThereUnit ? "Rehber Çeviriler" : "Örnek Çeviri";
+    popoverSubtitleHTML = `${lesson.subtitle}<br><span class="popover-example-translation" style="font-size: 0.8rem; display: block; margin-top: 4px; font-weight: normal; opacity: 0.9; color: var(--text-secondary);">${labelText}: <strong>${lesson.example}</strong></span>`;
   }
   /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
   if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
@@ -7180,7 +7188,8 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     `;
   }
 
-    const colorIndex = unit.id === 0 ? 10 : (((unit.id - 1) % 10) + 1);
+    const uIdx = units.findIndex(u => u.id === unitId);
+    const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
     popover.innerHTML = `
     <div class="popover-arrow"></div>
     <div class="popover-header">
@@ -7745,6 +7754,19 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
   isCurrentExercisePassed = false;
   currentLesson = lessons.find(l => l.id === lessonId);
   if (!currentLesson) return;
+  
+  // Lazy sanitize questions for this lesson
+  if (currentLesson.questions) {
+    sanitizeQuestions(currentLesson.questions);
+  }
+  if (currentLesson.exercises) {
+    currentLesson.exercises.forEach(ex => {
+      if (ex.questions) {
+        sanitizeQuestions(ex.questions);
+      }
+    });
+  }
+
   setUnitTheme(currentLesson.unitId);
 
   if (exerciseId && currentLesson.exercises) {
@@ -8106,7 +8128,10 @@ function updateQuizMetadata() {
   }
 
   const unitTitle = getUnitDisplayTitle(currentLesson.unitId);
+  const uIdx = units.findIndex(u => u.id === currentLesson.unitId);
+  const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
   const lessonLabel = (currentLesson.subtitle && currentLesson.subtitle.trim() !== '') ? `${currentLesson.title} (${currentLesson.subtitle})` : currentLesson.title;
+  const colorCodedLessonLabel = lessonLabel.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`);
   
   let exLabel = '';
   if (currentLesson.activeExerciseTitle) {
@@ -8117,7 +8142,7 @@ function updateQuizMetadata() {
   const total = currentQuizQuestions.length;
   const qNum = `${currentQuestionIndex + 1}/${total}`;
 
-  metadataEl.innerHTML = `${unitTitle} • ${lessonLabel}${exLabel ? ` • ${exLabel}` : ''} • Soru ${qNum}${newBadge}`;
+  metadataEl.innerHTML = `${unitTitle} • ${colorCodedLessonLabel}${exLabel ? ` • ${exLabel}` : ''} • Soru ${qNum}${newBadge}`;
 }
 
 function updateQuizUI() {
@@ -14374,6 +14399,10 @@ function startFormationTour(isRestore = false) {
   quizSessionId++;
   isFormationMode = true;
 
+  if (typeof FORMATION_QUESTIONS !== 'undefined' && FORMATION_QUESTIONS) {
+    sanitizeQuestions(FORMATION_QUESTIONS);
+  }
+
   if (isRestore) {
     currentQuestionIndex = parseInt(localStorage.getItem('amok_active_question_index') || '0', 10);
     correctCount = parseInt(localStorage.getItem('amok_active_correct_count') || '0', 10);
@@ -15203,6 +15232,10 @@ function startPlacementTest() {
   placementCurrentIndex = 0;
   placementSelectedAnswer = null;
   isPlacementAnswerChecked = false;
+
+  if (typeof placementQuestions !== 'undefined' && placementQuestions) {
+    sanitizeQuestions(placementQuestions);
+  }
   placementQuestionsList = placementQuestions;
 
   showScreen('placement-screen');
@@ -15935,6 +15968,11 @@ function startReviewMode(isRestore = false) {
 
     // Sadece ilk 10 soruyu al (10'ar soruluk testler yapmak için)
     reviewQuestions = reviewQuestions.slice(0, 10);
+  }
+
+  // Lazy sanitize review questions
+  if (reviewQuestions && reviewQuestions.length > 0) {
+    sanitizeQuestions(reviewQuestions);
   }
 
   selectedAnswer = null;

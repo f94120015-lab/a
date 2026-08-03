@@ -170,9 +170,9 @@ rawTopics.push(
     }
   ],
   "subtitles": [
-    "Present Continuous (is Ving) - Zaman Zarfları",
-    "Past Simple (v2) - Zaman Zarfları",
-    "Present Perfect (have V3) - Zaman Zarfları"
+    "Present Continuous (Currently, Nowadays, At the moment)",
+    "Past Simple (Yesterday, Ago, Last week)",
+    "Present Perfect (Recently, Since, Yet)"
   ],
   "originalNumLessons": 3
 },

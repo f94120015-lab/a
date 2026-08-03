@@ -19237,7 +19237,7 @@ const rawTopics = [
     "formulas": [
       {
         "formula": "There + Be + Noun",
-        "example": "There is a distinction in philosophy: Felsefede bir ayrım vardır"
+        "example": "<br>• <strong>There is/are (Vardır)</strong> ➔ There is a distinction in philosophy. (Felsefede bir ayrım vardır.)<br>• <strong>There was/were (Vardı)</strong> ➔ There was a consensus among historians. (Tarihçiler arasında bir uzlaşı vardı.)<br>• <strong>There must/should be (Olmalıdır)</strong> ➔ There must be a logical solution. (Mantıklı bir çözüm olmalıdır.)<br>• <strong>There can/may/might be (Olabilir)</strong> ➔ There can be different interpretations. (Farklı yorumlar olabilir.)<br>• <strong>There has/have been (Olmuştur/Vardır)</strong> ➔ There have been significant changes. (Önemli değişiklikler olmuştur.)"
       },
       {
         "formula": "There + Modal + Be/Been + Noun",
