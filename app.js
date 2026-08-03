@@ -1170,7 +1170,7 @@ const FORMATION_QUESTIONS = [
     id: "fq1",
     type: "multiple-choice",
     grammarTags: ["İsim Cümlesi", "To Be"],
-    prompt: "Aşağıdaki cümlenin Türkçe çevirisini bulunuz: 'The student is a doctor.'",
+    prompt: "Aşağıdaki cümlenin Türkçe çevirisini bulunuz:\n'The student is a doctor.'",
     sentence: "The student is a doctor.",
     options: ["Öğrenci bir doktordur", "Öğrenci doktora gider", "Öğrenci doktordur", "Öğrenci ve doktor"],
     correctIndex: 0,
@@ -1181,7 +1181,7 @@ const FORMATION_QUESTIONS = [
     id: "fq2",
     type: "word-bank",
     grammarTags: ["Kelime Sırası", "Word Order"],
-    prompt: "Kelimeleri doğru sıraya dizerek cümleyi İngilizce'ye çeviriniz: 'Sınav zordur.'",
+    prompt: "Kelimeleri doğru sıraya dizerek cümleyi İngilizce'ye çeviriniz:",
     sentence: "The exam is difficult",
     words: ["difficult", "is", "The", "exam"],
     correctOrder: ["The", "exam", "is", "difficult"],
@@ -1205,7 +1205,7 @@ const FORMATION_QUESTIONS = [
     type: "fill-blank-dropdown",
     grammarTags: ["Edat Takımları", "Prepositions"],
     prompt: "Boşluğa uygun olan edatı seçiniz:",
-    sentence: "The house [on] the corner is blue.",
+    sentence: "The house ___ the corner is blue.",
     options: ["on", "at", "in", "of"],
     correctIndex: 0,
     translation: "Köşedeki ev mavidir.",
@@ -1216,7 +1216,7 @@ const FORMATION_QUESTIONS = [
     type: "fill-blank",
     grammarTags: ["Zamanlar", "Present Perfect"],
     prompt: "Boşluğa uygun olan fiil biçimini bulunuz:",
-    sentence: "We have [lived] here since 2010.",
+    sentence: "We have ___ here since 2010.",
     options: ["lived", "living", "live", "lives"],
     correctIndex: 0,
     translation: "2010'dan beri burada yaşıyoruz.",
@@ -1226,8 +1226,8 @@ const FORMATION_QUESTIONS = [
     id: "fq6",
     type: "fill-blank-text",
     grammarTags: ["Zaman Uyumu", "While Clause"],
-    prompt: "Boşluğa gelebilecek en uygun fiili (past simple) klavyeden yazınız: 'While I was studying, the phone ___.' (çaldı)",
-    sentence: "While I was studying, the phone [rang].",
+    prompt: "Boşluğa gelebilecek en uygun fiili (past simple) klavyeden yazınız:\n'While I was studying, the phone ___.' (çaldı)",
+    sentence: "While I was studying, the phone ___.",
     correctAnswer: "rang",
     translation: "Ben ders çalışırken telefon çaldı.",
     mechanicNote: "<strong>6. Adım: Zaman Uyumu (Past Continuous & Past Simple)</strong><br>Süreç bildiren geçmiş zaman eylemleri esnasında anlık gerçekleşen kesintileri ('while/when' yapıları ile) öğrenirsiniz."
@@ -1236,7 +1236,7 @@ const FORMATION_QUESTIONS = [
     id: "fq7",
     type: "translation-text",
     grammarTags: ["Edilgen Çatı", "Passive Voice"],
-    prompt: "Verilen İngilizce cümlenin Türkçe karşılığını klavyeden yazınız: 'The book was written by the professor.'",
+    prompt: "Verilen İngilizce cümlenin Türkçe karşılığını klavyeden yazınız:\n'The book was written by the professor.'",
     sentence: "The book was written by the professor.",
     correctSentence: "Kitap profesör tarafından yazıldı.",
     translation: "Kitap profesör tarafından yazıldı.",
@@ -1363,19 +1363,19 @@ const FORMATION_QUESTIONS = [
   {
     id: "fq18",
     type: "multiple-choice",
-    grammarTags: ["İsim Tamlaması", "Of Phrase"],
-    prompt: "Aşağıdaki edatlı tamlamanın Türkçe karşılığını seçiniz: 'The legs of the animal'",
-    sentence: "The legs of the animal",
-    options: ["Hayvanın bacakları", "Bacaklı hayvan", "Bacaktaki hayvan", "Hayvan ve bacaklar"],
+    grammarTags: ["18. Bölüm", "Mantıksal Bağlaçlar (Conjunctions)"],
+    prompt: "Aşağıdaki cümlenin en uygun bağlacını seçiniz:",
+    sentence: "He worked hard, ___ he passed the exam easily.",
+    options: ["so", "but", "although", "unless"],
     correctIndex: 0,
-    translation: "Hayvanın bacakları",
-    mechanicNote: "<strong>18. Adım: İsim Tamlamaları ('of')</strong><br>Geriye doğru çevrilen isim tamlamalarını pekiştirirsiniz."
+    translation: "Çok çalıştı, bu yüzden sınavı kolayca geçti.",
+    mechanicNote: "<strong>18. Bölüm: Mantıksal Bağlaçlar (Conjunctions)</strong><br>Sebep-sonuç ilişkisi kuran bağlaçların (so, therefore, as a result) kullanımını çözersiniz."
   },
   {
     id: "fq19",
     type: "word-bank",
     grammarTags: ["Edilgen Yapı", "Word Order"],
-    prompt: "Kelimeleri doğru sıraya dizerek edilgen cümleyi İngilizce oluşturun: 'Hırsız yakalandı.'",
+    prompt: "Kelimeleri doğru sıraya dizerek edilgen cümleyi İngilizce oluşturun:",
     sentence: "The thief was arrested",
     words: ["arrested", "was", "thief", "The"],
     correctOrder: ["The", "thief", "was", "arrested"],
@@ -1400,7 +1400,7 @@ const FORMATION_QUESTIONS = [
     type: "fill-blank-dropdown",
     grammarTags: ["Sıfat Cümleciği Kısaltması", "Reduction"],
     prompt: "Boşluğa gelebilecek en uygun edilgen kısaltma fiil biçimini seçiniz:",
-    sentence: "The report [written] by the secretary was sent.",
+    sentence: "The report ___ by the secretary was sent.",
     options: ["written", "writing", "to write", "writes"],
     correctIndex: 0,
     translation: "Sekreter tarafından yazılan rapor gönderildi.",
@@ -1411,7 +1411,7 @@ const FORMATION_QUESTIONS = [
     type: "fill-blank",
     grammarTags: ["İsim Cümlecikleri", "Noun Clauses"],
     prompt: "Boşluğa uygun olan isim cümleciği bağlacını seçiniz:",
-    sentence: "I don't know [what] he wants.",
+    sentence: "I don't know ___ he wants.",
     options: ["what", "that", "whether", "if"],
     correctIndex: 0,
     translation: "Onun ne istediğini bilmiyorum.",
@@ -1421,8 +1421,8 @@ const FORMATION_QUESTIONS = [
     id: "fq23",
     type: "fill-blank-text",
     grammarTags: ["Geçmiş Zaman Modalları", "Perfect Modals"],
-    prompt: "Boşluğa uygun olan modal kelimesini klavyeden yazınız: 'You ___ have studied harder.' (Çalışmalıydın)",
-    sentence: "You [should] have studied harder.",
+    prompt: "Boşluğa uygun olan modal kelimesini klavyeden yazınız:\n'You ___ have studied harder.' (Çalışmalıydın)",
+    sentence: "You ___ have studied harder.",
     correctAnswer: "should",
     translation: "Daha çok çalışmalıydın.",
     mechanicNote: "<strong>23. Adım: Geçmişe Dair Pişmanlıklar</strong><br>Perfect modal (should have V3) yapılarını pekiştirirsiniz."
@@ -1524,7 +1524,8 @@ const FORMATION_QUESTIONS = [
     id: "fq32",
     type: "context-clue",
     grammarTags: ["Bağlamsal İpucu", "Context Clue"],
-    prompt: "Cümlenin bağlamına göre boşluğa gelecek en uygun kelimeyi seçiniz: 'The scientist's theory was so ___ that everyone believed it.'",
+    prompt: "Cümlenin bağlamına göre boşluğa gelecek en uygun kelimeyi seçiniz:",
+    sentence: "The scientist's theory was so ___ that everyone believed it.",
     options: ["credible", "implausible", "weak", "wrong"],
     correctIndex: 0,
     translation: "Bilim insanının teorisi o kadar inandırıcıydı ki herkes ona inandı.",
@@ -1534,7 +1535,8 @@ const FORMATION_QUESTIONS = [
     id: "fq33",
     type: "chain-expansion-differential",
     grammarTags: ["Zincirleme Genişleme", "Chain Expansion"],
-    prompt: "Aşağıdaki cümledeki boşluğu en uygun şekilde tamamlayan yapıyı bulunuz: 'The project, ___ was funded by the government, failed.'",
+    prompt: "Aşağıdaki cümledeki boşluğu en uygun şekilde tamamlayan yapıyı bulunuz:",
+    sentence: "The project, ___ was funded by the government, failed.",
     options: ["which", "who", "where", "whom"],
     correctIndex: 0,
     translation: "Hükümet tarafından finanse edilen proje başarısız oldu.",
@@ -1544,7 +1546,8 @@ const FORMATION_QUESTIONS = [
     id: "fq34",
     type: "structural-deconstruction",
     grammarTags: ["Yapısal Çözümleme", "Structural Deconstruction"],
-    prompt: "Aşağıdaki cümlenin yapısal analizine göre en doğru seçeneği bulunuz: 'Having finished his work, he left.'",
+    prompt: "Aşağıdaki cümlenin yapısal analizine göre en doğru seçeneği bulunuz:",
+    sentence: "Having finished his work, he left.",
     options: ["After he had finished his work, he left.", "Before he finished his work, he left.", "While he was finishing his work, he left.", "As soon as he leaves, he finishes his work."],
     correctIndex: 0,
     translation: "İşini bitirdikten sonra ayrıldı.",
@@ -1554,7 +1557,8 @@ const FORMATION_QUESTIONS = [
     id: "fq35",
     type: "vector-velocity-shift",
     grammarTags: ["Zaman Kayması", "Vector Velocity Shift"],
-    prompt: "Aşağıdaki cümlede zaman uyumuna göre doğru seçeneği bulunuz: 'By the time the police arrived, the thief ___.'",
+    prompt: "Aşağıdaki cümlede zaman uyumuna göre doğru seçeneği bulunuz:",
+    sentence: "By the time the police arrived, the thief ___.",
     options: ["had escaped", "escapes", "will escape", "is escaping"],
     correctIndex: 0,
     translation: "Polis vardığında hırsız kaçmıştı.",
@@ -1564,7 +1568,8 @@ const FORMATION_QUESTIONS = [
     id: "fq36",
     type: "titan-boundary-defense",
     grammarTags: ["Sınır Savunması", "Titan Boundary Defense"],
-    prompt: "Aşağıdaki akademik cümledeki sınırı aşan (hatalı) bağlacı bulunuz: 'Although it was raining, therefore we stayed home.'",
+    prompt: "Aşağıdaki akademik cümledeki sınırı aşan (hatalı) bağlacı bulunuz:",
+    sentence: "Although it was raining, therefore we stayed home.",
     options: ["Although", "was", "therefore", "home"],
     correctIndex: 2,
     translation: "Yağmur yağmasına rağmen, bu yüzden evde kaldık.",
@@ -1574,7 +1579,7 @@ const FORMATION_QUESTIONS = [
     id: "fq37",
     type: "vagon-to-suffix-match",
     grammarTags: ["Vagon-Ek Eşleşmesi", "Suffix Match"],
-    prompt: "İsim ile onun sıfat yapıcı son ekini (suffix) eşleştiren doğru seçeneği bulunuz: 'Beauty' -> ?",
+    prompt: "İsim ile onun sıfat yapıcı son ekini (suffix) eşleştiren doğru seçeneği bulunuz:\n'Beauty' -> ?",
     options: ["Beautiful", "Beautify", "Beautifully", "Beauties"],
     correctIndex: 0,
     translation: "Güzel",
@@ -1584,7 +1589,7 @@ const FORMATION_QUESTIONS = [
     id: "fq38",
     type: "reverse-engineering-translation",
     grammarTags: ["Tersine Mühendislik", "Reverse Translation"],
-    prompt: "Türkçe karşılığı verilen cümlenin İngilizce orijinalini bulunuz: 'Odamı temizlettim.'",
+    prompt: "Türkçe karşılığı verilen cümlenin İngilizce orijinalini bulunuz:\n'Odamı temizlettim.'",
     options: ["I had my room cleaned.", "I cleaned my room.", "My room was clean.", "I should clean my room."],
     correctIndex: 0,
     translation: "Odamı temizlettim.",
@@ -1594,17 +1599,18 @@ const FORMATION_QUESTIONS = [
     id: "fq39",
     type: "suffix-decapitation",
     grammarTags: ["Ek Eksiltme", "Suffix Decapitation"],
-    prompt: "Aşağıdaki kelimeden yapım ekini çıkartarak kök halini bulunuz: 'Ineffectively'",
+    prompt: "Aşağıdaki kelimeden yapım ekini çıkartarak kök halini bulunuz:\n'Ineffectively'",
     options: ["Effect", "Effective", "Effectively", "Ineffective"],
     correctIndex: 0,
     translation: "Etki",
-    mechanicNote: "<strong>39. Adım: Ek Koparma (Suffix Decapitation)</strong><br>Karmaşık akademik kelimelerin ön ek ve son eklerini soyarak kök kelimeyi bulursunuz."
+    mechanicNote: "<strong>39. Adım: Ek Koparma (Suffix Decapitation)</strong><br>Karmaşık akademik kelimelerin ön ek me son eklerini soyarak kök kelimeyi bulursunuz."
   },
   {
     id: "fq40",
     type: "sentence-connector",
     grammarTags: ["Cümle Bağlayıcı", "Sentence Connector"],
-    prompt: "İki cümleyi mantıksal olarak bağlayan en uygun geçiş kelimesini seçiniz: 'The test was difficult. ___, many students passed.'",
+    prompt: "İki cümleyi mantıksal olarak bağlayan en uygun geçiş kelimesini seçiniz:",
+    sentence: "The test was difficult. ___, many students passed.",
     options: ["However", "Therefore", "Moreover", "Because"],
     correctIndex: 0,
     translation: "Sınav zordu. Ancak birçok öğrenci geçti.",
@@ -1636,7 +1642,7 @@ const FORMATION_QUESTIONS = [
     type: "context-distractor",
     grammarTags: ["Bağlam Çeldirici", "Context Distractor"],
     prompt: "Açılır menüden bağlama en uygun seçeneği seçin:",
-    sentence: "Due to the storm, the flight was [cancelled] immediately.",
+    sentence: "Due to the storm, the flight was ___ immediately.",
     options: ["cancelled", "promoted", "enhanced", "enjoyed"],
     correctIndex: 0,
     translation: "Fırtına nedeniyle uçuş hemen iptal edildi.",
@@ -6672,7 +6678,7 @@ function renderLessonTree() {
           ${isCompleted ? '<span class="formation-tour-status-badge">Tamamlandı ✅</span>' : ''}
         </h3>
         <p class="formation-tour-desc-compact">
-          amok'un metodolojisini, tüm soru tiplerini ve eğitim haritasını <strong>30 doğrusal soruda</strong> hızlıca keşfedin.
+          amok'un metodolojisini, tüm soru tiplerini ve eğitim haritasını <strong>45 doğrusal soruda</strong> (her bir müfredat bölümünden 1 örnek uygulama) hızlıca keşfedin.
         </p>
       </div>
       <div class="formation-tour-btn-wrap">
@@ -7799,9 +7805,9 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
     let expandedQuestions = [];
     currentQuizQuestions.forEach(q => {
       expandedQuestions.push(q);
-      const hasSentence = !!(q.sentence || q.enSentence || q.paragraph || q.mainSentence);
+      const hasSentence = !!(q.sentence || q.enSentence || q.paragraph || q.mainSentence || (q.sentenceTokens && q.sentenceTokens.length > 0));
       const getCompleteSentence = (question) => {
-        let text = question.sentence || question.enSentence || question.paragraph || question.mainSentence || '';
+        let text = question.sentence || question.enSentence || question.paragraph || question.mainSentence || (question.sentenceTokens ? question.sentenceTokens.join(' ') : '');
         if (text.includes('___')) {
           if (question.options && typeof question.correctIndex === 'number' && question.options[question.correctIndex]) {
             const correctOpt = question.options[question.correctIndex];
@@ -8441,7 +8447,7 @@ function renderQuestion() {
     question.prompt = question.prompt.replace(/([^=]|^)(["'\u201c\u201d])([^"'\u201c\u201d]+)(["'\u201c\u201d])/g, (match, prefix, openQ, text, closeQ) => {
       if (text.includes('<') || text.includes('>') || text.includes('=')) return match;
       return `${prefix}${openQ}<span class="prompt-quote-highlight">${text}</span>${closeQ}`;
-    });
+    }).replace(/\n/g, '<br><span style="display:inline-block; margin-top: 6px;"></span>');
   }
   if (question.prompt) {
     question.prompt = formatPromptWithTags(question.prompt);
@@ -8820,7 +8826,7 @@ function renderMultipleChoice(container, question) {
                     !question.prompt.includes("İngilizce:");
   
   let sentenceHtml = question.sentence || question.mainSentence || "";
-  if (question.type === 'chain-expansion-differential') {
+  if (question.type === 'chain-expansion-differential' && question.sentence_1 && question.sentence_2) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 12px; margin-top: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Cümle 1:</span>
@@ -8831,14 +8837,14 @@ function renderMultipleChoice(container, question) {
         <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_2}</span>
       </div>
     `;
-  } else if (question.type === 'vector-velocity-shift') {
+  } else if (question.type === 'vector-velocity-shift' && question.current_structure) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 8px; margin-top: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Mevcut Yapı:</span>
         <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.current_structure}</span>
       </div>
     `;
-  } else if (question.type === 'suffix-decapitation') {
+  } else if (question.type === 'suffix-decapitation' && question.sentence_before && question.sentence_after) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ef4444; margin-bottom: 12px; margin-top: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Önceki Cümle:</span>
@@ -9165,6 +9171,17 @@ function renderIdiomBuilder(container, question) {
   let currentSelection = [];
   const shuffledTokens = [...question.tokens].sort(() => Math.random() - 0.5);
 
+  let displaySentence = question.sentence || question.question || "";
+  const targetPhrase = Array.isArray(question.correctSequence) 
+    ? question.correctSequence.join(' ') 
+    : (Array.isArray(question.tokens) ? question.tokens.join(' ') : "");
+
+  if (displaySentence && targetPhrase) {
+    const escapedPhrase = targetPhrase.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const phraseRegex = new RegExp(escapedPhrase.split('\\s+').join('\\s+'), 'gi');
+    displaySentence = displaySentence.replace(phraseRegex, '_______');
+  }
+
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin"}</p>
     <div style="text-align: center; margin-bottom: 20px;">
@@ -9176,7 +9193,7 @@ function renderIdiomBuilder(container, question) {
     </div>
     
     <div class="context-sentence" style="text-align: center; margin: 20px 0;">
-      ${question.sentence || question.question}
+      ${displaySentence}
     </div>
     
     <div class="tokens-flex" id="idiom-tokens" style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px;"></div>
@@ -9630,7 +9647,7 @@ function renderWordBank(container, question) {
   // Eğer Türkçe çeviri/dizme isteniyorsa (isEngToTr == true), gösterilecek kaynak cümle İngilizce olmalıdır.
   let displaySentence = "";
   if (isEngToTr) {
-    displaySentence = question.sentence || question.enSentence || question.paragraph || question.mainSentence || "";
+    displaySentence = question.sentence || question.enSentence || question.paragraph || question.mainSentence || (question.sentenceTokens ? question.sentenceTokens.join(' ') : "") || "";
   } else {
     displaySentence = question.translation || question.trSentence || "";
   }
@@ -18571,9 +18588,31 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
                                 (question.explanationKey ? explanationDictionary[question.explanationKey] : '') || 
                                 '';
 
-  const isMC = question.type === 'multiple-choice' || question.type === 'error-spotting' || question.type === 'context-clue' || question.type === 'sentence-connector' || question.type === 'context-distractor';
+  const isMC = question.type === 'multiple-choice' || question.type === 'context-clue' || question.type === 'sentence-connector' || question.type === 'context-distractor';
+  const isErrorSpotting = question.type === 'error-spotting';
 
-  if (isMC) {
+  if (isErrorSpotting) {
+    title = 'Hata Saptama Analizi';
+    const chosenWord = question.options[selectedAnswer] || '';
+    const correctWord = question.options[question.correctIndex] || '';
+
+    text = `Seçtiğiniz kelime: <strong style="color: var(--color-wrong);">${chosenWord}</strong>`;
+    ruleTitle = '💡 Özne-Yüklem & Sentaks Hatası Gerekçesi';
+    
+    let specificExplanation = question.explanation || question.grammarExplanation || '';
+    if (!specificExplanation && correctWord) {
+      if (['don\'t', 'doesn\'t', 'does', 'do', 'is', 'are', 'was', 'were', 'has', 'have'].includes(correctWord.toLowerCase())) {
+        specificExplanation = `Cümledeki <strong>"${correctWord}"</strong> kullanımı özne-yüklem uyumsuzluğuna (Subject-Verb Agreement) yol açmaktadır. 'She / He / It' üçüncü tekil özneleri ile geniş zamanda <em>'don't'</em> değil, <em>'doesn't'</em> yardımcı fiili kullanılır.`;
+      } else {
+        specificExplanation = `Cümlede <strong>"${correctWord}"</strong> öğesi gramer/sentaks kuralını ihlal etmektedir. Doğru yapı ile değiştirilmesi gerekmektedir.`;
+      }
+    }
+
+    ruleText = specificExplanation;
+    wrongExample = `Sizin Seçtiğiniz (Doğru Gramer Yapısı): "${chosenWord}" ❌`;
+    correctExample = `Cümledeki Hatalı Yapı: "${correctWord}" ✔️`;
+
+  } else if (isMC) {
     title = 'Çeviri Analizi';
     const chosenTranslation = question.options[selectedAnswer] || '';
     const correctTranslation = question.options[question.correctIndex] || '';
@@ -18647,7 +18686,8 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
           }
         }
       }
-      ruleText = lessonTipText || `İngilizceden Türkçeye (veya tersi) çevirilerde zaman zarflarının (when: -diğinde, since: -den beri, before: -meden önce, after: -dikten sonra) ve yardımcı fiillerin anlamına dikkat edilmelidir.`;
+      let cleanMechanic = (question.mechanicNote || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      ruleText = preDefinedExplanation || cleanMechanic || lessonTipText || `Cümle yapısındaki kelime seçimi, bağlaç uyumu ve zaman kalıpları bağlama uygun olarak analiz edilmelidir.`;
     }
 
     // Check specific conjunction errors
