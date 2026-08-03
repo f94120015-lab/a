@@ -62192,19 +62192,19 @@ const unitSentencesMap = {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> deciphering ancient scripts",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> ancient scripts",
                   "right": "antik yazıtları çözmeye alışıktır"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> examining archival sources",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">examining</span> archival sources",
                   "right": "arşiv kaynaklarını incelemeye alışkındırlar"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> analyzing historical manuscripts",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> <span style=\"color: #10b981; font-weight: bold;\">analyzing</span> historical manuscripts",
                   "right": "tarihi el yazmalarını analiz etmeye alışkınım"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">will get used to</span> living in tribal cultures",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">will get used to</span> <span style=\"color: #10b981; font-weight: bold;\">living</span> in tribal cultures",
                   "right": "kabile kültürlerinde yaşamaya alışacaktır"
                 }
               ],
@@ -62213,7 +62213,7 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> deciphering ancient scripts\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> ancient scripts\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "antik yazıtları çözmeye alışıktır",
                 "arşiv kaynaklarını incelemeye alışkındırlar",
@@ -62221,7 +62221,7 @@ const unitSentencesMap = {
                 "kabile kültürlerinde yaşamaya alışacaktır"
               ],
               "correctIndex": 0,
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> deciphering ancient scripts",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> ancient scripts",
               "isEngToTr": true,
               "explanation": "<b>Seçenek Analizi:</b><br/>• <b>antik yazıtları çözmeye alışıktır (Doğru):</b> <i>is used to deciphering ancient scripts</i> ifadesinin birebir karşılığıdır."
             },
@@ -62245,7 +62245,7 @@ const unitSentencesMap = {
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
               "translation": "antik yazıtları çözmeye alışıktır",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> deciphering ancient scripts",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> ancient scripts",
               "words": [
                 "çözmeye",
                 "yazıtları",
@@ -62266,9 +62266,9 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q5",
               "type": "translation-text",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> analyzing historical manuscripts\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> <span style=\"color: #10b981; font-weight: bold;\">analyzing</span> historical manuscripts\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "tarihi el yazmalarını analiz etmeye alışkınım",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> analyzing historical manuscripts",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">am used to</span> <span style=\"color: #10b981; font-weight: bold;\">analyzing</span> historical manuscripts",
               "isEngToTr": true,
               "explanation": "<b>Çeviri Notu:</b> <i>am used to analyzing</i> = analiz etmeye alışkınım."
             },
@@ -62278,19 +62278,19 @@ const unitSentencesMap = {
               "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "The historian <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> analyzing medieval tax records in local archives.",
+                  "left": "The historian <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">analyzing</span> medieval tax records in local archives.",
                   "right": "Tarihçi, yerel arşivlerdeki orta çağ vergi kayıtlarını analiz etmeye alışıktır."
                 },
                 {
-                  "left": "Anthropologists <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> living in remote villages for fieldwork.",
+                  "left": "Anthropologists <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">living</span> in remote villages for fieldwork.",
                   "right": "Antropologlar saha çalışması için uzak köylerde yaşamaya alışkındırlar."
                 },
                 {
-                  "left": "Young scholars slowly <span style=\"color: #ff6b6b; font-weight: bold;\">get used to</span> reading ambiguous historical documents.",
+                  "left": "Young scholars slowly <span style=\"color: #ff6b6b; font-weight: bold;\">get used to</span> <span style=\"color: #10b981; font-weight: bold;\">reading</span> ambiguous historical documents.",
                   "right": "Genç akademisyenler muğlak tarihi belgeleri okumaya yavaş yavaş alışırlar."
                 },
                 {
-                  "left": "The philologist <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> interpreting forgotten dialect structures.",
+                  "left": "The philologist <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">interpreting</span> forgotten dialect structures.",
                   "right": "Filolog, unutulmuş diyalekt yapılarını yorumlamaya alışıktır."
                 }
               ],
@@ -62307,7 +62307,7 @@ const unitSentencesMap = {
                 "Tarihçi, yerel arşivlerdeki orta çağ vergi kayıtlarını analiz etmeye alışıktır."
               ],
               "correctIndex": 1,
-              "enSentence": "Anthropologists <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> living in remote villages for fieldwork.",
+              "enSentence": "Anthropologists <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">living</span> in remote villages for fieldwork.",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> Antropologlar saha çalışması için uzak köylerde yaşamaya alışkındırlar."
             },
@@ -62331,7 +62331,7 @@ const unitSentencesMap = {
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
               "translation": "Tarihçi, yerel arşivlerdeki orta çağ vergi kayıtlarını analiz etmeye alışıktır.",
-              "enSentence": "The historian <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> analyzing medieval tax records in local archives.",
+              "enSentence": "The historian <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">analyzing</span> medieval tax records in local archives.",
               "words": [
                 "Tarihçi,",
                 "analiz",
@@ -62362,9 +62362,9 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">The philologist is accustomed to interpreting forgotten dialect structures.</span>\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">The philologist is accustomed to <span style=\"color: #10b981; font-weight: bold;\">interpreting</span> forgotten dialect structures.</span>\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "Filolog, unutulmuş diyalekt yapılarını yorumlamaya alışıktır.",
-              "enSentence": "The philologist <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> interpreting forgotten dialect structures.",
+              "enSentence": "The philologist <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">interpreting</span> forgotten dialect structures.",
               "isEngToTr": true,
               "explanation": "<b>Çeviri Notu:</b> <i>is accustomed to interpreting</i> = yorumlamaya alışıktır."
             },
@@ -62374,19 +62374,19 @@ const unitSentencesMap = {
               "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "Researchers who <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> evaluating qualitative evidence easily identify cultural biases in historical chronicles.",
+                  "left": "Researchers who <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">evaluating</span> qualitative evidence easily identify cultural biases in historical chronicles.",
                   "right": "Niteliksel kanıtları değerlendirmeye alışkın olan araştırmacılar, tarihi kroniklerdeki kültürel ön yargıları kolayca tespit ederler."
                 },
                 {
-                  "left": "Although the manuscript was heavily damaged, the paleographer <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> deciphering fragmented Renaissance codices.",
+                  "left": "Although the manuscript was heavily damaged, the paleographer <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> fragmented Renaissance codices.",
                   "right": "El yazması ağır hasar görmüş olmasına rağmen, paleograf parçalanmış Rönesans elyazmalarını çözmeye alışıktı."
                 },
                 {
-                  "left": "Sociologists who conduct field studies in urban communities quickly <span style=\"color: #ff6b6b; font-weight: bold;\">get used to</span> observing subtle linguistic shifts.",
+                  "left": "Sociologists who conduct field studies in urban communities quickly <span style=\"color: #ff6b6b; font-weight: bold;\">get used to</span> <span style=\"color: #10b981; font-weight: bold;\">observing</span> subtle linguistic shifts.",
                   "right": "Kent topluluklarında saha çalışmaları yürüten sosyologlar, ince dilbilimsel değişimleri gözlemlemeye hızla alışırlar."
                 },
                 {
-                  "left": "Having studied ancient rituals for decades, the ethnographer <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> contextualizing complex symbolic traditions.",
+                  "left": "Having studied ancient rituals for decades, the ethnographer <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">contextualizing</span> complex symbolic traditions.",
                   "right": "On yıllardır antik ritüelleri incelemiş olan etnograf, karmaşık sembolik gelenekleri bağlamısallaştırmaya alışıktır."
                 }
               ],
@@ -62395,7 +62395,7 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q12",
               "type": "multiple-choice",
-              "prompt": "[Akademik Bağlaçlı Cümle] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Although the manuscript was heavily damaged, the paleographer was used to deciphering fragmented Renaissance codices.</span>\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "[Akademik Bağlaçlı Cümle] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Although the manuscript was heavily damaged, the paleographer was used to <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> fragmented Renaissance codices.</span>\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "Niteliksel kanıtları değerlendirmeye alışkın olan araştırmacılar, tarihi kroniklerdeki kültürel ön yargıları kolayca tespit ederler.",
                 "El yazması ağır hasar görmüş olmasına rağmen, paleograf parçalanmış Rönesans elyazmalarını çözmeye alışıktı.",
@@ -62403,7 +62403,7 @@ const unitSentencesMap = {
                 "On yıllardır antik ritüelleri incelemiş olan etnograf, karmaşık sembolik gelenekleri bağlamısallaştırmaya alışıktır."
               ],
               "correctIndex": 1,
-              "enSentence": "Although the manuscript was heavily damaged, the paleographer <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> deciphering fragmented Renaissance codices.",
+              "enSentence": "Although the manuscript was heavily damaged, the paleographer <span style=\"color: #ff6b6b; font-weight: bold;\">was used to</span> <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> fragmented Renaissance codices.",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> El yazması ağır hasar görmüş olmasına rağmen, paleograf parçalanmış Rönesans elyazmalarını çözmeye alışıktı."
             },
@@ -62464,7 +62464,7 @@ const unitSentencesMap = {
               "type": "translation-text",
               "prompt": "[Etkin Katılç (Participle) Yapısı] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Having studied ancient rituals for decades, the ethnographer is accustomed to contextualizing complex symbolic traditions.</span>\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "On yıllardır antik ritüelleri incelemiş olan etnograf, karmaşık sembolik gelenekleri bağlamısallaştırmaya alışıktır.",
-              "enSentence": "Having studied ancient rituals for decades, the ethnographer <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> contextualizing complex symbolic traditions.",
+              "enSentence": "Having studied ancient rituals for decades, the ethnographer <span style=\"color: #ff6b6b; font-weight: bold;\">is accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">contextualizing</span> complex symbolic traditions.",
               "isEngToTr": true,
               "explanation": "<b>Participle Notu:</b> <i>Having studied...</i> = On yıllardır antik ritüelleri incelemiş olan..."
             }
@@ -62485,19 +62485,19 @@ const unitSentencesMap = {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> translate Latin treaties",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">translate</span> Latin treaties",
                   "right": "Latince antlaşmaları çevirmeye isteklidir"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> alter historical facts",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">alter</span> historical facts",
                   "right": "tarihi gerçekleri değiştirmeye isteksizdirler"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is reluctant to</span> question established dogmas",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is reluctant to</span> <span style=\"color: #10b981; font-weight: bold;\">question</span> established dogmas",
                   "right": "yerleşik dogmaları sorgulamaya gönülsüzdür"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">am willing to</span> share archival records",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">am willing to</span> <span style=\"color: #10b981; font-weight: bold;\">share</span> archival records",
                   "right": "arşiv kayıtlarını paylaşmaya istekliyim"
                 }
               ],
@@ -62506,7 +62506,7 @@ const unitSentencesMap = {
             {
               "id": "u103l108_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> translate Latin treaties\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">translate</span> Latin treaties\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "Latince antlaşmaları çevirmeye isteklidir",
                 "tarihi gerçekleri değiştirmeye isteksizdirler",
@@ -62514,7 +62514,7 @@ const unitSentencesMap = {
                 "arşiv kayıtlarını paylaşmaya istekliyim"
               ],
               "correctIndex": 0,
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> translate Latin treaties",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">translate</span> Latin treaties",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> Latince antlaşmaları çevirmeye isteklidir."
             },
@@ -62538,7 +62538,7 @@ const unitSentencesMap = {
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
               "translation": "Latince antlaşmaları çevirmeye isteklidir",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> translate Latin treaties",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">translate</span> Latin treaties",
               "words": [
                 "çevirmeye",
                 "Latince",
@@ -62559,9 +62559,9 @@ const unitSentencesMap = {
             {
               "id": "u103l108_ex1_q5",
               "type": "translation-text",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> alter historical facts\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">alter</span> historical facts\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "tarihi gerçekleri değiştirmeye isteksizdirler",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> alter historical facts",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">alter</span> historical facts",
               "isEngToTr": true,
               "explanation": "<b>Çeviri Notu:</b> <i>are unwilling to alter</i> = değiştirmeye isteksizdirler."
             },
@@ -62571,19 +62571,19 @@ const unitSentencesMap = {
               "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "The philosopher <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> re-examine classic moral dilemmas.",
+                  "left": "The philosopher <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">re-examine</span> classic moral dilemmas.",
                   "right": "Felsefeci, klasik ahlaki ikilemleri yeniden incelemeye isteklidir."
                 },
                 {
-                  "left": "Archivists <span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> disclose unverified royal correspondence.",
+                  "left": "Archivists <span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">disclose</span> unverified royal correspondence.",
                   "right": "Arşivciler, doğrulanmamış kraliyet yazışmalarını açıklamaya isteksizdirler."
                 },
                 {
-                  "left": "Literary critics <span style=\"color: #ff6b6b; font-weight: bold;\">are reluctant to</span> accept modern re-interpretations of epic poems.",
+                  "left": "Literary critics <span style=\"color: #ff6b6b; font-weight: bold;\">are reluctant to</span> <span style=\"color: #10b981; font-weight: bold;\">accept</span> modern re-interpretations of epic poems.",
                   "right": "Edebi eleştirmenler, destansı şiirlerin modern yeniden yorumlarını kabul etmeye gönülsüzdürler."
                 },
                 {
-                  "left": "The biographer <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> interview eyewitnesses of the political movement.",
+                  "left": "The biographer <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">interview</span> eyewitnesses of the political movement.",
                   "right": "Biyografi yazarı, siyasi hareketin görgü tanıklarıyla mülakat yapmaya isteklidir."
                 }
               ],
@@ -62600,7 +62600,7 @@ const unitSentencesMap = {
                 "Felsefeci, klasik ahlaki ikilemleri yeniden incelemeye isteklidir."
               ],
               "correctIndex": 1,
-              "enSentence": "Archivists <span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> disclose unverified royal correspondence.",
+              "enSentence": "Archivists <span style=\"color: #ff6b6b; font-weight: bold;\">are unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">disclose</span> unverified royal correspondence.",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> Arşivciler, doğrulanmamış kraliyet yazışmalarını açıklamaya isteksizdirler."
             },
@@ -62624,7 +62624,7 @@ const unitSentencesMap = {
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
               "translation": "Felsefeci, klasik ahlaki ikilemleri yeniden incelemeye isteklidir.",
-              "enSentence": "The philosopher <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> re-examine classic moral dilemmas.",
+              "enSentence": "The philosopher <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">re-examine</span> classic moral dilemmas.",
               "words": [
                 "Felsefeci,",
                 "klasik",
@@ -62649,9 +62649,9 @@ const unitSentencesMap = {
             {
               "id": "u103l108_ex1_q10",
               "type": "translation-text",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">Literary critics are reluctant to accept modern re-interpretations of epic poems.</span>\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">Literary critics are reluctant to <span style=\"color: #10b981; font-weight: bold;\">accept</span> modern re-interpretations of epic poems.</span>\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "Edebi eleştirmenler, destansı şiirlerin modern yeniden yorumlarını kabul etmeye gönülsüzdürler.",
-              "enSentence": "Literary critics <span style=\"color: #ff6b6b; font-weight: bold;\">are reluctant to</span> accept modern re-interpretations of epic poems.",
+              "enSentence": "Literary critics <span style=\"color: #ff6b6b; font-weight: bold;\">are reluctant to</span> <span style=\"color: #10b981; font-weight: bold;\">accept</span> modern re-interpretations of epic poems.",
               "isEngToTr": true,
               "explanation": "<b>Çeviri Notu:</b> <i>are reluctant to accept</i> = kabul etmeye gönülsüzdürler."
             },
@@ -62661,19 +62661,19 @@ const unitSentencesMap = {
               "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "Scholars who <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> integrate interdisciplinary frameworks often discover novel perspectives in cultural history.",
+                  "left": "Scholars who <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> <span style=\"color: #10b981; font-weight: bold;\">integrate</span> interdisciplinary frameworks often discover novel perspectives in cultural history.",
                   "right": "Disiplinler arası çerçeveleri entegre etmeye istekli akademisyenler, kültür tarihinde sıklıkla özgün perspektifler keşfederler."
                 },
                 {
-                  "left": "Because primary sources were restricted by state authorities, historians <span style=\"color: #ff6b6b; font-weight: bold;\">were unwilling to</span> publish preliminary conclusions.",
+                  "left": "Because primary sources were restricted by state authorities, historians <span style=\"color: #ff6b6b; font-weight: bold;\">were unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">publish</span> preliminary conclusions.",
                   "right": "Birincil kaynaklar devlet makamlarınca kısıtlandığı için tarihçiler ön sonuçları yayımlamaya isteksizdi."
                 },
                 {
-                  "left": "Having spent decades analyzing traditional canons, the committee <span style=\"color: #ff6b6b; font-weight: bold;\">was reluctant to</span> revise the literary curriculum.",
+                  "left": "Having spent decades analyzing traditional canons, the committee <span style=\"color: #ff6b6b; font-weight: bold;\">was reluctant to</span> <span style=\"color: #10b981; font-weight: bold;\">revise</span> the literary curriculum.",
                   "right": "Geleneksel kanonları analiz ederek on yıllar geçirmiş olan komite, edebi müfredatı revize etmeye gönülsüzdü."
                 },
                 {
-                  "left": "If independent researchers <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> share field notes, comparative anthropology will make significant progress.",
+                  "left": "If independent researchers <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> <span style=\"color: #10b981; font-weight: bold;\">share</span> field notes, comparative anthropology will make significant progress.",
                   "right": "Bağımsız araştırmacılar saha notlarını paylaşmaya istekliyse, karşılaştırmalı antropoloji önemli bir ilerleme kaydedecektir."
                 }
               ],
@@ -62690,7 +62690,7 @@ const unitSentencesMap = {
                 "Bağımsız araştırmacılar saha notlarını paylaşmaya istekliyse, karşılaştırmalı antropoloji önemli bir ilerleme kaydedecektir."
               ],
               "correctIndex": 1,
-              "enSentence": "Because primary sources were restricted by state authorities, historians <span style=\"color: #ff6b6b; font-weight: bold;\">were unwilling to</span> publish preliminary conclusions.",
+              "enSentence": "Because primary sources were restricted by state authorities, historians <span style=\"color: #ff6b6b; font-weight: bold;\">were unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">publish</span> preliminary conclusions.",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> Birincil kaynaklar devlet makamlarınca kısıtlandığı için tarihçiler ön sonuçları yayımlamaya isteksizdi."
             },
@@ -62776,19 +62776,19 @@ const unitSentencesMap = {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> spark ideological debates",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> <span style=\"color: #10b981; font-weight: bold;\">spark</span> ideological debates",
                   "right": "ideolojik tartışmaları ateşlemesi muhtemeldir"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is unlikely to</span> alter societal norms",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is unlikely to</span> <span style=\"color: #10b981; font-weight: bold;\">alter</span> societal norms",
                   "right": "toplumsal kuralları değiştirmesi muhtemel değildir"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> cause social transformation",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> <span style=\"color: #10b981; font-weight: bold;\">cause</span> social transformation",
                   "right": "kaçınılmaz olarak toplumsal dönüşüme yol açacaktır"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> reshape historical memory",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> <span style=\"color: #10b981; font-weight: bold;\">reshape</span> historical memory",
                   "right": "tarihi hafızayı kesinlikle yeniden şekillendirecektir"
                 }
               ],
@@ -62797,7 +62797,7 @@ const unitSentencesMap = {
             {
               "id": "u103l109_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> spark ideological debates\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> <span style=\"color: #10b981; font-weight: bold;\">spark</span> ideological debates\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "ideolojik tartışmaları ateşlemesi muhtemeldir",
                 "toplumsal kuralları değiştirmesi muhtemel değildir",
@@ -62805,7 +62805,7 @@ const unitSentencesMap = {
                 "tarihi hafızayı kesinlikle yeniden şekillendirecektir"
               ],
               "correctIndex": 0,
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> spark ideological debates",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> <span style=\"color: #10b981; font-weight: bold;\">spark</span> ideological debates",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> ideolojik tartışmaları ateşlemesi muhtemeldir."
             },
@@ -62829,7 +62829,7 @@ const unitSentencesMap = {
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
               "translation": "ideolojik tartışmaları ateşlemesi muhtemeldir",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> spark ideological debates",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> <span style=\"color: #10b981; font-weight: bold;\">spark</span> ideological debates",
               "words": [
                 "tartışmaları",
                 "ideolojik",
@@ -62850,9 +62850,9 @@ const unitSentencesMap = {
             {
               "id": "u103l109_ex1_q5",
               "type": "translation-text",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> reshape historical memory\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> <span style=\"color: #10b981; font-weight: bold;\">reshape</span> historical memory\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "tarihi hafızayı kesinlikle yeniden şekillendirecektir",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> reshape historical memory",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> <span style=\"color: #10b981; font-weight: bold;\">reshape</span> historical memory",
               "isEngToTr": true,
               "explanation": "<b>Çeviri Notu:</b> <i>is certain to reshape</i> = kesinlikle yeniden şekillendirecektir."
             },
@@ -62862,19 +62862,19 @@ const unitSentencesMap = {
               "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "The newly discovered papyrus <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> revise our understanding of Hellenistic philosophy.",
+                  "left": "The newly discovered papyrus <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> <span style=\"color: #10b981; font-weight: bold;\">revise</span> our understanding of Hellenistic philosophy.",
                   "right": "Yeni keşfedilen papirüsün Hellenistik felsefe anlayışımızı revize etmesi muhtemeldir."
                 },
                 {
-                  "left": "A single decree <span style=\"color: #ff6b6b; font-weight: bold;\">is unlikely to</span> eradicate centuries-old cultural rituals.",
+                  "left": "A single decree <span style=\"color: #ff6b6b; font-weight: bold;\">is unlikely to</span> <span style=\"color: #10b981; font-weight: bold;\">eradicate</span> centuries-old cultural rituals.",
                   "right": "Tek bir fermanın asırlık kültürel ritüelleri ortadan kaldırması muhtemel değildir."
                 },
                 {
-                  "left": "Rapid urbanization <span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> transform traditional family structures in developing nations.",
+                  "left": "Rapid urbanization <span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> <span style=\"color: #10b981; font-weight: bold;\">transform</span> traditional family structures in developing nations.",
                   "right": "Hızlı kentleşme, gelişmekte olan ülkelerde geleneksel aile yapılarını kaçınılmaz olarak dönüştürecektir."
                 },
                 {
-                  "left": "The rigorous comparative method <span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> yield objective historical findings.",
+                  "left": "The rigorous comparative method <span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> <span style=\"color: #10b981; font-weight: bold;\">yield</span> objective historical findings.",
                   "right": "Titiz karşılaştırmalı yöntem, kesinlikle nesnel tarihi bulgular üretecektir."
                 }
               ],
@@ -62891,7 +62891,7 @@ const unitSentencesMap = {
                 "Yeni keşfedilen papirüsün Hellenistik felsefe anlayışımızı revize etmesi muhtemeldir."
               ],
               "correctIndex": 1,
-              "enSentence": "Rapid urbanization <span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> transform traditional family structures in developing nations.",
+              "enSentence": "Rapid urbanization <span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> <span style=\"color: #10b981; font-weight: bold;\">transform</span> traditional family structures in developing nations.",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> Hızlı kentleşme, gelişmekte olan ülkelerde geleneksel aile yapılarını kaçınılmaz olarak dönüştürecektir."
             },
@@ -63071,19 +63071,19 @@ const unitSentencesMap = {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is supposed to</span> protect cultural heritage",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is supposed to</span> <span style=\"color: #10b981; font-weight: bold;\">protect</span> cultural heritage",
                   "right": "kültürel mirası koruması beklenmektedir"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> repeat past mistakes",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> <span style=\"color: #10b981; font-weight: bold;\">repeat</span> past mistakes",
                   "right": "geçmiş hataları tekrarlamaya mahkûmdur"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is obliged to</span> submit validation reports",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is obliged to</span> <span style=\"color: #10b981; font-weight: bold;\">submit</span> validation reports",
                   "right": "doğrulama raporlarını sunmakla yükümlüdür"
                 },
                 {
-                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is unable to</span> decipher damaged inscriptions",
+                  "left": "<span style=\"color: #ff6b6b; font-weight: bold;\">is unable to</span> <span style=\"color: #10b981; font-weight: bold;\">decipher</span> damaged inscriptions",
                   "right": "hasarlı yazıtları çözmeye muktedir değildir"
                 }
               ],
@@ -63092,7 +63092,7 @@ const unitSentencesMap = {
             {
               "id": "u103l110_ex1_q2",
               "type": "multiple-choice",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> repeat past mistakes\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> <span style=\"color: #10b981; font-weight: bold;\">repeat</span> past mistakes\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "geçmiş hataları tekrarlamaya mahkûmdur",
                 "kültürel mirası koruması beklenmektedir",
@@ -63100,7 +63100,7 @@ const unitSentencesMap = {
                 "hasarlı yazıtları çözmeye muktedir değildir"
               ],
               "correctIndex": 0,
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> repeat past mistakes",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> <span style=\"color: #10b981; font-weight: bold;\">repeat</span> past mistakes",
               "isEngToTr": true,
               "explanation": "<b>Doğru Cevap:</b> geçmiş hataları tekrarlamaya mahkûmdur."
             },
@@ -63124,7 +63124,7 @@ const unitSentencesMap = {
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
               "translation": "geçmiş hataları tekrarlamaya mahkûmdur",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> repeat past mistakes",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is doomed to</span> <span style=\"color: #10b981; font-weight: bold;\">repeat</span> past mistakes",
               "words": [
                 "tekrarlamaya",
                 "geçmiş",
@@ -63145,9 +63145,9 @@ const unitSentencesMap = {
             {
               "id": "u103l110_ex1_q5",
               "type": "translation-text",
-              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is about to</span> publish the critical edition\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "\"<span style=\"color: #ff6b6b; font-weight: bold;\">is about to</span> <span style=\"color: #10b981; font-weight: bold;\">publish</span> the critical edition\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "eleştirel baskıyı yayımlamak üzeredir",
-              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is about to</span> publish the critical edition",
+              "enSentence": "<span style=\"color: #ff6b6b; font-weight: bold;\">is about to</span> <span style=\"color: #10b981; font-weight: bold;\">publish</span> the critical edition",
               "isEngToTr": true,
               "explanation": "<b>Çeviri Notu:</b> <i>is about to publish</i> = yayımlamak üzeredir."
             },
@@ -63157,19 +63157,19 @@ const unitSentencesMap = {
               "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "Societies that forget history <span style=\"color: #ff6b6b; font-weight: bold;\">are doomed to</span> repeat its tragic errors.",
+                  "left": "Societies that forget history <span style=\"color: #ff6b6b; font-weight: bold;\">are doomed to</span> <span style=\"color: #10b981; font-weight: bold;\">repeat</span> its tragic errors.",
                   "right": "Tarihi unutan toplumlar, onun trajik hatalarını tekrarlamaya mahkûmdur."
                 },
                 {
-                  "left": "The international council <span style=\"color: #ff6b6b; font-weight: bold;\">is supposed to</span> preserve endangered oral traditions.",
+                  "left": "The international council <span style=\"color: #ff6b6b; font-weight: bold;\">is supposed to</span> <span style=\"color: #10b981; font-weight: bold;\">preserve</span> endangered oral traditions.",
                   "right": "Uluslararası konseyin tehlike altındaki sözlü gelenekleri koruması beklenmektedir."
                 },
                 {
-                  "left": "The royal envoy <span style=\"color: #ff6b6b; font-weight: bold;\">is to</span> deliver the peace terms to the rebel commander.",
+                  "left": "The royal envoy <span style=\"color: #ff6b6b; font-weight: bold;\">is to</span> <span style=\"color: #10b981; font-weight: bold;\">deliver</span> the peace terms to the rebel commander.",
                   "right": "Kraliyet elçisi, barış şartlarını isyancı komutana iletmekle görevlidir."
                 },
                 {
-                  "left": "Without bilingual texts, linguists <span style=\"color: #ff6b6b; font-weight: bold;\">are unable to</span> translate the ancient dialect.",
+                  "left": "Without bilingual texts, linguists <span style=\"color: #ff6b6b; font-weight: bold;\">are unable to</span> <span style=\"color: #10b981; font-weight: bold;\">translate</span> the ancient dialect.",
                   "right": "Çift dilli metinler olmaksızın, dilbilimciler antik diyalekti çevirmeye muktedir değildir."
                 }
               ],

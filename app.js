@@ -8397,6 +8397,36 @@ function renderQuestion() {
     }
   }
 
+  // Automatically color-code verbs following phrasal modals (used/accustomed -> -ing, all others -> V1) in green (#10b981)
+  const applyStructureGreenColoring = (str) => {
+    if (!str || typeof str !== 'string') return str;
+    // 1. Gerunds (-ing) after used to / accustomed to
+    let res = str.replace(/((?:used|accustomed)\s+to(?:<\/span>)?\s+)(\b[a-zA-Z]+ing\b)/gi, (match, prefix, ingWord) => {
+      if (match.includes('color: #10b981') || match.includes('color:#10b981')) return match;
+      return `${prefix}<span style="color: #10b981; font-weight: 700;">${ingWord}</span>`;
+    });
+    // 2. Bare infinitive (V1) verbs after phrasal modals (willing, unwilling, reluctant, likely, unlikely, bound, certain, supposed, doomed, unable, about, obliged + to, or am/is/are/was/were to)
+    res = res.replace(/((?:willing|unwilling|reluctant|likely|unlikely|bound|certain|supposed|doomed|unable|about|obliged)\s+to(?:<\/span>)?\s+)(\b[a-zA-Z-]+\b)/gi, (match, prefix, v1Word) => {
+      if (match.includes('color: #10b981') || match.includes('color:#10b981')) return match;
+      return `${prefix}<span style="color: #10b981; font-weight: 700;">${v1Word}</span>`;
+    });
+    res = res.replace(/((?:am|is|are|was|were)\s+to(?:<\/span>)?\s+)(\b[a-zA-Z-]+\b)/gi, (match, prefix, v1Word) => {
+      if (match.includes('color: #10b981') || match.includes('color:#10b981')) return match;
+      return `${prefix}<span style="color: #10b981; font-weight: 700;">${v1Word}</span>`;
+    });
+    return res;
+  };
+
+  if (question.sentence) question.sentence = applyStructureGreenColoring(question.sentence);
+  if (question.enSentence) question.enSentence = applyStructureGreenColoring(question.enSentence);
+  if (question.prompt) question.prompt = applyStructureGreenColoring(question.prompt);
+  if (question.pairs) {
+    question.pairs.forEach(p => {
+      if (p.left) p.left = applyStructureGreenColoring(p.left);
+      if (p.right) p.right = applyStructureGreenColoring(p.right);
+    });
+  }
+
   // Dynamically assign render type for blank questions
   if (question.type === 'fill-blank-dropdown' || question.type === 'fill-blank') {
     if (question._dynamicSessionId !== quizSessionId) {
@@ -18874,7 +18904,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       } else if (lessonNum === 104) {
         title = 'be/get used to + V-ing (Alışkanlık Durumu)';
         ruleTitle = '💡 Alışkanlık Bildiren Yapı Kuralları';
-        ruleText = `<strong>be used to</strong> veya <strong>get used to</strong> kalıpları bir şeye <strong>"alışkın olmak"</strong> veya <strong>"alışmak"</strong> anlamı taşır. Bu kalıplar arkasından gelen fiili yalın değil, mutlaka isim-fiil (Gerund / <strong>V-ing</strong>) veya doğrudan isim olarak alır. (Formül: <strong>be/get used to + Noun / V-ing</strong>)`;
+        ruleText = `<strong>be used to</strong>, <strong>be accustomed to</strong> veya <strong>get used to</strong> kalıpları bir şeye <strong>"alışkın olmak"</strong> veya <strong>"alışmak"</strong> anlamı taşır. Bu yapılardan sonra gelen fiil daima isim-fiil (<strong style="color: #10b981;">Gerund / V-ing</strong>) veya doğrudan bir isim alır. (Formül: <strong>be/get/be accustomed to + Noun / <span style="color: #10b981; font-weight: 800;">V-ing</span></strong>)`;
         wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" gerund (V-ing) veya be used to kuralına uygun değildir ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" (V-ing çekimi) ✔️`;
       }
@@ -22460,13 +22490,14 @@ function getModalTenseData(modal, tense, aspect) {
     { word: activeSpeaker, role: "subject", color: colorSubject };
     
   const isIngModal = modal.endsWith('_ing') || modal === 'be_used_to' || modal === 'be_accustomed_to';
+  const isV1PhrasalModal = modal.includes('to') || modal === 'would_prefer';
   const needsTo = modal.includes('to') || modal === 'would_prefer';
   
   const verbWagon = isPassive ?
     { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
     (isIngModal ?
-      { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" } :
-      { word: activeVerbObj.engV1, role: "main_verb", color: colorVerb, suffix_tr: activeStem + "-" }
+      { word: activeVerbObj.engIng, role: "main_verb_ing", color: "#10b981", suffix_tr: activeStem + "-" } :
+      { word: activeVerbObj.engV1, role: "main_verb", color: isV1PhrasalModal ? "#10b981" : colorVerb, suffix_tr: activeStem + "-" }
     );
     
   // Splitting for Question mode:
@@ -22606,7 +22637,7 @@ function getModalTenseData(modal, tense, aspect) {
   } else if (aspect === 'progressive') {
     const verbWagonIng = isPassive ?
       { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
-      { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" };
+      { word: activeVerbObj.engIng, role: "main_verb_ing", color: isIngModal ? "#10b981" : colorVerb, suffix_tr: activeStem + "-" };
       
     if (isQuestion) {
       wagonChain.push({ word: qFirst, role: "status_linker", color: colorAux });
@@ -22658,7 +22689,7 @@ function getModalTenseData(modal, tense, aspect) {
   } else if (aspect === 'perfect-progressive') {
     const verbWagonIng = isPassive ?
       { word: activeVerbObj.engV3, role: "main_verb_v3", color: colorVerb, suffix_tr: passiveStem + "-" } :
-      { word: activeVerbObj.engIng, role: "main_verb_ing", color: colorVerb, suffix_tr: activeStem + "-" };
+      { word: activeVerbObj.engIng, role: "main_verb_ing", color: isIngModal ? "#10b981" : colorVerb, suffix_tr: activeStem + "-" };
 
     if (isQuestion) {
       wagonChain.push({ word: qFirst, role: "status_linker", color: colorAux });
