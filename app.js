@@ -4064,65 +4064,57 @@ function openQuestionPreview(title, questions, parentObj = null) {
       case 'vagon-to-suffix-match':
       case 'reverse-engineering-translation':
       case 'suffix-decapitation':
-        typeLabel = q.isEngToTr ? "Çoktan Seçmeli (Eng -> Tr)" : "Çoktan Seçmeli (Tr -> Eng)";
-        typeClass = "qp-type-mc";
-        const opts = q.options.map((opt, oIdx) => {
+      case 'spotlight':
+      case 'true-false':
+        typeLabel = q.type === 'spotlight' ? "Projektör / Öge Analizi (Spotlight)" : (q.type === 'true-false' ? "Doğru / Yanlış" : (q.isEngToTr ? "Çoktan Seçmeli (Eng -> Tr)" : "Çoktan Seçmeli (Tr -> Eng)"));
+        typeClass = q.type === 'spotlight' ? "qp-type-wb" : (q.type === 'true-false' ? "qp-type-drop" : "qp-type-mc");
+        const opts = (q.options || []).map((opt, oIdx) => {
           const isCorrect = oIdx === q.correctIndex;
-          return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
+          return `<div class="qp-option-card-full ${isCorrect ? 'correct' : ''}">
+            <span class="qp-opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+            <span class="qp-opt-text">${opt}</span>
+            ${isCorrect ? '<span class="qp-opt-check">✓ Doğru Cevap</span>' : ''}
+          </div>`;
         }).join('');
-        if (q.type === 'suffix-decapitation') {
-          if (q.sentence_before) {
-            detailsHtml = `
-              <div class="qp-detail-row">
-                <span class="qp-detail-label">Önceki Cümle:</span>
-                <span class="qp-detail-val">"${q.sentence_before || ''}"</span>
-              </div>
-              <div class="qp-detail-row">
-                <span class="qp-detail-label">Sonraki Cümle:</span>
-                <span class="qp-detail-val">"${q.sentence_after || ''}"</span>
-              </div>
-              <div class="qp-detail-row">
-                <span class="qp-detail-label">Seçenekler:</span>
-                <div class="qp-options-list">${opts}</div>
-              </div>
-            `;
-          } else {
-            detailsHtml = `
-              <div class="qp-detail-row">
-                <span class="qp-detail-label">Cümle:</span>
-                <span class="qp-detail-val">"${q.sentence || ''}"</span>
-              </div>
-              <div class="qp-detail-row">
-                <span class="qp-detail-label">Seçenekler:</span>
-                <div class="qp-options-list">${opts}</div>
-              </div>
-            `;
-          }
-        } else {
-          detailsHtml = `
+        
+        let sentenceHtml = '';
+        if (q.sentence || q.enSentence) {
+          sentenceHtml = `
             <div class="qp-detail-row">
-              <span class="qp-detail-label">Seçenekler:</span>
-              <div class="qp-options-list">${opts}</div>
+              <span class="qp-detail-label">Cümle:</span>
+              <span class="qp-detail-val" style="font-size: 1.15rem; font-weight: 600;">${q.sentence || q.enSentence}</span>
             </div>
           `;
         }
+
+        detailsHtml = `
+          ${sentenceHtml}
+          <div class="qp-detail-row">
+            <span class="qp-detail-label">Seçenekler:</span>
+            <div class="qp-options-grid-full">${opts}</div>
+          </div>
+        `;
         break;
 
       case 'fill-blank-dropdown':
         typeLabel = "Açılır Menü Boşluk Doldurma";
         typeClass = "qp-type-drop";
-        const dropOpts = q.options.map((opt, oIdx) => {
+        const dropOpts = (q.options || []).map((opt, oIdx) => {
           const isCorrect = oIdx === q.correctIndex;
-          return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
+          return `<div class="qp-option-card-full ${isCorrect ? 'correct' : ''}">
+            <span class="qp-opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+            <span class="qp-opt-text">${opt}</span>
+            ${isCorrect ? '<span class="qp-opt-check">✓ Doğru Cevap</span>' : ''}
+          </div>`;
         }).join('');
         detailsHtml = `
           <div class="qp-detail-row">
             <span class="qp-detail-label">Cümle Şablonu:</span>
-            <span class="qp-detail-val">"${q.sentence || translatePromptToTurkish(q.prompt, q) || ''}"</span>
+            <span class="qp-detail-val" style="font-size: 1.15rem; font-weight: 600;">"${q.sentence || translatePromptToTurkish(q.prompt, q) || ''}"</span>
           </div>
           <div class="qp-detail-row">
             <span class="qp-detail-label">Seçenekler:</span>
-            <div class="qp-options-list">${dropOpts}</div>
+            <div class="qp-options-grid-full">${dropOpts}</div>
           </div>
         `;
         break;
@@ -4130,18 +4122,22 @@ function openQuestionPreview(title, questions, parentObj = null) {
       case 'fill-blank':
         typeLabel = "Butonlu Boşluk Doldurma";
         typeClass = "qp-type-fb";
-        const fbOpts = q.options.map((opt, oIdx) => {
+        const fbOpts = (q.options || []).map((opt, oIdx) => {
           const isCorrect = oIdx === q.correctIndex;
-          return `<span class="qp-option-item ${isCorrect ? 'correct' : ''}">${opt} ${isCorrect ? '✓' : ''}</span>`;
+          return `<div class="qp-option-card-full ${isCorrect ? 'correct' : ''}">
+            <span class="qp-opt-letter">${String.fromCharCode(65 + oIdx)}</span>
+            <span class="qp-opt-text">${opt}</span>
+            ${isCorrect ? '<span class="qp-opt-check">✓ Doğru Cevap</span>' : ''}
+          </div>`;
         }).join('');
         detailsHtml = `
           <div class="qp-detail-row">
             <span class="qp-detail-label">Cümle Şablonu:</span>
-            <span class="qp-detail-val">"${q.sentence || translatePromptToTurkish(q.prompt, q) || ''}"</span>
+            <span class="qp-detail-val" style="font-size: 1.15rem; font-weight: 600;">"${q.sentence || translatePromptToTurkish(q.prompt, q) || ''}"</span>
           </div>
           <div class="qp-detail-row">
             <span class="qp-detail-label">Seçenekler:</span>
-            <div class="qp-options-list">${fbOpts}</div>
+            <div class="qp-options-grid-full">${fbOpts}</div>
           </div>
         `;
         break;
@@ -4321,16 +4317,24 @@ window.previewQuestionById = function(lessonId, questionId) {
     lesson = lessons.find(l => l.id.toString() === lessonId.toString());
   }
   
+  // Dynamic bridge questions end with '_bridge', extract base ID if needed
+  const baseQuestionId = (questionId && questionId.endsWith('_bridge')) 
+    ? questionId.replace(/_bridge$/, '') 
+    : questionId;
+
   let targetQuestion = null;
+  const findInLesson = (l, searchId) => {
+    const qs = getLessonQuestions(l);
+    return qs.find(q => q && (q.id === searchId || q.id === `${searchId}_bridge`));
+  };
+
   if (lesson) {
-    const qs = getLessonQuestions(lesson);
-    targetQuestion = qs.find(q => q.id === questionId);
+    targetQuestion = findInLesson(lesson, questionId) || findInLesson(lesson, baseQuestionId);
   }
   
   if (!targetQuestion) {
     for (const l of lessons) {
-      const qs = getLessonQuestions(l);
-      const q = qs.find(qi => qi.id === questionId);
+      const q = findInLesson(l, questionId) || findInLesson(l, baseQuestionId);
       if (q) {
         targetQuestion = q;
         lesson = l;

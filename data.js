@@ -38197,8 +38197,8 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Altı çizili olan \"is\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The h<span style=\"text-decoration: underline;\">is</span>tory professor is a scholar.",
-            "enSentence": "The history professor is a scholar.",
+            "prompt": "Altı çizili olan \"is\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The cinema professor <span style=\"text-decoration: underline;\">is</span> a scholar.",
+            "enSentence": "The cinema professor is a scholar.",
             "options": [
               "Geçişli Fiil",
               "Olmak (Be) Yardımcı Fiili",
@@ -38206,7 +38206,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlaması"
             ],
             "correctIndex": 1,
-            "translation": "Tarih profesörü bir akademisyendir."
+            "translation": "Sinema profesörü bir akademisyendir."
           },
           {
             "id": "u6l1ex1_q9",
