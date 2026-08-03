@@ -12255,6 +12255,10 @@ function checkAnswer() {
             reason = "[KURAL 4: BY Miladı] 'By' zaman sınırlayıcısı olan yerde Simple/Continuous zamanlar elenir; 'Past Perfect (Had V3)' veya 'Future Perfect (Will Have V3)' aranır!";
           } else if (sentenceLower.includes("since")) {
             reason = "[KURAL 5: Since Çapası] 'Since' yan cümlesine V2 alır, ana cümleye Have/Has V3 alır; yan cümleye 'Have V3' gelemez!";
+          } else if (optLower === "yet") {
+            reason = "'Yet' zarfı Present Perfect ile olumsuz cümlelerde veya sorularda genellikle cümle sonunda kullanılır; olumlu cümle ortasında kullanılamaz.";
+          } else if (optLower === "still") {
+            reason = "'Still' eylemin devam ettiğini vurgular; Present Perfect kalıbında (has/have + V3) olumlu cümle ortasında 'already' yerini alamaz.";
           } else if (optLower.includes("will have") || optLower.includes("had been v-ing")) {
             reason = "Cümlede belirli bir gelecek/geçmiş zaman sınırlayıcısı (by 2030, by the time V2 vb.) olmadığı için elenir.";
           } else if (optLower.includes("had ") || optLower.includes("was ") || optLower.includes("were ") || optLower.includes("ed")) {
@@ -18864,7 +18868,24 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     text = `Seçtiğiniz kelime: <strong style="color: var(--color-wrong);">${chosenWord || '(boş)'}</strong> (Doğru cevap: <strong style="color: var(--color-correct);">${correctWord}</strong>)`;
     ruleTitle = '💡 Boşluk Doldurma Kuralları';
 
-    if (preDefinedExplanation) {
+    // Check specific distractors like yet, still, since, etc.
+    let distractorSpecificReason = '';
+    const cwLower = chosenWord.toLowerCase();
+    if (cwLower === 'yet') {
+      distractorSpecificReason = `'Yet' zarfı Present Perfect ile olumsuz cümlelerde veya sorularda genellikle cümle sonunda kullanılır; olumlu cümle ortasında kullanılamaz.`;
+    } else if (cwLower === 'still') {
+      distractorSpecificReason = `'Still' eylemin devam ettiğini vurgular; Present Perfect kalıbında (has/have + V3) olumlu cümle ortasında 'already' yerini alamaz.`;
+    } else if (cwLower === 'since') {
+      distractorSpecificReason = `'Since' edat/bağlaç yapısı arkasından bir zaman noktası veya V2 yan cümle almalıdır; tek başına cümle ortasında 'already' mantığında kullanılamaz.`;
+    }
+
+    if (distractorSpecificReason) {
+      title = 'Cümle Yapısı ve Kelime Anlamı';
+      ruleTitle = '💡 Seçilen Kelime Analizi';
+      ruleText = `Seçtiğiniz kelime cümle yapısına veya cümlenin anlamına uymamaktadır. Boşluğa gelecek en uygun sözcük <strong>${correctWord}</strong> olmalıdır.<br><br><strong>Seçilen "${chosenWord}" Neden Elendi?</strong><br>${distractorSpecificReason}`;
+      wrongExample = `Seçilen: "${chosenWord}" ❌`;
+      correctExample = `Doğru Kelime: "${correctWord}" ✔️`;
+    } else if (preDefinedExplanation) {
       title = 'Dilbilgisi Analizi';
       ruleTitle = '💡 Dilbilgisi Kuralı';
       ruleText = preDefinedExplanation;
@@ -18912,11 +18933,11 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
         ruleText = `Bu yapı, bir durumun veya eylemin zorluk, kolaylık veya önem derecesini bir mastar (<strong>to V1</strong>) eylemi aracılığıyla <strong>that</strong> cümleciğine bağlar.`;
         wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" bu mastarlı modele uymaz ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
-      } else if (lessonNum === 95) {
+      } else if (lessonNum === 95 || (currentLesson && currentLesson.id === 100)) {
         title = 'Present Continuous ve Zaman Zarfları';
-        ruleTitle = '💡 Şimdiki Zaman & Süreç Kuralları';
-        ruleText = `Şu anda devam etmekte olan süreçleri anlatan bu cümlede zaman zarfı (<strong>at the moment, right now, currently, presently, at present, these days</strong>) kullanılmıştır. Bu zarflar eylemin şimdiki zamanda (<strong>am/is/are + V-ing</strong>) çekimlenmesini zorunlu kılar.`;
-        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" süreç anlamı taşımaz ❌`;
+        ruleTitle = '💡 Şimdiki Zaman (Subject + am/is/are + V-ing)';
+        ruleText = `Şu anda devam eden süreçleri anlatan bu ders yapısında zaman zarfları (<strong>at the moment, currently, nowadays, right now</strong>) kullanılmıştır. Bu formül <strong>Subject + am/is/are + V-ing</strong> yapısını zorunlu kılar.`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" şimdiki zaman sürerlik yapısına (am/is/are + V-ing) uymaz ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
       } else if (lessonNum === 96) {
         title = 'Past Simple ve Net Geçmiş Zaman';
