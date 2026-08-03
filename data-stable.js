@@ -1349,7 +1349,7 @@ const wordDictionary = {
   "its": "onun (cansız / hayvan)",
   "job": "iş / görev",
   "job-creating": "istihdam yaratan",
-  "journal": "dergi / akademik dergi",
+  "journal": "dergi / dergi",
   "journalists": "gazeteciler",
   "json": "JSON (veri formatı)",
   "junior": "kıdemce küçük, genç",
@@ -2644,7 +2644,7 @@ const unit1IntroSentencesRaw = [
   { en: "Information technology sector policy", tr: "Bilgi teknolojisi sektörü politikası" },
   { en: "Government policy reform process", tr: "Hükümet politikası reform süreci" },
   { en: "Data collection method design", tr: "Veri toplama yöntemi tasarımı" },
-  { en: "Academic research project resource allocation", tr: "Akademik araştırma projesi kaynak tahsisi" },
+  { en: "Academic research project resource allocation", tr: "araştırma projesi kaynak tahsisi" },
   { en: "Computer network security policy framework", tr: "Bilgisayar ağı güvenliği politikası çerçevesi" },
   { en: "Data analysis team research project", tr: "Veri analizi ekibi araştırma projesi" },
   { en: "Global finance sector investment policy", tr: "Küresel finans sektörü yatırım politikası" },
@@ -3397,7 +3397,7 @@ const unit1Lesson4SentencesRaw = [
   { en: "the estimation of welfare", tr: "refah tahmini" },
   { en: "the integration of technology", tr: "teknolojinin entegrasyonu" },
   { en: "the history of legislation", tr: "mevzuat tarihi" },
-  { en: "the history of philosophy", tr: "felsefe tarihi" },
+  { en: "the history of philosophy", tr: "tarihi" },
   { en: "the equality of individuals", tr: "bireylerin eşitliği" },
   { en: "the production of components", tr: "bileşenlerin üretimi" },
   { en: "the existence of inconsistencies", tr: "tutarsızlıkların varlığı" },
@@ -5037,7 +5037,7 @@ function buildPedagogicalLesson17Exercises(unitId, lessonId) {
     },
     {
       id: `u${unitId}l${lessonId}ex2`,
-      title: "Alıştırma 2: Akademik Yapı ve Çeviri Testi",
+      title: "Alıştırma 2: Yapı ve Çeviri Testi",
       description: "Boşluk Doldurma ve Çoktan Seçmeli Bağlamsal Çeviri",
       questions: [gap1, gap2, gap3, gap4, gap5, gap6, gap7, gap8, mc1, mc2, mc3, mc4, mc5, mc6, mc7]
     }
@@ -6366,7 +6366,7 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     baseList2.push({
       id: `u${unitId}l${lessonId}_ex2_wb_${idx}`,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -6387,7 +6387,7 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
   });
 
   // ==========================================
-  // EXERCISE 3: Akademik Okuma & Cümle Eşleştirme (Halves)
+  // EXERCISE 3: Okuma & Cümle Eşleştirme (Halves)
   // ==========================================
   const baseList3 = [];
 
@@ -6431,14 +6431,14 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     pairs: halvesPairs2
   });
 
-  // Akademik Cümleler (0-7 -> Word Bank)
+  // Cümleler (0-7 -> Word Bank)
   akademikSentences.slice(0, 8).forEach((s, idx) => {
     const distractors = ["is", "had", "was"];
     const allWords = shuffle([...s.blocks, ...distractors]);
     baseList3.push({
       id: `u${unitId}l${lessonId}_ex3_wb_${idx}`,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -6475,8 +6475,8 @@ function buildAra3Exercises(sentences, unitId, lessonId) {
     },
     {
       id: `u${unitId}l${lessonId}ex3`,
-      title: "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme",
-      description: "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
+      title: "Alıştırma 3: Okuma & Cümle Eşleştirme",
+      description: "Cümle yarılarını birleştirme ve düzey blok sıralama",
       questions: [...interleaveQuestions(baseList3), ...translationList3]
     }
   ];
@@ -6969,7 +6969,7 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
   const ex5Trans = l5Sentences.slice(12, 14).map((s, idx) => buildTransQuestion(s, `u${unitId}l${lessonId}_ex5_tr_${idx}`));
 
   // ==========================================
-  // EXERCISE 6: Level 6 - Akademik Vurgu ve Devrik Yapılar (14 questions)
+  // EXERCISE 6: Level 6 - Vurgu ve Devrik Yapılar (14 questions)
   // ==========================================
   const ex6List = [];
   const l6Sentences = [...unit19Lesson1SentencesL6Raw].sort((a, b) => a.en.length - b.en.length);
@@ -7015,13 +7015,13 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
     {
       id: `u${unitId}l${lessonId}ex2`,
       title: "Alıştırma 2: Geniş Zaman ve Temel Yapılar",
-      description: "Geniş zaman bağlamında temel zarf cümlecikli tam yapılar",
+      description: "Geniş temel zarf cümlecikli tam yapılar",
       questions: [...interleaveQuestions(ex2List), ...ex2Trans]
     },
     {
       id: `u${unitId}l${lessonId}ex3`,
       title: "Alıştırma 3: Present Perfect ve Süreç Vurgulu",
-      description: "Present Perfect ile kurulan süreç vurgulu akademik yapılar",
+      description: "Present Perfect ile kurulan süreç vurgulu yapılar",
       questions: [...interleaveQuestions(ex3List), ...ex3Trans]
     },
     {
@@ -7038,8 +7038,8 @@ function buildUnit19Lesson66Exercises(unitId, lessonId) {
     },
     {
       id: `u${unitId}l${lessonId}ex6`,
-      title: "Alıştırma 6: Akademik Vurgu ve Devrik Yapılar",
-      description: "Only after ile başlayan devrik (inversion) akademik yapılar",
+      title: "Alıştırma 6: Vurgu ve Devrik Yapılar",
+      description: "Only after ile başlayan devrik (inversion) yapılar",
       questions: [...interleaveQuestions(ex6List), ...ex6Trans]
     },
     {
@@ -7328,7 +7328,7 @@ function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -7496,9 +7496,9 @@ function buildUnit19Lesson68Exercises(unitId, lessonId, lessonNum) {
     ];
   } else if (lessonNum === 5) {
     return [
-      compileSentenceExercise(unit19Lesson3SentencesL7Raw, "ex1", "Alıştırma 1: Akademik Cümleler — Biyoloji & Doğa Bilimleri (Alıştırma 142)", "when ile kurulan karmaşık biyoloji ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
-      compileSentenceExercise(unit19Lesson3SentencesL8Raw, "ex2", "Alıştırma 2: Akademik Cümleler — Yönetim & Doğa (Alıştırma 143)", "when ile kurulan karmaşık yönetim ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
-      compileSentenceExercise(unit19Lesson3SentencesL9Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Kimya & Fizik (Alıştırma 144)", "when ile kurulan karmaşık kimya ve fizik bilimleri cümleleri, eşleştirme ve yazma", splitter_144)
+      compileSentenceExercise(unit19Lesson3SentencesL7Raw, "ex1", "Alıştırma 1: Cümleler — Biyoloji & Doğa Bilimleri (Alıştırma 142)", "when ile kurulan karmaşık biyoloji ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
+      compileSentenceExercise(unit19Lesson3SentencesL8Raw, "ex2", "Alıştırma 2: Cümleler — Yönetim & Doğa (Alıştırma 143)", "when ile kurulan karmaşık yönetim ve doğa bilimleri cümleleri, eşleştirme ve yazma", {}),
+      compileSentenceExercise(unit19Lesson3SentencesL9Raw, "ex3", "Alıştırma 3: Cümleler — Kimya & Fizik (Alıştırma 144)", "when ile kurulan karmaşık kimya ve fizik bilimleri cümleleri, eşleştirme ve yazma", splitter_144)
     ];
   }
   return [];
@@ -7531,7 +7531,7 @@ const unit22Lesson1SentencesL2Raw = [
   { en: "Industrial automation metrics have increased since the tech firm opened.", tr: "Teknoloji firması açıldığından beri endüstriyel otomasyon ölçümleri arttı.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Industrial automation metrics ___ increased since the tech firm opened.", options: ['have', 'has', 'had', 'having'], blocks: ['Industrial', 'automation', 'metrics', 'have', 'increased', 'since', 'the', 'tech', 'firm', 'opened.'] },
   { en: "Ambient temperatures inside the chamber have fluctuated since winter began.", tr: "Kış başladığından beri hazne içindeki ortam sıcaklıkları dalgalandı.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Ambient temperatures inside the chamber ___ fluctuated since winter began.", options: ['have', 'has', 'had', 'having'], blocks: ['Ambient', 'temperatures', 'inside', 'the', 'chamber', 'have', 'fluctuated', 'since', 'winter', 'began.'] },
   { en: "Corporate profits have dropped dramatically since the financial market declined.", tr: "Finansal piyasa gerilediğinden beri şirket karları önemli ölçüde düştü.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Corporate profits ___ dropped dramatically since the financial market declined.", options: ['have', 'has', 'had', 'having'], blocks: ['Corporate', 'profits', 'have', 'dropped', 'dramatically', 'since', 'the', 'financial', 'market', 'declined.'] },
-  { en: "Academic research groups have compiled several datasets since the laboratory opened.", tr: "Laboratuvar açıldığından beri akademik araştırma grupları birkaç veri seti derledi.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Academic research groups ___ compiled several datasets since the laboratory opened.", options: ['have', 'has', 'had', 'having'], blocks: ['Academic', 'research', 'groups', 'have', 'compiled', 'several', 'datasets', 'since', 'the', 'laboratory', 'opened.'] }
+  { en: "Academic research groups have compiled several datasets since the laboratory opened.", tr: "Laboratuvar açıldığından beri araştırma grupları birkaç veri seti derledi.", word: "have", trWord: "sahip olmak", correct: "have", blank: "Academic research groups ___ compiled several datasets since the laboratory opened.", options: ['have', 'has', 'had', 'having'], blocks: ['Academic', 'research', 'groups', 'have', 'compiled', 'several', 'datasets', 'since', 'the', 'laboratory', 'opened.'] }
 ];
 
 const unit22Lesson1SentencesL3Raw = [
@@ -7609,7 +7609,7 @@ const unit22Lesson1SentencesL3Raw = [
   },
   {
     en: "Academic research groups have compiled several datasets since the laboratory opened to evaluate how organic polymers react under extreme heat pressure.",
-    tr: "Organik polimerlerin aşırı ısı basıncı altında nasıl reaksiyon gösterdiğini değerlendirmek amacıyla laboratuvar açıldığından beri akademik araştırma grupları birkaç veri seti derledi.",
+    tr: "Organik polimerlerin aşırı ısı basıncı altında nasıl reaksiyon gösterdiğini değerlendirmek amacıyla laboratuvar açıldığından beri araştırma grupları birkaç veri seti derledi.",
     word: "open", trWord: "açılmak", correct: "opened",
     blank: "Academic research groups have compiled several datasets since the laboratory ___ to evaluate how organic polymers react under extreme heat pressure.",
     options: ['opened', 'open', 'opening', 'opens'],
@@ -7726,7 +7726,7 @@ const unit22Lesson1PhraseRaw = [
   },
   {
     en: "The academic research group obtained accurate molecular rendering data <strong>despite</strong> the faulty microscope lenses.",
-    tr: "Kusurlu mikroskop merceklerine rağmen akademik araştırma grubu doğru moleküler modelleme verileri elde etti.",
+    tr: "Kusurlu mikroskop merceklerine rağmen araştırma grubu doğru moleküler modelleme verileri elde etti.",
     connector: "despite",
     options: ["despite", "although", "however", "because of"],
     blocks: ["The", "academic", "research", "group", "obtained", "accurate", "molecular", "rendering", "data", "despite", "the", "faulty", "microscope", "lenses."],
@@ -8235,7 +8235,7 @@ const unit22Lesson2MannerRaw = [
     connector: "just as",
     options: ["just as", "as if", "as though", "as you know"],
     blocks: ["The", "automated", "drone", "adjusted", "its", "flight", "altitude", "just as", "the", "proximity", "sensors", "calculated."],
-    explanation: "Just as, anlık veri uyuşmasını manner bağlamında niteler."
+    explanation: "Just as, anlık veri uyuşmasını niteler."
   },
   {
     en: "The corporate president addressed the international press conference <strong>as though</strong> the merger were finalized.",
@@ -8286,7 +8286,7 @@ const unit22Lesson2PurposeRaw = [
     connector: "in order that",
     options: ["in order that", "lest", "for fear that", "because of"],
     blocks: ["The", "system", "administrators", "automated", "the", "backup", "routine", "in order that", "user", "files", "might", "be", "protected."],
-    explanation: "In order that (-sin diye), so that ile eş anlamlı olup resmi/akademik dilde amaç belirtir. Genellikle modallarla kullanılır."
+    explanation: "In order that (-sin diye), so that ile eş anlamlı olup resmi/dilde amaç belirtir. Genellikle modallarla kullanılır."
   },
   {
     en: "The research facility locked the laboratory doors <strong>for fear that</strong> the hazardous gas should leak out.",
@@ -8425,7 +8425,7 @@ const unit22Lesson2CauseRaw = [
     connector: "on grounds that",
     options: ["on grounds that", "so that", "lest", "despite"],
     blocks: ["The", "corporate", "board", "rejected", "the", "partnership", "proposal", "on grounds that", "the", "financial", "parameters", "were", "highly", "unstable."],
-    explanation: "On grounds that (-gerekçesiyle), idari ve resmi raporlarda bir kararın gerekçesini açıklamak amacıyla yaygın kullanılan akademik sebep bağlacıdır."
+    explanation: "On grounds that (-gerekçesiyle), idari ve resmi raporlarda bir kararın gerekçesini açıklamak amacıyla yaygın kullanılan sebep bağlacıdır."
   },
   {
     en: "<strong>Inasmuch as</strong> the regional climate regulations have changed, factories must reduce emission metrics.",
@@ -8465,7 +8465,7 @@ const unit22Lesson2CauseRaw = [
     connector: "on grounds that",
     options: ["on grounds that", "so that", "lest", "despite"],
     blocks: ["The", "mobile", "language", "app", "achieved", "rapid", "commercial", "growth", "on grounds that", "its", "algorithm", "utilizes", "spaced", "repetition."],
-    explanation: "On grounds that, ticari başarının dayandığı akademik ve sistemsel gerekçeyi niteler."
+    explanation: "On grounds that, ticari başarının dayandığı ve sistemsel gerekçeyi niteler."
   },
   {
     en: "<strong>Inasmuch as</strong> the structural concrete has completely hardened, construction crews can build the next floor.",
@@ -8605,7 +8605,7 @@ function buildKonnektorLesson1Exercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: cleanBlocks,
@@ -8779,7 +8779,7 @@ function buildKonnektorLesson2Exercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: cleanBlocks,
@@ -8938,7 +8938,7 @@ function buildUnit22SinceExercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -9067,7 +9067,7 @@ function buildUnit22SinceExercises(unitId, lessonId) {
   return [
     compileClauseExercise(unit22Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "since ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
     compileClauseExercise(unit22Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "since bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
-    compileSentenceExercise(unit22Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "since bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma")
+    compileSentenceExercise(unit22Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Cümleler — Genişletilmiş Örnekler", "since bağlacı ile kurulan karmaşık cümleler, eşleştirme ve yazma")
   ];
 }
 
@@ -9281,7 +9281,7 @@ function buildUnit23WhileExercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -9412,7 +9412,7 @@ function buildUnit23WhileExercises(unitId, lessonId) {
   return [
     compileClauseExercise(unit23Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "while/as ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
     compileClauseExercise(unit23Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "while/as bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
-    compileSentenceExercise(unit23Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "while/as bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma")
+    compileSentenceExercise(unit23Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Cümleler — Genişletilmiş Örnekler", "while/as bağlacı ile kurulan karmaşık cümleler, eşleştirme ve yazma")
   ];
 }
 
@@ -9844,7 +9844,7 @@ function buildUnit24UntilExercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -9973,11 +9973,11 @@ function buildUnit24UntilExercises(unitId, lessonId) {
   return [
     compileClauseExercise(unit24Lesson1SentencesRaw, "ex1", "Alıştırma 1: Zaman Zarf Cümlecikleri — Pür Hal (Ham Hal)", "until ile başlayan yan cümle parçacıkları, kelime eşleştirme, çoktan seçmeli ve yazma"),
     compileClauseExercise(unit24Lesson1SentencesL2Raw, "ex2", "Alıştırma 2: Zaman Zarf Cümlecikleri — Yalın Cümleler", "until bağlacı ile kurulan yalın cümle örnekleri, kelime eşleştirme ve yazma"),
-    compileSentenceExercise(unit24Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Akademik Cümleler — Genişletilmiş Örnekler", "until bağlacı ile kurulan karmaşık akademik cümleler, eşleştirme ve yazma"),
+    compileSentenceExercise(unit24Lesson1SentencesL3Raw, "ex3", "Alıştırma 3: Cümleler — Genişletilmiş Örnekler", "until bağlacı ile kurulan karmaşık cümleler, eşleştirme ve yazma"),
     compileClauseExercise([...unit24Lesson1GroupAPurRaw, ...unit24Lesson1GroupAYalinRaw], "ex4", "Alıştırma 4: Soru Yapıları (Until when...?) — Pür Hal ve Yalın Cümleler", "until when sorusuyla başlayan yapısal soru örnekleri ve çevirileri"),
-    compileSentenceExercise(unit24Lesson1GroupAGenisRaw, "ex5", "Alıştırma 5: Soru Yapıları (Until when...?) — Gelişmiş Akademik Cümleler", "until when sorusuyla başlayan akademik soru cümleleri"),
+    compileSentenceExercise(unit24Lesson1GroupAGenisRaw, "ex5", "Alıştırma 5: Soru Yapıları (Until when...?) — Gelişmiş Cümleler", "until when sorusuyla başlayan soru cümleleri"),
     compileClauseExercise([...unit24Lesson1GroupBPurRaw, ...unit24Lesson1GroupBYalinRaw], "ex6", "Alıştırma 6: Soru Yapıları (What... until...?) — Pür Hal ve Yalın Cümleler", "what... until... yapısı ile kurulan temel soru cümleleri ve eşleştirmeleri"),
-    compileSentenceExercise(unit24Lesson1GroupBGenisRaw, "ex7", "Alıştırma 7: Soru Yapıları (What... until...?) — Gelişmiş Akademik Cümleler", "what... until... yapısı ile kurulan akademik düzeyde soru ve çeviri örnekleri")
+    compileSentenceExercise(unit24Lesson1GroupBGenisRaw, "ex7", "Alıştırma 7: Soru Yapıları (What... until...?) — Gelişmiş Cümleler", "what... until... yapısı ile kurulan düzeyde soru ve çeviri örnekleri")
   ];
 }
 
@@ -11922,7 +11922,7 @@ function buildUnit25GeneralExercises(group1, group2, group3, unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -11989,8 +11989,8 @@ function buildUnit25GeneralExercises(group1, group2, group3, unitId, lessonId) {
 
   return [
     compileExercise(group1, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "İsim cümleciği yan cümlecik yapısını ve girişlerini tanıma çalışmaları.", true),
-    compileExercise(group2, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde isim cümleciği nesnelerinin analizi.", true),
-    compileExercise(group3, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde isim cümleciği yapısının pekiştirilmesi.", false)
+    compileExercise(group2, "ex2", "Alıştırma 2: Cümle Girişleri — Yalın Cümleler", "Basit cümle yapıları içerisinde isim cümleciği nesnelerinin analizi.", true),
+    compileExercise(group3, "ex3", "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar", "Uzun ve karmaşık cümleler içerisinde isim cümleciği yapısının pekiştirilmesi.", false)
   ];
 }
 
@@ -12992,7 +12992,7 @@ function buildUnit26Lesson1Exercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -13059,8 +13059,8 @@ function buildUnit26Lesson1Exercises(unitId, lessonId) {
 
   return [
     compileExercise(unit26Lesson1Group1Raw, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "It is apparent that... gibi kişisiz giriş yapılarını tanıma ve tamamlama çalışmaları.", true),
-    compileExercise(unit26Lesson1Group2Raw, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde kişisiz kalıpların analizi.", true),
-    compileExercise(unit26Lesson1Group3Raw, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde Impersonal It kalıbının pekiştirilmesi.", false)
+    compileExercise(unit26Lesson1Group2Raw, "ex2", "Alıştırma 2: Cümle Girişleri — Yalın Cümleler", "Basit cümle yapıları içerisinde kişisiz kalıpların analizi.", true),
+    compileExercise(unit26Lesson1Group3Raw, "ex3", "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar", "Uzun ve karmaşık cümleler içerisinde Impersonal It kalıbının pekiştirilmesi.", false)
   ];
 }
 
@@ -13141,7 +13141,7 @@ function buildUnit26Lesson2Exercises(unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -13208,8 +13208,8 @@ function buildUnit26Lesson2Exercises(unitId, lessonId) {
 
   return [
     compileExercise(unit26Lesson2Group1Raw, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "It is easy to assume that... gibi mastar ve bağlaçlı giriş kalıplarını kavrama çalışmaları.", true),
-    compileExercise(unit26Lesson2Group2Raw, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde mastarlı It kalıplarının analizi.", true),
-    compileExercise(unit26Lesson2Group3Raw, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde mastarlı It kalıbının pekiştirilmesi.", false)
+    compileExercise(unit26Lesson2Group2Raw, "ex2", "Alıştırma 2: Cümle Girişleri — Yalın Cümleler", "Basit cümle yapıları içerisinde mastarlı It kalıplarının analizi.", true),
+    compileExercise(unit26Lesson2Group3Raw, "ex3", "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar", "Uzun ve karmaşık cümleler içerisinde mastarlı It kalıbının pekiştirilmesi.", false)
   ];
 }
 
@@ -13379,7 +13379,7 @@ function buildAcademicExercises(sentences, unitId, lessonId, exId, offset) {
 
   return {
     id: `u${unitId}l${lessonId}ex${exId}`,
-    title: `Alıştırma ${exId}: Akademik İnceleme ${exId}`,
+    title: `Alıştırma ${exId}: İnceleme ${exId}`,
     description: "Eşleştirme, Çoktan Seçmeli, Blok Sıralama ve Yazarak Çeviri",
     questions: qList
   };
@@ -13990,7 +13990,7 @@ const unit9Lesson1SentencesRaw = [
   { en: "Was the primary benefit clearly identified?", tr: "Temel fayda açıkça belirlendi mi?", word: "benefit", trWord: "fayda", blank: "Was the primary ___ clearly identified?" },
   { en: "Were the environmental factors considered?", tr: "Çevresel faktörler dikkate alındı mı?", word: "factors", trWord: "faktörler", blank: "Were the environmental ___ considered?" },
   { en: "Is the final outcome satisfactory for everyone?", tr: "Nihai sonuç herkes için tatmin edici midir?", word: "outcome", trWord: "sonuç", blank: "Is the final ___ satisfactory for everyone?" },
-  { en: "Are these academic journals peer-reviewed?", tr: "Bu akademik dergiler hakemli midir?", word: "academic", trWord: "akademik", blank: "Are these ___ journals peer-reviewed?" },
+  { en: "Are these academic journals peer-reviewed?", tr: "Bu dergiler hakemli midir?", word: "academic", trWord: "akademik", blank: "Are these ___ journals peer-reviewed?" },
   { en: "Is the methodological approach relevant to the current study?", tr: "Metodolojik yaklaşım mevcut çalışma ile ilgili midir?", word: "approach", trWord: "yaklaşım", blank: "Is the methodological ___ relevant to the current study?" },
   { en: "Are the statistical computations available for public review?", tr: "İstatistiksel hesaplamalar kamuya açık inceleme için mevcut mudur?", word: "available", trWord: "mevcut", blank: "Are the statistical computations ___ for public review?" },
   { en: "Was the constitutional amendment approved by the parliament?", tr: "Anayasa değişikliği parlamento tarafından onaylandı mı?", word: "amendment", trWord: "değişiklik", blank: "Was the constitutional ___ approved by the parliament?" },
@@ -14020,7 +14020,7 @@ const unit9Lesson2SentencesRaw = [
   { en: "Do researchers establish a clear framework?", tr: "Araştırmacılar net bir çerçeve kuruyor mu?", word: "establish", trWord: "kuruyor", blank: "Do researchers ___ a clear framework?" },
   { en: "Did the committee exclude the final report?", tr: "Komite nihai raporu hariç tuttu mu?", word: "exclude", trWord: "hariç tuttu", blank: "Did the committee ___ the final report?" },
   { en: "Does this factor influence the public opinion?", tr: "Bu faktör kamuoyunu etkiliyor mu?", word: "influence", trWord: "etkiliyor", blank: "Does this factor ___ the public opinion?" },
-  { en: "Do institutions structure their academic curriculum?", tr: "Kurumlar akademik müfredatlarını yapılandırıyor mu?", word: "structure", trWord: "yapılandırıyor", blank: "Do institutions ___ their academic curriculum?" },
+  { en: "Do institutions structure their academic curriculum?", tr: "Kurumlar müfredatlarını yapılandırıyor mu?", word: "structure", trWord: "yapılandırıyor", blank: "Do institutions ___ their academic curriculum?" },
   { en: "Did the team integrate the new software?", tr: "Ekip yeni yazılımı entegre etti mi?", word: "integrate", trWord: "entegre etti", blank: "Did the team ___ the new software?" },
   { en: "Does the theory define the phenomenon correctly?", tr: "Teori olguyu doğru tanımlıyor mu?", word: "define", trWord: "tanımlıyor", blank: "Does the theory ___ the phenomenon correctly?" },
   { en: "Do companies achieve their annual production goals?", tr: "Şirketler yıllık üretim hedeflerine ulaşıyor mu?", word: "achieve", trWord: "ulaşıyor", blank: "Do companies ___ their annual production goals?" },
@@ -14097,7 +14097,7 @@ const unit9Lesson4SentencesRaw = [
   { en: "How does the global economy affect domestic resource distribution?", tr: "Küresel ekonomi iç kaynak dağılımını nasıl etkiliyor?", word: "affect", trWord: "etkiliyor", blank: "How does the global economy ___ domestic resource distribution?" },
   { en: "What did the scientific community conclude regarding the data?", tr: "Bilimsel topluluk verilerle ilgili ne sonuç çıkardı?", word: "conclude", trWord: "sonuç çıkardı", blank: "What did the scientific community ___ regarding the data?" },
   { en: "Where do separate departments allocate their annual financial credit?", tr: "Ayrı departmanlar yıllık finansal kredilerini nereye tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Where do separate departments ___ their annual financial credit?" },
-  { en: "When did the university adopt the new academic assessment method?", tr: "Üniversite yeni akademik değerlendirme yöntemini ne zaman benimsedi?", word: "adopt", trWord: "benimsedi", blank: "When did the university ___ the new academic assessment method?" },
+  { en: "When did the university adopt the new academic assessment method?", tr: "Üniversite yeni değerlendirme yöntemini ne zaman benimsedi?", word: "adopt", trWord: "benimsedi", blank: "When did the university ___ the new academic assessment method?" },
   { en: "How does this specific variable alter the statistical analysis?", tr: "Bu özel değişken istatistiksel analizi nasıl değiştiriyor?", word: "alter", trWord: "değiştiriyor", blank: "How does this specific variable ___ the statistical analysis?" },
   { en: "Why did the main opposition challenge the legal definition?", tr: "Ana muhalefet yasal tanıma neden karşı çıktı?", word: "challenge", trWord: "karşı çıktı", blank: "Why did the main opposition ___ the legal definition?" },
   { en: "What does the historical text imply about social structures?", tr: "Tarihsel metin toplumsal yapılar hakkında ne ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "What does the historical text ___ about social structures?" },
@@ -14117,7 +14117,7 @@ const unit9Lesson5SentencesRaw = [
   { en: "In what period was it?", tr: "Hangi dönemdeydi?", word: "period", trWord: "dönemdeydi", blank: "In what ___ was it?" },
   { en: "With which method is it?", tr: "Hangi yöntemledir?", word: "method", trWord: "yöntemledir", blank: "With which ___ is it?" },
   { en: "On whose data was it?", tr: "Kimin verileri üzerindeydi?", word: "data", trWord: "verileri", blank: "On whose ___ was it?" },
-  { en: "In which academic journal was it published?", tr: "Hangi akademik dergide yayımlandı?", word: "journal", trWord: "dergide", blank: "In which academic ___ was it published?" },
+  { en: "In which academic journal was it published?", tr: "Hangi dergide yayımlandı?", word: "journal", trWord: "dergide", blank: "In which academic ___ was it published?" },
   { en: "Under what legal criteria were they selected?", tr: "Hangi yasal kriterler altında seçildiler?", word: "criteria", trWord: "kriterler", blank: "Under what legal ___ were they selected?" },
   { en: "For which specific purpose is this required?", tr: "Bu hangi özel amaç için gereklidir?", word: "purpose", trWord: "amaç", blank: "For which specific ___ is this required?" },
   { en: "At what financial percentage was it fixed?", tr: "Hangi finansal yüzdeyle sabitlendi?", word: "percentage", trWord: "yüzdeyle", blank: "At what financial ___ was it fixed?" },
@@ -15839,7 +15839,7 @@ const unit7LessonSentences = {
     },
     {
       "en": "The variable affects excellent academic student outcomes.",
-      "tr": "Değişken mükemmel akademik öğrenci sonuçlarını etkiler.",
+      "tr": "Değişken mükemmel öğrenci sonuçlarını etkiler.",
       "word": "affects",
       "trWord": "etkiler",
       "blank": "The variable ___ excellent academic student outcomes."
@@ -16049,7 +16049,7 @@ const unit7LessonSentences = {
     },
     {
       "en": "The primary independent variable affects excellent academic student outcomes.",
-      "tr": "Birincil bağımsız değişken mükemmel akademik öğrenci sonuçlarını etkiler.",
+      "tr": "Birincil bağımsız değişken mükemmel öğrenci sonuçlarını etkiler.",
       "word": "affects",
       "trWord": "etkiler",
       "blank": "The primary independent variable ___ excellent academic student outcomes."
@@ -16311,7 +16311,7 @@ const unit10LessonSentences = {
     { en: "There must be solutions provided by international human rights treaties.", tr: "Uluslararası insan hakları antlaşmaları tarafından sağlanan çözümler olmalıdır.", word: "provided", trWord: "sağlanan", blank: "There must be solutions ___ by international human rights treaties.", grammarTags: ["Edilgen Mastar", "There Yapıları", "İsim + Edat Takımı", "İsim Tamlaması"] }
   ],
   3: [
-    // Lesson 3: Bölünmüş (Split Passive) ve Gelişmiş Akademik Edilgen Yapılar (is/was/can be + Adverb + V3)
+    // Lesson 3: Bölünmüş (Split Passive) ve Gelişmiş Edilgen Yapılar (is/was/can be + Adverb + V3)
     { en: "The ancient stone inscriptions were newly discovered by excavating archaeologists.", tr: "Kadim taş yazıtlar kazı yapan arkeologlar tarafından yeni keşfedildi.", word: "discovered", trWord: "keşfedildi", blank: "The ancient stone inscriptions were newly ___ by excavating archaeologists.", grammarTags: ["Bölünmüş Edilgen", "Fiil + Edat Takımı", "İsim Tamlaması"] },
     { en: "Sociological theories are frequently revised in response to global cultural shifts.", tr: "Sosyolojik teoriler küresel kültürel değişimlere yanıt olarak sıklıkla revize edilir.", word: "revised", trWord: "revize edilir", blank: "Sociological theories are frequently ___ in response to global cultural shifts.", grammarTags: ["Bölünmüş Edilgen", "İsim + Edat Takımı", "İsim Tamlaması"] },
     { en: "Cognitive behavioral patterns can be significantly altered through structured psychological therapy.", tr: "Bilişsel davranışsal kalıplar yapılandırılmış psikolojik terapi aracılığıyla önemli ölçüde değiştirilebilir.", word: "altered", trWord: "değiştirilebilir", blank: "Cognitive behavioral patterns can be significantly ___ through structured psychological therapy.", grammarTags: ["Bölünmüş Edilgen", "Saf Modallar", "İsim + Edat Takımı", "İsim Tamlaması"] },
@@ -17324,14 +17324,14 @@ const unitAra3Lesson4SentencesRaw = [
   { en: "Before the legislation was enforced.", tr: "Mevzuat yürürlüğe girmeden önce.", word: "enforce", trWord: "yürürlüğe girmeden", blank: "Before the legislation was ___.", blocks: ["Before", "the legislation was", "enforced."] },
   { en: "Before the hypothesis had been formulated.", tr: "Hipotez formüle edilmeden önce.", word: "formulate", trWord: "formüle edilmeden", blank: "Before the hypothesis had been ___.", blocks: ["Before", "the hypothesis", "had been formulated."] },
   { en: "Before the new analytical method had been evaluated entirely, it produced only marginally acceptable experimental results.", tr: "Yeni analitik yöntem tamamen değerlendirilmeden önce, yalnızca sınırda kabul edilebilir deneysel sonuçlar üretti.", word: "evaluate", trWord: "değerlendirilmeden", blank: "Before the new analytical method had been ___ entirely, it produced only marginally acceptable experimental results.", blocks: ["Before the new analytical method had been evaluated entirely,", "it produced only", "marginally acceptable experimental results."] },
-  { en: "Before the academic document is published in the recognized journal, it must undergo a highly rigorous peer-review process.", tr: "Akademik belge tanınmış dergide yayınlanmadan önce, son derece titiz bir hakem değerlendirme sürecinden geçmelidir.", word: "publish", trWord: "yayınlanmadan", blank: "Before the academic document is ___ in the recognized journal, it must undergo a highly rigorous peer-review process.", blocks: ["Before the academic document is published in the recognized journal,", "it must undergo", "a highly rigorous peer-review process."] },
+  { en: "Before the academic document is published in the recognized journal, it must undergo a highly rigorous peer-review process.", tr: "belge tanınmış dergide yayınlanmadan önce, son derece titiz bir hakem değerlendirme sürecinden geçmelidir.", word: "publish", trWord: "yayınlanmadan", blank: "Before the academic document is ___ in the recognized journal, it must undergo a highly rigorous peer-review process.", blocks: ["Before the academic document is published in the recognized journal,", "it must undergo", "a highly rigorous peer-review process."] },
   { en: "Before the innovative marketing strategy was implemented, the international corporation conducted extensive demographic surveys.", tr: "Yenilikçi pazarlama stratejisi uygulanmadan önce, uluslararası şirket kapsamlı demografik anketler gerçekleştirdi.", word: "implement", trWord: "uygulanmadan", blank: "Before the innovative marketing strategy was ___, the international corporation conducted extensive demographic surveys.", blocks: ["Before the innovative marketing strategy was implemented,", "the international corporation conducted", "extensive demographic surveys."] },
   { en: "Before the statistical data is analyzed, researchers must meticulously ensure that all external variables are strictly controlled.", tr: "İstatistiki veriler analiz edilmeden önce, araştırmacılar tüm dış değişkenlerin sıkı bir şekilde kontrol edildiğinden titizlikle emin olmalıdır.", word: "analyze", trWord: "analiz edilmeden", blank: "Before the statistical data is ___, researchers must meticulously ensure that all external variables are strictly controlled.", blocks: ["Before the statistical data is analyzed,", "researchers must meticulously ensure", "that all external variables are strictly controlled."] },
   { en: "Before the critical computational error had been detected, the software malfunction caused significant disruptions to the network.", tr: "Kritik hesaplama hatası tespit edilmeden önce, yazılım arızası ağda önemli yapısal aksamalara neden oldu.", word: "detect", trWord: "tespit edilmeden", blank: "Before the critical computational error had been ___, the software malfunction caused significant disruptions to the network.", blocks: ["Before the critical computational error had been detected,", "the software malfunction caused", "significant disruptions to the network."] },
   { en: "Before the emergency fund was distributed, a thorough demographic assessment was conducted to identify the legitimate beneficiaries.", tr: "Acil durum fonu dağıtılmadan önce, meşru hak sahiplerini belirlemek için kapsamlı bir demografik değerlendirme yapıldı.", word: "distribute", trWord: "dağıtılmadan", blank: "Before the emergency fund was ___, a thorough demographic assessment was conducted to identify the legitimate beneficiaries.", blocks: ["Before the emergency fund was distributed,", "a thorough demographic assessment was conducted", "to identify the legitimate beneficiaries."] },
   { en: "Before the sensitive laboratory equipment is modified, technicians must strictly consult the manufacturer's technical specifications.", tr: "Hassas laboratuvar ekipmanı değiştirilmeden önce, teknisyenler kesinlikle üreticinin teknik özelliklerine danışmalıdır.", word: "modify", trWord: "değiştirilmeden", blank: "Before the sensitive laboratory equipment is ___, technicians must strictly consult the manufacturer's technical specifications.", blocks: ["Before the sensitive laboratory equipment is modified,", "technicians must strictly consult", "the manufacturer's technical specifications."] },
   { en: "Before the scarce natural resource was allocated, prominent environmentalists strongly advocated for sustainable distribution policies.", tr: "Kıt doğal kaynak tahsis edilmeden önce, önde gelen çevreciler sürdürülebilir dağıtım politikalarını güçlü bir şekilde savundular.", word: "allocate", trWord: "tahsis edilmeden", blank: "Before the scarce natural resource was ___, prominent environmentalists strongly advocated for sustainable distribution policies.", blocks: ["Before the scarce natural resource was allocated,", "prominent environmentalists strongly advocated", "for sustainable distribution policies."] },
-  { en: "Before the primary research hypothesis had been formulated, the scientific team systematically reviewed the existing academic literature.", tr: "Birincil araştırma hipotezi formüle edilmeden önce, bilimsel ekip mevcut akademik literatürü sistematik olarak gözden geçirdi.", word: "formulate", trWord: "formüle edilmeden", blank: "Before the primary research hypothesis had been ___, the scientific team systematically reviewed the existing academic literature.", blocks: ["Before the primary research hypothesis had been formulated,", "the scientific team systematically reviewed", "the existing academic literature."] },
+  { en: "Before the primary research hypothesis had been formulated, the scientific team systematically reviewed the existing academic literature.", tr: "Birincil araştırma hipotezi formüle edilmeden önce, bilimsel ekip mevcut literatürü sistematik olarak gözden geçirdi.", word: "formulate", trWord: "formüle edilmeden", blank: "Before the primary research hypothesis had been ___, the scientific team systematically reviewed the existing academic literature.", blocks: ["Before the primary research hypothesis had been formulated,", "the scientific team systematically reviewed", "the existing academic literature."] },
   { en: "Before the controversial civil legislation was enforced, multiple advocacy groups organized massive and unprecedented public demonstrations.", tr: "Tartışmalı sivil mevzuat yürürlüğe girmeden önce, çok sayıda savunucu grup büyük ve benzeri görülmemiş halk gösterileri düzenledi.", word: "enforce", trWord: "yürürlüğe girmeden", blank: "Before the controversial civil legislation was ___, multiple advocacy groups organized massive and unprecedented public demonstrations.", blocks: ["Before the controversial civil legislation was enforced,", "multiple advocacy groups organized", "massive and unprecedented public demonstrations."] }
 ];
 
@@ -17417,7 +17417,7 @@ const unitAra1Lesson1SentencesRaw = [
   { en: "I would rather work on a new architectural framework than maintain old scripts.", tr: "Eski kodları sürdürmektense yeni bir mimari çerçeve üzerinde çalışmayı tercih ederim.", word: "work", trWord: "çalışmayı", blank: "I would rather ___ on a new architectural framework than maintain old scripts.", blocks: ["I", "would rather work", "on a new architectural framework than maintain old scripts."] },
   { en: "Senior analysts would rather evaluate data charts than read long regional surveys.", tr: "Kıdemli analistler uzun bölgesel anketleri okumaktansa veri grafiklerini değerlendirmeyi tercih ederler.", word: "evaluate", trWord: "değerlendirmeyi", blank: "Senior analysts would rather ___ data charts than read long regional surveys.", blocks: ["Senior analysts", "would rather evaluate", "data charts than read long regional surveys."] },
   { en: "Institutional authorities would rather settle the commercial dispute without a lawsuit.", tr: "Kurumsal makamlar ticari anlaşmazlığı dava açmadan çözmeyi tercih ederler.", word: "settle", trWord: "çözmeyi", blank: "Institutional authorities would rather ___ the commercial dispute without a lawsuit.", blocks: ["Institutional authorities", "would rather settle", "the commercial dispute without a lawsuit."] },
-  { en: "She would rather read an academic paper regarding encryption than a regular journal.", tr: "Sıradan bir dergiyi okumaktansa şifrelemeyle ilgili akademik bir makale okumayı tercih eder.", word: "read", trWord: "okumayı", blank: "She would rather ___ an academic paper regarding encryption than a regular journal.", blocks: ["She", "would rather read", "an academic paper regarding encryption than a regular journal."] },
+  { en: "She would rather read an academic paper regarding encryption than a regular journal.", tr: "Sıradan bir dergiyi okumaktansa şifrelemeyle ilgili bir makale okumayı tercih eder.", word: "read", trWord: "okumayı", blank: "She would rather ___ an academic paper regarding encryption than a regular journal.", blocks: ["She", "would rather read", "an academic paper regarding encryption than a regular journal."] },
   { en: "Technical experts would rather design a new system than modify the old framework.", tr: "Teknik uzmanlar eski çerçeveyi değiştirmektense yeni bir sistem tasarlamayı tercih ederler.", word: "design", trWord: "tasarlamayı", blank: "Technical experts would rather ___ a new system than modify the old framework.", blocks: ["Technical experts", "would rather design", "a new system than modify the old framework."] },
   { en: "The evaluation committee would rather publish the qualitative insights next month.", tr: "Değerlendirme komitesi nitel öngörüleri gelecek ay yayınlamayı tercih eder.", word: "publish", trWord: "yayınlamayı", blank: "The evaluation committee would rather ___ the qualitative insights next month.", blocks: ["The evaluation committee", "would rather publish", "the qualitative insights next month."] },
   { en: "Government agencies would rather process data locally to protect user privacy.", tr: "Devlet kurumları kullanıcı gizliliğini korumak için verileri yerel olarak işlemeyi tercih eder.", word: "process", trWord: "işlemeyi", blank: "Government agencies would rather ___ data locally to protect user privacy.", blocks: ["Government agencies", "would rather process", "data locally to protect user privacy."] },
@@ -18279,7 +18279,7 @@ const unit16LessonSentences = {
   1: [
     { en: "Analyzing the raw data requires a strict methodology.", tr: "Ham verileri analiz etmek katı bir metodoloji gerektirir.", word: "Analyzing", trWord: "analiz etmek", blank: "___ the raw data requires a strict methodology." },
     { en: "Modifying the legislative framework causes temporary instability.", tr: "Yasal çerçeveyi değiştirmek geçici istikrarsızlığa neden olur.", word: "Modifying", trWord: "değiştirmek", blank: "___ the legislative framework causes temporary instability." },
-    { en: "Evaluating the academic curriculum takes a long time.", tr: "Akademik müfredatı değerlendirmek uzun zaman alır.", word: "Evaluating", trWord: "değerlendirmek", blank: "___ the academic curriculum takes a long time." },
+    { en: "Evaluating the academic curriculum takes a long time.", tr: "müfredatı değerlendirmek uzun zaman alır.", word: "Evaluating", trWord: "değerlendirmek", blank: "___ the academic curriculum takes a long time." },
     { en: "Structuring the financial resources is a complex process.", tr: "Finansal kaynakları yapılandırmak karmaşık bir süreçtir.", word: "Structuring", trWord: "yapılandırmak", blank: "___ the financial resources is a complex process." },
     { en: "Integrating the individual applications generates technical errors.", tr: "Bireysel uygulamaları entegre etmek teknik hatalar üretir.", word: "Integrating", trWord: "entegre etmek", blank: "___ the individual applications generates technical errors." },
     { en: "Restricting the resource distribution alters the economic outcome.", tr: "Kaynak dağıtımını kısıtlamak ekonomik sonucu değiştirir.", word: "Restricting", trWord: "kısıtlamak", blank: "___ the resource distribution alters the economic outcome." },
@@ -18346,7 +18346,7 @@ const unit17Lesson1SentencesRaw = [
   { en: "On regulating the battery temperature", tr: "Batarya sıcaklığını düzenleyince", word: "regulating", trWord: "düzenleyince", blank: "On ___ the battery temperature" },
   { en: "On converting the separate pages", tr: "Ayrı sayfaları dönüştürünce", word: "converting", trWord: "dönüştürünce", blank: "On ___ the separate pages" },
   { en: "On identifying the target goals", tr: "Hedef amaçları belirleyince", word: "identifying", trWord: "belirleyince", blank: "On ___ the target goals" },
-  { en: "In evaluating the academic curriculum", tr: "Akademik müfredatı değerlendirirken", word: "evaluating", trWord: "değerlendirirken", blank: "In ___ the academic curriculum" },
+  { en: "In evaluating the academic curriculum", tr: "müfredatı değerlendirirken", word: "evaluating", trWord: "değerlendirirken", blank: "In ___ the academic curriculum" },
   { en: "In processing the scanned text", tr: "Taranmış metni işlerken", word: "processing", trWord: "işlerken", blank: "In ___ the scanned text" },
   { en: "In adjusting the dynamic parameters", tr: "Dinamik parametreleri ayarlarken", word: "adjusting", trWord: "ayarlarken", blank: "In ___ the dynamic parameters" },
   { en: "In maintaining the structural framework", tr: "Yapısal çerçeveyi sürdürürken", word: "maintaining", trWord: "sürdürürken", blank: "In ___ the structural framework" },
@@ -18366,7 +18366,7 @@ const unit17Lesson1SentencesRaw = [
   { en: "On regulating the battery temperature, the system protects the solar inverters.", tr: "Batarya sıcaklığını düzenleyince sistem güneş enerjisi invertörlerini korur.", word: "regulating", trWord: "düzenleyince", blank: "On ___ the battery temperature, the system protects the solar inverters." },
   { en: "On converting the separate pages, the secretary created a comprehensive PDF.", tr: "Ayrı sayfaları dönüştürünce sekreter kapsamlı bir PDF oluşturdu.", word: "converting", trWord: "dönüştürünce", blank: "On ___ the separate pages, the secretary created a comprehensive PDF." },
   { en: "On identifying the target goals, the professional prepared the strategic defense.", tr: "Hedef amaçları belirleyince profesyonel stratejik savunmayı hazırladı.", word: "identifying", trWord: "belirleyince", blank: "On ___ the target goals, the professional prepared the strategic defense." },
-  { en: "In evaluating the academic curriculum, the board reviewed the entire program.", tr: "Akademik müfredatı değerlendirirken kurul tüm programı gözden geçirdi.", word: "evaluating", trWord: "değerlendirirken", blank: "In ___ the academic curriculum, the board reviewed the entire program." },
+  { en: "In evaluating the academic curriculum, the board reviewed the entire program.", tr: "müfredatı değerlendirirken kurul tüm programı gözden geçirdi.", word: "evaluating", trWord: "değerlendirirken", blank: "In ___ the academic curriculum, the board reviewed the entire program." },
   { en: "In processing the scanned text, the updated software runs an OCR tool.", tr: "Taranmış metni işlerken güncellenmiş yazılım bir OCR aracı çalıştırır.", word: "processing", trWord: "işlerken", blank: "In ___ the scanned text, the updated software runs an OCR tool." },
   { en: "In adjusting the dynamic parameters, the engineer balanced the structural framework.", tr: "Dinamik parametreleri ayarlarken mühendis yapısal çerçeveyi dengeledi.", word: "adjusting", trWord: "ayarlarken", blank: "In ___ the dynamic parameters, the engineer balanced the structural framework." },
   { en: "In maintaining the structural framework, the administration spent substantial annual resources.", tr: "Yapısal çerçeveyi sürdürürken yönetim önemli miktarda yıllık kaynak harcadı.", word: "maintaining", trWord: "sürdürürken", blank: "In ___ the structural framework, the administration spent substantial annual resources." },
@@ -18376,7 +18376,7 @@ const unit17Lesson1SentencesRaw = [
 const unit17Lesson2SentencesRaw = [
   { en: "When analyzing the raw data", tr: "Ham verileri analiz ederken", word: "analyzing", trWord: "analiz ederken", blank: "When ___ the raw data" },
   { en: "When modifying the legislative framework", tr: "Yasal çerçeveyi değiştirirken", word: "modifying", trWord: "değiştirirken", blank: "When ___ the legislative framework" },
-  { en: "When evaluating the academic curriculum", tr: "Akademik müfredatı değerlendirirken", word: "evaluating", trWord: "değerlendirirken", blank: "When ___ the academic curriculum" },
+  { en: "When evaluating the academic curriculum", tr: "müfredatı değerlendirirken", word: "evaluating", trWord: "değerlendirirken", blank: "When ___ the academic curriculum" },
   { en: "When structuring the financial resources", tr: "Finansal kaynakları yapılandırırken", word: "structuring", trWord: "yapılandırırken", blank: "When ___ the financial resources" },
   { en: "While integrating the individual applications", tr: "Bireysel uygulamaları entegre ederken", word: "integrating", trWord: "entegre ederken", blank: "While ___ the individual applications" },
   { en: "While restricting the resource distribution", tr: "Kaynak dağıtımını kısıtlarken", word: "restricting", trWord: "kısıtlarken", blank: "While ___ the resource distribution" },
@@ -18396,7 +18396,7 @@ const unit17Lesson2SentencesRaw = [
   { en: "Since redesigning the professional CV", tr: "Profesyonel özgeçmişi yeniden tasarladığından beri", word: "redesigning", trWord: "yeniden tasarladığından beri", blank: "Since ___ the professional CV" },
   { en: "When analyzing the raw data, the expert identified an error.", tr: "Ham verileri analiz ederken uzman bir hata belirledi.", word: "analyzing", trWord: "analiz ederken", blank: "When ___ the raw data, the expert identified an error." },
   { en: "When modifying the legislative framework, the government altered the code.", tr: "Yasal çerçeveyi değiştirirken hükümet kanunu değiştirdi.", word: "modifying", trWord: "değiştirirken", blank: "When ___ the legislative framework, the government altered the code." },
-  { en: "When evaluating the academic curriculum, the university requires empirical evidence.", tr: "Akademik müfredatı değerlendirirken üniversite ampirik kanıt gerektirir.", word: "evaluating", trWord: "değerlendirirken", blank: "When ___ the academic curriculum, the university requires empirical evidence." },
+  { en: "When evaluating the academic curriculum, the university requires empirical evidence.", tr: "müfredatı değerlendirirken üniversite ampirik kanıt gerektirir.", word: "evaluating", trWord: "değerlendirirken", blank: "When ___ the academic curriculum, the university requires empirical evidence." },
   { en: "When structuring the financial resources, the committee defined strict parameters.", tr: "Finansal kaynakları yapılandırarken komite katı parametreler belirledi.", word: "structuring", trWord: "yapılandırırken", blank: "When ___ the financial resources, the committee defined strict parameters." },
   { en: "While integrating the individual applications, the engineer encountered technical errors.", tr: "Bireysel uygulamaları entegre ederken mühendis teknik hatalarla karşılaştı.", word: "integrating", trWord: "entegre ederken", blank: "While ___ the individual applications, the engineer encountered technical errors." },
   { en: "While restricting the resource distribution, the administration caused temporary instability.", tr: "Kaynak dağıtımını kısıtlarken yönetim geçici istikrarsızlığa neden oldu.", word: "restricting", trWord: "kısıtlarken", blank: "While ___ the resource distribution, the administration caused temporary instability." },
@@ -18421,7 +18421,7 @@ const unit17Lesson3SentencesRaw = [
   { en: "When processed by the updated software", tr: "Güncellenmiş yazılım tarafından işlendiğinde", word: "processed", trWord: "işlendiğinde", blank: "When ___ by the updated software" },
   { en: "If modified by the central administration", tr: "Merkezi yönetim tarafından değiştirilirse", word: "modified", trWord: "değiştirilirse", blank: "If ___ by the central administration" },
   { en: "If excluded from the final statistical analysis", tr: "Nihai istatistiksel analizden hariç tutulursa", word: "excluded", trWord: "hariç tutulursa", blank: "If ___ from the final statistical analysis" },
-  { en: "Unless evaluated by the academic committee", tr: "Akademik komite tarafından değerlendirilmedikçe", word: "evaluated", trWord: "değerlendirilmedikçe", blank: "Unless ___ by the academic committee" },
+  { en: "Unless evaluated by the academic committee", tr: "komite tarafından değerlendirilmedikçe", word: "evaluated", trWord: "değerlendirilmedikçe", blank: "Unless ___ by the academic committee" },
   { en: "Unless validated through the regulatory process", tr: "Düzenleyici süreç yoluyla doğrulanmadıkça", word: "validated", trWord: "doğrulanmadıkça", blank: "Unless ___ through the regulatory process" },
   { en: "Although established by the special committee", tr: "Özel komite tarafından kurulmasına rağmen", word: "established", trWord: "kurulmasına rağmen", blank: "Although ___ by the special committee" },
   { en: "Although defined in the legal document", tr: "Yasal belgede tanımlanmasına rağmen", word: "defined", trWord: "tanımlanmasına rağmen", blank: "Although ___ in the legal document" },
@@ -18441,7 +18441,7 @@ const unit17Lesson3SentencesRaw = [
   { en: "When processed by the updated software, the text appears clearly.", tr: "Güncellenmiş yazılım tarafından işlendiğinde metin net bir şekilde görünür.", word: "processed", trWord: "işlendiğinde", blank: "When ___ by the updated software, the text appears clearly." },
   { en: "If modified by the central administration, the framework changes immediately.", tr: "Merkezi yönetim tarafından değiştirilirse çerçeve hemen değişir.", word: "modified", trWord: "değiştirilirse", blank: "If ___ by the central administration, the framework changes immediately." },
   { en: "If excluded from the final statistical analysis, the variables alter results.", tr: "Nihai istatistiksel analizden hariç tutulursa değişkenler sonuçları değiştirir.", word: "excluded", trWord: "hariç tutulursa", blank: "If ___ from the final statistical analysis, the variables alter results." },
-  { en: "Unless evaluated by the academic committee, the curriculum cannot change.", tr: "Akademik komite tarafından değerlendirilmedikçe müfredat değişemez.", word: "evaluated", trWord: "değerlendirilmedikçe", blank: "Unless ___ by the academic committee, the curriculum cannot change." },
+  { en: "Unless evaluated by the academic committee, the curriculum cannot change.", tr: "komite tarafından değerlendirilmedikçe müfredat değişemez.", word: "evaluated", trWord: "değerlendirilmedikçe", blank: "Unless ___ by the academic committee, the curriculum cannot change." },
   { en: "Unless validated through the regulatory process, the legal contract is inactive.", tr: "Düzenleyici süreç yoluyla doğrulanmadıkça yasal sözleşme geçersizdir.", word: "validated", trWord: "doğrulanmadıkça", blank: "Unless ___ through the regulatory process, the legal contract is inactive." },
   { en: "Although established by the special committee, the criteria faced intense opposition.", tr: "Özel komite tarafından kurulmasına rağmen kriterler yoğun muhalefetle karşılaştı.", word: "established", trWord: "kurulmasına rağmen", blank: "Although ___ by the special committee, the criteria faced intense opposition." },
   { en: "Although defined in the legal document, the dynamic clause remains controversial.", tr: "Yasal belgede tanımlanmasına rağmen dinamik madde tartışmalı kalmaya devam ediyor.", word: "defined", trWord: "tanımlanmasına rağmen", blank: "Although ___ in the legal document, the dynamic clause remains controversial." },
@@ -19200,7 +19200,7 @@ const rawTopics = [
       },
       {
         "date": "2026-07-23T18:30:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı: Özne - Geçişli Fiil + Nesne bölümü Beşeri Bilimler (tarih, felsefe, sosyoloji, edebiyat, psikoloji) tematiğine uygun olarak yeniden kurgulandı. İsim+Edat ve Fiil+Edat konuları ile spiralleşme sağlandı, tüm sorulara standart grammarTags eklendi.",
+        "desc": "Bölüm Yeniden Tasarımı: Özne - Geçişli Fiil + Nesne bölümü (tarih, felsefe, sosyoloji, edebiyat, psikoloji) tematiğine uygun olarak yeniden kurgulandı. İsim+Edat ve Fiil+Edat konuları ile spiralleşme sağlandı, tüm sorulara standart grammarTags eklendi.",
         "type": "custom"
       }
     ],
@@ -19226,7 +19226,7 @@ const rawTopics = [
     "edits": [
       {
         "date": "2026-07-23T18:35:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı: \"There\" Yapıları ünitesi Beşeri Bilimler (tarih, felsefe, sosyoloji, edebiyat, psikoloji) tematiğine uygun olarak yeniden kurgulandı. İsim+Edat ve Fiil+Edat konuları ile spiralleşme sağlandı, tüm sorulara standart grammarTags eklendi.",
+        "desc": "Bölüm Yeniden Tasarımı: \"There\" Yapıları ünitesi (tarih, felsefe, sosyoloji, edebiyat, psikoloji) tematiğine uygun olarak yeniden kurgulandı. İsim+Edat ve Fiil+Edat konuları ile spiralleşme sağlandı, tüm sorulara standart grammarTags eklendi.",
         "type": "custom"
       }
     ],
@@ -19319,7 +19319,7 @@ const rawTopics = [
       },
       {
         "date": "2026-07-23T18:50:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı: Saf Modallar ve Saf Zamanlar ünitesi Beşeri Bilimler (tarih, felsefe, sosyoloji, edebiyat, psikoloji) tematiğine uygun olarak yeniden kurgulandı. Önceki tüm ünitelerle (İsim+Edat, Fiil+Edat, There, Participle, Edilgen) spiralleşme sağlandı, tüm sorulara standart grammarTags eklendi.",
+        "desc": "Bölüm Yeniden Tasarımı: Saf Modallar ve Saf Zamanlar ünitesi (tarih, felsefe, sosyoloji, edebiyat, psikoloji) tematiğine uygun olarak yeniden kurgulandı. Önceki tüm ünitelerle (İsim+Edat, Fiil+Edat, There, Participle, Edilgen) spiralleşme sağlandı, tüm sorulara standart grammarTags eklendi.",
         "type": "custom"
       }
     ],
@@ -19350,7 +19350,7 @@ const rawTopics = [
     "edits": [
       {
         "date": "2026-07-23T19:10:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı & Birleştirme: Edilgen Yapısı (Bölüm 9) ve Edilgen Mastarı (Bölüm 10) üniteleri 'IX. Edilgen Yapılar ve Edilgen Mastarı' başlığı altında birleştirildi. Beşeri Bilimler tematiğine uygun olarak 3 derse indirildi, tüm zamanlar/modallar/zarflı yapıları kapsayan zengin formüller, spiralleşme ve standart grammarTags eklendi.",
+        "desc": "Bölüm Yeniden Tasarımı & Birleştirme: Edilgen Yapısı (Bölüm 9) ve Edilgen Mastarı (Bölüm 10) üniteleri 'IX. Edilgen Yapılar ve Edilgen Mastarı' başlığı altında birleştirildi. tematiğine uygun olarak 3 derse indirildi, tüm zamanlar/modallar/zarflı yapıları kapsayan zengin formüller, spiralleşme ve standart grammarTags eklendi.",
         "type": "custom"
       }
     ],
@@ -19372,13 +19372,13 @@ const rawTopics = [
       {
         "formula": "Subject + Be + Adverb + V3 (+ by + Agent)",
         "example": "• Yalın Bölünmüş: Sociological theories are frequently revised in response to cultural shifts (Sosyolojik teoriler sıklıkla revize edilir)<br>• Eyleyenli Bölünmüş: Ancient inscriptions were newly discovered by excavating archaeologists (Yazıtlar arkeologlar tarafından yeni keşfedildi)<br>• Modallı Bölünmüş: Cognitive behavioral patterns can be significantly altered through therapy (Bilişsel kalıplar önemli ölçüde değiştirilebilir)",
-        "description": "Bölünmüş Edilgen (Split Passive): Akademik metinlerde yardımcı fiil (is/was/can be) ile esas fiil (V3) arasına '-ly' ile biten derece veya zaman zarfı yerleştirilerek fiil pekiştirilir."
+        "description": "Bölünmüş Edilgen (Split Passive): metinlerde yardımcı fiil (is/was/can be) ile esas fiil (V3) arasına '-ly' ile biten derece veya zaman zarfı yerleştirilerek fiil pekiştirilir."
       }
     ],
     "subtitles": [
       "A. Zaman Tabanlı Edilgen Yapılar ve Olumsuzları (Sayfa 55-60)",
       "B. Eyleyenli (by + Agent) ve Modal Tabanlı Edilgen Yapılar (Sayfa 62-65)",
-      "C. Bölünmüş (Split Passive) ve Gelişmiş Akademik Edilgen Yapılar (Sayfa 66-71)"
+      "C. Bölünmüş (Split Passive) ve Gelişmiş Edilgen Yapılar (Sayfa 66-71)"
     ],
     "originalNumLessons": 3
   },
@@ -19429,7 +19429,7 @@ const rawTopics = [
       "2. İsteklilik & Eğilim Yapıları (be willing to, be unwilling to, be reluctant to)",
       "3. İhtimal, Kaçınılmazlık & Kesinlik (be likely to, be unlikely to, be bound to, be certain to)",
       "4. Zorunluluk, Beklenti & Kader Yapıları (be supposed to, be doomed to, be to, be unable to, be about to)",
-      "5. Karma Akademik Öbeksel Kipler Testi ve Metin Analizi"
+      "5. Karma Öbeksel Kipler Testi ve Metin Analizi"
     ],
     "originalNumLessons": 5
   },
@@ -19473,7 +19473,7 @@ const rawTopics = [
     "edits": [
       {
         "date": "2026-07-24T01:20:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı & Yapılandırma: Participle Yapıları (Bölüm 11 / Unit 12) ünitesi 3 ana derse yapılandırıldı. Present participle, past participle/zarflı sıfatlar ve sıfat cümlesi kısaltmalarını kapsayan zengin formüller, akademik/beşeri bilimler örnekleri, spiralleşme ve standart grammarTags eklendi.",
+        "desc": "Bölüm Yeniden Tasarımı & Yapılandırma: Participle Yapıları (Bölüm 11 / Unit 12) ünitesi 3 ana derse yapılandırıldı. Present participle, past participle/zarflı sıfatlar ve sıfat cümlesi kısaltmalarını kapsayan zengin formüller, akademik/örnekleri, spiralleşme ve standart grammarTags eklendi.",
         "type": "custom"
       },
       {
@@ -19496,18 +19496,18 @@ const rawTopics = [
     "formulas": [
       {
         "formula": "Present Participle (...ing) + Noun",
-        "example": "• Aktif Eylem Sıfatı: Emerging technologies transform global industries (Gelişmekte olan teknolojiler küresel sanayileri dönüştürür)<br>• Süreç Bildiren Niteleme: The rising temperature affects marine ecosystems (Yükselen sıcaklık deniz ekosistemlerini etkiler)<br>• Akademik Kullanım: Demographers analyze rapidly changing population patterns (Nüfus bilimciler hızla değişen nüfus kalıplarını analiz eder)",
+        "example": "• Aktif Eylem Sıfatı: Emerging technologies transform global industries (Gelişmekte olan teknolojiler küresel sanayileri dönüştürür)<br>• Süreç Bildiren Niteleme: The rising temperature affects marine ecosystems (Yükselen sıcaklık deniz ekosistemlerini etkiler)<br>• Kullanım: Demographers analyze rapidly changing population patterns (Nüfus bilimciler hızla değişen nüfus kalıplarını analiz eder)",
         "description": "Etken (aktif) eylem veya süreç bildiren fiillerin '-ing' takısı alarak isimlerin önüne niteleme sıfatı olarak gelmesi (Etken Ortaç). Özne eylemi bizzat gerçekleştirmektedir."
       },
       {
         "formula": "Adverb + Past Participle (...ed / V3) + Noun",
-        "example": "• Yalın Edilgen Sıfat: Detailed reports were submitted to the committee (Ayrıntılı raporlar kurula sunuldu)<br>• Zarfla Pekiştirilmiş Yapı: Highly sophisticated algorithms extract data efficiently (Son derece gelişmiş algoritmalar veriyi verimli bir şekilde çıkarır)<br>• Akademik Çekim: The newly established facility will produce clean energy (Yeni kurulan tesis temiz enerji üretecektir)",
+        "example": "• Yalın Edilgen Sıfat: Detailed reports were submitted to the committee (Ayrıntılı raporlar kurula sunuldu)<br>• Zarfla Pekiştirilmiş Yapı: Highly sophisticated algorithms extract data efficiently (Son derece gelişmiş algoritmalar veriyi verimli bir şekilde çıkarır)<br>• Çekim: The newly established facility will produce clean energy (Yeni kurulan tesis temiz enerji üretecektir)",
         "description": "Edilgen (pasif) veya tamamlanmış eylemlerin üçüncü hali (V3) ile isimleri nitelemesi. Zarf eklenerek (Adverb + V3 + Noun) eylemin derecesi veya zamanı pekiştirilir (Edilgen Ortaç)."
       },
       {
         "formula": "Noun + Present/Past Participle Phrase (Clause Reduction)",
-        "example": "• Aktif Takım (-ing + Prep/Object): The researchers investigating climate change published their findings (İklim değişikliğini araştıran araştırmacılar bulgularını yayımladı)<br>• Pasif Takım (V3 + Prep): Artifacts recovered from ancient ruins are preserved in museums (Antik kalıntılardan çıkarılan eserler müzelerde korunur)<br>• Akademik Cümlecik Kısaltması: Policies affecting socio-economic structures must be evaluated (Sosyo-ekonomik yapıları etkileyen politikalar değerlendirilmelidir)",
-        "description": "Sıfat cümleciklerinin (Relative Clause) kısaltılması: İsmi takip eden eylemsi grubu (Noun + V-ing / Noun + V3 + Edat Takımı/Nesne). Yan cümlecik bağlacı (who/which/that) ve yardımcı fiil kaldırılarak akıcı akademik anlatım sağlanır."
+        "example": "• Aktif Takım (-ing + Prep/Object): The researchers investigating climate change published their findings (İklim değişikliğini araştıran araştırmacılar bulgularını yayımladı)<br>• Pasif Takım (V3 + Prep): Artifacts recovered from ancient ruins are preserved in museums (Antik kalıntılardan çıkarılan eserler müzelerde korunur)<br>• Cümlecik Kısaltması: Policies affecting socio-economic structures must be evaluated (Sosyo-ekonomik yapıları etkileyen politikalar değerlendirilmelidir)",
+        "description": "Sıfat cümleciklerinin (Relative Clause) kısaltılması: İsmi takip eden eylemsi grubu (Noun + V-ing / Noun + V3 + Edat Takımı/Nesne). Yan cümlecik bağlacı (who/which/that) ve yardımcı fiil kaldırılarak akıcı anlatım sağlanır."
       }
     ],
     "subtitles": [
@@ -19522,7 +19522,7 @@ const rawTopics = [
     "edits": [
       {
         "date": "2026-07-28T13:45:00+03:00",
-        "desc": "Bölüm Yeniden Tasarımı: İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive) [Bölüm 23 / Unit 14] ünitesi 4 derse ayrıldı. Beşeri bilimler, iktisat, hukuk, sinema, tarih, iletişim, sanat tarihi, antropoloji, coğrafya, sosyoloji ve psikoloji alanlarına ait kelime haznesi kullanıldı. Önceki bölümden (Participle Yapıları) %40 kelime devri sağlandı. AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme), strict content boundary, her soruda İsim Tamlamaları ve Edat Yapısı zorunluluğu ile Çok Katmanlı Etiketleme (Multi-Tag) uygulandı.",
+        "desc": "Bölüm Yeniden Tasarımı: İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive) [Bölüm 23 / Unit 14] ünitesi 4 derse ayrıldı. Beşeri bilimler, iktisat, hukuk, sinema, tarih, iletişim, sanat tarihi, antropoloji, coğrafya, ve alanlarına ait kelime haznesi kullanıldı. Önceki bölümden (Participle Yapıları) %40 kelime devri sağlandı. AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme), strict content boundary, her soruda İsim Tamlamaları ve Edat Yapısı zorunluluğu ile Çok Katmanlı Etiketleme (Multi-Tag) uygulandı.",
         "type": "custom"
 }
     ],
@@ -19548,7 +19548,7 @@ const rawTopics = [
       },
       {
         "formula": "Wh- Word (what, where, how, when, which) + Infinitive (to V1)",
-        "example": "• İsim Cümleciği Kısaltması: Analysts know how to optimize the algorithm (Analistler algoritmanın nasıl optimize edileceğini bilir)<br>• Karar Yapısı: Before upgrading the server, they must decide which database to migrate (Sunucuyu yükseltmeden önce hangi veri tabanının taşınacağına karar vermeliler)<br>• Günlük & Akademik Kullanım: She showed us where to access the archives (Bize arşivlere nereden erişileceğini gösterdi)",
+        "example": "• İsim Cümleciği Kısaltması: Analysts know how to optimize the algorithm (Analistler algoritmanın nasıl optimize edileceğini bilir)<br>• Karar Yapısı: Before upgrading the server, they must decide which database to migrate (Sunucuyu yükseltmeden önce hangi veri tabanının taşınacağına karar vermeliler)<br>• Günlük & Kullanım: She showed us where to access the archives (Bize arşivlere nereden erişileceğini gösterdi)",
         "description": "Soru kelimelerinden sonra gelen mastar kısaltmaları (wh- + to V1): İsim cümleciğinin (Noun Clause) kısaltılması biçiminde nesne veya tamamlayıcı işlev görür."
       }
     ],
@@ -19588,12 +19588,12 @@ const rawTopics = [
       {
         "formula": "SVO + such as + Noun Phrase VEYA for example / for instance / that is",
         "example": "• Örneklendirme: Advanced technical frameworks require strict compliance codes to regulate volatile dimensions such as boundary parameter shifts.<br>• Açıklama: Monografiler nitel araştırma sunar; for example, modern söz dizimi modelleri incelenir.",
-        "description": "Akademik metinlerde karmaşık teorileri somutlaştırmak, örnekler vermek veya bir önceki ifadeyi açıklamak için kullanılan köprülerdir (<strong>such as</strong>, <strong>for example</strong>, <strong>for instance</strong>, <strong>that is (to say)</strong>)."
+        "description": "metinlerde karmaşık teorileri somutlaştırmak, örnekler vermek veya bir önceki ifadeyi açıklamak için kullanılan köprülerdir (<strong>such as</strong>, <strong>for example</strong>, <strong>for instance</strong>, <strong>that is (to say)</strong>)."
       },
       {
         "formula": "even if + Clause, Main Clause VEYA SVO; otherwise, SVO",
         "example": "• İstisnai Koşul: Even if frontend developers optimize application builds thoroughly, hardware constraints on older devices will still display lag.<br>• Sakıncalı Durum: You must run diagnostic tools; otherwise, the database system will collapse.",
-        "description": "Teknik ve akademik kurgularda istisnai durumları, sakıncalı olasılıkları veya genel eğilimlerin dışındaki senaryoları kurgulayan bağıntılar (<strong>even if</strong>, <strong>otherwise</strong>, <strong>in many cases</strong>, <strong>in some cases</strong>)."
+        "description": "Teknik ve kurgularda istisnai durumları, sakıncalı olasılıkları veya genel eğilimlerin dışındaki senaryoları kurgulayan bağıntılar (<strong>even if</strong>, <strong>otherwise</strong>, <strong>in many cases</strong>, <strong>in some cases</strong>)."
       },
       {
         "date": "2026-07-24T02:25:00+03:00",
@@ -19615,7 +19615,7 @@ const rawTopics = [
     "startLessonId": 370,
     "originalIndex": 22,
     "title": "Ara Bölüm 5: Nicelik, Zaman ve Derece Belirteçleri",
-    "desc": "İngilizcede sıklıkla kullanılan nicelik (Quantifiers), zaman (Adverbs of Time) ve derece (Adverbs of Degree) belirteçlerinin akademik cümle yapısındaki kullanımı.",
+    "desc": "İngilizcede sıklıkla kullanılan nicelik (Quantifiers), zaman (Adverbs of Time) ve derece (Adverbs of Degree) belirteçlerinin cümle yapısındaki kullanımı.",
     "icon": "📖",
     "numLessons": 4,
     "edits": [
@@ -19655,7 +19655,7 @@ const rawTopics = [
     "startLessonId": 128,
     "originalIndex": 23,
     "title": "XIX. Zarf Cümlecikleri",
-    "desc": "Zaman, sebep, zıtlık, amaç, derece, tarz ve şart bildiren tüm zarf cümleleri ve akademik kullanımları",
+    "desc": "Zaman, sebep, zıtlık, amaç, derece, tarz ve şart bildiren tüm zarf cümleleri ve kullanımları",
     "icon": "🧭",
     "numLessons": 5,
     "edits": [
@@ -19697,7 +19697,7 @@ const rawTopics = [
       "2. Sebep Zarf Cümlecikleri (because, since, as, seeing that & due to / because of)",
       "3. Zıtlık ve Beklenmedik Sonuç Cümlecikleri (although, even though, while & despite)",
       "4. Amaç, Derece, Netice ve Tarz Cümlecikleri (so that, so...that, as if / as though)",
-      "5. Koşul (Şart) Cümlecikleri ve Karma Akademik Metin Okuma (if, unless, provided that)"
+      "5. Koşul (Şart) Cümlecikleri ve Karma Metin Okuma (if, unless, provided that)"
     ],
     "originalNumLessons": 5
   },
@@ -19748,12 +19748,12 @@ const rawTopics = [
       {
         "formula": "Noun (person) + whom + Subject + Verb",
         "example": "The analysts whom the board requires have arrived: Yönetim kurulunun ihtiyaç duyduğu analistler geldi.",
-        "description": "İnsanları nitelemek için kullanılan bu yapıda <strong>whom</strong> ilgi zamiri, sıfat cümleciğinin nesnesi (object) konumundadır. Akademik ve resmi dilde, <strong>whom</strong> kelimesi genellikle bir edattan (preposition) hemen sonra tercih edilir.<br><br><strong>Çeviri Kılavuzu:</strong> Türkçeye çevrilirken, <strong>whom</strong> cümleciği <strong>\"-diği\"</strong>, <strong>\"-eceği\"</strong> veya edatın anlamına göre <strong>\"kendisine ... yapılan\"</strong>, <strong>\"birlikte ... olunan\"</strong> gibi yapılara dönüştürülerek nitelenen insanın önüne getirilir."
+        "description": "İnsanları nitelemek için kullanılan bu yapıda <strong>whom</strong> ilgi zamiri, sıfat cümleciğinin nesnesi (object) konumundadır. ve resmi dilde, <strong>whom</strong> kelimesi genellikle bir edattan (preposition) hemen sonra tercih edilir.<br><br><strong>Çeviri Kılavuzu:</strong> Türkçeye çevrilirken, <strong>whom</strong> cümleciği <strong>\"-diği\"</strong>, <strong>\"-eceği\"</strong> veya edatın anlamına göre <strong>\"kendisine ... yapılan\"</strong>, <strong>\"birlikte ... olunan\"</strong> gibi yapılara dönüştürülerek nitelenen insanın önüne getirilir."
       },
       {
         "formula": "Noun + Preposition + which/whom + Subject + Verb",
         "example": "The variables with which practitioners interact are volatile: Uygulayıcıların etkileşime girdiği değişkenler uçucudur.",
-        "description": "Sıfat cümleciğinin içindeki fiil, sıfat veya isim bir edatla (preposition) bağlandığında; bu edat <strong>which</strong> (cansızlar için) veya <strong>whom</strong> (insanlar için) zamirinin hemen başına getirilebilir. Akademik yazımın en karakteristik göstergelerinden biridir.<br><br><strong>Çeviri Kılavuzu:</strong> Türkçeye aktarılırken baştaki edat çoğu zaman tek başına çevrilmez; tüm sıfat cümleciği bir bütün olarak <strong>\"-diği\"</strong>, <strong>\"-en\"</strong> veya edatın kattığı yön, araç, içinden geçme anlamına göre (<strong>\"vasıtasıyla\"</strong>, <strong>\"içinden\"</strong>, <strong>\"üzerine\"</strong>) sıfatlaştırılıp ismin soluna yerleştirilir."
+        "description": "Sıfat cümleciğinin içindeki fiil, sıfat veya isim bir edatla (preposition) bağlandığında; bu edat <strong>which</strong> (cansızlar için) veya <strong>whom</strong> (insanlar için) zamirinin hemen başına getirilebilir. yazımın en karakteristik göstergelerinden biridir.<br><br><strong>Çeviri Kılavuzu:</strong> Türkçeye aktarılırken baştaki edat çoğu zaman tek başına çevrilmez; tüm sıfat cümleciği bir bütün olarak <strong>\"-diği\"</strong>, <strong>\"-en\"</strong> veya edatın kattığı yön, araç, içinden geçme anlamına göre (<strong>\"vasıtasıyla\"</strong>, <strong>\"içinden\"</strong>, <strong>\"üzerine\"</strong>) sıfatlaştırılıp ismin soluna yerleştirilir."
       },
       {
         "formula": "Noun + whose + Noun + Verb/Subject",
@@ -19771,7 +19771,7 @@ const rawTopics = [
       "2. Özne ve Nesne Konumundaki Relative Clauses (Who, Which, That)",
       "3. Yer, Zaman ve İyelik Relative Clauses (Where, When, Whose, Whom)",
       "4. Edatlı ve Zamiri Düşmüş Adjective Clauses (Preposition + Relative & Omitted Pronoun)",
-      "5. Karma Sıfat Cümleciği & Kıyaslama Akademik Metin Testi"
+      "5. Karma Sıfat Cümleciği & Kıyaslama Metin Testi"
     ],
     "originalNumLessons": 5
   }
@@ -20134,7 +20134,7 @@ const unit2Lesson2RedesignedSentences = {
     { en: "according to the records of the empire under the reign of the monarch", tr: "hükümdarın saltanatı altında imparatorluğun kayıtlarına göre" },
     { en: "during the formulation of philosophical theories after the Renaissance", tr: "Rönesans'tan sonra felsefi teorilerin formüle edilmesi sırasında" },
     { en: "before the emergence of modern states during the collapse of feudalism", tr: "feodalizmin çöküşü sırasında modern devletlerin ortaya çıkışından önce" },
-    { en: "in the context of literary criticism under the influence of romanticism", tr: "romantizmin etkisi altında edebiyat eleştirisinin bağlamında" }
+    { en: "in the context of literary criticism under the influence of romanticism", tr: "romantizmin etkisi altında edebiyat" }
   ]
 };
 
@@ -20155,7 +20155,7 @@ const unit2Lesson1Exercises = {
     {
       id: "u2l1ex3",
       title: "Alıştırma 3: Fiil + Edat Yapıları",
-      description: "Fiil ve edat takımları içeren gelişmiş ve akademik cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
+      description: "Fiil ve edat takımları içeren gelişmiş ve cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
       questions: buildUnit3RedesignedExercise(unit2Lesson1RedesignedSentences.ileri, 2, 8, 3, "ileri")
     }
   ]
@@ -20178,7 +20178,7 @@ const unit2Lesson2Exercises = {
     {
       id: "u2l2ex3",
       title: "Alıştırma 3: Edat Takımı + Edat Takımı",
-      description: "Edat kombinasyonları içeren gelişmiş ve akademik cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
+      description: "Edat kombinasyonları içeren gelişmiş ve cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
       questions: buildUnit3RedesignedExercise(unit2Lesson2RedesignedSentences.ileri, 2, 902, 3, "ileri")
     }
   ]
@@ -21537,7 +21537,7 @@ const unit3LessonExercises = {
     {
       id: "u3l10ex3",
       title: "Alıştırma 3: İsim Tamlaması",
-      description: "Önceki konuları (Edilgen, Edat Yapıları, There is/are) tekrar eden ileri düzey akademik cümleler",
+      description: "Önceki konuları (Edilgen, Edat Yapıları, There is/are) tekrar eden ileri düzey cümleler",
       questions: [
         {
           id: "u3l10ex3_q1",
@@ -21988,7 +21988,7 @@ const unit4LessonExercises = {
           id: "u4l12ex3_q10",
           type: "translation-text",
           prompt: "\"The evolving theories of the scientist are debated in the academic community.\" cümlesini Türkçe'ye çevirin:",
-          correctSentence: "Bilim insanının gelişen teorileri akademik toplulukta tartışılmaktadır.",
+          correctSentence: "Bilim insanının gelişen teorileri toplulukta tartışılmaktadır.",
           enSentence: "The evolving theories of the scientist are debated in the academic community.",
           isEngToTr: true
         },
@@ -24723,7 +24723,7 @@ const unit30Lesson2Group2Raw = [
 const unit30Lesson2Group3Raw = [
   {
     "en": "Vitamins were lacking inside the urban center; <span style=\"color: #ff6b6b; font-weight: bold;\">therefore</span>, public health indicators remained exceptionally poor last quarter.",
-    "tr": "Kent merkezinde vitaminler eksikti; bu nedenle halk sağlığı göstergeleri geçen çeyrekte son derece zayıf kaldı.",
+    "tr": "Kent merkezinde vitaminler eksikti; bu nedenle göstergeleri geçen çeyrekte son derece zayıf kaldı.",
     "word": "therefore",
     "trWord": "bu nedenle",
     "correct": "therefore",
@@ -25023,7 +25023,7 @@ const unit30Lesson2Group3Raw = [
   },
   {
     "en": "Vitamins were lacking inside the central urban zone; <span style=\"color: #ff6b6b; font-weight: bold;\">thus</span>, public health indicators remained exceptionally poor throughout the year.",
-    "tr": "Merkezi kent bölgesinde vitaminler eksikti; böylece halk sağlığı göstergeleri yıl boyunca son derece zayıf kaldı.",
+    "tr": "Merkezi kent bölgesinde vitaminler eksikti; böylece göstergeleri yıl boyunca son derece zayıf kaldı.",
     "word": "thus",
     "trWord": "böylece",
     "correct": "thus",
@@ -29805,7 +29805,7 @@ function buildUnit30GeneralExercises(group1, group2, group3, unitId, lessonId) {
     return {
       id: id,
       type: "word-bank",
-      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+      prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
       translation: s.tr,
       words: allWords,
       correctOrder: s.blocks,
@@ -29880,8 +29880,8 @@ function buildUnit30GeneralExercises(group1, group2, group3, unitId, lessonId) {
 
   return [
     compileExercise(group1, "ex1", "Alıştırma 1: Yapısal Kalıplar — Giriş Seviyesi (Pür Hal)", "Neden-sonuç yapılarını ve cümle girişlerini tanıma çalışmaları.", true),
-    compileExercise(group2, "ex2", "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler", "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.", true),
-    compileExercise(group3, "ex3", "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar", "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.", false)
+    compileExercise(group2, "ex2", "Alıştırma 2: Cümle Girişleri — Yalın Cümleler", "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.", true),
+    compileExercise(group3, "ex3", "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar", "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.", false)
   ];
 }
 
@@ -30353,7 +30353,7 @@ const unit27Lesson1SentencesRaw = [
   { en: "Manufacturing factories carefully monitor laboratory professionals <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> manipulate discrete variables inside the unsealed vacuum chamber.", tr: "Üretim fabrikaları, sızdırmazlığı sağlanmamış vakum odasının içinde kesikli değişkenleri yönlendiren laboratuvar profesyonellerini dikkatle izler.", word: "who", trWord: "yönlendiren", blank: "Manufacturing factories carefully monitor laboratory professionals ___ manipulate discrete variables inside the unsealed vacuum chamber.", options: ["who", "which", "whose", "whom"] },
   { en: "The metropolitan center employs administrative coordinates <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> supervise field operations while regional infrastructure components undergo modification.", tr: "Metropol merkezi, bölgesel altyapı bileşenleri modifikasyondan geçerken saha operasyonlarını denetleyen idari koordinatörleri istihdam ediyor.", word: "who", trWord: "denetleyen", blank: "The metropolitan center employs administrative coordinates ___ supervise field operations while regional infrastructure components undergo modification.", options: ["who", "which", "whose", "whom"] },
   { en: "The state actively seeks certified contractors <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> establish regional frameworks to boost investment metrics across the province.", tr: "Devlet, il genelinde yatırım metriklerini artırmak için bölgesel çerçeveler oluşturan sertifikalı yüklenicileri aktif olarak arıyor.", word: "who", trWord: "oluşturan", blank: "The state actively seeks certified contractors ___ establish regional frameworks to boost investment metrics across the province.", options: ["who", "which", "whose", "whom"] },
-  { en: "Academic libraries catalog prominent authors <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> publish qualitative monographs concerning the historical evolution of linguistic structures.", tr: "Akademik kütüphaneler, dilbilimsel yapıların tarihsel evrimi hakkında nitel monografiler yayımlayan seçkin yazarları kataloglar.", word: "who", trWord: "yayımlayan", blank: "Academic libraries catalog prominent authors ___ publish qualitative monographs concerning the historical evolution of linguistic structures.", options: ["who", "which", "whose", "whom"] },
+  { en: "Academic libraries catalog prominent authors <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> publish qualitative monographs concerning the historical evolution of linguistic structures.", tr: "kütüphaneler, dilbilimsel yapıların tarihsel evrimi hakkında nitel monografiler yayımlayan seçkin yazarları kataloglar.", word: "who", trWord: "yayımlayan", blank: "Academic libraries catalog prominent authors ___ publish qualitative monographs concerning the historical evolution of linguistic structures.", options: ["who", "which", "whose", "whom"] },
   { en: "Specialized medical clinics protect vulnerable individuals <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> consent to clinical trials despite experiencing severe physical constraints.", tr: "Uzman tıp klinikleri, ciddi fiziksel kısıtlamalar yaşamalarına rağmen klinik çalışmalara izin veren savunmasız kişileri korur.", word: "who", trWord: "izin veren", blank: "Specialized medical clinics protect vulnerable individuals ___ consent to clinical trials despite experiencing severe physical constraints.", options: ["who", "which", "whose", "whom"] },
   { en: "Decentralized systems trust local authorities <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> validate cryptographic tokens the moment an external trace requests clearance.", tr: "Merkeziyetsiz sistemler, harici bir iz izin talep ettiği anda kriptografik belirteçleri doğrulayan yerel yetkililere güvenir.", word: "who", trWord: "doğrulayan", blank: "Decentralized systems trust local authorities ___ validate cryptographic tokens the moment an external trace requests clearance.", options: ["who", "which", "whose", "whom"] },
   { en: "Financial institutions invite global economists <span style=\"color: #ff6b6b; font-weight: bold;\">who</span> project revenue fluctuations on grounds that asset valuations decline steadily.", tr: "Finansal kurumlar, varlık değerlemelerinin istikrarlı bir şekilde düşmesi gerekçesiyle gelir dalgalanmalarını öngören küresel ekonomistleri davet ediyor.", word: "who", trWord: "öngören", blank: "Financial institutions invite global economists ___ project revenue fluctuations on grounds that asset valuations decline steadily.", options: ["who", "which", "whose", "whom"] },
@@ -30391,7 +30391,7 @@ const unit27Lesson2SentencesRaw = [
   { en: "Production servers handle subsequent matrix outputs <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> expand rapidly permanently whenever the database runs an unoptimized query thread.", tr: "Üretim sunucuları, veritabanı optimize edilmemiş bir sorgu dizisi çalıştırdığında kalıcı olarak hızla genişleyen sonraki matris çıktılarını işler.", word: "which", trWord: "genişleyen", blank: "Production servers handle subsequent matrix outputs ___ expand rapidly permanently whenever the database runs an unoptimized query thread.", options: ["which", "who", "whose", "whom"] },
   { en: "Engineering teams isolated unstable frameworks <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> fail under intense pressure lest the entire platform suffer cache crashes.", tr: "Mühendislik ekipleri, tüm platformun önbellek çökmeleri yaşamaması için yoğun baskı altında başarısız olan kararsız çerçeveleri izole etti.", word: "which", trWord: "başarısız olan", blank: "Engineering teams isolated unstable frameworks ___ fail under intense pressure lest the entire platform suffer cache crashes.", options: ["which", "who", "whose", "whom"] },
   { en: "Chemical laboratories observe modern innovations <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> transform organic structures before project timelines undergo final modification.", tr: "Kimya laboratuvarları, proje zaman çizelgeleri nihai değişiklikten geçmeden önce organik yapıları dönüştüren modern yenilikleri gözlemliyor.", word: "which", trWord: "dönüştüren", blank: "Chemical laboratories observe modern innovations ___ transform organic structures before project timelines undergo final modification.", options: ["which", "who", "whose", "whom"] },
-  { en: "Academic evaluators reject arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> induce analytical errors during the compilation of global economic surveys.", tr: "Akademik değerlendiriciler, küresel ekonomik anketlerin derlenmesi sırasında analitik hatalara yol açan keyfi kriterleri reddeder.", word: "which", trWord: "yol açan", blank: "Academic evaluators reject arbitrary criteria ___ induce analytical errors during the compilation of global economic surveys.", options: ["which", "who", "whose", "whom"] },
+  { en: "Academic evaluators reject arbitrary criteria <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> induce analytical errors during the compilation of global economic surveys.", tr: "değerlendiriciler, küresel ekonomik anketlerin derlenmesi sırasında analitik hatalara yol açan keyfi kriterleri reddeder.", word: "which", trWord: "yol açan", blank: "Academic evaluators reject arbitrary criteria ___ induce analytical errors during the compilation of global economic surveys.", options: ["which", "who", "whose", "whom"] },
   { en: "Automated firewalls checked strict compliance criteria <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> validate database entries before granting active client profile clearance codes.", tr: "Otomatik güvenlik duvarları, aktif müşteri profili izin kodlarını vermeden önce veritabanı girişlerini doğrulayan katı uyumluluk kriterlerini kontrol etti.", word: "which", trWord: "doğrulayan", blank: "Automated firewalls checked strict compliance criteria ___ validate database entries before granting active client profile clearance codes.", options: ["which", "who", "whose", "whom"] },
   { en: "Software developers write strategic protocols <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> minimize runtime latency in order that gamified mobile applications function seamlessly.", tr: "Yazılım geliştiricileri, oyunlaştırılmış mobil uygulamaların sorunsuz çalışabilmesi için çalışma zamanı gecikmesini en aza indiren stratejik protokoller yazıyor.", word: "which", trWord: "en aza indiren", blank: "Software developers write strategic protocols ___ minimize runtime latency in order that gamified mobile applications function seamlessly.", options: ["which", "who", "whose", "whom"] },
   { en: "National parliaments pass laws <span style=\"color: #ff6b6b; font-weight: bold;\">which</span> mutate local governance, forcing regional municipalities to request immediate statutory adjustments.", tr: "Ulusal parlamentolar, yerel yönetimi değiştiren ve bölgesel belediyeleri derhal yasal ayarlamalar talep etmeye zorlayan yasalar çıkarır.", word: "which", trWord: "değiştiren", blank: "National parliaments pass laws ___ mutate local governance, forcing regional municipalities to request immediate statutory adjustments.", options: ["which", "who", "whose", "whom"] },
@@ -30527,7 +30527,7 @@ const unit27Lesson5SentencesRaw = [
   // Long Sentences (21-40)
   { en: "Isolate the volatile constituent variables <span style=\"color: #ff6b6b; font-weight: bold;\">with which</span> data practitioners interact before the automated system initializes validation diagnostic loops.", tr: "Otomatik sistem doğrulama tanılama döngülerini başlatmadan önce, veri uygulayıcılarının etkileşime girdiği oynak bileşen değişkenlerini izole edin.", word: "with which", trWord: "etkileşime girdiği", blank: "Isolate the volatile constituent variables ___ data practitioners interact before the automated system initializes validation diagnostic loops.", options: ["with which", "which", "who", "whose"] },
   { en: "Read the rigid statutory clauses <span style=\"color: #ff6b6b; font-weight: bold;\">under which</span> elected legislators function during the administrative state assembly review sessions.", tr: "İdari eyalet meclisi inceleme oturumları sırasında seçilmiş yasa koyucularının altında çalıştığı katı yasal maddeleri okuyun.", word: "under which", trWord: "altında çalıştığı", blank: "Read the rigid statutory clauses ___ elected legislators function during the administrative state assembly review sessions.", options: ["under which", "which", "who", "whose"] },
-  { en: "Study the adaptive academic frameworks <span style=\"color: #ff6b6b; font-weight: bold;\">through which</span> complex linguistic structures evolve now that mobile applications handle pedagogy.", tr: "Mobil uygulamaların pedagojiyi yönetmesiyle birlikte, karmaşık dilbilimsel yapıların aracılığıyla evrildiği uyarlanabilir akademik çerçeveleri inceleyin.", word: "through which", trWord: "aracılığıyla evrildiği", blank: "Study the adaptive academic frameworks ___ complex linguistic structures evolve now that mobile applications handle pedagogy.", options: ["through which", "which", "who", "whose"] },
+  { en: "Study the adaptive academic frameworks <span style=\"color: #ff6b6b; font-weight: bold;\">through which</span> complex linguistic structures evolve now that mobile applications handle pedagogy.", tr: "Mobil uygulamaların pedagojiyi yönetmesiyle birlikte, karmaşık dilbilimsel yapıların aracılığıyla evrildiği uyarlanabilir çerçeveleri inceleyin.", word: "through which", trWord: "aracılığıyla evrildiği", blank: "Study the adaptive academic frameworks ___ complex linguistic structures evolve now that mobile applications handle pedagogy.", options: ["through which", "which", "who", "whose"] },
   { en: "Deploy the optimized server scripts <span style=\"color: #ff6b6b; font-weight: bold;\">by which</span> agile developers optimize runtime latency across all active processing nodes.", tr: "Çevik geliştiricilerin tüm aktif işlem düğümlerinde çalışma zamanı gecikmesini optimize ettiği optimize edilmiş sunucu betiklerini dağıtın.", word: "by which", trWord: "optimize ettiği", blank: "Deploy the optimized server scripts ___ agile developers optimize runtime latency across all active processing nodes.", options: ["by which", "which", "who", "whose"] },
   { en: "Inspect the arbitrary validation criteria <span style=\"color: #ff6b6b; font-weight: bold;\">on which</span> external evaluators reject qualitative research entries during selection rounds.", tr: "Seçim aşamalarında harici değerlendiricilerin nitel araştırma başvurularını temel alarak reddettiği keyfi doğrulama kriterlerini inceleyin.", word: "on which", trWord: "temel alarak reddettiği", blank: "Inspect the arbitrary validation criteria ___ external evaluators reject qualitative research entries during selection rounds.", options: ["on which", "which", "who", "whose"] },
   { en: "Secure the decentralized cloud channels <span style=\"color: #ff6b6b; font-weight: bold;\">through which</span> configuration data shifts unexpectedly before the database architecture migration ends.", tr: "Veritabanı mimarisi taşıması sona ermeden önce yapılandırma verilerinin beklenmedik şekilde içinden kaydığı merkeziyetsiz bulut kanallarını güvenli hale getirin.", word: "through which", trWord: "içinden kaydığı", blank: "Secure the decentralized cloud channels ___ configuration data shifts unexpectedly before the database architecture migration ends.", options: ["through which", "which", "who", "whose"] },
@@ -30583,7 +30583,7 @@ const unit27Lesson6SentencesRaw = [
   { en: "Government inspectors must inspect local manufacturing factories <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> industrial output declined sharply due to infrastructural asset constraints.", tr: "Hükümet müfettişleri, altyapı varlık kısıtlamaları nedeniyle endüstriyel çıktıları keskin bir şekilde düşen yerel üretim fabrikalarını denetlemelidir.", word: "whose", trWord: "endüstriyel çıktıları keskin şekilde düşen", blank: "Government inspectors must inspect local manufacturing factories ___ industrial output declined sharply due to infrastructural asset constraints.", options: ["whose", "who", "which", "whom"] },
   { en: "The center will assist administrative coordinates <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> field operations require continuous supervision while regional guidelines undergo modification.", tr: "Merkez, bölgesel kurallar modifikasyondan geçerken saha operasyonları sürekli denetim gerektiren idari koordinatörlere yardımcı olacak.", word: "whose", trWord: "saha operasyonları sürekli denetim gerektiren", blank: "The center will assist administrative coordinates ___ field operations require continuous supervision while regional guidelines undergo modification.", options: ["whose", "who", "which", "whom"] },
   { en: "Municipalities will pay certified contractors <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> regional frameworks built resilient bridge infrastructures across the target province.", tr: "Belediyeler, bölgesel çerçeveleri hedef il genelinde dirençli köprü altyapıları inşa eden sertifikalı yüklenicilere ödeme yapacak.", word: "whose", trWord: "bölgesel çerçeveleri köprüler inşa eden", blank: "Municipalities will pay certified contractors ___ regional frameworks built resilient bridge infrastructures across the target province.", options: ["whose", "who", "which", "whom"] },
-  { en: "We met prominent academic authors <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> analytical monographs explain syntax patterns, aiding language learners using mobile applications.", tr: "Mobil uygulamaları kullanan dil öğrenenlere yardımcı olan, analitik monografileri söz dizimi kalıplarını açıklayan seçkin akademik yazarlarla tanıştık.", word: "whose", trWord: "analitik monografileri söz dizimini açıklayan", blank: "We met prominent academic authors ___ analytical monographs explain syntax patterns, aiding language learners using mobile applications.", options: ["whose", "who", "which", "whom"] },
+  { en: "We met prominent academic authors <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> analytical monographs explain syntax patterns, aiding language learners using mobile applications.", tr: "Mobil uygulamaları kullanan dil öğrenenlere yardımcı olan, analitik monografileri söz dizimi kalıplarını açıklayan seçkin yazarlarla tanıştık.", word: "whose", trWord: "analitik monografileri söz dizimini açıklayan", blank: "We met prominent academic authors ___ analytical monographs explain syntax patterns, aiding language learners using mobile applications.", options: ["whose", "who", "which", "whom"] },
   { en: "Clinical trial boards protect vulnerable individuals <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> formal medical consent remains strictly mandatory before testing cycles initialize.", tr: "Klinik araştırma kurulları, test döngüleri başlamadan önce resmi tıbbi rızası kesinlikle zorunlu olmaya devam eden savunmasız kişileri korur.", word: "whose", trWord: "resmi tıbbi rızası zorunlu olmaya devam eden", blank: "Clinical trial boards protect vulnerable individuals ___ formal medical consent remains strictly mandatory before testing cycles initialize.", options: ["whose", "who", "which", "whom"] },
   { en: "Core infrastructure nodes must upgrade systems <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> cryptographic tokens validate entries automatically to block unauthorized client traces.", tr: "Çekirdek altyapı düğümleri, yetkisiz istemci izlerini otomatik olarak engellemek için kriptografik belirteçleri girişleri doğrulayan sistemleri yükseltmelidir.", word: "whose", trWord: "kriptografik belirteçleri girişleri doğrulayan", blank: "Core infrastructure nodes must upgrade systems ___ cryptographic tokens validate entries automatically to block unauthorized client traces.", options: ["whose", "who", "which", "whom"] },
   { en: "Technicians must safely isolate organic chemical compounds <span style=\"color: #ff6b6b; font-weight: bold;\">whose</span> unstable structures produce explosive exothermic reactions under direct sunlight exposure.", tr: "Teknisyenler, doğrudan güneş ışığına maruz kaldığında kararsız yapıları patlayıcı ekzotermik reaksiyonlar üreten organik kimyasal bileşikleri güvenli bir şekilde izole etmelidir.", word: "whose", trWord: "kararsız yapıları patlayıcı reaksiyonlar üreten", blank: "Technicians must safely isolate organic chemical compounds ___ unstable structures produce explosive exothermic reactions under direct sunlight exposure.", options: ["whose", "who", "which", "whom"] },
@@ -30621,7 +30621,7 @@ const unit27Lesson7SentencesRaw = [
   { en: "Review the rigid statutory clauses <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> senior legislators draft to ensure regulatory compliance ahead of the assembly vote.", tr: "Meclis oylaması öncesinde mevzuat uyumunu sağlamak için kıdemli yasa koyucuların hazırladığı katı yasal maddeleri inceleyin.", word: "-", trWord: "hazırladığı", blank: "Review the rigid statutory clauses ___ senior legislators draft to ensure regulatory compliance ahead of the assembly vote.", options: ["-", "who", "which", "whose"] },
   { en: "Identify the adaptive structural frameworks <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> unreinforced concrete structures require to withstand intense seismic simulation pressure thresholds.", tr: "Güçlendirilmemiş beton yapıların yoğun sismik simülasyon basınç sınırlarına dayanmak için ihtiyaç duyduğu uyarlanabilir yapısal çerçeveleri belirleyin.", word: "-", trWord: "ihtiyaç duyduğu", blank: "Identify the adaptive structural frameworks ___ unreinforced concrete structures require to withstand intense seismic simulation pressure thresholds.", options: ["-", "who", "which", "whose"] },
   { en: "Deploy the optimized cloud scripts <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> frontend developers optimize to eliminate runtime latency during high-volume server transaction traffic.", tr: "Yüksek hacimli sunucu işlem trafiği sırasında çalışma zamanı gecikmesini ortadan kaldırmak için ön uç geliştiricilerinin optimize ettiği optimize edilmiş bulut betiklerini dağıtın.", word: "-", trWord: "optimize ettiği", blank: "Deploy the optimized cloud scripts ___ frontend developers optimize to eliminate runtime latency during high-volume server transaction traffic.", options: ["-", "who", "which", "whose"] },
-  { en: "Inspect the arbitrary quality criteria <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> academic evaluators reject because the underlying methodology contains serious analytical errors.", tr: "Temel alınan metodolojinin ciddi analitik hatalar içermesi nedeniyle akademik değerlendiricilerin reddettiği keyfi kalite kriterlerini inceleyin.", word: "-", trWord: "reddettiği", blank: "Inspect the arbitrary quality criteria ___ academic evaluators reject because the underlying methodology contains serious analytical errors.", options: ["-", "who", "which", "whose"] },
+  { en: "Inspect the arbitrary quality criteria <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> academic evaluators reject because the underlying methodology contains serious analytical errors.", tr: "Temel alınan metodolojinin ciddi analitik hatalar içermesi nedeniyle değerlendiricilerin reddettiği keyfi kalite kriterlerini inceleyin.", word: "-", trWord: "reddettiği", blank: "Inspect the arbitrary quality criteria ___ academic evaluators reject because the underlying methodology contains serious analytical errors.", options: ["-", "who", "which", "whose"] },
   { en: "Secure the decentralized network channels <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> transmission lines transmit data through before database schemas experience formatting shift errors.", tr: "Veritabanı şemaları biçimlendirme kayması hataları yaşamadan önce, iletim hatlarının içinden veri ilettiği merkeziyetsiz ağ kanallarını güvenli hale getirin.", word: "-", trWord: "ilettiği", blank: "Secure the decentralized network channels ___ transmission lines transmit data through before database schemas experience formatting shift errors.", options: ["-", "who", "which", "whose"] },
   { en: "Check the raw infrastructure components <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> maintenance technicians replace periodically inside the humid material testing chamber units.", tr: "Nemli malzeme test odası ünitelerinin içinde bakım teknisyenlerinin periyodik olarak değiştirdiği ham altyapı bileşenlerini kontrol edin.", word: "-", trWord: "değiştirdiği", blank: "Check the raw infrastructure components ___ maintenance technicians replace periodically inside the humid material testing chamber units.", options: ["-", "who", "which", "whose"] },
   { en: "Fix the loose source code <span style=\"color: #ff6b6b; font-weight: bold;\">-</span> software engineers modify for fear that catastrophic execution bottlenecks happen over the weekend.", tr: "Hafta sonu feci yürütme darboğazlarının meydana gelmesi korkusuyla yazılım mühendislerinin değiştirdiği gevşek kaynak kodunu onarın.", word: "-", trWord: "değiştirdiği", blank: "Fix the loose source code ___ software engineers modify for fear that catastrophic execution bottlenecks happen over the weekend.", options: ["-", "who", "which", "whose"] },
@@ -31369,12 +31369,12 @@ const unitSentencesMap = {
         {
           "id": "u1l1ex3",
           "title": "Alıştırma 3: 1. Giriş ve Of/Of The Yapıları",
-          "description": "Bölüm 1'deki to be yapılarını içeren akademik tamlamalar (12 Soru)",
+          "description": "Bölüm 1'deki to be yapılarını içeren tamlamalar (12 Soru)",
           "questions": [
             {
               "id": "u1l1_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The control tower of the airport is a critical structure.",
@@ -32091,12 +32091,12 @@ const unitSentencesMap = {
         {
           "id": "u1l2ex3",
           "title": "Alıştırma 3: 2. İsim + From / İsim + Edat Yapıları",
-          "description": "Bölüm 1'deki to be yapılarını içeren akademik tamlamalar (12 Soru)",
+          "description": "Bölüm 1'deki to be yapılarını içeren tamlamalar (12 Soru)",
           "questions": [
             {
               "id": "u1l2_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The data from the simulation is completely accurate.",
@@ -32834,7 +32834,7 @@ const unitSentencesMap = {
         {
           "id": "u1l3ex3",
           "title": "Alıştırma 3: 3. Zincirleme Edat Yapıları ve Karma Test",
-          "description": "Bölüm 1'deki to be yapılarını içeren akademik tamlamalar (12 Soru)",
+          "description": "Bölüm 1'deki to be yapılarını içeren tamlamalar (12 Soru)",
           "questions": [
             {
               "id": "u1l3_ex3_q1",
@@ -32845,7 +32845,7 @@ const unitSentencesMap = {
                 "İsim + Edat Takımı"
               ],
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The quality of the data in the report is fairly good.",
@@ -33597,7 +33597,7 @@ const unitSentencesMap = {
         {
           "id": "u2l1ex3",
           "title": "Alıştırma 3: Fiil + Edat Yapıları",
-          "description": "Fiil ve edat takımları içeren gelişmiş ve akademik cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
+          "description": "Fiil ve edat takımları içeren gelişmiş ve cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
           "questions": [
             {
               "id": "u2l8_ex3_mc_0",
@@ -34313,7 +34313,7 @@ const unitSentencesMap = {
         {
           "id": "u2l2ex3",
           "title": "Alıştırma 3: Edat Takımı + Edat Takımı",
-          "description": "Edat kombinasyonları içeren gelişmiş ve akademik cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
+          "description": "Edat kombinasyonları içeren gelişmiş ve cümleler (Çoktan Seçmeli, Kelime Havuzu ve Çeviri)",
           "questions": [
             {
               "id": "u2l902_ex3_mc_0",
@@ -34324,7 +34324,7 @@ const unitSentencesMap = {
                 "İsim ve Edat Takımları"
               ],
               "options": [
-                "romantizmin etkisi altında edebiyat eleştirisinin bağlamında",
+                "romantizmin etkisi altında edebiyat",
                 "kazı sırasında eserlerin kıtlığı nedeniyle",
                 "Rönesans'tan sonra felsefi teorilerin formüle edilmesi sırasında",
                 "hükümdarın saltanatı altında imparatorluğun kayıtlarına göre"
@@ -34344,7 +34344,7 @@ const unitSentencesMap = {
               "options": [
                 "Rönesans'tan sonra felsefi teorilerin formüle edilmesi sırasında",
                 "feodalizmin çöküşü sırasında modern devletlerin ortaya çıkışından önce",
-                "romantizmin etkisi altında edebiyat eleştirisinin bağlamında",
+                "romantizmin etkisi altında edebiyat",
                 "hükümdarın saltanatı altında imparatorluğun kayıtlarına göre"
               ],
               "correctIndex": 3,
@@ -34360,7 +34360,7 @@ const unitSentencesMap = {
                 "İsim ve Edat Takımları"
               ],
               "options": [
-                "romantizmin etkisi altında edebiyat eleştirisinin bağlamında",
+                "romantizmin etkisi altında edebiyat",
                 "hükümdarın saltanatı altında imparatorluğun kayıtlarına göre",
                 "Rönesans'tan sonra felsefi teorilerin formüle edilmesi sırasında",
                 "kazı sırasında eserlerin kıtlığı nedeniyle"
@@ -34541,7 +34541,7 @@ const unitSentencesMap = {
                 "Zincirleme Edat Takımları",
                 "İsim ve Edat Takımları"
               ],
-              "correctSentence": "romantizmin etkisi altında edebiyat eleştirisinin bağlamında",
+              "correctSentence": "romantizmin etkisi altında edebiyat",
               "enSentence": "in the context of literary criticism under the influence of romanticism",
               "isEngToTr": true
             }
@@ -34913,7 +34913,7 @@ const unitSentencesMap = {
         {
           "id": "u3l10ex3",
           "title": "Alıştırma 3: İsim Tamlaması",
-          "description": "Önceki konuları (Edilgen, Edat Yapıları, There is/are) tekrar eden ileri düzey akademik cümleler",
+          "description": "Önceki konuları (Edilgen, Edat Yapıları, There is/are) tekrar eden ileri düzey cümleler",
           "questions": [
             {
               "id": "u3l10ex3_q1",
@@ -36391,7 +36391,7 @@ const unitSentencesMap = {
         {
           "id": "u7l20ex1",
           "title": "Alıştırma 1: Temel SVO ve Öbek Yapıları",
-          "description": "Basit düzeyde Özne - Geçişli Fiil + Nesne yapıları ve beşeri bilimler öbek eşleştirmeleri (10 Soru)",
+          "description": "Basit düzeyde Özne - Geçişli Fiil + Nesne yapıları ve öbek eşleştirmeleri (10 Soru)",
           "questions": [
             {
               "id": "u7l20_ex1_match1",
@@ -36606,7 +36606,7 @@ const unitSentencesMap = {
         {
           "id": "u7l20ex2",
           "title": "Alıştırma 2: Modifiyeli SVO Yapıları",
-          "description": "Sıfat ve edatlarla genişletilmiş beşeri bilimler cümleleri (10 Soru)",
+          "description": "Sıfat ve edatlarla genişletilmiş cümleleri (10 Soru)",
           "questions": [
             {
               "id": "u7l20_ex2_match1",
@@ -36844,7 +36844,7 @@ const unitSentencesMap = {
         {
           "id": "u7l20ex3",
           "title": "Alıştırma 3: Kompleks SVO ve Eski Konu Tekrarları",
-          "description": "İsim+Edat ve Fiil+Edat takımlarıyla zenginleştirilmiş akademik cümleler ve spiralleşme (10 Soru)",
+          "description": "İsim+Edat ve Fiil+Edat takımlarıyla zenginleştirilmiş cümleler ve spiralleşme (10 Soru)",
           "questions": [
             {
               "id": "u7l20_ex3_match1",
@@ -37056,7 +37056,7 @@ const unitSentencesMap = {
               ],
               "type": "word-bank",
               "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Eleştirel felsefe sınavı ahlak teorilerinin temel varsayımlarını sorgular.",
+              "translation": "Eleştirel sınavı ahlak teorilerinin temel varsayımlarını sorgular.",
               "words": [
                 "Critical",
                 "examination",
@@ -37153,7 +37153,7 @@ const unitSentencesMap = {
             {
               "id": "u8l21_ex1_q2",
               "type": "matching",
-              "prompt": "Tarih ve sosyoloji alanındaki var/yok ifadelerini eşleştirin.",
+              "prompt": "Tarih ve alanındaki var/yok ifadelerini eşleştirin.",
               "grammarTags": [
                 "There Yapıları (Existential)",
                 "İsim ve Edat Yapıları",
@@ -37594,7 +37594,7 @@ const unitSentencesMap = {
         },
         {
           "id": "u8l1ex3",
-          "title": "Alıştırma 3: Akademik Düzey & Spiralleşme",
+          "title": "Alıştırma 3: Düzey & Spiralleşme",
           "description": "Participles, soru kelimeleri ve gelişmiş isim/edat tamlamaları ile spiralleşen ileri seviye yapılar (10 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
@@ -38190,7 +38190,7 @@ const unitSentencesMap = {
                 "İsim ve Edat Yapıları",
                 "Saf Modallar"
               ],
-              "correctSentence": "Yazar araştırma projesinin birincil kaynaklarını değerlendirmek için akademik konferansa katılabilir mi?",
+              "correctSentence": "Yazar araştırma projesinin birincil kaynaklarını değerlendirmek için konferansa katılabilir mi?",
               "enSentence": "May the author attend the academic conference to evaluate the primary sources of the research project?",
               "isEngToTr": true
             },
@@ -38252,7 +38252,7 @@ const unitSentencesMap = {
             {
               "id": "u9l24_m2",
               "type": "matching",
-              "prompt": "Ekonomi ve psikoloji alanındaki eylem sorularını eşleştirin.",
+              "prompt": "Ekonomi ve alanındaki eylem sorularını eşleştirin.",
               "grammarTags": [
                 "Soru Yapıları",
                 "İsim Tamlamaları",
@@ -38301,7 +38301,7 @@ const unitSentencesMap = {
             {
               "id": "u9l24_q3",
               "type": "multiple-choice",
-              "prompt": "\"Felsefe profesörü ders sırasında felsefi mantık kurallarını açıkladı mı?\" cümlesinin İngilizce karşılığı hangisidir?",
+              "prompt": "\"profesörü ders sırasında felsefi mantık kurallarını açıkladı mı?\" cümlesinin İngilizce karşılığı hangisidir?",
               "grammarTags": [
                 "Soru Yapıları",
                 "İsim Tamlamaları",
@@ -38626,7 +38626,7 @@ const unitSentencesMap = {
             {
               "id": "u9l25_m2",
               "type": "matching",
-              "prompt": "Akademik soru yapılarını Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "soru yapılarını Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "Soru Yapıları (Wh-)",
                 "İsim Tamlamaları",
@@ -41736,7 +41736,7 @@ const unitSentencesMap = {
         },
         {
           "id": "u12l1ex3",
-          "title": "Alıştırma 3: İleri Seviye Akademik & Spiralleşme (Akademik Cümle Sentezi)",
+          "title": "Alıştırma 3: İleri Seviye & Spiralleşme (Cümle Sentezi)",
           "description": "Participle kısaltmalarının önceki dilbilgisi yapılarıyla (SVO, Soru Cümleleri, Var/Yok, İsim+Edat, Edilgen Çatı, Modallar) harmanlandığı ileri seviye cümle analizi.",
           "questions": [
             {
@@ -42567,7 +42567,7 @@ const unitSentencesMap = {
       },
       {
         "id": "u14l45ex3",
-        "title": "Alıştırma 3: Akademik metin ve çeviriler",
+        "title": "Alıştırma 3: metin ve çeviriler",
         "description": "",
         "questions": [
           {
@@ -43401,7 +43401,7 @@ const unitSentencesMap = {
       },
       {
         "id": "u14l46ex3",
-        "title": "Alıştırma 3: Akademik çeviri ve spiralleşme",
+        "title": "Alıştırma 3: çeviri ve spiralleşme",
         "description": "",
         "questions": [
           {
@@ -44266,7 +44266,7 @@ const unitSentencesMap = {
       },
       {
         "id": "u14l47ex3",
-        "title": "Alıştırma 3: Karma akademik metinler",
+        "title": "Alıştırma 3: Karma metinler",
         "description": "",
         "questions": [
           {
@@ -46248,7 +46248,7 @@ const unitSentencesMap = {
         {
           "id": "u22l67ex1",
           "title": "Alıştırma 1: Zaman ve Amaç Bağlaçları",
-          "description": "Zaman ve amaç bildiren konnektörlerin akademik bağlamda kullanımı",
+          "description": "Zaman ve amaç bildiren konnektörlerin bağlamda kullanımı",
           "questions": [
             {
               "id": "u22l67_ex1_match1",
@@ -46545,7 +46545,7 @@ const unitSentencesMap = {
         {
           "id": "u22l67ex2",
           "title": "Alıştırma 2: Zıtlık ve Ekleme Bağlaçları",
-          "description": "Zıtlık ve ekleme/paralellik bildiren bağlaçların akademik kullanımı",
+          "description": "Zıtlık ve ekleme/paralellik bildiren bağlaçların kullanımı",
           "questions": [
             {
               "id": "u22l67_ex2_match1",
@@ -46826,7 +46826,7 @@ const unitSentencesMap = {
         {
           "id": "u22l67ex3",
           "title": "Alıştırma 3: Sebep ve Sonuç Bağlaçları",
-          "description": "Sebep ve sonuç bildiren konnektörlerin akademik bağlamda kullanımı",
+          "description": "Sebep ve sonuç bildiren konnektörlerin bağlamda kullanımı",
           "questions": [
             {
               "id": "u22l67_ex3_match1",
@@ -47568,7 +47568,7 @@ const unitSentencesMap = {
         },
         {
           "id": "u31l1ex7",
-          "title": "Alıştırma 7: Akademik Yazma",
+          "title": "Alıştırma 7: Yazma",
           "description": "Türkçe cümlelerin İngilizce karşılıklarını yazma.",
           "questions": [
             {
@@ -47683,7 +47683,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Geçiş Kelimeleri",
                 "Edilgen Yapı (Passive)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -47872,7 +47872,7 @@ const unitSentencesMap = {
                 "Geçiş Kelimeleri",
                 "Kipler (Modals)",
                 "Mastar & Amaç Yapısı (Infinitive)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -47899,7 +47899,7 @@ const unitSentencesMap = {
       "subtitle": "such as, for example, for instance, that is (to say) kalıplarının kullanımı",
       "konuAnlatimi": {
         "baslik": "Örneklendirme ve Açıklama Kalıpları Kılavuzu",
-        "teorikMantik": "Akademik metinlerde karmaşık teorileri somutlaştırmak, örnekler vermek veya bir önceki ifadeyi açıklamak için kullanılan köprüler.",
+        "teorikMantik": "metinlerde karmaşık teorileri somutlaştırmak, örnekler vermek veya bir önceki ifadeyi açıklamak için kullanılan köprüler.",
         "formul": "such as + Noun Phrase | for example / for instance + Clause | that is (to say)",
         "altinKural": "• <strong>such as</strong>: Kendisinden sonra isim veya isim öbeği alarak somut örnek sıralar.<br>• <strong>for example / for instance</strong>: Tam bir cümle ile örneklendirme yapar.<br>• <strong>that is (to say)</strong>: Önceki düşünceyi netleştirmek veya başka kelimelerle açıklamak için kullanılır."
       },
@@ -48199,7 +48199,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Cümle Bağlaçları",
                 "Geçiş Kelimeleri",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -48282,7 +48282,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Geçiş Kelimeleri",
                 "Edat Takımı (Prepositional Phrase)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -48402,7 +48402,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Geçiş Kelimeleri",
                 "Edat Takımı (Prepositional Phrase)",
-                "Akademik Sıfat & İsim Tamlaması",
+                "Sıfat & İsim Tamlaması",
                 "Participle (Kısaltma)"
               ]
             },
@@ -48690,7 +48690,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Geçiş Kelimeleri",
                 "Edat Takımı (Prepositional Phrase)",
-                "Akademik Sıfat & İsim Tamlaması",
+                "Sıfat & İsim Tamlaması",
                 "Participle (Kısaltma)"
               ]
             },
@@ -48765,7 +48765,7 @@ const unitSentencesMap = {
       "subtitle": "even if, otherwise, in many cases, in some cases kalıplarının kullanımı",
       "konuAnlatimi": {
         "baslik": "Durumsal Koşul ve İhtimal Kalıpları Kılavuzu",
-        "teorikMantik": "Teknik ve akademik kurgularda istisnai durumları, sakıncalı olasılıkları veya genel eğilimlerin dışındaki senaryoları ifade eden yapılar.",
+        "teorikMantik": "Teknik ve kurgularda istisnai durumları, sakıncalı olasılıkları veya genel eğilimlerin dışındaki senaryoları ifade eden yapılar.",
         "formul": "even if + Clause | SVO; otherwise, SVO | in many cases / in some cases",
         "altinKural": "• <strong>even if</strong>: Olumsuz koşula rağmen eylemin gerçekleşeceğini (bile) ifade eder.<br>• <strong>otherwise</strong>: Aksi takdirde sakıncalı bir durumun ortaya çıkacağını bildiren geçiş kelimesidir.<br>• <strong>in many cases / in some cases</strong>: Genelleme veya istisnai durum bildirir."
       },
@@ -49173,7 +49173,7 @@ const unitSentencesMap = {
               "grammarTags": [
                 "Cümle Bağlaçları",
                 "Koşul Cümlecikleri (If Clauses)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -49254,7 +49254,7 @@ const unitSentencesMap = {
                 "Koşul Cümlecikleri (If Clauses)",
                 "Edilgen Yapı (Passive)",
                 "Mastar & Amaç Yapısı (Infinitive)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -49419,7 +49419,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Koşul Cümlecikleri (If Clauses)",
                 "Mastar & Amaç Yapısı (Infinitive)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -49557,7 +49557,7 @@ const unitSentencesMap = {
                 "Koşul Cümlecikleri (If Clauses)",
                 "Edilgen Yapı (Passive)",
                 "Mastar & Amaç Yapısı (Infinitive)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             },
             {
@@ -49617,7 +49617,7 @@ const unitSentencesMap = {
                 "Cümle Bağlaçları",
                 "Koşul Cümlecikleri (If Clauses)",
                 "Mastar & Amaç Yapısı (Infinitive)",
-                "Akademik Sıfat & İsim Tamlaması"
+                "Sıfat & İsim Tamlaması"
               ]
             }
           ]
@@ -50113,12 +50113,12 @@ const unitSentencesMap = {
         {
           "id": "u26l78ex3",
           "title": "Alıştırma 3: 1. 'Than' Kullanılmayan Yalın Kıyaslama Yapısı",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l78_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The files were recovered more quickly after the server was rebooted.",
@@ -50857,12 +50857,12 @@ const unitSentencesMap = {
         {
           "id": "u26l79ex3",
           "title": "Alıştırma 3: 2. 'than'",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l79_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The files were processed faster than we expected after the code was optimized.",
@@ -51607,12 +51607,12 @@ const unitSentencesMap = {
         {
           "id": "u26l80ex3",
           "title": "Alıştırma 3: 3. 'as...as', 'the same'",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l80_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The servers were configured as carefully as possible after the system crashed.",
@@ -52353,12 +52353,12 @@ const unitSentencesMap = {
         {
           "id": "u26l81ex3",
           "title": "Alıştırma 3: 4. Who",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l81_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The technician who was assigned to the task verified the security keys.",
@@ -53089,12 +53089,12 @@ const unitSentencesMap = {
         {
           "id": "u26l82ex3",
           "title": "Alıştırma 3: 5. Which",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l82_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The database which was modified by the team is now stable.",
@@ -53831,12 +53831,12 @@ const unitSentencesMap = {
         {
           "id": "u26l83ex3",
           "title": "Alıştırma 3: 6. Where",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l83_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The files were stored in a directory where access is restricted strictly.",
@@ -54569,12 +54569,12 @@ const unitSentencesMap = {
         {
           "id": "u26l84ex3",
           "title": "Alıştırma 3: 7. Whom",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l84_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The engineer whom we trusted was assigned to fix the security breach.",
@@ -55313,12 +55313,12 @@ const unitSentencesMap = {
         {
           "id": "u26l85ex3",
           "title": "Alıştırma 3: 8. Edat ile başlayanlar",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l85_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The servers by which the backup was stored were shut down safely.",
@@ -55967,12 +55967,12 @@ const unitSentencesMap = {
         {
           "id": "u26l86ex3",
           "title": "Alıştırma 3: 9. Whose",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l86_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The application whose database was compromised yesterday is being updated now.",
@@ -56575,12 +56575,12 @@ const unitSentencesMap = {
         {
           "id": "u26l87ex3",
           "title": "Alıştırma 3: 10. İşaret kelimesi olmayanlar",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (12 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (12 Soru)",
           "questions": [
             {
               "id": "u26l87_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "ifadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The parameters they verified were automatically deleted after the reboot.",
@@ -57036,13 +57036,13 @@ const unitSentencesMap = {
         },
         {
           "id": "u32l1ex3",
-          "title": "Alıştırma 3: Zaman Zarf Cümlecikleri — Akademik Sentez & Spiralleşme",
-          "description": "Zaman bağlaçlarının edilgen, modallı ve ileri düzey akademik cümlelerdeki kullanımı (10 Soru)",
+          "title": "Alıştırma 3: Zaman Zarf Cümlecikleri — Sentez & Spiralleşme",
+          "description": "Zaman bağlaçlarının edilgen, modallı ve ileri düzey cümlelerdeki kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u32l1_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 { "left": "Reliable funding must be secured before the commission initiates the survey.", "right": "Komisyon anketi başlatmadan önce güvenilir fon sağlanmalıdır." },
                 { "left": "When the anonymous data was analyzed, the behavior pattern was identified.", "right": "İsimsiz veriler analiz edildiğinde davranış örüntüsü tanımlandı." },
@@ -57412,13 +57412,13 @@ const unitSentencesMap = {
         },
         {
           "id": "u32l2ex3",
-          "title": "Alıştırma 3: Sebep Zarf Cümlecikleri — Akademik Sentez & Spiralleşme",
-          "description": "Edilgen çatı, kipler ve isim/edat öbekleriyle kurulan karmaşık akademik nedensellik yapıları (10 Soru)",
+          "title": "Alıştırma 3: Sebep Zarf Cümlecikleri — Sentez & Spiralleşme",
+          "description": "Edilgen çatı, kipler ve isim/edat öbekleriyle kurulan karmaşık nedensellik yapıları (10 Soru)",
           "questions": [
             {
               "id": "u32l2_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 { "left": "Seeing that the data was anonymous, the privacy of the participants was protected.", "right": "Veriler isimsiz olduğu için katılımcıların gizliliği korundu." },
                 { "left": "The historical dispute intensified because the commission delayed the report.", "right": "Komisyon raporu geciktirdiği için tarihi anlaşmazlık şiddetlendi." },
@@ -57788,13 +57788,13 @@ const unitSentencesMap = {
         },
         {
           "id": "u32l3ex3",
-          "title": "Alıştırma 3: Zıtlık Zarf Cümlecikleri — Akademik Sentez & Spiralleşme",
-          "description": "Akademik yazında zıtlık bildiren yapıların edilgen, modallı ve karmaşık edat öbekleriyle kullanımı (10 Soru)",
+          "title": "Alıştırma 3: Zıtlık Zarf Cümlecikleri — Sentez & Spiralleşme",
+          "description": "yazında zıtlık bildiren yapıların edilgen, modallı ve karmaşık edat öbekleriyle kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u32l3_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 { "left": "Although empirical studies were restricted, they provided highly reliable context.", "right": "Ampirik çalışmalar kısıtlı olmasına rağmen son derece güvenilir bağlam sağladı." },
                 { "left": "Despite the historical dispute, cooperation between the institutes must continue.", "right": "Tarihi anlaşmazlığa rağmen enstitüler arasındaki iş birliği devam etmelidir." },
@@ -58164,13 +58164,13 @@ const unitSentencesMap = {
         },
         {
           "id": "u32l4ex3",
-          "title": "Alıştırma 3: Amaç, Derece ve Tarz Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "title": "Alıştırma 3: Amaç, Derece ve Tarz Cümlecikleri — Sentez & Spiralleşme",
           "description": "Edilgen yapılar, gereklilik kipleri ve karmaşık sentaks modellerinde amaç ve derece kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u32l4_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 { "left": "The data was stored anonymously so that the privacy of participants would be protected.", "right": "Katılımcıların gizliliği korunsun diye veriler isimsiz olarak saklandı." },
                 { "left": "The legal agreement was so restricted that the funding had to be delayed.", "right": "Yasal anlaşma o kadar kısıtlıydı ki fonlamanın geciktirilmesi gerekti." },
@@ -58540,13 +58540,13 @@ const unitSentencesMap = {
         },
         {
           "id": "u32l5ex3",
-          "title": "Alıştırma 3: Koşul Cümlecikleri — Akademik Sentez & Spiralleşme",
+          "title": "Alıştırma 3: Koşul Cümlecikleri — Sentez & Spiralleşme",
           "description": "Edilgen koşul cümleleri, zorunluluk/ihtimal kipleri ve ileri seviye sentaks kombinasyonları (10 Soru)",
           "questions": [
             {
               "id": "u32l5_ex3_q1",
               "type": "matching",
-              "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümleleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 { "left": "If the survey is conducted anonymously, the privacy of the participants will be protected.", "right": "Eğer anket isimsiz olarak düzenlenirse katılımcıların gizliliği korunacaktır." },
                 { "left": "Reliable funding must be provided if the commission is to continue the research.", "right": "Komisyonun araştırmaya devam etmesi için güvenilir fon sağlanmalıdır." },
@@ -59010,7 +59010,7 @@ const unitSentencesMap = {
         {
           "id": "u62l1ex3",
           "title": "Alıştırma 3: Zaman Belirteçleri",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (10 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (10 Soru)",
           "questions": [
             {
               "id": "u62l1_ex3_q1",
@@ -59532,7 +59532,7 @@ const unitSentencesMap = {
         {
           "id": "u62l2ex3",
           "title": "Alıştırma 3: Derece Belirteçleri",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (10 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (10 Soru)",
           "questions": [
             {
               "id": "u62l2_ex3_q1",
@@ -60071,7 +60071,7 @@ const unitSentencesMap = {
         {
           "id": "u62l3ex3",
           "title": "Alıştırma 3: Nicelik Belirteçleri",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (10 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (10 Soru)",
           "questions": [
             {
               "id": "u62l3_ex3_q1",
@@ -60599,7 +60599,7 @@ const unitSentencesMap = {
         {
           "id": "u62l4ex3",
           "title": "Alıştırma 3: Karma Pratik",
-          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren akademik cümleler (10 Soru)",
+          "description": "Bölüm 1-20 arası dilbilgisi yapılarını içeren cümleler (10 Soru)",
           "questions": [
             {
               "id": "u62l4_ex3_q1",
@@ -61013,7 +61013,7 @@ const unitSentencesMap = {
             {
               "id": "u70l2_q1_match",
               "type": "matching",
-              "prompt": "Temel beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Temel cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "İsim ve Edat Takımları",
                 "İsim + Edat Yapısı",
@@ -61230,7 +61230,7 @@ const unitSentencesMap = {
             {
               "id": "u70l3_q1_match",
               "type": "matching",
-              "prompt": "İleri düzey beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "İleri düzey cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "İsim ve Edat Takımları",
                 "İsim + Edat Yapısı",
@@ -61341,7 +61341,7 @@ const unitSentencesMap = {
               ],
               "type": "word-bank",
               "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-              "translation": "Ben o zamanlar her gün felsefe kitapları okurdum ve yeni kavramlar öğrenirdim.",
+              "translation": "Ben o zamanlar her gün kitapları okurdum ve yeni kavramlar öğrenirdim.",
               "words": [
                 "I",
                 "would",
@@ -61532,7 +61532,7 @@ const unitSentencesMap = {
                 "Gelecek Zaman"
               ],
               "type": "multiple-choice",
-              "prompt": "\"Yeni bir felsefe kitabı yazıyoruz.\" cümlesinin İngilizce karşılığı hangisidir?",
+              "prompt": "\"Yeni bir kitabı yazıyoruz.\" cümlesinin İngilizce karşılığı hangisidir?",
               "options": [
                 "We are writing a new philosophy book.",
                 "We write a new philosophy book.",
@@ -61702,7 +61702,7 @@ const unitSentencesMap = {
             {
               "id": "u71l2_q1_match",
               "type": "matching",
-              "prompt": "Temel beşeri bilimler zaman cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "Temel zaman cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "Fiil ve Edat Takımları",
                 "Fiil + Edat Yapısı",
@@ -61914,10 +61914,10 @@ const unitSentencesMap = {
               "type": "multiple-choice",
               "prompt": "\"She has written several books about the history of philosophy.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Felsefe tarihi hakkında birkaç kitap yazdı (yazmış durumda).",
-                "Felsefe tarihi hakkında birkaç kitap yazıyordu.",
-                "Felsefe tarihi hakkında birkaç kitap yazacak.",
-                "Felsefe tarihi hakkında birkaç kitap yazmıştı."
+                "tarihi hakkında birkaç kitap yazdı (yazmış durumda).",
+                "tarihi hakkında birkaç kitap yazıyordu.",
+                "tarihi hakkında birkaç kitap yazacak.",
+                "tarihi hakkında birkaç kitap yazmıştı."
               ],
               "correctIndex": 0,
               "enSentence": "She has written several books about the history of philosophy.",
@@ -61933,7 +61933,7 @@ const unitSentencesMap = {
             {
               "id": "u71l3_q1_match",
               "type": "matching",
-              "prompt": "İleri düzey beşeri bilimler zaman cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "İleri düzey zaman cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "grammarTags": [
                 "Fiil ve Edat Takımları",
                 "Fiil + Edat Yapısı",
@@ -62183,8 +62183,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u103l107ex1",
-          "title": "Alıştırma 1: Alışkanlık & Uyum Yapıları (Beşeri Bilimler Sentezi)",
-          "description": "Beşeri bilimler bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da akademik entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "title": "Alıştırma 1: Alışkanlık & Uyum Yapıları (Sentezi)",
+          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
           "questions": [
             {
               "id": "u103l107_ex1_q1",
@@ -62275,7 +62275,7 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q6",
               "type": "matching",
-              "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The historian <span style=\"color: #ff6b6b; font-weight: bold;\">is used to</span> <span style=\"color: #10b981; font-weight: bold;\">analyzing</span> medieval tax records in local archives.",
@@ -62371,7 +62371,7 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q11",
               "type": "matching",
-              "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "Researchers who <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> <span style=\"color: #10b981; font-weight: bold;\">evaluating</span> qualitative evidence easily identify cultural biases in historical chronicles.",
@@ -62390,12 +62390,12 @@ const unitSentencesMap = {
                   "right": "On yıllardır antik ritüelleri incelemiş olan etnograf, karmaşık sembolik gelenekleri bağlamısallaştırmaya alışıktır."
                 }
               ],
-              "explanation": "<b>Akademik Cümle Analizi:</b> İlgi cümlecikleri (who...) ve zıtlık bağlaçları (although) ile entegre edilmiş öbeksel kip kullanımı."
+              "explanation": "<b>Cümle Analizi:</b> İlgi cümlecikleri (who...) ve zıtlık bağlaçları (although) ile entegre edilmiş öbeksel kip kullanımı."
             },
             {
               "id": "u103l107_ex1_q12",
               "type": "multiple-choice",
-              "prompt": "[Akademik Bağlaçlı Cümle] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Although the manuscript was heavily damaged, the paleographer was used to <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> fragmented Renaissance codices.</span>\" ifadesinin Türkçe karşılığı hangisidir?",
+              "prompt": "[Bağlaçlı Cümle] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Although the manuscript was heavily damaged, the paleographer was used to <span style=\"color: #10b981; font-weight: bold;\">deciphering</span> fragmented Renaissance codices.</span>\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "Niteliksel kanıtları değerlendirmeye alışkın olan araştırmacılar, tarihi kroniklerdeki kültürel ön yargıları kolayca tespit ederler.",
                 "El yazması ağır hasar görmüş olmasına rağmen, paleograf parçalanmış Rönesans elyazmalarını çözmeye alışıktı.",
@@ -62410,7 +62410,7 @@ const unitSentencesMap = {
             {
               "id": "u103l107_ex1_q13",
               "type": "fill-blank-dropdown",
-              "prompt": "[Akademik Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
+              "prompt": "[Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "Having conducted qualitative research for decades, scholars who ___ evaluating qualitative evidence easily identify cultural biases in historical chronicles.",
               "options": [
                 "are accustomed to",
@@ -62476,8 +62476,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u103l108ex1",
-          "title": "Alıştırma 1: İsteklilik & Eğilim Yapıları (Beşeri Bilimler Sentezi)",
-          "description": "Beşeri bilimler bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da akademik entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "title": "Alıştırma 1: İsteklilik & Eğilim Yapıları (Sentezi)",
+          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
           "questions": [
             {
               "id": "u103l108_ex1_q1",
@@ -62568,7 +62568,7 @@ const unitSentencesMap = {
             {
               "id": "u103l108_ex1_q6",
               "type": "matching",
-              "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The philosopher <span style=\"color: #ff6b6b; font-weight: bold;\">is willing to</span> <span style=\"color: #10b981; font-weight: bold;\">re-examine</span> classic moral dilemmas.",
@@ -62617,7 +62617,7 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Siyasi tepkilerden ve doğrulanmamış iddialardan çekinen birçok kıdemli akademisyen, ampirik kanıt olmaksızın spekülatif teorileri benimsemeye gönülsüzdür.",
-              "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are reluctant to (Doğru):</b> \"Gönülsüz / isteksiz olmak\" anlamına gelir ve öznenin tutumunu/isteksizliğini belirtir.<br/>• <b>are bound to:</b> Kaçınılmazlık/ihtimal bildirir ancak bu cümlenin bağlamına uymaz.<br/>• <b>are about to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>"
+              "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are reluctant to (Doğru):</b> \"Gönülsüz / isteksiz olmak\" anlamına gelir ve öznenin tutumunu/isteksizliğini belirtir.<br/>• <b>are bound to:</b> Kaçınılmazlık/ihtimal bildirir ancak bu uymaz.<br/>• <b>are about to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>"
             },
             {
               "id": "u103l108_ex1_q9",
@@ -62658,7 +62658,7 @@ const unitSentencesMap = {
             {
               "id": "u103l108_ex1_q11",
               "type": "matching",
-              "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "Scholars who <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> <span style=\"color: #10b981; font-weight: bold;\">integrate</span> interdisciplinary frameworks often discover novel perspectives in cultural history.",
@@ -62677,7 +62677,7 @@ const unitSentencesMap = {
                   "right": "Bağımsız araştırmacılar saha notlarını paylaşmaya istekliyse, karşılaştırmalı antropoloji önemli bir ilerleme kaydedecektir."
                 }
               ],
-              "explanation": "<b>Akademik Cümle Analizi:</b> Koşul (if), neden-sonuç (because) ve etken katılç (having spent) ile zenginleştirilmiş istek/eğilim yapıları."
+              "explanation": "<b>Cümle Analizi:</b> Koşul (if), neden-sonuç (because) ve etken katılç (having spent) ile zenginleştirilmiş istek/eğilim yapıları."
             },
             {
               "id": "u103l108_ex1_q12",
@@ -62697,7 +62697,7 @@ const unitSentencesMap = {
             {
               "id": "u103l108_ex1_q13",
               "type": "fill-blank-dropdown",
-              "prompt": "[Akademik Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
+              "prompt": "[Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "Eager to expand their analytical horizon, scholars who ___ integrate interdisciplinary frameworks often discover novel perspectives in cultural history.",
               "options": [
                 "are willing to",
@@ -62707,7 +62707,7 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Analitik ufuklarını genişletmeye istekli olan ve disiplinler arası çerçeveleri entegre etmeye açık akademisyenler, kültür tarihinde sıklıkla özgün perspektifler keşfederler.",
-              "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are willing to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are doomed to:</b> \"Mahkûm olmak\" anlamındadır; kaçınılmaz olumsuz kader bildirir, olumlu/nötr bağlama uymaz.<br/>• <b>are bound to:</b> Kaçınılmazlık/ihtimal bildirir ancak bu cümlenin bağlamına uymaz.<br/>• <b>are unable to:</b> \"Muktedir olamamak\" anlamındadır; bireysel yetersizlik bildirir.<br/>"
+              "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are willing to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are doomed to:</b> \"Mahkûm olmak\" anlamındadır; kaçınılmaz olumsuz kader bildirir, olumlu/nötr bağlama uymaz.<br/>• <b>are bound to:</b> Kaçınılmazlık/ihtimal bildirir ancak bu uymaz.<br/>• <b>are unable to:</b> \"Muktedir olamamak\" anlamındadır; bireysel yetersizlik bildirir.<br/>"
             },
             {
               "id": "u103l108_ex1_q14",
@@ -62767,8 +62767,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u103l109ex1",
-          "title": "Alıştırma 1: İhtimal, Kaçınılmazlık & Kesinlik Yapıları (Beşeri Bilimler Sentezi)",
-          "description": "Beşeri bilimler bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da akademik entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "title": "Alıştırma 1: İhtimal, Kaçınılmazlık & Kesinlik Yapıları (Sentezi)",
+          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
           "questions": [
             {
               "id": "u103l109_ex1_q1",
@@ -62859,11 +62859,11 @@ const unitSentencesMap = {
             {
               "id": "u103l109_ex1_q6",
               "type": "matching",
-              "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "The newly discovered papyrus <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> <span style=\"color: #10b981; font-weight: bold;\">revise</span> our understanding of Hellenistic philosophy.",
-                  "right": "Yeni keşfedilen papirüsün Hellenistik felsefe anlayışımızı revize etmesi muhtemeldir."
+                  "right": "Yeni keşfedilen papirüsün Hellenistik anlayışımızı revize etmesi muhtemeldir."
                 },
                 {
                   "left": "A single decree <span style=\"color: #ff6b6b; font-weight: bold;\">is unlikely to</span> <span style=\"color: #10b981; font-weight: bold;\">eradicate</span> centuries-old cultural rituals.",
@@ -62888,7 +62888,7 @@ const unitSentencesMap = {
                 "Titiz karşılaştırmalı yöntem, kesinlikle nesnel tarihi bulgular üretecektir.",
                 "Hızlı kentleşme, gelişmekte olan ülkelerde geleneksel aile yapılarını kaçınılmaz olarak dönüştürecektir.",
                 "Tek bir fermanın asırlık kültürel ritüelleri ortadan kaldırması muhtemel değildir.",
-                "Yeni keşfedilen papirüsün Hellenistik felsefe anlayışımızı revize etmesi muhtemeldir."
+                "Yeni keşfedilen papirüsün Hellenistik anlayışımızı revize etmesi muhtemeldir."
               ],
               "correctIndex": 1,
               "enSentence": "Rapid urbanization <span style=\"color: #ff6b6b; font-weight: bold;\">is bound to</span> <span style=\"color: #10b981; font-weight: bold;\">transform</span> traditional family structures in developing nations.",
@@ -62914,7 +62914,7 @@ const unitSentencesMap = {
               "id": "u103l109_ex1_q9",
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-              "translation": "Yeni keşfedilen papirüsün Hellenistik felsefe anlayışımızı revize etmesi muhtemeldir.",
+              "translation": "Yeni keşfedilen papirüsün Hellenistik anlayışımızı revize etmesi muhtemeldir.",
               "enSentence": "The newly discovered papyrus <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> revise our understanding of Hellenistic philosophy.",
               "words": [
                 "Yeni",
@@ -62939,7 +62939,7 @@ const unitSentencesMap = {
                 "muhtemeldir."
               ],
               "isEngToTr": true,
-              "explanation": "<b>Dizilim Notu:</b> Özne tamlaması (Yeni keşfedilen papirüsün) + Nesne (Hellenistik felsefe anlayışımızı) + Yüklem (revize etmesi muhtemeldir)."
+              "explanation": "<b>Dizilim Notu:</b> Özne tamlaması (Yeni keşfedilen papirüsün) + Nesne (Hellenistik anlayışımızı) + Yüklem (revize etmesi muhtemeldir)."
             },
             {
               "id": "u103l109_ex1_q10",
@@ -62953,7 +62953,7 @@ const unitSentencesMap = {
             {
               "id": "u103l109_ex1_q11",
               "type": "matching",
-              "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "Sociological models indicate that systemic economic instability <span style=\"color: #ff6b6b; font-weight: bold;\">is likely to</span> deepen polarization across multicultural societies.",
@@ -62972,7 +62972,7 @@ const unitSentencesMap = {
                   "right": "Kapsamlı disiplinler arası araştırma, antik Akdeniz ticaretinin daha önce karanlıkta kalmış yönlerini kesinlikle aydınlatacaktır."
                 }
               ],
-              "explanation": "<b>Akademik Cümle Yapısı:</b> Nesne cümlecikleri (that...) ve koşul/edat öbekleri (without...) içeren ihtimal cümleleri."
+              "explanation": "<b>Cümle Yapısı:</b> Nesne cümlecikleri (that...) ve koşul/edat öbekleri (without...) içeren ihtimal cümleleri."
             },
             {
               "id": "u103l109_ex1_q12",
@@ -62992,7 +62992,7 @@ const unitSentencesMap = {
             {
               "id": "u103l109_ex1_q13",
               "type": "fill-blank-dropdown",
-              "prompt": "[Akademik İsim Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
+              "prompt": "[İsim Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "Based on structural analysis of historical recessions, sociological models indicate that systemic economic instability ___ deepen polarization across multicultural societies.",
               "options": [
                 "is likely to",
@@ -63048,7 +63048,7 @@ const unitSentencesMap = {
             {
               "id": "u103l109_ex1_q15",
               "type": "translation-text",
-              "prompt": "[Akademik Nesne Cümleciği] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Comprehensive interdisciplinary research is certain to illuminate previously obscure aspects of ancient Mediterranean trade.</span>\" ifadesini Türkçe'ye çevirin:",
+              "prompt": "[Nesne Cümleciği] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Comprehensive interdisciplinary research is certain to illuminate previously obscure aspects of ancient Mediterranean trade.</span>\" ifadesini Türkçe'ye çevirin:",
               "correctSentence": "Kapsamlı disiplinler arası araştırma, antik Akdeniz ticaretinin daha önce karanlıkta kalmış yönlerini kesinlikle aydınlatacaktır.",
               "enSentence": "Comprehensive interdisciplinary research <span style=\"color: #ff6b6b; font-weight: bold;\">is certain to</span> illuminate previously obscure aspects of ancient Mediterranean trade.",
               "isEngToTr": true,
@@ -63062,8 +63062,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u103l110ex1",
-          "title": "Alıştırma 1: Zorunluluk, Beklenti, Yetersizlik & Kader Yapıları (Beşeri Bilimler Sentezi)",
-          "description": "Beşeri bilimler bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da akademik entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "title": "Alıştırma 1: Zorunluluk, Beklenti, Yetersizlik & Kader Yapıları (Sentezi)",
+          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
           "questions": [
             {
               "id": "u103l110_ex1_q1",
@@ -63154,7 +63154,7 @@ const unitSentencesMap = {
             {
               "id": "u103l110_ex1_q6",
               "type": "matching",
-              "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "Societies that forget history <span style=\"color: #ff6b6b; font-weight: bold;\">are doomed to</span> <span style=\"color: #10b981; font-weight: bold;\">repeat</span> its tragic errors.",
@@ -63173,7 +63173,7 @@ const unitSentencesMap = {
                   "right": "Çift dilli metinler olmaksızın, dilbilimciler antik diyalekti çevirmeye muktedir değildir."
                 }
               ],
-              "explanation": "<b>Cümle Eşleştirme Notu:</b> Kendi öbeksel kiplerinin anlam gruplarına uygun akademik örnekler."
+              "explanation": "<b>Cümle Eşleştirme Notu:</b> Kendi öbeksel kiplerinin anlam gruplarına uygun örnekler."
             },
             {
               "id": "u103l110_ex1_q7",
@@ -63246,7 +63246,7 @@ const unitSentencesMap = {
             {
               "id": "u103l110_ex1_q11",
               "type": "matching",
-              "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "States that ignore structural socio-economic inequality <span style=\"color: #ff6b6b; font-weight: bold;\">are doomed to</span> experience recurring political crises.",
@@ -63265,7 +63265,7 @@ const unitSentencesMap = {
                   "right": "Araştırma ekibi, Erken Tunç Çağı ticaret ağlarını yeniden yorumlayan çığır açıcı bir monografi yayımlamak üzeredir."
                 }
               ],
-              "explanation": "<b>Akademik Yapılar:</b> Tarihi ve hukuki metinlerde görev, imkansızlık ve yakın gelecek anlatımı."
+              "explanation": "<b>Yapılar:</b> Tarihi ve hukuki metinlerde görev, imkansızlık ve yakın gelecek anlatımı."
             },
             {
               "id": "u103l110_ex1_q12",
@@ -63285,7 +63285,7 @@ const unitSentencesMap = {
             {
               "id": "u103l110_ex1_q13",
               "type": "fill-blank-dropdown",
-              "prompt": "[Akademik Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
+              "prompt": "[Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "Under the terms of the treaty, the neutral territories ___ accept the presence of the boundary inspectors.",
               "options": [
                 "are obliged to",
@@ -63295,7 +63295,7 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Antlaşma şartları uyarınca, tarafsız bölgeler sınır müfettişlerinin varlığını kabul etmekle yükümlüdür.",
-              "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are obliged to (Doğru):</b> Yasal veya ahlaki yükümlülük gereği \"yapmakla yükümlü olmak / zorunda olmak\" anlamına gelir.<br/>• <b>are willing to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>• <b>are unable to:</b> Cümlenin yasal yükümlülük bağlamına uymaz.<br/>"
+              "explanation": "<b>Seçenek Analizi:</b><br/>• <b>are obliged to (Doğru):</b> Yasal veya ahlaki yükümlülük gereği \"yapmakla yükümlü olmak / zorunda olmak\" anlamına gelir.<br/>• <b>are willing to:</b> Bu seçenekteki yapı cümlenin dil bilgisi veya bağlam gereksinimini karşılamamaktadır.<br/>• <b>are accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>• <b>are unable to:</b> Cümlenin yasal uymaz.<br/>"
             },
             {
               "id": "u103l110_ex1_q14",
@@ -63353,8 +63353,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u103l111ex1",
-          "title": "Alıştırma 1: Karma Beşeri Bilimler Öbeksel Kipler Testi ve Metin Analizi",
-          "description": "Tüm Öbeksel Kip yapılarının beşeri bilimler metinlerinde sentezlendiği genel tekrar testi (15 Soru)",
+          "title": "Alıştırma 1: Karma Öbeksel Kipler Testi ve Metin Analizi",
+          "description": "Tüm Öbeksel Kip yapılarının metinlerinde sentezlendiği genel tekrar testi (15 Soru)",
           "questions": [
             {
               "id": "u103l111_ex1_q1",
@@ -63407,7 +63407,7 @@ const unitSentencesMap = {
                 "is doomed to"
               ],
               "correctIndex": 0,
-              "translation": "Sadece son düzenlemeler kalmışken, tarihçi akademik konferans başlamadan önce el yazmasını tamamlamak üzeredir.",
+              "translation": "Sadece son düzenlemeler kalmışken, tarihçi konferans başlamadan önce el yazmasını tamamlamak üzeredir.",
               "explanation": "<b>Seçenek Analizi:</b><br/>• <b>is about to (Doğru):</b> \"Üzere olmak\" anlamına gelir; yakın gelecekte gerçekleşecek eylemleri ifade eder.<br/>• <b>is reluctant to:</b> \"Gönülsüz olmak\" anlamındadır; insani irade/duygu bildirir, canlı olmayan veya uymayan bağlamlarla kullanılamaz.<br/>• <b>is accustomed to:</b> \"Alışkın olmak\" anlamındadır ve fiilin <b>-ing (V-ing)</b> halini gerektirir. Bu cümledeki fiil yapısına uymaz.<br/>• <b>is doomed to:</b> \"Mahkûm olmak\" anlamındadır; kaçınılmaz olumsuz kader bildirir, olumlu/nötr bağlama uymaz.<br/>"
             },
             {
@@ -63445,7 +63445,7 @@ const unitSentencesMap = {
             {
               "id": "u103l111_ex1_q6",
               "type": "matching",
-              "prompt": "Beşeri bilimler cümlelerini Türkçe anlamlarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe anlamlarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "Senior archaeologists <span style=\"color: #ff6b6b; font-weight: bold;\">are willing to</span> share excavation data with international teams.",
@@ -63535,7 +63535,7 @@ const unitSentencesMap = {
             {
               "id": "u103l111_ex1_q11",
               "type": "matching",
-              "prompt": "Akademik beşeri bilimler cümlelerini Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "cümlelerini Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
                   "left": "Anthropologists who <span style=\"color: #ff6b6b; font-weight: bold;\">are accustomed to</span> living in nomadic communities can analyze social kinship without applying ethnocentric assumptions.",
@@ -63554,7 +63554,7 @@ const unitSentencesMap = {
                   "right": "Diplomatik heyet, sınırda düşmanlıklar tırmanmadan önce barış antlaşmasını imzalamakla görevliydi."
                 }
               ],
-              "explanation": "<b>Akademik Karma Analiz:</b> İlgi cümlecikleri, zıtlık ve neden-sonuç bağlaçları içeren karma sentez."
+              "explanation": "<b>Karma Analiz:</b> İlgi cümlecikleri, zıtlık ve neden-sonuç bağlaçları içeren karma sentez."
             },
             {
               "id": "u103l111_ex1_q12",
@@ -63574,7 +63574,7 @@ const unitSentencesMap = {
             {
               "id": "u103l111_ex1_q13",
               "type": "fill-blank-dropdown",
-              "prompt": "[Akademik Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
+              "prompt": "[Sıfat Cümleciği] Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "Having spent years conducting anthropological fieldwork, anthropologists who ___ living in nomadic communities can analyze social kinship without applying ethnocentric assumptions.",
               "options": [
                 "are accustomed to",

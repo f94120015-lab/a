@@ -6,7 +6,7 @@ rawTopics.push(
   "startLessonId": 88,
   "originalIndex": 28,
   "title": "XXII. İsim Cümleciği",
-  "desc": "Cümlede özne/nesne görevindeki wh- soru kelimeleri, that/whether yan cümleleri, subjunctive yapılar ve edatlı isim cümleciklerinin akademik kullanımı.",
+  "desc": "Cümlede özne/nesne görevindeki wh- soru kelimeleri, that/whether yan cümleleri, subjunctive yapılar ve edatlı isim cümleciklerinin kullanımı.",
   "icon": "🔋",
   "numLessons": 4,
   "formulas": [
@@ -28,7 +28,7 @@ rawTopics.push(
     {
       "formula": "Mixed Noun Clause Syntax & Academic Reading",
       "example": "Comprehensive analysis of all Noun Clause sentence patterns on academic passages.",
-      "description": "Tüm Noun Clause yapılarının akademik metinler üzerinde karışık test edilmesi."
+      "description": "Tüm Noun Clause yapılarının metinler üzerinde karışık test edilmesi."
     }
   ],
   "subtitles": [
@@ -113,7 +113,7 @@ rawTopics.push(
   "startLessonId": 51,
   "originalIndex": 17,
   "title": "Ara Bölüm 3: Rica ve İzin İsteme Yapıları",
-  "desc": "Kitapta olmayıp günlük ve akademik dil kullanımını pekiştirmek için eklenmiş rica ve izin isteme yapıları.",
+  "desc": "Kitapta olmayıp günlük ve dil kullanımını pekiştirmek için eklenmiş rica ve izin isteme yapıları.",
   "icon": "🤝",
   "numLessons": 2,
   "formulas": [
@@ -149,14 +149,14 @@ rawTopics.push(
   "startLessonId": 100,
   "originalIndex": 32,
   "title": "Zaman Zarfları ve Zaman Uyumu",
-  "desc": "Zaman zarfları ve akademik zaman uyumunu pekiştirmek için tasarlanmış ek alıştırma ünitesi.",
+  "desc": "Zaman zarfları ve zaman uyumunu pekiştirmek için tasarlanmış ek alıştırma ünitesi.",
   "icon": "⏳",
   "numLessons": 3,
   "formulas": [
     {
       "formula": "Subject + am/is/are + V-ing",
       "example": "At the moment, the compiler is processing the data blocks: Şu anda, derleyici veri bloklarını işliyor.",
-      "description": "Şimdiki zamanı ve güncel bilimsel/akademik süreçleri bildiren zaman zarfları."
+      "description": "Şimdiki zamanı ve güncel bilimsel/süreçleri bildiren zaman zarfları."
     },
     {
       "formula": "Subject + V2",
@@ -202,8 +202,8 @@ rawTopics.push(
     },
     {
       "formula": "Superlative / Restrictive Adjective + Present Perfect (Have/Has V3)",
-      "example": "This is the best academic article I <span style=\"color: #51cf66; font-weight: bold;\">have read</span> this year: Bu, bu yıl okuduğum en iyi akademik makaledir.",
-      "description": "Bir özneye veya duruma yönelik en uç değerlendirmeyi yapan süperlatif veya kısıtlayıcı sıfat ifadelerinden sonra gelen cümle, hayat boyu edinilen birikimi ve deneyimi sorguladığı için have/has v3 (Present Perfect) yapısıyla kurulur. Akademik dilde eşsizlik ve deneyim kalitesi vurgulanırken kullanılır."
+      "example": "This is the best academic article I <span style=\"color: #51cf66; font-weight: bold;\">have read</span> this year: Bu, bu yıl okuduğum en iyi makaledir.",
+      "description": "Bir özneye veya duruma yönelik en uç değerlendirmeyi yapan süperlatif veya kısıtlayıcı sıfat ifadelerinden sonra gelen cümle, hayat boyu edinilen birikimi ve deneyimi sorguladığı için have/has v3 (Present Perfect) yapısıyla kurulur. dilde eşsizlik ve deneyim kalitesi vurgulanırken kullanılır."
     }
   ],
   "subtitles": [
@@ -219,14 +219,14 @@ rawTopics.push(
   "edits": [
     {
       "date": "2026-07-21T01:59:00+03:00",
-      "desc": "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçlarının akademik cümlelerdeki kullanımları.",
+      "desc": "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçlarının cümlelerdeki kullanımları.",
       "type": "custom"
     }
   ],
   "startLessonId": 400,
   "originalIndex": 34,
   "title": "Bağlaçlar",
-  "desc": "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçlarının akademik cümlelerdeki kullanımları.",
+  "desc": "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçlarının cümlelerdeki kullanımları.",
   "icon": "⚖️",
   "numLessons": 4,
   "formulas": [
@@ -900,7 +900,7 @@ Object.assign(unitSentencesMap, {
               "id": "u4l12ex3_q10",
               "type": "translation-text",
               "prompt": "\"The evolving theories of the scientist are debated in the academic community.\" cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Bilim insanının gelişen teorileri akademik toplulukta tartışılmaktadır.",
+              "correctSentence": "Bilim insanının gelişen teorileri toplulukta tartışılmaktadır.",
               "enSentence": "The evolving theories of the scientist are debated in the academic community.",
               "isEngToTr": true
             },
@@ -3318,13 +3318,13 @@ Object.assign(unitSentencesMap, {
         "baslik": "Rica Yapıları Kılavuzu (Modallar & I Wonder)",
         "teorikMantik": "İngilizcede birinden kibarca bir şey yapmasını isterken veya ricada bulunurken modal fiiller (would, could, will, can) ve dolaylı anlatım kalıpları (I wonder if you could) kullanılır.",
         "formul": "Would / Could / Will / Can + you + V1 (Request)\nI wonder if you could + V1 (Request)",
-        "altinKural": "• Modal fiillerden sonra ve 'I wonder if you could' kalıbından sonra fiil her zaman yalın halde (V1) gelir.\n• Bu yapılarda akademik isim tamlamaları ve edat öbekleri kullanılarak akademik bağlam zenginleştirilir."
+        "altinKural": "• Modal fiillerden sonra ve 'I wonder if you could' kalıbından sonra fiil her zaman yalın halde (V1) gelir.\n• Bu yapılarda isim tamlamaları ve edat öbekleri kullanılarak bağlam zenginleştirilir."
       },
       "exercises": [
         {
           "id": "u17l51ex1",
           "title": "Alıştırma 1: Öbek Düzeyi",
-          "description": "Rica yapılarında kullanılan akademik öbekler ve kelime eşleştirmeleri (10 Soru)",
+          "description": "Rica yapılarında kullanılan öbekler ve kelime eşleştirmeleri (10 Soru)",
           "questions": [
             {
               "id": "u17l51_ex1_q1",
@@ -3477,7 +3477,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u17l51ex2",
           "title": "Alıştırma 2: Cümle Düzeyi",
-          "description": "Rica yapılarını içeren akademik cümlelerin analizi ve çevirisi (10 Soru)",
+          "description": "Rica yapılarını içeren cümlelerin analizi ve çevirisi (10 Soru)",
           "questions": [
             {
               "id": "u17l51_ex2_q1",
@@ -3609,8 +3609,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u17l51ex3",
-          "title": "Alıştırma 3: Akademik Sentez & Spiralleşme",
-          "description": "İleri düzey akademik cümleler ve geçmiş konuların tekrarı (10 Soru)",
+          "title": "Alıştırma 3: Sentez & Spiralleşme",
+          "description": "İleri düzey cümleler ve geçmiş konuların tekrarı (10 Soru)",
           "questions": [
             {
               "id": "u17l51_ex3_q1",
@@ -3751,7 +3751,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u17l52ex1",
           "title": "Alıştırma 1: Öbek Düzeyi",
-          "description": "İzin isteme yapılarında kullanılan akademik öbekler ve kelime eşleştirmeleri (10 Soru)",
+          "description": "İzin isteme yapılarında kullanılan öbekler ve kelime eşleştirmeleri (10 Soru)",
           "questions": [
             {
               "id": "u17l52_ex1_q1",
@@ -3904,7 +3904,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u17l52ex2",
           "title": "Alıştırma 2: Cümle Düzeyi",
-          "description": "İzin isteme yapılarını içeren akademik cümlelerin analizi ve çevirisi (10 Soru)",
+          "description": "İzin isteme yapılarını içeren cümlelerin analizi ve çevirisi (10 Soru)",
           "questions": [
             {
               "id": "u17l52_ex2_q1",
@@ -3939,7 +3939,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u17l52_ex2_q3",
               "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"Sosyoloji seminerini gelecek haftaya ertelememin bir sakıncası var mı?\"</strong>",
+              "prompt": "Cümlenin en uygun İngilizce karşılığını seçiniz:<br><br><strong>\"seminerini gelecek haftaya ertelememin bir sakıncası var mı?\"</strong>",
               "grammarTags": ["İzin İsteme Yapıları", "İsim Tamlamaları", "Sosyoloji"],
               "options": [
                 "Would you mind if I postponed the sociology seminar until next week?",
@@ -4036,8 +4036,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u17l52ex3",
-          "title": "Alıştırma 3: Akademik Sentez & Spiralleşme",
-          "description": "İleri düzey akademik izin isteme cümleleri ve geçmiş konuların tekrarı (10 Soru)",
+          "title": "Alıştırma 3: Sentez & Spiralleşme",
+          "description": "İleri düzey izin isteme cümleleri ve geçmiş konuların tekrarı (10 Soru)",
           "questions": [
             {
               "id": "u17l52_ex3_q1",
@@ -4758,7 +4758,7 @@ Object.assign(unitSentencesMap, {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "Akademik müfredatı değerlendirirken kurul, bireysel araştırma uygulamalarını entegre etmenin önemini vurguladı.",
+                  "left": "müfredatı değerlendirirken kurul, bireysel araştırma uygulamalarını entegre etmenin önemini vurguladı.",
                   "right": "In evaluating the academic curriculum, the board highlighted the importance of integrating individual research applications."
                 },
                 {
@@ -4785,7 +4785,7 @@ Object.assign(unitSentencesMap, {
               "prompt": "\"By utilizing the mobile interface, users can access the database directly without requesting additional administrative permissions.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "Batarya sıcaklığını düzenleyince sistem, güneş enerjisi invertörlerinin yoğun ısıdan zarar görmesini başarıyla engeller.",
-                "Akademik müfredatı değerlendirirken kurul, bireysel araştırma uygulamalarını entegre etmenin önemini vurguladı.",
+                "müfredatı değerlendirirken kurul, bireysel araştırma uygulamalarını entegre etmenin önemini vurguladı.",
                 "Mobil arayüzü kullanarak kullanıcılar, ek idari izinler talep etmeden veritabanına doğrudan erişebilirler.",
                 "Teknik hatalarla karşılaşınca, şebekeyi stabilize etmek amacıyla mühendisler tarafından geliştirilen birkaç yöntem vardır."
               ],
@@ -5043,7 +5043,7 @@ Object.assign(unitSentencesMap, {
               ],
               "type": "translation-text",
               "prompt": "\"In evaluating the academic curriculum, the board highlighted the importance of integrating individual research applications.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Akademik müfredatı değerlendirirken kurul, bireysel araştırma uygulamalarını entegre etmenin önemini vurguladı.",
+              "correctSentence": "müfredatı değerlendirirken kurul, bireysel araştırma uygulamalarını entegre etmenin önemini vurguladı.",
               "enSentence": "In evaluating the academic curriculum, the board highlighted the importance of integrating individual research applications.",
               "isEngToTr": true
             },
@@ -5103,7 +5103,7 @@ Object.assign(unitSentencesMap, {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "Akademik müfredatı değerlendirirken",
+                  "left": "müfredatı değerlendirirken",
                   "right": "When evaluating the academic curriculum"
                 },
                 {
@@ -5131,7 +5131,7 @@ Object.assign(unitSentencesMap, {
               "options": [
                 "Finansal kaynakları yapılandırırken",
                 "Batarya sıcaklığını düzenlediğinden beri",
-                "Akademik müfredatı değerlendirirken",
+                "müfredatı değerlendirirken",
                 "Yasal çerçeveyi değiştirirken"
               ],
               "correctIndex": 1,
@@ -5312,7 +5312,7 @@ Object.assign(unitSentencesMap, {
               ],
               "type": "translation-text",
               "prompt": "\"When evaluating the academic curriculum\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Akademik müfredatı değerlendirirken",
+              "correctSentence": "müfredatı değerlendirirken",
               "enSentence": "When evaluating the academic curriculum",
               "isEngToTr": true
             },
@@ -5368,7 +5368,7 @@ Object.assign(unitSentencesMap, {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "Akademik müfredatı değerlendirirken üniversite deneysel kanıt talep eder.",
+                  "left": "müfredatı değerlendirirken üniversite deneysel kanıt talep eder.",
                   "right": "When evaluating the academic curriculum, the university requires empirical evidence."
                 },
                 {
@@ -5609,7 +5609,7 @@ Object.assign(unitSentencesMap, {
               ],
               "type": "translation-text",
               "prompt": "\"When evaluating the academic curriculum, the university requires empirical evidence.\" ifadesini Türkçe'ye çevirin:",
-              "correctSentence": "Akademik müfredatı değerlendirirken üniversite deneysel kanıt talep eder.",
+              "correctSentence": "müfredatı değerlendirirken üniversite deneysel kanıt talep eder.",
               "enSentence": "When evaluating the academic curriculum, the university requires empirical evidence.",
               "isEngToTr": true
             },
@@ -6026,7 +6026,7 @@ Object.assign(unitSentencesMap, {
                   "right": "If excluded from the final statistical analysis"
                 },
                 {
-                  "left": "Akademik komite tarafından değerlendirilmedikçe",
+                  "left": "komite tarafından değerlendirilmedikçe",
                   "right": "Unless evaluated by the academic committee"
                 }
               ]
@@ -6293,7 +6293,7 @@ Object.assign(unitSentencesMap, {
                   "right": "If excluded from the final statistical analysis, the variables alter results."
                 },
                 {
-                  "left": "Akademik komite tarafından değerlendirilmedikçe müfredat değişemez.",
+                  "left": "komite tarafından değerlendirilmedikçe müfredat değişemez.",
                   "right": "Unless evaluated by the academic committee, the curriculum cannot change."
                 }
               ]
@@ -6310,7 +6310,7 @@ Object.assign(unitSentencesMap, {
                 "Flutter uygulamasına entegre edilene kadar mobil arayüz yavaş çalışır.",
                 "JSON formatında yapılandırılana kadar veriler ciddi hatalar üretir.",
                 "Deneysel kanıtlardan türetilmesine rağmen teori varsayımlara meydan okur.",
-                "Akademik komite tarafından değerlendirilmedikçe müfredat değişemez."
+                "komite tarafından değerlendirilmedikçe müfredat değişemez."
               ],
               "correctIndex": 2,
               "enSentence": "Although derived from empirical evidence, the theory challenges assumptions.",
@@ -6343,7 +6343,7 @@ Object.assign(unitSentencesMap, {
               "type": "multiple-choice",
               "prompt": "\"As identified in the chemical compound, the primary components are toxic.\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
-                "Akademik komite tarafından değerlendirilmedikçe müfredat değişemez.",
+                "komite tarafından değerlendirilmedikçe müfredat değişemez.",
                 "Profesyonel ekip tarafından hazırlandığı gibi idari savunma başarılı oldu.",
                 "Güncellenmiş yazılım tarafından işlendiğinde metin net bir şekilde görünür.",
                 "Kimyasal bileşikte tanımlandığı gibi ana bileşenler zehirlidir."
@@ -6592,7 +6592,7 @@ Object.assign(unitSentencesMap, {
                   "right": "Until redesigned into a corporate format, the portfolio prepared by the designer fails to show the depth of their work."
                 },
                 {
-                  "left": "Akademik komite tarafından değerlendirilmedikçe, ders müfredatını değiştirme kararı yürürlüğe konulamaz.",
+                  "left": "komite tarafından değerlendirilmedikçe, ders müfredatını değiştirme kararı yürürlüğe konulamaz.",
                   "right": "Unless evaluated by the academic committee, the decision to change the course curriculum cannot be put into effect."
                 }
               ]
@@ -7441,7 +7441,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Önemli ölçüde dalgalanmadan önce, ulusal para birimi genellikle merkez bankasının politikalarıyla istikrara kavuşturulur.",
               "words": [
                 "is",
@@ -7475,8 +7475,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u21l62ex3",
-          "title": "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme",
-          "description": "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
+          "title": "Alıştırma 3: Okuma & Cümle Eşleştirme",
+          "description": "Cümle yarılarını birleştirme ve düzey blok sıralama",
           "questions": [
             {
               "id": "u21l62_ex3_wb_0",
@@ -7856,7 +7856,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "En uygun şekilde çalışmadan önce, yeni tasarlanan mekanik cihaz son derece hassas teknik kalibrasyon gerektirir.",
               "words": [
                 "requires highly precise technical calibration.",
@@ -8454,7 +8454,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Topluluk krize tepki vermeden önce, yerel liderler acil durum toplantıları düzenledi.",
               "words": [
                 "Before the community responded to the crisis,",
@@ -8488,8 +8488,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u21l63ex3",
-          "title": "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme",
-          "description": "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
+          "title": "Alıştırma 3: Okuma & Cümle Eşleştirme",
+          "description": "Cümle yarılarını birleştirme ve düzey blok sıralama",
           "questions": [
             {
               "id": "u21l63_ex3_wb_0",
@@ -8829,7 +8829,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Kurum mevcut durumuna evrilmeden önce, küçük bir kar amacı gütmeyen kuruluş olarak faaliyet gösterdi.",
               "words": [
                 "Before the institution evolved into its current state,",
@@ -9449,7 +9449,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Mimari tasarım dönüşmeden önce, fiziksel yapı fonksiyonel verimlilikten ve estetik çekicilikten yoksundu.",
               "words": [
                 "the physical structure lacked functional efficiency",
@@ -9483,8 +9483,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u21l64ex3",
-          "title": "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme",
-          "description": "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
+          "title": "Alıştırma 3: Okuma & Cümle Eşleştirme",
+          "description": "Cümle yarılarını birleştirme ve düzey blok sıralama",
           "questions": [
             {
               "id": "u21l64_ex3_wb_0",
@@ -9864,7 +9864,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Ulusal para birimi dalgalanmadan önce, merkez bankası son derece tutarlı ve istikrarlı bir para politikası sürdürdü.",
               "words": [
                 "had",
@@ -10486,7 +10486,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "İstatistiki veriler analiz edilmeden önce, araştırmacılar tüm dış değişkenlerin sıkı bir şekilde kontrol edildiğinden titizlikle emin olmalıdır.",
               "words": [
                 "Before the statistical data is analyzed,",
@@ -10520,8 +10520,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u21l65ex3",
-          "title": "Alıştırma 3: Akademik Okuma & Cümle Eşleştirme",
-          "description": "Cümle yarılarını birleştirme ve akademik düzey blok sıralama",
+          "title": "Alıştırma 3: Okuma & Cümle Eşleştirme",
+          "description": "Cümle yarılarını birleştirme ve düzey blok sıralama",
           "questions": [
             {
               "id": "u21l65_ex3_wb_0",
@@ -10915,7 +10915,7 @@ Object.assign(unitSentencesMap, {
                 "Var / Yok İfadeleri"
               ],
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Kıt doğal kaynak tahsis edilmeden önce, önde gelen çevreciler sürdürülebilir dağıtım politikalarını güçlü bir şekilde savundular.",
               "words": [
                 "had",
@@ -10942,7 +10942,7 @@ Object.assign(unitSentencesMap, {
               "type": "translation-text",
               "prompt": "\"Before the primary research hypothesis had been formulated, the scientific team systematically reviewed the existing academic literature.\" ifadesini Türkçe'ye çevirin:",
               "enSentence": "Before the primary research hypothesis had been formulated, the scientific team systematically reviewed the existing academic literature.",
-              "correctSentence": "Birincil araştırma hipotezi formüle edilmeden önce, bilimsel ekip mevcut akademik literatürü sistematik olarak gözden geçirdi.",
+              "correctSentence": "Birincil araştırma hipotezi formüle edilmeden önce, bilimsel ekip mevcut literatürü sistematik olarak gözden geçirdi.",
               "isEngToTr": true
             },
             {
@@ -11242,17 +11242,17 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l88ex3",
-        "title": "Alıştırma 3: That Cümlecikleri ile Akademik Çeviri — Akademik Düzey",
-        "description": "Sosyal bilimler alanında relative clause ve pasif yapılarla harmanlanmış akademik sentences analizi.",
+        "title": "Alıştırma 3: That Cümlecikleri ile Çeviri — Düzey",
+        "description": "Sosyal bilimler alanında relative clause ve pasif yapılarla harmanlanmış sentences analizi.",
         "questions": [
           {
             "id": "u28l88_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe anlamlarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "That the unresolved academic dispute damaged the research funding is regrettable.",
-                "right": "Çözülmemiş akademik anlaşmazlığın araştırma finansmanına zarar vermiş olması üzüntü vericidir."
+                "right": "Çözülmemiş anlaşmazlığın araştırma finansmanına zarar vermiş olması üzüntü vericidir."
               },
               {
                 "left": "Anonymous surveys indicate that psychologists evaluate behavior more objectively now.",
@@ -11281,10 +11281,10 @@ Object.assign(unitSentencesMap, {
             "type": "multiple-choice",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"That the unresolved academic dispute damaged the research funding is regrettable.\"</span>",
             "options": [
-              "Çözülmemiş akademik anlaşmazlığın araştırma finansmanına zarar vermiş olması üzüntü vericidir.",
-              "Araştırma finansmanının çözülmemiş akademik anlaşmazlığa zarar vermesi üzüntü vericidir.",
-              "Akademik anlaşmazlığın çözülüp araştırma finansmanını kurtarması sevindiricidir.",
-              "Finansmana zarar veren çözülmemiş akademik anlaşmazlık araştırılmaktadır."
+              "Çözülmemiş anlaşmazlığın araştırma finansmanına zarar vermiş olması üzüntü vericidir.",
+              "Araştırma finansmanının çözülmemiş anlaşmazlığa zarar vermesi üzüntü vericidir.",
+              "anlaşmazlığın çözülüp araştırma finansmanını kurtarması sevindiricidir.",
+              "Finansmana zarar veren çözülmemiş anlaşmazlık araştırılmaktadır."
             ],
             "correctIndex": 0,
             "enSentence": "That the unresolved academic dispute damaged the research funding is regrettable.",
@@ -11668,17 +11668,17 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l89ex3",
-        "title": "Alıştırma 3: Whether Yapısı ve Akademik Çözümleme — Akademik Düzey",
+        "title": "Alıştırma 3: Whether Yapısı ve Çözümleme — Düzey",
         "description": "Sosyal bilimler metinlerinde complex sentences düzeyinde whether/if analizi.",
         "questions": [
           {
             "id": "u28l89_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe anlamlarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "Whether the unresolved academic dispute will affect the empirical research is uncertain.",
-                "right": "Çözülmemiş akademik anlaşmazlığın ampirik araştırmayı etkileyip etkilemeyeceği belirsizdir."
+                "right": "Çözülmemiş anlaşmazlığın ampirik araştırmayı etkileyip etkilemeyeceği belirsizdir."
               },
               {
                 "left": "The commission is investigating whether the reliable funding was distributed efficiently.",
@@ -11707,10 +11707,10 @@ Object.assign(unitSentencesMap, {
             "type": "multiple-choice",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Whether the unresolved academic dispute will affect the empirical research is uncertain.\"</span>",
             "options": [
-              "Çözülmemiş akademik anlaşmazlığın ampirik araştırmayı etkileyip etkilemeyeceği belirsizdir.",
-              "Ampirik araştırmanın çözülmemiş akademik anlaşmazlıktan etkilenmesi belirsizdir.",
-              "Akademik anlaşmazlık çözülmedikçe ampirik araştırmaların yapılması belirsiz kalacaktır.",
-              "Çözülemeyen akademik anlaşmazlıklar ampirik araştırmaları belirsizliğe sürükler."
+              "Çözülmemiş anlaşmazlığın ampirik araştırmayı etkileyip etkilemeyeceği belirsizdir.",
+              "Ampirik araştırmanın çözülmemiş anlaşmazlıktan etkilenmesi belirsizdir.",
+              "anlaşmazlık çözülmedikçe ampirik araştırmaların yapılması belirsiz kalacaktır.",
+              "Çözülemeyen anlaşmazlıklar ampirik araştırmaları belirsizliğe sürükler."
             ],
             "correctIndex": 0,
             "enSentence": "Whether the unresolved academic dispute will affect the empirical research is uncertain.",
@@ -11971,7 +11971,7 @@ Object.assign(unitSentencesMap, {
               },
               {
                 "left": "Whoever resolved the dispute received academic funding.",
-                "right": "Anlaşmazlığı her kim çözdüyse akademik fon aldı."
+                "right": "Anlaşmazlığı her kim çözdüyse fon aldı."
               }
             ],
             "grammarTags": [
@@ -12068,10 +12068,10 @@ Object.assign(unitSentencesMap, {
             "type": "translation-text",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Whoever resolved the dispute received academic funding.\"</span>",
             "options": [
-              "Akademik fon alan herkes anlaşmazlığı çözdü.",
-              "Anlaşmazlığın çözülmesiyle akademik fon alındı.",
-              "Anlaşmazlığı çözen kişi akademik fonu aldı.",
-              "Anlaşmazlığı her kim çözdüyse akademik fon aldı."
+              "fon alan herkes anlaşmazlığı çözdü.",
+              "Anlaşmazlığın çözülmesiyle fon alındı.",
+              "Anlaşmazlığı çözen kişi fonu aldı.",
+              "Anlaşmazlığı her kim çözdüyse fon aldı."
             ],
             "correctIndex": 3,
             "enSentence": "Whoever resolved the dispute received academic funding.",
@@ -12087,13 +12087,13 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l90ex3",
-        "title": "Alıştırma 3: Wh- ve -ever Cümlecikleri ile Akademik Çeviri — Akademik Düzey",
+        "title": "Alıştırma 3: Wh- ve -ever Cümlecikleri ile Çeviri — Düzey",
         "description": "Sosyal bilimler metinlerinde complex sentences düzeyinde wh- ve -ever yapıları analizi.",
         "questions": [
           {
             "id": "u28l90_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe anlamlarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "Whoever finalized the empirical research had access to primary sources.",
@@ -12105,7 +12105,7 @@ Object.assign(unitSentencesMap, {
               },
               {
                 "left": "Why the unresolved academic dispute escalated remains a subject of intense debate.",
-                "right": "Çözülmemiş akademik anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor."
+                "right": "Çözülmemiş anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor."
               },
               {
                 "left": "The psychologists showed how collective behavior is evaluated objectively.",
@@ -12169,10 +12169,10 @@ Object.assign(unitSentencesMap, {
             "type": "word-bank",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Why the unresolved academic dispute escalated remains a subject of intense debate.\"</span>",
             "options": [
-              "Akademik anlaşmazlıkların neden tırmandığı konusu yoğun şekilde tartışılmaktadır.",
-              "Yoğun tartışma konusu olan çözülmemiş akademik anlaşmazlık tırmanmaya devam ediyor.",
-              "Çözülmemiş akademik anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor.",
-              "Anlaşmazlıkların neden tırmandığını araştıran akademik çalışmalar tartışılıyor."
+              "anlaşmazlıkların neden tırmandığı konusu yoğun şekilde tartışılmaktadır.",
+              "Yoğun tartışma konusu olan çözülmemiş anlaşmazlık tırmanmaya devam ediyor.",
+              "Çözülmemiş anlaşmazlığın neden tırmandığı yoğun bir tartışma konusu olmaya devam ediyor.",
+              "Anlaşmazlıkların neden tırmandığını araştıran çalışmalar tartışılıyor."
             ],
             "correctIndex": 2,
             "enSentence": "Why the unresolved academic dispute escalated remains a subject of intense debate.",
@@ -12512,17 +12512,17 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l91ex3",
-        "title": "Alıştırma 3: Vurgu Yapıları ve Akademik Çeviri — Akademik Düzey",
+        "title": "Alıştırma 3: Vurgu Yapıları ve Çeviri — Düzey",
         "description": "Sosyal bilimler metinlerinde complex sentences düzeyinde the fact that ve impersonal models analizi.",
         "questions": [
           {
             "id": "u28l91_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe anlamlarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "The fact that the commission resolved the unresolved academic dispute is verified.",
-                "right": "Komisyonun çözülmemiş akademik anlaşmazlığı çözdügü gerçeği doğrulandı."
+                "right": "Komisyonun çözülmemiş anlaşmazlığı çözdügü gerçeği doğrulandı."
               },
               {
                 "left": "It is widely believed that psychologists evaluate collective behavior more objectively now.",
@@ -12551,10 +12551,10 @@ Object.assign(unitSentencesMap, {
             "type": "multiple-choice",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The fact that the commission resolved the unresolved academic dispute is verified.\"</span>",
             "options": [
-              "Komisyonun çözülmemiş akademik anlaşmazlığı çözdüğü gerçeği doğrulandı.",
-              "Çözülmemiş akademik anlaşmazlığın komisyonca çözüleceği gerçeği doğrulandı.",
+              "Komisyonun çözülmemiş anlaşmazlığı çözdüğü gerçeği doğrulandı.",
+              "Çözülmemiş anlaşmazlığın komisyonca çözüleceği gerçeği doğrulandı.",
               "Anlaşmazlığı çözen komisyonun duyurusu iktisatçıları şaşırttı.",
-              "Komisyonun çözülmemiş akademik anlaşmazlığı çözmesi gerektiği inancı doğrulandı."
+              "Komisyonun çözülmemiş anlaşmazlığı çözmesi gerektiği inancı doğrulandı."
             ],
             "correctIndex": 0,
             "enSentence": "The fact that the commission resolved the unresolved academic dispute is verified.",
@@ -12932,17 +12932,17 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l92ex3",
-        "title": "Alıştırma 3: Subjunctive Yapılarının Akademik Kullanımı — Akademik Düzey",
-        "description": "Akademik metinlerde complex sentences düzeyinde subjunctive analizi ve çevirileri.",
+        "title": "Alıştırma 3: Subjunctive Yapılarının Kullanımı — Düzey",
+        "description": "metinlerde complex sentences düzeyinde subjunctive analizi ve çevirileri.",
         "questions": [
           {
             "id": "u28l92_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe anlamlarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "It is crucial that the commission resolve the unresolved academic dispute.",
-                "right": "Komisyonun çözülmemiş akademik anlaşmazlığı çözmesi kritik öneme sahiptir."
+                "right": "Komisyonun çözülmemiş anlaşmazlığı çözmesi kritik öneme sahiptir."
               },
               {
                 "left": "Psychologists recommended that behavior be evaluated objectively in sociological surveys.",
@@ -12971,10 +12971,10 @@ Object.assign(unitSentencesMap, {
             "type": "multiple-choice",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"It is crucial that the commission resolve the unresolved academic dispute.\"</span>",
             "options": [
-              "Komisyonun çözülmemiş akademik anlaşmazlığı çözmesi kritik öneme sahiptir.",
-              "Kritik akademik anlaşmazlığın komisyon tarafından çözülmesi gerekiyor.",
-              "Komisyon çözülmemiş akademik anlaşmazlığı çözmek için kritik kararlar aldı.",
-              "Komisyonun çözülmemiş akademik anlaşmazlıkları çözeceği kritik öneme sahip kararlarla doğrulandı."
+              "Komisyonun çözülmemiş anlaşmazlığı çözmesi kritik öneme sahiptir.",
+              "Kritik anlaşmazlığın komisyon tarafından çözülmesi gerekiyor.",
+              "Komisyon çözülmemiş anlaşmazlığı çözmek için kritik kararlar aldı.",
+              "Komisyonun çözülmemiş anlaşmazlıkları çözeceği kritik öneme sahip kararlarla doğrulandı."
             ],
             "correctIndex": 0,
             "enSentence": "It is crucial that the commission resolve the unresolved academic dispute.",
@@ -13351,13 +13351,13 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l93ex3",
-        "title": "Alıştırma 3: Edat ve Sıfat Blokları ile Akademik Analiz — Akademik Düzey",
-        "description": "Akademik metinlerde complex sentences düzeyinde edatlı/sıfatlı isim cümlecikleri analizi.",
+        "title": "Alıştırma 3: Edat ve Sıfat Blokları ile Analiz — Düzey",
+        "description": "metinlerde complex sentences düzeyinde edatlı/sıfatlı isim cümlecikleri analizi.",
         "questions": [
           {
             "id": "u28l93_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe anlamlarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe anlamlarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "The psychologists were concerned about whether the sociological survey was anonymous.",
@@ -13369,7 +13369,7 @@ Object.assign(unitSentencesMap, {
               },
               {
                 "left": "We are convinced that the unresolved academic dispute can be resolved efficiently.",
-                "right": "Çözülmemiş akademik anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk."
+                "right": "Çözülmemiş anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk."
               },
               {
                 "left": "The historians are aware that access to primary sources remains restricted.",
@@ -13430,10 +13430,10 @@ Object.assign(unitSentencesMap, {
             "type": "word-bank",
             "prompt": "Aşağıdaki İngilizce ifadenin Türkçe karşılığını seçiniz / oluşturunuz:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"We are convinced that the unresolved academic dispute can be resolved efficiently.\"</span>",
             "options": [
-              "Akademik anlaşmazlığı verimli çözmek için çözülmemiş konuları inceledik.",
-              "İkna olduğumuz şey çözülmemiş akademik anlaşmazlığın çözülmesidir.",
-              "Çözülmemiş akademik anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk.",
-              "Akademik anlaşmazlığın verimli çözülmesiyle ilgili konulara ikna olduk."
+              "anlaşmazlığı verimli çözmek için çözülmemiş konuları inceledik.",
+              "İkna olduğumuz şey çözülmemiş anlaşmazlığın çözülmesidir.",
+              "Çözülmemiş anlaşmazlığın verimli bir şekilde çözülebileceğine ikna olduk.",
+              "anlaşmazlığın verimli çözülmesiyle ilgili konulara ikna olduk."
             ],
             "correctIndex": 2,
             "enSentence": "We are convinced that the unresolved academic dispute can be resolved efficiently.",
@@ -13770,13 +13770,13 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l94ex3",
-        "title": "Alıştırma 3: Kritik Ayırt Etme ve Çeviri Sentezi — Akademik Düzey",
-        "description": "Sosyal bilimler metinlerinde Adjective Clause vs. Noun Clause kilitlerinin akademik analizi.",
+        "title": "Alıştırma 3: Kritik Ayırt Etme ve Çeviri Sentezi — Düzey",
+        "description": "Sosyal bilimler metinlerinde Adjective Clause vs. Noun Clause kilitlerinin analizi.",
         "questions": [
           {
             "id": "u28l94_ex3_q1",
             "type": "matching",
-            "prompt": "Akademik cümleleri Türkçe karşılıklarıyla eşleştirin.",
+            "prompt": "cümleleri Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "The announcement that the commission resolved the dispute surprised the economists.",
@@ -13917,7 +13917,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u28l95ex1",
         "title": "Alıştırma 1: Karma Noun Clause Modelleri — Öbek Düzeyi",
-        "description": "Çeşitli isim cümleciklerini akademik öbek düzeyinde ayırt etme çalışmaları.",
+        "description": "Çeşitli isim cümleciklerini öbek düzeyinde ayırt etme çalışmaları.",
         "questions": [
           {
             "id": "u28l95_ex1_q1",
@@ -14053,7 +14053,7 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l95ex2",
-        "title": "Alıştırma 2: Akademik Karma İsim Cümlecikleri — Cümle Düzeyi",
+        "title": "Alıştırma 2: Karma İsim Cümlecikleri — Cümle Düzeyi",
         "description": "Sosyal bilimler cümlelerinde çeşitli Noun Clause bağlaçlarının kullanımı.",
         "questions": [
           {
@@ -14194,13 +14194,13 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u28l95ex3",
-        "title": "Alıştırma 3: Karma Akademik Paragraf Çözümleme — Akademik Düzey",
+        "title": "Alıştırma 3: Karma Paragraf Çözümleme — Düzey",
         "description": "Sosyal bilimler metinlerinde Noun Clause yapılarının toplu olarak sentezlendiği bitirme testi.",
         "questions": [
           {
             "id": "u28l95_ex3_q1",
             "type": "multiple-choice",
-            "prompt": "[Akademik Metin] Paragrafa göre boşluğa gelecek en uygun yapıyı bulun:<br><br>'Recent research in sociology reveals ___ collective behavior is heavily influenced by anonymous opinions. The survey confirmed that when primary sources are accessible, researchers evaluate findings more objectively.'",
+            "prompt": "[Metin] Paragrafa göre boşluğa gelecek en uygun yapıyı bulun:<br><br>'Recent research in sociology reveals ___ collective behavior is heavily influenced by anonymous opinions. The survey confirmed that when primary sources are accessible, researchers evaluate findings more objectively.'",
             "options": [
               "how",
               "that",
@@ -14220,7 +14220,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u28l95_ex3_q2",
             "type": "multiple-choice",
-            "prompt": "[Akademik Metin] Paragraftaki 'that' yapılarının dil bilgisel işlevini belirleyin:<br><br>'The finding that was published last term resolving the academic dispute proved that empirical data must be distributed efficiently. It is crucial that the commission follow these guidelines.'",
+            "prompt": "[Metin] Paragraftaki 'that' yapılarının dil bilgisel işlevini belirleyin:<br><br>'The finding that was published last term resolving the academic dispute proved that empirical data must be distributed efficiently. It is crucial that the commission follow these guidelines.'",
             "options": [
               "Her iki 'that' de isim cümleciğidir (Noun Clause).",
               "İlk 'that' sıfat cümleciği (Adjective Clause), ikinci 'that' ise isim cümleciğidir (Noun Clause).",
@@ -14261,7 +14261,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u28l95_ex3_q4",
             "type": "word-bank",
-            "prompt": "[Akademik Metin] Paragrafa göre boşluğa gelecek en uygun edat arkası isim cümleciği bağlacını seçin:<br><br>'Classical economists are concerned about ___ the severe financial crisis will subside. They specified that the guidelines must be implemented immediately.'",
+            "prompt": "[Metin] Paragrafa göre boşluğa gelecek en uygun edat arkası isim cümleciği bağlacını seçin:<br><br>'Classical economists are concerned about ___ the severe financial crisis will subside. They specified that the guidelines must be implemented immediately.'",
             "options": [
               "that",
               "which",
@@ -14299,7 +14299,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u28l95_ex3_q5",
             "type": "translation-text",
-            "prompt": "[Akademik Metin] Paragrafta 'whoever' kelimesinin işlevini belirleyin:<br><br>'Whoever finalized the empirical research had access to primary sources. The monograph proved that the funding was distributed efficiently.'",
+            "prompt": "[Metin] Paragrafta 'whoever' kelimesinin işlevini belirleyin:<br><br>'Whoever finalized the empirical research had access to primary sources. The monograph proved that the funding was distributed efficiently.'",
             "options": [
               "Cümlenin öznesi konumunda bir isim cümleciği (Noun Clause)",
               "Cümlenin nesnesi konumunda bir isim cümleciği",
@@ -14324,10 +14324,10 @@ Object.assign(unitSentencesMap, {
   "29": {
   "1": {
     "title": "1. Sahte Özne Yapıları (It + is/was/has been + Sıfat/V3 + that + Clause)",
-    "subtitle": "Kişisiz ve edilgen açıklayıcı cümle girişlerinin akademik metinlerdeki kullanımı",
+    "subtitle": "Kişisiz ve edilgen açıklayıcı cümle girişlerinin metinlerdeki kullanımı",
     "konuAnlatimi": {
       "baslik": "Sahte Özne Yapıları Kılavuzu (It is clear that..., It was confirmed that...)",
-      "teorikMantik": "İngilizce akademik metinlerde bir durumu, kanaati veya nesnel gerçeği özneyi kişiselleştirmeden vurgulamak için 'It' sahte öznesi ile edilgen/sıfatlı girişler yapılır.",
+      "teorikMantik": "İngilizce metinlerde bir durumu, kanaati veya nesnel gerçeği özneyi kişiselleştirmeden vurgulamak için 'It' sahte öznesi ile edilgen/sıfatlı girişler yapılır.",
       "formul": "[It + is / was / has been + Sıfat / V3 + THAT + Özne + Fiil + Nesne]",
       "altinKural": "• Temel Kalıplar: It is clear that, It was documented that, It has been reported that, It is evident that<br>• Cümle Dizilimi: 'That' bağlacından sonra daima nesnel ve bağımsız bir tam cümle (S + V + O) yer alır."
     },
@@ -14579,8 +14579,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u29l92ex2",
-        "title": "Alıştırma 2: Edilgen Yapılar ve Akademik Yan Cümleler",
-        "description": "Edilgen Sahte Özne ve bağlaç kalıplarının akademik cümle uygulamaları.",
+        "title": "Alıştırma 2: Edilgen Yapılar ve Yan Cümleler",
+        "description": "Edilgen Sahte Özne ve bağlaç kalıplarının cümle uygulamaları.",
         "questions": [
           {
             "id": "u29l92_ex2_q1",
@@ -14790,13 +14790,13 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u29l92ex3",
-        "title": "Alıştırma 3: İleri Seviye Akademik & Karma Analiz",
-        "description": "Beşeri bilimler ve iktisat metinlerinde Sahte Özne yapılarının ileri uygulamaları.",
+        "title": "Alıştırma 3: İleri Seviye & Karma Analiz",
+        "description": "ve iktisat metinlerinde Sahte Özne yapılarının ileri uygulamaları.",
         "questions": [
           {
             "id": "u29l92_ex3_q1",
             "type": "matching",
-            "prompt": "İfadeleri akademik Türkçe karşılıklarıyla eşleştirin.",
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "It is widely acknowledged that urban communities experience demographic shifts.",
@@ -15038,7 +15038,7 @@ Object.assign(unitSentencesMap, {
       "baslik": "Mastarlı Sahte Özne Yapıları Kılavuzu (It is easy to assume that..., It is essential to clarify that...)",
       "teorikMantik": "Bu yapı, bir durumun veya eylemin zorluk, kolaylık, önem veya gereklilik derecesini bir mastar (to V1) fiili aracılığıyla 'that' yan cümlesine bağlar.",
       "formul": "[It is / was + Sıfat / V3 + TO VERB + THAT + Özne + Fiil + Nesne]",
-      "altinKural": "• Mastarlı Kalıplar: It is easy to assume that, It is hard to perceive that, It is crucial to emphasize that, It is essential to clarify that<br>• Akademik Bağlam: Yan cümle içinde daima tam cümle (S + V + O) yer almalıdır."
+      "altinKural": "• Mastarlı Kalıplar: It is easy to assume that, It is hard to perceive that, It is crucial to emphasize that, It is essential to clarify that<br>• Bağlam: Yan cümle içinde daima tam cümle (S + V + O) yer almalıdır."
     },
     "exercises": [
       {
@@ -15504,12 +15504,12 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u29l93ex3",
         "title": "Alıştırma 3: İleri Mastarlı Analiz & Karma Mantık",
-        "description": "Disiplinlerarası akademik paragraf ve cümlelerde ileri seviye mastarlı sahte özne soruları.",
+        "description": "Disiplinlerarası paragraf ve cümlelerde ileri seviye mastarlı sahte özne soruları.",
         "questions": [
           {
             "id": "u29l93_ex3_q1",
             "type": "matching",
-            "prompt": "Mastarlı akademik ifadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "prompt": "Mastarlı ifadeleri Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "It is imperative to demonstrate that economic growth requires financial stability.",
@@ -16022,7 +16022,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l94_ex1_wb_2",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur",
               "words": [
                 "arbitrary compliance",
@@ -16062,8 +16062,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l94ex2",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
+          "title": "Alıştırma 2: Cümle Girişleri — Yalın Cümleler",
+          "description": "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
           "questions": [
             {
               "id": "u30l94_ex2_mc_0",
@@ -16334,7 +16334,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l94_ex2_wb_2",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Keyfi uyumluluk kriterleri önemli uygulama gecikmelerine neden olur.",
               "words": [
                 "is",
@@ -16374,8 +16374,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l94ex3",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
+          "title": "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar",
+          "description": "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
           "questions": [
             {
               "id": "u30l94_ex3_wb_0",
@@ -16869,7 +16869,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l94_ex3_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Bölgesel altyapı cihazlarının tamamen eksikliği ekonomik durgunluğa neden olarak eyalet genelindeki toplam kurumsal yatırım metriklerini düşürür.",
               "words": [
                 "regional infrastructure devices causes",
@@ -17177,7 +17177,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l95_ex1_wb_2",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "ani bellek tüketim artışları nedeniyle",
               "words": [
                 "will",
@@ -17215,8 +17215,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l95ex2",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
+          "title": "Alıştırma 2: Cümle Girişleri — Yalın Cümleler",
+          "description": "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
           "questions": [
             {
               "id": "u30l95_ex2_wb_0",
@@ -17602,7 +17602,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l95_ex2_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Uyumluluk kriterleri keyfiydi; bu nedenle uygulama gecikti.",
               "words": [
                 "reason implementation delayed",
@@ -17642,8 +17642,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l95ex3",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
+          "title": "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar",
+          "description": "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
           "questions": [
             {
               "id": "u30l95_ex3_wb_0",
@@ -17708,7 +17708,7 @@ Object.assign(unitSentencesMap, {
                 "despite"
               ],
               "correctIndex": 1,
-              "translation": "Kent merkezinde vitaminler eksikti; bu nedenle halk sağlığı göstergeleri geçen çeyrekte son derece zayıf kaldı."
+              "translation": "Kent merkezinde vitaminler eksikti; bu nedenle göstergeleri geçen çeyrekte son derece zayıf kaldı."
             },
             {
               "id": "u30l95_ex3_wb_1",
@@ -17769,7 +17769,7 @@ Object.assign(unitSentencesMap, {
                 "despite"
               ],
               "correctIndex": 0,
-              "translation": "Merkezi kent bölgesinde vitaminler eksikti; böylece halk sağlığı göstergeleri yıl boyunca son derece zayıf kaldı."
+              "translation": "Merkezi kent bölgesinde vitaminler eksikti; böylece göstergeleri yıl boyunca son derece zayıf kaldı."
             },
             {
               "id": "u30l95_ex3_wb_2",
@@ -18139,7 +18139,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l95_ex3_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Veritabanı sorgu döngüleri gevşek ve işlenmemişti; sonuç olarak yüksek hacimli işlem trafiği yönetilirken yıkıcı yürütme darboğazları oluştu.",
               "words": [
                 "Database query loops were",
@@ -18584,7 +18584,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l96_ex1_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Birincil sürücü mekanik hasar gördü; sonuç olarak veri tabanı kurtarma işlemi durduruldu.",
               "words": [
                 "suffered mechanical damage;",
@@ -18628,8 +18628,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l96ex2",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
+          "title": "Alıştırma 2: Cümle Girişleri — Yalın Cümleler",
+          "description": "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
           "questions": [
             {
               "id": "u30l96_ex2_wb_0",
@@ -19029,7 +19029,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l96_ex2_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Bağlantı profili doğrulanmamıştı ve sonuç olarak erişim reddedildi.",
               "words": [
                 "will",
@@ -19071,8 +19071,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l96ex3",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
+          "title": "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar",
+          "description": "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
           "questions": [
             {
               "id": "u30l96_ex3_wb_0",
@@ -19592,7 +19592,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l96_ex3_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Süregelen halk huzursuzluğu anayasa dışı rejimlerin çökmesine neden olarak bölgesel yöneticileri tamamen benzersiz yasal uyumluluk kuralları belirlemeye zorladı.",
               "words": [
                 "was",
@@ -19902,7 +19902,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l97_ex1_wb_2",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "erişim ayrıcalıkları sona erdiği için",
               "words": [
                 "before",
@@ -19940,8 +19940,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l97ex2",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
+          "title": "Alıştırma 2: Cümle Girişleri — Yalın Cümleler",
+          "description": "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
           "questions": [
             {
               "id": "u30l97_ex2_wb_0",
@@ -20317,7 +20317,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l97_ex2_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Parametrelendirilmiş matris sorunsuz bir şekilde genişledikçe, iletişim gelişir.",
               "words": [
                 "will",
@@ -20359,8 +20359,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l97ex3",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
+          "title": "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar",
+          "description": "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
           "questions": [
             {
               "id": "u30l97_ex3_wb_0",
@@ -20754,7 +20754,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l97_ex3_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Çıktı metrikleri sürekli bir şekilde düştüğü için, geliştirme bütçeleri daralır.",
               "words": [
                 "will",
@@ -21163,7 +21163,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l98_ex1_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Veri formatı aniden değiştiği için, ağ gecikmesi metrikleri artar.",
               "words": [
                 "before",
@@ -21201,8 +21201,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l98ex2",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
+          "title": "Alıştırma 2: Cümle Girişleri — Yalın Cümleler",
+          "description": "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
           "questions": [
             {
               "id": "u30l98_ex2_wb_0",
@@ -21586,7 +21586,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l98_ex2_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Veri formatı kademeli olarak değiştiği için, güvenlik geçiş kapısı metrikleri artar.",
               "words": [
                 "In view of the fact that the",
@@ -21624,8 +21624,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l98ex3",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
+          "title": "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar",
+          "description": "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
           "questions": [
             {
               "id": "u30l98_ex3_wb_0",
@@ -22005,7 +22005,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l98_ex3_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Çıktı metrikleri kesintili olarak düştüğü için, geliştirme bütçeleri daralır.",
               "words": [
                 "Seeing that output",
@@ -22323,7 +22323,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l99_ex1_wb_2",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "hızlı veri tabanı kurtarma hatası sürücü mekanik hasarından kaynaklanır",
               "words": [
                 "was",
@@ -22363,8 +22363,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l99ex2",
-          "title": "Alıştırma 2: Akademik Cümle Girişleri — Yalın Cümleler",
-          "description": "Basit akademik cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
+          "title": "Alıştırma 2: Cümle Girişleri — Yalın Cümleler",
+          "description": "Basit cümle yapıları içerisinde neden-sonuç bileşenlerinin analizi.",
           "questions": [
             {
               "id": "u30l99_ex2_mc_0",
@@ -22643,7 +22643,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l99_ex2_wb_2",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "beklenmedik bağlantı zaman aşımları donanım yükleri kararsızlığından kaynaklanır",
               "words": [
                 "is",
@@ -22683,8 +22683,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u30l99ex3",
-          "title": "Alıştırma 3: Gelişmiş Akademik Cümleler — Tam Yapılar",
-          "description": "Uzun ve karmaşık akademik cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
+          "title": "Alıştırma 3: Gelişmiş Cümleler — Tam Yapılar",
+          "description": "Uzun ve karmaşık cümleler içerisinde neden-sonuç yapısının pekiştirilmesi.",
           "questions": [
             {
               "id": "u30l99_ex3_wb_0",
@@ -23064,7 +23064,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u30l99_ex3_wb_7",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "analitik doğrulama açıklarına gevşek kontrol filtrelerinden katkıda bulunur",
               "words": [
                 "analytical validation errors",
@@ -24142,7 +24142,7 @@ Object.assign(unitSentencesMap, {
                 "intact"
               ],
               "correctAnswer": "reap",
-              "grammarExplain": "'Reap the benefits', gelecekte elde edilecek olumlu sonuçları, kazanımları ifade etmek için kullanılan akademik bir kalıptır."
+              "grammarExplain": "'Reap the benefits', gelecekte elde edilecek olumlu sonuçları, kazanımları ifade etmek için kullanılan bir kalıptır."
             },
             {
               "id": "u34_l1_q49",
@@ -24272,7 +24272,7 @@ Object.assign(unitSentencesMap, {
               "level": "Intermediate (B2)",
               "question": "The defense attorney managed to refute the prosecutor's main argument with new DNA evidence.",
               "correctAnswer": "Savunma avukatı, yeni DNA kanıtlarıyla savcının ana argümanını çürütmeyi başardı.",
-              "grammarExplain": "Hukuk ve akademik tartışma metinlerinde 'refute' kelimesi iddiaları geçersiz kılmak için anahtar fiildir."
+              "grammarExplain": "Hukuk ve tartışma metinlerinde 'refute' kelimesi iddiaları geçersiz kılmak için anahtar fiildir."
             },
             {
               "id": "u34_l2_q5",
@@ -24308,7 +24308,7 @@ Object.assign(unitSentencesMap, {
               "level": "Advanced (B2)",
               "question": "Yeni teknolojiyi erken benimseyen şirketler, pazar payı açısından faydasını görecekler.",
               "correctAnswer": "Companies that adopt the new technology early will reap the benefit in terms of market share.",
-              "grammarExplain": "Önceki ünitede öğrendiğimiz 'in terms of' ile 'reap the benefit' kalıbının harika bir akademik birleşimidir."
+              "grammarExplain": "Önceki ünitede öğrendiğimiz 'in terms of' ile 'reap the benefit' kalıbının harika bir birleşimidir."
             },
             {
               "id": "u34_l2_q9",
@@ -24335,7 +24335,7 @@ Object.assign(unitSentencesMap, {
               "level": "Advanced (B2)",
               "question": "Senin teorine belli bir dereceye kadar katılıyorum, ancak sunduğun veriler iddiayı çürütmüyor.",
               "correctAnswer": "I agree with your theory to a certain extent; however, the data you presented does not refute the claim.",
-              "grammarExplain": "Gelişmiş '; however, ' yapısıyla zenginleştirilmiş akademik sentez yapısı."
+              "grammarExplain": "Gelişmiş '; however, ' yapısıyla zenginleştirilmiş sentez yapısı."
             },
             {
               "id": "u34_l2_q12",
@@ -24353,7 +24353,7 @@ Object.assign(unitSentencesMap, {
               "level": "Advanced (B2)",
               "question": "Küresel ısınmanın iklim değişikliğini hızlandırdığı tartışmasızdır.",
               "correctAnswer": "It is beyond dispute that global warming accelerates climate change.",
-              "grammarExplain": "Akademik tez yazımlarında kesin bir gerçeği giriş cümlesi yapmak için 'It is beyond dispute that...' şablonu kullanılır."
+              "grammarExplain": "tez yazımlarında kesin bir gerçeği giriş cümlesi yapmak için 'It is beyond dispute that...' şablonu kullanılır."
             },
             {
               "id": "u34_l2_q14",
@@ -24362,7 +24362,7 @@ Object.assign(unitSentencesMap, {
               "level": "Advanced (B2)",
               "question": "Bu kriz hiçbir şekilde şirketimizin kalitesiz ürün ürettiği anlamına gelmez.",
               "correctAnswer": "This crisis by no means implies that our company produces low-quality goods.",
-              "grammarExplain": "'By no means' ifadesi, olumsuzluk eki kullanmadan cümleyi akademik düzeyde keskin bir şekilde olumsuz yapar."
+              "grammarExplain": "'By no means' ifadesi, olumsuzluk eki kullanmadan cümleyi düzeyde keskin bir şekilde olumsuz yapar."
             }
           ]
         },
@@ -24373,7 +24373,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q15",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Yararlanmak / Meyvesini Toplamak",
               "sentence": "By investing early, you can __________ of compound interest over time.",
               "question": "By investing early, you can __________ of compound interest over time.",
@@ -24404,7 +24404,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q16",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Sağlam Kalmak / Bozulmamak",
               "sentence": "The historic cathedral managed to __________ despite the heavy bombings.",
               "question": "The historic cathedral managed to __________ despite the heavy bombings.",
@@ -24433,7 +24433,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q17",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Önünü Açmak / Zemin Hazırlamak",
               "sentence": "His pioneering research in physics __________ the invention of the laser.",
               "question": "His pioneering research in physics __________ the invention of the laser.",
@@ -24465,7 +24465,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q18",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Teknolojinin/Çağın Gelmesiyle",
               "sentence": "__________ space travel, humanity entered a new era of exploration.",
               "question": "__________ space travel, humanity entered a new era of exploration.",
@@ -24497,7 +24497,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q19",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Hesaba Katmak / Dikkate Almak",
               "sentence": "When designing the bridge, engineers had to __________ the wind speed.",
               "question": "When designing the bridge, engineers had to __________ the wind speed.",
@@ -24527,7 +24527,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q20",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Kısmen / Bir Dereceye Kadar",
               "sentence": "I agree with your proposal __________, but I have some reservations.",
               "question": "I agree with your proposal __________, but I have some reservations.",
@@ -24559,7 +24559,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q21",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "İddiayı/Teoriyi Çürütmek",
               "sentence": "The defense lawyer managed to __________ with fresh DNA evidence.",
               "question": "The defense lawyer managed to __________ with fresh DNA evidence.",
@@ -24589,7 +24589,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q22",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Aydınlatmak / Işık Tutmak",
               "sentence": "The newly discovered documents could __________ the origins of the war.",
               "question": "The newly discovered documents could __________ the origins of the war.",
@@ -24620,7 +24620,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q23",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Yeni Yaklaşım Benimsemek",
               "sentence": "To improve efficiency, the company chose to __________.",
               "question": "To improve efficiency, the company chose to __________.",
@@ -24651,7 +24651,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q24",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Tartışma / Bakış Meselesi",
               "sentence": "The source of the leak remains a __________ among investigators.",
               "question": "The source of the leak remains a __________ among investigators.",
@@ -24681,7 +24681,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q25",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Tehlikeye Atmak / Riske Sokmak",
               "sentence": "Any delay in the funding could __________ of the entire project.",
               "question": "Any delay in the funding could __________ of the entire project.",
@@ -24714,7 +24714,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q26",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Tartışmasız / Kesinlikle",
               "sentence": "It is __________ that regular exercise improves overall health.",
               "question": "It is __________ that regular exercise improves overall health.",
@@ -24743,7 +24743,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q27",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Hiçbir Şekilde / Asla",
               "sentence": "The war is __________ over, as clashes continue in the region.",
               "question": "The war is __________ over, as clashes continue in the region.",
@@ -24779,7 +24779,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q28",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Ne Pahasına Olursa Olsun",
               "sentence": "We must prevent an escalation of the conflict __________.",
               "question": "We must prevent an escalation of the conflict __________.",
@@ -24808,7 +24808,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q29",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Kavramı/Terimi Türetmek",
               "sentence": "The sociologist was the first to __________ in his latest book.",
               "question": "The sociologist was the first to __________ in his latest book.",
@@ -24824,7 +24824,7 @@ Object.assign(unitSentencesMap, {
                 "the",
                 "term"
               ],
-              "grammarExplain": "'Coin the term' akademik literatürde adlandırma yapmaktır.",
+              "grammarExplain": "'Coin the term' literatürde adlandırma yapmaktır.",
               "translationBridge": {
                 "sentenceTr": "Sosyolog, son kitabında terimi türeten ilk kişiydi.",
                 "correctSequence": [
@@ -24838,7 +24838,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q30",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Kaçınılmaz Son",
               "sentence": "The __________ of human life is death.",
               "question": "The __________ of human life is death.",
@@ -24867,7 +24867,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q31",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Suç İşlemek",
               "sentence": "If you __________, you should bear the legal consequences.",
               "question": "If you __________, you should bear the legal consequences.",
@@ -24897,7 +24897,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q32",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Problemi Ele Almak",
               "sentence": "Your corporate colleague is correct in saying that __________ is vital.",
               "question": "Your corporate colleague is correct in saying that __________ is vital.",
@@ -24926,7 +24926,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q33",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Bu Amaçla",
               "sentence": "He wanted to discuss his position, and arranged a meeting __________.",
               "question": "He wanted to discuss his position, and arranged a meeting __________.",
@@ -24955,7 +24955,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q34",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Toplumun Her Kesiminden",
               "sentence": "They give people ___________ a chance to succeed.",
               "question": "They give people ___________ a chance to succeed.",
@@ -24986,7 +24986,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q35",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Ay Sonunu Getirmek / Geçinmek",
               "sentence": "A lot of firemen work second jobs to ___________.",
               "question": "A lot of firemen work second jobs to ___________.",
@@ -25015,7 +25015,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q36",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "... Şöyle Dursun, Bir Yana Bırak",
               "sentence": "The Greeks were not great travelers, __________ tourists.",
               "question": "The Greeks were not great travelers, __________ tourists.",
@@ -25044,7 +25044,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q37",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Uğruna / Hatırına",
               "sentence": "___________ peace, this critical borders issue must be resolved.",
               "question": "___________ peace, this critical borders issue must be resolved.",
@@ -25074,7 +25074,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q38",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Beklentileri Karşılamak",
               "sentence": "I fear I will never ___________ my parents' high expectations.",
               "question": "I fear I will never ___________ my parents' high expectations.",
@@ -25104,7 +25104,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q39",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Benim Görüşüme Göre / Bakış Açımca",
               "sentence": "___________ as a scientist, well-nourished kids absorb less lead.",
               "question": "___________ as a scientist, well-nourished kids absorb less lead.",
@@ -25120,7 +25120,7 @@ Object.assign(unitSentencesMap, {
                 "my",
                 "standpoint"
               ],
-              "grammarExplain": "'From my standpoint' akademik raporlarda kişisel bilimsel duruşu açar.",
+              "grammarExplain": "'From my standpoint' raporlarda kişisel bilimsel duruşu açar.",
               "translationBridge": {
                 "sentenceTr": "Bir bilim insanı olarak benim bakış açıma göre, iyi beslenen çocuklar az kurşun emer.",
                 "correctSequence": [
@@ -25133,7 +25133,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q40",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Hiç İlişkisi Olmamak",
               "sentence": "Most of their academic communities ___________ each other.",
               "question": "Most of their academic communities ___________ each other.",
@@ -25153,7 +25153,7 @@ Object.assign(unitSentencesMap, {
               ],
               "grammarExplain": "Alakasız durumları veya bağları koparmak için bu beşli dizilim kurulur.",
               "translationBridge": {
-                "sentenceTr": "Akademik topluluklarının çoğunun birbiriyle hiçbir ilişkisi yoktur.",
+                "sentenceTr": "topluluklarının çoğunun birbiriyle hiçbir ilişkisi yoktur.",
                 "correctSequence": [
                   "Most of their communities",
                   "have nothing to do",
@@ -25164,7 +25164,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u34_l2_q41",
               "type": "idiom-builder",
-              "prompt": "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
+              "prompt": "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin",
               "meaningTr": "Önemli Rol Oynamak",
               "sentence": "Parents ___________ educating, training and disciplining their children.",
               "question": "Parents ___________ educating, training and disciplining their children.",
@@ -25440,7 +25440,7 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u40l1ex3",
-        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "title": "Alıştırma 3: Sentez (Spiraling)",
         "description": "Zıtlık bağlaçlarını, edilgen yapı, modallar ve mastarlar gibi geçmiş gramer konularıyla harmanlayarak çeviri ve cümle kurma çalışmaları.",
         "questions": [
           {
@@ -25789,7 +25789,7 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u40l2ex3",
-        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "title": "Alıştırma 3: Sentez (Spiraling)",
         "description": "Kıyaslama ve sebep yapılarını, edilgen çatı, phrasal modallar, used to gibi geçmiş gramer yapılarıyla sentezleyen çalışmalar.",
         "questions": [
           {
@@ -26138,7 +26138,7 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u40l3ex3",
-        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "title": "Alıştırma 3: Sentez (Spiraling)",
         "description": "Sebep, sonuç ve ekleme yapılarını; edilgen çatı, there is/are ve should/must modallarıyla sentezleyen cümle çevirileri.",
         "questions": [
           {
@@ -26487,7 +26487,7 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u40l4ex3",
-        "title": "Alıştırma 3: Akademik Sentez (Spiraling)",
+        "title": "Alıştırma 3: Sentez (Spiraling)",
         "description": "İkili, amaç ve edat kombinasyonlarını; participle kısaltmaları, öbeksel modallar ve etken/edilgen cümle refleksleriyle pekiştiren çalışmalar.",
         "questions": [
           {
@@ -26599,7 +26599,7 @@ Object.assign(unitSentencesMap, {
     "1": {
       "konuAnlatimi": {
         "baslik": "Bölüm 41 / Ders 1: Cheat Code Challenge",
-        "teorikMantik": "Akademik metinlerde ve hızlı diyaloglarda Gerund ve Infinitive yapıları gramer analizine değil, doğrudan katı ezber reflekslerine dayanır.",
+        "teorikMantik": "metinlerde ve hızlı diyaloglarda Gerund ve Infinitive yapıları gramer analizine değil, doğrudan katı ezber reflekslerine dayanır.",
         "formul": "Suggest / Insist on / It is no use / There is no point in / Have difficulty -> + V-ing Çekimi",
         "altinKural": "HIZ TUZAĞI: Cümlenin anlamını çözmeye çalışarak vakit kaybetme. Tetikleyici fiili veya edatı (on, in, to) gördüğün an arkasından gelecek mekanik eki (V-ing veya to V1) milisaniyeler içinde işaretle!"
       },
@@ -26857,7 +26857,7 @@ Object.assign(unitSentencesMap, {
     "2": {
       "konuAnlatimi": {
         "baslik": "Bölüm 41 / Ders 2: Timeline Master",
-        "teorikMantik": "Akademik metinlerde ve teknik analiz raporlarında zaman yönetimi bir gramer bulmacası değil, tamamen kronolojik bir çizelge geometrisidir.",
+        "teorikMantik": "metinlerde ve teknik analiz raporlarında zaman yönetimi bir gramer bulmacası değil, tamamen kronolojik bir çizelge geometrisidir.",
         "formul": "1. Time Clause + Present Simple -> Main Clause + Future\n2. By the time + V2 -> Had V3\n3. Stative Verbs -> No Continuous (-ing)",
         "altinKural": "ZAMAN TUZAĞI: Zaman bağlacının hemen sağındaki yan cümlede 'will' aramayı bırak, resmi gelecek planlarında 'Simple Present' mühürlerini yakala!"
       },
@@ -27205,9 +27205,9 @@ Object.assign(unitSentencesMap, {
     "3": {
       "konuAnlatimi": {
         "baslik": "Bölüm 41 / Ders 3: Dialogue Matrix",
-        "teorikMantik": "Akademik mülakatlarda ve panellerde akıcılık, diyalog geçişlerindeki refleks kalıplarına ve doğru noktalama geometrisine bağlıdır.",
+        "teorikMantik": "mülakatlarda ve panellerde akıcılık, diyalog geçişlerindeki refleks kalıplarına ve doğru noktalama geometrisine bağlıdır.",
         "formul": "1. What-Question -> Well... + Explanation\n2. Negative Statement -> Neither + Auxiliary + Subject\n3. Noun Phrase + such as + Examples (No comma between 'such' and 'as')",
-        "altinKural": "MÜLAKAT REFLEKSİ: Bir akademik jüri veya panelist sana 'What' ile başlayan bir soru yönelttiğinde, boşlukta doğrudan düşünme payı bırakan 'Well...' refleksini ara; listeleme yaparken 'such' ile 'as' arasına asla sinsi bir virgül sokma!"
+        "altinKural": "MÜLAKAT REFLEKSİ: Bir jüri veya panelist sana 'What' ile başlayan bir soru yönelttiğinde, boşlukta doğrudan düşünme payı bırakan 'Well...' refleksini ara; listeleme yaparken 'such' ile 'as' arasına asla sinsi bir virgül sokma!"
       },
       "exercises": [
         {
@@ -27470,7 +27470,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l98ex2",
           "title": "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
           "questions": [
             {
               "id": "u101l98_ex2_q1",
@@ -27617,7 +27617,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l98ex3",
           "title": "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
           "questions": [
             {
               "id": "u101l98_ex3_q1",
@@ -27749,7 +27749,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l98ex4",
           "title": "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
           "questions": [
             {
               "id": "u101l98_ex4_q1",
@@ -27985,7 +27985,7 @@ Object.assign(unitSentencesMap, {
             {
               "id": "u101l98_ex5_q8",
               "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
               "translation": "Gökbilimciler patladığından beri yıldızı gözlemlediler.",
               "words": [
                 "Astronomers have observed",
@@ -28176,7 +28176,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l99ex2",
           "title": "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
           "questions": [
             {
               "id": "u101l99_ex2_q1",
@@ -28323,7 +28323,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l99ex3",
           "title": "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
           "questions": [
             {
               "id": "u101l99_ex3_q1",
@@ -28455,7 +28455,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l99ex4",
           "title": "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
           "questions": [
             {
               "id": "u101l99_ex4_q1",
@@ -28738,7 +28738,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l100ex2",
           "title": "Alıştırma 2: \"It is time\" Kalıbı II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
           "questions": [
             {
               "id": "u101l100_ex2_q1",
@@ -28885,7 +28885,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l100ex3",
           "title": "Alıştırma 3: \"It is time\" Kalıbı III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
           "questions": [
             {
               "id": "u101l100_ex3_q1",
@@ -29017,7 +29017,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l100ex4",
           "title": "Alıştırma 4: \"It is time\" Kalıbı IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
           "questions": [
             {
               "id": "u101l100_ex4_q1",
@@ -29105,7 +29105,7 @@ Object.assign(unitSentencesMap, {
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
               "sentence": "It is ___ the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
-              "translation": "Sosyoloji bölümünün doktora sonrası akademisyenleri işe alması gerektiğinden, üniversitenin gerekli proje fonlarını sağlama zamanı geldi.",
+              "translation": "bölümünün doktora sonrası akademisyenleri işe alması gerektiğinden, üniversitenin gerekli proje fonlarını sağlama zamanı geldi.",
               "corrects": [
                 "time",
                 "granted"
@@ -29167,7 +29167,7 @@ Object.assign(unitSentencesMap, {
                 "read"
               ],
               "correctIndex": 2,
-              "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
+              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
             },
             {
               "id": "u101l101_ex1_q2",
@@ -29237,7 +29237,7 @@ Object.assign(unitSentencesMap, {
                 "first"
               ],
               "correctIndex": 1,
-              "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
+              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
             },
             {
               "id": "u101l101_ex1_q7",
@@ -29300,7 +29300,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l101ex2",
           "title": "Alıştırma 2: Süperlatif & Kısıtlayıcı Sıfatlar II",
-          "description": "Basit ve yaygın akademik cümle yapılarıyla zaman zarfı pratikleri.",
+          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
           "questions": [
             {
               "id": "u101l101_ex2_q1",
@@ -29314,7 +29314,7 @@ Object.assign(unitSentencesMap, {
                 "raised"
               ],
               "correctIndex": 0,
-              "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
+              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
             },
             {
               "id": "u101l101_ex2_q2",
@@ -29384,7 +29384,7 @@ Object.assign(unitSentencesMap, {
                 "only"
               ],
               "correctIndex": 0,
-              "translation": "Bu, bu yıl okuduğum en iyi akademik makaledir."
+              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
             },
             {
               "id": "u101l101_ex2_q7",
@@ -29447,7 +29447,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l101ex3",
           "title": "Alıştırma 3: Süperlatif & Kısıtlayıcı Sıfatlar III",
-          "description": "Gelişmiş akademik yapılarda zaman bağlaçları ve kelime doldurma.",
+          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
           "questions": [
             {
               "id": "u101l101_ex3_q1",
@@ -29524,7 +29524,7 @@ Object.assign(unitSentencesMap, {
               "type": "multiple-fill-blank",
               "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
               "sentence": "This is the ___ academic article I ___ read this year because its innovative cross-disciplinary methodology is highly clear.",
-              "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi akademik makaledir.",
+              "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi makaledir.",
               "corrects": [
                 "best",
                 "have"
@@ -29579,7 +29579,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u101l101ex4",
           "title": "Alıştırma 4: Süperlatif & Kısıtlayıcı Sıfatlar IV",
-          "description": "Bileşik akademik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
+          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
           "questions": [
             {
               "id": "u101l101_ex4_q1",
@@ -29593,7 +29593,7 @@ Object.assign(unitSentencesMap, {
                 "raised"
               ],
               "correctIndex": 0,
-              "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi akademik makaledir."
+              "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi makaledir."
             },
             {
               "id": "u101l101_ex4_q2",
@@ -30179,8 +30179,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u102l95ex3",
-          "title": "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III (Akademik Düzey)",
-          "description": "Şimdiki zaman ve güncel süreç zarflarının akademik düzeyde alıştırmaları.",
+          "title": "Alıştırma 3: Şimdiki Zaman & Süreç Zarfları III (Düzey)",
+          "description": "Şimdiki zaman ve güncel süreç zarflarının düzeyde alıştırmaları.",
           "questions": [
             {
               "id": "u102l95_ex3_q1",
@@ -31048,8 +31048,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u102l96ex3",
-          "title": "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III (Akademik Düzey)",
-          "description": "Geçmiş zaman ve tarihsel süreç zarflarının akademik düzeyde alıştırmaları.",
+          "title": "Alıştırma 3: Di'li Geçmiş Zaman & Tarihsel Zarflar III (Düzey)",
+          "description": "Geçmiş zaman ve tarihsel süreç zarflarının düzeyde alıştırmaları.",
           "questions": [
             {
               "id": "u102l96_ex3_q1",
@@ -31922,8 +31922,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u102l97ex3",
-          "title": "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III (Akademik Düzey)",
-          "description": "Yakın geçmiş zaman ve süreç adyleyicilerinin akademik düzeyde alıştırmaları.",
+          "title": "Alıştırma 3: Yakın Geçmiş Zaman & Süreç Bağlaçları III (Düzey)",
+          "description": "Yakın geçmiş zaman ve süreç adyleyicilerinin düzeyde alıştırmaları.",
           "questions": [
             {
               "id": "u102l97_ex3_q1",
@@ -32583,8 +32583,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u62l1ex3",
-          "title": "Alıştırma 3: Zaman Zarfları (Akademik & Spiralleşme)",
-          "description": "Zaman belirteçlerinin edilgen, modal ve zaman uyumlu ileri düzey akademik cümlelerdeki kullanımı (10 Soru)",
+          "title": "Alıştırma 3: Zaman Zarfları (& Spiralleşme)",
+          "description": "Zaman belirteçlerinin edilgen, modal ve zaman uyumlu ileri düzey cümlelerdeki kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u62l1_ex3_q1",
@@ -32691,7 +32691,7 @@ Object.assign(unitSentencesMap, {
               "id": "u62l1_ex3_q9",
               "type": "translation-text",
               "prompt": "\"Several scientific hypotheses were recently validated by researchers in the psychology department.\" cümlesini Türkçe'ye çevirin:",
-              "correctSentence": "Psikoloji bölümündeki araştırmacılar tarafından son zamanlarda birkaç bilimsel hipotez doğrulandı.",
+              "correctSentence": "bölümündeki araştırmacılar tarafından son zamanlarda birkaç bilimsel hipotez doğrulandı.",
               "enSentence": "Several scientific hypotheses were recently validated by researchers in the psychology department.",
               "isEngToTr": true,
               "grammarTags": ["Zaman Zarfları", "Edilgen Yapılar", "Kip Ekleri ve Zamanlar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
@@ -32965,8 +32965,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u62l2ex3",
-          "title": "Alıştırma 3: Derece Zarfları (Akademik & Spiralleşme)",
-          "description": "Derece belirteçlerinin edilgen, modal ve zaman uyumlu ileri düzey akademik cümlelerdeki kullanımı (10 Soru)",
+          "title": "Alıştırma 3: Derece Zarfları (& Spiralleşme)",
+          "description": "Derece belirteçlerinin edilgen, modal ve zaman uyumlu ileri düzey cümlelerdeki kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u62l2_ex3_q1",
@@ -33052,7 +33052,7 @@ Object.assign(unitSentencesMap, {
               "sentence": "Empirical data for the psychology project is ___ to be thoroughly analyzed.",
               "options": ["bound", "used", "would", "had"],
               "correctIndex": 0,
-              "translation": "Psikoloji projesi için deneysel verilerin etraflıca analiz edilmesi kaçınılmazdır.",
+              "translation": "projesi için deneysel verilerin etraflıca analiz edilmesi kaçınılmazdır.",
               "explanation": "Kaçınılmazlık ve kesinlik bildiren yarı-modal yapısı 'is bound to be V3' kalıbıdır.",
               "hint": { "formula": "is/are + bound + to be + V3" },
               "grammarTags": ["Derece Zarfları", "Edilgen Yapılar", "Yarı-Modallar", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
@@ -33347,8 +33347,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u62l3ex3",
-          "title": "Alıştırma 3: Miktar Belirteçleri (Akademik & Spiralleşme)",
-          "description": "Miktar belirteçlerinin edilgen, modal ve zaman uyumlu ileri düzey akademik cümlelerdeki kullanımı (10 Soru)",
+          "title": "Alıştırma 3: Miktar Belirteçleri (& Spiralleşme)",
+          "description": "Miktar belirteçlerinin edilgen, modal ve zaman uyumlu ileri düzey cümlelerdeki kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u62l3_ex3_q1",
@@ -33729,8 +33729,8 @@ Object.assign(unitSentencesMap, {
         },
         {
           "id": "u62l4ex3",
-          "title": "Alıştırma 3: Karma Zarflar ve Miktar (Akademik & Spiralleşme)",
-          "description": "Zaman, derece ve miktar belirteçlerinin edilgen, modal, soru ve zaman uyumlu ileri düzey akademik cümlelerdeki kullanımı (10 Soru)",
+          "title": "Alıştırma 3: Karma Zarflar ve Miktar (& Spiralleşme)",
+          "description": "Zaman, derece ve miktar belirteçlerinin edilgen, modal, soru ve zaman uyumlu ileri düzey cümlelerdeki kullanımı (10 Soru)",
           "questions": [
             {
               "id": "u62l4_ex3_q1",
@@ -34049,7 +34049,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The norms of the society are rigid.",
             "translation": "Toplumun normları katıdır.",
             "words": [
@@ -34140,7 +34140,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Many of the ruins are ancient.",
             "translation": "Kalıntıların çoğu antiktir.",
             "words": [
@@ -34193,8 +34193,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u1l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u1l1ex2_q1",
@@ -34245,7 +34245,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The unequal distribution of income is a major economic problem.",
             "translation": "Gelirin adaletsiz dağılımı büyük bir ekonomik sorundur.",
             "words": [
@@ -34478,7 +34478,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The physical parameters of the experiment are stable.",
             "translation": "Deneyin fiziksel parametreleri kararlıdır.",
             "words": [
@@ -34806,7 +34806,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The decision by the supreme court is final.",
             "translation": "Yüksek mahkemenin kararı kesindir.",
             "words": [
@@ -34863,8 +34863,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u1l2ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u1l2ex2_q1",
@@ -34915,7 +34915,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The financial stability of the central bank is a crucial factor.",
             "translation": "Merkez bankasının finansal istikrarı kritik bir faktördür.",
             "words": [
@@ -35154,7 +35154,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The legal principles in the document are important.",
             "translation": "Belgedeki yasal ilkeler önemlidir.",
             "words": [
@@ -35486,7 +35486,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The members of the assembly in the capital are active.",
             "translation": "Başkentteki meclisin üyeleri aktiftir.",
             "words": [
@@ -35547,8 +35547,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u1l3ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u1l3ex2_q1",
@@ -35599,7 +35599,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The dynamic behavior of the social community in the city is interesting.",
             "translation": "Şehirdeki toplumsal topluluğun dinamik davranışı ilginçtir.",
             "words": [
@@ -35840,7 +35840,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The analysis of the collective behavior of the community is conclusive.",
             "translation": "Topluluğun kolektif davranışının analizi kesindir.",
             "words": [
@@ -36095,7 +36095,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The research team agrees with the social norms.",
             "translation": "Araştırma ekibi toplumsal normlarla uyuşur.",
             "words": [
@@ -36188,7 +36188,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The historians work in the national library.",
             "translation": "Tarihçiler ulusal kütüphanede çalışır.",
             "words": [
@@ -36243,8 +36243,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u2l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u2l1ex2_q1",
@@ -36295,7 +36295,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The rapid changes in the market prices result from the unequal resource allocation in the region.",
             "translation": "Piyasa fiyatlarındaki ani değişiklikler, bölgedeki adaletsiz kaynak tahsisinden kaynaklanır.",
             "words": [
@@ -36550,7 +36550,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The supreme court decision agrees with the constitutional principles of the country.",
             "translation": "Yüksek mahkeme kararı ülkenin anayasal ilkeleriyle uyuşur.",
             "words": [
@@ -36896,7 +36896,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The database is in the cloud on the virtual server.",
             "translation": "Veritabanı sanal sunucuda buluttadır.",
             "words": [
@@ -36957,8 +36957,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u2l2ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u2l2ex2_q1",
@@ -37009,7 +37009,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The economic survey on the market prices in the capital is under review in the ministry.",
             "translation": "Başkentteki piyasa fiyatlarına ilişkin ekonomik araştırma bakanlıkta inceleme altındadır.",
             "words": [
@@ -37262,7 +37262,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The social norms of the tribe are in transition in the modern cities of the country.",
             "translation": "Kabilenin toplumsal normları ülkenin modern şehirlerinde geçiş sürecindedir.",
             "words": [
@@ -37614,7 +37614,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The government policies are democratic.",
             "translation": "Hükümet politikaları demokratiktir.",
             "words": [
@@ -37665,8 +37665,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u3l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u3l1ex2_q1",
@@ -37717,7 +37717,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The unequal income distribution is a major economic problem in poor nations.",
             "translation": "Adaletsiz gelir dağılımı yoksul ülkelerde büyük bir ekonomik sorundur.",
             "words": [
@@ -37964,7 +37964,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The supreme court decision is a vital precedent for legal researchers.",
             "translation": "Yüksek mahkeme kararı hukuk araştırmacıları için hayati bir emsaldir.",
             "words": [
@@ -38217,7 +38217,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The cultural norms are rigid.",
             "translation": "Kültürel normlar katıdır.",
             "words": [
@@ -38349,8 +38349,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u6l16_ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u6l1ex2_q1",
@@ -38401,7 +38401,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The financial markets are volatile.",
             "translation": "Finansal piyasalar dalgalıdır.",
             "words": [
@@ -38620,7 +38620,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The constitutional rights are fundamental.",
             "translation": "Anayasal haklar temeldir.",
             "words": [
@@ -38938,7 +38938,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The decision is an important step.",
             "translation": "Karar önemli bir adımdır.",
             "words": [
@@ -38991,8 +38991,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u6l2_ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u6l2ex2_q1",
@@ -39043,7 +39043,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The geographical survey is on the official website.",
             "translation": "Coğrafi araştırma resmi web sitesindedir.",
             "words": [
@@ -39272,7 +39272,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The supreme court is in the federal capital.",
             "translation": "Yüksek mahkeme federal başkenttedir.",
             "words": [
@@ -39521,7 +39521,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The art historian examined the sculptures.",
             "translation": "Sanat tarihçisi heykelleri inceledi.",
             "words": [
@@ -39610,7 +39610,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The coordinators updated the database.",
             "translation": "Koordinatörler veritabanını güncelledi.",
             "words": [
@@ -39661,8 +39661,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u7l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u7l1ex2_q1",
@@ -39713,7 +39713,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The trade agreements determined the market prices of the agricultural resources.",
             "translation": "Ticaret anlaşmaları tarımsal kaynakların piyasa fiyatlarını belirledi.",
             "words": [
@@ -39952,7 +39952,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The research team investigated the cognitive development of children.",
             "translation": "Araştırma ekibi çocukların bilişsel gelişimini inceledi.",
             "words": [
@@ -40205,7 +40205,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "There are archaeological documents on the table.",
             "translation": "Masanın üzerinde arkeolojik belgeler vardır.",
             "words": [
@@ -40347,8 +40347,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u8l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u8l1ex2_q1",
@@ -40399,7 +40399,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "There were rigid community organizations in the rural areas of the country.",
             "translation": "Ülkenin kırsal alanlarında katı topluluk örgütlenmeleri vardı.",
             "words": [
@@ -40640,7 +40640,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "There has been an increase in the market prices of the agricultural resources.",
             "translation": "Tarımsal kaynakların piyasa fiyatlarında bir artış olmuştur.",
             "words": [
@@ -40899,7 +40899,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Could the historian examine the primary sources?",
             "translation": "Tarihçi birincil kaynakları inceleyebilir miydi?",
             "words": [
@@ -41039,8 +41039,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u9l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u9l1ex2_q1",
@@ -41091,7 +41091,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Are the constitutional rights of the citizens fundamental?",
             "translation": "Vatandaşların anayasal hakları temel midir?",
             "words": [
@@ -41324,7 +41324,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Was the unequal distribution of income an economic problem?",
             "translation": "Adaletsiz gelir dağılımı ekonomik bir sorun muydu?",
             "words": [
@@ -41575,7 +41575,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Did the writer publish the book?",
             "translation": "Yazar kitabı yayınladı mı?",
             "words": [
@@ -41717,8 +41717,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u9l2ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u9l2ex2_q1",
@@ -41769,7 +41769,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Did the trade agreements determine the market prices of the resources?",
             "translation": "Ticaret anlaşmaları kaynakların piyasa fiyatlarını belirledi mi?",
             "words": [
@@ -42008,7 +42008,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Did the supreme court decisions protect the constitutional rights of the citizens?",
             "translation": "Yüksek mahkeme kararları vatandaşların anayasal haklarını korudu mu?",
             "words": [
@@ -42263,7 +42263,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "How should the psychologist evaluate the behavioral patterns?",
             "translation": "Psikolog davranışsal kalıpları nasıl değerlendirmelidir?",
             "words": [
@@ -42405,8 +42405,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u9l3ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u9l3ex2_q1",
@@ -42457,7 +42457,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Where are the constitutional rights of the citizens fundamental?",
             "translation": "Vatandaşların anayasal hakları nerede temeldir?",
             "words": [
@@ -42692,7 +42692,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "How was the unequal distribution of income an economic problem?",
             "translation": "Adaletsiz gelir dağılımı nasıl ekonomik bir sorundu?",
             "words": [
@@ -42947,7 +42947,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Where did the writer publish the book?",
             "translation": "Yazar kitabı nerede yayınladı?",
             "words": [
@@ -43091,8 +43091,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u9l4ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u9l4ex2_q1",
@@ -43143,7 +43143,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "When did the trade agreements determine the market prices of the resources?",
             "translation": "Ticaret anlaşmaları kaynakların piyasa fiyatlarını ne zaman belirledi?",
             "words": [
@@ -43386,7 +43386,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "How did the supreme court decisions protect the constitutional rights of the citizens?",
             "translation": "Yüksek mahkeme kararları vatandaşların anayasal haklarını nasıl korudu?",
             "words": [
@@ -43647,7 +43647,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The report prepared by the lead researcher is conclusive.",
             "translation": "Baş araştırmacı tarafından hazırlanan rapor kesindir.",
             "words": [
@@ -43793,8 +43793,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u12l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u12l1ex2_q1",
@@ -43845,7 +43845,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The economic survey evaluating the market prices is under review.",
             "translation": "Piyasa fiyatlarını değerlendiren ekonomik araştırma inceleme altındadır.",
             "words": [
@@ -44084,7 +44084,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The resource allocation determined by the trade agreements is crucial for stability.",
             "translation": "Ticaret anlaşmaları tarafından belirlenen kaynak tahsisi istikrar için önemlidir.",
             "words": [
@@ -44343,7 +44343,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The supreme court might approve the constitutional amendments.",
             "translation": "Yüksek mahkeme anayasal değişiklikleri onaylayabilir.",
             "words": [
@@ -44487,8 +44487,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u70l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u70l1ex2_q1",
@@ -44539,7 +44539,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The sociological study must evaluate the collective behavior of communities.",
             "translation": "Sosyolojik çalışma toplulukların kolektif davranışını değerlendirmelidir.",
             "words": [
@@ -44774,7 +44774,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The municipal administration could resolve the rigid organization of the community.",
             "translation": "Belediye yönetimi topluluğun katı organizasyonunu çözebilirdi.",
             "words": [
@@ -45027,7 +45027,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The clinical study has evaluated the patient records.",
             "translation": "Klinik çalışma hasta kayıtlarını değerlendirdi.",
             "words": [
@@ -45169,8 +45169,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u70l2ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u70l2ex2_q1",
@@ -45221,7 +45221,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The municipal administration had resolved the rigid organization of the community.",
             "translation": "Belediye yönetimi topluluğun katı organizasyonunu çözmüştü.",
             "words": [
@@ -45466,7 +45466,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The research team has investigated the resource allocation in the developing nations.",
             "translation": "Araştırma ekibi gelişmekte olan ülkelerdeki kaynak tahsisini inceledi.",
             "words": [
@@ -45727,7 +45727,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The local merchants have waited for the financial aid since Monday.",
             "translation": "Yerel tüccarlar Pazartesi gününden beri finansal yardımı beklediler.",
             "words": [
@@ -45879,8 +45879,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u102l1ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u102l1ex2_q1",
@@ -45931,7 +45931,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The economic survey evaluating the market prices has not been ready yet.",
             "translation": "Piyasa fiyatlarını değerlendiren ekonomik araştırma henüz hazır olmamıştır.",
             "words": [
@@ -46172,7 +46172,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The historical analysis of primary sources has already been conclusive for historians.",
             "translation": "Birincil kaynakların tarihsel analizi tarihçiler için zaten kesin olmuştur.",
             "words": [
@@ -46431,7 +46431,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "While the team was analyzing the data, the server crashed.",
             "translation": "Ekip verileri analiz ederken sunucu çöktü.",
             "words": [
@@ -46583,8 +46583,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u102l2ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u102l2ex2_q1",
@@ -46635,7 +46635,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "Before the trade agreements determined the market prices, the economic crisis affected the regional stability.",
             "translation": "Ticaret anlaşmaları piyasa fiyatlarını belirlemeden önce, ekonomik kriz bölgesel istikrarı etkiledi.",
             "words": [
@@ -46890,7 +46890,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "By the time the economic crisis affected the local merchants, the government had approved the financial aid.",
             "translation": "Ekonomik kriz yerel tüccarları etkileyene kadar hükümet finansal yardımı onaylamıştı.",
             "words": [
@@ -47161,7 +47161,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The historian had found the primary source before the archive closed.",
             "translation": "Arşiv kapanmadan önce tarihçi birincil kaynağı bulmuştu.",
             "words": [
@@ -47317,8 +47317,8 @@ Object.assign(unitSentencesMap, {
       },
       {
         "id": "u102l3ex2",
-        "title": "Alıştırma 2: Akademik Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Akademik Çözümleme ve Cümle Çevirileri",
+        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
         "questions": [
           {
             "id": "u102l3ex2_q1",
@@ -47369,7 +47369,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The trade agreements had already determined the market prices when the crisis occurred.",
             "translation": "Kriz meydana geldiğinde ticaret anlaşmaları piyasa fiyatlarını zaten belirlemişti.",
             "words": [
@@ -47614,7 +47614,7 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "By the time the economic crisis affected the local merchants, the government had already approved the financial aid.",
             "translation": "Ekonomik kriz yerel tüccarları etkileyene kadar hükümet finansal yardımı zaten onaylamıştı.",
             "words": [
@@ -47749,7 +47749,7 @@ if (typeof unitSentencesMap !== 'undefined') {
           {
             "id": "u22l66_ex1_match2",
             "type": "matching",
-            "prompt": "Akademik öbekleri Türkçe karşılıklarıyla eşleştirin.",
+            "prompt": "öbekleri Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "due to restricted access",
@@ -48152,7 +48152,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u22l66ex3",
-        "title": "Alıştırma 3: Söz Dizimsel Bağlaçlar - Akademik & Spiralleşme",
+        "title": "Alıştırma 3: Söz Dizimsel Bağlaçlar - & Spiralleşme",
         "description": "Integration of previous grammar like passive voice, modals, and gerunds into connectors practice.",
         "questions": [
           {
@@ -48260,7 +48260,7 @@ if (typeof unitSentencesMap !== 'undefined') {
             ],
             "correctIndex": 0,
             "translation": "Ekip sosyolojik anketi tamamladı; ancak, parametreleri değiştirmeleri gerekiyor.",
-            "explanation": "İki cümleyi geçiş zarfıyla (however) bağlarken noktalı virgül (;) kullanımı standart akademik kuraldır.",
+            "explanation": "İki cümleyi geçiş zarfıyla (however) bağlarken noktalı virgül (;) kullanımı standart kuraldır.",
             "grammarTags": [
               "Cümle Bağlaçları",
               "İsim Tamlamaları",
@@ -48380,7 +48380,7 @@ if (typeof unitSentencesMap !== 'undefined') {
           {
             "id": "u22l67_ex1_match2",
             "type": "matching",
-            "prompt": "Akademik cümle parçalarını Türkçe karşılıklarıyla eşleştirin.",
+            "prompt": "cümle parçalarını Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "because the records are public",
@@ -48770,7 +48770,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u22l67ex3",
-        "title": "Alıştırma 3: Anlamsal Bağlaçlar - Akademik & Spiralleşme",
+        "title": "Alıştırma 3: Anlamsal Bağlaçlar - & Spiralleşme",
         "description": "Spiralled review of passive verbs and phrasal modals with because/whereas/so that.",
         "questions": [
           {
@@ -49392,7 +49392,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u22l68ex3",
-        "title": "Alıştırma 3: Sonuç Bağlaçları - Akademik & Spiralleşme",
+        "title": "Alıştırma 3: Sonuç Bağlaçları - & Spiralleşme",
         "description": "Advanced integration of there is/are, modals, and passive voice with results.",
         "questions": [
           {
@@ -49620,7 +49620,7 @@ if (typeof unitSentencesMap !== 'undefined') {
           {
             "id": "u22l69_ex1_match2",
             "type": "matching",
-            "prompt": "Akademik örnekleme öbeklerini Türkçe karşılıklarıyla eşleştirin.",
+            "prompt": "örnekleme öbeklerini Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
                 "left": "such as legal records",
@@ -50012,7 +50012,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u22l69ex3",
-        "title": "Alıştırma 3: Örneklendirme & Açıklama - Akademik & Spiralleşme",
+        "title": "Alıştırma 3: Örneklendirme & Açıklama - & Spiralleşme",
         "description": "Integration of gerunds, modals, and passives into exemplification.",
         "questions": [
           {
@@ -50119,7 +50119,7 @@ if (typeof unitSentencesMap !== 'undefined') {
             ],
             "correctIndex": 0,
             "translation": "Borç oranı gibi finansal oranları analiz etmeliyiz.",
-            "explanation": "İsim öbeklerine örnek veren 'such as' yapısından önce virgül (,) kullanılması akademik bir kuraldır.",
+            "explanation": "İsim öbeklerine örnek veren 'such as' yapısından önce virgül (,) kullanılması bir kuraldır.",
             "grammarTags": [
               "Cümle Bağlaçları",
               "İsim Tamlamaları",
@@ -50630,7 +50630,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u22l70ex3",
-        "title": "Alıştırma 3: Koşul Cümlecikleri - Akademik & Spiralleşme",
+        "title": "Alıştırma 3: Koşul Cümlecikleri - & Spiralleşme",
         "description": "Precautions and warn syntax merged with passives, modals, and existential there.",
         "questions": [
           {
@@ -50845,7 +50845,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               },
               {
                 "left": "the unresolved academic dispute",
-                "right": "çözülmemiş akademik anlaşmazlık"
+                "right": "çözülmemiş anlaşmazlık"
               },
               {
                 "left": "more reliable research funding",
@@ -50899,7 +50899,7 @@ if (typeof unitSentencesMap !== 'undefined') {
             "type": "multiple-choice",
             "prompt": "\"the unresolved academic dispute\" ifadesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "çözülmemiş akademik anlaşmazlık",
+              "çözülmemiş anlaşmazlık",
               "kesinleşmiş bilimsel araştırma",
               "kabul edilmiş yasal savunma",
               "tartışmalı tarihi anlatı"
@@ -50941,7 +50941,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "than"
             ],
             "correctIndex": 0,
-            "translation": "Sosyolojik anketin yayınlanmasından sonra akademik tartışma daha yoğun hale geldi.",
+            "translation": "Sosyolojik anketin yayınlanmasından sonra tartışma daha yoğun hale geldi.",
             "grammarTags": [
               "Derecelendirme (Comparison)",
               "İsim Tamlamaları",
@@ -51339,8 +51339,8 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u26l78ex3",
-        "title": "Alıştırma 3: Kıyaslama ve Eşitlik Yapıları — Akademik Sentez",
-        "description": "Önceki dilbilgisi yapılarını içeren gelişmiş akademik kıyaslama analizleri",
+        "title": "Alıştırma 3: Kıyaslama ve Eşitlik Yapıları — Sentez",
+        "description": "Önceki dilbilgisi yapılarını içeren gelişmiş kıyaslama analizleri",
         "questions": [
           {
             "id": "u26l78_ex3_q1",
@@ -51448,7 +51448,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "so"
             ],
             "correctIndex": 0,
-            "translation": "Enstitü müdahale ettiğinde akademik anlaşmazlık çok daha hızlı çözüldü.",
+            "translation": "Enstitü müdahale ettiğinde anlaşmazlık çok daha hızlı çözüldü.",
             "grammarTags": [
               "Derecelendirme (Comparison)",
               "Zaman Zarfları",
@@ -51747,7 +51747,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "whose"
             ],
             "correctIndex": 0,
-            "translation": "Raporu kesinleştiren tarih komisyonu akademik anlaşmazlığı çözdü.",
+            "translation": "Raporu kesinleştiren tarih komisyonu anlaşmazlığı çözdü.",
             "grammarTags": [
               "Sıfat Cümlecikleri (Relative Clauses)",
               "İsim Tamlamaları"
@@ -52103,8 +52103,8 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u26l79ex3",
-        "title": "Alıştırma 3: Özne ve Nesne İlgi Cümlecikleri — Akademik Sentez",
-        "description": "İlgi cümleciklerini zıtlık bağlaçları, edilgenler ve modallarla birleştiren akademik sentez alıştırmaları",
+        "title": "Alıştırma 3: Özne ve Nesne İlgi Cümlecikleri — Sentez",
+        "description": "İlgi cümleciklerini zıtlık bağlaçları, edilgenler ve modallarla birleştiren sentez alıştırmaları",
         "questions": [
           {
             "id": "u26l79_ex3_q1",
@@ -52194,7 +52194,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "whose"
             ],
             "correctIndex": 0,
-            "translation": "Birincil kaynaklara erişim gerektiren modern tarihçiler akademik anlaşmazlığı çözdü.",
+            "translation": "Birincil kaynaklara erişim gerektiren modern tarihçiler anlaşmazlığı çözdü.",
             "grammarTags": [
               "Sıfat Cümlecikleri (Relative Clauses)",
               "İsim Tamlamaları"
@@ -52512,7 +52512,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
+            "translation": "Ampirik araştırması anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
             "grammarTags": [
               "Sıfat Cümlecikleri (Relative Clauses)",
               "İsim Tamlamaları"
@@ -52632,7 +52632,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               },
               {
                 "left": "We met the social historian whose empirical research resolved the academic dispute.",
-                "right": "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık."
+                "right": "Ampirik araştırması anlaşmazlığı çözen sosyal tarihçiyle tanıştık."
               },
               {
                 "left": "The economists whom the commission invited finalized the financial agreement.",
@@ -52687,10 +52687,10 @@ if (typeof unitSentencesMap !== 'undefined') {
             "type": "multiple-choice",
             "prompt": "\"We met the social historian whose empirical research resolved the academic dispute.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
+              "Ampirik araştırması anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
               "Sosyal tarihçinin ampirik araştırmasını çözmek için onunla tanıştık.",
-              "Tarihçi akademik anlaşmazlığı çözen ampirik bir araştırma yayınladı.",
-              "Sosyal tarihçi ampirik araştırma yaptıkça akademik anlaşmazlığı çözdü."
+              "Tarihçi anlaşmazlığı çözen ampirik bir araştırma yayınladı.",
+              "Sosyal tarihçi ampirik araştırma yaptıkça anlaşmazlığı çözdü."
             ],
             "correctIndex": 0,
             "enSentence": "We met the social historian whose empirical research resolved the academic dispute.",
@@ -52730,7 +52730,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "Akademisyenleri isimsiz anketler yayınlayan sosyoloji enstitüsü fon aldı.",
+            "translation": "Akademisyenleri isimsiz anketler yayınlayan enstitüsü fon aldı.",
             "grammarTags": [
               "Sıfat Cümlecikleri (Relative Clauses)",
               "İsim Tamlamaları"
@@ -52845,7 +52845,7 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u26l80_ex2_q11",
             "type": "translation-text",
             "prompt": "\"We met the social historian whose empirical research resolved the academic dispute.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Ampirik araştırması akademik anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
+            "correctSentence": "Ampirik araştırması anlaşmazlığı çözen sosyal tarihçiyle tanıştık.",
             "enSentence": "We met the social historian whose empirical research resolved the academic dispute.",
             "isEngToTr": true,
             "grammarTags": [
@@ -52870,7 +52870,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u26l80ex3",
-        "title": "Alıştırma 3: İleri Niteleyiciler — Akademik Sentez",
+        "title": "Alıştırma 3: İleri Niteleyiciler — Sentez",
         "description": "Zaman uyumu, edilgenlik ve koşul bağlaçlarını içeren gelişmiş iyelik ve mekan ilgi cümlecikleri",
         "questions": [
           {
@@ -53651,8 +53651,8 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u26l81ex3",
-        "title": "Alıştırma 3: Edatlı ve Zamiri Düşmüş Sıfat Cümlecikleri — Akademik Sentez",
-        "description": "Zaman uyumu kilitleri, edilgen modallar ve bölüntülü yapılarla zenginleştirilmiş ileri düzey akademik cümle sentezleri",
+        "title": "Alıştırma 3: Edatlı ve Zamiri Düşmüş Sıfat Cümlecikleri — Sentez",
+        "description": "Zaman uyumu kilitleri, edilgen modallar ve bölüntülü yapılarla zenginleştirilmiş ileri düzey cümle sentezleri",
         "questions": [
           {
             "id": "u26l81_ex3_q1",
@@ -53912,7 +53912,7 @@ if (typeof unitSentencesMap !== 'undefined') {
     "exercises": [
       {
         "id": "u26l82ex1",
-        "title": "Alıştırma 1: Karma Yapılar ve Akademik Sentez — Öbek Düzeyi",
+        "title": "Alıştırma 1: Karma Yapılar ve Sentez — Öbek Düzeyi",
         "description": "Relative clauses ve kıyaslama kalıplarını bir arada içeren gelişmiş niteleme öbeklerinin anlam analizi",
         "questions": [
           {
@@ -54150,7 +54150,7 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u26l82_ex1_q11",
             "type": "translation-text",
             "prompt": "\"The academic dispute with which social psychologists are concerned is more complex than the previous conflict.\" ifadesini Türkçe'ye çevirin:",
-            "correctSentence": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "correctSentence": "Sosyal psikologların ilgilendiği anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
             "enSentence": "The academic dispute with which social psychologists are concerned is more complex than the previous conflict.",
             "isEngToTr": true,
             "grammarTags": [
@@ -54177,8 +54177,8 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u26l82ex2",
-        "title": "Alıştırma 2: Karma Yapılar ve Akademik Sentez — Cümle Düzeyi",
-        "description": "Kıyaslama ve relative clause yapılarını içeren tam akademik cümlelerin analizi",
+        "title": "Alıştırma 2: Karma Yapılar ve Sentez — Cümle Düzeyi",
+        "description": "Kıyaslama ve relative clause yapılarını içeren tam cümlelerin analizi",
         "questions": [
           {
             "id": "u26l82_ex2_q1",
@@ -54297,7 +54297,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "where"
             ],
             "correctIndex": 0,
-            "translation": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "translation": "Sosyal psikologların ilgilendiği anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
             "grammarTags": [
               "Sıfat Cümlecikleri (Relative Clauses)",
               "Derecelendirme (Comparison)",
@@ -54385,8 +54385,8 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u26l82_ex2_q10",
             "type": "word-bank",
             "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
-            "trSentence": "Sosyal psikologların ilgilendiği akademik anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "translation": "Sosyal psikologların ilgilendiği anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
+            "trSentence": "Sosyal psikologların ilgilendiği anlaşmazlık, önceki çatışmadan daha karmaşıktır.",
             "words": [
               "The",
               "academic",
@@ -54462,7 +54462,7 @@ if (typeof unitSentencesMap !== 'undefined') {
       },
       {
         "id": "u26l82ex3",
-        "title": "Alıştırma 3: Karma Yapılar ve Akademik Sentez — Akademik Sentez",
+        "title": "Alıştırma 3: Karma Yapılar ve Sentez — Sentez",
         "description": "Farklı zaman dilimleri, bağlaçlar ve niteleyici öbeklerle karmaşıklaşmış üst düzey sınav tipi cümle yapıları",
         "questions": [
           {
@@ -54497,7 +54497,7 @@ if (typeof unitSentencesMap !== 'undefined') {
               "like"
             ],
             "correctIndex": 0,
-            "translation": "Modern tarihçilerin çözdüğü akademik anlaşmazlık, birincil kaynaklar üzerindeki tartışma kadar karmaşıktır.",
+            "translation": "Modern tarihçilerin çözdüğü anlaşmazlık, birincil kaynaklar üzerindeki tartışma kadar karmaşıktır.",
             "grammarTags": [
               "Derecelendirme (Comparison)",
               "Sıfat Cümlecikleri (Relative Clauses)",
@@ -54679,7 +54679,7 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u26l82_ex3_q9",
             "type": "translation-text",
             "prompt": "\"The academic dispute which modern historians resolved was as complex as the controversy over primary sources.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Modern tarihçilerin çözdüğü akademik anlaşmazlık, birincil kaynaklar üzerindeki tartışma kadar karmaşıktır.",
+            "correctSentence": "Modern tarihçilerin çözdüğü anlaşmazlık, birincil kaynaklar üzerindeki tartışma kadar karmaşıktır.",
             "enSentence": "The academic dispute which modern historians resolved was as complex as the controversy over primary sources.",
             "isEngToTr": true,
             "grammarTags": [
@@ -54739,7 +54739,7 @@ if (typeof rawTopics !== 'undefined') {
     if (!t26.edits) t26.edits = [];
     t26.edits.push({
       date: "2026-07-28T02:15:00+03:00",
-      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, ve alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
       type: "custom"
     });
   }
@@ -55240,8 +55240,8 @@ const placementQuestions = [
 // data.js - UNIT 35: ACADEMIC SENTENCE PARSING & REDUCTIONS (BÖLÜM 25 - 120 EXERCISES)
 const unit35 = {
   unitId: "unit_35_reductions",
-  unitTitle: "Akademik Cümle Analizi ve Kısaltmalar (Reductions)",
-  unitDescription: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles/Reductions), bağımsız özne yapıları, sonuç bildiren participle öbekleri ve akademik metin çözme algoritmaları.",
+  unitTitle: "Cümle Analizi ve Kısaltmalar (Reductions)",
+  unitDescription: "Sıfat ve zarf cümlecikleri kısaltmaları (Participles/Reductions), bağımsız özne yapıları, sonuç bildiren participle öbekleri ve metin çözme algoritmaları.",
   formulas: [
     {
       formula: "Noun + V-ing / V3 / To V1 (Relative Clause Reduction)",
@@ -55555,7 +55555,7 @@ const unit35 = {
         {
           id: "u35_l1_ex2",
           title: "2. Öbek Düzeyi Alıştırmaları",
-          description: "Sıfat cümleciği etken ve edilgen kısaltma öbeklerinin akademik bağlamda analizi.",
+          description: "Sıfat cümleciği etken ve edilgen kısaltma öbeklerinin bağlamda analizi.",
           questions: [
             {
               id: "u35_l1_ex2_q1",
@@ -55630,7 +55630,7 @@ const unit35 = {
               sentence: "The academic dispute [resolved] by modern historians after the controversy over primary sources",
               options: ["resolved", "resolving", "to resolve", "resolves"],
               correctIndex: 0,
-              translation: "Birincil kaynaklar üzerindeki tartışmanın ardından modern tarihçiler tarafından çözülen akademik anlaşmazlık",
+              translation: "Birincil kaynaklar üzerindeki tartışmanın ardından modern tarihçiler tarafından çözülen anlaşmazlık",
               explanation: "Anlaşmazlık çözülen (edilgen) olduğu için passive reduction olan 'resolved' (which was resolved) kullanılır.",
               grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
             },
@@ -55798,7 +55798,7 @@ const unit35 = {
               prompt: "Choose the correct reduction form: 'The legal decisions ________ by the court concerning the academic dispute'",
               options: ["implemented", "implementing", "to implement", "implements"],
               correctIndex: 0,
-              translation: "Akademik anlaşmazlığa ilişkin olarak mahkemece uygulanan yasal kararlar",
+              translation: "anlaşmazlığa ilişkin olarak mahkemece uygulanan yasal kararlar",
               explanation: "Kararlar uygulanan (edilgen) olduğu için 'implemented' (V3) kullanılır.",
               grammarTags: ["Relative Clause Reduction", "Passive Reduction"]
             }
@@ -55809,7 +55809,7 @@ const unit35 = {
     {
       lessonId: "u35_l2",
       lessonTitle: "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık — Öbek Düzeyi",
-      description: `<strong>💡 Zaman Kısaltmasının "Altın Formülleri" Nedir?</strong><br>Zaman ve ardışıklık bildiren zarf cümleciği kısaltmaları şu kalıplarla karşımıza çıkar:<br>1. <strong>While / When + V-ing</strong> (Etken - Eşzamanlı: İncelerken/Yaparken)<br>2. <strong>While / When + V3</strong> (Edilgen - Eşzamanlı: İncelenirken/Yapılırken)<br>3. <strong>Having + V3</strong> (Etken - Öncelikli: Yapmış olduktan sonra)<br>4. <strong>Having been + V3</strong> (Edilgen - Öncelikli: Yapılmış olduktan sonra)<br>5. <strong>Before / After / On / Upon + V-ing</strong> (Zaman edatı kısaltması)<br><br>⚠️ <strong>Önemli Kural:</strong> Zarf cümlesi kısaltmalarında öznelerin ortak olması şarttır. Yan cümlenin gizli öznesi ile ana cümlenin öznesi aynı değilse bu kısaltmalar yapılamaz!<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Zaman Zarf Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Eylemler arasında bir öncelik-sonralık ilişkisi var mı (Önce olan eylem belirtilmiş mi)?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>Having + V3</strong> (etken) veya <strong>Having been + V3</strong> (edilgen) ara.<br>• <strong>Hayır ise (Eşzamanlı/Süreç) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluktan hemen önce bir zaman bağlacı (While, When, Before, After vb.) var mı?<br>• <strong>Evet ise ➔</strong> Bağlaçtan sonra gelen eylemin sağ tarafını kontrol et. Nesne varsa <strong>V-ing</strong>, edat/boşluk varsa <strong>V3</strong> seç.<br>• <strong>Hayır ise ➔</strong> Cümlenin zaman bağlamına göre <strong>V-ing / V3</strong> veya <strong>On/Upon V-ing</strong> yapılarını değerlendir.`,
+      description: `<strong>💡 Zaman Kısaltmasının "Altın Formülleri" Nedir?</strong><br>Zaman ve ardışıklık bildiren zarf cümleciği kısaltmaları şu kalıplarla karşımıza çıkar:<br>1. <strong>While / When + V-ing</strong> (Etken - Eşzamanlı: İncelerken/Yaparken)<br>2. <strong>While / When + V3</strong> (Edilgen - Eşzamanlı: İncelenirken/Yapılırken)<br>3. <strong>Having + V3</strong> (Etken - Öncelikli: Yapmış olduktan sonra)<br>4. <strong>Having been + V3</strong> (Edilgen - Öncelikli: Yapılmış olduktan sonra)<br>5. <strong>Before / After / On / Upon + V-ing</strong> (Zaman edatı kısaltması)<br><br>⚠️ <strong>Önemli Kural:</strong> Zarf cümlesi kısaltmalarında öznelerin ortak olması şarttır. Yan cümlenin gizli öznesi ile ana cümlenin öznesi aynı değilse bu kısaltmalar yapılamaz!<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Zaman Zarf Kısaltması Çözme Algoritması</strong><br><br><strong>ADIM 1:</strong> Eylemler arasında bir öncelik-sonralık ilişkisi var mı (Önce olan eylem belirtilmiş mi)?<br>• <strong>Evet ise ➔</strong> Cevapta <strong>Having + V3</strong> (etken) veya <strong>Having been + V3</strong> (edilgen) ara.<br>• <strong>Hayır ise (Eşzamanlı/Süreç) ➔</strong> <strong>ADIM 2'ye geç.</strong><br><br><strong>ADIM 2:</strong> Boşluktan hemen önce bir zaman bağlacı (While, When, Before, After vb.) var mı?<br>• <strong>Evet ise ➔</strong> Bağlaçtan sonra gelen eylemin sağ tarafını kontrol et. Nesne varsa <strong>V-ing</strong>, edat/boşluk varsa <strong>V3</strong> seç.<br>• <strong>Hayır ise ➔</strong> Cümlenin <strong>V-ing / V3</strong> veya <strong>On/Upon V-ing</strong> yapılarını değerlendir.`,
       exercises: [
         {
           id: "u35_l2_ex1",
@@ -56288,7 +56288,7 @@ const unit35 = {
         {
           id: "u35_l2_ex2",
           title: "2. Öbek Düzeyi Alıştırmaları",
-          description: "Zaman ve öncelik bildiren zarf kısaltma öbeklerinin akademik düzeyde çözümlenmesi.",
+          description: "Zaman ve öncelik bildiren zarf kısaltma öbeklerinin düzeyde çözümlenmesi.",
           questions: [
             {
               id: "u35_l2_q1",
@@ -56352,7 +56352,7 @@ const unit35 = {
               sentence: "Having resolve the academic dispute between modern historians",
               options: ["Having", "resolve", "academic", "historians"],
               correctIndex: 1,
-              translation: "Modern tarihçiler arasındaki akademik anlaşmazlığı çözdükten sonra",
+              translation: "Modern tarihçiler arasındaki anlaşmazlığı çözdükten sonra",
               explanation: "Perfect Participle yapısında 'Having'den sonra fiilin üçüncü hali gelmelidir: 'resolved'.",
               grammarTags: ["Perfect Participle Error", "Active Reduction"]
             },
@@ -56547,7 +56547,7 @@ const unit35 = {
         {
           id: "u35_l3_ex1",
           title: "Sebep, Koşul ve Zıtlık Kısaltmaları",
-          description: "Cümle düzeyinde sebep, koşul ve zıtlık bağlamlı kısaltma yapılarının akademik analizi.",
+          description: "Cümle düzeyinde sebep, koşul ve zıtlık bağlamlı kısaltma yapılarının analizi.",
           questions: [
             {
               id: "u35_l3_q1",
@@ -56724,7 +56724,7 @@ const unit35 = {
               sentence: "Not known the answer, the student left the psychology test blank.",
               options: ["known", "left", "psychology", "blank"],
               correctIndex: 0,
-              translation: "Cevabı bilmediği için öğrenci psikoloji testini boş bıraktı.",
+              translation: "Cevabı bilmediği için öğrenci testini boş bıraktı.",
               explanation: "Bilmemek etken bir durumdur, 'Not knowing the answer' şeklinde olmalıdır.",
               grammarTags: ["Cause Reduction Error", "Active Reduction"]
             },
@@ -56806,7 +56806,7 @@ const unit35 = {
         {
           id: "u35_l4_ex1",
           title: "Bağımsız Özneli Yapılar & Sonuç Bildiren Participle Yapıları",
-          description: "Absolute ve Resultative participle yapılarının akademik cümleler üzerinden incelenmesi.",
+          description: "Absolute ve Resultative participle yapılarının cümleler üzerinden incelenmesi.",
           questions: [
             {
               id: "u35_l4_q1",
@@ -56859,7 +56859,7 @@ const unit35 = {
               sentence: "The modern historians worked hard, thereby to resolve the academic dispute.",
               options: ["historians", "thereby", "to resolve", "dispute"],
               correctIndex: 2,
-              translation: "Modern tarihçiler çok çalıştı, böylelikle akademik anlaşmazlığı çözdü.",
+              translation: "Modern tarihçiler çok çalıştı, böylelikle anlaşmazlığı çözdü.",
               explanation: "'thereby' kelimesinden sonra doğrudan 'V-ing' gelmelidir: 'thereby resolving'. Infinitve 'to resolve' kullanılmaz.",
               grammarTags: ["Resultative Participle Error", "Syntax Error"]
             },
@@ -56950,7 +56950,7 @@ const unit35 = {
               sentence: "The academic controversy [having] escalated, the social psychologists ceased their survey.",
               options: ["having", "was", "is", "had"],
               correctIndex: 0,
-              translation: "Akademik tartışma tırmandığı için sosyal psikologlar anketlerini durdurdular.",
+              translation: "tartışma tırmandığı için sosyal psikologlar anketlerini durdurdular.",
               explanation: "'The controversy having escalated' bağımsız özneli kısaltmadır.",
               grammarTags: ["Absolute Clause", "Independent Subject"]
             },
@@ -57059,12 +57059,12 @@ const unit35 = {
     },
     {
       lessonId: "u35_l5",
-      lessonTitle: "5. Akademik Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
-      description: `<strong>💡 Akademik Cümle Parsing'in "Altın Formülleri" Nedir?</strong><br>Uzun ve karmaşık akademik cümleleri doğru çözümlemek (parsing) ve ana ögeleri bulmak için şu 3 altın kuralı uygulayınız:<br>1. <strong>Özne - Yüklem Ayrımı (The Core):</strong> Ana özne ile ana yüklem arasına giren tüm ek açıklamaları ve kısaltmaları geçici olarak cümleden eleyin.<br>2. <strong>Kısaltmalar Yüklem Değildir:</strong> Cümledeki <strong>V-ing</strong>, <strong>V3</strong> veya <strong>to V0</strong> yapıları niteleyici kısaltmalardır (modifiers); asla cümlenin ana fiili (Main Verb) olamazlar.<br>3. <strong>Uyum ve Bağlaç Kontrolü:</strong> Kısaltma öbeklerinin nitelenen özne ile aktif/pasif uyumuna ve iki çekimli yüklem varsa arada bağlaç olup olmadığına dikkat edin.<br><br>⚠️ <strong>Önemli Kural:</strong> Bir cümlede bağlaç olmadan birden fazla ana yüklem bulunamaz. Birden fazla yüklem varsa, biri kısaltılmış (reduction) ya da bir bağlaçla bağlanmış olmak zorundadır.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Akademik Cümle Çözümleme Algoritması</strong><br><br><strong>ADIM 1:</strong> Virgüller veya tireler arasına girmiş olan tüm kısaltma öbeklerini (parenthetical modifiers) parantez içine alarak yok sayın. Geriye kalan çekimli fiil ana yükleminizdir (Main Verb).<br>• <strong>Örnek:</strong> The documents, [preserved in legal archives], <u>were written</u>... (were written = Main Verb)<br><br><strong>ADIM 2:</strong> Cümledeki Noun Clause veya Relative Clause bağlaçlarını (that, which, who vb.) bularak yan cümle sınırlarını çizin. Ana cümlenin yüklemi ile yan cümlenin yüklemini birbirine karıştırmayın.<br><br><strong>ADIM 3:</strong> Kısaltmalarda yapısal veya uyum hatası olup olmadığını kontrol edin.<br>• Eylem edilgense relative clause kısaltmasında bağlaç kalamaz (örn: <i>which finalized by...</i> Hatalı ➔ <i>finalized by...</i> veya <i>which was finalized by...</i> olmalıdır).<br>• Kısaltma biçimleri dilbilgisel formüllere uymalıdır (örn: <i>Having</i>'den sonra V3 gelmelidir: <i>Having evaluated</i>).`,
+      lessonTitle: "5. Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
+      description: `<strong>💡 Cümle Parsing'in "Altın Formülleri" Nedir?</strong><br>Uzun ve karmaşık cümleleri doğru çözümlemek (parsing) ve ana ögeleri bulmak için şu 3 altın kuralı uygulayınız:<br>1. <strong>Özne - Yüklem Ayrımı (The Core):</strong> Ana özne ile ana yüklem arasına giren tüm ek açıklamaları ve kısaltmaları geçici olarak cümleden eleyin.<br>2. <strong>Kısaltmalar Yüklem Değildir:</strong> Cümledeki <strong>V-ing</strong>, <strong>V3</strong> veya <strong>to V0</strong> yapıları niteleyici kısaltmalardır (modifiers); asla cümlenin ana fiili (Main Verb) olamazlar.<br>3. <strong>Uyum ve Bağlaç Kontrolü:</strong> Kısaltma öbeklerinin nitelenen özne ile aktif/pasif uyumuna ve iki çekimli yüklem varsa arada bağlaç olup olmadığına dikkat edin.<br><br>⚠️ <strong>Önemli Kural:</strong> Bir cümlede bağlaç olmadan birden fazla ana yüklem bulunamaz. Birden fazla yüklem varsa, biri kısaltılmış (reduction) ya da bir bağlaçla bağlanmış olmak zorundadır.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Cümle Çözümleme Algoritması</strong><br><br><strong>ADIM 1:</strong> Virgüller veya tireler arasına girmiş olan tüm kısaltma öbeklerini (parenthetical modifiers) parantez içine alarak yok sayın. Geriye kalan çekimli fiil ana yükleminizdir (Main Verb).<br>• <strong>Örnek:</strong> The documents, [preserved in legal archives], <u>were written</u>... (were written = Main Verb)<br><br><strong>ADIM 2:</strong> Cümledeki Noun Clause veya Relative Clause bağlaçlarını (that, which, who vb.) bularak yan cümle sınırlarını çizin. Ana cümlenin yüklemi ile yan cümlenin yüklemini birbirine karıştırmayın.<br><br><strong>ADIM 3:</strong> Kısaltmalarda yapısal veya uyum hatası olup olmadığını kontrol edin.<br>• Eylem edilgense relative clause kısaltmasında bağlaç kalamaz (örn: <i>which finalized by...</i> Hatalı ➔ <i>finalized by...</i> veya <i>which was finalized by...</i> olmalıdır).<br>• Kısaltma biçimleri dilbilgisel formüllere uymalıdır (örn: <i>Having</i>'den sonra V3 gelmelidir: <i>Having evaluated</i>).`,
       exercises: [
         {
           id: "u35_l5_ex1",
-          title: "Akademik Cümle Parsing & Çözümleme Stratejileri",
+          title: "Cümle Parsing & Çözümleme Stratejileri",
           description: "Karmaşık cümlelerde ana fiilleri ve araya giren kısaltmaları tespit etme alıştırmaları.",
           questions: [
             {
@@ -57334,7 +57334,7 @@ const unit35 = {
         {
           id: "u35_l6_ex1",
           title: "Karma Master Class & Sentaks Dedektifliği",
-          description: "Özne uyumsuzluğu (Dangling Participle) ve karma akademik sentaks analizi.",
+          description: "Özne uyumsuzluğu (Dangling Participle) ve karma sentaks analizi.",
           questions: [
             {
               id: "u35_l7_q1",
@@ -57639,7 +57639,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof uni
       "u35_l2": "2. Zarf Cümleciği Kısaltmaları I — Zaman ve Ardışıklık — Öbek Düzeyi",
       "u35_l3": "3. Zarf Cümleciği Kısaltmaları II — Sebep, Koşul ve Zıtlık — Cümle Düzeyi",
       "u35_l4": "4. Bağımsız Özneli & Sonuç Bildiren Participle Yapıları — Cümle Düzeyi",
-      "u35_l5": "5. Akademik Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
+      "u35_l5": "5. Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
       "u35_l6": "6. Sınav Odaklı Karma Master Class & Sentaks Dedektifliği — Cümle Düzeyi"
     }
 
@@ -57694,7 +57694,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof uni
 
 const unit36 = {
   unitId: "unit_36_hedging",
-  unitTitle: "Akademik Yumuşatma ve İhtimal Dili",
+  unitTitle: "Yumuşatma ve İhtimal Dili",
   lessons: [
     {
       lessonId: "u36_l1",
@@ -57703,16 +57703,16 @@ const unit36 = {
         {
           id: "u36_l1_q1",
           type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun akademik yumuşatma sıfatını seçiniz:<br><br>The cognitive psychologists noted that a change in behavioral patterns is ___ to occur under stress.",
+          prompt: "Boşluğa gelecek en uygun yumuşatma sıfatını seçiniz:<br><br>The cognitive psychologists noted that a change in behavioral patterns is ___ to occur under stress.",
           options: ["likely", "definitely", "completely", "absolutely"],
           correctIndex: 0,
-          explanation: "Akademik yazımda kesinlik bildiren zarflar yerine ihtimal belirten 'likely' sıfat yapısı tercih edilerek iddia yumuşatılır.",
+          explanation: "yazımda kesinlik bildiren zarflar yerine ihtimal belirten 'likely' sıfat yapısı tercih edilerek iddia yumuşatılır.",
           grammarTags: ["Hedging", "Adjective", "Psychology", "Collocation"]
         },
         {
           id: "u36_l1_q2",
           type: "multiple-choice",
-          prompt: "Hangi cümle akademik yazımda 'Hedging' (yumuşatma) kuralına en uygundur?<br><br>Choose the most appropriate academic sentence:",
+          prompt: "Hangi cümle yazımda 'Hedging' (yumuşatma) kuralına en uygundur?<br><br>Choose the most appropriate academic sentence:",
           options: [
             "The film director's interpretation of cultural history was 100% flawless.",
             "The film director's interpretation of cultural history is arguably the most controversial of the decade.",
@@ -57720,7 +57720,7 @@ const unit36 = {
             "The film director's interpretation of cultural history is always proving absolute truth."
           ],
           correctIndex: 1,
-          explanation: "'Arguably' zarfı, iddiayı kesinlik tuzağından kurtaran ve tartışmaya açık bırakan akademik bir hedging kelimesidir.",
+          explanation: "'Arguably' zarfı, iddiayı kesinlik tuzağından kurtaran ve tartışmaya açık bırakan bir hedging kelimesidir.",
           grammarTags: ["Hedging", "Adverb", "Cinema", "Sentence Selection"]
         },
         {
@@ -57738,7 +57738,7 @@ const unit36 = {
         {
           id: "u36_l1_q4",
           type: "word-bank",
-          prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:<br><br>Construct the sentence:",
+          prompt: "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:<br><br>Construct the sentence:",
           translation: "Tarihçiler, arşiv kaynaklarının kısmen güvenilir olduğunu kabul ettiler.",
           words: ["Historians", "accepted", "that", "archival", "sources", "were", "partially", "reliable", "completely", "absolutely"],
           correctOrder: ["Historians", "accepted", "that", "archival", "sources", "were", "partially", "reliable"],
@@ -57758,7 +57758,7 @@ const unit36 = {
         {
           id: "u36_l1_q6",
           type: "reverse-engineering-translation",
-          prompt: "Verilen Türkçe cümlenin akademik İngilizce karşılığını seçiniz:<br><br>'Ekonomik araştırmalar, enflasyon oranlarını düşürme politikalarının muhtemelen yetersiz kalacağını gösteriyor.'",
+          prompt: "Verilen Türkçe cümlenin İngilizce karşılığını seçiniz:<br><br>'Ekonomik araştırmalar, enflasyon oranlarını düşürme politikalarının muhtemelen yetersiz kalacağını gösteriyor.'",
           options: [
             "Economic research indicates that policies to reduce inflation rates will definitely fail.",
             "Economic research indicates that policies to reduce inflation rates will absolutely fail.",
@@ -57766,7 +57766,7 @@ const unit36 = {
             "Economic research indicates that policies to reduce inflation rates will always fail."
           ],
           correctIndex: 2,
-          explanation: "'possibly' ihtimal zarfı, kesin bir iddia yerine makul bir akademik esneklik sağlar.",
+          explanation: "'possibly' ihtimal zarfı, kesin bir iddia yerine makul bir esneklik sağlar.",
           grammarTags: ["Reverse Translation", "Hedging", "Economics"]
         },
         {
@@ -57781,7 +57781,7 @@ const unit36 = {
         {
           id: "u36_l1_q8",
           type: "multiple-choice",
-          prompt: "Aşağıdaki cümledeki kesinlik ifadesini yumuşatarak akademik dile uyarlayan seçeneği bulunuz:<br><br>'The behavioral survey confirms that the subject reacted aggressively.'",
+          prompt: "Aşağıdaki cümledeki kesinlik ifadesini yumuşatarak dile uyarlayan seçeneği bulunuz:<br><br>'The behavioral survey confirms that the subject reacted aggressively.'",
           options: [
             "The behavioral survey indicates that the subject presumably reacted aggressively.",
             "The behavioral survey confirms 100% that the subject reacted aggressively.",
@@ -57789,13 +57789,13 @@ const unit36 = {
             "The behavioral survey shows that the subject always reacted aggressively."
           ],
           correctIndex: 0,
-          explanation: "'indicates' ve 'presumably' kullanılarak kesin hüküm bildiren 'confirms' ifadesi akademik dile uygun hale getirilmiştir.",
+          explanation: "'indicates' ve 'presumably' kullanılarak kesin hüküm bildiren 'confirms' ifadesi dile uygun hale getirilmiştir.",
           grammarTags: ["Sentence Correction", "Hedging", "Psychology"]
         },
         {
           id: "u36_l1_q9",
           type: "matching",
-          prompt: "Akademik yumuşatma sıfatlarını eşleştiriniz:<br><br>Match the following adjectives:",
+          prompt: "yumuşatma sıfatlarını eşleştiriniz:<br><br>Match the following adjectives:",
           pairs: [
             { left: "likely", right: "muhtemel" },
             { left: "possible", right: "olası" },
@@ -57827,7 +57827,7 @@ const unit36 = {
         {
           id: "u36_l1_q12",
           type: "reverse-engineering-translation",
-          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Mahkeme anlaşmazlığı, büyük ölçüde mülkiyet sınırlarının belirsizliğinden kaynaklanmaktadır.'",
+          prompt: "Türkçe cümlenin en uygun İngilizce karşılığını seçiniz:<br><br>'Mahkeme anlaşmazlığı, büyük ölçüde mülkiyet sınırlarının belirsizliğinden kaynaklanmaktadır.'",
           options: [
             "The court dispute is completely caused by the uncertainty of property borders.",
             "The court dispute is absolutely caused by the uncertainty of property borders.",
@@ -57850,7 +57850,7 @@ const unit36 = {
           prompt: "Boşluğa gelecek en uygun yumuşatma fiilini seçiniz:<br><br>The cognitive psychologists noted that children ___ to imitate behavioral patterns of adults.",
           options: ["tend", "must", "force", "insist"],
           correctIndex: 0,
-          explanation: "'tend to' (-e eğiliminde olmak) yapısı akademik yazımda kesinlik tuzağından kaçınmak için kullanılan bir hedging fiilidir.",
+          explanation: "'tend to' (-e eğiliminde olmak) yapısı yazımda kesinlik tuzağından kaçınmak için kullanılan bir hedging fiilidir.",
           grammarTags: ["Hedging", "Verb", "Psychology"]
         },
         {
@@ -57882,7 +57882,7 @@ const unit36 = {
         {
           id: "u36_l2_q4",
           type: "word-bank",
-          prompt: "Kelimeleri doğru sıraya dizerek akademik cümleyi oluşturun:<br><br>Construct the sentence:",
+          prompt: "Kelimeleri doğru sıraya dizerek cümleyi oluşturun:<br><br>Construct the sentence:",
           translation: "Mevcut bulgular, ekonomik politikaların istikrarsızlığa yol açabileceğini gösteriyor.",
           words: ["Current", "findings", "suggest", "that", "economic", "policies", "might", "lead", "to", "instability", "must", "always"],
           correctOrder: ["Current", "findings", "suggest", "that", "economic", "policies", "might", "lead", "to", "instability"],
@@ -57902,7 +57902,7 @@ const unit36 = {
         {
           id: "u36_l2_q6",
           type: "reverse-engineering-translation",
-          prompt: "Verilen Türkçe cümlenin akademik İngilizce karşılığını seçiniz:<br><br>'Tarihçiler, arşiv belgelerindeki bilgilerin çelişkili olabileceğini öne sürüyorlar.'",
+          prompt: "Verilen Türkçe cümlenin İngilizce karşılığını seçiniz:<br><br>'Tarihçiler, arşiv belgelerindeki bilgilerin çelişkili olabileceğini öne sürüyorlar.'",
           options: [
             "Historians prove that the information in archival documents is contradictory.",
             "Historians guarantee that the information in archival documents is contradictory.",
@@ -57910,7 +57910,7 @@ const unit36 = {
             "Historians mandate that the information in archival documents must be contradictory."
           ],
           correctIndex: 2,
-          explanation: "'suggest' ve 'could' kullanarak iddia akademik olarak yumuşatılmıştır.",
+          explanation: "'suggest' ve 'could' kullanarak iddia olarak yumuşatılmıştır.",
           grammarTags: ["Reverse Translation", "Hedging", "History"]
         },
         {
@@ -57971,7 +57971,7 @@ const unit36 = {
         {
           id: "u36_l2_q12",
           type: "reverse-engineering-translation",
-          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Yeni bulgular, ampirik araştırmaların veri güvenliğini artırabileceğini göstermektedir.'",
+          prompt: "Türkçe cümlenin en uygun İngilizce karşılığını seçiniz:<br><br>'Yeni bulgular, ampirik araştırmaların veri güvenliğini artırabileceğini göstermektedir.'",
           options: [
             "New findings guarantee that empirical research increases data security.",
             "New findings prove that empirical research will increase data security.",
@@ -57994,7 +57994,7 @@ const unit36 = {
           prompt: "Boşluğa gelecek en uygun ihtimal ismini seçiniz:<br><br>The economic survey suggests there is a strong ___ that inflation rates will decline next year.",
           options: ["possibility", "guarantee", "rule", "commandment"],
           correctIndex: 0,
-          explanation: "Akademik dilde kesin yargılardan kaçınmak için 'possibility' (olasılık) ifadesi kullanılır.",
+          explanation: "dilde kesin yargılardan kaçınmak için 'possibility' (olasılık) ifadesi kullanılır.",
           grammarTags: ["Hedging", "Noun", "Economics"]
         },
         {
@@ -58046,7 +58046,7 @@ const unit36 = {
         {
           id: "u36_l3_q6",
           type: "reverse-engineering-translation",
-          prompt: "Türkçe cümlenin akademik İngilizce karşılığını seçiniz:<br><br>'Sinema tarihi araştırmalarında, yönetmenin vizyonunun başarısı bir dereceye kadar finansmana bağlıdır.'",
+          prompt: "Türkçe cümlenin İngilizce karşılığını seçiniz:<br><br>'Sinema tarihi araştırmalarında, yönetmenin vizyonunun başarısı bir dereceye kadar finansmana bağlıdır.'",
           options: [
             "In cinema history research, the success of the director's vision is absolutely dependent on funding.",
             "In cinema history research, the success of the director's vision is completely dependent on funding.",
@@ -58063,7 +58063,7 @@ const unit36 = {
           prompt: "Boşluğa gelecek en uygun edat grubunu seçiniz:<br><br>The cognitive psychologists published their reports ___ that the behavioral patterns were stable.",
           options: ["guaranteeing", "on the rule", "with absolute truth", "on the assumption"],
           correctIndex: 3,
-          explanation: "'on the assumption that' (- varsayımıyla/kabulüyle) akademik bir varsayım kalıbıdır.",
+          explanation: "'on the assumption that' (- varsayımıyla/kabulüyle) bir varsayım kalıbıdır.",
           grammarTags: ["Hedging", "Prepositional Phrase", "Psychology"]
         },
         {
@@ -58083,7 +58083,7 @@ const unit36 = {
         {
           id: "u36_l3_q9",
           type: "matching",
-          prompt: "Akademik terimleri Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the academic terms:",
+          prompt: "terimleri Türkçe karşılıklarıyla eşleştiriniz:<br><br>Match the academic terms:",
           pairs: [
             { left: "likelihood", right: "olasılık / ihtimal derecesi" },
             { left: "assumption", right: "varsayım / kabul" },
@@ -58115,7 +58115,7 @@ const unit36 = {
         {
           id: "u36_l3_q12",
           type: "reverse-engineering-translation",
-          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Fon kaynaklarındaki artış büyük olasılıkla araştırma ekibini memnun edecektir.'",
+          prompt: "Türkçe cümlenin en uygun İngilizce karşılığını seçiniz:<br><br>'Fon kaynaklarındaki artış büyük olasılıkla araştırma ekibini memnun edecektir.'",
           options: [
             "The increase in funding resources will definitely satisfy the research team.",
             "The increase in funding resources will absolutely satisfy the research team.",
@@ -58130,12 +58130,12 @@ const unit36 = {
     },
     {
       lessonId: "u36_l4",
-      lessonTitle: "4: Akademik Hedging Cümle Kurma & Çeviri Pratiği (it seems that, arguably, tend to, suggest)",
+      lessonTitle: "4: Hedging Cümle Kurma & Çeviri Pratiği (it seems that, arguably, tend to, suggest)",
       exercises: [
         {
           id: "u36_l4_q1",
           type: "fill-blank-dropdown",
-          prompt: "Boşluğa gelecek en uygun akademik ifadeyi seçiniz:<br><br>___ that the newly proposed economic policies will stabilize the inflation rates.",
+          prompt: "Boşluğa gelecek en uygun ifadeyi seçiniz:<br><br>___ that the newly proposed economic policies will stabilize the inflation rates.",
           options: ["It seems", "It guarantees", "It proves", "It is 100% true"],
           correctIndex: 0,
           explanation: "'It seems that...' (görünüşe göre...) kesin bir kanıt göstermek yerine yumuşak bir iddia sunar.",
@@ -58190,7 +58190,7 @@ const unit36 = {
         {
           id: "u36_l4_q6",
           type: "reverse-engineering-translation",
-          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Bulgular, ampirik araştırmaların fon yetersizliğinden dolayı sekteye uğrayabileceğini göstermektedir.'",
+          prompt: "Türkçe cümlenin en uygun İngilizce karşılığını seçiniz:<br><br>'Bulgular, ampirik araştırmaların fon yetersizliğinden dolayı sekteye uğrayabileceğini göstermektedir.'",
           options: [
             "The findings prove that empirical research is definitely disrupted due to a lack of funding.",
             "The findings guarantee that empirical research will be disrupted due to a lack of funding.",
@@ -58198,7 +58198,7 @@ const unit36 = {
             "The findings show that empirical research is always disrupted due to a lack of funding."
           ],
           correctIndex: 2,
-          explanation: "'suggest' ve 'could' ifadeleri iddiaya akademik bir yumuşatma kalkanı kazandırır.",
+          explanation: "'suggest' ve 'could' ifadeleri iddiaya bir yumuşatma kalkanı kazandırır.",
           grammarTags: ["Reverse Translation", "Hedging", "Research"]
         },
         {
@@ -58213,7 +58213,7 @@ const unit36 = {
         {
           id: "u36_l4_q8",
           type: "multiple-choice",
-          prompt: "Aşağıdaki cümlelerden hangisi akademik yazım standartlarına en uygundur?<br><br>Select the best academic sentence:",
+          prompt: "Aşağıdaki cümlelerden hangisi yazım standartlarına en uygundur?<br><br>Select the best academic sentence:",
           options: [
             "It is likely that the cognitive psychologists will publish the survey data soon.",
             "The cognitive psychologists will 100% publish the survey data soon.",
@@ -58221,13 +58221,13 @@ const unit36 = {
             "There is an absolute guarantee that the cognitive psychologists will publish the survey data soon."
           ],
           correctIndex: 0,
-          explanation: "'It is likely that...' (muhtemeldir ki...) akademik makalelerde sıkça kullanılan bir yumuşatma yapısıdır.",
+          explanation: "'It is likely that...' (muhtemeldir ki...) makalelerde sıkça kullanılan bir yumuşatma yapısıdır.",
           grammarTags: ["Sentence Selection", "Hedging", "Psychology"]
         },
         {
           id: "u36_l4_q9",
           type: "matching",
-          prompt: "Akademik yumuşatma kalıplarını türleriyle eşleştiriniz:<br><br>Match the patterns with their types:",
+          prompt: "yumuşatma kalıplarını türleriyle eşleştiriniz:<br><br>Match the patterns with their types:",
           pairs: [
             { left: "It seems that...", right: "Giriş yapısı (Introductory It)" },
             { left: "tend to", right: "Yumuşatma fiili (Verb)" },
@@ -58259,7 +58259,7 @@ const unit36 = {
         {
           id: "u36_l4_q12",
           type: "reverse-engineering-translation",
-          prompt: "Türkçe cümlenin en uygun akademik İngilizce karşılığını seçiniz:<br><br>'Görünüşe göre, anket verileri davranışsal psikolojideki yeni eğilimleri desteklemektedir.'",
+          prompt: "Türkçe cümlenin en uygun İngilizce karşılığını seçiniz:<br><br>'Görünüşe göre, anket verileri davranışsal psikolojideki yeni eğilimleri desteklemektedir.'",
           options: [
             "The survey data definitely supports the new trends in behavioral psychology.",
             "The survey data absolutely supports the new trends in behavioral psychology.",
@@ -58267,7 +58267,7 @@ const unit36 = {
             "It seems that the survey data supports the new trends in behavioral psychology."
           ],
           correctIndex: 3,
-          explanation: "'It seems that...' (görünüşe göre...) akademik dilde gözlemleri yumuşatarak sunmak için tercih edilir.",
+          explanation: "'It seems that...' (görünüşe göre...) dilde gözlemleri yumuşatarak sunmak için tercih edilir.",
           grammarTags: ["Reverse Translation", "Psychology", "Hedging"]
         }
       ]
@@ -58283,14 +58283,14 @@ const unit36 = {
       "u36_l1": "1: Yumuşatma Sıfatları & Zarfları (likely, presumably, arguably, possibly)",
       "u36_l2": "2: Yumuşatma Fiilleri & Modallar (tend to, appear to, suggest, could, may, might)",
       "u36_l3": "3: İhtimal İsim Öbekleri & Yapısal İfadeler (likelihood, possibility, assumption, it is widely accepted)",
-      "u36_l4": "4: Akademik Hedging Cümle Kurma & Çeviri Pratiği (it seems that, arguably, tend to, suggest)"
+      "u36_l4": "4: Hedging Cümle Kurma & Çeviri Pratiği (it seems that, arguably, tend to, suggest)"
     };
 
     // Push Unit 36
     units.push({
       id: 36,
       title: unit36.unitTitle,
-      description: "Akademik yazımda kesinlik bildiren ifadeler yerine kullanılan hedging ve ihtimal dilleri.",
+      description: "yazımda kesinlik bildiren ifadeler yerine kullanılan hedging ve ihtimal dilleri.",
       lessons: unitLessonIds,
       pages: "161-180"
     });
@@ -58331,7 +58331,7 @@ const unit37 = { lessons: [] };
     const unitNC = units.find(u => u.title && u.title.includes('İsim Cümleciği'));
     if (unitNC) {
       unitNC.pages = "240-260";
-      unitNC.description = "Cümlede özne veya nesne görevindeki wh- soru kelimeleri, that/whether yan cümleleri, subjunctive yapılar ve edatlı isim cümleciklerinin akademik kullanımı.";
+      unitNC.description = "Cümlede özne veya nesne görevindeki wh- soru kelimeleri, that/whether yan cümleleri, subjunctive yapılar ve edatlı isim cümleciklerinin kullanımı.";
       
       const rawNC = unitSentencesMap["28"];
       if (rawNC && rawNC["8"]) {
@@ -58346,8 +58346,8 @@ const unit37 = { lessons: [] };
               },
               {
                 "id": "nc_l1_ex2",
-                "title": "Alıştırma 2: Bildirim Cümlecikleri — Akademik Analiz & Çeviri Sentezi (15 Soru)",
-                "description": "The Fact That ve sahte özne bloklarının ileri düzey akademik metinlerde analizi ve çevirisi (Soru tipleri: Çoktan Seçmeli, Açılır Menü, Kelime Havuzu, Yazma & Çeviri).",
+                "title": "Alıştırma 2: Bildirim Cümlecikleri — Analiz & Çeviri Sentezi (15 Soru)",
+                "description": "The Fact That ve sahte özne bloklarının ileri düzey metinlerde analizi ve çevirisi (Soru tipleri: Çoktan Seçmeli, Açılır Menü, Kelime Havuzu, Yazma & Çeviri).",
                 "questions": [...rawNC["4"].exercises[0].questions, ...rawNC["4"].exercises[1].questions, ...rawNC["4"].exercises[2].questions]
               }
             ]
@@ -58362,8 +58362,8 @@ const unit37 = { lessons: [] };
               },
               {
                 "id": "nc_l2_ex2",
-                "title": "Alıştırma 2: Dolaylı Sorular — Akademik Analiz & Çeviri Sentezi (15 Soru)",
-                "description": "Dolaylı soru ve -ever yapılarının karmaşık akademik pasajlarda analizi.",
+                "title": "Alıştırma 2: Dolaylı Sorular — Analiz & Çeviri Sentezi (15 Soru)",
+                "description": "Dolaylı soru ve -ever yapılarının karmaşık pasajlarda analizi.",
                 "questions": [...rawNC["3"].exercises[0].questions, ...rawNC["3"].exercises[1].questions, ...rawNC["3"].exercises[2].questions]
               }
             ]
@@ -58372,14 +58372,14 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l3_ex1",
-                "title": "Alıştırma 1: Akademik Zorunluluk & Edat-Sıfat Sonrası — Temel Uygulama (15 Soru)",
+                "title": "Alıştırma 1: Zorunluluk & Edat-Sıfat Sonrası — Temel Uygulama (15 Soru)",
                 "description": "Subjunctive (yalın fiil) ve edat/sıfat arkası isim cümleciklerinin kavranması.",
                 "questions": [...rawNC["5"].exercises[0].questions, ...rawNC["5"].exercises[1].questions, ...rawNC["5"].exercises[2].questions]
               },
               {
                 "id": "nc_l3_ex2",
-                "title": "Alıştırma 2: Akademik Zorunluluk & Edat-Sıfat Sonrası — Akademik Derinleşme (15 Soru)",
-                "description": "İleri düzey subjunctive ve edatlı blokların akademik metinlerde kullanımı ve çevirisi.",
+                "title": "Alıştırma 2: Zorunluluk & Edat-Sıfat Sonrası — Derinleşme (15 Soru)",
+                "description": "İleri düzey subjunctive ve edatlı blokların metinlerde kullanımı ve çevirisi.",
                 "questions": [...rawNC["6"].exercises[0].questions, ...rawNC["6"].exercises[1].questions, ...rawNC["6"].exercises[2].questions]
               }
             ]
@@ -58394,8 +58394,8 @@ const unit37 = { lessons: [] };
               },
               {
                 "id": "nc_l4_ex2",
-                "title": "Alıştırma 2: Noun Clause vs Relative Clause — Karma Akademik Sentez (15 Soru)",
-                "description": "Karma Noun Clause yapılarının akademik paragraflarda sentezi, çevirisi ve sınav refleksleri.",
+                "title": "Alıştırma 2: Noun Clause vs Relative Clause — Karma Sentez (15 Soru)",
+                "description": "Karma Noun Clause yapılarının paragraflarda sentezi, çevirisi ve sınav refleksleri.",
                 "questions": [...rawNC["8"].exercises[0].questions, ...rawNC["8"].exercises[1].questions, ...rawNC["8"].exercises[2].questions]
               }
             ]
@@ -58438,7 +58438,7 @@ const unit37 = { lessons: [] };
           icon: "🎯", 
           formula: "Noun Clause vs. Adjective Clause / That vs. What & Mixed Syntax", 
           example: "The finding that was published (Adjective Clause) vs The finding that data leaked (Noun Clause).", 
-          description: "Noun Clause ile Relative Clause arasındaki yapısal farklar, that/what ayrımı ve tüm yapıların karma akademik testleri." 
+          description: "Noun Clause ile Relative Clause arasındaki yapısal farklar, that/what ayrımı ve tüm yapıların karma testleri." 
         }
       };
 
@@ -58494,8 +58494,8 @@ const unit37_advanced_relative = {
   "lessons": [
     {
       "lessonId": "c37_l1",
-      "lessonTitle": "1: Sosyal ve Beşeri Bilimler Serisi I",
-      "description": "Tarih, hukuk, felsefe, sosyoloji ve psikoloji metinlerinde miktar, aitlik ve soyut zaman geçişleri.",
+      "lessonTitle": "1: Sosyal ve Serisi I",
+      "description": "Tarih, hukuk, felsefe, ve metinlerinde miktar, aitlik ve soyut zaman geçişleri.",
       "exercises": [
         {
           "id": "c37_l1_ex1",
@@ -58628,7 +58628,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex2_q1",
               "type": "matching",
-              "prompt": "İnsan odaklı akademik miktar yapılarını anlamlarıyla eşleştirin.<br><br>Match the human-focused quantifiers:",
+              "prompt": "İnsan odaklı miktar yapılarını anlamlarıyla eşleştirin.<br><br>Match the human-focused quantifiers:",
               "pairs": [
                 {
                   "left": "many of whom",
@@ -58664,7 +58664,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex2_q3",
               "type": "context-distractor",
-              "prompt": "Boşluğa gelmesi gereken en uygun akademik öbeği seçin:<br><br>The university hired three renowned anthropologists, ___ had conducted empirical research in Peru.",
+              "prompt": "Boşluğa gelmesi gereken en uygun öbeği seçin:<br><br>The university hired three renowned anthropologists, ___ had conducted empirical research in Peru.",
               "options": [
                 "the majority of which",
                 "each of which",
@@ -58788,7 +58788,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex3_q3",
               "type": "context-distractor",
-              "prompt": "Derecelendirme bildiren en uygun akademik yapıyı seçin:<br><br>The empire faced five major peasant rebellions, ___ shook the capital city.",
+              "prompt": "Derecelendirme bildiren en uygun yapıyı seçin:<br><br>The empire faced five major peasant rebellions, ___ shook the capital city.",
               "options": [
                 "the largest of whom",
                 "all of them",
@@ -59705,7 +59705,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l1_ex10_q6",
               "type": "sentence-connector",
-              "prompt": "Felsefi ve sosyolojik çıkarım bağlamına uygun olan seçeneği bulun:<br><br>The thinkers published a radical manifesto,",
+              "prompt": "Felsefi ve sosyolojik uygun olan seçeneği bulun:<br><br>The thinkers published a radical manifesto,",
               "options": [
                 "the implications of which shook the entire political structure.",
                 "under the supervision of whom they wrote it.",
@@ -59989,7 +59989,7 @@ const unit37_advanced_relative = {
     },
     {
       "lessonId": "c37_l2",
-      "lessonTitle": "2: Sosyal ve Beşeri Bilimler Serisi II",
+      "lessonTitle": "2: Sosyal ve Serisi II",
       "description": "İktisat, antropoloji, coğrafya, sinema ve iletişim metinleri ve en yanıltıcı sınav çeldiricileri.",
       "exercises": [
         {
@@ -60123,7 +60123,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex14_q1",
               "type": "matching",
-              "prompt": "İletişim ve psikoloji metinlerindeki insan odaklı yapıları eşleştirin.<br><br>Match human relative structures:",
+              "prompt": "İletişim ve metinlerindeki insan odaklı yapıları eşleştirin.<br><br>Match human relative structures:",
               "pairs": [
                 {
                   "left": "some of whom",
@@ -60608,12 +60608,12 @@ const unit37_advanced_relative = {
         },
         {
           "id": "c37_l2_ex18",
-          "title": "Alıştırma 18: Sosyal Hiyerarşi ve Akademik Gözetim Yapıları",
+          "title": "Alıştırma 18: Sosyal Hiyerarşi ve Gözetim Yapıları",
           "questions": [
             {
               "id": "c37_l2_ex18_q1",
               "type": "matching",
-              "prompt": "Akademik ve kurumsal hiyerarşi bildiren miktar yapılarını eşleştirin.<br><br>Match hierarchical structures:",
+              "prompt": "ve kurumsal hiyerarşi bildiren miktar yapılarını eşleştirin.<br><br>Match hierarchical structures:",
               "pairs": [
                 {
                   "left": "under the supervision of whom",
@@ -60636,7 +60636,7 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex18_q2",
               "type": "fill-blank-dropdown",
-              "prompt": "Akademik gözetim bildiren yapıyı doğru tamamlayın:<br><br>The university employs five senior professors, under the supervision of ___ the research is conducted.",
+              "prompt": "gözetim bildiren yapıyı doğru tamamlayın:<br><br>The university employs five senior professors, under the supervision of ___ the research is conducted.",
               "options": [
                 "whom",
                 "whose",
@@ -61102,7 +61102,7 @@ const unit37_advanced_relative = {
         },
         {
           "id": "c37_l2_ex22",
-          "title": "Alıştırma 22: Psikoloji ve Antropolojide Soyut Köken Bağları",
+          "title": "Alıştırma 22: ve Antropolojide Soyut Köken Bağları",
           "questions": [
             {
               "id": "c37_l2_ex22_q1",
@@ -61192,14 +61192,14 @@ const unit37_advanced_relative = {
             {
               "id": "c37_l2_ex22_q6",
               "type": "sentence-connector",
-              "prompt": "Psikolojik çıkarım bağlamına uygun olan seçeneği bulun:<br><br>The psychologists published a study on behavioral patterns,",
+              "prompt": "Psikolojik uygun olan seçeneği bulun:<br><br>The psychologists published a study on behavioral patterns,",
               "options": [
                 "under the supervision of whom they treated patients.",
                 "the largest of which was located in Berlin.",
                 "the implications of which shook the entire psychology department."
               ],
               "correctIndex": 2,
-              "translation": "Psikologlar davranışsal kalıplar üzerine bir çalışma yayınladılar, bunun etkileri tüm psikoloji bölümünü sarstı."
+              "translation": "Psikologlar davranışsal kalıplar üzerine bir çalışma yayınladılar, bunun etkileri tüm bölümünü sarstı."
             },
             {
               "id": "c37_l2_ex22_q7",
@@ -61555,7 +61555,7 @@ const unit37_advanced_relative = {
         formula: "Noun + , + [Preposition] + [Quantifier] + of which/whom + Clause",
         example: "The delegation proposed two amendments, to neither of which the parliament agreed.",
         description: "in some of which, by many of whom, with most of whom, to neither of which gibi edatlı miktar ve ilgi yapılarının sentezi.",
-        teorikMantik: "Akademik dilde, bir relative clause içindeki fiil (Örn: agree to, depend on) veya sıfat (Örn: familiar with) bir edat gerektirdiğinde, bu edat miktar belirtecinin de en başına taşınabilir. Bu durum, 'Preposition + Quantifier + of which/whom' yapısını doğurur. Örneğin: 'the amendments, to most of which they objected...' (çoğuna itiraz ettikleri değişiklikler).",
+        teorikMantik: "dilde, bir relative clause içindeki fiil (Örn: agree to, depend on) veya sıfat (Örn: familiar with) bir edat gerektirdiğinde, bu edat miktar belirtecinin de en başına taşınabilir. Bu durum, 'Preposition + Quantifier + of which/whom' yapısını doğurur. Örneğin: 'the amendments, to most of which they objected...' (çoğuna itiraz ettikleri değişiklikler).",
         altinKural: "Sınavlarda doğru edatı bulmak için yan cümledeki fiile/sıfata odaklanın. Eğer yan cümle 'I completely agreed with them' ise, edat 'with' olmalıdır: 'the theories, with most of which I agreed'. Edatı nitelediğiniz isme bakarak tahmin etmeye çalışmayın.",
         exerciseIds: ["c37_l1_ex5", "c37_l2_ex17"],
         tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Edat Takımı (Prepositional Phrase)"]
@@ -61564,12 +61564,12 @@ const unit37_advanced_relative = {
         id: "c37_ml6",
         displayId: 6,
         title: "6: Kurumsal Gözetim ve Hiyerarşi Yapıları (under the supervision of whom, through the analysis of which)",
-        subtitle: "Akademik ve Yönetsel Niteleme Öbekleri",
+        subtitle: "ve Yönetsel Niteleme Öbekleri",
         icon: "🎓",
         formula: "Noun + , + [Preposition] + the + [Noun] + of which/whom + Clause",
         example: "The foundation employs five junior researchers, under the supervision of whom the field study is conducted.",
-        description: "under the supervision of whom, through the analysis of which, under the leadership of whom gibi gelişmiş yönetsel ve akademik niteleme öbekleri.",
-        teorikMantik: "Bu yapılar, 'Preposition + the + Noun + of + which/whom' formülüyle kurulur ve akademik raporlarda yönetsel/bilimsel ilişkileri bağlamak için kullanılır. Örneğin: 'under the leadership of whom' (kimin liderliği altında) veya 'by means of which' (bunun vasıtasıyla). Bu dizilimler karmaşık hiyerarşileri tek cümlede özetlemeyi sağlar.",
+        description: "under the supervision of whom, through the analysis of which, under the leadership of whom gibi gelişmiş yönetsel ve niteleme öbekleri.",
+        teorikMantik: "Bu yapılar, 'Preposition + the + Noun + of + which/whom' formülüyle kurulur ve raporlarda yönetsel/bilimsel ilişkileri bağlamak için kullanılır. Örneğin: 'under the leadership of whom' (kimin liderliği altında) veya 'by means of which' (bunun vasıtasıyla). Bu dizilimler karmaşık hiyerarşileri tek cümlede özetlemeyi sağlar.",
         altinKural: "Bu yapılarda 'of' edatından sonra cansızlar/kavramlar için 'which', insanlar için 'whom' kullanımı zorunludur. 'of that' veya 'of them' kesinlikle kullanılamaz. Çeviri yaparken sondan başa doğru (isim tamlaması gibi) okuma refleksini geliştirin.",
         exerciseIds: ["c37_l1_ex6", "c37_l2_ex18"],
         tags: ["Sıfat Cümlecikleri (Relative Clauses)", "Edat Takımı (Prepositional Phrase)"]
@@ -61591,13 +61591,13 @@ const unit37_advanced_relative = {
       {
         id: "c37_ml8",
         displayId: 8,
-        title: "8: Akademik Sentaks ve Sınav Zirvesi (Karma Advanced Relative Clauses)",
+        title: "8: Sentaks ve Sınav Zirvesi (Karma Advanced Relative Clauses)",
         subtitle: "Genel Değerlendirme, Hata Avcısı ve Çeviri Matrisi",
         icon: "🏆",
         formula: "Mixed Advanced Relative Clause Patterns",
         example: "The king appointed two envoys, through the diplomatic efforts of whom the war was avoided.",
         description: "Tüm ileri düzey sıfat cümleciği yapılarının karışık test, hata avcısı, çeviri ve sentaks egzersizleriyle sınandığı bitirme zirvesi.",
-        teorikMantik: "İleri düzey sıfat cümleciği yapılarının tamamının akademik bağlamda, çeldirici tuzaklar ve sentaks kuralları eşliğinde test edildiği genel tekrar zirvesidir.",
+        teorikMantik: "İleri düzey sıfat cümleciği yapılarının tamamının bağlamda, çeldirici tuzaklar ve sentaks kuralları eşliğinde test edildiği genel tekrar zirvesidir.",
         altinKural: "Sınavlarda en sık yapılan hata, iki cümleyi bağlaçsız bağlarken 'which/whom' yerine 'them/it' kullanılmasıdır. Virgüle ve fiil sayılarına dikkat edin.",
         exerciseIds: [
           "c37_l1_ex8", "c37_l1_ex9", "c37_l1_ex10", "c37_l1_ex11", "c37_l1_ex12",
@@ -61674,7 +61674,7 @@ const unit37_advanced_relative = {
           { ids: ["c37_l1_ex8", "c37_l2_ex20"], title: "1. Aşama: Temel Nicelik ve Aitlik Sentezi" },
           { ids: ["c37_l1_ex9", "c37_l2_ex21"], title: "2. Aşama: Sıralama ve Hiyerarşi Sentezi" },
           { ids: ["c37_l1_ex10", "c37_l2_ex22"], title: "3. Aşama: Edat ve Karma Zaman Sentezi" },
-          { ids: ["c37_l1_ex11", "c37_l2_ex23"], title: "4. Aşama: Akademik Çeviri ve Yapısal Uyum" },
+          { ids: ["c37_l1_ex11", "c37_l2_ex23"], title: "4. Aşama: Çeviri ve Yapısal Uyum" },
           { ids: ["c37_l1_ex12", "c37_l2_ex24"], title: "5. Aşama: İleri Düzey Sentaks Zirvesi" }
         ];
         pairs.forEach((pair, pIdx) => {
@@ -61683,7 +61683,7 @@ const unit37_advanced_relative = {
           structuredExercises.push({
             id: ml.id + "_ex" + (pIdx + 1),
             title: pair.title,
-            description: "Akademik Zirve Karma Soruları",
+            description: "Zirve Karma Soruları",
             questions: sortedQs
           });
         });
@@ -61802,7 +61802,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l1_q4",
             "type": "inversion-transformer",
-            "prompt": "Verilen düz cümleyi 'Little' zarfını başa alarak devrik akademik forma dönüştürün:<br><br>The film director little knew that the political drama would cause a nationwide debate among cinema critics.",
+            "prompt": "Verilen düz cümleyi 'Little' zarfını başa alarak devrik forma dönüştürün:<br><br>The film director little knew that the political drama would cause a nationwide debate among cinema critics.",
             "mainSentence": "The film director little knew that the political drama would cause a nationwide debate among cinema critics.",
             "options": [
               "Little the film director knew that the political drama would cause a nationwide debate among cinema critics.",
@@ -61970,7 +61970,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l1_q13",
             "type": "inversion-transformer",
-            "prompt": "Düz yapıda verilen akademik cümleyi 'Rarely' olumsuz zarfıyla devrik forma getirin:<br><br>The institution rarely publishes such highly critical findings on social integration.",
+            "prompt": "Düz yapıda verilen cümleyi 'Rarely' olumsuz zarfıyla devrik forma getirin:<br><br>The institution rarely publishes such highly critical findings on social integration.",
             "mainSentence": "The institution rarely publishes such highly critical findings on social integration.",
             "options": [
               "Rarely did the institution publish such highly critical findings on social integration.",
@@ -61989,7 +61989,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l1_q14",
             "type": "word-bank",
-            "prompt": "Kelimeleri doğru dizerek 'Little did ... realize' akademik devrik yapısını oluşturun:<br><br>Little did the sociologist realize that the demographic survey contained significant regional errors.",
+            "prompt": "Kelimeleri doğru dizerek 'Little did ... realize' devrik yapısını oluşturun:<br><br>Little did the sociologist realize that the demographic survey contained significant regional errors.",
             "translation": "Sosyolog, demografik anketin ciddi bölgesel hatalar içerdiğini neredeyse hiç fark etmedi.",
             "words": [
               "Little did the sociologist",
@@ -62105,7 +62105,7 @@ const unit37_advanced_relative = {
               "the psychological department can"
             ],
             "correctIndex": 1,
-            "translation": "Psikoloji bölümü, insan davranışı üzerindeki bu etik dışı deneyleri hiçbir şekilde onaylayamaz.",
+            "translation": "bölümü, insan davranışı üzerindeki bu etik dışı deneyleri hiçbir şekilde onaylayamaz.",
             "explanation": "'In no way' kısıtlayıcı ifadesi ile başlayan cümlede devriklik modal fiille 'can + subject + V1' şeklinde kurulmalıdır.",
             "grammarTags": [
               "Devrik Cümle (Inversion)",
@@ -62364,7 +62364,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l2_q13",
             "type": "inversion-transformer",
-            "prompt": "Düz yapıda verilen cümleyi 'Only after' kısıtlayıcı ifadesiyle devrik akademik forma getirin:<br><br>The researcher understood the social dynamics only after conducting the ethnographic survey.",
+            "prompt": "Düz yapıda verilen cümleyi 'Only after' kısıtlayıcı ifadesiyle devrik forma getirin:<br><br>The researcher understood the social dynamics only after conducting the ethnographic survey.",
             "mainSentence": "The researcher understood the social dynamics only after conducting the ethnographic survey.",
             "options": [
               "Only after conducting the ethnographic survey the researcher understood the social dynamics.",
@@ -62418,7 +62418,7 @@ const unit37_advanced_relative = {
             ],
             "correctIndex": 1,
             "translation": "Parlamento, egemen yargı yetkisi ihtilaflarını ancak yasal çerçeveyi uyarlayarak çözebildi.",
-            "explanation": "Yetenek ve geçmiş zaman bağlamında yetkiyi nitelemek üzere modal fiil 'could' tercih edilir.",
+            "explanation": "Yetenek ve geçmiş yetkiyi nitelemek üzere modal fiil 'could' tercih edilir.",
             "grammarTags": [
               "Devrik Cümle (Inversion)",
               "Kısıtlayıcı Yapılar",
@@ -62523,7 +62523,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l3_q1",
             "type": "matching",
-            "prompt": "Koşul devrikliklerini (If Inversion) akademik karşılıklarıyla eşleştirin.<br><br>Match the conditional inversions:",
+            "prompt": "Koşul devrikliklerini (If Inversion) karşılıklarıyla eşleştirin.<br><br>Match the conditional inversions:",
             "pairs": [
               {
                 "left": "Should the committee reject the legal reforms,",
@@ -62690,7 +62690,7 @@ const unit37_advanced_relative = {
               "Esas Fiil (Main Verb)"
             ],
             "correctIndex": 0,
-            "translation": "Sosyolog anketi yayınlayacak olsaydı, akademik geri bildirim alırdı.",
+            "translation": "Sosyolog anketi yayınlayacak olsaydı, geri bildirim alırdı.",
             "grammarTags": [
               "Devrik Cümle (Inversion)",
               "Koşul Cümleleri",
@@ -62901,10 +62901,10 @@ const unit37_advanced_relative = {
       },
       {
         "lessonId": "c38_l4",
-        "lessonTitle": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri (neither do I, so is the, as did the, beautiful though she is)",
+        "lessonTitle": "4: Kıyas, Katılım ve Sıfat Devriklikleri (neither do I, so is the, as did the, beautiful though she is)",
         "konuAnlatimi": {
-          "baslik": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri",
-          "teorikMantik": "Akademik metinlerde katılım bildiren so, neither, nor ve karşılaştırma bildiren as yapıları başa geldiğinde devriklik oluşturur. Ayrıca sıfat veya zarflar 'though' veya 'as' ile zıtlık bildiren cümlelerin başına çekildiğinde edebi bir devriklik kurulur.",
+          "baslik": "4: Kıyas, Katılım ve Sıfat Devriklikleri",
+          "teorikMantik": "metinlerde katılım bildiren so, neither, nor ve karşılaştırma bildiren as yapıları başa geldiğinde devriklik oluşturur. Ayrıca sıfat veya zarflar 'though' veya 'as' ile zıtlık bildiren cümlelerin başına çekildiğinde edebi bir devriklik kurulur.",
           "formul": "1. Olumlu Katılım: and so + auxiliary + subject\n2. Olumsuz Katılım: nor / neither + auxiliary + subject\n3. Karşılaştırma: as + auxiliary + subject\n4. Sıfat Zıtlık Devrikliği: Adjective / Adverb + though / as + subject + verb (e.g. Beautiful though she is...)",
           "altinKural": "ZITLIK TUZAĞI: Sıfat devrik zıtlık yapısında 'though' veya 'as' kelimesinden önce sadece sıfat/zarf (Beautiful though...) gelmelidir; 'Although beautiful she was' gibi bir kullanım yanlıştır. Ayrıca bu yapıda 'as' kullanıldığında sadece zıtlık (beğenilse de...) anlamı verir, sebep-sonuç vermez."
         },
@@ -62912,7 +62912,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l4_q1",
             "type": "matching",
-            "prompt": "Akademik katılım ve sıfat devrikliklerini Türkçe karşılıklarıyla eşleştirin.<br><br>Match the comparative and adjectival inversions:",
+            "prompt": "katılım ve sıfat devrikliklerini Türkçe karşılıklarıyla eşleştirin.<br><br>Match the comparative and adjectival inversions:",
             "pairs": [
               {
                 "left": "as did the neighboring civilizations.",
@@ -63165,7 +63165,7 @@ const unit37_advanced_relative = {
             "id": "c38_l4_q14",
             "type": "word-bank",
             "prompt": "Kelimeleri doğru dizerek 'as' zıtlık devrik yapısını tamamlayın:<br><br>Influential as the theory was, the university rejected the findings.",
-            "translation": "Teori etkili olsa da, akademik kurum bulguları reddetti.",
+            "translation": "Teori etkili olsa da, kurum bulguları reddetti.",
             "words": [
               "Influential as",
               "the theory was,",
@@ -63302,7 +63302,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l5_q1",
             "type": "matching",
-            "prompt": "İleri düzey devrik yapıları akademik karşılıklarıyla eşleştirin.<br><br>Match the advanced inversion structures:",
+            "prompt": "İleri düzey devrik yapıları karşılıklarıyla eşleştirin.<br><br>Match the advanced inversion structures:",
             "pairs": [
               {
                 "left": "In the museum stands the ancient statue,",
@@ -63533,7 +63533,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l5_q13",
             "type": "inversion-transformer",
-            "prompt": "Verilen düz yapılı cümleyi 'locative inversion' kullanarak devrik akademik forma getirin:<br><br>The historic university library lies behind the museum gardens.",
+            "prompt": "Verilen düz yapılı cümleyi 'locative inversion' kullanarak devrik forma getirin:<br><br>The historic university library lies behind the museum gardens.",
             "mainSentence": "The historic university library lies behind the museum gardens.",
             "options": [
               "Behind the museum gardens does the historic university library lie.",
@@ -63738,7 +63738,7 @@ const unit38_advanced_inversion = curriculumData[0];
 
 const chapter40Data = {
   chapterId: "chapter40",
-  chapterName: "İleri Düzey Akademik Dil Bilgisi ve Sınav Stratejileri",
+  chapterName: "İleri Düzey Dil Bilgisi ve Sınav Stratejileri",
   chapterDescription: "Zaman kilitleri, kısaltma geometrileri, ileri düzey cümle yapıları ve bağlaç tuzaklarını içeren sınav hazırlık matrisidir.",
   lessons: [
     {
@@ -63746,7 +63746,7 @@ const chapter40Data = {
       lessonTitle: "1: By the Time Yapısının Zaman Çizelgesi ve Eylem Önceliği",
       konuAnlatimi: {
         baslik: "By the Time Kalıbının Zaman Matrisi (Kural 16)",
-        teorikMantik: "By the time, eylemlerin birbirine göre önceliğini ve '... olana kadar çoktan ... olmuştu / olacak' mantığını kuran en güçlü akademik zaman kilididir. Kendisinden hemen sonra gelen yan cümledeki zaman çekimi, ana cümlenin zaman yapısını mutlak bir matematiksel kesinlikle dikte eder.",
+        teorikMantik: "By the time, eylemlerin birbirine göre önceliğini ve '... olana kadar çoktan ... olmuştu / olacak' mantığını kuran en güçlü zaman kilididir. Kendisinden hemen sonra gelen yan cümledeki zaman çekimi, ana cümlenin zaman yapısını mutlak bir matematiksel kesinlikle dikte eder.",
         formul: "1. By the time + V1/Present -> Ana Cümle: Will have V3 / Will have been Ving\n2. By the time + V2/Past -> Ana Cümle: Had V3 / Had been Ving",
         altinKural: "By the time yapısının bulunduğu yan cümle tarafına ASLA 'will', 'would' veya 'had V3' gelemez! By the time geçmişe bakıyorsa ana cümle Past Perfect (Had V3), geleceğe bakıyorsa Future Perfect (Will have V3) olmak zorundadır."
       },
@@ -63791,7 +63791,7 @@ const chapter40Data = {
             {
                   "id": "c40_l1_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Misafirler mekana varana kadar, ikram personeli akşam yemeğini çoktan hazırlamış olacak.",
                   "words": [
                         "The",
@@ -63972,7 +63972,7 @@ const chapter40Data = {
             {
                   "id": "c40_l1_e1_q10",
                   "type": "inversion-transformer",
-                  "prompt": "Verilen düz akademik cümleyi 'By the time' kullanarak eş anlamlı öncelikli forma dönüştürün:",
+                  "prompt": "Verilen düz cümleyi 'By the time' kullanarak eş anlamlı öncelikli forma dönüştürün:",
                   "mainSentence": "The researchers analyzed the soil samples before the environmental agency updated the protective regulations.",
                   "options": [
                         "By the time the environmental agency updated the protective regulations, the researchers had analyzed the soil samples.",
@@ -64035,9 +64035,9 @@ const chapter40Data = {
       lessonTitle: "2: Süreç Bildiren Zarflar ve Perfect Tense İlişkisi",
       konuAnlatimi: {
         baslik: "Süreç Zarfları ve Zaman Yasakları (Kural 17 & 100)",
-        teorikMantik: "Akademik metinlerde zamanı belirleyen en sinsi yapılar 'Over + süreç' ve 'For + süreç' ifadeleridir. Bu ifadeler eylemin geçmişte, günümüzde veya gelecekte ne kadarlık bir zaman dilimine yayıldığını göstererek bizi doğrudan Perfect (Mükemmel) zaman gruplarına götürür.",
+        teorikMantik: "metinlerde zamanı belirleyen en sinsi yapılar 'Over + süreç' ve 'For + süreç' ifadeleridir. Bu ifadeler eylemin geçmişte, günümüzde veya gelecekte ne kadarlık bir zaman dilimine yayıldığını göstererek bizi doğrudan Perfect (Mükemmel) zaman gruplarına götürür.",
         formul: "1. Over/In/During + Present Süreç (Örn: over the last decade) -> Present Perfect (Have/Has V3)\n2. Over/In/During + Past Süreç (Örn: over the preceding century) -> Past Perfect (Had V3)\n3. For + Net Zaman Süreci (Örn: for two hours) + Geçmiş Kilit -> Past Perfect Continuous (Had been Ving)",
-        altinKural: "TENSE YASAKLARI: Akademik İngilizcede 'Had V3' ile başka bir 'Had V3' bağlaçsız asla yan yana gelemez! Ayrıca net bir süreç vurgusu (for, since, over) ve geçmişte bitmişlik işareti varsa düz 'was/were Ving' yerine her zaman 'Perfect Continuous' (had been Ving / will have been Ving) önceliklidir."
+        altinKural: "TENSE YASAKLARI: İngilizcede 'Had V3' ile başka bir 'Had V3' bağlaçsız asla yan yana gelemez! Ayrıca net bir süreç vurgusu (for, since, over) ve geçmişte bitmişlik işareti varsa düz 'was/were Ving' yerine her zaman 'Perfect Continuous' (had been Ving / will have been Ving) önceliklidir."
       },
       exercises: {
       "exercise_1": [
@@ -64080,7 +64080,7 @@ const chapter40Data = {
             {
                   "id": "c40_l2_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Son on yılda, nadir orkide türleri değişen alp iklimine uyum sağladı.",
                   "words": [
                         "Rare",
@@ -64167,9 +64167,9 @@ const chapter40Data = {
             {
                   "id": "c40_l2_e1_q6",
                   "type": "matching",
-                  "prompt": "Zaman zarfı tetikleyicilerini doğru akademik zaman çekimleriyle eşleştirin.",
+                  "prompt": "Zaman zarfı tetikleyicilerini doğru zaman çekimleriyle eşleştirin.",
                   "leftHeader": "Süreç / Zaman Tetikleyicisi",
-                  "rightHeader": "Zorunlu Akademik Zaman Çekimi",
+                  "rightHeader": "Zorunlu Zaman Çekimi",
                   "pairs": [
                         {
                               "left": "Over the last decade (Güncel süreç)",
@@ -64255,7 +64255,7 @@ const chapter40Data = {
             {
                   "id": "c40_l2_e1_q10",
                   "type": "inversion-transformer",
-                  "prompt": "Verilen düz akademik cümleyi 'By the time' kullanarak eş anlamlı öncelikli forma dönüştürün:",
+                  "prompt": "Verilen düz cümleyi 'By the time' kullanarak eş anlamlı öncelikli forma dönüştürün:",
                   "mainSentence": "The vessel sailed for three weeks before it reached the secure harbor.",
                   "options": [
                         "By the time the vessel reached the secure harbor, it had been sailing for three weeks.",
@@ -64318,7 +64318,7 @@ const chapter40Data = {
       lessonTitle: "3: Belirli ve Belirsiz Geçmiş Zaman Vurguları",
       konuAnlatimi: {
         baslik: "Last Year (V2) vs. Last Years (Have/Has V3) Dengesi (Kural 19)",
-        teorikMantik: "Akademik İngilizcede zamanın net bir nokta mı yoksa bir süreç mi bildirdiği, kullanılacak fiil çekimini tamamen değiştirir. Tekil 'year' ile çoğul 'years' kullanımı sinsi birer Tense kilit mekanizmasıdır.",
+        teorikMantik: "İngilizcede zamanın net bir nokta mı yoksa bir süreç mi bildirdiği, kullanılacak fiil çekimini tamamen değiştirir. Tekil 'year' ile çoğul 'years' kullanımı sinsi birer Tense kilit mekanizmasıdır.",
         formul: "1. Last year / Last month (Belirli bir nokta) -> Simple Past (V2)\n2. Last years / Last months (Belirsiz/Süreç bildiren dönem) -> Present Perfect (Have/Has V3)",
         altinKural: "Bu süreçlerde 'DURING' veya 'OVER' edatları sıklıkla süreci pekiştirmek için cümlenin başına veya ortasına yerleşir. 'Last years' gördüğünüzde eliniz otomatik olarak Simple Past'a (V2) gitmemelidir; o bir süreçtir ve Present Perfect ister."
       },
@@ -64363,7 +64363,7 @@ const chapter40Data = {
             {
                   "id": "c40_l3_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Toprak Razgatlıoğlu geçen yıl yeni bir şampiyonluk sözleşmesi imzaladı.",
                   "words": [
                         "Toprak",
@@ -64399,7 +64399,7 @@ const chapter40Data = {
             {
                   "id": "c40_l3_e1_q4",
                   "type": "multiple-choice",
-                  "prompt": "Boşluğa gelecek en uygun akademik zaman yapısını seçin:",
+                  "prompt": "Boşluğa gelecek en uygun zaman yapısını seçin:",
                   "sentence": "Over the last months, the museum ___ ancient Roman manuscripts.",
                   "options": [
                         "has restored",
@@ -64633,7 +64633,7 @@ const chapter40Data = {
             {
                   "id": "c40_l4_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Yolcu gemisi iskeleye yanaştıktan sonra tur rehberi otel transferlerini koordine etti.",
                   "words": [
                         "The",
@@ -64917,7 +64917,7 @@ const chapter40Data = {
             {
                   "id": "c40_l5_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Bu, şefin şimdiye kadar aldığı en prestijli ödüldür.",
                   "words": [
                         "This",
@@ -65189,13 +65189,13 @@ const chapter40Data = {
                   "hint": {
                         "formula": "[Present Perfect] + ever since + [Simple Past (V2)]",
                         "mirror": "Simülasyon anından (simulated) bu yana süregelen gelişim durumu.",
-                        "academicNote": "Since veya ever since bağlacının getirdiği bu yapı akademik sınavlarda en sık sorulan zaman kalıplarından biridir."
+                        "academicNote": "Since veya ever since bağlacının getirdiği bu yapı sınavlarda en sık sorulan zaman kalıplarından biridir."
                   }
             },
             {
                   "id": "c40_l6_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Merkez bankası faiz oranlarını düşürdüğünden beri, uluslararası yatırımcılar yerel göstergeleri izliyor.",
                   "words": [
                         "Since",
@@ -65242,13 +65242,13 @@ const chapter40Data = {
                   "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
                   "sentence": "Local academic institutions have preserved the poet's original manuscripts ever since the ministry declared the archive a protected heritage site.",
                   "options": [
-                        "Bakanlık arşivi korunan miras alanı ilan ettiğinden beri, yerel akademik kurumlar şairin orijinal el yazmalarını korumaktadır.",
-                        "Bakanlık arşivi korunan miras alanı ilan edeceği için, yerel akademik kurumlar şairin el yazmalarını korumaya başladı.",
-                        "Yerel akademik kurumlar el yazmalarını koruma altına aldıktan hemen sonra bakanlık burayı miras alanı ilan etti.",
-                        "Bakanlık arşivi korunan miras alanı ilan etmeden önce yerel akademik kurumlar orijinal el yazmalarını zaten koruyordu."
+                        "Bakanlık arşivi korunan miras alanı ilan ettiğinden beri, yerel kurumlar şairin orijinal el yazmalarını korumaktadır.",
+                        "Bakanlık arşivi korunan miras alanı ilan edeceği için, yerel kurumlar şairin el yazmalarını korumaya başladı.",
+                        "Yerel kurumlar el yazmalarını koruma altına aldıktan hemen sonra bakanlık burayı miras alanı ilan etti.",
+                        "Bakanlık arşivi korunan miras alanı ilan etmeden önce yerel kurumlar orijinal el yazmalarını zaten koruyordu."
                   ],
                   "correctIndex": 0,
-                  "translation": "Bakanlık arşivi korunan miras alanı ilan ettiğinden beri, yerel akademik kurumlar şairin orijinal el yazmalarını korumaktadır.",
+                  "translation": "Bakanlık arşivi korunan miras alanı ilan ettiğinden beri, yerel kurumlar şairin orijinal el yazmalarını korumaktadır.",
                   "explanation": "Ever since ile kurulan yapıda yan cümle V2 (declared) olup, ana cümlede süregelen eylem Present Perfect (have preserved) ile verilmiştir.",
                   "hint": {
                         "formula": "Subject + [Have/Has V3] + ever since + Subject + [Simple Past (V2)]",
@@ -65473,7 +65473,7 @@ const chapter40Data = {
             {
                   "id": "c40_l7_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Havacılık ve uzay mühendisleri, yerel havacılık filosunun daha yakıt verimli motorlara sahip olmasını diliyor.",
                   "words": [
                         "Aerospace",
@@ -65672,7 +65672,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "anticipate + [_____] + advance",
                         "mirror": "Riski azaltmak için önceden yapılacak tahmin eylemi.",
-                        "academicNote": "In advance, akademik metinlerde zaman zarfı olarak sıkça kullanılır."
+                        "academicNote": "In advance, metinlerde zaman zarfı olarak sıkça kullanılır."
                   }
             },
             {
@@ -65747,7 +65747,7 @@ const chapter40Data = {
             {
                   "id": "c40_l8_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Merkez bankasının optimal piyasa likidite havuzlarını sürdürmesi çok önemlidir.",
                   "words": [
                         "It",
@@ -66023,7 +66023,7 @@ const chapter40Data = {
             {
                   "id": "c40_l9_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Aşı adayının uzun vadeli bir bağışıklık yanıtı tetikleyip tetiklemeyeceği kurul tarafından hala değerlendiriliyor.",
                   "words": [
                         "Whether",
@@ -66140,7 +66140,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "Whether and If distribution constraints",
                         "mirror": "Whether her yerde çalışır; If sadece nesne konumunda serbesttir.",
-                        "academicNote": "Edat ve cümle başlarında If yasağı en çok test edilen akademik konudur."
+                        "academicNote": "Edat ve cümle başlarında If yasağı en çok test edilen konudur."
                   }
             },
             {
@@ -66262,7 +66262,7 @@ const chapter40Data = {
       lessonTitle: "10: THAT Bağlacının Ayırt Edilme Geometrisi",
       konuAnlatimi: {
         baslik: "THAT Geometrisi: Adjective Clause vs. Noun Clause (Kural 94 & 107)",
-        teorikMantik: "Akademik metinlerde en çok kafa karıştıran kelime 'THAT' bağlacıdır. Sıfat cümleciği (Adjective Clause) mi yoksa İsim cümleciği (Noun Clause) mi olduğunu ayırt etmek tam bir matematiksel analiz gerektirir.",
+        teorikMantik: "metinlerde en çok kafa karıştıran kelime 'THAT' bağlacıdır. Sıfat cümleciği (Adjective Clause) mi yoksa İsim cümleciği (Noun Clause) mi olduğunu ayırt etmek tam bir matematiksel analiz gerektirir.",
         formul: "1. İsim + THAT + Eksik Cümle (Özne veya Nesne eksik) -> Adjective Clause (Sıfat Cümlesi)\n2. Fiil / Sıfat / Soyut İsim + THAT + Tam Cümle (Eksiksiz SVO) -> Noun Clause (İsim Cümlesi)",
         altinKural: "Bir fiilin, sıfatın veya aktarım kelimesinin yanına gelen THAT arkasından kesinlikle tam, dil bilgisel olarak eksiksiz bir cümle ister. Aksine 'what' ve 'who' bağlaçları arkalarından eksik cümle ararlar."
       },
@@ -66307,7 +66307,7 @@ const chapter40Data = {
             {
                   "id": "c40_l10_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Teknik mühendisler Toprak Razgatlıoğlu'nun yarın tur rekorunu kıracağına inanıyor.",
                   "words": [
                         "Technical",
@@ -66349,7 +66349,7 @@ const chapter40Data = {
             {
                   "id": "c40_l10_e1_q4",
                   "type": "multiple-choice",
-                  "prompt": "Boşluğa gelecek en uygun akademik bağlacı seçin:",
+                  "prompt": "Boşluğa gelecek en uygun bağlacı seçin:",
                   "sentence": "The aerospace company rejected the technical report ___ the ground engineers had submitted prior to the flight check.",
                   "options": [
                         "that",
@@ -66583,7 +66583,7 @@ const chapter40Data = {
             {
                   "id": "c40_l11_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Botanik konseyinin yatırım yaptığı alp serası, nadir hibrit orkide tohumlarını tanıttı.",
                   "words": [
                         "The",
@@ -66855,7 +66855,7 @@ const chapter40Data = {
                   "isTrue": true,
                   "correctAnswer": "true",
                   "translation": "Dinamik algoritma, yüksek dalgalanma sırasında piyasa likidite havuzlarını stabilize etmek için kesin bir süreç formüle etti.",
-                  "explanation": "Noun + by which + to + V1 (a process by which to stabilize) akademik kısaltma yapısı tamamen kurallara uygundur.",
+                  "explanation": "Noun + by which + to + V1 (a process by which to stabilize) kısaltma yapısı tamamen kurallara uygundur.",
                   "hint": {
                         "formula": "Noun + by which + [to + V1]",
                         "mirror": "Likiditenin dengelenmesi (stabilize) için kullanılan yöntem/araç nitelemesi.",
@@ -66865,7 +66865,7 @@ const chapter40Data = {
             {
                   "id": "c40_l12_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Tıp kurulu şu anda tartışmalı klinik araştırmayı durdurup durdurmayacağını tartışıyor.",
                   "words": [
                         "The",
@@ -67052,7 +67052,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "how he should maintain -> how to maintain",
                         "mirror": "Virajlarda yol tutuşunun (maintain traction) korunma yönteminin kısaltılması.",
-                        "academicNote": "Modallı isim cümleciklerini mastarla (to V1) kısaltmak yaygın bir akademik dönüşümdür."
+                        "academicNote": "Modallı isim cümleciklerini mastarla (to V1) kısaltmak yaygın bir dönüşümdür."
                   }
             },
             {
@@ -67147,7 +67147,7 @@ const chapter40Data = {
             {
                   "id": "c40_l13_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Optimum arka lastik yol tutuşunu korumak Toprak Razgatlıoğlu'na büyük bir taktik avantaj sağlar.",
                   "words": [
                         "Maintaining",
@@ -67317,7 +67317,7 @@ const chapter40Data = {
             {
                   "id": "c40_l13_e1_q10",
                   "type": "inversion-transformer",
-                  "prompt": "Verilen düz cümleyi gerund özne kullanarak tekil fiilli akademik yapıya dönüştürün:",
+                  "prompt": "Verilen düz cümleyi gerund özne kullanarak tekil fiilli yapıya dönüştürün:",
                   "mainSentence": "Engineers calibrate drone engine components, and this task takes hours.",
                   "options": [
                         "Calibrating drone engine components takes hours.",
@@ -67380,7 +67380,7 @@ const chapter40Data = {
       lessonTitle: "14: Doğrudan Yalın Fiil İsteyen Mastar Amaç Yapıları",
       konuAnlatimi: {
         baslik: "Mastar Amaç Yapılarından Sonra Yalın Fiil Zorunluluğu (Kural 39)",
-        teorikMantik: "Akademik metinlerde '-mek amacıyla, yapmak için' anlamını vererek eylemin gerekçesini açıklayan temel yapılar (To, In order to, So as to) kendilerinden sonra gelen eylemi doğrudan mastar formuna bağlarlar. Bu yapılar arkalarından cümle değil, doğrudan fiil grubu alırlar.",
+        teorikMantik: "metinlerde '-mek amacıyla, yapmak için' anlamını vererek eylemin gerekçesini açıklayan temel yapılar (To, In order to, So as to) kendilerinden sonra gelen eylemi doğrudan mastar formuna bağlarlar. Bu yapılar arkalarından cümle değil, doğrudan fiil grubu alırlar.",
         formul: "[To / In order to / So as to] + Fiilin En Yalın Hali (VERB / V1)",
         altinKural: "YALIN FİİL ZORUNLULUĞU: Amaç bildiren bu mastar yapılarından sonra gelen fiile asla '-ing' takısı, geçmiş zaman eki (-ed) veya şahıs eki (-s) getirilemez. Fiil tamamen modifikasyondan arındırılmış çıplak haliyle kalmalıdır. (Örn: In order to fix the latency - 'fixing' veya 'fixed' kullanımı kesinlikle dil bilgisi hatasıdır)."
       },
@@ -67422,7 +67422,7 @@ const chapter40Data = {
           {
             "id": "c40_l14_e1_q3",
             "type": "word-bank",
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "translation": "Operasyonel gecikmeyi en aza indirmek amacıyla yer mühendisleri ikincil uçuş telemetri kalkanlarını kalibre etti.",
             "words": ["In", "order", "to", "minimize", "operational", "latency,", "ground", "engineers", "calibrated", "the", "secondary", "flight", "telemetry", "shields."],
             "correctOrder": ["In", "order", "to", "minimize", "operational", "latency,", "ground", "engineers", "calibrated", "the", "secondary", "flight", "telemetry", "shields."],
@@ -67532,7 +67532,7 @@ const chapter40Data = {
             "hint": {
               "formula": "so [___] to + V1 (ensure)",
               "mirror": "Güvenli geçiş sağlama amacı.",
-              "academicNote": "so as to kalıbı akademik metinlerde to ve in order to ile eş anlamlıdır."
+              "academicNote": "so as to kalıbı metinlerde to ve in order to ile eş anlamlıdır."
             }
           },
           {
@@ -67641,7 +67641,7 @@ const chapter40Data = {
             {
                   "id": "c40_l15_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Sera yöneticisi, konseyin geçen yıl nadir hibrit tohumları korumuş olmasını tercih ederdi.",
                   "words": [
                         "The",
@@ -67880,7 +67880,7 @@ const chapter40Data = {
       lessonTitle: "16: As if / As though: Gerçek vs. Gerçek Dışı Durum Geometrisi",
       konuAnlatimi: {
         "baslik": "As if / As though: Gerçek vs. Gerçek Dışı Durum Geometrisi (Kural 45 & 118)",
-        "teorikMantik": "As if ve as though bağlaçları cümleye '-miş gibi' anlamı katar. Bu yapılardan sonra akademik metinlerde zaman seçimi tamamen 'durumun olasılığına' bağlıdır. Eğer konuşan kişi durumun gerçek olma ihtimalini yüksek görüyorsa düz zamanları (Real), durumun tamamen imkansız veya uydurma olduğunu biliyorsa bir derece geçmiş zamanları (Unreal Tense Shift) tetikler.",
+        "teorikMantik": "As if ve as though bağlaçları cümleye '-miş gibi' anlamı katar. Bu yapılardan sonra metinlerde zaman seçimi tamamen 'durumun olasılığına' bağlıdır. Eğer konuşan kişi durumun gerçek olma ihtimalini yüksek görüyorsa düz zamanları (Real), durumun tamamen imkansız veya uydurma olduğunu biliyorsa bir derece geçmiş zamanları (Unreal Tense Shift) tetikler.",
         "formul": "1. GERÇEK (Real - Yüksek İhtimal): Look/Sound/Act + as if + Present Tenses (V1 / am-is-are / have-has V3)\n2. GERÇEK DIŞI (Unreal - İmkansız/Uydurma): Act/Talk + as if + [Şu an için: Simple Past (V2 / WERE)] ya da [Geçmiş için: Past Perfect (Had V3)]",
         "altinKural": "UNREAL TENSE KAYMASI: Eğer bir özne, gerçekte sahip olmadığı bir unvan veya durum varmış gibi davranıyorsa (Örn: He talks as if he were the CEO - ama aslında CEO değil), şu an anlatılmasına rağmen yan cümle kesinlikle 'V2' veya 'were' olmak zorundadır. 'Is' veya 'will' kullanımı bu tür durumlarda kesinlikle elenir."
 },
@@ -67925,7 +67925,7 @@ const chapter40Data = {
             {
                   "id": "c40_l16_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Genç broker, şirket varlıklarını sanki onlarca yıldır çok uluslu finansal portföyleri yönetiyormuş gibi harcadı.",
                   "words": [
                         "The",
@@ -68166,7 +68166,7 @@ const chapter40Data = {
       lessonTitle: "17: Zarf Konumunda Gizli Şart Cümleleri ve Inversion",
       konuAnlatimi: {
         "baslik": "Zarf Konumunda Gizli Şart Cümleleri ve Inversion (Kural 89)",
-        "teorikMantik": "Akademik İngilizcede 'If' bağlacı cümleden düşürüldüğünde, yardımcı fiil (Had, Should, Were) öznenin önüne geçerek cümleyi devrik (Inverted) hale getirir. Bu devrik yapı sadece cümlenin başında değil, cümlenin sağ tarafında (ana cümleden sonra gelen zarf konumu) yer aldığında da katı zaman uyum matrislerine tabidir.",
+        "teorikMantik": "İngilizcede 'If' bağlacı cümleden düşürüldüğünde, yardımcı fiil (Had, Should, Were) öznenin önüne geçerek cümleyi devrik (Inverted) hale getirir. Bu devrik yapı sadece cümlenin başında değil, cümlenin sağ tarafında (ana cümleden sonra gelen zarf konumu) yer aldığında da katı zaman uyum matrislerine tabidir.",
         "formul": "1. Type 2 Inversion (Sağda): Main Clause + [were + Subject + to V1 / Noun Phrase]\n2. Type 3 Inversion (Sağda): Main Clause + [had + Subject + V3]",
         "altinKural": "YARDIMCI FİİL KİLİDİ: Cümle sonunda 'if' olmadan bir şart yapısı kuruluyorsa, yan cümle asla düz bir dizilimle (Subject + Verb) başlayamaz. Yardımcı fiil (had/were/should) mutlaka öznenin önüne fırlatılmalıdır. Olumsuz devrik yapılarda ise 'not' eki yardımcı fiille birleşmez, öznenin arkasında çıplak kalır (Örn: ...had the team not altered the parameters)."
 },
@@ -68211,7 +68211,7 @@ const chapter40Data = {
             {
                   "id": "c40_l17_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Komisyon vergi reformunu uygulasaydı, merkez bankası piyasa likidite havuzlarını dengelerdi.",
                   "words": [
                         "The",
@@ -68420,7 +68420,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "focused + [_____] + noun",
                         "mirror": "Telemetrik süspansiyon verilerine odaklanma (focused) durumu.",
-                        "academicNote": "Focused fiili on edatı olmadan akademik nesneye bağlanamaz."
+                        "academicNote": "Focused fiili on edatı olmadan nesneye bağlanamaz."
                   }
             },
             {
@@ -68452,7 +68452,7 @@ const chapter40Data = {
         "baslik": "Zıtlık Bağlaçlarında Paralellik ve Terazi Dengesi (Kural 74 & 112)",
         "teorikMantik": "While ve whereas gibi doğrudan/saf zıtlık (direct contrast) bildiren bağlaçlar, cümledeki iki farklı özneyi, zamanı veya miktar eğilimini birbiriyle kıyaslar. Bu bağlaçların kurduğu geometride, terazinin bir kefesinde artış veya olumlu bir durum varsa, diğer kefesinde azalış veya olumsuz bir durum yer alarak tam bir denge sağlanmalıdır.",
         "formul": "1. While / Whereas + [Sürekli/Artan Eylem (Present Continuous / V1)] , [Azalan/Sabit Eylem (Present Continuous / V1)]\n2. Although / Even though + [Beklenmedik Durum (Past Simple V2)] , [Ana Cümle Zıt Sonuç (Past Simple V2)]",
-        "altinKural": "TENSE PARALELLİĞİ: 'While' ve 'Whereas' iki durumu eş zamanlı kıyaslıyorsa, iki taraf arasında dramatik bir zaman kopukluğu (Örn: Bir tarafı Present Perfect yaparken diğer tarafı Past Perfect yapmak) akademik olarak elenir. Zamanlar genelde paralel veya aynı zaman dilimine (Present-Present / Past-Past) mühürlenmek zorundadır."
+        "altinKural": "TENSE PARALELLİĞİ: 'While' ve 'Whereas' iki durumu eş zamanlı kıyaslıyorsa, iki taraf arasında dramatik bir zaman kopukluğu (Örn: Bir tarafı Present Perfect yaparken diğer tarafı Past Perfect yapmak) olarak elenir. Zamanlar genelde paralel veya aynı zaman dilimine (Present-Present / Past-Past) mühürlenmek zorundadır."
 },
       exercises: {
       "exercise_1": [
@@ -68495,7 +68495,7 @@ const chapter40Data = {
             {
                   "id": "c40_l18_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Merkez bankası piyasa likidite havuzlarını dengelemesine rağmen, uluslararası yatırımcılar temkinli kaldı.",
                   "words": [
                         "Although",
@@ -68551,7 +68551,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "While + Subject + thrive (V1) , Subject + struggles (V1)",
                         "mirror": "Hibrit orkidenin gelişimine (thrive) karşılık yerli floranın zorlanması.",
-                        "academicNote": "Genel geçer akademik gerçeklerde zıtlık present zamanlarla kurulur."
+                        "academicNote": "Genel geçer gerçeklerde zıtlık present zamanlarla kurulur."
                   }
             },
             {
@@ -68728,7 +68728,7 @@ const chapter40Data = {
         "baslik": "Geçmişe Yönelik Modallar ve Çıkarım Matrisi (Kural 24 & 105)",
         "teorikMantik": "İngilizcede modalların arkasına 'Have + V3' yapısı getirildiğinde eylem tamamen geçmişe mühürlenir. Bu yapılar artık birer zorunluluk veya tavsiye değil; geçmişte yaşanmış olaylara yönelik tahmin, çıkarım ya da kaçırılmış fırsat eleştirisi bildirirler.",
         "formul": "1. Must have V3: Geçmişe dönük güçlü olumlu çıkarım (... yapmış olmalı)\n2. Should have V3: Kaçırılmış ödev/pişmanlık (... yapmalıydı ama yapmadı)\n3. Might/Could have V3: Geçmişe dönük zayıf olasılık (... yapmış olabilir)\n4. Couldn't have V3: Geçmişe dönük kesin imkansızlık (... yapmış olması imkansız)",
-        "altinKural": "YASAKLI MODAL ANLAMLARI: Geçmişe yönelik güçlü bir olumsuz çıkarım yaparken (yapmamış olmalı anlamında) asla 'mustn't have V3' kullanılmaz! Akademik İngilizcede bu anlamın yegane karşılığı 'can't have V3' veya 'couldn't have V3' yapısıdır. Ayrıca 'should have V3' eylemin gerçekte YAPILMADIĞINI gösterir."
+        "altinKural": "YASAKLI MODAL ANLAMLARI: Geçmişe yönelik güçlü bir olumsuz çıkarım yaparken (yapmamış olmalı anlamında) asla 'mustn't have V3' kullanılmaz! İngilizcede bu anlamın yegane karşılığı 'can't have V3' veya 'couldn't have V3' yapısıdır. Ayrıca 'should have V3' eylemin gerçekte YAPILMADIĞINI gösterir."
 },
       exercises: {
       "exercise_1": [
@@ -68771,7 +68771,7 @@ const chapter40Data = {
             {
                   "id": "c40_l19_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Broker acil mali sübvansiyon olmadan piyasa likidite havuzlarını dengelemiş olamaz.",
                   "words": [
                         "The",
@@ -68852,7 +68852,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "Subject + [couldn't have + V3] + last month",
                         "mirror": "Hata: mustn't have discovered. Güçlü olumsuz çıkarım ihlali vardır.",
-                        "academicNote": "Mustn't have yapısı akademik olarak yasaklı çıkarım anlamı taşır."
+                        "academicNote": "Mustn't have yapısı olarak yasaklı çıkarım anlamı taşır."
                   }
             },
             {
@@ -69006,7 +69006,7 @@ const chapter40Data = {
       lessonTitle: "20: Nedensellik Yapılarında Edat vs. Bağlaç Ayrımı",
       konuAnlatimi: {
         "baslik": "Nedensellik Yapılarında Edat vs. Bağlaç Ayrımı (Kural 34 & 109)",
-        "teorikMantik": "Akademik İngilizcede 'yüzünden, -den dolayı' anlamına gelen nedensellik yapıları, arkalarından gelen kelime grubunun niteliğine göre katı bir dil bilgisel ayrıma tabidir. Bir yapının edat (preposition) mı yoksa bağlaç (conjunction) mı olduğu, cümlenin matematiksel dizilimini belirler.",
+        "teorikMantik": "İngilizcede 'yüzünden, -den dolayı' anlamına gelen nedensellik yapıları, arkalarından gelen kelime grubunun niteliğine göre katı bir dil bilgisel ayrıma tabidir. Bir yapının edat (preposition) mı yoksa bağlaç (conjunction) mı olduğu, cümlenin matematiksel dizilimini belirler.",
         "formul": "1. Because of / Due to / Owing to / On account of + Noun Phrase (İsim Grubu) / V-ing\n2. Because / Since / As / Inasmuch as + Tam Cümle (Eksiksiz SVO)",
         "altinKural": "YAPISAL FİLTRE: 'Due to' veya 'Because of' yapılarının hemen arkasına eylemi çekimlenmiş aktif bir cümle (Subject + Verb) gelemez! Eğer edat grubundan sonra illa bir cümle yapısı getirilmek isteniyorsa, araya 'the fact that' kalıbı köprü olarak eklenmelidir (Örn: due to the fact that he altered the files)."
 },
@@ -69051,7 +69051,7 @@ const chapter40Data = {
             {
                   "id": "c40_l20_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Toprak besin maddelerinin dalgalanması nedeniyle, nadir hibrit orkide tohumları hızla soldu.",
                   "words": [
                         "Due",
@@ -69111,7 +69111,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "Subject + Verb + [inasmuch as] + Subject + Verb + Object",
                         "mirror": "Merkez bankasının yardımı reddetmesi (refused to grant) tam cümlesini bağlayın.",
-                        "academicNote": "Inasmuch as akademik İngilizcede 'because' anlamını karşılayan resmi bir bağlaçtır."
+                        "academicNote": "Inasmuch as İngilizcede 'because' anlamını karşılayan resmi bir bağlaçtır."
                   }
             },
             {
@@ -69164,7 +69164,7 @@ const chapter40Data = {
                   "hint": {
                         "formula": "Causality linking words devam patterns",
                         "mirror": "Edat = İsim; Bağlaç = Cümle; Fact that = Cümle.",
-                        "academicNote": "Owing to ve due to akademik olarak en çok tercih edilen edatsal nedensellik yapılarıdır."
+                        "academicNote": "Owing to ve due to olarak en çok tercih edilen edatsal nedensellik yapılarıdır."
                   }
             },
             {
@@ -69287,7 +69287,7 @@ const chapter40Data = {
       lessonTitle: "21: No Sooner ve Hardly ile Eş Zamanlı Devrik Zaman Yapıları",
       konuAnlatimi: {
         "baslik": "No Sooner ve Hardly ile Eş Zamanlı Devrik Zaman Yapıları (Kural 28 & 115)",
-        "teorikMantik": "Akademik İngilizcede 'bir eylemin yapılmasıyla diğerinin olması bir oldu / tam yapmıştı ki şu oldu' anlamına gelen kalıplar (No sooner... than / Hardly... when / Scarcely... when) olumsuz zarflarla başladığı için cümle başına geldiklerinde arkalarından gelen ilk cümleciği devrik yapıya zorlarlar. Eylemler arasındaki mikrosaniyelik öncelik-sonralık ilişkisi Tense seçimini belirler.",
+        "teorikMantik": "İngilizcede 'bir eylemin yapılmasıyla diğerinin olması bir oldu / tam yapmıştı ki şu oldu' anlamına gelen kalıplar (No sooner... than / Hardly... when / Scarcely... when) olumsuz zarflarla başladığı için cümle başına geldiklerinde arkalarından gelen ilk cümleciği devrik yapıya zorlarlar. Eylemler arasındaki mikrosaniyelik öncelik-sonralık ilişkisi Tense seçimini belirler.",
         "formul": "1. NO SOONER + [HAD + Subject + V3] + THAN + [Subject + Past Simple (V2)]\n2. HARDLY / SCARCELY + [HAD + Subject + V3] + WHEN + [Subject + Past Simple (V2)]",
         "altinKural": "BAĞLAÇ VE DİZİLİM KİLİDİ: En sinsi tuzak bağlaçların birbiriyle karıştırılmasıdır: 'No sooner' sadece 'than' ile; 'Hardly/Scarcely' ise sadece 'when' ile eşleşebilir. Ayrıca zarf cümle başına geldiklerinde düz dizilim (No sooner the team had checked...) kesinlikle elenir; yardımcı fiil 'had' öznenin önüne fırlatılmalıdır."
 },
@@ -69332,7 +69332,7 @@ const chapter40Data = {
             {
                   "id": "c40_l21_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Araştırma hastanesi varyantı izole eder etmez tıp kurulu raporu onayladı.",
                   "words": [
                         "The",
@@ -69572,7 +69572,7 @@ const chapter40Data = {
       lessonTitle: "22: Provided that ve As long as Şart Geometrisi",
       konuAnlatimi: {
         "baslik": "Provided that ve As long as Şart Geometrisi (Kural 41 & 88)",
-        "teorikMantik": "Akademik İngilizcede 'koşuluyla / -dığı sürece' anlamını veren Provided that, Providing that, As long as ve So long as bağlaçları, temel olarak birer 'If Clause' türevidir. Bu yapılar ana cümledeki eylemin gerçekleşmesini, kendi bağlandıkları yan cümledeki şartın yerine gelmesine bağlarlar.",
+        "teorikMantik": "İngilizcede 'koşuluyla / -dığı sürece' anlamını veren Provided that, Providing that, As long as ve So long as bağlaçları, temel olarak birer 'If Clause' türevidir. Bu yapılar ana cümledeki eylemin gerçekleşmesini, kendi bağlandıkları yan cümledeki şartın yerine gelmesine bağlarlar.",
         "formul": "1. Present Matrisi: [Provided that + Present Simple (V1)] , [Ana Cümle: Future Simple (Will V1)]\n2. Past Matrisi: [Provided that + Past Simple (V2)] , [Ana Cümle: Would V1 / Past Modal]",
         "altinKural": "KOŞUL CÜMLESİ GELECEK YASAĞI: Tıpkı zaman bağlaçlarında olduğu gibi, koşul bildiren 'provided that' veya 'as long as' yapılarının hemen içine (bağlacın sağ tarafına) asla 'will' veya 'would' gelemez! Koşul cümleciği present ya da past çekimlenmek zorundadır; gelecek zaman anlamı ana cümleye mühürlenir."
 },
@@ -69617,7 +69617,7 @@ const chapter40Data = {
             {
                   "id": "c40_l22_e1_q3",
                   "type": "word-bank",
-                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                  "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                   "translation": "Bakanlığın vergi reformunu uygulaması koşuluyla, çok uluslu şirket piyasa likidite havuzlarını dengeleyebilirdi.",
                   "words": [
                         "The",
@@ -69751,7 +69751,7 @@ const chapter40Data = {
                   ],
                   "correctIndex": 0,
                   "translation": "Uçuş ekipleri yüksek irtifa basınç göstergelerini izlediği sürece, otomatik drone sistemi minimum yapısal hasar alır.",
-                  "explanation": "Genel geçer akademik present/present (sustains ... monitor) koşul dengesi tamamen doğrudur.",
+                  "explanation": "Genel geçer present/present (sustains ... monitor) koşul dengesi tamamen doğrudur.",
                   "hint": {
                         "formula": "sustains (V1) + as long as + monitor (V1) (Present/Present Real)",
                         "mirror": "Ekiplerin basınç göstergelerini izlemesi (monitor) genel şartını niteleyin.",
@@ -69859,7 +69859,7 @@ const chapter40Data = {
     "lessonTitle": "23: Unless ile Gizli Olumsuzluk ve Şart Geometrisi",
     "konuAnlatimi": {
         "baslik": "Unless ile Gizli Olumsuzluk ve Şart Geometrisi (Kural 43 & 102)",
-        "teorikMantik": "Akademik İngilizcede 'unless' bağlacı, 'if not' (eğer olmazsa) anlamını kendi içinde barındırır. Anlamca olumsuz olsa da, dil bilgisel olarak bağlandığı yan cümle yapısal olarak olumlu kurulmak zorundadır. Tense kuralları açısından ise standart bir 'If Clause' matrisini takip eder.",
+        "teorikMantik": "İngilizcede 'unless' bağlacı, 'if not' (eğer olmazsa) anlamını kendi içinde barındırır. Anlamca olumsuz olsa da, dil bilgisel olarak bağlandığı yan cümle yapısal olarak olumlu kurulmak zorundadır. Tense kuralları açısından ise standart bir 'If Clause' matrisini takip eder.",
         "formul": "1. Present Matrisi: [Unless + Present Simple (Olumlu V1)] , [Ana Cümle: Olumsuz Future (Won't V1 / Will fail)]\n2. Past Matrisi: [Unless + Past Simple (Olumlu V2)] , [Ana Cümle: Past Modal (Would not V1)]",
         "altinKural": "ÇİFTE OLUMSUZLUK YASAĞI: Unless bağlacının hemen arkasından gelen yan cümle içine asla 'don't', 'doesn't' veya 'didn't' gibi olumsuz yardımcı fiiller getirilemez! Çünkü unless zaten cümleyi anlamca olumsuz yapmıştır, dil bilgisel olarak olumlu bir eylem (V1 / V2) ister. Ayrıca bu cümlecik içine 'will/would' gelemez."
     },
@@ -69904,7 +69904,7 @@ const chapter40Data = {
             {
                 "id": "c40_l23_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Merkez bankası acil mali sübvansiyon sağlamadıkça, çok uluslu şirket iflasla karşı karşıya kalırdı.",
                 "words": [
                     "The",
@@ -70143,7 +70143,7 @@ const chapter40Data = {
     "lessonTitle": "24: In case ve In case of Yapısal Önlem Geometrisi",
     "konuAnlatimi": {
         "baslik": "In case ve In case of Yapısal Önlem Geometrisi (Kural 55 & 108)",
-        "teorikMantik": "Akademik İngilizcede bir olumsuzluğa veya riske karşı 'önceden alınan tedbiri' anlatmak için In case (bağlaç) veya In case of (edat) yapıları tercih edilir. Bu iki yapı anlamca akraba olsalar da arkalarından gelen kelime gruplarının dil bilgisini matematiksel olarak ikiye bölerler.",
+        "teorikMantik": "İngilizcede bir olumsuzluğa veya riske karşı 'önceden alınan tedbiri' anlatmak için In case (bağlaç) veya In case of (edat) yapıları tercih edilir. Bu iki yapı anlamca akraba olsalar da arkalarından gelen kelime gruplarının dil bilgisini matematiksel olarak ikiye bölerler.",
         "formul": "1. In case + Tam Çekimli Cümle (Subject + Verb + Object)\n2. In case of + Sadece İsim Grubu (Noun Phrase) / V-ing",
         "altinKural": "TEDBİR VE ZAMAN KISITLAMASI: 'In case' yapısının içine asla 'will' veya 'would' gelemez; genellikle Present Simple (V1) veya Past Simple (V2) tercih edilir. En sinsi tuzak ise 'In case of' edatından sonra tam cümle getirilmesidir. Eylem çekimli bir cümle varsa sadece 'In case' kullanılabilir."
     },
@@ -70188,7 +70188,7 @@ const chapter40Data = {
             {
                 "id": "c40_l24_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Çok uluslu şirketin iflas koruma başvurusunda bulunması ihtimaline karşı, merkez bankası en uygun piyasa likidite havuzlarını korur.",
                 "words": [
                     "The",
@@ -70307,7 +70307,7 @@ const chapter40Data = {
                 "hint": {
                     "formula": "Precautious structures matching matrix",
                     "mirror": "Bağlaç = Cümle; Edat = İsim; Lest = Should.",
-                    "academicNote": "Lest ve for fear that akademik makalelerde ve sınavlarda sıkça kullanılan alternatif tedbir yapılarıdır."
+                    "academicNote": "Lest ve for fear that makalelerde ve sınavlarda sıkça kullanılan alternatif tedbir yapılarıdır."
                 }
             },
             {
@@ -70430,7 +70430,7 @@ const chapter40Data = {
     "lessonTitle": "25: Noun Clause Yapılarında Eylemsel Eksiklik: That vs. What",
     "konuAnlatimi": {
         "baslik": "Noun Clause Yapılarında Eylemsel Eksiklik: That vs. What (Kural 96 & 117)",
-        "teorikMantik": "İsim cümlelerinde (Noun Clauses) en sık yapılan ve ayırt etmesi en zor olan akademik hata That ve What bağlaçlarının karıştırılmasıdır. Bir fiilden veya sıfattan sonra bu iki yapı da gelebilir ancak arkalarından çektikleri cümlenin dil bilgisel tamlık derecesi bağlacı belirler.",
+        "teorikMantik": "İsim cümlelerinde (Noun Clauses) en sık yapılan ve ayırt etmesi en zor olan hata That ve What bağlaçlarının karıştırılmasıdır. Bir fiilden veya sıfattan sonra bu iki yapı da gelebilir ancak arkalarından çektikleri cümlenin dil bilgisel tamlık derecesi bağlacı belirler.",
         "formul": "1. Verb + THAT + Tam Çekimli Cümle (Eksiksiz SVO)\n2. Verb + WHAT + Eksik Cümle (Öznesi veya Nesnesi düşmüş / eylemin nesnesi yok)",
         "altinKural": "NESNE BOŞLUĞU KANITI: 'What' bağlacı özü gereği 'şey / neyi' anlamına gelir ve bağlandığı yan cümleciğin içindeki bir ögeyi yutar. Eğer yan cümledeki fiilin nesnesi yoksa (Örn: ...what the team proposed - 'proposed' neyi sorusuna cevap vermiyor, nesnesi eksik), o boşluğu sadece 'what' doldurabilir. Cümle eksiksiz ise 'that' mühürlenir."
     },
@@ -70475,7 +70475,7 @@ const chapter40Data = {
             {
                 "id": "c40_l25_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Toprak Razgatlıoğlu'nu şaşırtan şey, arka lastik parametrelerindeki değişken bozulmaydı.",
                 "words": [
                     "What",
@@ -70754,7 +70754,7 @@ const chapter40Data = {
             {
                 "id": "c40_l26_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Yüksek derecede asidik toprak modellerinde yetiştirilen nadir hibrit orkide tohumları, mikro besinler olmadan hızla solar.",
                 "words": [
                     "Rare",
@@ -70989,7 +70989,7 @@ const chapter40Data = {
     "lessonTitle": "27: Miktar Belirteçli Sıfat Cümlecikleri: Of Which / Of Whom Geometrisi",
     "konuAnlatimi": {
         "baslik": "Miktar Belirteçli Sıfat Cümlecikleri: Of Which / Of Whom Geometrisi (Kural 137)",
-        "teorikMantik": "Akademik İngilizcede bir gruptan veya nesne kümesinden bahsettikten sonra, o kümenin bir kısmını, çoğunu veya hiçbirini niteleyerek sıfat cümleciği kurmak için [Miktar/Parça Zarfları + OF + Which (Cansız) / Whom (İnsan)] şablonu kullanılır. Bu yapının en büyük özelliği, iki bağımsız cümleyi tek bir akademik bütüne dönüştürmesidir.",
+        "teorikMantik": "İngilizcede bir gruptan veya nesne kümesinden bahsettikten sonra, o kümenin bir kısmını, çoğunu veya hiçbirini niteleyerek sıfat cümleciği kurmak için [Miktar/Parça Zarfları + OF + Which (Cansız) / Whom (İnsan)] şablonu kullanılır. Bu yapının en büyük özelliği, iki bağımsız cümleyi tek bir bütüne dönüştürmesidir.",
         "formul": "1. Cansız Nesneler: Noun (Plural) + [most / some / none / both] + OF WHICH + Tam Çekimli Cümle (SVO)\n2. İnsanlar: Noun (Plural) + [many / few / each / all] + OF WHOM + Tam Çekimli Cümle (SVO)",
         "altinKural": "BAĞLAÇ ZORUNLULUĞU TUZAĞI: En sinsi hata sıfat cümleciği yerine düz şahıs/nesne zamiri kullanılmasıdır (Örn: ...most of them failed yerine most of which failed denmelidir). Eğer arada bir bağlaç (and, but) yoksa 'them' veya 'it' kullanımı kesinlikle dil bilgisi hatasıdır ve cümleyi yapısal olarak çökertir."
     },
@@ -71034,7 +71034,7 @@ const chapter40Data = {
             {
                 "id": "c40_l27_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Sera yöneticisi, çoğu asidik toprak modellerinde çimlenen on hibrit orkide tohumunu izledi.",
                 "words": [
                     "The",
@@ -71274,7 +71274,7 @@ const chapter40Data = {
     "lessonTitle": "28: Karma Koşul Cümlecikleri: Mixed Conditionals Geometrisi",
     "konuAnlatimi": {
         "baslik": "Karma Koşul Cümlecikleri: Mixed Conditionals Geometrisi (Kural 47 & 116)",
-        "teorikMantik": "Akademik İngilizcede 'Mixed Conditional' yapıları, standart Type 2 veya Type 3 koşul cümlelerinin aksine, geçmiş ile günümüzü veya genel bir karakteri zamansal olarak çaprazlar. En yaygın iki karma model bulunur: Geçmişteki eylemin günümüze etkisi (Type 3 + Type 2) ve genel durumun geçmişteki eyleme etkisi (Type 2 + Type 3).",
+        "teorikMantik": "İngilizcede 'Mixed Conditional' yapıları, standart Type 2 veya Type 3 koşul cümlelerinin aksine, geçmiş ile günümüzü veya genel bir karakteri zamansal olarak çaprazlar. En yaygın iki karma model bulunur: Geçmişteki eylemin günümüze etkisi (Type 3 + Type 2) ve genel durumun geçmişteki eyleme etkisi (Type 2 + Type 3).",
         "formul": "1. Geçmiş Şart -> Günümüz Sonuç: If + Past Perfect (Had V3) , Main Clause: Would + V1 / Could + V1 (Zaman Zarfı: now, today)\n2. Genel/Şu An Şart -> Geçmiş Sonuç: If + Past Simple (V2 / WERE) , Main Clause: Would have V3 / Could have V3 (Zaman Zarfı: last year, yesterday)",
         "altinKural": "ZAMAN ZARFI ANAHTARI: Karma koşul cümlelerinin en büyük ipucu ve dil bilgisel zorunluluğu, iki tarafta yer alan farklı zaman zarflarıdır. Ana cümlede 'now', 'today' veya 'currently' gibi bir vurgu varsa ve 'If' tarafı geçmişi (yesterday, last season) anlatıyorsa, standart Type 3 yapısı bozularak sonuç kısmı 'would V1' yapılmak zorundadır."
     },
@@ -71319,7 +71319,7 @@ const chapter40Data = {
             {
                 "id": "c40_l28_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Eğer laboratuvar ekibi alp hava basıncını simüle etmiş olsaydı, hibrit orkide tohumları şu an gelişiyor olurdu.",
                 "words": [
                     "If",
@@ -71556,9 +71556,9 @@ const chapter40Data = {
     "lessonTitle": "29: Zaman Zarfı İndirgemeleri ve Özne Paralelliği Kuralı",
     "konuAnlatimi": {
         "baslik": "Zaman Zarfı İndirgemeleri ve Özne Paralelliği Kuralı (Kural 84 & 142)",
-        "teorikMantik": "Akademik İngilizcede zaman bağlaçları (After, Before, While, When) içeren yan cümleler, özne ve yardımcı fiillerden arındırılarak kısaltılabilir. Ancak bu kısaltmanın (Participle Clause) yapılabilmesi için yan cümle ile ana cümlenin öznesinin kesinlikle AYNI olması şarttır. Eylemler arasında öncelik varsa 'Having V3', eş zamanlılık varsa 'V-ing' veya pasiflik durumunda 'V3' tercih edilir.",
+        "teorikMantik": "İngilizcede zaman bağlaçları (After, Before, While, When) içeren yan cümleler, özne ve yardımcı fiillerden arındırılarak kısaltılabilir. Ancak bu kısaltmanın (Participle Clause) yapılabilmesi için yan cümle ile ana cümlenin öznesinin kesinlikle AYNI olması şarttır. Eylemler arasında öncelik varsa 'Having V3', eş zamanlılık varsa 'V-ing' veya pasiflik durumunda 'V3' tercih edilir.",
         "formul": "1. Aktif Öncelik Kısaltması: Having + Past Participle (V3) , [Subject + Past Simple (V2)]\n2. Pasif Öncelik Kısaltması: Having been + Past Participle (V3) / V3 , [Subject + Past Simple (V2)]",
-        "altinKural": "ÖZNE UYUŞMAZLIĞI (DANGLING MODIFIER): En yaygın akademik hata, farklı öznelere sahip iki cümleyi kısaltmaya çalışmaktır. (Örn: Having isolated the virus, the clinic reports were updated -> Virüsü izole eden klinik raporları olamayacağı için bu cümle yapısal olarak çöker. Doğrusu: Having isolated the virus, the virologist updated the reports... şeklindedir)."
+        "altinKural": "ÖZNE UYUŞMAZLIĞI (DANGLING MODIFIER): En yaygın hata, farklı öznelere sahip iki cümleyi kısaltmaya çalışmaktır. (Örn: Having isolated the virus, the clinic reports were updated -> Virüsü izole eden klinik raporları olamayacağı için bu cümle yapısal olarak çöker. Doğrusu: Having isolated the virus, the virologist updated the reports... şeklindedir)."
     },
     "exercises": {
         "exercise_1": [
@@ -71591,7 +71591,7 @@ const chapter40Data = {
                 "isTrue": true,
                 "correctAnswer": "true",
                 "translation": "İkincil telemetri radar kalkanlarını kalibre ettikten sonra, otonom drone sürati güvenli bir şekilde tamamladı.",
-                "explanation": "Kalıbı kalibre eden ground engineers olsa da, drone kendi bileşenlerine sahip olduğu için 'drone completed' özne odağı akademik olarak kabul edilir.",
+                "explanation": "Kalıbı kalibre eden ground engineers olsa da, drone kendi bileşenlerine sahip olduğu için 'drone completed' özne odağı olarak kabul edilir.",
                 "hint": {
                     "formula": "Having + V3 , Subject + Verb (Tense agreement & Subject parallel)",
                     "mirror": "Dronun kalkanları kalibre ettikten sonra sürati tamamlama ilişkisini niteleyin.",
@@ -71601,7 +71601,7 @@ const chapter40Data = {
             {
                 "id": "c40_l29_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Asidik toprak modellerinde yetiştirilmiş olan nadir hibrit tohumlar hızla soldu.",
                 "words": [
                     "Having",
@@ -71712,7 +71712,7 @@ const chapter40Data = {
                 "hint": {
                     "formula": "Participle reduction time and voice alignment rules",
                     "mirror": "Önce-Aktif = Having V3; Önce-Pasif = Having been V3; Eşzaman-Aktif = V-ing.",
-                    "academicNote": "Akademik makalelerde akıcılığı sağlamak için adverbial clause yapıları bu kurallarla kısaltılır."
+                    "academicNote": "makalelerde akıcılığı sağlamak için adverbial clause yapıları bu kurallarla kısaltılır."
                 }
             },
             {
@@ -71782,7 +71782,7 @@ const chapter40Data = {
                 "hint": {
                     "formula": "After + S + V2 + O -> [Having + V3] + O , S + V2",
                     "mirror": "Tohumların laboratuvar ekibi tarafından çıkarılması (extracted) durumunu dönüştürün.",
-                    "academicNote": "Perfect participle (Having V3) yapısı zaman önceliğini en şık vurgulayan akademik formdur."
+                    "academicNote": "Perfect participle (Having V3) yapısı zaman önceliğini en şık vurgulayan formdur."
                 }
             },
             {
@@ -71832,9 +71832,9 @@ const chapter40Data = {
     "lessonTitle": "30: Büyük Final: İleri Düzey Karma Gramer Matrisi ve Sentez",
     "konuAnlatimi": {
         "baslik": "Büyük Final: İleri Düzey Karma Gramer Matrisi ve Sentez (Kural 150)",
-        "teorikMantik": "Akademik İngilizcenin zirve noktasında, karmaşık yapıların tek bir cümlede iç içe geçtiği sentez tasarımları yer alır. Bu final adımında, bağlaçların edat kısıtlamaları, devrik zaman kalıpları, mastar indirgemeleri ve subjunctive kilitleri entegre edilerek öğrencinin üst düzey muhakeme yeteneği test edilir.",
-        "formul": "1. [Devrik Giriş] + [Subjunctive Kilit] + [Edat Arkası Relative Bağlaç] -> Üst düzey akademik sentez mimarisi.\n2. [Participle Modifier] + [Conditionals zaman kayması matrisi] -> Çoklu gramer filtresi.",
-        "altinKural": "BÜTÜNCÜL KONTROL FİLTRESİ: Akademik metinlerdeki en büyük tuzaklar tek bir kurala odaklanırken araya sıkıştırılan ikinci kural ihlalidir (Örn: Devrik dizilimi doğru kurup, edatın arkasına 'that' relative yapısını gizlemek). Cümlenin tüm bileşenleri (çatı, zaman, edat, bağlaç) eş zamanlı olarak denetlenmelidir."
+        "teorikMantik": "İngilizcenin zirve noktasında, karmaşık yapıların tek bir cümlede iç içe geçtiği sentez tasarımları yer alır. Bu final adımında, bağlaçların edat kısıtlamaları, devrik zaman kalıpları, mastar indirgemeleri ve subjunctive kilitleri entegre edilerek öğrencinin üst düzey muhakeme yeteneği test edilir.",
+        "formul": "1. [Devrik Giriş] + [Subjunctive Kilit] + [Edat Arkası Relative Bağlaç] -> Üst düzey sentez mimarisi.\n2. [Participle Modifier] + [Conditionals zaman kayması matrisi] -> Çoklu gramer filtresi.",
+        "altinKural": "BÜTÜNCÜL KONTROL FİLTRESİ: metinlerdeki en büyük tuzaklar tek bir kurala odaklanırken araya sıkıştırılan ikinci kural ihlalidir (Örn: Devrik dizilimi doğru kurup, edatın arkasına 'that' relative yapısını gizlemek). Cümlenin tüm bileşenleri (çatı, zaman, edat, bağlaç) eş zamanlı olarak denetlenmelidir."
     },
     "exercises": {
         "exercise_1": [
@@ -71877,7 +71877,7 @@ const chapter40Data = {
             {
                 "id": "c40_l30_e1_q3",
                 "type": "word-bank",
-                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+                "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
                 "translation": "Çok uluslu şirket iflas başvurusunda bulunduğunda, merkez bankası piyasa likidite havuzlarını henüz yeni dengelemişti.",
                 "words": [
                     "Hardly",
@@ -71921,7 +71921,7 @@ const chapter40Data = {
                 "hint": {
                     "formula": "Hardly + had + Subject + stabilized + when + Subject + filed",
                     "mirror": "Likidite havuzlarının dengelenmesi (had stabilized) ile iflas başvurusu (filed) arasındaki zaman uyuşmasını niteleyin.",
-                    "academicNote": "Eş zamanlılık ve öncelik bildiren bu devrik zarf kombinasyonu akademik metinlerin en gözde bağlaçlarındandır."
+                    "academicNote": "Eş zamanlılık ve öncelik bildiren bu devrik zarf kombinasyonu metinlerin en gözde bağlaçlarındandır."
                 }
             },
             {
@@ -71968,8 +71968,8 @@ const chapter40Data = {
             {
                 "id": "c40_l30_e1_q6",
                 "type": "matching",
-                "prompt": "Akademik gramer tetikleyicilerini zorunlu yapısal çıktılarla eşleştirin:",
-                "leftHeader": "Akademik Gramer Tetikleyicisi",
+                "prompt": "gramer tetikleyicilerini zorunlu yapısal çıktılarla eşleştirin:",
+                "leftHeader": "Gramer Tetikleyicisi",
                 "rightHeader": "Zorunlu Yapısal Çıktı",
                 "pairs": [
                     {
@@ -71989,8 +71989,8 @@ const chapter40Data = {
                         "right": "Yan cümle zaman kaymasıyla simple past veya past perfect olur"
                     }
                 ],
-                "translation": "Akademik gramer zirve eşleşmeleri.",
-                "explanation": "İleri düzey akademik cümlelerde devriklik, edatlı relative clause, subjunctive ve would rather kısıtlamaları bir arada yer alabilir.",
+                "translation": "gramer zirve eşleşmeleri.",
+                "explanation": "İleri düzey cümlelerde devriklik, edatlı relative clause, subjunctive ve would rather kısıtlamaları bir arada yer alabilir.",
                 "hint": {
                     "formula": "Advanced grammar synthesization rules",
                     "mirror": "Edat+Which = Doğru; Seldom+Devrik = Doğru; Demand+Yalın = Doğru.",
@@ -72137,7 +72137,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Tarih / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Tarih scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72146,8 +72146,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72157,23 +72157,23 @@ const chapter40Data = {
           {
             "id": "c40_l1_q2",
             "type": "true-false",
-            "prompt": "[Psikoloji / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In psikoloji studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In psikoloji studies, researchers must adhere to strict guidelines.",
+            "prompt": "Verilen cümle doğru mu?",
+            "sentence": "In studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Psikoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
+            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
             "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Psikoloji alanı akademik kuralı."
+              "academicNote": "alanı kuralı."
             }
           },
           {
             "id": "c40_l1_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Siyaset / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Siyaset scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72182,8 +72182,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72193,7 +72193,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q4",
             "type": "true-false",
-            "prompt": "[Antropoloji / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -72203,13 +72203,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Antropoloji alanı akademik kuralı."
+              "academicNote": "Antropoloji alanı kuralı."
             }
           },
           {
             "id": "c40_l1_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Kültür / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Kültür scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72218,8 +72218,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72229,7 +72229,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q6",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in sinema demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72249,7 +72249,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q7",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72269,8 +72269,8 @@ const chapter40Data = {
           {
             "id": "c40_l1_q8",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -72278,18 +72278,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l1_q9",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72309,8 +72309,8 @@ const chapter40Data = {
           {
             "id": "c40_l1_q10",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -72318,23 +72318,23 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l1_q11",
             "type": "matching",
-            "prompt": "[Sosyoloji / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "[/ Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
-                "left": "Although sosyoloji theories evolved quickly,",
+                "left": "Although theories evolved quickly,",
                 "right": "foundational principles remained largely intact."
               },
               {
@@ -72342,7 +72342,7 @@ const chapter40Data = {
                 "right": "the research council will publish the annual report."
               },
               {
-                "left": "Unless policy makers consult psikoloji experts,",
+                "left": "Unless policy makers consult experts,",
                 "right": "social reforms will encounter structural resistance."
               }
             ],
@@ -72351,7 +72351,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q12",
             "type": "matching",
-            "prompt": "[Siyaset / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -72373,7 +72373,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Sinema / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in sinema has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in sinema, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -72388,7 +72388,7 @@ const chapter40Data = {
           {
             "id": "c40_l1_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Edebiyat / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of edebiyat, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -72403,12 +72403,12 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although sosyoloji scholars faced severe censorship, they managed to publish seminal treatises.",
+            "prompt": "[/ Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "sentence": "Although scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
-              "In spite of facing severe censorship, sosyoloji scholars managed to publish seminal treatises.",
-              "Because sosyoloji scholars faced censorship, they could not publish treatises.",
-              "Unless sosyoloji scholars face censorship, they will publish seminal treatises."
+              "In spite of facing severe censorship, scholars managed to publish seminal treatises.",
+              "Because scholars faced censorship, they could not publish treatises.",
+              "Unless scholars face censorship, they will publish seminal treatises."
             ],
             "correctIndex": 0,
             "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
@@ -72438,8 +72438,8 @@ const chapter40Data = {
           {
             "id": "c40_l2_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Psikoloji / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Psikoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
+            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -72447,18 +72447,18 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Psikoloji dersi temel yapısı."
+              "academicNote": "dersi temel yapısı."
             }
           },
           {
             "id": "c40_l2_q2",
             "type": "true-false",
-            "prompt": "[Siyaset / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In siyaset studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In siyaset studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -72468,13 +72468,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Siyaset alanı akademik kuralı."
+              "academicNote": "Siyaset alanı kuralı."
             }
           },
           {
             "id": "c40_l2_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Antropoloji / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Antropoloji scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72483,8 +72483,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72494,7 +72494,7 @@ const chapter40Data = {
           {
             "id": "c40_l2_q4",
             "type": "true-false",
-            "prompt": "[Kültür / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In kültür studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In kültür studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -72504,13 +72504,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Kültür alanı akademik kuralı."
+              "academicNote": "Kültür alanı kuralı."
             }
           },
           {
             "id": "c40_l2_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Sinema / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Sinema scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72519,8 +72519,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72530,7 +72530,7 @@ const chapter40Data = {
           {
             "id": "c40_l2_q6",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72550,8 +72550,8 @@ const chapter40Data = {
           {
             "id": "c40_l2_q7",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -72559,18 +72559,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l2_q8",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72590,8 +72590,8 @@ const chapter40Data = {
           {
             "id": "c40_l2_q9",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -72599,18 +72599,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l2_q10",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72630,8 +72630,8 @@ const chapter40Data = {
           {
             "id": "c40_l2_q11",
             "type": "matching",
-            "prompt": "[Tarih / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
@@ -72652,7 +72652,7 @@ const chapter40Data = {
           {
             "id": "c40_l2_q12",
             "type": "matching",
-            "prompt": "[Antropoloji / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -72674,7 +72674,7 @@ const chapter40Data = {
           {
             "id": "c40_l2_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Edebiyat / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in edebiyat has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in edebiyat, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -72689,7 +72689,7 @@ const chapter40Data = {
           {
             "id": "c40_l2_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Sosyoloji / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of sosyoloji, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -72704,7 +72704,7 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
             "sentence": "Although tarih scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
               "In spite of facing severe censorship, tarih scholars managed to publish seminal treatises.",
@@ -72726,7 +72726,7 @@ const chapter40Data = {
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
-      "teorikMantik": "Tavsiye, emir, aciliyet veya hayati önem bildiren akademik fiil ve sıfatlardan sonra gelen 'that' bağlacında özne ne olursa olsun fiil yalın kök (bare infinitive / V0) kalır.",
+      "teorikMantik": "Tavsiye, emir, aciliyet veya hayati önem bildiren fiil ve sıfatlardan sonra gelen 'that' bağlacında özne ne olursa olsun fiil yalın kök (bare infinitive / V0) kalır.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0",
       "altinKural": "Özne 'he/she/it' veya pasif olsa dahi V-s takısı veya am/is/are almaz! Örn: 'insist that he BE present' veya 'recommend that the report BE revised'."
     },
@@ -72739,7 +72739,7 @@ const chapter40Data = {
           {
             "id": "c40_l3_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Siyaset / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Siyaset scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72748,8 +72748,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72759,7 +72759,7 @@ const chapter40Data = {
           {
             "id": "c40_l3_q2",
             "type": "true-false",
-            "prompt": "[Antropoloji / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -72769,13 +72769,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Antropoloji alanı akademik kuralı."
+              "academicNote": "Antropoloji alanı kuralı."
             }
           },
           {
             "id": "c40_l3_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Kültür / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Kültür scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72784,8 +72784,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72795,7 +72795,7 @@ const chapter40Data = {
           {
             "id": "c40_l3_q4",
             "type": "true-false",
-            "prompt": "[Sinema / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In sinema studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In sinema studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -72805,13 +72805,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sinema alanı akademik kuralı."
+              "academicNote": "Sinema alanı kuralı."
             }
           },
           {
             "id": "c40_l3_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Edebiyat / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Edebiyat scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -72820,8 +72820,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -72831,8 +72831,8 @@ const chapter40Data = {
           {
             "id": "c40_l3_q6",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -72840,18 +72840,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l3_q7",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72871,8 +72871,8 @@ const chapter40Data = {
           {
             "id": "c40_l3_q8",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -72880,18 +72880,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l3_q9",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72911,7 +72911,7 @@ const chapter40Data = {
           {
             "id": "c40_l3_q10",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -72931,12 +72931,12 @@ const chapter40Data = {
           {
             "id": "c40_l3_q11",
             "type": "matching",
-            "prompt": "[Psikoloji / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "[/ Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
-                "left": "Although psikoloji theories evolved quickly,",
+                "left": "Although theories evolved quickly,",
                 "right": "foundational principles remained largely intact."
               },
               {
@@ -72953,7 +72953,7 @@ const chapter40Data = {
           {
             "id": "c40_l3_q12",
             "type": "matching",
-            "prompt": "[Kültür / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -72975,8 +72975,8 @@ const chapter40Data = {
           {
             "id": "c40_l3_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Sosyoloji / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in sosyoloji has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+            "paragraph": "Academic research in has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in sosyoloji, what condition is necessary for historical conclusions to be definitive?",
             "options": [
               "Archival data must be cross-referenced with modern field observations.",
@@ -72990,7 +72990,7 @@ const chapter40Data = {
           {
             "id": "c40_l3_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Tarih / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of tarih, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -73005,12 +73005,12 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although psikoloji scholars faced severe censorship, they managed to publish seminal treatises.",
+            "prompt": "[/ Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "sentence": "Although scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
-              "In spite of facing severe censorship, psikoloji scholars managed to publish seminal treatises.",
-              "Because psikoloji scholars faced censorship, they could not publish treatises.",
-              "Unless psikoloji scholars face censorship, they will publish seminal treatises."
+              "In spite of facing severe censorship, scholars managed to publish seminal treatises.",
+              "Because scholars faced censorship, they could not publish treatises.",
+              "Unless scholars face censorship, they will publish seminal treatises."
             ],
             "correctIndex": 0,
             "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
@@ -73040,7 +73040,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Antropoloji / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Antropoloji scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73049,8 +73049,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73060,7 +73060,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q2",
             "type": "true-false",
-            "prompt": "[Kültür / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In kültür studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In kültür studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -73070,13 +73070,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Kültür alanı akademik kuralı."
+              "academicNote": "Kültür alanı kuralı."
             }
           },
           {
             "id": "c40_l4_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Sinema / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Sinema scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73085,8 +73085,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73096,7 +73096,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q4",
             "type": "true-false",
-            "prompt": "[Edebiyat / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In edebiyat studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In edebiyat studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -73106,14 +73106,14 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Edebiyat alanı akademik kuralı."
+              "academicNote": "Edebiyat alanı kuralı."
             }
           },
           {
             "id": "c40_l4_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Sosyoloji / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Sosyoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
+            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -73121,18 +73121,18 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Sosyoloji dersi temel yapısı."
+              "academicNote": "dersi temel yapısı."
             }
           },
           {
             "id": "c40_l4_q6",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73152,8 +73152,8 @@ const chapter40Data = {
           {
             "id": "c40_l4_q7",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -73161,18 +73161,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l4_q8",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73192,7 +73192,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q9",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73212,7 +73212,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q10",
             "type": "multiple-choice",
-            "prompt": "[Kültür / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in kültür demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73232,8 +73232,8 @@ const chapter40Data = {
           {
             "id": "c40_l4_q11",
             "type": "matching",
-            "prompt": "[Siyaset / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
@@ -73254,7 +73254,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q12",
             "type": "matching",
-            "prompt": "[Sinema / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -73267,7 +73267,7 @@ const chapter40Data = {
                 "right": "academic institutions updated their curriculum."
               },
               {
-                "left": "In order to analyze sosyoloji trends thoroughly,",
+                "left": "In order to analyze trends thoroughly,",
                 "right": "researchers compiled extensive quantitative data."
               }
             ],
@@ -73276,7 +73276,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Tarih / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in tarih has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in tarih, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -73291,7 +73291,7 @@ const chapter40Data = {
           {
             "id": "c40_l4_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Psikoloji / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of psikoloji, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -73306,7 +73306,7 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
             "sentence": "Although siyaset scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
               "In spite of facing severe censorship, siyaset scholars managed to publish seminal treatises.",
@@ -73341,7 +73341,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Kültür / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Kültür scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73350,8 +73350,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73361,7 +73361,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q2",
             "type": "true-false",
-            "prompt": "[Sinema / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In sinema studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In sinema studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -73371,13 +73371,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sinema alanı akademik kuralı."
+              "academicNote": "Sinema alanı kuralı."
             }
           },
           {
             "id": "c40_l5_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Edebiyat / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Edebiyat scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73386,8 +73386,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73397,23 +73397,23 @@ const chapter40Data = {
           {
             "id": "c40_l5_q4",
             "type": "true-false",
-            "prompt": "[Sosyoloji / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In sosyoloji studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In sosyoloji studies, researchers must adhere to strict guidelines.",
+            "prompt": "Verilen cümle doğru mu?",
+            "sentence": "In studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Sosyoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
+            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
             "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sosyoloji alanı akademik kuralı."
+              "academicNote": "alanı kuralı."
             }
           },
           {
             "id": "c40_l5_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Tarih / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Tarih scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73422,8 +73422,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73433,8 +73433,8 @@ const chapter40Data = {
           {
             "id": "c40_l5_q6",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -73442,18 +73442,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l5_q7",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73473,7 +73473,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q8",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73493,7 +73493,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q9",
             "type": "multiple-choice",
-            "prompt": "[Kültür / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in kültür demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73513,7 +73513,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q10",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in sinema demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73533,8 +73533,8 @@ const chapter40Data = {
           {
             "id": "c40_l5_q11",
             "type": "matching",
-            "prompt": "[Antropoloji / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
@@ -73555,7 +73555,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q12",
             "type": "matching",
-            "prompt": "[Edebiyat / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -73564,7 +73564,7 @@ const chapter40Data = {
                 "right": "than international scholars initiated debate."
               },
               {
-                "left": "Due to significant changes in sosyoloji paradigms,",
+                "left": "Due to significant changes in paradigms,",
                 "right": "academic institutions updated their curriculum."
               },
               {
@@ -73577,8 +73577,8 @@ const chapter40Data = {
           {
             "id": "c40_l5_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Psikoloji / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in psikoloji has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+            "paragraph": "Academic research in has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in psikoloji, what condition is necessary for historical conclusions to be definitive?",
             "options": [
               "Archival data must be cross-referenced with modern field observations.",
@@ -73592,7 +73592,7 @@ const chapter40Data = {
           {
             "id": "c40_l5_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Siyaset / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of siyaset, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -73607,7 +73607,7 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
             "sentence": "Although antropoloji scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
               "In spite of facing severe censorship, antropoloji scholars managed to publish seminal treatises.",
@@ -73625,10 +73625,10 @@ const chapter40Data = {
   {
     "id": "c40_l6_merged",
     "unitId": "39_2",
-    "title": "6. Akademik Kısaltmalar",
+    "title": "6. Kısaltmalar",
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "6. Akademik Kısaltmalar (Participle & Gerund Reductions)",
+      "baslik": "6. Kısaltmalar (Participle & Gerund Reductions)",
       "teorikMantik": "Cümle birleştirme ve kısaltmalarda etken eylemler için 'V-ing', edilgen eylemler için 'V3', kronolojik olarak önce tamamlanmış etken eylemler için 'Having V3' kullanılır.",
       "formul": "Etken Kısaltma: V-ing + Object | Edilgen Kısaltma: V3 / Being V3 | Geçmiş Etken: Having V3 | Geçmiş Edilgen: Having been V3",
       "altinKural": "Kısaltma ile başlayan yan cümlenin öznesi, virgülden sonra gelen ana cümlenin öznesi ile BİREBİR AYNI olmalıdır (Dangling Participle tuzağı)!"
@@ -73642,7 +73642,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Sinema / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Sinema scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73651,8 +73651,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73662,7 +73662,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q2",
             "type": "true-false",
-            "prompt": "[Edebiyat / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In edebiyat studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In edebiyat studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -73672,14 +73672,14 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Edebiyat alanı akademik kuralı."
+              "academicNote": "Edebiyat alanı kuralı."
             }
           },
           {
             "id": "c40_l6_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Sosyoloji / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Sosyoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
+            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -73687,18 +73687,18 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Sosyoloji dersi temel yapısı."
+              "academicNote": "dersi temel yapısı."
             }
           },
           {
             "id": "c40_l6_q4",
             "type": "true-false",
-            "prompt": "[Tarih / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In tarih studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In tarih studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -73708,14 +73708,14 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Tarih alanı akademik kuralı."
+              "academicNote": "Tarih alanı kuralı."
             }
           },
           {
             "id": "c40_l6_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Psikoloji / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Psikoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
+            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -73723,18 +73723,18 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Psikoloji dersi temel yapısı."
+              "academicNote": "dersi temel yapısı."
             }
           },
           {
             "id": "c40_l6_q6",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73754,7 +73754,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q7",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73774,7 +73774,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q8",
             "type": "multiple-choice",
-            "prompt": "[Kültür / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in kültür demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73794,7 +73794,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q9",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in sinema demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73814,7 +73814,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q10",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -73834,8 +73834,8 @@ const chapter40Data = {
           {
             "id": "c40_l6_q11",
             "type": "matching",
-            "prompt": "[Kültür / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
@@ -73856,12 +73856,12 @@ const chapter40Data = {
           {
             "id": "c40_l6_q12",
             "type": "matching",
-            "prompt": "[Sosyoloji / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "[/ Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
               {
-                "left": "No sooner had the sosyoloji manuscript been published",
+                "left": "No sooner had the manuscript been published",
                 "right": "than international scholars initiated debate."
               },
               {
@@ -73869,7 +73869,7 @@ const chapter40Data = {
                 "right": "academic institutions updated their curriculum."
               },
               {
-                "left": "In order to analyze psikoloji trends thoroughly,",
+                "left": "In order to analyze trends thoroughly,",
                 "right": "researchers compiled extensive quantitative data."
               }
             ],
@@ -73878,7 +73878,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Siyaset / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in siyaset has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in siyaset, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -73893,7 +73893,7 @@ const chapter40Data = {
           {
             "id": "c40_l6_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Antropoloji / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of antropoloji, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -73908,7 +73908,7 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Kültür / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
             "sentence": "Although kültür scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
               "In spite of facing severe censorship, kültür scholars managed to publish seminal treatises.",
@@ -73943,7 +73943,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Edebiyat / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Edebiyat scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73952,8 +73952,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73963,23 +73963,23 @@ const chapter40Data = {
           {
             "id": "c40_l7_q2",
             "type": "true-false",
-            "prompt": "[Sosyoloji / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In sosyoloji studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In sosyoloji studies, researchers must adhere to strict guidelines.",
+            "prompt": "Verilen cümle doğru mu?",
+            "sentence": "In studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Sosyoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
+            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
             "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sosyoloji alanı akademik kuralı."
+              "academicNote": "alanı kuralı."
             }
           },
           {
             "id": "c40_l7_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Tarih / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Tarih scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -73988,8 +73988,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -73999,23 +73999,23 @@ const chapter40Data = {
           {
             "id": "c40_l7_q4",
             "type": "true-false",
-            "prompt": "[Psikoloji / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In psikoloji studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In psikoloji studies, researchers must adhere to strict guidelines.",
+            "prompt": "Verilen cümle doğru mu?",
+            "sentence": "In studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Psikoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
+            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
             "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Psikoloji alanı akademik kuralı."
+              "academicNote": "alanı kuralı."
             }
           },
           {
             "id": "c40_l7_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Siyaset / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Siyaset scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -74024,8 +74024,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -74035,7 +74035,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q6",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74055,7 +74055,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q7",
             "type": "multiple-choice",
-            "prompt": "[Kültür / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in kültür demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74075,7 +74075,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q8",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in sinema demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74095,7 +74095,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q9",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74115,8 +74115,8 @@ const chapter40Data = {
           {
             "id": "c40_l7_q10",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -74124,19 +74124,19 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l7_q11",
             "type": "matching",
-            "prompt": "[Sinema / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
@@ -74148,7 +74148,7 @@ const chapter40Data = {
                 "right": "the research council will publish the annual report."
               },
               {
-                "left": "Unless policy makers consult sosyoloji experts,",
+                "left": "Unless policy makers consult experts,",
                 "right": "social reforms will encounter structural resistance."
               }
             ],
@@ -74157,7 +74157,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q12",
             "type": "matching",
-            "prompt": "[Tarih / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -74166,7 +74166,7 @@ const chapter40Data = {
                 "right": "than international scholars initiated debate."
               },
               {
-                "left": "Due to significant changes in psikoloji paradigms,",
+                "left": "Due to significant changes in paradigms,",
                 "right": "academic institutions updated their curriculum."
               },
               {
@@ -74179,7 +74179,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Antropoloji / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in antropoloji has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in antropoloji, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -74194,7 +74194,7 @@ const chapter40Data = {
           {
             "id": "c40_l7_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Kültür / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of kültür, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -74209,7 +74209,7 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
             "sentence": "Although sinema scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
               "In spite of facing severe censorship, sinema scholars managed to publish seminal treatises.",
@@ -74244,8 +74244,8 @@ const chapter40Data = {
           {
             "id": "c40_l8_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Sosyoloji / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Sosyoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
+            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -74253,18 +74253,18 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Sosyoloji dersi temel yapısı."
+              "academicNote": "dersi temel yapısı."
             }
           },
           {
             "id": "c40_l8_q2",
             "type": "true-false",
-            "prompt": "[Tarih / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In tarih studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In tarih studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -74274,14 +74274,14 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Tarih alanı akademik kuralı."
+              "academicNote": "Tarih alanı kuralı."
             }
           },
           {
             "id": "c40_l8_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Psikoloji / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Psikoloji scholars note that academic analysis ___ when methodological standards are applied.",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
+            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -74289,18 +74289,18 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Psikoloji dersi temel yapısı."
+              "academicNote": "dersi temel yapısı."
             }
           },
           {
             "id": "c40_l8_q4",
             "type": "true-false",
-            "prompt": "[Siyaset / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In siyaset studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In siyaset studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -74310,13 +74310,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Siyaset alanı akademik kuralı."
+              "academicNote": "Siyaset alanı kuralı."
             }
           },
           {
             "id": "c40_l8_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Antropoloji / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Antropoloji scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -74325,8 +74325,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -74336,7 +74336,7 @@ const chapter40Data = {
           {
             "id": "c40_l8_q6",
             "type": "multiple-choice",
-            "prompt": "[Kültür / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in kültür demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74356,7 +74356,7 @@ const chapter40Data = {
           {
             "id": "c40_l8_q7",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in sinema demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74376,7 +74376,7 @@ const chapter40Data = {
           {
             "id": "c40_l8_q8",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74396,8 +74396,8 @@ const chapter40Data = {
           {
             "id": "c40_l8_q9",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -74405,18 +74405,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l8_q10",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74436,8 +74436,8 @@ const chapter40Data = {
           {
             "id": "c40_l8_q11",
             "type": "matching",
-            "prompt": "[Edebiyat / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
@@ -74458,12 +74458,12 @@ const chapter40Data = {
           {
             "id": "c40_l8_q12",
             "type": "matching",
-            "prompt": "[Psikoloji / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "[/ Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
               {
-                "left": "No sooner had the psikoloji manuscript been published",
+                "left": "No sooner had the manuscript been published",
                 "right": "than international scholars initiated debate."
               },
               {
@@ -74480,7 +74480,7 @@ const chapter40Data = {
           {
             "id": "c40_l8_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Kültür / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in kültür has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in kültür, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -74495,7 +74495,7 @@ const chapter40Data = {
           {
             "id": "c40_l8_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Sinema / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of sinema, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -74510,7 +74510,7 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
             "sentence": "Although edebiyat scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
               "In spite of facing severe censorship, edebiyat scholars managed to publish seminal treatises.",
@@ -74545,7 +74545,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Tarih / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Tarih scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -74554,8 +74554,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -74565,23 +74565,23 @@ const chapter40Data = {
           {
             "id": "c40_l9_q2",
             "type": "true-false",
-            "prompt": "[Psikoloji / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
-            "sentence": "In psikoloji studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In psikoloji studies, researchers must adhere to strict guidelines.",
+            "prompt": "Verilen cümle doğru mu?",
+            "sentence": "In studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Psikoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
+            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
             "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Psikoloji alanı akademik kuralı."
+              "academicNote": "alanı kuralı."
             }
           },
           {
             "id": "c40_l9_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Siyaset / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Siyaset scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -74590,8 +74590,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -74601,7 +74601,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q4",
             "type": "true-false",
-            "prompt": "[Antropoloji / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -74611,13 +74611,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Antropoloji alanı akademik kuralı."
+              "academicNote": "Antropoloji alanı kuralı."
             }
           },
           {
             "id": "c40_l9_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Kültür / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Kültür scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -74626,8 +74626,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -74637,7 +74637,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q6",
             "type": "multiple-choice",
-            "prompt": "[Sinema / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in sinema demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74657,7 +74657,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q7",
             "type": "multiple-choice",
-            "prompt": "[Edebiyat / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in edebiyat demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74677,8 +74677,8 @@ const chapter40Data = {
           {
             "id": "c40_l9_q8",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -74686,18 +74686,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l9_q9",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -74717,8 +74717,8 @@ const chapter40Data = {
           {
             "id": "c40_l9_q10",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -74726,23 +74726,23 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l9_q11",
             "type": "matching",
-            "prompt": "[Sosyoloji / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "[/ Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
-                "left": "Although sosyoloji theories evolved quickly,",
+                "left": "Although theories evolved quickly,",
                 "right": "foundational principles remained largely intact."
               },
               {
@@ -74750,7 +74750,7 @@ const chapter40Data = {
                 "right": "the research council will publish the annual report."
               },
               {
-                "left": "Unless policy makers consult psikoloji experts,",
+                "left": "Unless policy makers consult experts,",
                 "right": "social reforms will encounter structural resistance."
               }
             ],
@@ -74759,7 +74759,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q12",
             "type": "matching",
-            "prompt": "[Siyaset / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -74781,7 +74781,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Sinema / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in sinema has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in sinema, what condition is necessary for historical conclusions to be definitive?",
             "options": [
@@ -74796,7 +74796,7 @@ const chapter40Data = {
           {
             "id": "c40_l9_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Edebiyat / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of edebiyat, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -74811,12 +74811,12 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although sosyoloji scholars faced severe censorship, they managed to publish seminal treatises.",
+            "prompt": "[/ Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "sentence": "Although scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
-              "In spite of facing severe censorship, sosyoloji scholars managed to publish seminal treatises.",
-              "Because sosyoloji scholars faced censorship, they could not publish treatises.",
-              "Unless sosyoloji scholars face censorship, they will publish seminal treatises."
+              "In spite of facing severe censorship, scholars managed to publish seminal treatises.",
+              "Because scholars faced censorship, they could not publish treatises.",
+              "Unless scholars face censorship, they will publish seminal treatises."
             ],
             "correctIndex": 0,
             "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
@@ -74927,7 +74927,7 @@ const chapter40Data = {
           {
             "id": "c40_l10_q5",
             "type": "word-bank",
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce akademik cümleyi oluşturun:",
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "sentence": "The broker couldn't have stabilized the market liquidity pools without the emergency fiscal subsidy.",
             "words": [
               "The",
@@ -75149,7 +75149,7 @@ const chapter40Data = {
           {
             "id": "c40_l10_q15",
             "type": "translation-text",
-            "prompt": "Verilen İngilizce cümlenin Türkçe akademik çevirisini yazın:",
+            "prompt": "Verilen İngilizce cümlenin Türkçe çevirisini yazın:",
             "sentence": "The regional factory must have reduced carbon emissions prior to the federal inspection.",
             "correctAnswer": "Bölgesel fabrika federal denetimden önce karbon emisyonlarını azaltmış olmalı.",
             "translation": "Bölgesel fabrika federal denetimden önce karbon emisyonlarını azaltmış olmalı.",
@@ -75172,7 +75172,7 @@ const chapter40Data = {
     "subtitle": "15 Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "11. Sınav Çeldirici & Hata Avcısı Zirvesi (Error Hunting Blitz)",
-      "teorikMantik": "Akademik sınavlarda (YDS/YÖKDİL/TOEFL) çeldiriciler genellikle zaman uyumsuzluğu, edat arkası 'that' tuzağı, devriklik bağlaç eşleşmesi ve paralel yapı (Parallelism) hatalarında gizlenir.",
+      "teorikMantik": "sınavlarda (YDS/YÖKDİL/TOEFL) çeldiriciler genellikle zaman uyumsuzluğu, edat arkası 'that' tuzağı, devriklik bağlaç eşleşmesi ve paralel yapı (Parallelism) hatalarında gizlenir.",
       "formul": "Zaman Uyum Dengesi + Bağlaç Eşleşmesi (No sooner...than) + Parallelism (and/or/but ile aynı yapı çekimi) + Preposition & Relative Pronoun",
       "altinKural": "Soru çözerken önce zaman uyumunu (Tense Match), ardından bağlaç arkasındaki yapıyı (SVO vs Noun) kontrol edip şıkları hızlıca eleyin!"
     },
@@ -75185,7 +75185,7 @@ const chapter40Data = {
           {
             "id": "c40_l11_q1",
             "type": "fill-blank-dropdown",
-            "prompt": "[Siyaset / Basit - Soru 1] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Siyaset scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -75194,8 +75194,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -75205,7 +75205,7 @@ const chapter40Data = {
           {
             "id": "c40_l11_q2",
             "type": "true-false",
-            "prompt": "[Antropoloji / Basit - Soru 2] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In antropoloji studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -75215,13 +75215,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Antropoloji alanı akademik kuralı."
+              "academicNote": "Antropoloji alanı kuralı."
             }
           },
           {
             "id": "c40_l11_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Kültür / Basit - Soru 3] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Kültür scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -75230,8 +75230,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -75241,7 +75241,7 @@ const chapter40Data = {
           {
             "id": "c40_l11_q4",
             "type": "true-false",
-            "prompt": "[Sinema / Basit - Soru 4] Verilen cümle dil bilgisi açısından doğru mu?",
+            "prompt": "Verilen cümle doğru mu?",
             "sentence": "In sinema studies, researchers must adhere to strict guidelines.",
             "englishPhrase": "In sinema studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
@@ -75251,13 +75251,13 @@ const chapter40Data = {
             "hint": {
               "formula": "Must + V1 -> Zorunluluk kuralı",
               "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sinema alanı akademik kuralı."
+              "academicNote": "Sinema alanı kuralı."
             }
           },
           {
             "id": "c40_l11_q5",
             "type": "fill-blank-dropdown",
-            "prompt": "[Edebiyat / Basit - Soru 5] Kurala en uygun seçeneği belirleyin:",
+            "prompt": "Kurala en uygun seçeneği belirleyin:",
             "sentence": "Edebiyat scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
@@ -75266,8 +75266,8 @@ const chapter40Data = {
               "improved"
             ],
             "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında akademik analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel akademik doğrularda V1 çekimi tercih edilir.",
+            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
+            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
             "hint": {
               "formula": "Academic Truth -> Present Simple",
               "mirror": "Genel kural doğrulaması.",
@@ -75277,8 +75277,8 @@ const chapter40Data = {
           {
             "id": "c40_l11_q6",
             "type": "multiple-choice",
-            "prompt": "[Sosyoloji / Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in sosyoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -75286,18 +75286,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sosyoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l11_q7",
             "type": "multiple-choice",
-            "prompt": "[Tarih / Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -75317,8 +75317,8 @@ const chapter40Data = {
           {
             "id": "c40_l11_q8",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in psikoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "prompt": "[/ Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -75326,18 +75326,18 @@ const chapter40Data = {
               "would be / was"
             ],
             "correctIndex": 0,
-            "translation": "Psikoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
+            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
             "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
             "hint": {
               "formula": "Provided that + Present -> Will V1",
               "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Psikoloji metin analizi."
+              "academicNote": "metin analizi."
             }
           },
           {
             "id": "c40_l11_q9",
             "type": "multiple-choice",
-            "prompt": "[Siyaset / Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -75357,7 +75357,7 @@ const chapter40Data = {
           {
             "id": "c40_l11_q10",
             "type": "multiple-choice",
-            "prompt": "[Antropoloji / Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
+            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
             "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
@@ -75377,12 +75377,12 @@ const chapter40Data = {
           {
             "id": "c40_l11_q11",
             "type": "matching",
-            "prompt": "[Psikoloji / Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru akademik ana cümlelerle eşleştirin:",
-            "leftHeader": "Akademik Bağlaç / Yan Cümle",
+            "prompt": "[/ Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
+            "leftHeader": "Bağlaç / Yan Cümle",
             "rightHeader": "Tamamlayıcı Ana Cümle",
             "pairs": [
               {
-                "left": "Although psikoloji theories evolved quickly,",
+                "left": "Although theories evolved quickly,",
                 "right": "foundational principles remained largely intact."
               },
               {
@@ -75399,7 +75399,7 @@ const chapter40Data = {
           {
             "id": "c40_l11_q12",
             "type": "matching",
-            "prompt": "[Kültür / Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
+            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
             "leftHeader": "Şart / Sebep Öbeği",
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
@@ -75421,8 +75421,8 @@ const chapter40Data = {
           {
             "id": "c40_l11_q13",
             "type": "multiple-choice",
-            "prompt": "[YÖKDİL Sosyoloji / Tip 4 Paragraf Bağlamı - Soru 13] Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in sosyoloji has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
+            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+            "paragraph": "Academic research in has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
             "sentence": "Based on the paragraph in sosyoloji, what condition is necessary for historical conclusions to be definitive?",
             "options": [
               "Archival data must be cross-referenced with modern field observations.",
@@ -75436,7 +75436,7 @@ const chapter40Data = {
           {
             "id": "c40_l11_q14",
             "type": "multiple-choice",
-            "prompt": "[TOEFL Tarih / Tip 4 Paragraf Bağlamı - Soru 14] Paragraftaki gramer kilitlerini değerlendirin:",
+            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
             "paragraph": "In the field of tarih, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
@@ -75451,12 +75451,12 @@ const chapter40Data = {
           {
             "id": "c40_l15_q15",
             "type": "multiple-choice",
-            "prompt": "[Psikoloji / Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although psikoloji scholars faced severe censorship, they managed to publish seminal treatises.",
+            "prompt": "[/ Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
+            "sentence": "Although scholars faced severe censorship, they managed to publish seminal treatises.",
             "options": [
-              "In spite of facing severe censorship, psikoloji scholars managed to publish seminal treatises.",
-              "Because psikoloji scholars faced censorship, they could not publish treatises.",
-              "Unless psikoloji scholars face censorship, they will publish seminal treatises."
+              "In spite of facing severe censorship, scholars managed to publish seminal treatises.",
+              "Because scholars faced censorship, they could not publish treatises.",
+              "Unless scholars face censorship, they will publish seminal treatises."
             ],
             "correctIndex": 0,
             "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
@@ -75516,7 +75516,7 @@ const chapter40Data = {
       "id": 41,
       "startLessonId": 410,
       "originalIndex": 40,
-      "title": "Akademik Sınav Kısayolları",
+      "title": "Sınav Kısayolları",
       "desc": "Gerund, Infinitive, zaman uyumu ve diyalog yapıları için pratik sınav stratejileri",
       "icon": "⚡",
       "numLessons": 3,
@@ -75534,13 +75534,13 @@ const chapter40Data = {
         {
           "formula": "What-Question -> Well... + Explanation / Negative Statement -> Neither + Auxiliary + Subject",
           "example": "Well, we must analyze / Neither did the principal researcher",
-          "description": "Akademik mülakat ve diyalog refleksleri"
+          "description": "mülakat ve diyalog refleksleri"
         }
       ],
       "subtitles": [
         "A. Sınav Kısayolları ve Yapı Refleksleri",
         "B. Kronolojik Zaman Uyumu",
-        "C. Akademik Diyalog ve Mülakat Matrisi"
+        "C. Diyalog ve Mülakat Matrisi"
       ],
       "originalNumLessons": 3
     };
@@ -75611,7 +75611,7 @@ const chapter40Data = {
     lessons.push({
       id: "c41_l3",
       unitId: 41,
-      title: "3. Akademik Diyalog ve Mülakat Matrisi",
+      title: "3. Diyalog ve Mülakat Matrisi",
       subtitle: "",
       exercises: structuredExercises3,
       konuAnlatimi: data41_l3.konuAnlatimi || null
@@ -75622,7 +75622,7 @@ const chapter40Data = {
       "startLessonId": 420,
       "originalIndex": 41,
       "title": "Phrasal Modal ve Subjunctive Matrisi",
-      "desc": "Zaman bükümleri, edilgenlik matrisleri ve modal yapılarla oluşan akademik kalıplar",
+      "desc": "Zaman bükümleri, edilgenlik matrisleri ve modal yapılarla oluşan kalıplar",
       "icon": "🎓",
       "numLessons": 4,
       "formulas": [
@@ -75660,8 +75660,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q1",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is likely to derive' yapısının bu akademik bağlamdaki net anlamsal karşılığını seçin.",
-    "question": "Cümledeki 'is likely to derive' yapısının bu akademik bağlamdaki net anlamsal karşılığını seçin.",
+    "prompt": "Cümledeki 'is likely to derive' yapısının bu bağlamdaki net anlamsal karşılığını seçin.",
+    "question": "Cümledeki 'is likely to derive' yapısının bu bağlamdaki net anlamsal karşılığını seçin.",
     "sentence": "In economic sociology, a stable society <span style='color:#ff6b6b;font-weight:bold;'>is likely to derive</span> its structural parameters from institutional validation rather than raw power.",
     "options": [
       "türetmesi şu an muhtemeldir",
@@ -75674,8 +75674,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q2",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is bound to deviate' yapısının coğrafya ve iklim bilimi bağlamındaki net karşılığını seçin.",
-    "question": "Cümledeki 'is bound to deviate' yapısının coğrafya ve iklim bilimi bağlamındaki net karşılığını seçin.",
+    "prompt": "Cümledeki 'is bound to deviate' yapısının net karşılığını seçin.",
+    "question": "Cümledeki 'is bound to deviate' yapısının net karşılığını seçin.",
     "sentence": "When atmospheric variables alter, the local climate pattern is bound to deviate from historical criteria.",
     "options": [
       "sapması kaçınılmazdır",
@@ -75688,8 +75688,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q3",
     "type": "fill-blank-dropdown",
-    "prompt": "Cümleyi, sinema tarihinde modern anlatının 'şu an kurallardan sapmaya gönülsüz/isteysiz olduğu' anlamını verecek şekilde tamamlayın.",
-    "question": "Cümleyi, sinema tarihinde modern anlatının 'şu an kurallardan sapmaya gönülsüz/isteysiz olduğu' anlamını verecek şekilde tamamlayın.",
+    "prompt": "Cümleyi 'şu an kurallardan sapmaya gönülsüz/isteysiz olduğu' anlamını verecek şekilde tamamlayın.",
+    "question": "Cümleyi 'şu an kurallardan sapmaya gönülsüz/isteysiz olduğu' anlamını verecek şekilde tamamlayın.",
     "sentence": "In contemporary cinema, mainstream infrastructure ___ deviate from established narrative parameters due to financial risks.",
     "options": [
       "is reluctant to",
@@ -75702,8 +75702,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q4",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is supposed to validate' yapısının edebiyat eleştirisi bağlamındaki net anlamsal karşılığını seçin.",
-    "question": "Cümledeki 'is supposed to validate' yapısının edebiyat eleştirisi bağlamındaki net anlamsal karşılığını seçin.",
+    "prompt": "Cümledeki 'is supposed to validate' yapısının net anlamsal karşılığını seçin.",
+    "question": "Cümledeki 'is supposed to validate' yapısının net anlamsal karşılığını seçin.",
     "sentence": "The structuralist approach in literature is supposed to validate text interpretation based on objective criteria.",
     "options": [
       "doğrulaması şu an bekleniyor/gerekiyor",
@@ -75716,8 +75716,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q5",
     "type": "fill-blank-dropdown",
-    "prompt": "Cümleyi, tarihsel süreçte 'gelişmekte olan ekonomilerin şu an bu kriterleri kabul etmeye zorunlu olduğu' anlamıyla tamamlayın.",
-    "question": "Cümleyi, tarihsel süreçte 'gelişmekte olan ekonomilerin şu an bu kriterleri kabul etmeye zorunlu olduğu' anlamıyla tamamlayın.",
+    "prompt": "Cümleyi, 'gelişmekte olan ekonomilerin şu an bu kriterleri kabul etmeye zorunlu olduğu' anlamıyla tamamlayın.",
+    "question": "Cümleyi, 'gelişmekte olan ekonomilerin şu an bu kriterleri kabul etmeye zorunlu olduğu' anlamıyla tamamlayın.",
     "sentence": "Under global economic integration, developing nations ___ validate their infrastructure parameters according to international lending criteria.",
     "options": [
       "are obliged to",
@@ -75730,8 +75730,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q6",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is certain to mutate' yapısının biyoloji ve bilim tarihi bağlamındaki net karşılığını bulun.",
-    "question": "Cümledeki 'is certain to mutate' yapısının biyoloji ve bilim tarihi bağlamındaki net karşılığını bulun.",
+    "prompt": "Cümledeki 'is certain to mutate' yapısının net karşılığını bulun.",
+    "question": "Cümledeki 'is certain to mutate' yapısının net karşılığını bulun.",
     "sentence": "When a biological system faces severe environmental anomalies, its core genetic variables are certain to mutate.",
     "options": [
       "mutasyona uğraması kesindir",
@@ -75744,8 +75744,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q7",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is doomed to deviate' yapısının sosyolojik döngüler bağlamındaki karşılığını seçin.",
-    "question": "Cümledeki 'is doomed to deviate' yapısının sosyolojik döngüler bağlamındaki karşılığını seçin.",
+    "prompt": "Cümledeki 'is doomed to deviate' yapısının karşılığını seçin.",
+    "question": "Cümledeki 'is doomed to deviate' yapısının karşılığını seçin.",
     "sentence": "Without proper institutional validation, any political infrastructure is doomed to deviate into structural anomalies.",
     "options": [
       "sapmaya mahkumdur",
@@ -75772,8 +75772,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q9",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is unlikely to compromise' yapısının diplomasi tarihi ve ekonomi bağlamındaki karşılığını bulun.",
-    "question": "Cümledeki 'is unlikely to compromise' yapısının diplomasi tarihi ve ekonomi bağlamındaki karşılığını bulun.",
+    "prompt": "Cümledeki 'is unlikely to compromise' yapısının karşılığını bulun.",
+    "question": "Cümledeki 'is unlikely to compromise' yapısının karşılığını bulun.",
     "sentence": "The central bank is unlikely to compromise its monetary parameters despite political pressure during an economic anomaly.",
     "options": [
       "ödün vermesi şu an muhtemel değildir",
@@ -75786,8 +75786,8 @@ const chapter40Data = {
   {
     "id": "c42_l01_e1_q10",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is to deviate' yapısının bilim felsefesi bağlamındaki kurumsal ve planlı planlama anlamını bulun.",
-    "question": "Cümledeki 'is to deviate' yapısının bilim felsefesi bağlamındaki kurumsal ve planlı planlama anlamını bulun.",
+    "prompt": "Cümledeki 'is to deviate' yapısının anlamını bulun.",
+    "question": "Cümledeki 'is to deviate' yapısının anlamını bulun.",
     "sentence": "According to the laboratory protocol, the scientist is to deviate from standard validation steps only if a data anomaly occurs.",
     "options": [
       "sapması planlanmıştır / sapmak durumundadır",
@@ -75988,8 +75988,8 @@ const chapter40Data = {
   {
     "id": "c42_l02_e1_q4",
     "type": "structure-match",
-    "prompt": "Cümledeki 'was supposed to validate' yapısının edebiyat tarihi bağlamındaki geçmiş zaman sitem/ihmal anlamını bulun.",
-    "question": "Cümledeki 'was supposed to validate' yapısının edebiyat tarihi bağlamındaki geçmiş zaman sitem/ihmal anlamını bulun.",
+    "prompt": "Cümledeki 'was supposed to validate' yapısının geçmiş zaman sitem/ihmal anlamını bulun.",
+    "question": "Cümledeki 'was supposed to validate' yapısının geçmiş zaman sitem/ihmal anlamını bulun.",
     "sentence": "The neoclassical critic was supposed to validate the manuscript based on rigid structural parameters, but he neglected the anomaly.",
     "options": [
       "doğrulaması geçmişte bekleniyordu/gerekiyordu (ama yapmadı)",
@@ -76016,8 +76016,8 @@ const chapter40Data = {
   {
     "id": "c42_l02_e1_q6",
     "type": "structure-match",
-    "prompt": "Cümledeki 'was certain to mutate' yapısının bilim tarihi bağlamındaki net karşılığını bulun.",
-    "question": "Cümledeki 'was certain to mutate' yapısının bilim tarihi bağlamındaki net karşılığını bulun.",
+    "prompt": "Cümledeki 'was certain to mutate' yapısının net karşılığını bulun.",
+    "question": "Cümledeki 'was certain to mutate' yapısının net karşılığını bulun.",
     "sentence": "Once the laboratory temperature fluctuated, the experimental variable was certain to mutate into a structural anomaly.",
     "options": [
       "mutasyona uğraması geçmişte kesindi",
@@ -76058,8 +76058,8 @@ const chapter40Data = {
   {
     "id": "c42_l02_e1_q9",
     "type": "structure-match",
-    "prompt": "Cümledeki 'was doomed to deviate' yapısının tarihsel döngü bağlamındaki karşılığını bulun.",
-    "question": "Cümledeki 'was doomed to deviate' yapısının tarihsel döngü bağlamındaki karşılığını bulun.",
+    "prompt": "Cümledeki 'was doomed to deviate' yapısının karşılığını bulun.",
+    "question": "Cümledeki 'was doomed to deviate' yapısının karşılığını bulun.",
     "sentence": "The ancient trade infrastructure, lacking financial validation, was doomed to deviate into local anomalies.",
     "options": [
       "sapmaya geçmişte mahkumdu",
@@ -76072,8 +76072,8 @@ const chapter40Data = {
   {
     "id": "c42_l02_e1_q10",
     "type": "structure-match",
-    "prompt": "Cümledeki 'was obliged to compromise' yapısının ekonomi tarihi bağlamındaki net geçmiş zaman karşılığını bulun.",
-    "question": "Cümledeki 'was obliged to compromise' yapısının ekonomi tarihi bağlamındaki net geçmiş zaman karşılığını bulun.",
+    "prompt": "Cümledeki 'was obliged to compromise' yapısının net geçmiş zaman karşılığını bulun.",
+    "question": "Cümledeki 'was obliged to compromise' yapısının net geçmiş zaman karşılığını bulun.",
     "sentence": "During the fiscal panic of 1929, the ministry was obliged to compromise its monetary validation parameters.",
     "options": [
       "ödün vermeye geçmişte zorunlu kaldı",
@@ -76518,8 +76518,8 @@ const chapter40Data = {
   {
     "id": "c42_l04_e1_q1",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is likely to have derived' yapısının bu akademik bağlamdaki net anlamsal karşılığını seçin.",
-    "question": "Cümledeki 'is likely to have derived' yapısının bu akademik bağlamdaki net anlamsal karşılığını seçin.",
+    "prompt": "Cümledeki 'is likely to have derived' yapısının bu bağlamdaki net anlamsal karşılığını seçin.",
+    "question": "Cümledeki 'is likely to have derived' yapısının bu bağlamdaki net anlamsal karşılığını seçin.",
     "sentence": "In climate history, the early civilization is likely to have derived its agricultural parameters from Nile flood cycles.",
     "options": [
       "türetmiş olması şu an muhtemeldir",
@@ -76804,8 +76804,8 @@ const chapter40Data = {
   {
     "id": "c42_l05_e1_q1",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is likely to have been derived' yapısının bu akademik bağlamdaki net iki parçalı karşılığını seçin.",
-    "question": "Cümledeki 'is likely to have been derived' yapısının bu akademik bağlamdaki net iki parçalı karşılığını seçin.",
+    "prompt": "Cümledeki 'is likely to have been derived' yapısının bu bağlamdaki net iki parçalı karşılığını seçin.",
+    "question": "Cümledeki 'is likely to have been derived' yapısının bu bağlamdaki net iki parçalı karşılığını seçin.",
     "sentence": "In economic history, the concept of market validation is likely to have been derived from early agricultural criteria.",
     "options": [
       "türetilmiş olması şu an muhtemeldir",
@@ -76902,8 +76902,8 @@ const chapter40Data = {
   {
     "id": "c42_l05_e1_q8",
     "type": "fill-blank-dropdown",
-    "prompt": "Cümleyi 'sinema tarihindeki o sessiz filmin sansür kuralları nedeniyle geçmişte mutasyona/değişime uğratılmış olmaya mahkum olduğu' anlamıyla tamamlayın.",
-    "question": "Cümleyi 'sinema tarihindeki o sessiz filmin sansür kuralları nedeniyle geçmişte mutasyona/değişime uğratılmış olmaya mahkum olduğu' anlamıyla tamamlayın.",
+    "prompt": "Cümleyi 'o sessiz filmin sansür kuralları nedeniyle geçmişte mutasyona/değişime uğratılmış olmaya mahkum olduğu' anlamıyla tamamlayın.",
+    "question": "Cümleyi 'o sessiz filmin sansür kuralları nedeniyle geçmişte mutasyona/değişime uğratılmış olmaya mahkum olduğu' anlamıyla tamamlayın.",
     "sentence": "The original avant-garde film ___ mutated by the conservative criteria of the era.",
     "options": [
       "was doomed to have been",
@@ -77243,8 +77243,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e1_q1",
     "type": "structure-match",
-    "prompt": "Renklendirilmiş 5 öğeli yapının bu sosyoloji bağlamındaki net karşılığını bulun.",
-    "question": "Renklendirilmiş 5 öğeli yapının bu sosyoloji bağlamındaki net karşılığını bulun.",
+    "prompt": "Renklendirilmiş 5 öğeli yapının bu net karşılığını bulun.",
+    "question": "Renklendirilmiş 5 öğeli yapının bu net karşılığını bulun.",
     "sentence": "In quantitative sociology, a stable social paradigm <span style='color:#ff6b6b;font-weight:bold;'>is likely to be derived</span>from shared institutional validation.",
     "options": [
       "türetilmesi şu an muhtemeldir",
@@ -77257,8 +77257,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e1_q2",
     "type": "structure-match",
-    "prompt": "Cümledeki renk kodlu 'is bound to be mutated' yapısının coğrafya bağlamındaki tam karşılığı nedir?",
-    "question": "Cümledeki renk kodlu 'is bound to be mutated' yapısının coğrafya bağlamındaki tam karşılığı nedir?",
+    "prompt": "Cümledeki renk kodlu 'is bound to be mutated' yapısının coğrafya tam karşılığı nedir?",
+    "question": "Cümledeki renk kodlu 'is bound to be mutated' yapısının coğrafya tam karşılığı nedir?",
     "sentence": "As climate variables shift, the regional ecosystem <span style='color:#ff6b6b;font-weight:bold;'>is bound to be mutated</span>beyond historical criteria.",
     "options": [
       "mutasyona uğraması/değişmesi şu an kaçınılmazdır",
@@ -77293,8 +77293,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e1_q4",
     "type": "structure-match",
-    "prompt": "Cümledeki 5 öğeli yapının ekonomi bağlamındaki net karşılığı hangisidir?",
-    "question": "Cümledeki 5 öğeli yapının ekonomi bağlamındaki net karşılığı hangisidir?",
+    "prompt": "Cümledeki 5 öğeli yapının ekonomi net karşılığı hangisidir?",
+    "question": "Cümledeki 5 öğeli yapının ekonomi net karşılığı hangisidir?",
     "sentence": "Under global financial strain, the domestic infrastructure <span style='color:#ff6b6b;font-weight:bold;'>is obliged to be compromised</span>for immediate liquidity.",
     "options": [
       "feda edilmeye/riske atılmaya şu an zorunludur",
@@ -77307,8 +77307,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e1_q5",
     "type": "fill-blank-dropdown",
-    "prompt": "Edebi teori bağlamında, cümlenin 'şu an mahkumdur' anlamı kazanması için boşluğu doldurun.",
-    "question": "Edebi teori bağlamında, cümlenin 'şu an mahkumdur' anlamı kazanması için boşluğu doldurun.",
+    "prompt": "cümlenin 'şu an mahkumdur' anlamı kazanması için boşluğu doldurun.",
+    "question": "cümlenin 'şu an mahkumdur' anlamı kazanması için boşluğu doldurun.",
     "sentence": "Without structural validation, any textual interpretation ___ be deviated from objective meaning.",
     "options": [
       "is doomed to",
@@ -77321,8 +77321,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e1_q6",
     "type": "structure-match",
-    "prompt": "Bilim felsefesi bağlamındaki bu cümlenin taşıdığı net anlamı seçin.",
-    "question": "Bilim felsefesi bağlamındaki bu cümlenin taşıdığı net anlamı seçin.",
+    "prompt": "bu cümlenin taşıdığı net anlamı seçin.",
+    "question": "bu cümlenin taşıdığı net anlamı seçin.",
     "sentence": "When laboratory parameters collapse, the experimental outcome <span style='color:#ff6b6b;font-weight:bold;'>is certain to be compromised</span>.",
     "options": [
       "riske girmesi şu an kesindir",
@@ -77384,8 +77384,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e1_q10",
     "type": "structure-match",
-    "prompt": "Renklendirilmiş yapının sinema ve ekonomi bağlamındaki net anlam kalkanı hangisidir?",
-    "question": "Renklendirilmiş yapının sinema ve ekonomi bağlamındaki net anlam kalkanı hangisidir?",
+    "prompt": "Renklendirilmiş yapının sinema ve ekonomi net anlam kalkanı hangisidir?",
+    "question": "Renklendirilmiş yapının sinema ve ekonomi net anlam kalkanı hangisidir?",
     "sentence": "If the box office parameters fail, the sequel's production infrastructure <span style='color:#ff6b6b;font-weight:bold;'>is bound to be compromised</span>.",
     "options": [
       "riske girmesi/feda edilmesi şu an kaçınılmazdır",
@@ -77429,8 +77429,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e2_q3",
     "type": "error-spotting",
-    "prompt": "Sosyoloji cümlesinde, 5 öğeli yapının arkasından gelen fiil çekimindeki hatayı yakalayın.",
-    "question": "Sosyoloji cümlesinde, 5 öğeli yapının arkasından gelen fiil çekimindeki hatayı yakalayın.",
+    "prompt": "cümlesinde, 5 öğeli yapının arkasından gelen fiil çekimindeki hatayı yakalayın.",
+    "question": "cümlesinde, 5 öğeli yapının arkasından gelen fiil çekimindeki hatayı yakalayın.",
     "sentence": "The ancient tribe variables are used to being monitoring by historians through digital parameters.",
     "options": [
       "are used to being monitoring",
@@ -77485,8 +77485,8 @@ const chapter40Data = {
   {
     "id": "c43_l01_e2_q7",
     "type": "error-spotting",
-    "prompt": "Ekonomi tarihi metnindeki 'obliged' yapısının pasif kullanım hatasını bulun.",
-    "question": "Ekonomi tarihi metnindeki 'obliged' yapısının pasif kullanım hatasını bulun.",
+    "prompt": "metnindeki 'obliged' yapısının pasif kullanım hatasını bulun.",
+    "question": "metnindeki 'obliged' yapısının pasif kullanım hatasını bulun.",
     "sentence": "During hyperinflation, the country's currency infrastructure is obliged to been mutated into a multi-variable index.",
     "options": [
       "is obliged to been mutated",
@@ -77558,8 +77558,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e1_q2",
     "type": "structure-match",
-    "prompt": "Coğrafya ve jeoloji bağlamındaki bu cümlede, renk kodlu yapının tam anlamsal kalkanı hangisidir?",
-    "question": "Coğrafya ve jeoloji bağlamındaki bu cümlede, renk kodlu yapının tam anlamsal kalkanı hangisidir?",
+    "prompt": "Coğrafya ve jeoloji bu cümlede, renk kodlu yapının tam anlamsal kalkanı hangisidir?",
+    "question": "Coğrafya ve jeoloji bu cümlede, renk kodlu yapının tam anlamsal kalkanı hangisidir?",
     "sentence": "Before the tectonic shift stabilized, the regional land infrastructure <span style='color:#ff6b6b;font-weight:bold;'>was bound to be mutated</span>by seismic variables.",
     "options": [
       "mutasyona uğraması/değişmesi geçmişte kaçınılmazdı",
@@ -77572,8 +77572,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e1_q3",
     "type": "vector-assembly",
-    "prompt": "Edebiyat tarihi cümlesindeki eylem trenini, 'klasik kriterlerin geçmişte doğrulanması gerekiyordu/bekleniyordu' anlamını verecek şekilde doğru geometrik sıraya dizin.",
-    "question": "Edebiyat tarihi cümlesindeki eylem trenini, 'klasik kriterlerin geçmişte doğrulanması gerekiyordu/bekleniyordu' anlamını verecek şekilde doğru geometrik sıraya dizin.",
+    "prompt": "cümlesindeki eylem trenini, 'klasik kriterlerin geçmişte doğrulanması gerekiyordu/bekleniyordu' anlamını verecek şekilde doğru geometrik sıraya dizin.",
+    "question": "cümlesindeki eylem trenini, 'klasik kriterlerin geçmişte doğrulanması gerekiyordu/bekleniyordu' anlamını verecek şekilde doğru geometrik sıraya dizin.",
     "sentence": "During the Renaissance, the poetic infrastructure was supposed to be validated by ancient scholastic criteria.",
     "scrambled_elements": [
       "be",
@@ -77594,8 +77594,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e1_q4",
     "type": "structure-match",
-    "prompt": "Cümledeki 5 öğeli yapının sosyoloji bağlamındaki net geçmiş zaman edilgen karşılığını bulun.",
-    "question": "Cümledeki 5 öğeli yapının sosyoloji bağlamındaki net geçmiş zaman edilgen karşılığını bulun.",
+    "prompt": "Cümledeki 5 öğeli yapının net geçmiş zaman edilgen karşılığını bulun.",
+    "question": "Cümledeki 5 öğeli yapının net geçmiş zaman edilgen karşılığını bulun.",
     "sentence": "Under the feudal charter, the social strata <span style='color:#ff6b6b;font-weight:bold;'>was obliged to be compromised</span>to protect the ruling class validation parameters.",
     "options": [
       "feda edilmesine/riske atılmasına geçmişte zorunlu kalındı",
@@ -77622,8 +77622,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e1_q6",
     "type": "structure-match",
-    "prompt": "Bilim tarihi bağlamındaki bu cümlenin taşıdığı geçmişe dönük kesinlik anlamını seçin.",
-    "question": "Bilim tarihi bağlamındaki bu cümlenin taşıdığı geçmişe dönük kesinlik anlamını seçin.",
+    "prompt": "bu cümlenin taşıdığı geçmişe dönük kesinlik anlamını seçin.",
+    "question": "bu cümlenin taşıdığı geçmişe dönük kesinlik anlamını seçin.",
     "sentence": "Once the temperature criteria fluctuated, the experimental data <span style='color:#ff6b6b;font-weight:bold;'>was certain to be compromised</span>by atmospheric anomalies.",
     "options": [
       "riske girmesi geçmişte kesindi",
@@ -77636,8 +77636,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e1_q7",
     "type": "vector-assembly",
-    "prompt": "Ekonomi tarihi cümlesindeki eylem trenini, 'bütçe parametrelerinin geçmişte değiştirilmesi/mutasyona uğratılması planlanmıştı' anlamıyla kurmak için öğeleri doğru dizin.",
-    "question": "Ekonomi tarihi cümlesindeki eylem trenini, 'bütçe parametrelerinin geçmişte değiştirilmesi/mutasyona uğratılması planlanmıştı' anlamıyla kurmak için öğeleri doğru dizin.",
+    "prompt": "cümlesindeki eylem trenini, 'bütçe parametrelerinin geçmişte değiştirilmesi/mutasyona uğratılması planlanmıştı' anlamıyla kurmak için öğeleri doğru dizin.",
+    "question": "cümlesindeki eylem trenini, 'bütçe parametrelerinin geçmişte değiştirilmesi/mutasyona uğratılması planlanmıştı' anlamıyla kurmak için öğeleri doğru dizin.",
     "sentence": "According to the wartime decree, the national credit infrastructure was to be mutated to adapt to fiscal anomalies.",
     "scrambled_elements": [
       "mutated",
@@ -77684,8 +77684,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e1_q10",
     "type": "structure-match",
-    "prompt": "Edebi akımlar bağlamındaki bu cümlenin net kronolojik karşılığı hangisidir?",
-    "question": "Edebi akımlar bağlamındaki bu cümlenin net kronolojik karşılığı hangisidir?",
+    "prompt": "Edebi akımlar bu cümlenin net kronolojik karşılığı hangisidir?",
+    "question": "Edebi akımlar bu cümlenin net kronolojik karşılığı hangisidir?",
     "sentence": "During the mid-20th century, traditional prose criteria <span style='color:#ff6b6b;font-weight:bold;'>was certain to be deviated</span>from by postmodern authors.",
     "options": [
       "sapılması geçmişte kesindi",
@@ -77757,8 +77757,8 @@ const chapter40Data = {
   {
     "id": "c43_l02_e2_q5",
     "type": "error-spotting",
-    "prompt": "Bilim tarihi metnindeki 5 öğeli 'was to be' planlama yapısındaki sinsi çekim hatasını bulun.",
-    "question": "Bilim tarihi metnindeki 5 öğeli 'was to be' planlama yapısındaki sinsi çekim hatasını bulun.",
+    "prompt": "metnindeki 5 öğeli 'was to be' planlama yapısındaki sinsi çekim hatasını bulun.",
+    "question": "metnindeki 5 öğeli 'was to be' planlama yapısındaki sinsi çekim hatasını bulun.",
     "sentence": "According to the 1920 laboratory protocol, the newly derived variable was to being validated by peer reviews.",
     "options": [
       "was to being validated",
@@ -77844,8 +77844,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q1",
     "type": "structure-match",
-    "prompt": "Cümledeki renk kodlu 'is likely to have derived' yapısının bu akademik bağlamdaki net anlamsal karşılığını seçin.",
-    "question": "Cümledeki renk kodlu 'is likely to have derived' yapısının bu akademik bağlamdaki net anlamsal karşılığını seçin.",
+    "prompt": "Cümledeki renk kodlu 'is likely to have derived' yapısının bu bağlamdaki net anlamsal karşılığını seçin.",
+    "question": "Cümledeki renk kodlu 'is likely to have derived' yapısının bu bağlamdaki net anlamsal karşılığını seçin.",
     "sentence": "In climate history, the early civilization <span style='color:#ff6b6b;font-weight:bold;'>is likely to have derived</span>its social parameters from agricultural criteria.",
     "options": [
       "türetmiş olması şu an muhtemeldir",
@@ -77872,8 +77872,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q3",
     "type": "vector-assembly",
-    "prompt": "Sosyoloji tarihi cümlesindeki eylem trenini, 'kültürel altyapının o dönemde ana kriterlerden sapmış olması muhtemel değildir' anlamını verecek şekilde doğru geometrik sıraya dizin.",
-    "question": "Sosyoloji tarihi cümlesindeki eylem trenini, 'kültürel altyapının o dönemde ana kriterlerden sapmış olması muhtemel değildir' anlamını verecek şekilde doğru geometrik sıraya dizin.",
+    "prompt": "tarihi cümlesindeki eylem trenini, 'kültürel altyapının o dönemde ana kriterlerden sapmış olması muhtemel değildir' anlamını verecek şekilde doğru geometrik sıraya dizin.",
+    "question": "tarihi cümlesindeki eylem trenini, 'kültürel altyapının o dönemde ana kriterlerden sapmış olması muhtemel değildir' anlamını verecek şekilde doğru geometrik sıraya dizin.",
     "sentence": "Given the strict isolation of the community, their social infrastructure is unlikely to have deviated from regional parameters.",
     "scrambled_elements": [
       "have",
@@ -77894,8 +77894,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q4",
     "type": "structure-match",
-    "prompt": "Cümledeki 5 öğeli yapının sinsi 'gerçekleşmemiş plan' anlamını edebiyat eleştirisi bağlamında bulun.",
-    "question": "Cümledeki 5 öğeli yapının sinsi 'gerçekleşmemiş plan' anlamını edebiyat eleştirisi bağlamında bulun.",
+    "prompt": "Cümledeki 5 öğeli yapının sinsi 'gerçekleşmemiş plan' anlamını bulun.",
+    "question": "Cümledeki 5 öğeli yapının sinsi 'gerçekleşmemiş plan' anlamını bulun.",
     "sentence": "The original manuscript <span style='color:#ff6b6b;font-weight:bold;'>was to have mutated into</span>a theatrical production, but the author rejected the validation criteria.",
     "options": [
       "dönüşmesi geçmişte planlanmıştı (ama gerçekleşmedi)",
@@ -77908,8 +77908,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q5",
     "type": "fill-blank-dropdown",
-    "prompt": "Bilim tarihi cümlesini, 'biyolojik organizmanın bu değişkenleri geçmişte kesinlikle türetmiş olduğu' anlamıyla tamamlayın.",
-    "question": "Bilim tarihi cümlesini, 'biyolojik organizmanın bu değişkenleri geçmişte kesinlikle türetmiş olduğu' anlamıyla tamamlayın.",
+    "prompt": "cümlesini, 'biyolojik organizmanın bu değişkenleri geçmişte kesinlikle türetmiş olduğu' anlamıyla tamamlayın.",
+    "question": "cümlesini, 'biyolojik organizmanın bu değişkenleri geçmişte kesinlikle türetmiş olduğu' anlamıyla tamamlayın.",
     "sentence": "The fossil log indicates that the specimen ___ have derived its structural infrastructure from geothermal parameters.",
     "options": [
       "is certain to",
@@ -77922,8 +77922,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q6",
     "type": "structure-match",
-    "prompt": "Cümledeki 'is unlikely to have compromised' yapısının geçmiş zaman bükümünü felsefe bağlamında seçin.",
-    "question": "Cümledeki 'is unlikely to have compromised' yapısının geçmiş zaman bükümünü felsefe bağlamında seçin.",
+    "prompt": "Cümledeki 'is unlikely to have compromised' yapısının geçmiş zaman bükümünü seçin.",
+    "question": "Cümledeki 'is unlikely to have compromised' yapısının geçmiş zaman bükümünü seçin.",
     "sentence": "The medieval scholar <span style='color:#ff6b6b;font-weight:bold;'>is unlikely to have compromised</span>his academic criteria under imperial pressure.",
     "options": [
       "ödün vermiş olması şu an muhtemel değildir",
@@ -77936,8 +77936,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q7",
     "type": "vector-assembly",
-    "prompt": "Ekonomi tarihi cümlesindeki eylem trenini, 'piyasa simülasyonunun geçmişte sapmış olmasının kaçınılmaz olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
-    "question": "Ekonomi tarihi cümlesindeki eylem trenini, 'piyasa simülasyonunun geçmişte sapmış olmasının kaçınılmaz olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
+    "prompt": "cümlesindeki eylem trenini, 'piyasa simülasyonunun geçmişte sapmış olmasının kaçınılmaz olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
+    "question": "cümlesindeki eylem trenini, 'piyasa simülasyonunun geçmişte sapmış olmasının kaçınılmaz olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
     "sentence": "With such highly volatile variables, the historical asset model was bound to have deviated from macro criteria.",
     "scrambled_elements": [
       "bound",
@@ -77958,8 +77958,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q8",
     "type": "structure-match",
-    "prompt": "Sinema tarihi bağlamındaki bu cümlede renk kodlu yapının tam anlamsal karşılığını bulun.",
-    "question": "Sinema tarihi bağlamındaki bu cümlede renk kodlu yapının tam anlamsal karşılığını bulun.",
+    "prompt": "Sinema tarihi bu cümlede renk kodlu yapının tam anlamsal karşılığını bulun.",
+    "question": "Sinema tarihi bu cümlede renk kodlu yapının tam anlamsal karşılığını bulun.",
     "sentence": "The production team <span style='color:#ff6b6b;font-weight:bold;'>was doomed to have compromised</span>its artistic parameters due to budget anomalies.",
     "options": [
       "ödün vermiş olmaya geçmişte mahkumdu",
@@ -77986,8 +77986,8 @@ const chapter40Data = {
   {
     "id": "c43_l03_e1_q10",
     "type": "structure-match",
-    "prompt": "Coğrafya ve haritacılık bağlamındaki bu cümlenin net kronolojik karşılığını bulun.",
-    "question": "Coğrafya ve haritacılık bağlamındaki bu cümlenin net kronolojik karşılığını bulun.",
+    "prompt": "Coğrafya ve haritacılık bu cümlenin net kronolojik karşılığını bulun.",
+    "question": "Coğrafya ve haritacılık bu cümlenin net kronolojik karşılığını bulun.",
     "sentence": "To pass the imperial inspection, the explorer <span style='color:#ff6b6b;font-weight:bold;'>was obliged to have derived</span>his charts from verified validation variables.",
     "options": [
       "türetmiş olmakla geçmişte yükümlüydü",
@@ -78088,7 +78088,7 @@ const chapter40Data = {
     "id": "c43_l03_e2_q7",
     "type": "error-spotting",
     "prompt": "Burada sinsi zaman kayması ve fiil çekimi hatasını tespit edin.",
-    "question": "Sosyoloji metnindeki sinsi zaman kayması ve fiil çekimi hatasını tespit edin.",
+    "question": "metnindeki sinsi zaman kayması ve fiil çekimi hatasını tespit edin.",
     "sentence": "The socioeconomic infrastructure is certain to have mutating its primary criteria during the urbanization anomaly.",
     "options": [
       "is certain to have mutating",
@@ -78194,8 +78194,8 @@ const chapter40Data = {
   {
     "id": "c43_l04_e1_q4",
     "type": "structure-match",
-    "prompt": "Cümledeki 5 öğeli yapının felsefe ve bilim tarihi bağlamındaki güçlü geçmiş tahmin anlamını bulun.",
-    "question": "Cümledeki 5 öğeli yapının felsefe ve bilim tarihi bağlamındaki güçlü geçmiş tahmin anlamını bulun.",
+    "prompt": "Cümledeki 5 öğeli yapının ve güçlü geçmiş tahmin anlamını bulun.",
+    "question": "Cümledeki 5 öğeli yapının ve güçlü geçmiş tahmin anlamını bulun.",
     "sentence": "The ancient laboratory log <span style='color:#ff6b6b;font-weight:bold;'>must have been validated</span>by the chief scholar, as it bears his official seal.",
     "options": [
       "doğrulanmış olmalıdır / doğrulanmış olduğu kaçınılmaz bir tahmindir",
@@ -78236,8 +78236,8 @@ const chapter40Data = {
   {
     "id": "c43_l04_e1_q7",
     "type": "vector-assembly",
-    "prompt": "Edebiyat eleştirisi cümlesindeki eylem trenini, 'gelecekte o tarihte metinsel parametrelerin çoktan türetilmiş olacağı' anlamıyla kurmak için öğeleri doğru dizin.",
-    "question": "Edebiyat eleştirisi cümlesindeki eylem trenini, 'gelecekte o tarihte metinsel parametrelerin çoktan türetilmiş olacağı' anlamıyla kurmak için öğeleri doğru dizin.",
+    "prompt": "cümlesindeki eylem trenini, 'gelecekte o tarihte metinsel parametrelerin çoktan türetilmiş olacağı' anlamıyla kurmak için öğeleri doğru dizin.",
+    "question": "cümlesindeki eylem trenini, 'gelecekte o tarihte metinsel parametrelerin çoktan türetilmiş olacağı' anlamıyla kurmak için öğeleri doğru dizin.",
     "sentence": "By the end of the century, new validation criteria will have been derived from structuralist theories.",
     "scrambled_elements": [
       "derived",
@@ -78270,8 +78270,8 @@ const chapter40Data = {
   {
     "id": "c43_l04_e1_q9",
     "type": "fill-blank-dropdown",
-    "prompt": "Sosyoloji cümlesini 'toplumsal normların o dönemde kesinlikle sapmaya uğratılmış olması gerekir' güçlü tahminiyle tamamlayın.",
-    "question": "Sosyoloji cümlesini 'toplumsal normların o dönemde kesinlikle sapmaya uğratılmış olması gerekir' güçlü tahminiyle tamamlayın.",
+    "prompt": "cümlesini 'toplumsal normların o dönemde kesinlikle sapmaya uğratılmış olması gerekir' güçlü tahminiyle tamamlayın.",
+    "question": "cümlesini 'toplumsal normların o dönemde kesinlikle sapmaya uğratılmış olması gerekir' güçlü tahminiyle tamamlayın.",
     "sentence": "Given the total structural collapse, the family infrastructure must ___ been deviated from by the community.",
     "options": [
       "have",
@@ -78284,8 +78284,8 @@ const chapter40Data = {
   {
     "id": "c43_l04_e1_q10",
     "type": "structure-match",
-    "prompt": "Renklendirilmiş yapının sinema ve sanat teorisi bağlamındaki net anlam karşılığı hangisidir?",
-    "question": "Renklendirilmiş yapının sinema ve sanat teorisi bağlamındaki net anlam karşılığı hangisidir?",
+    "prompt": "Renklendirilmiş yapının sinema ve sanat teorisi net anlam karşılığı hangisidir?",
+    "question": "Renklendirilmiş yapının sinema ve sanat teorisi net anlam karşılığı hangisidir?",
     "sentence": "The lost footage <span style='color:#ff6b6b;font-weight:bold;'>would have been validated</span>by the studio if the producer had signed the validation form.",
     "options": [
       "doğrulanmış/onaylanmış olacaktı (koşul sağlansaydı)",
@@ -78357,8 +78357,8 @@ const chapter40Data = {
   {
     "id": "c43_l04_e2_q5",
     "type": "error-spotting",
-    "prompt": "Edebi teori cümlesindeki 5 öğeli 'would' yapısındaki sinsi syntax hatasını tespit edin.",
-    "question": "Edebi teori cümlesindeki 5 öğeli 'would' yapısındaki sinsi syntax hatasını tespit edin.",
+    "prompt": "cümlesindeki 5 öğeli 'would' yapısındaki sinsi syntax hatasını tespit edin.",
+    "question": "cümlesindeki 5 öğeli 'would' yapısındaki sinsi syntax hatasını tespit edin.",
     "sentence": "The poet's stylistic criteria would have being validated if the structuralist critic had read the text.",
     "options": [
       "would have being validated",
@@ -78444,8 +78444,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e1_q1",
         "type": "structure-match",
-        "prompt": "Cümledeki 6 öğeli renk kodlu yapının ekonomi tarihi bağlamındaki net karşılığını bulun.",
-        "question": "Cümledeki 6 öğeli renk kodlu yapının ekonomi tarihi bağlamındaki net karşılığını bulun.",
+        "prompt": "Cümledeki 6 öğeli renk kodlu yapının net karşılığını bulun.",
+        "question": "Cümledeki 6 öğeli renk kodlu yapının net karşılığını bulun.",
         "sentence": "In global macroeconomics, the sudden rise of fiat currency <span style='color:#ff6b6b;font-weight:bold;'>is likely to have been derived</span>from traditional gold validation parameters.",
         "options": [
           "türetilmiş olması şu an muhtemeldir",
@@ -78458,8 +78458,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e1_q2",
         "type": "structure-match",
-        "prompt": "Biyoloji ve bilim tarihi bağlamındaki bu cümlede, 6 öğeli yapının tam anlamsal karşılığı hangisidir?",
-        "question": "Biyoloji ve bilim tarihi bağlamındaki bu cümlede, 6 öğeli yapının tam anlamsal karşılığı hangisidir?",
+        "prompt": "bu cümlede, 6 öğeli yapının tam anlamsal karşılığı hangisidir?",
+        "question": "bu cümlede, 6 öğeli yapının tam anlamsal karşılığı hangisidir?",
         "sentence": "Recent laboratory data confirms that the cellular infrastructure <span style='color:#ff6b6b;font-weight:bold;'>is certain to have been mutated</span>by external temperature anomalies.",
         "options": [
           "mutasyona uğratılmış olduğu şu an kesindir",
@@ -78482,8 +78482,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e1_q4",
         "type": "structure-match",
-        "prompt": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu yapının net edilgen karşılığını bulun.",
-        "question": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu yapının net edilgen karşılığını bulun.",
+        "prompt": "bu cümlede, renk kodlu yapının net edilgen karşılığını bulun.",
+        "question": "bu cümlede, renk kodlu yapının net edilgen karşılığını bulun.",
         "sentence": "The lost avant-garde manuscript <span style='color:#ff6b6b;font-weight:bold;'>is thought to have been deviated</span>from by medieval copyists who lacked strict validation criteria.",
         "options": [
           "aslından saptırılmış/değiştirilmiş olduğu şu an düşünülmektedir",
@@ -78534,8 +78534,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e1_q8",
         "type": "structure-match",
-        "prompt": "Sosyoloji bağlamındaki bu cümlede renk kodlu 6'lı yapının kattığı tam anlamsal refleks nedir?",
-        "question": "Sosyoloji bağlamındaki bu cümlede renk kodlu 6'lı yapının kattığı tam anlamsal refleks nedir?",
+        "prompt": "bu cümlede renk kodlu 6'lı yapının kattığı tam anlamsal refleks nedir?",
+        "question": "bu cümlede renk kodlu 6'lı yapının kattığı tam anlamsal refleks nedir?",
         "sentence": "The community's isolation parameters <span style='color:#ff6b6b;font-weight:bold;'>are unlikely to have been compromised</span>by external technological validation.",
         "options": [
           "riske atılmış/bozulmuş olması şu an muhtemel değildir",
@@ -78548,8 +78548,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e1_q9",
         "type": "fill-blank-dropdown",
-        "prompt": "Bilim felsefesi cümlesini 'eski teorik kriterlerden geçmişte kesinlikle sapılmış olduğu' anlamıyla tamamlayın.",
-        "question": "Bilim felsefesi cümlesini 'eski teorik kriterlerden geçmişte kesinlikle sapılmış olduğu' anlamıyla tamamlayın.",
+        "prompt": "cümlesini 'eski teorik kriterlerden geçmişte kesinlikle sapılmış olduğu' anlamıyla tamamlayın.",
+        "question": "cümlesini 'eski teorik kriterlerden geçmişte kesinlikle sapılmış olduğu' anlamıyla tamamlayın.",
         "sentence": "Modern physics confirms that Newton's gravitational variables ___ to have been deviated from under extreme space-time anomalies.",
         "options": [
           "are certain",
@@ -78562,8 +78562,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e1_q10",
         "type": "structure-match",
-        "prompt": "Renklendirilmiş devasa yapının ekonomi bağlamındaki net karşılığı hangisidir?",
-        "question": "Renklendirilmiş devasa yapının ekonomi bağlamındaki net karşılığı hangisidir?",
+        "prompt": "Renklendirilmiş devasa yapının ekonomi net karşılığı hangisidir?",
+        "question": "Renklendirilmiş devasa yapının ekonomi net karşılığı hangisidir?",
         "sentence": "The ancient tax infrastructure <span style='color:#ff6b6b;font-weight:bold;'>is thought to have been derived</span>from Byzantine validation criteria.",
         "options": [
           "türetilmiş olduğu şu an düşünülmektedir",
@@ -78663,8 +78663,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e2_q7",
         "type": "error-spotting",
-        "prompt": "Sosyoloji makalesindeki 6 öğeli 'unlikely' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
-        "question": "Sosyoloji makalesindeki 6 öğeli 'unlikely' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
+        "prompt": "makalesindeki 6 öğeli 'unlikely' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
+        "question": "makalesindeki 6 öğeli 'unlikely' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
         "sentence": "The remote tribe's linguistic variables are unlikely to having been compromised by modern infrastructure communication.",
         "options": [
           "to having been compromised",
@@ -78691,8 +78691,8 @@ const chapter40Data = {
       {
         "id": "c44_l01_e2_q9",
         "type": "error-spotting",
-        "prompt": "Bilim tarihi metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
-        "question": "Bilim tarihi metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "prompt": "metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "question": "metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
         "sentence": "The ancient alchemical formula is rumored to been have validated by early scientific criteria.",
         "options": [
           "to been have validated",
@@ -78736,8 +78736,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e1_q2",
         "type": "structure-match",
-        "prompt": "Ekonomi tarihi bağlamındaki bu cümlede, renk kodlu mega zincirin tam anlamsal kalkanı hangisidir?",
-        "question": "Ekonomi tarihi bağlamındaki bu cümlede, renk kodlu mega zincirin tam anlamsal kalkanı hangisidir?",
+        "prompt": "bu cümlede, renk kodlu mega zincirin tam anlamsal kalkanı hangisidir?",
+        "question": "bu cümlede, renk kodlu mega zincirin tam anlamsal kalkanı hangisidir?",
         "sentence": "Lacking central bank protection, the financial infrastructure <span style='color:#ff6b6b;font-weight:bold;'>was doomed to have been compromised</span>by the market anomaly.",
         "options": [
           "riske atılmış/zarar görmüş olmaya geçmişte mahkumdu",
@@ -78760,8 +78760,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e1_q4",
         "type": "structure-match",
-        "prompt": "Sosyolojik altyapı bağlamındaki bu cümlede, 6 öğeli yapının net edilgen karşılığını bulun.",
-        "question": "Sosyolojik altyapı bağlamındaki bu cümlede, 6 öğeli yapının net edilgen karşılığını bulun.",
+        "prompt": "Sosyolojik altyapı bu cümlede, 6 öğeli yapının net edilgen karşılığını bulun.",
+        "question": "Sosyolojik altyapı bu cümlede, 6 öğeli yapının net edilgen karşılığını bulun.",
         "sentence": "Under the previous authoritarian criteria, regional data variables <span style='color:#ff6b6b;font-weight:bold;'>were obliged to have been mutated</span>before public validation.",
         "options": [
           "değiştirilmiş/mutasyona uğratılmış olmakla geçmişte yükümlüydü",
@@ -78788,8 +78788,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e1_q6",
         "type": "structure-match",
-        "prompt": "Edebi eleştiri bağlamındaki bu cümlenin taşıdığı 'gerçekleşmemiş kurumsal plan' anlamını seçin.",
-        "question": "Edebi eleştiri bağlamındaki bu cümlenin taşıdığı 'gerçekleşmemiş kurumsal plan' anlamını seçin.",
+        "prompt": "Edebi eleştiri bu cümlenin taşıdığı 'gerçekleşmemiş kurumsal plan' anlamını seçin.",
+        "question": "Edebi eleştiri bu cümlenin taşıdığı 'gerçekleşmemiş kurumsal plan' anlamını seçin.",
         "sentence": "The structuralist framework <span style='color:#ff6b6b;font-weight:bold;'>was to have been derived</span>from linguistic parameters, but the journal rejected the paper.",
         "options": [
           "türetilmiş olması geçmişte planlanmıştı (ama gerçekleşmedi)",
@@ -78802,8 +78802,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e1_q7",
         "type": "vector-assembly",
-        "prompt": "Bilim tarihi cümlesindeki eylem trenini, 'deney düzeneğinin anomali esnasında riske atılmış olmasının geçmişte kesin olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
-        "question": "Bilim tarihi cümlesindeki eylem trenini, 'deney düzeneğinin anomali esnasında riske atılmış olmasının geçmişte kesin olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
+        "prompt": "cümlesindeki eylem trenini, 'deney düzeneğinin anomali esnasında riske atılmış olmasının geçmişte kesin olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
+        "question": "cümlesindeki eylem trenini, 'deney düzeneğinin anomali esnasında riske atılmış olmasının geçmişte kesin olduğu' anlamıyla kurmak için öğeleri doğru dizin.",
         "sentence": "The laboratory infrastructure was certain to have been compromised during the power anomaly.",
         "scrambled_elements": ["to", "certain", "compromised", "was", "have", "been"],
         "correct_sequence": ["was", "certain", "to", "have", "been", "compromised"],
@@ -78826,8 +78826,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e1_q9",
         "type": "fill-blank-dropdown",
-        "prompt": "Sosyoloji metnini 'ilkel kabile altyapısının modern değişkenlerce geçmişte kaçınılmaz olarak bozulmuş olduğu' anlamıyla tamamlayın.",
-        "question": "Sosyoloji metnini 'ilkel kabile altyapısının modern değişkenlerce geçmişte kaçınılmaz olarak bozulmuş olduğu' anlamıyla tamamlayın.",
+        "prompt": "metnini 'ilkel kabile altyapısının modern değişkenlerce geçmişte kaçınılmaz olarak bozulmuş olduğu' anlamıyla tamamlayın.",
+        "question": "metnini 'ilkel kabile altyapısının modern değişkenlerce geçmişte kaçınılmaz olarak bozulmuş olduğu' anlamıyla tamamlayın.",
         "sentence": "The isolation parameters of the tribe ___ bound to have been compromised by early industrial expansions.",
         "options": [
           "were",
@@ -78840,8 +78840,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e1_q10",
         "type": "structure-match",
-        "prompt": "Edebi akımlar bağlamındaki bu cümlenin net kuramsal anlam karşılığını bulun.",
-        "question": "Edebi akımlar bağlamındaki bu cümlenin net kuramsal anlam karşılığını bulun.",
+        "prompt": "Edebi akımlar bu cümlenin net kuramsal anlam karşılığını bulun.",
+        "question": "Edebi akımlar bu cümlenin net kuramsal anlam karşılığını bulun.",
         "sentence": "The neoclassical criteria <span style='color:#ff6b6b;font-weight:bold;'>were doomed to have been deviated</span>from as romantic variables dominated the era.",
         "options": [
           "sapılmış/terk edilmiş olmaya geçmişte mahkumdu",
@@ -78941,8 +78941,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e2_q7",
         "type": "error-spotting",
-        "prompt": "Sosyoloji cümlesindeki 6 öğeli 'obliged' mega yapısının syntax hatasını bulun.",
-        "question": "Sosyoloji cümlesindeki 6 öğeli 'obliged' mega yapısının syntax hatasını bulun.",
+        "prompt": "cümlesindeki 6 öğeli 'obliged' mega yapısının syntax hatasını bulun.",
+        "question": "cümlesindeki 6 öğeli 'obliged' mega yapısının syntax hatasını bulun.",
         "sentence": "The regional variables were obliged to had been mutated before the national parameters were finalized.",
         "options": [
           "were obliged to had been",
@@ -78969,8 +78969,8 @@ const chapter40Data = {
       {
         "id": "c44_l02_e2_q9",
         "type": "error-spotting",
-        "prompt": "Bilim tarihi metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
-        "question": "Bilim tarihi metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "prompt": "metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "question": "metnindeki 6 öğeli mega zincirin sinsi dizilim hatasını bulun.",
         "sentence": "The raw sample parameters were certain to been have compromised during the containment anomaly.",
         "options": [
           "certain to been have",
@@ -79014,8 +79014,8 @@ const chapter40Data = {
       {
         "id": "c44_l03_e1_q2",
         "type": "structure-match",
-        "prompt": "Coğrafya ve çevre bilimleri bağlamındaki bu cümlede, renk kodlu yapının gelecek zaman projeksiyonunu bulun.",
-        "question": "Coğrafya ve çevre bilimleri bağlamındaki bu cümlede, renk kodlu yapının gelecek zaman projeksiyonunu bulun.",
+        "prompt": "Coğrafya ve bu cümlede, renk kodlu yapının gelecek zaman projeksiyonunu bulun.",
+        "question": "Coğrafya ve bu cümlede, renk kodlu yapının gelecek zaman projeksiyonunu bulun.",
         "sentence": "If the ocean temperature criteria alter further, the marine infrastructure <span style='color:#ff6b6b;font-weight:bold;'>will be bound to be mutated</span>by the anomaly.",
         "options": [
           "mutasyona uğraması/değişmesi gelecekte kaçınılmaz olacaktır",
@@ -79038,8 +79038,8 @@ const chapter40Data = {
       {
         "id": "c44_l03_e1_q4",
         "type": "structure-match",
-        "prompt": "Sinema endüstrisi bağlamındaki bu cümlede, renk kodlu mega yapının tam gelecek zaman edilgen anlamını seçin.",
-        "question": "Sinema endüstrisi bağlamındaki bu cümlede, renk kodlu mega yapının tam gelecek zaman edilgen anlamını seçin.",
+        "prompt": "Sinema endüstrisi bu cümlede, renk kodlu mega yapının tam gelecek zaman edilgen anlamını seçin.",
+        "question": "Sinema endüstrisi bu cümlede, renk kodlu mega yapının tam gelecek zaman edilgen anlamını seçin.",
         "sentence": "With the rise of streaming platforms, traditional distribution networks <span style='color:#ff6b6b;font-weight:bold;'>will be bound to be deviated</span>from by new directors.",
         "options": [
           "terk edilmesi/dışına çıkılması gelecekte kaçınılmaz olacaktır",
@@ -79052,8 +79052,8 @@ const chapter40Data = {
       {
         "id": "c44_l03_e1_q5",
         "type": "fill-blank-dropdown",
-        "prompt": "Bilim tarihi ve gelecek projeksiyonu cümlesini, 'biyolojik örneğin gelecekte aylardır incelenmekte olmuş olacağı' anlamıyla tamamlayın.",
-        "question": "Bilim tarihi ve gelecek projeksiyonu cümlesini, 'biyolojik örneğin gelecekte aylardır incelenmekte olmuş olacağı' anlamıyla tamamlayın.",
+        "prompt": "cümlesini, 'biyolojik örneğin gelecekte aylardır incelenmekte olmuş olacağı' anlamıyla tamamlayın.",
+        "question": "cümlesini, 'biyolojik örneğin gelecekte aylardır incelenmekte olmuş olacağı' anlamıyla tamamlayın.",
         "sentence": "By next week, the pathogen variables will ___ been being monitored under tight laboratory criteria.",
         "options": [
           "have",
@@ -79066,8 +79066,8 @@ const chapter40Data = {
       {
         "id": "c44_l03_e1_q6",
         "type": "structure-match",
-        "prompt": "Edebi akımlar ve gelecek eleştirisi bağlamındaki bu cümlenin taşıdığı kesinlik kalkanını seçin.",
-        "question": "Edebi akımlar ve gelecek eleştirisi bağlamındaki bu cümlenin taşıdığı kesinlik kalkanını seçin.",
+        "prompt": "Edebi akımlar ve gelecek eleştirisi bu cümlenin taşıdığı kesinlik kalkanını seçin.",
+        "question": "Edebi akımlar ve gelecek eleştirisi bu cümlenin taşıdığı kesinlik kalkanını seçin.",
         "sentence": "Under digital dominance, classical poetry variables <span style='color:#ff6b6b;font-weight:bold;'>will be certain to be mutated</span>into modern text frameworks.",
         "options": [
           "dönüştürülmesi/mutasyona uğratılması gelecekte kesindir",
@@ -79090,8 +79090,8 @@ const chapter40Data = {
       {
         "id": "c44_l03_e1_q8",
         "type": "structure-match",
-        "prompt": "Ekonomi ve kentsel altyapı bağlamındaki bu cümlede, renk kodlu yapının net edilgen projeksiyonunu seçin.",
-        "question": "Ekonomi ve kentsel altyapı bağlamındaki bu cümlede, renk kodlu yapının net edilgen projeksiyonunu seçin.",
+        "prompt": "Ekonomi ve kentsel altyapı bu cümlede, renk kodlu yapının net edilgen projeksiyonunu seçin.",
+        "question": "Ekonomi ve kentsel altyapı bu cümlede, renk kodlu yapının net edilgen projeksiyonunu seçin.",
         "sentence": "If the municipal funding stops, the city's transport infrastructure <span style='color:#ff6b6b;font-weight:bold;'>will be likely to be compromised</span>before validation.",
         "options": [
           "riske girmesi/feda edilmesi gelecekte muhtemel olacaktır",
@@ -79118,8 +79118,8 @@ const chapter40Data = {
       {
         "id": "c44_l03_e1_q10",
         "type": "structure-match",
-        "prompt": "Bilim felsefesi metnindeki bu devasa 6 öğeli yapının net gelecek zaman edilgen karşılığı hangisidir?",
-        "question": "Bilim felsefesi metnindeki bu devasa 6 öğeli yapının net gelecek zaman edilgen karşılığı hangisidir?",
+        "prompt": "metnindeki bu devasa 6 öğeli yapının net gelecek zaman edilgen karşılığı hangisidir?",
+        "question": "metnindeki bu devasa 6 öğeli yapının net gelecek zaman edilgen karşılığı hangisidir?",
         "sentence": "By the time the reactor test ends, the safety variables <span style='color:#ff6b6b;font-weight:bold;'>will have been being monitored</span>by quantum infrastructure for two days straight.",
         "options": [
           "iki gündür izlenmekte/gözlemlenmekte olmuş olacak",
@@ -79278,8 +79278,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e1_q1",
         "type": "structure-match",
-        "prompt": "Cümledeki 7 öğeli renk kodlu yapının tarihsel coğrafya bağlamındaki net karşılığını bulun.",
-        "question": "Cümledeki 7 öğeli renk kodlu yapının tarihsel coğrafya bağlamındaki net karşılığını bulun.",
+        "prompt": "Cümledeki 7 öğeli renk kodlu yapının tarihsel coğrafya net karşılığını bulun.",
+        "question": "Cümledeki 7 öğeli renk kodlu yapının tarihsel coğrafya net karşılığını bulun.",
         "sentence": "In ancient cartography, the river delta infrastructure <span style='color:#ff6b6b;font-weight:bold;'>is rumored to have been being mutated</span>by seasonal flooding anomalies before the map was completed.",
         "options": [
           "mutasyona uğratılmakta olduğu söylenmektedir",
@@ -79292,8 +79292,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e1_q2",
         "type": "structure-match",
-        "prompt": "Ekonomi tarihi bağlamındaki bu cümlede, 7 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
-        "question": "Ekonomi tarihi bağlamındaki bu cümlede, 7 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
+        "prompt": "bu cümlede, 7 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
+        "question": "bu cümlede, 7 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
         "sentence": "The bank's monetary variables <span style='color:#ff6b6b;font-weight:bold;'>are thought to have been being compromised</span>during the hyperinflation crisis.",
         "options": [
           "riske atılmakta/zarar görmekte olduğu şu an düşünülmektedir",
@@ -79306,8 +79306,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e1_q3",
         "type": "vector-assembly",
-        "prompt": "Bilim tarihi cümlesindeki eylem trenini, 'hücresel parametrelerin o esnada laboratuvarda doğrulanmakta olduğunun iddia edildiği' anlamıyla doğru geometrik sıraya dizin.",
-        "question": "Bilim tarihi cümlesindeki eylem trenini, 'hücresel parametrelerin o esnada laboratuvarda doğrulanmakta olduğunun iddia edildiği' anlamıyla doğru geometrik sıraya dizin.",
+        "prompt": "cümlesindeki eylem trenini, 'hücresel parametrelerin o esnada laboratuvarda doğrulanmakta olduğunun iddia edildiği' anlamıyla doğru geometrik sıraya dizin.",
+        "question": "cümlesindeki eylem trenini, 'hücresel parametrelerin o esnada laboratuvarda doğrulanmakta olduğunun iddia edildiği' anlamıyla doğru geometrik sıraya dizin.",
         "sentence": "The biological specimen <span style='color:#ff6b6b;font-weight:bold;'>is alleged to have been being validated</span> by the research team when the temperature anomaly occurred.",
         "scrambled_elements": ["been", "alleged", "have", "to", "is", "validated", "being"],
         "correct_sequence": ["is", "alleged", "to", "have", "been", "being", "validated"],
@@ -79316,8 +79316,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e1_q4",
         "type": "structure-match",
-        "prompt": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu yapının net edilgen süreç karşılığını bulun.",
-        "question": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu yapının net edilgen süreç karşılığını bulun.",
+        "prompt": "bu cümlede, renk kodlu yapının net edilgen süreç karşılığını bulun.",
+        "question": "bu cümlede, renk kodlu yapının net edilgen süreç karşılığını bulun.",
         "sentence": "The tragic play's text <span style='color:#ff6b6b;font-weight:bold;'>is rumored to have been being deviated</span>from by local actors during the medieval tour.",
         "options": [
           "aslından saptırılmakta olduğu söylenmektedir",
@@ -79368,8 +79368,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e1_q8",
         "type": "structure-match",
-        "prompt": "Bilim felsefesi bağlamındaki bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal refleks nedir?",
-        "question": "Bilim felsefesi bağlamındaki bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal refleks nedir?",
+        "prompt": "bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal refleks nedir?",
+        "question": "bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal refleks nedir?",
         "sentence": "Newton's space-time parameters <span style='color:#ff6b6b;font-weight:bold;'>are thought to have been being deviated</span>from during the early physics anomalies.",
         "options": [
           "dışına çıkılmakta/sapılmakta olduğu şu an düşünülmektedir",
@@ -79396,8 +79396,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e1_q10",
         "type": "structure-match",
-        "prompt": "Renklendirilmiş devasa yapının sosyoloji bağlamındaki net kronolojik edilgen karşılığı hangisidir?",
-        "question": "Renklendirilmiş devasa yapının sosyoloji bağlamındaki net kronolojik edilgen karşılığı hangisidir?",
+        "prompt": "Renklendirilmiş devasa yapının net kronolojik edilgen karşılığı hangisidir?",
+        "question": "Renklendirilmiş devasa yapının net kronolojik edilgen karşılığı hangisidir?",
         "sentence": "The community's isolation variables <span style='color:#ff6b6b;font-weight:bold;'>are rumored to have been being mutated</span>by external validation procedures.",
         "options": [
           "mutasyona uğratılmakta olduğu söylenmektedir",
@@ -79497,8 +79497,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e2_q7",
         "type": "error-spotting",
-        "prompt": "Sosyoloji makalesindeki 7 öğeli 'alleged' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
-        "question": "Sosyoloji makalesindeki 7 öğeli 'alleged' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
+        "prompt": "makalesindeki 7 öğeli 'alleged' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
+        "question": "makalesindeki 7 öğeli 'alleged' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
         "sentence": "The remote tribe's criteria <span style='color:#ff6b6b;font-weight:bold;'>are alleged to having been being compromised</span> by modern industrial parameters.",
         "options": [
           "to having been being",
@@ -79525,8 +79525,8 @@ const chapter40Data = {
       {
         "id": "c45_l01_e2_q9",
         "type": "error-spotting",
-        "prompt": "Bilim tarihi metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
-        "question": "Bilim tarihi metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "prompt": "metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "question": "metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
         "sentence": "The ancient medical formula is rumored to been have being validated by early medieval criteria.",
         "options": [
           "to been have being",
@@ -79570,8 +79570,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e1_q2",
         "type": "structure-match",
-        "prompt": "Ekonomi tarihi bağlamındaki bu cümlede, 7 öğeli canavar yapının tam anlamsal kalkanı hangisidir?",
-        "question": "Ekonomi tarihi bağlamındaki bu cümlede, 7 öğeli canavar yapının tam anlamsal kalkanı hangisidir?",
+        "prompt": "bu cümlede, 7 öğeli canavar yapının tam anlamsal kalkanı hangisidir?",
+        "question": "bu cümlede, 7 öğeli canavar yapının tam anlamsal kalkanı hangisidir?",
         "sentence": "The treasury infrastructure <span style='color:#ff6b6b;font-weight:bold;'>was suspected to have been being compromised</span>by shadow market anomalies months before the market crashed.",
         "options": [
           "riske atılmakta/zarar görmekte olduğundan geçmişte şüpheleniliyordu",
@@ -79594,8 +79594,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e1_q4",
         "type": "structure-match",
-        "prompt": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu karmaşık saf modal yapının net sitem anlamını bulun.",
-        "question": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu karmaşık saf modal yapının net sitem anlamını bulun.",
+        "prompt": "bu cümlede, renk kodlu karmaşık saf modal yapının net sitem anlamını bulun.",
+        "question": "bu cümlede, renk kodlu karmaşık saf modal yapının net sitem anlamını bulun.",
         "sentence": "The original prose criteria <span style='color:#ff6b6b;font-weight:bold;'>ought to have been rumored to be derived</span>from classical text validation.",
         "options": [
           "türetilmiş olduğu (geçmişte) söyleniyor olmalıydı (ama söylenmedi)",
@@ -79646,8 +79646,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e1_q8",
         "type": "structure-match",
-        "prompt": "Bilim felsefesi bağlamındaki bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal adli çıkarım nedir?",
-        "question": "Bilim felsefesi bağlamındaki bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal adli çıkarım nedir?",
+        "prompt": "bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal adli çıkarım nedir?",
+        "question": "bu cümlede renk kodlu 7'li yapının kattığı tam anlamsal adli çıkarım nedir?",
         "sentence": "The experimental criteria <span style='color:#ff6b6b;font-weight:bold;'>were suspected to have been being deviated</span>from when the laboratory isolation broke.",
         "options": [
           "dışına çıkılmakta/sapılmakta olduğundan geçmişte şüpheleniliyordu",
@@ -79660,8 +79660,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e1_q9",
         "type": "fill-blank-dropdown",
-        "prompt": "Sosyoloji metnini 'toplumsal altyapının o esnada sinsi değişkenlerce mutasyona uğratılmakta olduğuna geçmişte inanıldığı' anlamıyla tamamlayın.",
-        "question": "Sosyoloji metnini 'toplumsal altyapının o esnada sinsi değişkenlerce mutasyona uğratılmakta olduğuna geçmişte inanıldığı' anlamıyla tamamlayın.",
+        "prompt": "metnini 'toplumsal altyapının o esnada sinsi değişkenlerce mutasyona uğratılmakta olduğuna geçmişte inanıldığı' anlamıyla tamamlayın.",
+        "question": "metnini 'toplumsal altyapının o esnada sinsi değişkenlerce mutasyona uğratılmakta olduğuna geçmişte inanıldığı' anlamıyla tamamlayın.",
         "sentence": "The tribal infrastructure ___ believed to have been being mutated by early industrial criteria before the treaty.",
         "options": [
           "was",
@@ -79674,8 +79674,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e1_q10",
         "type": "structure-match",
-        "prompt": "Renklendirilmiş devasa yapının ekonomi tarihi bağlamındaki net kronolojik edilgen karşılığı hangisidir?",
-        "question": "Renklendirilmiş devasa yapının ekonomi tarihi bağlamındaki net kronolojik edilgen karşılığı hangisidir?",
+        "prompt": "Renklendirilmiş devasa yapının net kronolojik edilgen karşılığı hangisidir?",
+        "question": "Renklendirilmiş devasa yapının net kronolojik edilgen karşılığı hangisidir?",
         "sentence": "The fiscal data variables <span style='color:#ff6b6b;font-weight:bold;'>were believed to have been being derived</span>from false documentation parameters.",
         "options": [
           "türetilmekte olduğuna geçmişte inanılıyordu",
@@ -79775,8 +79775,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e2_q7",
         "type": "error-spotting",
-        "prompt": "Sosyoloji makalesindeki 7 öğeli 'suspected' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
-        "question": "Sosyoloji makalesindeki 7 öğeli 'suspected' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
+        "prompt": "makalesindeki 7 öğeli 'suspected' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
+        "question": "makalesindeki 7 öğeli 'suspected' mega yapısının arasına gizlenmiş syntax hatasını tespit edin.",
         "sentence": "The remote community's variables were suspected to having been being compromised by early communication infrastructure.",
         "options": [
           "to having been being",
@@ -79803,8 +79803,8 @@ const chapter40Data = {
       {
         "id": "c45_l02_e2_q9",
         "type": "error-spotting",
-        "prompt": "Bilim tarihi metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
-        "question": "Bilim tarihi metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "prompt": "metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "question": "metnindeki 7 öğeli mega zincirin sinsi dizilim hatasını bulun.",
         "sentence": "The raw laboratory variables were suspected to been have being compromised during the severe power anomaly.",
         "options": [
           "to been have being",
@@ -79832,8 +79832,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e1_q1",
         "type": "structure-match",
-        "prompt": "Cümledeki 8 öğeli renk kodlu yapının tarihsel ekonomi bağlamındaki net karşılığını bulun.",
-        "question": "Cümledeki 8 öğeli renk kodlu yapının tarihsel ekonomi bağlamındaki net karşılığını bulun.",
+        "prompt": "Cümledeki 8 öğeli renk kodlu yapının tarihsel ekonomi net karşılığını bulun.",
+        "question": "Cümledeki 8 öğeli renk kodlu yapının tarihsel ekonomi net karşılığını bulun.",
         "sentence": "In 19th-century trade networks, the regional development criteria <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been altered</span>by sudden market anomalies.",
         "options": [
           "değiştirilmiş olmasının beklenmiş olabilmesi (geçmişte) mümkündü",
@@ -79846,8 +79846,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e1_q2",
         "type": "structure-match",
-        "prompt": "Bilim tarihi bağlamındaki bu cümlede, 8 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
-        "question": "Bilim tarihi bağlamındaki bu cümlede, 8 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
+        "prompt": "bu cümlede, 8 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
+        "question": "bu cümlede, 8 öğeli canavar yapının tam anlamsal karşılığı hangisidir?",
         "sentence": "The lab's original validation variables <span style='color:#ff6b6b;font-weight:bold;'>might have been rumored to have been compromised</span>before the official isolation protocol collapsed.",
         "options": [
           "riske atılmış/zarar görmüş olduğunun söylenmiş olması geçmişte bir ihtimaldi",
@@ -79870,8 +79870,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e1_q4",
         "type": "structure-match",
-        "prompt": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu yapının net edilgen çift perfect karşılığını bulun.",
-        "question": "Edebiyat eleştirisi bağlamındaki bu cümlede, renk kodlu yapının net edilgen çift perfect karşılığını bulun.",
+        "prompt": "bu cümlede, renk kodlu yapının net edilgen çift perfect karşılığını bulun.",
+        "question": "bu cümlede, renk kodlu yapının net edilgen çift perfect karşılığını bulun.",
         "sentence": "The classical poetic parameters <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been derived</span>from ancient validation logs.",
         "options": [
           "türetilmiş olmasının beklenmiş olabilmesi geçmişte mümkündü",
@@ -79922,8 +79922,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e1_q8",
         "type": "structure-match",
-        "prompt": "Sosyoloji bağlamındaki bu cümlede renk kodlu 8'li yapının kattığı tam anlamsal tahmin refleksini seçin.",
-        "question": "Sosyoloji bağlamındaki bu cümlede renk kodlu 8'li yapının kattığı tam anlamsal tahmin refleksini seçin.",
+        "prompt": "bu cümlede renk kodlu 8'li yapının kattığı tam anlamsal tahmin refleksini seçin.",
+        "question": "bu cümlede renk kodlu 8'li yapının kattığı tam anlamsal tahmin refleksini seçin.",
         "sentence": "The tribe's isolation parameters <span style='color:#ff6b6b;font-weight:bold;'>would have been supposed to have been compromised</span>if the communication lines had failed earlier.",
         "options": [
           "riske atılmış/bozulmuş olmasının varsayılmış olması gerekirdi (şartlı geçmiş tahmin)",
@@ -79936,8 +79936,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e1_q9",
         "type": "fill-blank-dropdown",
-        "prompt": "Bilim felsefesi cümlesini 'eski teorik kriterlerden geçmişte sapılmış olmasının beklenmiş olabilmesi mümkündü' anlamıyla tamamlayın.",
-        "question": "Bilim felsefesi cümlesini 'eski teorik kriterlerden geçmişte sapılmış olmasının beklenmiş olabilmesi mümkündü' anlamıyla tamamlayın.",
+        "prompt": "cümlesini 'eski teorik kriterlerden geçmişte sapılmış olmasının beklenmiş olabilmesi mümkündü' anlamıyla tamamlayın.",
+        "question": "cümlesini 'eski teorik kriterlerden geçmişte sapılmış olmasının beklenmiş olabilmesi mümkündü' anlamıyla tamamlayın.",
         "sentence": "Newton's gravitational variables could ___ been expected to have been deviated from under intense cosmic anomalies.",
         "options": [
           "have",
@@ -79950,8 +79950,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e1_q10",
         "type": "structure-match",
-        "prompt": "Renklendirilmiş bu zirve yapının ekonomi bağlamındaki net kronolojik edilgen karşılığı hangisidir?",
-        "question": "Renklendirilmiş bu zirve yapının ekonomi bağlamındaki net kronolojik edilgen karşılığı hangisidir?",
+        "prompt": "Renklendirilmiş bu zirve yapının ekonomi net kronolojik edilgen karşılığı hangisidir?",
+        "question": "Renklendirilmiş bu zirve yapının ekonomi net kronolojik edilgen karşılığı hangisidir?",
         "sentence": "The ancient asset altyapısı <span style='color:#ff6b6b;font-weight:bold;'>might have been rumored to have been mutated</span>by Byzantine validation procedures.",
         "options": [
           "mutasyona uğratılmış olduğunun söylenmiş olması geçmişte bir ihtimaldi",
@@ -80051,8 +80051,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e2_q7",
         "type": "error-spotting",
-        "prompt": "Sosyoloji makalesindeki 8 öğeli 'rumored' titan yapısının arasına gizlenmiş passive motoru hatasını tespit edin.",
-        "question": "Sosyoloji makalesindeki 8 öğeli 'rumored' titan yapısının arasına gizlenmiş passive motoru hatasını tespit edin.",
+        "prompt": "makalesindeki 8 öğeli 'rumored' titan yapısının arasına gizlenmiş passive motoru hatasını tespit edin.",
+        "question": "makalesindeki 8 öğeli 'rumored' titan yapısının arasına gizlenmiş passive motoru hatasını tespit edin.",
         "sentence": "The ancient tribe's linguistic parameters might have been rumor to have been compromised by modern communication frameworks.",
         "options": [
           "might have been rumor to",
@@ -80079,8 +80079,8 @@ const chapter40Data = {
       {
         "id": "c46_l01_e2_q9",
         "type": "error-spotting",
-        "prompt": "Bilim tarihi metnindeki 8 öğeli mega zincirin sinsi dizilim hatasını bulun.",
-        "question": "Bilim tarihi metnindeki 8 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "prompt": "metnindeki 8 öğeli mega zincirin sinsi dizilim hatasını bulun.",
+        "question": "metnindeki 8 öğeli mega zincirin sinsi dizilim hatasını bulun.",
         "sentence": "The medical formula criteria could have expected been to have been validated by early scientific academies.",
         "options": [
           "could have expected been to",
@@ -80153,8 +80153,8 @@ const chapter40Data = {
       {
         "id": "c47_l01_e1_q4",
         "type": "titan-boundary-defense",
-        "prompt": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı akademik mantık kalkanını açıklayın.",
-        "question": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı akademik mantık kalkanını açıklayın.",
+        "prompt": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
+        "question": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
         "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation validation servers deviated.",
         "options": [
           "Hem geçmişteki beklenti olasılığını hem de o beklentiye konu olan 'şifrenin çözümlenmiş olması' eylemini katmanlı olarak geçmişe gömer; yazar sorumluluk almaz.",
@@ -80239,8 +80239,8 @@ const chapter40Data = {
       {
         "id": "c47_l01_e1_q10",
         "type": "structural-deconstruction",
-        "prompt": "Aşağıdaki renk kodlu yapıda pembe alanla belirtilen 'rumored' vagonunun sisteme kattığı kurumsal/akademik sorumluluk kalkanı nedir?",
-        "question": "Aşağıdaki renk kodlu yapıda pembe alanla belirtilen 'rumored' vagonunun sisteme kattığı kurumsal/akademik sorumluluk kalkanı nedir?",
+        "prompt": "Aşağıdaki renk kodlu yapıda pembe alanla belirtilen 'rumored' vagonunun sisteme kattığı kurumsal/sorumluluk kalkanı nedir?",
+        "question": "Aşağıdaki renk kodlu yapıda pembe alanla belirtilen 'rumored' vagonunun sisteme kattığı kurumsal/sorumluluk kalkanı nedir?",
         "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>is/are rumored to have been being read</span>.",
         "options": [
           "Yazarın şifrelerin okunduğuna dair kesin bir kanıtı olmadığını, eylemi bir 'söylenti/iddia' kalkanı arkasından sunduğunu gösterir.",
@@ -80334,7 +80334,7 @@ const chapter40Data = {
         "options": [
           "Cümle 1 yazar adına gelecek odaklı kesin bir taahhüt içerirken; Cümle 2 çift perfect kalkanıyla eylemi tamamen geçmişteki bir beklenti ihtimaline gömer ve yazarı sorumluluktan kurtarır.",
           "Cümle 1 geçmişi belgelerken, Cümle 2 gelecekteki zorunlu bir mutasyonu ilan eder.",
-          "İki yapı arasında hiçbir kuramsal fark yoktur, sadece akademik kelime süslemesidir."
+          "İki yapı arasında hiçbir kuramsal fark yoktur, sadece kelime süslemesidir."
         ],
         "correctIndex": 0,
         "explanationKey": "phrasal_modal_master_matrix"
@@ -80370,8 +80370,8 @@ const chapter40Data = {
       {
         "id": "c47_l01_e2_q9",
         "type": "titan-boundary-defense",
-        "prompt": "Bir akademik metin taramasında karşılaştığınız 'could have been rumored to have been read' yapısındaki mantıksal ve kuramsal kilit noktası nedir?",
-        "question": "Bir akademik metin taramasında karşılaştığınız 'could have been rumored to have been read' yapısındaki mantıksal ve kuramsal kilit noktası nedir?",
+        "prompt": "Bir metin taramasında karşılaştığınız 'could have been rumored to have been read' yapısındaki mantıksal ve kuramsal kilit noktası nedir?",
+        "question": "Bir metin taramasında karşılaştığınız 'could have been rumored to have been read' yapısındaki mantıksal ve kuramsal kilit noktası nedir?",
         "sentence": "The cryptographic scripts could have been rumored to have been read.",
         "options": [
           "Hem söylentinin kendisi hem de şifrenin okunma eylemi iki ayrı mükemmel (perfect) motorla geçmişe taşınmıştır; 8 vagonlu tam bir yasal sınır korumasıdır.",
@@ -80391,7 +80391,7 @@ const chapter40Data = {
         "options": [
           "Cümle 1 eylemi doğrudan bitmiş bir veri olarak sunarken; Cümle 2 araya eklenen 5 ekstra vagonla yapıyı edilgenleştirir, katmanlı bir geçmişe gömer ve tamamen kuramsal bir ihtimal kalkanı haline getirir.",
           "Cümle 1 geleceği kurgularken, Cümle 2 şimdiki zamandaki kurumsal zorunlulukları belgeler.",
-          "İki cümle arasında sadece üslup farkı vardır, siber güvenlik bağlamındaki kuramsal ağırlıkları eşittir."
+          "İki cümle arasında sadece üslup farkı vardır, siber güvenlik kuramsal ağırlıkları eşittir."
         ],
         "correctIndex": 0,
         "explanationKey": "phrasal_modal_master_matrix"
@@ -80738,7 +80738,7 @@ const chapter40Data = {
         "hint": {
           "formula": "was believed to have V3 -> inanılıyordu",
           "mirror": "Geçmiş inanç.",
-          "academicNote": "Felsefe tarihi literatürü."
+          "academicNote": "tarihi literatürü."
         }
       },
       {
@@ -80831,8 +80831,8 @@ const chapter40Data = {
         "id": "c48_q8",
         "domain": "Felsefe",
         "type": "structure-match",
-        "prompt": "Boşluğa gelmesi gereken ve felsefe okulunun geçmişteki durumunu belirten en uygun yardımcı fiili seçin:",
-        "question": "Boşluğa gelmesi gereken ve felsefe okulunun geçmişteki durumunu belirten en uygun yardımcı fiili seçin:",
+        "prompt": "Boşluğa gelmesi gereken ve okulunun geçmişteki durumunu belirten en uygun yardımcı fiili seçin:",
+        "question": "Boşluğa gelmesi gereken ve okulunun geçmişteki durumunu belirten en uygun yardımcı fiili seçin:",
         "sentence": "In the Middle Ages, the scholastic thinkers ___ believed to have resolved the conflict between faith and reason.",
         "options": [
           "were",
@@ -80874,8 +80874,8 @@ const chapter40Data = {
         "id": "c48_q10",
         "domain": "Edebiyat",
         "type": "structure-match",
-        "prompt": "Geleceğe yönelik edebiyat eleştirisi bağlamında boşluğa gelmesi gereken en uygun yapıyı bulun:",
-        "question": "Geleceğe yönelik edebiyat eleştirisi bağlamında boşluğa gelmesi gereken en uygun yapıyı bulun:",
+        "prompt": "Geleceğe yönelik boşluğa gelmesi gereken en uygun yapıyı bulun:",
+        "question": "Geleceğe yönelik boşluğa gelmesi gereken en uygun yapıyı bulun:",
         "sentence": "In the next century, this author ___ rumored to have predicted the digital age.",
         "options": [
           "will be",
@@ -81104,7 +81104,7 @@ const chapter40Data = {
         "hint": {
           "formula": "By the time + V2 -> was/were rumored (Tense uyumu)",
           "mirror": "Gelecek-geçmiş uyumsuzluğu.",
-          "academicNote": "Sözlükbilim tarihi."
+          "academicNote": "."
         }
       },
       {
@@ -81188,7 +81188,7 @@ const chapter40Data = {
         "hint": {
           "formula": "to + have + V3 (to having kullanılamaz)",
           "mirror": "Mastar kuralı ihlali.",
-          "academicNote": "Diplomasi tarihi belgeleri."
+          "academicNote": "belgeleri."
         }
       },
       {
@@ -81251,7 +81251,7 @@ const chapter40Data = {
         "hint": {
           "formula": "are estimated (Present) + to have V3 (Past)",
           "mirror": "Öncelik-sonralık ilişkisi.",
-          "academicNote": "Kentsel sosyoloji verileri."
+          "academicNote": "Kentsel verileri."
         }
       },
       {
@@ -81345,7 +81345,7 @@ const chapter40Data = {
         "startLessonId": 460,
         "originalIndex": 45,
         "title": "8 Öğeli Titan Eylem Zincirleri",
-        "desc": "Çift geçmiş zaman kayması (Double Perfect Shift) içeren en karmaşık akademik yapılar",
+        "desc": "Çift geçmiş zaman kayması (Double Perfect Shift) içeren en karmaşık yapılar",
         "icon": "☄️",
         "numLessons": 1,
         "formulas": [
@@ -81364,7 +81364,7 @@ const chapter40Data = {
         "startLessonId": 470,
         "originalIndex": 46,
         "title": "Zincir Genişleme ve Sentaks Matrisi",
-        "desc": "Cümleye eklenen veya çıkarılan vagonların (yardımcı fiillerin) anlamsal ve akademik sorumluluk farkları",
+        "desc": "Cümleye eklenen veya çıkarılan vagonların (yardımcı fiillerin) anlamsal ve sorumluluk farkları",
         "icon": "🔮",
         "numLessons": 1,
         "formulas": [
@@ -81402,7 +81402,7 @@ const chapter40Data = {
         "startLessonId": 490,
         "originalIndex": 48,
         "title": "Ultimate Academic Exam Simulation",
-        "desc": "Nihai Akademik Sınav Simülasyonu",
+        "desc": "Nihai Sınav Simülasyonu",
         "icon": "🏁",
         "numLessons": 4,
         "formulas": [
@@ -81415,7 +81415,7 @@ const chapter40Data = {
         "subtitles": [
           "1. YDS/YÖKDİL Gramer Simülasyonu",
           "2. TOEFL/IELTS Cümle Çözümlemeleri",
-          "3. Akademik Metin Okuma Pratikleri",
+          "3. Metin Okuma Pratikleri",
           "4. Sınav Simülasyonu Final Zirvesi"
         ]
       },
@@ -82100,7 +82100,7 @@ const chapter40Data = {
   const t51 = {
     id: 51,
     originalIndex: 50,
-    title: "Akademik TIPS Master Serisi",
+    title: "TIPS Master Serisi",
     desc: "Sınav stratejileri ve ileri düzey soru çözüm kuralları.",
     icon: "💡",
     numLessons: 3,
@@ -82918,7 +82918,7 @@ const chapter40Data = {
   const t52 = {
     id: 52,
     originalIndex: 51,
-    title: "Akademik TIPS İhtisas Serisi",
+    title: "TIPS İhtisas Serisi",
     desc: "İleri düzey gramer kısaltmaları, bağlaçlar ve pasif aktarımlar.",
     icon: "🔬",
     numLessons: 4,
@@ -84953,7 +84953,7 @@ const chapter40Data = {
       "words": ["Uygulama tüm birim", "testlerini geçti;", "ancak,", "entegrasyon testleri", "bellek sızıntısını ortaya çıkardı.", "çünkü", "önce", "nedeniyle"]
     },
     "type": "context-distractor",
-    "prompt": "Zıtlık ve geçiş bağlamına göre boşluğu doldurun:",
+    "prompt": "Zıtlık ve geçiş boşluğu doldurun:",
     "sentence": "The application passed all unit tests; _______, integration testing revealed a memory leak.",
     "options": [
       "however",
@@ -84970,7 +84970,7 @@ const chapter40Data = {
   const t53 = {
     id: 53,
     originalIndex: 52,
-    title: "Akademik Bağlaç Mühendisliği",
+    title: "Bağlaç Mühendisliği",
     desc: "Bağlaçların sentaks kuralları, noktalama refleksleri ve anlamsal yön tayini çalışmaları.",
     icon: "🔗",
     numLessons: 4,
@@ -85325,7 +85325,7 @@ const chapter40Data = {
     {
       "id": "u55_3_q2_mc",
       "type": "multiple-choice",
-      "prompt": "Gelişmiş akademik dizilim kurallarına göre boşluğa uygun olanı bulun:<br><br><strong>\"We would have built the software if we _______ the admin keys.\"</strong>",
+      "prompt": "Gelişmiş dizilim kurallarına göre boşluğa uygun olanı bulun:<br><br><strong>\"We would have built the software if we _______ the admin keys.\"</strong>",
       "options": ["had possessed", "possess", "would possess", "possessed"],
       "correctIndex": 0,
       "explanation": "Ana cümle 'would have V3' ile geçmişteki bir sonuç bildirdiğinden, koşul cümlesi 'had V3' (Type 3) olmalıdır."
@@ -85404,7 +85404,7 @@ const chapter40Data = {
       id: "c56_l3_ex1",
       createdAt: "2026-07-11T12:00:00Z",
       title: "Alıştırma 1: Koşul Cümlelerinde Çeviri ve Sentaks",
-      description: "Unless gibi olumsuz koşul bağlaçlarının ve akademik düzeydeki dizilimlerin pratik çeviri çalışmaları.",
+      description: "Unless gibi olumsuz koşul bağlaçlarının ve düzeydeki dizilimlerin pratik çeviri çalışmaları.",
       questions: questions55_3
     }],
     konuAnlatimi: {
@@ -85423,7 +85423,7 @@ const chapter40Data = {
     {
       "id": "u99_l1_ex1_match1",
       "type": "matching",
-      "prompt": "Paragraftaki kritik akademik kelime ve öbekleri Türkçe karşılıklarıyla eşleştirin.",
+      "prompt": "Paragraftaki kritik kelime ve öbekleri Türkçe karşılıklarıyla eşleştirin.",
       "paragraph": "There are two main groups of food. The body builders are needed for growth and tissue repair. For this, foods rich in nitrogen in the form of protein and other elements are required. The fuel or energy foods provide heat and energy for living. Carbohydrates and fats are the most important of these. A seed provides all these in the young plant and so it is rich in these substances. Therefore a large part of our plant food consists of seeds. The pea belongs to the family Leguminosae. Its members extract free nitrogen from the atmosphere with the help of bacteria growing in their roots. As a result, peas are rich in protein or nitrogenous food materials. Beans are also leguminous plants and their seeds possess much nutritive value. The plant grows in the form of a bush and grows best in sandy soil treated with manure. Broad beans (faba vulgaris) grow best in heavy clay soil.",
       "pairs": [
         { "left": "tissue repair", "right": "doku onarımı" },
@@ -85701,26 +85701,26 @@ const chapter40Data = {
     {
       "id": "u99_l1_ex5_q3",
       "type": "collocation-matching",
-      "prompt": "Kelime gruplarını doğru edat veya kelime öbekleriyle eşleştirerek akademik birliktelikleri (collocations) tamamlayın.",
+      "prompt": "Kelime gruplarını doğru edat veya kelime öbekleriyle eşleştirerek birliktelikleri (collocations) tamamlayın.",
       "pairs": [
         { "word": "extract", "prep": "free nitrogen" },
         { "word": "belongs to", "prep": "the family" },
         { "word": "consists of", "prep": "seeds" },
         { "word": "treated with", "prep": "manure" }
       ],
-      "explanation": "Metinde geçen anahtar akademik birliktelikler: 'extract free nitrogen', 'belongs to the family', 'consists of seeds', ve 'treated with manure'."
+      "explanation": "Metinde geçen anahtar birliktelikler: 'extract free nitrogen', 'belongs to the family', 'consists of seeds', ve 'treated with manure'."
     },
     {
       "id": "u99_l1_ex5_q4",
       "type": "collocation-matching",
-      "prompt": "Kelime gruplarını doğru edat veya kelime öbekleriyle eşleştirerek akademik birliktelikleri (collocations) tamamlayın.",
+      "prompt": "Kelime gruplarını doğru edat veya kelime öbekleriyle eşleştirerek birliktelikleri (collocations) tamamlayın.",
       "pairs": [
         { "word": "rich in", "prep": "protein" },
         { "word": "needed for", "prep": "growth" },
         { "word": "provide heat", "prep": "for living" },
         { "word": "in the form", "prep": "of a bush" }
       ],
-      "explanation": "Metindeki diğer akademik yapılar: 'rich in protein', 'needed for growth', 'provide heat for living', ve 'in the form of a bush'."
+      "explanation": "Metindeki diğer yapılar: 'rich in protein', 'needed for growth', 'provide heat for living', ve 'in the form of a bush'."
     },
     {
       "id": "u99_l1_ex5_q5",
@@ -85759,7 +85759,7 @@ const chapter40Data = {
     {
       "id": "u99_l1_ex5_q9",
       "type": "inversion-transformer",
-      "prompt": "Verilen cümleyi en uygun devrik (inverted) akademik forma dönüştürün:",
+      "prompt": "Verilen cümleyi en uygun devrik (inverted) forma dönüştürün:",
       "mainSentence": "Peas not only belong to the family Leguminosae, but they also extract free nitrogen.",
       "options": [
         "Not only do peas belong to the family Leguminosae, but they also extract free nitrogen.",
@@ -85771,7 +85771,7 @@ const chapter40Data = {
     {
       "id": "u99_l1_ex5_q10",
       "type": "inversion-transformer",
-      "prompt": "Verilen cümleyi en uygun devrik (inverted) akademik forma dönüştürün:",
+      "prompt": "Verilen cümleyi en uygun devrik (inverted) forma dönüştürün:",
       "mainSentence": "If the soil is not treated with manure, the beans do not grow well.",
       "options": [
         "Should the soil not be treated with manure, the beans do not grow well.",
@@ -85789,7 +85789,7 @@ const chapter40Data = {
   {
     "id": "u60_pv_q1_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 1/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Social historians note that rural communities managed to _______ practicing traditional rituals despite urban modernization.",
     "options": [
       "keep on (devam etmek)",
@@ -85799,16 +85799,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Toplumsal tarihçiler, kırsal toplulukların kentsel modernleşmeye rağmen geleneksel ritüelleri uygulamaya devam ettiğini belirtmektedir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'devam etmek' (akademik eş anlamı: continue) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>keep on (devam etmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'devam etmek' (eş anlamı: continue) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>keep on (devam etmek)</span> yapısıdır.",
     "hint": {
       "formula": "keep on ➔ continue",
-      "academicNote": "Beşeri Bilimler Anlamı: devam etmek"
+      "academicNote": "Anlamı: devam etmek"
     }
   },
   {
     "id": "u60_pv_q2_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 2/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural factors such as shared belief systems often _______ major shifts in historical voting behavior.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural factors such as shared belief systems often _______ major shifts in historical voting behavior.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>get rid of</span> (kurtulmak, başından atmak)",
@@ -85817,12 +85817,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Paylaşılan inanç sistemleri gibi kültürel faktörler, tarihsel oy verme davranışlarındaki temel kaymaları sıklıkla açıklar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'oluşturmak; nedenini açıklamak' (eş anlamı: explain / constitute) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>account for</span> doğru seçenektir."
+    "explanation": "Cümlede 'oluşturmak; nedenini açıklamak' (eş anlamı: explain / constitute) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>account for</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q3_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 3/148 - Edat Kilidi] 'get rid' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Enlightenment philosophers sought to get rid _______ dogmatic superstitions through rational inquiry.'</strong>",
+    "prompt": "'get rid' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Enlightenment philosophers sought to get rid _______ dogmatic superstitions through rational inquiry.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>of</span> ➔ get rid of",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ get rid on",
@@ -85831,12 +85831,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Aydınlanma filozofları, akılcı sorgulama yoluyla dogmatik hurafelerden kurtulmaya çalışmışlardır.",
-    "explanation": "'get rid' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>of</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get rid of</span> (<strong>Anlamı: kurtulmak, başından atmak</strong> / <strong>Akademik Eş Anlamı: eliminate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'get rid' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>of</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get rid of</span> (<strong>Anlamı: kurtulmak, başından atmak</strong> / <strong>Eş Anlamı: eliminate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q4_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 4/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Literary critics advise young authors to _______ excessive adjectives to strengthen narrative momentum.",
     "options": [
       "cut down (on) (kesmek, kısmak, azaltmak)",
@@ -85846,16 +85846,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Edebi eleştirmenler, genç yazarlara anlatı ivmesini güçlendirmek için aşırı sıfat kullanımını kısmalarını tavsiye eder.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'kesmek, kısmak, azaltmak' (akademik eş anlamı: reduce) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>cut down (on) (kesmek, kısmak, azaltmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'kesmek, kısmak, azaltmak' (eş anlamı: reduce) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>cut down (on) (kesmek, kısmak, azaltmak)</span> yapısıdır.",
     "hint": {
       "formula": "cut down (on) ➔ reduce",
-      "academicNote": "Beşeri Bilimler Anlamı: kesmek, kısmak, azaltmak"
+      "academicNote": "Anlamı: kesmek, kısmak, azaltmak"
     }
   },
   {
     "id": "u60_pv_q5_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 5/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Contemporary sociologists struggle to _______ the rapid evolution of digital subcultures.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Contemporary sociologists struggle to _______ the rapid evolution of digital subcultures.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>look up to</span> (hayranlık duymak, saygı duymak)",
@@ -85864,12 +85864,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Çağdaş sosyologlar, dijital alt kültürlerin hızlı gelişimine yetişmekte zorlanırlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'hızına yetişmek, ayak uydurmak' (eş anlamı: pace with) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> doğru seçenektir."
+    "explanation": "Cümlede 'hızına yetişmek, ayak uydurmak' (eş anlamı: pace with) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q6_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 6/148 - Edat Kilidi] 'look up' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Renaissance artists used to look up _______ classical Greco-Roman sculptors for aesthetic inspiration.'</strong>",
+    "prompt": "'look up' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Renaissance artists used to look up _______ classical Greco-Roman sculptors for aesthetic inspiration.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>to</span> ➔ look up to",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ look up on",
@@ -85878,12 +85878,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Rönesans sanatçıları, estetik ilham almak için klasik Greko-Romen heykeltıraşlara hayranlık duyarlardı.",
-    "explanation": "'look up' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>to</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look up to</span> (<strong>Anlamı: hayranlık duymak, saygı duymak</strong> / <strong>Akademik Eş Anlamı: admire</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'look up' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>to</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look up to</span> (<strong>Anlamı: hayranlık duymak, saygı duymak</strong> / <strong>Eş Anlamı: admire</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q7_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 7/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Aristocratic elites in the 19th century tended to _______ the emerging working-class literature.",
     "options": [
       "look down (on) (hor görmek, tepeden bakmak, küçük görmek)",
@@ -85893,16 +85893,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "19. yüzyıldaki aristokrat elitler, yeni gelişen işçi sınıfı edebiyatını küçük görme eğilimindeydi.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'hor görmek, tepeden bakmak, küçük görmek' (akademik eş anlamı: despise) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look down (on) (hor görmek, tepeden bakmak, küçük görmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'hor görmek, tepeden bakmak, küçük görmek' (eş anlamı: despise) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look down (on) (hor görmek, tepeden bakmak, küçük görmek)</span> yapısıdır.",
     "hint": {
       "formula": "look down (on) ➔ despise",
-      "academicNote": "Beşeri Bilimler Anlamı: hor görmek, tepeden bakmak, küçük görmek"
+      "academicNote": "Anlamı: hor görmek, tepeden bakmak, küçük görmek"
     }
   },
   {
     "id": "u60_pv_q8_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 8/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The historical society agreed to _______ an archival database dedicated to oral folklore.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The historical society agreed to _______ an archival database dedicated to oral folklore.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>make up</span> (oluşturmak; uydurmak; telafi etmek)",
@@ -85911,12 +85911,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarih kurumu, sözlü halk bilimine adanmış bir arşiv veritabanı kurmaya karar verdi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'kurmak, düzenlemek, hazırlamak' (eş anlamı: establish) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>set up</span> doğru seçenektir."
+    "explanation": "Cümlede 'kurmak, düzenlemek, hazırlamak' (eş anlamı: establish) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>set up</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q9_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 9/148 - Edat Kilidi] 'make' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Mythological narratives make _______ a central pillar of early Mesopotamian religious life.'</strong>",
+    "prompt": "'make' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Mythological narratives make _______ a central pillar of early Mesopotamian religious life.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ make up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ make on",
@@ -85925,12 +85925,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Mitolojik anlatılar, erken Mezopotamya dini yaşamının temel bir sütununu oluşturur.",
-    "explanation": "'make' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>make up</span> (<strong>Anlamı: oluşturmak; uydurmak; telafi etmek</strong> / <strong>Akademik Eş Anlamı: constitute</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'make' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>make up</span> (<strong>Anlamı: oluşturmak; uydurmak; telafi etmek</strong> / <strong>Eş Anlamı: constitute</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q10_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 10/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Post-war governments attempted to _______ past cultural destruction by funding heritage restoration.",
     "options": [
       "make up for (telafi etmek)",
@@ -85940,16 +85940,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Savaş sonrası hükümetler, miras restorasyonunu fonlayarak geçmişteki kültürel yıkımı telafi etmeye çalıştılar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'telafi etmek' (akademik eş anlamı: compensate for) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>make up for (telafi etmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'telafi etmek' (eş anlamı: compensate for) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>make up for (telafi etmek)</span> yapısıdır.",
     "hint": {
       "formula": "make up for ➔ compensate for",
-      "academicNote": "Beşeri Bilimler Anlamı: telafi etmek"
+      "academicNote": "Anlamı: telafi etmek"
     }
   },
   {
     "id": "u60_pv_q11_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 11/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Philosophical debates regarding free will _______ a significant portion of early modern treatises.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Philosophical debates regarding free will _______ a significant portion of early modern treatises.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>hold up</span> (soymak (banka vs); geciktirmek, yavaşlatmak)",
@@ -85958,12 +85958,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Özgür iradeye ilişkin felsefi tartışmalar, erken modern risalelerin önemli bir kısmını kaplar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'zaman/yer kaplamak; hobiye başlamak' (eş anlamı: occupy) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>take up</span> doğru seçenektir."
+    "explanation": "Cümlede 'zaman/yer kaplamak; hobiye başlamak' (eş anlamı: occupy) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>take up</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q12_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 12/148 - Edat Kilidi] 'hold' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Censorship laws during the autocratic regime managed to hold _______ the publication of avant-garde poetry.'</strong>",
+    "prompt": "'hold' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Censorship laws during the autocratic regime managed to hold _______ the publication of avant-garde poetry.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ hold up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ hold on",
@@ -85972,12 +85972,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Otokratik rejim sırasındaki sansür yasaları, avangart şiirlerin yayınlanmasını geciktirmeyi başardı.",
-    "explanation": "'hold' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>hold up</span> (<strong>Anlamı: soymak (banka vs); geciktirmek, yavaşlatmak</strong> / <strong>Akademik Eş Anlamı: delay / impede</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'hold' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>hold up</span> (<strong>Anlamı: soymak (banka vs); geciktirmek, yavaşlatmak</strong> / <strong>Eş Anlamı: delay / impede</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q13_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 13/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "In his seminal lecture, the historian decided to _______ the neglected role of women in the revolution.",
     "options": [
       "bring up (çocuk yetiştirmek; gündeme getirmek; kusmak)",
@@ -85987,16 +85987,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihçi, ufuk açıcı konferansında devrimde kadınların ihmal edilen rolünü gündeme getirmeye karar verdi.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'çocuk yetiştirmek; gündeme getirmek; kusmak' (akademik eş anlamı: introduce / mention) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>bring up (çocuk yetiştirmek; gündeme getirmek; kusmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'çocuk yetiştirmek; gündeme getirmek; kusmak' (eş anlamı: introduce / mention) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>bring up (çocuk yetiştirmek; gündeme getirmek; kusmak)</span> yapısıdır.",
     "hint": {
       "formula": "bring up ➔ introduce / mention",
-      "academicNote": "Beşeri Bilimler Anlamı: çocuk yetiştirmek; gündeme getirmek; kusmak"
+      "academicNote": "Anlamı: çocuk yetiştirmek; gündeme getirmek; kusmak"
     }
   },
   {
     "id": "u60_pv_q14_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 14/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Over centuries, oral folk tales can _______ standardized national epics.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Over centuries, oral folk tales can _______ standardized national epics.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>break off</span> (ayrılmak, bırakmak, sonlandırmak)",
@@ -86005,12 +86005,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yüzyıllar boyunca sözlü halk hikayeleri standartlaştırılmış ulusal destanlara dönüşebilir.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'dönüşmek, dönüştürmek' (eş anlamı: transform into) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn into</span> doğru seçenektir."
+    "explanation": "Cümlede 'dönüşmek, dönüştürmek' (eş anlamı: transform into) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn into</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q15_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 15/148 - Edat Kilidi] 'break' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The two rival intellectual schools decided to break _______ dialogue after fundamental ideological disagreements.'</strong>",
+    "prompt": "'break' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The two rival intellectual schools decided to break _______ dialogue after fundamental ideological disagreements.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>off</span> ➔ break off",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ break on",
@@ -86019,14 +86019,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "İki rakip entelektüel ekol, temel ideolojik anlaşmazlıklardan sonra diyaloğu sonlandırmaya karar verdi.",
-    "explanation": "'break' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>off</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>break off</span> (<strong>Anlamı: ayrılmak, bırakmak, sonlandırmak</strong> / <strong>Akademik Eş Anlamı: terminate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'break' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>off</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>break off</span> (<strong>Anlamı: ayrılmak, bırakmak, sonlandırmak</strong> / <strong>Eş Anlamı: terminate</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex2 = [
   {
     "id": "u60_pv_q16_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 16/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The academic conference on medieval archaeology was _______ due to geopolitical conflicts in the region.",
     "options": [
       "put off (ertelemek; tiksindirmek, caydırmak)",
@@ -86035,17 +86035,17 @@ const chapter40Data = {
       "take up (zaman/yer kaplamak; hobiye başlamak)"
     ],
     "correctIndex": 0,
-    "translation": "Ortaçağ arkeolojisi üzerine akademik konferans, bölgedeki jeopolitik çatışmalar nedeniyle ertelendi.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'ertelemek; tiksindirmek, caydırmak' (akademik eş anlamı: postpone) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>put off (ertelemek; tiksindirmek, caydırmak)</span> yapısıdır.",
+    "translation": "Ortaçağ arkeolojisi üzerine konferans, bölgedeki jeopolitik çatışmalar nedeniyle ertelendi.",
+    "explanation": "metnindeki bu bağlamda 'ertelemek; tiksindirmek, caydırmak' (eş anlamı: postpone) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>put off (ertelemek; tiksindirmek, caydırmak)</span> yapısıdır.",
     "hint": {
       "formula": "put off ➔ postpone",
-      "academicNote": "Beşeri Bilimler Anlamı: ertelemek; tiksindirmek, caydırmak"
+      "academicNote": "Anlamı: ertelemek; tiksindirmek, caydırmak"
     }
   },
   {
     "id": "u60_pv_q17_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 17/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The museum board had to _______ the annual exhibition after the fragile artifacts suffered transport damage.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The museum board had to _______ the annual exhibition after the fragile artifacts suffered transport damage.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>call off</span> (iptal etmek, sona erdirmek, durdurmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -86054,12 +86054,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Müze yönetim kurulu, hassas eserlerin nakliye hasarı görmesi üzerine yıllık sergiyi iptal etmek zorunda kaldı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'iptal etmek, sona erdirmek, durdurmak' (eş anlamı: cancel) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>call off</span> doğru seçenektir."
+    "explanation": "Cümlede 'iptal etmek, sona erdirmek, durdurmak' (eş anlamı: cancel) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>call off</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q18_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 18/148 - Edat Kilidi] 'give' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Philosophers rarely give _______ their foundational axioms even when confronted with logical paradoxes.'</strong>",
+    "prompt": "'give' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Philosophers rarely give _______ their foundational axioms even when confronted with logical paradoxes.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ give up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ give on",
@@ -86068,12 +86068,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Filozoflar, mantıksal paradokslarla karşılaştıklarında bile temel kabullerinden nadiren vazgeçerler.",
-    "explanation": "'give' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>give up</span> (<strong>Anlamı: bırakmak, vazgeçmek</strong> / <strong>Akademik Eş Anlamı: abandon</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'give' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>give up</span> (<strong>Anlamı: bırakmak, vazgeçmek</strong> / <strong>Eş Anlamı: abandon</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q19_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 19/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Sociolinguists are planning to _______ the preservation of endangered indigenous dialects.",
     "options": [
       "look into (incelemek, araştırmak)",
@@ -86083,16 +86083,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Sosyolinguistler, tehlike altındaki yerli lehçelerin korunmasını incelemeyi planlıyorlar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'incelemek, araştırmak' (akademik eş anlamı: investigate) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look into (incelemek, araştırmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'incelemek, araştırmak' (eş anlamı: investigate) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look into (incelemek, araştırmak)</span> yapısıdır.",
     "hint": {
       "formula": "look into ➔ investigate",
-      "academicNote": "Beşeri Bilimler Anlamı: incelemek, araştırmak"
+      "academicNote": "Anlamı: incelemek, araştırmak"
     }
   },
   {
     "id": "u60_pv_q20_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 20/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'After years of nomadic field research, the ethnographer decided to _______ and write her memoirs.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'After years of nomadic field research, the ethnographer decided to _______ and write her memoirs.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>settle down</span> (yerleşmek; sakinleşmek, durulmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -86101,12 +86101,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Etnograf, Güney Amerika'da onlarca yıl süren saha araştırmasının ardından yerleşmeye ve anılarını yazmaya karar verdi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'yerleşmek; sakinleşmek, durulmak' (eş anlamı: establish residence) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>settle down</span> doğru seçenektir."
+    "explanation": "Cümlede 'yerleşmek; sakinleşmek, durulmak' (eş anlamı: establish residence) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>settle down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q21_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 21/148 - Edat Kilidi] 'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'It was challenging for paleographers to get _______ the damaged 14th-century parchment manuscripts.'</strong>",
+    "prompt": "'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'It was challenging for paleographers to get _______ the damaged 14th-century parchment manuscripts.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>through</span> ➔ get through",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ get on",
@@ -86115,12 +86115,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Paleograflar için hasarlı 14. yüzyıl parşömen el yazmalarını okuyup çözmek oldukça zordu.",
-    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get through</span> (<strong>Anlamı: telefonla ulaşmak, başarılı olmak, tüketmek</strong> / <strong>Akademik Eş Anlamı: decipher / navigate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get through</span> (<strong>Anlamı: telefonla ulaşmak, başarılı olmak, tüketmek</strong> / <strong>Eş Anlamı: decipher / navigate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q22_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 22/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The fragile peace treaty managed to _______ despite severe provocations from both sides.",
     "options": [
       "pull through (iyileşmek, sağlığına kavuşmak)",
@@ -86130,16 +86130,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Hassas barış antlaşması, her iki tarafın ağır kışkırtmalarına rağmen atlatmayı başardı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'iyileşmek, sağlığına kavuşmak' (akademik eş anlamı: survive) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>pull through (iyileşmek, sağlığına kavuşmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'iyileşmek, sağlığına kavuşmak' (eş anlamı: survive) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>pull through (iyileşmek, sağlığına kavuşmak)</span> yapısıdır.",
     "hint": {
       "formula": "pull through ➔ survive",
-      "academicNote": "Beşeri Bilimler Anlamı: iyileşmek, sağlığına kavuşmak"
+      "academicNote": "Anlamı: iyileşmek, sağlığına kavuşmak"
     }
   },
   {
     "id": "u60_pv_q23_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 23/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The preservation of ancient historical monuments _______ immediate UNESCO intervention.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The preservation of ancient historical monuments _______ immediate UNESCO intervention.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>take after / call for</span> (benzemek / istemek, gerektirmek, çağrıda bulunmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -86148,12 +86148,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihi anıtların korunması, acil UNESCO müdahalesini gerektirmektedir.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'benzemek / istemek, gerektirmek, çağrıda bulunmak' (eş anlamı: require / demand) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>take after / call for</span> doğru seçenektir."
+    "explanation": "Cümlede 'benzemek / istemek, gerektirmek, çağrıda bulunmak' (eş anlamı: require / demand) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>take after / call for</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q24_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 24/148 - Edat Kilidi] 'back up' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Historians must back up _______ their interpretive claims with verified archival documentation.'</strong>",
+    "prompt": "'back up' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Historians must back up _______ their interpretive claims with verified archival documentation.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>with</span> ➔ back up with",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ back up on",
@@ -86162,12 +86162,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihçiler, yorumlayıcı iddialarını doğrulanmış arşiv belgeleriyle desteklemelidir.",
-    "explanation": "'back up' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>back up (with)</span> (<strong>Anlamı: desteklemek, doğrulamak</strong> / <strong>Akademik Eş Anlamı: corroborate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'back up' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>back up (with)</span> (<strong>Anlamı: desteklemek, doğrulamak</strong> / <strong>Eş Anlamı: corroborate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q25_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 25/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Unbridled state propaganda can quickly _______ public hostility against minority groups.",
     "options": [
       "run up (fırlamak, artmak)",
@@ -86177,16 +86177,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "KONTROLSÜZ devlet propagandası, azınlık gruplarına karşı kamusal düşmanlığı hızla tırmandırabilir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'fırlamak, artmak' (akademik eş anlamı: escalate) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>run up (fırlamak, artmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'fırlamak, artmak' (eş anlamı: escalate) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>run up (fırlamak, artmak)</span> yapısıdır.",
     "hint": {
       "formula": "run up ➔ escalate",
-      "academicNote": "Beşeri Bilimler Anlamı: fırlamak, artmak"
+      "academicNote": "Anlamı: fırlamak, artmak"
     }
   },
   {
     "id": "u60_pv_q26_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 26/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Displaced populations often struggle to _______ cultural shock and language barriers in host societies.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Displaced populations often struggle to _______ cultural shock and language barriers in host societies.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>cope with</span> (başa çıkmak, üstesinden gelmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -86195,12 +86195,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yerinden edilmiş nüfuslar, ev sahibi toplumlarda kültür şoku ve dil engelleriyle başa çıkmakta sıklıkla zorlanırlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'başa çıkmak, üstesinden gelmek' (eş anlamı: manage / endure) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>cope with</span> doğru seçenektir."
+    "explanation": "Cümlede 'başa çıkmak, üstesinden gelmek' (eş anlamı: manage / endure) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>cope with</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q27_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 27/148 - Edat Kilidi] 'deal' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Ethics is a core branch of philosophy that attempts to deal _______ questions of moral responsibility.'</strong>",
+    "prompt": "'deal' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Ethics is a core branch of philosophy that attempts to deal _______ questions of moral responsibility.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>with</span> ➔ deal with",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ deal on",
@@ -86209,12 +86209,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Etik, felsefenin ahlaki sorumluluk sorularını ele almaya çalışan temel bir dalıdır.",
-    "explanation": "'deal' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>deal with</span> (<strong>Anlamı: ele almak, ile ilgili olmak; başa çıkmak</strong> / <strong>Akademik Eş Anlamı: address / handle</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'deal' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>deal with</span> (<strong>Anlamı: ele almak, ile ilgili olmak; başa çıkmak</strong> / <strong>Eş Anlamı: address / handle</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q28_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 28/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The literary genre of gothic fiction began to _______ rapidly across 19th-century Europe.",
     "options": [
       "take off (çıkarmak (kıyafet); havalanmak; başarılı olmak)",
@@ -86224,16 +86224,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Gotik kurgu edebi türü, 19. yüzyıl Avrupası'nda hızla popülerleşmeye başladı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'çıkarmak (kıyafet); havalanmak; başarılı olmak' (akademik eş anlamı: flourish) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>take off (çıkarmak (kıyafet); havalanmak; başarılı olmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'çıkarmak (kıyafet); havalanmak; başarılı olmak' (eş anlamı: flourish) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>take off (çıkarmak (kıyafet); havalanmak; başarılı olmak)</span> yapısıdır.",
     "hint": {
       "formula": "take off ➔ flourish",
-      "academicNote": "Beşeri Bilimler Anlamı: çıkarmak (kıyafet); havalanmak; başarılı olmak"
+      "academicNote": "Anlamı: çıkarmak (kıyafet); havalanmak; başarılı olmak"
     }
   },
   {
     "id": "u60_pv_q29_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 29/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The dramatic society decided to _______ an authentic Greek tragedy in the ancient amphitheater.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The dramatic society decided to _______ an authentic Greek tragedy in the ancient amphitheater.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>put on</span> (giymek; kilo almak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -86242,12 +86242,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tiyatro topluluğu, antik amfitiyatroda otantik bir Yunan trajedisi sahnelemeye karar verdi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'giymek; kilo almak' (eş anlamı: stage / perform) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put on</span> doğru seçenektir."
+    "explanation": "Cümlede 'giymek; kilo almak' (eş anlamı: stage / perform) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put on</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q30_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 30/148 - Edat Kilidi] 'come' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The museum managed to come _______ a rare collection of Impressionist paintings through a private bequest.'</strong>",
+    "prompt": "'come' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The museum managed to come _______ a rare collection of Impressionist paintings through a private bequest.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>into</span> ➔ come into",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ come on",
@@ -86256,14 +86256,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Müze, özel bir vasiyet yoluyla nadir bir İzlenimci tablo koleksiyonuna konmayı başardı.",
-    "explanation": "'come' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>into</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>come into</span> (<strong>Anlamı: mirasa konmak, etkilemek</strong> / <strong>Akademik Eş Anlamı: inherit / acquire</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'come' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>into</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>come into</span> (<strong>Anlamı: mirasa konmak, etkilemek</strong> / <strong>Eş Anlamı: inherit / acquire</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex3 = [
   {
     "id": "u60_pv_q31_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 31/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Archivists worked carefully to _______ damaged documents from the flooded library basement.",
     "options": [
       "clear out (boşaltmak)",
@@ -86273,16 +86273,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arşivciler, su basan kütüphane bodrumundan hasarlı belgeleri temizlemek için dikkatle çalıştılar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'boşaltmak' (akademik eş anlamı: evacuate / clear) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>clear out (boşaltmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'boşaltmak' (eş anlamı: evacuate / clear) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>clear out (boşaltmak)</span> yapısıdır.",
     "hint": {
       "formula": "clear out ➔ evacuate / clear",
-      "academicNote": "Beşeri Bilimler Anlamı: boşaltmak"
+      "academicNote": "Anlamı: boşaltmak"
     }
   },
   {
     "id": "u60_pv_q32_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 32/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Following public controversy, the dean of the humanities faculty was forced to _______.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Following public controversy, the dean of the humanities faculty was forced to _______.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>step down</span> (istifa etmek, ayrılmak, azaltmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -86290,13 +86290,13 @@ const chapter40Data = {
       "<span style='color: #ff6b6b; font-weight: bold;'>hold up</span> (soymak (banka vs); geciktirmek, yavaşlatmak)"
     ],
     "correctIndex": 0,
-    "translation": "Kamuoyundaki tartışmaların ardından beşeri bilimler fakültesi dekanı istifa etmek zorunda kaldı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'istifa etmek, ayrılmak, azaltmak' (eş anlamı: resign) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>step down</span> doğru seçenektir."
+    "translation": "Kamuoyundaki tartışmaların ardından fakültesi dekanı istifa etmek zorunda kaldı.",
+    "explanation": "Cümlede 'istifa etmek, ayrılmak, azaltmak' (eş anlamı: resign) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>step down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q33_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 33/148 - Edat Kilidi] 'break' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Historians analyze the structural causes that caused civil unrest to break _______ in 1848.'</strong>",
+    "prompt": "'break' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Historians analyze the structural causes that caused civil unrest to break _______ in 1848.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ break out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ break on",
@@ -86305,12 +86305,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihçiler, 1848'de sivil huzursuzluğun patlak vermesine neden olan yapısal nedenleri analiz ederler.",
-    "explanation": "'break' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>break out</span> (<strong>Anlamı: patlak vermek, başlamak; kaçmak</strong> / <strong>Akademik Eş Anlamı: erupt</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'break' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>break out</span> (<strong>Anlamı: patlak vermek, başlamak; kaçmak</strong> / <strong>Eş Anlamı: erupt</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q34_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 34/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Public interest in classical philology began to _______ with the rise of modern digital media.",
     "options": [
       "fall off (düşmek, azalmak)",
@@ -86320,16 +86320,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Klasik filolojiye olan kamusal ilgi, modern dijital medyanın yükselişiyle düşmeye başladı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'düşmek, azalmak' (akademik eş anlamı: decline) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>fall off (düşmek, azalmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'düşmek, azalmak' (eş anlamı: decline) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>fall off (düşmek, azalmak)</span> yapısıdır.",
     "hint": {
       "formula": "fall off ➔ decline",
-      "academicNote": "Beşeri Bilimler Anlamı: düşmek, azalmak"
+      "academicNote": "Anlamı: düşmek, azalmak"
     }
   },
   {
     "id": "u60_pv_q35_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 35/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The compilation of the comprehensive Ottoman etymological dictionary is starting to _______ remarkably well.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The compilation of the comprehensive Ottoman etymological dictionary is starting to _______ remarkably well.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>come along</span> (varmak, birlikte gitmek, ortaya çıkmak, gelişmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -86338,12 +86338,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kapsamlı Osmanlı etimolojik sözlüğünün derlenmesi son derece iyi ilerlemeye başlıyor.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'varmak, birlikte gitmek, ortaya çıkmak, gelişmek' (eş anlamı: progress) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>come along</span> doğru seçenektir."
+    "explanation": "Cümlede 'varmak, birlikte gitmek, ortaya çıkmak, gelişmek' (eş anlamı: progress) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>come along</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q36_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 36/148 - Edat Kilidi] 'turn' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Philosophical debates often turn _______ the precise definition of human consciousness.'</strong>",
+    "prompt": "'turn' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Philosophical debates often turn _______ the precise definition of human consciousness.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ turn on",
       "<span style='color: #ff6b6b; font-weight: bold;'>for</span> ➔ turn for",
@@ -86352,12 +86352,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Felsefi tartışmalar sıklıkla insan bilincinin hassas tanımına odaklanır.",
-    "explanation": "'turn' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>on</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>turn on</span> (<strong>Anlamı: açmak (elektronik)</strong> / <strong>Akademik Eş Anlamı: hinge upon / focus on</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'turn' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>on</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>turn on</span> (<strong>Anlamı: açmak (elektronik)</strong> / <strong>Eş Anlamı: hinge upon / focus on</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q37_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 37/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The publication of Martin Luther's theses managed to _______ the Protestant Reformation across Europe.",
     "options": [
       "set off (yola çıkmak, yolculuğa başlamak)",
@@ -86367,16 +86367,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Martin Luther'in tezlerinin yayınlanması, Avrupa genelinde Protestan Reformunu tetiklemeyi başardı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'yola çıkmak, yolculuğa başlamak' (akademik eş anlamı: trigger / spark) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>set off (yola çıkmak, yolculuğa başlamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'yola çıkmak, yolculuğa başlamak' (eş anlamı: trigger / spark) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>set off (yola çıkmak, yolculuğa başlamak)</span> yapısıdır.",
     "hint": {
       "formula": "set off ➔ trigger / spark",
-      "academicNote": "Beşeri Bilimler Anlamı: yola çıkmak, yolculuğa başlamak"
+      "academicNote": "Anlamı: yola çıkmak, yolculuğa başlamak"
     }
   },
   {
     "id": "u60_pv_q38_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 38/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The department of history is eager to _______ a multi-year research project on Silk Road trade.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The department of history is eager to _______ a multi-year research project on Silk Road trade.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>take on</span> (üstlenmek; hâl almak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -86385,12 +86385,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarih bölümü, İpek Yolu ticareti üzerine çok yıllı bir araştırma projesini üstlenmeye isteklidir.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'üstlenmek; hâl almak' (eş anlamı: undertake) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>take on</span> doğru seçenektir."
+    "explanation": "Cümlede 'üstlenmek; hâl almak' (eş anlamı: undertake) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>take on</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q39_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 39/148 - Edat Kilidi] 'come' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'While searching through royal archives, the researcher happened to come _______ unpublished letters of the Queen.'</strong>",
+    "prompt": "'come' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'While searching through royal archives, the researcher happened to come _______ unpublished letters of the Queen.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>across</span> ➔ come across",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ come on",
@@ -86399,12 +86399,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Araştırmacı, kraliyet arşivlerini ararken tesadüfen Kraliçe'nin yayınlanmamış mektuplarına rastladı.",
-    "explanation": "'come' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>across</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>come across</span> (<strong>Anlamı: karşılaşmak</strong> / <strong>Akademik Eş Anlamı: encounter</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'come' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>across</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>come across</span> (<strong>Anlamı: karşılaşmak</strong> / <strong>Eş Anlamı: encounter</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q40_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 40/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Archaeologists cannot _______ the possibility that the ancient fortress was destroyed by an earthquake.",
     "options": [
       "rule out (göz ardı etmek, önlemek)",
@@ -86414,16 +86414,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arkeologlar, antik kalenin bir depremle yıkılmış olma ihtimalini göz ardı edemezler.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'göz ardı etmek, önlemek' (akademik eş anlamı: exclude / dismiss) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>rule out (göz ardı etmek, önlemek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'göz ardı etmek, önlemek' (eş anlamı: exclude / dismiss) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>rule out (göz ardı etmek, önlemek)</span> yapısıdır.",
     "hint": {
       "formula": "rule out ➔ exclude / dismiss",
-      "academicNote": "Beşeri Bilimler Anlamı: göz ardı etmek, önlemek"
+      "academicNote": "Anlamı: göz ardı etmek, önlemek"
     }
   },
   {
     "id": "u60_pv_q41_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 41/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Imperial conquest and forced assimilation managed to _______ entire indigenous oral traditions.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Imperial conquest and forced assimilation managed to _______ entire indigenous oral traditions.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>wipe out</span> (yok etmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -86432,12 +86432,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Emperyal fetih ve zorunlu asimilasyon, tüm yerli sözlü geleneklerini yok etmeyi başardı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'yok etmek' (eş anlamı: eradicate) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>wipe out</span> doğru seçenektir."
+    "explanation": "Cümlede 'yok etmek' (eş anlamı: eradicate) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>wipe out</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q42_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 42/148 - Edat Kilidi] 'take' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The newly established regime moved quickly to take _______ state media and educational curricula.'</strong>",
+    "prompt": "'take' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The newly established regime moved quickly to take _______ state media and educational curricula.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>over</span> ➔ take over",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ take on",
@@ -86446,12 +86446,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yeni kurulan rejim, devlet medyasını ve eğitim müfredatını devralmak için hızla harekete geçti.",
-    "explanation": "'take' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take over</span> (<strong>Anlamı: devralmak, üstlenmek, yönetimini almak</strong> / <strong>Akademik Eş Anlamı: seize / control</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'take' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take over</span> (<strong>Anlamı: devralmak, üstlenmek, yönetimini almak</strong> / <strong>Eş Anlamı: seize / control</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q43_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 43/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Strict monastic rules were designed to _______ secular influences from sacred scholarly spaces.",
     "options": [
       "keep out (dışarda tutmak, girmemek)",
@@ -86460,17 +86460,17 @@ const chapter40Data = {
       "take after / call for (benzemek / istemek, gerektirmek, çağrıda bulunmak)"
     ],
     "correctIndex": 0,
-    "translation": "Katı manastır kuralları, dünyevi etkileri kutsal akademik mekanlardan dışarıda tutmak için tasarlanmıştı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'dışarda tutmak, girmemek' (akademik eş anlamı: exclude) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>keep out (dışarda tutmak, girmemek)</span> yapısıdır.",
+    "translation": "Katı manastır kuralları, dünyevi etkileri kutsal mekanlardan dışarıda tutmak için tasarlanmıştı.",
+    "explanation": "metnindeki bu bağlamda 'dışarda tutmak, girmemek' (eş anlamı: exclude) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>keep out (dışarda tutmak, girmemek)</span> yapısıdır.",
     "hint": {
       "formula": "keep out ➔ exclude",
-      "academicNote": "Beşeri Bilimler Anlamı: dışarda tutmak, girmemek"
+      "academicNote": "Anlamı: dışarda tutmak, girmemek"
     }
   },
   {
     "id": "u60_pv_q44_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 44/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Early feminist writers could no longer _______ the rigid patriarchal constraints of Victorian society.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Early feminist writers could no longer _______ the rigid patriarchal constraints of Victorian society.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>put up with</span> (dayanmak, katlanmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -86479,12 +86479,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Erken feminist yazarlar, Viktorya toplumunun katı ataerkil kısıtlamalarına artık tahammül edemezlerdi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'dayanmak, katlanmak' (eş anlamı: tolerate) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put up with</span> doğru seçenektir."
+    "explanation": "Cümlede 'dayanmak, katlanmak' (eş anlamı: tolerate) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put up with</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q45_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 45/148 - Edat Kilidi] 'give rise' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Socioeconomic inequality can easily give rise _______ revolutionary movements and ideological shifts.'</strong>",
+    "prompt": "'give rise' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Socioeconomic inequality can easily give rise _______ revolutionary movements and ideological shifts.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>to</span> ➔ give rise to",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ give rise on",
@@ -86493,14 +86493,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Sosyoekonomik eşitsizlik, devrimci hareketlere ve ideolojik kaymalara kolayca yol açabilir.",
-    "explanation": "'give rise' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>to</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>give rise to</span> (<strong>Anlamı: sebep olmak, ortaya çıkarmak</strong> / <strong>Akademik Eş Anlamı: cause / generate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'give rise' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>to</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>give rise to</span> (<strong>Anlamı: sebep olmak, ortaya çıkarmak</strong> / <strong>Eş Anlamı: cause / generate</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex4 = [
   {
     "id": "u60_pv_q46_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 46/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Linguists spent decades attempting to _______ the syntax of the mysterious Linear B script.",
     "options": [
       "figure out ((düşünüp) anlamak, çözmek)",
@@ -86510,16 +86510,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Dilbilimciler, gizemli Lineer B yazısının söz dizimini anlamak için onlarca yıl harcadılar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda '(düşünüp) anlamak, çözmek' (akademik eş anlamı: decipher / comprehend) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>figure out ((düşünüp) anlamak, çözmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda '(düşünüp) anlamak, çözmek' (eş anlamı: decipher / comprehend) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>figure out ((düşünüp) anlamak, çözmek)</span> yapısıdır.",
     "hint": {
       "formula": "figure out ➔ decipher / comprehend",
-      "academicNote": "Beşeri Bilimler Anlamı: (düşünüp) anlamak, çözmek"
+      "academicNote": "Anlamı: (düşünüp) anlamak, çözmek"
     }
   },
   {
     "id": "u60_pv_q47_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 47/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Archival records enabled historians to _______ the original architectural plan of the Renaissance cathedral.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Archival records enabled historians to _______ the original architectural plan of the Renaissance cathedral.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>find out</span> (anlamak, bulmak, çözmek, keşfetmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -86528,12 +86528,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arşiv kayıtları, tarihçilerin Rönesans katedralinin orijinal mimari planını öğrenmelerini sağladı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'anlamak, bulmak, çözmek, keşfetmek' (eş anlamı: discover) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>find out</span> doğru seçenektir."
+    "explanation": "Cümlede 'anlamak, bulmak, çözmek, keşfetmek' (eş anlamı: discover) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>find out</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q48_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 48/148 - Edat Kilidi] 'take' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The historic treaty negotiations will take _______ in the neutral territory of Geneva.'</strong>",
+    "prompt": "'take' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The historic treaty negotiations will take _______ in the neutral territory of Geneva.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>place</span> ➔ take place",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ take on",
@@ -86542,12 +86542,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihi antlaşma müzakereleri, Cenevre'nin tarafsız bölgesinde gerçekleşecek.",
-    "explanation": "'take' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>place</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take place</span> (<strong>Anlamı: meydana gelmek, olmak</strong> / <strong>Akademik Eş Anlamı: occur</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'take' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>place</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take place</span> (<strong>Anlamı: meydana gelmek, olmak</strong> / <strong>Eş Anlamı: occur</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q49_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 49/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The aristocratic family decided to _______ their historic manor to the national heritage foundation.",
     "options": [
       "make over (devretmek, bırakmak)",
@@ -86557,16 +86557,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Soylu aile, tarihi malikanelerini ulusal miras vakfına devretmeye karar verdi.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'devretmek, bırakmak' (akademik eş anlamı: transfer) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>make over (devretmek, bırakmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'devretmek, bırakmak' (eş anlamı: transfer) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>make over (devretmek, bırakmak)</span> yapısıdır.",
     "hint": {
       "formula": "make over ➔ transfer",
-      "academicNote": "Beşeri Bilimler Anlamı: devretmek, bırakmak"
+      "academicNote": "Anlamı: devretmek, bırakmak"
     }
   },
   {
     "id": "u60_pv_q50_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 50/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Monks worked tirelessly to _______ the fire that threatened the ancient monastery library.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Monks worked tirelessly to _______ the fire that threatened the ancient monastery library.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>put out</span> (söndürmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -86575,12 +86575,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Rahipler, antik manastır kütüphanesini tehdit eden yangını söndürmek için yorulmadan çalıştılar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'söndürmek' (eş anlamı: extinguish) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put out</span> doğru seçenektir."
+    "explanation": "Cümlede 'söndürmek' (eş anlamı: extinguish) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put out</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q51_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 51/148 - Edat Kilidi] 'bring' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The scholarly movement sought to bring _______ oriental literary aesthetics into Western romanticism.'</strong>",
+    "prompt": "'bring' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The scholarly movement sought to bring _______ oriental literary aesthetics into Western romanticism.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>into</span> ➔ bring into",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ bring on",
@@ -86588,13 +86588,13 @@ const chapter40Data = {
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ bring up"
     ],
     "correctIndex": 0,
-    "translation": "Akademik hareket, Doğu edebi estetiğini Batı romantizmine dahil etmeye çalıştı.",
-    "explanation": "'bring' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>into</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>bring into</span> (<strong>Anlamı: getirmek</strong> / <strong>Akademik Eş Anlamı: introduce</strong>) deyimsel fiilini oluşturur."
+    "translation": "hareket, Doğu edebi estetiğini Batı romantizmine dahil etmeye çalıştı.",
+    "explanation": "'bring' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>into</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>bring into</span> (<strong>Anlamı: getirmek</strong> / <strong>Eş Anlamı: introduce</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q52_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 52/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Despite persecution, the dissident philosopher refused to _______ to state censorship.",
     "options": [
       "give in (razı olmak, pes etmek, teslim olmak)",
@@ -86604,16 +86604,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Baskılara rağmen muhalif filozof, devlet sansürüne teslim olmayı reddetti.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'razı olmak, pes etmek, teslim olmak' (akademik eş anlamı: yield / surrender) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>give in (razı olmak, pes etmek, teslim olmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'razı olmak, pes etmek, teslim olmak' (eş anlamı: yield / surrender) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>give in (razı olmak, pes etmek, teslim olmak)</span> yapısıdır.",
     "hint": {
       "formula": "give in ➔ yield / surrender",
-      "academicNote": "Beşeri Bilimler Anlamı: razı olmak, pes etmek, teslim olmak"
+      "academicNote": "Anlamı: razı olmak, pes etmek, teslim olmak"
     }
   },
   {
     "id": "u60_pv_q53_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 53/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural preservationists strive to _______ oral storytelling traditions among younger generations.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural preservationists strive to _______ oral storytelling traditions among younger generations.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up</span> (yetişmek, aynı seviyeye gelmek; anlamaya çalışmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -86622,12 +86622,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kültürel korumacılar, genç nesiller arasında sözlü hikaye anlatımı geleneklerini sürdürmeye çalışırlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'yetişmek, aynı seviyeye gelmek; anlamaya çalışmak' (eş anlamı: maintain / preserve) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>keep up</span> doğru seçenektir."
+    "explanation": "Cümlede 'yetişmek, aynı seviyeye gelmek; anlamaya çalışmak' (eş anlamı: maintain / preserve) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>keep up</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q54_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 54/148 - Edat Kilidi] 'build' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Over centuries, civilizational exchange helped build _______ a rich synthesis of art and science.'</strong>",
+    "prompt": "'build' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Over centuries, civilizational exchange helped build _______ a rich synthesis of art and science.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ build up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ build on",
@@ -86636,12 +86636,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yüzyıllar boyunca medeniyetler arası değişim, zengin bir sanat ve bilim sentezi biriktirmeye yardımcı oldu.",
-    "explanation": "'build' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>build up</span> (<strong>Anlamı: birikmek, artmak, güçlendirmek</strong> / <strong>Akademik Eş Anlamı: accumulate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'build' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>build up</span> (<strong>Anlamı: birikmek, artmak, güçlendirmek</strong> / <strong>Eş Anlamı: accumulate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q55_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 55/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Visitors to the historic sanctuary are instructed to _______ the fragile mosaic pavements.",
     "options": [
       "keep off (uzak durmak)",
@@ -86651,16 +86651,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihi tapınağın ziyaretçilerine, hassas mozaik kaldırımlardan uzak durmaları talimatı verilir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'uzak durmak' (akademik eş anlamı: avoid) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>keep off (uzak durmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'uzak durmak' (eş anlamı: avoid) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>keep off (uzak durmak)</span> yapısıdır.",
     "hint": {
       "formula": "keep off ➔ avoid",
-      "academicNote": "Beşeri Bilimler Anlamı: uzak durmak"
+      "academicNote": "Anlamı: uzak durmak"
     }
   },
   {
     "id": "u60_pv_q56_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 56/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Historians could barely _______ the eroded Latin inscription on the ancient marble tombstone.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Historians could barely _______ the eroded Latin inscription on the ancient marble tombstone.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>make out</span> ((düşünüp) anlamak, çözmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -86669,12 +86669,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihçiler, antik mermer mezar taşındaki aşınmış Latince yazıtı güçlükle okuyabildiler.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre '(düşünüp) anlamak, çözmek' (eş anlamı: discern / read) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>make out</span> doğru seçenektir."
+    "explanation": "Cümlede '(düşünüp) anlamak, çözmek' (eş anlamı: discern / read) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>make out</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q57_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 57/148 - Edat Kilidi] 'set' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The 18th-century expedition planned to set _______ across the Mediterranean to document ancient ruins.'</strong>",
+    "prompt": "'set' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The 18th-century expedition planned to set _______ across the Mediterranean to document ancient ruins.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ set out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ set on",
@@ -86683,12 +86683,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "18. yüzyıl gezisi, antik kalıntıları belgelemek için Akdeniz boyunca yola çıkmayı planladı.",
-    "explanation": "'set' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>set out</span> (<strong>Anlamı: yola çıkmak, yolculuğa başlamak</strong> / <strong>Akademik Eş Anlamı: embark</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'set' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>set out</span> (<strong>Anlamı: yola çıkmak, yolculuğa başlamak</strong> / <strong>Eş Anlamı: embark</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q58_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 58/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Etymologists frequently _______ archaic root words in historical dictionaries.",
     "options": [
       "look up (aramak, (bir kaynaktan bilgi) bakmak)",
@@ -86698,16 +86698,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Etimologlar, tarihi sözlüklerde arkaik kök kelimelere sıklıkla bakarlar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'aramak, (bir kaynaktan bilgi) bakmak' (akademik eş anlamı: consult / search) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look up (aramak, (bir kaynaktan bilgi) bakmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'aramak, (bir kaynaktan bilgi) bakmak' (eş anlamı: consult / search) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look up (aramak, (bir kaynaktan bilgi) bakmak)</span> yapısıdır.",
     "hint": {
       "formula": "look up ➔ consult / search",
-      "academicNote": "Beşeri Bilimler Anlamı: aramak, (bir kaynaktan bilgi) bakmak"
+      "academicNote": "Anlamı: aramak, (bir kaynaktan bilgi) bakmak"
     }
   },
   {
     "id": "u60_pv_q59_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 59/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The aggressive expansion of urban housing threatens to _______ ancient archaeological sites.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The aggressive expansion of urban housing threatens to _______ ancient archaeological sites.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>run over</span> (ezmek, taşmak, tüketmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -86716,12 +86716,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kentsel konutların agresif büyümesi, antik arkeolojik alanları istila etmekle tehdit ediyor.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'ezmek, taşmak, tüketmek' (eş anlamı: overrun) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>run over</span> doğru seçenektir."
+    "explanation": "Cümlede 'ezmek, taşmak, tüketmek' (eş anlamı: overrun) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>run over</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q60_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 60/148 - Edat Kilidi] 'turn' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The newly discovered historical diary turn _______ to be a brilliant account of the French Revolution.'</strong>",
+    "prompt": "'turn' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The newly discovered historical diary turn _______ to be a brilliant account of the French Revolution.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ turn out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ turn on",
@@ -86730,14 +86730,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yeni keşfedilen tarihi günlük, Fransız Devrimi'nin harika bir anlatımı olduğu ortaya çıktı.",
-    "explanation": "'turn' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>turn out</span> (<strong>Anlamı: olduğu ortaya çıkmak, sonuçlanmak</strong> / <strong>Akademik Eş Anlamı: prove to be</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'turn' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>turn out</span> (<strong>Anlamı: olduğu ortaya çıkmak, sonuçlanmak</strong> / <strong>Eş Anlamı: prove to be</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex5 = [
   {
     "id": "u60_pv_q61_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 61/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "In traditional monastic routines, scholars had to _______ at dawn for morning prayers and study.",
     "options": [
       "get up (yataktan kalkmak, ayağa kalkmak)",
@@ -86747,16 +86747,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Geleneksel manastır rutinlerinde akademisyenler, sabah duaları ve çalışma için şafakta kalkmak zorundaydı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'yataktan kalkmak, ayağa kalkmak' (akademik eş anlamı: arise) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get up (yataktan kalkmak, ayağa kalkmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'yataktan kalkmak, ayağa kalkmak' (eş anlamı: arise) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get up (yataktan kalkmak, ayağa kalkmak)</span> yapısıdır.",
     "hint": {
       "formula": "get up ➔ arise",
-      "academicNote": "Beşeri Bilimler Anlamı: yataktan kalkmak, ayağa kalkmak"
+      "academicNote": "Anlamı: yataktan kalkmak, ayağa kalkmak"
     }
   },
   {
     "id": "u60_pv_q62_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 62/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Unpublished manuscripts of the philosopher began to _______ in private European archives.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Unpublished manuscripts of the philosopher began to _______ in private European archives.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>turn up</span> (varmak; sesini açmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -86765,12 +86765,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Filozofun yayınlanmamış el yazmaları, özel Avrupa arşivlerinde ortaya çıkmaya başladı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'varmak; sesini açmak' (eş anlamı: appear) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn up</span> doğru seçenektir."
+    "explanation": "Cümlede 'varmak; sesini açmak' (eş anlamı: appear) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn up</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q63_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 63/148 - Edat Kilidi] 'break' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Postmodern theory managed to break _______ rigid traditional paradigms in literary criticism.'</strong>",
+    "prompt": "'break' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Postmodern theory managed to break _______ rigid traditional paradigms in literary criticism.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>through</span> ➔ break through",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ break on",
@@ -86779,12 +86779,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Postmodern teori, edebi eleştirideki katı geleneksel paradigmaları aşmayı başardı.",
-    "explanation": "'break' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>break through</span> (<strong>Anlamı: engeli geçmek, aşmak</strong> / <strong>Akademik Eş Anlamı: shatter / penetrate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'break' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>break through</span> (<strong>Anlamı: engeli geçmek, aşmak</strong> / <strong>Eş Anlamı: shatter / penetrate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q64_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 64/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Anthropologists must learn to _______ indigenous elders to gain authentic cultural insights.",
     "options": [
       "get along with (biriyle iyi geçinmek)",
@@ -86794,16 +86794,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Antropologlar, otantik kültürel bilgiler edinmek için yerli büyüklerle iyi geçinmeyi öğrenmelidir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'biriyle iyi geçinmek' (akademik eş anlamı: harmonize with) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get along with (biriyle iyi geçinmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'biriyle iyi geçinmek' (eş anlamı: harmonize with) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get along with (biriyle iyi geçinmek)</span> yapısıdır.",
     "hint": {
       "formula": "get along with ➔ harmonize with",
-      "academicNote": "Beşeri Bilimler Anlamı: biriyle iyi geçinmek"
+      "academicNote": "Anlamı: biriyle iyi geçinmek"
     }
   },
   {
     "id": "u60_pv_q65_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 65/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'If cultural artifacts are uncatalogued, they often _______ in illegal private collections.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'If cultural artifacts are uncatalogued, they often _______ in illegal private collections.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>end up</span> (sonuçlanmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -86812,12 +86812,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kültürel eserler kataloglanmazsa, sıklıkla yasa dışı özel koleksiyonlarda son bulurlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'sonuçlanmak' (eş anlamı: wind up) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>end up</span> doğru seçenektir."
+    "explanation": "Cümlede 'sonuçlanmak' (eş anlamı: wind up) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>end up</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q66_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 66/148 - Edat Kilidi] 'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'It took decades for the nation to get _______ the collective trauma of the civil war.'</strong>",
+    "prompt": "'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'It took decades for the nation to get _______ the collective trauma of the civil war.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>over</span> ➔ get over",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ get on",
@@ -86826,12 +86826,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Ulusun iç savaşın kolektif travmasını atlatması onlarca yıl aldı.",
-    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get over</span> (<strong>Anlamı: iyileşmek, atlatmak, üstesinden gelmek</strong> / <strong>Akademik Eş Anlamı: recover from</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get over</span> (<strong>Anlamı: iyileşmek, atlatmak, üstesinden gelmek</strong> / <strong>Eş Anlamı: recover from</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q67_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 67/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Careless excavation techniques can quickly _______ the delicate archaeological context of a site.",
     "options": [
       "use up (tüketmek, harcamak)",
@@ -86841,16 +86841,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Dikkatsiz kazı teknikleri, bir alanın hassas arkeolojik bağlamını hızla tüketebilir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'tüketmek, harcamak' (akademik eş anlamı: exhaust) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>use up (tüketmek, harcamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'tüketmek, harcamak' (eş anlamı: exhaust) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>use up (tüketmek, harcamak)</span> yapısıdır.",
     "hint": {
       "formula": "use up ➔ exhaust",
-      "academicNote": "Beşeri Bilimler Anlamı: tüketmek, harcamak"
+      "academicNote": "Anlamı: tüketmek, harcamak"
     }
   },
   {
     "id": "u60_pv_q68_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 68/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Ancient parchment scrolls can _______ a distinct scent indicative of organic decay.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Ancient parchment scrolls can _______ a distinct scent indicative of organic decay.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>give off</span> (salmak, yaymak, bırakmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -86859,12 +86859,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Antik parşömen ruloları, organik çürümeyi gösteren belirgin bir koku yayabilir.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'salmak, yaymak, bırakmak' (eş anlamı: emit) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>give off</span> doğru seçenektir."
+    "explanation": "Cümlede 'salmak, yaymak, bırakmak' (eş anlamı: emit) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>give off</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q69_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 69/148 - Edat Kilidi] 'try' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Theater historians analyzed how actors used to try _______ elaborate masks in ancient Greek drama.'</strong>",
+    "prompt": "'try' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Theater historians analyzed how actors used to try _______ elaborate masks in ancient Greek drama.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ try on",
       "<span style='color: #ff6b6b; font-weight: bold;'>for</span> ➔ try for",
@@ -86873,12 +86873,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tiyatro tarihçileri, aktörlerin antik Yunan dramasında süslü maskeleri nasıl denediklerini analiz ettiler.",
-    "explanation": "'try' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>on</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>try on</span> (<strong>Anlamı: üzerinde denemek</strong> / <strong>Akademik Eş Anlamı: don / test</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'try' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>on</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>try on</span> (<strong>Anlamı: üzerinde denemek</strong> / <strong>Eş Anlamı: don / test</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q70_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 70/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Researchers know they can _______ peer-reviewed historical archives for verifiable data.",
     "options": [
       "count on (güvenmek, bel bağlamak)",
@@ -86888,16 +86888,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Araştırmacılar, doğrulanabilir veriler için hakemli tarihsel arşivlere güvenebileceklerini bilirler.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'güvenmek, bel bağlamak' (akademik eş anlamı: rely on) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>count on (güvenmek, bel bağlamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'güvenmek, bel bağlamak' (eş anlamı: rely on) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>count on (güvenmek, bel bağlamak)</span> yapısıdır.",
     "hint": {
       "formula": "count on ➔ rely on",
-      "academicNote": "Beşeri Bilimler Anlamı: güvenmek, bel bağlamak"
+      "academicNote": "Anlamı: güvenmek, bel bağlamak"
     }
   },
   {
     "id": "u60_pv_q71_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 71/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The proposed archaeological expedition began to _______ due to diplomatic conflicts.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The proposed archaeological expedition began to _______ due to diplomatic conflicts.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>fall through</span> (suya düşmek, güme gitmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -86906,12 +86906,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Önerilen arkeolojik gezi, diplomatik çatışmalar nedeniyle suya düşmeye başladı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'suya düşmek, güme gitmek' (eş anlamı: fail) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>fall through</span> doğru seçenektir."
+    "explanation": "Cümlede 'suya düşmek, güme gitmek' (eş anlamı: fail) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>fall through</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q72_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 72/148 - Edat Kilidi] 'look' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Curators work diligently to look _______ fragile medieval textiles in climate-controlled vaults.'</strong>",
+    "prompt": "'look' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Curators work diligently to look _______ fragile medieval textiles in climate-controlled vaults.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>after</span> ➔ look after",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ look on",
@@ -86920,12 +86920,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Küratörler, iklim kontrollü mahzenlerde ortaçağ tekstillerini korumak için özenle çalışırlar.",
-    "explanation": "'look' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>after</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look after</span> (<strong>Anlamı: bakmak, ilgilenmek</strong> / <strong>Akademik Eş Anlamı: care for / preserve</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'look' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>after</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look after</span> (<strong>Anlamı: bakmak, ilgilenmek</strong> / <strong>Eş Anlamı: care for / preserve</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q73_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 73/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "All historical narratives must _______ critical historiographical scrutiny before acceptance.",
     "options": [
       "go through (yaşamak, geçirmek; incelemek)",
@@ -86935,16 +86935,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tüm tarihsel anlatılar, kabul edilmeden önce kritik tarih yazımı incelemesinden geçmelidir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'yaşamak, geçirmek; incelemek' (akademik eş anlamı: undergo) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>go through (yaşamak, geçirmek; incelemek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'yaşamak, geçirmek; incelemek' (eş anlamı: undergo) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>go through (yaşamak, geçirmek; incelemek)</span> yapısıdır.",
     "hint": {
       "formula": "go through ➔ undergo",
-      "academicNote": "Beşeri Bilimler Anlamı: yaşamak, geçirmek; incelemek"
+      "academicNote": "Anlamı: yaşamak, geçirmek; incelemek"
     }
   },
   {
     "id": "u60_pv_q74_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 74/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The editorial board decided to _______ the controversial manuscript due to lack of sources.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The editorial board decided to _______ the controversial manuscript due to lack of sources.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>turn down</span> (reddetmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -86953,12 +86953,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yayın kurulu, kaynak yetersizliği nedeniyle tartışmalı el yazmasını reddetmeye karar verdi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'reddetmek' (eş anlamı: reject) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn down</span> doğru seçenektir."
+    "explanation": "Cümlede 'reddetmek' (eş anlamı: reject) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q75_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 75/148 - Edat Kilidi] 'do away' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The revolutionary assembly voted to do away _______ feudal privileges and hereditary titles.'</strong>",
+    "prompt": "'do away' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The revolutionary assembly voted to do away _______ feudal privileges and hereditary titles.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>with</span> ➔ do away with",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ do away on",
@@ -86967,14 +86967,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Devrimci meclis, feodal ayrıcalıkları ve irsi unvanları kaldırmak için oy kullandı.",
-    "explanation": "'do away' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>do away with</span> (<strong>Anlamı: yürürlükten kaldırmak, durdurmak</strong> / <strong>Akademik Eş Anlamı: abolish</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'do away' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>do away with</span> (<strong>Anlamı: yürürlükten kaldırmak, durdurmak</strong> / <strong>Eş Anlamı: abolish</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex6 = [
   {
     "id": "u60_pv_q76_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 76/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Imperial powers could no longer _______ looting cultural heritage without international condemnation.",
     "options": [
       "get away with (yanına kâr kalmak)",
@@ -86984,16 +86984,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Emperyal güçlerin kültürel mirası uluslararası kınama olmaksızın yağmalaması yanına kâr kalamazdı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'yanına kâr kalmak' (akademik eş anlamı: escape penalty) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get away with (yanına kâr kalmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'yanına kâr kalmak' (eş anlamı: escape penalty) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get away with (yanına kâr kalmak)</span> yapısıdır.",
     "hint": {
       "formula": "get away with ➔ escape penalty",
-      "academicNote": "Beşeri Bilimler Anlamı: yanına kâr kalmak"
+      "academicNote": "Anlamı: yanına kâr kalmak"
     }
   },
   {
     "id": "u60_pv_q77_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 77/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The philosopher managed to _______ an original theory regarding human linguistic capacity.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The philosopher managed to _______ an original theory regarding human linguistic capacity.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>come up with</span> (çözüm yolu bulmak, önermek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -87002,12 +87002,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Filozof, insanın dilsel kapasitesine ilişkin özgün bir teori üretmeyi başardı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'çözüm yolu bulmak, önermek' (eş anlamı: devise / propose) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>come up with</span> doğru seçenektir."
+    "explanation": "Cümlede 'çözüm yolu bulmak, önermek' (eş anlamı: devise / propose) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>come up with</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q78_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 78/148 - Edat Kilidi] 'rely' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Historiography heavily rely _______ primary source documents such as diaries and official decrees.'</strong>",
+    "prompt": "'rely' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Historiography heavily rely _______ primary source documents such as diaries and official decrees.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ rely on",
       "<span style='color: #ff6b6b; font-weight: bold;'>for</span> ➔ rely for",
@@ -87016,12 +87016,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarih yazımı; günlükler ve resmi fermanlar gibi birincil kaynak belgelere strongly dayanır.",
-    "explanation": "'rely' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>on</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>rely on</span> (<strong>Anlamı: güvenmek, bel bağlamak, muhtaç olmak</strong> / <strong>Akademik Eş Anlamı: depend on</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'rely' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>on</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>rely on</span> (<strong>Anlamı: güvenmek, bel bağlamak, muhtaç olmak</strong> / <strong>Eş Anlamı: depend on</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q79_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 79/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The autocratic monarch used imperial guards to _______ the peasant uprising.",
     "options": [
       "put down (yere koymak)",
@@ -87031,16 +87031,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Otokratik hükümdar, köylü ayaklanmasını bastırmak için kraliyet muhafızlarını kullandı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'yere koymak' (akademik eş anlamı: suppress) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>put down (yere koymak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'yere koymak' (eş anlamı: suppress) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>put down (yere koymak)</span> yapısıdır.",
     "hint": {
       "formula": "put down ➔ suppress",
-      "academicNote": "Beşeri Bilimler Anlamı: yere koymak"
+      "academicNote": "Anlamı: yere koymak"
     }
   },
   {
     "id": "u60_pv_q80_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 80/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The structuralist thinker was first to _______ the concept of deep linguistic patterns.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The structuralist thinker was first to _______ the concept of deep linguistic patterns.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>put forward</span> (ileri sürmek, iddia etmek, önermek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -87049,12 +87049,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yapısalcı düşünür, derin dilsel kalıplar kavramını ileri süren ilk kişiydi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'ileri sürmek, iddia etmek, önermek' (eş anlamı: propose / advance) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put forward</span> doğru seçenektir."
+    "explanation": "Cümlede 'ileri sürmek, iddia etmek, önermek' (eş anlamı: propose / advance) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put forward</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q81_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 81/148 - Edat Kilidi] 'look' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Researchers spent months trying to look _______ thousands of court records from the Ottoman era.'</strong>",
+    "prompt": "'look' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Researchers spent months trying to look _______ thousands of court records from the Ottoman era.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>through</span> ➔ look through",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ look on",
@@ -87063,12 +87063,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Araştırmacılar, Osmanlı dönemine ait binlerce mahkeme kaydını incelemek için aylar harcadılar.",
-    "explanation": "'look' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look through</span> (<strong>Anlamı: incelemek, göz atmak</strong> / <strong>Akademik Eş Anlamı: examine / scan</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'look' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look through</span> (<strong>Anlamı: incelemek, göz atmak</strong> / <strong>Eş Anlamı: examine / scan</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q82_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 82/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Mutual cultural understanding will always _______ enduring international peace.",
     "options": [
       "make for (\\-e doğru gitmek; \\-e neden olmak, sağlamak)",
@@ -87078,16 +87078,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Karşılıklı kültürel anlayış, kalıcı uluslararası barışa her zaman katkıda bulunacaktır.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda '\\-e doğru gitmek; \\-e neden olmak, sağlamak' (akademik eş anlamı: conduce to) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>make for (\\-e doğru gitmek; \\-e neden olmak, sağlamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda '\\-e doğru gitmek; \\-e neden olmak, sağlamak' (eş anlamı: conduce to) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>make for (\\-e doğru gitmek; \\-e neden olmak, sağlamak)</span> yapısıdır.",
     "hint": {
       "formula": "make for ➔ conduce to",
-      "academicNote": "Beşeri Bilimler Anlamı: \\-e doğru gitmek; \\-e neden olmak, sağlamak"
+      "academicNote": "Anlamı: \\-e doğru gitmek; \\-e neden olmak, sağlamak"
     }
   },
   {
     "id": "u60_pv_q83_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 83/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Art restorers work painstakingly to _______ damaged Renaissance frescoes.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Art restorers work painstakingly to _______ damaged Renaissance frescoes.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>care for</span> (bakmak, ilgilenmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -87096,12 +87096,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Sanat restoratörleri, hasarlı Rönesans fresklerine özen göstermek için titizlikle çalışırlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'bakmak, ilgilenmek' (eş anlamı: tend / preserve) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>care for</span> doğru seçenektir."
+    "explanation": "Cümlede 'bakmak, ilgilenmek' (eş anlamı: tend / preserve) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>care for</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q84_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 84/148 - Edat Kilidi] 'bring' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The invention of movable type helped bring _______ a rapid spread of humanist ideas.'</strong>",
+    "prompt": "'bring' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The invention of movable type helped bring _______ a rapid spread of humanist ideas.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>about</span> ➔ bring about",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ bring on",
@@ -87110,12 +87110,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Hareketli harflerin icadı, hümanist fikirlerin hızla yayılmasına sebep oldu.",
-    "explanation": "'bring' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>about</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>bring about</span> (<strong>Anlamı: sebep olmak, neden olmak</strong> / <strong>Akademik Eş Anlamı: cause / generate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'bring' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>about</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>bring about</span> (<strong>Anlamı: sebep olmak, neden olmak</strong> / <strong>Eş Anlamı: cause / generate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q85_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 85/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Translators often have to _______ culturally obsolete idioms to preserve clarity.",
     "options": [
       "cut out (kesip çıkarmak, bırakmak)",
@@ -87125,16 +87125,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Mütercimler, açıklığı korumak için kültürel olarak demode deyimleri sıklıkla çıkarıp atarlar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'kesip çıkarmak, bırakmak' (akademik eş anlamı: excise / omit) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>cut out (kesip çıkarmak, bırakmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'kesip çıkarmak, bırakmak' (eş anlamı: excise / omit) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>cut out (kesip çıkarmak, bırakmak)</span> yapısıdır.",
     "hint": {
       "formula": "cut out ➔ excise / omit",
-      "academicNote": "Beşeri Bilimler Anlamı: kesip çıkarmak, bırakmak"
+      "academicNote": "Anlamı: kesip çıkarmak, bırakmak"
     }
   },
   {
     "id": "u60_pv_q86_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 86/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The dry academic tone of the treatise threatened to _______ general readers.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The dry academic tone of the treatise threatened to _______ general readers.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>turn off</span> (kapatmak (elektronik))",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -87142,13 +87142,13 @@ const chapter40Data = {
       "<span style='color: #ff6b6b; font-weight: bold;'>get through</span> (telefonla ulaşmak, başarılı olmak, tüketmek)"
     ],
     "correctIndex": 0,
-    "translation": "Risalenin kuru akademik tonu, genel okuyucuları soğutmakla tehdit etti.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'kapatmak (elektronik)' (eş anlamı: disenchant / switch off) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn off</span> doğru seçenektir."
+    "translation": "Risalenin kuru tonu, genel okuyucuları soğutmakla tehdit etti.",
+    "explanation": "Cümlede 'kapatmak (elektronik)' (eş anlamı: disenchant / switch off) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn off</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q87_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 87/148 - Edat Kilidi] 'run' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Let us briefly run _______ the key historical events leading to the declaration of independence.'</strong>",
+    "prompt": "'run' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Let us briefly run _______ the key historical events leading to the declaration of independence.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>through</span> ➔ run through",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ run on",
@@ -87157,12 +87157,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Bağımsızlık bildirgesine yol açan temel kilit tarihsel olayları kısaca özetleyelim.",
-    "explanation": "'run' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>run through</span> (<strong>Anlamı: göz atmak, var olmak, tüketmek</strong> / <strong>Akademik Eş Anlamı: recapitulate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'run' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>run through</span> (<strong>Anlamı: göz atmak, var olmak, tüketmek</strong> / <strong>Eş Anlamı: recapitulate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q88_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 88/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The king decided to _______ the renowned philosopher to tutor his children.",
     "options": [
       "send for (çağırmak, getirtmek)",
@@ -87172,16 +87172,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kral, çocuklarına ders vermesi için ünlü filozofu çağırmaya karar verdi.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'çağırmak, getirtmek' (akademik eş anlamı: summon) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>send for (çağırmak, getirtmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'çağırmak, getirtmek' (eş anlamı: summon) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>send for (çağırmak, getirtmek)</span> yapısıdır.",
     "hint": {
       "formula": "send for ➔ summon",
-      "academicNote": "Beşeri Bilimler Anlamı: çağırmak, getirtmek"
+      "academicNote": "Anlamı: çağırmak, getirtmek"
     }
   },
   {
     "id": "u60_pv_q89_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 89/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Historical analysis cannot _______ rigorous contextual verification.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Historical analysis cannot _______ rigorous contextual verification.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>do without</span> (olmadan idare etmek, \\-sız idare etmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -87190,12 +87190,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihsel analiz, titiz bağlamsal doğrulama olmadan idare edemez.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'olmadan idare etmek, \\-sız idare etmek' (eş anlamı: dispense with) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>do without</span> doğru seçenektir."
+    "explanation": "Cümlede 'olmadan idare etmek, \\-sız idare etmek' (eş anlamı: dispense with) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>do without</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q90_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 90/148 - Edat Kilidi] 'show' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Renaissance patrons commissioned grand portraits to show _______ their political prestige.'</strong>",
+    "prompt": "'show' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Renaissance patrons commissioned grand portraits to show _______ their political prestige.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>off</span> ➔ show off",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ show on",
@@ -87204,14 +87204,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Rönesans hamileri, siyasi prestijlerini sergilemek için büyük portreler sipariş ettiler.",
-    "explanation": "'show' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>off</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>show off</span> (<strong>Anlamı: hava atmak, gösteriş yapmak</strong> / <strong>Akademik Eş Anlamı: display / exhibit</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'show' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>off</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>show off</span> (<strong>Anlamı: hava atmak, gösteriş yapmak</strong> / <strong>Eş Anlamı: display / exhibit</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex7 = [
   {
     "id": "u60_pv_q91_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 91/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The ethical council requested more time to _______ the moral implications of genetic editing.",
     "options": [
       "think over (iyice düşünmek)",
@@ -87221,16 +87221,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Etik kurulu, genetik düzenlemenin ahlaki boyutlarını düşünmek için daha fazla zaman talep etti.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'iyice düşünmek' (akademik eş anlamı: ponder) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>think over (iyice düşünmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'iyice düşünmek' (eş anlamı: ponder) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>think over (iyice düşünmek)</span> yapısıdır.",
     "hint": {
       "formula": "think over ➔ ponder",
-      "academicNote": "Beşeri Bilimler Anlamı: iyice düşünmek"
+      "academicNote": "Anlamı: iyice düşünmek"
     }
   },
   {
     "id": "u60_pv_q92_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 92/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The academic discipline began to _______ from structuralism to post-structuralist analysis.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The academic discipline began to _______ from structuralism to post-structuralist analysis.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>change over</span> (bir yöntemden diğerine geçmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -87238,13 +87238,13 @@ const chapter40Data = {
       "<span style='color: #ff6b6b; font-weight: bold;'>hold up</span> (soymak (banka vs); geciktirmek, yavaşlatmak)"
     ],
     "correctIndex": 0,
-    "translation": "Akademik disiplin, yapısalcılıktan post-yapısalcı analize dönüşmeye başladı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'bir yöntemden diğerine geçmek' (eş anlamı: transition / switch) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>change over</span> doğru seçenektir."
+    "translation": "disiplin, yapısalcılıktan post-yapısalcı analize dönüşmeye başladı.",
+    "explanation": "Cümlede 'bir yöntemden diğerine geçmek' (eş anlamı: transition / switch) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>change over</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q93_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 93/148 - Edat Kilidi] 'take care' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Cultural heritage organizations aim to take care _______ endangered historical monuments.'</strong>",
+    "prompt": "'take care' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Cultural heritage organizations aim to take care _______ endangered historical monuments.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>of</span> ➔ take care of",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ take care on",
@@ -87253,12 +87253,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kültürel miras kuruluşları, tehlike altındaki tarihi anıtları korumayı amaçlamaktadır.",
-    "explanation": "'take care' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>of</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take care of</span> (<strong>Anlamı: ilgilenmek, göz kulak olmak</strong> / <strong>Akademik Eş Anlamı: protect / preserve</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'take care' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>of</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take care of</span> (<strong>Anlamı: ilgilenmek, göz kulak olmak</strong> / <strong>Eş Anlamı: protect / preserve</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q94_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 94/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The besieged fortress began to _______ grain and clean water after three months.",
     "options": [
       "run out (of) (bitmek, bitirmek)",
@@ -87268,16 +87268,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kuşatılmış kale, üç ay sonra tahıl ve temiz suyu tüketmeye başladı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'bitmek, bitirmek' (akademik eş anlamı: deplete) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>run out (of) (bitmek, bitirmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'bitmek, bitirmek' (eş anlamı: deplete) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>run out (of) (bitmek, bitirmek)</span> yapısıdır.",
     "hint": {
       "formula": "run out (of) ➔ deplete",
-      "academicNote": "Beşeri Bilimler Anlamı: bitmek, bitirmek"
+      "academicNote": "Anlamı: bitmek, bitirmek"
     }
   },
   {
     "id": "u60_pv_q95_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 95/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Totalitarian regimes often move to _______ independent printing presses and theaters.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Totalitarian regimes often move to _______ independent printing presses and theaters.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>close down</span> (kapatmak, kepenk indirmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -87286,12 +87286,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Totaliter rejimler sıklıkla bağımsız matbaaları ve tiyatroları kapatmak için harekete geçerler.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'kapatmak, kepenk indirmek' (eş anlamı: suppress / shut) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>close down</span> doğru seçenektir."
+    "explanation": "Cümlede 'kapatmak, kepenk indirmek' (eş anlamı: suppress / shut) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>close down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q96_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 96/148 - Edat Kilidi] 'sort' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Philologists spent years attempting to sort _______ the confused chronology of ancient fragments.'</strong>",
+    "prompt": "'sort' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Philologists spent years attempting to sort _______ the confused chronology of ancient fragments.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ sort out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ sort on",
@@ -87300,12 +87300,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Filologlar, antik parçaların karışık kronolojisini çözmek için yıllarca çabaladılar.",
-    "explanation": "'sort' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>sort out</span> (<strong>Anlamı: çözmek, anlamak</strong> / <strong>Akademik Eş Anlamı: organize / resolve</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'sort' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>sort out</span> (<strong>Anlamı: çözmek, anlamak</strong> / <strong>Eş Anlamı: organize / resolve</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q97_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 97/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Ideological purges managed to _______ prominent dissident intellectuals from the university.",
     "options": [
       "force out (zorlamak)",
@@ -87315,16 +87315,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "İdeolojik tasfiyeler, önde gelen muhalif aydınları üniversiteden zorla çıkarmayı başardı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'zorlamak' (akademik eş anlamı: expel / oust) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>force out (zorlamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'zorlamak' (eş anlamı: expel / oust) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>force out (zorlamak)</span> yapısıdır.",
     "hint": {
       "formula": "force out ➔ expel / oust",
-      "academicNote": "Beşeri Bilimler Anlamı: zorlamak"
+      "academicNote": "Anlamı: zorlamak"
     }
   },
   {
     "id": "u60_pv_q98_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 98/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural anthropology has everything to _______ understanding human symbolic systems.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural anthropology has everything to _______ understanding human symbolic systems.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>do with</span> (alakalı olmak, ilgili olmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -87333,12 +87333,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kültürel antropoloji, insanın sembolik sistemlerini anlamakla tamamen alakalıdır.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'alakalı olmak, ilgili olmak' (eş anlamı: pertain to) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>do with</span> doğru seçenektir."
+    "explanation": "Cümlede 'alakalı olmak, ilgili olmak' (eş anlamı: pertain to) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>do with</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q99_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 99/148 - Edat Kilidi] 'turn' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The defeated commander agreed to turn _______ the city archives to the invading forces.'</strong>",
+    "prompt": "'turn' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The defeated commander agreed to turn _______ the city archives to the invading forces.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>over</span> ➔ turn over",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ turn on",
@@ -87347,12 +87347,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yenilen komutan, şehir arşivlerini işgalci güçlere devretmeyi kabul etti.",
-    "explanation": "'turn' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>turn over</span> (<strong>Anlamı: devretmek, iş yapmak</strong> / <strong>Akademik Eş Anlamı: surrender</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'turn' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>turn over</span> (<strong>Anlamı: devretmek, iş yapmak</strong> / <strong>Eş Anlamı: surrender</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q100_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 100/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "A balanced biography should never _______ the subject's early moral failures.",
     "options": [
       "leave out (dışarda tutmak, katmamak)",
@@ -87362,16 +87362,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Dengeli bir biyografi, kişinin erken dönem ahlaki hatalarını asla dışarıda bırakmamalıdır.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'dışarda tutmak, katmamak' (akademik eş anlamı: omit) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>leave out (dışarda tutmak, katmamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'dışarda tutmak, katmamak' (eş anlamı: omit) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>leave out (dışarda tutmak, katmamak)</span> yapısıdır.",
     "hint": {
       "formula": "leave out ➔ omit",
-      "academicNote": "Beşeri Bilimler Anlamı: dışarda tutmak, katmamak"
+      "academicNote": "Anlamı: dışarda tutmak, katmamak"
     }
   },
   {
     "id": "u60_pv_q101_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 101/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The siege managed to _______ the capital city from vital agricultural hinterlands.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The siege managed to _______ the capital city from vital agricultural hinterlands.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>cut off</span> (kesmek, kapatmak, durdurmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -87380,12 +87380,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kuşatma, başkenti hayati tarımsal art bölgelerden kesmeyi başardı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'kesmek, kapatmak, durdurmak' (eş anlamı: isolate / sever) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>cut off</span> doğru seçenektir."
+    "explanation": "Cümlede 'kesmek, kapatmak, durdurmak' (eş anlamı: isolate / sever) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>cut off</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q102_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 102/148 - Edat Kilidi] 'point' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Art historians were quick to point _______ the subtle Byzantine influences in Italian gothic art.'</strong>",
+    "prompt": "'point' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Art historians were quick to point _______ the subtle Byzantine influences in Italian gothic art.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ point out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ point on",
@@ -87394,12 +87394,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Sanat tarihçileri, İtalyan gotik sanatındaki ince Bizans etkilerini vurgulamakta gecikmediler.",
-    "explanation": "'point' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>point out</span> (<strong>Anlamı: işaret etmek, açıklamak</strong> / <strong>Akademik Eş Anlamı: highlight / indicate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'point' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>point out</span> (<strong>Anlamı: işaret etmek, açıklamak</strong> / <strong>Eş Anlamı: highlight / indicate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q103_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 103/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Scholars queued early at the library gates to _______ before the rare archive room opened.",
     "options": [
       "get in ((taşıt) binmek; girmek; varmak, ulaşmak)",
@@ -87409,16 +87409,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Akademisyenler, nadir arşiv odası açılmadan önce girmek için kütüphane kapılarında erken saatlerde kuyruğa girdiler.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda '(taşıt) binmek; girmek; varmak, ulaşmak' (akademik eş anlamı: enter) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get in ((taşıt) binmek; girmek; varmak, ulaşmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda '(taşıt) binmek; girmek; varmak, ulaşmak' (eş anlamı: enter) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get in ((taşıt) binmek; girmek; varmak, ulaşmak)</span> yapısıdır.",
     "hint": {
       "formula": "get in ➔ enter",
-      "academicNote": "Beşeri Bilimler Anlamı: (taşıt) binmek; girmek; varmak, ulaşmak"
+      "academicNote": "Anlamı: (taşıt) binmek; girmek; varmak, ulaşmak"
     }
   },
   {
     "id": "u60_pv_q104_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 104/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The diplomatic delegation decided to _______ near the neutral border town for talks.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The diplomatic delegation decided to _______ near the neutral border town for talks.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>put over</span> (demir atmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -87427,12 +87427,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Diplomatik heyet, görüşmeler için tarafsız sınır kasabası yakınında konaklamaya karar verdi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'demir atmak' (eş anlamı: berth / stay) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put over</span> doğru seçenektir."
+    "explanation": "Cümlede 'demir atmak' (eş anlamı: berth / stay) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put over</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q105_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 105/148 - Edat Kilidi] 'work' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Hermeneutic scholars spent lifetimes trying to work _______ coherent interpretations of sacred texts.'</strong>",
+    "prompt": "'work' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Hermeneutic scholars spent lifetimes trying to work _______ coherent interpretations of sacred texts.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ work out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ work on",
@@ -87441,14 +87441,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Hermeneotik bilginleri, kutsal metinlerin tutarlı yorumlarını çözümlemek için ömürler harcadılar.",
-    "explanation": "'work' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>work out</span> (<strong>Anlamı: (düşünüp) anlamak, çözmek; spor yapmak</strong> / <strong>Akademik Eş Anlamı: interpret / solve</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'work' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>work out</span> (<strong>Anlamı: (düşünüp) anlamak, çözmek; spor yapmak</strong> / <strong>Eş Anlamı: interpret / solve</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex8 = [
   {
     "id": "u60_pv_q106_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 106/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Experimental dramatists decided to _______ new interactive staging techniques.",
     "options": [
       "try out (denemek)",
@@ -87458,16 +87458,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Deneysel oyun yazarları, yeni etkileşimli sahneleme tekniklerini denemeye karar verdiler.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'denemek' (akademik eş anlamı: test) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>try out (denemek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'denemek' (eş anlamı: test) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>try out (denemek)</span> yapısıdır.",
     "hint": {
       "formula": "try out ➔ test",
-      "academicNote": "Beşeri Bilimler Anlamı: denemek"
+      "academicNote": "Anlamı: denemek"
     }
   },
   {
     "id": "u60_pv_q107_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 107/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Early sociologists analyzed how different immigrant groups _______ in urban environments.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Early sociologists analyzed how different immigrant groups _______ in urban environments.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>get on</span> (binmek; iyi geçinmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -87476,12 +87476,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Erken dönem sosyologlar, farklı göçmen gruplarının kentsel ortamlarda nasıl geçindiklerini analiz ettiler.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'binmek; iyi geçinmek' (eş anlamı: fare / progress) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>get on</span> doğru seçenektir."
+    "explanation": "Cümlede 'binmek; iyi geçinmek' (eş anlamı: fare / progress) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>get on</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q108_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 108/148 - Edat Kilidi] 'take' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The historian was forced to take _______ his erroneous claim after new archive proof emerged.'</strong>",
+    "prompt": "'take' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The historian was forced to take _______ his erroneous claim after new archive proof emerged.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>back</span> ➔ take back",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ take on",
@@ -87490,12 +87490,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihçi, yeni arşiv kanıtları ortaya çıktıktan sonra hatalı iddiasını geri almak zorunda kaldı.",
-    "explanation": "'take' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>back</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take back</span> (<strong>Anlamı: sözünü geri almak, geri vermek</strong> / <strong>Akademik Eş Anlamı: retract</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'take' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>back</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>take back</span> (<strong>Anlamı: sözünü geri almak, geri vermek</strong> / <strong>Eş Anlamı: retract</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q109_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 109/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The fragile peace treaty managed to _______ despite severe provocations from both sides.",
     "options": [
       "pull through (iyileşmek, sağlığına kavuşmak)",
@@ -87505,16 +87505,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Hassas barış antlaşması, her iki tarafın ağır kışkırtmalarına rağmen atlatmayı başardı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'iyileşmek, sağlığına kavuşmak' (akademik eş anlamı: survive) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>pull through (iyileşmek, sağlığına kavuşmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'iyileşmek, sağlığına kavuşmak' (eş anlamı: survive) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>pull through (iyileşmek, sağlığına kavuşmak)</span> yapısıdır.",
     "hint": {
       "formula": "pull through ➔ survive",
-      "academicNote": "Beşeri Bilimler Anlamı: iyileşmek, sağlığına kavuşmak"
+      "academicNote": "Anlamı: iyileşmek, sağlığına kavuşmak"
     }
   },
   {
     "id": "u60_pv_q110_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 110/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Archeologists had to _______ dry season conditions before excavating the riverbed site.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Archeologists had to _______ dry season conditions before excavating the riverbed site.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>wait for</span> (beklemek, gözlemek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -87523,12 +87523,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arkeologlar, nehir yatağındaki alanı kazmadan önce kurak mevsim koşullarını beklemek zorunda kaldılar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'beklemek, gözlemek' (eş anlamı: await) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>wait for</span> doğru seçenektir."
+    "explanation": "Cümlede 'beklemek, gözlemek' (eş anlamı: await) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>wait for</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q111_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 111/148 - Edat Kilidi] 'put' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The diplomat managed to put _______ the crucial peace amendment during the final vote.'</strong>",
+    "prompt": "'put' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The diplomat managed to put _______ the crucial peace amendment during the final vote.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>through</span> ➔ put through",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ put on",
@@ -87537,12 +87537,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Diplomat, son oylamada hayati barış değişikliğini geçirmeyi başardı.",
-    "explanation": "'put' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>put through</span> (<strong>Anlamı: telefon ile bağlamak</strong> / <strong>Akademik Eş Anlamı: enact / pass</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'put' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>through</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>put through</span> (<strong>Anlamı: telefon ile bağlamak</strong> / <strong>Eş Anlamı: enact / pass</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q112_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 112/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The reading public began to _______ realistic novels with unprecedented enthusiasm.",
     "options": [
       "take to (ısınmak, hoşlanmak, başlamak)",
@@ -87552,16 +87552,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Okuyucu kitle, gerçekçi romanları eş benzeri görülmemiş bir coşkuyla benimsemeye başladı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'ısınmak, hoşlanmak, başlamak' (akademik eş anlamı: adopt / favor) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>take to (ısınmak, hoşlanmak, başlamak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'ısınmak, hoşlanmak, başlamak' (eş anlamı: adopt / favor) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>take to (ısınmak, hoşlanmak, başlamak)</span> yapısıdır.",
     "hint": {
       "formula": "take to ➔ adopt / favor",
-      "academicNote": "Beşeri Bilimler Anlamı: ısınmak, hoşlanmak, başlamak"
+      "academicNote": "Anlamı: ısınmak, hoşlanmak, başlamak"
     }
   },
   {
     "id": "u60_pv_q113_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 113/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Widespread popular protest managed to _______ the oppressive autocratic regime.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Widespread popular protest managed to _______ the oppressive autocratic regime.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>bring down</span> (devirmek, indirmek, azaltmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -87570,12 +87570,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yaygın halk protestosu, baskıcı otokratik rejimi devirmeyi başardı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'devirmek, indirmek, azaltmak' (eş anlamı: topple / overthrow) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>bring down</span> doğru seçenektir."
+    "explanation": "Cümlede 'devirmek, indirmek, azaltmak' (eş anlamı: topple / overthrow) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>bring down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q114_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 114/148 - Edat Kilidi] 'look' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The senior editor promised to look _______ the translated epic before final printing.'</strong>",
+    "prompt": "'look' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The senior editor promised to look _______ the translated epic before final printing.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>over</span> ➔ look over",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ look on",
@@ -87584,12 +87584,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kıdemli editör, son baskıdan önce çevrilen destanı göz gezdirmeye söz verdi.",
-    "explanation": "'look' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look over</span> (<strong>Anlamı: göz gezdirmek, incelemek</strong> / <strong>Akademik Eş Anlamı: review / inspect</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'look' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>over</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>look over</span> (<strong>Anlamı: göz gezdirmek, incelemek</strong> / <strong>Eş Anlamı: review / inspect</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q115_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 115/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Historiographers must _______ ideological biases when reading court chronicles.",
     "options": [
       "look out (for) (bakmak, dikkat etmek, gözetmek)",
@@ -87599,16 +87599,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarih yazarları, saray kroniklerini okurken ideolojik önyargılara dikkat etmelidir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'bakmak, dikkat etmek, gözetmek' (akademik eş anlamı: watch out for) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look out (for) (bakmak, dikkat etmek, gözetmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'bakmak, dikkat etmek, gözetmek' (eş anlamı: watch out for) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look out (for) (bakmak, dikkat etmek, gözetmek)</span> yapısıdır.",
     "hint": {
       "formula": "look out (for) ➔ watch out for",
-      "academicNote": "Beşeri Bilimler Anlamı: bakmak, dikkat etmek, gözetmek"
+      "academicNote": "Anlamı: bakmak, dikkat etmek, gözetmek"
     }
   },
   {
     "id": "u60_pv_q116_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 116/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'During the war, scholars had to _______ makeshift libraries and scarce paper.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'During the war, scholars had to _______ makeshift libraries and scarce paper.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>make do (with)</span> (idare etmek, ile yetinmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -87617,12 +87617,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Savaş sırasında akademisyenler, derme çatma kütüphaneler ve kıt kağıtla idare etmek zorunda kaldılar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'idare etmek, ile yetinmek' (eş anlamı: cope with) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>make do (with)</span> doğru seçenektir."
+    "explanation": "Cümlede 'idare etmek, ile yetinmek' (eş anlamı: cope with) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>make do (with)</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q117_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 117/148 - Edat Kilidi] 'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Travelers on the Grand Tour used to get _______ their carriages at historical milestones.'</strong>",
+    "prompt": "'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Travelers on the Grand Tour used to get _______ their carriages at historical milestones.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>off</span> ➔ get off",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ get on",
@@ -87631,12 +87631,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Grand Tour üzerindeki gezginler, tarihi kilometre taşlarında arabalarından inerlerdi.",
-    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>off</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get off</span> (<strong>Anlamı: inmek; ayrılmak</strong> / <strong>Akademik Eş Anlamı: disembark</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>off</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get off</span> (<strong>Anlamı: inmek; ayrılmak</strong> / <strong>Eş Anlamı: disembark</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q118_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 118/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Scribes were commissioned to _______ every oral testimony during the trial.",
     "options": [
       "take down (indirmek, not almak)",
@@ -87646,16 +87646,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Duruşma sırasında her sözlü ifadeyi kaydetmek için yazıcılar görevlendirildi.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'indirmek, not almak' (akademik eş anlamı: transcribe / record) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>take down (indirmek, not almak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'indirmek, not almak' (eş anlamı: transcribe / record) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>take down (indirmek, not almak)</span> yapısıdır.",
     "hint": {
       "formula": "take down ➔ transcribe / record",
-      "academicNote": "Beşeri Bilimler Anlamı: indirmek, not almak"
+      "academicNote": "Anlamı: indirmek, not almak"
     }
   },
   {
     "id": "u60_pv_q119_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 119/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The imperial museum was urged to _______ looted ceremonial relics to indigenous tribes.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The imperial museum was urged to _______ looted ceremonial relics to indigenous tribes.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>give back</span> (geri vermek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -87664,12 +87664,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "İmparatorluk müzesi, yağmalanan törensel kalıntıları yerli kabilelere geri vermeye teşvik edildi.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'geri vermek' (eş anlamı: repatriate / return) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>give back</span> doğru seçenektir."
+    "explanation": "Cümlede 'geri vermek' (eş anlamı: repatriate / return) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>give back</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q120_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 120/148 - Edat Kilidi] 'play' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Court historians attempted to play _______ the severity of the military defeat in official records.'</strong>",
+    "prompt": "'play' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Court historians attempted to play _______ the severity of the military defeat in official records.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>down</span> ➔ play down",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ play on",
@@ -87678,14 +87678,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Saray tarihçileri, resmi kayıtlarda askeri yenilginin şiddetini önemsememeye çalıştılar.",
-    "explanation": "'play' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>down</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>play down</span> (<strong>Anlamı: önemsememek, hafife almak</strong> / <strong>Akademik Eş Anlamı: minimize / downplay</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'play' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>down</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>play down</span> (<strong>Anlamı: önemsememek, hafife almak</strong> / <strong>Eş Anlamı: minimize / downplay</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex9 = [
   {
     "id": "u60_pv_q121_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 121/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The royal carriage managed to _______ in front of the cathedral gates.",
     "options": [
       "pull up (azarlamak, durmak)",
@@ -87695,16 +87695,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kraliyet arabası, katedral kapılarının önünde durmayı başardı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'azarlamak, durmak' (akademik eş anlamı: halt) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>pull up (azarlamak, durmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'azarlamak, durmak' (eş anlamı: halt) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>pull up (azarlamak, durmak)</span> yapısıdır.",
     "hint": {
       "formula": "pull up ➔ halt",
-      "academicNote": "Beşeri Bilimler Anlamı: azarlamak, durmak"
+      "academicNote": "Anlamı: azarlamak, durmak"
     }
   },
   {
     "id": "u60_pv_q122_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 122/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Interpretations of ancient texts heavily _______ contextual linguistic knowledge.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Interpretations of ancient texts heavily _______ contextual linguistic knowledge.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>depend on/upon</span> (bağlı olmak; güvenmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -87713,12 +87713,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Antik metinlerin yorumları, büyük ölçüde bağlamsal dilbilimsel bilgiye bağlıdır.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'bağlı olmak; güvenmek' (eş anlamı: rely on) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>depend on/upon</span> doğru seçenektir."
+    "explanation": "Cümlede 'bağlı olmak; güvenmek' (eş anlamı: rely on) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>depend on/upon</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q123_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 123/148 - Edat Kilidi] 'follow' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Sociologists plan to follow _______ their initial study with a twenty-year longitudinal survey.'</strong>",
+    "prompt": "'follow' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Sociologists plan to follow _______ their initial study with a twenty-year longitudinal survey.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ follow up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ follow on",
@@ -87727,12 +87727,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Sosyologlar, ilk çalışmalarını yirmi yıllık uzunlamasına bir anketle takip etmeyi planlıyorlar.",
-    "explanation": "'follow' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>follow up</span> (<strong>Anlamı: takip etmek, ardını bırakmamak</strong> / <strong>Akademik Eş Anlamı: pursue further</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'follow' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>follow up</span> (<strong>Anlamı: takip etmek, ardını bırakmamak</strong> / <strong>Eş Anlamı: pursue further</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q124_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 124/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Citizens voted to _______ a marble monument commemorating the victims of the revolution.",
     "options": [
       "put up (inşa etmek, artırmak)",
@@ -87742,16 +87742,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Vatandaşlar, devrim kurbanlarını anan bir mermer anıt inşa etmek için oy kullandılar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'inşa etmek, artırmak' (akademik eş anlamı: erect / construct) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>put up (inşa etmek, artırmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'inşa etmek, artırmak' (eş anlamı: erect / construct) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>put up (inşa etmek, artırmak)</span> yapısıdır.",
     "hint": {
       "formula": "put up ➔ erect / construct",
-      "academicNote": "Beşeri Bilimler Anlamı: inşa etmek, artırmak"
+      "academicNote": "Anlamı: inşa etmek, artırmak"
     }
   },
   {
     "id": "u60_pv_q125_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 125/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The besieged city garrison managed to _______ against overwhelming imperial forces.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The besieged city garrison managed to _______ against overwhelming imperial forces.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>hold out</span> (ileri sürmek, ısrar etmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -87760,12 +87760,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kuşatılmış şehir garnizonu, ezici emperyal güçlere karşı direnmeyi başardı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'ileri sürmek, ısrar etmek' (eş anlamı: resist) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>hold out</span> doğru seçenektir."
+    "explanation": "Cümlede 'ileri sürmek, ısrar etmek' (eş anlamı: resist) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>hold out</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q126_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 126/148 - Edat Kilidi] 'show' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Fascinating new historical clues continue to show _______ in unexamined church registries.'</strong>",
+    "prompt": "'show' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Fascinating new historical clues continue to show _______ in unexamined church registries.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ show up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ show on",
@@ -87774,12 +87774,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Büyüleyici yeni tarihsel ipuçları, incelenmemiş kilise kayıtlarında ortaya çıkmaya devam ediyor.",
-    "explanation": "'show' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>show up</span> (<strong>Anlamı: çıkagelmek, ortaya çıkmak</strong> / <strong>Akademik Eş Anlamı: emerge / appear</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'show' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>show up</span> (<strong>Anlamı: çıkagelmek, ortaya çıkmak</strong> / <strong>Eş Anlamı: emerge / appear</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q127_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 127/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Ethical dilemmas are bound to _______ whenever artificial intelligence is debated in philosophy.",
     "options": [
       "come up (yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak)",
@@ -87789,16 +87789,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Yapay zeka felsefede ne zaman tartışılsa etik ikilemlerin gündeme gelmesi kaçınılmazdır.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak' (akademik eş anlamı: arise) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>come up (yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak' (eş anlamı: arise) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>come up (yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak)</span> yapısıdır.",
     "hint": {
       "formula": "come up ➔ arise",
-      "academicNote": "Beşeri Bilimler Anlamı: yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak"
+      "academicNote": "Anlamı: yaklaşmak, ele alınmak, ortaya çıkmak, piyasaya çıkmak"
     }
   },
   {
     "id": "u60_pv_q128_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 128/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural communities work to _______ linguistic homogenization caused by globalization.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Cultural communities work to _______ linguistic homogenization caused by globalization.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>fight off</span> (defetmek, mücadele etmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -87807,12 +87807,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kültürel topluluklar, küreselleşmenin neden olduğu dilsel homojenleşmeyle mücadele etmek için çalışırlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'defetmek, mücadele etmek' (eş anlamı: resist / repel) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>fight off</span> doğru seçenektir."
+    "explanation": "Cümlede 'defetmek, mücadele etmek' (eş anlamı: resist / repel) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>fight off</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q129_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 129/148 - Edat Kilidi] 'keep' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Totalitarian censors sought to keep _______ subversive literature from university students.'</strong>",
+    "prompt": "'keep' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Totalitarian censors sought to keep _______ subversive literature from university students.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>away</span> ➔ keep away",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ keep on",
@@ -87821,12 +87821,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Totaliter sansürcüler, yıkıcı edebiyatı üniversite öğrencilerinden uzak tutmaya çalıştılar.",
-    "explanation": "'keep' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>away</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>keep away</span> (<strong>Anlamı: uzak durmak, uzak tutmak</strong> / <strong>Akademik Eş Anlamı: withhold</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'keep' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>away</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>keep away</span> (<strong>Anlamı: uzak durmak, uzak tutmak</strong> / <strong>Eş Anlamı: withhold</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q130_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 130/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Secret archives allowed historians to _______ historical truth to the public domain.",
     "options": [
       "get out ((araç vs) çıkmak, inmek)",
@@ -87836,16 +87836,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Gizli arşivler, tarihçilerin tarihsel gerçeği kamusal alana çıkarmasını sağladı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda '(araç vs) çıkmak, inmek' (akademik eş anlamı: release / extract) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get out ((araç vs) çıkmak, inmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda '(araç vs) çıkmak, inmek' (eş anlamı: release / extract) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get out ((araç vs) çıkmak, inmek)</span> yapısıdır.",
     "hint": {
       "formula": "get out ➔ release / extract",
-      "academicNote": "Beşeri Bilimler Anlamı: (araç vs) çıkmak, inmek"
+      "academicNote": "Anlamı: (araç vs) çıkmak, inmek"
     }
   },
   {
     "id": "u60_pv_q131_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 131/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Conservative traditionalists tried to _______ to feudal values despite modernization.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Conservative traditionalists tried to _______ to feudal values despite modernization.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>hold on</span> (beklemek, durmak; sıkıca tutmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -87854,12 +87854,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Muhafazakar gelenekçiler, modernleşmeye rağmen feodal değerlere tutunmaya çalıştılar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'beklemek, durmak; sıkıca tutmak' (eş anlamı: cling to) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>hold on</span> doğru seçenektir."
+    "explanation": "Cümlede 'beklemek, durmak; sıkıca tutmak' (eş anlamı: cling to) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>hold on</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q132_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 132/148 - Edat Kilidi] 'bring' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The cultural exchange program helped bring _______ fresh artistic perspectives into the academy.'</strong>",
+    "prompt": "'bring' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The cultural exchange program helped bring _______ fresh artistic perspectives into the academy.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>in</span> ➔ bring in",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ bring on",
@@ -87868,12 +87868,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Kültürel değişim programı, akademiye taze sanatsal bakış açıları kazandırmaya yardımcı oldu.",
-    "explanation": "'bring' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>in</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>bring in</span> (<strong>Anlamı: tanıtmak, sunmak, kazandırmak, işe almak</strong> / <strong>Akademik Eş Anlamı: introduce</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'bring' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>in</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>bring in</span> (<strong>Anlamı: tanıtmak, sunmak, kazandırmak, işe almak</strong> / <strong>Eş Anlamı: introduce</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q133_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 133/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "The exiled dissident managed to _______ across the border under cover of darkness.",
     "options": [
       "get away (kaçmak, kurtulmak)",
@@ -87883,16 +87883,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Sürgündeki muhalif, karanlığın örtüsü altında sınırdan kaçmayı başardı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'kaçmak, kurtulmak' (akademik eş anlamı: escape) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get away (kaçmak, kurtulmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'kaçmak, kurtulmak' (eş anlamı: escape) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>get away (kaçmak, kurtulmak)</span> yapısıdır.",
     "hint": {
       "formula": "get away ➔ escape",
-      "academicNote": "Beşeri Bilimler Anlamı: kaçmak, kurtulmak"
+      "academicNote": "Anlamı: kaçmak, kurtulmak"
     }
   },
   {
     "id": "u60_pv_q134_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 134/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Archivists must carefully _______ fragile 15th-century maps after examination.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Archivists must carefully _______ fragile 15th-century maps after examination.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>put away</span> (yerine koymak, toplamak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>turn into</span> (dönüşmek, dönüştürmek)",
@@ -87901,12 +87901,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arşivciler, incelemeden sonra hassas 15. yüzyıl haritalarını dikkatle kaldırmalıdır.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'yerine koymak, toplamak' (eş anlamı: store) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put away</span> doğru seçenektir."
+    "explanation": "Cümlede 'yerine koymak, toplamak' (eş anlamı: store) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>put away</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q135_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 135/148 - Edat Kilidi] 'draw' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Delegates assembled to draw _______ a constitutional framework for the new republic.'</strong>",
+    "prompt": "'draw' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Delegates assembled to draw _______ a constitutional framework for the new republic.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ draw up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ draw on",
@@ -87915,14 +87915,14 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Delegeler, yeni cumhuriyet için anayasal bir çerçeve kaleme almak üzere toplandılar.",
-    "explanation": "'draw' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>draw up</span> (<strong>Anlamı: hazırlamak, düzenlemek</strong> / <strong>Akademik Eş Anlamı: draft / formulate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'draw' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>draw up</span> (<strong>Anlamı: hazırlamak, düzenlemek</strong> / <strong>Eş Anlamı: draft / formulate</strong>) deyimsel fiilini oluşturur."
   }
 ];
   const questions60_ex10 = [
   {
     "id": "u60_pv_q136_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 136/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "After decades of suppression, classical philosophical realism began to _______ into favor.",
     "options": [
       "come back (geri dönmek, aklına gelmek)",
@@ -87932,16 +87932,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Onlarca yıllık baskının ardından, klasik felsefi realizm yeniden popülerleşmeye başladı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'geri dönmek, aklına gelmek' (akademik eş anlamı: resurge) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>come back (geri dönmek, aklına gelmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'geri dönmek, aklına gelmek' (eş anlamı: resurge) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>come back (geri dönmek, aklına gelmek)</span> yapısıdır.",
     "hint": {
       "formula": "come back ➔ resurge",
-      "academicNote": "Beşeri Bilimler Anlamı: geri dönmek, aklına gelmek"
+      "academicNote": "Anlamı: geri dönmek, aklına gelmek"
     }
   },
   {
     "id": "u60_pv_q137_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 137/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Biased chroniclers used to _______ foreign cultures to justify imperial conquest.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Biased chroniclers used to _______ foreign cultures to justify imperial conquest.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>run down</span> (eleştirmek, çarpmak, azaltmak, bulmak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>account for</span> (oluşturmak; nedenini açıklamak)",
@@ -87950,12 +87950,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Önyargılı kronikçiler, emperyal fethi haklı çıkarmak için yabancı kültürleri kötülemeye çalışırlardı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'eleştirmek, çarpmak, azaltmak, bulmak' (eş anlamı: disparage) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>run down</span> doğru seçenektir."
+    "explanation": "Cümlede 'eleştirmek, çarpmak, azaltmak, bulmak' (eş anlamı: disparage) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>run down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q138_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 138/148 - Edat Kilidi] 'open' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The decipherment of Cuneiform script managed to open _______ thousands of years of Near Eastern history.'</strong>",
+    "prompt": "'open' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'The decipherment of Cuneiform script managed to open _______ thousands of years of Near Eastern history.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>up</span> ➔ open up",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ open on",
@@ -87964,12 +87964,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Çivi yazısının çözülmesi, binlerce yıllık Yakın Doğu tarihinin önünü açmayı başardı.",
-    "explanation": "'open' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>open up</span> (<strong>Anlamı: başlatmak, açmak</strong> / <strong>Akademik Eş Anlamı: unravel / unlock</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'open' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>up</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>open up</span> (<strong>Anlamı: başlatmak, açmak</strong> / <strong>Eş Anlamı: unravel / unlock</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q139_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 139/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Post-war European cinema worked hard to _______ with Hollywood's technological advances.",
     "options": [
       "catch up (hızına yetişmek; muhabbet etmek)",
@@ -87979,16 +87979,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Savaş sonrası Avrupa sineması, Hollywood'un teknolojik gelişmelerine yetişmek için çok çalıştı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'hızına yetişmek; muhabbet etmek' (akademik eş anlamı: overtake) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>catch up (hızına yetişmek; muhabbet etmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'hızına yetişmek; muhabbet etmek' (eş anlamı: overtake) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>catch up (hızına yetişmek; muhabbet etmek)</span> yapısıdır.",
     "hint": {
       "formula": "catch up ➔ overtake",
-      "academicNote": "Beşeri Bilimler Anlamı: hızına yetişmek; muhabbet etmek"
+      "academicNote": "Anlamı: hızına yetişmek; muhabbet etmek"
     }
   },
   {
     "id": "u60_pv_q140_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 140/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The economic decline threatened to _______ the pace of cultural institution funding.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The economic decline threatened to _______ the pace of cultural institution funding.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>slow down</span> (yavaşlamak; sakinleşmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>keep up with</span> (hızına yetişmek, ayak uydurmak)",
@@ -87997,12 +87997,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Ekonomik gerileme, kültürel kurum fonlamasının hızını yavaşlatmakla tehdit etti.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'yavaşlamak; sakinleşmek' (eş anlamı: decelerate) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>slow down</span> doğru seçenektir."
+    "explanation": "Cümlede 'yavaşlamak; sakinleşmek' (eş anlamı: decelerate) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>slow down</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q141_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 141/148 - Edat Kilidi] 'die' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Without active speakers, ancient oral storytelling traditions will eventually die _______.'</strong>",
+    "prompt": "'die' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'Without active speakers, ancient oral storytelling traditions will eventually die _______.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>out</span> ➔ die out",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ die on",
@@ -88011,12 +88011,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Aktif konuşmacılar olmadan, antik sözlü hikaye anlatımı gelenekleri sonunda yok olacaktır.",
-    "explanation": "'die' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>die out</span> (<strong>Anlamı: yok olmak, soyu tükenmek</strong> / <strong>Akademik Eş Anlamı: become extinct</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'die' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>out</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>die out</span> (<strong>Anlamı: yok olmak, soyu tükenmek</strong> / <strong>Eş Anlamı: become extinct</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q142_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 142/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Archival researchers are required to _______ official manuscript request forms.",
     "options": [
       "fill out (form doldurmak)",
@@ -88026,16 +88026,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arşiv araştırmacılarının resmi el yazması talep formlarını doldurmaları gerekmektedir.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'form doldurmak' (akademik eş anlamı: complete) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>fill out (form doldurmak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'form doldurmak' (eş anlamı: complete) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>fill out (form doldurmak)</span> yapısıdır.",
     "hint": {
       "formula": "fill out ➔ complete",
-      "academicNote": "Beşeri Bilimler Anlamı: form doldurmak"
+      "academicNote": "Anlamı: form doldurmak"
     }
   },
   {
     "id": "u60_pv_q143_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 143/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The army of Alexander the Great was forced to _______ after reaching the Indus River.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'The army of Alexander the Great was forced to _______ after reaching the Indus River.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>turn back</span> (geri dönmek)",
       "<span style='color: #ff6b6b; font-weight: bold;'>set up</span> (kurmak, düzenlemek, hazırlamak)",
@@ -88044,12 +88044,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Büyük İskender'in ordusu, İndus Nehrine ulaştıktan sonra geri dönmek zorunda kaldı.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'geri dönmek' (eş anlamı: retreat) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn back</span> doğru seçenektir."
+    "explanation": "Cümlede 'geri dönmek' (eş anlamı: retreat) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>turn back</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q144_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 144/148 - Edat Kilidi] 'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'News of the philosophical treatise began to get _______ rapidly across European universities.'</strong>",
+    "prompt": "'get' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'News of the philosophical treatise began to get _______ rapidly across European universities.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>around</span> ➔ get around",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ get on",
@@ -88058,12 +88058,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Felsefi risale haberi, Avrupa üniversiteleri arasında hızla yayılmaya başladı.",
-    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>around</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get around</span> (<strong>Anlamı: yayılmak, gezmek</strong> / <strong>Akademik Eş Anlamı: circulate</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'get' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>around</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>get around</span> (<strong>Anlamı: yayılmak, gezmek</strong> / <strong>Eş Anlamı: circulate</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q145_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 145/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Archaeologists continue to _______ the lost tomb of the ancient pharaoh.",
     "options": [
       "look for (aramak)",
@@ -88073,16 +88073,16 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Arkeologlar, antik firavunun kayıp mezarını aramaya devam ediyorlar.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'aramak' (akademik eş anlamı: search for) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look for (aramak)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'aramak' (eş anlamı: search for) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>look for (aramak)</span> yapısıdır.",
     "hint": {
       "formula": "look for ➔ search for",
-      "academicNote": "Beşeri Bilimler Anlamı: aramak"
+      "academicNote": "Anlamı: aramak"
     }
   },
   {
     "id": "u60_pv_q146_mc",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 146/148 - Çoktan Seçmeli] Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Historians plan to _______ exhaustive archival research in the Vatican library.'</strong>",
+    "prompt": "Metni en uygun Phrasal Verb ile tamamlayın:<br><br><strong>'Historians plan to _______ exhaustive archival research in the Vatican library.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>carry out</span> (yapmak, gerçekleştirmek, uygulamak)",
       "<span style='color: #ff6b6b; font-weight: bold;'>take up</span> (zaman/yer kaplamak; hobiye başlamak)",
@@ -88091,12 +88091,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Tarihçiler, Vatikan kütüphanesinde kapsamlı arşiv araştırması yürütmeyi planlıyorlar.",
-    "explanation": "Cümlenin beşeri bilimler bağlamına göre 'yapmak, gerçekleştirmek, uygulamak' (eş anlamı: conduct) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>carry out</span> doğru seçenektir."
+    "explanation": "Cümlede 'yapmak, gerçekleştirmek, uygulamak' (eş anlamı: conduct) anlamı veren <span style='color: #ff6b6b; font-weight: bold;'>carry out</span> doğru seçenektir."
   },
   {
     "id": "u60_pv_q147_prep",
     "type": "multiple-choice",
-    "prompt": "[Beşeri Bilimler - Soru 147/148 - Edat Kilidi] 'be fed up' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'18th-century thinkers had grown be fed up _______ dogmatic scholasticism and arbitrary censorship.'</strong>",
+    "prompt": "'be fed up' fiilini takip eden en uygun edatı (Preposition) seçin:<br><br><strong>'18th-century thinkers had grown be fed up _______ dogmatic scholasticism and arbitrary censorship.'</strong>",
     "options": [
       "<span style='color: #ff6b6b; font-weight: bold;'>with</span> ➔ be fed up with",
       "<span style='color: #ff6b6b; font-weight: bold;'>on</span> ➔ be fed up on",
@@ -88105,12 +88105,12 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "18. yüzyıl düşünürleri, dogmatik skolastisizmden ve keyfi sansürden bıkmışlardı.",
-    "explanation": "'be fed up' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>be fed up with</span> (<strong>Anlamı: bezmek, usanmak</strong> / <strong>Akademik Eş Anlamı: be weary of</strong>) deyimsel fiilini oluşturur."
+    "explanation": "'be fed up' fiili bu cümlede <span style='color: #ff6b6b; font-weight: bold;'>with</span> edatı ile birleşerek <span style='color: #ff6b6b; font-weight: bold;'>be fed up with</span> (<strong>Anlamı: bezmek, usanmak</strong> / <strong>Eş Anlamı: be weary of</strong>) deyimsel fiilini oluşturur."
   },
   {
     "id": "u60_pv_q148_fb",
     "type": "fill-blank-dropdown",
-    "prompt": "[Beşeri Bilimler - Soru 148/148 - Boşluk Doldurma] Metindeki boşluğa en uygun deyimsel fiili seçin:",
+    "prompt": "Metindeki boşluğa en uygun deyimsel fiili seçin:",
     "sentence": "Despite political exile, the philosopher was determined to _______ his intellectual writing.",
     "options": [
       "carry on (devam etmek)",
@@ -88120,10 +88120,10 @@ const chapter40Data = {
     ],
     "correctIndex": 0,
     "translation": "Siyasi sürgüne rağmen filozof, entelektüel yazılarını sürdürmeye kararlıydı.",
-    "explanation": "Beşeri bilimler metnindeki bu bağlamda 'devam etmek' (akademik eş anlamı: persevere / continue) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>carry on (devam etmek)</span> yapısıdır.",
+    "explanation": "metnindeki bu bağlamda 'devam etmek' (eş anlamı: persevere / continue) anlamını sağlayan Phrasal Verb <span style='color: #ff6b6b; font-weight: bold;'>carry on (devam etmek)</span> yapısıdır.",
     "hint": {
       "formula": "carry on ➔ persevere / continue",
-      "academicNote": "Beşeri Bilimler Anlamı: devam etmek"
+      "academicNote": "Anlamı: devam etmek"
     }
   }
 ];
@@ -88131,7 +88131,7 @@ const chapter40Data = {
   const t60 = {
     "id": 57,
     "originalIndex": 57,
-    "title": "Akademik Deyimsel Fiiller (Phrasal Verbs Masterclass)",
+    "title": "Deyimsel Fiiller (Phrasal Verbs Masterclass)",
     "desc": "Dokümanda yer alan 148 Phrasal Verb'ün 3 ana ders ve 4-3-3 alıştırma yapısıyla eksiksiz serisi.",
     "icon": "📚",
     "numLessons": 3,
@@ -88161,28 +88161,28 @@ const chapter40Data = {
             "id": "c60_ex1",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 1: Deyimsel Fiiller (1-15)",
-            "description": "1-15. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "1-15. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex1
       },
       {
             "id": "c60_ex2",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 2: Deyimsel Fiiller (16-30)",
-            "description": "16-30. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "16-30. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex2
       },
       {
             "id": "c60_ex3",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 3: Deyimsel Fiiller (31-45)",
-            "description": "31-45. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "31-45. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex3
       },
       {
             "id": "c60_ex4",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 4: Deyimsel Fiiller (46-60)",
-            "description": "46-60. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "46-60. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex4
       }
 ]
@@ -88198,21 +88198,21 @@ const chapter40Data = {
             "id": "c60_ex5",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 5: Deyimsel Fiiller (61-75)",
-            "description": "61-75. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "61-75. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex5
       },
       {
             "id": "c60_ex6",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 6: Deyimsel Fiiller (76-90)",
-            "description": "76-90. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "76-90. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex6
       },
       {
             "id": "c60_ex7",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 7: Deyimsel Fiiller (91-105)",
-            "description": "91-105. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "91-105. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex7
       }
 ]
@@ -88228,21 +88228,21 @@ const chapter40Data = {
             "id": "c60_ex8",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 8: Deyimsel Fiiller (106-120)",
-            "description": "106-120. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "106-120. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex8
       },
       {
             "id": "c60_ex9",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 9: Deyimsel Fiiller (121-135)",
-            "description": "121-135. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "121-135. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex9
       },
       {
             "id": "c60_ex10",
             "createdAt": "2026-07-27T00:00:00Z",
             "title": "Alıştırma 10: Deyimsel Fiiller (136-148)",
-            "description": "136-148. Phrasal Verb'lerin beşeri bilimler metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
+            "description": "136-148. Phrasal Verb'lerin metinlerinde boşluk doldurma, bağlam testi ve edat kilitleri.",
             "questions": questions60_ex10
       }
 ]
@@ -88899,7 +88899,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] Zaman bağlacı kuralına göre doğru seçeneği bulun:",
+              "prompt": "Zaman bağlacı kuralına göre doğru seçeneği bulun:",
               "sentence": "As soon as the archaeologists ___ the ancient site, they ___ the artifacts.",
               "options": [
                 "reached / documented",
@@ -88918,7 +88918,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] Cümle zaman uyumu kuralına uyuyor mu?",
+              "prompt": "[/ Basit] Cümle zaman uyumu kuralına uyuyor mu?",
               "sentence": "When social reform is introduced, public perception changes rapidly.",
               "englishPhrase": "When social reform is introduced, public perception changes rapidly.",
               "isTrue": true,
@@ -88927,13 +88927,13 @@ const chapter66Data = {
               "explanation": "When (Present) + Present (is introduced ➔ changes) zaman uyumu mükemmeldir.",
               "hint": {
                 "formula": "When + Present ➔ Present",
-                "academicNote": "Genel akademik uyuşma."
+                "academicNote": "Genel uyuşma."
               }
             },
             {
               "id": "c66_l1_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] En uygun seçeneği belirleyin:",
+              "prompt": "[/ Orta] En uygun seçeneği belirleyin:",
               "sentence": "Before researchers ___ the clinical trial, they ___ full ethical approval.",
               "options": [
                 "started / had obtained",
@@ -88952,7 +88952,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] Yan cümlede zaman kilitlerini kontrol edin:",
+              "prompt": "Yan cümlede zaman kilitlerini kontrol edin:",
               "sentence": "After the parliament ___ the new legislation, the economic indicators ___ .",
               "options": [
                 "passed / improved",
@@ -88971,7 +88971,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] Zaman bağlacı yan cümlesinde 'will' kullanılmış. Yanlış mı?",
+              "prompt": "Zaman bağlacı yan cümlesinde 'will' kullanılmış. Yanlış mı?",
               "sentence": "When researchers will examine the fossils, they find new evidence.",
               "englishPhrase": "When researchers will examine the fossils, they find new evidence.",
               "isTrue": false,
@@ -88986,7 +88986,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] Zaman uyumunu göz önüne alarak tamamlayın:",
+              "prompt": "Zaman uyumunu göz önüne alarak tamamlayın:",
               "sentence": "Once the manuscript ___ reviewed by the editors, it ___ for publication.",
               "options": [
                 "is / will be sent",
@@ -89005,7 +89005,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Tense uyumunu sağlayan doğru zaman yapısını seçin:",
+              "prompt": "Tense uyumunu sağlayan doğru zaman yapısını seçin:",
               "sentence": "Until the diplomatic summit ___ , reporters ___ outside the hall.",
               "options": [
                 "ended / waited",
@@ -89024,7 +89024,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] Uygun zaman kombinasyonunu seçin:",
+              "prompt": "Uygun zaman kombinasyonunu seçin:",
               "sentence": "As soon as the director ___ the final edit, the film ___ at the festival.",
               "options": [
                 "approved / premiered",
@@ -89043,7 +89043,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] Zaman uyumu kuralı doğru mu uygulanmış?",
+              "prompt": "Zaman uyumu kuralı doğru mu uygulanmış?",
               "sentence": "Before the treaty was signed in 1919, conflicts had devastated Europe.",
               "englishPhrase": "Before the treaty was signed in 1919, conflicts had devastated Europe.",
               "isTrue": true,
@@ -89058,7 +89058,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Zaman bağlacı cümlesini tamamlayın:",
+              "prompt": "[/ İleri] Zaman bağlacı cümlesini tamamlayın:",
               "sentence": "When urbanization ___ rapidly, infrastructure demands ___ exponentially.",
               "options": [
                 "accelerates / increase",
@@ -89115,7 +89115,7 @@ const chapter66Data = {
             {
               "id": "c66_l1_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki zaman bağlacı boşluğunu doldurun:",
+              "prompt": "Paragraftaki zaman bağlacı boşluğunu doldurun:",
               "sentence": "In historical sociology, researchers note that when central authorities ___ , local warlords ___ power immediately.",
               "options": [
                 "collapse / assume",
@@ -89125,16 +89125,16 @@ const chapter66Data = {
               ],
               "correctIndex": 0,
               "translation": "Tarihsel sosyolojide araştırmacılar, merkezi otoriteler çöktüğünde yerel derebeylerinin hemen gücü ele geçirdiğini belirtirler.",
-              "explanation": "Genel akademik tespitte 'when collapse (Present)' ➔ 'assume (Present)' uyumu esastır.",
+              "explanation": "Genel tespitte 'when collapse (Present)' ➔ 'assume (Present)' uyumu esastır.",
               "hint": {
                 "formula": "When + Present ➔ Present",
-                "academicNote": "Akademik okuma bağlamı."
+                "academicNote": "okuma bağlamı."
               }
             },
             {
               "id": "c66_l1_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Zaman bağlamını tamamlayın:",
+              "prompt": "Zaman bağlamını tamamlayın:",
               "sentence": "Before modern psychology ___ standardized testing, diagnosing mental conditions ___ largely subjective.",
               "options": [
                 "established / was",
@@ -89143,17 +89143,17 @@ const chapter66Data = {
                 "established / has been"
               ],
               "correctIndex": 0,
-              "translation": "Modern psikoloji standart testleri kurmadan önce zihinsel durumları teşhis etmek büyük ölçüde özneldi.",
+              "translation": "Modern standart testleri kurmadan önce zihinsel durumları teşhis etmek büyük ölçüde özneldi.",
               "explanation": "'Before ... established (Past)' ➔ 'was (Past)' zaman uyumu geçerlidir.",
               "hint": {
                 "formula": "Before + Past ➔ Past",
-                "academicNote": "Psikoloji tarihi bağlamı."
+                "academicNote": "tarihi bağlamı."
               }
             },
             {
               "id": "c66_l1_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Zaman bağlaşımı cümlesini en doğru şekilde ifade eden yapıyı seçin:",
+              "prompt": "Zaman bağlaşımı cümlesini en doğru şekilde ifade eden yapıyı seçin:",
               "sentence": "The moment the economic crisis hit, the government implemented austerity measures.",
               "options": [
                 "As soon as the economic crisis hit, the government implemented austerity measures.",
@@ -89193,7 +89193,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] Zıtlık bağlacı içeren cümlede doğru zamanı seçin:",
+              "prompt": "Zıtlık bağlacı içeren cümlede doğru zamanı seçin:",
               "sentence": "Although the ancient empire ___ centuries ago, its cultural influence ___ evident today.",
               "options": [
                 "collapsed / remains",
@@ -89212,7 +89212,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] Relative clause olan cümlede farklı tense kullanılması doğru mu?",
+              "prompt": "[/ Basit] Relative clause olan cümlede farklı tense kullanılması doğru mu?",
               "sentence": "The scholar who published the groundbreaking book in 1980 teaches at our university now.",
               "englishPhrase": "The scholar who published the groundbreaking book in 1980 teaches at our university now.",
               "isTrue": true,
@@ -89227,7 +89227,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] Zıtlık bağlamındaki zaman esnekliğini seçin:",
+              "prompt": "[/ Orta] Zıtlık zaman esnekliğini seçin:",
               "sentence": "Whereas early psychologists ___ on behavioral conditioning, modern neuroscience ___ cognitive brain mapping.",
               "options": [
                 "focused / emphasizes",
@@ -89246,7 +89246,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] Relative clause zaman esnekliği:",
+              "prompt": "Relative clause zaman esnekliği:",
               "sentence": "The constitution that ___ in 1787 still ___ as the supreme law of the nation.",
               "options": [
                 "was drafted / serves",
@@ -89265,7 +89265,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] 'Even though' cümlesinde iki tarafın zamanı farklı olabilir mi?",
+              "prompt": "'Even though' cümlesinde iki tarafın zamanı farklı olabilir mi?",
               "sentence": "Even though ancient humans lived in caves, their genetic markers exist in modern populations.",
               "englishPhrase": "Even though ancient humans lived in caves, their genetic markers exist in modern populations.",
               "isTrue": true,
@@ -89280,7 +89280,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] Uyumsuz gibi görünen ama zıtlık bağlacından dolayı doğru olan seçeneği bulun:",
+              "prompt": "Uyumsuz gibi görünen ama zıtlık bağlacından dolayı doğru olan seçeneği bulun:",
               "sentence": "While the 19th-century novelist ___ financially during his lifetime, his novels ___ millions today.",
               "options": [
                 "struggled / inspire",
@@ -89293,13 +89293,13 @@ const chapter66Data = {
               "explanation": "'While' (zıtlık) geçmişle günümüzü kıyasladığı için ana cümlede Present (inspire) kullanılır.",
               "hint": {
                 "formula": "While (Zıtlık) + Past ➔ Present",
-                "academicNote": "Edebiyat tarihi tespiti."
+                "academicNote": "tespiti."
               }
             },
             {
               "id": "c66_l2_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Relative clause bağımsızlığını değerlendirin:",
+              "prompt": "Relative clause bağımsızlığını değerlendirin:",
               "sentence": "Artifacts which ___ in Mesopotamia during the 1800s ___ currently on display in London.",
               "options": [
                 "were discovered / are",
@@ -89318,7 +89318,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] Zıtlık bağlacında doğru zaman kombinasyonu:",
+              "prompt": "Zıtlık bağlacında doğru zaman kombinasyonu:",
               "sentence": "Although early cinema ___ exclusively on silent imagery, modern filmmaking ___ immersive spatial audio.",
               "options": [
                 "relied / utilizes",
@@ -89337,7 +89337,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] Zıtlık bağlacında tense uyumu aranır cümlesi doğru mu?",
+              "prompt": "Zıtlık bağlacında tense uyumu aranır cümlesi doğru mu?",
               "sentence": "In English grammar, contrast conjunctions like 'although' require strict tense agreement.",
               "englishPhrase": "In English grammar, contrast conjunctions like 'although' require strict tense agreement.",
               "isTrue": false,
@@ -89352,7 +89352,7 @@ const chapter66Data = {
             {
               "id": "c66_l2_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Relative clause zaman yapısını seçin:",
+              "prompt": "[/ İleri] Relative clause zaman yapısını seçin:",
               "sentence": "Sociological theories that ___ decades ago still ___ relevant answers to contemporary crises.",
               "options": [
                 "were formulated / provide",
@@ -89365,7 +89365,7 @@ const chapter66Data = {
               "explanation": "Relative clause 'were formulated (Past)', ana cümle 'provide (Present)' zaman uyumsuzluğu değildir.",
               "hint": {
                 "formula": "Relative Clause Past ➔ Main Present",
-                "academicNote": "Sosyoloji teorileri."
+                "academicNote": "teorileri."
               }
             },
             {
@@ -89409,7 +89409,7 @@ const chapter66Data = {
             {
               "id": "c66_l3",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki zıtlık bağlamını tamamlayın:",
+              "prompt": "Paragraftaki zıtlık bağlamını tamamlayın:",
               "sentence": "While the 1918 influenza pandemic killed millions worldwide, modern epidemiologists ___ that current mRNA technology offers far superior protection.",
               "options": [
                 "note",
@@ -89422,13 +89422,13 @@ const chapter66Data = {
               "explanation": "'While' zıtlığı nedeniyle Past (killed) ve Present (note) uyum aramaksızın yan yana gelir.",
               "hint": {
                 "formula": "While + Past ➔ Present",
-                "academicNote": "Tıp ve halk sağlığı tarihi."
+                "academicNote": "Tıp ve tarihi."
               }
             },
             {
               "id": "c66_l14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Niteleme cümlesi zaman yapısını doldurun:",
+              "prompt": "Niteleme cümlesi zaman yapısını doldurun:",
               "sentence": "The ancient trade routes that connected Asia and Europe for centuries ___ studied by contemporary historians.",
               "options": [
                 "are continuously",
@@ -89447,7 +89447,7 @@ const chapter66Data = {
             {
               "id": "c66_l15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Zıtlık bağlamlı cümleyi en doğru ifade eden yapıyı seçin:",
+              "prompt": "Zıtlık bağlamlı cümleyi en doğru ifade eden yapıyı seçin:",
               "sentence": "Even though the document was written in the 15th century, its philosophical principles remain valid.",
               "options": [
                 "Although the document was written in the 15th century, its philosophical principles remain valid.",
@@ -89487,7 +89487,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] Net geçmiş tarih belirteci içeren cümleyi tamamlayın:",
+              "prompt": "Net geçmiş tarih belirteci içeren cümleyi tamamlayın:",
               "sentence": "The Republic of Turkey ___ founded in 1923 under the leadership of Mustafa Kemal Atatürk.",
               "options": [
                 "was",
@@ -89506,7 +89506,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q2",
               "type": "true-false",
-              "prompt": "[Edebiyat / Basit] Kitap özeti ve genel betimlemelerde Present Tense mi kullanılır?",
+              "prompt": "Kitap özeti ve genel betimlemelerde Present Tense mi kullanılır?",
               "sentence": "In Shakespeare's tragedy Hamlet, the Prince of Denmark seeks revenge for his father's murder.",
               "englishPhrase": "In Shakespeare's tragedy Hamlet, the Prince of Denmark seeks revenge for his father's murder.",
               "isTrue": true,
@@ -89521,7 +89521,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q3",
               "type": "multiple-choice",
-              "prompt": "[Sosyoloji / Orta] Betimleme cümlesinde doğru zamanı seçin:",
+              "prompt": "[/ Orta] Betimleme cümlesinde doğru zamanı seçin:",
               "sentence": "Max Weber's famous essay ___ how religious ethics influenced early capitalist development.",
               "options": [
                 "explains",
@@ -89531,7 +89531,7 @@ const chapter66Data = {
               ],
               "correctIndex": 0,
               "translation": "Max Weber'in ünlü makalesi dini etiğin erken kapitalist gelişimi nasıl etkilediğini açıklar.",
-              "explanation": "Eserin günümüzdeki içeriği ve akademik betimlemesi Present Simple ('explains') ile ifade edilir.",
+              "explanation": "Eserin günümüzdeki içeriği ve betimlemesi Present Simple ('explains') ile ifade edilir.",
               "hint": {
                 "formula": "Academic Essay Description ➔ Present Simple",
                 "academicNote": "Betimleme kuralı."
@@ -89540,7 +89540,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Antropoloji / Orta] Net geçmiş belirteci:",
+              "prompt": "Net geçmiş belirteci:",
               "sentence": "Archaeologists ___ the royal tombs in Egypt three decades ago.",
               "options": [
                 "unearthed",
@@ -89559,7 +89559,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q5",
               "type": "true-false",
-              "prompt": "[Psikoloji / Basit] 'In 1900' diyen cümlede Present Perfect kullanılır mı?",
+              "prompt": "[/ Basit] 'In 1900' diyen cümlede Present Perfect kullanılır mı?",
               "sentence": "Freud has published 'The Interpretation of Dreams' in 1900.",
               "englishPhrase": "Freud has published 'The Interpretation of Dreams' in 1900.",
               "isTrue": false,
@@ -89574,7 +89574,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q6",
               "type": "multiple-choice",
-              "prompt": "[Siyaset / Orta] Akademik makale betimlemesini seçin:",
+              "prompt": "makale betimlemesini seçin:",
               "sentence": "The political science textbook ___ the core principles of democratic governance.",
               "options": [
                 "outlines",
@@ -89593,7 +89593,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Net tarih kuralını uygulayın:",
+              "prompt": "Net tarih kuralını uygulayın:",
               "sentence": "UNESCO ___ the historic site as a World Heritage location in 1985.",
               "options": [
                 "designated",
@@ -89612,7 +89612,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] Film betimlemesi ve özet anlatımı:",
+              "prompt": "Film betimlemesi ve özet anlatımı:",
               "sentence": "The award-winning documentary ___ the devastating impact of deforestation in the Amazon.",
               "options": [
                 "portrays",
@@ -89631,7 +89631,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] Tarihi olayların tarihi verildiğinde V2 kullanılır cümlesi doğru mu?",
+              "prompt": "Tarihi olayların tarihi verildiğinde V2 kullanılır cümlesi doğru mu?",
               "sentence": "When a specific past date is present, Simple Past (V2) must be selected.",
               "englishPhrase": "When a specific past date is present, Simple Past (V2) must be selected.",
               "isTrue": true,
@@ -89646,7 +89646,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Betimleme vs Net Tarih ayrımını yapın:",
+              "prompt": "[/ İleri] Betimleme vs Net Tarih ayrımını yapın:",
               "sentence": "While Durkheim ___ his study on suicide in 1897, his methodology remains influential today.",
               "options": [
                 "published",
@@ -89684,7 +89684,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q12",
               "type": "structure-match",
-              "prompt": "Akademik makale, kitap veya belgesel betimlemelerinde genel kural olarak hangi tense tercih edilir?",
+              "prompt": "makale, kitap veya belgesel betimlemelerinde genel kural olarak hangi tense tercih edilir?",
               "options": [
                 "Present Simple Tense (V1)",
                 "Simple Past Tense (V2)",
@@ -89703,7 +89703,7 @@ const chapter66Data = {
             {
               "id": "c66_l3_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki betimleme zamanını doldurun:",
+              "prompt": "Paragraftaki betimleme zamanını doldurun:",
               "sentence": "In her seminal treatise, the philosopher ___ that human moral obligation stems from rational empathy.",
               "options": [
                 "argues",
@@ -89713,16 +89713,16 @@ const chapter66Data = {
               ],
               "correctIndex": 0,
               "translation": "Filozof usta yapıtında insan ahlaki yükümlülüğünün rasyonel empatiden kaynaklandığını savunmaktadır.",
-              "explanation": "Akademik eser özeti ve tez betimlemesi Present Simple ('argues') ile ifade edilir.",
+              "explanation": "eser özeti ve tez betimlemesi Present Simple ('argues') ile ifade edilir.",
               "hint": {
                 "formula": "Treatise Description ➔ Present Simple",
-                "academicNote": "Felsefe metni bağlamı."
+                "academicNote": "metni bağlamı."
               }
             },
             {
               "id": "c66_l3_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Net tarihli tarihi gelişmeyi doldurun:",
+              "prompt": "Net tarihli tarihi gelişmeyi doldurun:",
               "sentence": "When Alexander Fleming ___ penicillin in 1928, medical science entered a revolutionary era.",
               "options": [
                 "discovered",
@@ -89735,13 +89735,13 @@ const chapter66Data = {
               "explanation": "'In 1928' net tarihi V2 ('discovered') ister.",
               "hint": {
                 "formula": "In 1928 ➔ V2",
-                "academicNote": "Tıp tarihi bağlamı."
+                "academicNote": "bağlamı."
               }
             },
             {
               "id": "c66_l3_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Tarih kuralına uygun cümleyi seçin:",
+              "prompt": "Tarih kuralına uygun cümleyi seçin:",
               "sentence": "The museum opened its doors in 1950, and it houses ancient relics today.",
               "options": [
                 "Founded in 1950, the museum houses ancient relics today.",
@@ -89781,7 +89781,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] 'By + Past Point' kuralını uygulayın:",
+              "prompt": "'By + Past Point' kuralını uygulayın:",
               "sentence": "By 1900, industrial production ___ significantly across Western Europe and ___ economic growth.",
               "options": [
                 "had increased / accelerated",
@@ -89800,7 +89800,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] 'By 2050' ifadesi Future Perfect gerektirir mi?",
+              "prompt": "[/ Basit] 'By 2050' ifadesi Future Perfect gerektirir mi?",
               "sentence": "By 2050, urban populations will have surpassed rural communities worldwide.",
               "englishPhrase": "By 2050, urban populations will have surpassed rural communities worldwide.",
               "isTrue": true,
@@ -89815,7 +89815,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] Gelecek BY zaman kilidi:",
+              "prompt": "[/ Orta] Gelecek BY zaman kilidi:",
               "sentence": "By the end of this decade, neuroscientists ___ a complete map of neural connections and ___ new treatments.",
               "options": [
                 "will have constructed / developed",
@@ -89834,7 +89834,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] Geçmiş BY zaman kilidi:",
+              "prompt": "Geçmiş BY zaman kilidi:",
               "sentence": "By the time the diplomatic summit ___ , foreign ministers ___ all preliminary agreements.",
               "options": [
                 "commenced / had finalized",
@@ -89853,7 +89853,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] 'By last century' diyen cümlede Present Simple kullanılır mı?",
+              "prompt": "'By last century' diyen cümlede Present Simple kullanılır mı?",
               "sentence": "By last century, traditional hunting methods disappear completely.",
               "englishPhrase": "By last century, traditional hunting methods disappear completely.",
               "isTrue": false,
@@ -89868,7 +89868,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] Gelecek BY miladı ile soru çözümü:",
+              "prompt": "Gelecek BY miladı ile soru çözümü:",
               "sentence": "By next year, the literary foundation ___ the complete works of the poet and ___ a museum.",
               "options": [
                 "will have published / inaugurated",
@@ -89887,7 +89887,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Geçmiş BY miladı:",
+              "prompt": "Geçmiş BY miladı:",
               "sentence": "By the middle of the 19th century, photography ___ cultural documentation practices and ___ portraiture.",
               "options": [
                 "had transformed / revolutionized",
@@ -89906,7 +89906,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] Gelecek BY zaman kalıbı:",
+              "prompt": "Gelecek BY zaman kalıbı:",
               "sentence": "By 2030, digital streaming platforms ___ traditional cinema distribution models and ___ new standards.",
               "options": [
                 "will have reshaped / established",
@@ -89925,7 +89925,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] 'By' edatı zaman tamlamalarında Perfect Tense mi ister?",
+              "prompt": "'By' edatı zaman tamlamalarında Perfect Tense mi ister?",
               "sentence": "When 'by' indicates a time limit, it universally requires Perfect Tenses.",
               "englishPhrase": "When 'by' indicates a time limit, it universally requires Perfect Tenses.",
               "isTrue": true,
@@ -89940,7 +89940,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Geçmiş BY kuralı:",
+              "prompt": "[/ İleri] Geçmiş BY kuralı:",
               "sentence": "By the time the sociological study ___ , the community ___ significant demographic shifts.",
               "options": [
                 "was published / had experienced",
@@ -89997,7 +89997,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki 'BY' zaman sınırını tamamlayın:",
+              "prompt": "Paragraftaki 'BY' zaman sınırını tamamlayın:",
               "sentence": "By the turn of the century, industrial pollutants ___ irreversible damage to coastal ecosystems.",
               "options": [
                 "had caused",
@@ -90010,13 +90010,13 @@ const chapter66Data = {
               "explanation": "'By the turn of the century' (geçmiş milat) ➔ Past Perfect (had caused).",
               "hint": {
                 "formula": "By + Past ➔ Had V3",
-                "academicNote": "Çevre bilimleri bağlamı."
+                "academicNote": "bağlamı."
               }
             },
             {
               "id": "c66_l4_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Gelecek 'BY' miladını doldurun:",
+              "prompt": "Gelecek 'BY' miladını doldurun:",
               "sentence": "By 2040, renewable energy technologies ___ coal-fired power plants across major industrial nations.",
               "options": [
                 "will have replaced",
@@ -90035,7 +90035,7 @@ const chapter66Data = {
             {
               "id": "c66_l4_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] 'BY' miladını en doğru ifade eden yapıyı bulun:",
+              "prompt": "'BY' miladını en doğru ifade eden yapıyı bulun:",
               "sentence": "Before the deadline arrived yesterday, the team completed the entire translation.",
               "options": [
                 "By the time the deadline arrived yesterday, the team had completed the entire translation.",
@@ -90075,7 +90075,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] 'Since + V2' kuralına göre ana cümleyi tamamlayın:",
+              "prompt": "'Since + V2' kuralına göre ana cümleyi tamamlayın:",
               "sentence": "Since the diplomatic treaty ___ in 1945, peaceful relations ___ across the region.",
               "options": [
                 "was signed / have endured",
@@ -90094,7 +90094,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] 'For + Süreç' cümlesinde Present Perfect kullanılır mı?",
+              "prompt": "[/ Basit] 'For + Süreç' cümlesinde Present Perfect kullanılır mı?",
               "sentence": "Sociologists have studied urban migration patterns for over three decades.",
               "englishPhrase": "Sociologists have studied urban migration patterns for over three decades.",
               "isTrue": true,
@@ -90109,7 +90109,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] Since bağlacının ana cümle zamanını seçin:",
+              "prompt": "[/ Orta] Since bağlacının ana cümle zamanını seçin:",
               "sentence": "Since cognitive psychology ___ in the 1950s, researchers ___ perception with computer models.",
               "options": [
                 "emerged / have analyzed",
@@ -90118,17 +90118,17 @@ const chapter66Data = {
                 "had emerged / will analyze"
               ],
               "correctIndex": 0,
-              "translation": "Bilişsel psikoloji 1950'lerde ortaya çıktığından beri araştırmacılar algıyı bilgisayar modelleriyle analiz ettiler.",
+              "translation": "Bilişsel 1950'lerde ortaya çıktığından beri araştırmacılar algıyı bilgisayar modelleriyle analiz ettiler.",
               "explanation": "'Since + V2 (emerged)' ➔ Ana cümle Present Perfect ('have analyzed').",
               "hint": {
                 "formula": "Since + Past V2 ➔ Present Perfect (Have V3)",
-                "academicNote": "Psikoloji tarihi kuralı."
+                "academicNote": "tarihi kuralı."
               }
             },
             {
               "id": "c66_l5_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] Since yan cümle zamanını seçin:",
+              "prompt": "Since yan cümle zamanını seçin:",
               "sentence": "The international organization ___ electoral integrity since it ___ in 1990.",
               "options": [
                 "has monitored / was established",
@@ -90147,7 +90147,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] Since yan cümlesine 'have V3' gelebilir mi?",
+              "prompt": "Since yan cümlesine 'have V3' gelebilir mi?",
               "sentence": "Since humans have discovered agriculture, permanent settlements grew rapidly.",
               "englishPhrase": "Since humans have discovered agriculture, permanent settlements grew rapidly.",
               "isTrue": false,
@@ -90162,7 +90162,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] For ile yazılan süreç cümlesi:",
+              "prompt": "For ile yazılan süreç cümlesi:",
               "sentence": "Linguists ___ the evolution of dialects for several generations.",
               "options": [
                 "have been investigating",
@@ -90181,7 +90181,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Since çapa kuralını uygulayın:",
+              "prompt": "Since çapa kuralını uygulayın:",
               "sentence": "Cultural heritage preservation laws ___ significantly stricter since the 1990 convention ___ into effect.",
               "options": [
                 "have become / took",
@@ -90200,7 +90200,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] For süreç kelimesiyle doğru zamanı seçin:",
+              "prompt": "For süreç kelimesiyle doğru zamanı seçin:",
               "sentence": "Film historians ___ the impact of sound technology on cinematic narrative for decades.",
               "options": [
                 "have documented",
@@ -90219,7 +90219,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] 'Since' yan cümlesi V2, ana cümlesi Present Perfect olur kuralı doğru mu?",
+              "prompt": "'Since' yan cümlesi V2, ana cümlesi Present Perfect olur kuralı doğru mu?",
               "sentence": "In a 'since' clause structure, the subordinate clause requires Past Simple (V2) while the main clause requires Present Perfect.",
               "englishPhrase": "In a 'since' clause structure, the subordinate clause requires Past Simple (V2) while the main clause requires Present Perfect.",
               "isTrue": true,
@@ -90234,7 +90234,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Since kuralını tamamlayın:",
+              "prompt": "[/ İleri] Since kuralını tamamlayın:",
               "sentence": "Ever since the industrial revolution ___ , social class structures ___ constant redefinition.",
               "options": [
                 "began / have undergone",
@@ -90247,7 +90247,7 @@ const chapter66Data = {
               "explanation": "'Ever since' yan cümlesine V2 ('began') gelir.",
               "hint": {
                 "formula": "Ever since + V2 (Began)",
-                "academicNote": "Sosyoloji tarihi."
+                "academicNote": "tarihi."
               }
             },
             {
@@ -90291,7 +90291,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki 'Since' zaman çapasını tamamlayın:",
+              "prompt": "Paragraftaki 'Since' zaman çapasını tamamlayın:",
               "sentence": "Ever since the World Health Organization ___ the global eradication strategy, smallpox cases have dropped to zero.",
               "options": [
                 "launched",
@@ -90304,13 +90304,13 @@ const chapter66Data = {
               "explanation": "'Ever since + V2 (launched)' ➔ Ana cümle Present Perfect ('have dropped').",
               "hint": {
                 "formula": "Since + V2 ➔ Have V3",
-                "academicNote": "Halk sağlığı bağlamı."
+                "academicNote": "bağlamı."
               }
             },
             {
               "id": "c66_l5_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] 'For' süreç zarfını doldurun:",
+              "prompt": "'For' süreç zarfını doldurun:",
               "sentence": "Climate scientists ___ ice core samples in Antarctica for more than twenty years to track historical carbon dioxide levels.",
               "options": [
                 "have been analyzing",
@@ -90329,7 +90329,7 @@ const chapter66Data = {
             {
               "id": "c66_l5_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] 'Since' kuralına uygun eşdeğer cümleyi seçin:",
+              "prompt": "'Since' kuralına uygun eşdeğer cümleyi seçin:",
               "sentence": "The lab started its research in 2010, and it has published fifty papers so far.",
               "options": [
                 "Since the lab started its research in 2010, it has published fifty papers.",
@@ -90369,7 +90369,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] 'Realize' fiilinden sonraki zaman kaymasını tamamlayın:",
+              "prompt": "'Realize' fiilinden sonraki zaman kaymasını tamamlayın:",
               "sentence": "Historians realized that previous researchers ___ critical primary sources and ___ flawed conclusions.",
               "options": [
                 "had overlooked / reached",
@@ -90388,7 +90388,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] 'Noticed' fiilinden sonra Past Perfect kullanılır mı?",
+              "prompt": "[/ Basit] 'Noticed' fiilinden sonra Past Perfect kullanılır mı?",
               "sentence": "The sociologist noticed that demographic trends had shifted prior to the economic crisis.",
               "englishPhrase": "The sociologist noticed that demographic trends had shifted prior to the economic crisis.",
               "isTrue": true,
@@ -90403,7 +90403,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] 'Discovered' fiilinden sonra gelen zamanı seçin:",
+              "prompt": "[/ Orta] 'Discovered' fiilinden sonra gelen zamanı seçin:",
               "sentence": "Psychologists discovered that subjects ___ subconscious bias long before the experiment ___ .",
               "options": [
                 "had developed / started",
@@ -90422,7 +90422,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] 'Understood' fiili sonrası zaman kayması:",
+              "prompt": "'Understood' fiili sonrası zaman kayması:",
               "sentence": "The diplomats understood that negotiators ___ a secret compromise before the conference ___ .",
               "options": [
                 "had reached / ended",
@@ -90441,7 +90441,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] 'Learned' fiilinden sonra Present Perfect gelir mi?",
+              "prompt": "'Learned' fiilinden sonra Present Perfect gelir mi?",
               "sentence": "Researchers learned that ancient tribes have migrated to the island.",
               "englishPhrase": "Researchers learned that ancient tribes have migrated to the island.",
               "isTrue": false,
@@ -90456,7 +90456,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] 'Found out' fiili sonrası doğru zamanı seçin:",
+              "prompt": "'Found out' fiili sonrası doğru zamanı seçin:",
               "sentence": "The biographer found out that the poet ___ several manuscripts before his death.",
               "options": [
                 "had destroyed",
@@ -90475,7 +90475,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Realize grubu zaman kuralını uygulayın:",
+              "prompt": "Realize grubu zaman kuralını uygulayın:",
               "sentence": "Art historians recognized that the painting ___ altered by a later restorer.",
               "options": [
                 "had been",
@@ -90494,7 +90494,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] Realize fiili sonrası zamanı tamamlayın:",
+              "prompt": "Realize fiili sonrası zamanı tamamlayın:",
               "sentence": "Film critics realized that the director ___ subtle symbolism throughout the movie.",
               "options": [
                 "had embedded",
@@ -90513,7 +90513,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] Realize grubu fiiller geçmişte gerçekleşmişse takip eden eylem Had V3 olur kuralı doğru mu?",
+              "prompt": "Realize grubu fiiller geçmişte gerçekleşmişse takip eden eylem Had V3 olur kuralı doğru mu?",
               "sentence": "When verbs of perception like 'realize' or 'discover' are in Simple Past, the preceded action requires Past Perfect.",
               "englishPhrase": "When verbs of perception like 'realize' or 'discover' are in Simple Past, the preceded action requires Past Perfect.",
               "isTrue": true,
@@ -90528,7 +90528,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Realize grubu zaman kaymasını seçin:",
+              "prompt": "[/ İleri] Realize grubu zaman kaymasını seçin:",
               "sentence": "The research team observed that the community ___ its socio-economic status prior to intervention.",
               "options": [
                 "had improved",
@@ -90585,7 +90585,7 @@ const chapter66Data = {
             {
               "id": "c66_l6_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki 'Discover' zaman kaymasını tamamlayın:",
+              "prompt": "Paragraftaki 'Discover' zaman kaymasını tamamlayın:",
               "sentence": "Geneticists discovered that the mutation ___ centuries before the outbreak occurred.",
               "options": [
                 "had originated",
@@ -90598,13 +90598,13 @@ const chapter66Data = {
               "explanation": "'Discovered' (V2) ➔ Mutasyonun oluşması daha eskidir: Past Perfect ('had originated').",
               "hint": {
                 "formula": "Discovered + Had V3",
-                "academicNote": "Genetik bilimi bağlamı."
+                "academicNote": "bağlamı."
               }
             },
             {
               "id": "c66_l6_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] 'Understand' fiili zaman kaymasını doldurun:",
+              "prompt": "'Understand' fiili zaman kaymasını doldurun:",
               "sentence": "Economists understood that central banks ___ interest rates too late to curb inflation.",
               "options": [
                 "had raised",
@@ -90617,13 +90617,13 @@ const chapter66Data = {
               "explanation": "'Understood' (V2) ➔ Faiz artırma eylemi önceden yapılmıştır: 'had raised'.",
               "hint": {
                 "formula": "Understood + Had V3",
-                "academicNote": "Ekonomi tarihi bağlamı."
+                "academicNote": "bağlamı."
               }
             },
             {
               "id": "c66_l6_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Realize kuralına en uygun eşdeğer cümleyi seçin:",
+              "prompt": "Realize kuralına en uygun eşdeğer cümleyi seçin:",
               "sentence": "The detective realized that the suspect had forged the documents earlier.",
               "options": [
                 "Upon investigation, the detective noticed that the suspect had forged the documents earlier.",
@@ -90663,7 +90663,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] 'The first' sıfatından sonraki fiil kısaltmasını seçin:",
+              "prompt": "'The first' sıfatından sonraki fiil kısaltmasını seçin:",
               "sentence": "Marie Curie was the first woman ___ a Nobel Prize in physics.",
               "options": [
                 "to win",
@@ -90682,7 +90682,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] 'The only' yapısından sonra 'V-ing' kullanılır mı?",
+              "prompt": "[/ Basit] 'The only' yapısından sonra 'V-ing' kullanılır mı?",
               "sentence": "He is the only researcher studying this phenomenon.",
               "englishPhrase": "He is the only researcher to study this phenomenon.",
               "isTrue": true,
@@ -90697,7 +90697,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] 'The last' yapısı sonrası doğru kısaltmayı seçin:",
+              "prompt": "[/ Orta] 'The last' yapısı sonrası doğru kısaltmayı seçin:",
               "sentence": "Dr. Smith was the last psychologist ___ the trial results before publication.",
               "options": [
                 "to review",
@@ -90716,7 +90716,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] 'The second' sıralama sıfatı:",
+              "prompt": "'The second' sıralama sıfatı:",
               "sentence": "The country became the second nation ___ the international climate accord.",
               "options": [
                 "to ratify",
@@ -90735,7 +90735,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] 'The first person' tamlamasından sonra 'V-ing' mi gelir?",
+              "prompt": "'The first person' tamlamasından sonra 'V-ing' mi gelir?",
               "sentence": "Neil Armstrong was the first person walking on the moon.",
               "englishPhrase": "Neil Armstrong was the first person walking on the moon.",
               "isTrue": false,
@@ -90750,7 +90750,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] Superlative (En üstünlük) sonrası kısaltmayı seçin:",
+              "prompt": "Superlative (En üstünlük) sonrası kısaltmayı seçin:",
               "sentence": "This novel is considered the best work ___ the complexities of Victorian society.",
               "options": [
                 "to illustrate",
@@ -90769,7 +90769,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Pasif (Edilgen) Infinitive kısaltmasını seçin:",
+              "prompt": "Pasif (Edilgen) Infinitive kısaltmasını seçin:",
               "sentence": "The ancient artifact was the first item ___ in the new museum wing.",
               "options": [
                 "to be displayed",
@@ -90788,7 +90788,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] 'The only' sıfatından sonraki doğru kısaltma:",
+              "prompt": "'The only' sıfatından sonraki doğru kısaltma:",
               "sentence": "She remains the only female director ___ two Palme d'Or awards at Cannes.",
               "options": [
                 "to receive",
@@ -90807,7 +90807,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] Ordinals (First, Second) ve Superlatives arkasından 'To V1' gelir kuralı doğru mu?",
+              "prompt": "Ordinals (First, Second) ve Superlatives arkasından 'To V1' gelir kuralı doğru mu?",
               "sentence": "Ordinals and superlatives preceding nouns universally mandate 'to-infinitive' reductions.",
               "englishPhrase": "Ordinals and superlatives preceding nouns universally mandate 'to-infinitive' reductions.",
               "isTrue": true,
@@ -90822,7 +90822,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Sıralama sıfatı kısaltması:",
+              "prompt": "[/ İleri] Sıralama sıfatı kısaltması:",
               "sentence": "The city was the next urban center ___ smart grid technology.",
               "options": [
                 "to adopt",
@@ -90879,7 +90879,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki 'The first' kısaltmasını doldurun:",
+              "prompt": "Paragraftaki 'The first' kısaltmasını doldurun:",
               "sentence": "Dr. Edward Jenner was the first physician ___ widespread vaccination against smallpox.",
               "options": [
                 "to introduce",
@@ -90892,13 +90892,13 @@ const chapter66Data = {
               "explanation": "'The first physician' ➔ 'to introduce' (To V1).",
               "hint": {
                 "formula": "The first + Noun ➔ TO V1",
-                "academicNote": "Tıp tarihi bağlamı."
+                "academicNote": "bağlamı."
               }
             },
             {
               "id": "c66_l7_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] 'The only' kısaltmasını tamamlayın:",
+              "prompt": "'The only' kısaltmasını tamamlayın:",
               "sentence": "Antarctica remains the only continent ___ permanent native human settlement.",
               "options": [
                 "to lack",
@@ -90917,7 +90917,7 @@ const chapter66Data = {
             {
               "id": "c66_l7_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Ordinal kuralına uygun en doğru eşdeğer cümleyi seçin:",
+              "prompt": "Ordinal kuralına uygun en doğru eşdeğer cümleyi seçin:",
               "sentence": "She was the first scientist who isolated the enzyme in a laboratory.",
               "options": [
                 "She was the first scientist to isolate the enzyme in a laboratory.",
@@ -90957,7 +90957,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q1",
               "type": "fill-blank-dropdown",
-              "prompt": "[Tarih / Basit] 'Recently' zarfına uygun zaman yapısını seçin:",
+              "prompt": "'Recently' zarfına uygun zaman yapısını seçin:",
               "sentence": "Archaeologists have recently ___ a 3,000-year-old subterranean complex.",
               "options": [
                 "discovered",
@@ -90976,7 +90976,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q2",
               "type": "true-false",
-              "prompt": "[Sosyoloji / Basit] 'Lately' kelimesi Present Perfect ister mi?",
+              "prompt": "[/ Basit] 'Lately' kelimesi Present Perfect ister mi?",
               "sentence": "Lately, social media platforms have faced intense regulatory scrutiny.",
               "englishPhrase": "Lately, social media platforms have faced intense regulatory scrutiny.",
               "isTrue": true,
@@ -90991,7 +90991,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q3",
               "type": "multiple-choice",
-              "prompt": "[Psikoloji / Orta] Recently zarfı ile doğru zamanı seçin:",
+              "prompt": "[/ Orta] Recently zarfı ile doğru zamanı seçin:",
               "sentence": "Neuroscientists ___ recently demonstrated how sleep deprivation impacts memory consolidation.",
               "options": [
                 "have",
@@ -91010,7 +91010,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q4",
               "type": "fill-blank-dropdown",
-              "prompt": "[Siyaset / Orta] Lately belirteci:",
+              "prompt": "Lately belirteci:",
               "sentence": "International relations experts ___ lately emphasizing the shift toward multipolarity.",
               "options": [
                 "have been",
@@ -91029,7 +91029,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q5",
               "type": "true-false",
-              "prompt": "[Antropoloji / Basit] 'Recently' olan cümlede Simple Past kullanılır mı?",
+              "prompt": "'Recently' olan cümlede Simple Past kullanılır mı?",
               "sentence": "Geneticists recently publish a study on Neanderthal DNA.",
               "englishPhrase": "Geneticists recently publish a study on Neanderthal DNA.",
               "isTrue": false,
@@ -91044,7 +91044,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q6",
               "type": "multiple-choice",
-              "prompt": "[Edebiyat / Orta] Recently zaman kuralı:",
+              "prompt": "Recently zaman kuralı:",
               "sentence": "Literary critics ___ recently re-evaluated the post-war poetry movement.",
               "options": [
                 "have",
@@ -91063,7 +91063,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q7",
               "type": "fill-blank-dropdown",
-              "prompt": "[Kültür / İleri] Lately zarfı kullanımı:",
+              "prompt": "Lately zarfı kullanımı:",
               "sentence": "Museums ___ lately adopted interactive digital exhibits to engage younger audiences.",
               "options": [
                 "have",
@@ -91082,7 +91082,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q8",
               "type": "multiple-choice",
-              "prompt": "[Sinema / İleri] Recently belirteci zaman yapısı:",
+              "prompt": "Recently belirteci zaman yapısı:",
               "sentence": "Independent cinema ___ recently gained unprecedented popularity on global streaming platforms.",
               "options": [
                 "has",
@@ -91101,7 +91101,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q9",
               "type": "true-false",
-              "prompt": "[Tarih / İleri] Recently ve Lately zarfları Present Perfect ister kuralı doğru mu?",
+              "prompt": "Recently ve Lately zarfları Present Perfect ister kuralı doğru mu?",
               "sentence": "Adverbs like 'recently' and 'lately' fundamentally signal Present Perfect Tense.",
               "englishPhrase": "Adverbs like 'recently' and 'lately' fundamentally signal Present Perfect Tense.",
               "isTrue": true,
@@ -91116,7 +91116,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q10",
               "type": "fill-blank-dropdown",
-              "prompt": "[Sosyoloji / İleri] Recently zaman yapısını tamamlayın:",
+              "prompt": "[/ İleri] Recently zaman yapısını tamamlayın:",
               "sentence": "Urban planners have recently ___ sustainable transit corridors in major metropolises.",
               "options": [
                 "designed",
@@ -91173,7 +91173,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Paragraftaki 'Recently' zarfını tamamlayın:",
+              "prompt": "Paragraftaki 'Recently' zarfını tamamlayın:",
               "sentence": "Environmental agencies ___ recently enacted strict emission caps to combat rising urban pollution levels.",
               "options": [
                 "have",
@@ -91192,7 +91192,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] 'Lately' zaman yapısını doldurun:",
+              "prompt": "'Lately' zaman yapısını doldurun:",
               "sentence": "Medical researchers ___ lately reported groundbreaking results in targeted gene therapy trials.",
               "options": [
                 "have",
@@ -91211,7 +91211,7 @@ const chapter66Data = {
             {
               "id": "c66_l8_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Recently kuralına uygun en doğru cümleyi seçin:",
+              "prompt": "Recently kuralına uygun en doğru cümleyi seçin:",
               "sentence": "The institute published a new study in recent days.",
               "options": [
                 "The institute has recently published a new study.",
@@ -91479,7 +91479,7 @@ const chapter66Data = {
             {
               "id": "c66_l9_q13",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Karma sınav paragrafındaki zaman yapısını seçin:",
+              "prompt": "Karma sınav paragrafındaki zaman yapısını seçin:",
               "sentence": "By the time the international expedition reached the summit, they realized that another team ___ the flag hours earlier.",
               "options": [
                 "had planted",
@@ -91498,7 +91498,7 @@ const chapter66Data = {
             {
               "id": "c66_l9_q14",
               "type": "context-clue",
-              "prompt": "[Paragraf / Tip 4] Karma sınav paragrafındaki 'Since' çapasını doldurun:",
+              "prompt": "Karma sınav paragrafındaki 'Since' çapasını doldurun:",
               "sentence": "Ever since the treaty was ratified, the signatory states ___ peacefully for mutual economic prosperity.",
               "options": [
                 "have collaborated",
@@ -91517,7 +91517,7 @@ const chapter66Data = {
             {
               "id": "c66_l9_q15",
               "type": "inversion-transformer",
-              "prompt": "[Dönüştürme / Tip 5] Karma refleks kuralına en uygun cümleyi seçin:",
+              "prompt": "Karma refleks kuralına en uygun cümleyi seçin:",
               "sentence": "She was the first female scientist who discovered the element, and she recently received international acclaim.",
               "options": [
                 "She was the first female scientist to discover the element, and she has recently received international acclaim.",
@@ -91577,7 +91577,7 @@ const chapter66Data = {
       "c38_l1": "1: Sıklık Zarfları ve Korelasyonlu Zaman Kırılmaları (seldom, rarely, no sooner ... than, hardly ... when)",
       "c38_l2": "2: Kısıtlayıcı Yapılar ve Ana Cümle Tuzakları (only after, only when, under no circumstances)",
       "c38_l3": "3: Şartlı ve Edebi Modals Devriklikleri (should you need, had we known, were I you)",
-      "c38_l4": "4: Akademik Kıyas, Katılım ve Sıfat Devriklikleri (neither do I, so is the, as did the, beautiful though she is)",
+      "c38_l4": "4: Kıyas, Katılım ve Sıfat Devriklikleri (neither do I, so is the, as did the, beautiful though she is)",
       "c38_l5": "5: İleri Düzey Karma Devrik Cümle Final Zirvesi (Karma Inversion & Emphatic)",
 
       // Unit 39
@@ -91600,7 +91600,7 @@ const chapter66Data = {
       // Unit 41
       "c41_l1": "1. Sınav Kısayolları ve Yapı Refleksleri (suggest doing, insist on, it is no use)",
       "c41_l2": "2. Kronolojik Zaman Uyumu (since/for, by the time, before/after)",
-      "c41_l3": "3. Akademik Diyalog ve Mülakat Matrisi (neither did I, so do I, question flow)",
+      "c41_l3": "3. Diyalog ve Mülakat Matrisi (neither did I, so do I, question flow)",
 
       // Unit 42
       "c42_l1": "İhtimal, Beklenti ve Zorunluluk Modalları (likely, bound, supposed, due, doomed to)",
@@ -91698,7 +91698,7 @@ if (typeof rawTopics !== 'undefined') {
     if (!t62.edits) t62.edits = [];
     t62.edits.push({
       date: "2026-07-28T01:15:00+03:00",
-      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, ve alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
       type: "custom"
     });
   }
@@ -91711,7 +91711,7 @@ if (typeof rawTopics !== 'undefined') {
     if (!t22.edits) t22.edits = [];
     t22.edits.push({
       date: "2026-07-28T01:25:00+03:00",
-      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, ve alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
       type: "custom"
     });
   }
@@ -91723,7 +91723,7 @@ if (typeof rawTopics !== 'undefined') {
     if (!t17.edits) t17.edits = [];
     t17.edits.push({
       date: "2026-08-01T12:30:00+03:00",
-      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, sosyoloji ve psikoloji alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, ve alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
       type: "custom"
     });
   }

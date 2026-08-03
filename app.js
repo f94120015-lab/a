@@ -42,9 +42,9 @@ function cleanAcademicUnitTitle(title) {
     'Zaman Uyumu: By the time, Since, It is time': 'Zaman Bağlaçları ve Tense Uyumu (By the time, Since, It\'s time)',
     'Öbeksel Kipler': 'Öbeksel Kipler (Phrasal Modals)',
     'Bağlaçlar': 'Bağlaç Yapıları ve Cümle İlişkileri (Conjunctions)',
-    'Akademik Sınav Kısayolları': 'Akademik Sınav Kısayolları (Sınav Stratejileri ve Gramer İpuçları)',
-    'Akademik Cümle Analizi ve Kısaltmalar': 'Cümle Analizi ve Kısaltma Yapıları (Reductions)',
-    'Akademik Yumuşatma ve İhtimal Dili': 'İhtimal ve Yumuşatma İfadeleri (Hedging & Modality)',
+    'Sınav Kısayolları': 'Sınav Kısayolları (Sınav Stratejileri ve Gramer İpuçları)',
+    'Cümle Analizi ve Kısaltmalar': 'Cümle Analizi ve Kısaltma Yapıları (Reductions)',
+    'Yumuşatma ve İhtimal Dili': 'İhtimal ve Yumuşatma İfadeleri (Hedging & Modality)',
     'Advanced Relative Clauses': 'İleri Düzey Sıfat Cümlecikleri (Advanced Relative Clauses)',
     'Advanced Inversion': 'Devrik Cümle Yapıları (Inversion & Emphatic Structures)',
     'Bölüm 44 / Modül A: Zaman, Şart & Dilek Kalkanları': 'Zaman, Şart ve Dilek Cümleleri (Tenses, Conditionals & Subjunctive)',
@@ -63,15 +63,15 @@ function cleanAcademicUnitTitle(title) {
     '8 Öğeli Titan Eylem Zincirleri': 'Cümle Ögeleri ve Eylem Zincirleri (5-8 Öğe)',
     'Zincir Genişleme ve Sentaks Matrisi': 'Söz Dizimi ve Cümle Genişletme (Syntax)',
     'Zaman Kayma Kontrolü': 'Cümlelerde Zaman Kaymaları ve Uyum Denetimi',
-    'Ultimate Academic Exam Simulation': 'Akademik Sınav Simülasyonu',
+    'Ultimate Academic Exam Simulation': 'Sınav Simülasyonu',
     'Grand Master Final Challenge': 'Genel Sınav Değerlendirmesi',
-    'Akademik TIPS Master Serisi': 'YDS/YÖKDİL Soru Çözüm Taktikleri',
-    'Akademik TIPS İhtisas Serisi': 'İleri Seviye Gramer İpuçları ve Detay Kurallar',
-    'Akademik Bağlaç Mühendisliği': 'İleri Düzey Bağlaçlar ve Cümle Geçişleri',
+    'TIPS Master Serisi': 'YDS/YÖKDİL Soru Çözüm Taktikleri',
+    'TIPS İhtisas Serisi': 'İleri Seviye Gramer İpuçları ve Detay Kurallar',
+    'Bağlaç Mühendisliği': 'İleri Düzey Bağlaçlar ve Cümle Geçişleri',
     'Görsel Kartlar ve Özel Bağlaç Kalıpları': 'YDS/YÖKDİL Özel Bağlaç Kalıpları',
     'Koşul Cümleleri ve Mix Yapılar Mühendisliği': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
     'Koşul Cümleleri ve Mix Yapılar': 'Koşul Cümleleri ve Karma Yapılar (If Clauses & Mixed Conditionals)',
-    'Akademik Deyimsel Fiiller': 'Deyimsel Fiiller (Phrasal Verbs)',
+    'Deyimsel Fiiller': 'Deyimsel Fiiller (Phrasal Verbs)',
     'YDS / YÖKDİL / YDT Sınav Kilitleri ve Hızlı Refleks Stratejileri': 'YDS / YÖKDİL / YDT Sınav Stratejileri',
     'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Fiilimsiler ve Kısaltma Sentezi (Gerund & Participle)',
     'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'İleri Düzey Kısaltma ve Edilgen Yapılar',
@@ -400,14 +400,14 @@ function translatePromptToTurkish(prompt, question) {
   
   const translations = {
     "choose the correct grammatical form to complete the sentence": "Cümleyi tamamlamak için doğru dil bilgisi biçimini seçiniz",
-    "is the following sentence grammatically correct according to zaman uyumu rules?": "Aşağıdaki cümle Zaman Uyumu kurallarına göre dil bilgisi açısından doğru mudur?",
-    "select the correct choice that satisfies the syntax guidelines": "Sözdizimi kılavuzunu karşılayan doğru seçeneği belirleyiniz",
+    "is the following sentence grammatically correct according to zaman uyumu rules?": "Aşağıdaki cümle Zaman Uyumu kurallarına göre doğru mudur?",
+    "select the correct choice that satisfies the syntax guidelines": "Sözdizimi kuralını sağlayan doğru seçeneği belirleyiniz",
     "reconstruct the sentence in english using the correct word blocks": "Doğru kelime bloklarını kullanarak cümleyi İngilizce olarak yeniden oluşturun",
     "match the clauses to form correct sentences": "Doğru cümleler oluşturmak için yan cümleleri eşleştirin",
     "translate the following sentence into turkish": "Aşağıdaki cümleyi Türkçe'ye çevirin",
-    "is the following sentence grammatically correct according to modallar (modals) rules?": "Aşağıdaki cümle Modallar (Modals) kurallarına göre dil bilgisi açısından doğru mudur?",
+    "is the following sentence grammatically correct according to modallar (modals) rules?": "Aşağıdaki cümle Modallar (Modals) kurallarına göre doğru mudur?",
     "select the correct clause to connect with the sentence logically": "Cümleyi mantıksal olarak bağlamak için doğru yan cümleyi seçiniz",
-    "select the most suitable academic option for the context": "Bağlam için en uygun akademik seçeneği belirleyiniz"
+    "select the most suitable academic option for the context": "En uygun seçeneği belirleyiniz"
   };
 
   const lowerText = mainText.toLowerCase();
@@ -429,7 +429,7 @@ function translatePromptToTurkish(prompt, question) {
         "geçmiş zaman modalları (perfect modals)": "Geçmiş Zaman Modalları (Perfect Modals)"
       };
       const trRule = ruleTranslations[ruleName.toLowerCase()] || ruleName;
-      translatedText = `Aşağıdaki cümle ${trRule} kurallarına göre dil bilgisi açısından doğru mudur?`;
+      translatedText = `Aşağıdaki cümle ${trRule} kurallarına göre doğru mudur?`;
     }
   }
 
@@ -1240,13 +1240,13 @@ const FORMATION_QUESTIONS = [
     sentence: "The book was written by the professor.",
     correctSentence: "Kitap profesör tarafından yazıldı.",
     translation: "Kitap profesör tarafından yazıldı.",
-    mechanicNote: "<strong>7. Adım: Etken / Edilgen (Active & Passive)</strong><br>Akademik metinlerin bel kemiği olan edilgen çatıyı (be + V3) ve eylemin kimin tarafından yapıldığını belirten 'by' edatının kullanımını çözersiniz."
+    mechanicNote: "<strong>7. Adım: Etken / Edilgen (Active & Passive)</strong><br>metinlerin bel kemiği olan edilgen çatıyı (be + V3) ve eylemin kimin tarafından yapıldığını belirten 'by' edatının kullanımını çözersiniz."
   },
   {
     id: "fq8",
     type: "inversion-transformer",
     grammarTags: ["Devrik Cümleler", "Inversion"],
-    prompt: "Verilen düz akademik cümleyi devrik (inverted) forma dönüştürün:",
+    prompt: "Verilen düz cümleyi devrik (inverted) forma dönüştürün:",
     mainSentence: "We had seldom encountered such a complex theory.",
     options: [
       "Seldom had we encountered such a complex theory.",
@@ -1284,13 +1284,13 @@ const FORMATION_QUESTIONS = [
     id: "fq11",
     type: "idiom-builder",
     grammarTags: ["Deyim İnşa Etme", "Idioms"],
-    prompt: "Akademik deyimi oluşturmak için aşağıdaki kelimelere sırasıyla tıklayınız:",
+    prompt: "deyimi oluşturmak için aşağıdaki kelimelere sırasıyla tıklayınız:",
     tokens: ["shed", "light", "on"],
     correctSequence: ["shed", "light", "on"],
     meaningTr: "ışık tutmak, aydınlatmak",
     sentence: "The study will shed light on the disease.",
     translation: "Çalışma hastalık üzerine ışık tutacak.",
-    mechanicNote: "<strong>11. Adım: Deyim İnşa Etme (Idiom-Builder)</strong><br>Türkçe anlamı verilen akademik deyimi aşağıdaki kelimelere doğru sırayla tıklayarak oluşturursunuz."
+    mechanicNote: "<strong>11. Adım: Deyim İnşa Etme (Idiom-Builder)</strong><br>Türkçe anlamı verilen deyimi aşağıdaki kelimelere doğru sırayla tıklayarak oluşturursunuz."
   },
   {
     id: "fq12",
@@ -1475,13 +1475,13 @@ const FORMATION_QUESTIONS = [
     meaningTr: "takip etmek, izini sürmek",
     sentence: "We need to keep track of the expenses.",
     translation: "Masrafları takip etmemiz gerekiyor.",
-    mechanicNote: "<strong>27. Adım: Deyim Yapıları</strong><br>Akademik deyimlerin sentaksını pekiştirirsiniz."
+    mechanicNote: "<strong>27. Adım: Deyim Yapıları</strong><br>deyimlerin sentaksını pekiştirirsiniz."
   },
   {
     id: "fq28",
     type: "multiple-fill-blank",
     grammarTags: ["Koşul Yapıları", "Multiple Fill-Blank"],
-    prompt: "Boşlukları sırasıyla klavyeden doldurunuz (örn: had ... would):",
+    prompt: "Boşlukları doldurunuz:",
     sentence: "If I ___ known, I ___ have helped.",
     corrects: ["had", "would"],
     translation: "Bilseydim yardım ederdim.",
@@ -1491,7 +1491,7 @@ const FORMATION_QUESTIONS = [
     id: "fq29",
     type: "true-false",
     grammarTags: ["Ettirgen Yapı", "True / False"],
-    prompt: "Aşağıdaki ettirgen kuralı ifadesi doğru mudur?",
+    prompt: "Kural ifadesi doğru mudur?",
     turkishTranslation: "'Have something done' yapısı bir işi başkasına yaptırmak (ettirgen) için kullanılır.",
     correctAnswer: "true",
     translation: "Doğru.",
@@ -1501,7 +1501,7 @@ const FORMATION_QUESTIONS = [
     id: "fq30",
     type: "spotlight",
     grammarTags: ["Cümle Ögesi Analizi", "Spotlight"],
-    prompt: "Seçeneklerden cümlenin ana yüklemini (main verb) bulunuz:",
+    prompt: "Cümlenin ana yüklemini (main verb) bulunuz:",
     paragraph: "The novel written by Orwell depicts a dystopian future.",
     highlightChunk: "depicts",
     options: ["written", "depicts", "novel", "future"],
@@ -1513,7 +1513,7 @@ const FORMATION_QUESTIONS = [
     id: "fq31",
     type: "error-spotting",
     grammarTags: ["Hata Tespiti", "Error Spotting"],
-    prompt: "Aşağıdaki cümledeki gramer hatasını bulunuz:",
+    prompt: "Cümledeki gramer hatasını bulunuz:",
     sentence: "She don't like apples.",
     options: ["She", "don't", "like", "apples"],
     correctIndex: 1,
@@ -1524,7 +1524,7 @@ const FORMATION_QUESTIONS = [
     id: "fq32",
     type: "context-clue",
     grammarTags: ["Bağlamsal İpucu", "Context Clue"],
-    prompt: "Cümlenin bağlamına göre boşluğa gelecek en uygun kelimeyi seçiniz:",
+    prompt: "En uygun kelimeyi seçiniz:",
     sentence: "The scientist's theory was so ___ that everyone believed it.",
     options: ["credible", "implausible", "weak", "wrong"],
     correctIndex: 0,
@@ -1568,7 +1568,7 @@ const FORMATION_QUESTIONS = [
     id: "fq36",
     type: "titan-boundary-defense",
     grammarTags: ["Sınır Savunması", "Titan Boundary Defense"],
-    prompt: "Aşağıdaki akademik cümledeki sınırı aşan (hatalı) bağlacı bulunuz:",
+    prompt: "Aşağıdaki cümledeki sınırı aşan (hatalı) bağlacı bulunuz:",
     sentence: "Although it was raining, therefore we stayed home.",
     options: ["Although", "was", "therefore", "home"],
     correctIndex: 2,
@@ -1603,7 +1603,7 @@ const FORMATION_QUESTIONS = [
     options: ["Effect", "Effective", "Effectively", "Ineffective"],
     correctIndex: 0,
     translation: "Etki",
-    mechanicNote: "<strong>39. Adım: Ek Koparma (Suffix Decapitation)</strong><br>Karmaşık akademik kelimelerin ön ek me son eklerini soyarak kök kelimeyi bulursunuz."
+    mechanicNote: "<strong>39. Adım: Ek Koparma (Suffix Decapitation)</strong><br>Karmaşık kelimelerin ön ek me son eklerini soyarak kök kelimeyi bulursunuz."
   },
   {
     id: "fq40",
@@ -1630,12 +1630,12 @@ const FORMATION_QUESTIONS = [
     id: "fq42",
     type: "vector-assembly",
     grammarTags: ["Vektör İnşası", "Vector Assembly"],
-    prompt: "Öğeleri doğru sırayla seçerek akademik deyimi ('shed light on') inşa edin:",
+    prompt: "Öğeleri doğru sırayla seçerek deyimi ('shed light on') inşa edin:",
     sentence: "The research will ___ the dark areas of physics.",
     scrambled_elements: ["light", "on", "shed"],
     correct_sequence: ["shed", "light", "on"],
     translation: "Araştırma, fiziğin karanlık alanlarına ışık tutacak.",
-    mechanicNote: "<strong>42. Adım: Vektör İnşası (Vector-Assembly)</strong><br>Karmakarışık öğeleri sırayla seçerek anlamlı bir akademik kalıp oluşturursunuz."
+    mechanicNote: "<strong>42. Adım: Vektör İnşası (Vector-Assembly)</strong><br>Karmakarışık öğeleri sırayla seçerek anlamlı bir kalıp oluşturursunuz."
   },
   {
     id: "fq43",
@@ -4345,6 +4345,61 @@ window.previewQuestionById = function(lessonId, questionId) {
   }
   
   openQuestionPreview(`${lesson ? (lesson.subtitle ? lesson.id + '. Ders (' + lesson.subtitle + ')' : lesson.title || lesson.id + '. Ders') : 'Soru Önizleme'}`, [targetQuestion], lesson);
+};
+
+window.copyReportAiPrompt = function(questionId, lessonTitle, errorType, userComment) {
+  let targetQuestion = null;
+  let targetLessonTitle = lessonTitle || '';
+  
+  if (typeof lessons !== 'undefined') {
+    for (const l of lessons) {
+      const qList = getLessonQuestions(l);
+      const found = qList.find(q => q && q.id === questionId);
+      if (found) {
+        targetQuestion = found;
+        if (!targetLessonTitle) {
+          targetLessonTitle = l.subtitle ? `${l.id}. Ders (${l.subtitle})` : (l.title || `${l.id}. Ders`);
+        }
+        break;
+      }
+    }
+  }
+
+  const qClean = targetQuestion ? { ...targetQuestion } : {};
+  delete qClean._dynamicType;
+
+  const translatedError = typeof translateErrorType === 'function' ? translateErrorType(errorType) : errorType;
+
+  const promptText = `[AMOK SORU HATA DÜZELTME TALİMATI]
+Lütfen aşağıdaki sorudaki bildirilen hatayı veritabanında/kodda inceleyip düzelt:
+
+- Soru ID: ${questionId}
+- Ders / Konu: ${targetLessonTitle || 'Belirtilmedi'}
+- Bildirilen Hata Türü: ${translatedError}
+- Kullanıcı / Bildiren Yorumu: "${userComment || ''}"
+
+${targetQuestion ? `Mevcut Soru Verisi (JSON):
+\`\`\`json
+${JSON.stringify(qClean, null, 2)}
+\`\`\`` : ''}
+
+Yapılması Gerekenler:
+1. data.js veya ilgili müfredat dosyasında "${questionId}" ID'sine sahip soruyu bulun.
+2. Kullanıcının belirttiği "${userComment}" açıklamasını dikkate alarak hatayı (çeviri, imla, yanlış cevap anahtarı index'i, seçenekler veya kelimeler) düzeltin.
+3. Değişiklikleri ilgili dosyaya kaydedin.`;
+
+  navigator.clipboard.writeText(promptText).then(() => {
+    if (typeof showToast === 'function') {
+      showToast('Antigravity için AI düzeltme promptu kopyalandı! 📋 IDE sohbetine yapıştırabilirsiniz.', 'success');
+    } else {
+      alert('AI Fix Prompt kopyalandı!');
+    }
+  }).catch(err => {
+    console.error('Kopyalama hatası:', err);
+    if (typeof showToast === 'function') {
+      showToast('Kopyalama başarısız oldu.', 'error');
+    }
+  });
 };
 
 window.startLessonAtQuestion = function(lessonId, exerciseId, questionId) {
@@ -8738,7 +8793,7 @@ function renderQuestion() {
           hudType = 'by_the_time_present';
           hudTitle = 'By the Time (Present/Future)';
           hudFormula = 'By the time + Present (V1), Future Perfect (will have + V3)';
-          hudAlert = 'Gelecek/Geniş zaman bağlamındaki By the time cümlelerinde yan cümle V1 (Present Simple), ana cümle ise will have + V3 (Future Perfect) alır.';
+          hudAlert = 'Gelecek/Geniş zaman By the time cümlelerinde yan cümle V1 (Present Simple), ana cümle ise will have + V3 (Future Perfect) alır.';
         }
       } else if (sentenceStr.includes("time")) {
         hudType = 'high_time';
@@ -8860,29 +8915,29 @@ function renderMultipleChoice(container, question) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #3b82f6; margin-bottom: 12px; margin-top: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Cümle 1:</span>
-        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_1}</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${makeTextHoverable(question.sentence_1)}</span>
       </div>
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ec4899; margin-bottom: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Cümle 2:</span>
-        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_2}</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${makeTextHoverable(question.sentence_2)}</span>
       </div>
     `;
   } else if (question.type === 'vector-velocity-shift' && question.current_structure) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-bottom: 8px; margin-top: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Mevcut Yapı:</span>
-        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.current_structure}</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${makeTextHoverable(question.current_structure)}</span>
       </div>
     `;
   } else if (question.type === 'suffix-decapitation' && question.sentence_before && question.sentence_after) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ef4444; margin-bottom: 12px; margin-top: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Önceki Cümle:</span>
-        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_before}</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${makeTextHoverable(question.sentence_before)}</span>
       </div>
       <div style="text-align: left; background: rgba(255, 255, 255, 0.04); padding: 12px 16px; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 8px;">
         <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 4px; letter-spacing: 0.5px;">Sonraki Cümle:</span>
-        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${question.sentence_after}</span>
+        <span style="font-size: 1.05rem; color: var(--text-primary); line-height: 1.4;">${makeTextHoverable(question.sentence_after)}</span>
       </div>
     `;
   }
@@ -8901,11 +8956,9 @@ function renderMultipleChoice(container, question) {
     }
   }
 
-  if (sentenceHtml) {
-    // Apply hoverable meanings and grammar pattern highlights to raw English sentences
-    if (!sentenceHtml.includes('<span') && !sentenceHtml.includes('<div')) {
-      sentenceHtml = `"${makeTextHoverable(sentenceHtml)}"`;
-    }
+  if (sentenceHtml && !sentenceHtml.includes('<div')) {
+    const rawContent = (sentenceHtml.startsWith('"') && sentenceHtml.endsWith('"')) ? sentenceHtml.slice(1, -1) : sentenceHtml;
+    sentenceHtml = `"${makeTextHoverable(rawContent)}"`;
   }
 
   const renderedOptions = question.options.map((opt, i) => {
@@ -9032,7 +9085,8 @@ function renderErrorFinder(container, question) {
   const tokens = question.sentenceTokens || [];
   
   const tokensHtml = tokens.map((tok, i) => {
-    return `<span class="ef-token" data-index="${i}" style="cursor: pointer; display: inline-block; padding: 4px 8px; margin: 4px; font-size: 1.15rem; font-weight: 500; border-radius: 8px; transition: all 0.2s; border: 1.5px dashed rgba(255,255,255,0.25); background: rgba(255,255,255,0.03); color: var(--text-primary);">${tok}</span>`;
+    const hoverableTok = makeTextHoverable(tok, true);
+    return `<span class="ef-token" data-index="${i}" style="cursor: pointer; display: inline-block; padding: 4px 8px; margin: 4px; font-size: 1.15rem; font-weight: 500; border-radius: 8px; transition: all 0.2s; border: 1.5px dashed rgba(255,255,255,0.25); background: rgba(255,255,255,0.03); color: var(--text-primary);">${hoverableTok}</span>`;
   }).join('');
 
   container.innerHTML = `
@@ -9070,7 +9124,7 @@ function renderErrorFinder(container, question) {
 // ── Inversion Transformer ──────────────────────────────────
 function renderInversionTransformer(container, question) {
   const mainSentence = question.mainSentence || "";
-  const promptHtml = question.prompt || "Verilen düz akademik cümleyi devrik forma dönüştürün:";
+  const promptHtml = question.prompt || "Verilen düz cümleyi devrik forma dönüştürün:";
 
   const optionsHtml = question.options.map((opt, i) => {
     const letter = String.fromCharCode(65 + i);
@@ -9114,13 +9168,14 @@ function renderInversionTransformer(container, question) {
 
 // ── Noktalama İşaretli Seçim (punctuation-check) ──────────
 function renderPunctuationCheck(container, question) {
-  const formattedQuestion = question.sentence.replace(
+  const rawSentence = question.sentence.replace(
     /__________/g, 
     `<span class="punctuation-gap">[ ? ]</span>`
   ).replace(
     /___/g,
     `<span class="punctuation-gap">[ ? ]</span>`
   );
+  const formattedQuestion = makeTextHoverable(rawSentence);
 
   const optionsHtml = question.options.map((opt, i) => {
     const meaning = getOptionMeaning(question, opt);
@@ -9169,7 +9224,7 @@ function renderStructureMatch(container, question) {
   }).join('');
 
   const sentenceBlock = (question.sentence && question.sentence !== 'undefined')
-    ? `<div class="structure-context" style="font-size: 1.25rem; font-weight: 700; text-align: center; margin: 20px 0; color: var(--accent-primary); background: var(--bg-secondary); padding: 14px 20px; border-radius: 16px; border: 1px solid var(--border-light); line-height: 1.5;">${question.sentence}</div>`
+    ? `<div class="structure-context" style="font-size: 1.25rem; font-weight: 700; text-align: center; margin: 20px 0; color: var(--accent-primary); background: var(--bg-secondary); padding: 14px 20px; border-radius: 16px; border: 1px solid var(--border-light); line-height: 1.5;">${makeTextHoverable(question.sentence)}</div>`
     : '';
 
   container.innerHTML = `
@@ -9213,7 +9268,7 @@ function renderIdiomBuilder(container, question) {
   }
 
   container.innerHTML = `
-    <p class="quiz-prompt">${question.prompt || "Akademik Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin"}</p>
+    <p class="quiz-prompt">${question.prompt || "Deyimi Doğru Kelimelerle Sırasıyla İnşa Edin"}</p>
     <div style="text-align: center; margin-bottom: 20px;">
       <span class="idiom-meaning-badge">Anlamı: ${question.meaningTr}</span>
     </div>
@@ -15895,6 +15950,9 @@ function getReportsHTML() {
                   <button onclick="window.previewQuestionById('${escapeHtml(rep.lessonId)}', '${escapeHtml(rep.questionId)}')" class="btn btn-secondary-outline" style="font-size: 0.7rem; padding: 2px 6px; font-weight: bold; border-radius: 4px; border: 1px solid var(--accent-primary); color: var(--accent-primary); cursor: pointer; background: transparent;">
                     👁️ Önizle
                   </button>
+                  <button onclick="window.copyReportAiPrompt('${escapeHtml(rep.questionId)}', '${escapeHtml((rep.lessonTitle || '').replace(/'/g, "\\'"))}', '${escapeHtml(rep.errorType)}', '${escapeHtml((rep.userComment || '').replace(/'/g, "\\'").replace(/\n/g, ' '))}')" class="btn btn-secondary-outline" style="font-size: 0.7rem; padding: 2px 6px; font-weight: bold; border-radius: 4px; border: 1px solid #6366f1; color: #6366f1; cursor: pointer; background: rgba(99, 102, 241, 0.08); display: inline-flex; align-items: center; gap: 4px;" title="Antigravity IDE için düzeltme promptu kopyala">
+                    📋 AI Prompt Kopyala
+                  </button>
                   <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${escapeHtml(rep.timestamp)}</span>
                 </div>
               </div>
@@ -18145,6 +18203,9 @@ return `
               <button onclick="window.previewQuestionById('${escapeHtml(rep.lessonId)}', '${escapeHtml(rep.questionId)}')" class="btn btn-secondary-outline" style="font-size: 0.72rem; padding: 2px 8px; font-weight: bold; border-radius: 4px; border: 1px solid var(--accent-primary); color: var(--accent-primary); cursor: pointer; background: transparent; display: inline-flex; align-items: center;">
                 👁️ Soruyu Önizle
               </button>
+              <button onclick="window.copyReportAiPrompt('${escapeHtml(rep.questionId)}', '${escapeHtml((rep.lessonTitle || '').replace(/'/g, "\\'"))}', '${escapeHtml(rep.errorType)}', '${escapeHtml((rep.userComment || '').replace(/'/g, "\\'").replace(/\n/g, ' '))}')" class="btn btn-secondary-outline" style="font-size: 0.72rem; padding: 2px 8px; font-weight: bold; border-radius: 4px; border: 1px solid #6366f1; color: #6366f1; cursor: pointer; background: rgba(99, 102, 241, 0.08); display: inline-flex; align-items: center; gap: 4px;" title="Antigravity IDE sohbetine yapıştırmak için AI Prompt kopyala">
+                📋 AI Prompt Kopyala
+              </button>
             </span>
             <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal; margin-left: auto;">${escapeHtml(rep.timestamp)}</span>
             <button class="btn-delete-single-report" data-id="${rep.id}" style="background: transparent; border: none; color: var(--color-wrong); cursor: pointer; font-size: 1.1rem; padding: 0 4px; margin-left: 10px; display: inline-flex; align-items: center;" title="Sil">×</button>
@@ -18648,7 +18709,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     const correctTranslation = question.options[question.correctIndex] || '';
 
     text = `Seçtiğiniz çeviri: <strong style="color: var(--color-wrong);">${chosenTranslation}</strong>`;
-    ruleTitle = '💡 Akademik Çeviri Kuralı';
+    ruleTitle = '💡 Çeviri Kuralı';
     
     if (preDefinedExplanation) {
       ruleText = preDefinedExplanation;
@@ -18753,7 +18814,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       ruleText = preDefinedExplanation || `Türkçe cümle yapısında özneler, tümleçler ve yüklem uyumu kurallara uygun sıralanmalıdır. Türkçe cümlelerde genellikle yüklem sonda yer alır ve kelime grubu ilişkilerine özen gösterilmelidir.`;
     } else {
       ruleTitle = '💡 İngilizce Cümle Yapısı (Syntax)';
-      ruleText = preDefinedExplanation || `İngilizce akademik cümlelerde eklentiler, zaman zarfları ve ana cümle dizilimi kurallara uygun sıralanmalıdır. Yan cümle bağlacından (when, since, although vb.) hemen sonra bir özne ve çekimli fiil gelmelidir.`;
+      ruleText = preDefinedExplanation || `İngilizce cümlelerde eklentiler, zaman zarfları ve ana cümle dizilimi kurallara uygun sıralanmalıdır. Yan cümle bağlacından (when, since, although vb.) hemen sonra bir özne ve çekimli fiil gelmelidir.`;
     }
     
     wrongExample = `Dizilim Hatası ❌`;
@@ -18773,10 +18834,10 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
     text = `Yazdığınız çeviri: <span style="color: var(--color-wrong); font-weight: 500;">"${chosenText}"</span>`;
     if (question.isEngToTr) {
       ruleTitle = '💡 Türkçe Dilbilgisi ve Suffix Uyumu';
-      ruleText = preDefinedExplanation || `Akademik cümlelerin Türkçe çevirilerinde, yüklem zamanları ve ek uyumuna (suffix harmony) özen gösterilmelidir.`;
+      ruleText = preDefinedExplanation || `cümlelerin Türkçe çevirilerinde, yüklem zamanları ve ek uyumuna (suffix harmony) özen gösterilmelidir.`;
     } else {
       ruleTitle = '💡 İngilizce Zaman ve Özne-Yüklem Uyumu';
-      ruleText = preDefinedExplanation || `İngilizce akademik yazılı çevirilerde, özne-yüklem uyumuna (Subject-Verb Agreement) ve doğru zaman (Tense) seçimine özen gösterilmelidir.`;
+      ruleText = preDefinedExplanation || `İngilizce yazılı çevirilerde, özne-yüklem uyumuna (Subject-Verb Agreement) ve doğru zaman (Tense) seçimine özen gösterilmelidir.`;
     }
     
     wrongExample = `Yazılan Çeviri ❌`;
@@ -18887,7 +18948,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
         title = 'Süperlatif & Kısıtlayıcı Sıfatlar ve Deneyim';
         ruleTitle = '💡 Sıfat Dereceleri ve Present Perfect';
         ruleText = `Bir durumun en uç derecesini (<strong>the best, the worst, the first, the only vb.</strong>) niteleyen ifadelerden sonra gelen relative clause cümleleri, hayat boyu edinilen birikim ve tecrübeleri sorguladığı için <strong>Present Perfect (have/has + V3)</strong> yapısıyla çekimlenir.`;
-        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" tecrübe bağlamına uymuyor ❌`;
+        wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" uymuyor ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" (have/has + V3) ✔️`;
       } else if (lessonNum === 102) {
         title = 'used to + V1 (Geçmiş Alışkanlıklar)';
@@ -18978,7 +19039,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
           } else {
             title = 'Bağlamsal veya Dilbilgisel Hata';
             ruleTitle = '💡 Cümle Yapısı ve Kelime Anlamı';
-            ruleText = `Seçtiğiniz kelime cümle yapısına veya cümlenin akademik anlamına uymamaktadır. Boşluğa gelecek en uygun sözcük <strong>${correctWord}</strong> olmalıdır.`;
+            ruleText = `Seçtiğiniz kelime cümle yapısına veya cümlenin anlamına uymamaktadır. Boşluğa gelecek en uygun sözcük <strong>${correctWord}</strong> olmalıdır.`;
             wrongExample = `Seçilen: "${chosenWord || '(boş)'}" ❌`;
             correctExample = `Doğru Kelime: "${correctWord}" ✔️`;
           }
