@@ -6678,7 +6678,7 @@ function renderLessonTree() {
           ${isCompleted ? '<span class="formation-tour-status-badge">Tamamlandı ✅</span>' : ''}
         </h3>
         <p class="formation-tour-desc-compact">
-          amok'un metodolojisini, tüm soru tiplerini ve eğitim haritasını <strong>45 doğrusal soruda</strong> (her bir müfredat bölümünden 1 örnek uygulama) hızlıca keşfedin.
+          amok'un metodolojisini, tüm soru tiplerini ve eğitim haritasını <strong>45 doğrusal soruda</strong> hızlıca keşfedin.
         </p>
       </div>
       <div class="formation-tour-btn-wrap">
