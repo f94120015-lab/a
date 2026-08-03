@@ -9708,11 +9708,123 @@ nDown 0.3s ease;
   }
 }
 
+/* ============================================================
+   MOBILE OPTIMIZATIONS (KOTA/YER TASARRUFU EDITS)
+   ============================================================ */
+@media (max-width: 819px) {
+  /* 1. Üst Bar İyileştirmeleri (Padding ve Boyutlar) */
+  .top-bar {
+    padding: 6px 12px !important;
+    height: 48px !important;
+    box-sizing: border-box;
+  }
+  .top-bar-logo {
+    width: 32px !important;
+    height: 32px !important;
+    border-width: 1.5px !important;
+  }
+  .stat-pill {
+    padding: 3px 8px !important;
+    font-size: 0.75rem !important;
+    gap: 3px !important;
+  }
+  .stat-pill .stat-icon {
+    font-size: 0.85rem !important;
+  }
+  .top-bar-right .btn-icon {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  #btn-login-topbar {
+    padding: 4px 10px !important;
+    font-size: 0.75rem !important;
+    height: 28px !important;
+    line-height: 1 !important;
+    border-radius: var(--radius-sm) !important;
+  }
 
+  /* 2. Bölüm Bannerı İyileştirmeleri (Padding, Açıklamayı Gizleme, İlerlemeyi Sıkıştırma) */
+  .unit-banner {
+    padding: 10px 14px !important;
+    margin-bottom: 12px !important;
+    border-radius: var(--radius-md) !important;
+    min-height: auto !important;
+    top: 48px !important; /* aligns below the optimized 48px top-bar */
+  }
+  .unit-banner p {
+    display: none !important; /* Mobil açıklamayı gizle */
+  }
+  .unit-banner h2 {
+    font-size: 0.95rem !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+  }
+  .unit-banner-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: space-between;
+  }
 
+  /* 3. Kıvrımlı Patika ve Düğümlerin Sıkıştırılması */
+  .unit-path-container {
+    margin-bottom: 16px !important;
+  }
+  .lesson-node-wrapper {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .lesson-node {
+    width: 72px !important;
+    height: 72px !important;
+  }
+  .pin-bg {
+    top: 2px !important;
+    left: 2px !important;
+    width: 68px !important;
+    height: 68px !important;
+    border-width: 3px !important;
+  }
+  .pin-inner {
+    width: 44px !important;
+    height: 44px !important;
+  }
 
+  /* 4. Alt Gezinme Barının (Bottom Nav) Sıkıştırılması */
+  .sidebar-nav {
+    height: 48px !important;
+  }
+  .sidebar-menu .nav-tab {
+    padding: 2px 0 !important;
+    gap: 1px !important;
+  }
+  .sidebar-menu .nav-tab .nav-tab-label {
+    font-size: 0.6rem !important;
+    letter-spacing: -0.3px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 60px !important;
+  }
+  .sidebar-menu .nav-tab .nav-tab-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
 
-
-
-
-
+  /* 5. Kayan Yukarı Git Butonu */
+  .scroll-to-top-btn {
+    width: 36px !important;
+    height: 36px !important;
+    bottom: 60px !important; /* Alt bar yüksekliğinin üstü */
+    right: 12px !important;
+    font-size: 0.8rem !important;
+    opacity: 0.75 !important;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+  }
+}

@@ -6481,6 +6481,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
   const totalInUnit = unit.lessons.length;
   const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
 
+  const stepSize = window.innerWidth < 820 ? 95 : 130;
   const points = [];
   for (let idx = 0; idx < totalInUnit; idx++) {
     const u = unit.id;
@@ -6493,7 +6494,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
 
     points.push({
       x: 50 + offsetPercent,
-      y: idx * 130 + 65
+      y: idx * stepSize + (stepSize / 2)
     });
   }
 
@@ -6519,7 +6520,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
     }
 
     const svgHTML = `
-      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * 130}" preserveAspectRatio="none">
+      <svg class="unit-path-svg" viewBox="0 0 100 ${totalInUnit * stepSize}" preserveAspectRatio="none">
         <path class="path-bg" d="${pathD}" />
         ${progressD ? `<path class="path-progress" d="${progressD}" />` : ''}
       </svg>
@@ -6830,7 +6831,8 @@ function renderLessonTree() {
 
     const pathContainer = document.createElement('div');
     pathContainer.className = `unit-path-container unit-path-color-${colorIndex}`;
-    pathContainer.style.height = `${totalInUnit * 130}px`;
+    const stepSize = window.innerWidth < 820 ? 95 : 130;
+    pathContainer.style.height = `${totalInUnit * stepSize}px`;
     pathContainer.dataset.rendered = "false";
 
     unitSection.appendChild(pathContainer);
