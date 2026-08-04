@@ -40090,7 +40090,7 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 0,
-            "translation": "Televizyon ağı günlük yayınların resmi programını değiştirdi."
+            "translation": "Televizyon ağı günlük yayınların resmi programını değiştirmiş durumdadır."
           },
           {
             "id": "u7l1ex2_q5",
@@ -44538,7 +44538,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The historic ruins could explain the ancient rituals.",
-            "translation": "The historic ruins could explain the ancient rituals.",
+            "translation": "Tarihi kalıntılar antik ritüelleri açıklayabilir.",
             "words": [
               "Tarihi",
               "kalıntılar",
@@ -44555,7 +44555,7 @@ Object.assign(unitSentencesMap, {
               "ritüelleri",
               "açıklayabilir."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u70l1ex1_q4",
@@ -44697,7 +44697,7 @@ Object.assign(unitSentencesMap, {
               "constitutional",
               "amendments."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u70l1ex1_q10",
@@ -44767,7 +44767,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The community leaders should support the social changes.",
-            "translation": "The community leaders should support the social changes.",
+            "translation": "Topluluk liderleri toplumsal değişimleri desteklemelidir.",
             "words": [
               "Topluluk",
               "liderleri",
@@ -44784,7 +44784,7 @@ Object.assign(unitSentencesMap, {
               "değişimleri",
               "desteklemelidir."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u70l1ex1_q14",
@@ -44897,7 +44897,7 @@ Object.assign(unitSentencesMap, {
               "of",
               "communities."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u70l1ex2_q4",
@@ -45016,7 +45016,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The trade agreements must determine the market prices of resources.",
-            "translation": "The trade agreements must determine the market prices of resources.",
+            "translation": "Ticaret anlaşmaları kaynakların piyasa fiyatlarını belirlemelidir.",
             "words": [
               "Ticaret",
               "anlaşmaları",
@@ -45035,7 +45035,7 @@ Object.assign(unitSentencesMap, {
               "fiyatlarını",
               "belirlemelidir."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u70l1ex2_q10",
@@ -45134,7 +45134,7 @@ Object.assign(unitSentencesMap, {
               "the",
               "community."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u70l1ex2_q14",
@@ -45186,7 +45186,7 @@ Object.assign(unitSentencesMap, {
             "enSentence": "The historian has analyzed the primary sources.",
             "isEngToTr": true,
             "options": [
-              "Tarihçi birincil kaynakları analiz etti.",
+              "Tarihçi birincil kaynakları analiz etmiş durumdadır.",
               "Tarihçi birincil kaynakları analiz edecek.",
               "Tarihçiler kaynakları analiz ettiler.",
               "Tarihçi kaynakları inceliyor."
@@ -45224,7 +45224,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The archaeologists were excavating the ancient ruins.",
-            "translation": "The archaeologists were excavating the ancient ruins.",
+            "translation": "Arkeologlar antik kalıntıları kazıyorlardı.",
             "words": [
               "Arkeologlar",
               "antik",
@@ -45239,7 +45239,7 @@ Object.assign(unitSentencesMap, {
               "kalıntıları",
               "kazıyorlardı."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u70l2ex1_q4",
@@ -45256,7 +45256,7 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 0,
-            "translation": "Psikolog davranışsal tepkileri gözlemledi."
+            "translation": "Psikolog davranışsal tepkileri gözlemlemiş durumdadır."
           },
           {
             "id": "u70l2ex1_q5",
@@ -45270,7 +45270,7 @@ Object.assign(unitSentencesMap, {
             "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
-                "left": "veritabanını güncellediler",
+                "left": "veritabanını güncellemiş durumdadırlar",
                 "right": "have updated the database"
               },
               {
@@ -45282,7 +45282,7 @@ Object.assign(unitSentencesMap, {
                 "right": "were supporting the changes"
               },
               {
-                "left": "kayıtları değerlendirdi",
+                "left": "kayıtları değerlendirmiş durumdadır",
                 "right": "has evaluated the records"
               }
             ]
@@ -45305,7 +45305,7 @@ Object.assign(unitSentencesMap, {
               "having"
             ],
             "correctIndex": 2,
-            "translation": "Ticaret anlaşmaları piyasa fiyatlarını belirledi."
+            "translation": "Ticaret anlaşmaları piyasa fiyatlarını belirlemiş durumdadır."
           },
           {
             "id": "u70l2ex1_q7",
@@ -45321,7 +45321,7 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": true,
             "options": [
               "Antropolog kabile geleneklerini inceleyecek.",
-              "Sosyal antropolog kabile geleneklerini inceledi.",
+              "Sosyal antropolog kabile geleneklerini incelemiş durumdadır.",
               "Sosyal antropolog gelenekleri incelemişti.",
               "Antropolog kabile geleneklerini inceliyor."
             ],
@@ -45358,7 +45358,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The clinical study has evaluated the patient records.",
-            "translation": "Klinik çalışma hasta kayıtlarını değerlendirdi.",
+            "translation": "Klinik çalışma hasta kayıtlarını değerlendirmiş durumdadır.",
             "words": [
               "The",
               "clinical",
@@ -45381,7 +45381,7 @@ Object.assign(unitSentencesMap, {
               "patient",
               "records."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u70l2ex1_q10",
@@ -45434,7 +45434,7 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": true,
             "options": [
               "Koordinatörler kullanıcı profillerini güncelleyecek.",
-              "Koordinatörler kullanıcı profillerini güncelledi.",
+              "Koordinatörler kullanıcı profillerini güncellemiş durumdadırlar.",
               "Koordinatörler profilleri güncelliyordu.",
               "Koordinatör kullanıcı profillerini güncelledi."
             ],
@@ -45451,12 +45451,13 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The artist has created the modern sculpture.",
-            "translation": "The artist has created the modern sculpture.",
+            "translation": "Sanatçı modern heykeli oluşturmuş durumdadır.",
             "words": [
               "Sanatçı",
               "modern",
               "heykeli",
-              "oluşturdu.",
+              "oluşturmuş",
+              "durumdadır.",
               "müzededir.",
               "tasarlayacak."
             ],
@@ -45464,9 +45465,10 @@ Object.assign(unitSentencesMap, {
               "Sanatçı",
               "modern",
               "heykeli",
-              "oluşturdu."
+              "oluşturmuş",
+              "durumdadır."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u70l2ex1_q14",
@@ -45478,8 +45480,8 @@ Object.assign(unitSentencesMap, {
               "İsim ve Edat Yapıları"
             ],
             "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The database administrator has resolved the security problems.\"</span>",
-            "correctSentence": "Veritabanı yöneticisi güvenlik sorunlarını çözdü.",
-            "translation": "Veritabanı yöneticisi güvenlik sorunlarını çözdü."
+            "correctSentence": "Veritabanı yöneticisi güvenlik sorunlarını çözmüş durumdadır.",
+            "translation": "Veritabanı yöneticisi güvenlik sorunlarını çözmüş durumdadır."
           },
           {
             "id": "u70l2ex1_q15",
@@ -45490,9 +45492,9 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Topluluk liderleri eğitim reformlarını destekledi.\"</span>",
+            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Topluluk liderleri eğitim reformlarını desteklemiş durumdadırlar.\"</span>",
             "correctSentence": "The community leaders have supported the educational reforms.",
-            "translation": "Topluluk liderleri eğitim reformlarını destekledi."
+            "translation": "Topluluk liderleri eğitim reformlarını desteklemiş durumdadırlar."
           }
         ]
       },
@@ -45539,7 +45541,7 @@ Object.assign(unitSentencesMap, {
               "was"
             ],
             "correctIndex": 0,
-            "translation": "Sosyal antropolog yerel kabilenin kültürel akrabalık kalıplarını analiz etti."
+            "translation": "Sosyal antropolog yerel kabilenin kültürel akrabalık kalıplarını analiz etmiş durumdadır."
           },
           {
             "id": "u70l2ex2_q3",
@@ -45581,7 +45583,7 @@ Object.assign(unitSentencesMap, {
               "the",
               "community."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u70l2ex2_q4",
@@ -45598,7 +45600,7 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 0,
-            "translation": "Televizyon ağı günlük yayınların resmi programını değiştirdi."
+            "translation": "Televizyon ağı günlük yayınların resmi programını değiştirmiş durumdadır."
           },
           {
             "id": "u70l2ex2_q5",
@@ -45612,7 +45614,7 @@ Object.assign(unitSentencesMap, {
             "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
             "pairs": [
               {
-                "left": "istikrarı etkiledi",
+                "left": "istikrarı etkilemiş durumdadır",
                 "right": "has affected the stability"
               },
               {
@@ -45624,7 +45626,7 @@ Object.assign(unitSentencesMap, {
                 "right": "were observing the patterns"
               },
               {
-                "left": "görevleri tamamladılar",
+                "left": "görevleri tamamlamış durumdadırlar",
                 "right": "have completed the tasks"
               }
             ]
@@ -45647,7 +45649,7 @@ Object.assign(unitSentencesMap, {
               "has"
             ],
             "correctIndex": 3,
-            "translation": "Coğrafi araştırma bölgesel iklimdeki farklılıkları analiz etti."
+            "translation": "Coğrafi araştırma bölgesel iklimdeki farklılıkları analiz etmiş durumdadır."
           },
           {
             "id": "u70l2ex2_q7",
@@ -45700,7 +45702,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The translation team has completed the translation of the primary sources from the temple ruins.",
-            "translation": "The translation team has completed the translation of the primary sources from the temple ruins.",
+            "translation": "Çeviri ekibi tapınak kalıntılarından elde edilen birincil kaynakların çevirisini tamamlamış durumdadır.",
             "words": [
               "Çeviri",
               "ekibi",
@@ -45711,7 +45713,8 @@ Object.assign(unitSentencesMap, {
               "birincil",
               "kaynakların",
               "çevirisini",
-              "tamamladı.",
+              "tamamlamış",
+              "durumdadır.",
               "korumuştu.",
               "inceledi."
             ],
@@ -45725,9 +45728,10 @@ Object.assign(unitSentencesMap, {
               "birincil",
               "kaynakların",
               "çevirisini",
-              "tamamladı."
+              "tamamlamış",
+              "durumdadır."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u70l2ex2_q10",
@@ -45744,7 +45748,7 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 0,
-            "translation": "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi."
+            "translation": "Ekonomik kriz yerel tüccarların finansal istikrarını etkilemiş durumdadır."
           },
           {
             "id": "u70l2ex2_q11",
@@ -45764,7 +45768,7 @@ Object.assign(unitSentencesMap, {
               "have"
             ],
             "correctIndex": 3,
-            "translation": "Veritabanı güvenlik önlemleri yetkisiz girişleri engelledi."
+            "translation": "Veritabanı güvenlik önlemleri yetkisiz girişleri engellemiş durumdadır."
           },
           {
             "id": "u70l2ex2_q12",
@@ -45779,7 +45783,7 @@ Object.assign(unitSentencesMap, {
             "enSentence": "The clinical study has evaluated the cognitive development of children.",
             "isEngToTr": true,
             "options": [
-              "Klinik çalışma çocukların bilişsel gelişimini değerlendirdi.",
+              "Klinik çalışma çocukların bilişsel gelişimini değerlendirmiş durumdadır.",
               "Çalışma çocukların bilişsel gelişimini değerlendirecek.",
               "Klinik çalışma çocukların gelişimini değerlendirmişti.",
               "Klinik çalışma bilişsel gelişimi değerlendiriyor."
@@ -45797,7 +45801,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
             "enSentence": "The research team has investigated the resource allocation in the developing nations.",
-            "translation": "Araştırma ekibi gelişmekte olan ülkelerdeki kaynak tahsisini inceledi.",
+            "translation": "Araştırma ekibi gelişmekte olan ülkelerdeki kaynak tahsisini incelemiş durumdadır.",
             "words": [
               "The",
               "research",
@@ -45828,7 +45832,7 @@ Object.assign(unitSentencesMap, {
               "developing",
               "nations."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u70l2ex2_q14",
@@ -45852,9 +45856,339 @@ Object.assign(unitSentencesMap, {
               "İsim Tamlamaları",
               "İsim ve Edat Yapıları"
             ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözdü.\"</span>",
+            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözmüş durumdadır.\"</span>",
             "correctSentence": "The new policy has resolved the economic disputes between the nations.",
-            "translation": "Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözdü."
+            "translation": "Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözmüş durumdadır."
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "exercises": [
+      {
+        "id": "u70l3ex1",
+        "title": "Alıştırma 1: V2 (Simple Past) vs. Have/Has V3 (Present Perfect)",
+        "description": "Akademik metinlerde zaman çekim farkı ve durum/bulgu bildirme analizi",
+        "questions": [
+          {
+            "id": "u70l3ex1_q1",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+            "enSentence": "The trade agreements have determined the market prices.",
+            "isEngToTr": true,
+            "options": [
+              "Ticaret anlaşmaları piyasa fiyatlarını belirlemiş durumdadır.",
+              "Ticaret anlaşmaları piyasa fiyatlarını belirlemişti.",
+              "Ticaret anlaşmaları piyasa fiyatlarını belirler.",
+              "Ticaret anlaşmaları piyasa fiyatlarını belirleyecek."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u70l3ex1_q2",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+            "enSentence": "The trade agreements determined the market prices in 1994.",
+            "isEngToTr": true,
+            "options": [
+              "Ticaret anlaşmaları 1994'te piyasa fiyatlarını belirledi.",
+              "Ticaret anlaşmaları 1994'te piyasa fiyatlarını belirlemiş durumdadır.",
+              "Ticaret anlaşmaları 1994'te piyasa fiyatlarını belirlemişti.",
+              "Ticaret anlaşmaları 1994'te piyasa fiyatlarını belirler."
+            ],
+            "correctIndex": 0
+          },
+          {
+            "id": "u70l3ex1_q3",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Boşluğa gelecek en uygun zaman çekimini seçiniz (Not: Eylemin güncel etkisi devam etmektedir):",
+            "sentence": "Recent archeological excavations ___ new historical findings.",
+            "options": [
+              "have revealed",
+              "revealed",
+              "had revealed",
+              "reveals"
+            ],
+            "correctIndex": 0,
+            "translation": "Yakın zamandaki arkeolojik kazılar yeni tarihi bulguları ortaya çıkarmış durumdadır."
+          },
+          {
+            "id": "u70l3ex1_q4",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Boşluğa gelecek en uygun zaman çekimini seçiniz (Not: Belirli bir geçmiş zamandaki eylem):",
+            "sentence": "In 2012, the research institute ___ the final report.",
+            "options": [
+              "published",
+              "has published",
+              "was publishing",
+              "had published"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırma enstitüsü, final raporunu 2012 yılında yayımladı."
+          },
+          {
+            "id": "u70l3ex1_q5",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Cümlenin en uygun İngilizce karşılığını seçin:",
+            "enSentence": "Scientists have made significant progress in this field.",
+            "sentence": "Bilim insanları bu alanda önemli ilerlemeler kaydetmiş durumdadır.",
+            "isEngToTr": false,
+            "options": [
+              "Scientists have made significant progress in this field.",
+              "Scientists made significant progress in this field last year.",
+              "Scientists had made significant progress in this field.",
+              "Scientists will make significant progress in this field."
+            ],
+            "correctIndex": 0,
+            "translation": "Bilim insanları bu alanda önemli ilerlemeler kaydetmiş durumdadır."
+          },
+          {
+            "id": "u70l3ex1_q6",
+            "type": "word-bank",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+            "enSentence": "The administrative board has approved the new regulations.",
+            "translation": "Yönetim kurulu yeni yönetmelikleri onaylamış durumdadır.",
+            "words": [
+              "Yönetim",
+              "kurulu",
+              "yeni",
+              "yönetmelikleri",
+              "onaylamış",
+              "durumdadır.",
+              "onaylamıştı",
+              "onaylayacak"
+            ],
+            "correctOrder": [
+              "Yönetim",
+              "kurulu",
+              "yeni",
+              "yönetmelikleri",
+              "onaylamış",
+              "durumdadır."
+            ],
+            "isEngToTr": true
+          },
+          {
+            "id": "u70l3ex1_q7",
+            "type": "word-bank",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+            "enSentence": "The committee revised the budget plan last week.",
+            "translation": "Komite geçen hafta bütçe planını revize etti.",
+            "words": [
+              "The",
+              "committee",
+              "revised",
+              "the",
+              "budget",
+              "plan",
+              "last",
+              "week.",
+              "has",
+              "revised"
+            ],
+            "correctOrder": [
+              "The",
+              "committee",
+              "revised",
+              "the",
+              "budget",
+              "plan",
+              "last",
+              "week."
+            ],
+            "isEngToTr": false
+          },
+          {
+            "id": "u70l3ex1_q8",
+            "type": "true-false",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Historically, the empire has collapsed after the long war in the 17th century.\"</span>",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 1,
+            "translation": "Tarihsel olarak, imparatorluk 17. yüzyıldaki uzun savaştan sonra çökmüş durumdadır (collapsed olmalıydı)."
+          },
+          {
+            "id": "u70l3ex1_q9",
+            "type": "true-false",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Aşağıdaki cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The project team has completed the phase-one evaluation recently.\"</span>",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correctIndex": 0,
+            "translation": "Proje ekibi birinci aşama değerlendirmesini yakın zamanda tamamlamış durumdadır."
+          },
+          {
+            "id": "u70l3ex1_q10",
+            "type": "matching",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+            "pairs": [
+              {
+                "left": "fiyatları belirledi (geçmişte)",
+                "right": "determined the prices"
+              },
+              {
+                "left": "fiyatları belirlemiş durumdadır (güncel)",
+                "right": "has determined the prices"
+              },
+              {
+                "left": "bulguları yayımladı (geçmişte)",
+                "right": "published the findings"
+              },
+              {
+                "left": "bulguları yayımlamış durumdadır (güncel)",
+                "right": "has published the findings"
+              }
+            ]
+          },
+          {
+            "id": "u70l3ex1_q11",
+            "type": "fill-blank",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Boşluğu doldur (Not: Belirli bir geçmiş zamandaki eylem):",
+            "sentence": "The government ___ new environmental laws last month.",
+            "options": [
+              "implemented",
+              "has implemented",
+              "implementing",
+              "implements"
+            ],
+            "correctIndex": 0,
+            "translation": "Hükümet geçen ay yeni çevre yasalarını uygulamaya koydu."
+          },
+          {
+            "id": "u70l3ex1_q12",
+            "type": "fill-blank-dropdown",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin (Not: Eylemin güncel etkisi devam etmektedir):",
+            "sentence": "Over the last decade, technology ___ the education sector.",
+            "options": [
+              "has transformed",
+              "transformed",
+              "had transformed",
+              "transforms"
+            ],
+            "correctIndex": 0,
+            "translation": "Son on yılda teknoloji eğitim sektörünü dönüştürmüş durumdadır."
+          },
+          {
+            "id": "u70l3ex1_q13",
+            "type": "translation-text",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The central bank has adjusted the interest rates to stabilize the economy.\"</span>",
+            "correctSentence": "Merkez bankası ekonomiyi istikrara kavuşturmak için faiz oranlarını ayarlamış durumdadır.",
+            "translation": "Merkez bankası ekonomiyi istikrara kavuşturmak için faiz oranlarını ayarlamış durumdadır."
+          },
+          {
+            "id": "u70l3ex1_q14",
+            "type": "translation-text",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Sosyologlar geçen yıl kentsel alanlardaki göç kalıplarını araştırdı.\"</span>",
+            "correctSentence": "Sociologists investigated the migration patterns in urban areas last year.",
+            "translation": "Sosyologlar geçen yıl kentsel alanlardaki göç kalıplarını araştırdı."
+          },
+          {
+            "id": "u70l3ex1_q15",
+            "type": "multiple-choice",
+            "grammarTags": [
+              "Saf Modallar ve Saf Zamanlar",
+              "Tense / Modal Alignment",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ],
+            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+            "enSentence": "Recent studies have identified a strong correlation between the two variables.",
+            "isEngToTr": true,
+            "options": [
+              "Son çalışmalar iki değişken arasında güçlü bir korelasyon tanımlamış durumdadır.",
+              "Son çalışmalar iki değişken arasında güçlü bir korelasyon tanımlamıştı.",
+              "Son çalışmalar iki değişken arasında güçlü bir korelasyon tanımlar.",
+              "Gelecekteki çalışmalar iki değişken arasında güçlü bir korelasyon tanımlayacaktır."
+            ],
+            "correctIndex": 0
           }
         ]
       }

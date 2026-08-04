@@ -403,6 +403,7 @@ function translatePromptToTurkish(prompt, question) {
     "is the following sentence grammatically correct according to zaman uyumu rules?": "Aşağıdaki cümle Zaman Uyumu kurallarına göre doğru mudur?",
     "select the correct choice that satisfies the syntax guidelines": "Sözdizimi kuralını sağlayan doğru seçeneği belirleyiniz",
     "reconstruct the sentence in english using the correct word blocks": "Doğru kelime bloklarını kullanarak cümleyi İngilizce olarak yeniden oluşturun",
+    "reconstruct the sentence in turkish using the correct word blocks": "Doğru kelime bloklarını kullanarak cümleyi Türkçe olarak yeniden oluşturun",
     "match the clauses to form correct sentences": "Doğru cümleler oluşturmak için yan cümleleri eşleştirin",
     "translate the following sentence into turkish": "Aşağıdaki cümleyi Türkçe'ye çevirin",
     "is the following sentence grammatically correct according to modallar (modals) rules?": "Aşağıdaki cümle Modallar (Modals) kurallarına göre doğru mudur?",
@@ -800,8 +801,60 @@ function translateTurkishPlaceholdersInEnglish(text) {
 
 function sanitizeQuestions(questions) {
   if (!questions || !Array.isArray(questions)) return;
+
+  const translationFixes = {
+    "u22l66_ex2_wb_1": "Finansal anlaşmalar nedeniyle proje askıya alındı.",
+    "u22l67_ex2_wb_1": "Gelişmiş ülkeler sosyal reformu savunurken, diğerleri beklemeyi tercih ediyor.",
+    "u22l68_ex2_wb_1": "Hava kötüydü, bu yüzden arkeolojik proje askıya alındı.",
+    "u22l69_ex2_wb_1": "Yasal çerçeve çok katıdır; yani hiçbir istisnaya izin verilmez.",
+    "u22l70_ex2_wb_1": "Acil bir durumda, yetkililer arşiv erişimini sınırlandıracaktır.",
+    "u62l1_ex1_q5": "yakın zamanda değiştirilmiş kullanıcı girdileri",
+    "u62l1_ex2_q5": "Araştırmacılar daha önce bu projenin finansal oranlarını hesapladı.",
+    "u62l1_ex3_q5": "Yönetmen daha önce sinema tarihi projesi için bazı önemli verileri değiştirmişti.",
+    "u62l2_ex1_q5": "tamamen sınırlandırılmış arşiv erişimi",
+    "u62l2_ex2_q5": "Dijital medya, yasal reforma yönelik kamuoyu algısını önemli ölçüde manipüle etti.",
+    "u62l2_ex3_q5": "Bilişsel gelişim hakkındaki bilimsel hipotezler yakın zamanda son derece başarılı bir şekilde doğrulandı.",
+    "u62l3_ex1_q5": "büyük miktarda kamu fonu",
+    "u62l3_ex2_q5": "Birçok film eleştirmeni belgeseldeki sembolik temsili inceledi.",
+    "u62l3_ex3_q5": "Terapistler dünkü çalışma sırasında hastalarda büyük miktarda stres gözlemlemeyi tercih ederdi.",
+    "u62l4_ex1_q5": "daha önce son derece tutarlı proje parametreleri",
+    "u62l4_ex2_q5": "Araştırmacılar, psikolojik hipotezleri doğrulamak için daha önce deneysel verileri değiştirdi.",
+    "u62l4_ex3_q5": "Sektördeki hızlı büyüme, yeni kurallar nedeniyle yakın zamanda önemli ölçüde engellendi."
+  };
+
   questions.forEach(q => {
     if (!q || q._sanitized) return;
+
+    // Apply translation override if it is missing in the database
+    if (q.id && translationFixes[q.id]) {
+      q.translation = translationFixes[q.id];
+    }
+
+    // Inject explanation dynamically for specific questions
+    if (q.id === 'u70l1ex1_q6') {
+      q.explanation = "İngilizce'de saf modallar (should, must, could vb.) her zaman yalın ve değişmezdir; sonlarına asla '-s' takısı almazlar. Bu nedenle 'shoulds', 'musts' ve 'coulds' gibi kullanımlar dil bilgisel açıdan yanlıştır.";
+    }
+
+    // Dynamic correction of isEngToTr mismatch based on prompt context
+    if (q.prompt && typeof q.prompt === 'string') {
+      const promptClean = q.prompt
+        .replace(/İ/g, 'i')
+        .replace(/ı/g, 'i')
+        .replace(/I/g, 'i')
+        .toLowerCase()
+        .replace(/\u0069\u0307/g, 'i');
+      
+      if (promptClean.includes("ingilizce") || promptClean.includes("english")) {
+        q.isEngToTr = false;
+      } else if (promptClean.includes("türkçe") || promptClean.includes("turkce") || promptClean.includes("turkish")) {
+        q.isEngToTr = true;
+      }
+    }
+
+    // Heal translation if it was incorrectly set to the English sentence when target is Turkish
+    if (q.isEngToTr && q.translation && q.enSentence && q.translation === q.enSentence && Array.isArray(q.correctOrder)) {
+      q.translation = q.correctOrder.join(' ');
+    }
     
     // Normalise misconfigured multiple-choice question types (e.g. from Unit 28 template copy-pastes)
     if (q.options && typeof q.correctIndex === 'number' && q.type !== 'multiple-choice' && q.type !== 'matching') {
@@ -829,30 +882,76 @@ function sanitizeQuestions(questions) {
 
     // Convert translation-text to word-bank to avoid typing complex translations
     if (q.type === 'translation-text') {
-      let engSentence = "";
+      let sourceSentence = "";
       if (q.prompt) {
         const parts = q.prompt.split(/<br\s*\/?>/i);
         if (parts.length > 1) {
-          engSentence = parts[parts.length - 1].trim().replace(/^["'\u201c\u201d]/, '').replace(/["'\u201c\u201d]$/, '').trim();
+          let rawText = parts[parts.length - 1].trim();
+          // Strip HTML tags
+          rawText = rawText.replace(/<[^>]+>/g, '').trim();
+          // Strip quotes
+          sourceSentence = rawText.replace(/^["'\u201c\u201d]/, '').replace(/["'\u201c\u201d]$/, '').trim();
         }
       }
+
+      // Check translation direction (handling Turkish character lowercasing quirks)
+      const promptClean = (q.prompt || "")
+        .replace(/İ/g, 'i')
+        .replace(/ı/g, 'i')
+        .replace(/I/g, 'i')
+        .toLowerCase()
+        .replace(/\u0069\u0307/g, 'i');
       
-      const trSentence = q.correctAnswer || q.correctSentence || q.translation || "";
+      const isToEnglish = promptClean.includes("ingilizce") || promptClean.includes("english");
       
-      if (engSentence && trSentence) {
+      const isEngToTr = !isToEnglish;
+      
+      let targetSentence = "";
+      if (isEngToTr) {
+        targetSentence = q.correctAnswer || q.correctSentence || q.translation || "";
+      } else {
+        targetSentence = q.correctAnswer || q.correctSentence || "";
+      }
+      
+      if (sourceSentence && targetSentence) {
         q.type = 'word-bank';
-        q.isEngToTr = true;
-        q.prompt = 'Reconstruct the sentence in Turkish using the correct word blocks:';
-        q.sentence = engSentence;
-        q.translation = trSentence;
-        
-        // Translate placeholders in Turkish sentence before segmenting
-        const cleanTr = translateEnglishPlaceholdersInTurkish(trSentence);
-        q.correctOrder = segmentSentence(cleanTr, true);
-        
-        const distractors = ["rağmen", "çünkü", "önce", "sonra", "ancak", "ve", "veya", "iken"];
-        const uniqueDistractors = distractors.filter(d => !q.correctOrder.includes(d)).slice(0, 3);
-        q.words = [...q.correctOrder, ...uniqueDistractors];
+        q.isEngToTr = isEngToTr;
+        if (isEngToTr) {
+          q.prompt = 'Reconstruct the sentence in Turkish using the correct word blocks:';
+          q.sentence = sourceSentence;
+          q.translation = targetSentence;
+          
+          // Translate placeholders in Turkish sentence before segmenting
+          const cleanTr = translateEnglishPlaceholdersInTurkish(targetSentence);
+          q.correctOrder = segmentSentence(cleanTr, true);
+          
+          const distractors = ["rağmen", "çünkü", "önce", "sonra", "ancak", "ve", "veya", "iken"];
+          const uniqueDistractors = distractors.filter(d => !q.correctOrder.includes(d)).slice(0, 3);
+          q.words = [...q.correctOrder, ...uniqueDistractors];
+        } else {
+          q.prompt = 'Reconstruct the sentence in English using the correct word blocks:';
+          q.sentence = targetSentence; // This is the English sentence
+          q.translation = sourceSentence; // This is the Turkish sentence
+          
+          // Translate placeholders in English sentence before segmenting
+          const cleanEng = translateTurkishPlaceholdersInEnglish(targetSentence);
+          q.correctOrder = segmentSentence(cleanEng, false);
+          
+          const tokens = cleanEng.toLowerCase().split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "").trim());
+          const hasModal = tokens.some(t => ["should", "must", "could", "will", "would", "can", "might", "may"].includes(t));
+          
+          let distractors;
+          if (hasModal) {
+            const found = tokens.find(t => ["should", "must", "could", "will", "would", "can", "might", "may"].includes(t));
+            const pureModals = ["should", "must", "could", "will", "would", "can", "might", "may"];
+            distractors = pureModals.filter(m => m !== found);
+          } else {
+            distractors = ["although", "because", "before", "after", "however", "and", "or", "while"];
+          }
+          
+          const uniqueDistractors = distractors.filter(d => !q.correctOrder.includes(d)).slice(0, 3);
+          q.words = [...q.correctOrder, ...uniqueDistractors];
+        }
       }
     }
 
@@ -948,6 +1047,98 @@ function sanitizeQuestions(questions) {
           parts[i] = translateTurkishPlaceholdersInEnglish(parts[i]);
         }
         q.prompt = parts.join("<br>");
+      }
+    }
+    
+    // Generate modal distractors dynamically for Turkish word bank questions
+    if (q.type === 'word-bank' && q.isEngToTr && Array.isArray(q.correctOrder) && q.correctOrder.length > 0 && q.words) {
+      let lastWord = q.correctOrder[q.correctOrder.length - 1];
+      if (lastWord) {
+        let match = lastWord.match(/^([A-Za-zÇçĞğİıÖöŞşÜü\s-]+)([.?!]?)$/);
+        if (match) {
+          let stem = match[1].trim();
+          let punc = match[2];
+          let lowerStem = stem.toLowerCase();
+          let modalType = ""; // "should", "could", "will", "must"
+          let root = "";
+          
+          if (lowerStem.endsWith("melidir")) {
+            modalType = "should";
+            root = stem.slice(0, -7);
+          } else if (lowerStem.endsWith("malıdır")) {
+            modalType = "should";
+            root = stem.slice(0, -7);
+          } else if (lowerStem.endsWith("meli")) {
+            modalType = "should";
+            root = stem.slice(0, -4);
+          } else if (lowerStem.endsWith("malı")) {
+            modalType = "should";
+            root = stem.slice(0, -4);
+          } else if (lowerStem.endsWith("ebilir")) {
+            modalType = "could";
+            root = stem.slice(0, -6);
+          } else if (lowerStem.endsWith("abilir")) {
+            modalType = "could";
+            root = stem.slice(0, -6);
+          } else if (lowerStem.endsWith("ebilirdi")) {
+            modalType = "could";
+            root = stem.slice(0, -8);
+          } else if (lowerStem.endsWith("abilirdi")) {
+            modalType = "could";
+            root = stem.slice(0, -8);
+          } else if (lowerStem.endsWith("ecektir")) {
+            modalType = "will";
+            root = stem.slice(0, -7);
+          } else if (lowerStem.endsWith("acaktır")) {
+            modalType = "will";
+            root = stem.slice(0, -7);
+          } else if (lowerStem.endsWith("ecek")) {
+            modalType = "will";
+            root = stem.slice(0, -4);
+          } else if (lowerStem.endsWith("acak")) {
+            modalType = "will";
+            root = stem.slice(0, -4);
+          }
+          
+          if (modalType) {
+            // Strip buffer consonant 'y' if present
+            if (root.toLowerCase().endsWith('y') && root.length > 1) {
+              root = root.slice(0, -1);
+            }
+            
+            // Helper function for last vowel
+            const getLastVowel = (str) => {
+              const vowels = ['a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü', 'A', 'E', 'I', 'İ', 'O', 'Ö', 'U', 'Ü'];
+              for (let i = str.length - 1; i >= 0; i--) {
+                if (vowels.includes(str[i])) return str[i].toLowerCase();
+              }
+              return 'e';
+            };
+            
+            const lastV = getLastVowel(root);
+            const isFront = ['e', 'i', 'ö', 'ü'].includes(lastV);
+            const endsInVowel = ['a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü'].includes(root[root.length - 1].toLowerCase());
+            const y = endsInVowel ? 'y' : '';
+            
+            const generated = {};
+            generated.should = isFront ? (root + 'melidir') : (root + 'malıdır');
+            generated.could = isFront ? (root + y + 'ebilir') : (root + y + 'abilir');
+            generated.will = isFront ? (root + y + 'ecektir') : (root + y + 'acaktır');
+            generated.must = isFront ? (root + 'mek zorundadır') : (root + 'mak zorundadır');
+            
+            delete generated[modalType];
+            
+            const modalDistractors = Object.values(generated).map(w => w + punc);
+            const conjunctions = ["rağmen", "çünkü", "önce", "sonra", "ancak", "ve", "veya", "iken"];
+            q.words = q.words.filter(w => !conjunctions.includes(w));
+            
+            modalDistractors.forEach(dist => {
+              if (!q.words.includes(dist)) {
+                q.words.push(dist);
+              }
+            });
+          }
+        }
       }
     }
     
@@ -7922,6 +8113,7 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
       }
     });
     currentQuizQuestions = expandedQuestions;
+    sanitizeQuestions(currentQuizQuestions);
   }
 
   if (isRestore) {
@@ -9587,6 +9779,8 @@ function segmentSentence(fullSentence, isEngToTr) {
       "discover", "discovers", "discovered",
       "challenge", "challenges", "challenged",
       "transform", "transforms", "transformed",
+      "approve", "approves", "approved",
+      "revise", "revises", "revised",
       "reinterpreting", "evaluating", "examining", "analyzing", "identifying", "observing",
       "conducting", "investigating", "discovering", "challenging", "transforming", "producing",
       "developing", "creating", "establishing", "demonstrating", "determining", "highlighting",
@@ -9600,7 +9794,8 @@ function segmentSentence(fullSentence, isEngToTr) {
       "to induce", "to interact", "to mutate", "to decline", "to expand", "to decay",
       "to evolve", "to conflict", "unless", "if", "the moment", "under", "in order that",
       "on grounds that", "with the result that", "as a consequence", "for this reason",
-      "as an immediate result", "on that account", "inside", "during", "before", "after", "until"
+      "as an immediate result", "on that account", "inside", "during", "before", "after", "until",
+      "last week", "last month", "yesterday", "recently", "in 2012", "in 1994"
     ];
 
     // 1. Semicolon split
@@ -9637,7 +9832,8 @@ function segmentSentence(fullSentence, isEngToTr) {
     segments = tempComma;
 
     // 2. Split Phrasal Modals & Connectors (Split Before and After to preserve modals & isolate subject)
-    const allBeforeAndAfter = [...phrasalModals, ...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
+    const pureModals = ["should", "must", "could", "will", "would", "can", "might", "may"];
+    const allBeforeAndAfter = [...pureModals, ...phrasalModals, ...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
     for (let marker of allBeforeAndAfter) {
       segments = applySplitBeforeAndAfter(segments, marker);
     }
@@ -9669,7 +9865,9 @@ function segmentSentence(fullSentence, isEngToTr) {
   // Final fallback
   if (segments.length < 3) {
     const words = fullSentence.split(' ');
-    const chunkSize = Math.max(2, Math.ceil(words.length / 3));
+    // If the sentence is short (4 words or less), split it into individual words (chunkSize = 1)
+    // to keep the exercise interactive and meaningful.
+    const chunkSize = words.length <= 4 ? 1 : Math.max(2, Math.ceil(words.length / 3));
     segments = [];
     for (let i = 0; i < words.length; i += chunkSize) {
       segments.push(words.slice(i, i + chunkSize).join(' '));
@@ -9725,6 +9923,48 @@ function renderWordBank(container, question) {
     
     question.correctOrder = segments;
     question.words = [...segments, ...distractors];
+  }
+
+  // Generate English modal distractors dynamically for English word bank questions
+  if (Array.isArray(question.correctOrder) && question.words) {
+    const pureModals = ["should", "must", "could", "will", "would", "can", "might", "may"];
+    const capitalPureModals = ["Should", "Must", "Could", "Will", "Would", "Can", "Might", "May"];
+    
+    let foundModal = "";
+    let isCapitalized = false;
+    for (let m of pureModals) {
+      if (question.correctOrder.includes(m)) {
+        foundModal = m;
+        break;
+      }
+    }
+    if (!foundModal) {
+      for (let m of capitalPureModals) {
+        if (question.correctOrder.includes(m)) {
+          foundModal = m;
+          isCapitalized = true;
+          break;
+        }
+      }
+    }
+    
+    if (foundModal) {
+      const conjunctions = ["although", "because", "before", "after", "however", "and", "or", "while", "Although", "Because", "Before", "After", "However", "And", "Or", "While"];
+      question.words = question.words.filter(w => !conjunctions.includes(w));
+      
+      const lowerFound = foundModal.toLowerCase();
+      const listToChoose = isCapitalized ? capitalPureModals : pureModals;
+      const extraModals = listToChoose.filter(m => m.toLowerCase() !== lowerFound);
+      
+      let count = 0;
+      for (let extra of extraModals) {
+        if (count >= 2) break;
+        if (!question.words.includes(extra)) {
+          question.words.push(extra);
+          count++;
+        }
+      }
+    }
   }
 
   const shuffledWords = [...question.words].sort(() => Math.random() - 0.5);
@@ -10202,6 +10442,7 @@ function renderFillBlankDropdown(container, question) {
       </span>
       ${part1Html}
     </div>
+    ${question.translation ? `<div class="fb-translation-guide" style="font-size: 0.95rem; color: var(--text-secondary); opacity: 0.75; text-align: center; margin: -10px 0 20px 0; font-style: italic; font-weight: 500;">(${question.translation})</div>` : ''}
   `;
 
   const triggerBtn = container.querySelector('#fb-custom-trigger');
@@ -10342,6 +10583,7 @@ function renderFillBlank(container, question) {
     <p class="quiz-prompt">${displayPrompt}</p>
     <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
       ${sentenceInnerHtml}
+      ${question.translation ? `<div class="fb-translation-guide" style="font-size: 0.95rem; color: var(--text-secondary); opacity: 0.75; text-align: center; margin-top: 12px; font-style: italic; font-weight: 500;">(${question.translation})</div>` : ''}
     </div>
     <div class="fb-options">
       ${optionsHtml}

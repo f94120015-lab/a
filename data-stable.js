@@ -19326,7 +19326,7 @@ const rawTopics = [
     "title": "Saf Modallar ve Saf Zamanlar",
     "desc": "can, could, may, might, must, should, would, shall vb. yardımcı eylemleri ile yetenek, izin, gereklilik ve olasılık ifadeleri; İngilizcedeki 12 temel aktif zaman (Simple, Continuous, Perfect, Perfect Continuous) yapısı ve çekimleri",
     "icon": "💎",
-    "numLessons": 2,
+    "numLessons": 3,
     "formulas": [
       {
         "formula": "Subject + Modal + Verb (Bare Infinitive) + Object/Prep Phrase",
@@ -19339,9 +19339,10 @@ const rawTopics = [
     ],
     "subtitles": [
       "Saf Modallar (will, must, could...)",
-      "Saf Zamanlar (was/were -ing, V2...)"
+      "Saf Zamanlar Perfect & Continuous Çekimleri (was/were -ing, has/had V3)",
+      "Simple Past (V2) vs. Present Perfect (have/has V3) Akademik Karşılaştırma"
     ],
-    "originalNumLessons": 2
+    "originalNumLessons": 3
   },
   {
     "id": 10,
