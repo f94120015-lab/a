@@ -204,9 +204,9 @@ rawTopics.push(
     "2. Konuşma Anı ve Güncel Zarflar [am/is/are + V-ing] (now, currently, nowadays, at the moment)",
     "3. Kesin ve Tamamlanmış Geçmiş Zarfları [V2 / Did] (yesterday, last year, ...ago, in 1998)",
     "4. Geçmişte Süreç ve Eşzamanlılık Zarfları [was/were + V-ing] (at 5 PM yesterday, when, while, as)",
-    "5. Etkisi Süren ve Belirsiz Geçmiş Zarfları [have/has + V3] (already, yet, recently, lately, so far)",
-    "6. Kesintisiz Süreç Zarfları [have/has been + V-ing] (for 5 years, since 2010, all day/week)",
-    "7. Gelecek Zaman ve Plan Zarfları [will + V1 / be going to + V1] (tomorrow, next week, soon, shortly)",
+    "5. Etkisi Süren ve Belirsiz Geçmiş Zarfları [have/has + V3] (since, for, recently, so far)",
+    "6. Geçmişin Geçmişi ve Öncelik Zarfları [had + V3] (before, after, by the time, already)",
+    "7. Gelecek Zaman ve Planlı Eylem Zarfları [will + V1 / be going to] (tomorrow, next week, soon)",
     "8. Gelecekte Devam Eden, Tamamlanan ve Sınır Zarfları [will have + V3 / had + V3] (by tomorrow, by 2030, by the time)",
     "9. Akademik Sınavlar Zaman/Zarf Uyumu ve Eleme Taktikleri (YDS / YDT / TOEFL)"
   ],
@@ -217,38 +217,37 @@ rawTopics.push(
   "startLessonId": 103,
   "originalIndex": 31,
   "title": "Zaman Uyumu: By the time, Since, It is time",
-  "desc": "'By the time', 'Since', 'It is (high) time' ve süperlatif bağlamlı zaman uyumu pratikleri.",
+  "desc": "<span style='color: #10b981; font-weight: bold;'>'Since'</span>, <span style='color: #06b6d4; font-weight: bold;'>'By the time'</span>, <span style='color: #3b82f6; font-weight: bold;'>'Before'</span>/<span style='color: #8b5cf6; font-weight: bold;'>'After'</span>/<span style='color: #ec4899; font-weight: bold;'>'While'</span>, <span style='color: #f59e0b; font-weight: bold;'>'No sooner... than'</span>, <span style='color: #6366f1; font-weight: bold;'>'It is time'</span> ve <span style='color: #10b981; font-weight: bold;'>süperlatif kilitleri</span>.",
   "icon": "🧪",
   "numLessons": 4,
   "formulas": [
     {
-      "formula": "Present Perfect + since + Past Simple",
-      "example": "The company <span style=\"color: #51cf66; font-weight: bold;\">has expanded</span> since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>: Yeni yasa kabul edildiğinden beri şirket büyüdü.",
-      "description": "Since konnektörünün bağlandığı yan cümle geçmişteki eylemin kırılma/başlangıç noktasını bildirdiği için her zaman v2 (Past Simple) olurken; bu başlangıçtan günümüze kadar gelen süreci anlatan ana cümle have/has v3 (Present Perfect) yapısındadır."
+      "formula": "1. Since & By the time (Zaman Sınırları): Since + V2 ➔ Have/Has V3 (Günümüz) | Since + V2 ➔ Had V3 (Geçmiş Bağlam) | By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3",
+      "example": "• Since (Günümüz): Scientists <span style=\"color: #51cf66; font-weight: bold;\">have analyzed</span> data since the project <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.<br>• Since (Geçmiş Bağlam): Until 2020, they <span style=\"color: #da77f2; font-weight: bold;\">had analyzed</span> data since the project <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.<br>• By the time (Geçmiş): By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, they <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.<br>• By the time (Gelecek): By the time you <span style=\"color: #51cf66; font-weight: bold;\">arrive</span>, we <span style=\"color: #20c997; font-weight: bold;\">will have completed</span> the test.",
+      "description": "Since geçmişteki başlangıç noktasından günümüze uzanan süreçte Present Perfect (Have/Has V3), geçmişte kalmış süreç bağlamında ise Past Perfect (Had V3) alır. By the time ise eylemin tamamlandığı son sınırı (Past/Future Perfect) mühürler."
     },
     {
-      "formula": "By the time + Past (V2), Past Perfect (Had V3) VEYA By the time + Present (V1), Future Perfect (Will Have V3)",
-      "example": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people <span style=\"color: #da77f2; font-weight: bold;\">had left</span>: Biz vardığımızda çoğu insan ayrılmıştı.",
-      "description": "By the time konnektörü geçmiş bir bağlama uygulandığında yan cümle v2 (Past Simple), ana cümle had v3 (Past Perfect) olur. Geleceğe bağlandığında ise yan cümle v1 (Present Simple / Geniş Zaman) olurken ana cümle will have v3 (Future Perfect) kombinasyonunu alır. Hedeflenen zaman sınırına ulaşıldığında bir eylemin çoktan gerçekleşmiş olduğunu matematiksel olarak garantiler."
+      "formula": "2. Kronolojik Öncelik & Eşzamanlılık: After + Had V3 ➔ V2 | Before + V2 ➔ Had V3 | While + Continuous ➔ V2",
+      "example": "• After Önceliği: After the team <span style=\"color: #da77f2; font-weight: bold;\">had published</span> the study, they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> an award.<br>• Before Önceliği: Before the market <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, experts <span style=\"color: #da77f2; font-weight: bold;\">had warned</span> investors.<br>• While Eşzamanlılığı: While analysts <span style=\"color: #4a90e2; font-weight: bold;\">were collecting</span> samples, a power outage <span style=\"color: #ff6b6b; font-weight: bold;\">occurred</span>.",
+      "description": "After ilk gerçekleşen geçmiş eyleme (Had V3), Before sonraki eyleme (V2), While ise devam eden sürece (was/were Ving) odaklanır."
     },
     {
-      "formula": "It is (high) time + Subject + V2 (Past Simple)",
-      "example": "It is high time the administration <span style=\"color: #ff6b6b; font-weight: bold;\">updated</span> the safety laws: Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.",
-      "description": "Bu kalıp, yapısal olarak it is time / it is high time + v2 (Past Simple) dizilimini zorunlu kılar. Anlam olarak şu ana (present) yönelik bir gecikmişlik, şikayet veya zorunluluk bildirse de dil bilgisi kuralı gereği eylem geçmiş zamandadır. Öğrencilerin en sık hata yaptığı yapısal tuzaklardan biridir."
+      "formula": "3. Devrik Anlık Zaman Kırılması: No sooner + HAD + Subject + V3 ... THAN + Subject + V2",
+      "example": "• No sooner ... than: <span style=\"color: #e67e22; font-weight: bold;\">No sooner had</span> the scientist <span style=\"color: #da77f2; font-weight: bold;\">announced</span> the findings <span style=\"color: #e67e22; font-weight: bold;\">than</span> debate <span style=\"color: #ff6b6b; font-weight: bold;\">erupted</span>.<br>• Hardly ... when: <span style=\"color: #e67e22; font-weight: bold;\">Hardly had</span> the probe <span style=\"color: #da77f2; font-weight: bold;\">landed</span> <span style=\"color: #e67e22; font-weight: bold;\">when</span> signals <span style=\"color: #ff6b6b; font-weight: bold;\">were transmitted</span>.",
+      "description": "Bir eylemin hemen ardından diğerinin başladığı anlık geçişlerde 'No sooner... than' veya 'Hardly... when' devrik kurgusu (Had + Özne + V3) zorunludur."
     },
     {
-      "formula": "Superlative / Restrictive Adjective + Present Perfect (Have/Has V3)",
-      "example": "This is the best academic article I <span style=\"color: #51cf66; font-weight: bold;\">have read</span> this year: Bu, bu yıl okuduğum en iyi makaledir.",
-      "description": "Bir özneye veya duruma yönelik en uç değerlendirmeyi yapan süperlatif veya kısıtlayıcı sıfat ifadelerinden sonra gelen cümle, hayat boyu edinilen birikimi ve deneyimi sorguladığı için have/has v3 (Present Perfect) yapısıyla kurulur. dilde eşsizlik ve deneyim kalitesi vurgulanırken kullanılır."
+      "formula": "4. Unreal Present & Süperlatif: It is (high) time + Subject + V2 (vs to V1) | Superlative + Present/Past Perfect",
+      "example": "• Özneli Unreal Present: It is high time we <span style=\"color: #ff6b6b; font-weight: bold;\">revised</span> the laws.<br>• Öznesiz Mastar: It is time <span style=\"color: #4a90e2; font-weight: bold;\">to start</span> the exam.<br>• Süperlatif Mühürü: This IS the best book I <span style=\"color: #51cf66; font-weight: bold;\">have ever read</span>.",
+      "description": "It is time sonrasında özne varsa V2, özne yoksa to V1 gelir. Süperlatif yapılarda Present Perfect (Have/Has V3) tecrübe vurgusunu tamamlar."
     }
   ],
   "subtitles": [
-    "\"Since\" Zaman Uyumu Kalıpları",
-    "\"By the time\" Zaman Uyumu Kalıpları",
-    "\"It is (high) time\" Kalıbı",
-    "Süperlatif & Kısıtlayıcı Sıfatlar + Present Perfect"
-  ],
-  "originalNumLessons": 4
+    "1. <span style=\"color: #10b981; font-weight: bold;\">\"Since\"</span> ve <span style=\"color: #06b6d4; font-weight: bold;\">\"By the Time\"</span> Zaman Sınırları (<span style=\"color: #10b981; font-weight: bold;\">Süreç</span> ve <span style=\"color: #06b6d4; font-weight: bold;\">Sınır Kilitleri</span>)",
+    "2. Kronolojik Öncelik & Eşzamanlılık (<span style=\"color: #3b82f6; font-weight: bold;\">Before</span>, <span style=\"color: #8b5cf6; font-weight: bold;\">After</span>, <span style=\"color: #ec4899; font-weight: bold;\">While</span>)",
+    "3. Devrik Anlık Zaman Kırılmaları (<span style=\"color: #f59e0b; font-weight: bold;\">No sooner... than</span> / <span style=\"color: #ef4444; font-weight: bold;\">Hardly... when</span>)",
+    "4. Varsayımsal Zaman Kaymaları (<span style=\"color: #6366f1; font-weight: bold;\">It's time</span>) ve <span style=\"color: #10b981; font-weight: bold;\">Süperlatif Mühürleri</span>"
+]
 },
 {
   "id": 40,
@@ -27354,2399 +27353,3005 @@ Object.assign(unitSentencesMap, {
     }
   },
   "101": {
-    "1": {
-      "exercises": [
-        {
-          "id": "u101l98ex1",
-          "title": "Alıştırma 1: \"Since\" Zaman Uyumu Kalıpları I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
-          "questions": [
-            {
-              "id": "u101l98_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The company ___ since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
-              "options": [
-                "is expanding",
-                "has expanded",
-                "expanded",
-                "expands"
-              ],
-              "correctIndex": 1,
-              "translation": "Yeni yasa kabul edildiğinden beri şirket büyüdü."
-            },
-            {
-              "id": "u101l98_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The company <span style=\"color: #51cf66; font-weight: bold;\">has expanded</span> ___ the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span>.",
-              "options": [
-                "while",
-                "when",
-                "for",
-                "since"
-              ],
-              "correctIndex": 3,
-              "translation": "Bitkiler dikildiklerinden beri önemli ölçüde büyüdüler."
-            },
-            {
-              "id": "u101l98_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Plants ___ significantly since they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
-              "options": [
-                "are growing",
-                "grew",
-                "have grown",
-                "grow"
-              ],
-              "correctIndex": 2,
-              "translation": "Çocuklar okula başladıklarından beri dilbilgisi öğrendiler."
-            },
-            {
-              "id": "u101l98_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly ___ they <span style=\"color: #ff6b6b; font-weight: bold;\">were planted</span>.",
-              "options": [
-                "during",
-                "since",
-                "until",
-                "before"
-              ],
-              "correctIndex": 1,
-              "translation": "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
-            },
-            {
-              "id": "u101l98_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Children ___ grammar since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> school.",
-              "options": [
-                "learn",
-                "are learning",
-                "learned",
-                "have learned"
-              ],
-              "correctIndex": 3,
-              "translation": "Tasarım yapıldığından beri düzen değişmedi."
-            },
-            {
-              "id": "u101l98_ex1_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Children <span style=\"color: #51cf66; font-weight: bold;\">have learned</span> grammar ___ they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> school.",
-              "options": [
-                "since",
-                "for",
-                "as",
-                "when"
-              ],
-              "correctIndex": 0,
-              "translation": "Ekipman kurulduğundan beri işler kolaylaştı."
-            },
-            {
-              "id": "u101l98_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
-              "options": [
-                "has not held",
-                "did not hold",
-                "is not holding",
-                "does not hold"
-              ],
-              "correctIndex": 0,
-              "translation": "Sunucu çöktüğünden beri kullanıcılar hatalar yaşadı."
-            },
-            {
-              "id": "u101l98_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The board <span style=\"color: #51cf66; font-weight: bold;\">has not held</span> meetings ___ the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span>.",
-              "options": [
-                "since",
-                "although",
-                "until",
-                "while"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknoloji firması açıldığından beri otomasyon arttı."
-            },
-            {
-              "id": "u101l98_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The layout ___ since it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
-              "options": [
-                "is not changing",
-                "does not change",
-                "did not change",
-                "has not changed"
-              ],
-              "correctIndex": 3,
-              "translation": "Kış başladığından beri sıcaklıklar dalgalandı."
-            },
-            {
-              "id": "u101l98_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> ___ it <span style=\"color: #ff6b6b; font-weight: bold;\">was designed</span>.",
-              "options": [
-                "because",
-                "when",
-                "for",
-                "since"
-              ],
-              "correctIndex": 3,
-              "translation": "Finansal piyasa gerilediğinden beri karlar düştü."
-            }
-          ]
-        },
-        {
-          "id": "u101l98ex2",
-          "title": "Alıştırma 2: \"Since\" Zaman Uyumu Kalıpları II",
-          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
-          "questions": [
-            {
-              "id": "u101l98_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> since equipment ___ .",
-              "options": [
-                "was installed",
-                "is installed",
-                "has installed",
-                "installs"
-              ],
-              "correctIndex": 0,
-              "translation": "Ekipman kurulduğundan beri işler kolaylaştı."
-            },
-            {
-              "id": "u101l98_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Work ___ since equipment <span style=\"color: #ff6b6b; font-weight: bold;\">was installed</span>.",
-              "options": [
-                "has been facilitated",
-                "was facilitated",
-                "facilitates",
-                "is facilitated"
-              ],
-              "correctIndex": 0,
-              "translation": "Sunucu çöktüğünden beri kullanıcılar hatalar yaşadı."
-            },
-            {
-              "id": "u101l98_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Users <span style=\"color: #51cf66; font-weight: bold;\">have experienced</span> errors since the server ___ .",
-              "options": [
-                "crashed",
-                "has crashed",
-                "is crashing",
-                "crashes"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknoloji firması açıldığından beri otomasyon arttı."
-            },
-            {
-              "id": "u101l98_ex2_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>.",
-              "options": [
-                "have experienced",
-                "experienced",
-                "are experiencing",
-                "experience"
-              ],
-              "correctIndex": 0,
-              "translation": "Kış başladığından beri sıcaklıklar dalgalandı."
-            },
-            {
-              "id": "u101l98_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Automation <span style=\"color: #51cf66; font-weight: bold;\">has increased</span> since the tech firm ___ .",
-              "options": [
-                "opened",
-                "is opening",
-                "has opened",
-                "opens"
-              ],
-              "correctIndex": 0,
-              "translation": "Finansal piyasa gerilediğinden beri karlar düştü."
-            },
-            {
-              "id": "u101l98_ex2_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Automation ___ since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>.",
-              "options": [
-                "increased",
-                "is increasing",
-                "has increased",
-                "increases"
-              ],
-              "correctIndex": 2,
-              "translation": "Yeni yasa kabul edildiğinden beri şirket büyüdü."
-            },
-            {
-              "id": "u101l98_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ .",
-              "options": [
-                "began",
-                "begins",
-                "has begun",
-                "is beginning"
-              ],
-              "correctIndex": 0,
-              "translation": "Bitkiler dikildiklerinden beri önemli ölçüde büyüdüler."
-            },
-            {
-              "id": "u101l98_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Temperatures ___ since winter <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.",
-              "options": [
-                "have fluctuated",
-                "fluctuated",
-                "fluctuate",
-                "are fluctuating"
-              ],
-              "correctIndex": 0,
-              "translation": "Çocuklar okula başladıklarından beri dilbilgisi öğrendiler."
-            },
-            {
-              "id": "u101l98_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Profits <span style=\"color: #51cf66; font-weight: bold;\">have dropped</span> since the financial market ___ .",
-              "options": [
-                "is declining",
-                "declines",
-                "has declined",
-                "declined"
-              ],
-              "correctIndex": 3,
-              "translation": "Başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
-            },
-            {
-              "id": "u101l98_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Profits ___ since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span>.",
-              "options": [
-                "have dropped",
-                "dropped",
-                "drop",
-                "are dropping"
-              ],
-              "correctIndex": 0,
-              "translation": "Tasarım yapıldığından beri düzen değişmedi."
-            }
-          ]
-        },
-        {
-          "id": "u101l98ex3",
-          "title": "Alıştırma 3: \"Since\" Zaman Uyumu Kalıpları III",
-          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
-          "questions": [
-            {
-              "id": "u101l98_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The company ___ its digital trade operations since the new law <span style=\"color: #ff6b6b; font-weight: bold;\">was passed</span> by the legislative assembly.",
-              "options": [
-                "has expanded",
-                "expanded",
-                "expands",
-                "is expanding"
-              ],
-              "correctIndex": 0,
-              "translation": "Yasama meclisi tarafından yeni yasa kabul edildiğinden beri şirket dijital ticaret operasyonlarını genişletti."
-            },
-            {
-              "id": "u101l98_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Plants <span style=\"color: #51cf66; font-weight: bold;\">have grown</span> significantly since they ___ in the highly controlled laboratory greenhouse environment.",
-              "options": [
-                "were planted",
-                "are planted",
-                "have been planted",
-                "plant"
-              ],
-              "correctIndex": 0,
-              "translation": "Bitkiler, son derece kontrollü laboratuvar sera ortamına dikildiklerinden beri önemli ölçüde büyüdüler."
-            },
-            {
-              "id": "u101l98_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Children ___ grammar rules faster since they <span style=\"color: #ff6b6b; font-weight: bold;\">started</span> utilizing mobile applications with gamified designs.",
-              "options": [
-                "are learning",
-                "have learned",
-                "learned",
-                "learn"
-              ],
-              "correctIndex": 1,
-              "translation": "Çocuklar, oyunlaştırılmış tasarımlara sahip mobil uygulamaları kullanmaya başladıklarından beri dilbilgisi kurallarını daha hızlı öğrendiler."
-            },
-            {
-              "id": "u101l98_ex3_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The board ___ meetings since the president <span style=\"color: #ff6b6b; font-weight: bold;\">was elected</span> because internal administrative conflicts remain unresolved.",
-              "options": [
-                "does not hold",
-                "did not hold",
-                "is not holding",
-                "has not held"
-              ],
-              "correctIndex": 3,
-              "translation": "İç yönetimsel çatışmalar çözülmeden kaldığı için, başkan seçildiğinden beri yönetim kurulu toplantı yapmadı."
-            },
-            {
-              "id": "u101l98_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "The layout <span style=\"color: #51cf66; font-weight: bold;\">has not changed</span> since it ___ although several frontend developers requested visual interface updates.",
-              "options": [
-                "designs",
-                "has designed",
-                "is designed",
-                "was designed"
-              ],
-              "correctIndex": 3,
-              "translation": "Birkaç ön uç geliştirici görsel arayüz güncellemeleri talep etmesine rağmen, tasarım yapıldığından beri düzen değişmedi."
-            },
-            {
-              "id": "u101l98_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The company ___ expanded its digital trade operations since the new law ___ passed by the legislative assembly.",
-              "translation": "Yasama meclisi tarafından yeni yasa kabul edildiğinden beri şirket dijital ticaret operasyonlarını genişletti.",
-              "corrects": [
-                "has",
-                "was"
-              ]
-            },
-            {
-              "id": "u101l98_ex3_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Plants ___ grown significantly since they ___ planted in the highly controlled laboratory greenhouse environment.",
-              "translation": "Bitkiler, son derece kontrollü laboratuvar sera ortamına dikildiklerinden beri önemli ölçüde büyüdüler.",
-              "corrects": [
-                "have",
-                "were"
-              ]
-            },
-            {
-              "id": "u101l98_ex3_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Children ___ learned grammar rules faster since they ___ utilizing mobile applications with gamified designs.",
-              "translation": "Çocuklar, oyunlaştırılmış tasarımlara sahip mobil uygulamaları kullanmaya başladıklarından beri dilbilgisi kurallarını daha hızlı öğrendiler.",
-              "corrects": [
-                "have",
-                "started"
-              ]
-            },
-            {
-              "id": "u101l98_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The board ___ not held meetings since the president ___ elected because internal administrative conflicts remain unresolved.",
-              "translation": "İç yönetimsel çatışmalar çözülmeden kaldığı için, başkan seçildiğinden beri yönetim kurulu toplantı yapmadı.",
-              "corrects": [
-                "has",
-                "was"
-              ]
-            },
-            {
-              "id": "u101l98_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "The layout ___ not changed since it ___ designed although several frontend developers requested visual interface updates.",
-              "translation": "Birkaç ön uç geliştirici görsel arayüz güncellemeleri talep etmesine rağmen, tasarım yapıldığından beri düzen değişmedi.",
-              "corrects": [
-                "has",
-                "was"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u101l98ex4",
-          "title": "Alıştırma 4: \"Since\" Zaman Uyumu Kalıpları IV",
-          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
-          "questions": [
-            {
-              "id": "u101l98_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Work <span style=\"color: #51cf66; font-weight: bold;\">has been facilitated</span> greatly since electronic equipment ___ by the technical infrastructure branch.",
-              "options": [
-                "was installed",
-                "is installed",
-                "installs",
-                "has installed"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknik altyapı şubesi tarafından elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı."
-            },
-            {
-              "id": "u101l98_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Users ___ errors since the server <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, causing temporary suspension of data token generations.",
-              "options": [
-                "have experienced",
-                "experienced",
-                "experience",
-                "are experiencing"
-              ],
-              "correctIndex": 0,
-              "translation": "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı."
-            },
-            {
-              "id": "u101l98_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Automation ___ rapidly since the tech firm <span style=\"color: #ff6b6b; font-weight: bold;\">opened</span>, reducing corporate expenditure on manual operations.",
-              "options": [
-                "is increasing",
-                "increases",
-                "increased",
-                "has increased"
-              ],
-              "correctIndex": 3,
-              "translation": "Teknoloji firması açıldığından beri otomasyon hızla arttı ve manuel operasyonlardaki kurumsal harcamaları azalttı."
-            },
-            {
-              "id": "u101l98_ex4_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "Temperatures <span style=\"color: #51cf66; font-weight: bold;\">have fluctuated</span> since winter ___ , affecting the ongoing chemical simulation models inside the chamber.",
-              "options": [
-                "has begun",
-                "began",
-                "begins",
-                "is beginning"
-              ],
-              "correctIndex": 1,
-              "translation": "Kış başladığından beri sıcaklıklar dalgalandı ve oda içindeki devam eden kimyasal simülasyon modellerini etkiledi."
-            },
-            {
-              "id": "u101l98_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Profits ___ dropped since the financial market <span style=\"color: #ff6b6b; font-weight: bold;\">declined</span> due to unexpected international trade restrictions.",
-              "options": [
-                "had",
-                "has",
-                "have",
-                "are"
-              ],
-              "correctIndex": 2,
-              "translation": "Beklenmedik uluslararası ticaret kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri karlar düştü."
-            },
-            {
-              "id": "u101l98_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Work ___ been facilitated greatly since electronic equipment ___ installed by the technical infrastructure branch.",
-              "translation": "Teknik altyapı şubesi tarafından elektronik ekipman kurulduğundan beri işler büyük ölçüde kolaylaştı.",
-              "corrects": [
-                "has",
-                "was"
-              ]
-            },
-            {
-              "id": "u101l98_ex4_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Users ___ experienced errors since the server ___ , causing temporary suspension of data token generations.",
-              "translation": "Sunucu çöktüğünden beri, veri jetonu üretimlerinin geçici olarak askıya alınmasına neden olan hatalar kullanıcılar tarafından yaşandı.",
-              "corrects": [
-                "have",
-                "crashed"
-              ]
-            },
-            {
-              "id": "u101l98_ex4_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Automation ___ increased rapidly since the tech firm ___ , reducing corporate expenditure on manual operations.",
-              "translation": "Teknoloji firması açıldığından beri otomasyon hızla arttı ve manuel operasyonlardaki kurumsal harcamaları azalttı.",
-              "corrects": [
-                "has",
-                "opened"
-              ]
-            },
-            {
-              "id": "u101l98_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Temperatures ___ fluctuated since winter ___ , affecting the ongoing chemical simulation models inside the chamber.",
-              "translation": "Kış başladığından beri sıcaklıklar dalgalandı ve oda içindeki devam eden kimyasal simülasyon modellerini etkiledi.",
-              "corrects": [
-                "have",
-                "began"
-              ]
-            },
-            {
-              "id": "u101l98_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "Profits ___ dropped since the financial market ___ due to unexpected international trade restrictions.",
-              "translation": "Beklenmedik uluslararası ticaret kısıtlamaları nedeniyle finansal piyasa gerilediğinden beri karlar düştü.",
-              "corrects": [
-                "have",
-                "declined"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u101l98ex5",
-          "title": "Alıştırma 5: \"Since\" Zaman Uyumu Kalıpları V",
-          "description": "Farklı interaktif soru tipleri ile Since zaman uyumu kuralının pekiştirilmesi.",
-          "questions": [
-            {
-              "id": "u101l98_ex5_q1",
-              "type": "multiple-choice",
-              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-              "options": [
-                "Geçen yıl galeri açıldığında birkaç portre boyuyorduk.",
-                "Geçen yıl galeri açıldığından beri birkaç portre boyadık.",
-                "Galeri geçen yıl açılmadan önce birkaç portre boyamıştık.",
-                "Galeri geçen yıl açıldıktan sonra birkaç portre boyayacağız."
-              ],
-              "correctIndex": 1,
-              "enSentence": "We have painted several portraits since the gallery opened last year.",
-              "isEngToTr": true
-            },
-            {
-              "id": "u101l98_ex5_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The server has crashed twice since they ___ the new update.",
-              "options": [
-                "deployed",
-                "have deployed",
-                "deploy",
-                "are deploying"
-              ],
-              "correctIndex": 0,
-              "translation": "Onlar yeni güncellemeyi yayınladığından beri sunucu iki kez çöktü."
-            },
-            {
-              "id": "u101l98_ex5_q3",
-              "type": "matching",
-              "prompt": "Cümle yarılarını eşleştirin.",
-              "leftHeader": "Ana Cümle (Present Perfect)",
-              "rightHeader": "Yan Cümle (Since + Past Simple)",
-              "pairs": [
-                {
-                  "left": "Many companies have gone bankrupt",
-                  "right": "since the economic crisis began."
-                },
-                {
-                  "left": "The researcher has published three articles",
-                  "right": "since he joined the faculty."
-                },
-                {
-                  "left": "The climate has changed drastically",
-                  "right": "since industrialization accelerated."
-                },
-                {
-                  "left": "She has written two novels",
-                  "right": "since she moved to London."
-                }
-              ]
-            },
-            {
-              "id": "u101l98_ex5_q4",
-              "type": "swipe",
-              "prompt": "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-              "phrase": "Since the study began, scientists have collected thousands of samples.",
-              "translation": "Çalışma başladığından beri bilim insanları binlerce örnek topladı.",
-              "isCorrect": true,
-              "explanation": "VALID! 'Since' yan cümlesinde Past Simple (began) ve ana cümlede Present Perfect (have collected) uyumu tamamen doğrudur."
-            },
-            {
-              "id": "u101l98_ex5_q5",
-              "type": "swipe",
-              "prompt": "Cümlede hata var mı? Varsa sola (BUG), yoksa sağa (VALID) seçin.",
-              "phrase": "The team has finished the project since the manager has resigned.",
-              "translation": "Yönetici istifa ettiğinden beri ekip projeyi bitirdi.",
-              "isCorrect": false,
-              "explanation": "BUG! 'Since' bağlacından sonra gelen yan cümlede eylemin başlangıç noktası belirtildiği için Present Perfect (has resigned) yerine Past Simple (resigned) kullanılmalıdır."
-            },
-            {
-              "id": "u101l98_ex5_q6",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "Since the virus mutated, local clinics ___ hundreds of cases.",
-              "options": [
-                "have registered",
-                "registered",
-                "are registering",
-                "will register"
-              ],
-              "correctIndex": 0,
-              "translation": "Virüs mutasyona uğradığından beri yerel klinikler yüzlerce vaka kaydetti."
-            },
-            {
-              "id": "u101l98_ex5_q7",
-              "type": "reflex-blitz",
-              "prompt": "Hızlıca doğru seçeneği işaretleyin!",
-              "sentence": "Since the tomb was discovered, archaeologists ___ many artifacts.",
-              "options": [
-                "have restored",
-                "restored",
-                "will restore",
-                "are restoring"
-              ],
-              "correctIndex": 0,
-              "explanation": "Doğru! 'Since' ile başlayan geçmiş başlangıca bağlı olarak günümüze kadar gelen süreçte Present Perfect (have restored) kullanılmalıdır."
-            },
-            {
-              "id": "u101l98_ex5_q8",
-              "type": "word-bank",
-              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-              "translation": "Gökbilimciler patladığından beri yıldızı gözlemlediler.",
-              "words": [
-                "Astronomers have observed",
-                "the star",
-                "since it",
-                "exploded.",
-                "observed",
-                "will observe"
-              ],
-              "correctOrder": [
-                "Astronomers have observed",
-                "the star",
-                "since it",
-                "exploded."
-              ],
-              "enSentence": "Astronomers have observed the star since it exploded.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u101l98_ex5_q9",
-              "type": "translation-text",
-              "prompt": "\"Şirket kurulduğundan beri orada çalışıyor.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "He has worked there since the company was founded.",
-              "enSentence": "He has worked there since the company was founded.",
-              "isEngToTr": false
-            },
-            {
-              "id": "u101l98_ex5_q10",
-              "type": "translation-text",
-              "prompt": "\"İnternet icat edildiğinden beri dünya çok değişti.\" ifadesini İngilizceye çevirin:",
-              "correctSentence": "The world has changed a lot since the internet was invented.",
-              "enSentence": "The world has changed a lot since the internet was invented.",
-              "isEngToTr": false
-            }
-          ]
-        }
-      ]
-    },
+        "1": {
+            "exercises": [
+                        {
+                                    "id": "u101_l1_ex1",
+                                    "title": "Alıştırma 1: Since & By the Time Zaman Sınırları I",
+                                    "description": "Since ve By the time bağlaçlarının zaman sınırları ve 6 temel formül kilitleri.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l1_q1",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek en uygun kelime grubunu seçiniz:\n\n\"The research institute ___ groundbreaking reports since it was established in 2010.\"",
+                                                            "sentence": "The research institute ___ groundbreaking reports since it was established in 2010.",
+                                                            "options": [
+                                                                        "has published",
+                                                                        "published",
+                                                                        "is publishing",
+                                                                        "will publish"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Araştırma enstitüsü 2010'da kurulduğundan beri çığır açan raporlar yayımladı.",
+                                                            "explanation": "Since yan cümlesinde past simple (was established) varken ana cümle present perfect (has published) olur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q2",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek en uygun yüklem şeklini seçiniz:\n\n\"Economic indicators ___ since the central bank adjusted interest rates.\"",
+                                                            "sentence": "Economic indicators ___ since the central bank adjusted interest rates.",
+                                                            "options": [
+                                                                        "have stabilized",
+                                                                        "stabilized",
+                                                                        "had stabilized",
+                                                                        "will stabilize"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Merkez bankası faiz oranlarını ayarladığından beri ekonomik göstergeler dengelendi.",
+                                                            "explanation": "Since + V2 (adjusted) yan cümlesine karşılık ana cümlede Present Perfect (have stabilized) kullanılır.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q3",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu doldurunuz:\n\n\"The board of directors ___ three times since the financial crisis began.\"",
+                                                            "sentence": "The board of directors ___ three times since the financial crisis began.",
+                                                            "options": [
+                                                                        "has met",
+                                                                        "met",
+                                                                        "had met",
+                                                                        "is meeting"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Finansal kriz başladığından beri yönetim kurulu üç kez toplandı.",
+                                                            "explanation": "Since + Past Simple (began) bağlacına bağlı ana cümlede Present Perfect (has met) gelir.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q4",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa uygun zaman çekimini seçiniz:\n\n\"Legal scholars ___ the constitutional amendment since it was proposed.\"",
+                                                            "sentence": "Legal scholars ___ the constitutional amendment since it was proposed.",
+                                                            "options": [
+                                                                        "have debated",
+                                                                        "debated",
+                                                                        "had debated",
+                                                                        "will debate"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Hukuk akademisyenleri teklif edildiğinden beri anayasa değişikliğini tartışmaktadır.",
+                                                            "explanation": "Since + Pasif Past (was proposed) yan cümlesinde ana cümle Present Perfect (have debated) olur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q5",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek kelimeyi seçiniz:\n\n\"The museum ___ the manuscript since the restoration was completed.\"",
+                                                            "sentence": "The museum ___ the manuscript since the restoration was completed.",
+                                                            "options": [
+                                                                        "has preserved",
+                                                                        "preserved",
+                                                                        "had preserved",
+                                                                        "will preserve"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Restorasyon tamamlandığından beri müze el yazmasını korumaktadır.",
+                                                            "explanation": "Since + V2 (was completed) kalıbında ana cümle Present Perfect (has preserved) alır.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q6",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"The board has evaluated the project since the report was submitted.\"",
+                                                            "correctSentence": "Rapor sunulduğundan beri kurul projeyi değerlendirdi.",
+                                                            "enSentence": "The board has evaluated the project since the report was submitted.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Since + V2 (was submitted) yan cümlesi ana cümlede Present Perfect (has evaluated) uyumuyla Türkçe'ye çevrilir.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q7",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş hikaye bağlamındaki boşluğu doldurunuz:\n\n\"Until the company closed in 2020, the CEO ___ the firm since it was founded in 2005.\"",
+                                                            "sentence": "Until the company closed in 2020, the CEO ___ the firm since it was founded in 2005.",
+                                                            "options": [
+                                                                        "had managed",
+                                                                        "has managed",
+                                                                        "manages",
+                                                                        "will manage"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Şirket 2020'de kapanana kadar CEO, 2005'te kurulduğundan beri firmayı yönetmişti.",
+                                                            "explanation": "Geçmişte bitmiş süreçlerde 'Since + V2' yan cümlesine bağlı ana cümlede Past Perfect (had managed) kullanılır.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q8",
+                                                            "type": "true-false",
+                                                            "prompt": "Cümledeki 'since' ve geçmiş zaman uyumu kuralı doğru uygulanmış mıdır?\n\n\"He had taught at the university for a decade since he graduated in 2005 before he retired.\"",
+                                                            "englishPhrase": "He had taught at the university for a decade since he graduated in 2005 before he retired.",
+                                                            "isTrue": true,
+                                                            "correctAnswer": "true",
+                                                            "translation": "2005'te mezun olduğundan beri emekli olana kadar 10 yıl üniversitede ders vermişti.",
+                                                            "explanation": "Doğru! Geçmişin geçmişinde sonlanan süreçlerde 'Past Perfect (had taught) + SINCE + V2 (graduated)' kullanımı kurallara uygundur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q9",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa uygun geçmiş zaman çekimini seçiniz:\n\n\"Before the archived files were destroyed in the fire, archivists ___ them continuously since the library opened.\"",
+                                                            "sentence": "Before the archived files were destroyed in the fire, archivists ___ them continuously since the library opened.",
+                                                            "options": [
+                                                                        "had cataloged",
+                                                                        "have cataloged",
+                                                                        "catalog",
+                                                                        "will catalog"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Arşiv dosyaları yangında yok olmadan önce, kütüphane açıldığından beri arşivciler onları kesintisiz kataloglamıştı.",
+                                                            "explanation": "Yangından önceki geçmiş süreç mühürlendiği için 'had cataloged' (Past Perfect) kullanımı zorunludur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q10",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş zaman sınırındaki boşluğu tamamlayınız:\n\n\"By the end of last year, the lead scientist ___ five major grants since she completed her PhD.\"",
+                                                            "sentence": "By the end of last year, the lead scientist ___ five major grants since she completed her PhD.",
+                                                            "options": [
+                                                                        "had received",
+                                                                        "has received",
+                                                                        "receives",
+                                                                        "will receive"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Geçen yılın sonuna kadar baş bilim insanı, doktorasını tamamladığından beri beş büyük hibe almıştı.",
+                                                            "explanation": "Geçmiş bir tarihe kadar tamamlanmış süreç anlatıldığı için 'Since + V2' karşılığında 'Had V3' (had received) gelir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q11",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Geçmiş hikaye bağlamındaki en doğru cümleyi seçiniz:\n\n\"Until the team disbanded, they ___ data since the project launched.\"",
+                                                            "options": [
+                                                                        "had collected",
+                                                                        "have collected",
+                                                                        "collect",
+                                                                        "will have collected"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "Until the team disbanded, they had collected data since the project launched.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Ekip dağılana kadar, proje başladığından beri veri toplamıştı.",
+                                                            "explanation": "Geçmişte sonlanan süreçlerde 'Since + V2' (launched) yan cümlesine bağlı ana cümle Past Perfect (had collected) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q12",
+                                                            "type": "word-bank",
+                                                            "prompt": "Geçmiş süreç cümlesini öbeklerle oluşturunuz:\n\n\"By the time he retired, the professor had written six books since he joined the faculty.\"",
+                                                            "translation": "Emekli olana kadar profesör, fakülteye katıldığından beri altı kitap yazmıştı.",
+                                                            "words": [
+                                                                        "By the time he retired,",
+                                                                        "the professor had written",
+                                                                        "six books since he joined",
+                                                                        "the faculty.",
+                                                                        "has written",
+                                                                        "writes"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "By the time he retired,",
+                                                                        "the professor had written",
+                                                                        "six books since he joined",
+                                                                        "the faculty."
+                                                            ],
+                                                            "enSentence": "By the time he retired, the professor had written six books since he joined the faculty.",
+                                                            "isEngToTr": false,
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q13",
+                                                            "type": "structure-match",
+                                                            "prompt": "Cümledeki 'since' edat kullanımına uygun zaman formülünü seçiniz:\n\n\"Scientists have analyzed climate data since 2015.\"",
+                                                            "sentence": "Scientists have analyzed climate data since 2015.",
+                                                            "options": [
+                                                                        "Present Perfect + SINCE + Date / Noun (Edat Kullanımı)",
+                                                                        "Present Perfect + SINCE + Past Simple (V2)",
+                                                                        "Past Perfect + SINCE + Past Simple",
+                                                                        "Present Simple + SINCE + Future"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bilim insanları 2015'ten beri iklim verilerini analiz etmektedir.",
+                                                            "explanation": "Since doğrudan net bir tarih/zaman noktası (2015) ile kullanıldığında edat işlevi görür ve ana cümle Present Perfect olur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q14",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümle öbeklerini doğru sıraya dizerek akademik cümleyi oluşturunuz:\n\n\"Historians have examined the ancient treaty since its discovery in 1920.\"",
+                                                            "translation": "Tarihçiler 1920'deki keşfinden beri antik antlaşmayı incelemektedir.",
+                                                            "words": [
+                                                                        "Historians have examined",
+                                                                        "the ancient treaty",
+                                                                        "since its discovery",
+                                                                        "in 1920.",
+                                                                        "examined",
+                                                                        "will examine"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "Historians have examined",
+                                                                        "the ancient treaty",
+                                                                        "since its discovery",
+                                                                        "in 1920."
+                                                            ],
+                                                            "enSentence": "Historians have examined the ancient treaty since its discovery in 1920.",
+                                                            "isEngToTr": false,
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Present Perfect Tense"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q15",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu doldurunuz:\n\n\"The software company ___ cybersecurity algorithms continuously since last November.\"",
+                                                            "sentence": "The software company ___ cybersecurity algorithms continuously since last November.",
+                                                            "options": [
+                                                                        "has upgraded",
+                                                                        "upgraded",
+                                                                        "had upgraded",
+                                                                        "will upgrade"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yazılım şirketi geçen kasımdan beri siber güvenlik algoritmalarını sürekli güncelledi.",
+                                                            "explanation": "Since + Zaman İfadesi (last November) yapısı Present Perfect (has upgraded) gerektirir.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q16",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Zaman zarfına uygun yüklemi seçiniz:\n\n\"Demographic analysts ___ population shifts since the 2010 census.\"",
+                                                            "sentence": "Demographic analysts ___ population shifts since the 2010 census.",
+                                                            "options": [
+                                                                        "have monitored",
+                                                                        "monitored",
+                                                                        "had monitored",
+                                                                        "are monitoring"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Demografi analistleri 2010 nüfus sayımından beri nüfus değişimlerini izlemektedir.",
+                                                            "explanation": "Since + İsim İfadesi (the 2010 census) Present Perfect (have monitored) kullanımını zorunlu kılar.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q17",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Doğru zaman uyumuna sahip cümleyi seçiniz:\n\n\"Since the economic crisis of 2008, international trade commissions ___ regulations.\"",
+                                                            "options": [
+                                                                        "have modified",
+                                                                        "modified",
+                                                                        "had modified",
+                                                                        "will modify"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "Since the economic crisis of 2008, international trade commissions have modified regulations.",
+                                                            "isEngToTr": true,
+                                                            "translation": "2008 ekonomik krizinden beri uluslararası ticaret komisyonları düzenlemeleri değiştirdi.",
+                                                            "explanation": "Since + Tarih/Olay İfadesi (the economic crisis of 2008) Present Perfect (have modified) alır.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q18",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Zaman yapısına uygun seçeneği işaretleyiniz:\n\n\"Astronomers ___ deep space signals since the observatory launch.\"",
+                                                            "sentence": "Astronomers ___ deep space signals since the observatory launch.",
+                                                            "options": [
+                                                                        "have tracked",
+                                                                        "tracked",
+                                                                        "had tracked",
+                                                                        "will track"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Gözlemevi açılışından beri astronomlar derin uzay sinyallerini takip etmektedir.",
+                                                            "explanation": "Since + İsim Tamlaması (the observatory launch) yapısı Present Perfect (have tracked) getirir.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        },
+                        {
+                                    "id": "u101_l1_ex2",
+                                    "title": "Alıştırma 2: Since & By the Time Akademik Çeviri ve Yapı Sentezi",
+                                    "description": "Akademik metinler üzerinden Since ve By the time 6 formül yapısının dizilimi ve çevirisi.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l1_q19",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Çift süreç bildiren cümlede boşlukları doğru tamamlayınız:\n\n\"She ___ on quantum computing since she ___ in London.\"",
+                                                            "sentence": "She ___ on quantum computing since she ___ in London.",
+                                                            "options": [
+                                                                        "has researched / has lived",
+                                                                        "researched / lived",
+                                                                        "had researched / lives",
+                                                                        "is researching / will live"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Londra'da yaşadığından beri kuantum bilgisayarları üzerine araştırma yapıyor.",
+                                                            "explanation": "İki tarafta da günümüze kadar devam eden süreç anlatıldığında çift Present Perfect kullanımı mümkündür.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q20",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Çift süreç zaman uyumunu seçiniz:\n\n\"The institute ___ new patents since the director ___ the lab.\"",
+                                                            "sentence": "The institute ___ new patents since the director ___ the lab.",
+                                                            "options": [
+                                                                        "has filed / has led",
+                                                                        "filed / led",
+                                                                        "had filed / leads",
+                                                                        "will file / has led"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Direktör laboratuvara liderlik ettiğinden beri enstitü yeni patentler başvurusunda bulundu.",
+                                                            "explanation": "Devam eden süreç durumunda iki cümlecik de Present Perfect (has filed / has led) yapısında kurulabilir.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q21",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Doğru çift süreç yapısını seçiniz:\n\n\"The team ___ renewable energy sources since the government ___ green initiatives.\"",
+                                                            "options": [
+                                                                        "has tested / has funded",
+                                                                        "tested / funded",
+                                                                        "had tested / funds",
+                                                                        "will test / funded"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "The team has tested renewable energy sources since the government has funded green initiatives.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Hükümet yeşil girişimleri fonladığından beri ekip yenilenebilir enerji kaynaklarını test etmektedir.",
+                                                            "explanation": "Eşzamanlı devam eden süreçlerde 'Present Perfect + SINCE + Present Perfect' paralelliği kurulur.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q22",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Süreç uyumuna göre boşluğu doldurunuz:\n\n\"Economists ___ market trends since the coalition ___ new trade policies.\"",
+                                                            "sentence": "Economists ___ market trends since the coalition ___ new trade policies.",
+                                                            "options": [
+                                                                        "have analyzed / has enacted",
+                                                                        "analyzed / enacted",
+                                                                        "had analyzed / enacts",
+                                                                        "will analyze / enacted"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Koalisyon yeni ticaret politikalarını yürürlüğe koyduğundan beri ekonomistler piyasa eğilimlerini analiz ediyor.",
+                                                            "explanation": "Güncel ve devam eden süreçler 'have analyzed / has enacted' çift Present Perfect uyumu sağlar.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q23",
+                                                            "type": "word-bank",
+                                                            "prompt": "Çift süreç cümlesini sıralayınız:\n\n\"Scholars have published papers since the department has operated.\"",
+                                                            "translation": "Departman faaliyet gösterdiğinden beri akademisyenler makaleler yayımladı.",
+                                                            "words": [
+                                                                        "Scholars have published",
+                                                                        "papers since the department",
+                                                                        "has operated.",
+                                                                        "published",
+                                                                        "operated"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "Scholars have published",
+                                                                        "papers since the department",
+                                                                        "has operated."
+                                                            ],
+                                                            "enSentence": "Scholars have published papers since the department has operated.",
+                                                            "isEngToTr": false,
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q24",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Doğru zaman çiftini seçiniz:\n\n\"The corporation ___ international branches since the CEO ___ office.\"",
+                                                            "sentence": "The corporation ___ international branches since the CEO ___ office.",
+                                                            "options": [
+                                                                        "has expanded / has assumed",
+                                                                        "expanded / assumed",
+                                                                        "had expanded / assumes",
+                                                                        "will expand / assumed"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "CEO göreve geldiğinden beri şirket uluslararası şubelerini genişletti.",
+                                                            "explanation": "Süreç boyunca süregelen eylemler için iki tarafta da Present Perfect tercih edilebilir.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q25",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş bağlamdaki 'by the time' cümlesini tamamlayınız:\n\n\"By the time the engineers discovered the fault, the system ___ .\"",
+                                                            "sentence": "By the time the engineers discovered the fault, the system ___ .",
+                                                            "options": [
+                                                                        "had crashed",
+                                                                        "will have crashed",
+                                                                        "crashes",
+                                                                        "has crashed"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Mühendisler arızayı tespit edene kadar sistem çoktan çökmüştü.",
+                                                            "explanation": "By the time + V2 (discovered) yapısı ana cümlede Past Perfect (had crashed) gerektirir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q26",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş zaman sınırı boşluğunu tamamlayınız:\n\n\"By the time the summit concluded, delegates ___ several resolutions.\"",
+                                                            "sentence": "By the time the summit concluded, delegates ___ several resolutions.",
+                                                            "options": [
+                                                                        "had signed",
+                                                                        "will have signed",
+                                                                        "sign",
+                                                                        "have signed"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Zirve sona erdiğinde delegeler birkaç kararı imzalamıştı.",
+                                                            "explanation": "Concluded (Past V2) zaman sınırında ana cümle 'had signed' (Past Perfect) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q27",
+                                                            "type": "word-bank",
+                                                            "prompt": "Akademik cümleyi vagonlarla oluşturunuz:\n\n\"By the time historians found the manuscript, moisture had damaged the pages.\"",
+                                                            "translation": "Tarihçiler el yazmasını bulana kadar nem sayfalara zarar vermişti.",
+                                                            "words": [
+                                                                        "By the time historians",
+                                                                        "found the manuscript,",
+                                                                        "moisture had damaged",
+                                                                        "the pages.",
+                                                                        "find",
+                                                                        "will damage"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "By the time historians",
+                                                                        "found the manuscript,",
+                                                                        "moisture had damaged",
+                                                                        "the pages."
+                                                            ],
+                                                            "enSentence": "By the time historians found the manuscript, moisture had damaged the pages.",
+                                                            "isEngToTr": false,
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q28",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Cümlenin Türkçe karşılığını seçiniz:\n\n\"By the time the space probe sent data, scientists had waited for decades.\"",
+                                                            "options": [
+                                                                        "Uzay sondası veri gönderene kadar bilim insanları onlarca yıl beklemişti.",
+                                                                        "Uzay sondası veri gönderdiğinde bilim insanları onlarca yıl bekleyecek.",
+                                                                        "Uzay sondası veri gönderdiği için bilim insanları onlarca yıl bekledi.",
+                                                                        "Uzay sondası veri gönderdiğinden beri bilim insanları onlarca yıldır bekliyor."
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "By the time the space probe sent data, scientists had waited for decades.",
+                                                            "isEngToTr": true,
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q29",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş zaman sınırı yüklemini seçiniz:\n\n\"By the time the rescue team arrived at the avalanche site, local volunteers ___ three survivors.\"",
+                                                            "sentence": "By the time the rescue team arrived at the avalanche site, local volunteers ___ three survivors.",
+                                                            "options": [
+                                                                        "had rescued",
+                                                                        "will have rescued",
+                                                                        "rescue",
+                                                                        "have rescued"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Kurtarma ekibi çığ bölgesine ulaşana kadar yerel gönüllüler üç kazazedeyi kurtarmıştı.",
+                                                            "explanation": "By the time + V2 (arrived) zaman sınırında ana cümle Past Perfect (had rescued) olarak çekimlenir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q30",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş bağlamdaki boşluğu doldurunuz:\n\n\"By the time the auditor completed the inspection, the accountants ___ all discrepancy logs.\"",
+                                                            "sentence": "By the time the auditor completed the inspection, the accountants ___ all discrepancy logs.",
+                                                            "options": [
+                                                                        "had reconciled",
+                                                                        "will have reconciled",
+                                                                        "reconcile",
+                                                                        "have reconciled"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Denetçi incelemeyi tamamlayana kadar muhasebeciler tüm çelişki kayıtlarını uzlaştırmıştı.",
+                                                            "explanation": "Completed (V2) geçmiş eylem sınırında ana cümle Past Perfect (had reconciled) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q31",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Gelecek bağlamdaki 'by the time' cümlesini tamamlayınız:\n\n\"By the time the committee meets next week, the team ___ the final draft.\"",
+                                                            "sentence": "By the time the committee meets next week, the team ___ the final draft.",
+                                                            "options": [
+                                                                        "will have finalized",
+                                                                        "had finalized",
+                                                                        "finalized",
+                                                                        "has finalized"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Komite gelecek hafta toplanana kadar ekip son taslağı tamamlamış olacak.",
+                                                            "explanation": "By the time + V1 (meets) gelecek sınırını bildirdiğinden ana cümle Future Perfect (will have finalized) olur.",
+                                                            "grammarTags": [
+                                                                        "Future Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q32",
+                                                            "type": "structure-match",
+                                                            "prompt": "Gelecek sınır bildiren 'by the time' formülünü seçiniz:\n\n\"By the time the professor arrives, students will have completed the exam.\"",
+                                                            "sentence": "By the time the professor arrives, students will have completed the exam.",
+                                                            "options": [
+                                                                        "By the time + Present Simple (V1) ➔ Future Perfect (Will Have V3)",
+                                                                        "By the time + Past Simple (V2) ➔ Past Perfect (Had V3)",
+                                                                        "By the time + Future ➔ Present Simple",
+                                                                        "By the time + Present Perfect ➔ Simple Past"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Profesör gelene kadar öğrenciler sınavı tamamlamış olacaklar.",
+                                                            "explanation": "Yan cümle V1 (arrives) ise ana cümle Will Have V3 (Future Perfect) olur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q33",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Cümlenin Türkçe karşılığını seçiniz:\n\n\"By the time the law enters into force, legal advisors will have reviewed all clauses.\"",
+                                                            "options": [
+                                                                        "Yasa yürürlüğe girene kadar hukuk danışmanları tüm maddeleri gözden geçirmiş olacaklar.",
+                                                                        "Yasa yürürlüğe girdiğinde hukuk danışmanları tüm maddeleri gözden geçirmişti.",
+                                                                        "Yasa yürürlüğe girdikten sonra hukuk danışmanları tüm maddeleri gözden geçirecek.",
+                                                                        "Yasa yürürlüğe girdiği için hukuk danışmanları tüm maddeleri gözden geçirdi."
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "By the time the law enters into force, legal advisors will have reviewed all clauses.",
+                                                            "isEngToTr": true,
+                                                            "grammarTags": [
+                                                                        "Future Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q34",
+                                                            "type": "word-bank",
+                                                            "prompt": "Gelecek zaman sınır cümlesini oluşturunuz:\n\n\"By the time the renovation is completed, the museum will have acquired hundreds of new artifacts.\"",
+                                                            "translation": "Yenileme tamamlanana kadar müze yüzlerce yeni eser edinmiş olacak.",
+                                                            "words": [
+                                                                        "By the time the renovation",
+                                                                        "is completed,",
+                                                                        "the museum will have acquired",
+                                                                        "hundreds of new artifacts.",
+                                                                        "was completed",
+                                                                        "had acquired"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "By the time the renovation",
+                                                                        "is completed,",
+                                                                        "the museum will have acquired",
+                                                                        "hundreds of new artifacts."
+                                                            ],
+                                                            "enSentence": "By the time the renovation is completed, the museum will have acquired hundreds of new artifacts.",
+                                                            "isEngToTr": false,
+                                                            "grammarTags": [
+                                                                        "Future Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q35",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümle öbeklerini diziniz:\n\n\"By the time the copyright expires, the author will have published dozens of classic novels.\"",
+                                                            "translation": "Telif hakkı süresi dolana kadar yazar onlarca klasik roman yayımlamış olacak.",
+                                                            "words": [
+                                                                        "By the time the copyright",
+                                                                        "expires,",
+                                                                        "the author will have published",
+                                                                        "dozens of classic novels.",
+                                                                        "expired",
+                                                                        "had published"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "By the time the copyright",
+                                                                        "expires,",
+                                                                        "the author will have published",
+                                                                        "dozens of classic novels."
+                                                            ],
+                                                            "enSentence": "By the time the copyright expires, the author will have published dozens of classic novels.",
+                                                            "isEngToTr": false,
+                                                            "grammarTags": [
+                                                                        "Future Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l1_q36",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Gelecek sınır zaman çekimini tamamlayınız:\n\n\"By the time the spacecraft reaches Mars in 2030, ground control ___ mission protocols.\"",
+                                                            "sentence": "By the time the spacecraft reaches Mars in 2030, ground control ___ mission protocols.",
+                                                            "options": [
+                                                                        "will have updated",
+                                                                        "had updated",
+                                                                        "updated",
+                                                                        "has updated"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Uzay aracı 2030'da Mars'a ulaşana kadar yer kontrol görev protokollerini güncellemiş olacak.",
+                                                            "explanation": "By the time + V1 (reaches) gelecek sınırında ana cümle Will Have V3 (will have updated) gerektirir.",
+                                                            "grammarTags": [
+                                                                        "Future Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                }
+                                    ]
+                        }
+            ]
+},
     "2": {
-      "exercises": [
-        {
-          "id": "u101l99ex1",
-          "title": "Alıştırma 1: \"By the time\" Zaman Uyumu Kalıpları I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
-          "questions": [
-            {
-              "id": "u101l99_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ .",
-              "options": [
-                "left",
-                "have left",
-                "had left",
-                "will have left"
-              ],
-              "correctIndex": 2,
-              "translation": "Biz vardığımızda çoğu insan ayrılmıştı."
-            },
-            {
-              "id": "u101l99_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time we ___ home, children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed.",
-              "options": [
-                "arrive",
-                "arrived",
-                "will arrive",
-                "had arrived"
-              ],
-              "correctIndex": 0,
-              "translation": "Biz eve vardığımızda çocuklar yatmış olacaklar."
-            },
-            {
-              "id": "u101l99_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ .",
-              "options": [
-                "has spread",
-                "had spread",
-                "will have spread",
-                "spreads"
-              ],
-              "correctIndex": 1,
-              "translation": "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı."
-            },
-            {
-              "id": "u101l99_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time the compiler ___ , the server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> it.",
-              "options": [
-                "will finish",
-                "finishes",
-                "had finished",
-                "finished"
-              ],
-              "correctIndex": 1,
-              "translation": "Derleyici tamamlayana kadar sunucu onu kaydetmiş olacak."
-            },
-            {
-              "id": "u101l99_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ .",
-              "options": [
-                "has collapsed",
-                "had collapsed",
-                "will have collapsed",
-                "collapses"
-              ],
-              "correctIndex": 1,
-              "translation": "Fırtına dindiğinde köprü çökmüştü."
-            },
-            {
-              "id": "u101l99_ex1_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time the law ___ , firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
-              "options": [
-                "takes effect",
-                "took effect",
-                "had taken effect",
-                "will take effect"
-              ],
-              "correctIndex": 0,
-              "translation": "Yasa yürürlüğe girene kadar firmalar uyum sağlamış olacaklar."
-            },
-            {
-              "id": "u101l99_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> funds, the project ___ .",
-              "options": [
-                "had ended",
-                "will have ended",
-                "ends",
-                "has ended"
-              ],
-              "correctIndex": 0,
-              "translation": "Fonları aldıklarında proje sona ermişti."
-            },
-            {
-              "id": "u101l99_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time you ___ the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
-              "options": [
-                "open",
-                "opened",
-                "had opened",
-                "will open"
-              ],
-              "correctIndex": 0,
-              "translation": "Siz kapıyı açana kadar sistem aktif hale gelmiş olacak."
-            },
-            {
-              "id": "u101l99_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew ___ .",
-              "options": [
-                "will have left",
-                "leaves",
-                "have left",
-                "had left"
-              ],
-              "correctIndex": 3,
-              "translation": "Güneş battığında araştırma ekibi ayrılmıştı."
-            },
-            {
-              "id": "u101l99_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time the app ___ , the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
-              "options": [
-                "will launch",
-                "had launched",
-                "launched",
-                "launches"
-              ],
-              "correctIndex": 3,
-              "translation": "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak."
-            }
-          ]
-        },
-        {
-          "id": "u101l99ex2",
-          "title": "Alıştırma 2: \"By the time\" Zaman Uyumu Kalıpları II",
-          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
-          "questions": [
-            {
-              "id": "u101l99_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ the law <span style=\"color: #339af0; font-weight: bold;\">takes effect</span>, firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span>.",
-              "options": [
-                "Since",
-                "Although",
-                "While",
-                "By the time"
-              ],
-              "correctIndex": 3,
-              "translation": "Yasa yürürlüğe girene kadar firmalar uyum sağlamış olacaklar."
-            },
-            {
-              "id": "u101l99_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> funds, the project <span style=\"color: #da77f2; font-weight: bold;\">had ended</span>.",
-              "options": [
-                "By the time",
-                "Since",
-                "Lest",
-                "While"
-              ],
-              "correctIndex": 0,
-              "translation": "Fonları aldıklarında proje sona ermişti."
-            },
-            {
-              "id": "u101l99_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ you <span style=\"color: #339af0; font-weight: bold;\">open</span> the door, the system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span>.",
-              "options": [
-                "By the time",
-                "Since",
-                "Whereas",
-                "As soon as"
-              ],
-              "correctIndex": 0,
-              "translation": "Siz kapıyı açana kadar sistem aktif hale gelmiş olacak."
-            },
-            {
-              "id": "u101l99_ex2_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span>, the research crew <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.",
-              "options": [
-                "By the time",
-                "Since",
-                "While",
-                "Because"
-              ],
-              "correctIndex": 0,
-              "translation": "Güneş battığında araştırma ekibi ayrılmıştı."
-            },
-            {
-              "id": "u101l99_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "___ the app <span style=\"color: #339af0; font-weight: bold;\">launches</span>, the team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> it.",
-              "options": [
-                "Whereas",
-                "Since",
-                "Until",
-                "By the time"
-              ],
-              "correctIndex": 3,
-              "translation": "Uygulama piyasaya çıkana kadar ekip onu test etmiş olacak."
-            },
-            {
-              "id": "u101l99_ex2_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, most people ___ left.",
-              "options": [
-                "have",
-                "will have",
-                "were",
-                "had"
-              ],
-              "correctIndex": 3,
-              "translation": "Biz vardığımızda çoğu insan ayrılmıştı."
-            },
-            {
-              "id": "u101l99_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time we <span style=\"color: #339af0; font-weight: bold;\">arrive</span> home, children ___ gone to bed.",
-              "options": [
-                "will have",
-                "had",
-                "have",
-                "are"
-              ],
-              "correctIndex": 0,
-              "translation": "Biz eve vardığımızda çocuklar yatmış olacaklar."
-            },
-            {
-              "id": "u101l99_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the bug, malware ___ spread.",
-              "options": [
-                "had",
-                "will have",
-                "has",
-                "was"
-              ],
-              "correctIndex": 0,
-              "translation": "Mühendisler hatayı bulana kadar kötü amaçlı yazılım yayılmıştı."
-            },
-            {
-              "id": "u101l99_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time the compiler <span style=\"color: #339af0; font-weight: bold;\">finishes</span>, the server ___ saved it.",
-              "options": [
-                "has",
-                "had",
-                "is",
-                "will have"
-              ],
-              "correctIndex": 3,
-              "translation": "Derleyici tamamlayana kadar sunucu onu kaydetmiş olacak."
-            },
-            {
-              "id": "u101l99_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time the storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the bridge ___ collapsed.",
-              "options": [
-                "was",
-                "had",
-                "will have",
-                "has"
-              ],
-              "correctIndex": 1,
-              "translation": "Fırtına dindiğinde köprü çökmüştü."
-            }
-          ]
-        },
-        {
-          "id": "u101l99ex3",
-          "title": "Alıştırma 3: \"By the time\" Zaman Uyumu Kalıpları III",
-          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
-          "questions": [
-            {
-              "id": "u101l99_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span> at the corporate headquarters, most board members ___ the emergency meeting.",
-              "options": [
-                "have left",
-                "had left",
-                "will have left",
-                "left"
-              ],
-              "correctIndex": 1,
-              "translation": "Biz şirket merkezine vardığımızda yönetim kurulu üyelerinin çoğu acil toplantıdan ayrılmıştı."
-            },
-            {
-              "id": "u101l99_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time we ___ home from the laboratory, the children <span style=\"color: #20c997; font-weight: bold;\">will have gone</span> to bed because of the late hour.",
-              "options": [
-                "arrive",
-                "arrived",
-                "will arrive",
-                "had arrived"
-              ],
-              "correctIndex": 0,
-              "translation": "Laboratuvardan eve vardığımızda, geç saat olması nedeniyle çocuklar yatmış olacaklar."
-            },
-            {
-              "id": "u101l99_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time engineers <span style=\"color: #ff6b6b; font-weight: bold;\">found</span> the structural bug, the dynamic malware ___ across secondary network partitions.",
-              "options": [
-                "had spread",
-                "will have spread",
-                "has spread",
-                "spreads"
-              ],
-              "correctIndex": 0,
-              "translation": "Mühendisler yapısal hatayı bulana kadar, dinamik kötü amaçlı yazılım ikincil ağ bölümlerine yayılmıştı."
-            },
-            {
-              "id": "u101l99_ex3_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time the compiler ___ code optimization, the backup server <span style=\"color: #20c997; font-weight: bold;\">will have saved</span> the configuration metrics.",
-              "options": [
-                "had finished",
-                "finished",
-                "finishes",
-                "will finish"
-              ],
-              "correctIndex": 2,
-              "translation": "Derleyici kod optimizasyonunu tamamlayana kadar, yedek sunucu yapılandırma ölçümlerini kaydetmiş olacak."
-            },
-            {
-              "id": "u101l99_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time the severe coastal storm <span style=\"color: #ff6b6b; font-weight: bold;\">cleared</span>, the ancient bridge structure ___ into the turbulent river.",
-              "options": [
-                "has collapsed",
-                "will have collapsed",
-                "had collapsed",
-                "collapses"
-              ],
-              "correctIndex": 2,
-              "translation": "Şiddetli kıyı fırtınası dindiğinde, antik köprü yapısı coşkun nehre çökmüştü."
-            },
-            {
-              "id": "u101l99_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time we ___ at the corporate headquarters, most board members ___ left the emergency meeting.",
-              "translation": "Biz şirket merkezine vardığımızda yönetim kurulu üyelerinin çoğu acil toplantıdan ayrılmıştı.",
-              "corrects": [
-                "arrived",
-                "had"
-              ]
-            },
-            {
-              "id": "u101l99_ex3_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time we ___ home from the laboratory, the children ___ gone to bed because of the late hour.",
-              "translation": "Laboratuvardan eve vardığımızda, geç saat olması nedeniyle çocuklar yatmış olacaklar.",
-              "corrects": [
-                "arrive",
-                "will have"
-              ]
-            },
-            {
-              "id": "u101l99_ex3_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time engineers ___ the structural bug, the dynamic malware ___ spread across secondary network partitions.",
-              "translation": "Mühendisler yapısal hatayı bulana kadar, dinamik kötü amaçlı yazılım ikincil ağ bölümlerine yayılmıştı.",
-              "corrects": [
-                "found",
-                "had"
-              ]
-            },
-            {
-              "id": "u101l99_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time the compiler ___ code optimization, the backup server ___ saved the configuration metrics.",
-              "translation": "Derleyici kod optimizasyonunu tamamlayana kadar, yedek sunucu yapılandırma ölçümlerini kaydetmiş olacak.",
-              "corrects": [
-                "finishes",
-                "will have"
-              ]
-            },
-            {
-              "id": "u101l99_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time the severe coastal storm ___ , the ancient bridge structure ___ collapsed into the turbulent river.",
-              "translation": "Şiddetli kıyı fırtınası dindiğinde, antik köprü yapısı coşkun nehre çökmüştü.",
-              "corrects": [
-                "cleared",
-                "had"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u101l99ex4",
-          "title": "Alıştırma 4: \"By the time\" Zaman Uyumu Kalıpları IV",
-          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
-          "questions": [
-            {
-              "id": "u101l99_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time the new legislative law ___ , corporate firms <span style=\"color: #20c997; font-weight: bold;\">will have adjusted</span> their data privacy policies.",
-              "options": [
-                "takes effect",
-                "took effect",
-                "will take effect",
-                "had taken effect"
-              ],
-              "correctIndex": 0,
-              "translation": "Yeni yasama yasası yürürlüğe girene kadar, kurumsal firmalar veri gizliliği politikalarını ayarlamış olacaklar."
-            },
-            {
-              "id": "u101l99_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> the university research funds, the biology project ___ due to lack of materials.",
-              "options": [
-                "has ended",
-                "ends",
-                "will have ended",
-                "had ended"
-              ],
-              "correctIndex": 3,
-              "translation": "Üniversite araştırma fonlarını aldıklarında, biyoloji projesi malzeme eksikliği nedeniyle sona ermişti."
-            },
-            {
-              "id": "u101l99_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time you ___ the laboratory door, the automated security system <span style=\"color: #20c997; font-weight: bold;\">will have activated</span> the entry tracking algorithm.",
-              "options": [
-                "open",
-                "opened",
-                "will open",
-                "had opened"
-              ],
-              "correctIndex": 0,
-              "translation": "Siz laboratuvar kapısını açana kadar, otomatik güvenlik sistemi giriş takip algoritmasını aktif hale getirmiş olacak."
-            },
-            {
-              "id": "u101l99_ex4_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "By the time the sun <span style=\"color: #ff6b6b; font-weight: bold;\">set</span> behind the volcanic mountains, the field research crew ___ the evaluation site.",
-              "options": [
-                "have left",
-                "left",
-                "will have left",
-                "had left"
-              ],
-              "correctIndex": 3,
-              "translation": "Güneş volkanik dağların ardında batana kadar, saha araştırma ekibi değerlendirme alanından ayrılmıştı."
-            },
-            {
-              "id": "u101l99_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "By the time the mobile application ___ globally, the engineering team <span style=\"color: #20c997; font-weight: bold;\">will have tested</span> all core API modules.",
-              "options": [
-                "launches",
-                "will launch",
-                "had launched",
-                "launched"
-              ],
-              "correctIndex": 0,
-              "translation": "Mobil uygulama küresel olarak piyasaya sürülene kadar, mühendislik ekibi tüm temel API modüllerini test etmiş olacak."
-            },
-            {
-              "id": "u101l99_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time the new legislative law ___ effect, corporate firms ___ adjusted their data privacy policies.",
-              "translation": "Yeni yasama yasası yürürlüğe girene kadar, kurumsal firmalar veri gizliliği politikalarını ayarlamış olacaklar.",
-              "corrects": [
-                "takes",
-                "will have"
-              ]
-            },
-            {
-              "id": "u101l99_ex4_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time they ___ the university research funds, the biology project ___ ended due to lack of materials.",
-              "translation": "Üniversite araştırma fonlarını aldıklarında, biyoloji projesi malzeme eksikliği nedeniyle sona ermişti.",
-              "corrects": [
-                "received",
-                "had"
-              ]
-            },
-            {
-              "id": "u101l99_ex4_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time you ___ the laboratory door, the automated security system ___ activated the entry tracking algorithm.",
-              "translation": "Siz laboratuvar kapısını açana kadar, otomatik güvenlik sistemi giriş takip algoritmasını aktif hale getirmiş olacak.",
-              "corrects": [
-                "open",
-                "will have"
-              ]
-            },
-            {
-              "id": "u101l99_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time the sun ___ behind the volcanic mountains, the field research crew ___ left the evaluation site.",
-              "translation": "Güneş volkanik dağların ardında batana kadar, saha araştırma ekibi değerlendirme alanından ayrılmıştı.",
-              "corrects": [
-                "set",
-                "had"
-              ]
-            },
-            {
-              "id": "u101l99_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "By the time the mobile application ___ globally, the engineering team ___ tested all core API modules.",
-              "translation": "Mobil uygulama küresel olarak piyasaya sürülene kadar, mühendislik ekibi tüm temel API modüllerini test etmiş olacak.",
-              "corrects": [
-                "launches",
-                "will have"
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            "exercises": [
+                        {
+                                    "id": "u101_l2_ex1",
+                                    "title": "Alıştırma 1: Kronolojik Öncelik & Eşzamanlılık Formülleri I",
+                                    "description": "Before, After ve While bağlaçlarının öncelik, sonralık ve eşzamanlılık kilitleri.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l2_q1",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek en uygun geçmiş zaman yapısını seçiniz:\n\n\"After the research team ___ the clinical trial, they published the findings in a medical journal.\"",
+                                                            "sentence": "After the research team ___ the clinical trial, they published the findings in a medical journal.",
+                                                            "options": [
+                                                                        "had completed",
+                                                                        "will complete",
+                                                                        "completes",
+                                                                        "has completed"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Araştırma ekibi klinik testi tamamladıktan sonra bulguları tıp dergisinde yayımladı.",
+                                                            "explanation": "Formül: After + Had V3 (İlk Eylem) ➔ V2 (Sonraki Eylem). İlk gerçekleşen eylem 'After' yan cümlesinde Past Perfect (had completed) olarak çekimlenir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q2",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu doğru formül uyumuna göre doldurunuz:\n\n\"The stock market stabilized after the central bank ___ interest rates.\"",
+                                                            "sentence": "The stock market stabilized after the central bank ___ interest rates.",
+                                                            "options": [
+                                                                        "had adjusted",
+                                                                        "will adjust",
+                                                                        "adjusts",
+                                                                        "has adjusted"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Merkez bankası faiz oranlarını ayarladıktan sonra borsa dengelendi.",
+                                                            "explanation": "Formül: After + Had V3 ➔ V2. Merkez bankasının faizleri ayarlaması ilk gerçekleşen eylemdir; bu nedenle 'after' yan cümlesinde Had V3 (had adjusted) kullanılır.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q3",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Ana cümle yüklemini doğru seçiniz:\n\n\"After the archaeologists had excavated the site, they ___ the artifacts to the museum.\"",
+                                                            "options": [
+                                                                        "transferred",
+                                                                        "had transferred",
+                                                                        "will transfer",
+                                                                        "transfer"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "After the archaeologists had excavated the site, they transferred the artifacts to the museum.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Arkeologlar sahayı kazdıktan sonra eserleri müzeye transfer etti.",
+                                                            "explanation": "Formül: After + Had V3 (İlk Eylem) ➔ V2 (Sonraki Eylem). 'After' yan cümlesinde Had V3 (had excavated) olduğu için ana cümlede Past Simple (transferred) şarttır.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q4",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümle öbeklerini diziniz:\n\n\"After the engineers had tested the prototype, they launched mass production.\"",
+                                                            "translation": "Mühendisler prototipi test ettikten sonra seri üretime geçtiler.",
+                                                            "words": [
+                                                                        "After the engineers",
+                                                                        "had tested the prototype,",
+                                                                        "they launched",
+                                                                        "mass production.",
+                                                                        "test",
+                                                                        "will launch"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "After the engineers",
+                                                                        "had tested the prototype,",
+                                                                        "they launched",
+                                                                        "mass production."
+                                                            ],
+                                                            "enSentence": "After the engineers had tested the prototype, they launched mass production.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: After + Had V3 ➔ V2. Test etme eylemi üretime geçme eyleminden önce tamamlandığı için 'had tested' Past Perfect yapısındadır.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q5",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek en uygun geçmiş zaman kipini seçiniz:\n\n\"After the author ___ the final manuscript, the publisher released the book worldwide.\"",
+                                                            "sentence": "After the author ___ the final manuscript, the publisher released the book worldwide.",
+                                                            "options": [
+                                                                        "had revised",
+                                                                        "will revise",
+                                                                        "revises",
+                                                                        "has revised"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yazar son taslağı gözden geçirdikten sonra yayıncı kitabı dünya çapında yayımladı.",
+                                                            "explanation": "Formül: After + Had V3 ➔ V2. Yazarın taslağı düzeltmesi ilk gerçekleşen eylem olduğu için 'After' cümlesinde Past Perfect (had revised) zorunludur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q6",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"After the committee had reviewed the proposal, they approved the budget.\"",
+                                                            "correctSentence": "Komite teklifi inceledikten sonra bütçeyi onayladı.",
+                                                            "enSentence": "After the committee had reviewed the proposal, they approved the budget.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: After + Had V3 (had reviewed) ➔ V2 (approved). İlk gerçekleşen inceleme eylemi Past Perfect ile Türkçe'ye '-dikten sonra' olarak çevrilir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q7",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu doldurunuz:\n\n\"Before the market crashed, experts ___ investors about potential risks.\"",
+                                                            "sentence": "Before the market crashed, experts ___ investors about potential risks.",
+                                                            "options": [
+                                                                        "had warned",
+                                                                        "will warn",
+                                                                        "warn",
+                                                                        "have warned"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Piyasa çökmeden önce uzmanlar yatırımcıları potansiyel riskler hakkında uyarmıştı.",
+                                                            "explanation": "Formül: Before + V2 (Sonraki Eylem) ➔ Had V3 (Daha Önce Tamamlanan Eylem). Piyasa çökmeden (V2: crashed) önce gerçekleşen uyarma eylemi Past Perfect (had warned) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q8",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek yüklem formunu seçiniz:\n\n\"The server ___ all database files before the power outage occurred.\"",
+                                                            "sentence": "The server ___ all database files before the power outage occurred.",
+                                                            "options": [
+                                                                        "had backed up",
+                                                                        "will back up",
+                                                                        "backs up",
+                                                                        "has backed up"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Elektrik kesintisi meydana gelmeden önce sunucu tüm veritabanı dosyalarını yedeklemişti.",
+                                                            "explanation": "Formül: Before + V2 ➔ Had V3. Elektrik kesintisinden (V2: occurred) daha önce gerçekleşen yedekleme eylemi ana cümlede Had V3 (had backed up) gerektirir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q9",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Doğru zaman uyumuna sahip seçeneği işaretleyiniz:\n\n\"Before the delegation arrived at the embassy, security teams ___ the entire building.\"",
+                                                            "options": [
+                                                                        "had inspected",
+                                                                        "will inspect",
+                                                                        "inspect",
+                                                                        "have inspected"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "Before the delegation arrived at the embassy, security teams had inspected the entire building.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Heyet elçiliğe varmadan önce güvenlik ekipleri tüm binayı denetlemişti.",
+                                                            "explanation": "Formül: Before + V2 (arrived) ➔ Had V3 (had inspected). İnceleme eylemi heyetin varışından önce tamamlandığı için Past Perfect seçilmelidir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q10",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümleyi öbek vagonlarıyla oluşturunuz:\n\n\"Before the storm hit the coast, residents had evacuated the danger zone.\"",
+                                                            "translation": "Fırtına kıyıya vurmadan önce sakinler tehlikeli bölgeyi tahliye etmişti.",
+                                                            "words": [
+                                                                        "Before the storm",
+                                                                        "hit the coast,",
+                                                                        "residents had evacuated",
+                                                                        "the danger zone.",
+                                                                        "will evacuate",
+                                                                        "hits"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "Before the storm",
+                                                                        "hit the coast,",
+                                                                        "residents had evacuated",
+                                                                        "the danger zone."
+                                                            ],
+                                                            "enSentence": "Before the storm hit the coast, residents had evacuated the danger zone.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: Before + V2 ➔ Had V3. Tahliye eylemi fırtına vurmadan önce gerçekleştiği için 'had evacuated' Past Perfect yapısındadır.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q11",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu zaman uyumuna göre doldurunuz:\n\n\"Before the court delivered the final verdict, jury members ___ all presented evidence.\"",
+                                                            "sentence": "Before the court delivered the final verdict, jury members ___ all presented evidence.",
+                                                            "options": [
+                                                                        "had evaluated",
+                                                                        "will evaluate",
+                                                                        "evaluates",
+                                                                        "have evaluated"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Mahkeme nihai kararı açıklamadan önce jüri üyeleri sunulan tüm delilleri değerlendirmişti.",
+                                                            "explanation": "Formül: Before + V2 (delivered) ➔ Had V3 (had evaluated). Kanıtların değerlendirilmesi karardan önce gerçekleştiği için Had V3 gelmelidir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q12",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"Before the spacecraft entered the orbit, ground control had verified all telemetry data.\"",
+                                                            "correctSentence": "Uzay aracı yörüngeye girmeden önce yer kontrol tüm telemetri verilerini doğrulamıştı.",
+                                                            "enSentence": "Before the spacecraft entered the orbit, ground control had verified all telemetry data.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: Before + V2 (entered) ➔ Had V3 (had verified). Yörüngeye giriş öncesinde gerçekleşen doğrulama 'had verified' olarak kurulur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        },
+                        {
+                                    "id": "u101_l2_ex2",
+                                    "title": "Alıştırma 2: Kronolojik Öncelik & Gelecek Bağlaç Kuralları II",
+                                    "description": "Before, After ve While cümlelerinde eşzamanlılık ve gelecek zaman Will/Would yasağı uygulamaları.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l2_q13",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Süreç anını tamamlayan zaman çekimini seçiniz:\n\n\"While analysts ___ financial records, a sudden power failure interrupted the system.\"",
+                                                            "sentence": "While analysts ___ financial records, a sudden power failure interrupted the system.",
+                                                            "options": [
+                                                                        "were examining",
+                                                                        "had examined",
+                                                                        "will examine",
+                                                                        "examine"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Analistler finansal kayıtları incelerken ani bir elektrik arızası sistemi kesti.",
+                                                            "explanation": "Formül: While / As + Was/Were V-ing (Devam Eden Süreç) ➔ V2 (Kesen Eylem). Analistlerin inceleme süreci devam ederken kesinti olduğu için Continuous (were examining) kullanılır.",
+                                                            "grammarTags": [
+                                                                        "Past Continuous Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q14",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Eşzamanlı eylem sürecini seçiniz:\n\n\"As the team ___ deep sea samples, the underwater sensor detected a new species.\"",
+                                                            "sentence": "As the team ___ deep sea samples, the underwater sensor detected a new species.",
+                                                            "options": [
+                                                                        "was collecting",
+                                                                        "had collected",
+                                                                        "will collect",
+                                                                        "collects"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Ekip derin deniz örnekleri toplarken su altı sensörü yeni bir tür tespit etti.",
+                                                            "explanation": "Formül: While / As + Was/Were V-ing ➔ V2. Örnek toplama eylemi devam eden bir süreç olduğu için 'was collecting' Past Continuous yapısındadır.",
+                                                            "grammarTags": [
+                                                                        "Past Continuous Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q15",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Arada gerçekleşen kesen eylemi seçiniz:\n\n\"While the economist was presenting the annual report, an unexpected question ___ from the board.\"",
+                                                            "options": [
+                                                                        "arose",
+                                                                        "had arisen",
+                                                                        "will arise",
+                                                                        "arises"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "While the economist was presenting the annual report, an unexpected question arose from the board.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Ekonomist yıllık raporu sunarken kuruldan beklenmedik bir soru geldi.",
+                                                            "explanation": "Formül: While + Continuous (was presenting) ➔ V2 (arose). Sunum süreci devam ederken araya giren tekil anlık eylem Past Simple (arose) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q16",
+                                                            "type": "word-bank",
+                                                            "prompt": "Öbek vagonlarını diziniz:\n\n\"While technicians were repairing the radar, a security alarm went off.\"",
+                                                            "translation": "Teknisyenler radarı tamir ederken güvenlik alarmı çaldı.",
+                                                            "words": [
+                                                                        "While technicians",
+                                                                        "were repairing the radar,",
+                                                                        "a security alarm",
+                                                                        "went off.",
+                                                                        "repaired",
+                                                                        "will go"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "While technicians",
+                                                                        "were repairing the radar,",
+                                                                        "a security alarm",
+                                                                        "went off."
+                                                            ],
+                                                            "enSentence": "While technicians were repairing the radar, a security alarm went off.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: While + Continuous (were repairing) ➔ V2 (went off). Tamir süreci devam ederken alarmın çalması eşzamanlı kesişim kalıbıdır.",
+                                                            "grammarTags": [
+                                                                        "Past Continuous Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q17",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa uygun zaman yapısını yerleştiriniz:\n\n\"As the software developers ___ the algorithm, a critical bug emerged in the staging environment.\"",
+                                                            "sentence": "As the software developers ___ the algorithm, a critical bug emerged in the staging environment.",
+                                                            "options": [
+                                                                        "were refining",
+                                                                        "had refined",
+                                                                        "will refine",
+                                                                        "refine"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yazılım geliştiricileri algoritmayı iyileştirirken test ortamında kritik bir hata ortaya çıktı.",
+                                                            "explanation": "Formül: As / While + Was/Were V-ing ➔ V2. Geliştiricilerin iyileştirme süreci 'were refining' Past Continuous zamanı ile ifade edilir.",
+                                                            "grammarTags": [
+                                                                        "Past Continuous Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q18",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"While researchers were conducting the survey, unexpected weather conditions forced a pause.\"",
+                                                            "correctSentence": "Araştırmacılar anketi yürütürken beklenmedik hava koşulları duraklamaya neden oldu.",
+                                                            "enSentence": "While researchers were conducting the survey, unexpected weather conditions forced a pause.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: While + Continuous (were conducting) ➔ V2 (forced). Süreç anlatımı '-iken' yapısıyla Türkçe'ye çevrilir.",
+                                                            "grammarTags": [
+                                                                        "Past Continuous Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q19",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Zaman bağlacı kuralına göre boşluğu tamamlayınız:\n\n\"Before the committee ___ next week, the research team will have finalized the report.\"",
+                                                            "sentence": "Before the committee ___ next week, the research team will have finalized the report.",
+                                                            "options": [
+                                                                        "meets",
+                                                                        "will meet",
+                                                                        "would meet",
+                                                                        "had met"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Komite gelecek hafta toplanmadan önce araştırma ekibi raporu tamamlamış olacak.",
+                                                            "explanation": "Formül: Gelecek Zaman Zaman Uyum Kuralı ➔ Before/After bağlacının İÇİNE asla WILL/WOULD gelemez! Cümle gelecek bildirse de bağlaç içi Present (V1: meets) çekimlenir.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q20",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Gelecek zaman bağlaç yasağına uygun seçeneği işaretleyiniz:\n\n\"After the new policy ___ into effect, companies will adjust their financial plans.\"",
+                                                            "sentence": "After the new policy ___ into effect, companies will adjust their financial plans.",
+                                                            "options": [
+                                                                        "comes",
+                                                                        "will come",
+                                                                        "would come",
+                                                                        "had come"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yeni politika yürürlüğe girdikten sonra şirketler finansal planlarını ayarlayacak.",
+                                                            "explanation": "Formül: Gelecek Zaman Bağlaç Kuralı ➔ After cümlesi gelecek kastedilse bile 'will come' alamaz; Present Simple (comes) alır, ana cümle 'will adjust' olur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q21",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Gelecek sınır zaman yapısını doğru seçiniz:\n\n\"Before the delegates arrive at the summit, the host country ___ all security measures.\"",
+                                                            "options": [
+                                                                        "will have implemented",
+                                                                        "had implemented",
+                                                                        "implemented",
+                                                                        "implements"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "Before the delegates arrive at the summit, the host country will have implemented all security measures.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Delegeler zirveye varmadan önce ev sahibi ülke tüm güvenlik önlemlerini uygulamış olacak.",
+                                                            "explanation": "Formül: Before + Present (V1: arrive) ➔ Will Have V3 (Future Perfect). Gelecekte varış anından önce tamamlanacak eylem 'will have implemented' olur.",
+                                                            "grammarTags": [
+                                                                        "Future Perfect Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q22",
+                                                            "type": "word-bank",
+                                                            "prompt": "Gelecek bağlaç cümlesini sıralayınız:\n\n\"After the scientists complete the trial, they will publish the findings.\"",
+                                                            "translation": "Bilim insanları testi tamamladıktan sonra bulguları yayımlayacak.",
+                                                            "words": [
+                                                                        "After the scientists",
+                                                                        "complete the trial,",
+                                                                        "they will publish",
+                                                                        "the findings.",
+                                                                        "will complete",
+                                                                        "published"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "After the scientists",
+                                                                        "complete the trial,",
+                                                                        "they will publish",
+                                                                        "the findings."
+                                                            ],
+                                                            "enSentence": "After the scientists complete the trial, they will publish the findings.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: After + V1 (complete) ➔ Will V1 (will publish). Zaman bağlacının içi yalın V1 kalır, ana cümle Will alır.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q23",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Bağlaç içi zaman yasağını gözeterek boşluğu doldurunuz:\n\n\"Before the spacecraft ___ the satellite orbit, engineers will verify all navigation systems.\"",
+                                                            "sentence": "Before the spacecraft ___ the satellite orbit, engineers will verify all navigation systems.",
+                                                            "options": [
+                                                                        "enters",
+                                                                        "will enter",
+                                                                        "would enter",
+                                                                        "had entered"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Uzay aracı uydu yörüngesine girmeden önce mühendisler tüm seyrüsefer sistemlerini doğrulayacak.",
+                                                            "explanation": "Formül: Gelecek Kuralı ➔ 'Before' yan cümlesinde Will/Would kullanımı yasaktır! Doğru cevap Present Simple 'enters' olmalıdır.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l2_q24",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Gelecek zaman kilit kuralına uygun seçeneği bulunuz:\n\n\"After the board ___ the budget, the management will allocate resources to regional branches.\"",
+                                                            "sentence": "After the board ___ the budget, the management will allocate resources to regional branches.",
+                                                            "options": [
+                                                                        "approves",
+                                                                        "will approve",
+                                                                        "would approve",
+                                                                        "had approved"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yönetim kurulu bütçeyi onayladıktan sonra yönetim bölgesel şubelere kaynak tahsis edecek.",
+                                                            "explanation": "Formül: After + Present (approves) ➔ Will V1 (will allocate). Zaman bağlacı yan cümlesinde gelecek zaman eki yerine Present Simple (approves) kullanılır.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        }
+            ]
+},
     "3": {
-      "exercises": [
-        {
-          "id": "u101l100ex1",
-          "title": "Alıştırma 1: \"It is time\" Kalıbı I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
-          "questions": [
-            {
-              "id": "u101l100_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the development team ___ the memory leak.",
-              "options": [
-                "fixed",
-                "fixes",
-                "fix",
-                "has fixed"
-              ],
-              "correctIndex": 0,
-              "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ time the administration <span style=\"color: #ff6b6b; font-weight: bold;\">updated</span> the safety laws.",
-              "options": [
-                "It has been",
-                "It was",
-                "It is high",
-                "There is"
-              ],
-              "correctIndex": 2,
-              "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the technical operators ___ the main server.",
-              "options": [
-                "rebooted",
-                "are rebooting",
-                "reboots",
-                "reboot"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "___ time the government <span style=\"color: #ff6b6b; font-weight: bold;\">reduced</span> factory carbon emissions.",
-              "options": [
-                "It is high",
-                "It had",
-                "It has",
-                "There is"
-              ],
-              "correctIndex": 0,
-              "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the principal researcher ___ the statistical data.",
-              "options": [
-                "compiled",
-                "compiles",
-                "compile",
-                "has compiled"
-              ],
-              "correctIndex": 0,
-              "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex1_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It ___ time the development team <span style=\"color: #ff6b6b; font-weight: bold;\">fixed</span> the memory leak.",
-              "options": [
-                "has been",
-                "would be",
-                "is",
-                "was"
-              ],
-              "correctIndex": 2,
-              "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time the administration ___ the safety laws.",
-              "options": [
-                "updated",
-                "updates",
-                "update",
-                "is updating"
-              ],
-              "correctIndex": 0,
-              "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ time the technical operators <span style=\"color: #ff6b6b; font-weight: bold;\">rebooted</span> the main server.",
-              "options": [
-                "time",
-                "just time",
-                "the time",
-                "high time"
-              ],
-              "correctIndex": 0,
-              "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time the government ___ factory carbon emissions.",
-              "options": [
-                "will reduce",
-                "reduces",
-                "reduce",
-                "reduced"
-              ],
-              "correctIndex": 3,
-              "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ time the principal researcher <span style=\"color: #ff6b6b; font-weight: bold;\">compiled</span> the statistical data.",
-              "options": [
-                "the time",
-                "just time",
-                "high time",
-                "time"
-              ],
-              "correctIndex": 3,
-              "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
-            }
-          ]
-        },
-        {
-          "id": "u101l100ex2",
-          "title": "Alıştırma 2: \"It is time\" Kalıbı II",
-          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
-          "questions": [
-            {
-              "id": "u101l100_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time we ___ the legacy application components.",
-              "options": [
-                "refactor",
-                "refactored",
-                "are refactoring",
-                "refactors"
-              ],
-              "correctIndex": 1,
-              "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It ___ time the university <span style=\"color: #ff6b6b; font-weight: bold;\">granted</span> the necessary project funds.",
-              "options": [
-                "was",
-                "has been",
-                "will be",
-                "is"
-              ],
-              "correctIndex": 3,
-              "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time the field crew ___ the concrete foundation.",
-              "options": [
-                "reinforce",
-                "will reinforce",
-                "reinforces",
-                "reinforced"
-              ],
-              "correctIndex": 3,
-              "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex2_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ time companies <span style=\"color: #ff6b6b; font-weight: bold;\">hired</span> compliance policy experts.",
-              "options": [
-                "just time",
-                "the time",
-                "time",
-                "high time"
-              ],
-              "correctIndex": 3,
-              "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the compiler ___ the source code files.",
-              "options": [
-                "optimizing",
-                "optimize",
-                "optimizes",
-                "optimized"
-              ],
-              "correctIndex": 3,
-              "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex2_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ time we <span style=\"color: #ff6b6b; font-weight: bold;\">refactored</span> the legacy application components.",
-              "options": [
-                "the time",
-                "high time",
-                "time",
-                "just time"
-              ],
-              "correctIndex": 1,
-              "translation": "Geliştirme ekibinin bellek sızıntısını düzeltme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the university ___ the necessary project funds.",
-              "options": [
-                "granted",
-                "has granted",
-                "grants",
-                "grant"
-              ],
-              "correctIndex": 0,
-              "translation": "Yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ time the field crew <span style=\"color: #ff6b6b; font-weight: bold;\">reinforced</span> the concrete foundation.",
-              "options": [
-                "the time",
-                "time",
-                "just time",
-                "high time"
-              ],
-              "correctIndex": 3,
-              "translation": "Teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time companies ___ compliance policy experts.",
-              "options": [
-                "hires",
-                "are hiring",
-                "hire",
-                "hired"
-              ],
-              "correctIndex": 3,
-              "translation": "Hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is ___ time the compiler <span style=\"color: #ff6b6b; font-weight: bold;\">optimized</span> the source code files.",
-              "options": [
-                "time",
-                "the time",
-                "high time",
-                "just time"
-              ],
-              "correctIndex": 0,
-              "translation": "Baş araştırmacının istatistiksel verileri derleme zamanı geldi."
-            }
-          ]
-        },
-        {
-          "id": "u101l100ex3",
-          "title": "Alıştırma 3: \"It is time\" Kalıbı III",
-          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
-          "questions": [
-            {
-              "id": "u101l100_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the development team ___ the background memory leak since users are experiencing constant navigation delay.",
-              "options": [
-                "fixed",
-                "fixes",
-                "has fixed",
-                "fix"
-              ],
-              "correctIndex": 0,
-              "translation": "Geliştirme ekibinin eski uygulama bileşenlerini yeniden yapılandırma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is high time the administration ___ the safety laws because industrial mechanical piston failures occur frequently.",
-              "options": [
-                "update",
-                "is updating",
-                "updates",
-                "updated"
-              ],
-              "correctIndex": 3,
-              "translation": "Üniversitenin gerekli proje fonlarını sağlama zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the technical operators ___ the main server so that secure cryptographic token generation can resume.",
-              "options": [
-                "are rebooting",
-                "reboot",
-                "reboots",
-                "rebooted"
-              ],
-              "correctIndex": 3,
-              "translation": "Saha ekibinin beton temeli güçlendirme zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex3_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is high time the government ___ factory carbon emissions in order that international environmental limits might be met.",
-              "options": [
-                "reduced",
-                "will reduce",
-                "reduce",
-                "reduces"
-              ],
-              "correctIndex": 0,
-              "translation": "Derleyicinin kaynak kod dosyalarını optimize etme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is time the principal researcher ___ the statistical data before the board requests the annual performance report.",
-              "options": [
-                "has compiled",
-                "compile",
-                "compiled",
-                "compiles"
-              ],
-              "correctIndex": 2,
-              "translation": "Şirketlerin uyum politikası uzmanlarını işe alma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the development team ___ the background memory leak since users are experiencing constant navigation delay.",
-              "translation": "Kullanıcılar sürekli gezinme gecikmesi yaşadığından, geliştirme ekibinin arka plan bellek sızıntısını düzeltme zamanı geldi.",
-              "corrects": [
-                "time",
-                "fixed"
-              ]
-            },
-            {
-              "id": "u101l100_ex3_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the administration ___ the safety laws because industrial mechanical piston failures occur frequently.",
-              "translation": "Endüstriyel mekanik piston arızaları sıklıkla meydana geldiği için, yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor.",
-              "corrects": [
-                "high time",
-                "updated"
-              ]
-            },
-            {
-              "id": "u101l100_ex3_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the technical operators ___ the main server so that secure cryptographic token generation can resume.",
-              "translation": "Güvenli kriptografik jeton üretimi yeniden başlayabilsin diye, teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi.",
-              "corrects": [
-                "time",
-                "rebooted"
-              ]
-            },
-            {
-              "id": "u101l100_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the government ___ factory carbon emissions in order that international environmental limits might be met.",
-              "translation": "Uluslararası çevre sınırlarının karşılanabilmesi için, hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor.",
-              "corrects": [
-                "high time",
-                "reduced"
-              ]
-            },
-            {
-              "id": "u101l100_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the principal researcher ___ the statistical data before the board requests the annual performance report.",
-              "translation": "Yönetim kurulu yıllık performans raporunu talep etmeden önce, baş araştırmacının istatistiksel verileri derleme zamanı geldi.",
-              "corrects": [
-                "time",
-                "compiled"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u101l100ex4",
-          "title": "Alıştırma 4: \"It is time\" Kalıbı IV",
-          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
-          "questions": [
-            {
-              "id": "u101l100_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time we ___ the legacy application components lest the system should trigger an irreversible database crash.",
-              "options": [
-                "refactors",
-                "are refactoring",
-                "refactor",
-                "refactored"
-              ],
-              "correctIndex": 3,
-              "translation": "Kullanıcılar sürekli gezinme gecikmesi yaşadığından, geliştirme ekibinin arka plan bellek sızıntısını düzeltme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is time the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
-              "options": [
-                "grant",
-                "has granted",
-                "grants",
-                "granted"
-              ],
-              "correctIndex": 3,
-              "translation": "Endüstriyel mekanik piston arızaları sıklıkla meydana geldiği için, yönetimin güvenlik yasalarını güncelleme zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time the field crew ___ the concrete foundation despite the turbulent weather conditions at the site.",
-              "options": [
-                "reinforce",
-                "reinforces",
-                "will reinforce",
-                "reinforced"
-              ],
-              "correctIndex": 3,
-              "translation": "Güvenli kriptografik jeton üretimi yeniden başlayabilsin diye, teknik operatörlerin ana sunucuyu yeniden başlatma zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex4_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is time the compiler ___ the source code files, decreasing the processing latency parameters on production servers.",
-              "options": [
-                "optimize",
-                "optimizes",
-                "optimized",
-                "optimizing"
-              ],
-              "correctIndex": 2,
-              "translation": "Uluslararası çevre sınırlarının karşılanabilmesi için, hükümetin fabrika karbon emisyonlarını azaltma zamanı geldi de geçiyor."
-            },
-            {
-              "id": "u101l100_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is high time companies ___ compliance policy experts seeing that the legislative assembly passed strict digital currency rules.",
-              "options": [
-                "hire",
-                "hires",
-                "hired",
-                "are hiring"
-              ],
-              "correctIndex": 2,
-              "translation": "Yönetim kurulu yıllık performans raporunu talep etmeden önce, baş araştırmacının istatistiksel verileri derleme zamanı geldi."
-            },
-            {
-              "id": "u101l100_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ we ___ the legacy application components lest the system should trigger an irreversible database crash.",
-              "translation": "Sistemin geri döndürülemez bir veritabanı çöküşünü tetiklememesi için, eski uygulama bileşenlerini yeniden yapılandırma zamanımız geldi de geçiyor.",
-              "corrects": [
-                "high time",
-                "refactored"
-              ]
-            },
-            {
-              "id": "u101l100_ex4_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the university ___ the necessary project funds, for the sociology department needs to recruit post-doctoral scholars.",
-              "translation": "bölümünün doktora sonrası akademisyenleri işe alması gerektiğinden, üniversitenin gerekli proje fonlarını sağlama zamanı geldi.",
-              "corrects": [
-                "time",
-                "granted"
-              ]
-            },
-            {
-              "id": "u101l100_ex4_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the field crew ___ the concrete foundation despite the turbulent weather conditions at the site.",
-              "translation": "Sahadaki çalkantılı hava koşullarına rağmen, saha ekibinin beton temeli güçlendirme zamanı geldi de geçiyor.",
-              "corrects": [
-                "high time",
-                "reinforced"
-              ]
-            },
-            {
-              "id": "u101l100_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ the compiler ___ the source code files, decreasing the processing latency parameters on production servers.",
-              "translation": "Üretim sunucularındaki işlem gecikme parametrelerini azaltarak, derleyicinin kaynak kod dosyalarını optimize etme zamanı geldi.",
-              "corrects": [
-                "time",
-                "optimized"
-              ]
-            },
-            {
-              "id": "u101l100_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is ___ companies ___ compliance policy experts seeing that the legislative assembly passed strict digital currency rules.",
-              "translation": "Yasama meclisinin katı dijital para kurallarını kabul ettiğini göz önünde bulundurarak, şirketlerin uyum politikası uzmanlarını işe alma zamanı geldi de geçiyor.",
-              "corrects": [
-                "high time",
-                "hired"
-              ]
-            }
-          ]
-        }
-      ]
-    },
+            "exercises": [
+                        {
+                                    "id": "u101_l3_ex0",
+                                    "title": "Alıştırma 1: Isınma, Türkçe Çeviri Kılavuzu & Devrik Tense Kilitleri (Temel Seviye)",
+                                    "description": "Devrik anlık zaman bağlaçlarının Türkçe çeviri mantıkları (-er ... -mez / henüz ... ki), çağırdığı zamanlar (Had V3 / V2) ve ikincil ek kilitleri (THAN / WHEN).",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l3_t1",
+                                                            "type": "structure-match",
+                                                            "prompt": "No sooner ... than (🇹🇷 Çeviri Mantığı: '-er ... -mez' / '... etmesiyle ... etmesi bir oldu') bağlacının çağırdığı tense ve ikincil ek formülünü seçiniz:",
+                                                            "options": [
+                                                                        "No sooner + HAD + Subject + V3 (Past Perfect) ... THAN + Subject + V2 (Past Simple)",
+                                                                        "No sooner + Subject + V2 ... WHEN + Subject + Had V3",
+                                                                        "No sooner + WILL + Subject + V1 ... THEN + Subject + V1",
+                                                                        "No sooner + HAVE + Subject + V3 ... AS + Subject + V2"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "No sooner ... than ('-er ... -mez') yapısı: Had + Özne + V3 ... THAN + V2 formülünü çağırır.",
+                                                            "explanation": "Formül Kuralı & Çeviri Rehberi: No sooner ... than yapısı Türkçeye '-er ... -mez' (örn: duyurur duyurmaz / duyurmasıyla ... bir oldu) olarak çevrilir. 1. eylemde 'Had + Özne + V3' devrik yapısını çağırır, ikincil ek olarak 'THAN' alır ve 2. eylem 'V2' (Past Simple) olur.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t2",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "No sooner ... than (🇹🇷 '-er ... -mez') yapısının çağırdığı devrik yardımcı fiili ve ikincil bağlaç ekini seçiniz:\n\n\"No sooner ___ the scientist announced the discovery ___ debate erupted.\"",
+                                                            "sentence": "No sooner ___ the scientist announced the discovery ___ debate erupted.",
+                                                            "options": [
+                                                                        "had / than",
+                                                                        "has / when",
+                                                                        "did / then",
+                                                                        "was / before"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bilim insanı buluşu duyurur duyurmaz (duyurmasıyla ... bir oldu) tartışma patlak verdi.",
+                                                            "explanation": "Öğretici Kural & Çeviri: No sooner kelimesi 1. eylemde 'HAD' yardımcı fiilini özneden önce çağırır; 2. cümleye bağlanırken 'THAN' ekini ister. Çevirisi: 'duyurur duyurmaz'.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t3",
+                                                            "type": "true-false",
+                                                            "prompt": "'No sooner ... than' (-er ... -mez) yapısında cümle başında özne yardımcı fiilden önce gelir ve düz cümle kurulur.",
+                                                            "englishPhrase": "No sooner the scientist had announced...",
+                                                            "isTrue": false,
+                                                            "correctAnswer": "false",
+                                                            "translation": "No sooner başa geldiğinde cümle mutlaka devrik (Had + Özne + V3) olur.",
+                                                            "explanation": "Öğretici Kural: YANLIŞ! 'No sooner' (-er ... -mez) cümle başında kullanıldığında mutlaka DEVRİK yapı kurulur; yardımcı fiil 'HAD' öznenin önüne geçer (Had + Özne + V3).",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Sözdizimi (Syntax)"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t4",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "'No sooner ... than' (🇹🇷 '-er ... -mez') yapısında 1. eylem ve 2. eylemin zaman çekimleri sırasıyla hangisidir?",
+                                                            "options": [
+                                                                        "1. Eylem: Past Perfect (Had V3) | 2. Eylem: Past Simple (V2)",
+                                                                        "1. Eylem: Past Simple (V2) | 2. Eylem: Present Perfect (Have V3)",
+                                                                        "1. Eylem: Present Simple (V1) | 2. Eylem: Future (Will V1)",
+                                                                        "1. Eylem: Past Continuous (Was/Were Ving) | 2. Eylem: Past Perfect (Had V3)"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "No sooner had he left than she arrived.",
+                                                            "isEngToTr": true,
+                                                            "translation": "O ayrılır ayrılmaz (ayrılmasıyla ... bir oldu) kadın vardı.",
+                                                            "explanation": "Öğretici Kural: No sooner kalıbında ilk gerçekleşen anlık eylem Past Perfect (Had V3), 'than' sonrasındaki 2. eylem ise Past Simple (V2) zamanını çağırır.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t5",
+                                                            "type": "collocation-matching",
+                                                            "prompt": "No sooner (-er ... -mez) bileşenlerini çağırdığı gramer işlevleriyle eşleştiriniz:",
+                                                            "pairs": [
+                                                                        {
+                                                                                    "left": "No Sooner Cümle Başı",
+                                                                                    "right": "Yardımcı Fiil 'HAD' Öznenin Önüne Geçer (Devrik)"
+                                                                        },
+                                                                        {
+                                                                                    "left": "İlk Eylem (1. Kısım)",
+                                                                                    "right": "Past Perfect (Had + Subject + V3)"
+                                                                        },
+                                                                        {
+                                                                                    "left": "İkincil Bağlaç Eki",
+                                                                                    "right": "THAN"
+                                                                        },
+                                                                        {
+                                                                                    "left": "İkinci Eylem (2. Kısım)",
+                                                                                    "right": "Past Simple (V2)"
+                                                                        }
+                                                            ],
+                                                            "explanation": "No sooner kalıbının 4 temel gramer ayağı: Devriklik (Had), Past Perfect (V3), THAN eki ve Past Simple (V2). Türkçe Çevirisi: '-er ... -mez'.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t6",
+                                                            "type": "structure-match",
+                                                            "prompt": "Hardly / Scarcely / Barely ... when (🇹🇷 Çeviri Mantığı: '-er ... -mez' / '... henüz yapmıştı ki ... oldu') bağlaçlarının çağırdığı zaman ve ek formülünü seçiniz:",
+                                                            "options": [
+                                                                        "Hardly/Scarcely/Barely + HAD + Subject + V3 ... WHEN/BEFORE + Subject + V2",
+                                                                        "Hardly + Subject + V2 ... THAN + Subject + Had V3",
+                                                                        "Hardly + WILL + Subject + V1 ... AS + Subject + V1",
+                                                                        "Hardly + HAS + Subject + V3 ... SO + Subject + V2"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Hardly/Scarcely/Barely ... when: Had + Özne + V3 ... WHEN/BEFORE + V2 formülünü çağırır.",
+                                                            "explanation": "Formül Kuralı & Çeviri Rehberi: Hardly/Scarcely/Barely Türkçeye 'henüz yapmıştı ki ... oldu' veya '-er ... -mez' olarak çevrilir. Başa geldiğinde 1. eylem 'Had + Özne + V3' (Past Perfect) devrik yapısını çağırır, ikincil ek olarak 'WHEN' (veya 'BEFORE') alır ve 2. eylem 'V2' olur.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t7",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Hardly ... when (🇹🇷 'henüz yapmıştı ki ... oldu') bağlacının çağırdığı yardımcı fiili ve ikincil eki seçiniz:\n\n\"Hardly ___ the plane landed ___ a thunderstorm hit the airport.\"",
+                                                            "sentence": "Hardly ___ the plane landed ___ a thunderstorm hit the airport.",
+                                                            "options": [
+                                                                        "had / when",
+                                                                        "has / than",
+                                                                        "did / then",
+                                                                        "was / as"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Uçak henüz inmişti ki (iner inmez) havalimanını ani bir fırtına vurdu.",
+                                                            "explanation": "Öğretici Kural & Çeviri: Hardly kelimesi 1. eylemde 'HAD' yardımcı fiilini çağırır; 2. eyleme geçerken 'WHEN' ekini ister. Çeviri: 'iner inmez / henüz inmişti ki'.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t8",
+                                                            "type": "true-false",
+                                                            "prompt": "'Hardly' ve 'Scarcely' (-er ... -mez / henüz ... ki) bağlaçları ikincil ek olarak 'THAN' kullanır.",
+                                                            "englishPhrase": "Hardly had he arrived than the meeting started.",
+                                                            "isTrue": false,
+                                                            "correctAnswer": "false",
+                                                            "translation": "Hardly ve Scarcely ikincil ek olarak THAN değil, WHEN (veya BEFORE) ister.",
+                                                            "explanation": "Öğretici Kural: YANLIŞ! 'THAN' eki sadece 'No sooner' ile kullanılır. 'Hardly', 'Scarcely' ve 'Barely' ise ikincil ek olarak 'WHEN' (veya 'BEFORE') ister.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Kural Yasağı"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t9",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "\"Scarcely had the archaeologists uncovered the tomb ___ the storm began.\" (🇹🇷 Arkeologlar mezarı açar açmaz fırtına başladı). Boşluğa hangi ek ve zaman gelir?",
+                                                            "options": [
+                                                                        "Ek: WHEN | 2. Eylem Zamanı: Past Simple (V2: began)",
+                                                                        "Ek: THAN | 2. Eylem Zamanı: Past Perfect (had begun)",
+                                                                        "Ek: THEN | 2. Eylem Zamanı: Present Simple (begins)",
+                                                                        "Ek: AS | 2. Eylem Zamanı: Future (will begin)"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "Scarcely had the archaeologists uncovered the tomb when the storm began.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Arkeologlar mezarı henüz açmıştı ki (açar açmaz) fırtına başladı.",
+                                                            "explanation": "Öğretici Kural: Scarcely yapısı 'WHEN' ikincil ekini çağırır ve 'when' sonrasındaki 2. eylem Past Simple (V2: began) zamanındadır.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t10",
+                                                            "type": "collocation-matching",
+                                                            "prompt": "Hardly / Scarcely / Barely (-er ... -mez) bileşenlerini çağırdığı ek ve zamanlarla eşleştiriniz:",
+                                                            "pairs": [
+                                                                        {
+                                                                                    "left": "Cümle Başı Zarf (Hardly/Scarcely/Barely)",
+                                                                                    "right": "Devrik Yapı (Had + Özne + V3)"
+                                                                        },
+                                                                        {
+                                                                                    "left": "İkincil Bağlaç Eki",
+                                                                                    "right": "WHEN / BEFORE"
+                                                                        },
+                                                                        {
+                                                                                    "left": "İlk Eylem Zamanı",
+                                                                                    "right": "Past Perfect (Had V3)"
+                                                                        },
+                                                                        {
+                                                                                    "left": "İkinci Eylem Zamanı",
+                                                                                    "right": "Past Simple (V2)"
+                                                                        }
+                                                            ],
+                                                            "explanation": "Hardly/Scarcely/Barely kalıbının 4 temel gramer ayağı: Devrik Had, Past Perfect, WHEN/BEFORE eki ve Past Simple.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t11",
+                                                            "type": "structure-match",
+                                                            "prompt": "As soon as (🇹🇷 Çeviri Mantığı: '-er ... -mez' / '... yapar yapmaz') bağlacının cümle yapısı ve zaman kuralını seçiniz:",
+                                                            "options": [
+                                                                        "As soon as + Subject + V2 / Had V3 (Düz Cümle) ..., Subject + V2 (Düz Cümle)",
+                                                                        "As soon as + Had + Subject + V3 (Devrik Cümle) ... THAN + Subject + V2",
+                                                                        "As soon as + Will + Subject + V1 ... WHEN + Subject + V1",
+                                                                        "As soon as + Has + Subject + V3 ... BEFORE + Subject + V2"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "As soon as ('yapar yapmaz') yapısı düz cümle sıralaması (Özne + Yüklem) ister.",
+                                                            "explanation": "Formül Kuralı & Çeviri Rehberi: As soon as Türkçeye 'yapar yapmaz' olarak çevrilir. Cümle DEVRİK YAPILMAZ; özne başa gelir (Düz Cümle) ve eylemler Past Simple (V2) veya Past Perfect ile bağlanır.",
+                                                            "grammarTags": [
+                                                                        "Düz Cümle Yapısı",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t12",
+                                                            "type": "true-false",
+                                                            "prompt": "'As soon as' (-er ... -mez) bağlacı kullanıldığında tıpkı 'No sooner' gibi yardımcı fiil öznenin önüne geçerek devrik cümle oluşur.",
+                                                            "englishPhrase": "As soon as had the committee approved...",
+                                                            "isTrue": false,
+                                                            "correctAnswer": "false",
+                                                            "translation": "As soon as devrik cümle değil, düz cümle (Özne + Yüklem) ister.",
+                                                            "explanation": "Öğretici Kural: YANLIŞ! 'As soon as' ve 'Immediately after' düz zaman bağlaçlarıdır; devriklik (inversion) OLUŞTURMAZ. Cümle standart Özne + Yüklem sırasındadır.",
+                                                            "grammarTags": [
+                                                                        "Düz Cümle Yapısı",
+                                                                        "Kural Yasağı"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t13",
+                                                            "type": "collocation-matching",
+                                                            "prompt": "Devrik anlık bağlaçlarını çağırdıkları ikincil ekler ve Türkçe çeviri karşılıklarıyla eşleştiriniz:",
+                                                            "pairs": [
+                                                                        {
+                                                                                    "left": "No sooner ... THAN",
+                                                                                    "right": "-er ... -mez / ... etmesiyle ... etmesi bir oldu"
+                                                                        },
+                                                                        {
+                                                                                    "left": "Hardly ... WHEN",
+                                                                                    "right": "-er ... -mez / ... henüz yapmıştı ki ... oldu"
+                                                                        },
+                                                                        {
+                                                                                    "left": "Scarcely ... WHEN",
+                                                                                    "right": "-er ... -mez / ... henüz yapmıştı ki ... oldu"
+                                                                        },
+                                                                        {
+                                                                                    "left": "As soon as",
+                                                                                    "right": "-er ... -mez / ... yapar yapmaz"
+                                                                        }
+                                                            ],
+                                                            "explanation": "No sooner -> THAN; Hardly/Scarcely/Barely -> WHEN/BEFORE eşleşmesi ve Türkçe çeviri anlamları sabittir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t14",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Bağlaç kural yasağını gözeterek boşluğu doldurunuz (🇹🇷 Sunucu çöker çökmez...):\n\n\"No sooner had the server crashed ___ the backup system kicked in.\"",
+                                                            "sentence": "No sooner had the server crashed ___ the backup system kicked in.",
+                                                            "options": [
+                                                                        "than",
+                                                                        "when",
+                                                                        "before",
+                                                                        "as"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Sunucu çöker çökmez (çökmesiyle ... bir oldu) yedek sistem devreye girdi.",
+                                                            "explanation": "Kural Yasağı: 'NO SOONER' asla 'WHEN' veya 'BEFORE' alamaz! Sadece 'THAN' ile eşleşir. Çevirisi: 'çöker çökmez'.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_t15",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Eşleşme yasağına göre boşluğa gelecek ikincil eki seçiniz (🇹🇷 Yasa geçer geçmez...):\n\n\"Hardly had the law been passed ___ constitutional challenges were filed.\"",
+                                                            "sentence": "Hardly had the law been passed ___ constitutional challenges were filed.",
+                                                            "options": [
+                                                                        "when",
+                                                                        "than",
+                                                                        "so",
+                                                                        "that"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yasa henüz geçmişti ki (geçer geçmez) anayasal itirazlar açıldı.",
+                                                            "explanation": "Kural Yasağı: 'HARDLY / SCARCELY / BARELY' asla 'THAN' alamaz! Sadece 'WHEN' veya 'BEFORE' ile eşleşir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Çeviri Rehberi"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                }
+                                    ]
+                        },
+                        {
+                                    "id": "u101_l3_ex1",
+                                    "title": "Alıştırma 2: Devrik Anlık Zaman Kırılmaları Akademik Cümleler (No sooner... than & Hardly... when)",
+                                    "description": "Akademik metinlerde No sooner... than ve Hardly... when devrik dizilimi ve tense uyumları.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l3_q1",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Devrik yardımcı fiili doğru seçiniz:\n\n\"No sooner ___ the scientist announced the discovery than debate erupted in the auditorium.\"",
+                                                            "sentence": "No sooner ___ the scientist announced the discovery than debate erupted in the auditorium.",
+                                                            "options": [
+                                                                        "had",
+                                                                        "has",
+                                                                        "did",
+                                                                        "was"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bilim insanı buluşu duyurur duyurmaz salonda tartışma patlak verdi.",
+                                                            "explanation": "Formül: No sooner + HAD + Özne + V3 ... THAN + V2. Cümle başında olumsuz 'No sooner' kullanıldığında yardımcı fiil HAD öznenin önüne geçer.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q2",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "İkinci bağlacı doğru seçiniz:\n\n\"No sooner had the central bank raised interest rates ___ market indicators reacted sharply.\"",
+                                                            "sentence": "No sooner had the central bank raised interest rates ___ market indicators reacted sharply.",
+                                                            "options": [
+                                                                        "than",
+                                                                        "when",
+                                                                        "before",
+                                                                        "then"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Merkez bankası faizleri artırır artırmaz piyasa göstergeleri sert tepki verdi.",
+                                                            "explanation": "Formül: No sooner ... THAN. 'No sooner' yapısı ikili bağlaç olarak daima 'THAN' kelimesiyle eşleşir; 'when' veya 'before' ile kullanılamaz.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q3",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "İkinci eylemin zaman çekimini seçiniz:\n\n\"No sooner had the space probe entered Mars' orbit than ground control ___ telemetry signals.\"",
+                                                            "options": [
+                                                                        "received",
+                                                                        "had received",
+                                                                        "receives",
+                                                                        "will receive"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "No sooner had the space probe entered Mars' orbit than ground control received telemetry signals.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Uzay sondası Mars yörüngesine girer girmez yer kontrol telemetri sinyallerini aldı.",
+                                                            "explanation": "Formül: No sooner + Had + S + V3 ... THAN + V2. 'Than' bağlacından sonra gelen ikinci eylem Past Simple (V2: received) olmak zorundadır.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Devrik Cümle (Inversion)"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q4",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümle vagonlarını doğru sıralayınız:\n\n\"No sooner had the trial ended than the jury delivered the verdict.\"",
+                                                            "translation": "Duruşma biter bitmez jüri kararı açıkladı.",
+                                                            "words": [
+                                                                        "No sooner had",
+                                                                        "the trial ended",
+                                                                        "than the jury",
+                                                                        "delivered the verdict.",
+                                                                        "when",
+                                                                        "delivers"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "No sooner had",
+                                                                        "the trial ended",
+                                                                        "than the jury",
+                                                                        "delivered the verdict."
+                                                            ],
+                                                            "enSentence": "No sooner had the trial ended than the jury delivered the verdict.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: No sooner + HAD + S + V3 ... THAN + V2. Eylemlerin anlık geçişini vurgulayan devrik past yapısıdır.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q5",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu doldurunuz:\n\n\"No sooner had the company launched the product ___ competitors released a counter-model.\"",
+                                                            "sentence": "No sooner had the company launched the product ___ competitors released a counter-model.",
+                                                            "options": [
+                                                                        "than",
+                                                                        "when",
+                                                                        "before",
+                                                                        "where"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Şirket ürünü piyasaya sürer sürmez rakipler karşı bir model çıkardı.",
+                                                            "explanation": "Formül: No sooner ... THAN. 'No sooner' kalıbının ikinci bağlacı istisnasız 'THAN'dir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q6",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"No sooner had the meeting started than an emergency call interrupted the discussion.\"",
+                                                            "correctSentence": "Toplantı başlar başlamaz acil bir arama tartışmayı böldü.",
+                                                            "enSentence": "No sooner had the meeting started than an emergency call interrupted the discussion.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: No sooner + HAD + S + V3 ... THAN + V2. Anlık geçiş bildiren bu devrik yapı Türkçe'ye '-er ... -mez' şeklinde çevrilir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q7",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Devrik yardımcı fiili seçiniz:\n\n\"Hardly ___ the plane landed when a sudden thunderstorm hit the airport.\"",
+                                                            "sentence": "Hardly ___ the plane landed when a sudden thunderstorm hit the airport.",
+                                                            "options": [
+                                                                        "had",
+                                                                        "has",
+                                                                        "did",
+                                                                        "was"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Uçak iner inmez havalimanını ani bir fırtına vurdu.",
+                                                            "explanation": "Formül: Hardly + HAD + Özne + V3 ... WHEN + V2. Cümle başındaki 'Hardly' zarfı cümleyi devrik yapar ve 'Had + Özne + V3' yapısını zorunlu kılar.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q8",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "İkinci bağlacı doğru seçiniz:\n\n\"Scarcely had the archaeologists uncovered the tomb ___ the storm began.\"",
+                                                            "sentence": "Scarcely had the archaeologists uncovered the tomb ___ the storm began.",
+                                                            "options": [
+                                                                        "when",
+                                                                        "than",
+                                                                        "then",
+                                                                        "where"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Arkeologlar mezarı açar açmaz fırtına başladı.",
+                                                            "explanation": "Formül: Scarcely / Hardly ... WHEN. 'Hardly', 'Scarcely' ve 'Barely' yapıları ikili bağlaç olarak 'WHEN' (veya 'BEFORE') ile eşleşir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q9",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "İkinci yüklemi seçiniz:\n\n\"Hardly had the delegation arrived at the summit when reporters ___ a series of questions.\"",
+                                                            "options": [
+                                                                        "asked",
+                                                                        "had asked",
+                                                                        "will ask",
+                                                                        "ask"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "Hardly had the delegation arrived at the summit when reporters asked a series of questions.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Heyet zirveye varır varmaz gazeteciler bir dizi soru sordu.",
+                                                            "explanation": "Formül: Hardly + Had + S + V3 ... WHEN + V2. 'When' sonrasındaki ikinci eylem Past Simple (V2: asked) çekimlenir.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Devrik Cümle (Inversion)"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q10",
+                                                            "type": "word-bank",
+                                                            "prompt": "Öbek vagonlarını diziniz:\n\n\"Hardly had the rescue team reached the peak when fog covered the valley.\"",
+                                                            "translation": "Kurtarma ekibi zirveye ulaşır ulaşmaz vadiyi sis kapladı.",
+                                                            "words": [
+                                                                        "Hardly had the rescue team",
+                                                                        "reached the peak",
+                                                                        "when fog covered",
+                                                                        "the valley.",
+                                                                        "than",
+                                                                        "reaches"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "Hardly had the rescue team",
+                                                                        "reached the peak",
+                                                                        "when fog covered",
+                                                                        "the valley."
+                                                            ],
+                                                            "enSentence": "Hardly had the rescue team reached the peak when fog covered the valley.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: Hardly + HAD + S + V3 ... WHEN + V2. Sis çökmesi ile ulaşma eylemi arasındaki anlık geçiş 'Hardly ... when' ile ifade edilmiştir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q11",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa uygun bağlacı seçiniz:\n\n\"Barely had the technicians upgraded the firewall ___ the server detected another breach attempt.\"",
+                                                            "sentence": "Barely had the technicians upgraded the firewall ___ the server detected another breach attempt.",
+                                                            "options": [
+                                                                        "before",
+                                                                        "than",
+                                                                        "where",
+                                                                        "after"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Teknisyenler güvenlik duvarını yükseltir yükseltmez sunucu başka bir ihlal girişimi tespit etti.",
+                                                            "explanation": "Formül: Barely / Hardly ... BEFORE / WHEN. 'Barely' kalıbı ikinci bağlaç olarak 'before' veya 'when' kabul eder.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q12",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"Hardly had the research report been published when debate erupted among scholars.\"",
+                                                            "correctSentence": "Araştırma raporu yayımlanır yayımlanmaz akademisyenler arasında tartışma patlak verdi.",
+                                                            "enSentence": "Hardly had the research report been published when debate erupted among scholars.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: Hardly + HAD + S + V3 (edilgen) ... WHEN + V2. 'Hardly ... when' yapısı edilgen fiille de anlık geçiş bildirir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        },
+                        {
+                                    "id": "u101_l3_ex2",
+                                    "title": "Alıştırma 3: Düz vs. Devrik Anlık Bağlaç Karşılaştırmaları & Çeviri (As soon as vs. No sooner)",
+                                    "description": "As soon as (Düz Cümle) ile No sooner/Hardly (Devrik Cümle) sözdizimi farkı, kural yasakları ve çevirisi.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l3_q13",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Düz cümle zaman çekimini seçiniz:\n\n\"As soon as the committee ___ the proposed budget, funding was transferred to regional branches.\"",
+                                                            "sentence": "As soon as the committee ___ the proposed budget, funding was transferred to regional branches.",
+                                                            "options": [
+                                                                        "approved",
+                                                                        "had approved",
+                                                                        "will approve",
+                                                                        "approves"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Komite önerilen bütçeyi onaylar onaylamaz fon bölgesel şubelere aktarıldı.",
+                                                            "explanation": "Formül: As soon as + Özne + V2 / Had V3 ➔ V2 (Düz Cümle Dizilimi). 'As soon as' kullanımında cümle DEVRİK YAPILMAZ; özne başa gelir ve fiil Past (approved) olur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q14",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Düz anlık zaman bağlacı ana cümlesini doldurunuz:\n\n\"Immediately after the press conference ended, journalists ___ the spokespersons for comments.\"",
+                                                            "sentence": "Immediately after the press conference ended, journalists ___ the spokespersons for comments.",
+                                                            "options": [
+                                                                        "approached",
+                                                                        "had approached",
+                                                                        "will approach",
+                                                                        "approach"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Basın toplantısı biter bitmez gazeteciler yorum almak için sözcülere yaklaştı.",
+                                                            "explanation": "Formül: Immediately after + SVO ➔ V2 (Düz Cümle). Devrik olmayan düz anlık zaman bağlaçlarında ikinci eylem Past Simple (approached) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q15",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Düz dizilimli cümleyi tamamlayan seçeneği bulunuz:\n\n\"As soon as ground control received the telemetry data, they ___ the orbit path.\"",
+                                                            "options": [
+                                                                        "adjusted",
+                                                                        "had adjusted",
+                                                                        "will adjust",
+                                                                        "adjust"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "As soon as ground control received the telemetry data, they adjusted the orbit path.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Yer kontrol telemetri verilerini alır almaz yörünge yolunu ayarladı.",
+                                                            "explanation": "Formül: As soon as + V2 ➔ V2. 'As soon as' sonrasında devriklik yoktur, düz özne-yüklem sıralaması izlenir.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q16",
+                                                            "type": "word-bank",
+                                                            "prompt": "Düz anlık cümlesini vagonlarla diziniz:\n\n\"As soon as the treaty was signed, delegates left the conference room.\"",
+                                                            "translation": "Antlaşma imzalanır imzalanmaz delegeler konferans salonundan ayrıldı.",
+                                                            "words": [
+                                                                        "As soon as the treaty",
+                                                                        "was signed,",
+                                                                        "delegates left",
+                                                                        "the conference room.",
+                                                                        "had signed",
+                                                                        "will leave"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "As soon as the treaty",
+                                                                        "was signed,",
+                                                                        "delegates left",
+                                                                        "the conference room."
+                                                            ],
+                                                            "enSentence": "As soon as the treaty was signed, delegates left the conference room.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: As soon as + SVO (düz cümle) ➔ V2. 'No sooner' devrikken, 'As soon as' tamamen düz dizilimdedir.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q17",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu doldurunuz:\n\n\"Immediately after the software update ___ installed, system stability improved significantly.\"",
+                                                            "sentence": "Immediately after the software update ___ installed, system stability improved significantly.",
+                                                            "options": [
+                                                                        "was",
+                                                                        "had been",
+                                                                        "is",
+                                                                        "will be"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yazılım güncellemesi kurulur kurulmaz sistem kararlılığı önemli ölçüde gelişti.",
+                                                            "explanation": "Formül: Immediately after + Pasif V2 (was installed) ➔ V2 (improved). Düz zaman bağlacı sonrasında Past Simple uyumu kurulur.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q18",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"As soon as the new policy came into effect, corporate leaders modified financial projections.\"",
+                                                            "correctSentence": "Yeni politika yürürlüğe girer girmez şirket liderleri finansal öngörüleri değiştirdi.",
+                                                            "enSentence": "As soon as the new policy came into effect, corporate leaders modified financial projections.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: As soon as + V2 ➔ V2 (Düz Cümle). Anlık eylem diziliminde düz cümle yapısı kurulmuştur.",
+                                                            "grammarTags": [
+                                                                        "Zaman Uyumu",
+                                                                        "Zaman Bağlaçları"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q19",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Bağlaç kural yasağına uygun olanı seçiniz:\n\n\"No sooner had the server crashed ___ the backup system kicked in.\"",
+                                                            "sentence": "No sooner had the server crashed ___ the backup system kicked in.",
+                                                            "options": [
+                                                                        "than",
+                                                                        "when",
+                                                                        "before",
+                                                                        "as"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Sunucu çöker çökmez yedek sistem devreye girdi.",
+                                                            "explanation": "Formül: Kural Yasağı ➔ 'NO SOONER' asla 'WHEN' alamaz! Sadece 'THAN' ile eşleşir. ('Hardly' ise 'WHEN' alır).",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q20",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Eşleşme yasağını dikkate alarak boşluğu doldurunuz:\n\n\"Hardly had the law been passed ___ constitutional challenges were filed.\"",
+                                                            "sentence": "Hardly had the law been passed ___ constitutional challenges were filed.",
+                                                            "options": [
+                                                                        "when",
+                                                                        "than",
+                                                                        "so",
+                                                                        "that"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yasa geçer geçmez anayasal itirazlar açıldı.",
+                                                            "explanation": "Formül: Kural Yasağı ➔ 'HARDLY' asla 'THAN' alamaz! Sadece 'WHEN' / 'BEFORE' ile eşleşir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q21",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Cümle başındaki olumsuz edatı doğru seçiniz:\n\n\"___ had the CEO announced his resignation than stock prices plunged.\"",
+                                                            "options": [
+                                                                        "No sooner",
+                                                                        "Hardly",
+                                                                        "Barely",
+                                                                        "Scarcely"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "No sooner had the CEO announced his resignation than stock prices plunged.",
+                                                            "isEngToTr": true,
+                                                            "translation": "CEO istifasını açıklar açıklamaz hisse fiyatları düştü.",
+                                                            "explanation": "Formül: Bağlaç Uyum Kuralı ➔ İkinci tarafta 'THAN' olduğu için cümle başındaki olumsuz edat sadece 'No sooner' olabilir; 'Hardly/Scarcely/Barely' elenir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q22",
+                                                            "type": "word-bank",
+                                                            "prompt": "Öbek vagonlarını diziniz:\n\n\"No sooner had the alarm sounded than security personnel locked all gates.\"",
+                                                            "translation": "Alarm çalar çalmaz güvenlik personeli tüm kapıları kilitledi.",
+                                                            "words": [
+                                                                        "No sooner had the alarm",
+                                                                        "sounded than security",
+                                                                        "personnel locked",
+                                                                        "all gates.",
+                                                                        "when",
+                                                                        "sounds"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "No sooner had the alarm",
+                                                                        "sounded than security",
+                                                                        "personnel locked",
+                                                                        "all gates."
+                                                            ],
+                                                            "enSentence": "No sooner had the alarm sounded than security personnel locked all gates.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: No sooner ... THAN. 'No sooner' başa gelince 'Had + Özne + V3' devriklik oluşur ve bağlaç 'THAN' olur.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q23",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa gelecek bağlacı seçiniz:\n\n\"Scarcely had the storm cleared ___ rescue helicopters began searching the valley.\"",
+                                                            "sentence": "Scarcely had the storm cleared ___ rescue helicopters began searching the valley.",
+                                                            "options": [
+                                                                        "when",
+                                                                        "than",
+                                                                        "then",
+                                                                        "after"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Fırtına diner dinmez kurtarma helikopterleri vadiyi aramaya başladı.",
+                                                            "explanation": "Formül: Scarcely ... WHEN. 'Scarcely' cümlesinde ikinci bağlaç 'when' olmak zorundadır; 'than' kullanılamaz.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l3_q24",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "İkinci bağlaç kuralını seçiniz:\n\n\"No sooner had the lecture finished ___ students flooded the professor with questions.\"",
+                                                            "sentence": "No sooner had the lecture finished ___ students flooded the professor with questions.",
+                                                            "options": [
+                                                                        "than",
+                                                                        "when",
+                                                                        "before",
+                                                                        "until"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Ders biter bitmez öğrenciler profesörü sorularla boğdu.",
+                                                            "explanation": "Formül: No sooner ... THAN. 'No sooner' kalıbının ayrılmaz ikilisi 'THAN'dir.",
+                                                            "grammarTags": [
+                                                                        "Devrik Cümle (Inversion)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        }
+            ]
+},
     "4": {
-      "exercises": [
-        {
-          "id": "u101l101ex1",
-          "title": "Alıştırma 1: Süperlatif & Kısıtlayıcı Sıfatlar I",
-          "description": "Boşluk doldurma ve zaman zarfları pratikleri.",
-          "questions": [
-            {
-              "id": "u101l101_ex1_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the best academic article I ___ this year.",
-              "options": [
-                "am reading",
-                "had read",
-                "have read",
-                "read"
-              ],
-              "correctIndex": 2,
-              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
-            },
-            {
-              "id": "u101l101_ex1_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the ___ film the compiler team has watched together.",
-              "options": [
-                "first",
-                "worst",
-                "best",
-                "only"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
-            },
-            {
-              "id": "u101l101_ex1_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is the worst software crash we ___ to date.",
-              "options": [
-                "experienced",
-                "have experienced",
-                "had experienced",
-                "are experiencing"
-              ],
-              "correctIndex": 1,
-              "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
-            },
-            {
-              "id": "u101l101_ex1_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the ___ configuration option the algorithm has accepted.",
-              "options": [
-                "only",
-                "best",
-                "first",
-                "worst"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
-            },
-            {
-              "id": "u101l101_ex1_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the most complex simulation model they ___ .",
-              "options": [
-                "have built",
-                "had built",
-                "built",
-                "build"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
-            },
-            {
-              "id": "u101l101_ex1_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the ___ academic article I have read this year.",
-              "options": [
-                "worst",
-                "best",
-                "only",
-                "first"
-              ],
-              "correctIndex": 1,
-              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
-            },
-            {
-              "id": "u101l101_ex1_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the first film the compiler team ___ together.",
-              "options": [
-                "watched",
-                "watches",
-                "had watched",
-                "has watched"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
-            },
-            {
-              "id": "u101l101_ex1_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is the ___ software crash we have experienced to date.",
-              "options": [
-                "best",
-                "first",
-                "only",
-                "worst"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
-            },
-            {
-              "id": "u101l101_ex1_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the only configuration option the algorithm ___ .",
-              "options": [
-                "has accepted",
-                "accepted",
-                "had accepted",
-                "accepts"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
-            },
-            {
-              "id": "u101l101_ex1_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the ___ complex simulation model they have built.",
-              "options": [
-                "most",
-                "more",
-                "very",
-                "much"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
-            }
-          ]
-        },
-        {
-          "id": "u101l101ex2",
-          "title": "Alıştırma 2: Süperlatif & Kısıtlayıcı Sıfatlar II",
-          "description": "Basit ve yaygın cümle yapılarıyla zaman zarfı pratikleri.",
-          "questions": [
-            {
-              "id": "u101l101_ex2_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is the first time the central bank ___ rates.",
-              "options": [
-                "has raised",
-                "raises",
-                "had raised",
-                "raised"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
-            },
-            {
-              "id": "u101l101_ex2_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the ___ molecular rendering the researcher has obtained.",
-              "options": [
-                "finest",
-                "best",
-                "only",
-                "first"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
-            },
-            {
-              "id": "u101l101_ex2_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is the most challenging law the assembly ___ .",
-              "options": [
-                "has passed",
-                "had passed",
-                "passed",
-                "passes"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
-            },
-            {
-              "id": "u101l101_ex2_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the ___ secure token the server has generated so far.",
-              "options": [
-                "first",
-                "worst",
-                "best",
-                "only"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
-            },
-            {
-              "id": "u101l101_ex2_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the most efficient engine the factory ___ .",
-              "options": [
-                "has produced",
-                "had produced",
-                "produces",
-                "produced"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
-            },
-            {
-              "id": "u101l101_ex2_q6",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is the ___ time the central bank has raised rates.",
-              "options": [
-                "first",
-                "best",
-                "worst",
-                "only"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, bu yıl okuduğum en iyi makaledir."
-            },
-            {
-              "id": "u101l101_ex2_q7",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the finest molecular rendering the researcher ___ .",
-              "options": [
-                "has obtained",
-                "had obtained",
-                "obtained",
-                "obtains"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, derleyici ekibinin birlikte izlediği ilk filmdir."
-            },
-            {
-              "id": "u101l101_ex2_q8",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "It is the most ___ law the assembly has passed.",
-              "options": [
-                "secure",
-                "efficient",
-                "complex",
-                "challenging"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
-            },
-            {
-              "id": "u101l101_ex2_q9",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the only secure token the server ___ so far.",
-              "options": [
-                "generated",
-                "generates",
-                "had generated",
-                "has generated"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
-            },
-            {
-              "id": "u101l101_ex2_q10",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the most ___ engine the factory has produced.",
-              "options": [
-                "challenging",
-                "fine",
-                "complex",
-                "efficient"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, onların inşa ettiği en karmaşık simülasyon modelidir."
-            }
-          ]
-        },
-        {
-          "id": "u101l101ex3",
-          "title": "Alıştırma 3: Süperlatif & Kısıtlayıcı Sıfatlar III",
-          "description": "Gelişmiş yapılarda zaman bağlaçları ve kelime doldurma.",
-          "questions": [
-            {
-              "id": "u101l101_ex3_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the best academic article I ___ this year because its innovative cross-disciplinary methodology is highly clear.",
-              "options": [
-                "had read",
-                "am reading",
-                "have read",
-                "read"
-              ],
-              "correctIndex": 2,
-              "translation": "Merkez bankasının faizleri ilk kez artırmasıdır."
-            },
-            {
-              "id": "u101l101_ex3_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the first film the compiler team ___ together since they moved into the new technological facility.",
-              "options": [
-                "watched",
-                "watches",
-                "had watched",
-                "has watched"
-              ],
-              "correctIndex": 3,
-              "translation": "Bu, araştırmacının elde ettiği en iyi moleküler görselleştirmedir."
-            },
-            {
-              "id": "u101l101_ex3_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is the worst software crash we ___ to date because of a severe database overflow in primary partitions.",
-              "options": [
-                "are experiencing",
-                "have experienced",
-                "had experienced",
-                "experienced"
-              ],
-              "correctIndex": 1,
-              "translation": "Bu, meclisin kabul ettiği en zorlu yasadır."
-            },
-            {
-              "id": "u101l101_ex3_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the only configuration option the algorithm ___ although developers provided several alternative code strings.",
-              "options": [
-                "has accepted",
-                "had accepted",
-                "accepted",
-                "accepts"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, sunucunun şimdiye kadar ürettiği tek güvenli jetondur."
-            },
-            {
-              "id": "u101l101_ex3_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the most complex simulation model they ___ in order that tectonic plate pressure changes might be evaluated.",
-              "options": [
-                "have built",
-                "had built",
-                "built",
-                "build"
-              ],
-              "correctIndex": 0,
-              "translation": "Bu, fabrikanın ürettiği en verimli motordur."
-            },
-            {
-              "id": "u101l101_ex3_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the ___ academic article I ___ read this year because its innovative cross-disciplinary methodology is highly clear.",
-              "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi makaledir.",
-              "corrects": [
-                "best",
-                "have"
-              ]
-            },
-            {
-              "id": "u101l101_ex3_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the ___ film the compiler team ___ watched together since they moved into the new technological facility.",
-              "translation": "Yeni teknolojik tesise taşındıklarından beri bu, derleyici ekibinin birlikte izlediği ilk filmdir.",
-              "corrects": [
-                "first",
-                "has"
-              ]
-            },
-            {
-              "id": "u101l101_ex3_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is the ___ software crash we ___ experienced to date because of a severe database overflow in primary partitions.",
-              "translation": "Birincil bölümlerdeki ciddi bir veritabanı taşması nedeniyle bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür.",
-              "corrects": [
-                "worst",
-                "have"
-              ]
-            },
-            {
-              "id": "u101l101_ex3_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the ___ configuration option the algorithm ___ accepted although developers provided several alternative code strings.",
-              "translation": "Geliştiriciler birkaç alternatif kod dizisi sağlamasına rağmen, bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir.",
-              "corrects": [
-                "only",
-                "has"
-              ]
-            },
-            {
-              "id": "u101l101_ex3_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the most ___ simulation model they ___ built in order that tectonic plate pressure changes might be evaluated.",
-              "translation": "Tektonik plaka basınç değişikliklerinin değerlendirilebilmesi için bu, onların inşa ettiği en karmaşık simülasyon modelidir.",
-              "corrects": [
-                "complex",
-                "have"
-              ]
-            }
-          ]
-        },
-        {
-          "id": "u101l101ex4",
-          "title": "Alıştırma 4: Süperlatif & Kısıtlayıcı Sıfatlar IV",
-          "description": "Bileşik cümlelerde zaman uyumu ve çoklu boşluk doldurma pratikleri.",
-          "questions": [
-            {
-              "id": "u101l101_ex4_q1",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is the first time the central bank ___ rates now that global financial indicators display unprecedented market inflation.",
-              "options": [
-                "has raised",
-                "raises",
-                "had raised",
-                "raised"
-              ],
-              "correctIndex": 0,
-              "translation": "Yenilikçi disiplinler arası metodolojisi son derece net olduğu için bu, bu yıl okuduğum en iyi makaledir."
-            },
-            {
-              "id": "u101l101_ex4_q2",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the finest molecular rendering the researcher ___ while focusing on cellular sub-structure divisions.",
-              "options": [
-                "has obtained",
-                "had obtained",
-                "obtained",
-                "obtains"
-              ],
-              "correctIndex": 0,
-              "translation": "Yeni teknolojik tesise taşındıklarından beri bu, derleyici ekibinin birlikte izlediği ilk filmdir."
-            },
-            {
-              "id": "u101l101_ex4_q3",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "It is the most challenging law the assembly ___ since the new corporate administrative board was elected.",
-              "options": [
-                "has passed",
-                "passes",
-                "had passed",
-                "passed"
-              ],
-              "correctIndex": 0,
-              "translation": "Birincil bölümlerdeki ciddi bir veritabanı taşması nedeniyle bu, bugüne kadar yaşadığımız en kötü yazılım çöküşüdür."
-            },
-            {
-              "id": "u101l101_ex4_q4",
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "This is the only secure token the server ___ so far lest anonymous third-party trackers should intercept the data.",
-              "options": [
-                "generates",
-                "generated",
-                "had generated",
-                "has generated"
-              ],
-              "correctIndex": 3,
-              "translation": "Geliştiriciler birkaç alternatif kod dizisi sağlamasına rağmen, bu, algoritmanın kabul ettiği tek yapılandırma seçeneğidir."
-            },
-            {
-              "id": "u101l101_ex4_q5",
-              "type": "fill-blank",
-              "prompt": "Boşluğu doldur",
-              "sentence": "This is the most efficient engine the factory ___ inasmuch as its mechanical piston operates with zero friction limits.",
-              "options": [
-                "has produced",
-                "had produced",
-                "produces",
-                "produced"
-              ],
-              "correctIndex": 0,
-              "translation": "Tektonik plaka basınç değişikliklerinin değerlendirilebilmesi için bu, onların inşa ettiği en karmaşık simülasyon modelidir."
-            },
-            {
-              "id": "u101l101_ex4_q6",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is the ___ time the central bank ___ raised rates now that global financial indicators display unprecedented market inflation.",
-              "translation": "Küresel finansal göstergelerin benzeri görülmemiş bir piyasa enflasyonu sergilemesi nedeniyle, merkez bankası ilk kez faiz artırdı.",
-              "corrects": [
-                "first",
-                "has"
-              ]
-            },
-            {
-              "id": "u101l101_ex4_q7",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the ___ molecular rendering the researcher ___ obtained while focusing on cellular sub-structure divisions.",
-              "translation": "Hücresel alt yapı bölünmelerine odaklanırken bu, araştırmacının elde ettiği en iyi moleküler görselleştirmedir.",
-              "corrects": [
-                "finest",
-                "has"
-              ]
-            },
-            {
-              "id": "u101l101_ex4_q8",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "It is the most ___ law the assembly ___ passed since the new corporate administrative board was elected.",
-              "translation": "Yeni kurumsal yönetim kurulu seçildiğinden beri bu, meclisin kabul ettiği en zorlu yasadır.",
-              "corrects": [
-                "challenging",
-                "has"
-              ]
-            },
-            {
-              "id": "u101l101_ex4_q9",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the ___ secure token the server ___ generated so far lest anonymous third-party trackers should intercept the data.",
-              "translation": "Anonim üçüncü taraf takipçilerin verileri ele geçirmemesi için bu, sunucunun şimdiye kadar ürettiği tek güvenli jetondur.",
-              "corrects": [
-                "only",
-                "has"
-              ]
-            },
-            {
-              "id": "u101l101_ex4_q10",
-              "type": "multiple-fill-blank",
-              "prompt": "Aşağıdaki cümledeki boşlukları doldurun!",
-              "sentence": "This is the most ___ engine the factory ___ produced inasmuch as its mechanical piston operates with zero friction limits.",
-              "translation": "Mekanik pistonu sıfır sürtünme sınırıyla çalıştığı için bu, fabrikanın ürettiği en verimli motordur.",
-              "corrects": [
-                "efficient",
-                "has"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  },
+            "exercises": [
+                        {
+                                    "id": "u101_l4_ex1",
+                                    "title": "Alıştırma 1: Varsayımsal Zaman Kaymaları (It's time & to V1)",
+                                    "description": "It's time kalıplarında özneli V2 (Unreal Present) ile öznesiz to V1 yapılarının ayırt edilmesi.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l4_q1",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Varsayımsal zaman kayması kuralına göre boşluğu doldurunuz:\n\n\"It is high time the government ___ stricter regulations on industrial carbon emissions.\"",
+                                                            "sentence": "It is high time the government ___ stricter regulations on industrial carbon emissions.",
+                                                            "options": [
+                                                                        "enacted",
+                                                                        "enacts",
+                                                                        "will enact",
+                                                                        "has enacted"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Hükümetin sanayi karbon emisyonlarına daha katı düzenlemeler getirmesinin zamanı geldi de geçiyor.",
+                                                            "explanation": "Formül: It is (high) time + Özne + V2 (Past Simple). Kendisinden sonra bir özne (the government) geldiğinde eylem şimdiki zamana yönelik olsa da fiil gramer olarak V2 (enacted) çekimlenir.",
+                                                            "grammarTags": [
+                                                                        "Varsayımsal Yapılar (Unreal Present)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q2",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Özneli 'it is time' kalıbını tamamlayınız:\n\n\"It is about time we ___ the outdated data security protocols.\"",
+                                                            "sentence": "It is about time we ___ the outdated data security protocols.",
+                                                            "options": [
+                                                                        "revised",
+                                                                        "revise",
+                                                                        "will revise",
+                                                                        "have revised"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Eski veri güvenliği protokollerini gözden geçirmemizin zamanı geldi.",
+                                                            "explanation": "Formül: It is about time + Özne + V2. 'We' öznesi geldikten sonra eylem gecikmiş bir zorunluluk bildirdiğinden Past Simple (revised) olmak zorundadır.",
+                                                            "grammarTags": [
+                                                                        "Varsayımsal Yapılar (Unreal Present)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q3",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Doğru zaman kayması yüklemini seçiniz:\n\n\"It is high time the research committee ___ a final decision regarding project funding.\"",
+                                                            "options": [
+                                                                        "made",
+                                                                        "makes",
+                                                                        "will make",
+                                                                        "has made"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "It is high time the research committee made a final decision regarding project funding.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Araştırma komitesinin proje fonu konusunda nihai bir karar almasının zamanı geldi de geçiyor.",
+                                                            "explanation": "Formül: It is high time + Subject + V2. 'It is time' kalıbı özneli yapıda Past Simple (made) alarak varsayımsal zaman kayması oluşturur.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Varsayımsal Yapılar"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q4",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümle öbeklerini sıraya diziniz:\n\n\"It is high time universities updated their academic curricula.\"",
+                                                            "translation": "Üniversitelerin akademik müfredatlarını güncelleme zamanı geldi de geçiyor.",
+                                                            "words": [
+                                                                        "It is high time",
+                                                                        "universities updated",
+                                                                        "their academic",
+                                                                        "curricula.",
+                                                                        "update",
+                                                                        "will update"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "It is high time",
+                                                                        "universities updated",
+                                                                        "their academic",
+                                                                        "curricula."
+                                                            ],
+                                                            "enSentence": "It is high time universities updated their academic curricula.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: It is high time + Özne + V2. Üniversitelerin müfredatı güncellemesinin zamanının geldiğini gösteren özneli V2 yapısıdır.",
+                                                            "grammarTags": [
+                                                                        "Varsayımsal Yapılar (Unreal Present)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q5",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğa uygun V2 yüklemini seçiniz:\n\n\"It is time the board of directors ___ the proposed merger agreement.\"",
+                                                            "sentence": "It is time the board of directors ___ the proposed merger agreement.",
+                                                            "options": [
+                                                                        "signed",
+                                                                        "signs",
+                                                                        "will sign",
+                                                                        "has signed"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Yönetim kurulunun önerilen birleşme anlaşmasını imzalamasının zamanı geldi.",
+                                                            "explanation": "Formül: It is time + Özne + V2. Özne 'the board of directors' olduğu için yüklem V2 (signed) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Simple Tense",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q6",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"It is high time we addressed the growing economic disparities in urban areas.\"",
+                                                            "correctSentence": "Kentsel alanlarda büyüyen ekonomik eşitsizlikleri ele almamızın zamanı geldi de geçiyor.",
+                                                            "enSentence": "It is high time we addressed the growing economic disparities in urban areas.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: It is high time + S + V2 (addressed). Gecikmiş eylemleri vurgulayan varsayımsal yapıdır.",
+                                                            "grammarTags": [
+                                                                        "Varsayımsal Yapılar (Unreal Present)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q7",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Öznesiz mastar yapısını seçiniz:\n\n\"It is time ___ the annual conference with opening remarks from the keynote speaker.\"",
+                                                            "sentence": "It is time ___ the annual conference with opening remarks from the keynote speaker.",
+                                                            "options": [
+                                                                        "to start",
+                                                                        "started",
+                                                                        "will start",
+                                                                        "starting"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Ana konuşmacının açılış konuşmasıyla yıllık konferansı başlatma zamanıdır.",
+                                                            "explanation": "Formül: It is time + TO V1 (Öznesiz Mastar). Cümlede 'It is time' kalıbından sonra bir özne yer almıyorsa doğrudan 'to V1' (to start) kullanılır.",
+                                                            "grammarTags": [
+                                                                        "Mastar Yapıları (Infinitive)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q8",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Öznesiz kalıba uygun yüklemi işaretleyiniz:\n\n\"It is about time ___ new measures to prevent environmental degradation.\"",
+                                                            "sentence": "It is about time ___ new measures to prevent environmental degradation.",
+                                                            "options": [
+                                                                        "to implement",
+                                                                        "implemented",
+                                                                        "will implement",
+                                                                        "implementing"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Çevresel bozulmayı önlemek için yeni önlemler uygulama zamanıdır.",
+                                                            "explanation": "Formül: It is about time + TO V1. Öznesiz yapıda mastar hali (to implement) tercih edilmelidir.",
+                                                            "grammarTags": [
+                                                                        "Mastar Yapıları (Infinitive)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q9",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Doğru öznesiz mastar seçeneğini bulunuz:\n\n\"It is time ___ the experimental results before submitting the paper to the journal.\"",
+                                                            "options": [
+                                                                        "to review",
+                                                                        "reviewed",
+                                                                        "will review",
+                                                                        "reviewing"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "It is time to review the experimental results before submitting the paper to the journal.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Makaleyi dergiye sunmadan önce deneysel sonuçları gözden geçirme zamanıdır.",
+                                                            "explanation": "Formül: It is time + TO V1. Özne bulunmayan durumlarda zaman kayması (V2) değil, mastar (to review) yapısı geçerlidir.",
+                                                            "grammarTags": [
+                                                                        "Mastar Yapıları (Infinitive)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q10",
+                                                            "type": "word-bank",
+                                                            "prompt": "Cümle öbeklerini sıraya diziniz:\n\n\"It is time to publish the new research findings.\"",
+                                                            "translation": "Yeni araştırma bulgularını yayımlama zamanıdır.",
+                                                            "words": [
+                                                                        "It is time to",
+                                                                        "publish the new",
+                                                                        "research findings.",
+                                                                        "published",
+                                                                        "will publish"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "It is time to",
+                                                                        "publish the new",
+                                                                        "research findings."
+                                                            ],
+                                                            "enSentence": "It is time to publish the new research findings.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: It is time + TO V1. Öznesiz mastar kullanımı ile araştırma bulgularını yayımlama zamanının geldiği belirtilir.",
+                                                            "grammarTags": [
+                                                                        "Mastar Yapıları (Infinitive)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q11",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Öznesiz yapıdaki boşluğu tamamlayınız:\n\n\"It is high time ___ all legacy systems across regional healthcare centers.\"",
+                                                            "sentence": "It is high time ___ all legacy systems across regional healthcare centers.",
+                                                            "options": [
+                                                                        "to upgrade",
+                                                                        "upgraded",
+                                                                        "will upgrade",
+                                                                        "upgrading"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bölgesel sağlık merkezlerindeki tüm eski sistemleri yükseltme zamanıdır.",
+                                                            "explanation": "Formül: It is high time + TO V1. Özne omisyonu durumunda 'to upgrade' kullanımı doğrudur.",
+                                                            "grammarTags": [
+                                                                        "Mastar Yapıları (Infinitive)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q12",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"It is time to reform the institutional voting procedures.\"",
+                                                            "correctSentence": "Kurumsal oy kullanma prosedürlerini reform etme zamanıdır.",
+                                                            "enSentence": "It is time to reform the institutional voting procedures.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: It is time + TO V1 (to reform). Öznesiz kalıplarda mastarlı yapıyla Türkçeye çevrilir.",
+                                                            "grammarTags": [
+                                                                        "Mastar Yapıları (Infinitive)",
+                                                                        "Zaman Uyumu"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        },
+                        {
+                                    "id": "u101_l4_ex2",
+                                    "title": "Alıştırma 2: Süperlatif Tecrübe Mühürleri (Present & Past Perfect)",
+                                    "description": "Superlative yapılardan sonra gelen Present Perfect (This IS) ve Past Perfect (That WAS) tecrübe mühürleri.",
+                                    "questions": [
+                                                {
+                                                            "id": "u101_l4_q13",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Şimdiki tecrübe mühürüne uygun yüklemi seçiniz:\n\n\"This is the most comprehensive study the research institute ___ on climate change.\"",
+                                                            "sentence": "This is the most comprehensive study the research institute ___ on climate change.",
+                                                            "options": [
+                                                                        "has ever conducted",
+                                                                        "had ever conducted",
+                                                                        "conducted",
+                                                                        "will conduct"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bu, araştırma enstitüsünün iklim değişikliği üzerine yürüttüğü en kapsamlı çalışmadır.",
+                                                            "explanation": "Formül: This IS + Superlative ➔ Have/Has V3 (Present Perfect). Ana cümle şimdiki zamanda ('This is...') olduğundan tecrübe mühürü Present Perfect (has ever conducted) olur.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q14",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Tecrübe mühürünü tamamlayınız:\n\n\"This is the first time the economic council ___ such drastic monetary policies.\"",
+                                                            "sentence": "This is the first time the economic council ___ such drastic monetary policies.",
+                                                            "options": [
+                                                                        "has implemented",
+                                                                        "had implemented",
+                                                                        "implemented",
+                                                                        "will implement"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bu, ekonomi konseyinin bu kadar radikal parasal politikaları ilk kez uygulamasıdır.",
+                                                            "explanation": "Formül: This IS the first time ➔ Have/Has V3. Güncel ilk tecrübe vurgularında 'has implemented' kullanımı zorunludur.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q15",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Süperlatif tecrübe cümlesini doğru tamamlayınız:\n\n\"This is the most intricate algorithm our engineering team ___ so far.\"",
+                                                            "options": [
+                                                                        "has ever developed",
+                                                                        "had ever developed",
+                                                                        "developed",
+                                                                        "will develop"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "This is the most intricate algorithm our engineering team has ever developed so far.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Bu, mühendislik ekibimizin şu ana kadar geliştirdiği en karmaşık algoritmadır.",
+                                                            "explanation": "Formül: Superlative (the most intricate) + IS ➔ Present Perfect (has ever developed).",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q16",
+                                                            "type": "word-bank",
+                                                            "prompt": "Öbek vagonlarını diziniz:\n\n\"This is the best scientific report I have ever read.\"",
+                                                            "translation": "Bu, hayatımda okuduğum en iyi bilimsel rapordur.",
+                                                            "words": [
+                                                                        "This is the best",
+                                                                        "scientific report I",
+                                                                        "have ever read.",
+                                                                        "had read",
+                                                                        "will read"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "This is the best",
+                                                                        "scientific report I",
+                                                                        "have ever read."
+                                                            ],
+                                                            "enSentence": "This is the best scientific report I have ever read.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: Superlative (the best) + IS ➔ Have V3 (have ever read). Hayat boyu edinilen tecrübeyi mühürler.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q17",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Teklik bildiren süperlatif cümlesini doldurunuz:\n\n\"This is the only legal document that ___ all environmental standards correctly.\"",
+                                                            "sentence": "This is the only legal document that ___ all environmental standards correctly.",
+                                                            "options": [
+                                                                        "has addressed",
+                                                                        "had addressed",
+                                                                        "addresses",
+                                                                        "will address"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bu, tüm çevre standartlarını doğru bir şekilde ele alan tek hukuki belgedir.",
+                                                            "explanation": "Formül: The ONLY + IS ➔ Present Perfect (has addressed). Teklik ve tecrübe nitelemesi Present Perfect gerektirir.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q18",
+                                                            "type": "translation-text",
+                                                            "prompt": "Cümleyi Türkçeye çeviriniz:\n\n\"This is the most breakthrough discovery scientists have ever achieved.\"",
+                                                            "correctSentence": "Bu, bilim insanlarının bugüne kadar elde ettiği en çığır açıcı buluştur.",
+                                                            "enSentence": "This is the most breakthrough discovery scientists have ever achieved.",
+                                                            "isEngToTr": true,
+                                                            "explanation": "Formül: Superlative + IS ➔ Have/Has V3 (have ever achieved). Güncel tecrübe vurgulu çeviri kalıbıdır.",
+                                                            "grammarTags": [
+                                                                        "Present Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q19",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş tecrübe mühürüne uygun yüklemi seçiniz:\n\n\"That was the most severe economic crisis the country ___ since the turn of the century.\"",
+                                                            "sentence": "That was the most severe economic crisis the country ___ since the turn of the century.",
+                                                            "options": [
+                                                                        "had ever experienced",
+                                                                        "has ever experienced",
+                                                                        "experiences",
+                                                                        "will experience"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "O, ülkenin yüzyılın başından beri yaşadığı en şiddetli ekonomik krizdi.",
+                                                            "explanation": "Formül: That WAS + Superlative ➔ HAD V3 (Past Perfect). Ana cümle geçmiş zamanda ('That was...') olduğu için tecrübe bir derece geriye kayarak Past Perfect (had ever experienced) olur.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q20",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmişteki ilk tecrübe yüklemini seçiniz:\n\n\"It was the first time the space agency ___ a manned mission to deep space.\"",
+                                                            "sentence": "It was the first time the space agency ___ a manned mission to deep space.",
+                                                            "options": [
+                                                                        "had attempted",
+                                                                        "has attempted",
+                                                                        "attempts",
+                                                                        "will attempt"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "Bu, uzay ajansının derin uzaya insanlı bir görevi ilk kez denemesiydi.",
+                                                            "explanation": "Formül: It WAS the first time ➔ HAD V3. Geçmişteki ilk tecrübe anlatıldığı için 'had attempted' tercih edilir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q21",
+                                                            "type": "multiple-choice",
+                                                            "prompt": "Geçmiş tecrübe cümlesini tamamlayınız:\n\n\"This was the most complex legal dispute the supreme court ___ during that decade.\"",
+                                                            "options": [
+                                                                        "had ever adjudicated",
+                                                                        "has ever adjudicated",
+                                                                        "adjudicates",
+                                                                        "will adjudicate"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "enSentence": "This was the most complex legal dispute the supreme court had ever adjudicated during that decade.",
+                                                            "isEngToTr": true,
+                                                            "translation": "Bu, yüksek mahkemenin o on yıl boyunca karara bağladığı en karmaşık hukuki ihtilaftı.",
+                                                            "explanation": "Formül: Superlative + WAS ➔ HAD V3 (had ever adjudicated). Geçmiş döneme ait tecrübe mühürüdür.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q22",
+                                                            "type": "word-bank",
+                                                            "prompt": "Geçmiş tecrübe cümlesini vagonlarla diziniz:\n\n\"That was the most advanced satellite they had ever launched.\"",
+                                                            "translation": "O, fırlattıkları en gelişmiş uyduydu.",
+                                                            "words": [
+                                                                        "That was the most",
+                                                                        "advanced satellite they",
+                                                                        "had ever launched.",
+                                                                        "has launched",
+                                                                        "will launch"
+                                                            ],
+                                                            "correctOrder": [
+                                                                        "That was the most",
+                                                                        "advanced satellite they",
+                                                                        "had ever launched."
+                                                            ],
+                                                            "enSentence": "That was the most advanced satellite they had ever launched.",
+                                                            "isEngToTr": false,
+                                                            "explanation": "Formül: Superlative + WAS ➔ HAD V3 (had ever launched). Geçmişte mühürlenmiş tecrübe cümlesidir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q23",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Geçmiş tecrübe yüklemini işaretleyiniz:\n\n\"It was the only occasion when the board ___ unanimously on a controversial proposal.\"",
+                                                            "sentence": "It was the only occasion when the board ___ unanimously on a controversial proposal.",
+                                                            "options": [
+                                                                        "had voted",
+                                                                        "has voted",
+                                                                        "votes",
+                                                                        "will vote"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "O, kurulun tartışmalı bir teklifte oybirliğiyle oy kullandığı tek durumdu.",
+                                                            "explanation": "Formül: The ONLY + WAS ➔ HAD V3 (had voted). Geçmiş zamana ait tekil tecrübe mühürüdür.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Tense Agreement"
+                                                            ]
+                                                },
+                                                {
+                                                            "id": "u101_l4_q24",
+                                                            "type": "fill-blank-dropdown",
+                                                            "prompt": "Boşluğu geçmiş tecrübe kuralına göre doldurunuz:\n\n\"That was the most challenging obstacle the research team ___ before obtaining funding.\"",
+                                                            "sentence": "That was the most challenging obstacle the research team ___ before obtaining funding.",
+                                                            "options": [
+                                                                        "had encountered",
+                                                                        "has encountered",
+                                                                        "encounters",
+                                                                        "will encounter"
+                                                            ],
+                                                            "correctIndex": 0,
+                                                            "translation": "O, araştırma ekibinin fon elde etmeden önce karşılaştığı en zorlu engeliydi.",
+                                                            "explanation": "Formül: Superlative + WAS ➔ HAD V3 (had encountered). Geçmiş bağlamdaki en uç derece nitelemesidir.",
+                                                            "grammarTags": [
+                                                                        "Past Perfect Tense",
+                                                                        "Süperlatif Mühürü"
+                                                            ],
+                                                            "multiTag": [
+                                                                        "Bölüm 11",
+                                                                        "Time Conjunctions"
+                                                            ]
+                                                }
+                                    ]
+                        }
+            ]
+}
+},
   "102": {
   "1": {
     "exercises": [
@@ -56871,7 +57476,7 @@ if (typeof rawTopics !== 'undefined') {
   
   const t12 = rawTopics.find(t => t.id === 12);
   if (t12) {
-    t12.title = "VIII. Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)";
+    t12.title = "VIII. Present ve past participle sıfatları";
     t12.desc = "Present ve past participle sıfatları, zarf kombinasyonları, niteleme öbekleri ve sıfat cümlesi kısaltmaları (Adjective Clause Reductions)";
     t12.numLessons = 3;
     t12.formulas = [

@@ -24,8 +24,8 @@ function cleanAcademicUnitTitle(title) {
     'Soru Yapıları': 'Soru Cümleleri ve Kalıpları',
     'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar',
     'İsim Tamlaması': 'İsim Tamlamaları',
-    'Participle Yapıları': 'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)',
-    'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)': 'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)',
+    'Participle Yapıları': 'Present ve past participle sıfatları',
+    'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)': 'Present ve past participle sıfatları',
     'Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar': 'Mastar Yapıları ve Kısaltmalar (Infinitives)',
     'Cümle Bağlaçları, Geçiş Kelimeleri ve Yan Cümlecikler': 'Cümle Bağlaçları ve Geçiş İfadeleri (Connectors & Transitions)',
     'Ara Bölüm 5: Nicelik, Zaman ve Derece Belirteçleri': 'Nicelik, Zaman ve Derece Belirteçleri (Quantifiers & Adverbs)',
@@ -8150,13 +8150,7 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
     renderQuestion();
   } else {
     const proceedToQuiz = () => {
-      if (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101) {
-        showFormulaWarmup(currentLesson, () => {
-          renderQuestion();
-        });
-      } else {
-        renderQuestion();
-      }
+      renderQuestion();
     };
 
     if (currentLesson.konuAnlatimi) {
@@ -8567,6 +8561,15 @@ function renderQuestion() {
   const originalPrompt = question.prompt;
 
   // Automatic Question Schema Normalization Guard
+  if (question.sentence && question.prompt) {
+    if (question.prompt.includes('\n\n')) {
+      question.prompt = question.prompt.split('\n\n')[0].trim();
+    } else if (question.prompt.includes('\n')) {
+      question.prompt = question.prompt.split('\n')[0].trim();
+    } else if (question.prompt.includes('<br')) {
+      question.prompt = question.prompt.split(/<br\s*\/?>/i)[0].trim();
+    }
+  }
   if (question.type === 'fill-blank' || question.type === 'fill-blank-dropdown' || question.type === 'context-distractor') {
     if (!question.sentence && question.prompt && question.prompt.includes('___')) {
       question.sentence = question.prompt;
@@ -8661,7 +8664,7 @@ function renderQuestion() {
       if (match.includes('color: #10b981') || match.includes('color:#10b981')) return match;
       return `${prefix}<span style="color: #10b981; font-weight: 700;">${ingWord}</span>`;
     });
-    // 2. Bare infinitive (V1) verbs after phrasal modals (willing, unwilling, reluctant, likely, unlikely, bound, certain, supposed, doomed, unable, about, obliged + to, or am/is/are/was/were to)
+    // 2. Bare infinitive (V1) verbs after phrasal modals
     res = res.replace(/((?:willing|unwilling|reluctant|likely|unlikely|bound|certain|supposed|doomed|unable|about|obliged)\s+to(?:<\/span>)?\s+)(\b[a-zA-Z-]+\b)/gi, (match, prefix, v1Word) => {
       if (match.includes('color: #10b981') || match.includes('color:#10b981')) return match;
       return `${prefix}<span style="color: #10b981; font-weight: 700;">${v1Word}</span>`;
@@ -8670,6 +8673,48 @@ function renderQuestion() {
       if (match.includes('color: #10b981') || match.includes('color:#10b981')) return match;
       return `${prefix}<span style="color: #10b981; font-weight: 700;">${v1Word}</span>`;
     });
+
+    // 3. Time Conjunctions & Target Structures for Chapter 11 (Unit 101)
+    // Paired Inverted Time Structures (No sooner... than & Hardly/Scarcely/Barely... when)
+    if (/no sooner/i.test(res)) {
+      res = res.replace(/\b(no sooner)\b/gi, '<span style="color: #f59e0b; font-weight: 700;">$1</span>');
+      res = res.replace(/\b(than)\b/gi, (m, p1, offset, fullStr) => {
+        const before = fullStr.slice(0, offset);
+        if (before.lastIndexOf('<') > before.lastIndexOf('>')) return m;
+        return `<span style="color: #f59e0b; font-weight: 700;">${p1}</span>`;
+      });
+    }
+
+    if (/(hardly|scarcely|barely)/i.test(res)) {
+      res = res.replace(/\b(hardly|scarcely|barely)\b/gi, '<span style="color: #ef4444; font-weight: 700;">$1</span>');
+      res = res.replace(/\b(when)\b/gi, (m, p1, offset, fullStr) => {
+        const before = fullStr.slice(0, offset);
+        if (before.lastIndexOf('<') > before.lastIndexOf('>')) return m;
+        return `<span style="color: #ef4444; font-weight: 700;">${p1}</span>`;
+      });
+    }
+
+    const timeStructures = [
+      { regex: /\b(by the time)\b/gi, color: '#06b6d4' },
+      { regex: /\b(as soon as|immediately after)\b/gi, color: '#10b981' },
+      { regex: /\b(it is (?:high |about )?time|it's (?:high |about )?time)\b/gi, color: '#6366f1' },
+      { regex: /\b(since)\b/gi, color: '#10b981' },
+      { regex: /\b(before)\b/gi, color: '#3b82f6' },
+      { regex: /\b(after)\b/gi, color: '#8b5cf6' },
+      { regex: /\b(while|as)\b/gi, color: '#ec4899' },
+      { regex: /\b(until|till)\b/gi, color: '#10b981' }
+    ];
+
+    timeStructures.forEach(item => {
+      res = res.replace(item.regex, (match, p1, offset, fullStr) => {
+        const before = fullStr.slice(0, offset);
+        const lastOpen = before.lastIndexOf('<');
+        const lastClose = before.lastIndexOf('>');
+        if (lastOpen > lastClose) return match; // Inside HTML tag or attribute
+        return `<span style="color: ${item.color}; font-weight: 700;">${p1}</span>`;
+      });
+    });
+
     return res;
   };
 
@@ -8970,67 +9015,7 @@ function renderQuestion() {
       body.insertAdjacentHTML('afterbegin', hudHtml);
     }
 
-    // Bölüm 36 (Unit 101) HUD ve Zaman Çizelgesi Entegrasyonu
-    if (currentLesson && (currentLesson.unitId === 101 || currentLesson.originalUnitId === 101)) {
-      let sentenceStr = (originalSentence || "").toLowerCase();
-      let hudType = '';
-      let hudTitle = '';
-      let hudFormula = '';
-      let hudAlert = '';
-      
-      if (sentenceStr.includes("since")) {
-        hudType = 'since';
-        hudTitle = 'Since (Zaman Uyumu)';
-        hudFormula = 'Present Perfect + since + Past Simple (V2)';
-        hudAlert = 'Since\'li yan cümle geçmişin başlangıç noktasını (V2) bildirirken; süreç bildiren ana cümle Present Perfect (have/has + V3) yapısında olur.';
-      } else if (sentenceStr.includes("by the time")) {
-        const isPast = sentenceStr.includes("was") || sentenceStr.includes("were") || sentenceStr.includes("had") || sentenceStr.includes("arrived") || sentenceStr.includes("left") || sentenceStr.includes("occurred") || sentenceStr.includes("___ since") || (question.options && question.options.some(o => o.includes("had") || o.includes("arrived") || o.includes("left")));
-        if (isPast) {
-          hudType = 'by_the_time_past';
-          hudTitle = 'By the Time (Past)';
-          hudFormula = 'By the time + Past (V2), Past Perfect (had + V3)';
-          hudAlert = 'Geçmiş bağlamdaki By the time cümlelerinde yan cümle V2 (Past Simple), ana cümle ise daha önce biten eylemi vurgulamak için had + V3 (Past Perfect) alır.';
-        } else {
-          hudType = 'by_the_time_present';
-          hudTitle = 'By the Time (Present/Future)';
-          hudFormula = 'By the time + Present (V1), Future Perfect (will have + V3)';
-          hudAlert = 'Gelecek/Geniş zaman By the time cümlelerinde yan cümle V1 (Present Simple), ana cümle ise will have + V3 (Future Perfect) alır.';
-        }
-      } else if (sentenceStr.includes("time")) {
-        hudType = 'high_time';
-        hudTitle = 'It is (High) Time Kalıbı';
-        hudFormula = 'It is (high) time + Subject + Past Simple (V2)';
-        hudAlert = 'Sınav Tuzağı: Bu kalıp şu ana yönelik bir gecikmişlik, şikayet veya zorunluluk bildirse de gramer gereği fiil mutlaka V2 (Past Simple) çekimindedir.';
-      } else if (sentenceStr.includes("after")) {
-        hudType = 'after_past';
-        hudTitle = 'After Zaman Uyumu';
-        hudFormula = 'After + Past Perfect (had + V3), Past Simple (V2)';
-        hudAlert = 'After yan cümlesinde had + V3 (öncelik), ana cümlede ise V2 (sonralık) kullanılır.';
-      } else if (sentenceStr.includes("before")) {
-        hudType = 'before_past';
-        hudTitle = 'Before Zaman Uyumu';
-        hudFormula = 'Before + Past Simple (V2), Past Perfect (had + V3)';
-        hudAlert = 'Before yan cümlesinde V2, ana cümlede ise daha önce gerçekleşen eylem için had + V3 kullanılır.';
-      }
-      
-      if (hudType) {
-        const hudHtml = `
-          <div class="u101-hud-card" id="unit101-hud">
-            <div class="u101-hud-header">
-              <h4 class="u101-hud-title">🧪 Formül Köprüsü: ${hudTitle}</h4>
-              <span class="u101-hud-badge">${getUnitDisplayTitle(currentLesson.unitId).toUpperCase()}</span>
-            </div>
-            <div class="u101-hud-formula">${hudFormula}</div>
-            <div class="u101-trap-alert">
-              <span style="font-size: 1.2rem;">⚠️</span>
-              <div>${hudAlert}</div>
-            </div>
-            ${getUnit101TimelineSVG(hudType)}
-          </div>
-        `;
-        body.insertAdjacentHTML('afterbegin', hudHtml);
-      }
-    }
+    // Unit 101 HUD disabled as requested
   } catch (error) {
     console.error("Soru render edilirken hata oluştu:", error);
     body.innerHTML = `
@@ -19206,7 +19191,7 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
       } else if (lessonNum === 98) {
         title = 'Since Zaman Uyumu Kuralları';
         ruleTitle = '💡 Since Bağlacı ve Zaman Uyumu';
-        ruleText = `<strong>Since</strong> bağlacının bağlı olduğu yan cümle eylemin başlangıç noktasını bildirdiği için <strong>Past Simple (V2)</strong> ile çekimlenirken, ana cümle bu başlangıçtan günümüze kadar geçen süreci anlattığı için <strong>Present Perfect (have/has + V3)</strong> ile kurulur. (Formül: <strong>Present Perfect + since + Past Simple</strong>)`;
+        ruleText = `<strong>Since</strong> bağlacının bağlı olduğu yan cümle eylemin başlangıç noktasını bildirdiği için <strong>Past Simple (V2)</strong> ile çekimlenirken; ana cümle günümüze uzanan süreçte <strong>Present Perfect (have/has + V3)</strong>, geçmişte kalmış hikaye bağlamında ise <strong>Past Perfect (had + V3)</strong> ile kurulur. (Formül: <strong>Present/Past Perfect + since + Past Simple</strong>)`;
         wrongExample = `Seçtiğiniz "${chosenWord || 'kelime'}" zaman uyumu kuralını ihlal etmektedir ❌`;
         correctExample = `Doğru Çekim: "${correctWord}" ✔️`;
       } else if (lessonNum === 99) {
@@ -19327,12 +19312,40 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
 
   let formulaHtml = '';
   if (typeof currentLesson !== 'undefined' && currentLesson && currentLesson.formula) {
-    formulaHtml = `
-    <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); font-size: 0.9rem;">
-      <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 4px;">🧪 Ders Formülü (Grammar Formula):</span>
-      <code style="color: var(--text-primary); font-family: monospace; font-size: 0.95rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">${currentLesson.formula}</code>
-    </div>
-    `;
+    let rawFormula = currentLesson.formula;
+    if (rawFormula.includes('|')) {
+      let parts = rawFormula.split('|').map(p => p.trim()).filter(Boolean);
+      let titleHeader = '';
+      let formulaItems = [];
+
+      if (parts[0].includes(':')) {
+        const colonIdx = parts[0].indexOf(':');
+        titleHeader = parts[0].substring(0, colonIdx + 1).trim();
+        formulaItems.push(parts[0].substring(colonIdx + 1).trim());
+        for (let i = 1; i < parts.length; i++) {
+          formulaItems.push(parts[i]);
+        }
+      } else {
+        formulaItems = parts;
+      }
+
+      const itemsHtml = formulaItems.map(f => `<div style="margin-top: 4px;"><code style="color: var(--text-primary); font-family: monospace; font-size: 0.92rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px; display: inline-block;">${f}</code></div>`).join('');
+
+      formulaHtml = `
+      <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); font-size: 0.9rem;">
+        <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 6px;">🧪 Ders Formülü (Grammar Formula):</span>
+        ${titleHeader ? `<div style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">${titleHeader}</div>` : ''}
+        ${itemsHtml}
+      </div>
+      `;
+    } else {
+      formulaHtml = `
+      <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); font-size: 0.9rem;">
+        <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 4px;">🧪 Ders Formülü (Grammar Formula):</span>
+        <code style="color: var(--text-primary); font-family: monospace; font-size: 0.95rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">${currentLesson.formula}</code>
+      </div>
+      `;
+    }
   }
 
   return `
