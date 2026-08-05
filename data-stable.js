@@ -13971,172 +13971,172 @@ const unit5LessonSentences = {
 };
 
 const unit9Lesson1SentencesRaw = [
-  { en: "Is the data valid?", tr: "Veri geçerli midir?", word: "valid", trWord: "geçerli", blank: "Is the data ___?" },
-  { en: "Are the documents ready?", tr: "Belgeler hazır mıdır?", word: "ready", trWord: "hazır", blank: "Are the documents ___?" },
-  { en: "Was the concept clear?", tr: "Kavram açık mıydı?", word: "clear", trWord: "açık", blank: "Was the concept ___?" },
-  { en: "Were the methods standards?", tr: "Yöntemler standart mıydı?", word: "standards", trWord: "standart", blank: "Were the methods ___?" },
-  { en: "Is the author present?", tr: "Yazar mevcut mudur?", word: "present", trWord: "mevcut", blank: "Is the author ___?" },
-  { en: "Are the factors internal?", tr: "Faktörler içsel midir?", word: "internal", trWord: "içsel", blank: "Are the factors ___?" },
-  { en: "Was the response negative?", tr: "Yanıt olumsuz muydu?", word: "negative", trWord: "olumsuz", blank: "Was the response ___?" },
-  { en: "Were the criteria strict?", tr: "Kriterler katı mıydı?", word: "strict", trWord: "katı", blank: "Were the criteria ___?" },
-  { en: "Is the sector growing?", tr: "Sektör büyüyor mu?", word: "growing", trWord: "büyüyor", blank: "Is the sector ___?" },
-  { en: "Are you the analyst?", tr: "Siz analist misiniz?", word: "analyst", trWord: "analist", blank: "Are you the ___?" },
-  { en: "Is the legal framework sufficient for this case?", tr: "Yasal çerçeve bu dava için yeterli midir?", word: "framework", trWord: "çerçeve", blank: "Is the legal ___ sufficient for this case?" },
-  { en: "Are the economic indicators stable this month?", tr: "Ekonomik göstergeler bu ay istikrarlı mıdır?", word: "stable", trWord: "istikrarlı", blank: "Are the economic indicators ___ this month?" },
+  { en: "Is the legal framework sufficient for this complex case?", tr: "Yasal çerçeve bu karmaşık dava için yeterli midir?", word: "framework", trWord: "çerçeve", blank: "Is the legal ___ sufficient for this complex case?" },
+  { en: "Are the economic indicators stable this month?", tr: "Ekonomik göstergeler bu ay istikrarlı mıdır?", word: "indicators", trWord: "göstergeler", blank: "Are the economic ___ stable this month?" },
   { en: "Was the initial assessment fully accurate?", tr: "İlk değerlendirme tamamen doğru muydu?", word: "assessment", trWord: "değerlendirme", blank: "Was the initial ___ fully accurate?" },
-  { en: "Were the specific sources verified by experts?", tr: "Belirli kaynaklar uzmanlar tarafından doğrulandı mı?", word: "verified", trWord: "doğrulandı", blank: "Were the specific sources ___ by experts?" },
-  { en: "Is the financial structure completely transparent?", tr: "Finansal yapı tamamen şeffaf mıdır?", word: "structure", trWord: "yapı", blank: "Is the financial ___ completely transparent?" },
-  { en: "Are the individual variables controlled well?", tr: "Bireysel değişkenler iyi kontrol ediliyor mu?", word: "variables", trWord: "değişkenler", blank: "Are the individual ___ controlled well?" },
-  { en: "Was the primary benefit clearly identified?", tr: "Temel fayda açıkça belirlendi mi?", word: "benefit", trWord: "fayda", blank: "Was the primary ___ clearly identified?" },
-  { en: "Were the environmental factors considered?", tr: "Çevresel faktörler dikkate alındı mı?", word: "factors", trWord: "faktörler", blank: "Were the environmental ___ considered?" },
-  { en: "Is the final outcome satisfactory for everyone?", tr: "Nihai sonuç herkes için tatmin edici midir?", word: "outcome", trWord: "sonuç", blank: "Is the final ___ satisfactory for everyone?" },
-  { en: "Are these academic journals peer-reviewed?", tr: "Bu dergiler hakemli midir?", word: "academic", trWord: "akademik", blank: "Are these ___ journals peer-reviewed?" },
-  { en: "Is the methodological approach relevant to the current study?", tr: "Metodolojik yaklaşım mevcut çalışma ile ilgili midir?", word: "approach", trWord: "yaklaşım", blank: "Is the methodological ___ relevant to the current study?" },
+  { en: "Were the primary historical sources verified by experts?", tr: "Birincil tarihsel kaynaklar uzmanlar tarafından doğrulandı mı?", word: "verified", trWord: "doğrulandı", blank: "Were the primary historical sources ___ by experts?" },
+  { en: "Is the financial structure of the institution completely transparent?", tr: "Kurumun finansal yapısı tamamen şeffaf mıdır?", word: "transparent", trWord: "şeffaf", blank: "Is the financial structure of the institution completely ___?" },
+  { en: "Are the individual variables controlled well in this study?", tr: "Bu çalışmada bireysel değişkenler iyi kontrol ediliyor mu?", word: "variables", trWord: "değişkenler", blank: "Are the individual ___ controlled well in this study?" },
+  { en: "Was the primary socio-economic benefit clearly identified?", tr: "Temel sosyo-ekonomik fayda açıkça belirlendi mi?", word: "benefit", trWord: "fayda", blank: "Was the primary socio-economic ___ clearly identified?" },
+  { en: "Were the environmental factors thoroughly considered?", tr: "Çevresel faktörler etraflıca dikkate alındı mı?", word: "factors", trWord: "faktörler", blank: "Were the environmental ___ thoroughly considered?" },
+  { en: "Is the final outcome of the negotiation satisfactory for all parties?", tr: "Müzakerenin nihai sonucu tüm taraflar için tatmin edici midir?", word: "outcome", trWord: "sonuç", blank: "Is the final ___ of the negotiation satisfactory for all parties?" },
+  { en: "Are these academic journals peer-reviewed by experts?", tr: "Bu akademik dergiler uzmanlarca hakemli midir?", word: "academic", trWord: "akademik", blank: "Are these ___ journals peer-reviewed by experts?" },
+  { en: "Is the methodological approach relevant to contemporary sociology?", tr: "Metodolojik yaklaşım çağdaş sosyoloji ile ilgili midir?", word: "approach", trWord: "yaklaşım", blank: "Is the methodological ___ relevant to contemporary sociology?" },
   { en: "Are the statistical computations available for public review?", tr: "İstatistiksel hesaplamalar kamuya açık inceleme için mevcut mudur?", word: "available", trWord: "mevcut", blank: "Are the statistical computations ___ for public review?" },
-  { en: "Was the constitutional amendment approved by the parliament?", tr: "Anayasa değişikliği parlamento tarafından onaylandı mı?", word: "amendment", trWord: "değişiklik", blank: "Was the constitutional ___ approved by the parliament?" },
-  { en: "Were the administrative procedures followed during the crisis?", tr: "Kriz sırasında idari prosedürler takip edildi mi?", word: "procedures", trWord: "prosedürler", blank: "Were the administrative ___ followed during the crisis?" },
+  { en: "Was the constitutional amendment approved by parliament?", tr: "Anayasa değişikliği parlamento tarafından onaylandı mı?", word: "amendment", trWord: "değişiklik", blank: "Was the constitutional ___ approved by parliament?" },
+  { en: "Were the administrative procedures strictly followed during the crisis?", tr: "Kriz sırasında idari prosedürler sıkı bir şekilde takip edildi mi?", word: "procedures", trWord: "prosedürler", blank: "Were the administrative ___ strictly followed during the crisis?" },
   { en: "Is the theoretical assumption supported by empirical evidence?", tr: "Teorik varsayım ampirik kanıtlarla destekleniyor mu?", word: "assumption", trWord: "varsayım", blank: "Is the theoretical ___ supported by empirical evidence?" },
-  { en: "Are the global distribution networks functional right now?", tr: "Küresel dağıtım ağları şu anda işlevsel midir?", word: "distribution", trWord: "dağıtım", blank: "Are the global ___ networks functional right now?" },
-  { en: "Was the historical document genuine according to analysts?", tr: "Tarihsel belge analistlere göre orijinal miydi?", word: "analysts", trWord: "analistlere", blank: "Was the historical document genuine according to ___?" },
-  { en: "Were the experimental results consistent across all trials?", tr: "Deneysel sonuçlar tüm denemelerde tutarlı mıydı?", word: "consistent", trWord: "tutarlı", blank: "Were the experimental results ___ across all trials?" },
-  { en: "Is the institutional framework adaptable to new legislation?", tr: "Kurumsal çerçeve yeni mevzuata uyarlanabilir mi?", word: "legislation", trWord: "mevzuata", blank: "Is the institutional framework adaptable to new ___?" },
-  { en: "Are the demographic categories exclusive in this research?", tr: "Bu araştırmada demografik kategoriler birbirini dışlayıcı mıdır?", word: "categories", trWord: "kategoriler", blank: "Are the demographic ___ exclusive in this research?" }
+  { en: "Are global distribution networks functional right now?", tr: "Küresel dağıtım ağları şu anda işlevsel midir?", word: "networks", trWord: "ağları", blank: "Are global distribution ___ functional right now?" },
+  { en: "Was the historical manuscript genuine according to archivists?", tr: "Tarihsel el yazması arşivcilere göre orijinal miydi?", word: "manuscript", trWord: "el yazması", blank: "Was the historical ___ genuine according to archivists?" },
+  { en: "Were the experimental results consistent across all clinical trials?", tr: "Deneysel sonuçlar tüm klinik denemelerde tutarlı mıydı?", word: "consistent", trWord: "tutarlı", blank: "Were the experimental results ___ across all clinical trials?" },
+  { en: "Is the institutional policy adaptable to new international legislation?", tr: "Kurumsal politika yeni uluslararası mevzuata uyarlanabilir mi?", word: "legislation", trWord: "mevzuata", blank: "Is the institutional policy adaptable to new international ___?" },
+  { en: "Are demographic categories mutually exclusive in this demographic survey?", tr: "Bu demografik ankette demografik kategoriler birbirini dışlayıcı mıdır?", word: "categories", trWord: "kategoriler", blank: "Are demographic ___ mutually exclusive in this demographic survey?" },
+  { en: "Is the diplomatic protocol clear during international summits?", tr: "Uluslararası zirveler sırasında diplomatik protokol açık mıdır?", word: "protocol", trWord: "protokol", blank: "Is the diplomatic ___ clear during international summits?" },
+  { en: "Are moral principles universal across human cultures?", tr: "Ahlaki ilkeler insan kültürleri arasında evrensel midir?", word: "universal", trWord: "evrensel", blank: "Are moral principles ___ across human cultures?" },
+  { en: "Was the judicial decision precedent-setting in civil law?", tr: "Yargı kararı medeni hukukta emsal teşkil edici nitelikte miydi?", word: "decision", trWord: "kararı", blank: "Was the judicial ___ precedent-setting in civil law?" },
+  { en: "Were the philosophical arguments convincing to the scholars?", tr: "Felsefi argümanlar akademisyenler için ikna edici miydi?", word: "arguments", trWord: "argümanlar", blank: "Were the philosophical ___ convincing to the scholars?" },
+  { en: "Is the urban infrastructure resilient against natural disasters?", tr: "Kentsel altyapı doğal afetlere karşı dirençli midir?", word: "resilient", trWord: "dirençli", blank: "Is the urban infrastructure ___ against natural disasters?" },
+  { en: "Are sovereign states obligated under international treaties?", tr: "Egemen devletler uluslararası antlaşmalar uyarınca yükümlü müdür?", word: "obligated", trWord: "yükümlü", blank: "Are sovereign states ___ under international treaties?" },
+  { en: "Was the trade deficit significant during the previous decade?", tr: "Önceki on yılda ticaret açığı önemli miydi?", word: "deficit", trWord: "açığı", blank: "Was the trade ___ significant during the previous decade?" },
+  { en: "Were foreign aid funds distributed equitably among provinces?", tr: "Dış yardım fonları eyaletler arasında adil bir şekilde dağıtıldı mı?", word: "equitably", trWord: "adil", blank: "Were foreign aid funds distributed ___ among provinces?" },
+  { en: "Is scientific inquiry independent of political interference?", tr: "Bilimsel sorgulama siyasi müdahaleden bağımsız mıdır?", word: "inquiry", trWord: "sorgulama", blank: "Is scientific ___ independent of political interference?" },
+  { en: "Are human rights fundamental to democratic governance?", tr: "İnsan hakları demokratik yönetişim için temel midir?", word: "governance", trWord: "yönetişim", blank: "Are human rights fundamental to democratic ___?" }
 ];
 
 
 const unit9Lesson2SentencesRaw = [
-  { en: "Did you analyze it?", tr: "Onu analiz ettin mi?", word: "analyze", trWord: "analiz ettin", blank: "Did you ___ it?" },
-  { en: "Does it function well?", tr: "İyi çalışıyor mu?", word: "function", trWord: "çalışıyor", blank: "Does it ___ well?" },
-  { en: "Do they export goods?", tr: "Mal ihraç ediyorlar mı?", word: "export", trWord: "ihraç ediyorlar", blank: "Do they ___ goods?" },
-  { en: "Did he publish the book?", tr: "Kitabı yayımladı mı?", word: "publish", trWord: "yayımladı", blank: "Did he ___ the book?" },
-  { en: "Does she assume the risk?", tr: "Riski üstleniyor mu?", word: "assume", trWord: "üstleniyor", blank: "Does she ___ the risk?" },
-  { en: "Do we require a permit?", tr: "İzin belgesi gerekiyor mu?", word: "require", trWord: "gerekiyor", blank: "Do we ___ a permit?" },
-  { en: "Did it indicate a change?", tr: "Bir değişiklik gösterdi mi?", word: "indicate", trWord: "gösterdi", blank: "Did it ___ a change?" },
-  { en: "Does this derive from code?", tr: "Bu, kuraldan mı türiyor?", word: "derive", trWord: "türiyor", blank: "Does this ___ from code?" },
-  { en: "Do they source materials locally?", tr: "Malzemeleri yerel olarak mı tedarik ediyorlar?", word: "source", trWord: "tedarik ediyorlar", blank: "Do they ___ materials locally?" },
-  { en: "Did you estimate the cost?", tr: "Maliyeti tahmin ettin mi?", word: "estimate", trWord: "tahmin ettin", blank: "Did you ___ the cost?" },
-  { en: "Did the analyst evaluate the raw data?", tr: "Analist ham veriyi değerlendirdi mi?", word: "evaluate", trWord: "değerlendirdi", blank: "Did the analyst ___ the raw data?" },
-  { en: "Does the government modify the tax policy?", tr: "Hükümet vergi politikasını değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the government ___ the tax policy?" },
-  { en: "Do researchers establish a clear framework?", tr: "Araştırmacılar net bir çerçeve kuruyor mu?", word: "establish", trWord: "kuruyor", blank: "Do researchers ___ a clear framework?" },
-  { en: "Did the committee exclude the final report?", tr: "Komite nihai raporu hariç tuttu mu?", word: "exclude", trWord: "hariç tuttu", blank: "Did the committee ___ the final report?" },
-  { en: "Does this factor influence the public opinion?", tr: "Bu faktör kamuoyunu etkiliyor mu?", word: "influence", trWord: "etkiliyor", blank: "Does this factor ___ the public opinion?" },
-  { en: "Do institutions structure their academic curriculum?", tr: "Kurumlar müfredatlarını yapılandırıyor mu?", word: "structure", trWord: "yapılandırıyor", blank: "Do institutions ___ their academic curriculum?" },
-  { en: "Did the team integrate the new software?", tr: "Ekip yeni yazılımı entegre etti mi?", word: "integrate", trWord: "entegre etti", blank: "Did the team ___ the new software?" },
-  { en: "Does the theory define the phenomenon correctly?", tr: "Teori olguyu doğru tanımlıyor mu?", word: "define", trWord: "tanımlıyor", blank: "Does the theory ___ the phenomenon correctly?" },
-  { en: "Do companies achieve their annual production goals?", tr: "Şirketler yıllık üretim hedeflerine ulaşıyor mu?", word: "achieve", trWord: "ulaşıyor", blank: "Do companies ___ their annual production goals?" },
-  { en: "Did the manager adjust the financial budget?", tr: "Müdür finansal bütçeyi ayarladı mı?", word: "adjust", trWord: "ayarladı", blank: "Did the manager ___ the financial budget?" },
-  { en: "Did the administration abolish the controversial labor legislation?", tr: "Yönetim tartışmalı iş mevzuatını kaldırdı mı?", word: "abolish", trWord: "kaldırdı", blank: "Did the administration ___ the controversial labor legislation?" },
-  { en: "Does the regional economy affect the minority distribution?", tr: "Bölgesel ekonomi azınlık dağılımını etkiliyor mu?", word: "affect", trWord: "etkiliyor", blank: "Does the regional economy ___ the minority distribution?" },
-  { en: "Do separate departments allocate their resources independently?", tr: "Ayrı departmanlar kaynaklarını bağımsız olarak mı tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Do separate departments ___ their resources independently?" },
-  { en: "Did the university adopt the progressive assessment model?", tr: "Üniversite ilerici değerlendirme modelini benimsedi mi?", word: "adopt", trWord: "benimsedi", blank: "Did the university ___ the progressive assessment model?" },
-  { en: "Does this specific variable alter the final analysis?", tr: "Bu özel değişken nihai analizi değiştiriyor mu?", word: "alter", trWord: "değiştiriyor", blank: "Does this specific variable ___ the final analysis?" },
-  { en: "Do modern societies sustain their unique cultural identity?", tr: "Modern toplumlar benzersiz kültürel kimliklerini sürdürüyor mu?", word: "sustain", trWord: "sürdürüyor", blank: "Do modern societies ___ their unique cultural identity?" },
-  { en: "Did the supreme court challenge the legal definition today?", tr: "Anayasa Mahkemesi bugün yasal tanımı sorguladı mı?", word: "challenge", trWord: "sorguladı", blank: "Did the supreme court ___ the legal definition today?" },
-  { en: "Does the ancient text imply rigid social structures?", tr: "Antik metin katı sosyal yapılar mı ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "Does the ancient text ___ rigid social structures?" },
-  { en: "Do laboratory technicians conduct the primary safety experiment?", tr: "Laboratuvar teknisyenleri temel güvenlik deneyini yürütüyor mu?", word: "conduct", trWord: "yürütüyor", blank: "Do laboratory technicians ___ the primary safety experiment?" },
-  { en: "Did the participants interpret the survey instructions accurately?", tr: "Katılımcılar anket yönergelerini doğru yorumladı mı?", word: "interpret", trWord: "yorumladı", blank: "Did the participants ___ the survey instructions accurately?" }
+  { en: "Did the analyst evaluate the raw historical data?", tr: "Analist ham tarihsel veriyi değerlendirdi mi?", word: "evaluate", trWord: "değerlendirdi", blank: "Did the analyst ___ the raw historical data?" },
+  { en: "Does the central government modify monetary policy annually?", tr: "Merkezî hükümet para politikasını yıllık olarak değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the central government ___ monetary policy annually?" },
+  { en: "Do sociologists establish a clear theoretical framework?", tr: "Sosyologlar net bir teorik çerçeve kuruyor mu?", word: "establish", trWord: "kuruyor", blank: "Do sociologists ___ a clear theoretical framework?" },
+  { en: "Did the parliamentary committee exclude the final minority report?", tr: "Parlamento komitesi nihai azınlık raporunu hariç tuttu mu?", word: "exclude", trWord: "hariç tuttu", blank: "Did the parliamentary committee ___ the final minority report?" },
+  { en: "Does this geopolitical factor influence public opinion?", tr: "Bu jeopolitik faktör kamuoyunu etkiliyor mu?", word: "influence", trWord: "etkiliyor", blank: "Does this geopolitical factor ___ public opinion?" },
+  { en: "Do academic institutions structure their humanities curriculum effectively?", tr: "Akademik kurumlar beşeri bilimler müfredatlarını etkili yapılandırıyor mu?", word: "structure", trWord: "yapılandırıyor", blank: "Do academic institutions ___ their humanities curriculum effectively?" },
+  { en: "Did the research team integrate the new analytical software?", tr: "Araştırma ekibi yeni analitik yazılımı entegre etti mi?", word: "integrate", trWord: "entegre etti", blank: "Did the research team ___ the new analytical software?" },
+  { en: "Does the sociological theory define social mobility accurately?", tr: "Sosyolojik teori sosyal hareketliliği doğru tanımlıyor mu?", word: "define", trWord: "tanımlıyor", blank: "Does the sociological theory ___ social mobility accurately?" },
+  { en: "Do sovereign nations achieve their climate emissions targets?", tr: "Egemen uluslar iklim emisyon hedeflerine ulaşıyor mu?", word: "achieve", trWord: "ulaşıyor", blank: "Do sovereign nations ___ their climate emissions targets?" },
+  { en: "Did the financial manager adjust the annual regional budget?", tr: "Finans yöneticisi yıllık bölgesel bütçeyi ayarladı mı?", word: "adjust", trWord: "ayarladı", blank: "Did the financial manager ___ the annual regional budget?" },
+  { en: "Did the civil administration abolish the controversial tax legislation?", tr: "Sivil idare tartışmalı vergi mevzuatını kaldırdı mı?", word: "abolish", trWord: "kaldırdı", blank: "Did the civil administration ___ the controversial tax legislation?" },
+  { en: "Does global migration affect regional demographic distribution?", tr: "Küresel göç bölgesel demografik dağılımı etkiliyor mu?", word: "affect", trWord: "etkiliyor", blank: "Does global migration ___ regional demographic distribution?" },
+  { en: "Do autonomous departments allocate their financial resources independently?", tr: "Özerk departmanlar finansal kaynaklarını bağımsız olarak tahsis ediyor mu?", word: "allocate", trWord: "tahsis ediyor", blank: "Do autonomous departments ___ their financial resources independently?" },
+  { en: "Did the university senate adopt the new assessment criteria?", tr: "Üniversite senatosu yeni değerlendirme kriterlerini benimsedi mi?", word: "adopt", trWord: "benimsedi", blank: "Did the university senate ___ the new assessment criteria?" },
+  { en: "Does this specific independent variable alter the final outcome?", tr: "Bu özel bağımsız değişken nihai sonucu değiştiriyor mu?", word: "alter", trWord: "değiştiriyor", blank: "Does this specific independent variable ___ the final outcome?" },
+  { en: "Do modern societies sustain their distinct cultural heritage?", tr: "Modern toplumlar belirgin kültürel miraslarını sürdürüyor mu?", word: "sustain", trWord: "sürdürüyor", blank: "Do modern societies ___ their distinct cultural heritage?" },
+  { en: "Did the supreme court challenge the legal precedent today?", tr: "Anayasa Mahkemesi bugün yasal emsali sorguladı mı?", word: "challenge", trWord: "sorguladı", blank: "Did the supreme court ___ the legal precedent today?" },
+  { en: "Does the ancient text imply rigid social stratification?", tr: "Antik metin katı sosyal tabakalaşma mı ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "Does the ancient text ___ rigid social stratification?" },
+  { en: "Do senior researchers conduct ethical field experiments?", tr: "Kıdemli araştırmacılar etik saha deneyleri yürütüyor mu?", word: "conduct", trWord: "yürütüyor", blank: "Do senior researchers ___ ethical field experiments?" },
+  { en: "Did survey respondents interpret the questions accurately?", tr: "Anket katılımcıları soruları doğru yorumladı mı?", word: "interpret", trWord: "yorumladı", blank: "Did survey respondents ___ the questions accurately?" },
+  { en: "Did international treaties prevent regional armed conflicts?", tr: "Uluslararası antlaşmalar bölgesel silahlı çatışmaları önledi mi?", word: "prevent", trWord: "önledi", blank: "Did international treaties ___ regional armed conflicts?" },
+  { en: "Does industrialization accelerate urban population expansion?", tr: "Sanayileşme kentsel nüfus genişlemesini hızlandırıyor mu?", word: "accelerate", trWord: "hızlandırıyor", blank: "Does industrialization ___ urban population expansion?" },
+  { en: "Do diplomats negotiate international trade agreements quietly?", tr: "Diplomatlar uluslararası ticaret anlaşmalarını sessizce müzakere ediyor mu?", word: "negotiate", trWord: "müzakere ediyor", blank: "Do diplomats ___ international trade agreements quietly?" },
+  { en: "Did historians discover new primary documents in archives?", tr: "Tarihçiler arşivlerde yeni birincil belgeler keşfetti mi?", word: "discover", trWord: "keşfetti", blank: "Did historians ___ new primary documents in archives?" },
+  { en: "Does judicial oversight ensure constitutional compliance?", tr: "Yargısal denetim anayasal uyumu güvence altına alıyor mu?", word: "ensure", trWord: "güvence altına alıyor", blank: "Does judicial oversight ___ constitutional compliance?" },
+  { en: "Do non-governmental organizations provide humanitarian assistance?", tr: "Sivil toplum kuruluşları insani yardım sağlıyor mu?", word: "provide", trWord: "sağlıyor", blank: "Do non-governmental organizations ___ humanitarian assistance?" },
+  { en: "Did economic sanctions destabilize the national currency?", tr: "Ekonomik yaptırımlar ulusal para birimini istikrarsızlaştırdı mı?", word: "destabilize", trWord: "istikrarsızlaştırdı", blank: "Did economic sanctions ___ the national currency?" },
+  { en: "Does public education promote equal opportunities for citizens?", tr: "Kamu eğitimi vatandaşlar için eşit fırsatları teşvik ediyor mu?", word: "promote", trWord: "teşvik ediyor", blank: "Does public education ___ equal opportunities for citizens?" },
+  { en: "Do scientists replicate published experimental findings regularly?", tr: "Bilim insanları yayımlanmış deneysel bulguları düzenli olarak tekrarlıyor mu?", word: "replicate", trWord: "tekrarlıyor", blank: "Do scientists ___ published experimental findings regularly?" },
+  { en: "Did constitutional scholars debate the emergency powers clause?", tr: "Anayasa hukukçuları olağanüstü hal yetkileri maddesini tartıştılar mı?", word: "debate", trWord: "tartıştılar", blank: "Did constitutional scholars ___ the emergency powers clause?" }
 ];
 
 
 const unit9Lesson3SentencesRaw = [
-  { en: "Why is the data wrong?", tr: "Veri neden yanlıştır?", word: "wrong", trWord: "yanlıştır", blank: "Why is the data ___?" },
-  { en: "Where are the documents?", tr: "Belgeler nerededir?", word: "Where", trWord: "nerededir", blank: "___ are the documents?" },
-  { en: "What was the concept?", tr: "Kavram neydi?", word: "What", trWord: "neydi", blank: "___ was the concept?" },
-  { en: "How is the method?", tr: "Yöntem nasıldır?", word: "How", trWord: "nasıldır", blank: "___ is the method?" },
-  { en: "Who was the author?", tr: "Yazar kimdi?", word: "Who", trWord: "kimdi", blank: "___ was the author?" },
-  { en: "Why were the factors dynamic?", tr: "Faktörler neden dinamikti?", word: "dynamic", trWord: "dinamikti", blank: "Why were the factors ___?" },
-  { en: "Where is the sector?", tr: "Sektör nerededir?", word: "Where", trWord: "nerededir", blank: "___ is the sector?" },
-  { en: "What is the percentage?", tr: "Yüzde kaçtır?", word: "percentage", trWord: "yüzde", blank: "What is the ___?" },
-  { en: "How was the response?", tr: "Yanıt nasıldı?", word: "response", trWord: "yanıt", blank: "How was the ___?" },
-  { en: "Who is the analyst?", tr: "Analist kimdir?", word: "analyst", trWord: "analist", blank: "Who is the ___?" },
-  { en: "Why are the legal criteria so rigid?", tr: "Yasal kriterler neden bu kadar katıdır?", word: "rigid", trWord: "katıdır", blank: "Why are the legal criteria so ___?" },
-  { en: "What will be the primary benefit?", tr: "Temel fayda ne olacaktır?", word: "benefit", trWord: "fayda", blank: "What will be the primary ___?" },
-  { en: "How is the financial structure today?", tr: "Bugün finansal yapı nasıldır?", word: "structure", trWord: "yapı", blank: "How is the financial ___ today?" },
-  { en: "Where were the specific sources found?", tr: "Belirli kaynaklar nerede bulundu?", word: "found", trWord: "bulundu", blank: "Where were the specific sources ___?" },
-  { en: "Why is the initial assessment incomplete?", tr: "İlk değerlendirme neden eksiktir?", word: "assessment", trWord: "değerlendirme", blank: "Why is the initial ___ incomplete?" },
-  { en: "What can be the potential outcome?", tr: "Potansiyel sonuç ne olabilir?", word: "outcome", trWord: "sonuç", blank: "What can be the potential ___?" },
-  { en: "Who is the principal investigator here?", tr: "Buradaki asıl araştırmacı kimdir?", word: "investigator", trWord: "araştırmacı", blank: "Who is the principal ___ here?" },
-  { en: "How were the variables so unpredictable?", tr: "Değişkenler nasıl bu kadar tahmin edilemezdi?", word: "variables", trWord: "değişkenler", blank: "How were the ___ so unpredictable?" },
-  { en: "What is the major function of this?", tr: "Bunun ana işlevi nedir?", word: "function", trWord: "işlevi", blank: "What is the major ___ of this?" },
-  { en: "Where are the individual responses?", tr: "Bireysel yanıtlar nerededir?", word: "responses", trWord: "yanıtlar", blank: "Where are the individual ___?" },
-  { en: "Why is the theoretical framework of this study unstable?", tr: "Bu çalışmanın teorik çerçevesi neden istikrarsızdır?", word: "framework", trWord: "çerçevesi", blank: "Why is the theoretical ___ of this study unstable?" },
-  { en: "What was the ultimate constitutional authority of the state?", tr: "Devletin nihai anayasal yetkisi neydi?", word: "authority", trWord: "yetkisi", blank: "What was the ultimate constitutional ___ of the state?" },
-  { en: "How are the economic indicators relevant to this region?", tr: "Ekonomik göstergeler bu bölgeyle nasıl ilgilidir?", word: "indicators", trWord: "göstergeler", blank: "How are the economic ___ relevant to this region?" },
-  { en: "Where is the administrative policy document located now?", tr: "İdari politika belgesi şimdi nerede bulunuyor?", word: "located", trWord: "bulunuyor", blank: "Where is the administrative policy document ___ now?" },
-  { en: "Why were the environmental factors excluded from the report?", tr: "Çevresel faktörler neden rapordan hariç tutuldu?", word: "excluded", trWord: "hariç tutuldu", blank: "Why were the environmental factors ___ from the report?" },
-  { en: "What will be the long-term significance of this discovery?", tr: "Bu keşfin uzun vadeli önemi ne olacaktır?", word: "significance", trWord: "önemi", blank: "What will be the long-term ___ of this discovery?" },
-  { en: "How is the statistical analysis useful for predictions?", tr: "İstatistiksel analiz tahminler için nasıl yararlıdır?", word: "analysis", trWord: "analiz", blank: "How is the statistical ___ useful for predictions?" },
-  { en: "Who was the original creator of this specific methodology?", tr: "Bu özel metodolojinin özgün yaratıcısı kimdi?", word: "methodology", trWord: "metodolojinin", blank: "Who was the original creator of this specific ___?" },
-  { en: "Why is the global distribution of resources so unequal?", tr: "Küresel kaynak dağıtımı neden bu kadar adaletsizdir?", word: "distribution", trWord: "dağıtımı", blank: "Why is the global ___ of resources so unequal?" },
-  { en: "What are the primary components of this chemical compound?", tr: "Bu kimyasal bileşiğin birincil bileşenleri nelerdir?", word: "components", trWord: "bileşenleri", blank: "What are the primary ___ of this chemical compound?" }
+  { en: "Why are the legal criteria so rigid in international law?", tr: "Uluslararası hukukta yasal kriterler neden bu kadar katıdır?", word: "rigid", trWord: "katıdır", blank: "Why are the legal criteria so ___ in international law?" },
+  { en: "What will be the primary economic benefit of the reform?", tr: "Reformun temel ekonomik faydası ne olacaktır?", word: "benefit", trWord: "fayda", blank: "What will be the primary economic ___ of the reform?" },
+  { en: "How is the institutional structure organized today?", tr: "Kurumsal yapı bugün nasıl organize edilmiştir?", word: "structure", trWord: "yapı", blank: "How is the institutional ___ organized today?" },
+  { en: "Where were the primary historical sources originally archived?", tr: "Birincil tarihsel kaynaklar aslen nerede arşivlendi?", word: "archived", trWord: "arşivlendi", blank: "Where were the primary historical sources originally ___?" },
+  { en: "Why is the initial qualitative assessment incomplete?", tr: "İlk nitel değerlendirme neden eksiktir?", word: "assessment", trWord: "değerlendirme", blank: "Why is the initial qualitative ___ incomplete?" },
+  { en: "What could be the long-term political outcome of the election?", tr: "Seçimin uzun vadeli siyasi sonucu ne olabilir?", word: "outcome", trWord: "sonuç", blank: "What could be the long-term political ___ of the election?" },
+  { en: "Who is the principal investigator leading the neuroscientific study?", tr: "Nörobilimsel çalışmayı yürüten asıl araştırmacı kimdir?", word: "investigator", trWord: "araştırmacı", blank: "Who is the principal ___ leading the neuroscientific study?" },
+  { en: "How were the socio-economic variables so unpredictable during the crisis?", tr: "Kriz sırasında sosyo-ekonomik değişkenler nasıl bu kadar tahmin edilemezdi?", word: "variables", trWord: "değişkenler", blank: "How were the socio-economic ___ so unpredictable during the crisis?" },
+  { en: "What is the major social function of judicial institutions?", tr: "Yargı kurumlarının ana sosyal işlevi nedir?", word: "function", trWord: "işlevi", blank: "What is the major social ___ of judicial institutions?" },
+  { en: "Where are the individual survey responses stored securely?", tr: "Bireysel anket yanıtları nerede güvenli bir şekilde saklanmaktadır?", word: "responses", trWord: "yanıtları", blank: "Where are the individual survey ___ stored securely?" },
+  { en: "Why is the theoretical framework of this sociological study unstable?", tr: "Bu sosyolojik çalışmanın teorik çerçevesi neden istikrarsızdır?", word: "framework", trWord: "çerçevesi", blank: "Why is the theoretical ___ of this sociological study unstable?" },
+  { en: "What was the ultimate constitutional authority of the sovereign state?", tr: "Egemen devletin nihai anayasal yetkisi neydi?", word: "authority", trWord: "yetkisi", blank: "What was the ultimate constitutional ___ of the sovereign state?" },
+  { en: "How are economic indicators relevant to regional policy development?", tr: "Ekonomik göstergeler bölgesel politika geliştirme ile nasıl ilgilidir?", word: "indicators", trWord: "göstergeler", blank: "How are economic ___ relevant to regional policy development?" },
+  { en: "Where is the original administrative document preserved today?", tr: "Orijinal idari belge bugün nerede muhafaza edilmektedir?", word: "preserved", trWord: "muhafaza edilmektedir", blank: "Where is the original administrative document ___ today?" },
+  { en: "Why were environmental variables excluded from the economic model?", tr: "Çevresel değişkenler neden ekonomik modelden hariç tutuldu?", word: "variables", trWord: "değişkenler", blank: "Why were environmental ___ excluded from the economic model?" },
+  { en: "What will be the lasting historical significance of this treaty?", tr: "Bu antlaşmanın kalıcı tarihsel önemi ne olacaktır?", word: "significance", trWord: "önemi", blank: "What will be the lasting historical ___ of this treaty?" },
+  { en: "How is statistical sampling useful for demographic analysis?", tr: "İstatistiksel örnekleme demografik analiz için nasıl yararlıdır?", word: "sampling", trWord: "örnekleme", blank: "How is statistical ___ useful for demographic analysis?" },
+  { en: "Who was the primary architect of this philosophical methodology?", tr: "Bu felsefi metodolojinin ana mimarı kimdi?", word: "architect", trWord: "mimarı", blank: "Who was the primary ___ of this philosophical methodology?" },
+  { en: "Why is global resource distribution so unequal across continents?", tr: "Küresel kaynak dağıtımı kıtalar arasında neden bu kadar adaletsizdir?", word: "distribution", trWord: "dağıtımı", blank: "Why is global resource ___ so unequal across continents?" },
+  { en: "What are the core components of modern democratic governance?", tr: "Modern demokratik yönetişimin çekirdek bileşenleri nelerdir?", word: "components", trWord: "bileşenleri", blank: "What are the core ___ of modern democratic governance?" },
+  { en: "Why is academic freedom critical for scientific innovation?", tr: "Akademik özgürlük bilimsel yenilik için neden kritiktir?", word: "freedom", trWord: "özgürlük", blank: "Why is academic ___ critical for scientific innovation?" },
+  { en: "What was the chief cause of the agrarian crisis?", tr: "Tarımsal krizin baş nedeni neydi?", word: "cause", trWord: "nedeni", blank: "What was the chief ___ of the agrarian crisis?" },
+  { en: "How are moral values transmitted across generations?", tr: "Ahlaki değerler nesiller arasında nasıl aktarılır?", word: "transmitted", trWord: "aktarılır", blank: "How are moral values ___ across generations?" },
+  { en: "Where is the border demarcation line established on the map?", tr: "Sınır çizim hattı harita üzerinde nerede kurulmuştur?", word: "demarcation", trWord: "çizim", blank: "Where is the border ___ line established on the map?" },
+  { en: "Why was the diplomatic mission unsuccessful in restoring peace?", tr: "Diplomatik misyon barışı yeniden tesis etmede neden başarısız oldu?", word: "mission", trWord: "misyon", blank: "Why was the diplomatic ___ unsuccessful in restoring peace?" },
+  { en: "What is the primary objective of judicial independence?", tr: "Yargı bağımsızlığının birincil amacı nedir?", word: "objective", trWord: "amacı", blank: "What is the primary ___ of judicial independence?" },
+  { en: "How were public funds allocated among provincial hospitals?", tr: "Kamu fonları eyalet hastaneleri arasında nasıl tahsis edildi?", word: "allocated", trWord: "tahsis edildi", blank: "How were public funds ___ among provincial hospitals?" },
+  { en: "Who is responsible for international maritime safety oversight?", tr: "Uluslararası deniz güvenliği denetiminden kim sorumludur?", word: "responsible", trWord: "sorumludur", blank: "Who is ___ for international maritime safety oversight?" },
+  { en: "Why are economic sanctions imposed on authoritarian regimes?", tr: "Ototriter rejimlere ekonomik yaptırımlar neden uygulanır?", word: "sanctions", trWord: "yaptırımlar", blank: "Why are economic ___ imposed on authoritarian regimes?" },
+  { en: "What was the main argument presented by the defense attorney?", tr: "Savunma avukatı tarafından sunulan ana argüman neydi?", word: "argument", trWord: "argüman", blank: "What was the main ___ presented by the defense attorney?" }
 ];
 
 
 const unit9Lesson4SentencesRaw = [
-  { en: "Why did they analyze it?", tr: "Onu neden analiz ettiler?", word: "analyze", trWord: "analiz ettiler", blank: "Why did they ___ it?" },
-  { en: "How does it function?", tr: "Nasıl çalışıyor?", word: "function", trWord: "çalışıyor", blank: "How does it ___?" },
-  { en: "What did you estimate?", tr: "Neyi tahmin ettiniz?", word: "estimate", trWord: "tahmin ettiniz", blank: "What did you ___?" },
-  { en: "Where do they source it?", tr: "Onu nereden tedarik ediyorlar?", word: "source", trWord: "tedarik ediyorlar", blank: "Where do they ___ it?" },
-  { en: "When did he publish it?", tr: "Onu ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did he ___ it?" },
-  { en: "Why does she assume that?", tr: "Bunu neden varsayıyor?", word: "assume", trWord: "varsayıyor", blank: "Why does she ___ that?" },
-  { en: "How did you derive this?", tr: "Bunu nasıl türettiniz?", word: "derive", trWord: "türettiniz", blank: "How did you ___ this?" },
-  { en: "What does this indicate?", tr: "Bu neyi gösteriyor?", word: "indicate", trWord: "gösteriyor", blank: "What does this ___?" },
-  { en: "Where did they establish it?", tr: "Onu nerede kurdular?", word: "establish", trWord: "kurdular", blank: "Where did they ___ it?" },
-  { en: "Why do we require this?", tr: "Buna neden ihtiyaç duyuyoruz?", word: "require", trWord: "ihtiyaç duyuyoruz", blank: "Why do we ___ this?" },
-  { en: "How did the analyst evaluate the data?", tr: "Analist veriyi nasıl değerlendirdi?", word: "evaluate", trWord: "değerlendirdi", blank: "How did the analyst ___ the data?" },
-  { en: "Does the government modify the policy?", tr: "Hükümet politikayı değiştiriyor mu?", word: "modify", trWord: "değiştiriyor", blank: "Does the government ___ the policy?" },
-  { en: "What did the researchers achieve last year?", tr: "Araştırmacılar geçen yıl neyi başardı?", word: "achieve", trWord: "başardı", blank: "What did the researchers ___ last year?" },
-  { en: "Where do institutions structure the framework?", tr: "Kurumlar çerçeveyi nerede yapılandırıyor?", word: "structure", trWord: "yapılandırıyor", blank: "Where do institutions ___ the framework?" },
-  { en: "When did the committee publish the summary?", tr: "Komite özeti ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did the committee ___ the summary?" },
-  { en: "How does this factor influence the outcome?", tr: "Bu faktör sonucu nasıl etkiliyor?", word: "influence", trWord: "etkiliyor", blank: "How does this factor ___ the outcome?" },
-  { en: "Why did the team exclude the respondents?", tr: "Ekip katılımcıları neden hariç tuttu?", word: "exclude", trWord: "hariç tuttu", blank: "Why did the team ___ the respondents?" },
-  { en: "What does the theory define exactly?", tr: "Teori tam olarak neyi tanımlıyor?", word: "define", trWord: "tanımlıyor", blank: "What does the theory ___ exactly?" },
-  { en: "Where did they integrate the technology?", tr: "Teknolojiyi nereye entegre ettiler?", word: "integrate", trWord: "entegre ettiler", blank: "Where did they ___ the technology?" },
-  { en: "Why do companies export their production?", tr: "Şirketler üretimlerini neden ihraç ediyor?", word: "export", trWord: "ihraç ediyor", blank: "Why do companies ___ their production?" },
-  { en: "Why did the administration abolish the old regulatory framework?", tr: "Yönetim eski düzenleyici çerçeveyi neden kaldırdı?", word: "abolish", trWord: "kaldırdı", blank: "Why did the administration ___ the old regulatory framework?" },
-  { en: "How does the global economy affect domestic resource distribution?", tr: "Küresel ekonomi iç kaynak dağılımını nasıl etkiliyor?", word: "affect", trWord: "etkiliyor", blank: "How does the global economy ___ domestic resource distribution?" },
-  { en: "What did the scientific community conclude regarding the data?", tr: "Bilimsel topluluk verilerle ilgili ne sonuç çıkardı?", word: "conclude", trWord: "sonuç çıkardı", blank: "What did the scientific community ___ regarding the data?" },
-  { en: "Where do separate departments allocate their annual financial credit?", tr: "Ayrı departmanlar yıllık finansal kredilerini nereye tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Where do separate departments ___ their annual financial credit?" },
-  { en: "When did the university adopt the new academic assessment method?", tr: "Üniversite yeni değerlendirme yöntemini ne zaman benimsedi?", word: "adopt", trWord: "benimsedi", blank: "When did the university ___ the new academic assessment method?" },
-  { en: "How does this specific variable alter the statistical analysis?", tr: "Bu özel değişken istatistiksel analizi nasıl değiştiriyor?", word: "alter", trWord: "değiştiriyor", blank: "How does this specific variable ___ the statistical analysis?" },
-  { en: "Why did the main opposition challenge the legal definition?", tr: "Ana muhalefet yasal tanıma neden karşı çıktı?", word: "challenge", trWord: "karşı çıktı", blank: "Why did the main opposition ___ the legal definition?" },
-  { en: "What does the historical text imply about social structures?", tr: "Tarihsel metin toplumsal yapılar hakkında ne ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "What does the historical text ___ about social structures?" },
-  { en: "Where did the engineers conduct the primary energy experiment?", tr: "Mühendisler temel enerji deneyini nerede yürüttüler?", word: "conduct", trWord: "yürüttüler", blank: "Where did the engineers ___ the primary energy experiment?" },
-  { en: "How do modern societies sustain their cultural identity?", tr: "Modern toplumlar kültürel kimliklerini nasıl sürdürüyor?", word: "sustain", trWord: "sürdürüyor", blank: "How do modern societies ___ their cultural identity?" }
+  { en: "How did the economist evaluate the empirical data?", tr: "İktisatçı ampirik verileri nasıl değerlendirdi?", word: "evaluate", trWord: "değerlendirdi", blank: "How did the economist ___ the empirical data?" },
+  { en: "Why does the government modify tax regulations frequently?", tr: "Hükümet vergi düzenlemelerini neden sıklıkla değiştiriyor?", word: "modify", trWord: "değiştiriyor", blank: "Why does the government ___ tax regulations frequently?" },
+  { en: "What did researchers achieve during the interdisciplinary project?", tr: "Araştırmacılar disiplinlerarası proje boyunca neyi başardı?", word: "achieve", trWord: "başardı", blank: "What did researchers ___ during the interdisciplinary project?" },
+  { en: "Where do academic institutions structure their research programs?", tr: "Akademik kurumlar araştırma programlarını nerede yapılandırıyor?", word: "structure", trWord: "yapılandırıyor", blank: "Where do academic institutions ___ their research programs?" },
+  { en: "When did the parliamentary committee publish the policy report?", tr: "Parlamento komitesi politika raporunu ne zaman yayımladı?", word: "publish", trWord: "yayımladı", blank: "When did the parliamentary committee ___ the policy report?" },
+  { en: "How does this socio-economic factor influence educational attainment?", tr: "Bu sosyo-ekonomik faktör eğitim seviyesini nasıl etkiliyor?", word: "influence", trWord: "etkiliyor", blank: "How does this socio-economic factor ___ educational attainment?" },
+  { en: "Why did the research team exclude outlier survey responses?", tr: "Araştırma ekibi uç anket yanıtlarını neden hariç tuttu?", word: "exclude", trWord: "hariç tuttu", blank: "Why did the research team ___ outlier survey responses?" },
+  { en: "What does the philosophical theory define as human consciousness?", tr: "Felsefi teori insan bilinci olarak neyi tanımlıyor?", word: "define", trWord: "tanımlıyor", blank: "What does the philosophical theory ___ as human consciousness?" },
+  { en: "Where did engineers integrate the renewable energy technology?", tr: "Mühendisler yenilenebilir enerji teknolojisini nereye entegre ettiler?", word: "integrate", trWord: "entegre ettiler", blank: "Where did engineers ___ the renewable energy technology?" },
+  { en: "Why do sovereign nations export raw natural resources?", tr: "Egemen uluslar ham doğal kaynakları neden ihraç ediyor?", word: "export", trWord: "ihraç ediyor", blank: "Why do sovereign nations ___ raw natural resources?" },
+  { en: "Why did the civil administration abolish the outdated tariff system?", tr: "Sivil idare demode gümrük tarifesi sistemini neden kaldırdı?", word: "abolish", trWord: "kaldırdı", blank: "Why did the civil administration ___ the outdated tariff system?" },
+  { en: "How does global trade affect domestic market employment?", tr: "Küresel ticaret iç piyasa istihdamını nasıl etkiliyor?", word: "affect", trWord: "etkiliyor", blank: "How does global trade ___ domestic market employment?" },
+  { en: "What did the scientific community conclude regarding the climate survey?", tr: "Bilimsel topluluk iklim araştırmasına ilişkin ne sonuç çıkardı?", word: "conclude", trWord: "sonuç çıkardı", blank: "What did the scientific community ___ regarding the climate survey?" },
+  { en: "Where do provincial governments allocate their infrastructure budget?", tr: "Eyalet hükümetleri altyapı bütçelerini nereye tahsis ediyor?", word: "allocate", trWord: "tahsis ediyor", blank: "Where do provincial governments ___ their infrastructure budget?" },
+  { en: "When did the university adopt the online examination framework?", tr: "Üniversite çevrim içi sınav çerçevesini ne zaman benimsedi?", word: "adopt", trWord: "benimsedi", blank: "When did the university ___ the online examination framework?" },
+  { en: "How does this specific variable alter statistical confidence intervals?", tr: "Bu özel değişken istatistiksel güven aralıklarını nasıl değiştiriyor?", word: "alter", trWord: "değiştiriyor", blank: "How does this specific variable ___ statistical confidence intervals?" },
+  { en: "Why did the legal team challenge the constitutional validity of the law?", tr: "Hukuk ekibi yasanın anayasal geçerliliğine neden karşı çıktı?", word: "challenge", trWord: "karşı çıktı", blank: "Why did the legal team ___ the constitutional validity of the law?" },
+  { en: "What does the ancient document imply concerning medieval feudalism?", tr: "Antik belge ortaçağ feodalizmi hakkında ne ima ediyor?", word: "imply", trWord: "ima ediyor", blank: "What does the ancient document ___ concerning medieval feudalism?" },
+  { en: "Where did sociologists conduct the multi-year demographic survey?", tr: "Sosyologlar çok yıllı demografik anketi nerede yürüttüler?", word: "conduct", trWord: "yürüttüler", blank: "Where did sociologists ___ the multi-year demographic survey?" },
+  { en: "How do democratic societies sustain freedom of speech in digital media?", tr: "Demokratik toplumlar dijital medyada ifade özgürlüğünü nasıl sürdürüyor?", word: "sustain", trWord: "sürdürüyor", blank: "How do democratic societies ___ freedom of speech in digital media?" },
+  { en: "Why did diplomats postpone the bilateral peace talks?", tr: "Diplomatlar ikili barış görüşmelerini neden erteledi?", word: "postpone", trWord: "erteledi", blank: "Why did diplomats ___ the bilateral peace talks?" },
+  { en: "How do central banks control currency inflation during crises?", tr: "Merkez bankaları kriz dönemlerinde para enflasyonunu nasıl kontrol ediyor?", word: "control", trWord: "kontrol ediyor", blank: "How do central banks ___ currency inflation during crises?" },
+  { en: "What did historians discover regarding ancient trade routes?", tr: "Tarihçiler antik ticaret rotalarına ilişkin ne keşfettiler?", word: "discover", trWord: "keşfettiler", blank: "What did historians ___ regarding ancient trade routes?" },
+  { en: "Where do international bodies enforce environmental compliance standards?", tr: "Uluslararası organlar çevresel uyum standartlarını nerede uyguluyor?", word: "enforce", trWord: "uyguluyor", blank: "Where do international bodies ___ environmental compliance standards?" },
+  { en: "When will the judicial tribunal issue the final verdict?", tr: "Yargı mahkemesi nihai kararı ne zaman açıklayacak?", word: "issue", trWord: "açıklayacak", blank: "When will the judicial tribunal ___ the final verdict?" },
+  { en: "How did the researcher overcome methodological limitations?", tr: "Araştırmacı metodolojik sınırlamaları nasıl aştı?", word: "overcome", trWord: "aştı", blank: "How did the researcher ___ methodological limitations?" },
+  { en: "Why do developing nations prioritize industrial infrastructure investment?", tr: "Gelişmekte olan uluslar sanayi altyapısı yatırımına neden öncelik veriyor?", word: "prioritize", trWord: "öncelik veriyor", blank: "Why do developing nations ___ industrial infrastructure investment?" },
+  { en: "What does the economic index indicate regarding consumer sentiment?", tr: "Ekonomik endeks tüketici duyarlılığı hakkında neyi gösteriyor?", word: "indicate", trWord: "gösteriyor", blank: "What does the economic index ___ regarding consumer sentiment?" },
+  { en: "Where did archaeologists excavate the ancient Roman settlement?", tr: "Arkeologlar antik Roma yerleşimini nerede kazdılar?", word: "excavate", trWord: "kazdılar", blank: "Where did archaeologists ___ the ancient Roman settlement?" },
+  { en: "How do human rights defenders monitor election integrity?", tr: "İnsan hakları savunucuları seçim dürüstlüğünü nasıl izliyor?", word: "monitor", trWord: "izliyor", blank: "How do human rights defenders ___ election integrity?" }
 ];
 
 
 const unit9Lesson5SentencesRaw = [
-  { en: "At which level is it?", tr: "Hangi düzeydedir?", word: "level", trWord: "düzeydedir", blank: "At which ___ is it?" },
-  { en: "In which sector are they?", tr: "Hangi sektördedirler?", word: "sector", trWord: "sektördedirler", blank: "In which ___ are they?" },
-  { en: "To what extent was it?", tr: "Ne ölçüdeydi?", word: "extent", trWord: "ölçüdeydi", blank: "To what ___ was it?" },
-  { en: "For which purpose is this?", tr: "Bu hangi amaç içindir?", word: "purpose", trWord: "amaç", blank: "For which ___ is this?" },
-  { en: "By whose authority was it?", tr: "Kimin yetkisiyleydi?", word: "authority", trWord: "yetkisiyleydi", blank: "By whose ___ was it?" },
-  { en: "Under which category are they?", tr: "Hangi kategori altındadırlar?", word: "category", trWord: "kategori", blank: "Under which ___ are they?" },
-  { en: "From which source is it?", tr: "Hangi kaynaktandır?", word: "source", trWord: "kaynaktandır", blank: "From which ___ is it?" },
-  { en: "In what period was it?", tr: "Hangi dönemdeydi?", word: "period", trWord: "dönemdeydi", blank: "In what ___ was it?" },
-  { en: "With which method is it?", tr: "Hangi yöntemledir?", word: "method", trWord: "yöntemledir", blank: "With which ___ is it?" },
-  { en: "On whose data was it?", tr: "Kimin verileri üzerindeydi?", word: "data", trWord: "verileri", blank: "On whose ___ was it?" },
-  { en: "In which academic journal was it published?", tr: "Hangi dergide yayımlandı?", word: "journal", trWord: "dergide", blank: "In which academic ___ was it published?" },
-  { en: "Under what legal criteria were they selected?", tr: "Hangi yasal kriterler altında seçildiler?", word: "criteria", trWord: "kriterler", blank: "Under what legal ___ were they selected?" },
-  { en: "For which specific purpose is this required?", tr: "Bu hangi özel amaç için gereklidir?", word: "purpose", trWord: "amaç", blank: "For which specific ___ is this required?" },
-  { en: "At what financial percentage was it fixed?", tr: "Hangi finansal yüzdeyle sabitlendi?", word: "percentage", trWord: "yüzdeyle", blank: "At what financial ___ was it fixed?" },
-  { en: "From which primary source is this derived?", tr: "Bu hangi birincil kaynaktan türetilmiştir?", word: "source", trWord: "kaynaktan", blank: "From which primary ___ is this derived?" },
-  { en: "To what degree are the variables dynamic?", tr: "Değişkenler ne derece dinamiktir?", word: "degree", trWord: "derece", blank: "To what ___ are the variables dynamic?" },
-  { en: "With which analytical framework is it compatible?", tr: "Hangi analitik çerçeve ile uyumludur?", word: "framework", trWord: "çerçeve", blank: "With which analytical ___ is it compatible?" },
-  { en: "By what assessment method was it evaluated?", tr: "Hangi değerlendirme yöntemiyle değerlendirildi?", word: "assessment", trWord: "değerlendirme", blank: "By what ___ method was it evaluated?" },
-  { en: "In which economic sector is the crisis visible?", tr: "Kriz hangi ekonomik sektörde görünürdür?", word: "sector", trWord: "sektörde", blank: "In which economic ___ is the crisis visible?" },
-  { en: "On what theoretical assumption is this based?", tr: "Bu hangi teorik varsayıma dayanmaktadır?", word: "assumption", trWord: "varsayıma", blank: "On what theoretical ___ is this based?" },
-  { en: "Under which constitutional clause was the law modified?", tr: "Yasa hangi anayasal madde uyarınca değiştirildi?", word: "clause", trWord: "madde", blank: "Under which constitutional ___ was the law modified?" },
-  { en: "By what statistical methodology were the figures calculated?", tr: "Rakamlar hangi istatistiksel metodolojiyle hesaplandı?", word: "methodology", trWord: "metodolojiyle", blank: "By what statistical ___ were the figures calculated?" },
-  { en: "To what geographic extent is the population distributed?", tr: "Nüfus hangi coğrafi ölçüde dağılmıştır?", word: "extent", trWord: "ölçüde", blank: "To what geographic ___ is the population distributed?" },
-  { en: "For whose ultimate benefit was the policy established?", tr: "Politika kimin nihai faydası için oluşturuldu?", word: "benefit", trWord: "faydası", blank: "For whose ultimate ___ was the policy established?" },
-  { en: "From which institutional perspective was the text interpreted?", tr: "Metin hangi kurumsal perspektiften yorumlandı?", word: "perspective", trWord: "perspektiften", blank: "From which institutional ___ was the text interpreted?" },
-  { en: "In which experimental environment were the plants grown?", tr: "Bitkiler hangi deneysel ortamda yetiştirildi?", word: "environment", trWord: "ortamda", blank: "In which experimental ___ were the plants grown?" },
-  { en: "With what administrative authority is the director acting?", tr: "Müdür hangi idari yetkiyle hareket ediyor?", word: "authority", trWord: "yetkiyle", blank: "With what administrative ___ is the director acting?" },
-  { en: "At which developmental stage are the data components?", tr: "Veri bileşenleri hangi gelişim aşamasındadır?", word: "stage", trWord: "aşamasındadır", blank: "At which developmental ___ are the data components?" },
-  { en: "On which philosophical concept is the framework structured?", tr: "Çerçeve hangi felsefi kavram üzerine yapılandırılmıştır?", word: "concept", trWord: "kavram", blank: "On which philosophical ___ is the framework structured?" },
-  { en: "Through what regulatory process was the contract validated?", tr: "Sözleşme hangi düzenleyici süreçle onaylandı?", word: "process", trWord: "süreçle", blank: "Through what regulatory ___ was the contract validated?" }
+  { en: "At which level of administration was the decision finalized?", tr: "Karar idarenin hangi düzeyinde kesinleştirildi?", word: "level", trWord: "düzeyinde", blank: "At which ___ of administration was the decision finalized?" },
+  { en: "In which economic sector are the job losses most concentrated?", tr: "İstihdam kayıpları en çok hangi ekonomik sektörde yoğunlaşmaktadır?", word: "sector", trWord: "sektörde", blank: "In which economic ___ are the job losses most concentrated?" },
+  { en: "To what extent was the constitutional amendment implemented?", tr: "Anayasa değişikliği ne ölçüde uygulandı?", word: "extent", trWord: "ölçüde", blank: "To what ___ was the constitutional amendment implemented?" },
+  { en: "For which diplomatic purpose was the international treaty drafted?", tr: "Uluslararası antlaşma hangi diplomatik amaç için taslak haline getirildi?", word: "purpose", trWord: "amaç", blank: "For which diplomatic ___ was the international treaty drafted?" },
+  { en: "By whose judicial authority was the executive order revoked?", tr: "Kararname kimin yargı yetkisiyle iptal edildi?", word: "authority", trWord: "yetkisiyle", blank: "By whose judicial ___ was the executive order revoked?" },
+  { en: "Under which legal category are these financial assets classified?", tr: "Bu finansal varlıklar hangi yasal kategori altında sınıflandırılmaktadır?", word: "category", trWord: "kategori", blank: "Under which legal ___ are these financial assets classified?" },
+  { en: "From which primary historical source is this quote derived?", tr: "Bu alıntı hangi birincil tarihsel kaynaktan türetilmiştir?", word: "source", trWord: "kaynaktan", blank: "From which primary historical ___ is this quote derived?" },
+  { en: "In what historical period was feudalism predominant in Western Europe?", tr: "Batı Avrupa'da feodalizm hangi tarihsel dönemde hakimdi?", word: "period", trWord: "dönemde", blank: "In what historical ___ was feudalism predominant in Western Europe?" },
+  { en: "With which analytical method was the data set evaluated?", tr: "Veri seti hangi analitik yöntemle değerlendirildi?", word: "method", trWord: "yöntemle", blank: "With which analytical ___ was the data set evaluated?" },
+  { en: "On whose empirical data was the economic report based?", tr: "Ekonomik rapor kimin ampirik verilerine dayanıyordu?", word: "data", trWord: "verilerine", blank: "On whose empirical ___ was the economic report based?" },
+  { en: "In which academic journal was the breakthrough study published?", tr: "Çığır açan çalışma hangi akademik dergide yayımlandı?", word: "journal", trWord: "dergide", blank: "In which academic ___ was the breakthrough study published?" },
+  { en: "Under what legal criteria were the refugees granted asylum?", tr: "Mültecilere hangi yasal kriterler altında sığınma hakkı tanındı?", word: "criteria", trWord: "kriterler", blank: "Under what legal ___ were the refugees granted asylum?" },
+  { en: "For which specific regulatory purpose is this document required?", tr: "Bu belge hangi özel düzenleyici amaç için gereklidir?", word: "purpose", trWord: "amaç", blank: "For which specific regulatory ___ is this document required?" },
+  { en: "At what financial percentage was the national inflation rate pegged?", tr: "Ulusal enflasyon oranı hangi finansal yüzdeye sabitlendi?", word: "percentage", trWord: "yüzdeye", blank: "At what financial ___ was the national inflation rate pegged?" },
+  { en: "From which theoretical perspective did the author analyze human conflict?", tr: "Yazar insan çatışmasını hangi teorik perspektiften analiz etti?", word: "perspective", trWord: "perspektiften", blank: "From which theoretical ___ did the author analyze human conflict?" },
+  { en: "To what degree are economic variables dynamic in market models?", tr: "Ekonomik değişkenler piyasa modellerinde ne derece dinamiktir?", word: "degree", trWord: "derece", blank: "To what ___ are economic variables dynamic in market models?" },
+  { en: "With which legal framework is the corporate regulation compatible?", tr: "Şirket düzenlemesi hangi yasal çerçeve ile uyumludur?", word: "framework", trWord: "çerçeve", blank: "With which legal ___ is the corporate regulation compatible?" },
+  { en: "By what assessment method was student performance measured?", tr: "Öğrenci performansı hangi değerlendirme yöntemiyle ölçüldü?", word: "assessment", trWord: "değerlendirme", blank: "By what ___ method was student performance measured?" },
+  { en: "In which economic sector is structural unemployment most severe?", tr: "Yapısal işsizlik en çok hangi ekonomik sektörde şiddetlidir?", word: "sector", trWord: "sektörde", blank: "In which economic ___ is structural unemployment most severe?" },
+  { en: "On what theoretical assumption is the hypothesis structured?", tr: "Hipotez hangi teorik varsayım üzerine yapılandırılmıştır?", word: "assumption", trWord: "varsayım", blank: "On what theoretical ___ is the hypothesis structured?" },
+  { en: "Under which constitutional clause was the emergency law enacted?", tr: "Olağanüstü hal yasası hangi anayasal madde uyarınca yürürlüğe kondu?", word: "clause", trWord: "madde", blank: "Under which constitutional ___ was the emergency law enacted?" },
+  { en: "By what statistical methodology were the census figures calculated?", tr: "Nüfus sayımı rakamları hangi istatistiksel metodolojiyle hesaplandı?", word: "methodology", trWord: "metodolojiyle", blank: "By what statistical ___ were the census figures calculated?" },
+  { en: "To what geographic extent is the endangered species distributed?", tr: "Tehlike altındaki türler hangi coğrafi ölçüde dağılmıştır?", word: "extent", trWord: "ölçüde", blank: "To what geographic ___ is the endangered species distributed?" },
+  { en: "For whose ultimate benefit was the social policy designed?", tr: "Sosyal politika kimin nihai faydası için tasarlandı?", word: "benefit", trWord: "faydası", blank: "For whose ultimate ___ was the social policy designed?" },
+  { en: "From which institutional perspective was the reform criticized?", tr: "Reform hangi kurumsal perspektiften eleştirildi?", word: "perspective", trWord: "perspektiften", blank: "From which institutional ___ was the reform criticized?" },
+  { en: "In which experimental environment were the clinical trials conducted?", tr: "Klinik denemeler hangi deneysel ortamda yürütüldü?", word: "environment", trWord: "ortamda", blank: "In which experimental ___ were the clinical trials conducted?" },
+  { en: "With what administrative authority is the magistrate acting?", tr: "Yargıç hangi idari yetkiyle hareket ediyor?", word: "authority", trWord: "yetkiyle", blank: "With what administrative ___ is the magistrate acting?" },
+  { en: "At which developmental stage is the economic policy currently?", tr: "Ekonomik politika şu anda hangi gelişim aşamasındadır?", word: "stage", trWord: "aşamasındadır", blank: "At which developmental ___ is the economic policy currently?" },
+  { en: "On which philosophical concept is the ethical system founded?", tr: "Etik sistem hangi felsefi kavram üzerine kurulmuştur?", word: "concept", trWord: "kavram", blank: "On which philosophical ___ is the ethical system founded?" },
+  { en: "Through what regulatory process was the international agreement ratified?", tr: "Uluslararası anlaşma hangi düzenleyici süreçle onaylandı?", word: "process", trWord: "süreçle", blank: "Through what regulatory ___ was the international agreement ratified?" }
 ];
 
 
@@ -19230,10 +19230,10 @@ const rawTopics = [
         "type": "custom"
       }
     ],
-    "title": "VIII. \"There\" Yapıları",
-    "desc": "There is/are, modallar ve ileri düzey varlık (existential) yapıları",
+    "title": "VIII. Existential 'There' ve Varlık/Yokluk Yapıları",
+    "desc": "There is/are, exist, remain, modallı varlık yapıları ve beşeri bilimler uygulamaları",
     "icon": "📋",
-    "numLessons": 1,
+    "numLessons": 5,
     "formulas": [
       {
         "formula": "There + Be + Noun",
@@ -19245,11 +19245,13 @@ const rawTopics = [
       }
     ],
     "subtitles": [
-      "A. Temel \"There\" Yapıları (There is/are, was/were)",
-      "B. Modallı \"There\" Yapıları (There must/should/can be)",
-      "C. İleri Düzey Existential \"There\" Yapıları ve Karma Tekrar"
+      "1. Ders: Temel Varlık Yapıları (There is/are, was/were, exist, remain)",
+      "2. Ders: Modallı & İleri Varlık Yapıları (There must/should/can/may/might be, appears/seems to be)",
+      "3. Ders: Varlık/Yokluk Soru Yapıları (Is there, Are there, Was there, Can there be, Why is there)",
+      "4. Ders: Akademik Sentez I (Karmaşık İsim Tamlamaları & Edat Grupları)",
+      "5. Ders: Akademik Sentez II & Spiralleşme (İleri Seviye Beşeri Bilimler Kalıpları)"
     ],
-    "originalNumLessons": 1
+    "originalNumLessons": 5
   },
   {
     "id": 9,
@@ -19822,222 +19824,93 @@ const lessonIcons = [
   "🎗️", "📣", "📢", "🔋", "🔌", "🛸"
 ];
 
-const unit8Lesson1SentencesRaw1 = [
-  { en: "There is a test", tr: "Bir test var" },
-  { en: "There is no test", tr: "Bir test yok" },
-  { en: "There is a form", tr: "Bir form var" },
-  { en: "There is no form", tr: "Bir form yok" },
-  { en: "There is a wire", tr: "Bir tel var" },
-  { en: "There is no wire", tr: "Bir tel yok" },
-  { en: "There is a hope", tr: "Bir umut var" },
-  { en: "There is no hope", tr: "Bir umut yok" },
-  { en: "There is a type", tr: "Bir tür var" },
-  { en: "There is no type", tr: "Bir tür yok" },
-  { en: "There is a theory", tr: "Bir kuram var" },
-  { en: "There is no theory", tr: "Bir kuram yok" },
-  { en: "There is a supply", tr: "Bir arz var" },
-  { en: "There is no supply", tr: "Bir arz yok" },
-  { en: "There is a profit", tr: "Bir kâr var" },
-  { en: "There is no profit", tr: "Bir kâr yok" },
-  { en: "There is a source", tr: "Bir kaynak var" },
-  { en: "There is no source", tr: "Bir kaynak yok" },
-  { en: "There is a solution", tr: "Bir çözüm var" },
-  { en: "There is no solution", tr: "Bir çözüm yok" },
-  { en: "There is a summary", tr: "Bir özet var" },
-  { en: "There is no summary", tr: "Bir özet yok" },
-  { en: "There is a vibration", tr: "Bir titreşim var" },
-  { en: "There is no vibration", tr: "Bir titreşim yok" },
-  { en: "There is a statement", tr: "Bir ifade var" },
-  { en: "There is no statement", tr: "Bir ifade yok" },
-  { en: "There is a condition", tr: "Bir koşul var" },
-  { en: "There is no condition", tr: "Bir koşul yok" },
-  { en: "There is a tendency", tr: "Bir eğilim var" },
-  { en: "There is no tendency", tr: "Bir eğilim yok" },
-  { en: "There is an examination", tr: "Bir sınav var" },
-  { en: "There is no examination", tr: "Bir sınav yok" },
-  { en: "There is a possibility", tr: "Bir olasılık var" },
-  { en: "There is no possibility", tr: "Bir olasılık yok" },
-  { en: "There is a translation", tr: "Bir çeviri var" },
-  { en: "There is no translation", tr: "Bir çeviri yok" },
-  { en: "There is a temperature", tr: "Bir sıcaklık var" },
-  { en: "There is no temperature", tr: "Bir sıcaklık yok" },
-  { en: "There is a similarity", tr: "Bir benzerlik var" },
-  { en: "There is no similarity", tr: "Bir benzerlik yok" },
-  { en: "There is an improvement", tr: "Bir iyileşme var" },
-  { en: "There is no improvement", tr: "Bir iyileşme yok" },
-  { en: "There is a suggestion", tr: "Bir öneri var" },
-  { en: "There is no suggestion", tr: "Bir öneri yok" }
+// Set 1: Temel Varlık Yapıları (There is/are, There was/were, There exist, There remain)
+const unit8Lesson1SentencesRaw = [
+  { en: "There is a fundamental distinction in moral philosophy.", tr: "Ahlak felsefesinde temel bir ayrım vardır.", word: "distinction", trWord: "ayrım", blank: "There is a fundamental ___ in moral philosophy." },
+  { en: "There are several primary sources in the historical archive.", tr: "Tarihsel arşivde birkaç birincil kaynak vardır.", word: "sources", trWord: "kaynak", blank: "There are several primary ___ in the historical archive." },
+  { en: "There was significant consensus among constitutional scholars.", tr: "Anayasa hukukçuları arasında önemli bir uzlaşı vardı.", word: "consensus", trWord: "uzlaşı", blank: "There was significant ___ among constitutional scholars." },
+  { en: "There were multiple variables in the psychological study.", tr: "Psikolojik çalışmada birden fazla değişken vardı.", word: "variables", trWord: "değişkenler", blank: "There were multiple ___ in the psychological study." },
+  { en: "There exists a strong correlation between poverty and crime.", tr: "Yoksulluk ve suç arasında güçlü bir ilişki mevcuttur.", word: "correlation", trWord: "ilişki", blank: "There exists a strong ___ between poverty and crime." },
+  { en: "There exist rigid social hierarchies in traditional agrarian societies.", tr: "Geleneksel tarım toplumlarında katı sosyal hiyerarşiler mevcuttur.", word: "hierarchies", trWord: "hiyerarşiler", blank: "There exist rigid social ___ in traditional agrarian societies." },
+  { en: "There remains an unresolved question regarding legal jurisdiction.", tr: "Yasal yargı yetkisine ilişkin çözülmemiş bir soru kalmaktadır.", word: "jurisdiction", trWord: "yargı yetkisi", blank: "There remains an unresolved question regarding legal ___." },
+  { en: "There remain deep ideological divisions within the political assembly.", tr: "Siyasi meclis içinde derin ideolojik bölünmeler kalmaktadır.", word: "divisions", trWord: "bölünmeler", blank: "There remain deep ideological ___ within the political assembly." },
+  { en: "There is no empirical evidence supporting the initial hypothesis.", tr: "İlk hipotezi destekleyen hiçbir ampirik kanıt yoktur.", word: "evidence", trWord: "kanıt", blank: "There is no empirical ___ supporting the initial hypothesis." },
+  { en: "There was a rapid transformation in the regional economic structure.", tr: "Bölgesel ekonomik yapıda hızlı bir dönüşüm vardı.", word: "transformation", trWord: "dönüşüm", blank: "There was a rapid ___ in the regional economic structure." },
+  { en: "There exists an institutional continuity across different administrative eras.", tr: "Farklı idari dönemler arasında kurumsal bir süreklilik mevcuttur.", word: "continuity", trWord: "süreklilik", blank: "There exists an institutional ___ across different administrative eras." },
+  { en: "There remains considerable debate among sociologists regarding urban migration.", tr: "Kentsel göçe ilişkin sosyologlar arasında ciddi bir tartışma kalmaktadır.", word: "debate", trWord: "tartışma", blank: "There remains considerable ___ among sociologists regarding urban migration." }
 ];
 
-const unit8Lesson1SentencesRaw2 = [
-  { en: "There will be a short test", tr: "Kısa bir test olacak" },
-  { en: "There must be a thin wire", tr: "İnce bir tel olmalıdır" },
-  { en: "There will be a long examination", tr: "Uzun bir sınav olacak" },
-  { en: "There may be no new form", tr: "Yeni bir form olmayabilir" },
-  { en: "There might be a faint hope", tr: "Zayıf bir umut olabilir" },
-  { en: "There must be a short summary", tr: "Kısa bir özet olmalıdır" },
-  { en: "There will be a new source", tr: "Yeni bir kaynak olacak" },
-  { en: "There will be no large profit", tr: "Büyük bir kâr olmayacak" },
-  { en: "There may be some disadvantages", tr: "Bazı dezavantajlar olabilir" },
-  { en: "There will be some advantages", tr: "Bazı avantajlar olacak" },
-  { en: "There will be some successes", tr: "Bazı başarılar olacak" },
-  { en: "There could be some failures", tr: "Bazı başarısızlıklar olabilirdi" },
-  { en: "There have been some influences", tr: "Bazı etkiler olmuştur" },
-  { en: "There may be large supplies", tr: "Büyük tedarikler olabilir" },
-  { en: "There must be some reforms", tr: "Bazı reformlar olmalıdır" }
+// Set 2: Modallı & İleri Varlık Yapıları (There must be, There can/may/might be, There appears/seems to be, There could have been)
+const unit8Lesson2SentencesRaw = [
+  { en: "There must be a logical explanation for these experimental anomalies.", tr: "Bu deneysel anomaliler için mantıklı bir açıklama olmalıdır.", word: "explanation", trWord: "açıklama", blank: "There must be a logical ___ for these experimental anomalies." },
+  { en: "There can be different interpretations of the constitutional clause.", tr: "Anayasa maddesinin farklı yorumları olabilir.", word: "interpretations", trWord: "yorumlar", blank: "There can be different ___ of the constitutional clause." },
+  { en: "There should be strict regulatory oversight in financial markets.", tr: "Finansal piyasalarda katı düzenleyici denetim olmalıdır.", word: "oversight", trWord: "denetim", blank: "There should be strict regulatory ___ in financial markets." },
+  { en: "There may be psychological consequences of prolonged social isolation.", tr: "Uzun süreli sosyal izolasyonun psikolojik sonuçları olabilir.", word: "consequences", trWord: "sonuçlar", blank: "There may be psychological ___ of prolonged social isolation." },
+  { en: "There might be unexpected variables altering the analytical results.", tr: "Analitik sonuçları değiştiren beklenmedik değişkenler olabilir.", word: "variables", trWord: "değişkenler", blank: "There might be unexpected ___ altering the analytical results." },
+  { en: "There appears to be a consensus among international legal scholars.", tr: "Uluslararası hukukçular arasında bir uzlaşı var gibi görünmektedir.", word: "consensus", trWord: "uzlaşı", blank: "There appears to be a ___ among international legal scholars." },
+  { en: "There seems to be a fundamental flaw in the economic model.", tr: "Ekonomik modelde temel bir kusur var gibi görünmektedir.", word: "flaw", trWord: "kusur", blank: "There seems to be a fundamental ___ in the economic model." },
+  { en: "There have been major breakthroughs in neuroscience during this decade.", tr: "Bu on yıl boyunca nörobilimde büyük buluşlar olmuştur.", word: "breakthroughs", trWord: "buluşlar", blank: "There have been major ___ in neuroscience during this decade." },
+  { en: "There has been continuous evolution in linguistic structures across centuries.", tr: "Yüzyıllar boyunca dilbilimsel yapılarda sürekli bir evrim olmuştur.", word: "evolution", trWord: "evrim", blank: "There has been continuous ___ in linguistic structures across centuries." },
+  { en: "There could be severe economic repercussions following the trade embargo.", tr: "Ticaret ambargosunu takip eden ciddi ekonomik artçı etkiler olabilir.", word: "repercussions", trWord: "artçı etkiler", blank: "There could be severe economic ___ following the trade embargo." },
+  { en: "There must have been extensive trade networks in the ancient Bronze Age.", tr: "Antik Tunç Çağı'nda kapsamlı ticaret ağları olmuş olmalıdır.", word: "networks", trWord: "ağlar", blank: "There must have been extensive trade ___ in the ancient Bronze Age." },
+  { en: "There could have been alternative outcomes to the diplomatic crisis.", tr: "Diplomatik krize alternatif sonuçlar var olmuş olabilirdi.", word: "outcomes", trWord: "sonuçlar", blank: "There could have been alternative ___ to the diplomatic crisis." }
 ];
 
-const unit8Lesson1SentencesRaw3 = [
-  { en: "There may not be any heavy rainfall", tr: "Hiç şiddetli yağış olmayabilir" },
-  { en: "There may not be any agricultural reform", tr: "Hiç tarım reformu olmayabilir" },
-  { en: "There have not been any similar stages", tr: "Hiç benzer aşama olmamıştır" },
-  { en: "There have not been any common species", tr: "Hiç ortak tür olmamıştır" },
-  { en: "There must be some effective precautions", tr: "Bazı etkili önlemler olmalıdır" },
-  { en: "There may not be any intensive agriculture", tr: "Hiç yoğun tarım olmayabilir" },
-  { en: "There ought not to be any rapid erosion", tr: "Hiç hızlı erozyon olmamalıdır" },
-  { en: "There will not be any profitable agriculture", tr: "Hiç kârlı tarım olmayacak" },
-  { en: "There must not be any similar neglect", tr: "Hiç benzer ihmal olmamalıdır" },
-  { en: "There could not be any effective precautions", tr: "Hiç etkili önlem olamazdı" },
-  { en: "There must not be any unequal responsibilities", tr: "Hiç eşit olmayan sorumluluk olmamalıdır" },
-  { en: "There should not be any great disadvantages", tr: "Hiç büyük dezavantaj olmamalıdır" },
-  { en: "There may be a slight tendency towards improvement soon", tr: "Yakında iyileşmeye doğru hafif bir eğilim olabilir" },
-  { en: "There will not be any further nationalisation", tr: "Daha fazla kamulaştırma olmayacak" },
-  { en: "There has not been any concept of data distortion", tr: "Hiçbir veri bozulması kavramı olmamıştır" }
+// Set 3: Varlık/Yokluk Soru Yapıları (Is there, Are there, Was there, Were there, Can there be, Why is there)
+const unit8Lesson3SentencesRaw = [
+  { en: "Is there any empirical evidence supporting this sociological theory?", tr: "Bu sosyolojik teoriyi destekleyen herhangi bir ampirik kanıt var mıdır?", word: "evidence", trWord: "kanıt", blank: "Is there any empirical ___ supporting this sociological theory?" },
+  { en: "Are there sufficient historical documents in the national archive?", tr: "Ulusal arşivde yeterli tarihsel belge var mıdır?", word: "documents", trWord: "belge", blank: "Are there sufficient historical ___ in the national archive?" },
+  { en: "Was there any substantial objection to the constitutional amendment?", tr: "Anayasa değişikliğine herhangi bir kayda değer itiraz var mıydı?", word: "objection", trWord: "itiraz", blank: "Was there any substantial ___ to the constitutional amendment?" },
+  { en: "Were there economic indicators predicting the financial recession?", tr: "Finansal durgunluğu öngören ekonomik göstergeler var mıydı?", word: "indicators", trWord: "göstergeler", blank: "Were there economic ___ predicting the financial recession?" },
+  { en: "Can there be an objective assessment of artistic value?", tr: "Sanatsal değerin nesnel bir değerlendirmesi olabilir mi?", word: "assessment", trWord: "değerlendirme", blank: "Can there be an objective ___ of artistic value?" },
+  { en: "Could there be alternative explanations for the archaeological discovery?", tr: "Arkeolojik keşif için alternatif açıklamalar olabilir miydi?", word: "explanations", trWord: "açıklamalar", blank: "Could there be alternative ___ for the archaeological discovery?" },
+  { en: "Should there be legal restrictions on corporate monopolies?", tr: "Şirket tekerlerine yönelik yasal kısıtlamalar olmalı mıdır?", word: "restrictions", trWord: "kısıtlamalar", blank: "Should there be legal ___ on corporate monopolies?" },
+  { en: "Might there be undisclosed financial risks in this investment?", tr: "Bu yatırımda açıklanmamış finansal riskler olabilir mi?", word: "risks", trWord: "riskler", blank: "Might there be undisclosed financial ___ in this investment?" },
+  { en: "Must there be a philosophical framework behind every legal system?", tr: "Her hukuk sisteminin arkasında felsefi bir çerçeve olmalı mıdır?", word: "framework", trWord: "çerçeve", blank: "Must there be a philosophical ___ behind every legal system?" },
+  { en: "Has there been any progress in resolving the diplomatic conflict?", tr: "Diplomatik çatışmayı çözmede herhangi bir ilerleme olmuş mudur?", word: "progress", trWord: "ilerleme", blank: "Has there been any ___ in resolving the diplomatic conflict?" },
+  { en: "Why is there such strong resistance to institutional reform?", tr: "Kurumsal reforma neden bu kadar güçlü bir direnç vardır?", word: "resistance", trWord: "direnç", blank: "Why is there such strong ___ to institutional reform?" },
+  { en: "Why are there structural disparities in educational access?", tr: "Eğitime erişimde neden yapısal eşitsizlikler vardır?", word: "disparities", trWord: "eşitsizlikler", blank: "Why are there structural ___ in educational access?" }
 ];
 
-const unit8Lesson1SentencesRaw4 = [
-  { en: "There can be no reason for failure", tr: "Başarısızlık için hiçbir sebep olamaz" },
-  { en: "There must be an easy solution to this problem", tr: "Bu sorunun kolay bir çözümü olmalı" },
-  { en: "There may be no easy solution to this problem", tr: "Bu sorunun kolay bir çözümü olmayabilir" },
-  { en: "There have been no new theories in this field", tr: "Bu alanda yeni hiçbir teori olmadı" },
-  { en: "There has been no decision at the meeting so far", tr: "Şimdiye kadar toplantıda hiçbir karar alınmadı" },
-  { en: "There can be an improvement in the quality of the fruit", tr: "Meyvenin kalitesinde bir iyileşme olabilir" },
-  { en: "There has been a serious flying accident near the airport", tr: "Havalimanının yakınında ciddi bir uçuş kazası oldu" },
-  { en: "There has been no formal justification for the budget cuts", tr: "Bütçe kesintileri için resmi hiçbir gerekçe olmadı" },
-  { en: "There must be a precise definition for every core concept", tr: "Her temel kavram için kesin bir tanım olmalıdır" },
-  { en: "There will be no automatic extension of the existing contract", tr: "Mevcut sözleşmenin otomatik bir uzatılması olmayacak" },
-  { en: "There has been no clear resolution to the ongoing conflict", tr: "Devam eden çatışmaya net bir çözüm olmadı" },
-  { en: "There has been a very heavy rainfall in these areas", tr: "Bu bölgelerde çok şiddetli yağış oldu" },
-  { en: "There can be no possibility of improvement before next year", tr: "Gelecek yıldan önce bir iyileşme olasılığı olamaz" },
-  { en: "There has been no tendency towards improvement in recent years", tr: "Son yıllarda iyileşmeye yönelik hiçbir eğilim olmadı" },
-  { en: "There can be no resemblance between the two cases", tr: "İki vaka arasında hiçbir benzerlik olamaz" }
+// Set 4: Akademik Sentez I (Karmaşık İsim Tamlamaları & Edat Grupları)
+const unit8Lesson4SentencesRaw = [
+  { en: "There is a strong presumption of innocence in constitutional law.", tr: "Anayasa hukukunda güçlü bir masumiyet karinesi vardır.", word: "presumption", trWord: "karine", blank: "There is a strong ___ of innocence in constitutional law." },
+  { en: "There exist intricate institutional mechanisms within international organizations.", tr: "Uluslararası örgütler içinde karmaşık kurumsal mekanizmalar mevcuttur.", word: "mechanisms", trWord: "mekanizmalar", blank: "There exist intricate institutional ___ within international organizations." },
+  { en: "There was a gradual secularization of educational institutions in Europe.", tr: "Avrupa'da eğitim kurumlarının kademeli bir sekülerleşmesi vardı.", word: "secularization", trWord: "sekülerleşme", blank: "There was a gradual ___ of educational institutions in Europe." },
+  { en: "There remain unresolved disputes concerning maritime border demarcation.", tr: "Deniz sınırı çizimine ilişkin çözülmemiş anlaşmazlıklar kalmaktadır.", word: "demarcation", trWord: "sınır çizimi", blank: "There remain unresolved disputes concerning maritime border ___." },
+  { en: "There must be rigorous peer review before publishing scientific findings.", tr: "Bilimsel bulguları yayımlamadan önce sıkı hakem değerlendirmesi olmalıdır.", word: "review", trWord: "değerlendirme", blank: "There must be rigorous peer ___ before publishing scientific findings." },
+  { en: "There appear to be overlapping jurisdiction boundaries between courts.", tr: "Mahkemeler arasında çakışan yargı sınırları var gibi görünmektedir.", word: "boundaries", trWord: "sınırlar", blank: "There appear to be overlapping jurisdiction ___ between courts." },
+  { en: "There are profound philosophical questions concerning human consciousness.", tr: "İnsan bilincine ilişkin derin felsefi sorular vardır.", word: "consciousness", trWord: "bilinç", blank: "There are profound philosophical questions concerning human ___." },
+  { en: "There exist structural barriers preventing equal access to capital.", tr: "Sermayeye eşit erişimi engelleyen yapısal engeller mevcuttur.", word: "barriers", trWord: "engeller", blank: "There exist structural ___ preventing equal access to capital." },
+  { en: "There was an unprecedented expansion of trade routes in antiquity.", tr: "Antik çağda ticaret rotalarının eşi görülmemiş bir genişlemesi vardı.", word: "expansion", trWord: "genişleme", blank: "There was an unprecedented ___ of trade routes in antiquity." },
+  { en: "There remain critical vulnerabilities in cybersecurity infrastructure.", tr: "Siber güvenlik altyapısında kritik zafiyetler kalmaktadır.", word: "vulnerabilities", trWord: "zafiyetler", blank: "There remain critical ___ in cybersecurity infrastructure." },
+  { en: "There have been systematic efforts to preserve cultural heritage sites.", tr: "Kültürel miras alanlarını korumak için sistematik çabalar olmuştur.", word: "heritage", trWord: "miras", blank: "There have been systematic efforts to preserve cultural ___ sites." },
+  { en: "There is an indispensable role played by civil society in democracy.", tr: "Demokraside sivil toplum tarafından oynanan vazgeçilmez bir rol vardır.", word: "indispensable", trWord: "vazgeçilmez", blank: "There is an ___ role played by civil society in democracy." }
 ];
 
-const unit8Lesson1SentencesRaw5 = [
-  { en: "There must be a filter at the top of this machine", tr: "Bu makinenin üstünde bir filtre olmalıdır" },
-  { en: "There must be no filter in this part of the machine", tr: "Makinenin bu kısmında hiçbir filtre olmamalıdır" },
-  { en: "There could be a faint hope of improvement soon", tr: "Yakında hafif bir iyileşme umudu olabilirdi" },
-  { en: "There could be no evidence of guilt in the circumstances", tr: "Koşullarda hiçbir suçluluk kanıtı olamazdı" },
-  { en: "There may be no protection from fire in the laboratory", tr: "Laboratuvarda yangından hiçbir korunma olmayabilir" },
-  { en: "There has been no absorption of the light rays so far", tr: "Şimdiye kadar ışık ışınlarının hiçbir emilimi olmadı" },
-  { en: "There can be no comparison between these two actions", tr: "Bu iki eylem arasında hiçbir karşılaştırma olamaz" },
-  { en: "There can be no resemblance between the two types of plant", tr: "İki bitki türü arasında hiçbir benzerlik olamaz" },
-  { en: "There may be no direct relevance between these two issues", tr: "Bu iki konu arasında doğrudan hiçbir ilişki olmayabilir" },
-  { en: "There can be no stable growth without financial investment", tr: "Finansal yatırım olmadan istikrarlı bir büyüme olamaz" },
-  { en: "There could be no better framework for this specific research", tr: "Bu özel araştırma için daha iyi bir çerçeve olamazdı" },
-  { en: "There must be no possibility of failure in this matter", tr: "Bu hususta hiçbir başarısızlık olasılığı olmamalıdır" },
-  { en: "There can be no doubt of an improvement in the quality of the fruit", tr: "Meyvenin kalitesinde bir iyileşme olduğundan hiçbir şüphe duyulamaz" },
-  { en: "There has been no significant alteration in the research methodology", tr: "Araştırma metodolojisinde önemli hiçbir değişiklik olmadı" },
-  { en: "There must be no discrimination based on gender or ethnicity", tr: "Cinsiyete veya etnik kökene dayalı hiçbir ayrımcılık olmamalıdır" }
-];
-
-const unit8Lesson1SentencesRaw6 = [
-  { en: "There must be an immediate assessment of the structural damage", tr: "Yapısal hasarın derhal bir değerlendirmesi yapılmalıdır" },
-  { en: "There must be a sustainable source of funding for the project", tr: "Proje için sürdürülebilir bir finansman kaynağı olmalıdır" },
-  { en: "There ought to be a reliable mechanism to monitor the emissions", tr: "Emisyonları izlemek için güvenilir bir mekanizma olmalıdır" },
-  { en: "There must have been some inconsistencies in the analyzed samples", tr: "Analiz edilen örneklerde bazı tutarsızlıklar olmuş olmalı" },
-  { en: "There must have been a major recession in the domestic economy", tr: "Yurtiçi ekonomide büyük bir durgunluk olmuş olmalı" },
-  { en: "There will be a short test in Geology this afternoon", tr: "Bu öğleden sonra Jeoloji dersinde kısa bir test olacak" },
-  { en: "There may be a faint possibility of improvement next year", tr: "Gelecek yıl hafif bir iyileşme olasılığı olabilir" },
-  { en: "There will be a good translation of this work in the library", tr: "Kütüphanede bu çalışmanın iyi bir çevirisi olacak" },
-  { en: "There will be no wheat from this area until the year after next", tr: "Gelecek yıldan sonraki yıla kadar bu bölgeden hiçbir buğday olmayacak" },
-  { en: "There will be no further excavations in this area until next year", tr: "Gelecek yıla kadar bu alanda daha fazla kazı olmayacak" },
-  { en: "There may be no new works of art at the exhibition tomorrow", tr: "Yarın sergide yeni sanat eserleri olmayabilir" },
-  { en: "There has been a noticeable shift in public policy regarding welfare", tr: "Refah konusundaki kamu politikasında gözle görülür bir değişim oldu" },
-  { en: "There have been numerous occurrences of data distortion in the past", tr: "Geçmişte çok sayıda veri bozulması vakası meydana geldi" },
-  { en: "There must have been a systematic error in the initial compilation", tr: "İlk derlemede sistematik bir hata olmuş olmalı" },
-  { en: "There might not be an available substitute for this chemical component", tr: "Bu kimyasal bileşen için mevcut bir alternatif olmayabilir" }
-];
-
-const unit8Lesson1SentencesRaw7 = [
-  { en: "There must be a high degree of accuracy in the statistical estimation", tr: "İstatistiksel tahminde yüksek derecede doğruluk olmalıdır" },
-  { en: "There has not been any formal registration for the conference yet", tr: "Konferans için henüz resmi bir kayıt olmadı" },
-  { en: "There should be more focus on the welfare of the individuals", tr: "Bireylerin refahına daha fazla odaklanılmalıdır" },
-  { en: "There may be a new form of power within the next few years", tr: "Gelecek birkaç yıl içinde yeni bir güç biçimi olabilir" },
-  { en: "There could be a high temperature at a later stage of the disease", tr: "Hastalığın daha sonraki bir aşamasında yüksek ateş olabilirdi" },
-  { en: "There could be a slight similarity between the different types of plant", tr: "Farklı bitki türleri arasında hafif bir benzerlik olabilirdi" },
-  { en: "There might be a possibility of improvement in the wheat crop next year", tr: "Gelecek yıl buğday mahsulünde bir iyileşme olasılığı olabilir" },
-  { en: "There may be a slight tendency towards improvement at a later stage", tr: "Daha sonraki bir aşamada iyileşmeye yönelik hafif bir eğilim olabilir" },
-  { en: "There may be a slight resemblance between the two types of plant", tr: "İki bitki türü arasında hafif bir benzerlik olabilir" },
-  { en: "There should be some beautiful works of art at the exhibition tomorrow", tr: "Yarın sergide bazı güzel sanat eserleri olmalıdır" },
-  { en: "There has been no serious flying accident in the last ten years", tr: "Son on yılda ciddi hiçbir uçuş kazası olmadı" },
-  { en: "There has been a steady evolution in the structure of the organization", tr: "Organizasyonun yapısında istikrarlı bir gelişim oldu" },
-  { en: "There have been several contradictions in the witness testimonies", tr: "Tanık ifadelerinde birkaç çelişki oldu" },
-  { en: "There has not been enough evidence to support this specific hypothesis", tr: "Bu özel hipotezi desteklemek için yeterli kanıt olmadı" },
-  { en: "There has not been a clear indicator of economic stability this quarter", tr: "Bu çeyrekte ekonomik istikrarın net bir göstergesi olmadı" }
-];
-
-const unit8Lesson1SentencesRaw8 = [
-  { en: "There must not be any unverified variables in the final equation", tr: "Nihai denklemde doğrulanmamış hiçbir değişken olmamalıdır" },
-  { en: "There must not be any external interference during the investigation", tr: "Soruşturma sırasında hiçbir dış müdahale olmamalıdır" },
-  { en: "There ought to be more flexibility in the working hours of the staff", tr: "Personelin çalışma saatlerinde daha fazla esneklik olmalıdır" },
-  { en: "There ought to be an explicit acknowledgement of the authors' contributions", tr: "Yazarların katkılarının açık bir şekilde belirtilmesi gerekir" },
-  { en: "There should not be any significant error in the data processing phase", tr: "Veri işleme aşamasında önemli hiçbir hata olmamalıdır" },
-  { en: "There must not have been sufficient integration between the systems", tr: "Sistemler arasında yeterli entegrasyon olmamış olmalı" },
-  { en: "There could not have been a more appropriate method for this study", tr: "Bu çalışma için daha uygun bir yöntem olamazdı" },
-  { en: "There could have been no coincidence in those identical results", tr: "Bu özdeş sonuçlarda hiçbir tesadüf olamazdı" },
-  { en: "There could have been an ethical implication in that procedure", tr: "Bu prosedürde etik bir ima olabilirdi" },
-  { en: "There will be a special session dedicated to the theory of relativity", tr: "Görelilik teorisine adanmış özel bir oturum olacak" },
-  { en: "There must have been an unpredicted fluctuation in the market prices", tr: "Piyasa fiyatlarında öngörülemeyen bir dalgalanma olmuş olmalı" },
-  { en: "There will be a new source of raw material in the next 10 years", tr: "Gelecek 10 yıl içinde yeni bir hammadde kaynağı olacak" },
-  { en: "There has been no contact with the members for more than two months", tr: "Üyelerle iki aydan fazla süredir hiçbir temas olmadı" },
-  { en: "There will be more excavation in this area in the next two years", tr: "Gelecek iki yıl içinde bu alanda daha fazla kazı yapılacak" },
-  { en: "There were many gold and silver objects in the exhibition of art", tr: "Sanat sergisinde birçok altın ve gümüş nesne vardı" }
-];
-
-const unit8Lesson1SentencesRaw9 = [
-  { en: "There could have been no new sources of information on this subject", tr: "Bu konuda yeni hiçbir bilgi kaynağı olamazdı" },
-  { en: "There must have been a temporary breakdown in institutional communication", tr: "Kurumsal iletişimde geçici bir kesinti olmuş olmalı" },
-  { en: "There could have been a different outcome if the criteria were modified", tr: "Kriterler değiştirilseydi farklı bir sonuç olabilirdi" },
-  { en: "There could not have been a total collapse without structural flaws", tr: "Yapısal kusurlar olmadan tam bir çöküş olamazdı" },
-  { en: "There will be many new sources of information on this subject in this book", tr: "Bu kitapta bu konuda birçok yeni bilgi kaynağı olacak" },
-  { en: "There must have been an administrative oversight during the selection process", tr: "Seçim sürecinde idari bir hata olmuş olmalı" },
-  { en: "There must have been a difference between the results of the two experiments", tr: "İki deneyin sonuçları arasında bir fark olmuş olmalı" },
-  { en: "There should have been a better translation of that work in the library", tr: "Kütüphanede o çalışmanın daha iyi bir çevirisi olmalıydı" },
-  { en: "There can be no large supply of raw materials for export from these areas", tr: "Bu bölgelerden ihracat için büyük miktarda hammadde tedariki olamaz" }
+// Set 5: Akademik Sentez II & Spiralleşme (İleri Seviye Beşeri Bilimler Kalıpları)
+const unit8Lesson5SentencesRaw = [
+  { en: "There is a multi-disciplinary framework analyzing international migration.", tr: "Uluslararası göçü analiz eden çok disiplinli bir çerçeve vardır.", word: "migration", trWord: "göç", blank: "There is a multi-disciplinary framework analyzing international ___." },
+  { en: "There exist well-established precedents in international maritime law.", tr: "Uluslararası deniz hukukunda köklü emsaller mevcuttur.", word: "precedents", trWord: "emsaller", blank: "There exist well-established ___ in international maritime law." },
+  { en: "There was a comprehensive re-evaluation of monetary policy by central bankers.", tr: "Merkez bankacıları tarafından para politikasının kapsamlı bir yeniden değerlendirmesi vardı.", word: "re-evaluation", trWord: "yeniden değerlendirme", blank: "There was a comprehensive ___ of monetary policy by central bankers." },
+  { en: "There remain formidable obstacles to achieving global carbon neutrality.", tr: "Küresel karbon nötrlüğüne ulaşmada formidable engeller kalmaktadır.", word: "neutrality", trWord: "nötrlük", blank: "There remain formidable obstacles to achieving global carbon ___." },
+  { en: "There must be institutional mechanisms ensuring transparency in governance.", tr: "Yönetişimde şeffaflığı sağlayan kurumsal mekanizmalar olmalıdır.", word: "governance", trWord: "yönetişim", blank: "There must be institutional mechanisms ensuring transparency in ___." },
+  { en: "There appears to be a direct correlation between social capital and community resilience.", tr: "Sosyal sermaye ile toplumsal dayanıklılık arasında doğrudan bir ilişki var gibi görünmektedir.", word: "resilience", trWord: "dayanıklılık", blank: "There appears to be a direct correlation between social capital and community ___." },
+  { en: "There seems to be an inevitable tension between national sovereignty and global integration.", tr: "Ulusal egemenlik ile küresel entegrasyon arasında kaçınılmaz bir gerilim var gibi görünmektedir.", word: "sovereignty", trWord: "egemenlik", blank: "There seems to be an inevitable tension between national ___ and global integration." },
+  { en: "There have been significant advancements in quantum computing research.", tr: "Kuantum bilgisayar araştırmalarında önemli ilerlemeler olmuştur.", word: "advancements", trWord: "ilerlemeler", blank: "There have been significant ___ in quantum computing research." },
+  { en: "There has been an unprecedented shift toward renewable energy sources.", tr: "Yenilenebilir enerji kaynaklarına doğru eşi görülmemiş bir kayma olmuştur.", word: "renewable", trWord: "yenilenebilir", blank: "There has been an unprecedented shift toward ___ energy sources." },
+  { en: "There could be profound societal impacts resulting from demographic aging.", tr: "Demografik yaşlanmadan kaynaklanan derin toplumsal etkiler olabilir.", word: "aging", trWord: "yaşlanma", blank: "There could be profound societal impacts resulting from demographic ___." },
+  { en: "There appears to exist a subtle synergy between economic incentive and social responsibility.", tr: "Ekonomik teşvik ile sosyal sorumluluk arasında ince bir sinerji mevcut gibi görünmektedir.", word: "synergy", trWord: "sinerji", blank: "There appears to exist a subtle ___ between economic incentive and social responsibility." },
+  { en: "There seems to exist an intrinsic limit to economic growth in finite systems.", tr: "Sınırlı sistemlerde ekonomik büyümeye yönelik içsel bir sınır mevcut gibi görünmektedir.", word: "finite", trWord: "sınırlı", blank: "There seems to exist an intrinsic limit to economic growth in ___ systems." }
 ];
 
 const unit8Lesson1Exercises = {
   exercises: [
     {
       id: "u8l1ex1",
-      title: "Alıştırma 1: Temel \"There\" Yapıları",
-      description: "Eşleştirme, Çoktan Seçmeli ve Çeviri",
-      questions: buildCustomExerciseQuestions(unit8Lesson1SentencesRaw1, 8, 21, 1)
-    },
-    {
-      id: "u8l1ex2",
-      title: "Alıştırma 2: Zamanlar ve Modal Fiiller",
-      description: "Çoktan Seçmeli, Kelime Bankası ve Çeviri",
-      questions: build15Questions(unit8Lesson1SentencesRaw2, 8, 21, 2)
-    },
-    {
-      id: "u8l1ex3",
-      title: "Alıştırma 3: Orta Seviye Varyasyonlar",
-      description: "Eşleştirme, Çoktan Seçmeli ve Kelime Bankası",
-      questions: build15Questions(unit8Lesson1SentencesRaw3, 8, 21, 3)
-    },
-    {
-      id: "u8l1ex4",
-      title: "Alıştırma 4: İleri Seviye Cümleler I",
+      title: "Alıştırma 1: Temel Varlık Yapıları (12 Soru)",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
-      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw4, 8, 21, 4)
-    },
-    {
-      id: "u8l1ex5",
-      title: "Alıştırma 5: İleri Seviye Cümleler II",
-      description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
-      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw5, 8, 21, 5)
+      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw, 8, 21, 1)
     }
   ]
 };
@@ -20046,27 +19919,42 @@ const unit8Lesson2Exercises = {
   exercises: [
     {
       id: "u8l2ex1",
-      title: "Alıştırma 1: İleri Seviye Cümleler III",
+      title: "Alıştırma 1: Modallı & İleri Varlık Yapıları (12 Soru)",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
-      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw6, 8, 22, 1)
-    },
+      questions: buildDynamicQuestions(unit8Lesson2SentencesRaw, 8, 22, 1)
+    }
+  ]
+};
+
+const unit8Lesson3Exercises = {
+  exercises: [
     {
-      id: "u8l2ex2",
-      title: "Alıştırma 2: İleri Seviye Cümleler IV",
+      id: "u8l3ex1",
+      title: "Alıştırma 1: Varlık/Yokluk Soru Yapıları (12 Soru)",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
-      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw7, 8, 22, 2)
-    },
+      questions: buildDynamicQuestions(unit8Lesson3SentencesRaw, 8, 23, 1)
+    }
+  ]
+};
+
+const unit8Lesson4Exercises = {
+  exercises: [
     {
-      id: "u8l2ex3",
-      title: "Alıştırma 3: Karmaşık Durumsal Cümleler I",
+      id: "u8l4ex1",
+      title: "Alıştırma 1: Akademik Sentez I (12 Soru)",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
-      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw8, 8, 22, 3)
-    },
+      questions: buildDynamicQuestions(unit8Lesson4SentencesRaw, 8, 24, 1)
+    }
+  ]
+};
+
+const unit8Lesson5Exercises = {
+  exercises: [
     {
-      id: "u8l2ex4",
-      title: "Alıştırma 4: Karmaşık Durumsal Cümleler II",
+      id: "u8l5ex1",
+      title: "Alıştırma 1: Akademik Sentez II & Spiralleşme (12 Soru)",
       description: "Eşleştirme, Çoktan Seçmeli, Çeviri ve Kelime Bankası",
-      questions: buildDynamicQuestions(unit8Lesson1SentencesRaw9, 8, 22, 4)
+      questions: buildDynamicQuestions(unit8Lesson5SentencesRaw, 8, 25, 1)
     }
   ]
 };
@@ -63639,3 +63527,19 @@ const unitSentencesMap = {
     }
   }
 };
+
+if (typeof unitSentencesMap !== 'undefined' && typeof unit8Lesson1Exercises !== 'undefined' && typeof unit8Lesson2Exercises !== 'undefined') {
+  unitSentencesMap["8"] = {
+    "1": unit8Lesson1Exercises,
+    "2": unit8Lesson2Exercises,
+    "3": unit8Lesson3Exercises,
+    "4": unit8Lesson4Exercises,
+    "5": unit8Lesson5Exercises,
+    "21": unit8Lesson1Exercises,
+    "22": unit8Lesson2Exercises,
+    "23": unit8Lesson3Exercises,
+    "24": unit8Lesson4Exercises,
+    "25": unit8Lesson5Exercises
+  };
+}
+
