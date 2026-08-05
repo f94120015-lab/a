@@ -91006,6 +91006,25 @@ if (typeof unitSentencesMap !== 'undefined') {
       l14.exercises = unitSentencesMap["5"]["1"].exercises;
       l14.questions = [];
     }
+
+    // Update global lessons array dynamically for Unit 8 (Lessons 21-25)
+    if (typeof unit8Lesson1Exercises !== 'undefined') {
+      const u8LessonMap = {
+        21: unit8Lesson1Exercises,
+        22: unit8Lesson2Exercises,
+        908: unit8Lesson3Exercises,
+        24: unit8Lesson4Exercises,
+        25: unit8Lesson5Exercises
+      };
+      Object.keys(u8LessonMap).forEach(lIdStr => {
+        const lId = parseInt(lIdStr, 10);
+        const lessonObj = lessons.find(l => l.id === lId);
+        if (lessonObj && u8LessonMap[lIdStr]) {
+          lessonObj.exercises = u8LessonMap[lIdStr].exercises;
+          lessonObj.questions = [];
+        }
+      });
+    }
   }
 }
 
