@@ -43784,702 +43784,485 @@ Object.assign(unitSentencesMap, {
   }
 },
   "12": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u12l1ex1",
-        "title": "Alıştırma 1: Sıfat-Fiiller ve Kısaltmalar (Participles)",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u12l1ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The scholar writing the historical report is a professor.",
-            "isEngToTr": true,
-            "options": [
-              "Tarihsel raporu yazan profesör bir akademisyendir.",
-              "Akademisyen tarihsel raporu yazan bir profesördür.",
-              "Raporu yazan akademisyen bir profesördü.",
-              "Tarihsel raporu yazan akademisyen bir profesördür."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u12l1ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The documents ___ by the historian are primary sources.",
-            "options": [
-              "written",
-              "writing",
-              "write",
-              "writes"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihçi tarafından yazılan belgeler birincil kaynaklardır."
-          },
-          {
-            "id": "u12l1ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The artifacts found in the ancient ruins are rare.",
-            "translation": "The artifacts found in the ancient ruins are rare.",
-            "words": [
-              "Antik",
-              "kalıntılarda",
-              "bulunan",
-              "eserler",
-              "nadirdir.",
-              "kazılan",
-              "normlar"
-            ],
-            "correctOrder": [
-              "Antik",
-              "kalıntılarda",
-              "bulunan",
-              "eserler",
-              "nadirdir."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u12l1ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The team analyzing the demographic changes is active.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Demografik değişiklikleri analiz eden ekip aktiftir."
-          },
-          {
-            "id": "u12l1ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "ekip tarafından tamamlanan proje",
-                "right": "the project completed by the team"
-              },
-              {
-                "left": "topluluğa ait kurallar",
-                "right": "the rules belonging to the community"
-              },
-              {
-                "left": "meclise katılan adaylar",
-                "right": "the candidates participating in the assembly"
-              },
-              {
-                "left": "deneylerden kaynaklanan veriler",
-                "right": "the data resulting from the experiments"
-              }
-            ]
-          },
-          {
-            "id": "u12l1ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The administrator ___ the database is in the office.",
-            "options": [
-              "managed",
-              "managing",
-              "manages",
-              "manage"
-            ],
-            "correctIndex": 1,
-            "translation": "Veritabanını yöneten yönetici ofistedir."
-          },
-          {
-            "id": "u12l1ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The citizens protecting their constitutional rights are active.",
-            "isEngToTr": true,
-            "options": [
-              "Anayasal hakları koruyan vatandaşlar önemlidir.",
-              "Anayasal haklarını koruyan vatandaşlar aktifti.",
-              "Anayasal haklarını koruyan vatandaşlar aktiftir.",
-              "Vatandaşların anayasal haklarını koruyanlar aktiftir."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u12l1ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"leading\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The scholar <span style=\"text-decoration: underline;\">leading</span> the research team is a professor.",
-            "enSentence": "The scholar leading the research team is a professor.",
-            "options": [
-              "Ortaç (Participle Modifier)",
-              "Ana Fiil",
-              "Zaman Bağlacı",
-              "İsim Tamlaması"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma ekibine liderlik eden akademisyen bir profesördür."
-          },
-          {
-            "id": "u12l1ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The report prepared by the lead researcher is conclusive.",
-            "translation": "Baş araştırmacı tarafından hazırlanan rapor kesindir.",
-            "words": [
-              "The",
-              "report",
-              "prepared",
-              "by",
-              "the",
-              "lead",
-              "researcher",
-              "is",
-              "conclusive.",
-              "preparing",
-              "documents"
-            ],
-            "correctOrder": [
-              "The",
-              "report",
-              "prepared",
-              "by",
-              "the",
-              "lead",
-              "researcher",
-              "is",
-              "conclusive."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l1ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The changes proposed by the coordinator is final.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Koordinatör tarafından önerilen değişiklikler kesindir."
-          },
-          {
-            "id": "u12l1ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The resources ___ to the local tribe are rich.",
-            "options": [
-              "belonged",
-              "belongs",
-              "belong",
-              "belonging"
-            ],
-            "correctIndex": 3,
-            "translation": "Yerel kabileye ait kaynaklar zengindir."
-          },
-          {
-            "id": "u12l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The survey evaluating the public opinion is in the database.",
-            "isEngToTr": true,
-            "options": [
-              "Kamuoyunu değerlendiren anketler veritabanındadır.",
-              "Kamuoyu araştırması veritabanındadır.",
-              "Kamuoyunu değerlendiren anket veritabanındadır.",
-              "Anketi değerlendiren kamuoyu veritabanındadır."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u12l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The study observing the behavioral patterns is conclusive.",
-            "translation": "The study observing the behavioral patterns is conclusive.",
-            "words": [
-              "Davranışsal",
-              "kalıpları",
-              "gözlemleyen",
-              "çalışma",
-              "kesindir.",
-              "inceleyen",
-              "rapordur."
-            ],
-            "correctOrder": [
-              "Davranışsal",
-              "kalıpları",
-              "gözlemleyen",
-              "çalışma",
-              "kesindir."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u12l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The explanation provided by the professor is long.\"</span>",
-            "correctSentence": "Profesör tarafından sunulan açıklama uzundur.",
-            "translation": "Profesör tarafından sunulan açıklama uzundur."
-          },
-          {
-            "id": "u12l1ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Sanatçılar tarafından kullanılan teknikler yenilikçidir.\"</span>",
-            "correctSentence": "The techniques used by the artists are innovative.",
-            "translation": "Sanatçılar tarafından kullanılan teknikler yenilikçidir."
-          }
-        ]
-      },
-      {
-        "id": "u12l1ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u12l1ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The archaeological excavations conducted by the team revealed the ancient ruins.",
-            "isEngToTr": true,
-            "options": [
-              "Ekibin yaptığı kazılar kalıntıları ortaya çıkaracak.",
-              "Ekip tarafından yürütülen arkeolojik kazılar antik kalıntıları ortaya çıkardı.",
-              "Ekip tarafından yürütülen kazılar kalıntıları korudu.",
-              "Ekip kazıları yürütüyor."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u12l1ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The social anthropologist ___ the cultural kinship patterns of the tribe is famous.",
-            "options": [
-              "examined",
-              "examines",
-              "examine",
-              "examining"
-            ],
-            "correctIndex": 3,
-            "translation": "Kabilenin kültürel akrabalık kalıplarını inceleyen sosyal antropolog ünlüdür."
-          },
-          {
-            "id": "u12l1ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The economic survey evaluating the market prices is under review.",
-            "translation": "Piyasa fiyatlarını değerlendiren ekonomik araştırma inceleme altındadır.",
-            "words": [
-              "The",
-              "economic",
-              "survey",
-              "evaluating",
-              "the",
-              "market",
-              "prices",
-              "is",
-              "under",
-              "review.",
-              "evaluated",
-              "report"
-            ],
-            "correctOrder": [
-              "The",
-              "economic",
-              "survey",
-              "evaluating",
-              "the",
-              "market",
-              "prices",
-              "is",
-              "under",
-              "review."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l1ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The judicial decisions protecting the rights of the minority are final.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Azınlığın haklarını koruyan yargısal kararlar kesindir."
-          },
-          {
-            "id": "u12l1ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "devlet tarafından finanse edilen iklim araştırması",
-                "right": "the climate research funded by the state"
-              },
-              {
-                "left": "sınırları gösteren belgeler",
-                "right": "the documents showing the boundaries"
-              },
-              {
-                "left": "kolektif davranışı gözlemleyen çalışma",
-                "right": "the study observing collective behavior"
-              },
-              {
-                "left": "ekip tarafından tamamlanan çeviri",
-                "right": "the translation completed by the team"
-              }
-            ]
-          },
-          {
-            "id": "u12l1ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The measures ___ the database security are essential.",
-            "options": [
-              "protecting",
-              "protected",
-              "protects",
-              "protect"
-            ],
-            "correctIndex": 0,
-            "translation": "Veritabanı güvenliğini koruyan önlemler esastır."
-          },
-          {
-            "id": "u12l1ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The historical analysis of primary sources conducted by the historians is detailed.",
-            "isEngToTr": true,
-            "options": [
-              "Tarihçilerin yaptığı analizler detaylıdır.",
-              "Tarihçiler tarafından yürütülen birincil kaynakların tarihsel analizi detaylıdır.",
-              "Birincil kaynakların analizi detaylıdır.",
-              "Tarihçiler kaynakları detaylı analiz etti."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u12l1ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"affected by\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The local merchants <span style=\"text-decoration: underline;\">affected by</span> the economic crisis required financial aid.",
-            "enSentence": "The local merchants affected by the economic crisis required financial aid.",
-            "options": [
-              "Aktif Yüklem",
-              "Zarf",
-              "Ortaç Yapısı (Passive Participle)",
-              "İsim"
-            ],
-            "correctIndex": 2,
-            "translation": "Ekonomik krizden etkilenen yerel tüccarlar finansal yardıma ihtiyaç duydu."
-          },
-          {
-            "id": "u12l1ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The sculptural details of the temple admired by the visitors are unique.",
-            "translation": "The sculptural details of the temple admired by the visitors are unique.",
-            "words": [
-              "Ziyaretçiler",
-              "tarafından",
-              "hayran",
-              "kalınan",
-              "tapınağın",
-              "heykel",
-              "detayları",
-              "benzersizdir.",
-              "detaylarıdır.",
-              "koruması"
-            ],
-            "correctOrder": [
-              "Ziyaretçiler",
-              "tarafından",
-              "hayran",
-              "kalınan",
-              "tapınağın",
-              "heykel",
-              "detayları",
-              "benzersizdir."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u12l1ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The study investigating the cognitive development are important.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Bilişsel gelişimi inceleyen çalışma önemlidir."
-          },
-          {
-            "id": "u12l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The updates ___ from the television network are public resources.",
-            "options": [
-              "broadcasted",
-              "broadcasting",
-              "broadcasts",
-              "broadcast"
-            ],
-            "correctIndex": 0,
-            "translation": "Televizyon ağından yayınlanan güncellemeler kamusal kaynaklardır."
-          },
-          {
-            "id": "u12l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The municipal administration resolving the disputes between the communities is active.",
-            "isEngToTr": true,
-            "options": [
-              "Belediye yönetimi topluluklar arasındaki sorunları çözdü.",
-              "Topluluklar arasındaki anlaşmazlıkları çözen belediye yönetimi aktifti.",
-              "Anlaşmazlıkları çözen belediye yönetimi önemlidir.",
-              "Topluluklar arasındaki anlaşmazlıkları çözen belediye yönetimi aktiftir."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u12l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The resource allocation determined by the trade agreements is crucial for stability.",
-            "translation": "Ticaret anlaşmaları tarafından belirlenen kaynak tahsisi istikrar için önemlidir.",
-            "words": [
-              "The",
-              "resource",
-              "allocation",
-              "determined",
-              "by",
-              "the",
-              "trade",
-              "agreements",
-              "is",
-              "crucial",
-              "for",
-              "stability.",
-              "determining",
-              "policies"
-            ],
-            "correctOrder": [
-              "The",
-              "resource",
-              "allocation",
-              "determined",
-              "by",
-              "the",
-              "trade",
-              "agreements",
-              "is",
-              "crucial",
-              "for",
-              "stability."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u12l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The legislative amendments protecting the constitutional rights are in the public record.\"</span>",
-            "correctSentence": "Anayasal hakları koruyan yasal değişiklikler kamuya açık kayıtlardadır.",
-            "translation": "Anayasal hakları koruyan yasal değişiklikler kamuya açık kayıtlardadır."
-          },
-          {
-            "id": "u12l1ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Participle Yapıları",
-              "Participle Modifiers",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Bölgesel iklimi etkileyen coğrafi farklılıklar önemlidir.\"</span>",
-            "correctSentence": "The geographic variations influencing the regional climate are significant.",
-            "translation": "Bölgesel iklimi etkileyen coğrafi farklılıklar önemlidir."
-          }
-        ]
-      }
-    ]
-  }
-},
-  "70": {
+    "1": {
+      "exercises": [
+        {
+          "id": "u12l1ex1",
+          "title": "Alıştırma 1: Tekil Sıfat-Fiiller (Etken & Edilgen)",
+          "description": "Tekil sıfat-fiillerin (Present Participle ve Past Participle) niteleme kullanımları",
+          "questions": [
+            {
+              "id": "u12l1ex1_q1",
+              "type": "matching",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "çalınmış el yazması", "right": "stolen manuscript" },
+                { "left": "yeni ortaya çıkan fikirler", "right": "emerging ideas" },
+                { "left": "kazıdan çıkarılan eserler", "right": "excavated artifacts" },
+                { "left": "gelişen diller", "right": "evolving languages" }
+              ]
+            },
+            {
+              "id": "u12l1ex1_q2",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The museum recovered the stolen manuscript.",
+              "isEngToTr": true,
+              "options": [
+                "Müze çalınmış el yazmasını geri aldı.",
+                "Akademisyen el yazmasını kütüphaneden çaldı.",
+                "Müze yeni yazılan el yazmasını sergiledi.",
+                "Tarihçi çalınan el yazmasını müzeye bağışladı."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l1ex1_q3",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "Written laws protect the rights of citizens.",
+              "isEngToTr": true,
+              "options": [
+                "Yazılı kanunlar vatandaşların haklarını korur.",
+                "Vatandaşlar yazılı olmayan kurallara uymalıdır.",
+                "Kanunlar vatandaşların haklarını korumak için yazıldı.",
+                "Yazılı haklar vatandaşların kanunlarını korumaktadır."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l1ex1_q4",
+              "type": "fill-blank-dropdown",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The book had a ___ influence on sociology.",
+              "options": ["lasting", "lasted", "lasts", "last"],
+              "correctIndex": 0,
+              "translation": "Kitabın sosyoloji üzerinde kalıcı bir etkisi oldu."
+            },
+            {
+              "id": "u12l1ex1_q5",
+              "type": "fill-blank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "Socrates welcomed ___ ideas in philosophy.",
+              "options": ["emerging", "emerged", "emerge", "emerges"],
+              "correctIndex": 0,
+              "translation": "Sokrates felsefedeki yeni ortaya çıkan fikirleri memnuniyetle karşıladı."
+            },
+            {
+              "id": "u12l1ex1_q6",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "Broken treaties caused major historical conflicts.",
+              "isEngToTr": true,
+              "options": [
+                "Bozulmuş anlaşmalar büyük tarihsel çatışmalara neden oldu.",
+                "Tarihsel çatışmalar anlaşmaların bozulmasına sebep oldu.",
+                "Barış anlaşmaları büyük çatışmaları tamamen engelledi.",
+                "Bozulan ittifaklar tarihsel savaşları tetikledi."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l1ex1_q7",
+              "type": "fill-blank-dropdown",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The ___ child influenced the psychological study.",
+              "options": ["crying", "cried", "cry", "cries"],
+              "correctIndex": 0,
+              "translation": "Ağlayan çocuk psikolojik çalışmayı etkiledi."
+            },
+            {
+              "id": "u12l1ex1_q8",
+              "type": "fill-blank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The ___ monuments attracted many medieval art historians.",
+              "options": ["shining", "shined", "shine", "shines"],
+              "correctIndex": 0,
+              "translation": "Parlayan anıtlar birçok orta çağ sanat tarihçisini cezbetti."
+            },
+            {
+              "id": "u12l1ex1_q9",
+              "type": "swipe",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümledeki sıfat-fiil kullanımı doğru mudur?",
+              "phrase": "Archaeologists examine excavated artifacts from ancient ruins.",
+              "translation": "Arkeologlar antik kalıntılardan çıkarılan eserleri inceliyor.",
+              "isCorrect": true
+            },
+            {
+              "id": "u12l1ex1_q10",
+              "type": "word-bank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "Linguists study evolving languages across different centuries.",
+              "words": ["Dil bilimciler", "farklı", "yüzyıllar", "boyunca", "gelişen", "dilleri", "inceler."],
+              "correctOrder": ["Dil bilimciler", "farklı", "yüzyıllar", "boyunca", "gelişen", "dilleri", "inceler."],
+              "isEngToTr": true,
+              "translation": "Dil bilimciler farklı yüzyıllar boyunca gelişen dilleri inceler."
+            },
+            {
+              "id": "u12l1ex1_q11",
+              "type": "swipe",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümledeki sıfat-fiil kullanımı doğru mudur?",
+              "phrase": "Psychologists analyze the hiding motives behind human behavior.",
+              "translation": "Psychologists analyze the hidden motives behind human behavior.",
+              "isCorrect": false
+            },
+            {
+              "id": "u12l1ex1_q12",
+              "type": "word-bank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "Historians reconstruct the daily lives of forgotten civilisations.",
+              "words": ["Tarihçiler", "unutulmuş", "medeniyetlerin", "günlük", "yaşamlarını", "yeniden", "kurgular."],
+              "correctOrder": ["Tarihçiler", "unutulmuş", "medeniyetlerin", "günlük", "yaşamlarını", "yeniden", "kurgular."],
+              "isEngToTr": true,
+              "translation": "Tarihçiler unutulmuş medeniyetlerin günlük yaşamlarını yeniden kurgular."
+            },
+            {
+              "id": "u12l1ex1_q13",
+              "type": "translation-text",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Aşağıdaki cümleyi Türkçe'ye çevirin:",
+              "enSentence": "The committee discussed varying opinions regarding cultural heritage policies.",
+              "correctSentence": "Komite kültürel miras politikalarına ilişkin değişen görüşleri tartıştı.",
+              "translation": "Komite kültürel miras politikalarına ilişkin değişen görüşleri tartıştı."
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "exercises": [
+        {
+          "id": "u12l2ex1",
+          "title": "Alıştırma 1: Gelişmiş Birleşik ve Zarflı Sıfat-Fiiller",
+          "description": "Nesneli birleşik sıfat-fiiller ve zarfla nitelenmiş edilgen yapılar",
+          "questions": [
+            {
+              "id": "u12l2ex1_q1",
+              "type": "collocation-matching",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Kelimeleri doğru niteleyicileriyle eşleştirin:",
+              "pairs": [
+                { "word": "well", "prep": "preserved" },
+                { "word": "culture", "prep": "shaping" },
+                { "word": "highly", "prep": "sophisticated" },
+                { "word": "mind", "prep": "bending" }
+              ],
+              "explanation": "Eşleştirmeler tamamlandı: well preserved, culture shaping, highly sophisticated, mind bending."
+            },
+            {
+              "id": "u12l2ex1_q2",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The gallery displayed well-preserved paintings from the Renaissance.",
+              "isEngToTr": true,
+              "options": [
+                "Galeri Rönesans döneminden iyi korunmuş resimleri sergiledi.",
+                "Rönesans ressamları galeride kendi eserlerini sergilediler.",
+                "Galeri Rönesans dönemine ait yeni restore edilmiş tablolar sattı.",
+                "İyi korunan galeride bazı tarihi tablolar sergilenmektedir."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l2ex1_q3",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "Sociologists investigate culture-shaping norms in modern communities.",
+              "isEngToTr": true,
+              "options": [
+                "Sosyologlar modern topluluklarda kültürü şekillendiren normları araştırır.",
+                "Modern kültür sosyologların toplumsal kuralları incelemesini şekillendirir.",
+                "Kültürü şekillendiren sosyologlar modern normları topluma tanıttı.",
+                "Sosyolojik normlar toplumsal kültürleri her zaman etkilemektedir."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l2ex1_q4",
+              "type": "fill-blank-dropdown",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Highly ___ algorithms extract data from historical records.",
+              "options": ["sophisticated", "sophisticating", "sophisticate", "sophisticates"],
+              "correctIndex": 0,
+              "translation": "Son derece gelişmiş algoritmalar tarihsel kayıtlardan veri çıkarır."
+            },
+            {
+              "id": "u12l2ex1_q5",
+              "type": "fill-blank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The scholar presented a mind-___ paradox during the seminar.",
+              "options": ["bending", "bended", "bend", "bends"],
+              "correctIndex": 0,
+              "translation": "Akademisyen seminer sırasında zihin bulandıran bir paradoks sundu."
+            },
+            {
+              "id": "u12l2ex1_q6",
+              "type": "swipe",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümledeki sıfat-fiil kullanımı doğru mudur?",
+              "phrase": "They studied newly discovered manuscripts in the national library.",
+              "translation": "Milli kütüphanede yeni keşfedilen el yazmalarını incelediler.",
+              "isCorrect": true
+            },
+            {
+              "id": "u12l2ex1_q7",
+              "type": "fill-blank-dropdown",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "We must adapt to rapidly ___ climates.",
+              "options": ["shifting", "shifted", "shifts", "shift"],
+              "correctIndex": 0,
+              "translation": "Hızla değişen iklimlere uyum sağlamalıyız."
+            },
+            {
+              "id": "u12l2ex1_q8",
+              "type": "fill-blank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "Deeply ___ beliefs are difficult to change in society.",
+              "options": ["rooted", "rooting", "root", "roots"],
+              "correctIndex": 0,
+              "translation": "Derin kök salmış inançları toplumda değiştirmek zordur."
+            },
+            {
+              "id": "u12l2ex1_q9",
+              "type": "swipe",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümledeki sıfat-fiil kullanımı doğru mudur?",
+              "phrase": "The poorly constructing bridge collapsed after the heavy storm.",
+              "translation": "The poorly constructed bridge collapsed after the heavy storm.",
+              "isCorrect": false
+            },
+            {
+              "id": "u12l2ex1_q10",
+              "type": "word-bank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "Historians examined the well-documented events of the revolution.",
+              "words": ["Tarihçiler", "devrimin", "iyi", "belgelenmiş", "olaylarını", "incelediler."],
+              "correctOrder": ["Tarihçiler", "devrimin", "iyi", "belgelenmiş", "olaylarını", "incelediler."],
+              "isEngToTr": true,
+              "translation": "Tarihçiler devrimin iyi belgelenmiş olaylarını incelediler."
+            },
+            {
+              "id": "u12l2ex1_q11",
+              "type": "word-bank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The library contains heavily damaged books from the ancient era.",
+              "words": ["Kütüphane", "antik", "çağdan", "kalma", "ağır", "hasar", "görmüş", "kitaplar", "barındırır."],
+              "correctOrder": ["Kütüphane", "antik", "çağdan", "kalma", "ağır", "hasar", "görmüş", "kitaplar", "barındırır."],
+              "isEngToTr": true,
+              "translation": "Kütüphane antik çağdan kalma ağır hasar görmüş kitaplar barındırır."
+            },
+            {
+              "id": "u12l2ex1_q12",
+              "type": "translation-text",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Aşağıdaki cümleyi Türkçe'ye çevirin:",
+              "enSentence": "The philosopher proposed a path-breaking theory on human consciousness.",
+              "correctSentence": "Filozof insan bilinci üzerine çığır açan bir teori sundu.",
+              "translation": "Filozof insan bilinci üzerine çığır açan bir teori sundu."
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "exercises": [
+        {
+          "id": "u12l3ex1",
+          "title": "Alıştırma 1: Sıfat-Fiil Takımları (Etken & Edilgen Kısaltmalar)",
+          "description": "Etken ve edilgen sıfat-fiil takımları (reduction) ve entegre pekiştirme",
+          "questions": [
+            {
+              "id": "u12l3ex1_q1",
+              "type": "matching",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                { "left": "molecules moving in the gas", "right": "gazda hareket eden moleküller" },
+                { "left": "liquid containing organisms", "right": "organizma içeren sıvı" },
+                { "left": "food cooked with electricity", "right": "elektrikle pişirilmiş yemek" },
+                { "left": "artifacts recovered from ruins", "right": "harabelerden çıkarılan eserler" }
+              ]
+            },
+            {
+              "id": "u12l3ex1_q2",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The molecules moving in the gas collide frequently.",
+              "isEngToTr": true,
+              "options": [
+                "Gazda hareket eden moleküller sıklıkla çarpışır.",
+                "Moleküller hareket ettikçe gas sıklıkla genişler.",
+                "Gazın içindeki bazı moleküller hızlıca hareket eder.",
+                "Çarpışan moleküller gazda hareketliliğe neden olur."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l3ex1_q3",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The lab tested a liquid containing dangerous organisms.",
+              "isEngToTr": true,
+              "options": [
+                "Laboratuvar tehlikeli organizmalar içeren bir sıvıyı test etti.",
+                "Tehlikeli organizmalar laboratuvardaki sıvının içinde test edildi.",
+                "Sıvı içeren laboratuvar tehlikeli organizmaları yok etti.",
+                "Laboratuvar sıvısındaki organizmalar tehlike arz etmektedir."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l3ex1_q4",
+              "type": "multiple-choice",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The food cooked with electricity was served at the banquet.",
+              "isEngToTr": true,
+              "options": [
+                "Elektrikle pişirilmiş yemek şölende servis edildi.",
+                "Şölende elektrikli fırında pişirilen bazı yemekler vardı.",
+                "Elektrikle yemek pişirmek şöleni daha keyifli hale getirdi.",
+                "Yemek pişirmek için elektrikli aletler şölene getirildi."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u12l3ex1_q5",
+              "type": "preposition-magnet",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümleyi tamamlamak için doğru edatı boşluğa sürükleyin:",
+              "sentence": "The scholars participating ___ the exchange program gained international experience.",
+              "options": ["in", "on", "at", "with"],
+              "correctIndex": 0,
+              "translation": "Değişim programına katılan akademisyenler uluslararası deneyim kazandı."
+            },
+            {
+              "id": "u12l3ex1_q6",
+              "type": "preposition-magnet",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümleyi tamamlamak için doğru edatı boşluğa sürükleyin:",
+              "sentence": "The team working ___ the archaeological site discovered ancient coins.",
+              "options": ["at", "of", "to", "by"],
+              "correctIndex": 0,
+              "translation": "Arkeolojik alanda çalışan ekip antik paralar keşfetti."
+            },
+            {
+              "id": "u12l3ex1_q7",
+              "type": "reflex-blitz",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümleyi tamamlamak için en uygun sıfat-fiil yapısını seçin:",
+              "sentence": "The novels ___ during the Victorian era analyzed social inequality.",
+              "options": ["written", "writing", "writes", "write"],
+              "correctIndex": 0,
+              "translation": "Viktorya döneminde yazılan romanlar toplumsal eşitsizliği analiz etti."
+            },
+            {
+              "id": "u12l3ex1_q8",
+              "type": "reflex-blitz",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümleyi tamamlamak için en uygun sıfat-fiil yapısını seçin:",
+              "sentence": "Innovations ___ by young engineers will revolutionize renewable energy.",
+              "options": ["developed", "developing", "develop", "develops"],
+              "correctIndex": 0,
+              "translation": "Genç mühendisler tarafından geliştirilen yenilikler yenilenebilir enerjide devrim yaratacak."
+            },
+            {
+              "id": "u12l3ex1_q9",
+              "type": "fill-blank-dropdown",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "We read articles ___ the causes of the war.",
+              "options": ["explaining", "explained", "explain", "explains"],
+              "correctIndex": 0,
+              "translation": "Savaşın nedenlerini açıklayan makaleler okuduk."
+            },
+            {
+              "id": "u12l3ex1_q10",
+              "type": "fill-blank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The data ___ from clinical trials was re-examined.",
+              "options": ["collected", "collecting", "collect", "collects"],
+              "correctIndex": 0,
+              "translation": "Klinik deneylerden toplanan veriler yeniden incelendi."
+            },
+            {
+              "id": "u12l3ex1_q11",
+              "type": "swipe",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümledeki sıfat-fiil kullanımı doğru mudur?",
+              "phrase": "The program aiming to reduce poverty received significant funding.",
+              "translation": "Yoksulluğu azaltmayı hedefleyen program önemli ölçüde fon aldı.",
+              "isCorrect": true
+            },
+            {
+              "id": "u12l3ex1_q12",
+              "type": "swipe",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümledeki sıfat-fiil kullanımı doğru mudur?",
+              "phrase": "The laws governed environmental protection must be enforced strictly.",
+              "translation": "The laws governing environmental protection must be enforced strictly.",
+              "isCorrect": false
+            },
+            {
+              "id": "u12l3ex1_q13",
+              "type": "word-bank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The researchers investigating climate change published their findings.",
+              "words": ["İklim değişikliğini", "araştıran", "araştırmacılar", "bulgularını", "yayımladı."],
+              "correctOrder": ["İklim değişikliğini", "araştıran", "araştırmacılar", "bulgularını", "yayımladı."],
+              "isEngToTr": true,
+              "translation": "İklim değişikliğini araştıran araştırmacılar bulgularını yayımladı."
+            },
+            {
+              "id": "u12l3ex1_q14",
+              "type": "word-bank",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The structural errors identified by software engineers were resolved quickly.",
+              "words": ["Yazılım mühendisleri", "tarafından", "tespit edilen", "yapısal hatalar", "hızlıca", "çözüldü."],
+              "correctOrder": ["Yazılım mühendisleri", "tarafından", "tespit edilen", "yapısal hatalar", "hızlıca", "çözüldü."],
+              "isEngToTr": true,
+              "translation": "Yazılım mühendisleri tarafından tespit edilen yapısal hatalar hızlıca çözüldü."
+            },
+            {
+              "id": "u12l3ex1_q15",
+              "type": "translation-text",
+              "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
+              "prompt": "Aşağıdaki cümleyi Türkçe'ye çevirin:",
+              "enSentence": "Historical records preserved in local archives shed light on medieval social structures.",
+              "correctSentence": "Yerel arşivlerde korunan tarihsel kayıtlar orta çağ toplumsal yapılarına ışık tutmaktadır.",
+              "translation": "Yerel arşivlerde korunan tarihsel kayıtlar orta çağ toplumsal yapılarına ışık tutmaktadır."
+            }
+          ]
+        }
+      ]
+    }
+  },
+    "70": {
   "1": {
     "exercises": [
       {
@@ -57082,6 +56865,41 @@ if (typeof rawTopics !== 'undefined') {
     t26.edits.push({
       date: "2026-07-28T02:15:00+03:00",
       desc: "Bölüm Yeniden Tasarımı: AMOK 3 Aşamalı Pedagojik İlerleme (Öbek ➔ Cümle ➔ Akademik/Spiralleşme) ve Çok Katmanlı Etiketleme (Multi-Tag) Protokolüne göre yeniden düzenlendi. Kelime dağarcığı beşeri bilimler, hukuk, iktisat, tarih, ve alanlarına uyarlandı. Önceki konulardan kelime tekrarı %40 oranında yeni tamlamalarla sağlandı ve dilbilgisi sınırlarına sadık kalındı.",
+      type: "custom"
+    });
+  }
+  
+  const t12 = rawTopics.find(t => t.id === 12);
+  if (t12) {
+    t12.title = "VIII. Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)";
+    t12.desc = "Present ve past participle sıfatları, zarf kombinasyonları, niteleme öbekleri ve sıfat cümlesi kısaltmaları (Adjective Clause Reductions)";
+    t12.numLessons = 3;
+    t12.formulas = [
+      {
+        "formula": "Present Participle (...ing) + Noun VEYA Past Participle (...ed / V3) + Noun",
+        "example": "• Emerging technologies transform global industries (Gelişmekte olan teknolojiler küresel sanayileri dönüştürür)<br>• Detailed reports were submitted to the committee (Ayrıntılı raporlar kurula sunuldu)",
+        "description": "Etken veya edilgen sıfat-fiillerin isimlerin önüne gelerek niteleme sıfatı oluşturması."
+      },
+      {
+        "formula": "Noun-ing / Adverb + V3 + Noun",
+        "example": "• soil-enriching humus (toprağı zenginleştiren humus)<br>• well-developed system (iyi gelişmiş sistem)",
+        "description": "Nesneli birleşik sıfat-fiiller ve zarfla derecelendirilmiş edilgen yapılar."
+      },
+      {
+        "formula": "Noun + Present/Past Participle Phrase (Clause Reduction)",
+        "example": "• molecules moving in the gas (gazda hareket eden moleküller)<br>• liquid containing organisms (organizma içeren sıvı)<br>• food cooked with electricity (elektrikle pişirilmiş yemek)",
+        "description": "İsmi takip eden sıfat-fiil grupları (kısaltmalar). Niteleyici öbek Türkçe'de ismin önüne getirilir."
+      }
+    ];
+    t12.subtitles = [
+      "1. Tekil Sıfat-Fiiller (Etken & Edilgen Giriş)",
+      "2. Gelişmiş Birleşik ve Zarflı Sıfat-Fiiller",
+      "3. Sıfat-Fiil Takımları (Etken & Edilgen Kısaltmalar)"
+    ];
+    if (!t12.edits) t12.edits = [];
+    t12.edits.push({
+      date: "2026-08-05T14:40:00+03:00",
+      desc: "Bölüm Yeniden Tasarımı: 7 modelin tamamını içeren 3 yeni ders ve yeni interaktif soru tipleri eklendi, eski dersler temizlendi.",
       type: "custom"
     });
   }
@@ -94069,4 +93887,585 @@ if (typeof rawTopics !== 'undefined') {
       type: "custom"
     });
   }
+}
+
+// Dynamically register new humanities and academic terms for participles
+if (typeof wordDictionary !== 'undefined') {
+  Object.assign(wordDictionary, {
+    "evolving": "gelişen",
+    "evolve": "gelişmek",
+    "lasting": "kalıcı",
+    "varying": "değişen",
+    "excavated": "çıkarılmış",
+    "path-breaking": "çığır açan",
+    "sophisticated": "gelişmiş",
+    "governing": "düzenleyen",
+    "aiming": "hedefleyen",
+    "shaping": "şekillendiren",
+    "bending": "bulandıran",
+    "composed": "oluşan",
+    "emitted": "yayılan"
+  });
+}
+
+// AWL Complete Academic Word List Definitions (570 Headwords Integration)
+if (typeof wordDictionary !== 'undefined') {
+  Object.assign(wordDictionary, {
+    "analyze": "analiz etmek, çözümlemek",
+    "approach": "yaklaşım, yaklaşmak",
+    "area": "alan, bölge",
+    "assess": "değerlendirmek",
+    "assume": "varsaymak, üstlenmek",
+    "authority": "otorite, yetki",
+    "available": "mevcut, kullanılabilir",
+    "benefit": "fayda, yarar sağlamak",
+    "concept": "kavram",
+    "consist": "oluşmak (-den)",
+    "context": "bağlam",
+    "constitute": "oluşturmak, teşkil etmek",
+    "contract": "sözleşme, küçülmek",
+    "create": "yaratmak, oluşturmak",
+    "data": "veri",
+    "define": "tanımlamak",
+    "derive": "türetmek, elde etmek",
+    "distribute": "dağıtmak",
+    "economy": "ekonomi",
+    "environment": "çevre",
+    "establish": "kurmak, tesis etmek",
+    "estimate": "tahmin etmek",
+    "evident": "açık, belirgin",
+    "factor": "faktör, etken",
+    "finance": "finans, finanse etmek",
+    "formula": "formül",
+    "function": "işlev, fonksiyon",
+    "identify": "tanımlamak, tespit etmek",
+    "income": "gelir",
+    "indicate": "göstermek, işaret etmek",
+    "individual": "birey, bireysel",
+    "interpret": "yorumlamak",
+    "involve": "içermek, dahi etmek",
+    "issue": "konu, sorun, yayınlamak",
+    "labour": "iş gücü, emek",
+    "legal": "yasal, hukuki",
+    "legislate": "yasa çıkarmak",
+    "major": "ana, büyük, önemli",
+    "method": "yöntem, metod",
+    "occur": "meydana gelmek, olmak",
+    "percent": "yüzde",
+    "period": "dönem, süreç",
+    "policy": "politika",
+    "principle": "ilke, prensip",
+    "proceed": "ilerlemek, devam etmek",
+    "process": "süreç, işlemek",
+    "require": "gerektirmek",
+    "research": "araştırma, araştırmak",
+    "respond": "yanıt vermek, tepki göstermek",
+    "role": "rol, görev",
+    "section": "bölüm, kısım",
+    "sector": "sektör, alan",
+    "significant": "önemli, kayda değer",
+    "similar": "benzer",
+    "source": "kaynak",
+    "specific": "belirli, özgün",
+    "structure": "yapı, yapılandırmak",
+    "theory": "teori, kuram",
+    "vary": "çeşitlilik göstermek, değişmek",
+    "achieve": "başarmak, elde etmek",
+    "acquire": "edinmek, kazanmak",
+    "administrate": "yönetmek, idare etmek",
+    "affect": "etkilemek",
+    "appropriate": "uygun, el koymak",
+    "aspect": "yön, boyut, açı",
+    "assist": "yardım etmek, desteklemek",
+    "category": "kategori, sınıf",
+    "chapter": "bölüm",
+    "commission": "komisyon, görevlendirmek",
+    "community": "topluluk, toplum",
+    "complex": "karmaşık",
+    "compute": "hesaplamak",
+    "conclude": "sonuca varmak",
+    "conduct": "yürütmek, iletmek",
+    "consequent": "sonuç olarak ortaya çıkan",
+    "construct": "inşa etmek, kurmak",
+    "consume": "tüketmek",
+    "credit": "kredi, övgü, itibar",
+    "culture": "kültür",
+    "design": "tasarım, tasarlamak",
+    "equate": "eşititliği sağlamak, özdeşleştirmek",
+    "element": "unsur, öğe",
+    "evaluate": "değerlendirmek",
+    "feature": "özellik, öne çıkarmak",
+    "final": "son, nihai",
+    "focus": "odaklanmak, odak",
+    "impact": "etki, darbe",
+    "injure": "yaralamak, zarar vermek",
+    "institute": "enstitü, kurmak",
+    "invest": "yatırım yapmak",
+    "item": "madde, öğe",
+    "journal": "dergi, günlük",
+    "maintain": "sürdürmek, korumak",
+    "normal": "normal, olağan",
+    "obtain": "elde etmek, edinmek",
+    "participate": "katılmak",
+    "perceive": "algılamak",
+    "positive": "olumlu, pozitif",
+    "potential": "potansiyel, olası",
+    "previous": "önceki",
+    "primary": "birincil, temel",
+    "purchase": "satın almak",
+    "range": "yelpaze, çeşitlilik, aralık",
+    "region": "bölge",
+    "regulate": "düzenlemek",
+    "relevant": "ilgili, alakalı",
+    "reside": "ikamet etmek, yaşamak",
+    "resource": "kaynak",
+    "restrict": "kısıtlamak",
+    "secure": "güvenli, güvenceye almak",
+    "seek": "aralamak, çabalamak",
+    "select": "seçmek",
+    "site": "alan, saha, konum",
+    "strategy": "strateji",
+    "survey": "anket, araştırma",
+    "text": "metin",
+    "tradition": "gelenek",
+    "transfer": "aktarmak, transfer etmek",
+    "alternative": "alternatif, seçenek",
+    "circumstance": "durum, koşul",
+    "comment": "yorum, yorum yapmak",
+    "compensate": "telafi etmek",
+    "component": "bileşen, unsur",
+    "consent": "rıza, onay",
+    "considerable": "önemli, kayda değer",
+    "constant": "sabit, sürekli",
+    "constrain": "kısıtlamak, zorlamak",
+    "contribute": "katkıda bulunmak",
+    "convene": "toplanmak, bir araya gelmek",
+    "coordinate": "koordine etmek",
+    "core": "çekirdek, temel",
+    "corporate": "kurumsal",
+    "correspond": "yazışmak, denk gelmek",
+    "deduce": "çıkarım yapmak",
+    "demonstrate": "göstermek, kanıtlamak",
+    "document": "belge, belgelemek",
+    "dominate": "egemen olmak, domine etmek",
+    "emphasis": "vurgu",
+    "ensure": "sağlamak, garantiye almak",
+    "exclude": "haric tutmak, dışlamak",
+    "framework": "çerçeve, yapı",
+    "fund": "fon, kaynak sağlamak",
+    "illustrate": "örneklemek, resimlemek",
+    "immigrate": "göç etmek",
+    "imply": "ima etmek, anlamına gelmek",
+    "initial": "ilk, başlangıç",
+    "instance": "örnek, durum",
+    "interact": "etkileşime girmek",
+    "justify": "haklı çıkarmak, gerekçelendirmek",
+    "layer": "katman, tabaka",
+    "link": "bağlantı, bağlamak",
+    "locate": "konumlandırmak, bulmak",
+    "maximize": "en üst düzeye çıkarmak",
+    "minor": "küçük, ikincil",
+    "negate": "olumsuzlamak, etkisiz kılmak",
+    "outcome": "sonuç",
+    "partner": "ortak, eş",
+    "philosophy": "felsefe",
+    "physical": "fiziksel, bedensel",
+    "proportion": "oran, orantı",
+    "publish": "yayımlamak",
+    "react": "tepki vermek",
+    "register": "kaydolmak, sicil",
+    "rely": "güvenmek, dayanmak (-e)",
+    "remove": "kaldırmak, çıkarmak",
+    "scheme": "plan, şema, düzen",
+    "sequence": "dizi, sıra, silsile",
+    "sex": "cinsiyet",
+    "shift": "değişmek, kaymak, vardiya",
+    "specify": "belirtmek, açıkça söylemek",
+    "sufficient": "yeterli",
+    "technical": "teknik",
+    "technique": "teknik, yöntem",
+    "technology": "teknoloji",
+    "valid": "geçerli",
+    "volume": "hacim, cilt, ses seviyesi",
+    "access": "erişim, erişmek",
+    "adequacy": "yeterlilik",
+    "annual": "yıllık",
+    "apparent": "belirgin, aşikar",
+    "approximate": "yaklaşık",
+    "attitude": "tutum, tavır",
+    "attribute": "atfetmek, özellik",
+    "civil": "sivil, medeni",
+    "code": "kod, kural dizisi",
+    "commit": "üstlenmek, işlemek (suç)",
+    "communicate": "iletişim kurmak",
+    "concentrate": "odaklanmak, yoğunlaşmak",
+    "confer": "görüşmek, bağışlamak",
+    "contrast": "karşılaştırmak, tezat",
+    "cycle": "döngü",
+    "debate": "tartışma, tartışmak",
+    "despite": "rağmen (-e)",
+    "dimension": "boyut",
+    "domestic": "yerel, iç, evcil",
+    "emerge": "ortaya çıkmak",
+    "error": "hata",
+    "ethnic": "etnik",
+    "grant": "burs, hibe, bağışlamak",
+    "hence": "bu nedenle, bundan dolayı",
+    "hypothesis": "hipotez, varsayım",
+    "implement": "uygulamaya koymak",
+    "implicate": "bulaştırmak, ima etmek",
+    "impose": "dayatmak, yüklemek",
+    "integrate": "entegre etmek, bütünleştirmek",
+    "internal": "iç, dahili",
+    "investigate": "araştırmak, soruşturmak",
+    "job": "iş, görev",
+    "label": "etiket, etiketlemek",
+    "mechanism": "mekanizma",
+    "obvious": "açık, aşikar",
+    "occupier": "işgalci, sakini",
+    "option": "seçenek",
+    "output": "çıktı, üretim",
+    "overall": "genel, genel olarak",
+    "parallel": "paralel",
+    "parameter": "parametre, değişken",
+    "phase": "evre, aşama",
+    "predict": "tahmin etmek",
+    "principal": "asıl, ana, okul müdürü",
+    "prior": "öncelikli, önceki",
+    "professional": "profesyonel, mesleki",
+    "project": "proje, yansıtmak",
+    "promote": "desteklemek, terfi ettirmek",
+    "regime": "rejim, yönetim",
+    "resolve": "çözmek, kararlaştırmak",
+    "retain": "elinde tutmak, korumak",
+    "series": "dizi, seri",
+    "statistic": "istatistik",
+    "status": "statü, durum",
+    "stress": "vurgulamak, stres",
+    "subsequent": "sonraki, ardından gelen",
+    "sum": "toplam, özetlemek",
+    "summary": "özet",
+    "undertake": "üstlenmek",
+    "academic": "akademik",
+    "adjust": "ayarlamak, uyarlamak",
+    "alter": "değiştirmek",
+    "amend": "değiştirmek, düzeltmek (yasa)",
+    "capacity": "kapasite",
+    "clause": "madde, yan cümle",
+    "compound": "bileşik, birleştirmek",
+    "conflict": "çatışma, anlaşmazlık",
+    "consult": "danışmak",
+    "contact": "temas, iletişim kurmak",
+    "decline": "düşüş, reddetmek",
+    "discreet": "saygılı, tedbirli",
+    "draft": "taslak, tasarlamak",
+    "enable": "olanak tanımak, sağlamak",
+    "energy": "enerji",
+    "enforce": "yürürlüğe koymak, zorlamak",
+    "entity": "varlık, birim",
+    "equivalent": "eşdeğer, denk",
+    "evolve": "gelişmek, evrilmek",
+    "expand": "genişlemek, büyümek",
+    "expose": "maruz bırakmak, açığa çıkarmak",
+    "external": "harici, dış",
+    "facilitate": "kolaylaştırmak",
+    "fundamental": "temel, esas",
+    "generate": "üretmek, oluşturmak",
+    "generation": "nesil, kuşak, üretim",
+    "image": "görüntü, imaj",
+    "liberal": "özgürlükçü, liberal",
+    "license": "lisans, ruhsat",
+    "logic": "mantık",
+    "margin": "kenar, marj, fark",
+    "medical": "tıbbi, medikal",
+    "mental": "zihinsel, zihni",
+    "modify": "değiştirmek, nitelemek",
+    "monitor": "izlemek, ekran",
+    "network": "ağ, şebeke",
+    "notion": "kavram, düşünce",
+    "objective": "amaca yönelik, nesnel, hedef",
+    "orient": "yönlendirmek, odaklamak",
+    "perspective": "perspektif, bakış açısı",
+    "precise": "kesin, hassas",
+    "prime": "başlıca, asal, hazırlamak",
+    "psychology": "psikoloji",
+    "pursue": "takip etmek, sürdürmek",
+    "ratio": "oran",
+    "reject": "reddetmek",
+    "revenue": "gelir, hasılat",
+    "stable": "kararlı, istikrarlı",
+    "style": "tarz, stil",
+    "substitute": "yerine geçmek, yedek",
+    "sustain": "sürdürmek, desteklemek",
+    "symbol": "sembol, simge",
+    "target": "hedef, hedeflemek",
+    "transit": "transit, geçiş",
+    "trend": "eğilim, trend",
+    "version": "sürüm, versiyon",
+    "welfare": "refah, sosyal yardım",
+    "whereas": "oysa, -e karşılık",
+    "abstract": "soyut, özet",
+    "accurate": "doğru, kesin",
+    "acknowledge": "kabul etmek, onaylamak",
+    "aggregate": "toplam, bir araya getirmek",
+    "allocate": "tahsis etmek, ayırmak",
+    "assign": "atamak, görevlendirmek",
+    "attach": "eklemek, bağlamak",
+    "author": "yazar",
+    "bond": "bağ, tahvil",
+    "brief": "kısa, özetlemek",
+    "capable": "yetenekli, muktedir",
+    "cite": "alıntı yapmak, bahsetmek",
+    "cooperate": "işbirliği yapmak",
+    "discriminate": "ayrımcılık yapmak, ayırt etmek",
+    "display": "sergilemek, göstermek",
+    "diverse": "çeşitli, farklı",
+    "domain": "alan, etki alanı",
+    "edit": "düzenlemek, edit etmek",
+    "enhance": "geliştirmek, artırmak",
+    "estate": "mülk, emlak",
+    "exceed": "aşmak, geçmek",
+    "expert": "uzman",
+    "explicit": "açık, net",
+    "federal": "federal",
+    "fee": "ücret, harç",
+    "flexible": "esnek",
+    "furthermore": "dahası, ayrıca",
+    "gender": "cinsiyet",
+    "incentive": "teşvik, özendirme",
+    "incorporate": "bünyesine katmak, birleştirmek",
+    "incidence": "oran, görülme sıklığı",
+    "index": "endeks, dizin",
+    "inhibit": "engellemek, kısıtlamak",
+    "initiate": "başlatmak",
+    "input": "girdi, katkı",
+    "instruct": "talimat vermek, öğretmek",
+    "intelligence": "zekâ, istihbarat",
+    "interval": "aralık, mola",
+    "lecture": "ders, konferans",
+    "migrate": "göç etmek",
+    "minimum": "asgari, en az",
+    "ministry": "bakanlık",
+    "motive": "güdü, güdüleyici neden",
+    "neutral": "tarafız, nötr",
+    "nevertheless": "yine de, buna rağmen",
+    "overseas": "yurt dışı, deniz aşırı",
+    "precede": "-den önce gelmek",
+    "presume": "varsaymak, tahmin etmek",
+    "rational": "rasyonel, mantıklı",
+    "recover": "geri kazanmak, iyileşmek",
+    "reveal": "ortaya çıkarmak, ifşa etmek",
+    "scope": "kapsam, boyut",
+    "subsidy": "sübvansiyon, devlet desteği",
+    "tape": "bant, kaset",
+    "trace": "iz, izini sürmek",
+    "transform": "dönüştürmek",
+    "transport": "taşımak, ulaşım",
+    "underlie": "temelinde yatmak",
+    "utilize": "faydalanmak, kullanmak",
+    "adapt": "uyum sağlamak, uyarlamak",
+    "adult": "yetişkin",
+    "advocate": "savunmak, savunucu",
+    "aid": "yardım, yardım etmek",
+    "channel": "kanal, yönlendirmek",
+    "chemical": "kimyasal",
+    "classic": "klasik",
+    "comprehensive": "kapsamlı",
+    "comprise": "oluşmak, kapsamak",
+    "confirm": "onaylamak, doğrulamak",
+    "contrary": "aksine, karşıt",
+    "convert": "dönüştürmek",
+    "couple": "çift, birkaç",
+    "decade": "on yıl",
+    "definite": "kesin, belirli",
+    "deny": "inkar etmek, reddetmek",
+    "differentiate": "farklılaştırmak, ayırt etmek",
+    "dispose": "elden çıkarmak, düzenlemek",
+    "dynamic": "dinamik, hareketli",
+    "eliminate": "elemek, ortadan kaldırmak",
+    "empirical": "deneysel, ampirik",
+    "equip": "donatmak",
+    "extract": "özütlemek, çıkarmak",
+    "file": "dosya, dosyalamak",
+    "finite": "sınırlı, sonlu",
+    "foundation": "vakıf, temel",
+    "global": "küresel",
+    "grade": "derece, not, sınıf",
+    "guarantee": "garanti etmek",
+    "hierarchy": "hiyerarşi",
+    "identical": "birebir aynı, özdeş",
+    "ideology": "ideoloji",
+    "infer": "çıkarımda bulunmak",
+    "innovate": "yenilik yapmak",
+    "insert": "eklemek, sokmak",
+    "intervene": "müdahale etmek",
+    "isolate": "zole etmek, soyutlamak",
+    "media": "medya, basın",
+    "mode": "mod, biçim, tarz",
+    "paradigm": "paradigma, model",
+    "phenomenon": "olgu, fenomen",
+    "priority": "öncelik",
+    "prohibit": "yasaklamak",
+    "publication": "yayın, yayımlama",
+    "quote": "alıntı yapmak, kota",
+    "release": "serbest bırakmak, yaymlamak",
+    "reverse": "tersine çevirmek, ters",
+    "simulate": "simüle etmek, taklit etmek",
+    "sole": "tek, yegane",
+    "somewhat": "biraz, kısmen",
+    "submit": "sunmak, teslim etmek",
+    "successor": "ardıl, halef",
+    "survive": "hayatta kalmak",
+    "thesis": "tez, iddia",
+    "topic": "konu, başlık",
+    "transmit": "iletmek, yayınlamak",
+    "ultimate": "nihai, en son",
+    "unique": "benzersiz, özgün",
+    "visible": "görünür, gözle görülür",
+    "voluntary": "gönüllü",
+    "abandon": "terk etmek",
+    "accompany": "eşlik etmek",
+    "accumulate": "biriktirmek, toplamak",
+    "ambiguous": "belirsiz, muğlak",
+    "append": "sonuna eklemek",
+    "appreciate": "takdir etmek, kavramak",
+    "arbitrary": "keyfi, rastgele",
+    "automate": "otomatikleştirmek",
+    "bias": "önyargı, taraf tutmak",
+    "chart": "grafik, çizelge",
+    "clarify": "açıklığa kavuşturmak",
+    "commodity": "ticari mal, emtia",
+    "complement": "tamamlamak, tamamlayıcı",
+    "conform": "uymak, uyum sağlamak",
+    "contemporary": "çağdaş, modern",
+    "contradict": "çelişmek",
+    "crucial": "çok önemli, kritik",
+    "currency": "para birimi, geçerlilik",
+    "denote": "göstermek, simgelemek",
+    "detect": "tespit etmek, algılamak",
+    "deviate": "sapmak",
+    "displace": "yerinden etmek",
+    "drama": "dram, tiyatro",
+    "eventual": "sonunda gerçekleşen",
+    "exhibit": "sergilemek, sergi",
+    "exploit": "sömürmek, faydalanmak",
+    "fluctuate": "dalgalanmak",
+    "guideline": "yönerge, rehber",
+    "highlight": "vurgulamak, öne çıkarmak",
+    "implicit": "üstü kapalı, örtük",
+    "induce": "teşvik etmek, neden olmak",
+    "inevitable": "kaçınılmaz",
+    "infrastructure": "altyapı",
+    "inspect": "denetlemek, incelemek",
+    "intense": "yoğun, şiddetli",
+    "manipulate": "manipüle etmek, yönlendirmek",
+    "minimize": "en aza indirmek",
+    "nuclear": "nükleer",
+    "offset": "dengelemek, telafi etmek",
+    "paragraph": "paragraf",
+    "practitioner": "uygulayıcı, pratisyen",
+    "predominant": "baskın, hakim",
+    "prospect": "olasılık, beklenti",
+    "radical": "radikal, köklü",
+    "random": "rastgele",
+    "reinforce": "pekiştirmek, güçlendirmek",
+    "restore": "restore etmek, geri getirmek",
+    "revise": "gözden geçirmek, revize etmek",
+    "schedule": "program, takvim",
+    "tense": "gergin, zaman eki",
+    "terminate": "sonlandırmak",
+    "theme": "tema, ana konu",
+    "thereby": "böylelikle, bu sayede",
+    "uniform": "tektip, üniforma",
+    "vehicle": "araç, taşıt",
+    "via": "yoluyla, vasıtasıyla",
+    "virtual": "sanal",
+    "visual": "görsel",
+    "widespread": "yaygın",
+    "accommodate": "barındırmak, konaklatmak",
+    "analogy": "analoji, benzetme",
+    "anticipate": "öngörmek, beklemet",
+    "assure": "güvence vermek",
+    "attain": "ulaşmak, elde etmek",
+    "behalf": "adına, namına",
+    "cease": "durdurmak, sona ermek",
+    "coherent": "tümleşik, tutarlı",
+    "coincide": "çakışmak, denk gelmek",
+    "commence": "başlamak",
+    "compatible": "uyumlu",
+    "concurrent": "eşzamanlı",
+    "confine": "sınırlandırmak, hapsetmek",
+    "controversy": "anlaşmazlık, tartışma",
+    "converse": "karşıt, sohbet etmek",
+    "device": "cihaz, alet",
+    "devote": "adamak",
+    "diminish": "azalmak, azaltmak",
+    "distort": "saptırmak, çarpıtmak",
+    "duration": "süre, müddet",
+    "erode": "aşınmak, yıpranmak",
+    "ethic": "etik, ahlak",
+    "format": "biçim, format",
+    "founded": "kurulmuş, dayanan",
+    "inherent": "doğasında olan, özünde bulunan",
+    "insight": "içgörü, kavrayış",
+    "integral": "tamamlayıcı, ayrılmaz",
+    "intermediate": "orta düzey",
+    "manual": "el ile yapılan, kılavuz",
+    "mature": "olgun, olgunlaşmak",
+    "mediate": "aracılık etmek",
+    "medium": "orta, araç, ortam",
+    "military": "askeri",
+    "minimal": "en az, asgari",
+    "mutual": "karşılıklı, ortak",
+    "overlap": "örtüşmek, çakışmak",
+    "passive": "pasif, edilgen",
+    "portion": "porsiyon, kısım",
+    "preliminary": "ön, hazırlık niteliğinde",
+    "protocol": "protokol, kural dizisi",
+    "qualitative": "nitel, niteliksel",
+    "refine": "arıtmak, hassaslaştırmak",
+    "relax": "rahatlamak",
+    "restrain": "dizginlemek, kısıtlamak",
+    "revolution": "devrim",
+    "rigid": "sert, katı, esnemez",
+    "route": "rota, yol",
+    "scenario": "senaryo",
+    "sphere": "küre, alan",
+    "subordinate": "alt düzeydeki, ikincil",
+    "supplement": "takviye, eklemek",
+    "suspend": "askıya almak",
+    "team": "ekip, takım",
+    "temporary": "geçici",
+    "trigger": "tetiklemek",
+    "unify": "birleştirmek",
+    "violate": "ihlal etmek",
+    "vision": "vizyon, görüş",
+    "adjacent": "bitişik, komşu",
+    "albeit": "olmasına rağmen, yine de",
+    "assemble": "toplamak, monte etmek",
+    "collapse": "çökmek, yıkılmak",
+    "colleague": "meslektaş",
+    "compile": "derlemek, toplamak",
+    "conceive": "tasarlamak, kavramak",
+    "convince": "ikna etmek",
+    "depress": "baskılamak, depresyona sokmak",
+    "encounter": "karşılaşmak",
+    "forthcoming": "yaklaşmakta olan, açık yürekli",
+    "incline": "eğilim göstermek, meyil",
+    "integrity": "dürüstlük, bütünlük",
+    "intrinsic": "özünde olan, içsel",
+    "invoke": "çağırmak, başvurmak (yasaya)",
+    "levy": "vergi koymak, toplamak",
+    "likewise": "aynı şekilde, keza",
+    "nonetheless": "yine de, buna rağmen",
+    "notwithstanding": "-e rağmen, karşın",
+    "ongoing": "devam eden, süregelen",
+    "panel": "panel, kurul",
+    "persist": "srrar etmek, sürmek",
+    "pose": "teşkil etmek (tehlike), poz vermek",
+    "reluctant": "isteksiz, gönülsüz",
+    "straightforward": "açık, basit, dolaysız",
+    "undergo": "geçirmek, maruz kalmak",
+    "whereby": "ki onunla, vasıtasıyla"
+  });
 }

@@ -24,7 +24,8 @@ function cleanAcademicUnitTitle(title) {
     'Soru Yapıları': 'Soru Cümleleri ve Kalıpları',
     'Edilgen Yapılar ve Edilgen Mastarı': 'Edilgen Yapılar',
     'İsim Tamlaması': 'İsim Tamlamaları',
-    'Participle Yapıları': 'Sıfat-Fiiller ve Kısaltmalar (Participles)',
+    'Participle Yapıları': 'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)',
+    'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)': 'Sıfat-Fiiller ve Kısaltma Yapıları (Participles & Reductions)',
     'Mastar Yapıları, Amaç Mastarları ve Soru Kelimeli Kısaltmalar': 'Mastar Yapıları ve Kısaltmalar (Infinitives)',
     'Cümle Bağlaçları, Geçiş Kelimeleri ve Yan Cümlecikler': 'Cümle Bağlaçları ve Geçiş İfadeleri (Connectors & Transitions)',
     'Ara Bölüm 5: Nicelik, Zaman ve Derece Belirteçleri': 'Nicelik, Zaman ve Derece Belirteçleri (Quantifiers & Adverbs)',
@@ -7035,12 +7036,12 @@ function renderLessonTree() {
         `;
       }
       localLessonsBadgeHTML = `
-        <span class="unit-banner-lessons-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); margin-left: 10px; display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+        <span class="unit-banner-lessons-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
           ${totalInUnit} Ders
         </span>
       `;
       localQuestionsBadgeHTML = `
-        <span class="unit-banner-questions-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); margin-left: 10px; display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+        <span class="unit-banner-questions-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
           ${totalQuestions} Soru
         </span>
       `;
@@ -7063,10 +7064,14 @@ function renderLessonTree() {
           ${notUploadedBadgeHTML}
           ${originalBadgeHTML}
           ${extraBadgeHTML}
-          ${localTypesBadgeHTML}
-          ${localLessonsBadgeHTML}
-          ${localQuestionsBadgeHTML}
         </h2>
+        ${(localTypesBadgeHTML || localLessonsBadgeHTML || localQuestionsBadgeHTML) ? `
+          <div class="unit-banner-stats-row" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; margin-bottom: 6px;">
+            ${localTypesBadgeHTML}
+            ${localLessonsBadgeHTML}
+            ${localQuestionsBadgeHTML}
+          </div>
+        ` : ''}
         ${descHTML}
       </div>
       <div class="unit-progress-container">
@@ -11714,6 +11719,11 @@ function renderDoublePrepositionMagnet(container, question) {
 }
 
 const COLLOCATION_DICT = {
+  // Unit 12 Participle collocations
+  "well preserved": "iyi korunmuş",
+  "culture shaping": "kültür şekillendiren",
+  "highly sophisticated": "son derece gelişmiş",
+  "mind bending": "zihin bulandıran",
   // u36_l14_q1
   "to a certain extent": "Belirli bir dereceye kadar",
   "by no means certain": "Hiçbir şekilde kesin değil",
