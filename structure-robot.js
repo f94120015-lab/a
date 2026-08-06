@@ -1557,27 +1557,53 @@
       if (slotTitle3) slotTitle3.textContent = "3. MATRİS: ANA CÜMLE / MODAL (CLAUSE B)";
     }
 
-    // 1. Update Slot Content Targets
+    // 1. Update Slot Content Targets & Progress Badge
     const slotTarget1 = document.getElementById("srobot-slot-target-1");
     const slotTarget2 = document.getElementById("srobot-slot-target-2");
     const slotTarget3 = document.getElementById("srobot-slot-target-3");
+    const progressBadge = document.getElementById("srobot-slots-progress-badge");
+
+    let count = 0;
+    if (connObj) count++;
+    if (clauseAObj) count++;
+    if (clauseBObj) count++;
+
+    if (progressBadge) {
+      if (count === 3) {
+        progressBadge.textContent = "⚡ 3/3 Montaj Tamamlandı!";
+        progressBadge.style.background = "rgba(16, 185, 129, 0.18)";
+        progressBadge.style.color = "#10b981";
+        progressBadge.style.borderColor = "rgba(16, 185, 129, 0.4)";
+      } else {
+        progressBadge.textContent = `${count}/3 Parça Takıldı`;
+        progressBadge.style.background = "rgba(6, 182, 212, 0.12)";
+        progressBadge.style.color = "#06b6d4";
+        progressBadge.style.borderColor = "rgba(6, 182, 212, 0.25)";
+      }
+    }
 
     if (slotTarget1) {
       slotTarget1.innerHTML = connObj
-        ? `<span style="color: #06b6d4;">🔷 ${connObj.label}</span>`
-        : `<span style="color: var(--text-secondary); font-size: 0.85rem;">Parça Seçilmedi</span>`;
+        ? `<span style="color: #06b6d4; font-weight: 800;">🔷 ${connObj.label}</span>`
+        : `<span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>`;
+      slotTarget1.style.borderColor = connObj ? "#06b6d4" : "rgba(6, 182, 212, 0.25)";
+      slotTarget1.style.background = connObj ? "rgba(6, 182, 212, 0.14)" : "rgba(6, 182, 212, 0.06)";
     }
 
     if (slotTarget2) {
       slotTarget2.innerHTML = clauseAObj
-        ? `<span style="color: #8b5cf6;">🟣 ${clauseAObj.label}</span>`
-        : `<span style="color: var(--text-secondary); font-size: 0.85rem;">Parça Seçilmedi</span>`;
+        ? `<span style="color: #8b5cf6; font-weight: 800;">🟣 ${clauseAObj.label}</span>`
+        : `<span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>`;
+      slotTarget2.style.borderColor = clauseAObj ? "#8b5cf6" : "rgba(139, 92, 246, 0.25)";
+      slotTarget2.style.background = clauseAObj ? "rgba(139, 92, 246, 0.14)" : "rgba(139, 92, 246, 0.06)";
     }
 
     if (slotTarget3) {
       slotTarget3.innerHTML = clauseBObj
-        ? `<span style="color: #ec4899;">🔴 ${clauseBObj.label}</span>`
-        : `<span style="color: var(--text-secondary); font-size: 0.85rem;">Parça Seçilmedi</span>`;
+        ? `<span style="color: #ec4899; font-weight: 800;">🔴 ${clauseBObj.label}</span>`
+        : `<span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>`;
+      slotTarget3.style.borderColor = clauseBObj ? "#ec4899" : "rgba(236, 72, 153, 0.25)";
+      slotTarget3.style.background = clauseBObj ? "rgba(236, 72, 153, 0.14)" : "rgba(236, 72, 153, 0.06)";
     }
 
     // 2. Highlight Selected Buttons
