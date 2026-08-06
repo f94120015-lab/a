@@ -134,6 +134,16 @@
             </span>
             <span class="nav-tab-label">Neden-Etki</span>
           </button>
+          <button class="nav-tab" data-tab="time-matrix">
+            <span class="nav-tab-icon nav-anim-time-matrix">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <circle cx="16" cy="16" r="10" stroke="#8b5cf6" stroke-width="2.5"/>
+                <path d="M16 10V16L20 18" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M11 6L8 3M21 6L24 3" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Zaman & Tense</span>
+          </button>
           <button class="nav-tab" data-tab="simulator">
             <span class="nav-tab-icon nav-anim-simulator">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -365,6 +375,58 @@
 
             <!-- Matris Kartları Grid Alanı -->
             <div class="ce-matrix-grid" id="ce-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+              <!-- JS ile dinamik olarak doldurulacak -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ETKİLEŞİMLİ ZAMAN & TENSE UYUMU MATRİSİ SEKMESİ -->
+        <div id="tab-content-time-matrix" class="tab-content">
+          <div class="time-matrix-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
+            
+            <!-- Header Banner -->
+            <div class="tm-header-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(245, 158, 11, 0.15)); border: 1.5px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow-md);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <div>
+                  <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #8b5cf6; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                    ⏱️ Etkileşimli Zaman & Tense Uyumu Matrisi <span style="font-size: 0.75rem; background: #8b5cf6; color: white; padding: 2px 10px; border-radius: 12px; font-weight: 700;">MASTER ZAMAN KILAVUZU</span>
+                  </h2>
+                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                    Akademik İngilizcede kullanılan tüm zaman bağlaçları, tense uyum çapaları, devrik kalıplar ve zaman kısaltmalarının canlı rehberi. Yapıların üzerine tıklayarak kural ve örnekleri inceleyin.
+                  </p>
+                </div>
+
+                <!-- Arama Kutusu -->
+                <div class="tm-search-wrap" style="position: relative; min-width: 240px;">
+                  <input type="text" id="tm-search-input" placeholder="Zaman kalıbı ara (örn: by the time, since, when)..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                </div>
+              </div>
+
+              <!-- Yön / Mod Değiştirme Butonları -->
+              <div class="tm-direction-toggle-wrap" style="display: flex; gap: 12px; margin-top: 18px;">
+                <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.15); color: #8b5cf6; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                  ⏱️ ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers & Connectors)
+                </button>
+                <button type="button" class="tm-dir-btn" data-mode="tense_harmony" id="tm-mode-harmony" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                  📐 TENSE UYUM KURALLARI & ÇAPALAR (Tense Rules & Anchors)
+                </button>
+              </div>
+            </div>
+
+            <!-- Filtreleme Çipleri -->
+            <div class="tm-filter-chips" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+              <button type="button" class="tm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #8b5cf6; background: #8b5cf6; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="tm-chip" data-category="conjunctions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⏱️ Zaman Bağlaçları (when, while, as soon as...)</button>
+              <button type="button" class="tm-chip" data-category="anchors" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚓ Tense Çapaları (by the time, since...)</button>
+              <button type="button" class="tm-chip" data-category="inverted" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚡ Devrik Yapılar (no sooner... than)</button>
+              <button type="button" class="tm-chip" data-category="prepositions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🔗 Zaman Edatları (during, prior to...)</button>
+              <button type="button" class="tm-chip" data-category="eras" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🏛️ Çağ & Dönem (at the dawn of...)</button>
+              <button type="button" class="tm-chip" data-category="reductions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">✂️ Zaman Kısaltmaları (upon V-ing, having V3...)</button>
+            </div>
+
+            <!-- Matris Kartları Grid Alanı -->
+            <div class="tm-matrix-grid" id="tm-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
               <!-- JS ile dinamik olarak doldurulacak -->
             </div>
 

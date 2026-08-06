@@ -13019,6 +13019,8 @@ function switchTab(tabId) {
     initFeedbackTab();
   } else if (tabId === 'cause-effect') {
     initCauseEffectTab();
+  } else if (tabId === 'time-matrix') {
+    initTimeMatrixTab();
   }
 }
 
@@ -25958,5 +25960,355 @@ function toggleCeCard(idx) {
     ceExpandedCardIndex = idx;
   }
   renderCauseEffectMatrix();
+}
+
+// ============================================================
+// ETKİLEŞİMLİ ZAMAN & TENSE UYUMU MATRİSİ DATA & LOGIC
+// ============================================================
+
+const TIME_MATRIX_DATA = {
+  time_markers: [
+    {
+      term: "when",
+      category: "conjunctions",
+      meaning: "-dığında / -diğinde",
+      rule: "📐 UYUM: when + V1 (Present), Will V1 / Present || when + V2 (Past), V2 / Was-Were V-ing",
+      trap: "⚠️ UYUM KURALI: When yan cümlesine doğrudan 'WILL' veya 'WOULD' gelemez!",
+      examples: [
+        { en: "When the solid is heated, its molecules move apart.", tr: "Katı ısıtıldığında molekülleri birbirinden uzaklaşır." },
+        { en: "When the doctor arrived, the patient was resting.", tr: "Doktor geldiğinde hasta dinleniyordu." }
+      ]
+    },
+    {
+      term: "while / as",
+      category: "conjunctions",
+      meaning: "-erken / -mekte iken (Eşzamanlılık)",
+      rule: "📐 UYUM: while + Continuous Tense (was/were V-ing / is/are V-ing)",
+      trap: "⚠️ Eşzamanlı devam eden eylemlerde 'while' her iki tarafa da continuous alabilir.",
+      examples: [
+        { en: "While the experiment was running, data was recorded continuously.", tr: "Deney devam ederken veriler sürekli kaydediliyordu." },
+        { en: "As temperature rose, the gas expanded.", tr: "Sıcaklık yükselirken gaz genleşti." }
+      ]
+    },
+    {
+      term: "before",
+      category: "conjunctions",
+      meaning: "-den önce",
+      rule: "📐 UYUM: before + V2 (Past), Ana Cümle (Had V3 / V2) || before + V1, Will V1",
+      trap: "⚠️ Önce gerçekleşen eylem ana cümlededir ve Had V3 alır.",
+      examples: [
+        { en: "Before the team published the results, they had verified the data.", tr: "Ekip sonuçları yayımlamadan önce verileri doğrulamıştı." }
+      ]
+    },
+    {
+      term: "after",
+      category: "conjunctions",
+      meaning: "-den sonra",
+      rule: "📐 UYUM: after + Had V3 (Past Perfect), Ana Cümle (V2 / Past Simple)",
+      trap: "⚠️ After yan cümlesi öncelikli eylemdir (Had V3).",
+      examples: [
+        { en: "After the reaction had completed, the precipitate formed.", tr: "Tepkime tamamlandıktan sonra çökelti oluştu." }
+      ]
+    },
+    {
+      term: "as soon as / once / the moment",
+      category: "conjunctions",
+      meaning: "-er etmez / anında",
+      rule: "📐 UYUM: as soon as + V1, Will V1 || as soon as + V2, V2",
+      trap: "⚠️ Eylemler arasında zaman aralığı yoktur, hemen ardından gerçekleşir.",
+      examples: [
+        { en: "As soon as the alarm sounded, workers evacuated the laboratory.", tr: "Alarm çalar çalmaz çalışanlar laboratuvarı tahliye etti." },
+        { en: "Once the trial succeeds, production will begin.", tr: "Deneme başarılı olur olmaz üretim başlayacak." }
+      ]
+    },
+    {
+      term: "until / till",
+      category: "conjunctions",
+      meaning: "-e kadar (Süreç Sınırlayıcı)",
+      rule: "📐 UYUM: until + V1, Will V1 || until + V2, V2",
+      trap: "⚠️ Eylemin son sınırını gösterir. 'Until' yan cümlesine 'will' gelemez.",
+      examples: [
+        { en: "The sample remained in freezer until temperature reached zero.", tr: "Numune sıcaklık sıfıra ulaşana kadar dondurucuda kaldı." }
+      ]
+    },
+    {
+      term: "no sooner ... than",
+      category: "inverted",
+      meaning: "hemen ... -mişti ki ... oldu (Devrik)",
+      rule: "📐 DEVRİK KURAL: No sooner HAD + Özne + V3 + THAN + Özne + V2",
+      trap: "⚠️ Cümle başında 'No sooner' varsa yardımcı fiil (HAD) özneden önce gelir!",
+      examples: [
+        { en: "No sooner had the drug been administered than the pulse stabilized.", tr: "İlaç uygulanır uygulanmaz nabız hemen stabilized oldu." }
+      ]
+    },
+    {
+      term: "hardly / barely / scarcely ... when",
+      category: "inverted",
+      meaning: "henüz ... -mişti ki ... oldu (Devrik)",
+      rule: "📐 DEVRİK KURAL: Hardly / Barely HAD + Özne + V3 + WHEN + Özne + V2",
+      trap: "⚠️ Baglaç tarafında 'THAN' değil 'WHEN' kullanılır!",
+      examples: [
+        { en: "Hardly had the rocket launched when ground control lost signal.", tr: "Roket henüz fırlatılmıştı ki yer kontrolü sinyali kaybetti." }
+      ]
+    },
+    {
+      term: "during / throughout",
+      category: "prepositions",
+      meaning: "esnasında / boyunca (İsim Alır)",
+      rule: "📐 FORMÜL: during / throughout + İsim Öbeği (CÜMLE ALMAZ)",
+      trap: "⚠️ 'During' arkasından cümle ALMAZ, sadece isim öbeği alır!",
+      examples: [
+        { en: "Data was collected throughout the entire study period.", tr: "Tüm çalışma dönemi boyunca veri toplandı." },
+        { en: "The pressure dropped significantly during the test.", tr: "Test esnasında basınç önemli ölçüde düştü." }
+      ]
+    },
+    {
+      term: "prior to / subsequent to",
+      category: "prepositions",
+      meaning: "-den önce / -den sonra (Akademik Edat)",
+      rule: "📐 FORMÜL: prior to / subsequent to + İsim / V-ing",
+      trap: "⚠️ Cümle başı edatı olarak akademik yayınlarda sıkça tercih edilir.",
+      examples: [
+        { en: "Prior to the launch, safety inspections were completed.", tr: "Fırlatmadan önce güvenlik denetimleri tamamlandı." },
+        { en: "Subsequent to the announcement, stock prices surged.", tr: "Açıklamanın ardından hisse fiyatları yükseldi." }
+      ]
+    },
+    {
+      term: "upon / on (+ V-ing)",
+      category: "reductions",
+      meaning: "-er etmez / üzerine (Edat Kısaltması)",
+      rule: "📐 FORMÜL: Upon / On + V-ing + Nesne, Cümle",
+      trap: "⚠️ As soon as / when yapısının akademik kısaltmasıdır.",
+      examples: [
+        { en: "Upon heating the solution, a bright blue color emerged.", tr: "Çözelti ısıtılır ısıtılmaz parlak mavi bir renk ortaya çıktı." }
+      ]
+    },
+    {
+      term: "at the dawn of / at the turn of / on the eve of",
+      category: "eras",
+      meaning: "-in şafağında / dönümünde / arifesinde",
+      rule: "📐 FORMÜL: at the dawn of / on the eve of + Dönem/Tarih İsmi",
+      trap: "⚠️ Tarihsel ve sosyolojik metinlerde zaman çapası olarak sorulur.",
+      examples: [
+        { en: "At the dawn of the Industrial Revolution, cities expanded rapidly.", tr: "Sanayi Devrimi'nin şafağında şehirler hızla büyüdü." },
+        { en: "On the eve of the discovery, scientists remained skeptical.", tr: "Buluşun arifesinde bilim insanları şüpheci kalmaya devam etti." }
+      ]
+    }
+  ],
+
+  tense_harmony: [
+    {
+      term: "by the time",
+      category: "anchors",
+      meaning: "-dığı zamana kadar (Kritik Tense Çapası)",
+      rule: "📐 KURAL 1: By the time + V1 (Present) ➔ Ana Cümle: WILL HAVE V3\n📐 KURAL 2: By the time + V2 (Past) ➔ Ana Cümle: HAD V3",
+      trap: "⚠️ Sınavın en garantili kuralıdır! By the time tarafı V1 ise ana cümle Will Have V3, V2 ise Had V3 almak zorundadır!",
+      examples: [
+        { en: "By the time rescuers arrived, the snow had covered the path.", tr: "Kurtarma ekipleri ulaşana kadar kar yolu kapatmıştı." },
+        { en: "By the time the project finishes, we will have spent millions.", tr: "Proje bitene kadar milyonlarca harcamış olacağız." }
+      ]
+    },
+    {
+      term: "since",
+      category: "anchors",
+      meaning: "-den beri (Zaman Çapası & Bağlaç)",
+      rule: "📐 KURAL: Ana Cümle (HAVE/HAS V3) + SINCE + Yan Cümle (V2 / Past Simple)",
+      trap: "⚠️ SINCE yan cümlesine ASLA Have/Has V3 gelemez! Yan cümle V2, ana cümle Present Perfect olmalıdır.",
+      examples: [
+        { en: "Scientists have studied this cell since it was isolated in 1995.", tr: "Bilim insanları bu hücreyi 1995'te izole edildiğinden beri inceliyor." }
+      ]
+    },
+    {
+      term: "by + Gelecek / Geçmiş Zaman Çapası",
+      category: "anchors",
+      meaning: "-e kadar (Tense Çapa İşaretçisi)",
+      rule: "📐 KURAL 1: BY + Gelecek Zaman (By 2050) ➔ WILL HAVE V3\n📐 KURAL 2: BY + Geçmiş Zaman (By 1900) ➔ HAD V3",
+      trap: "⚠️ 'By 2030' gibi gelecek tarih görürseniz cevabınız Will Have V3 olmalıdır!",
+      examples: [
+        { en: "By 2030, renewable energy will have replaced fossil fuels.", tr: "2030'a kadar yenilenebilir enerji fosil yakıtların yerini almış olacak." },
+        { en: "By the end of the 19th century, railways had connected cities.", tr: "19. yüzyılın sonuna kadar demiryolları şehirleri bağlamıştı." }
+      ]
+    },
+    {
+      term: "so far / up to now / hitherto / in recent years",
+      category: "anchors",
+      meaning: "şu ana kadar / son yıllarda (Present Perfect Çapası)",
+      rule: "📐 KURAL: Bu çapalar doğrudan PRESENT PERFECT (Have/Has V3) gerektirir.",
+      trap: "⚠️ 'So far' veya 'In recent years' kalıbı Past V2 veya Past Perfect almaz!",
+      examples: [
+        { en: "In recent years, researchers have made significant progress.", tr: "Son yıllarda araştırmacılar önemli ilerleme kaydettiler." },
+        { en: "Hitherto, no viable solution has been proposed.", tr: "Şu ana kadar kabul edilebilir hiçbir çözüm önerilmedi." }
+      ]
+    },
+    {
+      term: "Having + V3 / Having been + V3",
+      category: "reductions",
+      meaning: "-dikten sonra / -dildikten sonra (Etken/Edilgen Zaman Kısaltması)",
+      rule: "📐 KURAL: Having + V3 ➔ After + Had V3 kısaltmasıdır.",
+      trap: "⚠️ Özne uyumu şarttır! Cümlenin ana öznesi ile kısaltmayı yapan özne aynı olmalıdır.",
+      examples: [
+        { en: "Having completed the analysis, the chemist published the paper.", tr: "Analizi tamamladıktan sonra kimyager makaleyi yayımladı." },
+        { en: "Having been tested thoroughly, the vaccine was approved.", tr: "Etraflıca test edildikten sonra aşı onaylandı." }
+      ]
+    }
+  ]
+};
+
+let tmActiveMode = 'time_markers';
+let tmActiveCategory = 'all';
+let tmSearchQuery = '';
+let tmExpandedCardIndex = null;
+
+function initTimeMatrixTab() {
+  const modeBtns = document.querySelectorAll('.tm-dir-btn');
+  modeBtns.forEach(btn => {
+    btn.onclick = () => {
+      modeBtns.forEach(b => {
+        b.classList.remove('active');
+        b.style.borderColor = 'var(--border-color)';
+        b.style.background = 'var(--bg-card)';
+        b.style.color = 'var(--text-secondary)';
+      });
+      btn.classList.add('active');
+      btn.style.borderColor = '#8b5cf6';
+      btn.style.background = 'rgba(139, 92, 246, 0.15)';
+      btn.style.color = '#8b5cf6';
+
+      tmActiveMode = btn.dataset.mode;
+      tmExpandedCardIndex = null;
+      renderTimeMatrix();
+    };
+  });
+
+  const filterChips = document.querySelectorAll('.tm-chip');
+  filterChips.forEach(chip => {
+    chip.onclick = () => {
+      filterChips.forEach(c => {
+        c.classList.remove('active');
+        c.style.background = 'var(--bg-card)';
+        c.style.color = 'var(--text-primary)';
+        c.style.borderColor = 'var(--border-color)';
+      });
+      chip.classList.add('active');
+      chip.style.background = '#8b5cf6';
+      chip.style.color = 'white';
+      chip.style.borderColor = '#8b5cf6';
+
+      tmActiveCategory = chip.dataset.category;
+      tmExpandedCardIndex = null;
+      renderTimeMatrix();
+    };
+  });
+
+  const searchInput = document.getElementById('tm-search-input');
+  if (searchInput) {
+    searchInput.oninput = (e) => {
+      tmSearchQuery = e.target.value.toLowerCase().trim();
+      renderTimeMatrix();
+    };
+  }
+
+  renderTimeMatrix();
+}
+
+function highlightTmText(text, category) {
+  if (!text) return '';
+  const keywords = [
+    "when", "while", "as soon as", "once", "the moment", "until", "before", "after", "by the time", "since",
+    "no sooner", "than", "hardly", "barely", "scarcely", "during", "throughout", "prior to", "subsequent to",
+    "upon", "on the eve of", "at the dawn of", "so far", "up to now", "hitherto", "in recent years",
+    "by 2030", "by the end of", "having completed", "having been tested",
+    "dığında", "diğinde", "erken", "mekte iken", "er etmez", "anında", "kadar", "önce", "sonra", "zamana kadar",
+    "beri", "henüz", "mişti ki", "esnasında", "boyunca", "arifesinde", "şafağında", "son yıllarda", "tamamladıktan sonra"
+  ];
+
+  let highlighted = text;
+  keywords.forEach(kw => {
+    const reg = new RegExp(`\\b(${kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
+    highlighted = highlighted.replace(reg, `<span class="tm-hl-marker">$1</span>`);
+  });
+
+  return highlighted;
+}
+
+function renderTimeMatrix() {
+  const gridEl = document.getElementById('tm-matrix-grid');
+  if (!gridEl) return;
+
+  const rawList = TIME_MATRIX_DATA[tmActiveMode] || [];
+  const filtered = rawList.filter(item => {
+    const matchCategory = tmActiveCategory === 'all' || item.category === tmActiveCategory;
+    const matchSearch = !tmSearchQuery ||
+      item.term.toLowerCase().includes(tmSearchQuery) ||
+      item.meaning.toLowerCase().includes(tmSearchQuery) ||
+      item.rule.toLowerCase().includes(tmSearchQuery) ||
+      (item.trap && item.trap.toLowerCase().includes(tmSearchQuery)) ||
+      item.examples.some(ex => ex.en.toLowerCase().includes(tmSearchQuery) || ex.tr.toLowerCase().includes(tmSearchQuery));
+    return matchCategory && matchSearch;
+  });
+
+  if (filtered.length === 0) {
+    gridEl.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">🔍</span>
+        <h4 style="margin: 0 0 6px 0; color: var(--text-primary);">Aramanıza Uygun Zaman Kalıbı Bulunamadı</h4>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">Farklı bir arama terimi deneyin veya filtreleri temizleyin.</p>
+      </div>
+    `;
+    return;
+  }
+
+  gridEl.innerHTML = filtered.map((item, idx) => {
+    const isExpanded = tmExpandedCardIndex === idx;
+    const catLabelMap = {
+      conjunctions: 'BAĞLAÇ',
+      anchors: 'TENSE ÇAPASI',
+      inverted: 'DEVRİK YAPILAR',
+      prepositions: 'EDAT ÖBEĞİ',
+      eras: 'ÇAĞ & DÖNEM',
+      reductions: 'ZAMAN KISALTMASI'
+    };
+    const catLabel = catLabelMap[item.category] || 'ZAMAN';
+
+    const hlMeaning = highlightTmText(item.meaning, item.category);
+
+    return `
+      <div class="tm-card ${isExpanded ? 'active-expanded' : ''}" onclick="toggleTmCard(${idx})">
+        <div class="tm-card-header">
+          <h3 class="tm-term-title">${item.term}</h3>
+          <span class="tm-category-badge ${item.category}">${catLabel}</span>
+        </div>
+
+        <p class="tm-meaning-text">👉 ${hlMeaning}</p>
+        <div class="tm-rule-box">${item.rule.replace(/\n/g, '<br>')}</div>
+        ${item.trap ? `<div class="tm-trap-box">${item.trap}</div>` : ''}
+
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #8b5cf6; font-weight: 700; margin-top: 4px;">
+          <span>${item.examples.length} Örnek Cümle</span>
+          <span>${isExpanded ? '▲ Kapat' : '▼ Örnekleri İncele'}</span>
+        </div>
+
+        ${isExpanded ? `
+          <div class="tm-examples-accordion">
+            ${item.examples.map(ex => `
+              <div class="tm-example-item">
+                <div class="tm-example-en">🇬🇧 ${highlightTmText(ex.en, item.category)}</div>
+                <div class="tm-example-tr">🇹🇷 ${highlightTmText(ex.tr, item.category)}</div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleTmCard(idx) {
+  if (tmExpandedCardIndex === idx) {
+    tmExpandedCardIndex = null;
+  } else {
+    tmExpandedCardIndex = idx;
+  }
+  renderTimeMatrix();
 }
 
