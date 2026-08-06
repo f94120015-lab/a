@@ -880,22 +880,31 @@
     let sentenceENText = "...";
     let sentenceTRText = "Lütfen tüm yuvalara uygun parçalar seçin.";
 
-    if (state.selectedConnector && RULE_RULES[state.selectedConnector]) {
+    if (state.selectedConnector) {
       const rule = RULE_RULES[state.selectedConnector];
-      ruleExplanationText = `💡 <strong>${connObj.label} Kuralı:</strong> ${rule.ruleText}`;
+      if (rule && rule.validPairs) {
+        ruleExplanationText = `💡 <strong>${connObj.label} Kuralı:</strong> ${rule.ruleText}`;
+        const validPairs = rule.validPairs;
+        allowedClauseA = validPairs.map(p => p.clauseA);
 
-      // Find valid pairs
-      const validPairs = rule.validPairs;
-      allowedClauseA = validPairs.map(p => p.clauseA);
-
-      if (state.selectedClauseA) {
-        const matchingPair = validPairs.find(p => p.clauseA === state.selectedClauseA);
-        if (matchingPair) {
-          allowedClauseB = matchingPair.clauseB;
-          if (state.selectedClauseB && allowedClauseB.includes(state.selectedClauseB)) {
-            isValidCombination = true;
-            sentenceTRText = matchingPair.trPattern;
+        if (state.selectedClauseA) {
+          const matchingPair = validPairs.find(p => p.clauseA === state.selectedClauseA);
+          if (matchingPair) {
+            allowedClauseB = matchingPair.clauseB;
+            if (state.selectedClauseB && allowedClauseB.includes(state.selectedClauseB)) {
+              isValidCombination = true;
+              sentenceTRText = matchingPair.trPattern;
+            }
           }
+        }
+      } else {
+        // Fallback for any unmapped connectors so they don't hardlock
+        ruleExplanationText = `💡 <strong>${connObj.label}:</strong> Kural uyumu aktif.`;
+        allowedClauseA = CLAUSE_A_TENSES.map(t => t.id);
+        allowedClauseB = CLAUSE_B_MODALS.map(m => m.id);
+        if (state.selectedClauseA && state.selectedClauseB) {
+          isValidCombination = true;
+          sentenceTRText = "Doğru dizilim yapıldı.";
         }
       }
     }
