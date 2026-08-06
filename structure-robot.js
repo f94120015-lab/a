@@ -19,12 +19,27 @@
     { id: "by_time_anchor", label: "BY + Tarih (Tense Çapası)", desc: "Zaman Çapası (By 2050 / By 1900)", category: "time", color: "#06b6d4" },
     { id: "so_far", label: "SO FAR / UP TO NOW", desc: "Zaman Çapası (Şu ana kadar / Son yıllarda)", category: "time", color: "#06b6d4" },
 
-    // 🔀 Cümle Bağlaçları & Geçiş İfadeleri
-    { id: "however_nevertheless", label: "HOWEVER / NEVERTHELESS", desc: "Zıtlık Bağlacı (Yine de / Bununla birlikte)", category: "transitions", color: "#06b6d4" },
+    // 🔀 Cümle Bağlaçları & Geçiş İfadeleri (Tüm Kategorik Kalıplar)
+    // A) Zıtlık & Karşılaştırma Geçiş İfadeleri
+    { id: "however_nevertheless", label: "HOWEVER / NEVERTHELESS / NONETHELESS", desc: "Zıtlık Bağlacı (Yine de / Bununla birlikte)", category: "transitions", color: "#06b6d4" },
+    { id: "in_contrast_on_the_other_hand", label: "IN CONTRAST / ON THE OTHER HAND", desc: "Karşılaştırma (Aksine / Diğer yandan)", category: "transitions", color: "#06b6d4" },
+    { id: "on_the_contrary", label: "ON THE CONTRARY", desc: "Aksine / Tam tersine (Cümle; on the contrary, Cümle)", category: "transitions", color: "#06b6d4" },
+    { id: "even_so", label: "EVEN SO", desc: "Öyle olsa bile / Yine de", category: "transitions", color: "#06b6d4" },
+
+    // B) Sonuç & İlliyet Geçiş İfadeleri
     { id: "therefore_thus", label: "THEREFORE / THUS / HENCE", desc: "Sonuç Geçiş İfadesi (Bu yüzden / Dolayısıyla)", category: "transitions", color: "#06b6d4" },
-    { id: "in_addition_moreover", label: "IN ADDITION / MOREOVER", desc: "Ekleme Geçiş İfadesi (Ayrıca / Üstelik)", category: "transitions", color: "#06b6d4" },
-    { id: "in_contrast_on_the_other_hand", label: "IN CONTRAST / ON THE OTHER HAND", desc: "Karşılaştırma Geçiş İfadesi (Aksine / Diğer yandan)", category: "transitions", color: "#06b6d4" },
-    { id: "for_example_for_instance", label: "FOR EXAMPLE / FOR INSTANCE", desc: "Örneklendirme İfadesi (Örneğin)", category: "transitions", color: "#06b6d4" },
+    { id: "as_a_result_transition", label: "AS A RESULT / CONSEQUENTLY", desc: "Sonuç Olarak / Bunun neticesinde", category: "transitions", color: "#06b6d4" },
+    { id: "accordingly_transition", label: "ACCORDINGLY", desc: "Buna bağlı olarak / Bu doğrultuda", category: "transitions", color: "#06b6d4" },
+
+    // C) Ekleme & Paralellik Geçiş İfadeleri
+    { id: "in_addition_moreover", label: "IN ADDITION / MOREOVER / FURTHERMORE", desc: "Ekleme İfadesi (Ayrıca / Üstelik / Dahası)", category: "transitions", color: "#06b6d4" },
+    { id: "besides_what_is_more", label: "BESIDES / WHAT IS MORE", desc: "Bunun yanı sıra / Üstelik", category: "transitions", color: "#06b6d4" },
+    { id: "likewise_similarly", label: "LIKEWISE / SIMILARLY", desc: "Benzer şekilde / Aynı biçimde", category: "transitions", color: "#06b6d4" },
+
+    // D) Örneklendirme & Açıklama İfadeleri
+    { id: "for_example_for_instance", label: "FOR EXAMPLE / FOR INSTANCE", desc: "Örneklendirme (Örneğin)", category: "transitions", color: "#06b6d4" },
+    { id: "in_other_words_that_is", label: "IN OTHER WORDS / THAT IS (TO SAY)", desc: "Diğer bir deyişle / Yani", category: "transitions", color: "#06b6d4" },
+    { id: "otherwise", label: "OTHERWISE / OR ELSE", desc: "Aksi takdirde / Yoksa", category: "transitions", color: "#06b6d4" },
 
     // 🎯 Neden-Etki Matrisi & Neden-Sonuç Fiilleri (Görsellerdeki Tüm Kalıplar)
     // A) Neden ➔ Fiil ➔ Etki Grubu (Yol Açmak / Meydana Getirmek)
