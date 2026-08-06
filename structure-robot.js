@@ -7,28 +7,44 @@
 
   // 1. Matris: Tüm Bağlaçlar, Çapalar, Kısaltmalar & Edat Öbekleri
   const CONNECTORS = [
-    { id: "when", label: "WHEN", desc: "Zaman Bağlacı (-dığında / olunca)", color: "#06b6d4" },
-    { id: "while_as", label: "WHILE / AS", desc: "Eşzamanlılık Bağlacı (-erken / -mekte iken)", color: "#06b6d4" },
-    { id: "before", label: "BEFORE", desc: "Zaman Bağlacı (-den önce)", color: "#06b6d4" },
-    { id: "after", label: "AFTER", desc: "Zaman Bağlacı (-den sonra)", color: "#06b6d4" },
-    { id: "as_soon_as", label: "AS SOON AS / ONCE", desc: "Tezlik Bağlacı (-er etmez / anında)", color: "#06b6d4" },
-    { id: "until_till", label: "UNTIL / TILL", desc: "Süreç Sınırlandırıcı (-e kadar)", color: "#06b6d4" },
-    { id: "by_the_time", label: "BY THE TIME", desc: "Zaman Çapası Bağlacı (-dığı zamana kadar)", color: "#06b6d4" },
-    { id: "since", label: "SINCE", desc: "Zaman Çapası (-den beri)", color: "#06b6d4" },
-    { id: "by_time_anchor", label: "BY + Tarih (Tense Çapası)", desc: "Zaman Çapası (By 2050 / By 1900)", color: "#06b6d4" },
-    { id: "so_far", label: "SO FAR / UP TO NOW / HITHERTO", desc: "Zaman Çapası (Şu ana kadar / Son yıllarda)", color: "#06b6d4" },
-    { id: "having_v3", label: "HAVING + V3 / HAVING BEEN + V3", desc: "Zaman Kısaltması (-dikten sonra)", color: "#06b6d4" },
-    { id: "prior_to", label: "PRIOR TO / SUBSEQUENT TO", desc: "Akademik Edat Öbeği (-den önce / -den sonra)", color: "#06b6d4" },
-    { id: "upon_on", label: "UPON / ON (+ V-ing)", desc: "Zaman Kısaltması (-er etmez / üzerine)", color: "#06b6d4" },
-    { id: "at_the_dawn", label: "AT THE DAWN OF / ON THE EVE OF", desc: "Çağ & Dönem Çapası (-in şafağında / arifesinde)", color: "#06b6d4" },
-    { id: "no_sooner_than", label: "NO SOONER ... THAN", desc: "Devrik Yapı (Tam ... olmuştu ki ... oldu)", color: "#06b6d4" },
-    { id: "hardly_when", label: "HARDLY / BARELY ... WHEN", desc: "Devrik Yapı (Henüz ... olmuştu ki ... oldu)", color: "#06b6d4" },
-    { id: "during_throughout", label: "DURING / THROUGHOUT", desc: "Edat Öbeği (Esnasında / Boyunca + İsim)", color: "#06b6d4" },
-    { id: "if_type0_1", label: "IF (Type 0 / 1)", desc: "Gerçek / Olası Koşul", color: "#06b6d4" },
-    { id: "if_type2", label: "IF (Type 2)", desc: "Şimdiki Zaman Hayali Koşul", color: "#06b6d4" },
-    { id: "if_type3", label: "IF (Type 3)", desc: "Geçmiş Zamanda Kaçırılmış Koşul / Pişmanlık", color: "#06b6d4" },
-    { id: "although", label: "ALTHOUGH / EVEN THOUGH", desc: "Zıtlık Bağlacı (-e rağmen)", color: "#06b6d4" },
-    { id: "because", label: "BECAUSE / AS / SINCE", desc: "Neden-Sonuç Bağlacı (Çünkü / -dığı için)", color: "#06b6d4" }
+    // ⏱️ Zaman & Tense Uyumları
+    { id: "when", label: "WHEN", desc: "Zaman Bağlacı (-dığında / olunca)", category: "time", color: "#06b6d4" },
+    { id: "while_as", label: "WHILE / AS", desc: "Eşzamanlılık Bağlacı (-erken / -mekte iken)", category: "time", color: "#06b6d4" },
+    { id: "before", label: "BEFORE", desc: "Zaman Bağlacı (-den önce)", category: "time", color: "#06b6d4" },
+    { id: "after", label: "AFTER", desc: "Zaman Bağlacı (-den sonra)", category: "time", color: "#06b6d4" },
+    { id: "as_soon_as", label: "AS SOON AS / ONCE", desc: "Tezlik Bağlacı (-er etmez / anında)", category: "time", color: "#06b6d4" },
+    { id: "until_till", label: "UNTIL / TILL", desc: "Süreç Sınırlandırıcı (-e kadar)", category: "time", color: "#06b6d4" },
+    { id: "by_the_time", label: "BY THE TIME", desc: "Zaman Çapası Bağlacı (-dığı zamana kadar)", category: "time", color: "#06b6d4" },
+    { id: "since", label: "SINCE", desc: "Zaman Çapası (-den beri)", category: "time", color: "#06b6d4" },
+    { id: "by_time_anchor", label: "BY + Tarih (Tense Çapası)", desc: "Zaman Çapası (By 2050 / By 1900)", category: "time", color: "#06b6d4" },
+    { id: "so_far", label: "SO FAR / UP TO NOW", desc: "Zaman Çapası (Şu ana kadar / Son yıllarda)", category: "time", color: "#06b6d4" },
+
+    // 🔀 Cümle Bağlaçları & Geçiş İfadeleri
+    { id: "however_nevertheless", label: "HOWEVER / NEVERTHELESS", desc: "Zıtlık Bağlacı (Yine de / Bununla birlikte)", category: "transitions", color: "#06b6d4" },
+    { id: "therefore_thus", label: "THEREFORE / THUS / HENCE", desc: "Sonuç Geçiş İfadesi (Bu yüzden / Dolayısıyla)", category: "transitions", color: "#06b6d4" },
+    { id: "in_addition_moreover", label: "IN ADDITION / MOREOVER", desc: "Ekleme Geçiş İfadesi (Ayrıca / Üstelik)", category: "transitions", color: "#06b6d4" },
+    { id: "in_contrast_on_the_other_hand", label: "IN CONTRAST / ON THE OTHER HAND", desc: "Karşılaştırma Geçiş İfadesi (Aksine / Diğer yandan)", category: "transitions", color: "#06b6d4" },
+    { id: "for_example_for_instance", label: "FOR EXAMPLE / FOR INSTANCE", desc: "Örneklendirme İfadesi (Örneğin)", category: "transitions", color: "#06b6d4" },
+
+    // 🎯 Neden-Etki Matrisi & Neden-Sonuç Fiilleri
+    { id: "lead_to_cause", label: "LEAD TO / CAUSE / BRING ABOUT", desc: "Neden Olmak Fiil Kalıbı (X ➔ Y'ye yol açar)", category: "cause_effect", color: "#06b6d4" },
+    { id: "stem_from_result_from", label: "STEM FROM / RESULT FROM", desc: "Kaynaklanmak Fiil Kalıbı (Y ➔ X'ten kaynaklanır)", category: "cause_effect", color: "#06b6d4" },
+    { id: "due_to_owing_to", label: "DUE TO / OWING TO / BECAUSE OF", desc: "Nedeniyle Edat Öbeği (+ İsim Öbeği)", category: "cause_effect", color: "#06b6d4" },
+    { id: "because_as_since_clause", label: "BECAUSE / AS / SINCE (Clause)", desc: "Neden-Sonuç Bağlacı (+ Cümle)", category: "cause_effect", color: "#06b6d4" },
+
+    // ⚡ Devrik Yapılar & Zaman Kısaltmaları
+    { id: "having_v3", label: "HAVING + V3 / HAVING BEEN + V3", desc: "Zaman Kısaltması (-dikten sonra)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "prior_to", label: "PRIOR TO / SUBSEQUENT TO", desc: "Akademik Edat Öbeği (-den önce / -den sonra)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "upon_on", label: "UPON / ON (+ V-ing)", desc: "Zaman Kısaltması (-er etmez / üzerine)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "at_the_dawn", label: "AT THE DAWN OF / ON THE EVE OF", desc: "Çağ & Dönem Çapası (-in şafağında / arifesinde)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "no_sooner_than", label: "NO SOONER ... THAN", desc: "Devrik Yapı (Tam ... olmuştu ki ... oldu)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "hardly_when", label: "HARDLY / BARELY ... WHEN", desc: "Devrik Yapı (Henüz ... olmuştu ki ... oldu)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "during_throughout", label: "DURING / THROUGHOUT", desc: "Edat Öbeği (Esnasında / Boyunca + İsim)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "if_type0_1", label: "IF (Type 0 / 1)", desc: "Gerçek / Olası Koşul", category: "time", color: "#06b6d4" },
+    { id: "if_type2", label: "IF (Type 2)", desc: "Şimdiki Zaman Hayali Koşul", category: "time", color: "#06b6d4" },
+    { id: "if_type3", label: "IF (Type 3)", desc: "Geçmiş Zamanda Kaçırılmış Koşul / Pişmanlık", category: "time", color: "#06b6d4" },
+    { id: "although", label: "ALTHOUGH / EVEN THOUGH", desc: "Zıtlık Bağlacı (-e rağmen)", category: "transitions", color: "#06b6d4" },
+    { id: "because", label: "BECAUSE / AS / SINCE", desc: "Neden-Sonuç Bağlacı (Çünkü / -dığı için)", category: "cause_effect", color: "#06b6d4" }
   ];
 
   // 2. Matris: Yan Cümle Zamanları (Clause A)
@@ -260,6 +276,7 @@
 
   let state = {
     mode: "sandbox", // 'sandbox' veya 'challenge'
+    selectedCategory: "all",
     selectedConnector: null,
     selectedClauseA: null,
     selectedClauseB: null,
@@ -282,8 +299,14 @@
 
     if (!connectorsContainer || !clauseAContainer || !clauseBContainer) return;
 
+    // Filter Connectors by selected category
+    const filteredConnectors = CONNECTORS.filter(c => {
+      if (state.selectedCategory === "all") return true;
+      return c.category === state.selectedCategory;
+    });
+
     // Connectors Palette
-    connectorsContainer.innerHTML = CONNECTORS.map(c => `
+    connectorsContainer.innerHTML = filteredConnectors.map(c => `
       <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" style="padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;">
         <span>🔷</span> ${c.label}
       </button>
@@ -305,6 +328,25 @@
   }
 
   function bindEvents() {
+    // Category Filter Buttons
+    document.querySelectorAll(".srobot-cat-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".srobot-cat-btn").forEach(b => {
+          b.classList.remove("active");
+          b.style.background = "var(--bg-body)";
+          b.style.color = "var(--text-secondary)";
+          b.style.borderColor = "var(--border-color)";
+        });
+        btn.classList.add("active");
+        btn.style.background = "var(--accent-primary)";
+        btn.style.color = "#fff";
+        btn.style.borderColor = "var(--accent-primary)";
+
+        state.selectedCategory = btn.dataset.cat || "all";
+        renderPalette();
+        updateUI();
+      });
+    });
     // Mode Buttons
     const btnSandbox = document.getElementById("srobot-mode-sandbox");
     const btnChallenge = document.getElementById("srobot-mode-challenge");
@@ -436,14 +478,36 @@
   // ─── 6. REAKTİF KİLİT MOTORU VE ARAYÜZ GÜNCELLEMESİ ───────────────────────
 
   function updateUI() {
-    // 1. Update Slot Labels
-    const slotTarget1 = document.getElementById("srobot-slot-target-1");
-    const slotTarget2 = document.getElementById("srobot-slot-target-2");
-    const slotTarget3 = document.getElementById("srobot-slot-target-3");
+    // 0. Dynamic Slot Titles Adaptation based on selected Connector Category
+    const slotTitle1 = document.getElementById("srobot-slot-title-1");
+    const slotTitle2 = document.getElementById("srobot-slot-title-2");
+    const slotTitle3 = document.getElementById("srobot-slot-title-3");
 
     const connObj = CONNECTORS.find(c => c.id === state.selectedConnector);
     const clauseAObj = CLAUSE_A_TENSES.find(t => t.id === state.selectedClauseA);
     const clauseBObj = CLAUSE_B_MODALS.find(m => m.id === state.selectedClauseB);
+
+    if (connObj && connObj.category === "cause_effect") {
+      // 🎯 Neden-Etki Fiil Şablonu: Neden Öbeği ➔ Neden-Etki Fiili ➔ Sonuç Öbeği
+      if (slotTitle1) slotTitle1.textContent = "1. YUVA: NEDEN (CAUSE) ÖBEĞİ";
+      if (slotTitle2) slotTitle2.textContent = "2. MATRİS: NEDEN-ETKİ FİİLİ / EDATI";
+      if (slotTitle3) slotTitle3.textContent = "3. YUVA: SONUÇ (EFFECT) ÖBEĞİ";
+    } else if (connObj && connObj.category === "transitions") {
+      // 🔀 Geçiş İfadesi Şablonu: Cümle A ➔ Geçiş İfadesi ➔ Cümle B
+      if (slotTitle1) slotTitle1.textContent = "1. YUVA: BİRİNCİ YARGI (CÜMLE A)";
+      if (slotTitle2) slotTitle2.textContent = "2. MATRİS: GEÇİŞ İFADESİ";
+      if (slotTitle3) slotTitle3.textContent = "3. YUVA: İKİNCİ YARGI (CÜMLE B)";
+    } else {
+      // ⏱️ Standart Bağlaç Şablonu: Bağlaç ➔ Yan Cümle ➔ Ana Cümle
+      if (slotTitle1) slotTitle1.textContent = "1. MATRİS: BAĞLAÇ / KOŞUL";
+      if (slotTitle2) slotTitle2.textContent = "2. MATRİS: YAN CÜMLE ZAMANI (CLAUSE A)";
+      if (slotTitle3) slotTitle3.textContent = "3. MATRİS: ANA CÜMLE / MODAL (CLAUSE B)";
+    }
+
+    // 1. Update Slot Content Targets
+    const slotTarget1 = document.getElementById("srobot-slot-target-1");
+    const slotTarget2 = document.getElementById("srobot-slot-target-2");
+    const slotTarget3 = document.getElementById("srobot-slot-target-3");
 
     if (slotTarget1) {
       slotTarget1.innerHTML = connObj

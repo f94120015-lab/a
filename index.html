@@ -1514,7 +1514,7 @@
               
               <!-- Slot 1: Connector Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-1" style="background: var(--bg-body); border: 2px dashed rgba(6, 182, 212, 0.4); border-radius: var(--radius-md); padding: 16px; text-align: center; transition: all 0.2s;">
-                <div style="font-size: 0.75rem; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                <div id="srobot-slot-title-1" style="font-size: 0.75rem; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
                   1. MATRİS: BAĞLAÇ / KOŞUL
                 </div>
                 <div id="srobot-slot-target-1" class="srobot-slot-target" style="min-height: 48px; border-radius: var(--radius-md); background: rgba(6, 182, 212, 0.05); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--text-primary); border: 1px solid rgba(6, 182, 212, 0.2);">
@@ -1524,7 +1524,7 @@
 
               <!-- Slot 2: Clause A Tense Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-2" style="background: var(--bg-body); border: 2px dashed rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 16px; text-align: center; transition: all 0.2s;">
-                <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                <div id="srobot-slot-title-2" style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
                   2. MATRİS: YAN CÜMLE ZAMANI (CLAUSE A)
                 </div>
                 <div id="srobot-slot-target-2" class="srobot-slot-target" style="min-height: 48px; border-radius: var(--radius-md); background: rgba(139, 92, 246, 0.05); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--text-primary); border: 1px solid rgba(139, 92, 246, 0.2);">
@@ -1534,7 +1534,7 @@
 
               <!-- Slot 3: Clause B Modal/Tense Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-3" style="background: var(--bg-body); border: 2px dashed rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 16px; text-align: center; transition: all 0.2s;">
-                <div style="font-size: 0.75rem; font-weight: 700; color: #ec4899; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                <div id="srobot-slot-title-3" style="font-size: 0.75rem; font-weight: 700; color: #ec4899; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
                   3. MATRİS: ANA CÜMLE / MODAL (CLAUSE B)
                 </div>
                 <div id="srobot-slot-target-3" class="srobot-slot-target" style="min-height: 48px; border-radius: var(--radius-md); background: rgba(236, 72, 153, 0.05); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--text-primary); border: 1px solid rgba(236, 72, 153, 0.2);">
@@ -1570,10 +1570,20 @@
           <!-- Component Palette (Piece Selection Area) -->
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
             
-            <!-- Section 1: Connectors -->
+            <!-- Section 1: Connectors with Category Filter Tabs -->
             <div>
-              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
-                <span style="color: #06b6d4;">🔵</span> 1. Matris Parçaları (Bağlaçlar)
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                  <span style="color: #06b6d4;">🔵</span> 1. Matris Parçaları (Bağlaç & Yapı Türü)
+                </div>
+                <!-- Category Filter Pills -->
+                <div id="srobot-category-filters" style="display: flex; gap: 6px; flex-wrap: wrap;">
+                  <button class="srobot-cat-btn active" data-cat="all" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: #fff; cursor: pointer;">Tümü</button>
+                  <button class="srobot-cat-btn" data-cat="time" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⏱️ Zaman & Tense</button>
+                  <button class="srobot-cat-btn" data-cat="transitions" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">🔀 Cümle Bağlaçları & Geçiş</button>
+                  <button class="srobot-cat-btn" data-cat="cause_effect" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">🎯 Neden-Etki & Fiiller</button>
+                  <button class="srobot-cat-btn" data-cat="devrik_kısaltma" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⚡ Devrik & Kısaltmalar</button>
+                </div>
               </div>
               <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: flex; flex-wrap: wrap; gap: 8px;">
                 <!-- JS tarafından doldurulacak -->
