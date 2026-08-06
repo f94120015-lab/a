@@ -912,7 +912,7 @@
     // Lock/Unlock Buttons
     document.querySelectorAll(".srobot-piece-btn[data-type='clauseA']").forEach(btn => {
       const id = btn.dataset.id;
-      if (allowedClauseA && !allowedClauseA.includes(id)) {
+      if (allowedClauseA !== null && !allowedClauseA.includes(id)) {
         btn.disabled = true;
         btn.style.opacity = "0.35";
         btn.style.cursor = "not-allowed";
@@ -927,7 +927,7 @@
 
     document.querySelectorAll(".srobot-piece-btn[data-type='clauseB']").forEach(btn => {
       const id = btn.dataset.id;
-      if (allowedClauseB && !allowedClauseB.includes(id)) {
+      if (allowedClauseB !== null && !allowedClauseB.includes(id)) {
         btn.disabled = true;
         btn.style.opacity = "0.35";
         btn.style.cursor = "not-allowed";
