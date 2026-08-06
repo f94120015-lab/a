@@ -235,6 +235,270 @@
       ],
       ruleText: "DURING / THROUGHOUT (Edat Öbeği): Cümle almaz! Kendisinden sonra sadece İsim / İsim Öbeği (Noun Phrase) gelir!"
     },
+
+    // 🎯 Neden-Etki Fiil ve Edat Kuralları
+    is_responsible_for: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Şiddetli yağışlar sel felaketinden sorumludur / yol açmıştır." }
+      ],
+      ruleText: "IS / ARE RESPONSIBLE FOR (Fiil Kalıbı): NEDEN (İsim Öbeği) + is/are responsible for + ETKİ (İsim Öbeği)."
+    },
+    produce_produces: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Fabrikalar kirli atıklar meydana getirir." }
+      ],
+      ruleText: "PRODUCE / PRODUCES: NEDEN + produce(s) + ETKİ (Meydana getirmek)."
+    },
+    induce_provoke_prompt: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Yeni teşvikler yatırımları özendirdi / tetikledi." }
+      ],
+      ruleText: "INDUCE / PROVOKE / PROMPT: NEDEN + induce / prompt + ETKİ (Teşvik etmek / Yol açmak)."
+    },
+    result_in: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Dikkatsizlik büyük kazalarla sonuçlanır." }
+      ],
+      ruleText: "RESULT IN: NEDEN + result in + ETKİ (İle sonuçlanmak)."
+    },
+    trigger_triggers: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Stres sağlık sorunlarını tetikler." }
+      ],
+      ruleText: "TRIGGER / TRIGGERS: NEDEN + trigger(s) + ETKİ (Tetiklemek)."
+    },
+    give_rise_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Yeni teknoloji yeni iş alanları ortaya çıkarır." }
+      ],
+      ruleText: "GIVE RISE TO: NEDEN + give(s) rise to + ETKİ (Ortaya çıkarmak)."
+    },
+    contribute_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Düzenli egzersiz sağlığa katkı sağlar." }
+      ],
+      ruleText: "CONTRIBUTE TO: NEDEN + contribute(s) to + ETKİ (Katkıda bulunmak / Yol açmak)."
+    },
+    pave_the_way_for: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Bu keşif yeni tedavilere zemin hazırladı." }
+      ],
+      ruleText: "PAVE THE WAY FOR: NEDEN + pave(s) the way for + ETKİ (Zemin hazırlamak)."
+    },
+    culminate_in: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Yıllar süren çalışmalar büyük bir zaferle noktalandı." }
+      ],
+      ruleText: "CULMINATE IN: NEDEN + culminate(s) in + ETKİ (İle sonuçlanmak / Zirveye ulaşmak)."
+    },
+
+    // Etki ➔ Fiil ➔ Neden Grubu
+    is_due_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Gecikme olumsuz hava şartlarından kaynaklanmaktadır." }
+      ],
+      ruleText: "IS / ARE DUE TO: ETKİ (İsim Öbeği) + is/are due to + NEDEN (İsim Öbeği)."
+    },
+    result_from: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Başarı disiplinli çalışmaktan doğar." }
+      ],
+      ruleText: "RESULT FROM: ETKİ + result(s) from + NEDEN (Kaynaklanmak)."
+    },
+    stem_from: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Sorunlar iletişim eksikliğinden köken alır." }
+      ],
+      ruleText: "STEM FROM: ETKİ + stem(s) from + NEDEN (Köken almak)."
+    },
+    originate_from: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Gelenek antik çağlardan doğmuştur." }
+      ],
+      ruleText: "ORIGINATE FROM / IN: ETKİ + originate(s) in/from + NEDEN."
+    },
+    arise_from: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Anlaşmazlıklar yanlış anlamalardan meydana gelir." }
+      ],
+      ruleText: "ARISE FROM / OUT OF: ETKİ + arise(s) from/out of + NEDEN."
+    },
+    is_attributed_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Artış yeni politikalara atfedilmektedir." }
+      ],
+      ruleText: "IS ATTRIBUTED TO: ETKİ + is/are attributed to + NEDEN."
+    },
+    is_ascribed_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Başarı ekibin özverisine bağlanmaktadır." }
+      ],
+      ruleText: "IS ASCRIBED TO / ROOTED IN: ETKİ + is ascribed to / rooted in + NEDEN."
+    },
+    is_caused_by: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Yangın elektrik kaçağından kaynaklandı." }
+      ],
+      ruleText: "IS CAUSED BY: ETKİ + is/are caused by + NEDEN (Neden olunmak)."
+    },
+
+    // Edat Öbekleri & Bağlaçlar
+    because_of_due_to_owing_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main", "will_v1"], trPattern: "Fırtına nedeniyle uçuşlar iptal edildi." }
+      ],
+      ruleText: "BECAUSE OF / DUE TO / OWING TO: ETKİ Cümlesi + edat + NEDEN İsim Öbeği."
+    },
+    on_account_of_in_view_of: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main", "will_v1"], trPattern: "Yoğun talep göz önüne alındığında ek sefer konuldu." }
+      ],
+      ruleText: "ON ACCOUNT OF / IN VIEW OF: Göz önüne alındığında / -den dolayı."
+    },
+    by_virtue_of: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main", "will_v1"], trPattern: "Tecrübesi sayesinde projeyi başardı." }
+      ],
+      ruleText: "BY VIRTUE OF / ON THE GROUNDS OF: Sayesinde / Gerekçesiyle."
+    },
+    as_a_result_of: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main", "will_v1"], trPattern: "İhmalin sonucu olarak kaza meydana geldi." }
+      ],
+      ruleText: "AS A RESULT OF: -in sonucu olarak (+ İsim Öbeği)."
+    },
+    therefore_thus_hence: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Çok çalıştı; bu yüzden başarılı olacak." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Çok çalıştı; bu yüzden sınavı kazandı." }
+      ],
+      ruleText: "THEREFORE / THUS / HENCE: NEDEN Cümlesi; bu yüzden, ETKİ Cümlesi."
+    },
+    consequently: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Bunun neticesinde hedef tamamlandı." }
+      ],
+      ruleText: "CONSEQUENTLY / AS A CONSEQUENCE: Bunun neticesinde."
+    },
+    as_a_result_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Sonuç olarak proje başarıyla bitti." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sonuç olarak proje başarıyla bitti." }
+      ],
+      ruleText: "AS A RESULT / WITH THE RESULT THAT: Sonuç olarak."
+    },
+    accordingly: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Buna bağlı olarak gerekli önlemler alınacak." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Buna bağlı olarak gerekli önlemler alındı." }
+      ],
+      ruleText: "ACCORDINGLY: Buna bağlı olarak / Bu doğrultuda."
+    },
+    in_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Bu yöntem faydalıdır çünkü zamandan tasarruf sağlar." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Bu yöntem faydalıydı çünkü zamandan tasarruf sağladı." }
+      ],
+      ruleText: "IN THAT: -mesi bakımından / çünkü (+ Cümle)."
+    },
+    inasmuch_as_seeing_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Madenler sınırlı olduğuna göre tasarruf etmeliyiz." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Madenler sınırlı olduğu için tasarruf edildi." }
+      ],
+      ruleText: "INASMUCH AS / SEEING THAT / GIVEN THAT: -dığına göre / göz önüne alındığında."
+    },
+    owing_to_the_fact_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Hava muhalefeti gerçeğinden dolayı erteledik." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Hava muhalefeti gerçeğinden dolayı ertelendi." }
+      ],
+      ruleText: "OWING TO THE FACT THAT: -dığı gerçeğinden dolayı (+ Cümle)."
+    },
+    thereby_v_ing: {
+      validPairs: [
+        { clauseA: "v_ing_obj", clauseB: ["v2_main", "v1_main"], trPattern: "Yatırımları artırdı, böylelikle yeni istihdam sağladı." }
+      ],
+      ruleText: "THEREBY + V-ING: Böylelikle -erek (Zaman Kısaltmalı Sonuç)."
+    },
+    so_that_such_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "can_may_v1"], trPattern: "Öyle hızlı koştu ki rekor kırdı." },
+        { clauseA: "v2_past", clauseB: ["v2_main", "would_v1"], trPattern: "Öyle hızlı koştu ki rekor kırdı." }
+      ],
+      ruleText: "SO...THAT / SUCH...THAT: Öyle ... ki (Derece Sonuç Kalıbı)."
+    },
+    so_much_so_that: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Öyle bir dereceye kadar çalıştı ki dereceye girdi." }
+      ],
+      ruleText: "SO MUCH SO THAT: Öyle bir dereceye kadar ki."
+    },
+
+    // Geçiş İfadeleri Kuralları
+    however_nevertheless: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Çok çalıştı; yine de sınavda zorlandı." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Çok çalıştı; yine de sınavı geçemedi." }
+      ],
+      ruleText: "HOWEVER / NEVERTHELESS / NONETHELESS: Zıtlık Geçiş İfadesi."
+    },
+    in_contrast_on_the_other_hand: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Ali çalışkandır; diğer yandan kardeş tembeldir." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ali başarılıydı; aksine kardeşi zorlanıyordu." }
+      ],
+      ruleText: "IN CONTRAST / ON THE OTHER HAND: Karşılaştırma Geçiş İfadesi."
+    },
+    on_the_contrary: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Başarısız değil; tam tersine çok yetenekli." }
+      ],
+      ruleText: "ON THE CONTRARY: Tam tersine / Aksine."
+    },
+    even_so: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Hava soğuktu; öyle olsa bile dışarı çıktık." }
+      ],
+      ruleText: "EVEN SO: Öyle olsa bile / Yine de."
+    },
+    in_addition_moreover: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Zekidir; üstelik çok disiplinlidir." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Raporu bitirdi; ayrıca sunumu da hazırladı." }
+      ],
+      ruleText: "IN ADDITION / MOREOVER / FURTHERMORE: Ekleme İfadesi."
+    },
+    besides_what_is_more: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Ders anlatıyor; üstelik rehberlik de yapıyor." }
+      ],
+      ruleText: "BESIDES / WHAT IS MORE: Bunun yanı sıra / Üstelik."
+    },
+    likewise_similarly: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Fransa tedbir aldı; benzer şekilde Almanya da adımı attı." }
+      ],
+      ruleText: "LIKEWISE / SIMILARLY: Benzer şekilde."
+    },
+    for_example_for_instance: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Birçok ülke katıldı; örneğin Türkiye delegasyon gönderdi." }
+      ],
+      ruleText: "FOR EXAMPLE / FOR INSTANCE: Örneklendırma İfadesi."
+    },
+    in_other_words_that_is: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Sınavı geçti; diğer bir deyişle mezun oldu." }
+      ],
+      ruleText: "IN OTHER WORDS / THAT IS: Diğer bir deyişle."
+    },
+    otherwise: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "can_may_v1"], trPattern: "Acele etmeliyiz; aksi takdirde treni kaçıracağız." }
+      ],
+      ruleText: "OTHERWISE / OR ELSE: Aksi takdirde / Yoksa."
+    },
     if_type0_1: {
       validPairs: [
         { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Eğer çok çalışırsa sınavı geçecek." }
