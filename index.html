@@ -1585,10 +1585,13 @@
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
             
             <!-- Section 1: Connectors with Category Filter Tabs -->
-            <div>
+            <div id="srobot-section-connectors">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
+                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
                   <span style="color: #06b6d4;">🔵</span> 1. Matris Parçaları (Bağlaç & Yapı Türü)
+                  <button id="srobot-toggle-connectors-btn" style="display: none; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(6, 182, 212, 0.4); background: rgba(6, 182, 212, 0.12); color: #06b6d4; cursor: pointer; transition: all 0.2s;">
+                    ✏️ Değiştir / Listeyi Aç (114)
+                  </button>
                 </div>
                 <!-- Category Filter Pills -->
                 <div id="srobot-category-filters" style="display: flex; gap: 6px; flex-wrap: wrap;">
@@ -1599,7 +1602,7 @@
                   <button class="srobot-cat-btn" data-cat="devrik_kısaltma" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⚡ Devrik & Kısaltmalar</button>
                 </div>
               </div>
-              <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: flex; flex-wrap: wrap; gap: 8px; transition: all 0.3s ease;">
                 <!-- JS tarafından doldurulacak -->
               </div>
             </div>
@@ -2153,7 +2156,7 @@
   <script src="data-extra.js?v=1.4.9" defer></script>
   <script src="rules-db.js?v=1.4.9" defer></script>
   <script src="app.js?v=1.4.9" defer></script>
-  <script src="structure-robot.js?v=5.0.0" defer></script>
+  <script src="structure-robot.js?v=6.0.0" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">

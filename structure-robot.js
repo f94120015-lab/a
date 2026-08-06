@@ -1333,6 +1333,7 @@
     selectedConnector: null,
     selectedClauseA: null,
     selectedClauseB: null,
+    isConnectorsCollapsed: false,
     currentChallengeIndex: 0,
     completedChallenges: []
   };
@@ -1349,6 +1350,7 @@
     const connectorsContainer = document.getElementById("srobot-pieces-connectors");
     const clauseAContainer = document.getElementById("srobot-pieces-clause-a");
     const clauseBContainer = document.getElementById("srobot-pieces-clause-b");
+    const toggleBtn = document.getElementById("srobot-toggle-connectors-btn");
 
     if (!connectorsContainer || !clauseAContainer || !clauseBContainer) return;
 
@@ -1358,12 +1360,39 @@
       return c.category === state.selectedCategory;
     });
 
-    // Connectors Palette
-    connectorsContainer.innerHTML = filteredConnectors.map(c => `
-      <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" style="padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;">
-        <span>🔷</span> ${c.label}
-      </button>
-    `).join("");
+    // Connectors Palette (Collapsed vs Expanded Mode)
+    if (state.isConnectorsCollapsed && state.selectedConnector) {
+      const selectedObj = CONNECTORS.find(c => c.id === state.selectedConnector);
+      connectorsContainer.innerHTML = selectedObj ? `
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; background: rgba(6, 182, 212, 0.12); border: 1.5px solid #06b6d4; padding: 8px 16px; border-radius: var(--radius-md); box-shadow: 0 0 12px rgba(6, 182, 212, 0.25);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-weight: 800; color: #06b6d4; font-size: 0.92rem; font-family: var(--font-heading);">🔷 Seçili Bağlaç: ${selectedObj.label}</span>
+            <span style="font-size: 0.75rem; color: var(--text-secondary);">(${CONNECTORS.length} parçadan 1'i aktif)</span>
+          </div>
+          <button class="srobot-piece-btn" data-type="connector" data-id="${selectedObj.id}" style="padding: 4px 10px; font-size: 0.75rem; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.1); color: #ef4444; cursor: pointer; font-weight: 700;">
+            ✖ Seçimi Kaldır
+          </button>
+        </div>
+      ` : "";
+      if (toggleBtn) {
+        toggleBtn.style.display = "inline-flex";
+        toggleBtn.textContent = `✏️ Değiştir / Listeyi Aç (${CONNECTORS.length})`;
+      }
+    } else {
+      connectorsContainer.innerHTML = filteredConnectors.map(c => `
+        <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" style="padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;">
+          <span>🔷</span> ${c.label}
+        </button>
+      `).join("");
+      if (toggleBtn) {
+        if (state.selectedConnector) {
+          toggleBtn.style.display = "inline-flex";
+          toggleBtn.textContent = "▲ Daralt (Mini Mod)";
+        } else {
+          toggleBtn.style.display = "none";
+        }
+      }
+    }
 
     // Clause A Palette
     clauseAContainer.innerHTML = CLAUSE_A_TENSES.map(t => `
@@ -1381,6 +1410,16 @@
   }
 
   function bindEvents() {
+    // Toggle Collapse Button
+    const toggleBtn = document.getElementById("srobot-toggle-connectors-btn");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", () => {
+        state.isConnectorsCollapsed = !state.isConnectorsCollapsed;
+        renderPalette();
+        updateUI();
+      });
+    }
+
     // Category Filter Buttons
     document.querySelectorAll(".srobot-cat-btn").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -1396,10 +1435,12 @@
         btn.style.borderColor = "var(--accent-primary)";
 
         state.selectedCategory = btn.dataset.cat || "all";
+        state.isConnectorsCollapsed = false; // Always expand on category click
         renderPalette();
         updateUI();
       });
     });
+
     // Mode Buttons
     const btnSandbox = document.getElementById("srobot-mode-sandbox");
     const btnChallenge = document.getElementById("srobot-mode-challenge");
@@ -1462,7 +1503,14 @@
     const id = pieceBtn.dataset.id;
 
     if (type === "connector") {
-      state.selectedConnector = state.selectedConnector === id ? null : id;
+      if (state.selectedConnector === id) {
+        state.selectedConnector = null;
+        state.isConnectorsCollapsed = false;
+      } else {
+        state.selectedConnector = id;
+        state.isConnectorsCollapsed = true; // Auto collapse on selection!
+      }
+      renderPalette();
     } else if (type === "clauseA") {
       state.selectedClauseA = state.selectedClauseA === id ? null : id;
     } else if (type === "clauseB") {
@@ -1476,6 +1524,8 @@
     state.selectedConnector = null;
     state.selectedClauseA = null;
     state.selectedClauseB = null;
+    state.isConnectorsCollapsed = false;
+    renderPalette();
     updateUI();
   }
 
