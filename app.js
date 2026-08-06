@@ -26779,6 +26779,47 @@ const TRANSITIONS_MATRIX_DATA = {
 
     // Odaklanma & İstisna
     {
+      term: "in case / in the event of",
+      category: "purpose_condition",
+      meaning: "tedbir amacıyla, ... durumunda",
+      rule: "📐 FORMÜL: in case + Özne + Fiil (Tedbir Cümlesi) || in the event of + İsim",
+      trap: "⚠️ 'In case' gelecekteki olumsuz durum için önlem alırken kullanılır (If ile aynı değildir!).",
+      examples: [
+        { en: "Take an umbrella in case it rains.", tr: "Yağmur yağar tedbiriyle bir şemsiye al." },
+        { en: "In the event of an emergency, press the red button.", tr: "Acil bir durum halinde kırmızı düğmeye basın." }
+      ]
+    },
+    {
+      term: "as if / as though",
+      category: "focus_exception",
+      meaning: "-miş gibi (Gerçek Dışı / Sanal Durum)",
+      rule: "📐 FORMÜL: Özne + Fiil + as if / as though + Özne + Past Tense (V2 / Were)",
+      trap: "⚠️ Gerçek dışı varsayımlarda past tense ('were' veya 'had V3') kullanılır.",
+      examples: [
+        { en: "He speaks as if he knew the solution to every problem.", tr: "Her problemin çözümünü biliyormuş gibi konuşuyor." }
+      ]
+    },
+    {
+      term: "just as ... so (too)",
+      category: "addition",
+      meaning: "tıpkı ... olduğu gibi ... da (Birebir Benzetişim)",
+      rule: "📐 FORMÜL: Just as + Cümle 1, so (too) + Cümle 2",
+      trap: "⚠️ Akademik makalelerde iki bağımsız bilimsel olguyu benzetirken sorulur.",
+      examples: [
+        { en: "Just as physics explains energy, so biology explains life.", tr: "Tıpkı fiziğin enerjiyi açıklaması gibi biyoloji de yaşamı açıklar." }
+      ]
+    },
+    {
+      term: "the more ... the more",
+      category: "focus_exception",
+      meaning: "ne kadar ... o kadar ... (Çift Derecelendirme)",
+      rule: "📐 FORMÜL: The + Komparatif + Cümle 1, the + Komparatif + Cümle 2",
+      trap: "⚠️ Her iki tarafın başında da 'the' tanım edatı kullanılmak zorundadır!",
+      examples: [
+        { en: "The more you study, the more confident you become.", tr: "Ne kadar çok çalışırsanız, o kadar kendinizden emin olursunuz." }
+      ]
+    },
+    {
       term: "apart from / aside from",
       category: "focus_exception",
       meaning: "-den başka, hariç",
