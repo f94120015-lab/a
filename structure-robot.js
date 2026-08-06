@@ -165,7 +165,16 @@
     { id: "only_when_after_inv", label: "ONLY WHEN / ONLY AFTER (Devrik)", desc: "Ancak ... olduktan sonra + Devrik Cümle", category: "devrik_kısaltma", color: "#06b6d4" },
 
     // ═══ 7. PARTICIPLE CLAUSES (Pasif) ═══
-    { id: "v3_passive_participle", label: "V3 / BEING V3 (Passive Reduction)", desc: "Pasif Kısaltma (Görüldüğünde / -dığında)", category: "devrik_kısaltma", color: "#06b6d4" }
+    { id: "v3_passive_participle", label: "V3 / BEING V3 (Passive Reduction)", desc: "Pasif Kısaltma (Görüldüğünde / -dığında)", category: "devrik_kısaltma", color: "#06b6d4" },
+
+    // ⏱️ ZAMAN ZARFLARI & TENSE ZORUNLULUKLARI (TIME ADVERBS)
+    { id: "over_past_years", label: "OVER / IN / DURING THE PAST ...", desc: "Zaman Çapası (Son X yıldır/aydır ➔ Pres. Perf.)", category: "time", color: "#06b6d4" },
+    { id: "lately_recently", label: "LATELY / RECENTLY", desc: "Yakın Geçmiş Zarfı (Son zamanlarda ➔ Pres. Perf.)", category: "time", color: "#06b6d4" },
+    { id: "yesterday_ago_last", label: "YESTERDAY / ... AGO / LAST ...", desc: "Kesin Geçmiş Zaman Zarfı (➔ Simple Past V2)", category: "time", color: "#06b6d4" },
+    { id: "how_long_ago", label: "HOW LONG AGO ... ?", desc: "Geçmiş Zaman Soru Zarfı (➔ Simple Past V2)", category: "time", color: "#06b6d4" },
+    { id: "by_future_for", label: "BY (Future) + FOR (Duration)", desc: "Gelecekte Süreç Zarfı (➔ Future Perfect)", category: "time", color: "#06b6d4" },
+    { id: "always_continuous", label: "ALWAYS / FOREVER (Şikayet)", desc: "Şikayet Bildiren Zaman Zarfı (➔ Continuous)", category: "time", color: "#06b6d4" },
+    { id: "modal_past_adverb", label: "YESTERDAY / AGO + MODAL", desc: "Geçmiş Tahmin Zarfı (➔ Modal + Have V3)", category: "time", color: "#06b6d4" }
   ];
 
   // 2. Matris: Yan Cümle Zamanları (Clause A)
@@ -193,7 +202,8 @@
     { id: "would_have_v3", label: "WOULD / COULD + HAVE V3", sample: "she would have passed the exam", sampleTR: "sınavı geçmiş olacaktı", modalGroup: "would_have_v3", color: "#ec4899" },
     { id: "has_v3_main", label: "HAS/HAVE + V3 (Present Perfect)", sample: "she has achieved great success", sampleTR: "büyük başarı elde etti", modalGroup: "present_perfect", color: "#ec4899" },
     { id: "had_v3_main", label: "HAD + V3 / Past Perfect", sample: "the train had already left", sampleTR: "tren çoktan kalkmıştı", modalGroup: "past_perfect", color: "#ec4899" },
-    { id: "can_may_v1", label: "CAN / MAY / MUST + V1", sample: "she can reach her goals", sampleTR: "hedeflerine ulaşabilir", modalGroup: "modal_present", color: "#ec4899" }
+    { id: "can_may_v1", label: "CAN / MAY / MUST + V1", sample: "she can reach her goals", sampleTR: "hedeflerine ulaşabilir", modalGroup: "modal_present", color: "#ec4899" },
+    { id: "is_ving_main", label: "Am/Is/Are + V-ing (Continuous)", sample: "she is losing her keys", sampleTR: "anahtarlarını kaybediyor", modalGroup: "present_cont", color: "#ec4899" }
   ];
 
   // ─── 2. KURAL MATRİS MOTORU (UYUMLULUK TABLOSU) ─────────────────────────
@@ -736,28 +746,28 @@
     // 💭 Dilek, Varsayım & Hayali Durum Kalıpları
     wish_if_only: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Keşke çok çalışsa. (Şimdiki dilek → Past Simple)" },
-        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Keşke çok çalışmış olsaydı. (Geçmiş pişmanlık → Past Perfect)" }
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Keşke sınavı geçse." },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Keşke sınavı geçmiş olsaydı." }
       ],
       ruleText: "WISH / IF ONLY: Şu an için dilek → Past Simple; Geçmiş için pişmanlık → Past Perfect. Zaman gerçek zamandan bir derece geçmişe kaydırılır!"
     },
     as_if_as_though: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Sanki her şeyi biliyormuş gibi davranıyor. (Present → Past Simple)" },
-        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Sanki her şeyi bilmiş gibi davrandı. (Past → Past Perfect)" }
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Sanki sınavı geçmiş gibi davranıyor." },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Sanki sınavı geçmiş gibi davrandı." }
       ],
       ruleText: "AS IF / AS THOUGH (Sanki): Gerçek dışı durum için zaman bir derece geçmişe kayar. Present durumda → Past Simple; Past durumda → Past Perfect."
     },
     its_time: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Artık çalışma zamanı geldi. (It's time + Past Simple)" }
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Artık sınavı geçme zamanı geldi de geçiyor." }
       ],
       ruleText: "IT'S (HIGH) TIME + Özne: Devamında Past Simple kullanılır! 'It's time we left.' Gerçek zaman Present olsa bile yapı Past Simple gerektirir."
     },
     would_rather: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Çalışmasını tercih ederim. (Şimdi/Gelecek → Past Simple)" },
-        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Çalışmış olmasını tercih ederdim. (Geçmiş → Past Perfect)" }
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Sınavı geçmesini tercih ederdim." },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Sınavı geçmiş olmasını tercih ederdim." }
       ],
       ruleText: "WOULD RATHER / WOULD SOONER + Özne: Şu an/Gelecek için → Past Simple; Geçmiş için → Past Perfect. Zaman bir derece geçmişe kayar!"
     },
@@ -968,6 +978,51 @@
         { clauseA: "noun_phrase", clauseB: ["v2_main"], trPattern: "İncelendiğinde durum netleşti." }
       ],
       ruleText: "V3 / BEING V3: Pasif kısaltma yapısıdır."
+    },
+
+    // ⏱️ ZAMAN ZARFLARI & TENSE ZORUNLULUKLARI
+    over_past_years: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["has_v3_main"], trPattern: "Son 5 yılda teknoloji hızla gelişti." }
+      ],
+      ruleText: "⚠️ <strong>OVER / IN / DURING THE PAST (LAST) X YEARS:</strong> İçinde 'Past' kelimesi geçse dahi eylem günümüze ulaştığı için KESİNLİKLE Present Perfect (Has/Have V3) gerektirir. Simple Past (V2) kullanılamaz!"
+    },
+    lately_recently: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["has_v3_main"], trPattern: "Son zamanlarda önemli gelişmeler kaydedildi." }
+      ],
+      ruleText: "LATELY / RECENTLY / SO FAR: Etkisi devam eden yakın geçmiş zarfları KESİNLİKLE Present Perfect (Has/Have V3) zorunlu kılar."
+    },
+    yesterday_ago_last: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main"], trPattern: "Dün / İki gün önce sınavı geçti." }
+      ],
+      ruleText: "YESTERDAY / ... AGO / LAST ...: Tamamlanmış kesin geçmiş zaman zarfları KESİNLİKLE Simple Past (V2) zorunlu kılar. Has/Have V3 alamaz!"
+    },
+    how_long_ago: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main"], trPattern: "Ne kadar süre önce taşındın?" }
+      ],
+      ruleText: "HOW LONG AGO: 'Ago' kelimesi içerdiği için KESİNLİKLE Simple Past (V2 / Did) zorunlu kılar! ('How long...?' ise Present Perfect alabilir)."
+    },
+    by_future_for: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["will_have_v3"], trPattern: "Gelecek yıla kadar proje tamamlanmış olacak." },
+        { clauseA: "future_date", clauseB: ["will_have_v3"], trPattern: "2050 yılına kadar proje tamamlanmış olacak." }
+      ],
+      ruleText: "BY (Gelecek Tarih) + FOR (Süreç): Gelecekte tamamlanacak süreçleri ifade ettiği için Future Perfect (Will Have V3 / Will Have Been V-ing) zorunlu kılar."
+    },
+    always_continuous: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["is_ving_main"], trPattern: "Sürekli anahtarlarını kaybedip duruyor!" }
+      ],
+      ruleText: "ALWAYS / FOREVER / CONSTANTLY (+ Continuous): Şikayet, rahatsızlık ve sürekli tekrarlanan eylemleri vurgularken Present Continuous (Am/Is/Are + V-ing) gerektirir."
+    },
+    modal_past_adverb: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["would_have_v3"], trPattern: "Dün sınavı geçmiş olacaktı." }
+      ],
+      ruleText: "YESTERDAY / AGO / LAST + MODALS: Geçmiş zaman zarfı içeren ihtimal veya eleştiri cümleleri KESİNLİKLE Modal + HAVE V3 (Must have / Should have / Could have V3) gerektirir."
     }
   };
 
@@ -1086,6 +1141,15 @@
     as_if_as_though: "{A} as if {B}.",
     its_time: "It's high time {B}.",
     would_rather: "I'd rather {B}.",
+
+    // ⏱️ Zaman Zarfları & Tense Zorunlulukları
+    over_past_years: "Over the past five years, {B}.",
+    lately_recently: "Lately, {B}.",
+    yesterday_ago_last: "Yesterday, {B}.",
+    how_long_ago: "How long ago did it happen? ({B})",
+    by_future_for: "{A}, {B}.",
+    always_continuous: "Always / Forever: {B}.",
+    modal_past_adverb: "Yesterday, {B}.",
 
     // ═══ 1. FANBOYS ═══
     and_coord: "{A}, and {B}.",
@@ -1244,6 +1308,13 @@
     as_if_as_though: "{A_TR} sanki {B_TR}.",
     its_time: "Artık {B_TR} zamanı geldi.",
     would_rather: "Tercih ederdim ki {B_TR}.",
+    over_past_years: "Son birkaç yılda, {B_TR}.",
+    lately_recently: "Son zamanlarda, {B_TR}.",
+    yesterday_ago_last: "Dün, {B_TR}.",
+    how_long_ago: "Ne kadar süre önce...? ({B_TR})",
+    by_future_for: "{A_TR} itibarıyla, {B_TR}.",
+    always_continuous: "Şikayet / Sürekli Eylem: {B_TR}.",
+    modal_past_adverb: "Dün, {B_TR}.",
     and_coord: "{A_TR} ve {B_TR}.",
     but_yet_coord: "{A_TR} fakat {B_TR}.",
     or_coord: "{A_TR} veya {B_TR}.",
@@ -1322,6 +1393,22 @@
       rewardXP: 20,
       target: { connector: "when", clauseA: "v1_present", clauseB: "will_v1" },
       hint: "When + V1 (Simple Present) ➔ Will + V1"
+    },
+    {
+      id: 6,
+      title: "'OVER THE PAST 5 YEARS' zaman zarfı tuzağını çöz!",
+      desc: "İçinde 'Past' geçse bile eylemin bugüne uzandığını hatırla ve Present Perfect'i seç.",
+      rewardXP: 30,
+      target: { connector: "over_past_years", clauseA: "noun_phrase", clauseB: "has_v3_main" },
+      hint: "Over the past years ➔ HAS/HAVE + V3 (Present Perfect) zorunludur!"
+    },
+    {
+      id: 7,
+      title: "'YESTERDAY' zarfının kesin geçmiş zaman kuralını uygula!",
+      desc: "Tamamlanmış geçmiş zaman zarfı ile Simple Past V2 yapısını hatasız bağla.",
+      rewardXP: 25,
+      target: { connector: "yesterday_ago_last", clauseA: "noun_phrase", clauseB: "v2_main" },
+      hint: "Yesterday / ... ago / Last ... ➔ Simple Past V2 zorunludur!"
     }
   ];
 
@@ -1590,21 +1677,38 @@
     const clauseAObj = CLAUSE_A_TENSES.find(t => t.id === state.selectedClauseA);
     const clauseBObj = CLAUSE_B_MODALS.find(m => m.id === state.selectedClauseB);
 
-    if (connObj && connObj.category === "cause_effect") {
+    const singleTimeAdverbs = [
+      "lately_recently", "so_far", "yesterday_ago_last", "over_past_years",
+      "how_long_ago", "by_time_anchor", "modal_past_adverb", "by_future_for",
+      "always_continuous", "its_time", "would_rather", "wish_if_only"
+    ];
+
+    const sec2Header = document.getElementById("srobot-section2-header");
+
+    if (connObj && singleTimeAdverbs.includes(connObj.id)) {
+      // ⏱️ Tekli Zaman Zarfı Şablonu: Zarf ➔ Özne/İsim ➔ Zorunlu Tense (Yan cümle yok)
+      if (slotTitle1) slotTitle1.textContent = "1. MATRİS: ZAMAN ZARFI / ÇAPASI";
+      if (slotTitle2) slotTitle2.textContent = "2. YUVA: ÖZNE / İSİM (YAN CÜMLE YOK)";
+      if (slotTitle3) slotTitle3.textContent = "3. MATRİS: ZORUNLU TENSE / YÜKLEM";
+      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Özne / İsim Öbeği - Yan Cümle Yok)";
+    } else if (connObj && connObj.category === "cause_effect") {
       // 🎯 Neden-Etki Fiil Şablonu: Neden Öbeği ➔ Neden-Etki Fiili ➔ Sonuç Öbeği
       if (slotTitle1) slotTitle1.textContent = "1. YUVA: NEDEN (CAUSE) ÖBEĞİ";
       if (slotTitle2) slotTitle2.textContent = "2. MATRİS: NEDEN-ETKİ FİİLİ / EDATI";
       if (slotTitle3) slotTitle3.textContent = "3. YUVA: SONUÇ (EFFECT) ÖBEĞİ";
+      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Neden-Etki Fiilleri / Edatları)";
     } else if (connObj && connObj.category === "transitions") {
       // 🔀 Geçiş İfadesi Şablonu: Cümle A ➔ Geçiş İfadesi ➔ Cümle B
       if (slotTitle1) slotTitle1.textContent = "1. YUVA: BİRİNCİ YARGI (CÜMLE A)";
       if (slotTitle2) slotTitle2.textContent = "2. MATRİS: GEÇİŞ İFADESİ";
       if (slotTitle3) slotTitle3.textContent = "3. YUVA: İKİNCİ YARGI (CÜMLE B)";
+      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Geçiş İfadeleri)";
     } else {
       // ⏱️ Standart Bağlaç Şablonu: Bağlaç ➔ Yan Cümle ➔ Ana Cümle
       if (slotTitle1) slotTitle1.textContent = "1. MATRİS: BAĞLAÇ / KOŞUL";
       if (slotTitle2) slotTitle2.textContent = "2. MATRİS: YAN CÜMLE ZAMANI (CLAUSE A)";
       if (slotTitle3) slotTitle3.textContent = "3. MATRİS: ANA CÜMLE / MODAL (CLAUSE B)";
+      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Yan Cümle Zamanları)";
     }
 
     // 1. Update Slot Content Targets & Progress Badge
@@ -1710,7 +1814,12 @@
               isValidCombination = true;
               sentenceTRText = matchingPair.trPattern;
             }
+          } else {
+            allowedClauseB = [];
           }
+        } else {
+          // If Clause A is not selected yet, enable Matrix 3 options valid for ANY pair of this connector
+          allowedClauseB = [...new Set(validPairs.flatMap(p => p.clauseB))];
         }
       } else {
         // Fallback for any unmapped connectors so they don't hardlock
@@ -1774,16 +1883,29 @@
       }
 
       // Dynamic Turkish Translation
-      const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector];
-      const trA = clauseAObj.sampleTR || clauseAObj.label;
-      const trB = clauseBObj.sampleTR || clauseBObj.label;
+      let activeMatchingPair = null;
+      if (connObj && state.selectedClauseA) {
+        const ruleObj = RULE_RULES[state.selectedConnector];
+        if (ruleObj && ruleObj.validPairs) {
+          activeMatchingPair = ruleObj.validPairs.find(p => p.clauseA === state.selectedClauseA);
+        }
+      }
 
-      if (templateTR) {
-        let resultTR = templateTR
-          .replace("{A_TR}", trA)
-          .replace("{B_TR}", trB);
-        resultTR = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
-        sentenceTRText = resultTR;
+      if (activeMatchingPair && activeMatchingPair.trPattern && isValidCombination) {
+        let cleanTR = activeMatchingPair.trPattern.split(" (")[0];
+        sentenceTRText = cleanTR.charAt(0).toUpperCase() + cleanTR.slice(1);
+      } else {
+        const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector];
+        const trA = clauseAObj.sampleTR || clauseAObj.label;
+        const trB = clauseBObj.sampleTR || clauseBObj.label;
+
+        if (templateTR) {
+          let resultTR = templateTR
+            .replace("{A_TR}", trA)
+            .replace("{B_TR}", trB);
+          resultTR = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
+          sentenceTRText = resultTR;
+        }
       }
     } else {
       let parts = [];
