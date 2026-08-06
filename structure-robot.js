@@ -94,7 +94,33 @@
     { id: "if_type2", label: "IF (Type 2)", desc: "Şimdiki Zaman Hayali Koşul", category: "time", color: "#06b6d4" },
     { id: "if_type3", label: "IF (Type 3)", desc: "Geçmiş Zamanda Kaçırılmış Koşul / Pişmanlık", category: "time", color: "#06b6d4" },
     { id: "although", label: "ALTHOUGH / EVEN THOUGH", desc: "Zıtlık Bağlacı (-e rağmen)", category: "transitions", color: "#06b6d4" },
-    { id: "because", label: "BECAUSE / AS / SINCE", desc: "Neden-Sonuç Bağlacı (Çünkü / -dığı için)", category: "cause_effect", color: "#06b6d4" }
+    { id: "because", label: "BECAUSE / AS / SINCE", desc: "Neden-Sonuç Bağlacı (Çünkü / -dığı için)", category: "cause_effect", color: "#06b6d4" },
+
+    // ⏱️ Ek Zaman Bağlaçları
+    { id: "whenever", label: "WHENEVER / EVERY TIME", desc: "Her ... -dığında / Ne zaman ... -se", category: "time", color: "#06b6d4" },
+    { id: "the_moment", label: "THE MOMENT / THE MINUTE / DIRECTLY", desc: "-dığı an / -dığı anda", category: "time", color: "#06b6d4" },
+
+    // ⚡ Ek Koşul Bağlaçları
+    { id: "unless", label: "UNLESS", desc: "-medikçe / -mazsa (If...not)", category: "time", color: "#06b6d4" },
+    { id: "provided_that", label: "PROVIDED (THAT) / PROVIDING (THAT)", desc: "-mesi şartıyla / koşuluyla", category: "time", color: "#06b6d4" },
+    { id: "as_long_as", label: "AS LONG AS / SO LONG AS", desc: "-diği sürece", category: "time", color: "#06b6d4" },
+    { id: "in_case", label: "IN CASE", desc: "İhtimaline karşı / -ması durumunda", category: "time", color: "#06b6d4" },
+    { id: "supposing_that", label: "SUPPOSING (THAT) / IMAGINE (THAT)", desc: "Varsayalım ki / Farz edelim ki", category: "time", color: "#06b6d4" },
+    { id: "only_if", label: "ONLY IF", desc: "Yalnızca ... olursa / Ancak ... şartıyla", category: "time", color: "#06b6d4" },
+
+    // 🎯 Amaç Bildiren Bağlaçlar (Purpose Clauses)
+    { id: "so_that_purpose", label: "SO THAT (Purpose / Amaç)", desc: "-sın diye / -mesi için (Amaç Bağlacı)", category: "time", color: "#06b6d4" },
+    { id: "in_order_that", label: "IN ORDER THAT", desc: "-mesi için / -sın diye (Resmi Amaç)", category: "time", color: "#06b6d4" },
+
+    // 📢 Dolaylı Anlatım & İsim Cümlecikleri (Reported Speech & Noun Clauses)
+    { id: "reported_speech", label: "SAID THAT (Reported Speech)", desc: "Dolaylı Anlatım / Backshift Kuralı", category: "time", color: "#06b6d4" },
+    { id: "noun_clause", label: "I KNEW THAT (Noun Clause)", desc: "İsim Cümleciği Zaman Kayması", category: "time", color: "#06b6d4" },
+
+    // 💭 Dilek, Varsayım & Hayali Durum Kalıpları
+    { id: "wish_if_only", label: "WISH / IF ONLY", desc: "Keşke / Dilek Yapısı (Zaman Kayması)", category: "time", color: "#06b6d4" },
+    { id: "as_if_as_though", label: "AS IF / AS THOUGH", desc: "Sanki / -mış gibi (Gerçek Dışı)", category: "time", color: "#06b6d4" },
+    { id: "its_time", label: "IT'S (HIGH) TIME", desc: "Artık ... zamanı geldi (+ Past Simple)", category: "time", color: "#06b6d4" },
+    { id: "would_rather", label: "WOULD RATHER / WOULD SOONER", desc: "Tercih ederim ki (Zaman Kayması)", category: "time", color: "#06b6d4" }
   ];
 
   // 2. Matris: Yan Cümle Zamanları (Clause A)
@@ -570,6 +596,125 @@
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Bu doğrultuda gerekli adımlar atıldı." }
       ],
       ruleText: "ACCORDINGLY (Geçiş İfadesi): Buna bağlı olarak / Bu doğrultuda."
+    },
+
+    // ⏱️ Ek Zaman Bağlaçları
+    whenever: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Ne zaman çok çalışsa sınavı geçer / geçecek." },
+        { clauseA: "v2_past", clauseB: ["v2_main", "was_were_ving_main"], trPattern: "Ne zaman çalışsa sınavı geçerdi." }
+      ],
+      ruleText: "WHENEVER / EVERY TIME: WHEN ile aynı zaman uyumu kuralına tabidir. Yan cümleye 'will' gelemez! V1 → V1/Will; V2 → V2."
+    },
+    the_moment: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main"], trPattern: "Geldiği anda toplantıyı başlatacağız." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Geldiği anda haber verdi." }
+      ],
+      ruleText: "THE MOMENT / THE MINUTE / DIRECTLY: 'As soon as' ile eş anlamlıdır. Yan cümleye 'will' gelemez!"
+    },
+
+    // ⚡ Ek Koşul Bağlaçları
+    unless: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Çok çalışmazsa sınavı geçemeyecek." }
+      ],
+      ruleText: "UNLESS (-medikçe): 'If...not' anlamındadır. Unless + Present Simple → Ana cümle Will/Modal. Yan cümleye 'will' gelemez!"
+    },
+    provided_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Çok çalışması şartıyla sınavı geçecek." }
+      ],
+      ruleText: "PROVIDED (THAT) / PROVIDING (THAT): -mesi şartıyla. IF Type 1 kuralıyla aynıdır. V1 → Will/Modal."
+    },
+    as_long_as: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Çalıştığı sürece sınavı geçecek." }
+      ],
+      ruleText: "AS LONG AS / SO LONG AS (-diği sürece): IF Type 1 kuralıyla aynıdır. V1 → Will/Modal. Yan cümleye 'will' gelemez!"
+    },
+    in_case: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Yağmur yağması ihtimaline karşı şemsiye al." },
+        { clauseA: "v2_past", clauseB: ["v2_main", "would_v1"], trPattern: "Yağmur yağması ihtimaline karşı şemsiye aldı." }
+      ],
+      ruleText: "IN CASE (ihtimaline karşı): Genelde Present Simple veya 'should' alır. Yan cümleye 'will' gelemez!"
+    },
+    supposing_that: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["would_v1"], trPattern: "Varsayalım ki kazansaydın, ne yapardın?" },
+        { clauseA: "had_v3", clauseB: ["would_have_v3"], trPattern: "Farz edelim ki kazanmış olsaydın, ne yapmış olurdun?" }
+      ],
+      ruleText: "SUPPOSING (THAT) / IMAGINE (THAT): IF Type 2 ve Type 3 kurallarıyla aynıdır. V2 → Would V1; Had V3 → Would Have V3."
+    },
+    only_if: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "can_may_v1"], trPattern: "Yalnızca çok çalışırsa sınavı geçebilir." },
+        { clauseA: "v2_past", clauseB: ["would_v1"], trPattern: "Yalnızca çalışsaydı geçerdi." }
+      ],
+      ruleText: "ONLY IF (Yalnızca ... olursa): Vurgulu koşul ifadesidir. IF kurallarına tabidir. V1 → Will/Modal; V2 → Would."
+    },
+
+    // 🎯 Amaç Bildiren Bağlaçlar
+    so_that_purpose: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["can_may_v1", "will_v1"], trPattern: "Sınavı geçebilsin diye çok çalışıyor." },
+        { clauseA: "v2_past", clauseB: ["would_v1"], trPattern: "Sınavı geçebilsin diye çok çalıştı." }
+      ],
+      ruleText: "SO THAT (Amaç): Ana cümle Present → yan cümlede can/will/may; Ana cümle Past → yan cümlede could/would/might. Zaman uyumu zorunludur!"
+    },
+    in_order_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["can_may_v1", "will_v1"], trPattern: "Sınavı geçmesi için çok çalışıyor." },
+        { clauseA: "v2_past", clauseB: ["would_v1"], trPattern: "Sınavı geçmesi için çok çalıştı." }
+      ],
+      ruleText: "IN ORDER THAT (Resmi Amaç): SO THAT ile aynı zaman uyumu kuralına tabidir. Present → can/may; Past → could/would."
+    },
+
+    // 📢 Dolaylı Anlatım & İsim Cümlecikleri
+    reported_speech: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "'Çalışıyorum' → Çalıştığını söyledi. (Present → Past)" },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "'Çalıştım' → Çalışmış olduğunu söyledi. (Past → Past Perfect)" },
+        { clauseA: "has_v3", clauseB: ["had_v3_main"], trPattern: "'Çalışmışım' → Çalışmış olduğunu söyledi. (Pres. Perf. → Past Perf.)" }
+      ],
+      ruleText: "REPORTED SPEECH (Dolaylı Anlatım - Backshift): Ana fiil Past (said/told) ise yan cümle bir derece geçmişe kayar! Present → Past, Past → Past Perfect, Pres. Perf. → Past Perfect."
+    },
+    noun_clause: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1", "can_may_v1"], trPattern: "Çok çalıştığını biliyorum. (Know → Present/Future)" },
+        { clauseA: "v2_past", clauseB: ["v2_main", "would_v1"], trPattern: "Çok çalıştığını biliyordum. (Knew → Past/Would)" }
+      ],
+      ruleText: "NOUN CLAUSE (İsim Cümleciği): 'I know that...' → Present/Future; 'I knew that...' → Past/Would. Ana fiil zamanı yan cümle zamanını belirler!"
+    },
+
+    // 💭 Dilek, Varsayım & Hayali Durum Kalıpları
+    wish_if_only: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Keşke çok çalışsa. (Şimdiki dilek → Past Simple)" },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Keşke çok çalışmış olsaydı. (Geçmiş pişmanlık → Past Perfect)" }
+      ],
+      ruleText: "WISH / IF ONLY: Şu an için dilek → Past Simple; Geçmiş için pişmanlık → Past Perfect. Zaman gerçek zamandan bir derece geçmişe kaydırılır!"
+    },
+    as_if_as_though: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Sanki her şeyi biliyormuş gibi davranıyor. (Present → Past Simple)" },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Sanki her şeyi bilmiş gibi davrandı. (Past → Past Perfect)" }
+      ],
+      ruleText: "AS IF / AS THOUGH (Sanki): Gerçek dışı durum için zaman bir derece geçmişe kayar. Present durumda → Past Simple; Past durumda → Past Perfect."
+    },
+    its_time: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Artık çalışma zamanı geldi. (It's time + Past Simple)" }
+      ],
+      ruleText: "IT'S (HIGH) TIME + Özne: Devamında Past Simple kullanılır! 'It's time we left.' Gerçek zaman Present olsa bile yapı Past Simple gerektirir."
+    },
+    would_rather: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Çalışmasını tercih ederim. (Şimdi/Gelecek → Past Simple)" },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Çalışmış olmasını tercih ederdim. (Geçmiş → Past Perfect)" }
+      ],
+      ruleText: "WOULD RATHER / WOULD SOONER + Özne: Şu an/Gelecek için → Past Simple; Geçmiş için → Past Perfect. Zaman bir derece geçmişe kayar!"
     }
   };
 
@@ -661,7 +806,33 @@
     at_the_dawn: "At the dawn of {A}, {B}.",
     no_sooner_than: "No sooner {A_INV} than {B}.",
     hardly_when: "Hardly {A_INV} when {B}.",
-    during_throughout: "During {A}, {B}."
+    during_throughout: "During {A}, {B}.",
+
+    // ⏱️ Ek Zaman Bağlaçları
+    whenever: "Whenever {A}, {B}.",
+    the_moment: "The moment {A}, {B}.",
+
+    // ⚡ Ek Koşul Bağlaçları
+    unless: "Unless {A}, {B}.",
+    provided_that: "Provided that {A}, {B}.",
+    as_long_as: "As long as {A}, {B}.",
+    in_case: "In case {A}, {B}.",
+    supposing_that: "Supposing {A}, {B}.",
+    only_if: "Only if {A}, {B}.",
+
+    // 🎯 Amaç Bağlaçları
+    so_that_purpose: "{A} so that {B}.",
+    in_order_that: "{A} in order that {B}.",
+
+    // 📢 Dolaylı Anlatım & İsim Cümlecikleri
+    reported_speech: "'{A}' → He said that {B}.",
+    noun_clause: "I knew that {B}.",
+
+    // 💭 Dilek & Varsayım Kalıpları
+    wish_if_only: "I wish {B}.",
+    as_if_as_though: "{A} as if {B}.",
+    its_time: "It's high time {B}.",
+    would_rather: "I'd rather {B}."
   };
 
   // Devrik yapı yardımcısı: "she had studied hard" → "had she studied hard"
