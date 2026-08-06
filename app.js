@@ -25490,7 +25490,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "yol açmak, beraberinde getirmek",
       formula: "NEDEN + bring(s) about + ETKİ",
       examples: [
-        { en: "The new tax reform brought about significant economic changes.", tr: "Yeni vergi reformu önemli ekonomik değişiklikleri beraberinde getirdi." }
+        { en: "The new tax reform brought about significant economic changes.", tr: "Yeni vergi reformu önemli ekonomik değişiklikleri beraberinde getirdi." },
+        { en: "Rapid industrialisation brought about unprecedented urban growth.", tr: "Hızlı sanayileşme eşi benzeri görülmemiş kent büyümesini beraberinde getirdi." }
       ]
     },
     {
@@ -25499,7 +25500,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "tetiklemek, başlatmak",
       formula: "NEDEN + trigger(s) + ETKİ",
       examples: [
-        { en: "Chronic stress can trigger severe migraine attacks.", tr: "Kronik stres şiddetli migren ataklarını tetikleyebilir." }
+        { en: "Chronic stress can trigger severe migraine attacks.", tr: "Kronik stres şiddetli migren ataklarını tetikleyebilir." },
+        { en: "Sudden temperature drops trigger volcanic eruptions.", tr: "Ani sıcaklık düşüşleri volkanik patlamaları tetikler." }
       ]
     },
     {
@@ -25508,7 +25510,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "ortaya çıkarmak, sebebiyet vermek",
       formula: "NEDEN + give(s) rise to + ETKİ",
       examples: [
-        { en: "Economic instability gives rise to social unrest.", tr: "Ekonomik istikrarsızlık toplumsal huzursuzluğa sebebiyet verir." }
+        { en: "Economic instability gives rise to social unrest.", tr: "Ekonomik istikrarsızlık toplumsal huzursuzluğa sebebiyet verir." },
+        { en: "Unchecked inflation gives rise to widespread poverty.", tr: "Kontrolsüz enflasyon yaygın yoksulluğa sebebiyet verir." }
       ]
     },
     {
@@ -25517,7 +25520,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "katkıda bulunmak / yol açmak",
       formula: "NEDEN + contribute(s) to + ETKİ",
       examples: [
-        { en: "Smoking heavily contributes to cardiovascular diseases.", tr: "Sigara kullanımı kalp-damar hastalıklarına ciddi katkıda bulunur (yol açar)." }
+        { en: "Smoking heavily contributes to cardiovascular diseases.", tr: "Sigara kullanımı kalp-damar hastalıklarına ciddi katkıda bulunur (yol açar)." },
+        { en: "Deforestation contributes to global climate change.", tr: "Ormansızlaşma küresel iklim değişikliğine katkıda bulunur." }
       ]
     },
     {
@@ -25526,7 +25530,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "zemin hazırlamak, önünü açmak",
       formula: "NEDEN + pave(s) the way for + ETKİ",
       examples: [
-        { en: "This breakthrough paved the way for modern gene editing.", tr: "Bu buluş modern gen düzenlemesinin önünü açtı." }
+        { en: "This breakthrough paved the way for modern gene editing.", tr: "Bu buluş modern gen düzenlemesinin önünü açtı." },
+        { en: "Peace talks paved the way for international cooperation.", tr: "Barış görüşmeleri uluslararası işbirliğinin önünü açtı." }
       ]
     },
     {
@@ -25535,7 +25540,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "... ile sonuçlanmak / zirveye ulaşmak",
       formula: "NEDEN + culminate(s) in + ETKİ",
       examples: [
-        { en: "Years of secret negotiations culminated in a historic peace treaty.", tr: "Yıllar süren gizli görüşmeler tarihi bir barış antlaşmasıyla sonuçlandı." }
+        { en: "Years of secret negotiations culminated in a historic peace treaty.", tr: "Yıllar süren gizli görüşmeler tarihi bir barış antlaşmasıyla sonuçlandı." },
+        { en: "Decades of research culminated in a Nobel Prize.", tr: "Onlarca yıl süren araştırmalar bir Nobel Ödülü ile sonuçlandı." }
       ]
     },
     {
@@ -25544,7 +25550,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den sorumlu olmak, yol açmak",
       formula: "NEDEN + is/are responsible for + ETKİ",
       examples: [
-        { en: "Human error was responsible for the train collision.", tr: "Tren çarpışmasına insan hatası yol açtı." }
+        { en: "Human error was responsible for the train collision.", tr: "Tren çarpışmasına insan hatası yol açtı." },
+        { en: "Greenhouse gases are responsible for global warming.", tr: "Sera gazları küresel ısınmadan sorumludur (yol açar)." }
       ]
     },
     {
@@ -25553,7 +25560,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "meydana getirmek, üretmek",
       formula: "NEDEN + produce(s) + ETKİ",
       examples: [
-        { en: "Volcanic eruptions produce massive ash clouds.", tr: "Volkanik patlamalar devasa kül bulutları meydana getirir." }
+        { en: "Volcanic eruptions produce massive ash clouds.", tr: "Volkanik patlamalar devasa kül bulutları meydana getirir." },
+        { en: "Nuclear reactions produce immense amounts of energy.", tr: "Nükleer tepkimeler muazzam miktarda enerji meydana getirir." }
       ]
     },
     {
@@ -25572,7 +25580,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "bu yüzden, bundan dolayı",
       formula: "NEDEN Cümlesi; therefore, ETKİ Cümlesi",
       examples: [
-        { en: "Vitamins were lacking; therefore, health was poor.", tr: "Vitamin eksikti; bundan dolayı sağlık kötüydü." }
+        { en: "Vitamins were lacking; therefore, health was poor.", tr: "Vitamin eksikti; bundan dolayı sağlık kötüydü." },
+        { en: "The data was flawed; therefore, the hypothesis was rejected.", tr: "Veri kusurluydu; bundan dolayı hipotez reddedildi." }
       ]
     },
     {
@@ -25581,7 +25590,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "böylece, bu nedenle",
       formula: "NEDEN Cümlesi; thus, ETKİ Cümlesi",
       examples: [
-        { en: "The engine was damaged; thus, the vehicle stopped.", tr: "Motor hasar gördü; böylece araç durdu." }
+        { en: "The engine was damaged; thus, the vehicle stopped.", tr: "Motor hasar gördü; böylece araç durdu." },
+        { en: "He worked diligently; thus, he achieved high scores.", tr: "Özenle çalıştı; böylece yüksek puanlar elde etti." }
       ]
     },
     {
@@ -25590,7 +25600,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "bu yüzden, bundan dolayı",
       formula: "NEDEN Cümlesi; hence, ETKİ Cümlesi / İsim",
       examples: [
-        { en: "The company lost capital; hence the need for drastic cuts.", tr: "Şirket sermaye kaybetti; bu yüzden sert kısıntı ihtiyacı doğdu." }
+        { en: "The company lost capital; hence the need for drastic cuts.", tr: "Şirket sermaye kaybetti; bu yüzden sert kısıntı ihtiyacı doğdu." },
+        { en: "The region lacks rainfall; hence the water shortage.", tr: "Bölge yağış almamaktadır; bu yüzden su sıkıntısı yaşanmaktadır." }
       ]
     },
     {
@@ -25599,7 +25610,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "sonuç olarak, bunun neticesinde",
       formula: "NEDEN Cümlesi; consequently, ETKİ Cümlesi",
       examples: [
-        { en: "The harvest failed; consequently, food prices skyrocketed.", tr: "Hasat başarısız oldu; neticede gıda fiyatları fırladı." }
+        { en: "The harvest failed; consequently, food prices skyrocketed.", tr: "Hasat başarısız oldu; neticede gıda fiyatları fırladı." },
+        { en: "The dam collapsed; consequently, coastal areas flooded.", tr: "Baraj yıkıldı; neticede kıyı bölgelerini su bastı." }
       ]
     },
     {
@@ -25608,7 +25620,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "sonuç olarak, şöyle ki",
       formula: "NEDEN Cümlesi; as a result, ETKİ Cümlesi",
       examples: [
-        { en: "He studied systematically; as a result, he passed the exam.", tr: "Sistematik çalıştı; sonuç olarak sınavı geçti." }
+        { en: "He studied systematically; as a result, he passed the exam.", tr: "Sistematik çalıştı; sonuç olarak sınavı geçti." },
+        { en: "Protocols were enforced; as a result, contamination was prevented.", tr: "Protokoller uygulandı; sonuç olarak kirlenme önlendi." }
       ]
     },
     {
@@ -25617,7 +25630,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "bu doğrultuda, buna bağlı olarak",
       formula: "NEDEN Cümlesi; accordingly, ETKİ Cümlesi",
       examples: [
-        { en: "Safety regulations were updated; accordingly, procedures changed.", tr: "Güvenlik yönetmelikleri güncellendi; buna bağlı olarak prosedürler değişti." }
+        { en: "Safety regulations were updated; accordingly, procedures changed.", tr: "Güvenlik yönetmelikleri güncellendi; buna bağlı olarak prosedürler değişti." },
+        { en: "Costs increased sharply; accordingly, budget plans were revised.", tr: "Maliyetler keskin bir şekilde arttı; buna bağlı olarak bütçe planları revize edildi." }
       ]
     },
     {
@@ -25626,7 +25640,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "böylelikle ... -erek (Akademik Sonuç Kısaltması)",
       formula: "Cümle, thereby + V-ing + Nesne",
       examples: [
-        { en: "He increased the temperature, thereby accelerating the chemical reaction.", tr: "Sıcaklığı artırdı, böylelikle kimyasal tepkimeyi hızlandırdı." }
+        { en: "He increased the temperature, thereby accelerating the chemical reaction.", tr: "Sıcaklığı artırdı, böylelikle kimyasal tepkimeyi hızlandırdı." },
+        { en: "They adopted solar power, thereby reducing carbon emissions.", tr: "Güneş enerjisini benimsediler, böylelikle karbon emisyonlarını azalttılar." }
       ]
     },
     {
@@ -25645,7 +25660,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "öyle bir dereceye kadar ki",
       formula: "NEDEN Cümlesi, so much so that ETKİ Cümlesi",
       examples: [
-        { en: "The disease spread rapidly, so much so that schools were closed.", tr: "Hastalık hızla yayıldı, öyle bir dereceye kadar ki okullar tatil edildi." }
+        { en: "The disease spread rapidly, so much so that schools were closed.", tr: "Hastalık hızla yayıldı, öyle bir dereceye kadar ki okullar tatil edildi." },
+        { en: "Noise levels rose, so much so that workers wore hearing protection.", tr: "Gürültü seviyeleri yükseldi, öyle bir dereceye kadar ki işçiler kulak koruyucu taktı." }
       ]
     }
   ],
@@ -25677,7 +25693,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den kaynaklanmak, köken almak",
       formula: "ETKİ + stem(s) from + NEDEN",
       examples: [
-        { en: "His chronic anxiety stems from childhood trauma.", tr: "Onun kronik kaygısı çocukluk travmasından kaynaklanır." }
+        { en: "His chronic anxiety stems from childhood trauma.", tr: "Onun kronik kaygısı çocukluk travmasından kaynaklanır." },
+        { en: "Social conflicts often stem from economic inequality.", tr: "Toplumsal çatışmalar sıklıkla ekonomik eşitsizlikten kaynaklanır." }
       ]
     },
     {
@@ -25686,7 +25703,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den doğmak, ortaya çıkmak",
       formula: "ETKİ + originate(s) in/from + NEDEN",
       examples: [
-        { en: "The disease originated in infected water sources.", tr: "Hastalık enfekte su kaynaklarından ortaya çıktı." }
+        { en: "The disease originated in infected water sources.", tr: "Hastalık enfekte su kaynaklarından ortaya çıktı." },
+        { en: "The ancient trade route originated in East Asia.", tr: "Antik ticaret yolu Doğu Asya'dan ortaya çıktı." }
       ]
     },
     {
@@ -25695,7 +25713,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den doğmak, meydana gelmek",
       formula: "ETKİ + arise(s) from/out of + NEDEN",
       examples: [
-        { en: "Complications arose out of improper wound treatment.", tr: "Komplikasyonlar uygunsuz yara tedavisinden doğdu." }
+        { en: "Complications arose out of improper wound treatment.", tr: "Komplikasyonlar uygunsuz yara tedavisinden doğdu." },
+        { en: "Technical issues arose from outdated software.", tr: "Teknik sorunlar eski yazılımdan doğdu." }
       ]
     },
     {
@@ -25704,7 +25723,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...e atfedilmek, nedeni ... olarak gösterilmek",
       formula: "ETKİ + is/are attributed to + NEDEN",
       examples: [
-        { en: "The patient's recovery was attributed to new medication.", tr: "Hastanın iyileşmesi yeni ilaca atfedildi." }
+        { en: "The patient's recovery was attributed to new medication.", tr: "Hastanın iyileşmesi yeni ilaca atfedildi." },
+        { en: "The company's success was attributed to dedicated teamwork.", tr: "Şirketin başarısı özverili ekip çalışmasına atfedildi." }
       ]
     },
     {
@@ -25713,7 +25733,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...e bağlanmak / kök salmış olmak",
       formula: "ETKİ + is ascribed to / rooted in + NEDEN",
       examples: [
-        { en: "Economic collapse was rooted in long-term corruption.", tr: "Ekonomik çöküşün kökeni uzun süreli yolsuzlukta yatıyordu." }
+        { en: "Economic collapse was rooted in long-term corruption.", tr: "Ekonomik çöküşün kökeni uzun süreli yolsuzlukta yatıyordu." },
+        { en: "The discovery was ascribed to decades of persistence.", tr: "Keşif onlarca yıl süren kararlılığa bağlandı." }
       ]
     },
     {
@@ -25722,7 +25743,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den kaynaklanmak, nedeni olunmak",
       formula: "ETKİ + is/are caused by + NEDEN",
       examples: [
-        { en: "Plant diseases are caused by trace element deficiencies.", tr: "Bitki hastalıkları eser element eksikliğinden kaynaklanır." }
+        { en: "Plant diseases are caused by trace element deficiencies.", tr: "Bitki hastalıkları eser element eksikliğinden kaynaklanır." },
+        { en: "Severe floods were caused by continuous heavy rainfall.", tr: "Şiddetli sel felaketleri sürekli yağıştan kaynaklandı." }
       ]
     },
     {
@@ -25741,7 +25763,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den dolayı, ... göz önüne alındığında",
       formula: "ETKİ Cümlesi + on account of / in view of + NEDEN İsim Öbeği",
       examples: [
-        { en: "Match was cancelled on account of torrential rain.", tr: "Maç sağanak yağış nedeniyle iptal edildi." }
+        { en: "Match was cancelled on account of torrential rain.", tr: "Maç sağanak yağış nedeniyle iptal edildi." },
+        { en: "In view of recent findings, safety measures were upgraded.", tr: "Son bulgular göz önüne alındığında güvenlik önlemleri artırıldı." }
       ]
     },
     {
@@ -25750,7 +25773,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...den dolayı / sayesinde, ... gerekçesiyle",
       formula: "ETKİ Cümlesi + by virtue of / on the grounds of + NEDEN",
       examples: [
-        { en: "He secured the post by virtue of his vast experience.", tr: "Geniş tecrübesi sayesinde pozisyonu elde etti." }
+        { en: "He secured the post by virtue of his vast experience.", tr: "Geniş tecrübesi sayesinde pozisyonu elde etti." },
+        { en: "The claim was dismissed on the grounds of insufficient proof.", tr: "İddia yetersiz kanıt gerekçesiyle reddedildi." }
       ]
     },
     {
@@ -25759,7 +25783,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "...in sonucu olarak, nedeniyle",
       formula: "ETKİ Cümlesi + as a result of + NEDEN İsim Öbeği",
       examples: [
-        { en: "Hospitalisations increased as a result of the epidemic.", tr: "Salgın sonucunda hastaneye yatışlar arttı." }
+        { en: "Hospitalisations increased as a result of the epidemic.", tr: "Salgın sonucunda hastaneye yatışlar arttı." },
+        { en: "Landslides occurred as a consequence of deforestation.", tr: "Heyelanlar ormansızlaşmanın bir sonucu olarak meydana geldi." }
       ]
     },
     {
@@ -25768,7 +25793,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "-mesi bakımından, çünkü (YÖKDİL Özel)",
       formula: "ETKİ Cümlesi + in that + NEDEN Cümlesi",
       examples: [
-        { en: "Water is unique in that it expands when frozen.", tr: "Su donduğunda genleşmesi bakımından eşsizdir." }
+        { en: "Water is unique in that it expands when frozen.", tr: "Su donduğunda genleşmesi bakımından eşsizdir." },
+        { en: "Glass is valuable in that it can be recycled endlessly.", tr: "Cam, sonsuz kez dönüştürülebilmesi bakımından değerlidir." }
       ]
     },
     {
@@ -25787,7 +25813,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "-dığına göre, -dığı göz önüne alındığında",
       formula: "inasmuch as / given that NEDEN Cümlesi, ETKİ Cümlesi",
       examples: [
-        { en: "Given that resources are limited, we must economise.", tr: "Kaynakların sınırlı olduğu göz önüne alındığında tasarruf etmeliyiz." }
+        { en: "Given that resources are limited, we must economise.", tr: "Kaynakların sınırlı olduğu göz önüne alındığında tasarruf etmeliyiz." },
+        { en: "Seeing that time is short, we should finalize the report.", tr: "Zamanın kısa olduğu göz önüne alındığında raporu sonlandırmalıyız." }
       ]
     },
     {
@@ -25796,7 +25823,8 @@ const CAUSE_EFFECT_DATA = {
       meaning: "... gerçeğinden dolayı, ...dığı için",
       formula: "ETKİ Cümlesi + owing to the fact that + NEDEN Cümlesi",
       examples: [
-        { en: "Coarser material is deposited owing to the fact that ice melts rapidly.", tr: "Buz hızlı eridiği gerçeğinden dolayı kaba malzeme çöker." }
+        { en: "Coarser material is deposited owing to the fact that ice melts rapidly.", tr: "Buz hızlı eridiği gerçeğinden dolayı kaba malzeme çöker." },
+        { en: "The flight was grounded owing to the fact that storm raged.", tr: "Fırtına koptuğu gerçeğinden dolayı uçuş yere indirildi." }
       ]
     }
   ]
@@ -25999,7 +26027,8 @@ const TIME_MATRIX_DATA = {
       rule: "📐 UYUM: before + V2 (Past), Ana Cümle (Had V3 / V2) || before + V1, Will V1",
       trap: "⚠️ Önce gerçekleşen eylem ana cümlededir ve Had V3 alır.",
       examples: [
-        { en: "Before the team published the results, they had verified the data.", tr: "Ekip sonuçları yayımlamadan önce verileri doğrulamıştı." }
+        { en: "Before the team published the results, they had verified the data.", tr: "Ekip sonuçları yayımlamadan önce verileri doğrulamıştı." },
+        { en: "Verify all settings before you initiate the experiment.", tr: "Deneyi başlatmadan önce tüm ayarları doğrulayın." }
       ]
     },
     {
@@ -26009,7 +26038,8 @@ const TIME_MATRIX_DATA = {
       rule: "📐 UYUM: after + Had V3 (Past Perfect), Ana Cümle (V2 / Past Simple)",
       trap: "⚠️ After yan cümlesi öncelikli eylemdir (Had V3).",
       examples: [
-        { en: "After the reaction had completed, the precipitate formed.", tr: "Tepkime tamamlandıktan sonra çökelti oluştu." }
+        { en: "After the reaction had completed, the precipitate formed.", tr: "Tepkime tamamlandıktan sonra çökelti oluştu." },
+        { en: "After the storm had passed, relief teams entered the area.", tr: "Fırtına dindikten sonra yardım ekipleri bölgeye girdi." }
       ]
     },
     {
@@ -26030,7 +26060,8 @@ const TIME_MATRIX_DATA = {
       rule: "📐 UYUM: until + V1, Will V1 || until + V2, V2",
       trap: "⚠️ Eylemin son sınırını gösterir. 'Until' yan cümlesine 'will' gelemez.",
       examples: [
-        { en: "The sample remained in freezer until temperature reached zero.", tr: "Numune sıcaklık sıfıra ulaşana kadar dondurucuda kaldı." }
+        { en: "The sample remained in freezer until temperature reached zero.", tr: "Numune sıcaklık sıfıra ulaşana kadar dondurucuda kaldı." },
+        { en: "Hold the chemical in solution until the reaction completes.", tr: "Tepkime tamamlanana kadar kimyasalı çözeltide tutun." }
       ]
     },
     {
@@ -26040,7 +26071,8 @@ const TIME_MATRIX_DATA = {
       rule: "📐 DEVRİK KURAL: No sooner HAD + Özne + V3 + THAN + Özne + V2",
       trap: "⚠️ Cümle başında 'No sooner' varsa yardımcı fiil (HAD) özneden önce gelir!",
       examples: [
-        { en: "No sooner had the drug been administered than the pulse stabilized.", tr: "İlaç uygulanır uygulanmaz nabız hemen stabilized oldu." }
+        { en: "No sooner had the drug been administered than the pulse stabilized.", tr: "İlaç uygulanır uygulanmaz nabız hemen stabilized oldu." },
+        { en: "No sooner had the power failed than generators turned on.", tr: "Güç henüz kesilmişti ki jeneratörler devreye girdi." }
       ]
     },
     {
@@ -26050,7 +26082,8 @@ const TIME_MATRIX_DATA = {
       rule: "📐 DEVRİK KURAL: Hardly / Barely HAD + Özne + V3 + WHEN + Özne + V2",
       trap: "⚠️ Baglaç tarafında 'THAN' değil 'WHEN' kullanılır!",
       examples: [
-        { en: "Hardly had the rocket launched when ground control lost signal.", tr: "Roket henüz fırlatılmıştı ki yer kontrolü sinyali kaybetti." }
+        { en: "Hardly had the rocket launched when ground control lost signal.", tr: "Roket henüz fırlatılmıştı ki yer kontrolü sinyali kaybetti." },
+        { en: "Scarcely had the speech begun when protest erupted.", tr: "Konuşma henüz başlamıştı ki protesto patlak verdi." }
       ]
     },
     {
@@ -26082,7 +26115,8 @@ const TIME_MATRIX_DATA = {
       rule: "📐 FORMÜL: Upon / On + V-ing + Nesne, Cümle",
       trap: "⚠️ As soon as / when yapısının akademik kısaltmasıdır.",
       examples: [
-        { en: "Upon heating the solution, a bright blue color emerged.", tr: "Çözelti ısıtılır ısıtılmaz parlak mavi bir renk ortaya çıktı." }
+        { en: "Upon heating the solution, a bright blue color emerged.", tr: "Çözelti ısıtılır ısıtılmaz parlak mavi bir renk ortaya çıktı." },
+        { en: "On receiving the report, the committee took swift action.", tr: "Raporu alır almaz komite hızlıca harekete geçti." }
       ]
     },
     {
@@ -26328,7 +26362,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1; however, Cümle 2. OR Cümle 1. However, Cümle 2.",
       trap: "⚠️ UYUM: Arkasından tam cümle alır. Virgülle tek başına bağlanmaz.",
       examples: [
-        { en: "The theory is widely accepted; however, recent data contradicts it.", tr: "Teori yaygın olarak kabul görmektedir; ancak son veriler bununla çelişmektedir." }
+        { en: "The theory is widely accepted; however, recent data contradicts it.", tr: "Teori yaygın olarak kabul görmektedir; ancak son veriler bununla çelişmektedir." },
+        { en: "Prices rose sharply; however, demand remained steady.", tr: "Fiyatlar keskin şekilde yükseldi; ancak talep sabit kaldı." }
       ]
     },
     {
@@ -26338,7 +26373,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Nevertheless, Cümle 2.",
       trap: "⚠️ Beklenmedik bir zıtlık durumunda ikinci cümlenin başında yer alır.",
       examples: [
-        { en: "The trial faced budget cuts. Nevertheless, researchers proceeded.", tr: "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti." }
+        { en: "The trial faced budget cuts. Nevertheless, researchers proceeded.", tr: "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti." },
+        { en: "Weather conditions were harsh. Nevertheless, the expedition reached the summit.", tr: "Hava koşulları sertti. Yine de keşif ekibi zirveye ulaştı." }
       ]
     },
     {
@@ -26348,7 +26384,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Nonetheless, Cümle 2.",
       trap: "⚠️ Nevertheless ile tamamen eş anlamlıdır, akademik metinlerde sık geçer.",
       examples: [
-        { en: "The task was extremely difficult; nonetheless, she completed it on time.", tr: "Görev son derece zordu; buna rağmen zamanında tamamladı." }
+        { en: "The task was extremely difficult; nonetheless, she completed it on time.", tr: "Görev son derece zordu; buna rağmen zamanında tamamladı." },
+        { en: "Risks were high; nonetheless, the company approved the investment.", tr: "Riskler yüksekti; buna rağmen şirket yatırımı onayladı." }
       ]
     },
     {
@@ -26358,7 +26395,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. On the other hand, Cümle 2.",
       trap: "⚠️ İki farklı durum veya seçeneği kıyaslarken kullanılır.",
       examples: [
-        { en: "Solar energy is renewable. On the other hand, fossil fuels are finite.", tr: "Güneş enerjisi yenilenebilirdir. Diğer yandan, fosil yakıtlar sınırlıdır." }
+        { en: "Solar energy is renewable. On the other hand, fossil fuels are finite.", tr: "Güneş enerjisi yenilenebilirdir. Diğer yandan, fosil yakıtlar sınırlıdır." },
+        { en: "Laptops offer portability. On the other hand, desktops provide higher power.", tr: "Dizüstü bilgisayarlar taşınabilirlik sağlar. Diğer yandan masaüstü cihazlar daha yüksek güç sunar." }
       ]
     },
     {
@@ -26368,7 +26406,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. In contrast, Cümle 2.",
       trap: "⚠️ İki olgu arasındaki açık farkı vurgular.",
       examples: [
-        { en: "Tropical regions are humid. In contrast, deserts receive almost no rain.", tr: "Tropikal bölgeler nemlidir. Tezat olarak, çöller neredeyse hiç yağış almaz." }
+        { en: "Tropical regions are humid. In contrast, deserts receive almost no rain.", tr: "Tropikal bölgeler nemlidir. Tezat olarak, çöller neredeyse hiç yağış almaz." },
+        { en: "Private sector hiring grew. By contrast, public employment stagnated.", tr: "Özel sektör istihdamı büyüdü. Tezat olarak kamu istihdamı durakladı." }
       ]
     },
     {
@@ -26378,7 +26417,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1; conversely, Cümle 2.",
       trap: "⚠️ İki durumun birbirinin tam zıddı/tersi olduğunu ifade eder.",
       examples: [
-        { en: "Cold air contracts; conversely, hot air expands.", tr: "Soğuk hava büzüşür; aksine, sıcak hava genleşir." }
+        { en: "Cold air contracts; conversely, hot air expands.", tr: "Soğuk hava büzüşür; aksine, sıcak hava genleşir." },
+        { en: "High supply lowers prices; conversely, scarcity drives costs up.", tr: "Yüksek arz fiyatları düşürür; aksine kıtlık maliyetleri yukarı çeker." }
       ]
     },
     {
@@ -26388,7 +26428,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Olumsuz İddia. On the contrary, Doğrulayıcı Cümle.",
       trap: "⚠️ 'On the contrary' var olan yanlış bir iddiayı veya olumsuzluğu çürütmek için kullanılır!",
       examples: [
-        { en: "The drug did not harm the patient. On the contrary, it accelerated recovery.", tr: "İlaç hastaya zarar vermedi. Aksine, iyileşmeyi hızlandırdı." }
+        { en: "The drug did not harm the patient. On the contrary, it accelerated recovery.", tr: "İlaç hastaya zarar vermedi. Aksine, iyileşmeyi hızlandırdı." },
+        { en: "The reform did not fail. On the contrary, efficiency doubled.", tr: "Reform başarısız olmadı. Aksine verimlilik ikiye katlandı." }
       ]
     },
 
@@ -26400,7 +26441,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1; furthermore, Cümle 2.",
       trap: "⚠️ Mevcut argümana daha güçlü ek kanıt sunar.",
       examples: [
-        { en: "The report is thoroughly researched; furthermore, it offers practical solutions.", tr: "Rapor etraflıca araştırılmıştır; üstelik pratik çözümler sunmaktadır." }
+        { en: "The report is thoroughly researched; furthermore, it offers practical solutions.", tr: "Rapor etraflıca araştırılmıştır; üstelik pratik çözümler sunmaktadır." },
+        { en: "The device is lightweight; furthermore, battery life exceeds two days.", tr: "Cihaz hafiftir; üstelik pil ömrü iki günü aşmaktadır." }
       ]
     },
     {
@@ -26410,7 +26452,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Moreover, Cümle 2.",
       trap: "⚠️ Akışı güçlendiren ilave bilgi verir.",
       examples: [
-        { en: "The car is fuel-efficient; moreover, it has top safety ratings.", tr: "Araç yakıt tasarrufludur; üstelik en yüksek güvenlik puanlarına sahiptir." }
+        { en: "The car is fuel-efficient; moreover, it has top safety ratings.", tr: "Araç yakıt tasarrufludur; üstelik en yüksek güvenlik puanlarına sahiptir." },
+        { en: "The university boasts top faculty; moreover, tuition is affordable.", tr: "Üniversite üst düzey akademik kadroya sahiptir; üstelik harçlar uygundur." }
       ]
     },
     {
@@ -26420,7 +26463,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. In addition, Cümle 2.",
       trap: "⚠️ Cümle başında 'In addition,' olarak veya 'In addition to + İsim' şeklinde edat olarak kullanılır.",
       examples: [
-        { en: "The hospital opened a new wing. In addition, it hired twenty doctors.", tr: "Hastanede yeni bir kanat açıldı. Ayrıca yirmi doktor işe alındı." }
+        { en: "The hospital opened a new wing. In addition, it hired twenty doctors.", tr: "Hastanede yeni bir kanat açıldı. Ayrıca yirmi doktor işe alındı." },
+        { en: "She speaks fluent French. In addition, she has mastered Spanish.", tr: "Akıcı Fransızca konuşuyor. Ayrıca İspanyolcaya da hakim." }
       ]
     },
     {
@@ -26430,7 +26474,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Besides, Cümle 2.",
       trap: "⚠️ 'Beside' (yanında) ile karıştırılmamalıdır! Sonu '-s' ile biten geçiş zarfıdır.",
       examples: [
-        { en: "I do not want to go out. Besides, it is raining heavily.", tr: "Dışarı çıkmak istemiyorum. Ayrıca şiddetli yağmur yağıyor." }
+        { en: "I do not want to go out. Besides, it is raining heavily.", tr: "Dışarı çıkmak istemiyorum. Ayrıca şiddetli yağmur yağıyor." },
+        { en: "The candidate lacks experience. Besides, salary demands are unrealistic.", tr: "Aday deneyimden yoksundur. Ayrıca maaş talepleri gerçekçi değildir." }
       ]
     },
     {
@@ -26440,7 +26485,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. What is more, Cümle 2.",
       trap: "⚠️ Konuşma ve resmi akademik metinlerde ekstra dikkat çekici eklemedir.",
       examples: [
-        { en: "He passed the test; what is more, he scored the highest mark.", tr: "Sınavı geçti; dahası da var ki en yüksek puanı aldı." }
+        { en: "He passed the test; what is more, he scored the highest mark.", tr: "Sınavı geçti; dahası da var ki en yüksek puanı aldı." },
+        { en: "The apartment is spacious; what is more, rent includes heating.", tr: "Daire ferahtır; dahası da var ki kiraya ısınma dahildir." }
       ]
     },
     {
@@ -26450,7 +26496,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Likewise, Cümle 2.",
       trap: "⚠️ Benzer davranışı bildirmek için kullanılır.",
       examples: [
-        { en: "Japan invested in robotics. Likewise, South Korea expanded tech funding.", tr: "Japonya robotiğe yatırım yaptı. Aynı şekilde Güney Kore de teknoloji fonunu genişletti." }
+        { en: "Japan invested in robotics. Likewise, South Korea expanded tech funding.", tr: "Japonya robotiğe yatırım yaptı. Aynı şekilde Güney Kore de teknoloji fonunu genişletti." },
+        { en: "Teachers embraced online tools. Likewise, students adapted quickly.", tr: "Öğretmenler çevrimiçi araçları benimsedi. Aynı şekilde öğrenciler de hızla uyum sağladı." }
       ]
     },
     {
@@ -26460,7 +26507,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Similarly, Cümle 2.",
       trap: "⚠️ İki durum arasındaki paralelliği gösterir.",
       examples: [
-        { en: "The first experiment failed. Similarly, the second trial yielded no results.", tr: "İlk deney başarısız oldu. Benzer şekilde, ikinci deneme de sonuç vermedi." }
+        { en: "The first experiment failed. Similarly, the second trial yielded no results.", tr: "İlk deney başarısız oldu. Benzer şekilde, ikinci deneme de sonuç vermedi." },
+        { en: "Butterflies undergo metamorphosis. Similarly, frogs change during development.", tr: "Kelebekler başkalaşım geçirir. Benzer şekilde kurbağalar da gelişim sırasında değişir." }
       ]
     },
     {
@@ -26470,7 +26518,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. In the same way, Cümle 2.",
       trap: "⚠️ Yöntemsel veya mantıksal paralellik kurar.",
       examples: [
-        { en: "Plants absorb sunlight. In the same way, solar panels capture solar energy.", tr: "Bitkiler güneş ışığını emer. Aynı şekilde güneş panelleri de güneş enerjisini yakalar." }
+        { en: "Plants absorb sunlight. In the same way, solar panels capture solar energy.", tr: "Bitkiler güneş ışığını emer. Aynı şekilde güneş panelleri de güneş enerjisini yakalar." },
+        { en: "Muscles strengthen through exercise. In the same way, brain functions improve with mental tasks.", tr: "Kaslar egzersizle güçlenir. Aynı şekilde beyin fonksiyonları zihinsel görevlerle gelişir." }
       ]
     },
 
@@ -26482,7 +26531,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. For instance, Cümle 2.",
       trap: "⚠️ Cümle ortasında ara söz olarak da gelebilir.",
       examples: [
-        { en: "Certain mammals have adapted to water; whales, for instance, live entirely in the sea.", tr: "Bazı memeliler suya uyum sağlamıştır; balinalar, örneğin, tamamen denizde yaşar." }
+        { en: "Certain mammals have adapted to water; whales, for instance, live entirely in the sea.", tr: "Bazı memeliler suya uyum sağlamıştır; balinalar, örneğin, tamamen denizde yaşar." },
+        { en: "Renewable energy sources are expanding; wind power, for instance, grew by 20%.", tr: "Yenilenebilir enerji kaynakları büyüyor; rüzgar gücü, örneğin, %20 arttı." }
       ]
     },
     {
@@ -26492,7 +26542,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. For example, Cümle 2.",
       trap: "⚠️ En yaygın örnekleme geçiş ifadesidir.",
       examples: [
-        { en: "Many countries use green energy. Iceland, for example, relies on geothermal power.", tr: "Birçok ülke yeşil enerji kullanıyor. İzlanda, örneğin, jeotermal güce dayanmaktadır." }
+        { en: "Many countries use green energy. Iceland, for example, relies on geothermal power.", tr: "Birçok ülke yeşil enerji kullanıyor. İzlanda, örneğin, jeotermal güce dayanmaktadır." },
+        { en: "Citrus fruits are rich in vitamins. Oranges, for example, contain high vitamin C.", tr: "Narenciyeler vitamin bakımından zengindir. Portakal, örneğin, yüksek C vitamini içerir." }
       ]
     },
     {
@@ -26502,7 +26553,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. As an illustration, Cümle 2.",
       trap: "⚠️ Makalelerde grafik veya somut durum açıklamadan önce kullanılır.",
       examples: [
-        { en: "Inflation affects daily costs. As an illustration, bread prices doubled in a year.", tr: "Enflasyon günlük maliyetleri etkiler. Somut bir örnek olarak ekmek fiyatları bir yılda ikiye katlandı." }
+        { en: "Inflation affects daily costs. As an illustration, bread prices doubled in a year.", tr: "Enflasyon günlük maliyetleri etkiler. Somut bir örnek olarak ekmek fiyatları bir yılda ikiye katlandı." },
+        { en: "Technology changes habits. As an illustration, mobile payments replaced cash.", tr: "Teknoloji alışkanlıkları değiştirir. Somut bir örnek olarak mobil ödemeler nakdin yerini aldı." }
       ]
     },
     {
@@ -26512,7 +26564,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1; that is, Cümle 2.",
       trap: "⚠️ Bir önceki tanımı netleştirmek için açıklama yapar.",
       examples: [
-        { en: "The species is nocturnal; that is, it is active only during the night.", tr: "Türü gececildir; yani, sadece gece aktiftir." }
+        { en: "The species is nocturnal; that is, it is active only during the night.", tr: "Türü gececildir; yani, sadece gece aktiftir." },
+        { en: "The mineral is insoluble; that is, it will not dissolve in liquid.", tr: "Mineral çözünmez niteliktedir; yani sıvı içinde erimez." }
       ]
     },
     {
@@ -26522,7 +26575,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. In other words, Cümle 2.",
       trap: "⚠️ Aynı fikri daha anlaşılır veya basitleştirilmiş ifadeyle tekrarlar.",
       examples: [
-        { en: "The patient is completely afebrile; in other words, she has no fever.", tr: "Hasta tamamen ateşsizdir; diğer bir deyişle ateşi yoktur." }
+        { en: "The patient is completely afebrile; in other words, she has no fever.", tr: "Hasta tamamen ateşsizdir; diğer bir deyişle ateşi yoktur." },
+        { en: "The offer was declined unconditionally; in other words, the answer was no.", tr: "Teklif koşulsuz reddedildi; diğer bir deyişle yanıt hayırdı." }
       ]
     },
     {
@@ -26532,7 +26586,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle, namely Öğe 1 and Öğe 2.",
       trap: "⚠️ 'Namely' arkasından isim listesi alır, tam cümle gerektirmez.",
       examples: [
-        { en: "Two countries abstained from vote, namely France and Germany.", tr: "İki ülke oylamada çekimser kaldı, şöyle ki Fransa ve Almanya." }
+        { en: "Two countries abstained from vote, namely France and Germany.", tr: "İki ülke oylamada çekimser kaldı, şöyle ki Fransa ve Almanya." },
+        { en: "The test checks two elements, namely calcium and iron.", tr: "Test iki elementi kontrol eder, şöyle ki kalsiyum ve demir." }
       ]
     },
     {
@@ -26542,7 +26597,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1. Specifically, Cümle 2.",
       trap: "⚠️ Genel bir ifadeden özel bir detay noktasına iner.",
       examples: [
-        { en: "The policy targets youth unemployment; specifically, graduates under 25.", tr: "Politika genç işsizliğini hedefliyor; özel olarak 25 yaş altı mezunları." }
+        { en: "The policy targets youth unemployment; specifically, graduates under 25.", tr: "Politika genç işsizliğini hedefliyor; özel olarak 25 yaş altı mezunları." },
+        { en: "The study examines ocean life; specifically, deep-sea coral reefs.", tr: "Çalışma okyanus yaşamını inceliyor; özel olarak derin deniz mercan kayalıklarını." }
       ]
     },
 
@@ -26554,7 +26610,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1; otherwise, Cümle 2.",
       trap: "⚠️ İkinci cümlede genellikle modal (will/would/could) bulunur.",
       examples: [
-        { en: "We must preserve wetlands; otherwise, flood risks will escalate.", tr: "Sulak alanları korumalıyız; aksi takdirde felaket riski tırmanacaktır." }
+        { en: "We must preserve wetlands; otherwise, flood risks will escalate.", tr: "Sulak alanları korumalıyız; aksi takdirde felaket riski tırmanacaktır." },
+        { en: "Submit the proposal today; otherwise, funding will be revoked.", tr: "Teklifi bugün teslim edin; aksi takdirde fon iptal edilecektir." }
       ]
     },
     {
@@ -26564,7 +26621,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 NOKTALAMA: Cümle 1, or else Cümle 2.",
       trap: "⚠️ Günlük ve resmi dilde olumsuz sonuç uyarısı verir.",
       examples: [
-        { en: "Lock the laboratory, or else unauthorised personnel might enter.", tr: "Laboratuvarı kilitleyin, yoksa yetkisiz kişiler içeri girebilir." }
+        { en: "Lock the laboratory, or else unauthorised personnel might enter.", tr: "Laboratuvarı kilitleyin, yoksa yetkisiz kişiler içeri girebilir." },
+        { en: "Wear safety goggles, or else chemical splashes may injure your eyes.", tr: "Güvenlik gözlüğü takın, yoksa kimyasal sıçramalar gözlerinizi yaralayabilir." }
       ]
     },
 
@@ -26641,7 +26699,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Although + Özne + Fiil, Cümle",
       trap: "⚠️ Arkasından doğrudan isim almaz, tam cümle alır.",
       examples: [
-        { en: "Although the vaccine showed promise, further trials are required.", tr: "Aşı umut vadetse de daha ileri denemeler gerekiyor." }
+        { en: "Although the vaccine showed promise, further trials are required.", tr: "Aşı umut vadetse de daha ileri denemeler gerekiyor." },
+        { en: "Although prices increased, sales remained steady.", tr: "Fiyatlar artış gösterse de satışlar sabit kaldı." }
       ]
     },
     {
@@ -26651,7 +26710,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Even though + Özne + Fiil, Cümle",
       trap: "⚠️ Although'dan daha vurgulu bir zıtlık bağlacıdır.",
       examples: [
-        { en: "Even though it was midnight, the lab was fully active.", tr: "Gece yarısı olmasına rağmen laboratuvar tamamen aktifti." }
+        { en: "Even though it was midnight, the lab was fully active.", tr: "Gece yarısı olmasına rağmen laboratuvar tamamen aktifti." },
+        { en: "Even though he lacked formal training, his invention worked flawlessly.", tr: "Resmi eğitimi olmamasına rağmen icadı kusursuz çalıştı." }
       ]
     },
     {
@@ -26661,7 +26721,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Though + Özne + Fiil, Cümle OR Cümle, though.",
       trap: "⚠️ Cümle sonunda da kullanılabilen tek zıtlık bağlacıdır.",
       examples: [
-        { en: "The plan had flaws. We decided to proceed, though.", tr: "Planın kusurları vardı. Yine de devam etmeye karar verdik." }
+        { en: "The plan had flaws. We decided to proceed, though.", tr: "Planın kusurları vardı. Yine de devam etmeye karar verdik." },
+        { en: "Though tired from travel, the scientist presented the paper.", tr: "Yolculuktan yorgun olmasına rağmen bilim insanı bildiriyi sundu." }
       ]
     },
     {
@@ -26671,7 +26732,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Despite + İsim Öbeği / V-ing, Cümle",
       trap: "⚠️ 'Despite' yanına ASLA 'of' almaz! (In spite of vardır, despite of yoktur).",
       examples: [
-        { en: "Despite heavy rain, the field research continued.", tr: "Yoğun yağmura rağmen arazi araştırması devam etti." }
+        { en: "Despite heavy rain, the field research continued.", tr: "Yoğun yağmura rağmen arazi araştırması devam etti." },
+        { en: "Despite strict regulations, compliance remained low.", tr: "Katı yönetmeliklere rağmen uyum düşük kaldı." }
       ]
     },
     {
@@ -26681,7 +26743,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: In spite of + İsim Öbeği / V-ing, Cümle",
       trap: "⚠️ Despite ile tam eş anlamlıdır, arkasından isim öbeği alır.",
       examples: [
-        { en: "In spite of his age, the professor leads active field studies.", tr: "Yaşına karşın profesör aktif arazi çalışmalarını yürütmektedir." }
+        { en: "In spite of his age, the professor leads active field studies.", tr: "Yaşına karşın profesör aktif arazi çalışmalarını yürütmektedir." },
+        { en: "In spite of initial setbacks, the project succeeded.", tr: "Başlangıçtaki olumsuzluklara karşın proje başarılı oldu." }
       ]
     },
     {
@@ -26691,7 +26754,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Regardless of + İsim Öbeği, Cümle",
       trap: "⚠️ Herhangi bir engel veya farkın dikkate alınmadığını söyler.",
       examples: [
-        { en: "Regardless of background, all applicants have equal chance.", tr: "Arka plana bakılmaksızın tüm adaylar eşit şansa sahiptir." }
+        { en: "Regardless of background, all applicants have equal chance.", tr: "Arka plana bakılmaksızın tüm adaylar eşit şansa sahiptir." },
+        { en: "The policy applies to all citizens, irrespective of income.", tr: "Politika gelire bakılmaksızın tüm vatandaşlara uygulanır." }
       ]
     },
     {
@@ -26701,7 +26765,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Notwithstanding + İsim Öbeği, Cümle OR İsim + notwithstanding",
       trap: "⚠️ İsimden sonra da gelebilen özel akademik edattır.",
       examples: [
-        { en: "Notwithstanding the objections, the bill was passed.", tr: "İtirazlara rağmen tasarı kabul edildi." }
+        { en: "Notwithstanding the objections, the bill was passed.", tr: "İtirazlara rağmen tasarı kabul edildi." },
+        { en: "Evidence notwithstanding, the jury acquitted the defendant.", tr: "Kanıtlara rağmen jüri sanığı beraat ettirdi." }
       ]
     },
     {
@@ -26711,7 +26776,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Simple as it may seem, ... = Although it may seem simple, ...",
       trap: "⚠️ Sıfat/Zarf cümlenin başına geçer ve arkasından 'as' alır!",
       examples: [
-        { en: "Simple as it may seem, the task requires extreme precision.", tr: "Her ne kadar basit görünse de görev aşırı hassasiyet gerektirir." }
+        { en: "Simple as it may seem, the task requires extreme precision.", tr: "Her ne kadar basit görünse de görev aşırı hassasiyet gerektirir." },
+        { en: "Hard as they tried, they could not unlock the mechanism.", tr: "Her ne kadar çok çabalasalar da mekanizmayı açamadılar." }
       ]
     },
     {
@@ -26721,7 +26787,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: However + Sıfat/Zarf + Özne + Fiil, Cümle",
       trap: "⚠️ Burada 'However' geçiş zarfı değil, 'Ne kadar... olsa da' bağlacıdır!",
       examples: [
-        { en: "However carefully you plan, unexpected challenges will arise.", tr: "Ne kadar dikkatli planlarsanız planlayın beklenmedik engeller çıkacaktır." }
+        { en: "However carefully you plan, unexpected challenges will arise.", tr: "Ne kadar dikkatli planlarsanız planlayın beklenmedik engeller çıkacaktır." },
+        { en: "However rich he is, he lives a frugal life.", tr: "Ne kadar zengin olursa olsun mütevazı bir hayat yaşıyor." }
       ]
     },
 
@@ -26733,7 +26800,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Cümle 1 + so that + Özne + can/could/may/might + V1",
       trap: "⚠️ So that cümlesinde genellikle modal (can, could, may) yer alır.",
       examples: [
-        { en: "The vault was sealed so that oxygen levels could be controlled.", tr: "Kasa, oksijen seviyeleri kontrol edilebilsin diye mühürlendi." }
+        { en: "The vault was sealed so that oxygen levels could be controlled.", tr: "Kasa, oksijen seviyeleri kontrol edilebilsin diye mühürlendi." },
+        { en: "He explained the steps clearly so that everyone could understand.", tr: "Herkes anlayabilsin diye adımları net bir şekilde açıkladı." }
       ]
     },
     {
@@ -26743,7 +26811,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: in order to / so as to + Fiil Yalın Hali (V1)",
       trap: "⚠️ Cümle almaz, sadece fiil alır.",
       examples: [
-        { en: "The sample was cooled in order to prevent degradation.", tr: "Numune bozulmayı önlemek için soğutuldu." }
+        { en: "The sample was cooled in order to prevent degradation.", tr: "Numune bozulmayı önlemek için soğutuldu." },
+        { en: "She arrived early so as to secure a front seat.", tr: "Ön koltuk kapmak amacıyla erken geldi." }
       ]
     },
     {
@@ -26753,7 +26822,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: lest + Özne + V1 / should V1",
       trap: "⚠️ 'Lest' kendi içinde olumsuzdur, yan cümlesine 'not' ALMAZ!",
       examples: [
-        { en: "The archives were digitised lest they be destroyed by fire.", tr: "Arşivler yangında yok olmasın diye dijitalleştirildi." }
+        { en: "The archives were digitised lest they be destroyed by fire.", tr: "Arşivler yangında yok olmasın diye dijitalleştirildi." },
+        { en: "He spoke softly for fear that he might wake the patient.", tr: "Hastayı uyandırır korkusuyla alçak sesle konuştu." }
       ]
     },
     {
@@ -26763,7 +26833,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: provided that + Özne + Fiil, Cümle",
       trap: "⚠️ 'If' bağlacının resmi akademik şeklidir.",
       examples: [
-        { en: "The permit will be granted provided that safety standards are met.", tr: "Ruhsat, güvenlik standartları karşılanması şartıyla verilecektir." }
+        { en: "The permit will be granted provided that safety standards are met.", tr: "Ruhsat, güvenlik standartları karşılanması şartıyla verilecektir." },
+        { en: "You may borrow the equipment providing that you return it tomorrow.", tr: "Yarın iade etmeniz şartıyla ekipmanı ödünç alabilirsiniz." }
       ]
     },
     {
@@ -26773,7 +26844,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Unless + Olumlu Yan Cümle, Cümle",
       trap: "⚠️ 'Unless' olumsuzdur, yan cümlesine 'not' almaz!",
       examples: [
-        { en: "Unless emissions drop, global temperatures will keep rising.", tr: "Emisyonlar düşmedikçe küresel sıcaklıklar yükselmeye devam edecek." }
+        { en: "Unless emissions drop, global temperatures will keep rising.", tr: "Emisyonlar düşmedikçe küresel sıcaklıklar yükselmeye devam edecek." },
+        { en: "Unless you sign the consent form, surgery cannot proceed.", tr: "Rıza formunu imzalamadığınız sürece ameliyat ilerleyemez." }
       ]
     },
 
@@ -26796,7 +26868,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Özne + Fiil + as if / as though + Özne + Past Tense (V2 / Were)",
       trap: "⚠️ Gerçek dışı varsayımlarda past tense ('were' veya 'had V3') kullanılır.",
       examples: [
-        { en: "He speaks as if he knew the solution to every problem.", tr: "Her problemin çözümünü biliyormuş gibi konuşuyor." }
+        { en: "He speaks as if he knew the solution to every problem.", tr: "Her problemin çözümünü biliyormuş gibi konuşuyor." },
+        { en: "The robot moved as though it were alive.", tr: "Robot canlıymış gibi hareket etti." }
       ]
     },
     {
@@ -26806,7 +26879,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: Just as + Cümle 1, so (too) + Cümle 2",
       trap: "⚠️ Akademik makalelerde iki bağımsız bilimsel olguyu benzetirken sorulur.",
       examples: [
-        { en: "Just as physics explains energy, so biology explains life.", tr: "Tıpkı fiziğin enerjiyi açıklaması gibi biyoloji de yaşamı açıklar." }
+        { en: "Just as physics explains energy, so biology explains life.", tr: "Tıpkı fiziğin enerjiyi açıklaması gibi biyoloji de yaşamı açıklar." },
+        { en: "Just as the body needs food, so the mind needs stimulation.", tr: "Tıpkı vücudun gıdaya ihtiyacı olduğu gibi zihin de uyarılmaya ihtiyaç duyar." }
       ]
     },
     {
@@ -26816,7 +26890,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: The + Komparatif + Cümle 1, the + Komparatif + Cümle 2",
       trap: "⚠️ Her iki tarafın başında da 'the' tanım edatı kullanılmak zorundadır!",
       examples: [
-        { en: "The more you study, the more confident you become.", tr: "Ne kadar çok çalışırsanız, o kadar kendinizden emin olursunuz." }
+        { en: "The more you study, the more confident you become.", tr: "Ne kadar çok çalışırsanız, o kadar kendinizden emin olursunuz." },
+        { en: "The higher the altitude, the lower the atmospheric pressure.", tr: "Rakım ne kadar yüksek olursa, atmosferik basınç o kadar düşük olur." }
       ]
     },
     {
@@ -26826,7 +26901,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: apart from + İsim Öbeği, Cümle",
       trap: "⚠️ Hem olumlu ekleme hem de hariç tutma anlamında kullanılır.",
       examples: [
-        { en: "Apart from minor flaws, the research model is solid.", tr: "Küçük kusurlar dışında araştırma modeli sağlamdır." }
+        { en: "Apart from minor flaws, the research model is solid.", tr: "Küçük kusurlar dışında araştırma modeli sağlamdır." },
+        { en: "Aside from a short delay, the flight was pleasant.", tr: "Kısa bir gecikme haricinde uçuş keyifliydi." }
       ]
     },
     {
@@ -26836,7 +26912,8 @@ const TRANSITIONS_MATRIX_DATA = {
       rule: "📐 FORMÜL: barring + İsim Öbeği, Cümle",
       trap: "⚠️ 'Barring' geleceğe dönük istisnai engel durumunu belirtir.",
       examples: [
-        { en: "Barring unforeseen delays, construction finishes in June.", tr: "Görünmeyen gecikmeler hariç, inşaat Haziran'da bitecek." }
+        { en: "Barring unforeseen delays, construction finishes in June.", tr: "Görünmeyen gecikmeler hariç, inşaat Haziran'da bitecek." },
+        { en: "Except for a few errors, the essay was brilliantly written.", tr: "Birkaç hata hariç makale harika yazılmıştı." }
       ]
     }
   ]
