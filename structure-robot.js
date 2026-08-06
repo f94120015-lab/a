@@ -102,13 +102,13 @@
     { id: "v1_present", label: "V1 / Present Simple", sample: "she studies hard", tenseGroup: "present", color: "#8b5cf6" },
     { id: "v2_past", label: "V2 / Past Simple", sample: "she studied hard", tenseGroup: "past", color: "#8b5cf6" },
     { id: "was_were_ving", label: "Was/Were + V-ing", sample: "she was studying late", tenseGroup: "past_cont", color: "#8b5cf6" },
-    { id: "had_v3", label: "Had + V3 (Inverted / Past Perfect)", sample: "had she entered the room", tenseGroup: "past_perfect", color: "#8b5cf6" },
+    { id: "had_v3", label: "Had + V3 (Past Perfect)", sample: "she had studied hard", tenseGroup: "past_perfect", color: "#8b5cf6" },
     { id: "has_v3", label: "Has/Have + V3 / Present Perfect", sample: "she has lived here", tenseGroup: "present_perfect", color: "#8b5cf6" },
     { id: "is_ving", label: "Am/Is/Are + V-ing", sample: "it is raining outside", tenseGroup: "present_cont", color: "#8b5cf6" },
     { id: "future_date", label: "[Gelecek Tarih / By 2050]", sample: "By 2050", tenseGroup: "future_date", color: "#8b5cf6" },
     { id: "past_date", label: "[Geçmiş Tarih / By 1900]", sample: "By 1900", tenseGroup: "past_date", color: "#8b5cf6" },
     { id: "v_ing_obj", label: "[V-ing + Nesne]", sample: "completing the report", tenseGroup: "ving", color: "#8b5cf6" },
-    { id: "noun_phrase", label: "[Noun / İsim / Dönem İskeleti]", sample: "the exam period / the 20th century", tenseGroup: "noun", color: "#8b5cf6" }
+    { id: "noun_phrase", label: "[Noun / İsim / Dönem İskeleti]", sample: "the economic crisis", tenseGroup: "noun", color: "#8b5cf6" }
   ];
 
   // 3. Matris: Ana Cümle / Modal Yapıları (Clause B)
@@ -116,7 +116,7 @@
     { id: "will_have_v3", label: "WILL HAVE + V3 (Future Perfect)", sample: "they will have finished the project", modalGroup: "future_perfect", color: "#ec4899" },
     { id: "will_v1", label: "WILL + V1", sample: "she will pass the exam", modalGroup: "future", color: "#ec4899" },
     { id: "v1_main", label: "V1 / Simple Present", sample: "she passes the exam", modalGroup: "present", color: "#ec4899" },
-    { id: "v2_main", label: "V2 / Simple Past", sample: "she passed the exam / did the train leave", modalGroup: "past", color: "#ec4899" },
+    { id: "v2_main", label: "V2 / Simple Past", sample: "she passed the exam", modalGroup: "past", color: "#ec4899" },
     { id: "was_were_ving_main", label: "Was/Were + V-ing", sample: "everyone was waiting", modalGroup: "past_cont", color: "#ec4899" },
     { id: "would_v1", label: "WOULD / COULD + V1", sample: "she would pass the exam", modalGroup: "would_v1", color: "#ec4899" },
     { id: "would_have_v3", label: "WOULD / COULD + HAVE V3", sample: "she would have passed the exam", modalGroup: "would_have_v3", color: "#ec4899" },
@@ -573,6 +573,109 @@
     }
   };
 
+  // ─── 2b. CÜMLE ŞABLONLARI (SENTENCE TEMPLATES) ──────────────────────────
+  // Her bağlaç/yapı için doğru İngilizce cümle kalıbı.
+  // {A} = Clause A (Yan Cümle) sample, {B} = Clause B (Ana Cümle) sample
+
+  const SENTENCE_TEMPLATES = {
+    // ⏱️ Zaman & Tense Bağlaçları
+    when: "When {A}, {B}.",
+    while_as: "While {A}, {B}.",
+    before: "Before {A}, {B}.",
+    after: "After {A}, {B}.",
+    as_soon_as: "As soon as {A}, {B}.",
+    until_till: "Until {A}, {B}.",
+    by_the_time: "By the time {A}, {B}.",
+    since: "Since {A}, {B}.",
+    by_time_anchor: "{A}, {B}.",
+    so_far: "So far, {B}.",
+
+    // ⚡ Koşul Yapıları
+    if_type0_1: "If {A}, {B}.",
+    if_type2: "If {A}, {B}.",
+    if_type3: "If {A}, {B}.",
+
+    // 🔀 Zıtlık & Neden Bağlaçları
+    although: "Although {A}, {B}.",
+    because: "Because {A}, {B}.",
+
+    // 🔀 Geçiş İfadeleri (Transitions)
+    however_nevertheless: "{A}; however, {B}.",
+    in_contrast_on_the_other_hand: "{A}; on the other hand, {B}.",
+    on_the_contrary: "{A}; on the contrary, {B}.",
+    even_so: "{A}; even so, {B}.",
+    therefore_thus: "{A}; therefore, {B}.",
+    as_a_result_transition: "{A}; as a result, {B}.",
+    accordingly_transition: "{A}; accordingly, {B}.",
+    in_addition_moreover: "{A}; moreover, {B}.",
+    besides_what_is_more: "{A}; besides, {B}.",
+    likewise_similarly: "{A}; likewise, {B}.",
+    for_example_for_instance: "{A}; for example, {B}.",
+    in_other_words_that_is: "{A}; in other words, {B}.",
+    otherwise: "{A}; otherwise, {B}.",
+
+    // 🎯 Neden → Fiil → Etki
+    lead_to_cause: "{A} leads to {B}.",
+    is_responsible_for: "{A} is responsible for {B}.",
+    produce_produces: "{A} produces {B}.",
+    induce_provoke_prompt: "{A} induces {B}.",
+    result_in: "{A} results in {B}.",
+    trigger_triggers: "{A} triggers {B}.",
+    give_rise_to: "{A} gives rise to {B}.",
+    contribute_to: "{A} contributes to {B}.",
+    pave_the_way_for: "{A} paves the way for {B}.",
+    culminate_in: "{A} culminates in {B}.",
+
+    // 🎯 Etki → Fiil → Neden (Ters yön)
+    is_due_to: "{B} is due to {A}.",
+    result_from: "{B} results from {A}.",
+    stem_from: "{B} stems from {A}.",
+    originate_from: "{B} originates from {A}.",
+    arise_from: "{B} arises from {A}.",
+    is_attributed_to: "{B} is attributed to {A}.",
+    is_ascribed_to: "{B} is ascribed to {A}.",
+    is_caused_by: "{B} is caused by {A}.",
+
+    // 🎯 Edat Öbekleri
+    because_of_due_to_owing_to: "Due to {A}, {B}.",
+    on_account_of_in_view_of: "On account of {A}, {B}.",
+    by_virtue_of: "By virtue of {A}, {B}.",
+    as_a_result_of: "As a result of {A}, {B}.",
+
+    // 🎯 Neden-Etki Bağlaç Kalıpları
+    therefore_thus_hence: "{A}; therefore, {B}.",
+    consequently: "{A}; consequently, {B}.",
+    as_a_result_that: "{A}; as a result, {B}.",
+    accordingly: "{A}; accordingly, {B}.",
+    in_that: "{B}, in that {A}.",
+    inasmuch_as_seeing_that: "Inasmuch as {A}, {B}.",
+    owing_to_the_fact_that: "Owing to the fact that {A}, {B}.",
+    thereby_v_ing: "{A}, thereby {B}.",
+    so_that_such_that: "{A}, so that {B}.",
+    so_much_so_that: "{A}, so much so that {B}.",
+
+    // ⚡ Devrik Yapılar & Kısaltmalar
+    having_v3: "Having {A}, {B}.",
+    prior_to: "Prior to {A}, {B}.",
+    upon_on: "Upon {A}, {B}.",
+    at_the_dawn: "At the dawn of {A}, {B}.",
+    no_sooner_than: "No sooner {A_INV} than {B}.",
+    hardly_when: "Hardly {A_INV} when {B}.",
+    during_throughout: "During {A}, {B}."
+  };
+
+  // Devrik yapı yardımcısı: "she had studied hard" → "had she studied hard"
+  function invertHadV3(sample) {
+    const parts = sample.split(" ");
+    const hadIdx = parts.indexOf("had");
+    if (hadIdx > 0) {
+      const subject = parts.slice(0, hadIdx).join(" ");
+      const rest = parts.slice(hadIdx + 1).join(" ");
+      return "had " + subject + " " + rest;
+    }
+    return sample;
+  }
+
   // ─── 3. GÖREV MODU (CHALLENGE) VERİ SETİ ─────────────────────────────────
 
   const CHALLENGES = [
@@ -972,13 +1075,25 @@
       }
     });
 
-    // Build Live English Sentence
+    // Build Live English Sentence using Templates
     if (connObj && clauseAObj && clauseBObj) {
-      let connWord = connObj.label.split(" ")[0];
-      if (connWord === "IF") connWord = "If";
-      else connWord = connWord.charAt(0) + connWord.slice(1).toLowerCase();
-
-      sentenceENText = `"${connWord} ${clauseAObj.sample}, ${clauseBObj.sample}."`;
+      const template = SENTENCE_TEMPLATES[state.selectedConnector];
+      if (template) {
+        let sA = clauseAObj.sample;
+        let sB = clauseBObj.sample;
+        let result = template
+          .replace("{A_INV}", invertHadV3(sA))
+          .replace("{A}", sA)
+          .replace("{B}", sB);
+        // İlk harfi büyüt
+        result = result.charAt(0).toUpperCase() + result.slice(1);
+        sentenceENText = '"' + result + '"';
+      } else {
+        // Fallback: bağlacın ilk anlamlı kelimesini al
+        let connWord = connObj.label.split(" / ")[0];
+        connWord = connWord.charAt(0) + connWord.slice(1).toLowerCase();
+        sentenceENText = '"' + connWord + " " + clauseAObj.sample + ", " + clauseBObj.sample + '."';
+      }
     } else {
       let parts = [];
       if (connObj) parts.push(connObj.label);
