@@ -26895,6 +26895,39 @@ const TRANSITIONS_MATRIX_DATA = {
       ]
     },
     {
+      term: "such as",
+      category: "exemplification",
+      meaning: "-gibi (Örnekleme Edatı)",
+      rule: "📐 FORMÜL: Çoğul İsim + such as + Örnek 1 and Örnek 2 (CÜMLE ALMAZ)",
+      trap: "⚠️ 'Such as' arkasından tam cümle ALMAZ, sadece isim/isim öbeği alır!",
+      examples: [
+        { en: "Renewable sources such as wind and solar are expanding.", tr: "Rüzgar ve güneş gibi yenilenebilir kaynaklar yaygınlaşıyor." },
+        { en: "Noble gases such as helium and neon are unreactive.", tr: "Helyum ve neon gibi soy gazlar tepkimeye girmez." }
+      ]
+    },
+    {
+      term: "like",
+      category: "exemplification",
+      meaning: "-gibi (Benzetişim / Örnekleme Edatı)",
+      rule: "📐 FORMÜL: İsim + like + Örnek İsim",
+      trap: "⚠️ Cümle başı bağlacı değil, isimleri örneklendiren edattır.",
+      examples: [
+        { en: "Gases like carbon dioxide trap heat in the atmosphere.", tr: "Karbondioksit gibi gazlar ısıyı atmosferde hapseder." },
+        { en: "Predators like lions hunt in organized packs.", tr: "Aslan gibi yırtıcılar örgütlü sürüler halinde avlanır." }
+      ]
+    },
+    {
+      term: "including",
+      category: "exemplification",
+      meaning: "-dahil olmak üzere (Dahiliyet Örneklemesi)",
+      rule: "📐 FORMÜL: Genel İsim, including + Dahil Edilen Örnekler",
+      trap: "⚠️ Virgülle ayrılarak ara söz şeklinde listeleme yapar.",
+      examples: [
+        { en: "All vital organs, including the heart and lungs, were examined.", tr: "Kalp ve akciğerler dahil olmak üzere tüm hayati organlar incelendi." },
+        { en: "Several countries, including Canada, signed the treaty.", tr: "Kanada dahil olmak üzere birkaç ülke antlaşmayı imzaladı." }
+      ]
+    },
+    {
       term: "apart from / aside from",
       category: "focus_exception",
       meaning: "-den başka, hariç",
@@ -26940,6 +26973,23 @@ function initTransitionsMatrixTab() {
       btn.style.color = '#10b981';
 
       trmActiveMode = btn.dataset.mode;
+      trmActiveCategory = 'all';
+      
+      const filterChips = document.querySelectorAll('.trm-chip');
+      filterChips.forEach(c => {
+        if (c.dataset.category === 'all') {
+          c.classList.add('active');
+          c.style.background = '#10b981';
+          c.style.color = 'white';
+          c.style.borderColor = '#10b981';
+        } else {
+          c.classList.remove('active');
+          c.style.background = 'var(--bg-card)';
+          c.style.color = 'var(--text-primary)';
+          c.style.borderColor = 'var(--border-color)';
+        }
+      });
+
       trmExpandedCardIndex = null;
       renderTransitionsMatrix();
     };
@@ -26981,12 +27031,12 @@ function highlightTrmText(text, category) {
   const keywords = [
     "however", "nevertheless", "nonetheless", "on the other hand", "in contrast", "conversely", "on the contrary",
     "furthermore", "moreover", "in addition", "besides", "likewise", "similarly", "in the same way",
-    "for instance", "for example", "that is", "in other words", "namely", "otherwise", "or else",
+    "for instance", "for example", "such as", "like", "including", "that is", "in other words", "namely", "otherwise", "or else",
     "in brief", "in short", "overall", "to sum up", "indeed", "in fact", "as for", "as regards",
     "although", "even though", "though", "despite", "in spite of", "regardless of", "simple as it may seem",
     "however carefully", "so that", "in order to", "lest", "provided that", "unless", "apart from", "barring",
     "ancak", "yine de", "buna rağmen", "diğer yandan", "aksine", "bilakis", "dahası", "üstelik", "ayrıca",
-    "benzer şekilde", "örneğin", "yani", "şöyle ki", "aksi takdirde", "yoksa", "kısaca", "özetle", "aslında",
+    "benzer şekilde", "örneğin", "gibi", "dahil olmak üzere", "yani", "şöyle ki", "aksi takdirde", "yoksa", "kısaca", "özetle", "aslında",
     "gelince", "rağmen", "se de", "amacıyla", "için", "mesin diye", "şartıyla", "medikçe", "hariç"
   ];
 
