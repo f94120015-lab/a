@@ -13021,6 +13021,8 @@ function switchTab(tabId) {
     initCauseEffectTab();
   } else if (tabId === 'time-matrix') {
     initTimeMatrixTab();
+  } else if (tabId === 'transitions-matrix') {
+    initTransitionsMatrixTab();
   }
 }
 
@@ -26310,5 +26312,393 @@ function toggleTmCard(idx) {
     tmExpandedCardIndex = idx;
   }
   renderTimeMatrix();
+}
+
+// ============================================================
+// ETKİLEŞİMLİ CÜMLE BAĞLAÇLARI & GEÇİŞ İFADELERİ DATA & LOGIC
+// ============================================================
+
+const TRANSITIONS_MATRIX_DATA = {
+  sentence_connectors: [
+    {
+      term: "however / nevertheless / nonetheless",
+      category: "contrast",
+      meaning: "ancak, yine de, buna rağmen (Geçiş Zarfları)",
+      rule: "📐 NOKTALAMA: Cümle 1; however, Cümle 2. OR Cümle 1. However, Cümle 2.",
+      trap: "⚠️ UYUM: Arkasından tam cümle alır. Virgülle tek başına bağlanmaz.",
+      examples: [
+        { en: "The theory is widely accepted; however, recent data contradicts it.", tr: "Teori yaygın olarak kabul görmektedir; ancak son veriler bununla çelişmektedir." },
+        { en: "The trial faced budget cuts. Nevertheless, researchers proceeded.", tr: "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti." }
+      ]
+    },
+    {
+      term: "on the other hand / in contrast / conversely",
+      category: "contrast",
+      meaning: "diğer yandan, tezat olarak, aksine",
+      rule: "📐 NOKTALAMA: Cümle 1. In contrast, Cümle 2. / Cümle 1; conversely, Cümle 2.",
+      trap: "⚠️ 'Conversely' iki durumun birbirinin tam tersi olduğunu vurgular.",
+      examples: [
+        { en: "Solar energy is renewable. On the other hand, fossil fuels are finite.", tr: "Güneş enerjisi yenilenebilirdir. Diğer yandan, fosil yakıtlar sınırlıdır." },
+        { en: "Cold air contracts; conversely, hot air expands.", tr: "Soğuk hava büzüşür; aksine, sıcak hava genleşir." }
+      ]
+    },
+    {
+      term: "on the contrary",
+      category: "contrast",
+      meaning: "aksine, bilakis (Yanlış İddiayı Çürütür)",
+      rule: "📐 NOKTALAMA: Olumsuz Cümle. On the contrary, Olumlu Cümle.",
+      trap: "⚠️ 'On the contrary' sadece bir yanlış algıyı/iddiayı düzeltirken kullanılır!",
+      examples: [
+        { en: "The drug did not harm the patient. On the contrary, it accelerated recovery.", tr: "İlaç hastaya zarar vermedi. Aksine, iyileşmeyi hızlandırdı." }
+      ]
+    },
+    {
+      term: "furthermore / moreover / in addition / besides",
+      category: "addition",
+      meaning: "dahası, üstelik, ayrıca",
+      rule: "📐 NOKTALAMA: Cümle 1; furthermore, Cümle 2. / Cümle 1. Moreover, Cümle 2.",
+      trap: "⚠️ Var olan bir argümanı güçlendirmek için ek kanıt sunar.",
+      examples: [
+        { en: "The report is thoroughly researched; furthermore, it offers practical solutions.", tr: "Rapor etraflıca araştırılmıştır; üstelik pratik çözümler sunmaktadır." }
+      ]
+    },
+    {
+      term: "likewise / similarly / in the same way",
+      category: "addition",
+      meaning: "benzer şekilde, keza, aynı biçimde",
+      rule: "📐 NOKTALAMA: Cümle 1. Likewise, Cümle 2.",
+      trap: "⚠️ İki farklı öznenin aynı davranışı sergilediğini gösterir.",
+      examples: [
+        { en: "The first experiment failed. Similarly, the second trial yielded no results.", tr: "İlk deney başarısız oldu. Benzer şekilde, ikinci deneme de sonuç vermedi." }
+      ]
+    },
+    {
+      term: "for instance / for example",
+      category: "exemplification",
+      meaning: "örneğin, misal olarak",
+      rule: "📐 NOKTALAMA: Cümle 1. For instance, Cümle 2.",
+      trap: "⚠️ Ara söz olarak cümlenin ortasına da girebilir: (Cümle 1, for instance, ...)",
+      examples: [
+        { en: "Certain mammals have adapted to water; whales, for instance, live entirely in the sea.", tr: "Bazı memeliler suya uyum sağlamıştır; balinalar, örneğin, tamamen denizde yaşar." }
+      ]
+    },
+    {
+      term: "that is (i.e.) / in other words / namely",
+      category: "exemplification",
+      meaning: "yani, başka bir deyişle, şöyle ki",
+      rule: "📐 NOKTALAMA: Cümle 1; in other words, Cümle 2.",
+      trap: "⚠️ 'Namely' kendinden sonra gelen isimleri teker teker listeler.",
+      examples: [
+        { en: "The species is nocturnal; that is, it is active only during the night.", tr: "Türü gececildir; yani, sadece gece aktiftir." },
+        { en: "Two countries abstained from vote, namely France and Germany.", tr: "İki ülke oylamada çekimser kaldı, şöyle ki Fransa ve Almanya." }
+      ]
+    },
+    {
+      term: "otherwise / or else",
+      category: "purpose_condition",
+      meaning: "aksi takdirde, yoksa (Gizli Şart Yapısı)",
+      rule: "📐 NOKTALAMA: Emir/Tavsiye Cümlesi; otherwise, Olumsuz Sonuç Cümlesi.",
+      trap: "⚠️ Arkasından genellikle modal (would / will / could) alır.",
+      examples: [
+        { en: "We must preserve wetlands; otherwise, flood risks will escalate.", tr: "Sulak alanları korumalıyız; aksi takdirde felaket riski tırmanacaktır." }
+      ]
+    },
+    {
+      term: "in brief / in short / overall / to sum up",
+      category: "summary_emphasis",
+      meaning: "kısaca, özetle, genel olarak",
+      rule: "📐 NOKTALAMA: Paragraph... In brief, Sonuç Cümlesi.",
+      trap: "⚠️ Paragraf ve makalelerin sonuç cümlelerinde bağlaç olarak kullanılır.",
+      examples: [
+        { en: "In brief, the proposed intervention proved highly effective.", tr: "Kısaca, önerilen müdahalenin son derece etkili olduğu kanıtlandı." }
+      ]
+    },
+    {
+      term: "indeed / in fact / as a matter of fact",
+      category: "summary_emphasis",
+      meaning: "gerçekten de, aslında, nitekim",
+      rule: "📐 NOKTALAMA: İddia Cümlesi. Indeed, Doğrulayıcı Cümle.",
+      trap: "⚠️ Bir önceki iddiayı derinleştirir ve vurgular.",
+      examples: [
+        { en: "The test was difficult; indeed, only three students passed.", tr: "Test zordu; gerçekten de, sadece üç öğrenci geçti." }
+      ]
+    },
+    {
+      term: "as for / as regards / with respect to",
+      category: "focus_exception",
+      meaning: "-e gelince, -e ilişkin, hususunda",
+      rule: "📐 NOKTALAMA: As for + İsim, Cümle",
+      trap: "⚠️ Yeni bir konuya yumuşak geçiş yaparken kullanılır.",
+      examples: [
+        { en: "As for the funding, private donors have stepped in.", tr: "Finansmana gelince, özel bağışçılar devreye girdi." }
+      ]
+    }
+  ],
+
+  subordinate_preps: [
+    {
+      term: "although / even though / though",
+      category: "contrast",
+      meaning: "-e rağmen, -se de (Zıtlık Yan Cümleciği)",
+      rule: "📐 FORMÜL: Although + Yan Cümle (Özne + Fiil), Ana Cümle",
+      trap: "⚠️ Although arkasından İSİM almaz, TAM CÜMLE alır!",
+      examples: [
+        { en: "Although the vaccine showed promise, further trials are required.", tr: "Aşı umut vadetse de daha ileri denemeler gerekiyor." }
+      ]
+    },
+    {
+      term: "despite / in spite of / regardless of",
+      category: "contrast",
+      meaning: "-e rağmen, bakılmaksızın (Zıtlık Edatları)",
+      rule: "📐 FORMÜL: despite / in spite of + İsim Öbeği / V-ing (CÜMLE ALMAZ)",
+      trap: "⚠️ 'Despite' kelimesinden sonra asla 'of' GELMEZ! (In spite of vardır, despite of yoktur).",
+      examples: [
+        { en: "Despite heavy rain, the field research continued.", tr: "Yoğun yağmura rağmen arazi araştırması devam etti." },
+        { en: "Regardless of background, all applicants have equal chance.", tr: "Arka plana bakılmaksızın tüm adaylar eşit şansa sahiptir." }
+      ]
+    },
+    {
+      term: "Adj / Adv + as / though + S + V",
+      category: "contrast",
+      meaning: "her ne kadar ... olsa da (Devrik Zıtlık)",
+      rule: "📐 FORMÜL: Rich as he is, ... = Although he is rich, ...",
+      trap: "⚠️ Sıfat veya zarf cümlenin en başına geçer ve arkasından 'as' alır!",
+      examples: [
+        { en: "Simple as it may seem, the task requires extreme precision.", tr: "Her ne kadar basit görünse de görev aşırı hassasiyet gerektirir." }
+      ]
+    },
+    {
+      term: "However + Adj / Adv + S + V",
+      category: "contrast",
+      meaning: "ne kadar ... olursa olsun",
+      rule: "📐 FORMÜL: However + Sıfat/Zarf + Özne + Fiil, Ana Cümle",
+      trap: "⚠️ Burada 'However' geçiş zarfı değil, 'Ne kadar... olsa da' bağlacıdır!",
+      examples: [
+        { en: "However carefully you plan, unexpected challenges will arise.", tr: "Ne kadar dikkatli planlarsanız planlayın beklenmedik engeller çıkacaktır." }
+      ]
+    },
+    {
+      term: "so that / in order that",
+      category: "purpose_condition",
+      meaning: "-sın diye, amacıyla (Amaç Cümleciği)",
+      rule: "📐 FORMÜL: Cümle 1 + so that + Özne + can/could/may/might + V1",
+      trap: "⚠️ So that cümlesinde genellikle modal (can, could, may) yer alır.",
+      examples: [
+        { en: "The vault was sealed so that oxygen levels could be controlled.", tr: "Kasa, oksijen seviyeleri kontrol edilebilsin diye mühürlendi." }
+      ]
+    },
+    {
+      term: "in order to / so as to (+ V1)",
+      category: "purpose_condition",
+      meaning: "-mek için, amacıyla (Mastar Kısaltması)",
+      rule: "📐 FORMÜL: in order to / so as to + Fiil Yalın Hali (V1)",
+      trap: "⚠️ Arkasından cümle almaz, sadece fiil alır.",
+      examples: [
+        { en: "The sample was cooled in order to prevent degradation.", tr: "Numune bozulmayı önlemek için soğutuldu." }
+      ]
+    },
+    {
+      term: "lest / for fear that",
+      category: "purpose_condition",
+      meaning: "-mesin diye, korkusuyla",
+      rule: "📐 FORMÜL: lest + Özne + V1 / should V1",
+      trap: "⚠️ 'Lest' kendi içinde olumsuzdur, yan cümlesine 'not' ALMAZ!",
+      examples: [
+        { en: "The archives were digitised lest they be destroyed by fire.", tr: "Arşivler yangında yok olmasın diye dijitalleştirildi." }
+      ]
+    },
+    {
+      term: "provided that / providing that / on condition that",
+      category: "purpose_condition",
+      meaning: "-mesi şartıyla, koşuluyla",
+      rule: "📐 FORMÜL: provided that + Özne + Fiil, Ana Cümle",
+      trap: "⚠️ 'If' bağlacının daha resmi ve güçlü akademik halidir.",
+      examples: [
+        { en: "The permit will be granted provided that safety standards are met.", tr: "Ruhsat, güvenlik standartları karşılanması şartıyla verilecektir." }
+      ]
+    },
+    {
+      term: "unless",
+      category: "purpose_condition",
+      meaning: "-medikçe, -massa (Olumsuz Şart: if ... not)",
+      rule: "📐 FORMÜL: Unless + Olumlu Yan Cümle, Ana Cümle",
+      trap: "⚠️ 'Unless' kendi içinde olumsuzdur, yan cümlesine 'not' almaz!",
+      examples: [
+        { en: "Unless emissions drop, global temperatures will keep rising.", tr: "Emisyonlar düşmedikçe küresel sıcaklıklar yükselmeye devam edecek." }
+      ]
+    },
+    {
+      term: "apart from / aside from / barring / except for",
+      category: "focus_exception",
+      meaning: "-den başka, hariç, olmaması durumunda",
+      rule: "📐 FORMÜL: apart from / barring + İsim Öbeği",
+      trap: "⚠️ 'Barring' geleceğe dönük istisna durum bildirir.",
+      examples: [
+        { en: "Apart from minor flaws, the research model is solid.", tr: "Küçük kusurlar dışında araştırma modeli sağlamdır." },
+        { en: "Barring unforeseen delays, construction finishes in June.", tr: "Görünmeyen gecikmeler hariç, inşaat Haziran'da bitecek." }
+      ]
+    }
+  ]
+};
+
+let trmActiveMode = 'sentence_connectors';
+let trmActiveCategory = 'all';
+let trmSearchQuery = '';
+let trmExpandedCardIndex = null;
+
+function initTransitionsMatrixTab() {
+  const modeBtns = document.querySelectorAll('.trm-dir-btn');
+  modeBtns.forEach(btn => {
+    btn.onclick = () => {
+      modeBtns.forEach(b => {
+        b.classList.remove('active');
+        b.style.borderColor = 'var(--border-color)';
+        b.style.background = 'var(--bg-card)';
+        b.style.color = 'var(--text-secondary)';
+      });
+      btn.classList.add('active');
+      btn.style.borderColor = '#10b981';
+      btn.style.background = 'rgba(16, 185, 129, 0.15)';
+      btn.style.color = '#10b981';
+
+      trmActiveMode = btn.dataset.mode;
+      trmExpandedCardIndex = null;
+      renderTransitionsMatrix();
+    };
+  });
+
+  const filterChips = document.querySelectorAll('.trm-chip');
+  filterChips.forEach(chip => {
+    chip.onclick = () => {
+      filterChips.forEach(c => {
+        c.classList.remove('active');
+        c.style.background = 'var(--bg-card)';
+        c.style.color = 'var(--text-primary)';
+        c.style.borderColor = 'var(--border-color)';
+      });
+      chip.classList.add('active');
+      chip.style.background = '#10b981';
+      chip.style.color = 'white';
+      chip.style.borderColor = '#10b981';
+
+      trmActiveCategory = chip.dataset.category;
+      trmExpandedCardIndex = null;
+      renderTransitionsMatrix();
+    };
+  });
+
+  const searchInput = document.getElementById('trm-search-input');
+  if (searchInput) {
+    searchInput.oninput = (e) => {
+      trmSearchQuery = e.target.value.toLowerCase().trim();
+      renderTransitionsMatrix();
+    };
+  }
+
+  renderTransitionsMatrix();
+}
+
+function highlightTrmText(text, category) {
+  if (!text) return '';
+  const keywords = [
+    "however", "nevertheless", "nonetheless", "on the other hand", "in contrast", "conversely", "on the contrary",
+    "furthermore", "moreover", "in addition", "besides", "likewise", "similarly", "in the same way",
+    "for instance", "for example", "that is", "in other words", "namely", "otherwise", "or else",
+    "in brief", "in short", "overall", "to sum up", "indeed", "in fact", "as for", "as regards",
+    "although", "even though", "though", "despite", "in spite of", "regardless of", "simple as it may seem",
+    "however carefully", "so that", "in order to", "lest", "provided that", "unless", "apart from", "barring",
+    "ancak", "yine de", "buna rağmen", "diğer yandan", "aksine", "bilakis", "dahası", "üstelik", "ayrıca",
+    "benzer şekilde", "örneğin", "yani", "şöyle ki", "aksi takdirde", "yoksa", "kısaca", "özetle", "aslında",
+    "gelince", "rağmen", "se de", "amacıyla", "için", "mesin diye", "şartıyla", "medikçe", "hariç"
+  ];
+
+  let highlighted = text;
+  keywords.forEach(kw => {
+    const reg = new RegExp(`\\b(${kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
+    highlighted = highlighted.replace(reg, `<span class="trm-hl-term">$1</span>`);
+  });
+
+  return highlighted;
+}
+
+function renderTransitionsMatrix() {
+  const gridEl = document.getElementById('trm-matrix-grid');
+  if (!gridEl) return;
+
+  const rawList = TRANSITIONS_MATRIX_DATA[trmActiveMode] || [];
+  const filtered = rawList.filter(item => {
+    const matchCategory = trmActiveCategory === 'all' || item.category === trmActiveCategory;
+    const matchSearch = !trmSearchQuery ||
+      item.term.toLowerCase().includes(trmSearchQuery) ||
+      item.meaning.toLowerCase().includes(trmSearchQuery) ||
+      item.rule.toLowerCase().includes(trmSearchQuery) ||
+      (item.trap && item.trap.toLowerCase().includes(trmSearchQuery)) ||
+      item.examples.some(ex => ex.en.toLowerCase().includes(trmSearchQuery) || ex.tr.toLowerCase().includes(trmSearchQuery));
+    return matchCategory && matchSearch;
+  });
+
+  if (filtered.length === 0) {
+    gridEl.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">🔍</span>
+        <h4 style="margin: 0 0 6px 0; color: var(--text-primary);">Aramanıza Uygun Geçiş Bağlacı Bulunamadı</h4>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">Farklı bir arama terimi deneyin veya filtreleri temizleyin.</p>
+      </div>
+    `;
+    return;
+  }
+
+  gridEl.innerHTML = filtered.map((item, idx) => {
+    const isExpanded = trmExpandedCardIndex === idx;
+    const catLabelMap = {
+      contrast: 'ZITLIK & ÇELİŞKİ',
+      addition: 'EKLEME & PARALELLİK',
+      exemplification: 'ÖRNEKLEME & AÇIKLAMA',
+      purpose_condition: 'AMAÇ & ŞART',
+      summary_emphasis: 'ÖZET & VURGU',
+      focus_exception: 'ODAKLANMA & İSTİSNA'
+    };
+    const catLabel = catLabelMap[item.category] || 'GEÇİŞ BAĞLACI';
+
+    const hlMeaning = highlightTrmText(item.meaning, item.category);
+
+    return `
+      <div class="trm-card ${isExpanded ? 'active-expanded' : ''}" onclick="toggleTrmCard(${idx})">
+        <div class="trm-card-header">
+          <h3 class="trm-term-title">${item.term}</h3>
+          <span class="trm-category-badge ${item.category}">${catLabel}</span>
+        </div>
+
+        <p class="trm-meaning-text">👉 ${hlMeaning}</p>
+        <div class="trm-punc-box">${item.rule.replace(/\n/g, '<br>')}</div>
+        ${item.trap ? `<div class="trm-trap-box">${item.trap}</div>` : ''}
+
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #10b981; font-weight: 700; margin-top: 4px;">
+          <span>${item.examples.length} Örnek Cümle</span>
+          <span>${isExpanded ? '▲ Kapat' : '▼ Örnekleri İncele'}</span>
+        </div>
+
+        ${isExpanded ? `
+          <div class="trm-examples-accordion">
+            ${item.examples.map(ex => `
+              <div class="trm-example-item">
+                <div class="trm-example-en">🇬🇧 ${highlightTrmText(ex.en, item.category)}</div>
+                <div class="trm-example-tr">🇹🇷 ${highlightTrmText(ex.tr, item.category)}</div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleTrmCard(idx) {
+  if (trmExpandedCardIndex === idx) {
+    trmExpandedCardIndex = null;
+  } else {
+    trmExpandedCardIndex = idx;
+  }
+  renderTransitionsMatrix();
 }
 

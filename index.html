@@ -144,6 +144,15 @@
             </span>
             <span class="nav-tab-label">Zaman & Tense</span>
           </button>
+          <button class="nav-tab" data-tab="transitions-matrix">
+            <span class="nav-tab-icon nav-anim-transitions-matrix">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M8 12H24M24 12L18 6M24 12L18 18" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24 20H8M8 20L14 14M8 20L14 26" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Bağlaçlar & Geçişler</span>
+          </button>
           <button class="nav-tab" data-tab="simulator">
             <span class="nav-tab-icon nav-anim-simulator">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -427,6 +436,58 @@
 
             <!-- Matris Kartları Grid Alanı -->
             <div class="tm-matrix-grid" id="tm-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+              <!-- JS ile dinamik olarak doldurulacak -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ETKİLEŞİMLİ CÜMLE BAĞLAÇLARI & GEÇİŞ İFADELERİ MATRİSİ SEKMESİ -->
+        <div id="tab-content-transitions-matrix" class="tab-content">
+          <div class="transitions-matrix-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
+            
+            <!-- Header Banner -->
+            <div class="trm-header-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(245, 158, 11, 0.15)); border: 1.5px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow-md);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <div>
+                  <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #10b981; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                    🌉 Etkileşimli Cümle Bağlaçları & Geçiş İfadeleri <span style="font-size: 0.75rem; background: #10b981; color: white; padding: 2px 10px; border-radius: 12px; font-weight: 700;">MASTER BAĞLAÇ KILAVUZU</span>
+                  </h2>
+                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                    Akademik İngilizcedeki zıtlık, ekleme, örnekleme, amaç, şart, özet ve odaklanma bağlaçlarının eksiksiz canlı kütüphanesi. Noktalama kuralları ve örnek cümleler için kartlara tıklayın.
+                  </p>
+                </div>
+
+                <!-- Arama Kutusu -->
+                <div class="trm-search-wrap" style="position: relative; min-width: 240px;">
+                  <input type="text" id="trm-search-input" placeholder="Bağlaç / geçiş ara (örn: however, furthermore, provided that)..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                </div>
+              </div>
+
+              <!-- Yön / Mod Değiştirme Butonları -->
+              <div class="trm-direction-toggle-wrap" style="display: flex; gap: 12px; margin-top: 18px;">
+                <button type="button" class="trm-dir-btn active" data-mode="sentence_connectors" id="trm-mode-connectors" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                  ⚡ CÜMLE GEÇİŞ ZARFLARI (however, furthermore, for instance...)
+                </button>
+                <button type="button" class="trm-dir-btn" data-mode="subordinate_preps" id="trm-mode-subordinates" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                  📐 YAN CÜMLE & EDAT BAĞLAÇLARI (although, so that, despite...)
+                </button>
+              </div>
+            </div>
+
+            <!-- Filtreleme Çipleri -->
+            <div class="trm-filter-chips" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+              <button type="button" class="trm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #10b981; background: #10b981; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="trm-chip" data-category="contrast" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚡ Zıtlık & Çelişki (however, although...)</button>
+              <button type="button" class="trm-chip" data-category="addition" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">➕ Ekleme & Paralellik (furthermore, likewise...)</button>
+              <button type="button" class="trm-chip" data-category="exemplification" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">💡 Örnekleme & Açıklama (for instance, namely...)</button>
+              <button type="button" class="trm-chip" data-category="purpose_condition" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🎯 Amaç & Şart (so that, provided that...)</button>
+              <button type="button" class="trm-chip" data-category="summary_emphasis" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">📌 Özet & Vurgu (in brief, indeed...)</button>
+              <button type="button" class="trm-chip" data-category="focus_exception" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🔍 Odaklanma & İstisna (as for, apart from...)</button>
+            </div>
+
+            <!-- Matris Kartları Grid Alanı -->
+            <div class="trm-matrix-grid" id="trm-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
               <!-- JS ile dinamik olarak doldurulacak -->
             </div>
 
