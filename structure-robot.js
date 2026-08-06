@@ -538,6 +538,38 @@
         { clauseA: "had_v3", clauseB: ["v2_main"], trPattern: "Önceden çok çalışmış olduğu için sınavı geçti." }
       ],
       ruleText: "BECAUSE (Sebep Bağlacı): Mantıksal zaman sırasına uyan tenseler birbiriyle eşleşir."
+    },
+
+    // Eksik Neden-Etki Fiili
+    lead_to_cause: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v2_main", "v1_main"], trPattern: "Kirlilik çevre tahribatına yol açar / neden olur." },
+        { clauseA: "v_ing_obj", clauseB: ["v2_main", "v1_main"], trPattern: "Aşırı çalışmak sağlık sorunlarına yol açar." }
+      ],
+      ruleText: "LEAD TO / CAUSE / BRING ABOUT: NEDEN (İsim/V-ing) + lead(s) to / cause(s) / bring(s) about + ETKİ (İsim Öbeği)."
+    },
+
+    // Eksik Geçiş İfadeleri (transitions kategorisi)
+    therefore_thus: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Çok çalışıyor; bu yüzden başarılı olacak." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Çok çalıştı; dolayısıyla sınavı kazandı." }
+      ],
+      ruleText: "THEREFORE / THUS / HENCE (Geçiş İfadesi): NEDEN Cümlesi; bu yüzden, ETKİ Cümlesi."
+    },
+    as_a_result_transition: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Sonuç olarak hedeflerine ulaşacak." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sonuç olarak proje tamamlandı." }
+      ],
+      ruleText: "AS A RESULT / CONSEQUENTLY (Geçiş İfadesi): NEDEN Cümlesi; sonuç olarak, ETKİ Cümlesi."
+    },
+    accordingly_transition: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Bu doğrultuda gerekli adımlar atılacak." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Bu doğrultuda gerekli adımlar atıldı." }
+      ],
+      ruleText: "ACCORDINGLY (Geçiş İfadesi): Buna bağlı olarak / Bu doğrultuda."
     }
   };
 
