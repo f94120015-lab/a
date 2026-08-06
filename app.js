@@ -25855,6 +25855,38 @@ function initCauseEffectTab() {
   renderCauseEffectMatrix();
 }
 
+function highlightCeText(text, category) {
+  if (!text) return '';
+  const hlClass = category === 'verbs' ? 'ce-hl-verb' : (category === 'prepositions' ? 'ce-hl-prep' : (category === 'conjunctions' ? 'ce-hl-conj' : 'ce-hl-pattern'));
+  
+  const keywords = [
+    "causes", "caused", "cause", "leads to", "lead to", "results in", "resulted in", "result in",
+    "brought about", "brings about", "bring about", "triggers", "trigger", "gives rise to", "give rise to",
+    "contributes to", "contribute to", "paved the way for", "pave the way for", "culminated in", "culminates in",
+    "was responsible for", "is responsible for", "are responsible for", "produces", "produce",
+    "induces", "induce", "prompted", "prompt", "stems from", "stem from", "originated in", "originate in",
+    "arose out of", "arise out of", "was attributed to", "is attributed to", "was rooted in", "is rooted in",
+    "is ascribed to", "was caused by", "is caused by", "are caused by", "results from", "resulted from", "result from", "is due to", "are due to", "was due to",
+    "therefore", "thus", "hence", "consequently", "as a consequence", "as a result", "with the result that", "accordingly", "in that", "because", "since", "as", "inasmuch as", "seeing that", "given that", "owing to the fact that",
+    "because of", "due to", "owing to", "on account of", "in view of", "by virtue of", "on the grounds of", "as a result of", "as a consequence of",
+    "thereby accelerating", "thereby", "so severe that", "such a complex problem that", "so much so that",
+    "sebep olur", "yol açtı", "yol açar", "neden olur", "sonuçlandı", "sonuçlanır", "beraberinde getirdi", "tetikleyebilir",
+    "sebebiyet verir", "katkıda bulunur", "önünü açtı", "zirveye ulaştı", "sorumluydu", "meydana getirir",
+    "sağlar", "bundan dolayı", "böylece", "bu yüzden", "neticede", "sonuç olarak", "buna bağlı olarak", "böylelikle",
+    "öyle şiddetliydi ki", "öyle karmaşık bir problemdi ki", "öyle bir dereceye kadar ki", "ileri gelir", "kaynaklandı",
+    "doğdu", "kaynaklanır", "ortaya çıktı", "atfedildi", "kökeni", "nedeniyle", "sayesinde", "bakımından",
+    "çünkü", "göz önüne alındığında"
+  ];
+
+  let highlighted = text;
+  keywords.forEach(kw => {
+    const reg = new RegExp(`\\b(${kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
+    highlighted = highlighted.replace(reg, `<span class="ce-hl ${hlClass}">$1</span>`);
+  });
+
+  return highlighted;
+}
+
 function renderCauseEffectMatrix() {
   const gridEl = document.getElementById('ce-matrix-grid');
   if (!gridEl) return;
@@ -25886,6 +25918,9 @@ function renderCauseEffectMatrix() {
     const catLabel = item.category === 'verbs' ? 'FİİL' : (item.category === 'prepositions' ? 'EDAT' : (item.category === 'conjunctions' ? 'BAĞLAÇ' : 'KALIP'));
     const catClass = item.category === 'verbs' ? 'verb' : (item.category === 'prepositions' ? 'prep' : (item.category === 'conjunctions' ? 'conj' : 'pattern'));
 
+    const highlightedMeaning = highlightCeText(item.meaning, item.category);
+    const highlightedFormula = highlightCeText(item.formula, item.category);
+
     return `
       <div class="ce-card ${isExpanded ? 'active-expanded' : ''}" onclick="toggleCeCard(${idx})">
         <div class="ce-card-header">
@@ -25893,8 +25928,8 @@ function renderCauseEffectMatrix() {
           <span class="ce-category-badge ${catClass}">${catLabel}</span>
         </div>
 
-        <p class="ce-meaning-text">👉 ${item.meaning}</p>
-        <div class="ce-formula-box">📐 ${item.formula}</div>
+        <p class="ce-meaning-text">👉 ${highlightedMeaning}</p>
+        <div class="ce-formula-box">📐 ${highlightedFormula}</div>
 
         <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: var(--accent-primary); font-weight: 700; margin-top: 4px;">
           <span>${item.examples.length} Örnek Cümle</span>
@@ -25905,8 +25940,8 @@ function renderCauseEffectMatrix() {
           <div class="ce-examples-accordion">
             ${item.examples.map(ex => `
               <div class="ce-example-item">
-                <div class="ce-example-en">🇬🇧 ${ex.en}</div>
-                <div class="ce-example-tr">🇹🇷 ${ex.tr}</div>
+                <div class="ce-example-en">🇬🇧 ${highlightCeText(ex.en, item.category)}</div>
+                <div class="ce-example-tr">🇹🇷 ${highlightCeText(ex.tr, item.category)}</div>
               </div>
             `).join('')}
           </div>
