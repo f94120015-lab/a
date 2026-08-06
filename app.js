@@ -25481,12 +25481,57 @@ const CAUSE_EFFECT_DATA = {
       ]
     },
     {
+      term: "bring about / brings about",
+      category: "verbs",
+      meaning: "yol açmak, beraberinde getirmek",
+      formula: "NEDEN + bring(s) about + ETKİ",
+      examples: [
+        { en: "The new tax reform brought about significant economic changes.", tr: "Yeni vergi reformu önemli ekonomik değişiklikleri beraberinde getirdi." }
+      ]
+    },
+    {
+      term: "trigger / triggers",
+      category: "verbs",
+      meaning: "tetiklemek, başlatmak",
+      formula: "NEDEN + trigger(s) + ETKİ",
+      examples: [
+        { en: "Chronic stress can trigger severe migraine attacks.", tr: "Kronik stres şiddetli migren ataklarını tetikleyebilir." }
+      ]
+    },
+    {
       term: "give rise to / gives rise to",
       category: "verbs",
       meaning: "ortaya çıkarmak, sebebiyet vermek",
       formula: "NEDEN + give(s) rise to + ETKİ",
       examples: [
         { en: "Economic instability gives rise to social unrest.", tr: "Ekonomik istikrarsızlık toplumsal huzursuzluğa sebebiyet verir." }
+      ]
+    },
+    {
+      term: "contribute to / contributes to",
+      category: "verbs",
+      meaning: "katkıda bulunmak / yol açmak",
+      formula: "NEDEN + contribute(s) to + ETKİ",
+      examples: [
+        { en: "Smoking heavily contributes to cardiovascular diseases.", tr: "Sigara kullanımı kalp-damar hastalıklarına ciddi katkıda bulunur (yol açar)." }
+      ]
+    },
+    {
+      term: "pave the way for",
+      category: "verbs",
+      meaning: "zemin hazırlamak, önünü açmak",
+      formula: "NEDEN + pave(s) the way for + ETKİ",
+      examples: [
+        { en: "This breakthrough paved the way for modern gene editing.", tr: "Bu buluş modern gen düzenlemesinin önünü açtı." }
+      ]
+    },
+    {
+      term: "culminate in / culminates in",
+      category: "verbs",
+      meaning: "... ile sonuçlanmak / zirveye ulaşmak",
+      formula: "NEDEN + culminate(s) in + ETKİ",
+      examples: [
+        { en: "Years of secret negotiations culminated in a historic peace treaty.", tr: "Yıllar süren gizli görüşmeler tarihi bir barış antlaşmasıyla sonuçlandı." }
       ]
     },
     {
@@ -25508,12 +25553,40 @@ const CAUSE_EFFECT_DATA = {
       ]
     },
     {
+      term: "induce / provoke / prompt",
+      category: "verbs",
+      meaning: "uyarmak, teşvik etmek, sevk etmek",
+      formula: "NEDEN + induce(s) / prompt(s) + ETKİ",
+      examples: [
+        { en: "The drug induces deep sleep in patients.", tr: "İlaç hastalarda derin uykuyu tetikler/sağlar." },
+        { en: "The incident prompted an immediate government inquiry.", tr: "Olay derhal bir hükümet soruşturmasına yol açtı." }
+      ]
+    },
+    {
       term: "therefore",
       category: "conjunctions",
       meaning: "bu yüzden, bundan dolayı",
       formula: "NEDEN Cümlesi; therefore, ETKİ Cümlesi",
       examples: [
         { en: "Vitamins were lacking; therefore, health was poor.", tr: "Vitamin eksikti; bundan dolayı sağlık kötüydü." }
+      ]
+    },
+    {
+      term: "thus",
+      category: "conjunctions",
+      meaning: "böylece, bu nedenle",
+      formula: "NEDEN Cümlesi; thus, ETKİ Cümlesi",
+      examples: [
+        { en: "The engine was damaged; thus, the vehicle stopped.", tr: "Motor hasar gördü; böylece araç durdu." }
+      ]
+    },
+    {
+      term: "hence",
+      category: "conjunctions",
+      meaning: "bu yüzden, bundan dolayı",
+      formula: "NEDEN Cümlesi; hence, ETKİ Cümlesi / İsim",
+      examples: [
+        { en: "The company lost capital; hence the need for drastic cuts.", tr: "Şirket sermaye kaybetti; bu yüzden sert kısıntı ihtiyacı doğdu." }
       ]
     },
     {
@@ -25532,6 +25605,43 @@ const CAUSE_EFFECT_DATA = {
       formula: "NEDEN Cümlesi; as a result, ETKİ Cümlesi",
       examples: [
         { en: "He studied systematically; as a result, he passed the exam.", tr: "Sistematik çalıştı; sonuç olarak sınavı geçti." }
+      ]
+    },
+    {
+      term: "accordingly",
+      category: "conjunctions",
+      meaning: "bu doğrultuda, buna bağlı olarak",
+      formula: "NEDEN Cümlesi; accordingly, ETKİ Cümlesi",
+      examples: [
+        { en: "Safety regulations were updated; accordingly, procedures changed.", tr: "Güvenlik yönetmelikleri güncellendi; buna bağlı olarak prosedürler değişti." }
+      ]
+    },
+    {
+      term: "thereby + V-ing",
+      category: "patterns",
+      meaning: "böylelikle ... -erek (Akademik Sonuç Kısaltması)",
+      formula: "Cümle, thereby + V-ing + Nesne",
+      examples: [
+        { en: "He increased the temperature, thereby accelerating the chemical reaction.", tr: "Sıcaklığı artırdı, böylelikle kimyasal tepkimeyi hızlandırdı." }
+      ]
+    },
+    {
+      term: "so ... that / such ... that",
+      category: "patterns",
+      meaning: "öyle ... ki (Derece Sonuç Yapısı)",
+      formula: "so + Sıfat/Zarf + that Cümle / such + (Sıfat) İsim + that Cümle",
+      examples: [
+        { en: "The storm was so severe that all flights were cancelled.", tr: "Fırtına öyle şiddetliydi ki tüm uçuşlar iptal edildi." },
+        { en: "It was such a complex problem that nobody could solve it.", tr: "Öyle karmaşık bir problemdi ki kimse çözemedi." }
+      ]
+    },
+    {
+      term: "so much so that",
+      category: "patterns",
+      meaning: "öyle bir dereceye kadar ki",
+      formula: "NEDEN Cümlesi, so much so that ETKİ Cümlesi",
+      examples: [
+        { en: "The disease spread rapidly, so much so that schools were closed.", tr: "Hastalık hızla yayıldı, öyle bir dereceye kadar ki okullar tatil edildi." }
       ]
     }
   ],
@@ -25558,6 +25668,51 @@ const CAUSE_EFFECT_DATA = {
       ]
     },
     {
+      term: "stem from / stems from",
+      category: "verbs",
+      meaning: "...den kaynaklanmak, köken almak",
+      formula: "ETKİ + stem(s) from + NEDEN",
+      examples: [
+        { en: "His chronic anxiety stems from childhood trauma.", tr: "Onun kronik kaygısı çocukluk travmasından kaynaklanır." }
+      ]
+    },
+    {
+      term: "originate from / in",
+      category: "verbs",
+      meaning: "...den doğmak, ortaya çıkmak",
+      formula: "ETKİ + originate(s) in/from + NEDEN",
+      examples: [
+        { en: "The disease originated in infected water sources.", tr: "Hastalık enfekte su kaynaklarından ortaya çıktı." }
+      ]
+    },
+    {
+      term: "arise from / out of",
+      category: "verbs",
+      meaning: "...den doğmak, meydana gelmek",
+      formula: "ETKİ + arise(s) from/out of + NEDEN",
+      examples: [
+        { en: "Complications arose out of improper wound treatment.", tr: "Komplikasyonlar uygunsuz yara tedavisinden doğdu." }
+      ]
+    },
+    {
+      term: "is attributed to / are attributed to",
+      category: "verbs",
+      meaning: "...e atfedilmek, nedeni ... olarak gösterilmek",
+      formula: "ETKİ + is/are attributed to + NEDEN",
+      examples: [
+        { en: "The patient's recovery was attributed to new medication.", tr: "Hastanın iyileşmesi yeni ilaca atfedildi." }
+      ]
+    },
+    {
+      term: "is ascribed to / is rooted in",
+      category: "verbs",
+      meaning: "...e bağlanmak / kök salmış olmak",
+      formula: "ETKİ + is ascribed to / rooted in + NEDEN",
+      examples: [
+        { en: "Economic collapse was rooted in long-term corruption.", tr: "Ekonomik çöküşün kökeni uzun süreli yolsuzlukta yatıyordu." }
+      ]
+    },
+    {
       term: "is caused by / are caused by",
       category: "verbs",
       meaning: "...den kaynaklanmak, nedeni olunmak",
@@ -25577,12 +25732,39 @@ const CAUSE_EFFECT_DATA = {
       ]
     },
     {
+      term: "on account of / in view of",
+      category: "prepositions",
+      meaning: "...den dolayı, ... göz önüne alındığında",
+      formula: "ETKİ Cümlesi + on account of / in view of + NEDEN İsim Öbeği",
+      examples: [
+        { en: "Match was cancelled on account of torrential rain.", tr: "Maç sağanak yağış nedeniyle iptal edildi." }
+      ]
+    },
+    {
+      term: "by virtue of / on the grounds of",
+      category: "prepositions",
+      meaning: "...den dolayı / sayesinde, ... gerekçesiyle",
+      formula: "ETKİ Cümlesi + by virtue of / on the grounds of + NEDEN",
+      examples: [
+        { en: "He secured the post by virtue of his vast experience.", tr: "Geniş tecrübesi sayesinde pozisyonu elde etti." }
+      ]
+    },
+    {
       term: "as a result of / as a consequence of",
       category: "prepositions",
       meaning: "...in sonucu olarak, nedeniyle",
       formula: "ETKİ Cümlesi + as a result of + NEDEN İsim Öbeği",
       examples: [
         { en: "Hospitalisations increased as a result of the epidemic.", tr: "Salgın sonucunda hastaneye yatışlar arttı." }
+      ]
+    },
+    {
+      term: "in that",
+      category: "conjunctions",
+      meaning: "-mesi bakımından, çünkü (YÖKDİL Özel)",
+      formula: "ETKİ Cümlesi + in that + NEDEN Cümlesi",
+      examples: [
+        { en: "Water is unique in that it expands when frozen.", tr: "Su donduğunda genleşmesi bakımından eşsizdir." }
       ]
     },
     {
@@ -25593,6 +25775,15 @@ const CAUSE_EFFECT_DATA = {
       examples: [
         { en: "Health was poor because vitamins were lacking.", tr: "Sağlık kötüydü çünkü vitaminler eksikti." },
         { en: "Ice floats since it is less dense than water.", tr: "Buz yüzer çünkü sudan daha az yoğundur." }
+      ]
+    },
+    {
+      term: "inasmuch as / seeing that / given that",
+      category: "conjunctions",
+      meaning: "-dığına göre, -dığı göz önüne alındığında",
+      formula: "inasmuch as / given that NEDEN Cümlesi, ETKİ Cümlesi",
+      examples: [
+        { en: "Given that resources are limited, we must economise.", tr: "Kaynakların sınırlı olduğu göz önüne alındığında tasarruf etmeliyiz." }
       ]
     },
     {
@@ -25692,8 +25883,8 @@ function renderCauseEffectMatrix() {
 
   gridEl.innerHTML = filtered.map((item, idx) => {
     const isExpanded = ceExpandedCardIndex === idx;
-    const catLabel = item.category === 'verbs' ? 'FİİL' : (item.category === 'prepositions' ? 'EDAT' : 'BAĞLAÇ');
-    const catClass = item.category === 'verbs' ? 'verb' : (item.category === 'prepositions' ? 'prep' : 'conj');
+    const catLabel = item.category === 'verbs' ? 'FİİL' : (item.category === 'prepositions' ? 'EDAT' : (item.category === 'conjunctions' ? 'BAĞLAÇ' : 'KALIP'));
+    const catClass = item.category === 'verbs' ? 'verb' : (item.category === 'prepositions' ? 'prep' : (item.category === 'conjunctions' ? 'conj' : 'pattern'));
 
     return `
       <div class="ce-card ${isExpanded ? 'active-expanded' : ''}" onclick="toggleCeCard(${idx})">
