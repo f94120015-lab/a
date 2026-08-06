@@ -26273,7 +26273,10 @@ function renderTimeMatrix() {
 
   const rawList = TIME_MATRIX_DATA[tmActiveMode] || [];
   const filtered = rawList.filter(item => {
-    const matchCategory = tmActiveCategory === 'all' || item.category === tmActiveCategory;
+    const matchCategory = tmActiveCategory === 'all' ||
+      item.category === tmActiveCategory ||
+      (tmActiveCategory === 'conjunctions' && item.category === 'inverted');
+
     const matchSearch = !tmSearchQuery ||
       item.term.toLowerCase().includes(tmSearchQuery) ||
       item.meaning.toLowerCase().includes(tmSearchQuery) ||
