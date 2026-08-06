@@ -120,7 +120,52 @@
     { id: "wish_if_only", label: "WISH / IF ONLY", desc: "Keşke / Dilek Yapısı (Zaman Kayması)", category: "time", color: "#06b6d4" },
     { id: "as_if_as_though", label: "AS IF / AS THOUGH", desc: "Sanki / -mış gibi (Gerçek Dışı)", category: "time", color: "#06b6d4" },
     { id: "its_time", label: "IT'S (HIGH) TIME", desc: "Artık ... zamanı geldi (+ Past Simple)", category: "time", color: "#06b6d4" },
-    { id: "would_rather", label: "WOULD RATHER / WOULD SOONER", desc: "Tercih ederim ki (Zaman Kayması)", category: "time", color: "#06b6d4" }
+    { id: "would_rather", label: "WOULD RATHER / WOULD SOONER", desc: "Tercih ederim ki (Zaman Kayması)", category: "time", color: "#06b6d4" },
+
+    // ═══ 1. COORDINATING CONJUNCTIONS (FANBOYS) ═══
+    { id: "and_coord", label: "AND", desc: "Ve (Eş Bağlaç)", category: "transitions", color: "#06b6d4" },
+    { id: "but_yet_coord", label: "BUT / YET", desc: "Ama / Yine de (Eş Bağlaç - Zıtlık)", category: "transitions", color: "#06b6d4" },
+    { id: "or_coord", label: "OR", desc: "Veya / Ya da (Eş Bağlaç - Seçenek)", category: "transitions", color: "#06b6d4" },
+    { id: "nor_coord", label: "NOR", desc: "Ne de (Eş Bağlaç - Olumsuz)", category: "transitions", color: "#06b6d4" },
+    { id: "for_coord", label: "FOR (Coordinating)", desc: "Çünkü / Zira (Eş Bağlaç - Neden)", category: "transitions", color: "#06b6d4" },
+    { id: "so_coord", label: "SO (Coordinating)", desc: "Bu yüzden / Dolayısıyla (Eş Bağlaç - Sonuç)", category: "transitions", color: "#06b6d4" },
+
+    // ═══ 2. EK SUBORDINATING ═══
+    { id: "while_whereas", label: "WHILE / WHEREAS (Contrast)", desc: "-e karşın / Oysa (Karşılaştırma)", category: "transitions", color: "#06b6d4" },
+    { id: "on_condition_that", label: "ON CONDITION THAT", desc: "Koşuluyla / Şartıyla", category: "time", color: "#06b6d4" },
+
+    // ═══ 3. PREPOSITIONAL PHRASES ═══
+    { id: "despite_in_spite_of", label: "DESPITE / IN SPITE OF / NOTWITHSTANDING", desc: "-e rağmen (Edat + İsim/V-ing)", category: "transitions", color: "#06b6d4" },
+    { id: "in_order_to", label: "IN ORDER TO / SO AS TO", desc: "-mek için (Edat + Yalın Fiil)", category: "cause_effect", color: "#06b6d4" },
+    { id: "in_addition_to_prep", label: "IN ADDITION TO / ALONG WITH", desc: "-e ek olarak / ile birlikte (Edat + İsim)", category: "transitions", color: "#06b6d4" },
+    { id: "regarding_as_for", label: "REGARDING / WITH REGARD TO / AS FOR", desc: "-e gelince / Hususunda (Edat + İsim)", category: "transitions", color: "#06b6d4" },
+    { id: "in_terms_of_in_light_of", label: "IN TERMS OF / IN LIGHT OF", desc: "Açısından / Işığında (Edat + İsim)", category: "transitions", color: "#06b6d4" },
+    { id: "compared_to", label: "COMPARED TO / IN COMPARISON WITH", desc: "İle kıyaslandığında (Edat + İsim)", category: "transitions", color: "#06b6d4" },
+    { id: "except_for_apart_from", label: "EXCEPT FOR / APART FROM / OTHER THAN", desc: "-den başka / Haricinde (Edat + İsim)", category: "transitions", color: "#06b6d4" },
+
+    // ═══ 4. EK TRANSITIONS ═══
+    { id: "namely", label: "NAMELY / TO PUT IT ANOTHER WAY", desc: "Yani / Şöyle ki / Başka bir deyişle", category: "transitions", color: "#06b6d4" },
+    { id: "in_fact_indeed", label: "IN FACT / INDEED / AS A MATTER OF FACT", desc: "Aslında / Hatta / Nitekim (Vurgu)", category: "transitions", color: "#06b6d4" },
+    { id: "first_firstly", label: "FIRST / FIRSTLY / FIRST OF ALL", desc: "İlk olarak / Öncelikle", category: "transitions", color: "#06b6d4" },
+    { id: "meanwhile", label: "MEANWHILE / IN THE MEANTIME", desc: "Bu sırada / Bu esnada", category: "transitions", color: "#06b6d4" },
+    { id: "subsequently", label: "SUBSEQUENTLY / AFTERWARDS", desc: "Sonrasında / Daha sonra", category: "transitions", color: "#06b6d4" },
+    { id: "eventually", label: "EVENTUALLY / ULTIMATELY", desc: "Sonunda / Nihayetinde", category: "transitions", color: "#06b6d4" },
+    { id: "in_summary", label: "IN SUMMARY / IN SHORT / IN BRIEF", desc: "Özetle / Kısacası", category: "transitions", color: "#06b6d4" },
+    { id: "all_in_all", label: "ALL IN ALL / OVERALL / TO SUM UP", desc: "Genel olarak / Özetlemek gerekirse", category: "transitions", color: "#06b6d4" },
+
+    // ═══ 5. CORRELATIVE CONJUNCTIONS ═══
+    { id: "both_and", label: "BOTH ... AND ...", desc: "Hem ... hem ... (İkili Bağlaç)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "either_or", label: "EITHER ... OR ...", desc: "Ya ... ya ... (İkili Bağlaç)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "neither_nor", label: "NEITHER ... NOR ...", desc: "Ne ... ne ... (İkili Bağlaç)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "not_only_but_also", label: "NOT ONLY ... BUT ALSO ...", desc: "Sadece ... değil, aynı zamanda ... (+ Devrik)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "whether_or", label: "WHETHER ... OR ...", desc: "İster ... ister ... / Olup olmadığını", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "just_as_so", label: "JUST AS ... SO ...", desc: "Nasıl ki ... öyle de ...", category: "devrik_kısaltma", color: "#06b6d4" },
+
+    // ═══ 6. EK INVERTED STRUCTURES ═══
+    { id: "only_when_after_inv", label: "ONLY WHEN / ONLY AFTER (Devrik)", desc: "Ancak ... olduktan sonra + Devrik Cümle", category: "devrik_kısaltma", color: "#06b6d4" },
+
+    // ═══ 7. PARTICIPLE CLAUSES (Pasif) ═══
+    { id: "v3_passive_participle", label: "V3 / BEING V3 (Passive Reduction)", desc: "Pasif Kısaltma (Görüldüğünde / -dığında)", category: "devrik_kısaltma", color: "#06b6d4" }
   ];
 
   // 2. Matris: Yan Cümle Zamanları (Clause A)
@@ -715,6 +760,214 @@
         { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Çalışmış olmasını tercih ederdim. (Geçmiş → Past Perfect)" }
       ],
       ruleText: "WOULD RATHER / WOULD SOONER + Özne: Şu an/Gelecek için → Past Simple; Geçmiş için → Past Perfect. Zaman bir derece geçmişe kayar!"
+    },
+
+    // ═══ 1. FANBOYS ═══
+    and_coord: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Ders çalışır ve sınavı geçer." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ders çalıştı ve sınavı geçti." }
+      ],
+      ruleText: "AND (Eş Bağlaç): İki eşit yargıyı veya iki bağımsız cümleyi bağlar."
+    },
+    but_yet_coord: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Ders çalışıyor ama sınavı geçemeyebilir." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ders çalıştı fakat sınavı geçemedi." }
+      ],
+      ruleText: "BUT / YET (Zıtlık Eş Bağlacı): İki zıt yargıyı bağlar."
+    },
+    or_coord: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Ders çalışır veya projeyi tamamlar." }
+      ],
+      ruleText: "OR (Seçenek Eş Bağlacı): Alternatif sunar."
+    },
+    nor_coord: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Ne ders çalışır ne de sınavı geçer." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ne ders çalıştı ne de sınavı geçti." }
+      ],
+      ruleText: "NOR (Olumsuz Eş Bağlaç): Olumsuz durumları bağlar."
+    },
+    for_coord: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Sınavı geçer çünkü çok çalışır." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sınavı geçti çünkü çok çalıştı." }
+      ],
+      ruleText: "FOR (Neden Eş Bağlacı): Cümle ortasında 'çünkü' anlamında kullanılır."
+    },
+    so_coord: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Çok çalışıyor; bu yüzden sınavı geçecek." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Çok çalıştı; bu yüzden sınavı geçti." }
+      ],
+      ruleText: "SO (Sonuç Eş Bağlacı): Sonuç bildirir."
+    },
+
+    // ═══ 2. EK SUBORDINATING ═══
+    while_whereas: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "O çalışırken kardeş oynuyor." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "O çalıştı oysa kardeş oynadı." }
+      ],
+      ruleText: "WHILE / WHEREAS: Doğrudan zıtlık ve karşılaştırma bildirir."
+    },
+    on_condition_that: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main"], trPattern: "Çalışması koşuluyla geçer." }
+      ],
+      ruleText: "ON CONDITION THAT: Koşul yapısıdır."
+    },
+
+    // ═══ 3. PREPOSITIONAL PHRASES ═══
+    despite_in_spite_of: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Zorluklara rağmen başardı." },
+        { clauseA: "v_ing_obj", clauseB: ["v2_main", "v1_main"], trPattern: "Çok çalışmasına rağmen sınavı geçemedi." }
+      ],
+      ruleText: "DESPITE / IN SPITE OF: İsim veya V-ing alarak zıtlık bildirir."
+    },
+    in_order_to: {
+      validPairs: [
+        { clauseA: "v_ing_obj", clauseB: ["v2_main", "v1_main", "will_v1"], trPattern: "Başarmak için çalıştı." }
+      ],
+      ruleText: "IN ORDER TO / SO AS TO: Yalın fiil / V-ing ile amaç bildirir."
+    },
+    in_addition_to_prep: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Buna ek olarak yeni adımlar atıldı." }
+      ],
+      ruleText: "IN ADDITION TO / ALONG WITH: İsim öbeği alarak ekleme yapar."
+    },
+    regarding_as_for: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Bu konuya gelince adımlar atıldı." }
+      ],
+      ruleText: "REGARDING / WITH REGARD TO / AS FOR: İsim alarak husus bildirir."
+    },
+    in_terms_of_in_light_of: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Açısından değerlendirildi." }
+      ],
+      ruleText: "IN TERMS OF / IN LIGHT OF: İsim alarak bakış açısı bildirir."
+    },
+    compared_to: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Geçen yıla kıyasla başarılı oldu." }
+      ],
+      ruleText: "COMPARED TO: Kıyaslama bildirir."
+    },
+    except_for_apart_from: {
+      validPairs: [
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Bu durum haricinde sorun yok." }
+      ],
+      ruleText: "EXCEPT FOR / APART FROM: İstisna bildirir."
+    },
+
+    // ═══ 4. EK TRANSITIONS ═══
+    namely: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Yani başarmak demektir." }
+      ],
+      ruleText: "NAMELY: Açıklama geçişidir."
+    },
+    in_fact_indeed: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Aslında çok başarılıdır." }
+      ],
+      ruleText: "IN FACT / INDEED: Vurgu geçişidir."
+    },
+    first_firstly: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "İlk olarak bu adım atılır." }
+      ],
+      ruleText: "FIRST / FIRSTLY: Sıralama geçişidir."
+    },
+    meanwhile: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main", "was_were_ving_main"], trPattern: "Bu sırada diğeri çalışıyordu." }
+      ],
+      ruleText: "MEANWHILE: Zaman geçişidir."
+    },
+    subsequently: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sonrasında adım atıldı." }
+      ],
+      ruleText: "SUBSEQUENTLY: Zaman geçişidir."
+    },
+    eventually: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sonunda başardı." }
+      ],
+      ruleText: "EVENTUALLY: Sonuç geçişidir."
+    },
+    in_summary: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Özetle başarılı bir süreçtir." }
+      ],
+      ruleText: "IN SUMMARY: Özet geçişidir."
+    },
+    all_in_all: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Genel olarak bakıldığında böyledir." }
+      ],
+      ruleText: "ALL IN ALL: Özet geçişidir."
+    },
+
+    // ═══ 5. CORRELATIVE CONJUNCTIONS ═══
+    both_and: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Hem çalışır hem başarır." }
+      ],
+      ruleText: "BOTH ... AND ...: İkili bağlaç."
+    },
+    either_or: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Ya çalışır ya da başarısız olur." }
+      ],
+      ruleText: "EITHER ... OR ...: İkili alternatif."
+    },
+    neither_nor: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Ne çalışır ne de dinlenir." }
+      ],
+      ruleText: "NEITHER ... NOR ...: İkili olumsuzluk."
+    },
+    not_only_but_also: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Sadece çalışmakla kalmaz, aynı zamanda başarır." }
+      ],
+      ruleText: "NOT ONLY ... BUT ALSO ...: İkili ekleme."
+    },
+    whether_or: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "İster çalışsın ister çalışmasın başaracak." }
+      ],
+      ruleText: "WHETHER ... OR ...: Seçenek/Koşul ikilisi."
+    },
+    just_as_so: {
+      validPairs: [
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Nasıl ki çalışır, öyle de başarır." }
+      ],
+      ruleText: "JUST AS ... SO ...: Benzetme ikilisi."
+    },
+
+    // ═══ 6. EK INVERTED ═══
+    only_when_after_inv: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ancak çalıştıktan sonra başardı." }
+      ],
+      ruleText: "ONLY WHEN / AFTER: Devrik ana cümle yapısı gerektirir."
+    },
+
+    // ═══ 7. PARTICIPLE ═══
+    v3_passive_participle: {
+      validPairs: [
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Uzaktan bakıldığında güzel görünür." },
+        { clauseA: "noun_phrase", clauseB: ["v2_main"], trPattern: "İncelendiğinde durum netleşti." }
+      ],
+      ruleText: "V3 / BEING V3: Pasif kısaltma yapısıdır."
     }
   };
 
@@ -832,7 +1085,52 @@
     wish_if_only: "I wish {B}.",
     as_if_as_though: "{A} as if {B}.",
     its_time: "It's high time {B}.",
-    would_rather: "I'd rather {B}."
+    would_rather: "I'd rather {B}.",
+
+    // ═══ 1. FANBOYS ═══
+    and_coord: "{A}, and {B}.",
+    but_yet_coord: "{A}, but {B}.",
+    or_coord: "{A}, or {B}.",
+    nor_coord: "{A}, nor {B}.",
+    for_coord: "{A}, for {B}.",
+    so_coord: "{A}, so {B}.",
+
+    // ═══ 2. EK SUBORDINATING ═══
+    while_whereas: "{A}, whereas {B}.",
+    on_condition_that: "{A} on condition that {B}.",
+
+    // ═══ 3. PREPOSITIONAL PHRASES ═══
+    despite_in_spite_of: "Despite {A}, {B}.",
+    in_order_to: "In order to {A}, {B}.",
+    in_addition_to_prep: "In addition to {A}, {B}.",
+    regarding_as_for: "Regarding {A}, {B}.",
+    in_terms_of_in_light_of: "In terms of {A}, {B}.",
+    compared_to: "Compared to {A}, {B}.",
+    except_for_apart_from: "Except for {A}, {B}.",
+
+    // ═══ 4. EK TRANSITIONS ═══
+    namely: "{A}; namely, {B}.",
+    in_fact_indeed: "{A}; in fact, {B}.",
+    first_firstly: "First, {A}, then {B}.",
+    meanwhile: "{A}; meanwhile, {B}.",
+    subsequently: "{A}; subsequently, {B}.",
+    eventually: "{A}; eventually, {B}.",
+    in_summary: "{A}; in summary, {B}.",
+    all_in_all: "All in all, {A}, so {B}.",
+
+    // ═══ 5. CORRELATIVE CONJUNCTIONS ═══
+    both_and: "Both {A} and {B}.",
+    either_or: "Either {A} or {B}.",
+    neither_nor: "Neither {A} nor {B}.",
+    not_only_but_also: "Not only {A}, but also {B}.",
+    whether_or: "Whether {A} or {B}.",
+    just_as_so: "Just as {A}, so {B}.",
+
+    // ═══ 6. EK INVERTED ═══
+    only_when_after_inv: "Only when {A}, {B}.",
+
+    // ═══ 7. PARTICIPLE ═══
+    v3_passive_participle: "Seen as {A}, {B}."
   };
 
   // Devrik yapı yardımcısı: "she had studied hard" → "had she studied hard"
