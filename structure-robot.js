@@ -26,11 +26,46 @@
     { id: "in_contrast_on_the_other_hand", label: "IN CONTRAST / ON THE OTHER HAND", desc: "Karşılaştırma Geçiş İfadesi (Aksine / Diğer yandan)", category: "transitions", color: "#06b6d4" },
     { id: "for_example_for_instance", label: "FOR EXAMPLE / FOR INSTANCE", desc: "Örneklendirme İfadesi (Örneğin)", category: "transitions", color: "#06b6d4" },
 
-    // 🎯 Neden-Etki Matrisi & Neden-Sonuç Fiilleri
-    { id: "lead_to_cause", label: "LEAD TO / CAUSE / BRING ABOUT", desc: "Neden Olmak Fiil Kalıbı (X ➔ Y'ye yol açar)", category: "cause_effect", color: "#06b6d4" },
-    { id: "stem_from_result_from", label: "STEM FROM / RESULT FROM", desc: "Kaynaklanmak Fiil Kalıbı (Y ➔ X'ten kaynaklanır)", category: "cause_effect", color: "#06b6d4" },
-    { id: "due_to_owing_to", label: "DUE TO / OWING TO / BECAUSE OF", desc: "Nedeniyle Edat Öbeği (+ İsim Öbeği)", category: "cause_effect", color: "#06b6d4" },
-    { id: "because_as_since_clause", label: "BECAUSE / AS / SINCE (Clause)", desc: "Neden-Sonuç Bağlacı (+ Cümle)", category: "cause_effect", color: "#06b6d4" },
+    // 🎯 Neden-Etki Matrisi & Neden-Sonuç Fiilleri (Görsellerdeki Tüm Kalıplar)
+    // A) Neden ➔ Fiil ➔ Etki Grubu (Yol Açmak / Meydana Getirmek)
+    { id: "lead_to_cause", label: "LEAD TO / CAUSE / BRING ABOUT", desc: "Neden Olmak (NEDEN + lead to / cause / bring about + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "is_responsible_for", label: "IS / ARE RESPONSIBLE FOR", desc: "Sorumlu Olmak (NEDEN + is/are responsible for + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "produce_produces", label: "PRODUCE / PRODUCES", desc: "Meydana Getirmek (NEDEN + produce(s) + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "induce_provoke_prompt", label: "INDUCE / PROVOKE / PROMPT", desc: "Uyarmak / Teşvik Etmek (NEDEN + induce / prompt + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "result_in", label: "RESULT IN / RESULTS IN", desc: "İle Sonuçlanmak (NEDEN + result in + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "trigger_triggers", label: "TRIGGER / TRIGGERS", desc: "Tetiklemek (NEDEN + trigger(s) + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "give_rise_to", label: "GIVE RISE TO / GIVES RISE TO", desc: "Ortaya Çıkarmak (NEDEN + give(s) rise to + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "contribute_to", label: "CONTRIBUTE TO / CONTRIBUTES TO", desc: "Katkıda Bulunmak (NEDEN + contribute(s) to + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "pave_the_way_for", label: "PAVE THE WAY FOR", desc: "Zemin Hazırlamak (NEDEN + pave(s) the way for + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "culminate_in", label: "CULMINATE IN / CULMINATES IN", desc: "Zirveye Ulaşmak (NEDEN + culminate(s) in + ETKİ)", category: "cause_effect", color: "#06b6d4" },
+
+    // B) Etki ➔ Fiil ➔ Neden Grubu (Kaynaklanmak / Edilgen Neden)
+    { id: "is_due_to", label: "IS / ARE DUE TO", desc: "İleri Gelmek (ETKİ + is/are due to + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "result_from", label: "RESULT FROM / RESULTS FROM", desc: "Doğmak / Kaynaklanmak (ETKİ + result(s) from + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "stem_from", label: "STEM FROM / STEMS FROM", desc: "Köken Almak (ETKİ + stem(s) from + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "originate_from", label: "ORIGINATE FROM / IN", desc: "Doğmak (ETKİ + originate(s) in/from + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "arise_from", label: "ARISE FROM / OUT OF", desc: "Meydana Gelmek (ETKİ + arise(s) from/out of + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "is_attributed_to", label: "IS / ARE ATTRIBUTED TO", desc: "Atfedilmek (ETKİ + is/are attributed to + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "is_ascribed_to", label: "IS ASCRIBED TO / ROOTED IN", desc: "Kök Salmak (ETKİ + is ascribed to / rooted in + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "is_caused_by", label: "IS / ARE CAUSED BY", desc: "Neden Olunmak (ETKİ + is/are caused by + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+
+    // C) Neden-Etki Edat Öbekleri (Nedeniyle / Sayesinde + İsim)
+    { id: "because_of_due_to_owing_to", label: "BECAUSE OF / DUE TO / OWING TO", desc: "Yüzünden / Dolayı (ETKİ Cümlesi + edat + NEDEN İsim Öbeği)", category: "cause_effect", color: "#06b6d4" },
+    { id: "on_account_of_in_view_of", label: "ON ACCOUNT OF / IN VIEW OF", desc: "Göz Önüne Alındığında (ETKİ + on account of / in view of + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "by_virtue_of", label: "BY VIRTUE OF / ON THE GROUNDS OF", desc: "Sayesinde / Gerekçesiyle (ETKİ + by virtue of + NEDEN)", category: "cause_effect", color: "#06b6d4" },
+    { id: "as_a_result_of", label: "AS A RESULT OF / AS A CONSEQUENCE OF", desc: "Sonucu Olarak (ETKİ + as a result of + NEDEN İsim)", category: "cause_effect", color: "#06b6d4" },
+
+    // D) Cümle Bağlayan Neden-Etki Bağlaçları & Kalıpları
+    { id: "therefore_thus_hence", label: "THEREFORE / THUS / HENCE", desc: "Bu Yüzden (NEDEN Cümlesi; therefore, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
+    { id: "consequently", label: "CONSEQUENTLY / AS A CONSEQUENCE", desc: "Bunun Neticesinde (NEDEN Cümlesi; consequently, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
+    { id: "as_a_result_that", label: "AS A RESULT / WITH THE RESULT THAT", desc: "Sonuç Olarak (NEDEN Cümlesi; as a result, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
+    { id: "accordingly", label: "ACCORDINGLY", desc: "Buna Bağlı Olarak (NEDEN Cümlesi; accordingly, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
+    { id: "in_that", label: "IN THAT", desc: "-mesi bakımından / çünkü (ETKİ Cümlesi + in that + NEDEN Cümlesi)", category: "cause_effect", color: "#06b6d4" },
+    { id: "inasmuch_as_seeing_that", label: "INASMUCH AS / SEEING THAT / GIVEN THAT", desc:-dığına göre / göz önüne alındığında (inasmuch as NEDEN, ETKİ)", category: "cause_effect", color: "#06b6d4" },
+    { id: "owing_to_the_fact_that", label: "OWING TO THE FACT THAT / DUE TO THE FACT THAT", desc:-dığı gerçeğinden dolayı (ETKİ + owing to the fact that + NEDEN Cümlesi)", category: "cause_effect", color: "#06b6d4" },
+    { id: "thereby_v_ing", label: "THEREBY + V-ING", desc: "Böylelikle -erek (Cümle, thereby + V-ing + Nesne)", category: "cause_effect", color: "#06b6d4" },
+    { id: "so_that_such_that", label: "SO ... THAT / SUCH ... THAT", desc: "Öyle ... ki (Derece Sonuç Yapısı)", category: "cause_effect", color: "#06b6d4" },
+    { id: "so_much_so_that", label: "SO MUCH SO THAT", desc: "Öyle bir dereceye kadar ki (NEDEN, so much so that ETKİ)", category: "cause_effect", color: "#06b6d4" },
 
     // ⚡ Devrik Yapılar & Zaman Kısaltmaları
     { id: "having_v3", label: "HAVING + V3 / HAVING BEEN + V3", desc: "Zaman Kısaltması (-dikten sonra)", category: "devrik_kısaltma", color: "#06b6d4" },
