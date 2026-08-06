@@ -170,30 +170,30 @@
 
   // 2. Matris: Yan Cümle Zamanları (Clause A)
   const CLAUSE_A_TENSES = [
-    { id: "v1_present", label: "V1 / Present Simple", sample: "she studies hard", tenseGroup: "present", color: "#8b5cf6" },
-    { id: "v2_past", label: "V2 / Past Simple", sample: "she studied hard", tenseGroup: "past", color: "#8b5cf6" },
-    { id: "was_were_ving", label: "Was/Were + V-ing", sample: "she was studying late", tenseGroup: "past_cont", color: "#8b5cf6" },
-    { id: "had_v3", label: "Had + V3 (Past Perfect)", sample: "she had studied hard", tenseGroup: "past_perfect", color: "#8b5cf6" },
-    { id: "has_v3", label: "Has/Have + V3 / Present Perfect", sample: "she has lived here", tenseGroup: "present_perfect", color: "#8b5cf6" },
-    { id: "is_ving", label: "Am/Is/Are + V-ing", sample: "it is raining outside", tenseGroup: "present_cont", color: "#8b5cf6" },
-    { id: "future_date", label: "[Gelecek Tarih / By 2050]", sample: "By 2050", tenseGroup: "future_date", color: "#8b5cf6" },
-    { id: "past_date", label: "[Geçmiş Tarih / By 1900]", sample: "By 1900", tenseGroup: "past_date", color: "#8b5cf6" },
-    { id: "v_ing_obj", label: "[V-ing + Nesne]", sample: "completing the report", tenseGroup: "ving", color: "#8b5cf6" },
-    { id: "noun_phrase", label: "[Noun / İsim / Dönem İskeleti]", sample: "the economic crisis", tenseGroup: "noun", color: "#8b5cf6" }
+    { id: "v1_present", label: "V1 / Present Simple", sample: "she studies hard", sampleTR: "o sıkı çalışır", tenseGroup: "present", color: "#8b5cf6" },
+    { id: "v2_past", label: "V2 / Past Simple", sample: "she studied hard", sampleTR: "o sıkı çalıştı", tenseGroup: "past", color: "#8b5cf6" },
+    { id: "was_were_ving", label: "Was/Were + V-ing", sample: "she was studying late", sampleTR: "o geç saatlere kadar çalışıyordu", tenseGroup: "past_cont", color: "#8b5cf6" },
+    { id: "had_v3", label: "Had + V3 (Past Perfect)", sample: "she had studied hard", sampleTR: "o sıkı çalışmıştı", tenseGroup: "past_perfect", color: "#8b5cf6" },
+    { id: "has_v3", label: "Has/Have + V3 / Present Perfect", sample: "she has lived here", sampleTR: "o burada yaşadı", tenseGroup: "present_perfect", color: "#8b5cf6" },
+    { id: "is_ving", label: "Am/Is/Are + V-ing", sample: "it is raining outside", sampleTR: "dışarıda yağmur yağıyor", tenseGroup: "present_cont", color: "#8b5cf6" },
+    { id: "future_date", label: "[Gelecek Tarih / By 2050]", sample: "By 2050", sampleTR: "2050 yılına kadar", tenseGroup: "future_date", color: "#8b5cf6" },
+    { id: "past_date", label: "[Geçmiş Tarih / By 1900]", sample: "By 1900", sampleTR: "1900 yılına kadar", tenseGroup: "past_date", color: "#8b5cf6" },
+    { id: "v_ing_obj", label: "[V-ing + Nesne]", sample: "completing the report", sampleTR: "raporu tamamlamak", tenseGroup: "ving", color: "#8b5cf6" },
+    { id: "noun_phrase", label: "[Noun / İsim / Dönem İskeleti]", sample: "the economic crisis", sampleTR: "ekonomik kriz", tenseGroup: "noun", color: "#8b5cf6" }
   ];
 
   // 3. Matris: Ana Cümle / Modal Yapıları (Clause B)
   const CLAUSE_B_MODALS = [
-    { id: "will_have_v3", label: "WILL HAVE + V3 (Future Perfect)", sample: "they will have finished the project", modalGroup: "future_perfect", color: "#ec4899" },
-    { id: "will_v1", label: "WILL + V1", sample: "she will pass the exam", modalGroup: "future", color: "#ec4899" },
-    { id: "v1_main", label: "V1 / Simple Present", sample: "she passes the exam", modalGroup: "present", color: "#ec4899" },
-    { id: "v2_main", label: "V2 / Simple Past", sample: "she passed the exam", modalGroup: "past", color: "#ec4899" },
-    { id: "was_were_ving_main", label: "Was/Were + V-ing", sample: "everyone was waiting", modalGroup: "past_cont", color: "#ec4899" },
-    { id: "would_v1", label: "WOULD / COULD + V1", sample: "she would pass the exam", modalGroup: "would_v1", color: "#ec4899" },
-    { id: "would_have_v3", label: "WOULD / COULD + HAVE V3", sample: "she would have passed the exam", modalGroup: "would_have_v3", color: "#ec4899" },
-    { id: "has_v3_main", label: "HAS/HAVE + V3 (Present Perfect)", sample: "she has achieved great success", modalGroup: "present_perfect", color: "#ec4899" },
-    { id: "had_v3_main", label: "HAD + V3 / Past Perfect", sample: "the train had already left", modalGroup: "past_perfect", color: "#ec4899" },
-    { id: "can_may_v1", label: "CAN / MAY / MUST + V1", sample: "she can reach her goals", modalGroup: "modal_present", color: "#ec4899" }
+    { id: "will_have_v3", label: "WILL HAVE + V3 (Future Perfect)", sample: "they will have finished the project", sampleTR: "projeyi tamamlamış olacaklar", modalGroup: "future_perfect", color: "#ec4899" },
+    { id: "will_v1", label: "WILL + V1", sample: "she will pass the exam", sampleTR: "sınavı geçecek", modalGroup: "future", color: "#ec4899" },
+    { id: "v1_main", label: "V1 / Simple Present", sample: "she passes the exam", sampleTR: "sınavı geçer", modalGroup: "present", color: "#ec4899" },
+    { id: "v2_main", label: "V2 / Simple Past", sample: "she passed the exam", sampleTR: "sınavı geçti", modalGroup: "past", color: "#ec4899" },
+    { id: "was_were_ving_main", label: "Was/Were + V-ing", sample: "everyone was waiting", sampleTR: "herkes bekliyordu", modalGroup: "past_cont", color: "#ec4899" },
+    { id: "would_v1", label: "WOULD / COULD + V1", sample: "she would pass the exam", sampleTR: "sınavı geçerdi", modalGroup: "would_v1", color: "#ec4899" },
+    { id: "would_have_v3", label: "WOULD / COULD + HAVE V3", sample: "she would have passed the exam", sampleTR: "sınavı geçmiş olacaktı", modalGroup: "would_have_v3", color: "#ec4899" },
+    { id: "has_v3_main", label: "HAS/HAVE + V3 (Present Perfect)", sample: "she has achieved great success", sampleTR: "büyük başarı elde etti", modalGroup: "present_perfect", color: "#ec4899" },
+    { id: "had_v3_main", label: "HAD + V3 / Past Perfect", sample: "the train had already left", sampleTR: "tren çoktan kalkmıştı", modalGroup: "past_perfect", color: "#ec4899" },
+    { id: "can_may_v1", label: "CAN / MAY / MUST + V1", sample: "she can reach her goals", sampleTR: "hedeflerine ulaşabilir", modalGroup: "modal_present", color: "#ec4899" }
   ];
 
   // ─── 2. KURAL MATRİS MOTORU (UYUMLULUK TABLOSU) ─────────────────────────
@@ -1133,6 +1133,141 @@
     v3_passive_participle: "Seen as {A}, {B}."
   };
 
+  // ─── 2c. DİNAMİK TÜRKÇE CÜMLE ŞABLONLARI (TR_SENTENCE_TEMPLATES) ────────
+  const TR_SENTENCE_TEMPLATES = {
+    // Zaman
+    when: "{A_TR} zaman, {B_TR}.",
+    while_as: "{A_TR} iken, {B_TR}.",
+    before: "{A_TR} öncesinde, {B_TR}.",
+    after: "{A_TR} sonrasında, {B_TR}.",
+    as_soon_as: "{A_TR} an, {B_TR}.",
+    until_till: "{A_TR} kadarki süreçte {B_TR}.",
+    by_the_time: "{A_TR} zamana kadar, {B_TR}.",
+    since: "{A_TR} beri, {B_TR}.",
+    by_time_anchor: "{A_TR}, {B_TR}.",
+    so_far: "Şu ana kadar, {B_TR}.",
+    whenever: "Ne zaman {A_TR}, {B_TR}.",
+    the_moment: "{A_TR} an, {B_TR}.",
+
+    // Koşul
+    if_type0_1: "Eğer {A_TR}, {B_TR}.",
+    if_type2: "Eğer {A_TR}, {B_TR}.",
+    if_type3: "Eğer {A_TR}, {B_TR}.",
+    unless: "{A_TR} olmadıkça, {B_TR}.",
+    provided_that: "{A_TR} şartıyla, {B_TR}.",
+    as_long_as: "{A_TR} sürece, {B_TR}.",
+    in_case: "{A_TR} durumuna karşı, {B_TR}.",
+    supposing_that: "Varsayalım ki {A_TR}, {B_TR}.",
+    only_if: "Yalnızca {A_TR} ise {B_TR}.",
+    on_condition_that: "{A_TR} koşuluyla, {B_TR}.",
+
+    // Neden-Zıtlık-Geçiş
+    although: "{A_TR} rağmen, {B_TR}.",
+    because: "{A_TR} için, {B_TR}.",
+    however_nevertheless: "{A_TR}; ancak, {B_TR}.",
+    in_contrast_on_the_other_hand: "{A_TR}; öte yandan, {B_TR}.",
+    on_the_contrary: "{A_TR}; aksine, {B_TR}.",
+    even_so: "{A_TR}; öyle olsa bile, {B_TR}.",
+    therefore_thus: "{A_TR}; bu yüzden, {B_TR}.",
+    as_a_result_transition: "{A_TR}; sonuç olarak, {B_TR}.",
+    accordingly_transition: "{A_TR}; buna bağlı olarak, {B_TR}.",
+    in_addition_moreover: "{A_TR}; üstelik, {B_TR}.",
+    besides_what_is_more: "{A_TR}; bunun yanı sıra, {B_TR}.",
+    likewise_similarly: "{A_TR}; benzer şekilde, {B_TR}.",
+    for_example_for_instance: "{A_TR}; örneğin, {B_TR}.",
+    in_other_words_that_is: "{A_TR}; diğer bir deyişle, {B_TR}.",
+    otherwise: "{A_TR}; aksi takdirde, {B_TR}.",
+    while_whereas: "{A_TR} oysa {B_TR}.",
+
+    // Neden-Etki Fiilleri
+    lead_to_cause: "{A_TR}, {B_TR} durumuna yol açar.",
+    is_responsible_for: "{A_TR}, {B_TR} durumundan sorumludur.",
+    produce_produces: "{A_TR}, {B_TR} meydana getirir.",
+    induce_provoke_prompt: "{A_TR}, {B_TR} tetikler.",
+    result_in: "{A_TR}, {B_TR} ile sonuçlanır.",
+    trigger_triggers: "{A_TR}, {B_TR} tetikler.",
+    give_rise_to: "{A_TR}, {B_TR} ortaya çıkarır.",
+    contribute_to: "{A_TR}, {B_TR} katkıda bulunur.",
+    pave_the_way_for: "{A_TR}, {B_TR} zemin hazırlar.",
+    culminate_in: "{A_TR}, {B_TR} zirveye ulaşır.",
+
+    // Neden-Etki Ters Fiiller
+    is_due_to: "{B_TR}, {A_TR} durumundan kaynaklanır.",
+    result_from: "{B_TR}, {A_TR} durumundan doğar.",
+    stem_from: "{B_TR}, {A_TR} köken alır.",
+    originate_from: "{B_TR}, {A_TR} kaynaklanır.",
+    arise_from: "{B_TR}, {A_TR} doğar.",
+    is_attributed_to: "{B_TR}, {A_TR} atfedilir.",
+    is_ascribed_to: "{B_TR}, {A_TR} bağlanır.",
+    is_caused_by: "{B_TR}, {A_TR} tarafından oluşturulur.",
+
+    // Edat Öbekleri
+    because_of_due_to_owing_to: "{A_TR} nedeniyle, {B_TR}.",
+    on_account_of_in_view_of: "{A_TR} göz önüne alındığında, {B_TR}.",
+    by_virtue_of: "{A_TR} sayesinde, {B_TR}.",
+    as_a_result_of: "{A_TR} sonucu olarak, {B_TR}.",
+    despite_in_spite_of: "{A_TR} karşın, {B_TR}.",
+    in_order_to: "{A_TR} için, {B_TR}.",
+    in_addition_to_prep: "{A_TR} ek olarak, {B_TR}.",
+    regarding_as_for: "{A_TR} hususunda, {B_TR}.",
+    in_terms_of_in_light_of: "{A_TR} açısından, {B_TR}.",
+    compared_to: "{A_TR} kıyasla, {B_TR}.",
+    except_for_apart_from: "{A_TR} haricinde, {B_TR}.",
+
+    // Neden-Etki Bağlaç Kalıpları
+    therefore_thus_hence: "{A_TR}; bu yüzden, {B_TR}.",
+    consequently: "{A_TR}; bunun neticesinde, {B_TR}.",
+    as_a_result_that: "{A_TR}; sonuç olarak, {B_TR}.",
+    accordingly: "{A_TR}; bu doğrultuda, {B_TR}.",
+    in_that: "{B_TR}, çünkü {A_TR}.",
+    inasmuch_as_seeing_that: "{A_TR} mademki, {B_TR}.",
+    owing_to_the_fact_that: "{A_TR} gerçeğinden dolayı, {B_TR}.",
+    thereby_v_ing: "{A_TR}, böylelikle {B_TR}.",
+    so_that_such_that: "{A_TR}, öyle ki {B_TR}.",
+    so_much_so_that: "{A_TR}, öyle bir dereceye kadar ki {B_TR}.",
+
+    // Devrik & Kısaltmalar
+    having_v3: "{A_TR} sonrasında, {B_TR}.",
+    prior_to: "{A_TR} öncesinde, {B_TR}.",
+    upon_on: "{A_TR} üzerine, {B_TR}.",
+    at_the_dawn: "{A_TR} şafağında, {B_TR}.",
+    no_sooner_than: "{A_TR} ki {B_TR}.",
+    hardly_when: "Henüz {A_TR} ki {B_TR}.",
+    during_throughout: "{A_TR} boyunca, {B_TR}.",
+
+    // Amaç, Dolaylı, Dilek
+    so_that_purpose: "{B_TR} diye {A_TR}.",
+    in_order_that: "{B_TR} için {A_TR}.",
+    reported_speech: "{A_TR} dedi ki {B_TR}.",
+    noun_clause: "Biliyordum ki {B_TR}.",
+    wish_if_only: "Keşke {B_TR}.",
+    as_if_as_though: "{A_TR} sanki {B_TR}.",
+    its_time: "Artık {B_TR} zamanı geldi.",
+    would_rather: "Tercih ederdim ki {B_TR}.",
+    and_coord: "{A_TR} ve {B_TR}.",
+    but_yet_coord: "{A_TR} fakat {B_TR}.",
+    or_coord: "{A_TR} veya {B_TR}.",
+    nor_coord: "{A_TR} ne de {B_TR}.",
+    for_coord: "{A_TR} çünkü {B_TR}.",
+    so_coord: "{A_TR} bu yüzden {B_TR}.",
+    namely: "{A_TR}; yani {B_TR}.",
+    in_fact_indeed: "{A_TR}; aslında {B_TR}.",
+    first_firstly: "İlk olarak {A_TR}, sonra {B_TR}.",
+    meanwhile: "{A_TR}; bu sırada {B_TR}.",
+    subsequently: "{A_TR}; sonrasında {B_TR}.",
+    eventually: "{A_TR}; sonunda {B_TR}.",
+    in_summary: "{A_TR}; özetle {B_TR}.",
+    all_in_all: "Genel olarak {A_TR}, dolayısıyla {B_TR}.",
+    both_and: "Hem {A_TR} hem de {B_TR}.",
+    either_or: "Ya {A_TR} ya da {B_TR}.",
+    neither_nor: "Ne {A_TR} ne de {B_TR}.",
+    not_only_but_also: "Sadece {A_TR} değil, aynı zamanda {B_TR}.",
+    whether_or: "İster {A_TR} ister {B_TR}.",
+    just_as_so: "Nasıl ki {A_TR}, öyle de {B_TR}.",
+    only_when_after_inv: "Ancak {A_TR} sonra {B_TR}.",
+    v3_passive_participle: "{A_TR} olarak görüldüğünde, {B_TR}."
+  };
+
   // Devrik yapı yardımcısı: "she had studied hard" → "had she studied hard"
   function invertHadV3(sample) {
     const parts = sample.split(" ");
@@ -1544,24 +1679,35 @@
       }
     });
 
-    // Build Live English Sentence using Templates
+    // Build Live English & Turkish Sentences using Dynamic Templates
     if (connObj && clauseAObj && clauseBObj) {
-      const template = SENTENCE_TEMPLATES[state.selectedConnector];
-      if (template) {
+      const templateEN = SENTENCE_TEMPLATES[state.selectedConnector];
+      if (templateEN) {
         let sA = clauseAObj.sample;
         let sB = clauseBObj.sample;
-        let result = template
+        let resultEN = templateEN
           .replace("{A_INV}", invertHadV3(sA))
           .replace("{A}", sA)
           .replace("{B}", sB);
-        // İlk harfi büyüt
-        result = result.charAt(0).toUpperCase() + result.slice(1);
-        sentenceENText = '"' + result + '"';
+        resultEN = resultEN.charAt(0).toUpperCase() + resultEN.slice(1);
+        sentenceENText = '"' + resultEN + '"';
       } else {
-        // Fallback: bağlacın ilk anlamlı kelimesini al
         let connWord = connObj.label.split(" / ")[0];
         connWord = connWord.charAt(0) + connWord.slice(1).toLowerCase();
         sentenceENText = '"' + connWord + " " + clauseAObj.sample + ", " + clauseBObj.sample + '."';
+      }
+
+      // Dynamic Turkish Translation
+      const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector];
+      const trA = clauseAObj.sampleTR || clauseAObj.label;
+      const trB = clauseBObj.sampleTR || clauseBObj.label;
+
+      if (templateTR) {
+        let resultTR = templateTR
+          .replace("{A_TR}", trA)
+          .replace("{B_TR}", trB);
+        resultTR = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
+        sentenceTRText = resultTR;
       }
     } else {
       let parts = [];
