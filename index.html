@@ -124,6 +124,16 @@
             </span>
             <span class="nav-tab-label">Dersler</span>
           </button>
+          <button class="nav-tab" data-tab="cause-effect">
+            <span class="nav-tab-icon nav-anim-cause-effect">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M6 16H22M22 16L16 10M22 16L16 22" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="6" cy="16" r="3" fill="#ec4899"/>
+                <path d="M26 10V22" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Neden-Etki</span>
+          </button>
           <button class="nav-tab" data-tab="simulator">
             <span class="nav-tab-icon nav-anim-simulator">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -308,6 +318,55 @@
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- NEDEN-ETKİ MATRİSİ (CETVEL I & II) SEKMESİ -->
+        <div id="tab-content-cause-effect" class="tab-content">
+          <div class="cause-effect-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
+            
+            <!-- Header Banner -->
+            <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(236, 72, 153, 0.15)); border: 1.5px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow-md);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <div>
+                  <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--accent-primary); margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
+                    ⚡ Etkileşimli Neden-Etki Matrisi <span style="font-size: 0.75rem; background: var(--accent-primary); color: white; padding: 2px 10px; border-radius: 12px; font-weight: 700;">CETVEL I & II</span>
+                  </h2>
+                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
+                    Akademik İngilizcede neden-sonuç ilişkisi kuran fiil, edat ve bağlaç kalıplarının canlı matrisi. Yapıların üzerine tıklayarak canlı örneklerini inceleyin.
+                  </p>
+                </div>
+
+                <!-- Arama Kutusu -->
+                <div class="ce-search-wrap" style="position: relative; min-width: 240px;">
+                  <input type="text" id="ce-search-input" placeholder="Yapı veya kelime ara (örn: due to, lead to)..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                </div>
+              </div>
+
+              <!-- Yön Değiştirme Butonları (Cetvel I vs Cetvel II) -->
+              <div class="ce-direction-toggle-wrap" style="display: flex; gap: 12px; margin-top: 18px;">
+                <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                  🔴 CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
+                </button>
+                <button type="button" class="ce-dir-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                  🔵 CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
+                </button>
+              </div>
+            </div>
+
+            <!-- Filtreleme Çipleri -->
+            <div class="ce-filter-chips" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+              <button type="button" class="ce-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="ce-chip" data-category="verbs" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚡ Fiil Yapıları (causes, leads to...)</button>
+              <button type="button" class="ce-chip" data-category="prepositions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🔗 Edat Öbekleri (due to, owing to...)</button>
+              <button type="button" class="ce-chip" data-category="conjunctions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🌉 Cümle Bağlaçları (therefore, because...)</button>
+            </div>
+
+            <!-- Matris Kartları Grid Alanı -->
+            <div class="ce-matrix-grid" id="ce-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+              <!-- JS ile dinamik olarak doldurulacak -->
+            </div>
+
           </div>
         </div>
 

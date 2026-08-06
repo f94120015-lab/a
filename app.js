@@ -13017,6 +13017,8 @@ function switchTab(tabId) {
     renderSimulator();
   } else if (tabId === 'feedback') {
     initFeedbackTab();
+  } else if (tabId === 'cause-effect') {
+    initCauseEffectTab();
   }
 }
 
@@ -25440,3 +25442,295 @@ if (document.readyState === 'loading') {
 } else {
   initParagraphAnalysisModule();
 }
+
+// ============================================================
+// ETKİLEŞİMLİ NEDEN-ETKİ MATRİSİ (CETVEL I & II) DATA & LOGIC
+// ============================================================
+
+const CAUSE_EFFECT_DATA = {
+  cause_to_effect: [
+    {
+      term: "cause / causes",
+      category: "verbs",
+      meaning: "sebep olmak, yol açmak",
+      formula: "NEDEN + cause(s) + ETKİ",
+      examples: [
+        { en: "Lack of vitamins causes poor health.", tr: "Vitamin eksikliği sıhhatsizliğe sebep olur." },
+        { en: "The storm caused severe damage to the crops.", tr: "Fırtına ekinlerde ağır hasara yol açtı." },
+        { en: "High temperature causes water to evaporate rapidly.", tr: "Yüksek sıcaklık suyun hızlı buharlaşmasına neden olur." }
+      ]
+    },
+    {
+      term: "lead to / leads to",
+      category: "verbs",
+      meaning: "yol açmak, sürüklemek",
+      formula: "NEDEN + lead(s) to + ETKİ",
+      examples: [
+        { en: "High sugar intake leads to diabetes.", tr: "Yüksek şeker tüketimi diyabete yol açar." },
+        { en: "Irresponsible industrial pollution leads to climate change.", tr: "Sorumsuz sanayi kirliliği iklim değişikliğine yol açar." }
+      ]
+    },
+    {
+      term: "result in / results in",
+      category: "verbs",
+      meaning: "... ile sonuçlanmak, doğurmak",
+      formula: "NEDEN + result(s) in + ETKİ",
+      examples: [
+        { en: "Lack of preparation resulted in total failure.", tr: "Hazırlık eksikliği tam bir başarısızlıkla sonuçlandı." },
+        { en: "Earthquake movements result in folds in the earth crust.", tr: "Deprem hareketleri yer kabuğunda kıvrılmalarla sonuçlanır." }
+      ]
+    },
+    {
+      term: "give rise to / gives rise to",
+      category: "verbs",
+      meaning: "ortaya çıkarmak, sebebiyet vermek",
+      formula: "NEDEN + give(s) rise to + ETKİ",
+      examples: [
+        { en: "Economic instability gives rise to social unrest.", tr: "Ekonomik istikrarsızlık toplumsal huzursuzluğa sebebiyet verir." }
+      ]
+    },
+    {
+      term: "is responsible for / are responsible for",
+      category: "verbs",
+      meaning: "...den sorumlu olmak, yol açmak",
+      formula: "NEDEN + is/are responsible for + ETKİ",
+      examples: [
+        { en: "Human error was responsible for the train collision.", tr: "Tren çarpışmasına insan hatası yol açtı." }
+      ]
+    },
+    {
+      term: "produce / produces",
+      category: "verbs",
+      meaning: "meydana getirmek, üretmek",
+      formula: "NEDEN + produce(s) + ETKİ",
+      examples: [
+        { en: "Volcanic eruptions produce massive ash clouds.", tr: "Volkanik patlamalar devasa kül bulutları meydana getirir." }
+      ]
+    },
+    {
+      term: "therefore",
+      category: "conjunctions",
+      meaning: "bu yüzden, bundan dolayı",
+      formula: "NEDEN Cümlesi; therefore, ETKİ Cümlesi",
+      examples: [
+        { en: "Vitamins were lacking; therefore, health was poor.", tr: "Vitamin eksikti; bundan dolayı sağlık kötüydü." }
+      ]
+    },
+    {
+      term: "consequently / as a consequence",
+      category: "conjunctions",
+      meaning: "sonuç olarak, bunun neticesinde",
+      formula: "NEDEN Cümlesi; consequently, ETKİ Cümlesi",
+      examples: [
+        { en: "The harvest failed; consequently, food prices skyrocketed.", tr: "Hasat başarısız oldu; neticede gıda fiyatları fırladı." }
+      ]
+    },
+    {
+      term: "as a result / with the result that",
+      category: "conjunctions",
+      meaning: "sonuç olarak, şöyle ki",
+      formula: "NEDEN Cümlesi; as a result, ETKİ Cümlesi",
+      examples: [
+        { en: "He studied systematically; as a result, he passed the exam.", tr: "Sistematik çalıştı; sonuç olarak sınavı geçti." }
+      ]
+    }
+  ],
+
+  effect_to_cause: [
+    {
+      term: "is due to / are due to",
+      category: "verbs",
+      meaning: "...den ileri gelmek, kaynaklanmak",
+      formula: "ETKİ + is/are due to + NEDEN",
+      examples: [
+        { en: "Poor health is due to lack of vitamins.", tr: "Sağlıksızlık, vitamin yetersizliğinden ileri gelir." },
+        { en: "The flight delay was due to heavy fog.", tr: "Uçuş gecikmesi yoğun sisten kaynaklandı." }
+      ]
+    },
+    {
+      term: "result from / results from",
+      category: "verbs",
+      meaning: "...den doğmak, kaynaklanmak",
+      formula: "ETKİ + result(s) from + NEDEN",
+      examples: [
+        { en: "Devastation of forests resulted from introduction of goats.", tr: "Ormanların tahribatı keçilerin alana sokulmasından doğdu." },
+        { en: "Soil erosion results from deforestation.", tr: "Toprak erozyonu ormansızlaşmadan kaynaklanır." }
+      ]
+    },
+    {
+      term: "is caused by / are caused by",
+      category: "verbs",
+      meaning: "...den kaynaklanmak, nedeni olunmak",
+      formula: "ETKİ + is/are caused by + NEDEN",
+      examples: [
+        { en: "Plant diseases are caused by trace element deficiencies.", tr: "Bitki hastalıkları eser element eksikliğinden kaynaklanır." }
+      ]
+    },
+    {
+      term: "because of / due to / owing to",
+      category: "prepositions",
+      meaning: "...den dolayı, yüzünden",
+      formula: "ETKİ Cümlesi + because of / owing to + NEDEN İsim Öbeği",
+      examples: [
+        { en: "The crops failed because of lack of water.", tr: "Ekinler su eksikliğinden dolayı kurudu." },
+        { en: "Tree plantation failed owing to a severe drought.", tr: "Ağaçlandırma şiddetli kuraklık nedeniyle başarısız oldu." }
+      ]
+    },
+    {
+      term: "as a result of / as a consequence of",
+      category: "prepositions",
+      meaning: "...in sonucu olarak, nedeniyle",
+      formula: "ETKİ Cümlesi + as a result of + NEDEN İsim Öbeği",
+      examples: [
+        { en: "Hospitalisations increased as a result of the epidemic.", tr: "Salgın sonucunda hastaneye yatışlar arttı." }
+      ]
+    },
+    {
+      term: "because / since / as",
+      category: "conjunctions",
+      meaning: "çünkü, ...dığı için",
+      formula: "ETKİ Cümlesi + because / since / as + NEDEN Cümlesi",
+      examples: [
+        { en: "Health was poor because vitamins were lacking.", tr: "Sağlık kötüydü çünkü vitaminler eksikti." },
+        { en: "Ice floats since it is less dense than water.", tr: "Buz yüzer çünkü sudan daha az yoğundur." }
+      ]
+    },
+    {
+      term: "owing to the fact that",
+      category: "conjunctions",
+      meaning: "... gerçeğinden dolayı, ...dığı için",
+      formula: "ETKİ Cümlesi + owing to the fact that + NEDEN Cümlesi",
+      examples: [
+        { en: "Coarser material is deposited owing to the fact that ice melts rapidly.", tr: "Buz hızlı eridiği gerçeğinden dolayı kaba malzeme çöker." }
+      ]
+    }
+  ]
+};
+
+let ceActiveDirection = 'cause_to_effect';
+let ceActiveCategory = 'all';
+let ceSearchQuery = '';
+let ceExpandedCardIndex = null;
+
+function initCauseEffectTab() {
+  const dirBtns = document.querySelectorAll('.ce-dir-btn');
+  dirBtns.forEach(btn => {
+    btn.onclick = () => {
+      dirBtns.forEach(b => {
+        b.classList.remove('active');
+        b.style.borderColor = 'var(--border-color)';
+        b.style.background = 'var(--bg-card)';
+        b.style.color = 'var(--text-secondary)';
+      });
+      btn.classList.add('active');
+      btn.style.borderColor = btn.dataset.direction === 'cause_to_effect' ? '#3b82f6' : '#ec4899';
+      btn.style.background = btn.dataset.direction === 'cause_to_effect' ? 'rgba(59, 130, 246, 0.15)' : 'rgba(236, 72, 153, 0.15)';
+      btn.style.color = btn.dataset.direction === 'cause_to_effect' ? '#3b82f6' : '#ec4899';
+
+      ceActiveDirection = btn.dataset.direction;
+      ceExpandedCardIndex = null;
+      renderCauseEffectMatrix();
+    };
+  });
+
+  const filterChips = document.querySelectorAll('.ce-chip');
+  filterChips.forEach(chip => {
+    chip.onclick = () => {
+      filterChips.forEach(c => {
+        c.classList.remove('active');
+        c.style.background = 'var(--bg-card)';
+        c.style.color = 'var(--text-primary)';
+        c.style.borderColor = 'var(--border-color)';
+      });
+      chip.classList.add('active');
+      chip.style.background = 'var(--accent-primary)';
+      chip.style.color = 'white';
+      chip.style.borderColor = 'var(--accent-primary)';
+
+      ceActiveCategory = chip.dataset.category;
+      ceExpandedCardIndex = null;
+      renderCauseEffectMatrix();
+    };
+  });
+
+  const searchInput = document.getElementById('ce-search-input');
+  if (searchInput) {
+    searchInput.oninput = (e) => {
+      ceSearchQuery = e.target.value.toLowerCase().trim();
+      renderCauseEffectMatrix();
+    };
+  }
+
+  renderCauseEffectMatrix();
+}
+
+function renderCauseEffectMatrix() {
+  const gridEl = document.getElementById('ce-matrix-grid');
+  if (!gridEl) return;
+
+  const rawList = CAUSE_EFFECT_DATA[ceActiveDirection] || [];
+  const filtered = rawList.filter(item => {
+    const matchCategory = ceActiveCategory === 'all' || item.category === ceActiveCategory;
+    const matchSearch = !ceSearchQuery ||
+      item.term.toLowerCase().includes(ceSearchQuery) ||
+      item.meaning.toLowerCase().includes(ceSearchQuery) ||
+      item.formula.toLowerCase().includes(ceSearchQuery) ||
+      item.examples.some(ex => ex.en.toLowerCase().includes(ceSearchQuery) || ex.tr.toLowerCase().includes(ceSearchQuery));
+    return matchCategory && matchSearch;
+  });
+
+  if (filtered.length === 0) {
+    gridEl.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">🔍</span>
+        <h4 style="margin: 0 0 6px 0; color: var(--text-primary);">Aramanıza Uygun Yapı Bulunamadı</h4>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">Farklı bir arama terimi deneyin veya filtreleri temizleyin.</p>
+      </div>
+    `;
+    return;
+  }
+
+  gridEl.innerHTML = filtered.map((item, idx) => {
+    const isExpanded = ceExpandedCardIndex === idx;
+    const catLabel = item.category === 'verbs' ? 'FİİL' : (item.category === 'prepositions' ? 'EDAT' : 'BAĞLAÇ');
+    const catClass = item.category === 'verbs' ? 'verb' : (item.category === 'prepositions' ? 'prep' : 'conj');
+
+    return `
+      <div class="ce-card ${isExpanded ? 'active-expanded' : ''}" onclick="toggleCeCard(${idx})">
+        <div class="ce-card-header">
+          <h3 class="ce-term-title">${item.term}</h3>
+          <span class="ce-category-badge ${catClass}">${catLabel}</span>
+        </div>
+
+        <p class="ce-meaning-text">👉 ${item.meaning}</p>
+        <div class="ce-formula-box">📐 ${item.formula}</div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: var(--accent-primary); font-weight: 700; margin-top: 4px;">
+          <span>${item.examples.length} Örnek Cümle</span>
+          <span>${isExpanded ? '▲ Kapat' : '▼ Örnekleri İncele'}</span>
+        </div>
+
+        ${isExpanded ? `
+          <div class="ce-examples-accordion">
+            ${item.examples.map(ex => `
+              <div class="ce-example-item">
+                <div class="ce-example-en">🇬🇧 ${ex.en}</div>
+                <div class="ce-example-tr">🇹🇷 ${ex.tr}</div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+function toggleCeCard(idx) {
+  if (ceExpandedCardIndex === idx) {
+    ceExpandedCardIndex = null;
+  } else {
+    ceExpandedCardIndex = idx;
+  }
+  renderCauseEffectMatrix();
+}
+
