@@ -26320,149 +26320,396 @@ function toggleTmCard(idx) {
 
 const TRANSITIONS_MATRIX_DATA = {
   sentence_connectors: [
+    // Zıtlık & Çelişki
     {
-      term: "however / nevertheless / nonetheless",
+      term: "however",
       category: "contrast",
-      meaning: "ancak, yine de, buna rağmen (Geçiş Zarfları)",
+      meaning: "ancak, yine de (Geçiş Zarfı)",
       rule: "📐 NOKTALAMA: Cümle 1; however, Cümle 2. OR Cümle 1. However, Cümle 2.",
       trap: "⚠️ UYUM: Arkasından tam cümle alır. Virgülle tek başına bağlanmaz.",
       examples: [
-        { en: "The theory is widely accepted; however, recent data contradicts it.", tr: "Teori yaygın olarak kabul görmektedir; ancak son veriler bununla çelişmektedir." },
+        { en: "The theory is widely accepted; however, recent data contradicts it.", tr: "Teori yaygın olarak kabul görmektedir; ancak son veriler bununla çelişmektedir." }
+      ]
+    },
+    {
+      term: "nevertheless",
+      category: "contrast",
+      meaning: "yine de, buna rağmen",
+      rule: "📐 NOKTALAMA: Cümle 1. Nevertheless, Cümle 2.",
+      trap: "⚠️ Beklenmedik bir zıtlık durumunda ikinci cümlenin başında yer alır.",
+      examples: [
         { en: "The trial faced budget cuts. Nevertheless, researchers proceeded.", tr: "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti." }
       ]
     },
     {
-      term: "on the other hand / in contrast / conversely",
+      term: "nonetheless",
       category: "contrast",
-      meaning: "diğer yandan, tezat olarak, aksine",
-      rule: "📐 NOKTALAMA: Cümle 1. In contrast, Cümle 2. / Cümle 1; conversely, Cümle 2.",
-      trap: "⚠️ 'Conversely' iki durumun birbirinin tam tersi olduğunu vurgular.",
+      meaning: "buna rağmen, her şeye karşın",
+      rule: "📐 NOKTALAMA: Cümle 1. Nonetheless, Cümle 2.",
+      trap: "⚠️ Nevertheless ile tamamen eş anlamlıdır, akademik metinlerde sık geçer.",
       examples: [
-        { en: "Solar energy is renewable. On the other hand, fossil fuels are finite.", tr: "Güneş enerjisi yenilenebilirdir. Diğer yandan, fosil yakıtlar sınırlıdır." },
+        { en: "The task was extremely difficult; nonetheless, she completed it on time.", tr: "Görev son derece zordu; buna rağmen zamanında tamamladı." }
+      ]
+    },
+    {
+      term: "on the other hand",
+      category: "contrast",
+      meaning: "diğer yandan, öte yandan",
+      rule: "📐 NOKTALAMA: Cümle 1. On the other hand, Cümle 2.",
+      trap: "⚠️ İki farklı durum veya seçeneği kıyaslarken kullanılır.",
+      examples: [
+        { en: "Solar energy is renewable. On the other hand, fossil fuels are finite.", tr: "Güneş enerjisi yenilenebilirdir. Diğer yandan, fosil yakıtlar sınırlıdır." }
+      ]
+    },
+    {
+      term: "in contrast / by contrast",
+      category: "contrast",
+      meaning: "tezat olarak, aksine",
+      rule: "📐 NOKTALAMA: Cümle 1. In contrast, Cümle 2.",
+      trap: "⚠️ İki olgu arasındaki açık farkı vurgular.",
+      examples: [
+        { en: "Tropical regions are humid. In contrast, deserts receive almost no rain.", tr: "Tropikal bölgeler nemlidir. Tezat olarak, çöller neredeyse hiç yağış almaz." }
+      ]
+    },
+    {
+      term: "conversely",
+      category: "contrast",
+      meaning: "aksine, tersine (Mantıksal Terslik)",
+      rule: "📐 NOKTALAMA: Cümle 1; conversely, Cümle 2.",
+      trap: "⚠️ İki durumun birbirinin tam zıddı/tersi olduğunu ifade eder.",
+      examples: [
         { en: "Cold air contracts; conversely, hot air expands.", tr: "Soğuk hava büzüşür; aksine, sıcak hava genleşir." }
       ]
     },
     {
       term: "on the contrary",
       category: "contrast",
-      meaning: "aksine, bilakis (Yanlış İddiayı Çürütür)",
-      rule: "📐 NOKTALAMA: Olumsuz Cümle. On the contrary, Olumlu Cümle.",
-      trap: "⚠️ 'On the contrary' sadece bir yanlış algıyı/iddiayı düzeltirken kullanılır!",
+      meaning: "aksine, bilakis (İddiayı Çürütür)",
+      rule: "📐 NOKTALAMA: Olumsuz İddia. On the contrary, Doğrulayıcı Cümle.",
+      trap: "⚠️ 'On the contrary' var olan yanlış bir iddiayı veya olumsuzluğu çürütmek için kullanılır!",
       examples: [
         { en: "The drug did not harm the patient. On the contrary, it accelerated recovery.", tr: "İlaç hastaya zarar vermedi. Aksine, iyileşmeyi hızlandırdı." }
       ]
     },
+
+    // Ekleme & Paralellik
     {
-      term: "furthermore / moreover / in addition / besides",
+      term: "furthermore",
       category: "addition",
-      meaning: "dahası, üstelik, ayrıca",
-      rule: "📐 NOKTALAMA: Cümle 1; furthermore, Cümle 2. / Cümle 1. Moreover, Cümle 2.",
-      trap: "⚠️ Var olan bir argümanı güçlendirmek için ek kanıt sunar.",
+      meaning: "dahası, üstelik",
+      rule: "📐 NOKTALAMA: Cümle 1; furthermore, Cümle 2.",
+      trap: "⚠️ Mevcut argümana daha güçlü ek kanıt sunar.",
       examples: [
         { en: "The report is thoroughly researched; furthermore, it offers practical solutions.", tr: "Rapor etraflıca araştırılmıştır; üstelik pratik çözümler sunmaktadır." }
       ]
     },
     {
-      term: "likewise / similarly / in the same way",
+      term: "moreover",
       category: "addition",
-      meaning: "benzer şekilde, keza, aynı biçimde",
+      meaning: "üstelik, bundan başka",
+      rule: "📐 NOKTALAMA: Cümle 1. Moreover, Cümle 2.",
+      trap: "⚠️ Akışı güçlendiren ilave bilgi verir.",
+      examples: [
+        { en: "The car is fuel-efficient; moreover, it has top safety ratings.", tr: "Araç yakıt tasarrufludur; üstelik en yüksek güvenlik puanlarına sahiptir." }
+      ]
+    },
+    {
+      term: "in addition",
+      category: "addition",
+      meaning: "ayrıca, ek olarak",
+      rule: "📐 NOKTALAMA: Cümle 1. In addition, Cümle 2.",
+      trap: "⚠️ Cümle başında 'In addition,' olarak veya 'In addition to + İsim' şeklinde edat olarak kullanılır.",
+      examples: [
+        { en: "The hospital opened a new wing. In addition, it hired twenty doctors.", tr: "Hastanede yeni bir kanat açıldı. Ayrıca yirmi doktor işe alındı." }
+      ]
+    },
+    {
+      term: "besides",
+      category: "addition",
+      meaning: "ayrıca, bundan başka",
+      rule: "📐 NOKTALAMA: Cümle 1. Besides, Cümle 2.",
+      trap: "⚠️ 'Beside' (yanında) ile karıştırılmamalıdır! Sonu '-s' ile biten geçiş zarfıdır.",
+      examples: [
+        { en: "I do not want to go out. Besides, it is raining heavily.", tr: "Dışarı çıkmak istemiyorum. Ayrıca şiddetli yağmur yağıyor." }
+      ]
+    },
+    {
+      term: "what is more",
+      category: "addition",
+      meaning: "dahası da var ki, üstelik",
+      rule: "📐 NOKTALAMA: Cümle 1. What is more, Cümle 2.",
+      trap: "⚠️ Konuşma ve resmi akademik metinlerde ekstra dikkat çekici eklemedir.",
+      examples: [
+        { en: "He passed the test; what is more, he scored the highest mark.", tr: "Sınavı geçti; dahası da var ki en yüksek puanı aldı." }
+      ]
+    },
+    {
+      term: "likewise",
+      category: "addition",
+      meaning: "aynı şekilde, keza",
       rule: "📐 NOKTALAMA: Cümle 1. Likewise, Cümle 2.",
-      trap: "⚠️ İki farklı öznenin aynı davranışı sergilediğini gösterir.",
+      trap: "⚠️ Benzer davranışı bildirmek için kullanılır.",
+      examples: [
+        { en: "Japan invested in robotics. Likewise, South Korea expanded tech funding.", tr: "Japonya robotiğe yatırım yaptı. Aynı şekilde Güney Kore de teknoloji fonunu genişletti." }
+      ]
+    },
+    {
+      term: "similarly",
+      category: "addition",
+      meaning: "benzer biçimde",
+      rule: "📐 NOKTALAMA: Cümle 1. Similarly, Cümle 2.",
+      trap: "⚠️ İki durum arasındaki paralelliği gösterir.",
       examples: [
         { en: "The first experiment failed. Similarly, the second trial yielded no results.", tr: "İlk deney başarısız oldu. Benzer şekilde, ikinci deneme de sonuç vermedi." }
       ]
     },
     {
-      term: "for instance / for example",
+      term: "in the same way",
+      category: "addition",
+      meaning: "aynı yolla / biçimde",
+      rule: "📐 NOKTALAMA: Cümle 1. In the same way, Cümle 2.",
+      trap: "⚠️ Yöntemsel veya mantıksal paralellik kurar.",
+      examples: [
+        { en: "Plants absorb sunlight. In the same way, solar panels capture solar energy.", tr: "Bitkiler güneş ışığını emer. Aynı şekilde güneş panelleri de güneş enerjisini yakalar." }
+      ]
+    },
+
+    // Örnekleme & Açıklama
+    {
+      term: "for instance",
       category: "exemplification",
       meaning: "örneğin, misal olarak",
       rule: "📐 NOKTALAMA: Cümle 1. For instance, Cümle 2.",
-      trap: "⚠️ Ara söz olarak cümlenin ortasına da girebilir: (Cümle 1, for instance, ...)",
+      trap: "⚠️ Cümle ortasında ara söz olarak da gelebilir.",
       examples: [
         { en: "Certain mammals have adapted to water; whales, for instance, live entirely in the sea.", tr: "Bazı memeliler suya uyum sağlamıştır; balinalar, örneğin, tamamen denizde yaşar." }
       ]
     },
     {
-      term: "that is (i.e.) / in other words / namely",
+      term: "for example",
       category: "exemplification",
-      meaning: "yani, başka bir deyişle, şöyle ki",
-      rule: "📐 NOKTALAMA: Cümle 1; in other words, Cümle 2.",
-      trap: "⚠️ 'Namely' kendinden sonra gelen isimleri teker teker listeler.",
+      meaning: "örneğin",
+      rule: "📐 NOKTALAMA: Cümle 1. For example, Cümle 2.",
+      trap: "⚠️ En yaygın örnekleme geçiş ifadesidir.",
       examples: [
-        { en: "The species is nocturnal; that is, it is active only during the night.", tr: "Türü gececildir; yani, sadece gece aktiftir." },
+        { en: "Many countries use green energy. Iceland, for example, relies on geothermal power.", tr: "Birçok ülke yeşil enerji kullanıyor. İzlanda, örneğin, jeotermal güce dayanmaktadır." }
+      ]
+    },
+    {
+      term: "as an illustration",
+      category: "exemplification",
+      meaning: "somut bir örnek olarak",
+      rule: "📐 NOKTALAMA: Cümle 1. As an illustration, Cümle 2.",
+      trap: "⚠️ Makalelerde grafik veya somut durum açıklamadan önce kullanılır.",
+      examples: [
+        { en: "Inflation affects daily costs. As an illustration, bread prices doubled in a year.", tr: "Enflasyon günlük maliyetleri etkiler. Somut bir örnek olarak ekmek fiyatları bir yılda ikiye katlandı." }
+      ]
+    },
+    {
+      term: "that is (i.e.)",
+      category: "exemplification",
+      meaning: "yani, başka bir deyişle",
+      rule: "📐 NOKTALAMA: Cümle 1; that is, Cümle 2.",
+      trap: "⚠️ Bir önceki tanımı netleştirmek için açıklama yapar.",
+      examples: [
+        { en: "The species is nocturnal; that is, it is active only during the night.", tr: "Türü gececildir; yani, sadece gece aktiftir." }
+      ]
+    },
+    {
+      term: "in other words",
+      category: "exemplification",
+      meaning: "diğer bir deyişle",
+      rule: "📐 NOKTALAMA: Cümle 1. In other words, Cümle 2.",
+      trap: "⚠️ Aynı fikri daha anlaşılır veya basitleştirilmiş ifadeyle tekrarlar.",
+      examples: [
+        { en: "The patient is completely afebrile; in other words, she has no fever.", tr: "Hasta tamamen ateşsizdir; diğer bir deyişle ateşi yoktur." }
+      ]
+    },
+    {
+      term: "namely",
+      category: "exemplification",
+      meaning: "şöyle ki, yani (Tek Tek Sayarak)",
+      rule: "📐 NOKTALAMA: Cümle, namely Öğe 1 and Öğe 2.",
+      trap: "⚠️ 'Namely' arkasından isim listesi alır, tam cümle gerektirmez.",
+      examples: [
         { en: "Two countries abstained from vote, namely France and Germany.", tr: "İki ülke oylamada çekimser kaldı, şöyle ki Fransa ve Almanya." }
       ]
     },
     {
-      term: "otherwise / or else",
+      term: "specifically",
+      category: "exemplification",
+      meaning: "özel olarak, spesifik olarak",
+      rule: "📐 NOKTALAMA: Cümle 1. Specifically, Cümle 2.",
+      trap: "⚠️ Genel bir ifadeden özel bir detay noktasına iner.",
+      examples: [
+        { en: "The policy targets youth unemployment; specifically, graduates under 25.", tr: "Politika genç işsizliğini hedefliyor; özel olarak 25 yaş altı mezunları." }
+      ]
+    },
+
+    // Şart & Koşul
+    {
+      term: "otherwise",
       category: "purpose_condition",
-      meaning: "aksi takdirde, yoksa (Gizli Şart Yapısı)",
-      rule: "📐 NOKTALAMA: Emir/Tavsiye Cümlesi; otherwise, Olumsuz Sonuç Cümlesi.",
-      trap: "⚠️ Arkasından genellikle modal (would / will / could) alır.",
+      meaning: "aksi takdirde, yoksa",
+      rule: "📐 NOKTALAMA: Cümle 1; otherwise, Cümle 2.",
+      trap: "⚠️ İkinci cümlede genellikle modal (will/would/could) bulunur.",
       examples: [
         { en: "We must preserve wetlands; otherwise, flood risks will escalate.", tr: "Sulak alanları korumalıyız; aksi takdirde felaket riski tırmanacaktır." }
       ]
     },
     {
-      term: "in brief / in short / overall / to sum up",
+      term: "or else",
+      category: "purpose_condition",
+      meaning: "yoksa, aksi halde",
+      rule: "📐 NOKTALAMA: Cümle 1, or else Cümle 2.",
+      trap: "⚠️ Günlük ve resmi dilde olumsuz sonuç uyarısı verir.",
+      examples: [
+        { en: "Lock the laboratory, or else unauthorised personnel might enter.", tr: "Laboratuvarı kilitleyin, yoksa yetkisiz kişiler içeri girebilir." }
+      ]
+    },
+
+    // Özet & Vurgu
+    {
+      term: "in brief / in short",
       category: "summary_emphasis",
-      meaning: "kısaca, özetle, genel olarak",
-      rule: "📐 NOKTALAMA: Paragraph... In brief, Sonuç Cümlesi.",
-      trap: "⚠️ Paragraf ve makalelerin sonuç cümlelerinde bağlaç olarak kullanılır.",
+      meaning: "kısaca, özetle",
+      rule: "📐 NOKTALAMA: In brief, Cümle.",
+      trap: "⚠️ Paragrafın veya analizin özet cümlesinin başında yer alır.",
       examples: [
         { en: "In brief, the proposed intervention proved highly effective.", tr: "Kısaca, önerilen müdahalenin son derece etkili olduğu kanıtlandı." }
       ]
     },
     {
-      term: "indeed / in fact / as a matter of fact",
+      term: "overall / all in all",
       category: "summary_emphasis",
-      meaning: "gerçekten de, aslında, nitekim",
-      rule: "📐 NOKTALAMA: İddia Cümlesi. Indeed, Doğrulayıcı Cümle.",
-      trap: "⚠️ Bir önceki iddiayı derinleştirir ve vurgular.",
+      meaning: "genel olarak, bütün olarak bakıldığında",
+      rule: "📐 NOKTALAMA: Overall, Cümle.",
+      trap: "⚠️ Tüm boyutları değerlendirip genel sonuca varırken kullanılır.",
+      examples: [
+        { en: "Overall, the results indicate a strong positive correlation.", tr: "Genel olarak sonuçlar güçlü bir pozitif korelasyon göstermektedir." }
+      ]
+    },
+    {
+      term: "indeed",
+      category: "summary_emphasis",
+      meaning: "gerçekten de, nitekim",
+      rule: "📐 NOKTALAMA: Cümle 1; indeed, Cümle 2.",
+      trap: "⚠️ Önceki cümleyi pekiştirip onaylar.",
       examples: [
         { en: "The test was difficult; indeed, only three students passed.", tr: "Test zordu; gerçekten de, sadece üç öğrenci geçti." }
       ]
     },
     {
-      term: "as for / as regards / with respect to",
+      term: "in fact / as a matter of fact",
+      category: "summary_emphasis",
+      meaning: "aslında, hakikatte",
+      rule: "📐 NOKTALAMA: Cümle 1. In fact, Cümle 2.",
+      trap: "⚠️ Beklenenden daha çarpıcı bir gerçeği açıklarken tercih edilir.",
+      examples: [
+        { en: "The project was not a loss. In fact, it generated high revenue.", tr: "Proje bir kayıp değildi. Aslında yüksek gelir elde etti." }
+      ]
+    },
+
+    // Odaklanma & İstisna
+    {
+      term: "as for / as regards",
       category: "focus_exception",
-      meaning: "-e gelince, -e ilişkin, hususunda",
-      rule: "📐 NOKTALAMA: As for + İsim, Cümle",
-      trap: "⚠️ Yeni bir konuya yumuşak geçiş yaparken kullanılır.",
+      meaning: "-e gelince, -e ilişkin",
+      rule: "📐 NOKTALAMA: As for + İsim, Cümle.",
+      trap: "⚠️ Konu başlığını değiştirip yeni konuya geçiş sağlar.",
       examples: [
         { en: "As for the funding, private donors have stepped in.", tr: "Finansmana gelince, özel bağışçılar devreye girdi." }
+      ]
+    },
+    {
+      term: "with respect to / regarding",
+      category: "focus_exception",
+      meaning: "-e ilişkin, hususında",
+      rule: "📐 NOKTALAMA: With respect to + İsim, Cümle.",
+      trap: "⚠️ Akademik makalelerin giriş ve kapsam cümlelerinde sıkça geçer.",
+      examples: [
+        { en: "Regarding the new policy, several questions remain unanswered.", tr: "Yeni politikaya ilişkin birkaç soru yanıtlanmamış durumda." }
       ]
     }
   ],
 
   subordinate_preps: [
     {
-      term: "although / even though / though",
+      term: "although",
       category: "contrast",
-      meaning: "-e rağmen, -se de (Zıtlık Yan Cümleciği)",
-      rule: "📐 FORMÜL: Although + Yan Cümle (Özne + Fiil), Ana Cümle",
-      trap: "⚠️ Although arkasından İSİM almaz, TAM CÜMLE alır!",
+      meaning: "-e rağmen, -se de (Yan Cümle)",
+      rule: "📐 FORMÜL: Although + Özne + Fiil, Cümle",
+      trap: "⚠️ Arkasından doğrudan isim almaz, tam cümle alır.",
       examples: [
         { en: "Although the vaccine showed promise, further trials are required.", tr: "Aşı umut vadetse de daha ileri denemeler gerekiyor." }
       ]
     },
     {
-      term: "despite / in spite of / regardless of",
+      term: "even though",
       category: "contrast",
-      meaning: "-e rağmen, bakılmaksızın (Zıtlık Edatları)",
-      rule: "📐 FORMÜL: despite / in spite of + İsim Öbeği / V-ing (CÜMLE ALMAZ)",
-      trap: "⚠️ 'Despite' kelimesinden sonra asla 'of' GELMEZ! (In spite of vardır, despite of yoktur).",
+      meaning: "buna rağmen, -se bile (Güçlü Zıtlık)",
+      rule: "📐 FORMÜL: Even though + Özne + Fiil, Cümle",
+      trap: "⚠️ Although'dan daha vurgulu bir zıtlık bağlacıdır.",
       examples: [
-        { en: "Despite heavy rain, the field research continued.", tr: "Yoğun yağmura rağmen arazi araştırması devam etti." },
+        { en: "Even though it was midnight, the lab was fully active.", tr: "Gece yarısı olmasına rağmen laboratuvar tamamen aktifti." }
+      ]
+    },
+    {
+      term: "though",
+      category: "contrast",
+      meaning: "-se de (Cümle Sonu veya Başı)",
+      rule: "📐 FORMÜL: Though + Özne + Fiil, Cümle OR Cümle, though.",
+      trap: "⚠️ Cümle sonunda da kullanılabilen tek zıtlık bağlacıdır.",
+      examples: [
+        { en: "The plan had flaws. We decided to proceed, though.", tr: "Planın kusurları vardı. Yine de devam etmeye karar verdik." }
+      ]
+    },
+    {
+      term: "despite",
+      category: "contrast",
+      meaning: "-e rağmen (Edat)",
+      rule: "📐 FORMÜL: Despite + İsim Öbeği / V-ing, Cümle",
+      trap: "⚠️ 'Despite' yanına ASLA 'of' almaz! (In spite of vardır, despite of yoktur).",
+      examples: [
+        { en: "Despite heavy rain, the field research continued.", tr: "Yoğun yağmura rağmen arazi araştırması devam etti." }
+      ]
+    },
+    {
+      term: "in spite of",
+      category: "contrast",
+      meaning: "-e karşın, -e rağmen (Edat Öbeği)",
+      rule: "📐 FORMÜL: In spite of + İsim Öbeği / V-ing, Cümle",
+      trap: "⚠️ Despite ile tam eş anlamlıdır, arkasından isim öbeği alır.",
+      examples: [
+        { en: "In spite of his age, the professor leads active field studies.", tr: "Yaşına karşın profesör aktif arazi çalışmalarını yürütmektedir." }
+      ]
+    },
+    {
+      term: "regardless of / irrespective of",
+      category: "contrast",
+      meaning: "bakılmaksızın, gözetilmeksizin",
+      rule: "📐 FORMÜL: Regardless of + İsim Öbeği, Cümle",
+      trap: "⚠️ Herhangi bir engel veya farkın dikkate alınmadığını söyler.",
+      examples: [
         { en: "Regardless of background, all applicants have equal chance.", tr: "Arka plana bakılmaksızın tüm adaylar eşit şansa sahiptir." }
+      ]
+    },
+    {
+      term: "notwithstanding",
+      category: "contrast",
+      meaning: "-e rağmen (Hukuki / Akademik Edat)",
+      rule: "📐 FORMÜL: Notwithstanding + İsim Öbeği, Cümle OR İsim + notwithstanding",
+      trap: "⚠️ İsimden sonra da gelebilen özel akademik edattır.",
+      examples: [
+        { en: "Notwithstanding the objections, the bill was passed.", tr: "İtirazlara rağmen tasarı kabul edildi." }
       ]
     },
     {
       term: "Adj / Adv + as / though + S + V",
       category: "contrast",
       meaning: "her ne kadar ... olsa da (Devrik Zıtlık)",
-      rule: "📐 FORMÜL: Rich as he is, ... = Although he is rich, ...",
-      trap: "⚠️ Sıfat veya zarf cümlenin en başına geçer ve arkasından 'as' alır!",
+      rule: "📐 FORMÜL: Simple as it may seem, ... = Although it may seem simple, ...",
+      trap: "⚠️ Sıfat/Zarf cümlenin başına geçer ve arkasından 'as' alır!",
       examples: [
         { en: "Simple as it may seem, the task requires extreme precision.", tr: "Her ne kadar basit görünse de görev aşırı hassasiyet gerektirir." }
       ]
@@ -26471,12 +26718,14 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "However + Adj / Adv + S + V",
       category: "contrast",
       meaning: "ne kadar ... olursa olsun",
-      rule: "📐 FORMÜL: However + Sıfat/Zarf + Özne + Fiil, Ana Cümle",
+      rule: "📐 FORMÜL: However + Sıfat/Zarf + Özne + Fiil, Cümle",
       trap: "⚠️ Burada 'However' geçiş zarfı değil, 'Ne kadar... olsa da' bağlacıdır!",
       examples: [
         { en: "However carefully you plan, unexpected challenges will arise.", tr: "Ne kadar dikkatli planlarsanız planlayın beklenmedik engeller çıkacaktır." }
       ]
     },
+
+    // Amaç & Şart
     {
       term: "so that / in order that",
       category: "purpose_condition",
@@ -26488,11 +26737,11 @@ const TRANSITIONS_MATRIX_DATA = {
       ]
     },
     {
-      term: "in order to / so as to (+ V1)",
+      term: "in order to / so as to",
       category: "purpose_condition",
       meaning: "-mek için, amacıyla (Mastar Kısaltması)",
       rule: "📐 FORMÜL: in order to / so as to + Fiil Yalın Hali (V1)",
-      trap: "⚠️ Arkasından cümle almaz, sadece fiil alır.",
+      trap: "⚠️ Cümle almaz, sadece fiil alır.",
       examples: [
         { en: "The sample was cooled in order to prevent degradation.", tr: "Numune bozulmayı önlemek için soğutuldu." }
       ]
@@ -26508,11 +26757,11 @@ const TRANSITIONS_MATRIX_DATA = {
       ]
     },
     {
-      term: "provided that / providing that / on condition that",
+      term: "provided that / providing that",
       category: "purpose_condition",
       meaning: "-mesi şartıyla, koşuluyla",
-      rule: "📐 FORMÜL: provided that + Özne + Fiil, Ana Cümle",
-      trap: "⚠️ 'If' bağlacının daha resmi ve güçlü akademik halidir.",
+      rule: "📐 FORMÜL: provided that + Özne + Fiil, Cümle",
+      trap: "⚠️ 'If' bağlacının resmi akademik şeklidir.",
       examples: [
         { en: "The permit will be granted provided that safety standards are met.", tr: "Ruhsat, güvenlik standartları karşılanması şartıyla verilecektir." }
       ]
@@ -26520,21 +26769,32 @@ const TRANSITIONS_MATRIX_DATA = {
     {
       term: "unless",
       category: "purpose_condition",
-      meaning: "-medikçe, -massa (Olumsuz Şart: if ... not)",
-      rule: "📐 FORMÜL: Unless + Olumlu Yan Cümle, Ana Cümle",
-      trap: "⚠️ 'Unless' kendi içinde olumsuzdur, yan cümlesine 'not' almaz!",
+      meaning: "-medikçe, -massa (if ... not)",
+      rule: "📐 FORMÜL: Unless + Olumlu Yan Cümle, Cümle",
+      trap: "⚠️ 'Unless' olumsuzdur, yan cümlesine 'not' almaz!",
       examples: [
         { en: "Unless emissions drop, global temperatures will keep rising.", tr: "Emisyonlar düşmedikçe küresel sıcaklıklar yükselmeye devam edecek." }
       ]
     },
+
+    // Odaklanma & İstisna
     {
-      term: "apart from / aside from / barring / except for",
+      term: "apart from / aside from",
       category: "focus_exception",
-      meaning: "-den başka, hariç, olmaması durumunda",
-      rule: "📐 FORMÜL: apart from / barring + İsim Öbeği",
-      trap: "⚠️ 'Barring' geleceğe dönük istisna durum bildirir.",
+      meaning: "-den başka, hariç",
+      rule: "📐 FORMÜL: apart from + İsim Öbeği, Cümle",
+      trap: "⚠️ Hem olumlu ekleme hem de hariç tutma anlamında kullanılır.",
       examples: [
-        { en: "Apart from minor flaws, the research model is solid.", tr: "Küçük kusurlar dışında araştırma modeli sağlamdır." },
+        { en: "Apart from minor flaws, the research model is solid.", tr: "Küçük kusurlar dışında araştırma modeli sağlamdır." }
+      ]
+    },
+    {
+      term: "barring / except for",
+      category: "focus_exception",
+      meaning: "olmaması durumunda, hariç",
+      rule: "📐 FORMÜL: barring + İsim Öbeği, Cümle",
+      trap: "⚠️ 'Barring' geleceğe dönük istisnai engel durumunu belirtir.",
+      examples: [
         { en: "Barring unforeseen delays, construction finishes in June.", tr: "Görünmeyen gecikmeler hariç, inşaat Haziran'da bitecek." }
       ]
     }
