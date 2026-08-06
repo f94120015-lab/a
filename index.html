@@ -165,6 +165,21 @@
             </span>
             <span class="nav-tab-label">Simülatör</span>
           </button>
+          <button class="nav-tab" data-tab="structure-robot">
+            <span class="nav-tab-icon nav-anim-robot">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="6" y="8" width="20" height="16" rx="4" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="2"/>
+                <circle cx="11" cy="14" r="2.5" fill="#ffffff"/>
+                <circle cx="21" cy="14" r="2.5" fill="#ffffff"/>
+                <circle cx="11" cy="14" r="1" fill="#0f172a"/>
+                <circle cx="21" cy="14" r="1" fill="#0f172a"/>
+                <path d="M12 19C14 21 18 21 20 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 3V8" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="16" cy="3" r="2" fill="#eab308"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Yapı Robotu</span>
+          </button>
           <button class="nav-tab" data-tab="leaderboard">
             <span class="nav-tab-icon nav-anim-leaderboard">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -1429,6 +1444,168 @@
         </div>
       </div>
 
+      <!-- ════════════════════════════════════════════════════════
+           YAPI ROBOTU (STRUCTURE LAB) EKRANI
+           ════════════════════════════════════════════════════════ -->
+      <div id="tab-content-structure-robot" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
+        
+        <!-- Header & Mode Switcher -->
+        <div class="srobot-header-card" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.08)); border: 1px solid rgba(34, 211, 238, 0.25); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div class="srobot-avatar" style="width: 56px; height: 56px; border-radius: 16px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3); position: relative;">
+                🤖
+                <span id="srobot-eye-status" style="position: absolute; top: 4px; right: 4px; width: 10px; height: 10px; border-radius: 50%; background: #10b981; border: 2px solid #fff; box-shadow: 0 0 8px #10b981;"></span>
+              </div>
+              <div>
+                <h2 style="margin: 0; font-size: 1.4rem; font-weight: 800; color: var(--text-primary); font-family: var(--font-heading); display: flex; align-items: center; gap: 8px;">
+                  Yapı Robotu <span style="font-size: 0.75rem; background: var(--accent-primary); color: #fff; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MATRİS LAB</span>
+                </h2>
+                <p style="margin: 4px 0 0 0; font-size: 0.88rem; color: var(--text-secondary);" id="srobot-status-text">
+                  Bağlaç, Zaman ve Modal matris parçalarını birleştirerek hatasız cümleler inşa et!
+                </p>
+              </div>
+            </div>
+
+            <!-- Mode Buttons -->
+            <div style="display: flex; gap: 8px; background: var(--bg-body); padding: 4px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+              <button id="srobot-mode-sandbox" class="srobot-mode-btn active" style="padding: 8px 16px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: var(--accent-primary); color: #fff;">
+                🧪 Serbest Mod (Sandbox)
+              </button>
+              <button id="srobot-mode-challenge" class="srobot-mode-btn" style="padding: 8px 16px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
+                🎯 Görev Modu (Puzzle)
+              </button>
+            </div>
+          </div>
+
+          <!-- Challenge Banner (hidden in sandbox) -->
+          <div id="srobot-challenge-card" style="display: none; background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-md); padding: 16px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-weight: 800; font-size: 0.85rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
+                <span>🎯</span> GÖREV HEDEFİ (<span id="srobot-challenge-index">1</span>/<span id="srobot-challenge-total">5</span>)
+              </span>
+              <span style="font-weight: 700; font-size: 0.8rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 8px; border-radius: 8px;" id="srobot-challenge-reward">+25 XP</span>
+            </div>
+            <h3 id="srobot-challenge-title" style="margin: 0 0 6px 0; font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+              Geçmişte gerçekleşmemiş ve pişmanlık belirten bir koşul cümlesi kur!
+            </h3>
+            <p id="srobot-challenge-desc" style="margin: 0; font-size: 0.85rem; color: var(--text-secondary);">
+              Tip 3 Conditional (If + Had V3 + Would have V3) yapısına uyan parçaları robota tak.
+            </p>
+          </div>
+        </div>
+
+        <!-- Robot Interactive Assembly Area -->
+        <div class="srobot-lab-container" style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+          
+          <!-- Assembly Line Slots (The 3 Matrices) -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 12px;">
+              <h3 style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+                <span>⚙️</span> ROBOT MONTAJ HATTI (SLOTS)
+              </h3>
+              <button id="srobot-btn-reset" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem; border-radius: var(--radius-md);">
+                🔄 Sıfırla
+              </button>
+            </div>
+
+            <!-- Slots Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+              
+              <!-- Slot 1: Connector Matrix -->
+              <div class="srobot-slot-box" id="srobot-slot-box-1" style="background: var(--bg-body); border: 2px dashed rgba(6, 182, 212, 0.4); border-radius: var(--radius-md); padding: 16px; text-align: center; transition: all 0.2s;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                  1. MATRİS: BAĞLAÇ / KOŞUL
+                </div>
+                <div id="srobot-slot-target-1" class="srobot-slot-target" style="min-height: 48px; border-radius: var(--radius-md); background: rgba(6, 182, 212, 0.05); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--text-primary); border: 1px solid rgba(6, 182, 212, 0.2);">
+                  <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500;">Parça Seçilmedi</span>
+                </div>
+              </div>
+
+              <!-- Slot 2: Clause A Tense Matrix -->
+              <div class="srobot-slot-box" id="srobot-slot-box-2" style="background: var(--bg-body); border: 2px dashed rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 16px; text-align: center; transition: all 0.2s;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                  2. MATRİS: YAN CÜMLE ZAMANI (CLAUSE A)
+                </div>
+                <div id="srobot-slot-target-2" class="srobot-slot-target" style="min-height: 48px; border-radius: var(--radius-md); background: rgba(139, 92, 246, 0.05); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--text-primary); border: 1px solid rgba(139, 92, 246, 0.2);">
+                  <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500;">Parça Seçilmedi</span>
+                </div>
+              </div>
+
+              <!-- Slot 3: Clause B Modal/Tense Matrix -->
+              <div class="srobot-slot-box" id="srobot-slot-box-3" style="background: var(--bg-body); border: 2px dashed rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 16px; text-align: center; transition: all 0.2s;">
+                <div style="font-size: 0.75rem; font-weight: 700; color: #ec4899; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+                  3. MATRİS: ANA CÜMLE / MODAL (CLAUSE B)
+                </div>
+                <div id="srobot-slot-target-3" class="srobot-slot-target" style="min-height: 48px; border-radius: var(--radius-md); background: rgba(236, 72, 153, 0.05); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; color: var(--text-primary); border: 1px solid rgba(236, 72, 153, 0.2);">
+                  <span style="color: var(--text-secondary); font-size: 0.85rem; font-weight: 500;">Parça Seçilmedi</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Output Preview Box -->
+            <div id="srobot-output-box" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(6, 182, 212, 0.05)); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; gap: 8px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.75rem; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.5px;">CANLI CÜMLE ÇIKTISI & UYUM ANALİZİ</span>
+                <span id="srobot-validation-badge" style="font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b;">Eksik Parçalar Var</span>
+              </div>
+              <div id="srobot-sentence-en" style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); font-family: var(--font-heading);">
+                ...
+              </div>
+              <div id="srobot-sentence-tr" style="font-size: 0.9rem; color: var(--text-secondary); font-style: italic;">
+                Lütfen yuvaları doldurun.
+              </div>
+              <div id="srobot-rule-explanation" style="font-size: 0.82rem; color: var(--text-primary); background: var(--bg-body); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-top: 4px;">
+                💡 <strong>Kural Mantığı:</strong> Parçaları seçtikçe kural uyumu otomatik hesaplanır. Uyumsuz parçalar kilitlenir.
+              </div>
+            </div>
+
+            <!-- Challenge Submit Button -->
+            <button id="srobot-btn-check-challenge" class="btn btn-primary" style="display: none; width: 100%; padding: 14px; font-weight: 800; font-size: 1rem; border-radius: var(--radius-md); background: linear-gradient(135deg, #10b981, #059669); border: none;">
+              ✨ GÖREVİ KONTROL ET & ONAYLA
+            </button>
+          </div>
+
+          <!-- Component Palette (Piece Selection Area) -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- Section 1: Connectors -->
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #06b6d4;">🔵</span> 1. Matris Parçaları (Bağlaçlar)
+              </div>
+              <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <!-- JS tarafından doldurulacak -->
+              </div>
+            </div>
+
+            <!-- Section 2: Clause A Tenses -->
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #8b5cf6;">🟣</span> 2. Matris Parçaları (Yan Cümle Zamanları)
+              </div>
+              <div class="srobot-pieces-grid" id="srobot-pieces-clause-a" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <!-- JS tarafından doldurulacak -->
+              </div>
+            </div>
+
+            <!-- Section 3: Clause B Modals/Tenses -->
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                <span style="color: #ec4899;">🔴</span> 3. Matris Parçaları (Ana Cümle / Modal Yapıları)
+              </div>
+              <div class="srobot-pieces-grid" id="srobot-pieces-clause-b" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <!-- JS tarafından doldurulacak -->
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </main>
     </div> <!-- .home-main-wrapper sonu -->
     </div> <!-- .home-body-layout sonu -->
@@ -1952,6 +2129,7 @@
   <script src="data-extra.js?v=1.4.9" defer></script>
   <script src="rules-db.js?v=1.4.9" defer></script>
   <script src="app.js?v=1.4.9" defer></script>
+  <script src="structure-robot.js?v=1.4.9" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">

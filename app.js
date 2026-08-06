@@ -13023,6 +13023,10 @@ function switchTab(tabId) {
     initTimeMatrixTab();
   } else if (tabId === 'transitions-matrix') {
     initTransitionsMatrixTab();
+  } else if (tabId === 'structure-robot') {
+    if (typeof initStructureRobot === 'function') {
+      initStructureRobot();
+    }
   }
 }
 
