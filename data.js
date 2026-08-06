@@ -44400,12 +44400,12 @@ Object.assign(unitSentencesMap, {
               "id": "u12l1ex1_q1",
               "type": "matching",
               "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "📌 Yapı Tanıma & Anlamlandırma: Niteleme sıfat-fiillerinin (...ing etken, V3 edilgen) Türkçe karşılıklarını eşleştirerek yapının mantığını kavrayın:",
               "pairs": [
-                { "left": "çalınmış el yazması", "right": "stolen manuscript" },
-                { "left": "yeni ortaya çıkan fikirler", "right": "emerging ideas" },
-                { "left": "kazıdan çıkarılan eserler", "right": "excavated artifacts" },
-                { "left": "gelişen diller", "right": "evolving languages" }
+                { "left": "çalınmış el yazması (V3 + İsim)", "right": "stolen manuscript" },
+                { "left": "yeni ortaya çıkan fikirler (...ing + İsim)", "right": "emerging ideas" },
+                { "left": "kazıdan çıkarılan eserler (V3 + İsim)", "right": "excavated artifacts" },
+                { "left": "gelişen diller (...ing + İsim)", "right": "evolving languages" }
               ]
             },
             {
@@ -44700,12 +44700,12 @@ Object.assign(unitSentencesMap, {
               "id": "u12l3ex1_q1",
               "type": "matching",
               "grammarTags": ["Participle Yapıları", "Sıfat-Fiiller ve Kısalt"],
-              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "prompt": "📌 Yapı Tanıma & Anlamlandırma: İsmi takip eden sıfat-fiil takımlarının (Clause Reductions) Türkçe karşılıklarını eşleştirerek mantığını kavrayın:",
               "pairs": [
-                { "left": "molecules moving in the gas", "right": "gazda hareket eden moleküller" },
-                { "left": "liquid containing organisms", "right": "organizma içeren sıvı" },
-                { "left": "food cooked with electricity", "right": "elektrikle pişirilmiş yemek" },
-                { "left": "artifacts recovered from ruins", "right": "harabelerden çıkarılan eserler" }
+                { "left": "gazda hareket eden moleküller (İsim + ...ing Öbeği)", "right": "molecules moving in the gas" },
+                { "left": "organizma içeren sıvı (İsim + ...ing Öbeği)", "right": "liquid containing organisms" },
+                { "left": "elektrikle pişirilmiş yemek (İsim + V3 Öbeği)", "right": "food cooked with electricity" },
+                { "left": "harabelerden çıkarılan eserler (İsim + V3 Öbeği)", "right": "artifacts recovered from ruins" }
               ]
             },
             {
@@ -57481,18 +57481,18 @@ if (typeof rawTopics !== 'undefined') {
     t12.numLessons = 3;
     t12.formulas = [
       {
-        "formula": "Present Participle (...ing) + Noun VEYA Past Participle (...ed / V3) + Noun",
-        "example": "• Emerging technologies transform global industries (Gelişmekte olan teknolojiler küresel sanayileri dönüştürür)<br>• Detailed reports were submitted to the committee (Ayrıntılı raporlar kurula sunuldu)",
+        "formula": "<span class=\"participle-ing\">Present Participle (...ing)</span> + Noun VEYA <span class=\"participle-ed\">Past Participle (...ed / V3)</span> + Noun",
+        "example": "• <span class=\"participle-ing\">Emerging technologies</span> transform global industries (Gelişmekte olan teknolojiler küresel sanayileri dönüştürür)<br>• <span class=\"participle-ed\">Detailed reports</span> were submitted to the committee (Ayrıntılı raporlar kurula sunuldu)",
         "description": "Etken veya edilgen sıfat-fiillerin isimlerin önüne gelerek niteleme sıfatı oluşturması."
       },
       {
-        "formula": "Noun-ing / Adverb + V3 + Noun",
-        "example": "• soil-enriching humus (toprağı zenginleştiren humus)<br>• well-developed system (iyi gelişmiş sistem)",
+        "formula": "<span class=\"participle-adv\">Noun-ing / Adverb + V3</span> + Noun",
+        "example": "• <span class=\"participle-adv\">soil-enriching humus</span> (toprağı zenginleştiren humus)<br>• <span class=\"participle-adv\">well-developed system</span> (iyi gelişmiş sistem)",
         "description": "Nesneli birleşik sıfat-fiiller ve zarfla derecelendirilmiş edilgen yapılar."
       },
       {
-        "formula": "Noun + Present/Past Participle Phrase (Clause Reduction)",
-        "example": "• molecules moving in the gas (gazda hareket eden moleküller)<br>• liquid containing organisms (organizma içeren sıvı)<br>• food cooked with electricity (elektrikle pişirilmiş yemek)",
+        "formula": "Noun + <span class=\"participle-phrase\">Present/Past Participle Phrase (Clause Reduction)</span>",
+        "example": "• molecules <span class=\"participle-phrase\">moving in the gas</span> (gazda hareket eden moleküller)<br>• liquid <span class=\"participle-phrase\">containing organisms</span> (organizma içeren sıvı)<br>• food <span class=\"participle-phrase\">cooked with electricity</span> (elektrikle pişirilmiş yemek)",
         "description": "İsmi takip eden sıfat-fiil grupları (kısaltmalar). Niteleyici öbek Türkçe'de ismin önüne getirilir."
       }
     ];

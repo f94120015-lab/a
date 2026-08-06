@@ -3509,25 +3509,25 @@ const chapter105Data = {
 const chapter104Data = {
   chapterId: 104,
   chapterName: "Yarı-Modallar ve Modal Benzeri Yapılar",
-  chapterDescription: "be able to, have to, had better, used to, get used to -ing gibi yetenek, zorunluluk, tavsiye ve alışkanlık bildiren yapılar.",
+  chapterDescription: "<span style='color: #ff6b6b; font-weight: bold;'>be able to</span>, <span style='color: #ff6b6b; font-weight: bold;'>have to</span>, <span style='color: #ff6b6b; font-weight: bold;'>had better</span>, <span style='color: #ff6b6b; font-weight: bold;'>used to</span>, <span style='color: #ff6b6b; font-weight: bold;'>get used to -ing</span> gibi yetenek, zorunluluk, tavsiye ve alışkanlık bildiren yapılar.",
   lessons: [
     {
       id: "c104_l1",
       unitId: 104,
       title: "1. Yetenek ve Zorunluluk (Ability & Necessity)",
-      subtitle: "be able to, have to, had to, needn't",
+      subtitle: "<span style='color: #ff6b6b; font-weight: bold;'>be able to</span>, <span style='color: #ff6b6b; font-weight: bold;'>have to</span>, <span style='color: #ff6b6b; font-weight: bold;'>had to</span>, <span style='color: #ff6b6b; font-weight: bold;'>needn't</span>",
       konuAnlatimi: {
-        baslik: "Yetenek ve Zorunluluk Yapıları (be able to, have to, had to, needn't)",
-        teorikMantik: "Yetenek ve zorunluluk bildiren yapılar, cümlenin zamanına (past, present, future) göre şekillenir. be able to yetenek, have to zorunluluk bildirirken, needn't ve don't have to/need to gereklilik olmadığını ifade eder.",
-        formul: "S + (be able to / have to / had to / needn't / don't have to) + V1",
-        altinKural: "needn't modal gibi davranarak arkasından doğrudan yalın fiil (V1) alırken, don't need to fiil olarak 'to' gerektirir. didn't need to geçmişte gerek olmayan ama yapılıp yapılmadığı belirsiz durumları, didn't have to ise gerek olmadığı için yapılmayan durumları anlatır."
+        baslik: "Yetenek ve Zorunluluk Yapıları (<span style='color: #ff6b6b; font-weight: bold;'>be able to</span>, <span style='color: #ff6b6b; font-weight: bold;'>have to</span>, <span style='color: #ff6b6b; font-weight: bold;'>had to</span>, <span style='color: #ff6b6b; font-weight: bold;'>needn't</span>)",
+        teorikMantik: "Yetenek ve zorunluluk bildiren yapılar, cümlenin zamanına (past, present, future) göre şekillenir. <span style='color: #ff6b6b; font-weight: bold;'>be able to</span> yetenek, <span style='color: #ff6b6b; font-weight: bold;'>have to</span> zorunluluk bildirirken, <span style='color: #ff6b6b; font-weight: bold;'>needn't</span> ve <span style='color: #ff6b6b; font-weight: bold;'>don't have to</span>/<span style='color: #ff6b6b; font-weight: bold;'>need to</span> gereklilik olmadığını ifade eder.",
+        formul: "S + (<span style='color: #ff6b6b; font-weight: bold;'>be able to</span> / <span style='color: #ff6b6b; font-weight: bold;'>have to</span> / <span style='color: #ff6b6b; font-weight: bold;'>had to</span> / <span style='color: #ff6b6b; font-weight: bold;'>needn't</span> / <span style='color: #ff6b6b; font-weight: bold;'>don't have to</span>) + V1",
+        altinKural: "<span style='color: #ff6b6b; font-weight: bold;'>needn't</span> modal gibi davranarak arkasından doğrudan yalın fiil (V1) alırken, <span style='color: #ff6b6b; font-weight: bold;'>don't need to</span> fiil olarak 'to' gerektirir. <span style='color: #ff6b6b; font-weight: bold;'>didn't need to</span> geçmişte gerek olmayan ama yapılıp yapılmadığı belirsiz durumları, <span style='color: #ff6b6b; font-weight: bold;'>didn't have to</span> ise gerek olmadığı için yapılmayan durumları anlatır."
       },
       exercises: [
         {
           id: "c104_l1_ex1",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 1: Öbek Düzeyi (Yetenek ve Zorunluluk)",
-          description: "Yarı-modalların yetenek ve zorunluluk biçimlerinin (be able to, have to, needn't, had to) öbek düzeyinde Türkçe karşılıklarıyla tespiti.",
+          description: "Yarı-modalların yetenek ve zorunluluk biçimlerinin (<span style='color: #ff6b6b; font-weight: bold;'>be able to</span>, <span style='color: #ff6b6b; font-weight: bold;'>have to</span>, <span style='color: #ff6b6b; font-weight: bold;'>needn't</span>, <span style='color: #ff6b6b; font-weight: bold;'>had to</span>) öbek düzeyinde Türkçe karşılıklarıyla tespiti.",
           questions: [
             {
               id: "c104_l1_ex1_q1",
@@ -3535,10 +3535,10 @@ const chapter104Data = {
               prompt: "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               pairs: [
-                { left: "have to examine the legal documents", right: "yasal belgeleri incelemek zorundadır" },
-                { left: "was able to reform the monetary system", right: "parasal sistemi reforme etmeyi başardı" },
-                { left: "needn't explain the symbolic meaning", right: "sembolik anlamı açıklamasına gerek yoktur" },
-                { left: "had to preserve the historical archives", right: "tarihi arşivleri korumak zorunda kaldı" }
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>have to</span> examine the legal documents", right: "yasal belgeleri incelemek zorundadır" },
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>was able to</span> reform the monetary system", right: "parasal sistemi reforme etmeyi başardı" },
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>needn't</span> explain the symbolic meaning", right: "sembolik anlamı açıklamasına gerek yoktur" },
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>had to</span> preserve the historical archives", right: "tarihi arşivleri korumak zorunda kaldı" }
               ]
             },
             {
@@ -3681,7 +3681,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Hükümet politikayı değiştirmeden önce akademisyenleri yasal belgeleri incelemek zorundadır.",
               explanation: "Çoğul özne (Scholars) ile present zorunluluk bildiren 'have to' yapısı kullanılır.",
-              hint: { formula: "Plural Subject + have to + V1" },
+              hint: { formula: "Plural Subject + <span style='color: #ff6b6b; font-weight: bold;'>have to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3693,7 +3693,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Komite, vatandaşların yoğun eleştirilerine rağmen parasal sistemi reforme etmeyi başardı.",
               explanation: "Geçmişte bir eylemi başarma/yapabilme anlamı 'was able to' ile verilir.",
-              hint: { formula: "was/were able to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>was/were able to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3705,7 +3705,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Film eleştirmenlerinin belgeseldeki antik kalıntıların sembolik anlamını açıklamasına gerek yoktur.",
               explanation: "Gereksizlik/muafiyet bildiren ve kendisinden sonra doğrudan yalın fiil (explain) alan yarı-modal 'needn't' yapısıdır.",
-              hint: { formula: "needn't + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>needn't</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3717,7 +3717,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Yeni yönergeler uyarınca, terapistlerin çocukların ebeveynlerinden yazılı izin almasına gerek yoktur.",
               explanation: "'don't need to' yapısı gereksizlik bildirir ve 'to' ile kullanılır.",
-              hint: { formula: "don't/doesn't need to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>don't/doesn't need to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3729,7 +3729,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Savaş sırasında parlamento, ulusun tüm tarihi arşivlerini güvenli bir yerde korumak zorunda kaldı.",
               explanation: "Geçmişte yapılmış zorunluluklar 'had to' ile ifade edilir.",
-              hint: { formula: "had to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3741,7 +3741,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Enstitü resmi sonuçları yayınladığında, araştırmacılar demografik anketi analiz edebilirler.",
               explanation: "Çoğul özne (Researchers) ile present yetenek/olasılık bildiren 'are able to' yapısı uyuşur.",
-              hint: { formula: "are able to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>are able to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3753,7 +3753,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Mahkeme bir rapor talep etmedikçe klinik, hastaların bilişsel davranışlarını değerlendirmek zorunda değildir.",
               explanation: "Zorunluluk olmama durumunu bildirmek için 'doesn't have to' kullanılır.",
-              hint: { formula: "doesn't/don't have to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>doesn't/don't have to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3765,7 +3765,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Yeni tarihi kanıtları keşfettikten sonra akademisyenler araştırma metodolojilerini değiştirmek zorunda kaldılar.",
               explanation: "'had to' yapısı fiilden önce 'to' edatını gerektirir.",
-              hint: { formula: "had to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3777,7 +3777,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Yönetmenin ana karakterin eylemlerini değiştirmesine gerek yoktur çünkü izleyici duygusal çatışmayı anlamaktadır.",
               explanation: "'needn't' yarı-modalı kendisinden sonra yalın fiil alır (alter) ve 'to' almaz.",
-              hint: { formula: "needn't + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>needn't</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Gereklilik", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -3789,7 +3789,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Parlamento üyeleri, bir uzlaşıya varmadıkça hükümetin bütçe teklifini onaylamak zorunda değildir.",
               explanation: "'don't have to' yapısı zorunluluk olmama durumu bildirir ve 'to' gerektirir.",
-              hint: { formula: "don't have to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>don't have to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
@@ -3898,19 +3898,19 @@ const chapter104Data = {
       id: "c104_l2",
       unitId: 104,
       title: "2. Tavsiye ve Alışkanlıklar (Advice & Habits)",
-      subtitle: "had better, ought to, used to, be/get used to",
+      subtitle: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span>, <span style='color: #ff6b6b; font-weight: bold;'>ought to</span>, <span style='color: #ff6b6b; font-weight: bold;'>used to</span>, <span style='color: #ff6b6b; font-weight: bold;'>be/get used to</span>",
       konuAnlatimi: {
-        baslik: "Tavsiye ve Alışkanlık Yapıları (had better, ought to, used to, be/get used to)",
-        teorikMantik: "ought to güçlü öneri, had better ise olumsuz sonuç ihtimali taşıyan acil/güçlü önerilerde kullanılır. used to geçmişteki alışkanlıkları (V1), be used to (alışkın olmak) ve get used to (alışmak) ise alışkanlık durumlarını (-ing veya isim) belirtir.",
-        formul: "S + ought to + V1 | S + had better + V1 | S + used to + V1 | S + be/get used to + V-ing",
-        altinKural: "had better olumsuz yapılırken 'had better not' şeklinde kullanılır; had NOT better hatalıdır. be used to ve get used to yapılarından sonra gelen fiil mutlaka '-ing' takısı almalıdır, fiilin yalın hali (V1) kullanılamaz."
+        baslik: "Tavsiye ve Alışkanlık Yapıları (<span style='color: #ff6b6b; font-weight: bold;'>had better</span>, <span style='color: #ff6b6b; font-weight: bold;'>ought to</span>, <span style='color: #ff6b6b; font-weight: bold;'>used to</span>, <span style='color: #ff6b6b; font-weight: bold;'>be/get used to</span>)",
+        teorikMantik: "<span style='color: #ff6b6b; font-weight: bold;'>ought to</span> güçlü öneri, <span style='color: #ff6b6b; font-weight: bold;'>had better</span> ise olumsuz sonuç ihtimali taşıyan acil/güçlü önerilerde kullanılır. <span style='color: #ff6b6b; font-weight: bold;'>used to</span> geçmişteki alışkanlıkları (V1), <span style='color: #ff6b6b; font-weight: bold;'>be used to</span> (alışkın olmak) ve <span style='color: #ff6b6b; font-weight: bold;'>get used to</span> (alışmak) ise alışkanlık durumlarını (-ing veya isim) belirtir.",
+        formul: "S + <span style='color: #ff6b6b; font-weight: bold;'>ought to</span> + V1 | S + <span style='color: #ff6b6b; font-weight: bold;'>had better</span> + V1 | S + <span style='color: #ff6b6b; font-weight: bold;'>used to</span> + V1 | S + <span style='color: #ff6b6b; font-weight: bold;'>be/get used to</span> + V-ing",
+        altinKural: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span> olumsuz yapılırken '<span style='color: #ff6b6b; font-weight: bold;'>had better not</span>' şeklinde kullanılır; <span style='color: #ff6b6b; font-weight: bold;'>had NOT better</span> hatalıdır. <span style='color: #ff6b6b; font-weight: bold;'>be used to</span> ve <span style='color: #ff6b6b; font-weight: bold;'>get used to</span> yapılarından sonra gelen fiil mutlaka '-ing' takısı almalıdır, fiilin yalın hali (V1) kullanılamaz."
       },
       exercises: [
         {
           id: "c104_l2_ex1",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 1: Öbek Düzeyi (Tavsiye ve Alışkanlık)",
-          description: "Kibar tavsiye, geçmiş alışkanlıklar ve alışkınlık yapılarının (had better, ought to, used to, be used to) tespiti.",
+          description: "Kibar tavsiye, geçmiş alışkanlıklar ve alışkınlık yapılarının (<span style='color: #ff6b6b; font-weight: bold;'>had better</span>, <span style='color: #ff6b6b; font-weight: bold;'>ought to</span>, <span style='color: #ff6b6b; font-weight: bold;'>used to</span>, <span style='color: #ff6b6b; font-weight: bold;'>be used to</span>) tespiti.",
           questions: [
             {
               id: "c104_l2_ex1_q1",
@@ -3918,10 +3918,10 @@ const chapter104Data = {
               prompt: "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"],
               pairs: [
-                { left: "had better implement the constitutional reform", right: "anayasal reformu uygulasa iyi olur" },
-                { left: "ought to analyze the behavior of individuals", right: "bireylerin davranışlarını analiz etmelidir" },
-                { left: "used to shoot films in the parliament", right: "parlamentoda filmler çekerdi" },
-                { left: "are used to evaluating the emotional development", right: "duygusal gelişimi değerlendirmeye alışıktır" }
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span> implement the constitutional reform", right: "anayasal reformu uygulasa iyi olur" },
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>ought to</span> analyze the behavior of individuals", right: "bireylerin davranışlarını analiz etmelidir" },
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>used to</span> shoot films in the parliament", right: "parlamentoda filmler çekerdi" },
+                { left: "<span style='color: #ff6b6b; font-weight: bold;'>are used to</span> evaluating the emotional development", right: "duygusal gelişimi değerlendirmeye alışıktır" }
               ]
             },
             {
@@ -4064,7 +4064,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Ekonomik kriz derinleşmeden önce hükümet anayasal reformu uygulasa iyi olur.",
               explanation: "Güçlü/acil tavsiye bildiren kalıp 'had better' şeklindedir.",
-              hint: { formula: "had better + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4076,7 +4076,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Tarih akademisyenleri, aşırı toplumsal baskı altındaki bireylerin davranışlarını analiz etmelidir.",
               explanation: "'ought' yapısı tavsiye/gereklilik bildirirken daima 'to' ile devam eder.",
-              hint: { formula: "ought + to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>ought + to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4088,7 +4088,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Geçmişte, ünlü yönetmen filmlerini antik parlamento binasında çekerdi.",
               explanation: "Geçmişteki alışkanlıklar 'used to' yapısı ile anlatılır.",
-              hint: { formula: "used to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>used to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4100,7 +4100,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Klinik terapistleri, seans sırasında çocukların duygusal gelişimini değerlendirmeye alışıktır.",
               explanation: "'be used to' (alışkın olmak) kalıbından sonra fiil -ing (gerund) takısı alır.",
-              hint: { formula: "be used to + V-ing" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>be used to</span> + V-ing" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4112,7 +4112,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Sosyolojik araştırmacılar, istatistiksel değişkenleri kontrol etmeden anket sonuçlarını yayınlamasalar iyi olur.",
               explanation: "'had better' yapısının olumsuzu 'had better not' olarak kurulur.",
-              hint: { formula: "had better not + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had better not</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4124,7 +4124,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Vatandaşların yasal haklarını tanımlayan tarihi belgeleri korumalıyız.",
               explanation: "'to' ile kullanılan ve gereklilik bildiren modal 'ought' yapısıdır.",
-              hint: { formula: "ought to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>ought to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4136,7 +4136,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Sinema endüstrisi popüler hale gelmeden önce film eleştirmenleri detaylı incelemeler yazmazlardı.",
               explanation: "Olumsuzlayıcı 'didn't' sonrasında 'used to' kalıbı yalın 'use to' haline gelir.",
-              hint: { formula: "didn't use to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>didn't use to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4148,7 +4148,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Yeni parasal sistem altında, vatandaşlar yavaş yavaş daha yüksek vergiler ödemeye alışıyorlar.",
               explanation: "'get used to' (alışmak) yapısından sonra fiil -ing (gerund) takısı alır.",
-              hint: { formula: "get used to + V-ing" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>get used to</span> + V-ing" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4160,7 +4160,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Psikologlar, travma yaşayan çocukların bilişsel süreçlerini araştırsalar iyi olur.",
               explanation: "'had better' acil/güçlü tavsiye bildirir ve arkasından yalın fiil alır.",
-              hint: { formula: "had better + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4172,7 +4172,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Hukuk uzmanları, hükümetin önerdiği anayasal değişiklikleri göz ardı etmemelidir.",
               explanation: "'ought to' olumsuz biçiminde 'ought not to' şeklinde kurulur.",
-              hint: { formula: "ought not to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>ought not to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]
@@ -4285,7 +4285,7 @@ const chapter104Data = {
       konuAnlatimi: {
         baslik: "Sentez ve Spiralleşme (Yarı-Modallar)",
         teorikMantik: "Bu ders, yarı-modalların metinlerdeki zarf kısaltmaları ve bağlaçlarla birleşmiş karmaşık ve ileri düzey versiyonlarını içerir.",
-        formul: "S + (be able to / have to / used to / had better) + Active reduced structures + Conjunctions",
+        formul: "S + (<span style='color: #ff6b6b; font-weight: bold;'>be able to</span> / <span style='color: #ff6b6b; font-weight: bold;'>have to</span> / <span style='color: #ff6b6b; font-weight: bold;'>used to</span> / <span style='color: #ff6b6b; font-weight: bold;'>had better</span>) + Active reduced structures + Conjunctions",
         altinKural: "Karmaşık cümlelerde ana eylem ile yarı-modalın özneyle uyumunu ve eylemin etken (aktif) yapısını mutlaka sentezleyin."
       },
       exercises: [
@@ -4450,7 +4450,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Hükümet yasal çerçeveyi değiştirmek zorunda kalmasına rağmen, parlamento üyeleri değişikliklere hâlâ karşı çıkıyor.",
               explanation: "'had to' yapısı fiilden önce 'to' gerektirir.",
-              hint: { formula: "had to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4462,7 +4462,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Eğer merkez bankası enflasyon oranını kontrol edebilirse, vatandaşlar para politikasını protesto etmeyecektir.",
               explanation: "Yetenek/beceri bildiren present 'is able to' yapısı cümleyi tamamlar.",
-              hint: { formula: "is/are able to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>is/are able to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Yetenek", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4474,7 +4474,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Film eleştirmenleri nihai sütunlarını yazmadan önce filmdeki tarihi temsili değerlendirmelidir.",
               explanation: "'to' ile devam eden ve gereklilik/tavsiye bildiren tek modal 'ought' yapısıdır.",
-              hint: { formula: "ought + to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>ought + to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4486,7 +4486,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Klinik yeni programa başladığından beri, terapistler bilişsel bozukluğu olan çocukları tedavi etmeye alıştılar.",
               explanation: "Alışma sürecini present perfect ile vurgulamak için 'have got used to' yapısı kullanılır.",
-              hint: { formula: "have/has got used to + V-ing" },
+              hint: { formula: "have/has <span style='color: #ff6b6b; font-weight: bold;'>got used to</span> + V-ing" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "Zaman Uyumu", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4498,7 +4498,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "İnternet iletişimi değiştirmeden önce, akademisyenleri araştırmalarını yüz yüze görüşmeler yoluyla yürütürlerdi.",
               explanation: "Geçmişteki alışkanlıklar/durumlar 'used to' yapısı ile anlatılır.",
-              hint: { formula: "used to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>used to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4510,7 +4510,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Hukuk uzmanları antik belgeleri dikkatle inceleseler iyi olur; aksi takdirde hakim delilleri reddedebilir.",
               explanation: "Güçlü/acil tavsiye bildiren 'had better' kalıbı cümleyi tamamlar.",
-              hint: { formula: "had better + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Tavsiye", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4522,7 +4522,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Sinema tarihini incelerken, araştırmacılar erken dönem belgesellerin sembolik anlamını analiz etmek zorundadır.",
               explanation: "Çoğul özne (researchers) ile present zorunluluk bildiren 'have to' yapısı uyuşur.",
-              hint: { formula: "Plural Subject + have to + V1" },
+              hint: { formula: "Plural Subject + <span style='color: #ff6b6b; font-weight: bold;'>have to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Zorunluluk", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4534,7 +4534,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Uluslararası ticaret piyasası ciddi bir istikrarsızlık yaşamadıkça para politikasını değiştirmemize gerek yoktur.",
               explanation: "'needn't' yarı-modalından sonra fiil yalın halde (V1) gelir, 'to' kullanılmaz.",
-              hint: { formula: "needn't + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>needn't</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Gereklilik", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4546,7 +4546,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Kütüphane parlamentonun tarihi arşivlerini koruduğu için, akademisyenler iddiaları doğrulayabilmektedir.",
               explanation: "Çoğul özne (scholars) ile present yetenek/beceri bildiren 'are able to' yapısı kullanılır.",
-              hint: { formula: "are able to + V1" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>are able to</span> + V1" },
               grammarTags: ["Yarı-Modallar", "Yetenek", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             },
             {
@@ -4558,7 +4558,7 @@ const chapter104Data = {
               correctIndex: 0,
               translation: "Eğer terapistler hastaların davranışlarını gözlemlemeye alışırlarsa, bilişsel sorunları kolayca belirleyeceklerdir.",
               explanation: "'get used to' yapısından sonra fiil -ing (gerund) takısı alır.",
-              hint: { formula: "get used to + V-ing" },
+              hint: { formula: "<span style='color: #ff6b6b; font-weight: bold;'>get used to</span> + V-ing" },
               grammarTags: ["Yarı-Modallar", "Alışkanlık", "Koşul Cümleleri", "İsim Tamlamaları", "İsim ve Edat Yapıları"]
             }
           ]

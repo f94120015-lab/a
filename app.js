@@ -7697,6 +7697,45 @@ function colorCodeUnit101Sentence(sentence) {
   return cleaned;
 }
 
+function colorCodeUnit12Sentence(sentence) {
+  if (!sentence || typeof sentence !== 'string') return sentence;
+
+  // 1. Birleşik ve Zarflı Sıfat-Fiiller + Niteledikleri İsim (e.g. soil-enriching humus, well-preserved paintings, culture-shaping norms, mind-bending paradox, path-breaking theory, well-documented events) -> Amber
+  let cleaned = sentence.replace(/\b([\w]+-(?:enriching|developed|preserved|shaping|bending|breaking|rooted|documented|damaged|discovered|shifting)\s+[\w]+)\b/gi, '<span class="participle-adv">$1</span>');
+  cleaned = cleaned.replace(/\b((?:well|highly|deeply|newly|poorly|rapidly|heavily)\s+[\w]+(?:ed|ing)\s+[\w]+)\b/gi, '<span class="participle-adv">$1</span>');
+
+  // Fallback for compound adjectives without following noun captured yet
+  cleaned = cleaned.replace(/\b([\w]+-(?:enriching|developed|preserved|shaping|bending|breaking|rooted|documented|damaged|discovered|shifting))\b/gi, (match) => {
+    if (cleaned.includes(match) && cleaned.indexOf(`">${match}`) !== -1) return match;
+    return `<span class="participle-adv">${match}</span>`;
+  });
+  cleaned = cleaned.replace(/\b((?:well|highly|deeply|newly|poorly|rapidly|heavily)\s+[\w]+(?:ed|ing))\b/gi, (match) => {
+    if (cleaned.includes(match) && cleaned.indexOf(`">${match}`) !== -1) return match;
+    return `<span class="participle-adv">${match}</span>`;
+  });
+
+  // 2. Participle Clause Reductions (e.g. moving in the gas, containing organisms, cooked with electricity, recovered from ruins) -> Pink
+  cleaned = cleaned.replace(/\b((?:moving|containing|cooked|recovered|preserved|excavated|living|working|written|built|designed|produced|created)\s+(?:in|with|from|by|of|on|at|about)\s+[\w\s]+?)(?=[.,;!?]|$)/gi, (match) => {
+    // Avoid double wrapping if already wrapped
+    if (match.includes('<span')) return match;
+    return `<span class="participle-phrase">${match}</span>`;
+  });
+
+  // 3. Present Participle (...ing) sıfatları + Niteledikleri İsim (e.g. emerging technologies, evolving languages, crying child, shining monuments, varying opinions) -> Green
+  cleaned = cleaned.replace(/\b((?:emerging|evolving|crying|shining|varying|lasting|hiding|shifting|rooting)\s+[\w]+)\b/gi, (match) => {
+    if (match.includes('<span')) return match;
+    return `<span class="participle-ing">${match}</span>`;
+  });
+
+  // 4. Past Participle (...ed/V3) sıfatları + Niteledikleri İsim (e.g. detailed reports, stolen manuscript, excavated artifacts, written laws, broken treaties, forgotten civilisations) -> Purple
+  cleaned = cleaned.replace(/\b((?:detailed|stolen|excavated|written|broken|forgotten|hidden|damaged)\s+[\w]+)\b/gi, (match) => {
+    if (match.includes('<span')) return match;
+    return `<span class="participle-ed">${match}</span>`;
+  });
+
+  return cleaned;
+}
+
 function colorCodeUnit29Sentence(sentence) {
   if (!sentence || typeof sentence !== 'string') return sentence;
   const patterns = [
@@ -7730,6 +7769,41 @@ function colorCodeUnit29Sentence(sentence) {
     }
   }
   return tokens.join("");
+}
+
+function colorCodeUnit104Sentence(sentence) {
+  if (!sentence || typeof sentence !== 'string') return sentence;
+  let res = sentence;
+
+  const modalPatterns = [
+    /\b((?:don't|doesn't|didn't)?\s*(?:have|has|had)\s+to)\b/gi,
+    /\b(needn't|(?:don't|doesn't|didn't)\s+need\s+to)\b/gi,
+    /\b((?:am|is|are|was|were|will\s+be|be)?\s*able\s+to)\b/gi,
+    /\b(ought\s+(?:not\s+)?to)\b/gi,
+    /\b(had\s+better(?:\s+not)?)\b/gi,
+    /\b((?:didn't\s+)?used?\s+to)\b/gi,
+    /\b((?:am|is|are|was|were|get|gets|got|getting|have\s+got|has\s+got)\s+used\s+to)\b/gi
+  ];
+
+  modalPatterns.forEach(pattern => {
+    res = res.replace(pattern, (match, p1, offset, fullStr) => {
+      const before = fullStr.slice(0, offset);
+      const lastOpen = before.lastIndexOf('<');
+      const lastClose = before.lastIndexOf('>');
+      if (lastOpen > lastClose) return match;
+
+      const after = fullStr.slice(offset + match.length);
+      const nextCloseSpan = after.indexOf('</span>');
+      const nextOpenSpan = after.indexOf('<span');
+      if (nextCloseSpan !== -1 && (nextOpenSpan === -1 || nextCloseSpan < nextOpenSpan)) {
+        return match;
+      }
+
+      return `<span style="color: #ff6b6b; font-weight: bold;">${p1}</span>`;
+    });
+  });
+
+  return res;
 }
 
 function getConjunctionGroupInfo(optText) {
@@ -8652,6 +8726,42 @@ function renderQuestion() {
       question.pairs.forEach(p => {
         if (p.left) p.left = colorCodeUnit29Sentence(p.left);
         if (p.right) p.right = colorCodeUnit29Sentence(p.right);
+      });
+    }
+  }
+
+  if (currentLesson && (currentLesson.unitId === 12 || currentLesson.originalUnitId === 12)) {
+    if (question.sentence) question.sentence = colorCodeUnit12Sentence(question.sentence);
+    if (question.enSentence) question.enSentence = colorCodeUnit12Sentence(question.enSentence);
+    if (question.phrase) question.phrase = colorCodeUnit12Sentence(question.phrase);
+    if (question.paragraph) question.paragraph = colorCodeUnit12Sentence(question.paragraph);
+    if (question.englishPhrase) question.englishPhrase = colorCodeUnit12Sentence(question.englishPhrase);
+    if (question.options) {
+      question.options = question.options.map(opt => typeof opt === 'string' ? colorCodeUnit12Sentence(opt) : opt);
+    }
+    if (question.pairs) {
+      question.pairs.forEach(p => {
+        if (p.left) p.left = colorCodeUnit12Sentence(p.left);
+        if (p.right) p.right = colorCodeUnit12Sentence(p.right);
+      });
+    }
+  }
+
+  if (currentLesson && (currentLesson.unitId === 104 || currentLesson.originalUnitId === 104 || currentLesson.chapterId === 104 || (currentLesson.id && String(currentLesson.id).includes('c104')))) {
+    if (originalSentence && originalSentence.includes('<span')) {
+      question.sentence = originalSentence;
+    }
+    if (question.sentence) question.sentence = colorCodeUnit104Sentence(question.sentence);
+    if (question.enSentence) question.enSentence = colorCodeUnit104Sentence(question.enSentence);
+    if (question.prompt) question.prompt = colorCodeUnit104Sentence(question.prompt);
+    if (question.translation) question.translation = colorCodeUnit104Sentence(question.translation);
+    if (question.options) {
+      question.options = question.options.map(opt => typeof opt === 'string' ? colorCodeUnit104Sentence(opt) : opt);
+    }
+    if (question.pairs) {
+      question.pairs.forEach(p => {
+        if (p.left) p.left = colorCodeUnit104Sentence(p.left);
+        if (p.right) p.right = colorCodeUnit104Sentence(p.right);
       });
     }
   }
