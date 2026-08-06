@@ -26957,6 +26957,38 @@ let trmActiveCategory = 'all';
 let trmSearchQuery = '';
 let trmExpandedCardIndex = null;
 
+function updateTrmChipSubtitles(mode) {
+  const chipLabelsMap = {
+    sentence_connectors: {
+      all: "🧪 Tümü (All)",
+      contrast: "⚡ Zıtlık & Çelişki (however, nevertheless...)",
+      addition: "➕ Ekleme & Paralellik (furthermore, moreover...)",
+      exemplification: "💡 Örnekleme & Açıklama (for instance, namely...)",
+      purpose_condition: "🎯 Amaç & Şart (otherwise, or else...)",
+      summary_emphasis: "📌 Özet & Vurgu (in brief, indeed...)",
+      focus_exception: "🔍 Odaklanma & İstisna (as for, regarding...)"
+    },
+    subordinate_preps: {
+      all: "🧪 Tümü (All)",
+      contrast: "⚡ Zıtlık & Çelişki (although, despite...)",
+      addition: "➕ Ekleme & Paralellik (just as... so, in addition...)",
+      exemplification: "💡 Örnekleme & Açıklama (such as, like, including...)",
+      purpose_condition: "🎯 Amaç & Şart (so that, in order to, lest...)",
+      summary_emphasis: "📌 Özet & Vurgu (in brief, overall...)",
+      focus_exception: "🔍 Odaklanma & İstisna (apart from, barring...)"
+    }
+  };
+
+  const map = chipLabelsMap[mode] || chipLabelsMap.sentence_connectors;
+  const filterChips = document.querySelectorAll('.trm-chip');
+  filterChips.forEach(chip => {
+    const cat = chip.dataset.category;
+    if (map[cat]) {
+      chip.textContent = map[cat];
+    }
+  });
+}
+
 function initTransitionsMatrixTab() {
   const modeBtns = document.querySelectorAll('.trm-dir-btn');
   modeBtns.forEach(btn => {
@@ -26990,6 +27022,7 @@ function initTransitionsMatrixTab() {
         }
       });
 
+      updateTrmChipSubtitles(trmActiveMode);
       trmExpandedCardIndex = null;
       renderTransitionsMatrix();
     };
@@ -27023,6 +27056,7 @@ function initTransitionsMatrixTab() {
     };
   }
 
+  updateTrmChipSubtitles(trmActiveMode);
   renderTransitionsMatrix();
 }
 
