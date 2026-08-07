@@ -2959,11 +2959,25 @@ input {
     position: sticky;
     top: var(--topbar-height, 72px);
     height: calc(100vh - var(--topbar-height, 72px));
+    max-height: calc(100vh - var(--topbar-height, 72px));
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 240px;
     display: flex;
     flex-direction: column;
-    padding: 24px 16px;
+    padding: 16px 8px;
     flex-shrink: 0;
+  }
+
+  .sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+  }
+  .sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
   }
   
   .sidebar-brand {
@@ -3045,18 +3059,29 @@ input {
   .sidebar-menu {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 3px;
     width: 100%;
+  }
+
+  .sidebar-section-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding: 10px 14px 2px 14px;
+    opacity: 0.65;
+    user-select: none;
   }
   
   .sidebar-menu .nav-tab {
     display: flex;
     align-items: center;
-    gap: 16px;
-    width: calc(100% - 24px);
-    margin: 4px 12px;
-    padding: 14px 18px;
-    font-size: 1.1rem;
+    gap: 12px;
+    width: calc(100% - 16px);
+    margin: 2px 8px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-secondary);
@@ -3069,12 +3094,17 @@ input {
   }
 
   .sidebar-menu .nav-tab .nav-tab-icon {
-    font-size: 1.45rem;
+    font-size: 1.2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
+    width: 24px;
     transition: transform var(--transition-fast);
+  }
+
+  .sidebar-menu .nav-tab .nav-tab-icon svg {
+    width: 20px;
+    height: 20px;
   }
 
   .sidebar-menu .nav-tab:hover .nav-tab-icon {
@@ -3186,6 +3216,84 @@ input {
     border-color: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 24px rgba(6, 182, 212, 0.2);
   }
+
+  /* Cause-Effect (Neden-Etki) Tab - Blue/Pink */
+  .sidebar-menu .nav-tab[data-tab="cause-effect"]:hover {
+    background: rgba(59, 130, 246, 0.08);
+    color: #2563eb;
+    border-color: rgba(59, 130, 246, 0.15);
+  }
+  .sidebar-menu .nav-tab[data-tab="cause-effect"].active {
+    background: linear-gradient(135deg, #3b82f6 0%, #ec4899 100%) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+  }
+
+  /* Time-Matrix (Zaman & Tense) Tab - Purple/Amber */
+  .sidebar-menu .nav-tab[data-tab="time-matrix"]:hover {
+    background: rgba(139, 92, 246, 0.08);
+    color: #7c3aed;
+    border-color: rgba(139, 92, 246, 0.15);
+  }
+  .sidebar-menu .nav-tab[data-tab="time-matrix"].active {
+    background: linear-gradient(135deg, #8b5cf6 0%, #d97706 100%) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+  }
+
+  /* Transitions-Matrix (Bağlaçlar & Geçişler) Tab - Emerald */
+  .sidebar-menu .nav-tab[data-tab="transitions-matrix"]:hover {
+    background: rgba(16, 185, 129, 0.08);
+    color: #059669;
+    border-color: rgba(16, 185, 129, 0.15);
+  }
+  .sidebar-menu .nav-tab[data-tab="transitions-matrix"].active {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+  }
+
+  /* Ezber Robotu Tab - Violet/Pink */
+  .sidebar-menu .nav-tab[data-tab="ezber-robotu"]:hover {
+    background: rgba(139, 92, 246, 0.08);
+    color: #8b5cf6;
+    border-color: rgba(139, 92, 246, 0.15);
+  }
+  .sidebar-menu .nav-tab[data-tab="ezber-robotu"].active {
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+  }
+
+  /* Structure Robot (Yapı Robotu) Tab - Cyan/Purple */
+  .sidebar-menu .nav-tab[data-tab="structure-robot"]:hover {
+    background: rgba(6, 182, 212, 0.08);
+    color: #0891b2;
+    border-color: rgba(6, 182, 212, 0.15);
+  }
+  .sidebar-menu .nav-tab[data-tab="structure-robot"].active {
+    background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
+  }
+
+  /* General Fallback Active / Hover Style */
+  .sidebar-menu .nav-tab:hover {
+    background: rgba(139, 92, 246, 0.08);
+    color: var(--accent-primary, #8b5cf6);
+    border-color: rgba(139, 92, 246, 0.15);
+  }
+  .sidebar-menu .nav-tab.active {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%) !important;
+    color: #fff !important;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+  }
   
   .home-main-wrapper {
     flex: 1;
@@ -3285,6 +3393,12 @@ input {
   .sidebar-menu .nav-tab[data-tab="feedback"].active { color: #a855f7 !important; }
   .sidebar-menu .nav-tab[data-tab="admin"].active { color: #6b7280 !important; }
   .sidebar-menu .nav-tab[data-tab="simulator"].active { color: #06b6d4 !important; }
+  .sidebar-menu .nav-tab[data-tab="cause-effect"].active { color: #ec4899 !important; }
+  .sidebar-menu .nav-tab[data-tab="time-matrix"].active { color: #8b5cf6 !important; }
+  .sidebar-menu .nav-tab[data-tab="transitions-matrix"].active { color: #10b981 !important; }
+  .sidebar-menu .nav-tab[data-tab="ezber-robotu"].active { color: #8b5cf6 !important; }
+  .sidebar-menu .nav-tab[data-tab="structure-robot"].active { color: #06b6d4 !important; }
+  .sidebar-menu .nav-tab.active { color: var(--accent-primary, #8b5cf6) !important; }
   
   .home-main-wrapper {
     margin-left: 0;
@@ -9117,6 +9231,156 @@ input:checked + .slider:before {
     right: 30px;
   }
 }
+/* ============================================================
+   PROFİL HUB NAVİGASYON (Profilim / Puan Tablosu / Mağaza)
+   ============================================================ */
+.profile-hub-master {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+}
+
+.profile-hub-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 520px;
+  margin: 0 auto 28px;
+  padding: 5px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm), 0 0 0 1px rgba(255,255,255,0.04) inset;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.profile-hub-tab {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 10px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: color 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.profile-hub-tab:hover {
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.profile-hub-tab:active {
+  transform: scale(0.97);
+}
+
+.profile-hub-tab.active {
+  color: #ffffff;
+}
+
+.profile-hub-tab-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-hub-tab.active .profile-hub-tab-icon {
+  transform: scale(1.15);
+}
+
+.profile-hub-tab-label {
+  font-size: 0.86rem;
+  letter-spacing: 0.01em;
+}
+
+/* Animated sliding indicator */
+.profile-hub-indicator {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  height: calc(100% - 10px);
+  width: calc(33.333% - 3px);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary, #a78bfa));
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4),
+              0 0 24px rgba(139, 92, 246, 0.15);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.35s ease;
+  pointer-events: none;
+}
+
+.profile-hub-indicator[data-pos="0"] {
+  transform: translateX(0);
+}
+.profile-hub-indicator[data-pos="1"] {
+  transform: translateX(calc(100% + 4px));
+}
+.profile-hub-indicator[data-pos="2"] {
+  transform: translateX(calc(200% + 8px));
+}
+
+/* Subcontent visibility */
+.profile-hub-content {
+  display: none;
+  animation: profileHubFadeIn 0.32s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.profile-hub-content.active {
+  display: block;
+}
+
+@keyframes profileHubFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .profile-hub-nav {
+    max-width: 100%;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 14px;
+  }
+  .profile-hub-tab {
+    padding: 10px 6px;
+    gap: 5px;
+    border-radius: 10px;
+  }
+  .profile-hub-tab-label {
+    font-size: 0.78rem;
+  }
+  .profile-hub-tab-icon {
+    font-size: 0.95rem;
+  }
+  .profile-hub-indicator {
+    border-radius: 10px;
+    top: 4px;
+    left: 4px;
+    height: calc(100% - 8px);
+  }
+}
 
 /* ============================================================
    ADMIN ALT SEKME MENÜSÜ GÖRSEL DÜZENLEMELERİ (PREMIUM CARD)
@@ -9124,15 +9388,15 @@ input:checked + .slider:before {
 .admin-subtabs-container {
   display: none;
   flex-direction: column;
-  gap: 6px;
-  padding: 8px;
-  margin: 6px 12px 14px 12px;
+  gap: 3px;
+  padding: 6px;
+  margin: 4px 8px 8px 8px;
   background: rgba(0, 0, 0, 0.015);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
   box-sizing: border-box;
-  width: calc(100% - 24px);
+  width: calc(100% - 16px);
 }
 
 [data-theme="dark"] .admin-subtabs-container {
@@ -9142,10 +9406,10 @@ input:checked + .slider:before {
 .admin-nav-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   width: 100%;
-  padding: 8px 10px;
-  font-size: 0.88rem;
+  padding: 6px 8px;
+  font-size: 0.82rem;
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--text-secondary);
@@ -10472,4 +10736,453 @@ nDown 0.3s ease;
   color: #fbcfe8;
   border-bottom-color: #f472b6;
 }
+
+/* ════════════════════════════════════════════════════════
+   🧠 EZBER ROBOTU (DRILL & MEMORIZATION LAB) STİLLERİ
+   ════════════════════════════════════════════════════════ */
+.ezber-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+}
+
+.ezber-header-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.1));
+  border: 1.5px solid rgba(139, 92, 246, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.ezber-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ezber-main-title {
+  margin: 0 0 6px 0;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ezber-badge {
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.ezber-subtitle {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.ezber-stats-pills {
+  display: flex;
+  gap: 12px;
+}
+
+.ezber-stat-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.ezber-mode-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ez-mode-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ez-mode-btn:hover {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.ez-mode-btn.active {
+  background: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Ezber Kartı Gövdesi */
+.ez-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.ez-card-badge {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ez-item-word {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 6px 0;
+}
+
+.ez-item-tr {
+  font-size: 1.1rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.ez-prompt-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+/* Seçenek Gridleri */
+.ez-grid-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.ez-opt-btn {
+  background: var(--bg-body);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+}
+
+.ez-opt-btn:hover {
+  transform: translateY(-2px);
+  border-color: #8b5cf6;
+  box-shadow: var(--shadow-md);
+}
+
+.ez-group-tag {
+  background: #8b5cf6;
+  color: white;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.ez-group-desc {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Yön Vektörü Grid */
+.ez-direction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ez-dir-option {
+  padding: 24px 16px;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border-color);
+  background: var(--bg-body);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.ez-dir-option.red-dir {
+  border-color: #ef4444;
+}
+
+.ez-dir-option.blue-dir {
+  border-color: #3b82f6;
+}
+
+.ez-dir-option:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+.ez-dir-arrow {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.ez-dir-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Noktalama ve Cümle Şablonu */
+.ez-sentence-box {
+  background: var(--bg-body);
+  border: 1.5px dashed var(--accent-primary);
+  padding: 18px 24px;
+  border-radius: var(--radius-lg);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.ez-hl {
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.15);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* İkiz Yapı Gösterimi */
+.ez-twin-source {
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.ez-twin-tag {
+  background: #ec4899;
+  color: white;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+/* 3D Flashcard Styling */
+.ez-flip-card {
+  perspective: 1000px;
+  width: 100%;
+  min-height: 240px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.ez-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.ez-flip-card.flipped .ez-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.ez-flip-front, .ez-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ez-flip-front {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15));
+  border: 2px solid #8b5cf6;
+}
+
+.ez-flip-back {
+  background: var(--bg-body);
+  border: 2px solid #ec4899;
+  transform: rotateY(180deg);
+}
+
+.ez-flip-word {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.ez-flip-tag {
+  background: #8b5cf6;
+  color: white;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.ez-flip-hint {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.ez-flip-tr {
+  color: #ec4899;
+  margin: 0 0 10px 0;
+}
+
+.ez-flip-rule {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.ez-flip-sample {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.ez-flash-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.ez-flash-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.ez-flash-btn.hard {
+  background: #ef4444;
+}
+
+.ez-flash-btn.easy {
+  background: #10b981;
+}
+
+.ez-flash-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Feedback Box */
+.ez-feedback-box {
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.ez-feedback-box.correct {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1.5px solid #10b981;
+}
+
+.ez-feedback-box.wrong {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1.5px solid #ef4444;
+}
+
+.ez-fb-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.ez-fb-desc {
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+.ez-fb-example {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.ez-next-btn {
+  width: 100%;
+  padding: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ez-pop-in {
+  animation: ezPopIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes ezPopIn {
+  0% { transform: scale(0.95); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 

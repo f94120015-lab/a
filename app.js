@@ -12975,12 +12975,60 @@ function toggleTheme() {
 // ============================================================
 // SEKME YÖNETİMİ
 // ============================================================
+const PROFILE_HUB_TABS = ['info', 'leaderboard', 'store'];
+
+function switchProfileHub(hubId) {
+  if (!hubId) hubId = 'info';
+  state.activeProfileHub = hubId;
+
+  // Update hub tab buttons
+  document.querySelectorAll('.profile-hub-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.hub === hubId);
+  });
+
+  // Move the sliding indicator
+  const indicator = document.getElementById('profile-hub-indicator');
+  if (indicator) {
+    const idx = PROFILE_HUB_TABS.indexOf(hubId);
+    indicator.setAttribute('data-pos', idx >= 0 ? idx : 0);
+  }
+
+  // Show/hide subcontent areas
+  document.querySelectorAll('.profile-hub-content').forEach(area => {
+    const isTarget = area.id === `profile-hub-${hubId}`;
+    if (isTarget) {
+      area.classList.add('active');
+      // Re-trigger animation
+      area.style.animation = 'none';
+      area.offsetHeight; // force reflow
+      area.style.animation = '';
+    } else {
+      area.classList.remove('active');
+    }
+  });
+
+  // Render the appropriate content
+  if (hubId === 'info') {
+    renderProfile();
+  } else if (hubId === 'leaderboard') {
+    renderLeaderboard();
+  } else if (hubId === 'store') {
+    renderStore();
+  }
+}
+
 function switchTab(tabId) {
   if (!tabId) return;
   
-  const isGuestUser = !state.username || state.isGuest || state.username === 'Misafir';
-  if (tabId === 'leaderboard' && isGuestUser) {
-    switchTab('lessons');
+  // Redirect leaderboard/store to profile hub
+  if (tabId === 'leaderboard') {
+    switchTab('profile');
+    switchProfileHub('leaderboard');
+    return;
+  }
+  if (tabId === 'store') {
+    switchTab('profile');
+    switchProfileHub('store');
     return;
   }
   
@@ -13002,15 +13050,22 @@ function switchTab(tabId) {
     updateAdminBadgeCount();
   }
 
+  const userMenuBtn = document.getElementById('btn-user-menu');
+  if (userMenuBtn) {
+    if (tabId === 'profile') {
+      userMenuBtn.style.boxShadow = '0 0 0 3px #ec4899, 0 4px 14px rgba(236, 72, 153, 0.5)';
+      userMenuBtn.style.transform = 'scale(1.08)';
+    } else {
+      userMenuBtn.style.boxShadow = 'none';
+      userMenuBtn.style.transform = 'none';
+    }
+  }
+
   document.querySelectorAll('.tab-content').forEach(content => {
     content.classList.toggle('active', content.id === `tab-content-${tabId}`);
   });
-  if (tabId === 'leaderboard') {
-    renderLeaderboard();
-  } else if (tabId === 'store') {
-    renderStore();
-  } else if (tabId === 'profile') {
-    renderProfile();
+  if (tabId === 'profile') {
+    switchProfileHub(state.activeProfileHub || 'info');
   } else if (tabId === 'simulator') {
     state.activePassiveMode = 'active';
     saveState();
@@ -13023,6 +13078,10 @@ function switchTab(tabId) {
     initTimeMatrixTab();
   } else if (tabId === 'transitions-matrix') {
     initTransitionsMatrixTab();
+  } else if (tabId === 'ezber-robotu') {
+    if (typeof initEzberRobotu === 'function') {
+      initEzberRobotu();
+    }
   } else if (tabId === 'structure-robot') {
     if (typeof initStructureRobot === 'function') {
       initStructureRobot();
@@ -15055,14 +15114,35 @@ function initEventListeners() {
     });
   }
 
+  // Profile Subnav Buttons
+  document.querySelectorAll('.profile-subnav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const section = btn.dataset.profileSection;
+      switchProfileSubcontent(section);
+    });
+  });
+
   // Tema
   document.getElementById('btn-theme').addEventListener('click', toggleTheme);
 
-  // Kullanıcı menüsü
-  document.getElementById('btn-user-menu').addEventListener('click', (e) => {
-    e.stopPropagation();
-    document.getElementById('user-dropdown').classList.toggle('open');
-  });
+  // Kullanıcı menüsü / Profil Butonu (Sağ üst avatar)
+  const userMenuBtn = document.getElementById('btn-user-menu');
+  if (userMenuBtn) {
+    userMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      switchTab('profile');
+    });
+  }
+
+  const btnGotoProfileDropdown = document.getElementById('btn-goto-profile-dropdown');
+  if (btnGotoProfileDropdown) {
+    btnGotoProfileDropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const userDropdown = document.getElementById('user-dropdown');
+      if (userDropdown) userDropdown.classList.remove('open');
+      switchTab('profile');
+    });
+  }
 
   document.addEventListener('click', (e) => {
     document.getElementById('user-dropdown').classList.remove('open');
@@ -15281,6 +15361,15 @@ function initEventListeners() {
     btn.addEventListener('click', () => {
       if (btn.dataset.tab) {
         switchTab(btn.dataset.tab);
+      }
+    });
+  });
+
+  // Profil Hub Alt Sekmeleri (Profilim / Puan Tablosu / Mağaza)
+  document.querySelectorAll('.profile-hub-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.hub) {
+        switchProfileHub(btn.dataset.hub);
       }
     });
   });

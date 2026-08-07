@@ -102,6 +102,7 @@
           <div class="user-dropdown" id="user-dropdown">
             <span class="dropdown-name" id="dropdown-name">Kullanıcı</span>
             <hr>
+            <button id="btn-goto-profile-dropdown" style="color: var(--accent-primary); font-weight: 700; display: flex; align-items: center; gap: 6px; margin-bottom: 6px; background: none; border: none; cursor: pointer; width: 100%;">👤 Profil Sayfası</button>
             <button id="btn-logout">Çıkış Yap</button>
           </div>
         </div>
@@ -114,6 +115,7 @@
       <aside class="sidebar-nav">
 
         <nav class="sidebar-menu">
+          <div class="sidebar-section-label">Öğrenme & Matrisler</div>
           <button class="nav-tab active" data-tab="lessons">
             <span class="nav-tab-icon nav-anim-lessons">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -153,6 +155,8 @@
             </span>
             <span class="nav-tab-label">Bağlaçlar & Geçişler</span>
           </button>
+
+          <div class="sidebar-section-label">Laboratuvar & Robotlar</div>
           <button class="nav-tab" data-tab="simulator">
             <span class="nav-tab-icon nav-anim-simulator">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -164,6 +168,17 @@
               </svg>
             </span>
             <span class="nav-tab-label">Simülatör</span>
+          </button>
+          <button class="nav-tab" data-tab="ezber-robotu">
+            <span class="nav-tab-icon nav-anim-ezber-robot">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="5" y="5" width="22" height="22" rx="5" fill="#8b5cf6" opacity="0.85" stroke="#a78bfa" stroke-width="2"/>
+                <path d="M11 11H21M11 16H21M11 21H17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="21" cy="21" r="3.5" fill="#ec4899"/>
+                <path d="M21 19V23M19 21H23" stroke="#ffffff" stroke-width="1.5"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Ezber Robotu</span>
           </button>
           <button class="nav-tab" data-tab="structure-robot">
             <span class="nav-tab-icon nav-anim-robot">
@@ -180,36 +195,8 @@
             </span>
             <span class="nav-tab-label">Yapı Robotu</span>
           </button>
-          <button class="nav-tab" data-tab="leaderboard">
-            <span class="nav-tab-icon nav-anim-leaderboard">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <path d="M8 6H24V14C24 18.4 20.4 22 16 22C11.6 22 8 18.4 8 14V6Z" fill="#eab308" opacity="0.9" stroke="#fde047" stroke-width="2"/>
-                <path d="M16 22V27M11 27H21" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M5 8H8V12H5C3.9 12 3 11.1 3 10C3 8.9 3.9 8 5 8Z" fill="#eab308"/>
-                <path d="M27 8H24V12H27C28.1 12 29 11.1 29 10C29 8.9 28.1 8 27 8Z" fill="#eab308"/>
-                <circle cx="16" cy="13" r="2.5" fill="#ffffff"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Puan Tablosu</span>
-          </button>
-          <button class="nav-tab" data-tab="store">
-            <span class="nav-tab-icon nav-anim-store">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <path d="M7 11H25L23 26H9L7 11Z" fill="#ec4899" opacity="0.85" stroke="#f472b6" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M11 11V8C11 5.2 13.2 3 16 3C18.8 3 21 5.2 21 8V11" stroke="#f472b6" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Mağaza</span>
-          </button>
-          <button class="nav-tab" data-tab="profile">
-            <span class="nav-tab-icon nav-anim-profile" id="profile-tab-icon">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <circle cx="16" cy="11" r="5" fill="#06b6d4" opacity="0.9" stroke="#67e8f9" stroke-width="2"/>
-                <path d="M7 26C7 21 11 19 16 19C21 19 25 21 25 26" fill="#06b6d4" opacity="0.6" stroke="#67e8f9" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Profil</span>
-          </button>
+
+          <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
             <span class="nav-tab-icon nav-anim-about">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -830,170 +817,192 @@
                 </div>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
 
-      <!-- 2. LİDERLİK TABLOSU SEKMESİ -->
-      <div id="tab-content-leaderboard" class="tab-content">
-        <div class="leaderboard-container">
-          <div class="leaderboard-header">
-            <div class="league-badge">🏆 Altın Lig</div>
-            <p class="league-desc">Haftalık ligin bitmesine son 2 gün! Ligde kalıp puan kazanmak için dersleri tamamla.</p>
-          </div>
-          <table class="leaderboard-table">
-            <thead>
-              <tr>
-                <th>Sıra</th>
-                <th>Kullanıcı</th>
-                <th>Puan</th>
-              </tr>
-            </thead>
-            <tbody id="leaderboard-list">
-              <!-- Dinamik olarak app.js tarafından doldurulacak -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 3. MAĞAZA SEKMESİ -->
-      <div id="tab-content-store" class="tab-content">
-        <div class="store-container">
-          <h2 class="store-title">🛍️ amok Sanal Mağazası</h2>
-          <p class="store-subtitle">Deneyim puanlarını kullanarak serini dondur, canlarını doldur veya altın temayı aç!</p>
-
-          <!-- Üyelik & Lisans Bölümü Kopyası -->
-          <div class="profile-actions-card" id="store-licence-card" style="margin-top: 0; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);">
-            <!-- Kart Başlığı (Tıklanabilir Alan) -->
-            <div id="store-licence-header" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; user-select: none; background: rgba(0, 0, 0, 0.01); transition: background-color 0.2s;">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <span style="font-size: 1.15rem;">🔑</span>
-                <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--text-primary);">Üyelik & Lisans</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span id="store-licence-status-badge-header" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">KONTROL EDİLİYOR...</span>
-                <span id="store-licence-arrow" style="font-size: 0.8rem; color: var(--text-secondary); transition: transform 0.3s; transform: rotate(0deg);">▼</span>
-              </div>
-            </div>
-
-            <!-- Açılır/Kapanır Gövde -->
-            <div id="store-licence-body" style="max-height: 0px; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s; opacity: 0; overflow: hidden; border-top: 1px solid transparent;">
-              <div style="padding: 20px; background: var(--bg-body); display: flex; flex-direction: column; gap: 16px; text-align: left;">
-                
-                <!-- Durum Detayı -->
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; background: var(--bg-card); padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                  <div>
-                    <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="store-licence-status-text">Durum: Kontrol ediliyor...</div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="store-licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
-                  </div>
-                  <span id="store-licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25); display: none;">ÜCRETSİZ / KİLİTLİ</span>
-                </div>
-                
-                <!-- Giriş Alanları -->
-                <div style="display: flex; flex-direction: column; gap: 12px;">
-                  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="store-licence-email" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-                      <input type="email" id="store-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
-                    </div>
-                    <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="store-licence-phone" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-                      <input type="tel" id="store-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
-                    </div>
-                  </div>
-                  <div style="display: flex; flex-direction: column; gap: 6px;">
-                    <label for="store-licence-input" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
-                    <input type="text" id="store-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box; outline: none;">
-                  </div>
-                  <div style="display: flex; gap: 12px; width: 100%; margin-top: 8px;">
-                    <button id="btn-store-activate-licence" class="btn btn-primary" style="flex: 1; padding: 12px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; transition: all 0.2s;">Aktifleştir</button>
-                    <button id="btn-store-request-licence" class="btn btn-secondary-outline" style="flex: 1; padding: 12px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent; margin-bottom: 0; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center;">Lisans Anahtarı Al</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="store-grid">
-            <div class="store-card" id="store-card-hearts">
-              <span class="store-card-icon">❤️</span>
-              <h3>Can Yenile</h3>
-              <p>Canını tamamen doldur (5 Can). Canın azaldığında alabilirsin.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="hearts" data-price="50" id="buy-hearts-btn">50 Puan</button>
-            </div>
-            
-            <div class="store-card" id="store-card-streak-freeze">
-              <span class="store-card-icon">❄️</span>
-              <h3>Seri Dondurucu</h3>
-              <p>Bir gün girmeyi unutsan bile serini koruyan kalkan.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="streak-freeze" data-price="100" id="buy-streak-freeze-btn">100 Puan</button>
-            </div>
-            
-            <div class="store-card" id="store-card-gold-theme">
-              <span class="store-card-icon">👑</span>
-              <h3>Özel Altın Tema</h3>
-              <p>Tüm uygulamaya özel, asil altın renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="gold-theme" data-price="200" id="buy-gold-theme-btn">200 Puan</button>
-            </div>
-            
-            <div class="store-card" id="store-card-canva-theme">
-              <span class="store-card-icon">🎨</span>
-              <h3>Özel Canva Teması</h3>
-              <p>Canva'nın turkuaz, mavi ve mor gradyan renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="canva-theme" data-price="150" id="buy-canva-theme-btn">150 Puan</button>
-            </div>
-
-            <div class="store-card" id="store-card-mint-theme">
-              <span class="store-card-icon">🌿</span>
-              <h3>Pastel Mint Teması</h3>
-              <p>Yatıştırıcı pastel nane yeşili ve adaçayı renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="mint-theme" data-price="100" id="buy-mint-theme-btn">100 Puan</button>
-            </div>
-
-            <div class="store-card" id="store-card-sakura-theme">
-              <span class="store-card-icon">🌸</span>
-              <h3>Pastel Sakura Teması</h3>
-              <p>Zarif pastel kiraz çiçeği pembesi ve lavanta renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="sakura-theme" data-price="120" id="buy-sakura-theme-btn">120 Puan</button>
-            </div>
-
-            <div class="store-card" id="store-card-sunset-theme">
-              <span class="store-card-icon">🌅</span>
-              <h3>Pastel Sunset Teması</h3>
-              <p>Sıcak pastel şeftali, mercan ve gün batımı renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="sunset-theme" data-price="130" id="buy-sunset-theme-btn">130 Puan</button>
-            </div>
-
-            <div class="store-card" id="store-card-kutup-theme">
-              <span class="store-card-icon">❄️</span>
-              <h3>Nordic Frost Teması</h3>
-              <p>Minimalist ve ferahlatıcı buz mavisi renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="kutup-theme" data-price="140" id="buy-kutup-theme-btn">140 Puan</button>
-            </div>
-
-            <div class="store-card" id="store-card-siber-theme">
-              <span class="store-card-icon">🌌</span>
-              <h3>Cyberpunk Neon Teması</h3>
-              <p>Obsidyen siyahı ve elektrik siyanı renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="siber-theme" data-price="180" id="buy-siber-theme-btn">180 Puan</button>
-            </div>
-
-            <div class="store-card" id="store-card-orman-theme">
-              <span class="store-card-icon">🍂</span>
-              <h3>Forest Zen Teması</h3>
-              <p>Dinlendirici çam yeşili ve krem toprak renk paletini uygular.</p>
-              <button class="btn btn-primary store-buy-btn" data-item="orman-theme" data-price="120" id="buy-orman-theme-btn">120 Puan</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. PROFİL SEKMESİ -->
+      <!-- 4. BİRLEŞİK PROFİL SEKMESİ (Profilim + Puan Tablosu + Mağaza) -->
       <div id="tab-content-profile" class="tab-content">
-        <div class="profile-container">
-          <!-- Dinamik olarak app.js tarafından doldurulacak -->
+        <div class="profile-hub-master">
+          
+          <!-- Premium Alt Navigasyon Barı -->
+          <div class="profile-hub-nav" id="profile-hub-nav">
+            <button class="profile-hub-tab active" data-hub="info" id="hub-tab-info">
+              <span class="profile-hub-tab-icon">👤</span>
+              <span class="profile-hub-tab-label">Profilim</span>
+            </button>
+            <button class="profile-hub-tab" data-hub="leaderboard" id="hub-tab-leaderboard">
+              <span class="profile-hub-tab-icon">🏆</span>
+              <span class="profile-hub-tab-label">Puan Tablosu</span>
+            </button>
+            <button class="profile-hub-tab" data-hub="store" id="hub-tab-store">
+              <span class="profile-hub-tab-icon">🛍️</span>
+              <span class="profile-hub-tab-label">Mağaza</span>
+            </button>
+            <div class="profile-hub-indicator" id="profile-hub-indicator" data-pos="0"></div>
+          </div>
+
+          <!-- A) PROFİL BİLGİLERİ -->
+          <div id="profile-hub-info" class="profile-hub-content active">
+            <div class="profile-container">
+              <!-- Dinamik olarak app.js tarafından doldurulacak -->
+            </div>
+          </div>
+
+          <!-- B) LİDERLİK TABLOSU -->
+          <div id="profile-hub-leaderboard" class="profile-hub-content">
+            <div class="leaderboard-container">
+              <div class="leaderboard-header">
+                <div class="league-badge">🏆 Altın Lig</div>
+                <p class="league-desc">Haftalık ligin bitmesine son 2 gün! Ligde kalıp puan kazanmak için dersleri tamamla.</p>
+              </div>
+              <table class="leaderboard-table">
+                <thead>
+                  <tr>
+                    <th>Sıra</th>
+                    <th>Kullanıcı</th>
+                    <th>Puan</th>
+                  </tr>
+                </thead>
+                <tbody id="leaderboard-list">
+                  <!-- Dinamik olarak app.js tarafından doldurulacak -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- C) MAĞAZA -->
+          <div id="profile-hub-store" class="profile-hub-content">
+            <div class="store-container">
+              <h2 class="store-title">🛍️ amok Sanal Mağazası</h2>
+              <p class="store-subtitle">Deneyim puanlarını kullanarak serini dondur, canlarını doldur veya altın temayı aç!</p>
+
+              <!-- Üyelik & Lisans Bölümü -->
+              <div class="profile-actions-card" id="store-licence-card" style="margin-top: 0; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);">
+                <!-- Kart Başlığı (Tıklanabilir Alan) -->
+                <div id="store-licence-header" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; user-select: none; background: rgba(0, 0, 0, 0.01); transition: background-color 0.2s;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.15rem;">🔑</span>
+                    <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--text-primary);">Üyelik & Lisans</span>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 12px;">
+                    <span id="store-licence-status-badge-header" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">KONTROL EDİLİYOR...</span>
+                    <span id="store-licence-arrow" style="font-size: 0.8rem; color: var(--text-secondary); transition: transform 0.3s; transform: rotate(0deg);">▼</span>
+                  </div>
+                </div>
+
+                <!-- Açılır/Kapanır Gövde -->
+                <div id="store-licence-body" style="max-height: 0px; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s; opacity: 0; overflow: hidden; border-top: 1px solid transparent;">
+                  <div style="padding: 20px; background: var(--bg-body); display: flex; flex-direction: column; gap: 16px; text-align: left;">
+                    
+                    <!-- Durum Detayı -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; background: var(--bg-card); padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                      <div>
+                        <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="store-licence-status-text">Durum: Kontrol ediliyor...</div>
+                        <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="store-licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
+                      </div>
+                      <span id="store-licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25); display: none;">ÜCRETSİZ / KİLİTLİ</span>
+                    </div>
+                    
+                    <!-- Giriş Alanları -->
+                    <div style="display: flex; flex-direction: column; gap: 12px;">
+                      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 6px;">
+                          <label for="store-licence-email" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
+                          <input type="email" id="store-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                        </div>
+                        <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 6px;">
+                          <label for="store-licence-phone" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
+                          <input type="tel" id="store-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 6px;">
+                        <label for="store-licence-input" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
+                        <input type="text" id="store-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box; outline: none;">
+                      </div>
+                      <div style="display: flex; gap: 12px; width: 100%; margin-top: 8px;">
+                        <button id="btn-store-activate-licence" class="btn btn-primary" style="flex: 1; padding: 12px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; transition: all 0.2s;">Aktifleştir</button>
+                        <button id="btn-store-request-licence" class="btn btn-secondary-outline" style="flex: 1; padding: 12px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent; margin-bottom: 0; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center;">Lisans Anahtarı Al</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="store-grid">
+                <div class="store-card" id="store-card-hearts">
+                  <span class="store-card-icon">❤️</span>
+                  <h3>Can Yenile</h3>
+                  <p>Canını tamamen doldur (5 Can). Canın azaldığında alabilirsin.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="hearts" data-price="50" id="buy-hearts-btn">50 Puan</button>
+                </div>
+                
+                <div class="store-card" id="store-card-streak-freeze">
+                  <span class="store-card-icon">❄️</span>
+                  <h3>Seri Dondurucu</h3>
+                  <p>Bir gün girmeyi unutsan bile serini koruyan kalkan.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="streak-freeze" data-price="100" id="buy-streak-freeze-btn">100 Puan</button>
+                </div>
+                
+                <div class="store-card" id="store-card-gold-theme">
+                  <span class="store-card-icon">👑</span>
+                  <h3>Özel Altın Tema</h3>
+                  <p>Tüm uygulamaya özel, asil altın renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="gold-theme" data-price="200" id="buy-gold-theme-btn">200 Puan</button>
+                </div>
+                
+                <div class="store-card" id="store-card-canva-theme">
+                  <span class="store-card-icon">🎨</span>
+                  <h3>Özel Canva Teması</h3>
+                  <p>Canva'nın turkuaz, mavi ve mor gradyan renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="canva-theme" data-price="150" id="buy-canva-theme-btn">150 Puan</button>
+                </div>
+
+                <div class="store-card" id="store-card-mint-theme">
+                  <span class="store-card-icon">🌿</span>
+                  <h3>Pastel Mint Teması</h3>
+                  <p>Yatıştırıcı pastel nane yeşili ve adaçayı renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="mint-theme" data-price="100" id="buy-mint-theme-btn">100 Puan</button>
+                </div>
+
+                <div class="store-card" id="store-card-sakura-theme">
+                  <span class="store-card-icon">🌸</span>
+                  <h3>Pastel Sakura Teması</h3>
+                  <p>Zarif pastel kiraz çiçeği pembesi ve lavanta renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="sakura-theme" data-price="120" id="buy-sakura-theme-btn">120 Puan</button>
+                </div>
+
+                <div class="store-card" id="store-card-sunset-theme">
+                  <span class="store-card-icon">🌅</span>
+                  <h3>Pastel Sunset Teması</h3>
+                  <p>Sıcak pastel şeftali, mercan ve gün batımı renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="sunset-theme" data-price="130" id="buy-sunset-theme-btn">130 Puan</button>
+                </div>
+
+                <div class="store-card" id="store-card-kutup-theme">
+                  <span class="store-card-icon">❄️</span>
+                  <h3>Nordic Frost Teması</h3>
+                  <p>Minimalist ve ferahlatıcı buz mavisi renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="kutup-theme" data-price="140" id="buy-kutup-theme-btn">140 Puan</button>
+                </div>
+
+                <div class="store-card" id="store-card-siber-theme">
+                  <span class="store-card-icon">🌌</span>
+                  <h3>Cyberpunk Neon Teması</h3>
+                  <p>Obsidyen siyahı ve elektrik siyanı renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="siber-theme" data-price="180" id="buy-siber-theme-btn">180 Puan</button>
+                </div>
+
+                <div class="store-card" id="store-card-orman-theme">
+                  <span class="store-card-icon">🍂</span>
+                  <h3>Forest Zen Teması</h3>
+                  <p>Dinlendirici çam yeşili ve krem toprak renk paletini uygular.</p>
+                  <button class="btn btn-primary store-buy-btn" data-item="orman-theme" data-price="120" id="buy-orman-theme-btn">120 Puan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1443,6 +1452,11 @@
 
         </div>
       </div>
+
+      <!-- ════════════════════════════════════════════════════════
+           EZBER ROBOTU (DRILL & MEMORIZATION LAB) EKRANI
+           ════════════════════════════════════════════════════════ -->
+      <div id="tab-content-ezber-robotu" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;"></div>
 
       <!-- ════════════════════════════════════════════════════════
            YAPI ROBOTU (STRUCTURE LAB) EKRANI
@@ -2157,6 +2171,7 @@
   <script src="rules-db.js?v=1.4.9" defer></script>
   <script src="app.js?v=1.4.9" defer></script>
   <script src="structure-robot.js?v=6.0.0" defer></script>
+  <script src="ezber-robotu.js?v=1.0.0" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">
