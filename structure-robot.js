@@ -1416,7 +1416,7 @@
 
   let state = {
     mode: "sandbox", // 'sandbox' veya 'challenge'
-    selectedCategory: "all",
+    selectedCategory: "time", // Varsayılan olarak 'Zaman & Tense' kategorisinden başlasın
     selectedConnector: null,
     selectedClauseA: null,
     selectedClauseB: null,
@@ -1427,7 +1427,24 @@
 
   // ─── 5. DOM ELEMENTLERİ VE BAŞLATICI ────────────────────────────────────
 
+  function updateCategoryButtons() {
+    document.querySelectorAll(".srobot-cat-btn").forEach(btn => {
+      if (btn.dataset.cat === state.selectedCategory) {
+        btn.classList.add("active");
+        btn.style.background = "var(--accent-primary)";
+        btn.style.color = "#fff";
+        btn.style.borderColor = "var(--accent-primary)";
+      } else {
+        btn.classList.remove("active");
+        btn.style.background = "var(--bg-body)";
+        btn.style.color = "var(--text-secondary)";
+        btn.style.borderColor = "var(--border-color)";
+      }
+    });
+  }
+
   function initStructureRobot() {
+    updateCategoryButtons();
     renderPalette();
     bindEvents();
     updateUI();

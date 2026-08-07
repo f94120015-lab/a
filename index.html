@@ -115,7 +115,6 @@
       <aside class="sidebar-nav">
 
         <nav class="sidebar-menu">
-          <div class="sidebar-section-label">Öğrenme & Matrisler</div>
           <button class="nav-tab active" data-tab="lessons">
             <span class="nav-tab-icon nav-anim-lessons">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -126,6 +125,7 @@
             </span>
             <span class="nav-tab-label">Dersler</span>
           </button>
+          <div class="sidebar-section-label">Öğrenme & Matrisler</div>
           <button class="nav-tab" data-tab="cause-effect">
             <span class="nav-tab-icon nav-anim-cause-effect">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -156,7 +156,7 @@
             <span class="nav-tab-label">Bağlaçlar & Geçişler</span>
           </button>
 
-          <div class="sidebar-section-label">Laboratuvar & Robotlar</div>
+          <div class="sidebar-section-label">Robotlar</div>
           <button class="nav-tab" data-tab="simulator">
             <span class="nav-tab-icon nav-anim-simulator">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -277,25 +277,43 @@
             </div>
 
             <div class="lessons-side-col">
+              <!-- Section Label 1: DURUM & İLERLEME -->
+              <div class="sidebar-section-label" style="padding-left: 4px; padding-right: 4px;">Durum & İlerleme</div>
+              
               <!-- Yan Sütun Stats Bar (Masaüstü için) -->
               <div class="side-stats-bar">
                 <div class="stat-pill" id="stat-streak-side" title="Günlük seri">
-                  <span class="stat-icon">🔥</span>
-                  <span class="stat-value" id="streak-count-side">0</span>
+                  <span class="stat-icon-wrap" style="background: rgba(245, 158, 11, 0.12); color: #d97706;"><span class="stat-icon">🔥</span></span>
+                  <div class="stat-info">
+                    <span class="stat-label-text">Seri</span>
+                    <span class="stat-value" id="streak-count-side">0 Gün</span>
+                  </div>
                 </div>
                 <div class="stat-pill" id="stat-xp-side" title="Deneyim puanı">
-                  <span class="stat-icon">⚡</span>
-                  <span class="stat-value" id="xp-count-side">0</span>
+                  <span class="stat-icon-wrap" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;"><span class="stat-icon">⚡</span></span>
+                  <div class="stat-info">
+                    <span class="stat-label-text">XP Puanı</span>
+                    <span class="stat-value" id="xp-count-side">0 XP</span>
+                  </div>
                 </div>
                 <div class="stat-pill hearts" id="stat-hearts-side" title="Can">
-                  <span class="stat-icon">❤️</span>
-                  <span class="stat-value" id="hearts-count-side">5</span>
+                  <span class="stat-icon-wrap" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;"><span class="stat-icon">❤️</span></span>
+                  <div class="stat-info">
+                    <span class="stat-label-text">Kalan Can</span>
+                    <span class="stat-value" id="hearts-count-side">5 Can</span>
+                  </div>
                 </div>
               </div>
 
+              <!-- Section Label 2: SOSYAL & TOPLULUK -->
+              <div class="sidebar-section-label" style="padding-left: 4px; padding-right: 4px;">Sosyal & Topluluk</div>
+
               <!-- Sosyal Takip Modülü (Kullanıcılar) -->
               <div class="profile-social-card" id="lessons-social-card">
-                <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">👥 Kullanıcılar</h3>
+                <h3 class="profile-section-title title-shadow" style="margin-top: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">
+                  <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.08); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">👥</span>
+                  <span class="title-shadow">Kullanıcılar</span>
+                </h3>
                 
                 <div class="social-tabs">
                   <button class="social-tab active" data-subtab="all-users" id="subtab-all-users">Tüm Kullanıcılar</button>
@@ -307,7 +325,7 @@
                     <input type="text" id="social-search-input" placeholder="Kullanıcı ara (örn: Ahmet, Elif, Can)..." autocomplete="off">
                     <button class="search-clear-btn" id="social-search-clear" style="display:none;">✕</button>
                   </div>
-                  <button class="btn btn-primary" id="btn-social-search" style="padding: 10px 16px;">Ara</button>
+                  <button class="btn btn-primary" id="btn-social-search" style="padding: 10px 20px; border-radius: 9999px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); border: none; font-weight: 800; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);">Ara</button>
                 </div>
                 <div class="social-search-results" id="social-search-results" style="display:none;"></div>
                 
@@ -316,25 +334,33 @@
                 </div>
               </div>
 
+              <!-- Section Label 3: ALIŞTIRMA & TEKRAR -->
+              <div class="sidebar-section-label" style="padding-left: 4px; padding-right: 4px;">Alıştırma & Tekrar</div>
+
               <!-- Spaced Repetition (Review) Banner -->
               <div class="review-banner" id="review-banner">
                 <div class="review-banner-left">
-                  <h3>🔄 Akıllı Tekrar Zamanı!</h3>
+                  <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800; margin-bottom: 6px;">
+                    <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">🔄</span>
+                    <span class="title-shadow" style="color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Akıllı Tekrar Zamanı!</span>
+                  </h3>
                   <p>Hata yaptığın sorulardan oluşan özel tekrar testini çöz, bilgilerini pekiştir.</p>
                 </div>
                 <button class="btn btn-secondary" id="btn-start-review">Hızlı Tekrar (0 Soru)</button>
               </div>
 
               <!-- Paragraf Çözümleme (Deneme) Banner -->
-              <div class="paragraph-analysis-banner" id="paragraph-analysis-banner" style="margin-top: 0px; background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(59, 130, 246, 0.12)); border: 1.5px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-lg); padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--shadow-sm); transition: all 0.3s ease;">
+              <div class="paragraph-analysis-banner" id="paragraph-analysis-banner">
                 <div class="paragraph-analysis-banner-content">
-                  <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                    <span style="font-size: 1.4rem;">📖</span>
-                    <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; color: var(--accent-primary);">Paragraf Çözümleme <span style="font-size: 0.75rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 12px; vertical-align: middle;">DENEME</span></h3>
+                  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                    <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.12); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">📖</span>
+                    <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800;">
+                      <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.68rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
+                    </h3>
                   </div>
-                  <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.45;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
+                  <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
                 </div>
-                <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);">
+                <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
                   ✨ Analize Başla (10. Ders Sonu)
                 </button>
               </div>
@@ -1609,8 +1635,8 @@
                 </div>
                 <!-- Category Filter Pills -->
                 <div id="srobot-category-filters" style="display: flex; gap: 6px; flex-wrap: wrap;">
-                  <button class="srobot-cat-btn active" data-cat="all" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: #fff; cursor: pointer;">Tümü</button>
-                  <button class="srobot-cat-btn" data-cat="time" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⏱️ Zaman & Tense</button>
+                  <button class="srobot-cat-btn" data-cat="all" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">Tümü</button>
+                  <button class="srobot-cat-btn active" data-cat="time" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: #fff; cursor: pointer;">⏱️ Zaman & Tense</button>
                   <button class="srobot-cat-btn" data-cat="transitions" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">🔀 Cümle Bağlaçları & Geçiş</button>
                   <button class="srobot-cat-btn" data-cat="cause_effect" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">🎯 Neden-Etki & Fiiller</button>
                   <button class="srobot-cat-btn" data-cat="devrik_kısaltma" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⚡ Devrik & Kısaltmalar</button>
