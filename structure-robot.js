@@ -1986,7 +1986,7 @@
       if (activeMatchingPair && isValidCombination) {
         let patternStr = (activeMatchingPair.trPatternMap && activeMatchingPair.trPatternMap[state.selectedClauseB]) || activeMatchingPair.trPattern;
         if (patternStr) {
-          let cleanTR = patternStr.split(" (")[0];
+          let cleanTR = patternStr.replace(/\s*\([^)]*\)/g, "").trim();
           sentenceTRText = cleanTR.charAt(0).toUpperCase() + cleanTR.slice(1);
         }
       } else {
