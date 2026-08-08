@@ -257,22 +257,72 @@
     },
     when: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "O çok çalıştığında sınavı geçecek / geçer." },
-        { clauseA: "v2_past", clauseB: ["v2_main", "was_were_ving_main"], trPattern: "O çalıştığında sınavı geçti / herkes ders çalışıyordu." }
+        { 
+          clauseA: "v1_present", 
+          clauseB: ["will_v1", "v1_main", "can_may_v1"], 
+          trPatternMap: {
+            will_v1: "O çok çalıştığında sınavı geçecek.",
+            v1_main: "O çok çalıştığında sınavı geçer.",
+            can_may_v1: "O çok çalıştığında sınavı geçebilir."
+          },
+          trPattern: "O çok çalıştığında sınavı geçecek." 
+        },
+        { 
+          clauseA: "v2_past", 
+          clauseB: ["v2_main", "was_were_ving_main"], 
+          trPatternMap: {
+            v2_main: "O çalıştığında sınavı geçti.",
+            was_were_ving_main: "O çalıştığında herkes ders çalışıyordu."
+          },
+          trPattern: "O çalıştığında sınavı geçti." 
+        }
       ],
       ruleText: "WHEN zaman uyumu gerektirir! Yan cümle Present (V1) ise ana cümle Will/V1/Modal; yan cümle Past (V2) ise ana cümle Past (V2/Was-Were Ving) olur."
     },
     while_as: {
       validPairs: [
-        { clauseA: "was_were_ving", clauseB: ["v2_main", "was_were_ving_main"], trPattern: "Ders çalışıyorken kapı çaldı / kardeşi müzik dinliyordu." },
-        { clauseA: "is_ving", clauseB: ["v1_main", "will_v1"], trPattern: "Yağmur yağıyorken içeride otururuz." }
+        { 
+          clauseA: "was_were_ving", 
+          clauseB: ["v2_main", "was_were_ving_main"], 
+          trPatternMap: {
+            v2_main: "Ders çalışıyorken kapı çaldı.",
+            was_were_ving_main: "Ders çalışıyorken kardeşi müzik dinliyordu."
+          },
+          trPattern: "Ders çalışıyorken kapı çaldı." 
+        },
+        { 
+          clauseA: "is_ving", 
+          clauseB: ["v1_main", "will_v1"], 
+          trPatternMap: {
+            v1_main: "Yağmur yağıyorken içeride otururuz.",
+            will_v1: "Yağmur yağıyorken içeride oturacağız."
+          },
+          trPattern: "Yağmur yağıyorken içeride otururuz." 
+        }
       ],
       ruleText: "WHILE / AS (Eşzamanlılık): Yan cümle genellikle Continuous Tense (was/were V-ing) alır. Ana cümle V2 veya Continuous olur."
     },
     before: {
       validPairs: [
-        { clauseA: "v2_past", clauseB: ["had_v3_main", "v2_main"], trPattern: "O gelmeden önce tren çoktan kalkmıştı." },
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "O gelmeden önce hazırlıkları tamamlayacağız." }
+        { 
+          clauseA: "v2_past", 
+          clauseB: ["had_v3_main", "v2_main"], 
+          trPatternMap: {
+            had_v3_main: "O gelmeden önce tren çoktan kalkmıştı.",
+            v2_main: "O gelmeden önce hazırlıklar tamamlandı."
+          },
+          trPattern: "O gelmeden önce tren çoktan kalkmıştı." 
+        },
+        { 
+          clauseA: "v1_present", 
+          clauseB: ["will_v1", "v1_main", "can_may_v1"], 
+          trPatternMap: {
+            will_v1: "O gelmeden önce hazırlıkları tamamlayacağız.",
+            v1_main: "O gelmeden önce hazırlıkları tamamlarız.",
+            can_may_v1: "O gelmeden önce hazırlıkları tamamlayabiliriz."
+          },
+          trPattern: "O gelmeden önce hazırlıkları tamamlayacağız." 
+        }
       ],
       ruleText: "BEFORE: Öncelikli eylem ana cümle tarafındadır ve 'Had V3' alır! Before yan cümlesi V2 ise ana cümle Had V3; V1 ise Will V1 olur."
     },
@@ -280,20 +330,45 @@
       validPairs: [
         { clauseA: "had_v3", clauseB: ["v2_main"], trPattern: "Önceden çok çalıştıktan sonra sınavı geçti." },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sınav bittikten sonra eve gitti." },
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main"], trPattern: "Çok çalıştıktan sonra sınavı geçecek." }
+        { 
+          clauseA: "v1_present", 
+          clauseB: ["will_v1", "v1_main"], 
+          trPatternMap: {
+            will_v1: "Çok çalıştıktan sonra sınavı geçecek.",
+            v1_main: "Çok çalıştıktan sonra sınavı geçer."
+          },
+          trPattern: "Çok çalıştıktan sonra sınavı geçecek." 
+        }
       ],
       ruleText: "AFTER: Yan cümle öncelikli eylemdir ve 'Had V3' alabilir! After + Had V3 ➔ Ana Cümle V2."
     },
     as_soon_as: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main"], trPattern: "O gelir gelmez toplantıyı başlatacağız." },
+        { 
+          clauseA: "v1_present", 
+          clauseB: ["will_v1", "v1_main"], 
+          trPatternMap: {
+            will_v1: "O gelir gelmez toplantıyı başlatacağız.",
+            v1_main: "O gelir gelmez toplantıyı başlatırız."
+          },
+          trPattern: "O gelir gelmez toplantıyı başlatacağız." 
+        },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "O gelir gelmez haber verdi." }
       ],
       ruleText: "AS SOON AS / ONCE (Tezlik): Eylemler arasında zaman aralığı yoktur. Present ➔ Will V1; Past (V2) ➔ Past (V2) eşleşir."
     },
     until_till: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "O gelene kadar bekleyeceğiz." },
+        { 
+          clauseA: "v1_present", 
+          clauseB: ["will_v1", "v1_main", "can_may_v1"], 
+          trPatternMap: {
+            will_v1: "O gelene kadar bekleyeceğiz.",
+            v1_main: "O gelene kadar bekleriz.",
+            can_may_v1: "O gelene kadar bekleyebiliriz."
+          },
+          trPattern: "O gelene kadar bekleyeceğiz." 
+        },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "O gelene kadar beklediler." }
       ],
       ruleText: "UNTIL / TILL: Eylemin son sınırını gösterir. Yan cümlesine asla 'will' gelemez. V1 ➔ Will V1; V2 ➔ V2."
@@ -1908,9 +1983,12 @@
         }
       }
 
-      if (activeMatchingPair && activeMatchingPair.trPattern && isValidCombination) {
-        let cleanTR = activeMatchingPair.trPattern.split(" (")[0];
-        sentenceTRText = cleanTR.charAt(0).toUpperCase() + cleanTR.slice(1);
+      if (activeMatchingPair && isValidCombination) {
+        let patternStr = (activeMatchingPair.trPatternMap && activeMatchingPair.trPatternMap[state.selectedClauseB]) || activeMatchingPair.trPattern;
+        if (patternStr) {
+          let cleanTR = patternStr.split(" (")[0];
+          sentenceTRText = cleanTR.charAt(0).toUpperCase() + cleanTR.slice(1);
+        }
       } else {
         const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector];
         const trA = clauseAObj.sampleTR || clauseAObj.label;
