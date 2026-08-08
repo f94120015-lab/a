@@ -6801,6 +6801,8 @@ function renderUnitPathAndNodes(pContainer, unitId) {
 
     let lessonOriginalTagHTML = '';
 
+    const labelPosClass = pt.x > 50 ? 'label-left' : 'label-right';
+
     nodeWrapper.innerHTML = `
       ${isActive ? '<div class="pulse-ring"></div>' : ''}
       ${activeBannerContent}
@@ -6812,7 +6814,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
         ${isLocked ? '<div class="pin-lock-badge">🔒</div>' : ''}
         ${progressBadgeContent}
       </button>
-      <div class="lesson-node-label ${pt.x > 50 ? 'label-left' : 'label-right'} ${isLocked ? 'label-blur-mask' : ''}">
+      <div class="lesson-node-label ${labelPosClass} ${isLocked ? 'label-blur-mask' : ''}">
         <strong>${lesson.title.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</strong>
         ${lessonOriginalTagHTML}
         ${isNotUploadedLesson ? '<div class="lesson-not-uploaded-badge">⏳ Ders eklenmemiştir</div>' : ''}
@@ -7485,12 +7487,12 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     // Dynamically adjust popover position to fit within the visible viewport bounds
     requestAnimationFrame(() => {
       const popoverRect = popover.getBoundingClientRect();
-      const containerRect = pathContainer.getBoundingClientRect();
       const sidebar = document.querySelector('.sidebar-nav');
       
-      const isSidebarLeft = sidebar && window.innerWidth >= 820;
-      const leftBound = isSidebarLeft ? sidebar.getBoundingClientRect().right : 0;
-      const rightBound = window.innerWidth;
+      const isSidebarLeft = sidebar && window.innerWidth >= 820 && window.getComputedStyle(sidebar).display !== 'none';
+      const leftMargin = 16;
+      const leftBound = (isSidebarLeft ? sidebar.getBoundingClientRect().right : 0) + leftMargin;
+      const rightBound = window.innerWidth - leftMargin;
       
       const W_p = popoverRect.width || 450;
       const W_container = containerRect.width || 440;
@@ -15089,6 +15091,42 @@ function initEventListeners() {
     });
   });
 
+  // Sağ Slide-over Paneli (Sosyal & Araçlar)
+  window.openRightDrawer = function() {
+    const drawer = document.getElementById('right-side-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (drawer) drawer.classList.add('active');
+    if (backdrop) backdrop.classList.add('active');
+  };
+
+  window.closeRightDrawer = function() {
+    const drawer = document.getElementById('right-side-drawer');
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (drawer) drawer.classList.remove('active');
+    if (backdrop) backdrop.classList.remove('active');
+  };
+
+  const btnToggleDrawer = document.getElementById('btn-toggle-social-drawer');
+  if (btnToggleDrawer) {
+    btnToggleDrawer.addEventListener('click', window.openRightDrawer);
+  }
+
+  const btnCloseDrawer = document.getElementById('btn-close-side-drawer');
+  if (btnCloseDrawer) {
+    btnCloseDrawer.addEventListener('click', window.closeRightDrawer);
+  }
+
+  const drawerBackdrop = document.getElementById('drawer-backdrop');
+  if (drawerBackdrop) {
+    drawerBackdrop.addEventListener('click', window.closeRightDrawer);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      window.closeRightDrawer();
+    }
+  });
+
   // Tema
   document.getElementById('btn-theme').addEventListener('click', toggleTheme);
 
@@ -16543,6 +16581,25 @@ function checkIsLocal() {
   return false;
 }
 
+function isLocalDevDesktop() {
+  const isLocalHost = checkIsLocal();
+  const isDesktopWidth = window.innerWidth >= 1024;
+  return isLocalHost && isDesktopWidth;
+}
+
+function updateAdminTabVisibility() {
+  const adminTab = document.getElementById('btn-admin');
+  const adminSubtabs = document.getElementById('admin-subtabs-menu');
+  if (isLocalDevDesktop()) {
+    if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
+  } else {
+    if (adminTab) adminTab.style.setProperty('display', 'none', 'important');
+    if (adminSubtabs) adminSubtabs.style.setProperty('display', 'none', 'important');
+  }
+}
+
+window.addEventListener('resize', updateAdminTabVisibility);
+
 function renderRecentChanges() {
   return;
 }
@@ -16636,7 +16693,8 @@ function init() {
   // Preserve all units in the curriculum tree (total 63 units)
   console.log("DEBUG: Total units loaded:", typeof units !== 'undefined' ? units.length : 0);
 
-  const isLocal = checkIsLocal();
+  const isLocal = isLocalDevDesktop();
+  updateAdminTabVisibility();
   if (isLocal) {
     const adminTab = document.getElementById('btn-admin');
     if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
