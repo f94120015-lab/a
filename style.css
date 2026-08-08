@@ -6947,16 +6947,21 @@ input {
 .unit-banner-title-row {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
   width: 100%;
   min-width: 0;
 }
 
 .unit-banner-title-row > span:first-child {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  line-height: 1.35 !important;
   min-width: 0;
   flex: 1;
 }
@@ -11205,12 +11210,16 @@ nDown 0.3s ease;
     display: none !important; /* Mobil görünümde Soru Tipi, Ders ve Soru istatistik rozetlerini gizle */
   }
   .unit-banner h2,
-  .unit-banner-title-row {
+  .unit-banner-title-row,
+  .unit-banner-title-row > span:first-child {
     font-size: 0.95rem !important;
     white-space: normal !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     text-overflow: clip !important;
     word-break: break-word !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
     max-width: 100% !important;
     line-height: 1.3 !important;
   }
