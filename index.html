@@ -958,37 +958,37 @@
                 </div>
 
                 <!-- Açılır/Kapanır Gövde -->
-                <div id="store-licence-body" style="max-height: 0px; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s; opacity: 0; overflow: hidden; border-top: 1px solid transparent;">
-                  <div style="padding: 20px; background: var(--bg-body); display: flex; flex-direction: column; gap: 16px; text-align: left;">
+                <div id="store-licence-body" style="max-height: 0px; transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s; opacity: 0; overflow: hidden; border-top: 1px solid var(--border-color);">
+                  <div style="padding: 20px; display: flex; flex-direction: column; gap: 16px; text-align: left; box-sizing: border-box; width: 100%;">
                     
                     <!-- Durum Detayı -->
-                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; background: var(--bg-card); padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-                      <div>
-                        <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="store-licence-status-text">Durum: Kontrol ediliyor...</div>
-                        <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="store-licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
+                    <div class="profile-licence-status-banner">
+                      <div class="licence-status-info">
+                        <div class="licence-status-title" id="store-licence-status-text">Durum: Kontrol ediliyor...</div>
+                        <div class="licence-status-sub" id="store-licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
                       </div>
-                      <span id="store-licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25); display: none;">ÜCRETSİZ / KİLİTLİ</span>
+                      <span id="store-licence-status-badge" class="licence-badge-free" style="display: none;">ÜCRETSİZ / KİLİTLİ</span>
                     </div>
                     
                     <!-- Giriş Alanları -->
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                        <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 6px;">
-                          <label for="store-licence-email" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-                          <input type="email" id="store-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                    <div class="profile-licence-form">
+                      <div class="licence-form-grid">
+                        <div class="form-group">
+                          <label for="store-licence-email">E-Posta</label>
+                          <input type="email" id="store-licence-email" placeholder="örn: ahmet@gmail.com" class="profile-input">
                         </div>
-                        <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 6px;">
-                          <label for="store-licence-phone" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-                          <input type="tel" id="store-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                        <div class="form-group">
+                          <label for="store-licence-phone">Telefon</label>
+                          <input type="tel" id="store-licence-phone" placeholder="örn: 5551234567" class="profile-input">
                         </div>
                       </div>
-                      <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <label for="store-licence-input" style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
-                        <input type="text" id="store-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box; outline: none;">
+                      <div class="form-group">
+                        <label for="store-licence-input">Lisans Anahtarı</label>
+                        <input type="text" id="store-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" class="profile-input profile-input-code">
                       </div>
-                      <div style="display: flex; gap: 12px; width: 100%; margin-top: 8px;">
-                        <button id="btn-store-activate-licence" class="btn btn-primary" style="flex: 1; padding: 12px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; transition: all 0.2s;">Aktifleştir</button>
-                        <button id="btn-store-request-licence" class="btn btn-secondary-outline" style="flex: 1; padding: 12px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-md); border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent; margin-bottom: 0; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center;">Lisans Anahtarı Al</button>
+                      <div class="profile-licence-actions">
+                        <button id="btn-store-activate-licence" class="btn btn-primary">Aktifleştir</button>
+                        <button id="btn-store-request-licence" class="btn btn-secondary-outline" style="border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent;">Lisans Anahtarı Al</button>
                       </div>
                     </div>
                   </div>
