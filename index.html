@@ -379,29 +379,28 @@
           <div class="cause-effect-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
             
             <!-- Header Banner -->
-            <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(236, 72, 153, 0.15)); border: 1.5px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow-md);">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-                <div>
-                  <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--accent-primary); margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
-                    ⚡ Etkileşimli Neden-Etki Matrisi <span style="font-size: 0.75rem; background: var(--accent-primary); color: white; padding: 2px 10px; border-radius: 12px; font-weight: 700;">CETVEL I & II</span>
-                  </h2>
-                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
-                    Akademik İngilizcede neden-sonuç ilişkisi kuran fiil, edat ve bağlaç kalıplarının canlı matrisi. Yapıların üzerine tıklayarak canlı örneklerini inceleyin.
-                  </p>
-                </div>
+            <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(236, 72, 153, 0.12)); border: 1.5px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
+                  ⚡ Neden-Etki Matrisi <span style="font-size: 0.7rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">CETVEL I & II</span>
+                </h2>
 
                 <!-- Arama Kutusu -->
-                <div class="ce-search-wrap" style="position: relative; min-width: 240px;">
-                  <input type="text" id="ce-search-input" placeholder="Yapı veya kelime ara (örn: due to, lead to)..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                <div class="ce-search-wrap" style="position: relative; flex: 1; max-width: 280px; min-width: 200px;">
+                  <input type="text" id="ce-search-input" placeholder="Yapı / kelime ara (due to, lead to)..." style="width: 100%; padding: 7px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.82rem; outline: none; box-sizing: border-box;">
                 </div>
               </div>
 
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 12px 0; line-height: 1.35;">
+                Akademik İngilizcede neden-sonuç ilişkisi kuran fiil, edat ve bağlaç kalıplarının canlı matrisi.
+              </p>
+
               <!-- Yön Değiştirme Butonları (Cetvel I vs Cetvel II) -->
-              <div class="ce-direction-toggle-wrap" style="display: flex; gap: 12px; margin-top: 18px;">
-                <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+              <div class="ce-direction-toggle-wrap" style="display: flex; gap: 8px;">
+                <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
                   🔴 CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
                 </button>
-                <button type="button" class="ce-dir-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+                <button type="button" class="ce-dir-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
                   🔵 CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
                 </button>
               </div>
@@ -429,30 +428,29 @@
           <div class="time-matrix-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
             
             <!-- Header Banner -->
-            <div class="tm-header-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(245, 158, 11, 0.15)); border: 1.5px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow-md);">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-                <div>
-                  <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #8b5cf6; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
-                    ⏱️ Etkileşimli Zaman & Tense Uyumu Matrisi <span style="font-size: 0.75rem; background: #8b5cf6; color: white; padding: 2px 10px; border-radius: 12px; font-weight: 700;">MASTER ZAMAN KILAVUZU</span>
-                  </h2>
-                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
-                    Akademik İngilizcede kullanılan tüm zaman bağlaçları, tense uyum çapaları, devrik kalıplar ve zaman kısaltmalarının canlı rehberi. Yapıların üzerine tıklayarak kural ve örnekleri inceleyin.
-                  </p>
-                </div>
+            <div class="tm-header-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #8b5cf6; margin: 0; display: flex; align-items: center; gap: 8px;">
+                  ⏱️ Zaman & Tense Uyumu Matrisi <span style="font-size: 0.7rem; background: #8b5cf6; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER ZAMAN KILAVUZU</span>
+                </h2>
 
                 <!-- Arama Kutusu -->
-                <div class="tm-search-wrap" style="position: relative; min-width: 240px;">
-                  <input type="text" id="tm-search-input" placeholder="Zaman kalıbı ara (örn: by the time, since, when)..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                <div class="tm-search-wrap" style="position: relative; flex: 1; max-width: 280px; min-width: 200px;">
+                  <input type="text" id="tm-search-input" placeholder="Zaman kalıbı ara (by the time, since...)..." style="width: 100%; padding: 7px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.82rem; outline: none; box-sizing: border-box;">
                 </div>
               </div>
 
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 12px 0; line-height: 1.35;">
+                Akademik İngilizcedeki zaman bağlaçları, tense uyum çapaları, devrik kalıplar ve zaman kısaltmalarının canlı rehberi.
+              </p>
+
               <!-- Yön / Mod Değiştirme Butonları -->
-              <div class="tm-direction-toggle-wrap" style="display: flex; gap: 12px; margin-top: 18px;">
-                <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid #8b5cf6; background: rgba(139, 92, 246, 0.15); color: #8b5cf6; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
-                  ⏱️ ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers & Connectors)
+              <div class="tm-direction-toggle-wrap" style="display: flex; gap: 8px;">
+                <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #8b5cf6; background: rgba(139, 92, 246, 0.15); color: #8b5cf6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                  ⏱️ ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers)
                 </button>
-                <button type="button" class="tm-dir-btn" data-mode="tense_harmony" id="tm-mode-harmony" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
-                  📐 TENSE UYUM KURALLARI & ÇAPALAR (Tense Rules & Anchors)
+                <button type="button" class="tm-dir-btn" data-mode="tense_harmony" id="tm-mode-harmony" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                  📐 TENSE UYUM KURALLARI & ÇAPALAR (Tense Rules)
                 </button>
               </div>
             </div>
@@ -481,30 +479,29 @@
           <div class="transitions-matrix-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
             
             <!-- Header Banner -->
-            <div class="trm-header-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(245, 158, 11, 0.15)); border: 1.5px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-xl); padding: 24px; margin-bottom: 20px; box-shadow: var(--shadow-md);">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-                <div>
-                  <h2 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #10b981; margin: 0 0 6px 0; display: flex; align-items: center; gap: 10px;">
-                    🌉 Etkileşimli Cümle Bağlaçları & Geçiş İfadeleri <span style="font-size: 0.75rem; background: #10b981; color: white; padding: 2px 10px; border-radius: 12px; font-weight: 700;">MASTER BAĞLAÇ KILAVUZU</span>
-                  </h2>
-                  <p style="font-size: 0.92rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
-                    Akademik İngilizcedeki zıtlık, ekleme, örnekleme, amaç, şart, özet ve odaklanma bağlaçlarının eksiksiz canlı kütüphanesi. Noktalama kuralları ve örnek cümleler için kartlara tıklayın.
-                  </p>
-                </div>
+            <div class="trm-header-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #10b981; margin: 0; display: flex; align-items: center; gap: 8px;">
+                  🌉 Cümle Bağlaçları & Geçiş İfadeleri <span style="font-size: 0.7rem; background: #10b981; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER BAĞLAÇ KILAVUZU</span>
+                </h2>
 
                 <!-- Arama Kutusu -->
-                <div class="trm-search-wrap" style="position: relative; min-width: 240px;">
-                  <input type="text" id="trm-search-input" placeholder="Bağlaç / geçiş ara (örn: however, furthermore, provided that)..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.88rem; outline: none; box-sizing: border-box;">
+                <div class="trm-search-wrap" style="position: relative; flex: 1; max-width: 280px; min-width: 200px;">
+                  <input type="text" id="trm-search-input" placeholder="Bağlaç / geçiş ara (however, furthermore)..." style="width: 100%; padding: 7px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.82rem; outline: none; box-sizing: border-box;">
                 </div>
               </div>
 
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 12px 0; line-height: 1.35;">
+                Akademik İngilizcedeki zıtlık, ekleme, örnekleme, amaç, şart, özet ve odaklanma bağlaçlarının eksiksiz canlı kütüphanesi.
+              </p>
+
               <!-- Yön / Mod Değiştirme Butonları -->
-              <div class="trm-direction-toggle-wrap" style="display: flex; gap: 12px; margin-top: 18px;">
-                <button type="button" class="trm-dir-btn active" data-mode="sentence_connectors" id="trm-mode-connectors" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
-                  ⚡ CÜMLE GEÇİŞ ZARFLARI (however, furthermore, for instance...)
+              <div class="trm-direction-toggle-wrap" style="display: flex; gap: 8px;">
+                <button type="button" class="trm-dir-btn active" data-mode="sentence_connectors" id="trm-mode-connectors" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                  ⚡ CÜMLE GEÇİŞ ZARFLARI (however, furthermore...)
                 </button>
-                <button type="button" class="trm-dir-btn" data-mode="subordinate_preps" id="trm-mode-subordinates" style="flex: 1; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.95rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
-                  📐 YAN CÜMLE & EDAT BAĞLAÇLARI (although, so that, despite...)
+                <button type="button" class="trm-dir-btn" data-mode="subordinate_preps" id="trm-mode-subordinates" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                  📐 YAN CÜMLE & EDAT BAĞLAÇLARI (although, despite...)
                 </button>
               </div>
             </div>
