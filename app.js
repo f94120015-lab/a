@@ -6677,10 +6677,10 @@ function renderUnitPathAndNodes(pContainer, unitId) {
   if (pContainer.dataset.rendered === "true") return;
   pContainer.dataset.rendered = "true";
 
-  const unit = units.find(u => u.id === parseInt(unitId, 10));
+  const unit = units.find(u => String(u.id) === String(unitId));
   if (!unit) return;
 
-  const uIdx = units.findIndex(u => u.id === parseInt(unitId, 10));
+  const uIdx = units.findIndex(u => String(u.id) === String(unitId));
   const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
   const totalInUnit = unit.lessons.length;
   const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
@@ -7045,11 +7045,7 @@ function renderLessonTree() {
     unitSection.appendChild(pathContainer);
     container.appendChild(unitSection);
 
-    if (uIdx < 3) {
-      renderUnitPathAndNodes(pathContainer, unit.id);
-    } else {
-      observer.observe(unitSection);
-    }
+    renderUnitPathAndNodes(pathContainer, unit.id);
   });
 }
 
