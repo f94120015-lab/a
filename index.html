@@ -24,7 +24,7 @@
   <!-- Supabase client library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 
-  <link rel="stylesheet" href="style.css?v=2.6.0">
+  <link rel="stylesheet" href="style.css?v=2.7.0">
 </head>
 <body>
 
@@ -277,95 +277,9 @@
       <!-- Ana İçerik Alanı (Sol menünün sağında kalacak şekilde sarmalandı) -->
       <div class="home-main-wrapper">
 
-        <!-- Right Slide-Over Side Drawer Backdrop -->
+        <!-- Right Slide-Over Side Drawer Backdrop (Mobil için) -->
         <div class="drawer-backdrop" id="drawer-backdrop"></div>
 
-        <!-- Right Slide-Over Side Drawer Panel -->
-        <aside class="lessons-side-col right-side-drawer" id="right-side-drawer">
-          <div class="drawer-header">
-            <div class="drawer-header-title">
-              <span class="drawer-icon">👥</span>
-              <span>Sosyal & Araç Paneli</span>
-            </div>
-            <button class="drawer-close-btn" id="btn-close-side-drawer" title="Kapat">✕</button>
-          </div>
-          <div class="drawer-body">
-            <!-- Section Label 1: DURUM & İLERLEME -->
-            <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-stats" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
-              <span>Durum & İlerleme</span>
-              <span class="collapsible-icon">▼</span>
-            </div>
-
-            <!-- Seviye & Deneyim Kartı -->
-            <div class="profile-stats-card collapsible-content id-collapsible-stats" id="lessons-stats-card" style="margin-top: 0;">
-              <h3 class="profile-section-title title-shadow" style="margin-top: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">
-                <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(16, 185, 129, 0.08); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">📊</span>
-                <span class="title-shadow">Genel Durumun</span>
-              </h3>
-              
-              <div class="profile-level-badge">
-                <span class="p-level-num" id="user-level-display">Seviye 1</span>
-                <span class="p-level-title" id="user-title-display">Acemi Okuyucu</span>
-              </div>
-              
-              <div class="profile-xp-bar-wrap">
-                <div class="xp-bar-header">
-                  <span>Deneyim Puanı (XP)</span>
-                  <span id="user-xp-display">0 / 100 XP</span>
-                </div>
-                <div class="xp-bar-track">
-                  <div class="xp-bar-fill" id="user-xp-bar" style="width: 0%;"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Section Label 2: SOSYAL & TOPLULUK -->
-            <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-social" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
-              <span>Sosyal & Topluluk</span>
-              <span class="collapsible-icon">▼</span>
-            </div>
-
-            <!-- Sosyal Takip Modülü (Kullanıcılar) -->
-            <div class="profile-social-card collapsible-content id-collapsible-social" id="lessons-social-card">
-              <h3 class="profile-section-title title-shadow" style="margin-top: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">
-                <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.08); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">👥</span>
-                <span class="title-shadow">Kullanıcılar</span>
-              </h3>
-              
-              <div class="social-tabs">
-                <button class="social-tab active" data-subtab="all-users" id="subtab-all-users">Tüm Kullanıcılar</button>
-                <button class="social-tab" data-subtab="following" id="subtab-following">Takip Ettiklerim</button>
-              </div>
-              
-              <div class="social-search-wrap">
-                <div class="search-input-container">
-                  <input type="text" id="social-search-input" placeholder="Kullanıcı ara (örn: Ahmet, Elif, Can)..." autocomplete="off">
-                  <button class="search-clear-btn" id="social-search-clear" style="display:none;">✕</button>
-                </div>
-                <button class="btn btn-primary" id="btn-social-search" style="padding: 10px 20px; border-radius: 9999px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); border: none; font-weight: 800; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);">Ara</button>
-              </div>
-              <div class="social-search-results" id="social-search-results" style="display:none;"></div>
-              
-              <div class="social-list-container">
-                <div id="social-list-content"></div>
-              </div>
-            </div>
-
-            <!-- Section Label 3: HIZLI UYGULAMALAR & ARAÇLAR -->
-            <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-tools" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
-              <span>Hızlı Uygulamalar & Araçlar</span>
-              <span class="collapsible-icon">▼</span>
-            </div>
-
-            <!-- Paragraf Analizi Başlatma Kartı -->
-            <div class="collapsible-content id-collapsible-tools">
-              <div class="placement-banner" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(59, 130, 246, 0.12)); border: 1.5px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-lg); padding: 18px; margin-bottom: 0; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px;">
-                <div style="display: flex; align-items: center; justify-content: space-between;">
-                  <span style="font-size: 0.72rem; background: #8b5cf6; color: white; padding: 3px 10px; border-radius: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Özel Analiz Modülü</span>
-                  <span style="font-size: 1.2rem;">🔬</span>
-                </div>
-                <div>
-                  <h3 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0 0 6px 0; display: flex; align-items: center; gap: 8px;">
                     📝 Paragraf Tahlil Simülatörü
                   </h3>
 
@@ -2241,13 +2155,13 @@
 
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="data-stable.js?v=2.6.0" defer></script>
-  <script src="data.js?v=2.6.0" defer></script>
-  <script src="data-extra.js?v=2.6.0" defer></script>
-  <script src="rules-db.js?v=2.6.0" defer></script>
-  <script src="app.js?v=2.6.0" defer></script>
+  <script src="data-stable.js?v=2.7.0" defer></script>
+  <script src="data.js?v=2.7.0" defer></script>
+  <script src="data-extra.js?v=2.7.0" defer></script>
+  <script src="rules-db.js?v=2.7.0" defer></script>
+  <script src="app.js?v=2.7.0" defer></script>
   <script src="structure-robot.js?v=6.0.0" defer></script>
-  <script src="ezber-robotu.js?v=2.6.0" defer></script>
+  <script src="ezber-robotu.js?v=2.7.0" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">
