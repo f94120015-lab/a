@@ -7004,6 +7004,7 @@ function renderLessonTree() {
     const colorIndex = (uIdx % 10) + 1;
     banner.className = `unit-banner unit-color-${colorIndex} ${isNotUploadedUnit ? 'not-uploaded-breath' : ''}`;
     
+    const noDescUnitIds = [31, 32, 33, 34, 38, 36, 35, 37];
     const descCleaned = (unit.description || '').replace(/\s+,/g, ',');
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${descCleaned}</p>`;
     banner.innerHTML = `
