@@ -1624,8 +1624,8 @@ input {
 .lesson-popover {
   position: absolute;
   z-index: 500;
-  width: 450px;
-  max-width: calc(100vw - 32px);
+  width: 95%;
+  max-width: 440px;
   box-sizing: border-box;
   background: var(--bg-card);
   border: 1px solid var(--border-color);

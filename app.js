@@ -7303,7 +7303,8 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   // Positioned directly below the scaled-up labels (pxY + 65px) to prevent overlap with the smaller pins/labels
   popover.style.top = `${pxY + 65}px`;
   
-  popover.style.left = `${pctX}%`;
+  popover.style.left = `50%`;
+  popover.style.setProperty('--arrow-left', `${pctX}%`);
 
   const isUnlocked = isLessonUnlocked(lessonId);
 
