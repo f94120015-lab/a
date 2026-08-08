@@ -7027,7 +7027,7 @@ function renderLessonTree() {
     const noDescUnitIds = [31, 32, 33, 34, 38, 36, 35, 37];
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${unit.description}</p>`;
     banner.innerHTML = `
-      <div class="unit-banner-info" style="width: 100%;">
+      <div class="unit-banner-info">
         <h2 class="unit-banner-title-row">
           <span>${unitDisplayNames[unit.id]}</span>
           ${notUploadedBadgeHTML}

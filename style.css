@@ -1030,15 +1030,24 @@ input {
 
 .unit-banner-info {
   flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.unit-banner h2 {
+.unit-banner h2,
+.unit-banner-title-row {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: #fff;
   margin: 0;
-  letter-spacing: 0.02em;
+  line-height: 1.35;
+  white-space: normal !important;
+  word-break: break-word;
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 
 .unit-banner p {
@@ -1046,9 +1055,47 @@ input {
   color: rgba(255, 255, 255, 0.9);
   margin-top: 4px;
   font-family: var(--font-body);
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.unit-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0 !important;
+  min-width: max-content;
+  z-index: 10;
+}
+
+.unit-progress-text {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 4px 12px;
+  border-radius: 14px;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.unit-progress-bar-wrap {
+  width: 60px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
   overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+.unit-progress-bar {
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: width 0.4s ease;
 }
 
 .unit-banner:hover {
@@ -11157,20 +11204,30 @@ nDown 0.3s ease;
   .unit-banner-questions-tag {
     display: none !important; /* Mobil görünümde Soru Tipi, Ders ve Soru istatistik rozetlerini gizle */
   }
-  .unit-banner h2 {
+  .unit-banner h2,
+  .unit-banner-title-row {
     font-size: 0.95rem !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 80%;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: break-word !important;
+    max-width: 100% !important;
+    line-height: 1.3 !important;
   }
   .unit-banner-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .unit-progress-container {
+    flex-shrink: 0 !important;
+    min-width: max-content !important;
+  }
+  .unit-progress-text {
+    font-size: 0.82rem !important;
+    padding: 3px 9px !important;
+    white-space: nowrap !important;
   }
 
   /* 3. Kıvrımlı Patika ve Düğümlerin Sıkıştırılması */
