@@ -911,10 +911,14 @@ input {
    ════════════════════════════════════════════════════════════ */
 .home-content {
   flex: 1;
-  padding: 32px 24px 80px;
-  max-width: 1024px;
+  padding: 32px 20px 80px;
+  max-width: 960px;
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 /* ============================================================
@@ -923,6 +927,10 @@ input {
 
 .unit-section {
   position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .unit-banner {
@@ -933,13 +941,17 @@ input {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
+  width: 100%;
+  max-width: 640px;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 24px;
+  padding: 16px 20px;
   color: #fff;
+  gap: 12px;
+  box-sizing: border-box;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -1859,23 +1871,26 @@ input {
    DERSLER SEKMESİ İKİ SÜTUNLU DESKTOP DÜZENİ
    ════════════════════════════════════════════════════════════ */
 .lessons-layout {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 900px;
+  max-width: 680px;
   margin: 0 auto;
 }
 
 @media (min-width: 820px) {
   .lessons-layout {
-    display: block;
+    display: flex;
   }
 }
 
-
 .lessons-main-col {
+  width: 100%;
   min-width: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .lessons-side-col {
