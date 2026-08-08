@@ -481,7 +481,7 @@
           <div class="ezber-title-row">
             <div>
               <h2 class="ezber-main-title">
-                🧠 Bağlaç & Yapı Ezber Robotu <span class="ezber-badge">PRO DRILL</span>
+                🧠 Bağlaç Robotu <span class="ezber-badge">PRO DRILL</span>
               </h2>
               <p class="ezber-subtitle">
                 80+ bağlaç, edat ve neden-sonuç kalıbını refleks haline getiren aktif geri çağırma ve hafıza motoru.
