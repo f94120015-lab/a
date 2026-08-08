@@ -24,7 +24,7 @@
   <!-- Supabase client library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 
-  <link rel="stylesheet" href="style.css?v=2.4.0">
+  <link rel="stylesheet" href="style.css?v=2.5.0">
 </head>
 <body>
 
@@ -98,9 +98,11 @@
           👥 <span class="social-drawer-btn-label">Sosyal & Araçlar</span>
         </button>
         <button class="btn-icon" id="btn-theme" title="Tema değiştir">🌙</button>
-        <button class="btn btn-login-topbar" id="btn-login-topbar" style="display:none;">Giriş Yap</button>
-        <div class="user-menu">
-          <button class="btn-icon" id="btn-user-menu" title="Profil">👤</button>
+        <div class="user-menu" id="topbar-user-menu">
+          <button class="topbar-user-pill" id="btn-user-menu" title="Profil / Giriş Yap">
+            <span class="topbar-avatar-wrap" id="topbar-avatar-wrap">👤</span>
+            <span class="topbar-user-name" id="topbar-user-name">Giriş Yap</span>
+          </button>
           <div class="user-dropdown" id="user-dropdown">
             <span class="dropdown-name" id="dropdown-name">Kullanıcı</span>
             <hr>
@@ -2227,13 +2229,13 @@
 
   <div class="toast-container" id="toast-container"></div>
 
-  <script src="data-stable.js?v=2.4.0" defer></script>
-  <script src="data.js?v=2.4.0" defer></script>
-  <script src="data-extra.js?v=2.4.0" defer></script>
-  <script src="rules-db.js?v=2.4.0" defer></script>
-  <script src="app.js?v=2.4.0" defer></script>
+  <script src="data-stable.js?v=2.5.0" defer></script>
+  <script src="data.js?v=2.5.0" defer></script>
+  <script src="data-extra.js?v=2.5.0" defer></script>
+  <script src="rules-db.js?v=2.5.0" defer></script>
+  <script src="app.js?v=2.5.0" defer></script>
   <script src="structure-robot.js?v=6.0.0" defer></script>
-  <script src="ezber-robotu.js?v=2.4.0" defer></script>
+  <script src="ezber-robotu.js?v=2.5.0" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">

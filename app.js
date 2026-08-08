@@ -6073,13 +6073,15 @@ function updateTopBar() {
   if (heartsCountSide) heartsCountSide.textContent = state.hearts;
 
   const dropdownName = document.getElementById('dropdown-name');
-  if (dropdownName) {
-    const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
-    dropdownName.textContent = state.displayName || full || state.username || 'Kullanıcı';
-  }
+  const topbarUserName = document.getElementById('topbar-user-name');
+  const topbarAvatarWrap = document.getElementById('topbar-avatar-wrap');
 
-  const loginTopbarBtn = document.getElementById('btn-login-topbar');
-  const userMenu = document.querySelector('.user-menu');
+  const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+  const displayName = state.displayName || full || state.username;
+
+  if (dropdownName) {
+    dropdownName.textContent = displayName || 'Kullanıcı';
+  }
 
   const isGuestUser = !state.username || state.isGuest || state.username === 'Misafir';
   const leaderboardTabBtn = document.querySelector('.sidebar-menu button[data-tab="leaderboard"]');
@@ -6087,51 +6089,29 @@ function updateTopBar() {
     leaderboardTabBtn.style.display = isGuestUser ? 'none' : 'flex';
   }
 
-  if (state.isGuest) {
-    if (loginTopbarBtn) loginTopbarBtn.style.display = 'block';
-    if (userMenu) userMenu.style.display = 'none';
+  if (isGuestUser) {
+    if (topbarUserName) topbarUserName.textContent = 'Giriş Yap';
+    if (topbarAvatarWrap) {
+      topbarAvatarWrap.innerHTML = '👤';
+      topbarAvatarWrap.style.backgroundColor = 'var(--bg-secondary)';
+      topbarAvatarWrap.style.color = 'var(--text-secondary)';
+    }
   } else {
-    if (loginTopbarBtn) loginTopbarBtn.style.display = 'none';
-    if (userMenu) userMenu.style.display = 'block';
-  }
-
-  const userMenuBtn = document.getElementById('btn-user-menu');
-  if (userMenuBtn) {
-    if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
-      const emoji = state.profilePhoto.split(':')[1];
-      userMenuBtn.innerHTML = `<span style="font-size: 1.2rem; display: flex; align-items: center; justify-content: center;">${emoji}</span>`;
-      userMenuBtn.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
-      userMenuBtn.style.display = 'flex';
-      userMenuBtn.style.alignItems = 'center';
-      userMenuBtn.style.justifyContent = 'center';
-      userMenuBtn.style.borderRadius = '50%';
-      userMenuBtn.style.width = '34px';
-      userMenuBtn.style.height = '34px';
-      userMenuBtn.style.padding = '0';
-      userMenuBtn.style.border = 'none';
-    } else if (state.profilePhoto) {
-      userMenuBtn.innerHTML = `<img src="${state.profilePhoto}" style="width: 34px; height: 34px; border-radius: 50%; object-fit: cover; display: block;">`;
-      userMenuBtn.style.backgroundColor = 'transparent';
-      userMenuBtn.style.display = 'flex';
-      userMenuBtn.style.alignItems = 'center';
-      userMenuBtn.style.justifyContent = 'center';
-      userMenuBtn.style.borderRadius = '50%';
-      userMenuBtn.style.width = '34px';
-      userMenuBtn.style.height = '34px';
-      userMenuBtn.style.padding = '0';
-      userMenuBtn.style.border = 'none';
-    } else {
-      const firstLetter = (state.username || 'K').charAt(0).toUpperCase();
-      userMenuBtn.innerHTML = `<span style="font-size: 0.95rem; font-weight: bold; color: white; display: flex; align-items: center; justify-content: center;">${firstLetter}</span>`;
-      userMenuBtn.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
-      userMenuBtn.style.display = 'flex';
-      userMenuBtn.style.alignItems = 'center';
-      userMenuBtn.style.justifyContent = 'center';
-      userMenuBtn.style.borderRadius = '50%';
-      userMenuBtn.style.width = '34px';
-      userMenuBtn.style.height = '34px';
-      userMenuBtn.style.padding = '0';
-      userMenuBtn.style.border = 'none';
+    if (topbarUserName) topbarUserName.textContent = displayName || 'Kullanıcı';
+    if (topbarAvatarWrap) {
+      topbarAvatarWrap.style.color = 'white';
+      if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
+        const emoji = state.profilePhoto.split(':')[1];
+        topbarAvatarWrap.innerHTML = `<span style="font-size: 1.15rem; display: flex; align-items: center; justify-content: center;">${emoji}</span>`;
+        topbarAvatarWrap.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
+      } else if (state.profilePhoto) {
+        topbarAvatarWrap.innerHTML = `<img src="${state.profilePhoto}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+        topbarAvatarWrap.style.backgroundColor = 'transparent';
+      } else {
+        const firstLetter = (displayName || 'K').charAt(0).toUpperCase();
+        topbarAvatarWrap.innerHTML = `<span style="font-size: 0.95rem; font-weight: bold; color: white;">${firstLetter}</span>`;
+        topbarAvatarWrap.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
+      }
     }
   }
 
