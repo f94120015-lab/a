@@ -67,6 +67,9 @@
     <!-- Üst Bar (Tüm ekranı kaplayacak şekilde en üste alındı) -->
     <header class="top-bar">
       <div class="top-bar-left">
+        <!-- Mobil Menü Açma Butonu (Masaüstünde gizli) -->
+        <button class="btn-icon mobile-menu-toggle" id="btn-mobile-menu" title="Menü">☰</button>
+
         <!-- Masaüstü için Başlık Yazısı ve Yeni Logo (Masaüstünde gösterilecek, mobilde gizlenecek) -->
         <div class="top-bar-title-wrap">
           <img src="assets/logo_topbar.png" alt="Logo" class="top-bar-title-logo">
@@ -108,6 +111,9 @@
         </div>
       </div>
     </header>
+
+    <!-- Mobil Menü Karartma Örtüsü -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
 
     <!-- Gövde Bölümü (Sidebar ve Ana İçerik yan yana) -->
     <div class="home-body-layout">
@@ -1541,11 +1547,11 @@
           
           <!-- Assembly Line Slots (The 3 Matrices) -->
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 16px 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+            <div class="srobot-slots-header">
               <h3 style="margin: 0; font-size: 0.92rem; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 8px; letter-spacing: 0.5px;">
                 <span>⚙️</span> MONTAJ HATTI (SLOTS)
               </h3>
-              <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                 <span id="srobot-slots-progress-badge" style="font-size: 0.75rem; font-weight: 700; background: rgba(6, 182, 212, 0.12); color: #06b6d4; padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">
                   0/3 Parça Takıldı
                 </span>
@@ -1556,7 +1562,7 @@
             </div>
 
             <!-- Slots Pipeline Grid with Flow Indicators -->
-            <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 8px; align-items: center;">
+            <div class="srobot-slots-pipeline">
               
               <!-- Slot 1: Connector Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-1" style="background: var(--bg-body); border: 1.5px dashed rgba(6, 182, 212, 0.4); border-radius: var(--radius-md); padding: 10px 12px; text-align: center; transition: all 0.2s;">
@@ -1569,7 +1575,7 @@
               </div>
 
               <!-- Pipeline Arrow 1 -->
-              <div style="font-size: 1.1rem; color: rgba(6, 182, 212, 0.5); font-weight: 900; user-select: none;">➜</div>
+              <div class="srobot-pipeline-arrow" style="color: rgba(6, 182, 212, 0.6);">➜</div>
 
               <!-- Slot 2: Clause A Tense Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-2" style="background: var(--bg-body); border: 1.5px dashed rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 10px 12px; text-align: center; transition: all 0.2s;">
@@ -1582,7 +1588,7 @@
               </div>
 
               <!-- Pipeline Arrow 2 -->
-              <div style="font-size: 1.1rem; color: rgba(139, 92, 246, 0.5); font-weight: 900; user-select: none;">➜</div>
+              <div class="srobot-pipeline-arrow" style="color: rgba(139, 92, 246, 0.6);">➜</div>
 
               <!-- Slot 3: Clause B Modal/Tense Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-3" style="background: var(--bg-body); border: 1.5px dashed rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 10px 12px; text-align: center; transition: all 0.2s;">

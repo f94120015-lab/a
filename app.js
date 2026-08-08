@@ -16618,7 +16618,43 @@ function stopHeartbeat() {
 // ============================================================
 // BAŞLATMA
 // ============================================================
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('btn-mobile-menu');
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  const overlay = document.getElementById('sidebar-overlay');
+
+  if (toggleBtn && sidebarNav && overlay) {
+    const openMenu = () => {
+      sidebarNav.classList.add('mobile-open');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      sidebarNav.classList.remove('mobile-open');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sidebarNav.classList.contains('mobile-open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    overlay.addEventListener('click', closeMenu);
+
+    document.querySelectorAll('.sidebar-menu .nav-tab').forEach(btn => {
+      btn.addEventListener('click', closeMenu);
+    });
+  }
+}
+
 function init() {
+  initMobileMenu();
   sanitizeAllQuestions();
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
