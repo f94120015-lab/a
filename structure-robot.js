@@ -1975,32 +1975,15 @@
       }
 
       // Dynamic Turkish Translation
-      let activeMatchingPair = null;
-      if (connObj && state.selectedClauseA) {
-        const ruleObj = RULE_RULES[state.selectedConnector];
-        if (ruleObj && ruleObj.validPairs) {
-          activeMatchingPair = ruleObj.validPairs.find(p => p.clauseA === state.selectedClauseA);
-        }
-      }
+      const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector] || "{A_TR}, {B_TR}.";
+      const trA = clauseAObj.sampleTR || clauseAObj.label;
+      const trB = clauseBObj.sampleTR || clauseBObj.label;
 
-      if (activeMatchingPair && isValidCombination) {
-        let patternStr = (activeMatchingPair.trPatternMap && activeMatchingPair.trPatternMap[state.selectedClauseB]) || activeMatchingPair.trPattern;
-        if (patternStr) {
-          let cleanTR = patternStr.replace(/\s*\([^)]*\)/g, "").trim();
-          sentenceTRText = cleanTR.charAt(0).toUpperCase() + cleanTR.slice(1);
-        }
-      } else {
-        const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector];
-        const trA = clauseAObj.sampleTR || clauseAObj.label;
-        const trB = clauseBObj.sampleTR || clauseBObj.label;
-
-        if (templateTR) {
-          let resultTR = templateTR
-            .replace("{A_TR}", trA)
-            .replace("{B_TR}", trB);
-          resultTR = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
-          sentenceTRText = resultTR;
-        }
+      if (templateTR) {
+        let resultTR = templateTR
+          .replace("{A_TR}", trA)
+          .replace("{B_TR}", trB);
+        sentenceTRText = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
       }
     } else {
       let parts = [];
