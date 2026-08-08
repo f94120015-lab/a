@@ -7045,7 +7045,11 @@ function renderLessonTree() {
     unitSection.appendChild(pathContainer);
     container.appendChild(unitSection);
 
-    observer.observe(unitSection);
+    if (uIdx < 3) {
+      renderUnitPathAndNodes(pathContainer, unit.id);
+    } else {
+      observer.observe(unitSection);
+    }
   });
 }
 
