@@ -284,38 +284,52 @@
 
             <div class="lessons-side-col">
               <!-- Section Label 1: DURUM & İLERLEME -->
-              <div class="sidebar-section-label" style="padding-left: 4px; padding-right: 4px;">Durum & İlerleme</div>
+              <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-stats" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
+                <span>Durum & İlerleme</span>
+                <span class="collapsible-icon">▼</span>
+              </div>
               
               <!-- Yan Sütun Stats Bar (Masaüstü için) -->
-              <div class="side-stats-bar">
-                <div class="stat-pill" id="stat-streak-side" title="Günlük seri">
-                  <span class="stat-icon-wrap" style="background: rgba(245, 158, 11, 0.12); color: #d97706;"><span class="stat-icon">🔥</span></span>
-                  <div class="stat-info">
-                    <span class="stat-label-text">Seri</span>
-                    <span class="stat-value" id="streak-count-side">0 Gün</span>
+              <div class="side-stats-bar collapsible-content id-collapsible-stats">
+                <div class="stat-card-box" id="stat-streak-side" title="Günlük seri">
+                  <div class="stat-card-icon-wrap streak-wrap">
+                    <span class="stat-icon">🔥</span>
+                  </div>
+                  <div class="stat-card-content">
+                    <span class="stat-card-label">SERİ</span>
+                    <span class="stat-card-val" id="streak-count-side">3</span>
                   </div>
                 </div>
-                <div class="stat-pill" id="stat-xp-side" title="Deneyim puanı">
-                  <span class="stat-icon-wrap" style="background: rgba(139, 92, 246, 0.12); color: #8b5cf6;"><span class="stat-icon">⚡</span></span>
-                  <div class="stat-info">
-                    <span class="stat-label-text">XP Puanı</span>
-                    <span class="stat-value" id="xp-count-side">0 XP</span>
+
+                <div class="stat-card-box" id="stat-xp-side" title="Deneyim puanı">
+                  <div class="stat-card-icon-wrap xp-wrap">
+                    <span class="stat-icon">⚡</span>
+                  </div>
+                  <div class="stat-card-content">
+                    <span class="stat-card-label">XP PUANI</span>
+                    <span class="stat-card-val" id="xp-count-side">125</span>
                   </div>
                 </div>
-                <div class="stat-pill hearts" id="stat-hearts-side" title="Can">
-                  <span class="stat-icon-wrap" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;"><span class="stat-icon">❤️</span></span>
-                  <div class="stat-info">
-                    <span class="stat-label-text">Kalan Can</span>
-                    <span class="stat-value" id="hearts-count-side">5 Can</span>
+
+                <div class="stat-card-box" id="stat-hearts-side" title="Can">
+                  <div class="stat-card-icon-wrap hearts-wrap">
+                    <span class="stat-icon">❤️</span>
+                  </div>
+                  <div class="stat-card-content">
+                    <span class="stat-card-label">KALAN CAN</span>
+                    <span class="stat-card-val" id="hearts-count-side">1</span>
                   </div>
                 </div>
               </div>
 
               <!-- Section Label 2: SOSYAL & TOPLULUK -->
-              <div class="sidebar-section-label" style="padding-left: 4px; padding-right: 4px;">Sosyal & Topluluk</div>
+              <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-social" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
+                <span>Sosyal & Topluluk</span>
+                <span class="collapsible-icon">▼</span>
+              </div>
 
               <!-- Sosyal Takip Modülü (Kullanıcılar) -->
-              <div class="profile-social-card" id="lessons-social-card">
+              <div class="profile-social-card collapsible-content id-collapsible-social" id="lessons-social-card">
                 <h3 class="profile-section-title title-shadow" style="margin-top: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">
                   <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.08); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">👥</span>
                   <span class="title-shadow">Kullanıcılar</span>
@@ -341,34 +355,39 @@
               </div>
 
               <!-- Section Label 3: ALIŞTIRMA & TEKRAR -->
-              <div class="sidebar-section-label" style="padding-left: 4px; padding-right: 4px;">Alıştırma & Tekrar</div>
-
-              <!-- Spaced Repetition (Review) Banner -->
-              <div class="review-banner" id="review-banner">
-                <div class="review-banner-left">
-                  <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800; margin-bottom: 6px;">
-                    <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">🔄</span>
-                    <span class="title-shadow" style="color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Akıllı Tekrar Zamanı!</span>
-                  </h3>
-                  <p>Hata yaptığın sorulardan oluşan özel tekrar testini çöz, bilgilerini pekiştir.</p>
-                </div>
-                <button class="btn btn-secondary" id="btn-start-review">Hızlı Tekrar (0 Soru)</button>
+              <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-practice" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
+                <span>Alıştırma & Tekrar</span>
+                <span class="collapsible-icon">▼</span>
               </div>
 
-              <!-- Paragraf Çözümleme (Deneme) Banner -->
-              <div class="paragraph-analysis-banner" id="paragraph-analysis-banner">
-                <div class="paragraph-analysis-banner-content">
-                  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                    <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.12); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">📖</span>
-                    <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800;">
-                      <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.68rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
+              <div class="collapsible-content id-collapsible-practice" style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                <!-- Spaced Repetition (Review) Banner -->
+                <div class="review-banner" id="review-banner">
+                  <div class="review-banner-left">
+                    <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800; margin-bottom: 6px;">
+                      <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">🔄</span>
+                      <span class="title-shadow" style="color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Akıllı Tekrar Zamanı!</span>
                     </h3>
+                    <p>Hata yaptığın sorulardan oluşan özel tekrar testini çöz, bilgilerini pekiştir.</p>
                   </div>
-                  <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
+                  <button class="btn btn-secondary" id="btn-start-review">Hızlı Tekrar (0 Soru)</button>
                 </div>
-                <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
-                  ✨ Analize Başla (10. Ders Sonu)
-                </button>
+
+                <!-- Paragraf Çözümleme (Deneme) Banner -->
+                <div class="paragraph-analysis-banner" id="paragraph-analysis-banner">
+                  <div class="paragraph-analysis-banner-content">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                      <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.12); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">📖</span>
+                      <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800;">
+                        <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.68rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
+                      </h3>
+                    </div>
+                    <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
+                  </div>
+                  <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
+                    ✨ Analize Başla (10. Ders Sonu)
+                  </button>
+                </div>
               </div>
             </div>
           </div>

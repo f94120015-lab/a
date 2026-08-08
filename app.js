@@ -2028,44 +2028,11 @@ function playFeedbackSound(isCorrect) {
 
 function playCompletionSound(isSuccess = true) {
   try {
-    const ctx = getAudioContext();
-    if (!ctx) return;
-    const now = ctx.currentTime;
-
     if (isSuccess) {
-      // Grand celebratory fanfare chime sequence (C5 -> E5 -> G5 -> C6 -> E6 -> G6)
-      const notes = [
-        { freq: 523.25, time: 0.00, dur: 0.16 }, // C5
-        { freq: 659.25, time: 0.10, dur: 0.16 }, // E5
-        { freq: 783.99, time: 0.20, dur: 0.18 }, // G5
-        { freq: 1046.50, time: 0.32, dur: 0.25 }, // C6
-        { freq: 1318.51, time: 0.44, dur: 0.25 }, // E6
-        { freq: 1567.98, time: 0.56, dur: 0.70 }  // G6 (sustained victory tone)
-      ];
-
-      notes.forEach(n => {
-        const osc1 = ctx.createOscillator();
-        const osc2 = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc1.type = 'sine';
-        osc1.frequency.setValueAtTime(n.freq, now + n.time);
-
-        osc2.type = 'triangle';
-        osc2.frequency.setValueAtTime(n.freq * 0.5, now + n.time);
-
-        gain.gain.setValueAtTime(0.001, now + n.time);
-        gain.gain.linearRampToValueAtTime(0.55, now + n.time + 0.02);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + n.time + n.dur);
-
-        osc1.connect(gain);
-        osc2.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc1.start(now + n.time);
-        osc2.start(now + n.time);
-        osc1.stop(now + n.time + n.dur);
-        osc2.stop(now + n.time + n.dur);
+      const audio = new Audio('assets/uy_aha.mp3');
+      audio.volume = 0.9;
+      audio.play().catch(e => {
+        console.warn("Audio play blocked or failed:", e);
       });
     } else {
       playFeedbackSound(false);
@@ -22286,6 +22253,20 @@ function renderActiveMission() {
     });
   }
 
+  initCollapsibleSidebar();
+}
+
+function initCollapsibleSidebar() {
+  document.querySelectorAll('.collapsible-label').forEach(label => {
+    label.addEventListener('click', () => {
+      const targetId = label.dataset.toggle;
+      const content = document.querySelector(`.id-${targetId}`);
+      if (content) {
+        const isCollapsed = content.classList.toggle('collapsed');
+        label.classList.toggle('collapsed', isCollapsed);
+      }
+    });
+  });
 }
 
 // DOM yüklendiğinde başlat

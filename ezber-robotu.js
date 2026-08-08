@@ -903,6 +903,10 @@
         `;
       }
 
+      if (typeof playCompletionSound === 'function') {
+        playCompletionSound(true);
+      }
+
       if (typeof confetti === "function" && stateEZ.streak % 5 === 0) {
         confetti({ particleCount: 60, spread: 60, origin: { y: 0.7 } });
       }
