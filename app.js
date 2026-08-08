@@ -7045,9 +7045,6 @@ function renderLessonTree() {
       </div>
       <div class="unit-progress-container">
         <span class="unit-progress-text">${completedInUnit}/${totalInUnit}</span>
-        <div class="unit-progress-bar-wrap">
-          <div class="unit-progress-bar" style="width: ${progressPercent}%"></div>
-        </div>
       </div>
     `;
     unitSection.appendChild(banner);

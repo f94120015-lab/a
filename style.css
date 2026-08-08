@@ -1062,7 +1062,8 @@ input {
 .unit-progress-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-end;
+  margin-left: auto;
   flex-shrink: 0 !important;
   min-width: max-content;
   z-index: 10;
