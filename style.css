@@ -3292,12 +3292,7 @@ input {
   }
 }
 
-/* Mobil (820px altı) */
-@media (max-width: 819px) {
-  html {
-    font-size: 15px;
-  }
-/* Desktop rules for mobile toggle & overlay */
+/* Masaüstü Ek Kuralları (820px ve üzeri) */
 @media (min-width: 820px) {
   .mobile-menu-toggle,
   .sidebar-overlay {
@@ -5571,28 +5566,32 @@ input {
 .top-bar-title-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .top-bar-title-logo {
-  height: 46px;
+  height: 32px;
+  max-height: 32px;
   width: auto;
   object-fit: contain;
 }
 
 .top-bar-title-text {
-  font-family: var(--font-body);
-  font-size: 1.8rem; /* Barın izin verdiği ölçüde büyütülmüş hali */
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
   font-weight: 700;
-  color: var(--accent-primary-hover);
+  color: var(--text-primary);
   letter-spacing: -0.01em;
   line-height: 1.2;
   white-space: nowrap;
 }
 
 .top-bar-title-amok {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 1.8rem;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
   font-weight: 800;
   letter-spacing: 0.05em;
   display: inline-flex;
@@ -5766,13 +5765,21 @@ input {
     box-sizing: border-box;
   }
 
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
   .top-bar-left .stat-pill {
     display: none !important;
   }
   
   .top-bar-left .top-bar-title-wrap {
-    display: flex;
-    margin-left: 216px; /* Aligns with main content wrapper (240px sidebar width - 24px top-bar padding) */
+    display: flex !important;
+    margin-left: 0;
+  }
+
+  .top-bar-center {
+    display: none !important;
   }
 
   .side-stats-bar {
