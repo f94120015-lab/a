@@ -13603,53 +13603,52 @@ function renderProfile() {
         ` : ''}
 
         <div class="profile-actions-card" style="margin-top: 0;">
-          <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">📝 Kayıt Bilgileri (Değiştirilemez)</h3>
-          <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 10px; font-size: 0.88rem;">
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
-              <span style="color: var(--text-secondary); font-weight: 600;">Ad Soyad:</span>
-              <span style="color: var(--text-primary); font-weight: 700;">${escapeHtml(((state.firstName || '') + ' ' + (state.lastName || '')).trim() || '—')}</span>
+          <h3 class="profile-section-title" style="margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">📝 Kayıt Bilgileri (Değiştirilemez)</h3>
+          <div class="profile-info-list">
+            <div class="profile-info-row">
+              <span class="info-label">Ad Soyad:</span>
+              <span class="info-value">${escapeHtml(((state.firstName || '') + ' ' + (state.lastName || '')).trim() || '—')}</span>
             </div>
-            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
-              <span style="color: var(--text-secondary); font-weight: 600;">E-Posta:</span>
-              <span style="color: var(--text-primary); font-weight: 700;">${escapeHtml(state.email || '—')}</span>
+            <div class="profile-info-row">
+              <span class="info-label">E-Posta:</span>
+              <span class="info-value">${escapeHtml(state.email || '—')}</span>
             </div>
-            <div style="display: flex; justify-content: space-between; padding-bottom: 2px;">
-              <span style="color: var(--text-secondary); font-weight: 600;">Telefon:</span>
-              <span style="color: var(--text-primary); font-weight: 700;">${escapeHtml(state.phone || '—')}</span>
+            <div class="profile-info-row">
+              <span class="info-label">Telefon:</span>
+              <span class="info-value">${escapeHtml(state.phone || '—')}</span>
             </div>
           </div>
         </div>
 
         <div class="profile-actions-card" style="margin-top: 0;">
-          <h3 class="profile-section-title" style="margin-top: 0; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
-          <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; text-align: left; display: flex; flex-direction: column; gap: 12px;">
-            <div id="profile-licence-status-box" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-              <div>
-                <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary);" id="licence-status-text">Durum: Kontrol ediliyor...</div>
-                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
-              </div>
-              <span id="licence-status-badge" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">ÜCRETSİZ / KİLİTLİ</span>
+          <h3 class="profile-section-title" style="margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">🔑 Üyelik & Lisans</h3>
+          
+          <div class="profile-licence-status-banner" id="profile-licence-status-box">
+            <div class="licence-status-info">
+              <div class="licence-status-title" id="licence-status-text">Durum: Kontrol ediliyor...</div>
+              <div class="licence-status-sub" id="licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
             </div>
-            
-            <div style="border-top: 1px solid var(--border-color); padding-top: 12px; display: flex; flex-direction: column; gap: 12px;">
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
-                  <label for="profile-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-                  <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
-                </div>
-                <div style="flex: 1; min-width: 140px; display: flex; flex-direction: column; gap: 4px;">
-                  <label for="profile-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-                  <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
-                </div>
+            <span id="licence-status-badge" class="licence-badge-free">ÜCRETSİZ / KİLİTLİ</span>
+          </div>
+          
+          <div class="profile-licence-form">
+            <div class="licence-form-grid">
+              <div class="form-group">
+                <label for="profile-licence-email">E-Posta</label>
+                <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" class="profile-input">
               </div>
-              <div style="display: flex; flex-direction: column; gap: 4px;">
-                <label for="profile-licence-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
-                <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box;">
+              <div class="form-group">
+                <label for="profile-licence-phone">Telefon</label>
+                <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" class="profile-input">
               </div>
-              <div style="display: flex; gap: 8px; width: 100%; margin-top: 4px;">
-                <button id="btn-profile-activate-licence" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0;">Aktifleştir</button>
-                <button id="btn-profile-request-licence" class="btn btn-secondary-outline" style="flex: 1; padding: 10px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent; margin-bottom: 0;">Lisans Anahtarı Al</button>
-              </div>
+            </div>
+            <div class="form-group">
+              <label for="profile-licence-input">Lisans Anahtarı</label>
+              <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" class="profile-input profile-input-code">
+            </div>
+            <div class="profile-licence-actions">
+              <button id="btn-profile-activate-licence" class="btn btn-primary">Aktifleştir</button>
+              <button id="btn-profile-request-licence" class="btn btn-secondary-outline" style="border: 1px solid var(--accent-primary); color: var(--accent-primary); background: transparent;">Lisans Anahtarı Al</button>
             </div>
           </div>
         </div>
