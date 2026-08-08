@@ -1585,28 +1585,29 @@ input {
 .lesson-node-label {
   position: absolute;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: var(--text-primary);
-  text-align: center;
+  text-align: left;
   white-space: normal;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  word-break: normal;
+  overflow-wrap: anywhere;
   background: var(--bg-card);
-  padding: 7px 14px;
-  border-radius: 8px;
+  padding: 8px 13px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   width: max-content;
-  max-width: 320px;
+  max-width: 250px;
   line-height: 1.35;
   z-index: 10;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 .lesson-node-label.label-right {
   top: 50%;
-  left: 106px;
+  left: 98px;
   right: auto;
   bottom: auto;
   transform: translateY(-50%);
@@ -1614,7 +1615,7 @@ input {
 
 .lesson-node-label.label-left {
   top: 50%;
-  right: 106px;
+  right: 98px;
   left: auto;
   bottom: auto;
   transform: translateY(-50%);
