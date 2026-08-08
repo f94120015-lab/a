@@ -3087,17 +3087,17 @@ input {
   }
 
   .sidebar-section-label {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     color: var(--text-muted);
     text-transform: uppercase;
-    padding: 18px 16px 8px 16px;
+    padding: 10px 14px 3px 14px;
     opacity: 0.6;
     user-select: none;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .sidebar-section-label::after {
@@ -3112,15 +3112,15 @@ input {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 14px;
-    width: calc(100% - 12px);
-    margin: 2px 6px;
-    padding: 11px 14px;
-    font-size: 1.08rem;
+    gap: 10px;
+    width: calc(100% - 8px);
+    margin: 1px 4px;
+    padding: 6px 10px;
+    font-size: 0.96rem;
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-secondary);
-    border-radius: 14px;
+    border-radius: 10px;
     background: none;
     border: 1px solid transparent;
     border-left: 3px solid transparent;
@@ -3131,21 +3131,21 @@ input {
   }
 
   .sidebar-menu .nav-tab .nav-tab-icon {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    border-radius: 11px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 8px;
     background: rgba(139, 92, 246, 0.06);
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .sidebar-menu .nav-tab .nav-tab-icon svg {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
   }
 
   .sidebar-menu .nav-tab:hover .nav-tab-icon {
