@@ -1704,27 +1704,27 @@
 
     if (connObj && singleTimeAdverbs.includes(connObj.id)) {
       // ⏱️ Tekli Zaman Zarfı Şablonu: Zarf ➔ Özne/İsim ➔ Zorunlu Tense (Yan cümle yok)
-      if (slotTitle1) slotTitle1.textContent = "1. MATRİS: ZAMAN ZARFI / ÇAPASI";
-      if (slotTitle2) slotTitle2.textContent = "2. YUVA: ÖZNE / İSİM (YAN CÜMLE YOK)";
-      if (slotTitle3) slotTitle3.textContent = "3. MATRİS: ZORUNLU TENSE / YÜKLEM";
+      if (slotTitle1) slotTitle1.textContent = "ZAMAN ZARFI / ÇAPASI";
+      if (slotTitle2) slotTitle2.textContent = "ÖZNE / İSİM (YAN CÜMLE YOK)";
+      if (slotTitle3) slotTitle3.textContent = "ZORUNLU TENSE / YÜKLEM";
       if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Özne / İsim Öbeği - Yan Cümle Yok)";
     } else if (connObj && connObj.category === "cause_effect") {
       // 🎯 Neden-Etki Fiil Şablonu: Neden Öbeği ➔ Neden-Etki Fiili ➔ Sonuç Öbeği
-      if (slotTitle1) slotTitle1.textContent = "1. YUVA: NEDEN (CAUSE) ÖBEĞİ";
-      if (slotTitle2) slotTitle2.textContent = "2. MATRİS: NEDEN-ETKİ FİİLİ / EDATI";
-      if (slotTitle3) slotTitle3.textContent = "3. YUVA: SONUÇ (EFFECT) ÖBEĞİ";
+      if (slotTitle1) slotTitle1.textContent = "NEDEN (CAUSE) ÖBEĞİ";
+      if (slotTitle2) slotTitle2.textContent = "NEDEN-ETKİ FİİLİ / EDATI";
+      if (slotTitle3) slotTitle3.textContent = "SONUÇ (EFFECT) ÖBEĞİ";
       if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Neden-Etki Fiilleri / Edatları)";
     } else if (connObj && connObj.category === "transitions") {
       // 🔀 Geçiş İfadesi Şablonu: Cümle A ➔ Geçiş İfadesi ➔ Cümle B
-      if (slotTitle1) slotTitle1.textContent = "1. YUVA: BİRİNCİ YARGI (CÜMLE A)";
-      if (slotTitle2) slotTitle2.textContent = "2. MATRİS: GEÇİŞ İFADESİ";
-      if (slotTitle3) slotTitle3.textContent = "3. YUVA: İKİNCİ YARGI (CÜMLE B)";
+      if (slotTitle1) slotTitle1.textContent = "BİRİNCİ YARGI (CÜMLE A)";
+      if (slotTitle2) slotTitle2.textContent = "GEÇİŞ İFADESİ";
+      if (slotTitle3) slotTitle3.textContent = "İKİNCİ YARGI (CÜMLE B)";
       if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Geçiş İfadeleri)";
     } else {
       // ⏱️ Standart Bağlaç Şablonu: Bağlaç ➔ Yan Cümle ➔ Ana Cümle
-      if (slotTitle1) slotTitle1.textContent = "1. MATRİS: BAĞLAÇ / KOŞUL";
-      if (slotTitle2) slotTitle2.textContent = "2. MATRİS: YAN CÜMLE ZAMANI (CLAUSE A)";
-      if (slotTitle3) slotTitle3.textContent = "3. MATRİS: ANA CÜMLE / MODAL (CLAUSE B)";
+      if (slotTitle1) slotTitle1.textContent = "BAĞLAÇ / KOŞUL";
+      if (slotTitle2) slotTitle2.textContent = "YAN CÜMLE ZAMANI (CLAUSE A)";
+      if (slotTitle3) slotTitle3.textContent = "ANA CÜMLE / MODAL (CLAUSE B)";
       if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Yan Cümle Zamanları)";
     }
 
