@@ -8117,7 +8117,7 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
           explanationKey: q.explanationKey || 'academic_tips_master'
         };
         expandedQuestions.push(bridgeQ);
-      } else if (hasSentence && q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
+      } else if (hasSentence && q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'fill-blank' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
         let targetSentence = getCompleteSentence(q);
         let targetTr = typeof q.translation === 'string' ? q.translation : (Array.isArray(q.translation) ? q.translation.join(' ') : '');
         if (targetTr && targetTr.length > 0) {
@@ -9880,7 +9880,7 @@ function segmentSentence(fullSentence, isEngToTr) {
     segments = tempComma;
 
     // 2. Split Phrasal Modals & Connectors (Split Before and After to preserve modals & isolate subject)
-    const pureModals = ["should", "must", "could", "will", "would", "can", "might", "may"];
+    const pureModals = ["should", "must", "could", "will", "would", "can", "might", "may", "is", "are", "was", "were", "am", "Is", "Are", "Was", "Were", "Am"];
     const allBeforeAndAfter = [...pureModals, ...phrasalModals, ...splitBeforeAndAfter].sort((a, b) => b.length - a.length);
     for (let marker of allBeforeAndAfter) {
       segments = applySplitBeforeAndAfter(segments, marker);
@@ -10490,7 +10490,6 @@ function renderFillBlankDropdown(container, question) {
       </span>
       ${part1Html}
     </div>
-    ${question.translation ? `<div class="fb-translation-guide" style="font-size: 0.95rem; color: var(--text-secondary); opacity: 0.75; text-align: center; margin: -10px 0 20px 0; font-style: italic; font-weight: 500;">(${question.translation})</div>` : ''}
   `;
 
   const triggerBtn = container.querySelector('#fb-custom-trigger');
@@ -10631,7 +10630,6 @@ function renderFillBlank(container, question) {
     <p class="quiz-prompt">${displayPrompt}</p>
     <div class="fb-sentence" style="font-size: 1.25rem; font-weight: 500; text-align: center; margin: 24px 0; color: var(--text-primary); line-height: 1.6;">
       ${sentenceInnerHtml}
-      ${question.translation ? `<div class="fb-translation-guide" style="font-size: 0.95rem; color: var(--text-secondary); opacity: 0.75; text-align: center; margin-top: 12px; font-style: italic; font-weight: 500;">(${question.translation})</div>` : ''}
     </div>
     <div class="fb-options">
       ${optionsHtml}

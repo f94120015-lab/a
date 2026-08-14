@@ -39021,7 +39021,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The financial stability is essential.",
-            "translation": "The financial stability is essential.",
+            "translation": "Finansal istikrar esastır.",
             "words": [
               "Finansal",
               "istikrar",
@@ -39034,7 +39034,7 @@ Object.assign(unitSentencesMap, {
               "istikrar",
               "esastır."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u6l1ex1_q4",
@@ -39051,7 +39051,8 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 1,
-            "translation": "Bilişsel süreçler karmaşıktır."
+            "translation": "Bilişsel süreçler karmaşıktır.",
+            "explanation": "Cümledeki özne \"The cognitive processes\" (bilişsel süreçler) çoğuldur. Çoğul öznelerle \"is\" yerine \"are\" yardımcı fiili kullanılmalıdır. Doğru cümle: \"The cognitive processes are complex.\" olmalıdır."
           },
           {
             "id": "u6l1ex1_q5",
@@ -39187,98 +39188,9 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 0,
-            "translation": "Sinematik teknikler yenilikçidir."
+            "translation": "Sinematik teknikler yenilikçidir.",
+            "explanation": "\"The cinematic techniques\" çoğul öznesi ile çoğul yardımcı fiil \"are\" uyumludur. Cümle dil bilgisel açıdan doğrudur."
           },
-          {
-            "id": "u6l1ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The explanation ___ long.",
-            "options": [
-              "are",
-              "been",
-              "is",
-              "be"
-            ],
-            "correctIndex": 2,
-            "translation": "Açıklama uzundur."
-          },
-          {
-            "id": "u6l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The psychological analysis is important.",
-            "isEngToTr": true,
-            "options": [
-              "Psikolojik analiz önemlidir.",
-              "Psikolojik analizler önemlidir.",
-              "Psikolojik analiz gereklidir.",
-              "Psikolojik analiz önemsizdir."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u6l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The history is complex.",
-            "translation": "The history is complex.",
-            "words": [
-              "Tarih",
-              "karmaşıktır.",
-              "kolaydır.",
-              "bilim"
-            ],
-            "correctOrder": [
-              "Tarih",
-              "karmaşıktır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u6l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Zemin ıslaktır.\"</span>",
-            "correctSentence": "The ground is wet.",
-            "translation": "Zemin ıslaktır."
-          },
-          {
-            "id": "u6l1ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The answer is wrong.\"</span>",
-            "correctSentence": "Cevap yanlıştır.",
-            "translation": "Cevap yanlıştır."
-          }
         ]
       },
       {
@@ -39354,7 +39266,7 @@ Object.assign(unitSentencesMap, {
               "are",
               "volatile."
             ],
-            "isEngToTr": true
+            "isEngToTr": false
           },
           {
             "id": "u6l1ex2_q4",
@@ -39371,7 +39283,8 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 1,
-            "translation": "Psikolojik çalışmalar kamusaldır."
+            "translation": "Psikolojik çalışmalar kamusaldır.",
+            "explanation": "Özne \"The psychological studies\" (psikolojik çalışmalar) çoğuldur. Çoğul özne ile \"is\" değil \"are\" kullanılmalıdır. Doğru cümle: \"The psychological studies are public.\" olmalıdır."
           },
           {
             "id": "u6l1ex2_q5",
@@ -39473,7 +39386,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The economic indicators are negative.",
-            "translation": "The economic indicators are negative.",
+            "translation": "Ekonomik göstergeler negatiftir.",
             "words": [
               "Ekonomik",
               "göstergeler",
@@ -39486,7 +39399,7 @@ Object.assign(unitSentencesMap, {
               "göstergeler",
               "negatiftir."
             ],
-            "isEngToTr": false
+            "isEngToTr": true
           },
           {
             "id": "u6l1ex2_q10",
@@ -39503,104 +39416,9 @@ Object.assign(unitSentencesMap, {
               "False"
             ],
             "correctIndex": 0,
-            "translation": "Sosyolojik teoriler geçerlidir."
+            "translation": "Sosyolojik teoriler geçerlidir.",
+            "explanation": "\"The sociological theories\" çoğul öznesi ile \"are\" yardımcı fiili uyumludur. Cümle dil bilgisel açıdan doğrudur."
           },
-          {
-            "id": "u6l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The tribal customs ___ ancient.",
-            "options": [
-              "is",
-              "are",
-              "was",
-              "be"
-            ],
-            "correctIndex": 1,
-            "translation": "Kabile gelenekleri antiktir."
-          },
-          {
-            "id": "u6l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The cognitive development is rapid.",
-            "isEngToTr": true,
-            "options": [
-              "Bilişsel gelişim yavaştır.",
-              "Fiziksel gelişim hızlıdır.",
-              "Bilişsel gelişim hızlıdır.",
-              "Zihinsel süreçler hızlıdır."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u6l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The constitutional rights are fundamental.",
-            "translation": "Anayasal haklar temeldir.",
-            "words": [
-              "The",
-              "constitutional",
-              "rights",
-              "are",
-              "fundamental.",
-              "is",
-              "principles"
-            ],
-            "correctOrder": [
-              "The",
-              "constitutional",
-              "rights",
-              "are",
-              "fundamental."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u6l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The judicial decision is final.\"</span>",
-            "correctSentence": "Yargısal karar kesindir.",
-            "translation": "Yargısal karar kesindir."
-          },
-          {
-            "id": "u6l1ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Kültürel normlar katıdır.\"</span>",
-            "correctSentence": "The cultural norms are rigid.",
-            "translation": "Kültürel normlar katıdır."
-          }
         ]
       }
     ]

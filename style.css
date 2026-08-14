@@ -3280,29 +3280,54 @@ input {
 
   /* Specific color bars for each navigation tab */
 
-  /* Lessons (Dersler) Tab - Dynamic color */
+  /* Lessons (Dersler) Tab - Hero Main Section Styling */
+  .sidebar-menu .nav-tab[data-tab="lessons"] {
+    padding: 12px 14px !important;
+    margin: 6px 0 16px 0 !important;
+    border-radius: 16px !important;
+    font-size: 1.12rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.3px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
   .sidebar-menu .nav-tab[data-tab="lessons"] .nav-tab-icon {
-    background: rgba(99, 102, 241, 0.08);
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3) !important;
+  }
+  .sidebar-menu .nav-tab[data-tab="lessons"] .nav-tab-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+  .sidebar-menu .nav-tab[data-tab="lessons"] .nav-tab-label {
+    font-size: 1.12rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
   }
   .sidebar-menu .nav-tab[data-tab="lessons"]:hover {
-    background: var(--theme-accent-light);
-    color: var(--theme-accent-hover);
-    border-left-color: var(--theme-accent, #6366f1);
-  }
-  .sidebar-menu .nav-tab[data-tab="lessons"]:hover .nav-tab-icon {
-    background: rgba(99, 102, 241, 0.15);
-    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px) scale(1.03) !important;
+    box-shadow: 0 12px 28px rgba(16, 185, 129, 0.48), 0 4px 10px rgba(0, 0, 0, 0.12) !important;
+    background: linear-gradient(135deg, #34d399 0%, #059669 100%) !important;
+    color: #ffffff !important;
   }
   .sidebar-menu .nav-tab[data-tab="lessons"].active {
-    background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-hover) 100%) !important;
-    color: #fff !important;
-    border-color: transparent;
-    border-left-color: transparent;
-    box-shadow: 0 6px 20px var(--theme-accent-shadow);
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 10px 28px rgba(16, 185, 129, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.3) !important;
   }
   .sidebar-menu .nav-tab[data-tab="lessons"].active .nav-tab-icon {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: none;
+    background: rgba(255, 255, 255, 0.28) !important;
+    box-shadow: none !important;
   }
 
   /* ── Her sekmeye özel ikon arkaplan renkleri ────────── */
@@ -12099,8 +12124,44 @@ nDown 0.3s ease;
 }
 
 /* ============================================================
-   RESPONSIVE MONTAJ HATTI (SLOTS) LAYOUT
+   RESPONSIVE MONTAJ HATTI (SLOTS) LAYOUT & STICKY HEADER
    ============================================================ */
+.srobot-lab-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 72px;
+  z-index: 90;
+  background: var(--bg-secondary, #F0EDF7);
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+}
+
+[data-theme="dark"] .srobot-lab-container {
+  background: #171321;
+  border-color: var(--border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.srobot-slots-card {
+  background: #ffffff !important;
+}
+
+[data-theme="dark"] .srobot-slots-card {
+  background: #1e1a28 !important;
+}
+
+#srobot-output-box {
+  background: #F0FDF4 !important;
+}
+
+[data-theme="dark"] #srobot-output-box {
+  background: #0d281e !important;
+}
+
 .srobot-slots-header {
   display: flex;
   justify-content: space-between;
@@ -12127,6 +12188,13 @@ nDown 0.3s ease;
   text-align: center;
 }
 
+@media (max-width: 819px) {
+  .srobot-lab-container {
+    top: 48px;
+    padding: 8px;
+  }
+}
+
 @media (max-width: 768px) {
   .srobot-slots-header {
     flex-direction: column;
@@ -12143,5 +12211,6 @@ nDown 0.3s ease;
     padding: 4px 0;
   }
 }
+
 
 
