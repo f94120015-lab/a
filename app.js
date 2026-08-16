@@ -13636,9 +13636,9 @@ function renderProfile() {
         <div class="profile-actions-card" style="margin-top: 0;">
           <h3 class="profile-section-title" style="margin-top: 0;">⚙️ Ayarlar</h3>
           <div class="profile-actions-buttons" style="display: flex; flex-direction: column; gap: 8px;">
-            <button class="btn btn-secondary" id="btn-profile-logout" style="margin-bottom: 0;">Çıkış Yap / Hesap Değiştir</button>
+            <button class="btn btn-secondary" id="btn-profile-logout" style="margin-bottom: 0;">${isGuest ? 'Giriş Yap / Kaydol' : 'Çıkış Yap / Hesap Değiştir'}</button>
             <button class="btn btn-ghost" id="btn-profile-clear" style="color: var(--color-wrong); border-color: var(--color-wrong-border); margin-bottom: 0;">İlerlemeyi Sıfırla</button>
-            <button class="btn btn-ghost" id="btn-profile-delete-account" style="color: #ff3b30; border-color: rgba(255, 59, 48, 0.4); background: rgba(255, 59, 48, 0.05); font-weight: 700; margin-bottom: 0;">🗑️ Hesabı Sil</button>
+            ${isGuest ? '' : '<button class="btn btn-ghost" id="btn-profile-delete-account" style="color: #ff3b30; border-color: rgba(255, 59, 48, 0.4); background: rgba(255, 59, 48, 0.05); font-weight: 700; margin-bottom: 0;">🗑️ Hesabı Sil</button>'}
           </div>
         </div>
 
