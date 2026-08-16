@@ -39481,12 +39481,12 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "The professor is in the library.",
-            "translation": "The professor is in the library.",
+            "translation": "Profesör kütüphanededir.",
             "words": [
               "Profesör",
               "kütüphanededir.",
-              "ofistedir.",
-              "oda"
+              "laboratuvardadır.",
+              "öğretmendir."
             ],
             "correctOrder": [
               "Profesör",
@@ -39524,19 +39524,19 @@ Object.assign(unitSentencesMap, {
             "pairs": [
               {
                 "left": "Kitaplar sıranın üzerindedir.",
-                "right": "The books are on the desk."
-              },
-              {
-                "left": "Akademisyen bilge bir adamdır.",
-                "right": "The scholar is a wise man."
-              },
-              {
-                "left": "Kalıntılar vadidedir.",
                 "right": "The ruins are in the valley."
               },
               {
-                "left": "Fiyat büyük bir zorluktur.",
+                "left": "Akademisyen bilge bir adamdır.",
                 "right": "The price is a major challenge."
+              },
+              {
+                "left": "Kalıntılar vadidedir.",
+                "right": "The books are on the desk."
+              },
+              {
+                "left": "Fiyat büyük bir zorluktur.",
+                "right": "The scholar is a wise man."
               }
             ]
           },
@@ -39553,7 +39553,7 @@ Object.assign(unitSentencesMap, {
             "sentence": "The findings ___ in the report.",
             "options": [
               "is",
-              "was",
+              "were",
               "are",
               "be"
             ],
@@ -39640,104 +39640,6 @@ Object.assign(unitSentencesMap, {
             ],
             "correctIndex": 0,
             "translation": "Kanıt kritik bir faktördür."
-          },
-          {
-            "id": "u6l2ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The employees ___ in the factory.",
-            "options": [
-              "are",
-              "is",
-              "been",
-              "be"
-            ],
-            "correctIndex": 0,
-            "translation": "Çalışanlar fabrikadadır."
-          },
-          {
-            "id": "u6l2ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The analysis is a complex process.",
-            "isEngToTr": true,
-            "options": [
-              "Analizler karmaşık süreçlerdir.",
-              "Analiz karmaşık bir süreçtir.",
-              "Analiz kolay bir süreçtir.",
-              "Süreç karmaşık bir analizdir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u6l2ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The decision is an important step.",
-            "translation": "Karar önemli bir adımdır.",
-            "words": [
-              "The",
-              "decision",
-              "is",
-              "an",
-              "important",
-              "step.",
-              "are",
-              "measure"
-            ],
-            "correctOrder": [
-              "The",
-              "decision",
-              "is",
-              "an",
-              "important",
-              "step."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u6l2ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The map is on the wall.\"</span>",
-            "correctSentence": "Harita duvardadır.",
-            "translation": "Harita duvardadır."
-          },
-          {
-            "id": "u6l2ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Cevaplar kitaptadır.\"</span>",
-            "correctSentence": "The answers are in the book.",
-            "translation": "Cevaplar kitaptadır."
           }
         ]
       },
@@ -39881,7 +39783,7 @@ Object.assign(unitSentencesMap, {
             "sentence": "The volcanic islands ___ in the pacific ocean.",
             "options": [
               "is",
-              "was",
+              "were",
               "be",
               "are"
             ],
@@ -39974,108 +39876,6 @@ Object.assign(unitSentencesMap, {
             ],
             "correctIndex": 0,
             "translation": "Bilişsel süreç aktif bir simülasyondur."
-          },
-          {
-            "id": "u6l2ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The lead researcher ___ in the conference room.",
-            "options": [
-              "are",
-              "been",
-              "be",
-              "is"
-            ],
-            "correctIndex": 3,
-            "translation": "Baş araştırmacı konferans odasındadır."
-          },
-          {
-            "id": "u6l2ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The financial stability is a crucial factor.",
-            "isEngToTr": true,
-            "options": [
-              "Finansal istikrar kritik bir faktördür.",
-              "Finansal piyasalar kritik faktörlerdir.",
-              "Finansal istikrar kritik bir göstergedir.",
-              "Ekonomik istikrar kritik bir faktördür."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u6l2ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The supreme court is in the federal capital.",
-            "translation": "Yüksek mahkeme federal başkenttedir.",
-            "words": [
-              "The",
-              "supreme",
-              "court",
-              "is",
-              "in",
-              "the",
-              "federal",
-              "capital.",
-              "are",
-              "regional"
-            ],
-            "correctOrder": [
-              "The",
-              "supreme",
-              "court",
-              "is",
-              "in",
-              "the",
-              "federal",
-              "capital."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u6l2ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The organic substances are in the test-tubes.\"</span>",
-            "correctSentence": "Organik maddeler deney tüplerindedir.",
-            "translation": "Organik maddeler deney tüplerindedir."
-          },
-          {
-            "id": "u6l2ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Temel Yapılar",
-              "Subject + Be + Noun/Adjective",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Detaylı açıklama tahtadadır.\"</span>",
-            "correctSentence": "The detailed explanation is on the board.",
-            "translation": "Detaylı açıklama tahtadadır."
           }
         ]
       }
