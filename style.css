@@ -516,6 +516,7 @@ input {
   padding: 16px;
   box-sizing: border-box;
   background: #ffffff;
+  border-radius: 50%;
 }
 
 .auth-title {
@@ -1852,6 +1853,7 @@ input {
   width: 84px;
   height: 84px;
   border-radius: 50%;
+  overflow: hidden;
   background: #ffffff !important;
   border: 2.5px solid #a7f3d0;
   box-shadow: 0 4px 16px rgba(16, 185, 129, 0.12);
@@ -1873,6 +1875,7 @@ input {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 50%;
 }
 
 /* ════════════════════════════════════════════════════════════
