@@ -34795,4173 +34795,2625 @@ Object.assign(unitSentencesMap, {
   // CUSTOM OVERRIDES (Sections 1 to 10)
   // ==========================================
   "1": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u1l1ex1",
-        "title": "Alıştırma 1: Giriş ve Of/Of The Yapıları",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u1l1ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The analysis of history is important.",
-            "isEngToTr": true,
-            "options": [
-              "Tarihsel analiz önemlidir.",
-              "Tarihin analizi önemlidir.",
-              "Analizin tarihi önemlidir.",
-              "Tarihin analizi önemsizdir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u1l1ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The document ___ the Ottoman era is a primary source.",
-            "options": [
-              "from",
-              "in",
-              "of",
-              "with"
-            ],
-            "correctIndex": 2,
-            "translation": "Osmanlı döneminin belgesi birincil bir kaynaktır."
-          },
-          {
-            "id": "u1l1ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The structures of the community are complex.",
-            "translation": "The structures of the community are complex.",
-            "words": [
-              "Topluluğun",
-              "yapıları",
-              "karmaşıktır.",
-              "piyasa",
-              "kuralları"
-            ],
-            "correctOrder": [
-              "Topluluğun",
-              "yapıları",
-              "karmaşıktır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l1ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Some of the details is rare.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Detayların bazıları nadirdir."
-          },
-          {
-            "id": "u1l1ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "mahkemenin kararları",
-                "right": "the decisions of the court"
-              },
-              {
-                "left": "toplumun değerleri",
-                "right": "the values of the society"
-              },
-              {
-                "left": "hukukun ilkeleri",
-                "right": "the principles of the law"
-              },
-              {
-                "left": "heykellerin detayları",
-                "right": "the details of the sculptures"
-              }
-            ]
-          },
-          {
-            "id": "u1l1ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Some of the findings ___ conclusive.",
-            "options": [
-              "are",
-              "is",
-              "was",
-              "be"
-            ],
-            "correctIndex": 0,
-            "translation": "Bulguların bazıları kesindir."
-          },
-          {
-            "id": "u1l1ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The development of behavior is a study area.",
-            "isEngToTr": true,
-            "options": [
-              "Davranışın gelişimi bir çalışma alanlarıdır.",
-              "Gelişimin davranışı bir çalışma alanıdır.",
-              "Davranışın gelişimi bir araştırma alanıdır.",
-              "Davranışın gelişimi bir çalışma alanıdır."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u1l1ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"of communication\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The networks <span style=\"text-decoration: underline;\">of communication</span> are active.",
-            "enSentence": "The networks of communication are active.",
-            "options": [
-              "Özne",
-              "Yüklem",
-              "İsim Tamlayıcısı (Noun Modifier)",
-              "Sıfat"
-            ],
-            "correctIndex": 2,
-            "translation": "İletişim ağları aktiftir."
-          },
-          {
-            "id": "u1l1ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The norms of the society are rigid.",
-            "translation": "Toplumun normları katıdır.",
-            "words": [
-              "The",
-              "norms",
-              "of",
-              "the",
-              "society",
-              "are",
-              "rigid.",
-              "is",
-              "rules"
-            ],
-            "correctOrder": [
-              "The",
-              "norms",
-              "of",
-              "the",
-              "society",
-              "are",
-              "rigid."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l1ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The mapping of the boundaries is important.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Sınırların haritalanması önemlidir."
-          },
-          {
-            "id": "u1l1ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The decisions ___ the supreme court are final.",
-            "options": [
-              "from",
-              "of",
-              "in",
-              "with"
-            ],
-            "correctIndex": 1,
-            "translation": "Yüksek mahkemenin kararları kesindir."
-          },
-          {
-            "id": "u1l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The stability of the market is essential.",
-            "isEngToTr": true,
-            "options": [
-              "Piyasa istikrarlıdır.",
-              "İstikrarlı piyasa önemlidir.",
-              "Piyasanın istikrarı gereklidir.",
-              "Piyasanın istikrarı esastır."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u1l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "Many of the ruins are ancient.",
-            "translation": "Kalıntıların çoğu antiktir.",
-            "words": [
-              "Many",
-              "of",
-              "the",
-              "ruins",
-              "are",
-              "ancient.",
-              "is",
-              "some"
-            ],
-            "correctOrder": [
-              "Many",
-              "of",
-              "the",
-              "ruins",
-              "are",
-              "ancient."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The discovery of the artifact is a success.\"</span>",
-            "correctSentence": "Eserin keşfi bir başarıdır.",
-            "translation": "Eserin keşfi bir başarıdır."
-          },
-          {
-            "id": "u1l1ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Sistemin ilkeleri demokratiktir.\"</span>",
-            "correctSentence": "The principles of the system are democratic.",
-            "translation": "Sistemin ilkeleri demokratiktir."
-          }
-        ]
-      },
-      {
-        "id": "u1l1ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u1l1ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The careful documentation of the archaeological excavations is a key source.",
-            "isEngToTr": true,
-            "options": [
-              "Arkeolojik kazıların dikkatli belgelenmesi temel bir kaynaktır.",
-              "Arkeolojik kazılar temel kaynaklardır.",
-              "Arkeolojik belgelerin dikkatli kazısı temel bir kaynaktır.",
-              "Dikkatli kazılar arkeolojik kaynaklardır."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u1l1ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The rigid organization ___ the social community is a barrier.",
-            "options": [
-              "in",
-              "of",
-              "from",
-              "with"
-            ],
-            "correctIndex": 1,
-            "translation": "Toplumsal topluluğun katı organizasyonu bir engeldir."
-          },
-          {
-            "id": "u1l1ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The unequal distribution of income is a major economic problem.",
-            "translation": "Gelirin adaletsiz dağılımı büyük bir ekonomik sorundur.",
-            "words": [
-              "The",
-              "unequal",
-              "distribution",
-              "of",
-              "income",
-              "is",
-              "a",
-              "major",
-              "economic",
-              "problem.",
-              "are",
-              "markets"
-            ],
-            "correctOrder": [
-              "The",
-              "unequal",
-              "distribution",
-              "of",
-              "income",
-              "is",
-              "a",
-              "major",
-              "economic",
-              "problem."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l1ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The daily broadcasts of the national network is public resources.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Ulusal ağın günlük yayınları kamusal kaynaklardır."
-          },
-          {
-            "id": "u1l1ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "kültürel mirasın korunması",
-                "right": "the preservation of the cultural heritage"
-              },
-              {
-                "left": "yüksek mahkemenin kararları",
-                "right": "the decisions of the supreme court"
-              },
-              {
-                "left": "yerel piyasanın hızlı büyümesi",
-                "right": "the rapid growth of the local market"
-              },
-              {
-                "left": "toplumsal topluluğun dinamik davranışı",
-                "right": "the dynamic behavior of the social community"
-              }
-            ]
-          },
-          {
-            "id": "u1l1ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The translation ___ the primary sources is a basic requirement.",
-            "options": [
-              "from",
-              "in",
-              "of",
-              "by"
-            ],
-            "correctIndex": 2,
-            "translation": "Birincil kaynakların çevirisi temel bir gerekliliktir."
-          },
-          {
-            "id": "u1l1ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The artistic value of the sculptures is indisputable.",
-            "isEngToTr": true,
-            "options": [
-              "Heykellerin sanatsal değeri tartışmasızdır.",
-              "Heykellerin sanatsal değerleri tartışmasızdır.",
-              "Sanatsal değerin heykelleri tartışmasızdır.",
-              "Heykellerin sanatsal değeri belirsizdir."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u1l1ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"mapping\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The precise <span style=\"text-decoration: underline;\">mapping</span> of the geographical boundaries is important.",
-            "enSentence": "The precise mapping of the geographical boundaries is important.",
-            "options": [
-              "Geçişli Fiil",
-              "Zarf",
-              "Nesne",
-              "Özne Çekirdeği (Subject Head)"
-            ],
-            "correctIndex": 3,
-            "translation": "Coğrafi sınırların kesin haritalanması önemlidir."
-          },
-          {
-            "id": "u1l1ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The logical analysis of the grammatical rules is helpful.",
-            "translation": "The logical analysis of the grammatical rules is helpful.",
-            "words": [
-              "Dilbilgisi",
-              "kurallarının",
-              "mantıksal",
-              "analizi",
-              "faydalıdır.",
-              "önemlidir.",
-              "yapısı"
-            ],
-            "correctOrder": [
-              "Dilbilgisi",
-              "kurallarının",
-              "mantıksal",
-              "analizi",
-              "faydalıdır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l1ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The archaeological evidence of the ancient ruins are conclusive.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Antik kalıntıların arkeolojik kanıtları kesindir."
-          },
-          {
-            "id": "u1l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The collective actions ___ the tribal members are common.",
-            "options": [
-              "in",
-              "from",
-              "of",
-              "with"
-            ],
-            "correctIndex": 2,
-            "translation": "Kabile üyelerinin kolektif eylemleri yaygındır."
-          },
-          {
-            "id": "u1l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The sudden decline of the stock prices is a threat.",
-            "isEngToTr": true,
-            "options": [
-              "Hisse senedi fiyatlarının ani yükselişi bir tehdittir.",
-              "Hisse senedi fiyatlarının ani düşüşü bir tehdittir.",
-              "Hisse senetleri piyasası bir tehdittir.",
-              "Piyasa fiyatlarının düşüşü bir tehdittir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u1l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The physical parameters of the experiment are stable.",
-            "translation": "Deneyin fiziksel parametreleri kararlıdır.",
-            "words": [
-              "The",
-              "physical",
-              "parameters",
-              "of",
-              "the",
-              "experiment",
-              "are",
-              "stable.",
-              "is",
-              "results"
-            ],
-            "correctOrder": [
-              "The",
-              "physical",
-              "parameters",
-              "of",
-              "the",
-              "experiment",
-              "are",
-              "stable."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The detailed descriptions of the historical events are public.\"</span>",
-            "correctSentence": "Tarihi olayların detaylı açıklamaları kamusaldır.",
-            "translation": "Tarihi olayların detaylı açıklamaları kamusaldır."
-          },
-          {
-            "id": "u1l1ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Vatandaşların anayasal hakları önemlidir.\"</span>",
-            "correctSentence": "The constitutional rights of the citizens are important.",
-            "translation": "Vatandaşların anayasal hakları önemlidir."
-          }
-        ]
-      }
-    ]
+    "1": {
+      "exercises": [
+        {
+          "id": "u1l1ex1",
+          "title": "Alıştırma 1: Giriş ve Of/Of The Yapıları",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u1l1ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The analysis of history is important.",
+              "isEngToTr": true,
+              "options": [
+                "Tarihsel analiz önemlidir.",
+                "Tarihin analizi önemlidir.",
+                "Analizin tarihi önemlidir.",
+                "Tarihin analizi önemsizdir."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u1l1ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The document ___ the Ottoman era is a primary source.",
+              "options": [
+                "from",
+                "in",
+                "of",
+                "with"
+              ],
+              "correctIndex": 2,
+              "translation": "Osmanlı döneminin belgesi birincil bir kaynaktır."
+            },
+            {
+              "id": "u1l1ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The structures of the community are complex.",
+              "translation": "The structures of the community are complex.",
+              "words": [
+                "Topluluğun",
+                "yapıları",
+                "karmaşıktır.",
+                "piyasa",
+                "kuralları"
+              ],
+              "correctOrder": [
+                "Topluluğun",
+                "yapıları",
+                "karmaşıktır."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u1l1ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Some of the details is rare.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Detayların bazıları nadirdir."
+            },
+            {
+              "id": "u1l1ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "mahkemenin kararları",
+                  "right": "the decisions of the court"
+                },
+                {
+                  "left": "toplumun değerleri",
+                  "right": "the values of the society"
+                },
+                {
+                  "left": "hukukun ilkeleri",
+                  "right": "the principles of the law"
+                },
+                {
+                  "left": "heykellerin detayları",
+                  "right": "the details of the sculptures"
+                }
+              ]
+            },
+            {
+              "id": "u1l1ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "Some of the findings ___ conclusive.",
+              "options": [
+                "are",
+                "is",
+                "was",
+                "be"
+              ],
+              "correctIndex": 0,
+              "translation": "Bulguların bazıları kesindir."
+            },
+            {
+              "id": "u1l1ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The development of behavior is a study area.",
+              "isEngToTr": true,
+              "options": [
+                "Davranışın gelişimi bir çalışma alanlarıdır.",
+                "Gelişimin davranışı bir çalışma alanıdır.",
+                "Davranışın gelişimi bir araştırma alanıdır.",
+                "Davranışın gelişimi bir çalışma alanıdır."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u1l1ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"of communication\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The networks <span style=\"text-decoration: underline;\">of communication</span> are active.",
+              "enSentence": "The networks of communication are active.",
+              "options": [
+                "Özne",
+                "Yüklem",
+                "İsim Tamlayıcısı (Noun Modifier)",
+                "Sıfat"
+              ],
+              "correctIndex": 2,
+              "translation": "İletişim ağları aktiftir."
+            },
+            {
+              "id": "u1l1ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The discovery of the artifact is a success.\"</span>",
+              "correctSentence": "Eserin keşfi bir başarıdır.",
+              "translation": "Eserin keşfi bir başarıdır."
+            },
+            {
+              "id": "u1l1ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Sistemin ilkeleri demokratiktir.\"</span>",
+              "correctSentence": "The principles of the system are democratic.",
+              "translation": "Sistemin ilkeleri demokratiktir."
+            }
+          ]
+        },
+        {
+          "id": "u1l1ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u1l1ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The careful documentation of the archaeological excavations is a key source.",
+              "isEngToTr": true,
+              "options": [
+                "Arkeolojik kazıların dikkatli belgelenmesi temel bir kaynaktır.",
+                "Arkeolojik kazılar temel kaynaklardır.",
+                "Arkeolojik belgelerin dikkatli kazısı temel bir kaynaktır.",
+                "Dikkatli kazılar arkeolojik kaynaklardır."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u1l1ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The rigid organization ___ the social community is a barrier.",
+              "options": [
+                "in",
+                "of",
+                "from",
+                "with"
+              ],
+              "correctIndex": 1,
+              "translation": "Toplumsal topluluğun katı organizasyonu bir engeldir."
+            },
+            {
+              "id": "u1l1ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The unequal distribution of income is a major economic problem.",
+              "translation": "Gelirin adaletsiz dağılımı büyük bir ekonomik sorundur.",
+              "words": [
+                "The",
+                "unequal",
+                "distribution",
+                "of",
+                "income",
+                "is",
+                "a",
+                "major",
+                "economic",
+                "problem.",
+                "are",
+                "markets"
+              ],
+              "correctOrder": [
+                "The",
+                "unequal",
+                "distribution",
+                "of",
+                "income",
+                "is",
+                "a",
+                "major",
+                "economic",
+                "problem."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u1l1ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The daily broadcasts of the national network is public resources.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Ulusal ağın günlük yayınları kamusal kaynaklardır."
+            },
+            {
+              "id": "u1l1ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "kültürel mirasın korunması",
+                  "right": "the preservation of the cultural heritage"
+                },
+                {
+                  "left": "yüksek mahkemenin kararları",
+                  "right": "the decisions of the supreme court"
+                },
+                {
+                  "left": "yerel piyasanın hızlı büyümesi",
+                  "right": "the rapid growth of the local market"
+                },
+                {
+                  "left": "toplumsal topluluğun dinamik davranışı",
+                  "right": "the dynamic behavior of the social community"
+                }
+              ]
+            },
+            {
+              "id": "u1l1ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The translation ___ the primary sources is a basic requirement.",
+              "options": [
+                "from",
+                "in",
+                "of",
+                "by"
+              ],
+              "correctIndex": 2,
+              "translation": "Birincil kaynakların çevirisi temel bir gerekliliktir."
+            },
+            {
+              "id": "u1l1ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The artistic value of the sculptures is indisputable.",
+              "isEngToTr": true,
+              "options": [
+                "Heykellerin sanatsal değeri tartışmasızdır.",
+                "Heykellerin sanatsal değerleri tartışmasızdır.",
+                "Sanatsal değerin heykelleri tartışmasızdır.",
+                "Heykellerin sanatsal değeri belirsizdir."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u1l1ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"mapping\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The precise <span style=\"text-decoration: underline;\">mapping</span> of the geographical boundaries is important.",
+              "enSentence": "The precise mapping of the geographical boundaries is important.",
+              "options": [
+                "Geçişli Fiil",
+                "Zarf",
+                "Nesne",
+                "Özne Çekirdeği (Subject Head)"
+              ],
+              "correctIndex": 3,
+              "translation": "Coğrafi sınırların kesin haritalanması önemlidir."
+            },
+            {
+              "id": "u1l1ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The detailed descriptions of the historical events are public.\"</span>",
+              "correctSentence": "Tarihi olayların detaylı açıklamaları kamusaldır.",
+              "translation": "Tarihi olayların detaylı açıklamaları kamusaldır."
+            },
+            {
+              "id": "u1l1ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Vatandaşların anayasal hakları önemlidir.\"</span>",
+              "correctSentence": "The constitutional rights of the citizens are important.",
+              "translation": "Vatandaşların anayasal hakları önemlidir."
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "exercises": [
+        {
+          "id": "u1l2ex1",
+          "title": "Alıştırma 1: İsim + From / İsim + Edat Yapıları",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u1l2ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "A student from England is in the library.",
+              "isEngToTr": true,
+              "options": [
+                "İngiltere'den öğrenciler kütüphanededir.",
+                "İngiliz bir öğrenci kütüphanededir.",
+                "İngiltere'den bir öğrenci ofistedir.",
+                "İngiltere'den bir öğrenci kütüphanededir."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u1l2ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The document ___ the Ottoman archives is a primary source.",
+              "options": [
+                "from",
+                "in",
+                "of",
+                "with"
+              ],
+              "correctIndex": 0,
+              "translation": "Osmanlı arşivlerinden gelen belge birincil bir kaynaktır."
+            },
+            {
+              "id": "u1l2ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The house on the corner is ancient.",
+              "translation": "The house on the corner is ancient.",
+              "words": [
+                "Köşedeki",
+                "ev",
+                "antiktir.",
+                "sokaktaki",
+                "yeni"
+              ],
+              "correctOrder": [
+                "Köşedeki",
+                "ev",
+                "antiktir."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u1l2ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The papers on the desk is important.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Sıradaki kağıtlar önemlidir."
+            },
+            {
+              "id": "u1l2ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "tarih hakkındaki kitap",
+                  "right": "the book about history"
+                },
+                {
+                  "left": "vadideki tapınak",
+                  "right": "the temple in the valley"
+                },
+                {
+                  "left": "sonuçları içeren çalışma",
+                  "right": "the study with the results"
+                },
+                {
+                  "left": "kazıdan elde edilen eserler",
+                  "right": "the artifacts from the excavation"
+                }
+              ]
+            },
+            {
+              "id": "u1l2ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The database on the server ___ active.",
+              "options": [
+                "are",
+                "is",
+                "been",
+                "be"
+              ],
+              "correctIndex": 1,
+              "translation": "Sunucudaki veritabanı aktiftir."
+            },
+            {
+              "id": "u1l2ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The paintings in the museum are famous.",
+              "isEngToTr": true,
+              "options": [
+                "Müzedeki tablolar ünlüdür.",
+                "Müzedeki tablo ünlüdür.",
+                "Müzedeki tablolar ünlüdür.",
+                "Müzedeki tablolar önemlidir."
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "u1l2ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"about the election\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The report <span style=\"text-decoration: underline;\">about the election</span> is conclusive.",
+              "enSentence": "The report about the election is conclusive.",
+              "options": [
+                "İsim Tamlayıcısı (Noun Modifier)",
+                "Özne Çekirdeği",
+                "Yüklem",
+                "Zarf"
+              ],
+              "correctIndex": 0,
+              "translation": "Seçim hakkındaki rapor kesindir."
+            },
+            {
+              "id": "u1l2ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The book on the table is a dictionary.\"</span>",
+              "correctSentence": "Masadaki kitap bir sözlüktür.",
+              "translation": "Masadaki kitap bir sözlüktür."
+            },
+            {
+              "id": "u1l2ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Koordinatörden gelen mesaj açıktır.\"</span>",
+              "correctSentence": "The message from the coordinator is clear.",
+              "translation": "Koordinatörden gelen mesaj açıktır."
+            }
+          ]
+        },
+        {
+          "id": "u1l2ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u1l2ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The primary source documents from the Ottoman era are in the national archive.",
+              "isEngToTr": true,
+              "options": [
+                "Osmanlı döneminin birincil kaynak belgeleri ulusal arşivdedir.",
+                "Osmanlı döneminden kalma birincil kaynak belgeler ulusal arşivdedir.",
+                "Osmanlı döneminden kalma belgeler ulusal arşivdedir.",
+                "Osmanlı döneminden kalma birincil kaynak belgeler kütüphanededir."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u1l2ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The rigid organization of the community ___ the rural areas is a barrier.",
+              "options": [
+                "on",
+                "at",
+                "with",
+                "in"
+              ],
+              "correctIndex": 3,
+              "translation": "Kırsal alanlardaki topluluğun katı organizasyonu bir engeldir."
+            },
+            {
+              "id": "u1l2ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The financial stability of the central bank is a crucial factor.",
+              "translation": "Merkez bankasının finansal istikrarı kritik bir faktördür.",
+              "words": [
+                "The",
+                "financial",
+                "stability",
+                "of",
+                "the",
+                "central",
+                "bank",
+                "is",
+                "a",
+                "crucial",
+                "factor.",
+                "are",
+                "economy"
+              ],
+              "correctOrder": [
+                "The",
+                "financial",
+                "stability",
+                "of",
+                "the",
+                "central",
+                "bank",
+                "is",
+                "a",
+                "crucial",
+                "factor."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u1l2ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The cognitive development of children is under close observation.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 0,
+              "translation": "Çocukların bilişsel gelişimi yakın gözlem altındadır."
+            },
+            {
+              "id": "u1l2ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "platformdaki kamuoyu araştırması",
+                  "right": "the public opinion survey on the platform"
+                },
+                {
+                  "left": "sergideki tarihi tablolar",
+                  "right": "the historic paintings in the exhibition"
+                },
+                {
+                  "left": "modern şehirlerdeki kültürel akrabalık kalıpları",
+                  "right": "the cultural kinship patterns in modern cities"
+                },
+                {
+                  "left": "bölgenin ekonomik göstergeleri",
+                  "right": "the economic indicators of the region"
+                }
+              ]
+            },
+            {
+              "id": "u1l2ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The community leaders ___ the local regions are under high pressure.",
+              "options": [
+                "in",
+                "on",
+                "at",
+                "with"
+              ],
+              "correctIndex": 0,
+              "translation": "Yerel bölgelerdeki topluluk liderleri yüksek baskı altındadır."
+            },
+            {
+              "id": "u1l2ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The constitutional rights of the citizens are in the parliamentary records.",
+              "isEngToTr": true,
+              "options": [
+                "Vatandaşların anayasal hakları parlamento kayıtlarındadır.",
+                "Vatandaşların anayasal hakları parlamento kayıtlarındadır.",
+                "Vatandaşların anayasal hakları parlamento kaydındadır.",
+                "Vatandaşların anayasal hakları meclis kayıtlarındadır."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u1l2ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"in the archives\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The detailed maps <span style=\"text-decoration: underline;\">in the archives</span> are public resources.",
+              "enSentence": "The detailed maps in the archives are public resources.",
+              "options": [
+                "Özne Çekirdeği",
+                "Asıl Yüklem",
+                "Edat Takımı (Prepositional Phrase)",
+                "Nesne"
+              ],
+              "correctIndex": 2,
+              "translation": "Arşivlerdeki detaylı haritalar kamusal kaynaklardır."
+            },
+            {
+              "id": "u1l2ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The sculptural details in the capital temple are unique.\"</span>",
+              "correctSentence": "Başkent tapınağındaki heykel detayları benzersizdir.",
+              "translation": "Başkent tapınağındaki heykel detayları benzersizdir."
+            },
+            {
+              "id": "u1l2ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Bölgesel iklimdeki coğrafi farklılıklar önemlidir.\"</span>",
+              "correctSentence": "The geographical variations in the regional climate are significant.",
+              "translation": "Bölgesel iklimdeki coğrafi farklılıklar önemlidir."
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "exercises": [
+        {
+          "id": "u1l3ex1",
+          "title": "Alıştırma 1: Zincirleme Edat Yapıları",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u1l3ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The difference in the findings of the experiments is small.",
+              "isEngToTr": true,
+              "options": [
+                "Deneylerin bulgularındaki fark büyüktür.",
+                "Deneyin bulgularındaki fark küçüktür.",
+                "Deneylerin bulgularındaki fark küçüktür.",
+                "Deneylerin bulgularındaki farklar küçüktür."
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "u1l3ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The stability of the values ___ the society is essential.",
+              "options": [
+                "in",
+                "of",
+                "from",
+                "with"
+              ],
+              "correctIndex": 1,
+              "translation": "Toplumun değerlerinin istikrarı esastır."
+            },
+            {
+              "id": "u1l3ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The mapping of the boundaries of the territory is ready.",
+              "translation": "The mapping of the boundaries of the territory is ready.",
+              "words": [
+                "Bölgenin",
+                "sınırlarının",
+                "haritalanması",
+                "hazırdır.",
+                "kamusal",
+                "kaynaklar"
+              ],
+              "correctOrder": [
+                "Bölgenin",
+                "sınırlarının",
+                "haritalanması",
+                "hazırdır."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u1l3ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The details of the sculptures in the temple is rare.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Tapınaktaki heykellerin detayları nadirdir."
+            },
+            {
+              "id": "u1l3ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "kabile liderlerinin kararları",
+                  "right": "the decisions of the leaders of the tribe"
+                },
+                {
+                  "left": "arşivdeki belgelerin analizi",
+                  "right": "the analysis of the documents from the archive"
+                },
+                {
+                  "left": "müzedeki tabloların detayları",
+                  "right": "the details of the paintings in the museum"
+                },
+                {
+                  "left": "piyasadaki fiyatların istikrarı",
+                  "right": "the stability of the prices in the market"
+                }
+              ]
+            },
+            {
+              "id": "u1l3ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The development of the behavior ___ the children is rapid.",
+              "options": [
+                "in",
+                "from",
+                "at",
+                "of"
+              ],
+              "correctIndex": 3,
+              "translation": "Çocukların davranışlarının gelişimi hızlıdır."
+            },
+            {
+              "id": "u1l3ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The document from the era of the empire is in the museum.",
+              "isEngToTr": true,
+              "options": [
+                "İmparatorluk döneminden kalma belge müzededir.",
+                "İmparatorluk döneminden kalma belgeler müzededir.",
+                "İmparatorluk döneminden kalma belge müzededir.",
+                "İmparatorluk döneminin belgesi müzededir."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u1l3ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"of the structure\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The stability <span style=\"text-decoration: underline;\">of the structure</span> of the database is important.",
+              "enSentence": "The stability of the structure of the database is important.",
+              "options": [
+                "Özne Çekirdeği",
+                "İsim Tamlayıcısı (Noun Modifier)",
+                "Yüklem",
+                "Nesne"
+              ],
+              "correctIndex": 1,
+              "translation": "Veritabanının yapısının istikrarı önemlidir."
+            },
+            {
+              "id": "u1l3ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The discovery of the tomb of the king is a success.\"</span>",
+              "correctSentence": "Kralın mezarının keşfi bir başarıdır.",
+              "translation": "Kralın mezarının keşfi bir başarıdır."
+            },
+            {
+              "id": "u1l3ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Yüksek mahkemenin kararlarının kayıtları kamusaldır.\"</span>",
+              "correctSentence": "The records of the decisions of the supreme court are public.",
+              "translation": "Yüksek mahkemenin kararlarının kayıtları kamusaldır."
+            }
+          ]
+        },
+        {
+          "id": "u1l3ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u1l3ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The precise mapping of the geographical boundaries of the regional territory is important.",
+              "isEngToTr": true,
+              "options": [
+                "Bölgesel arazinin coğrafi sınırları önemlidir.",
+                "Bölgenin coğrafi sınırlarının haritalanması önemlidir.",
+                "Bölgesel arazinin coğrafi sınırlarının kesin haritalanması önemlidir.",
+                "Bölgesel arazinin coğrafi sınırlarının kesin haritalanması önemlidir."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u1l3ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The rapid growth of the local market ___ the regional capital is a positive indicator.",
+              "options": [
+                "from",
+                "on",
+                "in",
+                "with"
+              ],
+              "correctIndex": 2,
+              "translation": "Bölgesel başkentteki yerel piyasanın hızlı büyümesi olumlu bir göstergedir."
+            },
+            {
+              "id": "u1l3ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The dynamic behavior of the social community in the city is interesting.",
+              "translation": "Şehirdeki toplumsal topluluğun dinamik davranışı ilginçtir.",
+              "words": [
+                "The",
+                "dynamic",
+                "behavior",
+                "of",
+                "the",
+                "social",
+                "community",
+                "in",
+                "the",
+                "city",
+                "is",
+                "interesting.",
+                "are",
+                "complex"
+              ],
+              "correctOrder": [
+                "The",
+                "dynamic",
+                "behavior",
+                "of",
+                "the",
+                "social",
+                "community",
+                "in",
+                "the",
+                "city",
+                "is",
+                "interesting."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u1l3ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The documents of the primary sources from the ruins are public resources.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 0,
+              "translation": "Kalıntılardan elde edilen birincil kaynakların belgeleri kamusal kaynaklardır."
+            },
+            {
+              "id": "u1l3ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "kalıntıların arkeolojik kazılarının belgelenmesi",
+                  "right": "the documentation of the archaeological excavations of the ruins"
+                },
+                {
+                  "left": "kırsal alanlardaki topluluğun organizasyonu",
+                  "right": "the organization of the community in the rural areas"
+                },
+                {
+                  "left": "vatandaşların gelirlerinin dağılımı",
+                  "right": "the distribution of the income of the citizens"
+                },
+                {
+                  "left": "toplumların kültürel miraslarının korunması",
+                  "right": "the preservation of the cultural heritage of the societies"
+                }
+              ]
+            },
+            {
+              "id": "u1l3ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The translation of the primary sources ___ the capital museum is useful.",
+              "options": [
+                "of",
+                "in",
+                "from",
+                "at"
+              ],
+              "correctIndex": 1,
+              "translation": "Başkent müzesindeki birincil kaynakların çevirisi faydalıdır."
+            },
+            {
+              "id": "u1l3ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The decisions of the supreme court on the constitutional rights are final.",
+              "isEngToTr": true,
+              "options": [
+                "Yüksek mahkemenin anayasal haklar konusundaki kararları kesindir.",
+                "Yüksek mahkemenin anayasal haklar konusundaki kararı kesindir.",
+                "Yüksek mahkemenin kararları kesindir.",
+                "Yüksek mahkemenin anayasal haklar konusundaki kararları kesindir."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u1l3ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"of the local bank\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The stability of the financial structure <span style=\"text-decoration: underline;\">of the local bank</span> is critical.",
+              "enSentence": "The stability of the financial structure of the local bank is critical.",
+              "options": [
+                "İsim Tamlayıcısı (Noun Modifier)",
+                "Özne",
+                "Yüklem",
+                "Zarf"
+              ],
+              "correctIndex": 0,
+              "translation": "Yerel bankanın finansal yapısının istikrarı kritiktir."
+            },
+            {
+              "id": "u1l3ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The study of the cultural kinship of the local tribe is important.\"</span>",
+              "correctSentence": "Yerel kabilenin kültürel akrabalığının incelenmesi önemlidir.",
+              "translation": "Yerel kabilenin kültürel akrabalığının incelenmesi önemlidir."
+            },
+            {
+              "id": "u1l3ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim ve Edat Yapıları",
+                "Noun + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Alandaki tarihi kalıntıların açıklaması detaylıdır.\"</span>",
+              "correctSentence": "The description of the historical ruins in the area is detailed.",
+              "translation": "Alandaki tarihi kalıntıların açıklaması detaylıdır."
+            }
+          ]
+        }
+      ]
+    }
   },
   "2": {
-    "exercises": [
-      {
-        "id": "u1l2ex1",
-        "title": "Alıştırma 1: İsim + From / İsim + Edat Yapıları",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u1l2ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "A student from England is in the library.",
-            "isEngToTr": true,
-            "options": [
-              "İngiltere'den öğrenciler kütüphanededir.",
-              "İngiliz bir öğrenci kütüphanededir.",
-              "İngiltere'den bir öğrenci ofistedir.",
-              "İngiltere'den bir öğrenci kütüphanededir."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u1l2ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The document ___ the Ottoman archives is a primary source.",
-            "options": [
-              "from",
-              "in",
-              "of",
-              "with"
-            ],
-            "correctIndex": 0,
-            "translation": "Osmanlı arşivlerinden gelen belge birincil bir kaynaktır."
-          },
-          {
-            "id": "u1l2ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The house on the corner is ancient.",
-            "translation": "The house on the corner is ancient.",
-            "words": [
-              "Köşedeki",
-              "ev",
-              "antiktir.",
-              "sokaktaki",
-              "yeni"
-            ],
-            "correctOrder": [
-              "Köşedeki",
-              "ev",
-              "antiktir."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l2ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The papers on the desk is important.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Sıradaki kağıtlar önemlidir."
-          },
-          {
-            "id": "u1l2ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "tarih hakkındaki kitap",
-                "right": "the book about history"
-              },
-              {
-                "left": "vadideki tapınak",
-                "right": "the temple in the valley"
-              },
-              {
-                "left": "sonuçları içeren çalışma",
-                "right": "the study with the results"
-              },
-              {
-                "left": "kazıdan elde edilen eserler",
-                "right": "the artifacts from the excavation"
-              }
-            ]
-          },
-          {
-            "id": "u1l2ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The database on the server ___ active.",
-            "options": [
-              "are",
-              "is",
-              "been",
-              "be"
-            ],
-            "correctIndex": 1,
-            "translation": "Sunucudaki veritabanı aktiftir."
-          },
-          {
-            "id": "u1l2ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The paintings in the museum are famous.",
-            "isEngToTr": true,
-            "options": [
-              "Müzedeki tablolar ünlüdür.",
-              "Müzedeki tablo ünlüdür.",
-              "Müzedeki tablolar ünlüdür.",
-              "Müzedeki tablolar önemlidir."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u1l2ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"about the election\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The report <span style=\"text-decoration: underline;\">about the election</span> is conclusive.",
-            "enSentence": "The report about the election is conclusive.",
-            "options": [
-              "İsim Tamlayıcısı (Noun Modifier)",
-              "Özne Çekirdeği",
-              "Yüklem",
-              "Zarf"
-            ],
-            "correctIndex": 0,
-            "translation": "Seçim hakkındaki rapor kesindir."
-          },
-          {
-            "id": "u1l2ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The tools in the laboratory are clean.",
-            "translation": "The tools in the laboratory are clean.",
-            "words": [
-              "Laboratuvardaki",
-              "aletler",
-              "temizdir.",
-              "kirlidir.",
-              "cihazlar"
-            ],
-            "correctOrder": [
-              "Laboratuvardaki",
-              "aletler",
-              "temizdir."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l2ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The artifacts from the ruins is rare.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Kalıntılardan elde edilen eserler nadirdir."
-          },
-          {
-            "id": "u1l2ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The information ___ the brochure is useful.",
-            "options": [
-              "from",
-              "with",
-              "by",
-              "in"
-            ],
-            "correctIndex": 3,
-            "translation": "Broşürdeki bilgi faydalıdır."
-          },
-          {
-            "id": "u1l2ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The scholar from France is a famous professor.",
-            "isEngToTr": true,
-            "options": [
-              "Fransa'daki akademisyenler ünlü profesörlerdir.",
-              "Fransız akademisyen ünlü bir yazardır.",
-              "Fransa'dan gelen akademisyen ünlü bir profesördür.",
-              "Fransa'dan gelen akademisyen bilge bir profesördür."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u1l2ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The decision by the supreme court is final.",
-            "translation": "Yüksek mahkemenin kararı kesindir.",
-            "words": [
-              "The",
-              "decision",
-              "by",
-              "the",
-              "supreme",
-              "court",
-              "is",
-              "final.",
-              "are",
-              "of"
-            ],
-            "correctOrder": [
-              "The",
-              "decision",
-              "by",
-              "the",
-              "supreme",
-              "court",
-              "is",
-              "final."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l2ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The book on the table is a dictionary.\"</span>",
-            "correctSentence": "Masadaki kitap bir sözlüktür.",
-            "translation": "Masadaki kitap bir sözlüktür."
-          },
-          {
-            "id": "u1l2ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Koordinatörden gelen mesaj açıktır.\"</span>",
-            "correctSentence": "The message from the coordinator is clear.",
-            "translation": "Koordinatörden gelen mesaj açıktır."
-          }
-        ]
-      },
-      {
-        "id": "u1l2ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u1l2ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The primary source documents from the Ottoman era are in the national archive.",
-            "isEngToTr": true,
-            "options": [
-              "Osmanlı döneminin birincil kaynak belgeleri ulusal arşivdedir.",
-              "Osmanlı döneminden kalma birincil kaynak belgeler ulusal arşivdedir.",
-              "Osmanlı döneminden kalma belgeler ulusal arşivdedir.",
-              "Osmanlı döneminden kalma birincil kaynak belgeler kütüphanededir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u1l2ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The rigid organization of the community ___ the rural areas is a barrier.",
-            "options": [
-              "on",
-              "at",
-              "with",
-              "in"
-            ],
-            "correctIndex": 3,
-            "translation": "Kırsal alanlardaki topluluğun katı organizasyonu bir engeldir."
-          },
-          {
-            "id": "u1l2ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The financial stability of the central bank is a crucial factor.",
-            "translation": "Merkez bankasının finansal istikrarı kritik bir faktördür.",
-            "words": [
-              "The",
-              "financial",
-              "stability",
-              "of",
-              "the",
-              "central",
-              "bank",
-              "is",
-              "a",
-              "crucial",
-              "factor.",
-              "are",
-              "economy"
-            ],
-            "correctOrder": [
-              "The",
-              "financial",
-              "stability",
-              "of",
-              "the",
-              "central",
-              "bank",
-              "is",
-              "a",
-              "crucial",
-              "factor."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l2ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The cognitive development of children is under close observation.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Çocukların bilişsel gelişimi yakın gözlem altındadır."
-          },
-          {
-            "id": "u1l2ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "platformdaki kamuoyu araştırması",
-                "right": "the public opinion survey on the platform"
-              },
-              {
-                "left": "sergideki tarihi tablolar",
-                "right": "the historic paintings in the exhibition"
-              },
-              {
-                "left": "modern şehirlerdeki kültürel akrabalık kalıpları",
-                "right": "the cultural kinship patterns in modern cities"
-              },
-              {
-                "left": "bölgenin ekonomik göstergeleri",
-                "right": "the economic indicators of the region"
-              }
-            ]
-          },
-          {
-            "id": "u1l2ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The community leaders ___ the local regions are under high pressure.",
-            "options": [
-              "in",
-              "on",
-              "at",
-              "with"
-            ],
-            "correctIndex": 0,
-            "translation": "Yerel bölgelerdeki topluluk liderleri yüksek baskı altındadır."
-          },
-          {
-            "id": "u1l2ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The constitutional rights of the citizens are in the parliamentary records.",
-            "isEngToTr": true,
-            "options": [
-              "Vatandaşların anayasal hakları parlamento kayıtlarındadır.",
-              "Vatandaşların anayasal hakları parlamento kayıtlarındadır.",
-              "Vatandaşların anayasal hakları parlamento kaydındadır.",
-              "Vatandaşların anayasal hakları meclis kayıtlarındadır."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u1l2ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"in the archives\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The detailed maps <span style=\"text-decoration: underline;\">in the archives</span> are public resources.",
-            "enSentence": "The detailed maps in the archives are public resources.",
-            "options": [
-              "Özne Çekirdeği",
-              "Asıl Yüklem",
-              "Edat Takımı (Prepositional Phrase)",
-              "Nesne"
-            ],
-            "correctIndex": 2,
-            "translation": "Arşivlerdeki detaylı haritalar kamusal kaynaklardır."
-          },
-          {
-            "id": "u1l2ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The primary source documents are under review by historians.",
-            "translation": "The primary source documents are under review by historians.",
-            "words": [
-              "Birincil",
-              "kaynak",
-              "belgeler",
-              "tarihçiler",
-              "tarafından",
-              "inceleme",
-              "altındadır.",
-              "üstündedir.",
-              "analizler"
-            ],
-            "correctOrder": [
-              "Birincil",
-              "kaynak",
-              "belgeler",
-              "tarihçiler",
-              "tarafından",
-              "inceleme",
-              "altındadır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l2ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The tools from the archaeological excavations is in the museum.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Arkeolojik kazılardan elde edilen aletler müzededir."
-          },
-          {
-            "id": "u1l2ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The changes ___ the local market are indicators of development.",
-            "options": [
-              "in",
-              "on",
-              "at",
-              "by"
-            ],
-            "correctIndex": 0,
-            "translation": "Yerel piyasadaki değişiklikler kalkınma göstergeleridir."
-          },
-          {
-            "id": "u1l2ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The collective behavior of the community is a major study area.",
-            "isEngToTr": true,
-            "options": [
-              "Toplumsal kurallar önemli çalışma alanlarıdır.",
-              "Topluluğun kolektif davranışı önemli bir çalışma alanıdır.",
-              "Kolektif davranışlar önemli çalışma alanlarıdır.",
-              "Topluluğun kolektif davranışı önemli bir çalışma alanıdır."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u1l2ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The legal principles in the document are important.",
-            "translation": "Belgedeki yasal ilkeler önemlidir.",
-            "words": [
-              "The",
-              "legal",
-              "principles",
-              "in",
-              "the",
-              "document",
-              "are",
-              "important.",
-              "is",
-              "rules"
-            ],
-            "correctOrder": [
-              "The",
-              "legal",
-              "principles",
-              "in",
-              "the",
-              "document",
-              "are",
-              "important."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l2ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The sculptural details in the capital temple are unique.\"</span>",
-            "correctSentence": "Başkent tapınağındaki heykel detayları benzersizdir.",
-            "translation": "Başkent tapınağındaki heykel detayları benzersizdir."
-          },
-          {
-            "id": "u1l2ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Bölgesel iklimdeki coğrafi farklılıklar önemlidir.\"</span>",
-            "correctSentence": "The geographical variations in the regional climate are significant.",
-            "translation": "Bölgesel iklimdeki coğrafi farklılıklar önemlidir."
-          }
-        ]
-      }
-    ]
+    "1": {
+      "exercises": [
+        {
+          "id": "u2l1ex1",
+          "title": "Alıştırma 1: Fiil + Edat Yapısı",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u2l1ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The results depend on the primary sources.",
+              "isEngToTr": true,
+              "options": [
+                "Sonuçlar birincil kaynaklara bağlıdır.",
+                "Sonuçlar birincil kaynaklara bağlıdır.",
+                "Sonuçlar birincil kaynakları belirler.",
+                "Kaynaktaki sonuçlar önemlidir."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u2l1ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The research focuses ___ the ancient artifacts.",
+              "options": [
+                "at",
+                "in",
+                "to",
+                "on"
+              ],
+              "correctIndex": 3,
+              "translation": "Araştırma antik eserlere odaklanır."
+            },
+            {
+              "id": "u2l1ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The community members participate in the assembly.",
+              "translation": "The community members participate in the assembly.",
+              "words": [
+                "Topluluk",
+                "üyeleri",
+                "meclise",
+                "katılır.",
+                "çalışır.",
+                "adaydır."
+              ],
+              "correctOrder": [
+                "Topluluk",
+                "üyeleri",
+                "meclise",
+                "katılır."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u2l1ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The cognitive processes contributes to human behavior.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Bilişsel süreçler insan davranışına katkıda bulunur."
+            },
+            {
+              "id": "u2l1ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "vatandaşlara aittir",
+                  "right": "belong to the citizens"
+                },
+                {
+                  "left": "düzenlemelerden kaynaklanır",
+                  "right": "result from the regulations"
+                },
+                {
+                  "left": "normlarla uyuşur",
+                  "right": "agree with the norms"
+                },
+                {
+                  "left": "bilişsel gelişime odaklanır",
+                  "right": "focus on cognitive development"
+                }
+              ]
+            },
+            {
+              "id": "u2l1ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The tribal rituals depend ___ the seasonal changes.",
+              "options": [
+                "in",
+                "at",
+                "on",
+                "to"
+              ],
+              "correctIndex": 2,
+              "translation": "Kabile ritüelleri mevsimsel değişikliklere bağlıdır."
+            },
+            {
+              "id": "u2l1ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The media reports focus on public opinion.",
+              "isEngToTr": true,
+              "options": [
+                "Medya raporları kamuoyuna odaklanır.",
+                "Medya raporları kamuoyuna odaklanır.",
+                "Medya raporu kamuoyuna odaklanır.",
+                "Medya raporları kamuoyunu yansıtır."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u2l1ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"belong to\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The constitutional rights <span style=\"text-decoration: underline;\">belong to</span> the citizens.",
+              "enSentence": "The constitutional rights belong to the citizens.",
+              "options": [
+                "Sıfat",
+                "Zarf",
+                "İsim Tamlaması",
+                "Edat alan eylem (Verb + Preposition)"
+              ],
+              "correctIndex": 3,
+              "translation": "Anayasal haklar vatandaşlara aittir."
+            },
+            {
+              "id": "u2l1ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The students listen to the professor.\"</span>",
+              "correctSentence": "Öğrenciler profesörü dinler.",
+              "translation": "Öğrenciler profesörü dinler."
+            },
+            {
+              "id": "u2l1ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Topluluğun değerleri geleneksel inançlara bağlıdır.\"</span>",
+              "correctSentence": "The values of the community depend on traditional beliefs.",
+              "translation": "Topluluğun değerleri geleneksel inançlara bağlıdır."
+            }
+          ]
+        },
+        {
+          "id": "u2l1ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u2l1ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The success of the archaeological excavations depends on the financial aid from the municipal administration.",
+              "isEngToTr": true,
+              "options": [
+                "Arkeolojik kazılar belediye yönetiminin finansal desteğiyle başarılı olur.",
+                "Arkeolojik kazıların başarısı, belediye yönetiminden gelen finansal desteğe bağlıdır.",
+                "Arkeolojik kazıların başarısı, belediye yönetiminden gelen finansal desteğe bağlıdır.",
+                "Kazıların başarısı belediyenin finansal desteğini artırır."
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "u2l1ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The research on social organizations ___ on the structural changes in urban communities.",
+              "options": [
+                "focuses",
+                "focus",
+                "focused",
+                "focusing"
+              ],
+              "correctIndex": 0,
+              "translation": "Toplumsal örgütler üzerine yapılan araştırmalar, kentsel topluluklardaki yapısal değişikliklere odaklanır."
+            },
+            {
+              "id": "u2l1ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The rapid changes in the market prices result from the unequal resource allocation in the region.",
+              "translation": "Piyasa fiyatlarındaki ani değişiklikler, bölgedeki adaletsiz kaynak tahsisinden kaynaklanır.",
+              "words": [
+                "The",
+                "rapid",
+                "changes",
+                "in",
+                "the",
+                "market",
+                "prices",
+                "result",
+                "from",
+                "the",
+                "unequal",
+                "resource",
+                "allocation",
+                "in",
+                "the",
+                "region.",
+                "is",
+                "high"
+              ],
+              "correctOrder": [
+                "The",
+                "rapid",
+                "changes",
+                "in",
+                "the",
+                "market",
+                "prices",
+                "result",
+                "from",
+                "the",
+                "unequal",
+                "resource",
+                "allocation",
+                "in",
+                "the",
+                "region."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u2l1ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The official updates from the television network contributes to public communication.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Televizyon ağından gelen resmi güncellemeler kamusal iletişime katkıda bulunur."
+            },
+            {
+              "id": "u2l1ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "çalışmaya katılır",
+                  "right": "participates in the study"
+                },
+                {
+                  "left": "yasal ilkelerle uyuşur",
+                  "right": "agrees with the legal principles"
+                },
+                {
+                  "left": "ekonomik istikrara katkıda bulunur",
+                  "right": "contribute to the economic stability"
+                },
+                {
+                  "left": "geleneksel değerlere bağlıdır",
+                  "right": "depends on the traditional values"
+                }
+              ]
+            },
+            {
+              "id": "u2l1ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The translation of the primary sources from the temple ruins ___ to the historical knowledge of the era.",
+              "options": [
+                "contribute",
+                "contributed",
+                "contributing",
+                "contributes"
+              ],
+              "correctIndex": 3,
+              "translation": "Tapınak kalıntılarından elde edilen birincil kaynakların çevirisi, dönemin tarihi bilgisine katkıda bulunur."
+            },
+            {
+              "id": "u2l1ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The sculptural details in the capital temple refer to ancient tribal beliefs.",
+              "isEngToTr": true,
+              "options": [
+                "Başkent tapınağındaki heykel detayları eski kabile inançlarına atıfta bulunur.",
+                "Başkent tapınağındaki heykel detayları eski kabile inançlarını etkiler.",
+                "Başkent tapınağındaki heykel detayları eski kabile inançlarına atıfta bulunur.",
+                "Heykel detayları kabile inançlarını yansıtır."
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "u2l1ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"result from\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The geographical variations in the regional climate <span style=\"text-decoration: underline;\">result from</span> global temperature shifts.",
+              "enSentence": "The geographical variations in the regional climate result from global temperature shifts.",
+              "options": [
+                "Özne",
+                "Edat Alan Yüklem (Verb + Preposition)",
+                "Sıfat",
+                "Zarf"
+              ],
+              "correctIndex": 1,
+              "translation": "Bölgesel iklimdeki coğrafi farklılıklar küresel sıcaklık değişimlerinden kaynaklanır."
+            },
+            {
+              "id": "u2l1ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The artists collaborate with the art historians for the exhibition.\"</span>",
+              "correctSentence": "Sanatçılar sergi için sanat tarihçileriyle iş birliği yapar.",
+              "translation": "Sanatçılar sergi için sanat tarihçileriyle iş birliği yapar."
+            },
+            {
+              "id": "u2l1ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Kabile azınlığının değerleri kalıcı bir mirasa aittir.\"</span>",
+              "correctSentence": "The values of the tribal minority belong to a permanent heritage.",
+              "translation": "Kabile azınlığının değerleri kalıcı bir mirasa aittir."
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "exercises": [
+        {
+          "id": "u2l2ex1",
+          "title": "Alıştırma 1: Edat Takımı + Edat Takımı",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u2l2ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The documents are under review in the archive.",
+              "isEngToTr": true,
+              "options": [
+                "Belgeler arşivde inceleme altındadır.",
+                "Belgeler arşivde inceleme altındadır.",
+                "Belgeler arşivdedir.",
+                "Belgelerin analizi arşivdedir."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u2l2ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The artifacts from the site are ___ protection in the museum.",
+              "options": [
+                "in",
+                "on",
+                "under",
+                "for"
+              ],
+              "correctIndex": 2,
+              "translation": "Alandaki eserler müzede koruma altındadır."
+            },
+            {
+              "id": "u2l2ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The community leaders are in transition in the region.",
+              "translation": "The community leaders are in transition in the region.",
+              "words": [
+                "Topluluk",
+                "liderleri",
+                "bölgede",
+                "geçiş",
+                "sürecindedir.",
+                "çalışır.",
+                "gelişimdedir."
+              ],
+              "correctOrder": [
+                "Topluluk",
+                "liderleri",
+                "bölgede",
+                "geçiş",
+                "sürecindedir."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u2l2ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The behavioral responses is under observation in the clinic.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Davranışsal tepkiler klinikte gözlem altındadır."
+            },
+            {
+              "id": "u2l2ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "müzedeki sergide",
+                  "right": "in the exhibition in the museum"
+                },
+                {
+                  "left": "başkentteki toplantıda",
+                  "right": "at the meeting in the capital"
+                },
+                {
+                  "left": "parlamentoda tartışma altında",
+                  "right": "under debate in the parliament"
+                },
+                {
+                  "left": "yerel ofislerde devam etmekte",
+                  "right": "in progress in the local offices"
+                }
+              ]
+            },
+            {
+              "id": "u2l2ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The supreme court decision is under review ___ the state capital.",
+              "options": [
+                "in",
+                "on",
+                "at",
+                "by"
+              ],
+              "correctIndex": 0,
+              "translation": "Yüksek mahkeme kararı eyalet başkentinde inceleme altındadır."
+            },
+            {
+              "id": "u2l2ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The community values are in transition in the southern regions.",
+              "isEngToTr": true,
+              "options": [
+                "Toplum değerleri güney bölgelerinde geçiş sürecindedir.",
+                "Toplum değerleri güney bölgelerinde geçiş sürecindedir.",
+                "Toplum değerleri güney bölgelerinde önemlidir.",
+                "Toplum değerleri güney bölgelerinde geçiş sürecindedir."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u2l2ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"under revision in the local department\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The clinical records are <span style=\"text-decoration: underline;\">under revision in the local department</span>.",
+              "enSentence": "The clinical records are under revision in the local department.",
+              "options": [
+                "Özne",
+                "Yüklem",
+                "Ardışık Edat Grupları (Stacked Prepositional Phrases)",
+                "Nesne"
+              ],
+              "correctIndex": 2,
+              "translation": "Klinik kayıtlar yerel departmanda revizyon altındadır."
+            },
+            {
+              "id": "u2l2ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The legal documents are in the folder on the table.\"</span>",
+              "correctSentence": "Yasal belgeler masadaki klasördedir.",
+              "translation": "Yasal belgeler masadaki klasördedir."
+            },
+            {
+              "id": "u2l2ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Güncellemeler iletişim kanalındaki platformdadır.\"</span>",
+              "correctSentence": "The updates are on the platform in the communication channel.",
+              "translation": "Güncellemeler iletişim kanalındaki platformdadır."
+            }
+          ]
+        },
+        {
+          "id": "u2l2ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u2l2ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The primary source documents from the Ottoman era are under technical review in the archives of the national library.",
+              "isEngToTr": true,
+              "options": [
+                "Osmanlı dönemine ait birincil kaynak belgeleri milli kütüphanenin arşivlerinde teknik inceleme altındadır.",
+                "Osmanlı döneminden kalma belgeler milli kütüphanenin arşivinde inceleme altındadır.",
+                "Osmanlı dönemine ait birincil kaynak belgeleri milli kütüphanenin arşivlerinde teknik inceleme altındadır.",
+                "Osmanlı dönemine ait kaynak belgeler kütüphanenin arşivinde teknik inceleme altındadır."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u2l2ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The rigid organization of the community in the rural areas is ___ revision in the municipal office.",
+              "options": [
+                "in",
+                "under",
+                "on",
+                "for"
+              ],
+              "correctIndex": 1,
+              "translation": "Kırsal alanlardaki topluluğun katı organizasyonu belediye ofisinde revizyon altındadır."
+            },
+            {
+              "id": "u2l2ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The economic survey on the market prices in the capital is under review in the ministry.",
+              "translation": "Başkentteki piyasa fiyatlarına ilişkin ekonomik araştırma bakanlıkta inceleme altındadır.",
+              "words": [
+                "The",
+                "economic",
+                "survey",
+                "on",
+                "the",
+                "market",
+                "prices",
+                "in",
+                "the",
+                "capital",
+                "is",
+                "under",
+                "review",
+                "in",
+                "the",
+                "ministry.",
+                "are",
+                "report"
+              ],
+              "correctOrder": [
+                "The",
+                "economic",
+                "survey",
+                "on",
+                "the",
+                "market",
+                "prices",
+                "in",
+                "the",
+                "capital",
+                "is",
+                "under",
+                "review",
+                "in",
+                "the",
+                "ministry."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u2l2ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The official updates from the television network in the country is under public debate on the website.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Ülkedeki televizyon ağından gelen resmi güncellemeler web sitesinde tartışma altındadır."
+            },
+            {
+              "id": "u2l2ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "enstitüde hazırlık aşamasında",
+                  "right": "under preparation in the institute"
+                },
+                {
+                  "left": "veritabanında kayıtlı",
+                  "right": "on record in the database"
+                },
+                {
+                  "left": "ulusal mecliste tartışma altında",
+                  "right": "under debate in the national assembly"
+                },
+                {
+                  "left": "araştırma ekibi tarafından yakın gözlem altında",
+                  "right": "under close observation by the research team"
+                }
+              ]
+            },
+            {
+              "id": "u2l2ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The translation of the primary sources from the temple ruins is under preparation ___ the history department of the university.",
+              "options": [
+                "on",
+                "at",
+                "in",
+                "by"
+              ],
+              "correctIndex": 2,
+              "translation": "Tapınak kalıntılarından elde edilen birincil kaynakların çevirisi, üniversitenin tarih bölümünde hazırlık aşamasındadır."
+            },
+            {
+              "id": "u2l2ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The sculptural details in the capital temple are under the supervision of museum curators.",
+              "isEngToTr": true,
+              "options": [
+                "Başkent tapınağındaki heykel detayları müze küratörlerinin denetimi altındadır.",
+                "Başkent tapınağındaki heykel detayları müze küratörlerinin denetimi altındadır.",
+                "Başkent tapınağındaki heykel detayları müze küratörlerinin denetimini etkiler.",
+                "Heykel detayları küratörlerin denetimini yansıtır."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u2l2ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"in the climate of the region\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The geographical variations <span style=\"text-decoration: underline;\">in the climate of the region</span> result from global temperature shifts.",
+              "enSentence": "The geographical variations in the climate of the region result from global temperature shifts.",
+              "options": [
+                "Özne Çekirdeği",
+                "Yüklem",
+                "Zarf",
+                "İsim Tamlayıcısı (Noun Modifier)"
+              ],
+              "correctIndex": 3,
+              "translation": "Bölge iklimindeki coğrafi farklılıklar küresel sıcaklık değişimlerinden kaynaklanır."
+            },
+            {
+              "id": "u2l2ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The tools from the archaeological excavation are on display in the national museum.\"</span>",
+              "correctSentence": "Arkeolojik kazıdan elde edilen aletler ulusal müzede sergilenmektedir.",
+              "translation": "Arkeolojik kazıdan elde edilen aletler ulusal müzede sergilenmektedir."
+            },
+            {
+              "id": "u2l2ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "Fiil ve Edat Yapıları",
+                "Verb + Prepositional Phrase",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Bölgelerdeki gelir dağılımına ilişkin raporlar başkentte inceleme altındadır.\"</span>",
+              "correctSentence": "The reports on the income distribution in the regions are under review in the capital.",
+              "translation": "Bölgelerdeki gelir dağılımına ilişkin raporlar başkentte inceleme altındadır."
+            }
+          ]
+        }
+      ]
+    }
   },
   "3": {
-    "exercises": [
-      {
-        "id": "u1l3ex1",
-        "title": "Alıştırma 1: Zincirleme Edat Yapıları",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u1l3ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The difference in the findings of the experiments is small.",
-            "isEngToTr": true,
-            "options": [
-              "Deneylerin bulgularındaki fark büyüktür.",
-              "Deneyin bulgularındaki fark küçüktür.",
-              "Deneylerin bulgularındaki fark küçüktür.",
-              "Deneylerin bulgularındaki farklar küçüktür."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u1l3ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The stability of the values ___ the society is essential.",
-            "options": [
-              "in",
-              "of",
-              "from",
-              "with"
-            ],
-            "correctIndex": 1,
-            "translation": "Toplumun değerlerinin istikrarı esastır."
-          },
-          {
-            "id": "u1l3ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The mapping of the boundaries of the territory is ready.",
-            "translation": "The mapping of the boundaries of the territory is ready.",
-            "words": [
-              "Bölgenin",
-              "sınırlarının",
-              "haritalanması",
-              "hazırdır.",
-              "kamusal",
-              "kaynaklar"
-            ],
-            "correctOrder": [
-              "Bölgenin",
-              "sınırlarının",
-              "haritalanması",
-              "hazırdır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l3ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The details of the sculptures in the temple is rare.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Tapınaktaki heykellerin detayları nadirdir."
-          },
-          {
-            "id": "u1l3ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "kabile liderlerinin kararları",
-                "right": "the decisions of the leaders of the tribe"
-              },
-              {
-                "left": "arşivdeki belgelerin analizi",
-                "right": "the analysis of the documents from the archive"
-              },
-              {
-                "left": "müzedeki tabloların detayları",
-                "right": "the details of the paintings in the museum"
-              },
-              {
-                "left": "piyasadaki fiyatların istikrarı",
-                "right": "the stability of the prices in the market"
-              }
-            ]
-          },
-          {
-            "id": "u1l3ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The development of the behavior ___ the children is rapid.",
-            "options": [
-              "in",
-              "from",
-              "at",
-              "of"
-            ],
-            "correctIndex": 3,
-            "translation": "Çocukların davranışlarının gelişimi hızlıdır."
-          },
-          {
-            "id": "u1l3ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The document from the era of the empire is in the museum.",
-            "isEngToTr": true,
-            "options": [
-              "İmparatorluk döneminden kalma belge müzededir.",
-              "İmparatorluk döneminden kalma belgeler müzededir.",
-              "İmparatorluk döneminden kalma belge müzededir.",
-              "İmparatorluk döneminin belgesi müzededir."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u1l3ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"of the structure\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The stability <span style=\"text-decoration: underline;\">of the structure</span> of the database is important.",
-            "enSentence": "The stability of the structure of the database is important.",
-            "options": [
-              "Özne Çekirdeği",
-              "İsim Tamlayıcısı (Noun Modifier)",
-              "Yüklem",
-              "Nesne"
-            ],
-            "correctIndex": 1,
-            "translation": "Veritabanının yapısının istikrarı önemlidir."
-          },
-          {
-            "id": "u1l3ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The principles of the law in the country are rigid.",
-            "translation": "The principles of the law in the country are rigid.",
-            "words": [
-              "Ülkedeki",
-              "hukukun",
-              "ilkeleri",
-              "katıdır.",
-              "esnektir.",
-              "kuralları"
-            ],
-            "correctOrder": [
-              "Ülkedeki",
-              "hukukun",
-              "ilkeleri",
-              "katıdır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l3ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The resources of the community in the valley is rich.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Vadideki topluluğun kaynakları zengindir."
-          },
-          {
-            "id": "u1l3ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The norms of the community ___ the village are traditional.",
-            "options": [
-              "from",
-              "at",
-              "in",
-              "by"
-            ],
-            "correctIndex": 2,
-            "translation": "Köydeki topluluğun normları gelenekseldir."
-          },
-          {
-            "id": "u1l3ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The details of the customs of the tribe are rare.",
-            "isEngToTr": true,
-            "options": [
-              "Kabilenin geleneklerinin detayları nadirdir.",
-              "Kabile adetlerinin detayları yaygındır.",
-              "Kabilenin geleneklerinin detayları nadirdir.",
-              "Kabilenin kurallarının detayları nadirdir."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u1l3ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The members of the assembly in the capital are active.",
-            "translation": "Başkentteki meclisin üyeleri aktiftir.",
-            "words": [
-              "The",
-              "members",
-              "of",
-              "the",
-              "assembly",
-              "in",
-              "the",
-              "capital",
-              "are",
-              "active.",
-              "is",
-              "representatives"
-            ],
-            "correctOrder": [
-              "The",
-              "members",
-              "of",
-              "the",
-              "assembly",
-              "in",
-              "the",
-              "capital",
-              "are",
-              "active."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l3ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The discovery of the tomb of the king is a success.\"</span>",
-            "correctSentence": "Kralın mezarının keşfi bir başarıdır.",
-            "translation": "Kralın mezarının keşfi bir başarıdır."
-          },
-          {
-            "id": "u1l3ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Yüksek mahkemenin kararlarının kayıtları kamusaldır.\"</span>",
-            "correctSentence": "The records of the decisions of the supreme court are public.",
-            "translation": "Yüksek mahkemenin kararlarının kayıtları kamusaldır."
-          }
-        ]
-      },
-      {
-        "id": "u1l3ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u1l3ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The precise mapping of the geographical boundaries of the regional territory is important.",
-            "isEngToTr": true,
-            "options": [
-              "Bölgesel arazinin coğrafi sınırları önemlidir.",
-              "Bölgenin coğrafi sınırlarının haritalanması önemlidir.",
-              "Bölgesel arazinin coğrafi sınırlarının kesin haritalanması önemlidir.",
-              "Bölgesel arazinin coğrafi sınırlarının kesin haritalanması önemlidir."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u1l3ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The rapid growth of the local market ___ the regional capital is a positive indicator.",
-            "options": [
-              "from",
-              "on",
-              "in",
-              "with"
-            ],
-            "correctIndex": 2,
-            "translation": "Bölgesel başkentteki yerel piyasanın hızlı büyümesi olumlu bir göstergedir."
-          },
-          {
-            "id": "u1l3ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The dynamic behavior of the social community in the city is interesting.",
-            "translation": "Şehirdeki toplumsal topluluğun dinamik davranışı ilginçtir.",
-            "words": [
-              "The",
-              "dynamic",
-              "behavior",
-              "of",
-              "the",
-              "social",
-              "community",
-              "in",
-              "the",
-              "city",
-              "is",
-              "interesting.",
-              "are",
-              "complex"
-            ],
-            "correctOrder": [
-              "The",
-              "dynamic",
-              "behavior",
-              "of",
-              "the",
-              "social",
-              "community",
-              "in",
-              "the",
-              "city",
-              "is",
-              "interesting."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l3ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The documents of the primary sources from the ruins are public resources.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Kalıntılardan elde edilen birincil kaynakların belgeleri kamusal kaynaklardır."
-          },
-          {
-            "id": "u1l3ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "kalıntıların arkeolojik kazılarının belgelenmesi",
-                "right": "the documentation of the archaeological excavations of the ruins"
-              },
-              {
-                "left": "kırsal alanlardaki topluluğun organizasyonu",
-                "right": "the organization of the community in the rural areas"
-              },
-              {
-                "left": "vatandaşların gelirlerinin dağılımı",
-                "right": "the distribution of the income of the citizens"
-              },
-              {
-                "left": "toplumların kültürel miraslarının korunması",
-                "right": "the preservation of the cultural heritage of the societies"
-              }
-            ]
-          },
-          {
-            "id": "u1l3ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The translation of the primary sources ___ the capital museum is useful.",
-            "options": [
-              "of",
-              "in",
-              "from",
-              "at"
-            ],
-            "correctIndex": 1,
-            "translation": "Başkent müzesindeki birincil kaynakların çevirisi faydalıdır."
-          },
-          {
-            "id": "u1l3ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The decisions of the supreme court on the constitutional rights are final.",
-            "isEngToTr": true,
-            "options": [
-              "Yüksek mahkemenin anayasal haklar konusundaki kararları kesindir.",
-              "Yüksek mahkemenin anayasal haklar konusundaki kararı kesindir.",
-              "Yüksek mahkemenin kararları kesindir.",
-              "Yüksek mahkemenin anayasal haklar konusundaki kararları kesindir."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u1l3ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"of the local bank\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The stability of the financial structure <span style=\"text-decoration: underline;\">of the local bank</span> is critical.",
-            "enSentence": "The stability of the financial structure of the local bank is critical.",
-            "options": [
-              "İsim Tamlayıcısı (Noun Modifier)",
-              "Özne",
-              "Yüklem",
-              "Zarf"
-            ],
-            "correctIndex": 0,
-            "translation": "Yerel bankanın finansal yapısının istikrarı kritiktir."
-          },
-          {
-            "id": "u1l3ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The reports of the local government on the local problems are clear.",
-            "translation": "The reports of the local government on the local problems are clear.",
-            "words": [
-              "Yerel",
-              "yönetimin",
-              "yerel",
-              "sorunlar",
-              "hakkındaki",
-              "raporları",
-              "açıktır.",
-              "kapalıdır.",
-              "belgeleri"
-            ],
-            "correctOrder": [
-              "Yerel",
-              "yönetimin",
-              "yerel",
-              "sorunlar",
-              "hakkındaki",
-              "raporları",
-              "açıktır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u1l3ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The variation in the climate of the region are significant.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Bölge iklimindeki değişiklik önemlidir."
-          },
-          {
-            "id": "u1l3ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The updates from the national channel ___ the country are interesting.",
-            "options": [
-              "of",
-              "in",
-              "from",
-              "by"
-            ],
-            "correctIndex": 1,
-            "translation": "Ülkedeki ulusal kanaldan gelen güncellemeler ilginçtir."
-          },
-          {
-            "id": "u1l3ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The success of the archaeological excavations of the ancient city is clear.",
-            "isEngToTr": true,
-            "options": [
-              "Antik kentte arkeolojik kazıların başarısı açıktır.",
-              "Antik kentin arkeolojik kazılarının başarısı açıktır.",
-              "Antik kentin arkeolojik kazılarının başarısı açıktır.",
-              "Antik kentin kazılarının başarısı belirsizdir."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u1l3ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The analysis of the collective behavior of the community is conclusive.",
-            "translation": "Topluluğun kolektif davranışının analizi kesindir.",
-            "words": [
-              "The",
-              "analysis",
-              "of",
-              "the",
-              "collective",
-              "behavior",
-              "of",
-              "the",
-              "community",
-              "is",
-              "conclusive.",
-              "are",
-              "results"
-            ],
-            "correctOrder": [
-              "The",
-              "analysis",
-              "of",
-              "the",
-              "collective",
-              "behavior",
-              "of",
-              "the",
-              "community",
-              "is",
-              "conclusive."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u1l3ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The study of the cultural kinship of the local tribe is important.\"</span>",
-            "correctSentence": "Yerel kabilenin kültürel akrabalığının incelenmesi önemlidir.",
-            "translation": "Yerel kabilenin kültürel akrabalığının incelenmesi önemlidir."
-          },
-          {
-            "id": "u1l3ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim ve Edat Yapıları",
-              "Noun + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Alandaki tarihi kalıntıların açıklaması detaylıdır.\"</span>",
-            "correctSentence": "The description of the historical ruins in the area is detailed.",
-            "translation": "Alandaki tarihi kalıntıların açıklaması detaylıdır."
-          }
-        ]
-      }
-    ]
-  }
-},
-  "2": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u2l1ex1",
-        "title": "Alıştırma 1: Fiil + Edat Yapısı",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u2l1ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The results depend on the primary sources.",
-            "isEngToTr": true,
-            "options": [
-              "Sonuçlar birincil kaynaklara bağlıdır.",
-              "Sonuçlar birincil kaynaklara bağlıdır.",
-              "Sonuçlar birincil kaynakları belirler.",
-              "Kaynaktaki sonuçlar önemlidir."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u2l1ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The research focuses ___ the ancient artifacts.",
-            "options": [
-              "at",
-              "in",
-              "to",
-              "on"
-            ],
-            "correctIndex": 3,
-            "translation": "Araştırma antik eserlere odaklanır."
-          },
-          {
-            "id": "u2l1ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The community members participate in the assembly.",
-            "translation": "The community members participate in the assembly.",
-            "words": [
-              "Topluluk",
-              "üyeleri",
-              "meclise",
-              "katılır.",
-              "çalışır.",
-              "adaydır."
-            ],
-            "correctOrder": [
-              "Topluluk",
-              "üyeleri",
-              "meclise",
-              "katılır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u2l1ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The cognitive processes contributes to human behavior.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Bilişsel süreçler insan davranışına katkıda bulunur."
-          },
-          {
-            "id": "u2l1ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "vatandaşlara aittir",
-                "right": "belong to the citizens"
-              },
-              {
-                "left": "düzenlemelerden kaynaklanır",
-                "right": "result from the regulations"
-              },
-              {
-                "left": "normlarla uyuşur",
-                "right": "agree with the norms"
-              },
-              {
-                "left": "bilişsel gelişime odaklanır",
-                "right": "focus on cognitive development"
-              }
-            ]
-          },
-          {
-            "id": "u2l1ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The tribal rituals depend ___ the seasonal changes.",
-            "options": [
-              "in",
-              "at",
-              "on",
-              "to"
-            ],
-            "correctIndex": 2,
-            "translation": "Kabile ritüelleri mevsimsel değişikliklere bağlıdır."
-          },
-          {
-            "id": "u2l1ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The media reports focus on public opinion.",
-            "isEngToTr": true,
-            "options": [
-              "Medya raporları kamuoyuna odaklanır.",
-              "Medya raporları kamuoyuna odaklanır.",
-              "Medya raporu kamuoyuna odaklanır.",
-              "Medya raporları kamuoyunu yansıtır."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u2l1ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"belong to\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The constitutional rights <span style=\"text-decoration: underline;\">belong to</span> the citizens.",
-            "enSentence": "The constitutional rights belong to the citizens.",
-            "options": [
-              "Sıfat",
-              "Zarf",
-              "İsim Tamlaması",
-              "Edat alan eylem (Verb + Preposition)"
-            ],
-            "correctIndex": 3,
-            "translation": "Anayasal haklar vatandaşlara aittir."
-          },
-          {
-            "id": "u2l1ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The research team agrees with the social norms.",
-            "translation": "Araştırma ekibi toplumsal normlarla uyuşur.",
-            "words": [
-              "The",
-              "research",
-              "team",
-              "agrees",
-              "with",
-              "the",
-              "social",
-              "norms.",
-              "is",
-              "values"
-            ],
-            "correctOrder": [
-              "The",
-              "research",
-              "team",
-              "agrees",
-              "with",
-              "the",
-              "social",
-              "norms."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l1ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The clinical studies focus on cognitive development.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Klinik çalışmalar bilişsel gelişime odaklanır."
-          },
-          {
-            "id": "u2l1ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The changes ___ from the new trade rules.",
-            "options": [
-              "result",
-              "results",
-              "resulted",
-              "resulting"
-            ],
-            "correctIndex": 0,
-            "translation": "Değişiklikler yeni ticaret kurallarından kaynaklanır."
-          },
-          {
-            "id": "u2l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The artists cooperate with the museum administration.",
-            "isEngToTr": true,
-            "options": [
-              "Sanatçılar müze yönetimini eleştirir.",
-              "Sanatçılar müze yönetimiyle iş birliği yapar.",
-              "Sanatçılar müze yönetimiyle iş birliği yapar.",
-              "Sanatçılar müze yönetimi için çalışır."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u2l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The historians work in the national library.",
-            "translation": "Tarihçiler ulusal kütüphanede çalışır.",
-            "words": [
-              "The",
-              "historians",
-              "work",
-              "in",
-              "the",
-              "national",
-              "library.",
-              "is",
-              "at"
-            ],
-            "correctOrder": [
-              "The",
-              "historians",
-              "work",
-              "in",
-              "the",
-              "national",
-              "library."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The students listen to the professor.\"</span>",
-            "correctSentence": "Öğrenciler profesörü dinler.",
-            "translation": "Öğrenciler profesörü dinler."
-          },
-          {
-            "id": "u2l1ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Topluluğun değerleri geleneksel inançlara bağlıdır.\"</span>",
-            "correctSentence": "The values of the community depend on traditional beliefs.",
-            "translation": "Topluluğun değerleri geleneksel inançlara bağlıdır."
-          }
-        ]
-      },
-      {
-        "id": "u2l1ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u2l1ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The success of the archaeological excavations depends on the financial aid from the municipal administration.",
-            "isEngToTr": true,
-            "options": [
-              "Arkeolojik kazılar belediye yönetiminin finansal desteğiyle başarılı olur.",
-              "Arkeolojik kazıların başarısı, belediye yönetiminden gelen finansal desteğe bağlıdır.",
-              "Arkeolojik kazıların başarısı, belediye yönetiminden gelen finansal desteğe bağlıdır.",
-              "Kazıların başarısı belediyenin finansal desteğini artırır."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u2l1ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The research on social organizations ___ on the structural changes in urban communities.",
-            "options": [
-              "focuses",
-              "focus",
-              "focused",
-              "focusing"
-            ],
-            "correctIndex": 0,
-            "translation": "Toplumsal örgütler üzerine yapılan araştırmalar, kentsel topluluklardaki yapısal değişikliklere odaklanır."
-          },
-          {
-            "id": "u2l1ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The rapid changes in the market prices result from the unequal resource allocation in the region.",
-            "translation": "Piyasa fiyatlarındaki ani değişiklikler, bölgedeki adaletsiz kaynak tahsisinden kaynaklanır.",
-            "words": [
-              "The",
-              "rapid",
-              "changes",
-              "in",
-              "the",
-              "market",
-              "prices",
-              "result",
-              "from",
-              "the",
-              "unequal",
-              "resource",
-              "allocation",
-              "in",
-              "the",
-              "region.",
-              "is",
-              "high"
-            ],
-            "correctOrder": [
-              "The",
-              "rapid",
-              "changes",
-              "in",
-              "the",
-              "market",
-              "prices",
-              "result",
-              "from",
-              "the",
-              "unequal",
-              "resource",
-              "allocation",
-              "in",
-              "the",
-              "region."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l1ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The official updates from the television network contributes to public communication.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Televizyon ağından gelen resmi güncellemeler kamusal iletişime katkıda bulunur."
-          },
-          {
-            "id": "u2l1ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "çalışmaya katılır",
-                "right": "participates in the study"
-              },
-              {
-                "left": "yasal ilkelerle uyuşur",
-                "right": "agrees with the legal principles"
-              },
-              {
-                "left": "ekonomik istikrara katkıda bulunur",
-                "right": "contribute to the economic stability"
-              },
-              {
-                "left": "geleneksel değerlere bağlıdır",
-                "right": "depends on the traditional values"
-              }
-            ]
-          },
-          {
-            "id": "u2l1ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The translation of the primary sources from the temple ruins ___ to the historical knowledge of the era.",
-            "options": [
-              "contribute",
-              "contributed",
-              "contributing",
-              "contributes"
-            ],
-            "correctIndex": 3,
-            "translation": "Tapınak kalıntılarından elde edilen birincil kaynakların çevirisi, dönemin tarihi bilgisine katkıda bulunur."
-          },
-          {
-            "id": "u2l1ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The sculptural details in the capital temple refer to ancient tribal beliefs.",
-            "isEngToTr": true,
-            "options": [
-              "Başkent tapınağındaki heykel detayları eski kabile inançlarına atıfta bulunur.",
-              "Başkent tapınağındaki heykel detayları eski kabile inançlarını etkiler.",
-              "Başkent tapınağındaki heykel detayları eski kabile inançlarına atıfta bulunur.",
-              "Heykel detayları kabile inançlarını yansıtır."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u2l1ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"result from\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The geographical variations in the regional climate <span style=\"text-decoration: underline;\">result from</span> global temperature shifts.",
-            "enSentence": "The geographical variations in the regional climate result from global temperature shifts.",
-            "options": [
-              "Özne",
-              "Edat Alan Yüklem (Verb + Preposition)",
-              "Sıfat",
-              "Zarf"
-            ],
-            "correctIndex": 1,
-            "translation": "Bölgesel iklimdeki coğrafi farklılıklar küresel sıcaklık değişimlerinden kaynaklanır."
-          },
-          {
-            "id": "u2l1ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The research team cooperates with the local leaders for the ethnographic study.",
-            "translation": "The research team cooperates with the local leaders for the ethnographic study.",
-            "words": [
-              "Araştırma",
-              "ekibi",
-              "etnografik",
-              "çalışma",
-              "için",
-              "yerel",
-              "liderlerle",
-              "iş",
-              "birliği",
-              "yapar.",
-              "uyuşur.",
-              "katılır."
-            ],
-            "correctOrder": [
-              "Araştırma",
-              "ekibi",
-              "etnografik",
-              "çalışma",
-              "için",
-              "yerel",
-              "liderlerle",
-              "iş",
-              "birliği",
-              "yapar."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u2l1ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The database administrators agree with the security team.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Veritabanı yöneticileri güvenlik ekibiyle uyuşur."
-          },
-          {
-            "id": "u2l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The local merchants ___ on the city council for financial aid.",
-            "options": [
-              "depends",
-              "depending",
-              "depended",
-              "depend"
-            ],
-            "correctIndex": 3,
-            "translation": "Yerel tüccarlar finansal destek için belediye meclisine bağlıdır."
-          },
-          {
-            "id": "u2l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The changes in the population density contribute to urban migration.",
-            "isEngToTr": true,
-            "options": [
-              "Nüfus yoğunluğundaki değişiklikler kentsel göçe katkıda bulunur.",
-              "Nüfus yoğunluğu kentsel göçü engeller.",
-              "Nüfus yoğunluğundaki değişiklikler kentsel göçten kaynaklanır.",
-              "Nüfus yoğunluğundaki değişiklikler kentsel göçe katkıda bulunur."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u2l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The supreme court decision agrees with the constitutional principles of the country.",
-            "translation": "Yüksek mahkeme kararı ülkenin anayasal ilkeleriyle uyuşur.",
-            "words": [
-              "The",
-              "supreme",
-              "court",
-              "decision",
-              "agrees",
-              "with",
-              "the",
-              "constitutional",
-              "principles",
-              "of",
-              "the",
-              "country.",
-              "are",
-              "norm"
-            ],
-            "correctOrder": [
-              "The",
-              "supreme",
-              "court",
-              "decision",
-              "agrees",
-              "with",
-              "the",
-              "constitutional",
-              "principles",
-              "of",
-              "the",
-              "country."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The artists collaborate with the art historians for the exhibition.\"</span>",
-            "correctSentence": "Sanatçılar sergi için sanat tarihçileriyle iş birliği yapar.",
-            "translation": "Sanatçılar sergi için sanat tarihçileriyle iş birliği yapar."
-          },
-          {
-            "id": "u2l1ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Kabile azınlığının değerleri kalıcı bir mirasa aittir.\"</span>",
-            "correctSentence": "The values of the tribal minority belong to a permanent heritage.",
-            "translation": "Kabile azınlığının değerleri kalıcı bir mirasa aittir."
-          }
-        ]
-      }
-    ]
+    "1": {
+      "exercises": [
+        {
+          "id": "u3l1ex1",
+          "title": "Alıştırma 1: İsim + İsim ve İsim + İsim + İsim Yapıları",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u3l1ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The family structures are rigid.",
+              "isEngToTr": true,
+              "options": [
+                "Ailenin yapıları katıdır.",
+                "Aile yapısı katıdır.",
+                "Aile yapıları katıdır.",
+                "Aile yapıları katıdır."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u3l1ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The market ___ is high.",
+              "options": [
+                "demand",
+                "demands",
+                "demanded",
+                "demanding"
+              ],
+              "correctIndex": 0,
+              "translation": "Piyasa talebi yüksektir."
+            },
+            {
+              "id": "u3l1ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The art history is a study area.",
+              "translation": "The art history is a study area.",
+              "words": [
+                "Sanat",
+                "tarihi",
+                "bir",
+                "çalışma",
+                "alanıdır.",
+                "kolaydır.",
+                "yapısı"
+              ],
+              "correctOrder": [
+                "Sanat",
+                "tarihi",
+                "bir",
+                "çalışma",
+                "alanıdır."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u3l1ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The communication networks is active.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "İletişim ağları aktiftir."
+            },
+            {
+              "id": "u3l1ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "gelir dağılımı",
+                  "right": "the income distribution"
+                },
+                {
+                  "left": "araştırma ekibi",
+                  "right": "the research team"
+                },
+                {
+                  "left": "değerlendirme sonuçları",
+                  "right": "the evaluation results"
+                },
+                {
+                  "left": "mahkeme kayıtları",
+                  "right": "the court records"
+                }
+              ]
+            },
+            {
+              "id": "u3l1ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The target audience ___ active.",
+              "options": [
+                "are",
+                "is",
+                "been",
+                "be"
+              ],
+              "correctIndex": 1,
+              "translation": "Hedef kitle aktiftir."
+            },
+            {
+              "id": "u3l1ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The database administrator is in the office.",
+              "isEngToTr": true,
+              "options": [
+                "Veritabanı yöneticisi ofistedir.",
+                "Veritabanı yöneticileri ofistedir.",
+                "Veritabanı yöneticisi ofistedir.",
+                "Veri yöneticisi ofistedir."
+              ],
+              "correctIndex": 2
+            },
+            {
+              "id": "u3l1ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"resource allocation\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The <span style=\"text-decoration: underline;\">resource allocation</span> is important.",
+              "enSentence": "The resource allocation is important.",
+              "options": [
+                "İsim Tamlaması (Compound Noun)",
+                "Edat Öbeği",
+                "Zarf",
+                "Yüklem"
+              ],
+              "correctIndex": 0,
+              "translation": "Kaynak tahsisi önemlidir."
+            },
+            {
+              "id": "u3l1ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The user profiles are in the database.\"</span>",
+              "correctSentence": "Kullanıcı profilleri veritabanındadır.",
+              "translation": "Kullanıcı profilleri veritabanındadır."
+            },
+            {
+              "id": "u3l1ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Kaynak çevirisi bir gerekliliktir.\"</span>",
+              "correctSentence": "The source translation is a requirement.",
+              "translation": "Kaynak çevirisi bir gerekliliktir."
+            }
+          ]
+        },
+        {
+          "id": "u3l1ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u3l1ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The careful analysis of the archive documents is a primary requirement for the research team.",
+              "isEngToTr": true,
+              "options": [
+                "Arşiv belgelerinin dikkatli analizi, araştırma ekibi için birincil bir gerekliliktir.",
+                "Arşiv belgelerinin dikkatli analizi, araştırma ekibi için birincil bir gerekliliktir.",
+                "Arşiv belgelerinin analizi, araştırma ekibi için bir gerekliliktir.",
+                "Arşivlerin dikkatli analizi, araştırma ekibi için birincil bir gerekliliktir."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u3l1ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The rigid community organization is a major barrier to education ___.",
+              "options": [
+                "reforms",
+                "reformed",
+                "reforming",
+                "reform"
+              ],
+              "correctIndex": 3,
+              "translation": "Topluluğun katı organizasyonu eğitim reformuna büyük bir engeldir."
+            },
+            {
+              "id": "u3l1ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The unequal income distribution is a major economic problem in poor nations.",
+              "translation": "Adaletsiz gelir dağılımı yoksul ülkelerde büyük bir ekonomik sorundur.",
+              "words": [
+                "The",
+                "unequal",
+                "income",
+                "distribution",
+                "is",
+                "a",
+                "major",
+                "economic",
+                "problem",
+                "in",
+                "poor",
+                "nations.",
+                "are",
+                "wealth"
+              ],
+              "correctOrder": [
+                "The",
+                "unequal",
+                "income",
+                "distribution",
+                "is",
+                "a",
+                "major",
+                "economic",
+                "problem",
+                "in",
+                "poor",
+                "nations."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u3l1ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The television network broadcasts is public resources.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 1,
+              "translation": "Televizyon ağı yayınları kamusal kaynaklardır."
+            },
+            {
+              "id": "u3l1ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "kültürel mirasın korunması",
+                  "right": "the cultural heritage preservation"
+                },
+                {
+                  "left": "hızlı piyasa büyümesi",
+                  "right": "the rapid market growth"
+                },
+                {
+                  "left": "toplumsal örgütlenme dinamikleri",
+                  "right": "the social organization dynamics"
+                },
+                {
+                  "left": "birincil kaynak çevirisi",
+                  "right": "the primary source translation"
+                }
+              ]
+            },
+            {
+              "id": "u3l1ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The geographical boundary changes ___ significant in this region.",
+              "options": [
+                "are",
+                "is",
+                "was",
+                "be"
+              ],
+              "correctIndex": 0,
+              "translation": "Coğrafi sınır değişiklikleri bu bölgede önemlidir."
+            },
+            {
+              "id": "u3l1ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The sculptural details in the temple are public treasures.",
+              "isEngToTr": true,
+              "options": [
+                "Tapınaktaki heykel detayı kamusal hazinedir.",
+                "Tapınaktaki heykel detayları kamusal hazinelerdir.",
+                "Tapınaktaki heykel detayları kamusal hazinedir.",
+                "Heykel detayları tapınakta kamusal hazinedir."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u3l1ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"public opinion survey findings\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The <span style=\"text-decoration: underline;\">public opinion survey findings</span> are in the database.",
+              "enSentence": "The public opinion survey findings are in the database.",
+              "options": [
+                "Edat Takımı",
+                "Zarf",
+                "Zincirleme İsim Tamlaması (Compound Noun Phrase)",
+                "Yüklem"
+              ],
+              "correctIndex": 2,
+              "translation": "Kamuoyu araştırması bulguları veritabanındadır."
+            },
+            {
+              "id": "u3l1ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The trade agreement parameters are in the document.\"</span>",
+              "correctSentence": "Ticaret anlaşması parametreleri belgededir.",
+              "translation": "Ticaret anlaşması parametreleri belgededir."
+            },
+            {
+              "id": "u3l1ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "İsim Tamlaması",
+                "Compound Nouns",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Topluluk liderleri belediye yönetiminden gelen yüksek baskı altındadır.\"</span>",
+              "correctSentence": "The community leaders are under high pressure from the municipal administration.",
+              "translation": "Topluluk liderleri belediye yönetiminden gelen yüksek baskı altındadır."
+            }
+          ]
+        }
+      ]
+    }
   },
-  "2": {
-    "exercises": [
-      {
-        "id": "u2l2ex1",
-        "title": "Alıştırma 1: Edat Takımı + Edat Takımı",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u2l2ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The documents are under review in the archive.",
-            "isEngToTr": true,
-            "options": [
-              "Belgeler arşivde inceleme altındadır.",
-              "Belgeler arşivde inceleme altındadır.",
-              "Belgeler arşivdedir.",
-              "Belgelerin analizi arşivdedir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u2l2ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The artifacts from the site are ___ protection in the museum.",
-            "options": [
-              "in",
-              "on",
-              "under",
-              "for"
-            ],
-            "correctIndex": 2,
-            "translation": "Alandaki eserler müzede koruma altındadır."
-          },
-          {
-            "id": "u2l2ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The community leaders are in transition in the region.",
-            "translation": "The community leaders are in transition in the region.",
-            "words": [
-              "Topluluk",
-              "liderleri",
-              "bölgede",
-              "geçiş",
-              "sürecindedir.",
-              "çalışır.",
-              "gelişimdedir."
-            ],
-            "correctOrder": [
-              "Topluluk",
-              "liderleri",
-              "bölgede",
-              "geçiş",
-              "sürecindedir."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u2l2ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The behavioral responses is under observation in the clinic.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Davranışsal tepkiler klinikte gözlem altındadır."
-          },
-          {
-            "id": "u2l2ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "müzedeki sergide",
-                "right": "in the exhibition in the museum"
-              },
-              {
-                "left": "başkentteki toplantıda",
-                "right": "at the meeting in the capital"
-              },
-              {
-                "left": "parlamentoda tartışma altında",
-                "right": "under debate in the parliament"
-              },
-              {
-                "left": "yerel ofislerde devam etmekte",
-                "right": "in progress in the local offices"
-              }
-            ]
-          },
-          {
-            "id": "u2l2ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The supreme court decision is under review ___ the state capital.",
-            "options": [
-              "in",
-              "on",
-              "at",
-              "by"
-            ],
-            "correctIndex": 0,
-            "translation": "Yüksek mahkeme kararı eyalet başkentinde inceleme altındadır."
-          },
-          {
-            "id": "u2l2ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The community values are in transition in the southern regions.",
-            "isEngToTr": true,
-            "options": [
-              "Toplum değerleri güney bölgelerinde geçiş sürecindedir.",
-              "Toplum değerleri güney bölgelerinde geçiş sürecindedir.",
-              "Toplum değerleri güney bölgelerinde önemlidir.",
-              "Toplum değerleri güney bölgelerinde geçiş sürecindedir."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u2l2ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"under revision in the local department\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The clinical records are <span style=\"text-decoration: underline;\">under revision in the local department</span>.",
-            "enSentence": "The clinical records are under revision in the local department.",
-            "options": [
-              "Özne",
-              "Yüklem",
-              "Ardışık Edat Grupları (Stacked Prepositional Phrases)",
-              "Nesne"
-            ],
-            "correctIndex": 2,
-            "translation": "Klinik kayıtlar yerel departmanda revizyon altındadır."
-          },
-          {
-            "id": "u2l2ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The survey results are under review in the research office.",
-            "translation": "The survey results are under review in the research office.",
-            "words": [
-              "Araştırma",
-              "ofisinde",
-              "anket",
-              "sonuçları",
-              "inceleme",
-              "altındadır.",
-              "üstündedir.",
-              "rapordur."
-            ],
-            "correctOrder": [
-              "Araştırma",
-              "ofisinde",
-              "anket",
-              "sonuçları",
-              "inceleme",
-              "altındadır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u2l2ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The tools from the site are in the showcase on the shelf.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Alandaki aletler raftaki vitrindedir."
-          },
-          {
-            "id": "u2l2ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The team works ___ the laboratory ___ the valley.",
-            "options": [
-              "at / on",
-              "in / in",
-              "in / of",
-              "on / at"
-            ],
-            "correctIndex": 1,
-            "translation": "Ekip vadideki laboratuvarda çalışır."
-          },
-          {
-            "id": "u2l2ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The historic ruins are under state protection in the forest.",
-            "isEngToTr": true,
-            "options": [
-              "Tarihi kalıntılar müzede devlet koruması altındadır.",
-              "Tarihi kalıntılar ormanda devlet koruması altındadır.",
-              "Tarihi kalıntılar ormanda özel koruma altındadır.",
-              "Tarihi kalıntılar ormanda devlet koruması altındadır."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u2l2ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The database is in the cloud on the virtual server.",
-            "translation": "Veritabanı sanal sunucuda buluttadır.",
-            "words": [
-              "The",
-              "database",
-              "is",
-              "in",
-              "the",
-              "cloud",
-              "on",
-              "the",
-              "virtual",
-              "server.",
-              "are",
-              "physical"
-            ],
-            "correctOrder": [
-              "The",
-              "database",
-              "is",
-              "in",
-              "the",
-              "cloud",
-              "on",
-              "the",
-              "virtual",
-              "server."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l2ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The legal documents are in the folder on the table.\"</span>",
-            "correctSentence": "Yasal belgeler masadaki klasördedir.",
-            "translation": "Yasal belgeler masadaki klasördedir."
-          },
-          {
-            "id": "u2l2ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Güncellemeler iletişim kanalındaki platformdadır.\"</span>",
-            "correctSentence": "The updates are on the platform in the communication channel.",
-            "translation": "Güncellemeler iletişim kanalındaki platformdadır."
-          }
-        ]
-      },
-      {
-        "id": "u2l2ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u2l2ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The primary source documents from the Ottoman era are under technical review in the archives of the national library.",
-            "isEngToTr": true,
-            "options": [
-              "Osmanlı dönemine ait birincil kaynak belgeleri milli kütüphanenin arşivlerinde teknik inceleme altındadır.",
-              "Osmanlı döneminden kalma belgeler milli kütüphanenin arşivinde inceleme altındadır.",
-              "Osmanlı dönemine ait birincil kaynak belgeleri milli kütüphanenin arşivlerinde teknik inceleme altındadır.",
-              "Osmanlı dönemine ait kaynak belgeler kütüphanenin arşivinde teknik inceleme altındadır."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u2l2ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The rigid organization of the community in the rural areas is ___ revision in the municipal office.",
-            "options": [
-              "in",
-              "under",
-              "on",
-              "for"
-            ],
-            "correctIndex": 1,
-            "translation": "Kırsal alanlardaki topluluğun katı organizasyonu belediye ofisinde revizyon altındadır."
-          },
-          {
-            "id": "u2l2ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The economic survey on the market prices in the capital is under review in the ministry.",
-            "translation": "Başkentteki piyasa fiyatlarına ilişkin ekonomik araştırma bakanlıkta inceleme altındadır.",
-            "words": [
-              "The",
-              "economic",
-              "survey",
-              "on",
-              "the",
-              "market",
-              "prices",
-              "in",
-              "the",
-              "capital",
-              "is",
-              "under",
-              "review",
-              "in",
-              "the",
-              "ministry.",
-              "are",
-              "report"
-            ],
-            "correctOrder": [
-              "The",
-              "economic",
-              "survey",
-              "on",
-              "the",
-              "market",
-              "prices",
-              "in",
-              "the",
-              "capital",
-              "is",
-              "under",
-              "review",
-              "in",
-              "the",
-              "ministry."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l2ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The official updates from the television network in the country is under public debate on the website.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Ülkedeki televizyon ağından gelen resmi güncellemeler web sitesinde tartışma altındadır."
-          },
-          {
-            "id": "u2l2ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "enstitüde hazırlık aşamasında",
-                "right": "under preparation in the institute"
-              },
-              {
-                "left": "veritabanında kayıtlı",
-                "right": "on record in the database"
-              },
-              {
-                "left": "ulusal mecliste tartışma altında",
-                "right": "under debate in the national assembly"
-              },
-              {
-                "left": "araştırma ekibi tarafından yakın gözlem altında",
-                "right": "under close observation by the research team"
-              }
-            ]
-          },
-          {
-            "id": "u2l2ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The translation of the primary sources from the temple ruins is under preparation ___ the history department of the university.",
-            "options": [
-              "on",
-              "at",
-              "in",
-              "by"
-            ],
-            "correctIndex": 2,
-            "translation": "Tapınak kalıntılarından elde edilen birincil kaynakların çevirisi, üniversitenin tarih bölümünde hazırlık aşamasındadır."
-          },
-          {
-            "id": "u2l2ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The sculptural details in the capital temple are under the supervision of museum curators.",
-            "isEngToTr": true,
-            "options": [
-              "Başkent tapınağındaki heykel detayları müze küratörlerinin denetimi altındadır.",
-              "Başkent tapınağındaki heykel detayları müze küratörlerinin denetimi altındadır.",
-              "Başkent tapınağındaki heykel detayları müze küratörlerinin denetimini etkiler.",
-              "Heykel detayları küratörlerin denetimini yansıtır."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u2l2ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"in the climate of the region\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The geographical variations <span style=\"text-decoration: underline;\">in the climate of the region</span> result from global temperature shifts.",
-            "enSentence": "The geographical variations in the climate of the region result from global temperature shifts.",
-            "options": [
-              "Özne Çekirdeği",
-              "Yüklem",
-              "Zarf",
-              "İsim Tamlayıcısı (Noun Modifier)"
-            ],
-            "correctIndex": 3,
-            "translation": "Bölge iklimindeki coğrafi farklılıklar küresel sıcaklık değişimlerinden kaynaklanır."
-          },
-          {
-            "id": "u2l2ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The research team focuses on the resource allocation in the developing nations of the region.",
-            "translation": "The research team focuses on the resource allocation in the developing nations of the region.",
-            "words": [
-              "Araştırma",
-              "ekibi",
-              "bölgenin",
-              "gelişmekte",
-              "olan",
-              "ülkelerindeki",
-              "kaynak",
-              "tahsisine",
-              "odaklanır.",
-              "katılır.",
-              "yapısı"
-            ],
-            "correctOrder": [
-              "Araştırma",
-              "ekibi",
-              "bölgenin",
-              "gelişmekte",
-              "olan",
-              "ülkelerindeki",
-              "kaynak",
-              "tahsisine",
-              "odaklanır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u2l2ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The clinical records of the patients in the clinic are under technical review in the local department.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Klinikteki hastaların klinik kayıtları yerel departmanda teknik inceleme altındadır."
-          },
-          {
-            "id": "u2l2ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The community leaders participate ___ the discussion ___ the city hall.",
-            "options": [
-              "at / on",
-              "in / of",
-              "in / in",
-              "on / at"
-            ],
-            "correctIndex": 2,
-            "translation": "Topluluk liderleri belediye binasındaki tartışmaya katılır."
-          },
-          {
-            "id": "u2l2ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The legal documents on the constitutional rights are under protection in the federal building.",
-            "isEngToTr": true,
-            "options": [
-              "Anayasal haklar federal binada koruma altındadır.",
-              "Anayasal haklara ilişkin yasal belgeler federal binada koruma altındadır.",
-              "Yasal belgeler federal binada koruma altındadır.",
-              "Anayasal haklara ilişkin yasal belgeler federal binada koruma altındadır."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u2l2ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The social norms of the tribe are in transition in the modern cities of the country.",
-            "translation": "Kabilenin toplumsal normları ülkenin modern şehirlerinde geçiş sürecindedir.",
-            "words": [
-              "The",
-              "social",
-              "norms",
-              "of",
-              "the",
-              "tribe",
-              "are",
-              "in",
-              "transition",
-              "in",
-              "the",
-              "modern",
-              "cities",
-              "of",
-              "the",
-              "country.",
-              "is",
-              "development"
-            ],
-            "correctOrder": [
-              "The",
-              "social",
-              "norms",
-              "of",
-              "the",
-              "tribe",
-              "are",
-              "in",
-              "transition",
-              "in",
-              "the",
-              "modern",
-              "cities",
-              "of",
-              "the",
-              "country."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u2l2ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The tools from the archaeological excavation are on display in the national museum.\"</span>",
-            "correctSentence": "Arkeolojik kazıdan elde edilen aletler ulusal müzede sergilenmektedir.",
-            "translation": "Arkeolojik kazıdan elde edilen aletler ulusal müzede sergilenmektedir."
-          },
-          {
-            "id": "u2l2ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Fiil ve Edat Yapıları",
-              "Verb + Prepositional Phrase",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Bölgelerdeki gelir dağılımına ilişkin raporlar başkentte inceleme altındadır.\"</span>",
-            "correctSentence": "The reports on the income distribution in the regions are under review in the capital.",
-            "translation": "Bölgelerdeki gelir dağılımına ilişkin raporlar başkentte inceleme altındadır."
-          }
-        ]
-      }
-    ]
-  }
-},
-  "3": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u3l1ex1",
-        "title": "Alıştırma 1: İsim + İsim ve İsim + İsim + İsim Yapıları",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u3l1ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The family structures are rigid.",
-            "isEngToTr": true,
-            "options": [
-              "Ailenin yapıları katıdır.",
-              "Aile yapısı katıdır.",
-              "Aile yapıları katıdır.",
-              "Aile yapıları katıdır."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u3l1ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The market ___ is high.",
-            "options": [
-              "demand",
-              "demands",
-              "demanded",
-              "demanding"
-            ],
-            "correctIndex": 0,
-            "translation": "Piyasa talebi yüksektir."
-          },
-          {
-            "id": "u3l1ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The art history is a study area.",
-            "translation": "The art history is a study area.",
-            "words": [
-              "Sanat",
-              "tarihi",
-              "bir",
-              "çalışma",
-              "alanıdır.",
-              "kolaydır.",
-              "yapısı"
-            ],
-            "correctOrder": [
-              "Sanat",
-              "tarihi",
-              "bir",
-              "çalışma",
-              "alanıdır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u3l1ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The communication networks is active.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "İletişim ağları aktiftir."
-          },
-          {
-            "id": "u3l1ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "gelir dağılımı",
-                "right": "the income distribution"
-              },
-              {
-                "left": "araştırma ekibi",
-                "right": "the research team"
-              },
-              {
-                "left": "değerlendirme sonuçları",
-                "right": "the evaluation results"
-              },
-              {
-                "left": "mahkeme kayıtları",
-                "right": "the court records"
-              }
-            ]
-          },
-          {
-            "id": "u3l1ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The target audience ___ active.",
-            "options": [
-              "are",
-              "is",
-              "been",
-              "be"
-            ],
-            "correctIndex": 1,
-            "translation": "Hedef kitle aktiftir."
-          },
-          {
-            "id": "u3l1ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The database administrator is in the office.",
-            "isEngToTr": true,
-            "options": [
-              "Veritabanı yöneticisi ofistedir.",
-              "Veritabanı yöneticileri ofistedir.",
-              "Veritabanı yöneticisi ofistedir.",
-              "Veri yöneticisi ofistedir."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u3l1ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"resource allocation\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The <span style=\"text-decoration: underline;\">resource allocation</span> is important.",
-            "enSentence": "The resource allocation is important.",
-            "options": [
-              "İsim Tamlaması (Compound Noun)",
-              "Edat Öbeği",
-              "Zarf",
-              "Yüklem"
-            ],
-            "correctIndex": 0,
-            "translation": "Kaynak tahsisi önemlidir."
-          },
-          {
-            "id": "u3l1ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The social organization norms are rigid.",
-            "translation": "The social organization norms are rigid.",
-            "words": [
-              "Toplumsal",
-              "örgütlenme",
-              "normları",
-              "katıdır.",
-              "esnektir.",
-              "kuralları"
-            ],
-            "correctOrder": [
-              "Toplumsal",
-              "örgütlenme",
-              "normları",
-              "katıdır."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u3l1ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The population changes are significant.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Nüfus değişiklikleri önemlidir."
-          },
-          {
-            "id": "u3l1ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The trade ___ is final.",
-            "options": [
-              "agreements",
-              "agreed",
-              "agreeing",
-              "agreement"
-            ],
-            "correctIndex": 3,
-            "translation": "Ticaret anlaşması kesindir."
-          },
-          {
-            "id": "u3l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The classroom activities are interesting.",
-            "isEngToTr": true,
-            "options": [
-              "Sınıf içi aktiviteler sıkıcıdır.",
-              "Sınıftaki aktiviteler ilginçtir.",
-              "Sınıf içi aktiviteler ilginçtir.",
-              "Sınıf içi aktiviteler ilginçtir."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u3l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The government policies are democratic.",
-            "translation": "Hükümet politikaları demokratiktir.",
-            "words": [
-              "The",
-              "government",
-              "policies",
-              "are",
-              "democratic.",
-              "is",
-              "rules"
-            ],
-            "correctOrder": [
-              "The",
-              "government",
-              "policies",
-              "are",
-              "democratic."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u3l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The user profiles are in the database.\"</span>",
-            "correctSentence": "Kullanıcı profilleri veritabanındadır.",
-            "translation": "Kullanıcı profilleri veritabanındadır."
-          },
-          {
-            "id": "u3l1ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Kaynak çevirisi bir gerekliliktir.\"</span>",
-            "correctSentence": "The source translation is a requirement.",
-            "translation": "Kaynak çevirisi bir gerekliliktir."
-          }
-        ]
-      },
-      {
-        "id": "u3l1ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u3l1ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The careful analysis of the archive documents is a primary requirement for the research team.",
-            "isEngToTr": true,
-            "options": [
-              "Arşiv belgelerinin dikkatli analizi, araştırma ekibi için birincil bir gerekliliktir.",
-              "Arşiv belgelerinin dikkatli analizi, araştırma ekibi için birincil bir gerekliliktir.",
-              "Arşiv belgelerinin analizi, araştırma ekibi için bir gerekliliktir.",
-              "Arşivlerin dikkatli analizi, araştırma ekibi için birincil bir gerekliliktir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u3l1ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The rigid community organization is a major barrier to education ___.",
-            "options": [
-              "reforms",
-              "reformed",
-              "reforming",
-              "reform"
-            ],
-            "correctIndex": 3,
-            "translation": "Topluluğun katı organizasyonu eğitim reformuna büyük bir engeldir."
-          },
-          {
-            "id": "u3l1ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The unequal income distribution is a major economic problem in poor nations.",
-            "translation": "Adaletsiz gelir dağılımı yoksul ülkelerde büyük bir ekonomik sorundur.",
-            "words": [
-              "The",
-              "unequal",
-              "income",
-              "distribution",
-              "is",
-              "a",
-              "major",
-              "economic",
-              "problem",
-              "in",
-              "poor",
-              "nations.",
-              "are",
-              "wealth"
-            ],
-            "correctOrder": [
-              "The",
-              "unequal",
-              "income",
-              "distribution",
-              "is",
-              "a",
-              "major",
-              "economic",
-              "problem",
-              "in",
-              "poor",
-              "nations."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u3l1ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The television network broadcasts is public resources.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 1,
-            "translation": "Televizyon ağı yayınları kamusal kaynaklardır."
-          },
-          {
-            "id": "u3l1ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "kültürel mirasın korunması",
-                "right": "the cultural heritage preservation"
-              },
-              {
-                "left": "hızlı piyasa büyümesi",
-                "right": "the rapid market growth"
-              },
-              {
-                "left": "toplumsal örgütlenme dinamikleri",
-                "right": "the social organization dynamics"
-              },
-              {
-                "left": "birincil kaynak çevirisi",
-                "right": "the primary source translation"
-              }
-            ]
-          },
-          {
-            "id": "u3l1ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The geographical boundary changes ___ significant in this region.",
-            "options": [
-              "are",
-              "is",
-              "was",
-              "be"
-            ],
-            "correctIndex": 0,
-            "translation": "Coğrafi sınır değişiklikleri bu bölgede önemlidir."
-          },
-          {
-            "id": "u3l1ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The sculptural details in the temple are public treasures.",
-            "isEngToTr": true,
-            "options": [
-              "Tapınaktaki heykel detayı kamusal hazinedir.",
-              "Tapınaktaki heykel detayları kamusal hazinelerdir.",
-              "Tapınaktaki heykel detayları kamusal hazinedir.",
-              "Heykel detayları tapınakta kamusal hazinedir."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u3l1ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"public opinion survey findings\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The <span style=\"text-decoration: underline;\">public opinion survey findings</span> are in the database.",
-            "enSentence": "The public opinion survey findings are in the database.",
-            "options": [
-              "Edat Takımı",
-              "Zarf",
-              "Zincirleme İsim Tamlaması (Compound Noun Phrase)",
-              "Yüklem"
-            ],
-            "correctIndex": 2,
-            "translation": "Kamuoyu araştırması bulguları veritabanındadır."
-          },
-          {
-            "id": "u3l1ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The state bank financial stability is a crucial factor for the national economy.",
-            "translation": "The state bank financial stability is a crucial factor for the national economy.",
-            "words": [
-              "Devlet",
-              "bankasının",
-              "finansal",
-              "istikrarı",
-              "ulusal",
-              "ekonomi",
-              "için",
-              "kritik",
-              "bir",
-              "faktördür.",
-              "piyasası",
-              "önemlidir."
-            ],
-            "correctOrder": [
-              "Devlet",
-              "bankasının",
-              "finansal",
-              "istikrarı",
-              "ulusal",
-              "ekonomi",
-              "için",
-              "kritik",
-              "bir",
-              "faktördür."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u3l1ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The database security measures are final.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Veritabanı güvenlik önlemleri kesindir."
-          },
-          {
-            "id": "u3l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The communication ___ protocols are rigid.",
-            "options": [
-              "network",
-              "networks",
-              "networked",
-              "networking"
-            ],
-            "correctIndex": 0,
-            "translation": "İletişim ağı protokolleri katıdır."
-          },
-          {
-            "id": "u3l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The history department research projects are public.",
-            "isEngToTr": true,
-            "options": [
-              "Tarih departmanı projeleri kamusaldır.",
-              "Tarih bölümü araştırma projeleri kamusaldır.",
-              "Tarih bölümünün araştırmaları kamusaldır.",
-              "Tarih bölümü araştırma projeleri kamusaldır."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u3l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The supreme court decision is a vital precedent for legal researchers.",
-            "translation": "Yüksek mahkeme kararı hukuk araştırmacıları için hayati bir emsaldir.",
-            "words": [
-              "The",
-              "supreme",
-              "court",
-              "decision",
-              "is",
-              "a",
-              "vital",
-              "precedent",
-              "for",
-              "legal",
-              "researchers.",
-              "are",
-              "justices"
-            ],
-            "correctOrder": [
-              "The",
-              "supreme",
-              "court",
-              "decision",
-              "is",
-              "a",
-              "vital",
-              "precedent",
-              "for",
-              "legal",
-              "researchers."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u3l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The trade agreement parameters are in the document.\"</span>",
-            "correctSentence": "Ticaret anlaşması parametreleri belgededir.",
-            "translation": "Ticaret anlaşması parametreleri belgededir."
-          },
-          {
-            "id": "u3l1ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "İsim Tamlaması",
-              "Compound Nouns",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Topluluk liderleri belediye yönetiminden gelen yüksek baskı altındadır.\"</span>",
-            "correctSentence": "The community leaders are under high pressure from the municipal administration.",
-            "translation": "Topluluk liderleri belediye yönetiminden gelen yüksek baskı altındadır."
-          }
-        ]
-      }
-    ]
-  }
-},
   "6": {
   "1": {
     "exercises": [
@@ -39883,687 +38335,439 @@ Object.assign(unitSentencesMap, {
   }
 },
   "7": {
-  "1": {
-    "exercises": [
-      {
-        "id": "u7l1ex1",
-        "title": "Alıştırma 1: Özne - Geçişli Fiil + Nesne",
-        "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
-        "questions": [
-          {
-            "id": "u7l1ex1_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The historian analyzed the primary sources.",
-            "isEngToTr": true,
-            "options": [
-              "Tarihçi birincil kaynakları analiz etti.",
-              "Tarihçi birincil kaynakları analiz etti.",
-              "Tarihçiler birincil kaynakları analiz ettiler.",
-              "Tarihçi birincil kaynakları inceledi."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u7l1ex1_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The archaeologist ___ the ancient ruins.",
-            "options": [
-              "excavates",
-              "excavating",
-              "excavated",
-              "excavation"
-            ],
-            "correctIndex": 2,
-            "translation": "Arkeolog antik kalıntıları kazdı."
-          },
-          {
-            "id": "u7l1ex1_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The sociologist observed the community norms.",
-            "translation": "The sociologist observed the community norms.",
-            "words": [
-              "Sosyolog",
-              "topluluk",
-              "normlarını",
-              "gözlemledi.",
-              "kuralları",
-              "inceledi"
-            ],
-            "correctOrder": [
-              "Sosyolog",
-              "topluluk",
-              "normlarını",
-              "gözlemledi."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u7l1ex1_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The psychologist evaluated the behavioral patterns.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Psikolog davranışsal kalıpları değerlendirdi."
-          },
-          {
-            "id": "u7l1ex1_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "heykeli oluşturdu",
-                "right": "created the sculpture"
-              },
-              {
-                "left": "güncellemeleri yayınladı",
-                "right": "broadcasted the updates"
-              },
-              {
-                "left": "değişiklikleri onayladı",
-                "right": "approved the amendments"
-              },
-              {
-                "left": "ekonomik istikrar talep eder",
-                "right": "demands economic stability"
-              }
-            ]
-          },
-          {
-            "id": "u7l1ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The local market ___ economic stability.",
-            "options": [
-              "demands",
-              "demand",
-              "demanded",
-              "demanding"
-            ],
-            "correctIndex": 0,
-            "translation": "Yerel piyasa ekonomik istikrar talep eder."
-          },
-          {
-            "id": "u7l1ex1_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The community leaders supported the social changes.",
-            "isEngToTr": true,
-            "options": [
-              "Topluluk liderleri toplumsal değişimleri destekledi.",
-              "Topluluk liderleri toplumsal değişimi destekledi.",
-              "Topluluk liderleri toplumsal değişimleri destekler.",
-              "Topluluk liderleri toplumsal değişimleri destekledi."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u7l1ex1_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"evaluated\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The clinical study <span style=\"text-decoration: underline;\">evaluated</span> the cognitive development.",
-            "enSentence": "The clinical study evaluated the cognitive development.",
-            "options": [
-              "Geçişsiz Fiil",
-              "Özne",
-              "Geçişli Fiil (Transitive Verb)",
-              "Nesne"
-            ],
-            "correctIndex": 2,
-            "translation": "Klinik çalışma bilişsel gelişimi değerlendirdi."
-          },
-          {
-            "id": "u7l1ex1_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The art historian examined the sculptures.",
-            "translation": "Sanat tarihçisi heykelleri inceledi.",
-            "words": [
-              "The",
-              "art",
-              "historian",
-              "examined",
-              "the",
-              "sculptures.",
-              "is",
-              "paintings"
-            ],
-            "correctOrder": [
-              "The",
-              "art",
-              "historian",
-              "examined",
-              "the",
-              "sculptures."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u7l1ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The supreme court approved the statutory amendments.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Yüksek mahkeme yasal değişiklikleri onayladı."
-          },
-          {
-            "id": "u7l1ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The government ___ the national economy.",
-            "options": [
-              "influence",
-              "influences",
-              "influenced",
-              "influencing"
-            ],
-            "correctIndex": 1,
-            "translation": "Hükümet ulusal ekonomiyi etkiler."
-          },
-          {
-            "id": "u7l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The project team completed the tasks.",
-            "isEngToTr": true,
-            "options": [
-              "Proje ekibi görevleri tamamlar.",
-              "Proje ekibi görevleri tamamladı.",
-              "Proje ekibi görevi tamamladı.",
-              "Proje ekibi görevleri tamamladı."
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u7l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The coordinators updated the database.",
-            "translation": "Koordinatörler veritabanını güncelledi.",
-            "words": [
-              "The",
-              "coordinators",
-              "updated",
-              "the",
-              "database.",
-              "is",
-              "file"
-            ],
-            "correctOrder": [
-              "The",
-              "coordinators",
-              "updated",
-              "the",
-              "database."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u7l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The writer published the book.\"</span>",
-            "correctSentence": "Yazar kitabı yayınladı.",
-            "translation": "Yazar kitabı yayınladı."
-          },
-          {
-            "id": "u7l1ex1_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Müze yönetimi tarihi tabloları korudu.\"</span>",
-            "correctSentence": "The museum administration preserved the historic paintings.",
-            "translation": "Müze yönetimi tarihi tabloları korudu."
-          }
-        ]
-      },
-      {
-        "id": "u7l1ex2",
-        "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
-        "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
-        "questions": [
-          {
-            "id": "u7l1ex2_q1",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The history research team evaluated the primary source documents from the Ottoman archive.",
-            "isEngToTr": true,
-            "options": [
-              "Tarih araştırma ekibi, Osmanlı arşivinden elde edilen birincil kaynak belgeleri değerlendirdi.",
-              "Tarih araştırma ekibi, Osmanlı arşivinin birincil kaynak belgelerini değerlendirdi.",
-              "Tarih araştırma ekibi, Osmanlı arşivinden elde edilen birincil kaynak belgeleri değerlendirdi.",
-              "Ekip, Osmanlı arşivinden elde edilen birincil kaynak belgeleri değerlendirdi."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u7l1ex2_q2",
-            "type": "fill-blank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğu doldur:",
-            "sentence": "The social anthropologist ___ the cultural kinship patterns of the local tribe.",
-            "options": [
-              "analyze",
-              "analyzed",
-              "analyzing",
-              "analysis"
-            ],
-            "correctIndex": 1,
-            "translation": "Sosyal antropolog yerel kabilenin kültürel akrabalık kalıplarını analiz etti."
-          },
-          {
-            "id": "u7l1ex2_q3",
-            "type": "word-bank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The trade agreements determined the market prices of the agricultural resources.",
-            "translation": "Ticaret anlaşmaları tarımsal kaynakların piyasa fiyatlarını belirledi.",
-            "words": [
-              "The",
-              "trade",
-              "agreements",
-              "determined",
-              "the",
-              "market",
-              "prices",
-              "of",
-              "the",
-              "agricultural",
-              "resources.",
-              "are",
-              "policies"
-            ],
-            "correctOrder": [
-              "The",
-              "trade",
-              "agreements",
-              "determined",
-              "the",
-              "market",
-              "prices",
-              "of",
-              "the",
-              "agricultural",
-              "resources."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u7l1ex2_q4",
-            "type": "true-false",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The television network changed the official schedule of the daily broadcasts.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Televizyon ağı günlük yayınların resmi programını değiştirmiş durumdadır."
-          },
-          {
-            "id": "u7l1ex2_q5",
-            "type": "matching",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
-            "pairs": [
-              {
-                "left": "piyasa fiyatlarını belirledi",
-                "right": "determined the market prices"
-              },
-              {
-                "left": "finansal istikrarı etkiledi",
-                "right": "affected the financial stability"
-              },
-              {
-                "left": "kolektif davranışı değerlendirdi",
-                "right": "evaluated the collective behavior"
-              },
-              {
-                "left": "çeviriyi tamamladı",
-                "right": "completed the translation"
-              }
-            ]
-          },
-          {
-            "id": "u7l1ex2_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The supreme court decisions ___ the constitutional rights of the citizens.",
-            "options": [
-              "protect",
-              "protects",
-              "protected",
-              "protecting"
-            ],
-            "correctIndex": 2,
-            "translation": "Yüksek mahkeme kararları vatandaşların anayasal haklarını korudu."
-          },
-          {
-            "id": "u7l1ex2_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The economic crisis affected the financial stability of the local merchants.",
-            "isEngToTr": true,
-            "options": [
-              "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi.",
-              "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi.",
-              "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi.",
-              "Ekonomik kriz finansal istikrarı etkiledi."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u7l1ex2_q8",
-            "type": "spotlight",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Altı çizili olan \"the sculptural details of the temple\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The museum visitors admired <span style=\"text-decoration: underline;\">the sculptural details of the temple</span>.",
-            "enSentence": "The museum visitors admired the sculptural details of the temple.",
-            "options": [
-              "Özne",
-              "Yüklem",
-              "Zarf",
-              "Nesne (Object)"
-            ],
-            "correctIndex": 3,
-            "translation": "Müze ziyaretçileri tapınağın heykel detaylarına hayran kaldı."
-          },
-          {
-            "id": "u7l1ex2_q9",
-            "type": "word-bank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "The geographical research analyzed the variations in the regional climate.",
-            "translation": "The geographical research analyzed the variations in the regional climate.",
-            "words": [
-              "Coğrafi",
-              "araştırma",
-              "bölgesel",
-              "iklimdeki",
-              "farklılıkları",
-              "analiz",
-              "etti.",
-              "belirledi.",
-              "sonuçları"
-            ],
-            "correctOrder": [
-              "Coğrafi",
-              "araştırma",
-              "bölgesel",
-              "iklimdeki",
-              "farklılıkları",
-              "analiz",
-              "etti."
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u7l1ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The municipal administration resolved the rigid organization of the community.\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Belediye yönetimi topluluğun katı organizasyonunu çözdü."
-          },
-          {
-            "id": "u7l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "The psychologist ___ the behavioral responses of the patients.",
-            "options": [
-              "observe",
-              "observes",
-              "observed",
-              "observing"
-            ],
-            "correctIndex": 2,
-            "translation": "Psikolog hastaların davranışsal tepkilerini gözlemledi."
-          },
-          {
-            "id": "u7l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "The database security measures prevented the unauthorized entries.",
-            "isEngToTr": true,
-            "options": [
-              "Veritabanı güvenlik önlemleri yetkisiz girişleri engeller.",
-              "Veritabanı güvenlik önlemleri yetkisiz girişleri engelledi.",
-              "Veritabanı güvenlik önlemleri yetkisiz girişleri engelledi.",
-              "Veritabanı güvenlik önlemleri girişleri engelledi."
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u7l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "The research team investigated the cognitive development of children.",
-            "translation": "Araştırma ekibi çocukların bilişsel gelişimini inceledi.",
-            "words": [
-              "The",
-              "research",
-              "team",
-              "investigated",
-              "the",
-              "cognitive",
-              "development",
-              "of",
-              "children.",
-              "are",
-              "behavior"
-            ],
-            "correctOrder": [
-              "The",
-              "research",
-              "team",
-              "investigated",
-              "the",
-              "cognitive",
-              "development",
-              "of",
-              "children."
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u7l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The translation team completed the translation of the primary sources from the temple ruins.\"</span>",
-            "correctSentence": "Çeviri ekibi tapınak kalıntılarından elde edilen birincil kaynakların çevirisini tamamladı.",
-            "translation": "Çeviri ekibi tapınak kalıntılarından elde edilen birincil kaynakların çevirisini tamamladı."
-          },
-          {
-            "id": "u7l1ex2_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Özne - Geçişli Fiil + Nesne",
-              "Subject + Transitive Verb + Object",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözdü.\"</span>",
-            "correctSentence": "The new policy resolved the economic disputes between the nations.",
-            "translation": "Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözdü."
-          }
-        ]
-      }
-    ]
-  }
-},
+    "1": {
+      "exercises": [
+        {
+          "id": "u7l1ex1",
+          "title": "Alıştırma 1: Özne - Geçişli Fiil + Nesne",
+          "description": "Öbek ve Temel Cümle Düzeyi Çeviri ve Yapı Çalışmaları",
+          "questions": [
+            {
+              "id": "u7l1ex1_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The historian analyzed the primary sources.",
+              "isEngToTr": true,
+              "options": [
+                "Tarihçi birincil kaynakları analiz etti.",
+                "Tarihçi birincil kaynakları analiz etti.",
+                "Tarihçiler birincil kaynakları analiz ettiler.",
+                "Tarihçi birincil kaynakları inceledi."
+              ],
+              "correctIndex": 1
+            },
+            {
+              "id": "u7l1ex1_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The archaeologist ___ the ancient ruins.",
+              "options": [
+                "excavates",
+                "excavating",
+                "excavated",
+                "excavation"
+              ],
+              "correctIndex": 2,
+              "translation": "Arkeolog antik kalıntıları kazdı."
+            },
+            {
+              "id": "u7l1ex1_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
+              "enSentence": "The sociologist observed the community norms.",
+              "translation": "The sociologist observed the community norms.",
+              "words": [
+                "Sosyolog",
+                "topluluk",
+                "normlarını",
+                "gözlemledi.",
+                "kuralları",
+                "inceledi"
+              ],
+              "correctOrder": [
+                "Sosyolog",
+                "topluluk",
+                "normlarını",
+                "gözlemledi."
+              ],
+              "isEngToTr": false
+            },
+            {
+              "id": "u7l1ex1_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The psychologist evaluated the behavioral patterns.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 0,
+              "translation": "Psikolog davranışsal kalıpları değerlendirdi."
+            },
+            {
+              "id": "u7l1ex1_q5",
+              "type": "matching",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "heykeli oluşturdu",
+                  "right": "created the sculpture"
+                },
+                {
+                  "left": "güncellemeleri yayınladı",
+                  "right": "broadcasted the updates"
+                },
+                {
+                  "left": "değişiklikleri onayladı",
+                  "right": "approved the amendments"
+                },
+                {
+                  "left": "ekonomik istikrar talep eder",
+                  "right": "demands economic stability"
+                }
+              ]
+            },
+            {
+              "id": "u7l1ex1_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The local market ___ economic stability.",
+              "options": [
+                "demands",
+                "demand",
+                "demanded",
+                "demanding"
+              ],
+              "correctIndex": 0,
+              "translation": "Yerel piyasa ekonomik istikrar talep eder."
+            },
+            {
+              "id": "u7l1ex1_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The community leaders supported the social changes.",
+              "isEngToTr": true,
+              "options": [
+                "Topluluk liderleri toplumsal değişimleri destekledi.",
+                "Topluluk liderleri toplumsal değişimi destekledi.",
+                "Topluluk liderleri toplumsal değişimleri destekler.",
+                "Topluluk liderleri toplumsal değişimleri destekledi."
+              ],
+              "correctIndex": 3
+            },
+            {
+              "id": "u7l1ex1_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"evaluated\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The clinical study <span style=\"text-decoration: underline;\">evaluated</span> the cognitive development.",
+              "enSentence": "The clinical study evaluated the cognitive development.",
+              "options": [
+                "Geçişsiz Fiil",
+                "Özne",
+                "Geçişli Fiil (Transitive Verb)",
+                "Nesne"
+              ],
+              "correctIndex": 2,
+              "translation": "Klinik çalışma bilişsel gelişimi değerlendirdi."
+            },
+            {
+              "id": "u7l1ex1_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The writer published the book.\"</span>",
+              "correctSentence": "Yazar kitabı yayınladı.",
+              "translation": "Yazar kitabı yayınladı."
+            },
+            {
+              "id": "u7l1ex1_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Müze yönetimi tarihi tabloları korudu.\"</span>",
+              "correctSentence": "The museum administration preserved the historic paintings.",
+              "translation": "Müze yönetimi tarihi tabloları korudu."
+            }
+          ]
+        },
+        {
+          "id": "u7l1ex2",
+          "title": "Alıştırma 2: Analiz & Çeviri Sentezi",
+          "description": "İleri Düzey Çözümleme ve Cümle Çevirileri",
+          "questions": [
+            {
+              "id": "u7l1ex2_q1",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The history research team evaluated the primary source documents from the Ottoman archive.",
+              "isEngToTr": true,
+              "options": [
+                "Tarih araştırma ekibi, Osmanlı arşivinden elde edilen birincil kaynak belgeleri değerlendirdi.",
+                "Tarih araştırma ekibi, Osmanlı arşivinin birincil kaynak belgelerini değerlendirdi.",
+                "Tarih araştırma ekibi, Osmanlı arşivinden elde edilen birincil kaynak belgeleri değerlendirdi.",
+                "Ekip, Osmanlı arşivinden elde edilen birincil kaynak belgeleri değerlendirdi."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u7l1ex2_q2",
+              "type": "fill-blank",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğu doldur:",
+              "sentence": "The social anthropologist ___ the cultural kinship patterns of the local tribe.",
+              "options": [
+                "analyze",
+                "analyzed",
+                "analyzing",
+                "analysis"
+              ],
+              "correctIndex": 1,
+              "translation": "Sosyal antropolog yerel kabilenin kültürel akrabalık kalıplarını analiz etti."
+            },
+            {
+              "id": "u7l1ex2_q3",
+              "type": "word-bank",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
+              "enSentence": "The trade agreements determined the market prices of the agricultural resources.",
+              "translation": "Ticaret anlaşmaları tarımsal kaynakların piyasa fiyatlarını belirledi.",
+              "words": [
+                "The",
+                "trade",
+                "agreements",
+                "determined",
+                "the",
+                "market",
+                "prices",
+                "of",
+                "the",
+                "agricultural",
+                "resources.",
+                "are",
+                "policies"
+              ],
+              "correctOrder": [
+                "The",
+                "trade",
+                "agreements",
+                "determined",
+                "the",
+                "market",
+                "prices",
+                "of",
+                "the",
+                "agricultural",
+                "resources."
+              ],
+              "isEngToTr": true
+            },
+            {
+              "id": "u7l1ex2_q4",
+              "type": "true-false",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The television network changed the official schedule of the daily broadcasts.\"</span>",
+              "options": [
+                "True",
+                "False"
+              ],
+              "correctIndex": 0,
+              "translation": "Televizyon ağı günlük yayınların resmi programını değiştirmiş durumdadır."
+            },
+            {
+              "id": "u7l1ex2_q5",
+              "type": "matching",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
+              "pairs": [
+                {
+                  "left": "piyasa fiyatlarını belirledi",
+                  "right": "determined the market prices"
+                },
+                {
+                  "left": "finansal istikrarı etkiledi",
+                  "right": "affected the financial stability"
+                },
+                {
+                  "left": "kolektif davranışı değerlendirdi",
+                  "right": "evaluated the collective behavior"
+                },
+                {
+                  "left": "çeviriyi tamamladı",
+                  "right": "completed the translation"
+                }
+              ]
+            },
+            {
+              "id": "u7l1ex2_q6",
+              "type": "fill-blank-dropdown",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
+              "sentence": "The supreme court decisions ___ the constitutional rights of the citizens.",
+              "options": [
+                "protect",
+                "protects",
+                "protected",
+                "protecting"
+              ],
+              "correctIndex": 2,
+              "translation": "Yüksek mahkeme kararları vatandaşların anayasal haklarını korudu."
+            },
+            {
+              "id": "u7l1ex2_q7",
+              "type": "multiple-choice",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
+              "enSentence": "The economic crisis affected the financial stability of the local merchants.",
+              "isEngToTr": true,
+              "options": [
+                "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi.",
+                "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi.",
+                "Ekonomik kriz yerel tüccarların finansal istikrarını etkiledi.",
+                "Ekonomik kriz finansal istikrarı etkiledi."
+              ],
+              "correctIndex": 0
+            },
+            {
+              "id": "u7l1ex2_q8",
+              "type": "spotlight",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Altı çizili olan \"the sculptural details of the temple\" ifadesinin cümledeki dil bilgisi işlevi nedir?<br><br>The museum visitors admired <span style=\"text-decoration: underline;\">the sculptural details of the temple</span>.",
+              "enSentence": "The museum visitors admired the sculptural details of the temple.",
+              "options": [
+                "Özne",
+                "Yüklem",
+                "Zarf",
+                "Nesne (Object)"
+              ],
+              "correctIndex": 3,
+              "translation": "Müze ziyaretçileri tapınağın heykel detaylarına hayran kaldı."
+            },
+            {
+              "id": "u7l1ex2_q9",
+              "type": "translation-text",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"The translation team completed the translation of the primary sources from the temple ruins.\"</span>",
+              "correctSentence": "Çeviri ekibi tapınak kalıntılarından elde edilen birincil kaynakların çevirisini tamamladı.",
+              "translation": "Çeviri ekibi tapınak kalıntılarından elde edilen birincil kaynakların çevirisini tamamladı."
+            },
+            {
+              "id": "u7l1ex2_q10",
+              "type": "translation-text",
+              "grammarTags": [
+                "Özne - Geçişli Fiil + Nesne",
+                "Subject + Transitive Verb + Object",
+                "İsim Tamlamaları",
+                "İsim ve Edat Yapıları"
+              ],
+              "prompt": "Aşağıdaki ifadeyi İngilizceye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözdü.\"</span>",
+              "correctSentence": "The new policy resolved the economic disputes between the nations.",
+              "translation": "Yeni politika ülkeler arasındaki ekonomik anlaşmazlıkları çözdü."
+            }
+          ]
+        }
+      ]
+    }
+  },
   "8": {
   "1": {
     "exercises": [
