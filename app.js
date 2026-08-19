@@ -6961,21 +6961,23 @@ function renderLessonTree() {
     let localTypesBadgeHTML = '';
     let localQuestionsBadgeHTML = '';
     let localLessonsBadgeHTML = '';
-    if (checkIsLocal()) {
-      const qTypes = new Set();
-      let totalQuestions = 0;
-      unit.lessons.forEach(lId => {
-        const l = lessons.find(lesson => lesson.id === lId);
-        if (l) {
-          const qs = getLessonQuestions(l);
-          totalQuestions += qs.length;
-          qs.forEach(q => {
-            if (q && q.type) {
-              qTypes.add(q.type);
-            }
-          });
-        }
-      });
+
+    const qTypes = new Set();
+    let totalQuestions = 0;
+    unit.lessons.forEach(lId => {
+      const l = lessons.find(lesson => lesson.id === lId);
+      if (l) {
+        const qs = getLessonQuestions(l);
+        totalQuestions += qs.length;
+        qs.forEach(q => {
+          if (q && q.type) {
+            qTypes.add(q.type);
+          }
+        });
+      }
+    });
+
+    if (isStrictlyLocal) {
       if (qTypes.size > 0) {
         const typesStr = Array.from(qTypes).join(',');
         localTypesBadgeHTML = `
@@ -6985,12 +6987,12 @@ function renderLessonTree() {
         `;
       }
       localLessonsBadgeHTML = `
-        <span class="unit-banner-lessons-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+        <span class="unit-banner-lessons-tag">
           ${totalInUnit} Ders
         </span>
       `;
       localQuestionsBadgeHTML = `
-        <span class="unit-banner-questions-tag" style="background: rgba(255, 255, 255, 0.16); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); color: #ffffff; font-size: 0.7rem; padding: 3.5px 10px; border-radius: 20px; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.3); display: inline-flex; align-items: center; height: fit-content; vertical-align: middle; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+        <span class="unit-banner-questions-tag">
           ${totalQuestions} Soru
         </span>
       `;
@@ -7007,7 +7009,9 @@ function renderLessonTree() {
     const noDescUnitIds = [31, 32, 33, 34, 38, 36, 35, 37];
     const descCleaned = (unit.description || '').replace(/\s+,/g, ',');
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${descCleaned}</p>`;
+    const unitPct = totalInUnit > 0 ? Math.round((completedInUnit / totalInUnit) * 100) : 0;
     banner.innerHTML = `
+      <span class="unit-banner-icon-watermark" aria-hidden="true">${unit.icon || ''}</span>
       <div class="unit-banner-info">
         <h2 class="unit-banner-title-row">
           <span>${unitDisplayNames[unit.id]}</span>
@@ -7016,7 +7020,7 @@ function renderLessonTree() {
           ${extraBadgeHTML}
         </h2>
         ${(localTypesBadgeHTML || localLessonsBadgeHTML || localQuestionsBadgeHTML) ? `
-          <div class="unit-banner-stats-row" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; margin-bottom: 6px;">
+          <div class="unit-banner-stats-row">
             ${localTypesBadgeHTML}
             ${localLessonsBadgeHTML}
             ${localQuestionsBadgeHTML}
@@ -7025,7 +7029,9 @@ function renderLessonTree() {
         ${descHTML}
       </div>
       <div class="unit-progress-container">
-        <span class="unit-progress-text">${completedInUnit}/${totalInUnit}</span>
+        <div class="unit-progress-ring" style="--pct: ${unitPct}%;">
+          <div class="unit-progress-ring-inner">${completedInUnit}/${totalInUnit}</div>
+        </div>
       </div>
     `;
     unitSection.appendChild(banner);

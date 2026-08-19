@@ -149,7 +149,7 @@ rawTopics.push(
   "startLessonId": 1020,
   "originalIndex": 32,
   "title": "Zaman Zarfları ve Tense Uyumu",
-  "desc": "Cümlede görülen zaman zarfına (adverb of time) göre doğru zaman (tense) refleksine ulaşma, zaman uyumu, akademik sınav taktikleri ve beşeri/sosyal bilimler bağlamlı uygulama alıştırmaları.",
+  "desc": "Zaman zarflarına (adverb of time) göre doğru tense refleksini kazanma ve zaman uyumu pratikleri",
   "icon": "⏳",
   "numLessons": 9,
   "formulas": [

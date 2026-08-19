@@ -19326,7 +19326,7 @@ const rawTopics = [
       }
     ],
     "title": "Saf Modallar ve Saf Zamanlar",
-    "desc": "can, could, may, might, must, should, would, shall vb. yardımcı eylemleri ile yetenek, izin, gereklilik ve olasılık ifadeleri; İngilizcedeki 12 temel aktif zaman (Simple, Continuous, Perfect, Perfect Continuous) yapısı ve çekimleri",
+    "desc": "Can, could, may, must, should vb. modallarla yetenek, izin, olasılık ifadeleri; 12 temel zamanın yapı ve çekimleri",
     "icon": "💎",
     "numLessons": 3,
     "formulas": [
@@ -19390,7 +19390,7 @@ const rawTopics = [
     "startLessonId": 107,
     "originalIndex": 33,
     "title": "Öbeksel Kipler",
-    "desc": "Bölüm Yeniden Tasarımı: Öbeksel Kipler ünitesi, her derste 15 sorudan oluşan 1 alıştırmaya (ders başına 15 soru, toplamda 240 soru) sahip olacak şekilde yeniden tasarlandı. Kelime eşleştirmeler kaldırılarak ifade düzeyinde eşleştirmeler korundu, aşamalı pedagoji ve entegre dilbilgisi tekrarları eklendi.",
+    "desc": "Be used to, be willing to, be likely to, be supposed to vb. öbeksel modal yapılarının kullanım ve çekimleri",
     "icon": "🎯",
     "numLessons": 5,
     "edits": [
@@ -19530,7 +19530,7 @@ const rawTopics = [
 }
     ],
     "title": "XIII. İsim-Fiiller ve Mastar Yapıları (Gerund & Infinitive)",
-    "desc": "Fiil tamlayıcısı mastarlar (Infinitive Compliments), özne ve durum bildiren mastarlar (It is + Adj + to V), amaç/maksat bildiren eylemsi yapıları (Infinitive of Purpose: to, in order to, so as to) ile soru kelimeli mastar kısaltmaları (Wh- + to V1)",
+    "desc": "Fiil tamlayıcısı, özne/durum ve amaç bildiren mastar yapıları (Infinitive) ile soru kelimeli mastar kısaltmaları",
     "icon": "⛵",
     "numLessons": 4,
     "formulas": [

@@ -91,7 +91,7 @@
         </div>
       </div>
 
-      <div class="top-bar-center" style="display: none;"></div>
+      <div class="top-bar-center u-hidden"></div>
 
       <div class="top-bar-right">
         <button class="btn btn-social-drawer-toggle" id="btn-toggle-social-drawer" title="Sosyal & Araçlar" onclick="if(window.openRightDrawer) window.openRightDrawer();">
@@ -124,6 +124,10 @@
         <div class="sidebar-brand-header">
           <div class="sidebar-brand-logo-wrap">
             <img src="assets/logo.png" alt="academic Reader" class="sidebar-brand-logo">
+          </div>
+          <div class="sidebar-brand-wordmark">
+            <strong>academic Reader</strong>
+            <span>AMOK</span>
           </div>
         </div>
 
@@ -243,7 +247,7 @@
           </button>
           
           <!-- Admin Sub-tabs Menu -->
-          <div id="admin-subtabs-menu" class="dev-only-tab admin-subtabs-container" style="display: none;">
+          <div id="admin-subtabs-menu" class="dev-only-tab admin-subtabs-container u-hidden">
             <button class="admin-nav-item active" data-admin-section="users">
               <span class="admin-icon-badge">👥</span>
               <span class="admin-label">Kullanıcılar</span>
@@ -305,7 +309,7 @@
                 </div>
                 <div class="drawer-body">
                   <!-- Section Label 1: DURUM & İLERLEME -->
-                  <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-stats" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
+                  <div class="sidebar-section-label collapsible-label active pad-x-pointer" data-toggle="collapsible-stats">
                     <span>Durum & İlerleme</span>
                     <span class="collapsible-icon">▼</span>
                   </div>
@@ -344,7 +348,7 @@
                   </div>
 
                   <!-- Section Label 2: SOSYAL & TOPLULUK -->
-                  <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-social" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
+                  <div class="sidebar-section-label collapsible-label active pad-x-pointer" data-toggle="collapsible-social">
                     <span>Sosyal & Topluluk</span>
                     <span class="collapsible-icon">▼</span>
                   </div>
@@ -364,11 +368,11 @@
                     <div class="social-search-wrap">
                       <div class="search-input-container">
                         <input type="text" id="social-search-input" placeholder="Kullanıcı ara (örn: Ahmet, Elif, Can)..." autocomplete="off">
-                        <button class="search-clear-btn" id="social-search-clear" style="display:none;">✕</button>
+                        <button class="search-clear-btn u-hidden" id="social-search-clear">✕</button>
                       </div>
                       <button class="btn btn-primary" id="btn-social-search" style="padding: 10px 20px; border-radius: 9999px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); border: none; font-weight: 800; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);">Ara</button>
                     </div>
-                    <div class="social-search-results" id="social-search-results" style="display:none;"></div>
+                    <div class="social-search-results u-hidden" id="social-search-results"></div>
                     
                     <div class="social-list-container">
                       <div id="social-list-content"></div>
@@ -376,7 +380,7 @@
                   </div>
 
                   <!-- Section Label 3: ALIŞTIRMA & TEKRAR -->
-                  <div class="sidebar-section-label collapsible-label active" data-toggle="collapsible-practice" style="padding-left: 4px; padding-right: 4px; cursor: pointer;">
+                  <div class="sidebar-section-label collapsible-label active pad-x-pointer" data-toggle="collapsible-practice">
                     <span>Alıştırma & Tekrar</span>
                     <span class="collapsible-icon">▼</span>
                   </div>
@@ -417,47 +421,47 @@
 
         <!-- NEDEN-ETKİ MATRİSİ (CETVEL I & II) SEKMESİ -->
         <div id="tab-content-cause-effect" class="tab-content">
-          <div class="cause-effect-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
+          <div class="cause-effect-container page-container">
             
             <!-- Header Banner -->
             <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(236, 72, 153, 0.12)); border: 1.5px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+              <div class="flex-between-wrap-10">
                 <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
                   ⚡ Neden-Etki Matrisi <span style="font-size: 0.7rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">CETVEL I & II</span>
                 </h2>
 
                 <!-- Arama Kutusu -->
-                <div class="ce-search-wrap" style="position: relative; flex: 1; max-width: 280px; min-width: 200px;">
-                  <input type="text" id="ce-search-input" placeholder="Yapı / kelime ara (due to, lead to)..." style="width: 100%; padding: 7px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.82rem; outline: none; box-sizing: border-box;">
+                <div class="ce-search-wrap search-box">
+                  <input type="text" id="ce-search-input" placeholder="Yapı / kelime ara (due to, lead to)..." class="input-field-xs">
                 </div>
               </div>
 
-              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 12px 0; line-height: 1.35;">
+              <p class="desc-text">
                 Akademik İngilizcede neden-sonuç ilişkisi kuran fiil, edat ve bağlaç kalıplarının canlı matrisi.
               </p>
 
               <!-- Yön Değiştirme Butonları (Cetvel I vs Cetvel II) -->
-              <div class="ce-direction-toggle-wrap" style="display: flex; gap: 8px;">
+              <div class="ce-direction-toggle-wrap flex-gap-8">
                 <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
                   🔴 CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
                 </button>
-                <button type="button" class="ce-dir-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                <button type="button" class="ce-dir-btn segmented-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause">
                   🔵 CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
                 </button>
               </div>
             </div>
 
             <!-- Filtreleme Çipleri -->
-            <div class="ce-filter-chips" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+            <div class="ce-filter-chips flex-gap-8-wrap-mb20">
               <button type="button" class="ce-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
-              <button type="button" class="ce-chip" data-category="verbs" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚡ Fiil Yapıları (causes, leads to...)</button>
-              <button type="button" class="ce-chip" data-category="prepositions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🔗 Edat Öbekleri (due to, owing to...)</button>
-              <button type="button" class="ce-chip" data-category="conjunctions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🌉 Cümle Bağlaçları (therefore, because...)</button>
-              <button type="button" class="ce-chip" data-category="patterns" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">✂️ Kısaltma & Kalıplar (thereby V-ing, in that...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="verbs">⚡ Fiil Yapıları (causes, leads to...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="prepositions">🔗 Edat Öbekleri (due to, owing to...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="conjunctions">🌉 Cümle Bağlaçları (therefore, because...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="patterns">✂️ Kısaltma & Kalıplar (thereby V-ing, in that...)</button>
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
-            <div class="ce-matrix-grid" id="ce-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+            <div class="ce-matrix-grid grid-300" id="ce-matrix-grid">
               <!-- JS ile dinamik olarak doldurulacak -->
             </div>
 
@@ -466,49 +470,49 @@
 
         <!-- ETKİLEŞİMLİ ZAMAN & TENSE UYUMU MATRİSİ SEKMESİ -->
         <div id="tab-content-time-matrix" class="tab-content">
-          <div class="time-matrix-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
+          <div class="time-matrix-container page-container">
             
             <!-- Header Banner -->
             <div class="tm-header-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+              <div class="flex-between-wrap-10">
                 <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #8b5cf6; margin: 0; display: flex; align-items: center; gap: 8px;">
                   ⏱️ Zaman & Tense Uyumu Matrisi <span style="font-size: 0.7rem; background: #8b5cf6; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER ZAMAN KILAVUZU</span>
                 </h2>
 
                 <!-- Arama Kutusu -->
-                <div class="tm-search-wrap" style="position: relative; flex: 1; max-width: 280px; min-width: 200px;">
-                  <input type="text" id="tm-search-input" placeholder="Zaman kalıbı ara (by the time, since...)..." style="width: 100%; padding: 7px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.82rem; outline: none; box-sizing: border-box;">
+                <div class="tm-search-wrap search-box">
+                  <input type="text" id="tm-search-input" placeholder="Zaman kalıbı ara (by the time, since...)..." class="input-field-xs">
                 </div>
               </div>
 
-              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 12px 0; line-height: 1.35;">
+              <p class="desc-text">
                 Akademik İngilizcedeki zaman bağlaçları, tense uyum çapaları, devrik kalıplar ve zaman kısaltmalarının canlı rehberi.
               </p>
 
               <!-- Yön / Mod Değiştirme Butonları -->
-              <div class="tm-direction-toggle-wrap" style="display: flex; gap: 8px;">
+              <div class="tm-direction-toggle-wrap flex-gap-8">
                 <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #8b5cf6; background: rgba(139, 92, 246, 0.15); color: #8b5cf6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
                   ⏱️ ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers)
                 </button>
-                <button type="button" class="tm-dir-btn" data-mode="tense_harmony" id="tm-mode-harmony" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                <button type="button" class="tm-dir-btn segmented-btn" data-mode="tense_harmony" id="tm-mode-harmony">
                   📐 TENSE UYUM KURALLARI & ÇAPALAR (Tense Rules)
                 </button>
               </div>
             </div>
 
             <!-- Filtreleme Çipleri -->
-            <div class="tm-filter-chips" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+            <div class="tm-filter-chips flex-gap-8-wrap-mb20">
               <button type="button" class="tm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #8b5cf6; background: #8b5cf6; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
-              <button type="button" class="tm-chip" data-category="conjunctions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⏱️ Zaman Bağlaçları (when, while, as soon as...)</button>
-              <button type="button" class="tm-chip" data-category="anchors" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚓ Tense Çapaları (by the time, since...)</button>
-              <button type="button" class="tm-chip" data-category="inverted" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚡ Devrik Yapılar (no sooner... than)</button>
-              <button type="button" class="tm-chip" data-category="prepositions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🔗 Zaman Edatları (during, prior to...)</button>
-              <button type="button" class="tm-chip" data-category="eras" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🏛️ Çağ & Dönem (at the dawn of...)</button>
-              <button type="button" class="tm-chip" data-category="reductions" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">✂️ Zaman Kısaltmaları (upon V-ing, having V3...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="conjunctions">⏱️ Zaman Bağlaçları (when, while, as soon as...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="anchors">⚓ Tense Çapaları (by the time, since...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="inverted">⚡ Devrik Yapılar (no sooner... than)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="prepositions">🔗 Zaman Edatları (during, prior to...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="eras">🏛️ Çağ & Dönem (at the dawn of...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="reductions">✂️ Zaman Kısaltmaları (upon V-ing, having V3...)</button>
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
-            <div class="tm-matrix-grid" id="tm-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+            <div class="tm-matrix-grid grid-300" id="tm-matrix-grid">
               <!-- JS ile dinamik olarak doldurulacak -->
             </div>
 
@@ -517,49 +521,49 @@
 
         <!-- ETKİLEŞİMLİ CÜMLE BAĞLAÇLARI & GEÇİŞ İFADELERİ MATRİSİ SEKMESİ -->
         <div id="tab-content-transitions-matrix" class="tab-content">
-          <div class="transitions-matrix-container" style="max-width: 1000px; margin: 0 auto; padding: 20px 16px;">
+          <div class="transitions-matrix-container page-container">
             
             <!-- Header Banner -->
             <div class="trm-header-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;">
+              <div class="flex-between-wrap-10">
                 <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #10b981; margin: 0; display: flex; align-items: center; gap: 8px;">
                   🌉 Cümle Bağlaçları & Geçiş İfadeleri <span style="font-size: 0.7rem; background: #10b981; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER BAĞLAÇ KILAVUZU</span>
                 </h2>
 
                 <!-- Arama Kutusu -->
-                <div class="trm-search-wrap" style="position: relative; flex: 1; max-width: 280px; min-width: 200px;">
-                  <input type="text" id="trm-search-input" placeholder="Bağlaç / geçiş ara (however, furthermore)..." style="width: 100%; padding: 7px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.82rem; outline: none; box-sizing: border-box;">
+                <div class="trm-search-wrap search-box">
+                  <input type="text" id="trm-search-input" placeholder="Bağlaç / geçiş ara (however, furthermore)..." class="input-field-xs">
                 </div>
               </div>
 
-              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0 0 12px 0; line-height: 1.35;">
+              <p class="desc-text">
                 Akademik İngilizcedeki zıtlık, ekleme, örnekleme, amaç, şart, özet ve odaklanma bağlaçlarının eksiksiz canlı kütüphanesi.
               </p>
 
               <!-- Yön / Mod Değiştirme Butonları -->
-              <div class="trm-direction-toggle-wrap" style="display: flex; gap: 8px;">
+              <div class="trm-direction-toggle-wrap flex-gap-8">
                 <button type="button" class="trm-dir-btn active" data-mode="sentence_connectors" id="trm-mode-connectors" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
                   ⚡ CÜMLE GEÇİŞ ZARFLARI (however, furthermore...)
                 </button>
-                <button type="button" class="trm-dir-btn" data-mode="subordinate_preps" id="trm-mode-subordinates" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid var(--border-color); background: var(--bg-card); color: var(--text-secondary); font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                <button type="button" class="trm-dir-btn segmented-btn" data-mode="subordinate_preps" id="trm-mode-subordinates">
                   📐 YAN CÜMLE & EDAT BAĞLAÇLARI (although, despite...)
                 </button>
               </div>
             </div>
 
             <!-- Filtreleme Çipleri -->
-            <div class="trm-filter-chips" style="display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap;">
+            <div class="trm-filter-chips flex-gap-8-wrap-mb20">
               <button type="button" class="trm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #10b981; background: #10b981; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
-              <button type="button" class="trm-chip" data-category="contrast" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">⚡ Zıtlık & Çelişki (however, although...)</button>
-              <button type="button" class="trm-chip" data-category="addition" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">➕ Ekleme & Paralellik (furthermore, likewise...)</button>
-              <button type="button" class="trm-chip" data-category="exemplification" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">💡 Örnekleme & Açıklama (for instance, namely...)</button>
-              <button type="button" class="trm-chip" data-category="purpose_condition" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🎯 Amaç & Şart (so that, provided that...)</button>
-              <button type="button" class="trm-chip" data-category="summary_emphasis" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">📌 Özet & Vurgu (in brief, indeed...)</button>
-              <button type="button" class="trm-chip" data-category="focus_exception" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer;">🔍 Odaklanma & İstisna (as for, apart from...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="contrast">⚡ Zıtlık & Çelişki (however, although...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="addition">➕ Ekleme & Paralellik (furthermore, likewise...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="exemplification">💡 Örnekleme & Açıklama (for instance, namely...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="purpose_condition">🎯 Amaç & Şart (so that, provided that...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="summary_emphasis">📌 Özet & Vurgu (in brief, indeed...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="focus_exception">🔍 Odaklanma & İstisna (as for, apart from...)</button>
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
-            <div class="trm-matrix-grid" id="trm-matrix-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px;">
+            <div class="trm-matrix-grid grid-300" id="trm-matrix-grid">
               <!-- JS ile dinamik olarak doldurulacak -->
             </div>
 
@@ -611,7 +615,7 @@
                 </div>
 
                 <!-- Kalkan Seçici (Seviye 10-11 için) -->
-                <div class="control-group" id="control-group-shield" style="display: none;">
+                <div class="control-group u-hidden" id="control-group-shield">
                   <span class="control-label">KALKAN SEÇİCİ (Lvl 10-11)</span>
                   <select id="select-shield" class="cockpit-select">
                     <!-- Dinamik doldurulacak -->
@@ -619,7 +623,7 @@
                 </div>
 
                 <!-- Vites 2: Modal Seçici (Seviye 12 için aktif) -->
-                <div class="control-group" id="control-group-modal" style="display: none;">
+                <div class="control-group u-hidden" id="control-group-modal">
                   <span class="control-label">MODAL SEÇİCİ (Lvl 12)</span>
                   <select id="select-modal" class="cockpit-select">
                     <option value="could" selected>could</option>
@@ -673,17 +677,17 @@
               <!-- Tab Başlıkları -->
               <div class="matrix-tabs" style="display: flex; gap: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; flex-wrap: wrap;">
                 <button type="button" class="matrix-tab-btn active" id="btn-tab-pure" style="padding: 6px 12px; border: 1px solid var(--accent-primary); background: rgba(59, 130, 246, 0.1); color: var(--accent-primary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Saf Zamanlar</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-core" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Saf Modallar</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-semi" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Yarı Modallar</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-pref" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Tercih Yapıları</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-perfect" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Perfect Modals</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-phrasal" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Phrasal Modals</button>
-                <button type="button" class="matrix-tab-btn" id="btn-tab-cond" style="padding: 6px 12px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); border-radius: var(--radius-md); font-weight: 700; cursor: pointer; font-size: 0.85rem; transition: all 0.2s;">Koşul Seçici (If)</button>
+                <button type="button" class="matrix-tab-btn btn-outline-sm" id="btn-tab-core">Saf Modallar</button>
+                <button type="button" class="matrix-tab-btn btn-outline-sm" id="btn-tab-semi">Yarı Modallar</button>
+                <button type="button" class="matrix-tab-btn btn-outline-sm" id="btn-tab-pref">Tercih Yapıları</button>
+                <button type="button" class="matrix-tab-btn btn-outline-sm" id="btn-tab-perfect">Perfect Modals</button>
+                <button type="button" class="matrix-tab-btn btn-outline-sm" id="btn-tab-phrasal">Phrasal Modals</button>
+                <button type="button" class="matrix-tab-btn btn-outline-sm" id="btn-tab-cond">Koşul Seçici (If)</button>
               </div>
 
               <!-- Saf Zamanlar İçeriği -->
               <div id="matrix-tab-pure-content">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 6px;">
                     <button type="button" class="matrix-cell-btn" data-tense="present" data-aspect="simple">write / writes</button>
                     <button type="button" class="matrix-cell-btn" data-tense="present" data-aspect="perfect">has/have written</button>
@@ -702,8 +706,8 @@
               </div>
 
               <!-- Saf Modallar İçeriği -->
-              <div id="matrix-tab-core-content" style="display: none;">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+              <div id="matrix-tab-core-content" class="u-hidden">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px;">
                     <button type="button" class="modal-matrix-btn" data-modal="can" data-aspect="simple">can</button>
                     <button type="button" class="modal-matrix-btn" data-modal="cant" data-aspect="simple">can't</button>
@@ -723,8 +727,8 @@
               </div>
 
               <!-- Yarı Modallar İçeriği -->
-              <div id="matrix-tab-semi-content" style="display: none;">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+              <div id="matrix-tab-semi-content" class="u-hidden">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px;">
                     <button type="button" class="modal-matrix-btn" data-modal="be_able_to" data-aspect="simple">be able to</button>
                     <button type="button" class="modal-matrix-btn" data-modal="was_were_able_to" data-aspect="simple">was/were able to</button>
@@ -752,8 +756,8 @@
               </div>
 
               <!-- Tercih Yapıları İçeriği -->
-              <div id="matrix-tab-pref-content" style="display: none;">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+              <div id="matrix-tab-pref-content" class="u-hidden">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 6px;">
                     <button type="button" class="modal-matrix-btn" data-modal="would_prefer" data-aspect="simple">would prefer to do</button>
                     <button type="button" class="modal-matrix-btn" data-modal="would_prefer" data-aspect="progressive">would prefer to be doing</button>
@@ -767,8 +771,8 @@
               </div>
 
               <!-- Geçmiş Zaman Modalları İçeriği -->
-              <div id="matrix-tab-perfect-content" style="display: none;">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+              <div id="matrix-tab-perfect-content" class="u-hidden">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px;">
                     <button type="button" class="modal-matrix-btn" data-modal="must" data-aspect="perfect">must have done</button>
                     <button type="button" class="modal-matrix-btn" data-modal="must" data-aspect="perfect" data-neg="true">must not have done</button>
@@ -788,8 +792,8 @@
               </div>
 
               <!-- Phrasal Modals İçeriği -->
-              <div id="matrix-tab-phrasal-content" style="display: none;">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+              <div id="matrix-tab-phrasal-content" class="u-hidden">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px;">
                     <button type="button" class="modal-matrix-btn" data-modal="be_used_to" data-aspect="simple">be used to: alışkın</button>
                     <button type="button" class="modal-matrix-btn" data-modal="be_accustomed_to" data-aspect="simple">be accustomed to: alışkın</button>
@@ -811,8 +815,8 @@
               </div>
 
               <!-- Koşul Seçici İçeriği -->
-              <div id="matrix-tab-cond-content" style="display: none;">
-                <div style="max-height: 250px; overflow-y: auto; padding: 4px;">
+              <div id="matrix-tab-cond-content" class="u-hidden">
+                <div class="scroll-box">
                   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px;">
                     <button type="button" class="cond-matrix-btn active" data-cond="type0">Type 0 (Genel Doğrular)</button>
                     <button type="button" class="cond-matrix-btn" data-cond="type1">Type 1 (Olasılıklar)</button>
@@ -955,7 +959,7 @@
                     <span style="font-size: 1.15rem;">🔑</span>
                     <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--text-primary);">Üyelik & Lisans</span>
                   </div>
-                  <div style="display: flex; align-items: center; gap: 12px;">
+                  <div class="flex-center-12">
                     <span id="store-licence-status-badge-header" style="background: rgba(255,59,48,0.1); color: #ff3b30; font-weight: 700; font-size: 0.72rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(255,59,48,0.25);">KONTROL EDİLİYOR...</span>
                     <span id="store-licence-arrow" style="font-size: 0.8rem; color: var(--text-secondary); transition: transform 0.3s; transform: rotate(0deg);">▼</span>
                   </div>
@@ -971,7 +975,7 @@
                         <div class="licence-status-title" id="store-licence-status-text">Durum: Kontrol ediliyor...</div>
                         <div class="licence-status-sub" id="store-licence-expiry-text">Geçerlilik tarihi bulunamadı.</div>
                       </div>
-                      <span id="store-licence-status-badge" class="licence-badge-free" style="display: none;">ÜCRETSİZ / KİLİTLİ</span>
+                      <span id="store-licence-status-badge" class="licence-badge-free u-hidden">ÜCRETSİZ / KİLİTLİ</span>
                     </div>
                     
                     <!-- Giriş Alanları -->
@@ -1111,8 +1115,8 @@
               <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Uygulamayla ilgili karşılaştığınız hataları (Mağaza açılmıyor, Tema değişmiyor vb.) veya geliştirilmesini istediğiniz önerileri ekran görüntüsü ekleyerek bize iletebilirsiniz.</p>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-              <label for="feedback-category" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Kategori</label>
+            <div class="flex-col-6">
+              <label for="feedback-category" class="text-label">Kategori</label>
               <select id="feedback-category" class="report-select" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; outline: none;">
                 <option value="bug">Hata Bildirimi (Hata / Problem)</option>
                 <option value="feature">Geliştirme Önerisi (Öneri / İstek)</option>
@@ -1120,18 +1124,18 @@
               </select>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-              <label for="feedback-title" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Konu Başlığı</label>
+            <div class="flex-col-6">
+              <label for="feedback-title" class="text-label">Konu Başlığı</label>
               <input type="text" id="feedback-title" placeholder="Hatanın / önerinin kısa bir özeti..." style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; box-sizing: border-box; outline: none;">
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-              <label for="feedback-description" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Açıklamanız</label>
+            <div class="flex-col-6">
+              <label for="feedback-description" class="text-label">Açıklamanız</label>
               <textarea id="feedback-description" placeholder="Sorunu / öneriyi detaylandırın. Hangi adımları izlediğinizde hata oluştu?" style="width: 100%; height: 120px; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; box-sizing: border-box; outline: none; resize: vertical; font-family: var(--font-body);"></textarea>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 6px;">
-              <label style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Ekran Görüntüsü (Opsiyonel)</label>
+            <div class="flex-col-6">
+              <label class="text-label">Ekran Görüntüsü (Opsiyonel)</label>
               <div style="border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 20px; text-align: center; cursor: pointer; transition: all 0.2s; position: relative;" id="feedback-screenshot-dropzone">
                 <input type="file" id="feedback-screenshot-input" accept="image/*" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
                 <span style="font-size: 2rem; display: block; margin-bottom: 6px;">📸</span>
@@ -1177,19 +1181,19 @@
             <div class="admin-main-content" style="flex: 1; min-width: 0;">
 
               <!-- Panel 6: Soru Hata Bildirimleri -->
-              <div class="admin-panel" id="admin-panel-reports" style="display: none; flex-direction: column; gap: 20px;">
-                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+              <div class="admin-panel flex-col-20-hidden" id="admin-panel-reports">
+                <div class="admin-card-glass card-panel">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span style="font-size: 1.5rem;">⚠️</span>
-                      <div style="text-align: left;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Soru Hata Bildirimleri</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcıların alıştırma esnasında bildirdiği hataları inceleyin ve yönetin.</p>
+                    <div class="flex-center-12">
+                      <span class="icon-lg">⚠️</span>
+                      <div class="text-left">
+                        <h3 class="section-title-sm">Soru Hata Bildirimleri</h3>
+                        <p class="subtext">Kullanıcıların alıştırma esnasında bildirdiği hataları inceleyin ve yönetin.</p>
                       </div>
                     </div>
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                      <button id="btn-admin-export-reports" class="btn btn-secondary" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">JSON Dışa Aktar</button>
-                      <button id="btn-admin-export-csv-reports" class="btn btn-secondary" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">Excel'e Aktar (CSV)</button>
+                      <button id="btn-admin-export-reports" class="btn btn-secondary btn-outline">JSON Dışa Aktar</button>
+                      <button id="btn-admin-export-csv-reports" class="btn btn-secondary btn-outline">Excel'e Aktar (CSV)</button>
                       <button id="btn-admin-clear-reports" class="btn btn-ghost" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; color: var(--color-wrong); border: 1px solid var(--color-wrong-border);">Hepsini Temizle</button>
                     </div>
                   </div>
@@ -1201,18 +1205,18 @@
               </div>
               
               <!-- Panel 6.5: Genel Geri Bildirim Raporları -->
-              <div class="admin-panel" id="admin-panel-general-feedback" style="display: none; flex-direction: column; gap: 20px;">
-                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
+              <div class="admin-panel flex-col-20-hidden" id="admin-panel-general-feedback">
+                <div class="admin-card-glass card-panel">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span style="font-size: 1.5rem;">💬</span>
-                      <div style="text-align: left;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Genel Geri Bildirimler</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcıların genel hata bildirimlerini ve geliştirme önerilerini inceleyin.</p>
+                    <div class="flex-center-12">
+                      <span class="icon-lg">💬</span>
+                      <div class="text-left">
+                        <h3 class="section-title-sm">Genel Geri Bildirimler</h3>
+                        <p class="subtext">Kullanıcıların genel hata bildirimlerini ve geliştirme önerilerini inceleyin.</p>
                       </div>
                     </div>
                     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                      <button id="btn-admin-export-feedback" class="btn btn-secondary" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">JSON Dışa Aktar</button>
+                      <button id="btn-admin-export-feedback" class="btn btn-secondary btn-outline">JSON Dışa Aktar</button>
                       <button id="btn-admin-clear-feedback" class="btn btn-ghost" style="font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); padding: 8px 16px; color: var(--color-wrong); border: 1px solid var(--color-wrong-border);">Hepsini Temizle</button>
                     </div>
                   </div>
@@ -1226,14 +1230,14 @@
 
 
               <!-- Panel 2: Lisans Yönetimi -->
-              <div class="admin-panel" id="admin-panel-licensing" style="display: none; flex-direction: column; gap: 20px;">
-                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span style="font-size: 1.5rem;">🔑</span>
-                      <div style="text-align: left;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Lisans Anahtarı Oluşturucu</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcılarınız için şifreli, süreli ve güvenli çevrimdışı lisans kodları üretin.</p>
+              <div class="admin-panel flex-col-20-hidden" id="admin-panel-licensing">
+                <div class="admin-card-glass card-panel">
+                  <div class="header-row">
+                    <div class="flex-center-12">
+                      <span class="icon-lg">🔑</span>
+                      <div class="text-left">
+                        <h3 class="section-title-sm">Lisans Anahtarı Oluşturucu</h3>
+                        <p class="subtext">Kullanıcılarınız için şifreli, süreli ve güvenli çevrimdışı lisans kodları üretin.</p>
                       </div>
                     </div>
                     <div style="background: rgba(139, 126, 200, 0.1); color: var(--accent-primary); font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(139, 126, 200, 0.25);">
@@ -1241,25 +1245,25 @@
                     </div>
                   </div>
                   <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;">
-                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="licence-owner-first-name" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı Adı</label>
-                      <input type="text" id="licence-owner-first-name" placeholder="örn: Ahmet" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    <div class="form-col-wide">
+                      <label for="licence-owner-first-name" class="text-label">Alıcı Adı</label>
+                      <input type="text" id="licence-owner-first-name" placeholder="örn: Ahmet" class="input-field">
                     </div>
-                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="licence-owner-last-name" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı Soyadı</label>
-                      <input type="text" id="licence-owner-last-name" placeholder="örn: Yılmaz" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    <div class="form-col-wide">
+                      <label for="licence-owner-last-name" class="text-label">Alıcı Soyadı</label>
+                      <input type="text" id="licence-owner-last-name" placeholder="örn: Yılmaz" class="input-field">
                     </div>
-                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="licence-owner-email" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı E-Posta</label>
-                      <input type="email" id="licence-owner-email" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    <div class="form-col-wide">
+                      <label for="licence-owner-email" class="text-label">Alıcı E-Posta</label>
+                      <input type="email" id="licence-owner-email" placeholder="örn: ahmet@gmail.com" class="input-field">
                     </div>
-                    <div style="flex: 1.5; min-width: 180px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="licence-owner-phone" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Alıcı Telefon</label>
-                      <input type="tel" id="licence-owner-phone" placeholder="örn: 5551234567" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                    <div class="form-col-wide">
+                      <label for="licence-owner-phone" class="text-label">Alıcı Telefon</label>
+                      <input type="tel" id="licence-owner-phone" placeholder="örn: 5551234567" class="input-field">
                     </div>
                     <div style="flex: 1; min-width: 130px; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="licence-duration" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Süre</label>
-                      <select id="licence-duration" class="report-select" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-size: 0.9rem;">
+                      <label for="licence-duration" class="text-label">Süre</label>
+                      <select id="licence-duration" class="report-select input-field">
                         <option value="90" selected>3 Ay (90 Gün)</option>
                         <option value="30">1 Ay (30 Gün)</option>
                         <option value="180">6 Ay (180 Gün)</option>
@@ -1278,9 +1282,9 @@
                       <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
                         <thead>
                           <tr style="border-bottom: 1px solid var(--border-color); background: rgba(0,0,0,0.05);">
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Alıcı</th>
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Bitiş Tarihi</th>
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Lisans Anahtarı</th>
+                            <th class="th-left">Alıcı</th>
+                            <th class="th-left">Bitiş Tarihi</th>
+                            <th class="th-left">Lisans Anahtarı</th>
                             <th style="padding: 10px; text-align: center; font-weight: 700;">İşlem</th>
                           </tr>
                         </thead>
@@ -1303,10 +1307,10 @@
                       <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
                         <thead>
                           <tr style="border-bottom: 1px solid var(--border-color); background: rgba(0,0,0,0.05);">
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Ad Soyad</th>
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Telefon</th>
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">E-posta</th>
-                            <th style="padding: 10px; text-align: left; font-weight: 700;">Talep Tarihi</th>
+                            <th class="th-left">Ad Soyad</th>
+                            <th class="th-left">Telefon</th>
+                            <th class="th-left">E-posta</th>
+                            <th class="th-left">Talep Tarihi</th>
                             <th style="padding: 10px; text-align: center; font-weight: 700;">İşlem</th>
                           </tr>
                         </thead>
@@ -1324,14 +1328,14 @@
 
 
               <!-- Panel 3: Supabase Entegrasyonu -->
-              <div class="admin-panel" id="admin-panel-supabase" style="display: none; flex-direction: column; gap: 20px;">
-                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span style="font-size: 1.5rem;">⚡</span>
-                      <div style="text-align: left;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Supabase Bulut Veritabanı</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kullanıcıları, durumları ve çevrimiçi kişileri ortak bir veritabanında senkronize edin.</p>
+              <div class="admin-panel flex-col-20-hidden" id="admin-panel-supabase">
+                <div class="admin-card-glass card-panel">
+                  <div class="header-row">
+                    <div class="flex-center-12">
+                      <span class="icon-lg">⚡</span>
+                      <div class="text-left">
+                        <h3 class="section-title-sm">Supabase Bulut Veritabanı</h3>
+                        <p class="subtext">Kullanıcıları, durumları ve çevrimiçi kişileri ortak bir veritabanında senkronize edin.</p>
                       </div>
                     </div>
                     <div style="background: rgba(62, 207, 142, 0.1); color: #3ecf8e; font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(62, 207, 142, 0.25);">
@@ -1365,13 +1369,13 @@
 
               <!-- Panel 4: Kullanıcı Yönetimi -->
               <div class="admin-panel active" id="admin-panel-users" style="display: flex; flex-direction: column; gap: 20px;">
-                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span style="font-size: 1.5rem;">👥</span>
-                      <div style="text-align: left;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Kullanıcı Yönetimi</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Kayıtlı kullanıcıları, yeni üyeleri ve çevrimiçi kullanıcıları görüntüleyin.</p>
+                <div class="admin-card-glass card-panel">
+                  <div class="header-row">
+                    <div class="flex-center-12">
+                      <span class="icon-lg">👥</span>
+                      <div class="text-left">
+                        <h3 class="section-title-sm">Kullanıcı Yönetimi</h3>
+                        <p class="subtext">Kayıtlı kullanıcıları, yeni üyeleri ve çevrimiçi kullanıcıları görüntüleyin.</p>
                       </div>
                     </div>
                     <div id="admin-users-badge" style="background: rgba(139, 126, 200, 0.1); color: var(--accent-primary); font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(139, 126, 200, 0.25);">
@@ -1383,19 +1387,19 @@
                   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;">
                     <div id="admin-stat-total" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.02)); border: 1px solid rgba(59, 130, 246, 0.15); border-radius: var(--radius-md); padding: 16px; text-align: center;">
                       <div style="font-size: 1.8rem; font-weight: 800; color: #3b82f6; line-height: 1;" id="admin-stat-total-count">—</div>
-                      <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Toplam Üye</div>
+                      <div class="eyebrow-label">Toplam Üye</div>
                     </div>
                     <div id="admin-stat-new" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(16, 185, 129, 0.02)); border: 1px solid rgba(16, 185, 129, 0.15); border-radius: var(--radius-md); padding: 16px; text-align: center;">
                       <div style="font-size: 1.8rem; font-weight: 800; color: #10b981; line-height: 1;" id="admin-stat-new-count">—</div>
-                      <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Yeni Üye (7 Gün)</div>
+                      <div class="eyebrow-label">Yeni Üye (7 Gün)</div>
                     </div>
                     <div id="admin-stat-online" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(245, 158, 11, 0.02)); border: 1px solid rgba(245, 158, 11, 0.15); border-radius: var(--radius-md); padding: 16px; text-align: center;">
                       <div style="font-size: 1.8rem; font-weight: 800; color: #f59e0b; line-height: 1;" id="admin-stat-online-count">—</div>
-                      <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Çevrimiçi</div>
+                      <div class="eyebrow-label">Çevrimiçi</div>
                     </div>
                     <div id="admin-stat-active" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(168, 85, 247, 0.02)); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: var(--radius-md); padding: 16px; text-align: center;">
                       <div style="font-size: 1.8rem; font-weight: 800; color: #a855f7; line-height: 1;" id="admin-stat-active-count">—</div>
-                      <div style="font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">Aktif (24 Saat)</div>
+                      <div class="eyebrow-label">Aktif (24 Saat)</div>
                     </div>
                   </div>
 
@@ -1405,21 +1409,21 @@
                       <span>👤</span> Yeni Kullanıcı Oluştur
                     </h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
-                      <div style="display: flex; flex-direction: column; gap: 4px;">
-                        <label for="admin-add-user-name" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Ad Soyad</label>
-                        <input type="text" id="admin-add-user-name" placeholder="örn: Ahmet Yılmaz" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      <div class="flex-col-4">
+                        <label for="admin-add-user-name" class="text-label-muted">Ad Soyad</label>
+                        <input type="text" id="admin-add-user-name" placeholder="örn: Ahmet Yılmaz" class="field-static">
                       </div>
-                      <div style="display: flex; flex-direction: column; gap: 4px;">
-                        <label for="admin-add-user-username" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Kullanıcı Adı</label>
-                        <input type="text" id="admin-add-user-username" placeholder="örn: ahmetyilmaz" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      <div class="flex-col-4">
+                        <label for="admin-add-user-username" class="text-label-muted">Kullanıcı Adı</label>
+                        <input type="text" id="admin-add-user-username" placeholder="örn: ahmetyilmaz" class="field-static">
                       </div>
-                      <div style="display: flex; flex-direction: column; gap: 4px;">
-                        <label for="admin-add-user-email" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-                        <input type="email" id="admin-add-user-email" placeholder="örn: ahmet@gmail.com" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      <div class="flex-col-4">
+                        <label for="admin-add-user-email" class="text-label-muted">E-Posta</label>
+                        <input type="email" id="admin-add-user-email" placeholder="örn: ahmet@gmail.com" class="field-static">
                       </div>
-                      <div style="display: flex; flex-direction: column; gap: 4px;">
-                        <label for="admin-add-user-password" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Şifre</label>
-                        <input type="password" id="admin-add-user-password" value="amok123456" style="padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem;">
+                      <div class="flex-col-4">
+                        <label for="admin-add-user-password" class="text-label-muted">Şifre</label>
+                        <input type="password" id="admin-add-user-password" value="amok123456" class="field-static">
                       </div>
                     </div>
                     <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px;">
@@ -1468,14 +1472,14 @@
               </div>
 
               <!-- Panel 5: Test Beyaz Listesi Yönetimi -->
-              <div class="admin-panel" id="admin-panel-whitelist" style="display: none; flex-direction: column; gap: 20px;">
-                <div class="admin-card-glass" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
-                  <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px;">
-                    <div style="display: flex; align-items: center; gap: 12px;">
-                      <span style="font-size: 1.5rem;">🛡️</span>
-                      <div style="text-align: left;">
-                        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;">Test Beyaz Listesi (Whitelist)</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 2px 0 0 0;">Supabase SMS/OTP hatası olsa dahi Master OTP (571461) ile giriş yapabilecek test kullanıcılarını yönetin.</p>
+              <div class="admin-panel flex-col-20-hidden" id="admin-panel-whitelist">
+                <div class="admin-card-glass card-panel">
+                  <div class="header-row">
+                    <div class="flex-center-12">
+                      <span class="icon-lg">🛡️</span>
+                      <div class="text-left">
+                        <h3 class="section-title-sm">Test Beyaz Listesi (Whitelist)</h3>
+                        <p class="subtext">Supabase SMS/OTP hatası olsa dahi Master OTP (571461) ile giriş yapabilecek test kullanıcılarını yönetin.</p>
                       </div>
                     </div>
                   </div>
@@ -1483,16 +1487,16 @@
                   <!-- Add to Whitelist Form -->
                   <div style="display: flex; gap: 12px; align-items: flex-end; background: var(--bg-body); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); flex-wrap: wrap;">
                     <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="admin-whitelist-name-input" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Ad Soyad</label>
-                      <input type="text" id="admin-whitelist-name-input" placeholder="örn: Ahmet Yılmaz" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                      <label for="admin-whitelist-name-input" class="text-label-muted">Ad Soyad</label>
+                      <input type="text" id="admin-whitelist-name-input" placeholder="örn: Ahmet Yılmaz" class="input-field-md">
                     </div>
                     <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="admin-whitelist-phone-input" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-                      <input type="text" id="admin-whitelist-phone-input" placeholder="örn: 5551234567" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                      <label for="admin-whitelist-phone-input" class="text-label-muted">Telefon</label>
+                      <input type="text" id="admin-whitelist-phone-input" placeholder="örn: 5551234567" class="input-field-md">
                     </div>
                     <div style="flex: 1; min-width: 180px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="admin-whitelist-email-input" style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary);">E-posta</label>
-                      <input type="text" id="admin-whitelist-email-input" placeholder="örn: ahmet@gmail.com" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; outline: none;">
+                      <label for="admin-whitelist-email-input" class="text-label-muted">E-posta</label>
+                      <input type="text" id="admin-whitelist-email-input" placeholder="örn: ahmet@gmail.com" class="input-field-md">
                     </div>
                     <button id="btn-admin-add-whitelist" class="btn btn-primary" style="padding: 10px 20px; font-weight: 700; border-radius: var(--radius-md); height: 38px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-primary); border: none; cursor: pointer; color: white;">Ekle</button>
                   </div>
@@ -1502,9 +1506,9 @@
                     <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
                       <thead>
                         <tr style="background: rgba(0, 0, 0, 0.02); border-bottom: 1px solid var(--border-color);">
-                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600;">Ad Soyad</th>
-                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600;">Telefon</th>
-                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600;">E-posta</th>
+                          <th class="padded-label">Ad Soyad</th>
+                          <th class="padded-label">Telefon</th>
+                          <th class="padded-label">E-posta</th>
                           <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600; text-align: right; width: 100px;">İşlemler</th>
                         </tr>
                       </thead>
@@ -1535,7 +1539,7 @@
         
         <!-- Header & Mode Switcher (Compact & Sleek Glassmorphism) -->
         <div class="srobot-header-card" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.08)); border: 1px solid rgba(34, 211, 238, 0.3); border-radius: var(--radius-lg); padding: 14px 20px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; backdrop-filter: blur(8px);">
-          <div style="display: flex; align-items: center; gap: 12px;">
+          <div class="flex-center-12">
             <div class="srobot-avatar" style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); position: relative;">
               🤖
               <span id="srobot-eye-status" style="position: absolute; top: 2px; right: 2px; width: 8px; height: 8px; border-radius: 50%; background: #10b981; border: 2px solid #fff; box-shadow: 0 0 6px #10b981;"></span>
@@ -1608,7 +1612,7 @@
                   BAĞLAÇ / KOŞUL
                 </div>
                 <div id="srobot-slot-target-1" class="srobot-slot-target" style="min-height: 38px; border-radius: var(--radius-sm); background: rgba(6, 182, 212, 0.06); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.88rem; color: var(--text-primary); border: 1px solid rgba(6, 182, 212, 0.25); padding: 4px 8px;">
-                  <span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>
+                  <span class="text-sm-muted">Parça Seçilmedi</span>
                 </div>
               </div>
 
@@ -1621,7 +1625,7 @@
                   YAN CÜMLE ZAMANI (CLAUSE A)
                 </div>
                 <div id="srobot-slot-target-2" class="srobot-slot-target" style="min-height: 38px; border-radius: var(--radius-sm); background: rgba(139, 92, 246, 0.06); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.88rem; color: var(--text-primary); border: 1px solid rgba(139, 92, 246, 0.25); padding: 4px 8px;">
-                  <span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>
+                  <span class="text-sm-muted">Parça Seçilmedi</span>
                 </div>
               </div>
 
@@ -1634,7 +1638,7 @@
                   ANA CÜMLE / MODAL (CLAUSE B)
                 </div>
                 <div id="srobot-slot-target-3" class="srobot-slot-target" style="min-height: 38px; border-radius: var(--radius-sm); background: rgba(236, 72, 153, 0.06); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.88rem; color: var(--text-primary); border: 1px solid rgba(236, 72, 153, 0.25); padding: 4px 8px;">
-                  <span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>
+                  <span class="text-sm-muted">Parça Seçilmedi</span>
                 </div>
               </div>
 
@@ -1682,10 +1686,10 @@
                 <!-- Category Filter Pills -->
                 <div id="srobot-category-filters" style="display: flex; gap: 6px; flex-wrap: wrap;">
                   <button class="srobot-cat-btn active" data-cat="all" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: #fff; cursor: pointer;">Tümü</button>
-                  <button class="srobot-cat-btn" data-cat="time" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⏱️ Zaman & Tense</button>
-                  <button class="srobot-cat-btn" data-cat="transitions" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">🔀 Cümle Bağlaçları & Geçiş</button>
-                  <button class="srobot-cat-btn" data-cat="cause_effect" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">🎯 Neden-Etki & Fiiller</button>
-                  <button class="srobot-cat-btn" data-cat="devrik_kısaltma" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary); cursor: pointer;">⚡ Devrik & Kısaltmalar</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="time">⏱️ Zaman & Tense</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="transitions">🔀 Cümle Bağlaçları & Geçiş</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="cause_effect">🎯 Neden-Etki & Fiiller</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="devrik_kısaltma">⚡ Devrik & Kısaltmalar</button>
                 </div>
               </div>
               <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: flex; flex-wrap: wrap; gap: 8px; transition: all 0.3s ease;">
@@ -1698,7 +1702,7 @@
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
                 <span style="color: #8b5cf6;">🟣</span> <span id="srobot-section2-header">2. Matris Parçaları (Yan Cümle Zamanları)</span>
               </div>
-              <div class="srobot-pieces-grid" id="srobot-pieces-clause-a" style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <div class="srobot-pieces-grid flex-wrap-8" id="srobot-pieces-clause-a">
                 <!-- JS tarafından doldurulacak -->
               </div>
             </div>
@@ -1708,7 +1712,7 @@
               <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
                 <span style="color: #ec4899;">🔴</span> 3. Matris Parçaları (Ana Cümle / Modal Yapıları)
               </div>
-              <div class="srobot-pieces-grid" id="srobot-pieces-clause-b" style="display: flex; flex-wrap: wrap; gap: 8px;">
+              <div class="srobot-pieces-grid flex-wrap-8" id="srobot-pieces-clause-b">
                 <!-- JS tarafından doldurulacak -->
               </div>
             </div>
@@ -1866,20 +1870,20 @@
         <button class="grammar-modal-close" id="review-prompt-close-btn">&times;</button>
       </div>
       <div class="grammar-modal-body" style="text-align: center; gap: 12px; padding: 24px 20px;">
-        <p style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin: 0;" id="review-prompt-title">Hata Yaptığın Soruları Yeniden Denemek İster misin?</p>
+        <p class="section-title-sm" id="review-prompt-title">Hata Yaptığın Soruları Yeniden Denemek İster misin?</p>
         <p style="font-size: 0.95rem; color: var(--text-secondary); margin: 0; line-height: 1.5;" id="review-prompt-desc">
           Şu ana kadar hata yaptığın <strong id="review-prompt-count" style="color: var(--accent-secondary);">0</strong> soru birikti. Bunları çözerek hatalarını hemen pekiştirebilirsin!
         </p>
       </div>
       <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: center; padding: 16px 20px; background: var(--bg-secondary);">
-        <button class="btn btn-secondary" id="review-prompt-cancel-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Daha Sonra</button>
+        <button class="btn btn-secondary flex-1-pad-12" id="review-prompt-cancel-btn">Daha Sonra</button>
         <button class="btn btn-primary" id="review-prompt-confirm-btn" style="flex: 1; padding: 12px; margin-bottom: 0; background: var(--accent-secondary, #10b981); border-color: var(--accent-secondary, #10b981);">Şimdi Çöz</button>
       </div>
     </div>
   </div>
   <div class="grammar-modal-overlay" id="guest-block-modal">
     <div class="grammar-modal" style="max-width: 440px;">
-      <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8));">
+      <div class="grammar-modal-header accent-gradient-bg">
         <span class="grammar-modal-icon">🔒</span>
         <h3>Bölüm Kilitli</h3>
         <button class="grammar-modal-close" id="guest-block-close-btn">&times;</button>
@@ -1891,8 +1895,8 @@
         </p>
       </div>
       <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: center; padding: 16px 20px; background: var(--bg-secondary);">
-        <button class="btn btn-secondary" id="guest-block-login-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Giriş Yap</button>
-        <button class="btn btn-primary" id="guest-block-register-btn" style="flex: 1; padding: 12px; margin-bottom: 0;">Kayıt Ol</button>
+        <button class="btn btn-secondary flex-1-pad-12" id="guest-block-login-btn">Giriş Yap</button>
+        <button class="btn btn-primary flex-1-pad-12" id="guest-block-register-btn">Kayıt Ol</button>
         <button class="btn btn-secondary" id="guest-block-activate-btn" style="flex: 1; padding: 12px; margin-bottom: 0; display: none;">Lisans Anahtarı Gir</button>
         <button class="btn btn-primary" id="guest-block-licence-btn" style="flex: 1; padding: 12px; margin-bottom: 0; background: var(--accent-primary); display: none;">Lisans Anahtarı Al</button>
       </div>
@@ -1902,7 +1906,7 @@
   <!-- Guest Licence Request Modal -->
   <div class="grammar-modal-overlay" id="guest-licence-request-modal">
     <div class="grammar-modal" style="max-width: 450px;">
-      <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8));">
+      <div class="grammar-modal-header accent-gradient-bg">
         <span class="grammar-modal-icon">📩</span>
         <h3>Lisans Anahtarı Talep Et</h3>
         <button class="grammar-modal-close" id="guest-licence-request-close-btn">&times;</button>
@@ -1912,21 +1916,21 @@
           <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">
             Lütfen aşağıdaki bilgileri doldurun. Talebiniz yöneticinize iletilecektir.
           </p>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <label for="req-name-surname" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Ad Soyad</label>
-            <input type="text" id="req-name-surname" placeholder="örn: Ahmet Yılmaz" required style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
+          <div class="flex-col-4">
+            <label for="req-name-surname" class="text-label-xs">Ad Soyad</label>
+            <input type="text" id="req-name-surname" placeholder="örn: Ahmet Yılmaz" required class="input-field-md-2">
           </div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <label for="req-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-            <input type="email" id="req-email" placeholder="örn: ahmet@gmail.com" required style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
+          <div class="flex-col-4">
+            <label for="req-email" class="text-label-xs">E-Posta</label>
+            <input type="email" id="req-email" placeholder="örn: ahmet@gmail.com" required class="input-field-md-2">
           </div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <label for="req-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-            <input type="tel" id="req-phone" placeholder="örn: 5551234567" required style="width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box;">
+          <div class="flex-col-4">
+            <label for="req-phone" class="text-label-xs">Telefon</label>
+            <input type="tel" id="req-phone" placeholder="örn: 5551234567" required class="input-field-md-2">
           </div>
         </div>
         <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: flex-end; padding: 16px 20px; background: var(--bg-secondary);">
-          <button type="button" class="btn btn-secondary" id="guest-licence-request-cancel-btn" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer;">İptal</button>
+          <button type="button" class="btn btn-secondary btn-pill-solid" id="guest-licence-request-cancel-btn">İptal</button>
           <button type="submit" class="btn btn-primary" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; background: var(--accent-primary); cursor: pointer;">Gönder</button>
         </div>
       </form>
@@ -1938,7 +1942,7 @@
        ════════════════════════════════════════════════════════ -->
   <div class="grammar-modal-overlay" id="admin-user-licence-modal">
     <div class="grammar-modal" style="max-width: 500px;">
-      <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8));">
+      <div class="grammar-modal-header accent-gradient-bg">
         <span class="grammar-modal-icon">🔑</span>
         <h3 id="admin-licence-modal-title">Kullanıcı Yönetimi & Lisans</h3>
         <button class="grammar-modal-close" id="admin-licence-modal-close-btn">&times;</button>
@@ -1955,28 +1959,28 @@
         <!-- License management fields -->
         <div style="display: flex; flex-direction: column; gap: 10px;">
           <div style="display: flex; gap: 10px;">
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
-              <label for="admin-licence-fullname" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Ad Soyad</label>
-              <input type="text" id="admin-licence-fullname" placeholder="Ad ve soyad girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            <div class="flex-1-col-4">
+              <label for="admin-licence-fullname" class="text-label-xs">Ad Soyad</label>
+              <input type="text" id="admin-licence-fullname" placeholder="Ad ve soyad girin" class="input-field-sm">
             </div>
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
-              <label for="admin-user-xp-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">XP Puanı</label>
-              <input type="number" id="admin-user-xp-input" placeholder="XP puanı girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            <div class="flex-1-col-4">
+              <label for="admin-user-xp-input" class="text-label-xs">XP Puanı</label>
+              <input type="number" id="admin-user-xp-input" placeholder="XP puanı girin" class="input-field-sm">
             </div>
           </div>
           <div style="display: flex; gap: 10px;">
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
-              <label for="admin-licence-email" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-Posta</label>
-              <input type="email" id="admin-licence-email" placeholder="E-posta girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            <div class="flex-1-col-4">
+              <label for="admin-licence-email" class="text-label-xs">E-Posta</label>
+              <input type="email" id="admin-licence-email" placeholder="E-posta girin" class="input-field-sm">
             </div>
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
-              <label for="admin-licence-phone" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Telefon</label>
-              <input type="tel" id="admin-licence-phone" placeholder="Telefon girin" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; box-sizing: border-box;">
+            <div class="flex-1-col-4">
+              <label for="admin-licence-phone" class="text-label-xs">Telefon</label>
+              <input type="tel" id="admin-licence-phone" placeholder="Telefon girin" class="input-field-sm">
             </div>
           </div>
           <div style="display: flex; gap: 10px; align-items: flex-end;">
             <div style="flex: 1.5; display: flex; flex-direction: column; gap: 4px;">
-              <label for="admin-licence-duration" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Süresi</label>
+              <label for="admin-licence-duration" class="text-label-xs">Lisans Süresi</label>
               <select id="admin-licence-duration" class="report-select" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.8rem; height: 36px; box-sizing: border-box;">
                 <option value="90" selected>3 Ay (90 Gün)</option>
                 <option value="30">1 Ay (30 Gün)</option>
@@ -1989,17 +1993,17 @@
               <span>⚡</span> Üret
             </button>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 4px;">
-            <label for="admin-licence-key-input" style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Lisans Anahtarı</label>
+          <div class="flex-col-4">
+            <label for="admin-licence-key-input" class="text-label-xs">Lisans Anahtarı</label>
             <input type="text" id="admin-licence-key-input" placeholder="AMOK-XXXX-XXXX-YYYYMMDD-SIG" style="width: 100%; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-family: monospace; box-sizing: border-box;">
           </div>
         </div>
 
       </div>
       <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: flex-end; padding: 16px 20px; background: var(--bg-secondary);">
-        <button class="btn btn-secondary" id="admin-licence-modal-cancel-btn" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer;">İptal</button>
+        <button class="btn btn-secondary btn-pill-solid" id="admin-licence-modal-cancel-btn">İptal</button>
         <button class="btn btn-secondary" id="btn-admin-licence-send-email" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; background: #2563eb; color: #fff; border-color: #2563eb; display: flex; align-items: center; gap: 6px;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">✉️ E-posta Gönder</button>
-        <button class="btn btn-primary" id="admin-licence-modal-save-btn" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer;">Kaydet</button>
+        <button class="btn btn-primary btn-pill-solid" id="admin-licence-modal-save-btn">Kaydet</button>
       </div>
     </div>
   </div>
@@ -2131,7 +2135,7 @@
                 <div style="font-size: 0.75rem; font-weight: 800; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
                   <span>🔑</span> Kelime & Öbek İpuçları:
                 </div>
-                <div id="vocab-hints-list" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <div id="vocab-hints-list" class="flex-wrap-8">
                   <!-- Dynamic vocab list -->
                 </div>
               </div>
@@ -2197,24 +2201,24 @@
           Sisteminizde varsayılan bir e-posta uygulaması yoksa, aşağıdaki bilgileri kopyalayarak Gmail veya dilediğiniz servisten gönderebilirsiniz:
         </p>
         
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">Alıcı E-posta</label>
-          <div style="display: flex; gap: 8px;">
+        <div class="flex-col-4">
+          <label class="text-label-xs">Alıcı E-posta</label>
+          <div class="flex-gap-8">
             <input type="text" id="email-draft-to" readonly style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); font-size: 0.85rem;">
             <button id="btn-copy-draft-to" class="btn btn-secondary" style="padding: 0 12px; margin: 0; height: 36px; font-size: 0.8rem; cursor: pointer;">Kopyala</button>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-posta Konusu</label>
-          <div style="display: flex; gap: 8px;">
+        <div class="flex-col-4">
+          <label class="text-label-xs">E-posta Konusu</label>
+          <div class="flex-gap-8">
             <input type="text" id="email-draft-subject" readonly style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); font-size: 0.85rem;">
             <button id="btn-copy-draft-subject" class="btn btn-secondary" style="padding: 0 12px; margin: 0; height: 36px; font-size: 0.8rem; cursor: pointer;">Kopyala</button>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 4px;">
-          <label style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary);">E-posta İçeriği</label>
+        <div class="flex-col-4">
+          <label class="text-label-xs">E-posta İçeriği</label>
           <textarea id="email-draft-body" readonly rows="8" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); font-size: 0.85rem; font-family: sans-serif; resize: none; box-sizing: border-box;"></textarea>
           <button id="btn-copy-draft-body" class="btn btn-primary" style="width: 100%; padding: 10px 0; margin-top: 4px; font-weight: 700; cursor: pointer;">📋 Tüm İçeriği Kopyala</button>
         </div>
