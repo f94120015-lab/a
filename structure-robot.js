@@ -2514,6 +2514,7 @@
     let isValidCombination = false;
     let sentenceENText = "...";
     let sentenceTRText = "Lütfen tüm yuvalara uygun parçalar seçin.";
+    let curatedExample = null;
 
     if (state.selectedConnector) {
       const rule = RULE_RULES[state.selectedConnector];
@@ -2529,6 +2530,14 @@
             if (state.selectedClauseB && allowedClauseB.includes(state.selectedClauseB)) {
               isValidCombination = true;
               sentenceTRText = matchingPair.trPattern;
+              // Hand-curated example sentences (tenseExamples) are linked to
+              // validPairs via an identical Turkish sentence — use the matching
+              // curated English sentence instead of stitching raw clause samples,
+              // which produces ungrammatical run-ons (e.g. "She studied hard
+              // triggers she passed the exam.").
+              if (rule.tenseExamples) {
+                curatedExample = rule.tenseExamples.find(ex => ex.tr === matchingPair.trPattern) || null;
+              }
             }
           } else {
             allowedClauseB = [];
@@ -2582,34 +2591,47 @@
 
     // Build Live English & Turkish Sentences using Dynamic Templates
     if (connObj && clauseAObj && clauseBObj) {
-      const templateEN = SENTENCE_TEMPLATES[state.selectedConnector];
-      if (templateEN) {
-        let sA = clauseAObj.sample;
-        let sB = clauseBObj.sample;
-        let sB_ing_clean = sB.replace(/^(she|he|it|they|we|you|I)\s+(is|are|am)\s+/i, "");
-        let resultEN = templateEN
-          .replace("{A_INV}", invertHadV3(sA))
-          .replace("{A}", sA)
-          .replace("{B_ing_clean}", sB_ing_clean)
-          .replace("{B}", sB);
-        resultEN = resultEN.charAt(0).toUpperCase() + resultEN.slice(1);
-        sentenceENText = '"' + resultEN + '"';
+      if (curatedExample) {
+        // A hand-curated, grammatically correct example exists for this exact
+        // valid combination — use it for English instead of stitching raw
+        // clause samples, which produces ungrammatical run-ons.
+        sentenceENText = '"' + curatedExample.en + '"';
       } else {
-        let connWord = connObj.label.split(" / ")[0];
-        connWord = connWord.charAt(0) + connWord.slice(1).toLowerCase();
-        sentenceENText = '"' + connWord + " " + clauseAObj.sample + ", " + clauseBObj.sample + '."';
+        const templateEN = SENTENCE_TEMPLATES[state.selectedConnector];
+        if (templateEN) {
+          let sA = clauseAObj.sample;
+          let sB = clauseBObj.sample;
+          let sB_ing_clean = sB.replace(/^(she|he|it|they|we|you|I)\s+(is|are|am)\s+/i, "");
+          let resultEN = templateEN
+            .replace("{A_INV}", invertHadV3(sA))
+            .replace("{A}", sA)
+            .replace("{B_ing_clean}", sB_ing_clean)
+            .replace("{B}", sB);
+          resultEN = resultEN.charAt(0).toUpperCase() + resultEN.slice(1);
+          sentenceENText = '"' + resultEN + '"';
+        } else {
+          let connWord = connObj.label.split(" / ")[0];
+          connWord = connWord.charAt(0) + connWord.slice(1).toLowerCase();
+          sentenceENText = '"' + connWord + " " + clauseAObj.sample + ", " + clauseBObj.sample + '."';
+        }
       }
 
-      // Dynamic Turkish Translation
-      const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector] || "{A_TR}, {B_TR}.";
-      const trA = clauseAObj.sampleTR || clauseAObj.label;
-      const trB = clauseBObj.sampleTR || clauseBObj.label;
+      if (isValidCombination) {
+        // sentenceTRText already holds the curated matchingPair.trPattern —
+        // keep it instead of overwriting with the generic clause-stitching
+        // template below, which was producing disconnected, ungrammatical
+        // Turkish translations for otherwise valid structures.
+      } else {
+        const templateTR = TR_SENTENCE_TEMPLATES[state.selectedConnector] || "{A_TR}, {B_TR}.";
+        const trA = clauseAObj.sampleTR || clauseAObj.label;
+        const trB = clauseBObj.sampleTR || clauseBObj.label;
 
-      if (templateTR) {
-        let resultTR = templateTR
-          .replace("{A_TR}", trA)
-          .replace("{B_TR}", trB);
-        sentenceTRText = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
+        if (templateTR) {
+          let resultTR = templateTR
+            .replace("{A_TR}", trA)
+            .replace("{B_TR}", trB);
+          sentenceTRText = resultTR.charAt(0).toUpperCase() + resultTR.slice(1);
+        }
       }
     } else {
       let parts = [];
