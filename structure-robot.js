@@ -1951,14 +1951,14 @@
     // Neden-Etki Fiilleri
     lead_to_cause: "{A_TR}, {B_TR} durumuna yol açar.",
     is_responsible_for: "{A_TR}, {B_TR} durumundan sorumludur.",
-    produce_produces: "{A_TR}, {B_TR} meydana getirir.",
-    induce_provoke_prompt: "{A_TR}, {B_TR} tetikler.",
+    produce_produces: "{A_TR}, {B_TR} durumunu meydana getirir.",
+    induce_provoke_prompt: "{A_TR}, {B_TR} durumunu tetikler.",
     result_in: "{A_TR}, {B_TR} ile sonuçlanır.",
-    trigger_triggers: "{A_TR}, {B_TR} tetikler.",
-    give_rise_to: "{A_TR}, {B_TR} ortaya çıkarır.",
-    contribute_to: "{A_TR}, {B_TR} katkıda bulunur.",
-    pave_the_way_for: "{A_TR}, {B_TR} zemin hazırlar.",
-    culminate_in: "{A_TR}, {B_TR} zirveye ulaşır.",
+    trigger_triggers: "{A_TR}, {B_TR} durumunu tetikler.",
+    give_rise_to: "{A_TR}, {B_TR} durumunu ortaya çıkarır.",
+    contribute_to: "{A_TR}, {B_TR} durumuna katkıda bulunur.",
+    pave_the_way_for: "{A_TR}, {B_TR} durumuna zemin hazırlar.",
+    culminate_in: "{A_TR}, {B_TR} durumuyla zirveye ulaşır.",
 
     // Neden-Etki Ters Fiiller
     is_due_to: "{B_TR}, {A_TR} durumundan kaynaklanır.",
