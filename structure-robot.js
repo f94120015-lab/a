@@ -390,7 +390,7 @@
       ruleText: "BEFORE: Öncelikli eylem ana cümle tarafındadır ve 'Had V3' alır! Before yan cümlesi V2 ise ana cümle Had V3; V1 ise Will V1 olur.",
       tenseExamples: [
         { tense: "Simple Present", en: "Please check all equipment before you start the experiment.", tr: "Deneye başlamadan önce lütfen tüm ekipmanları kontrol edin." },
-        { tense: "Simple Past", en: "Prior to the industrial era, most people worked in farming.", tr: "Sanayi çağından önce çoğu insan tarımda çalışıyordu." },
+        { tense: "Simple Past", en: "Before the industrial era, most people worked in farming.", tr: "Sanayi çağından önce çoğu insan tarımda çalışıyordu." },
         { tense: "Past Perfect", en: "She had already left the office before the manager arrived.", tr: "Müdür varmadan önce o çoktan ofisten ayrılmıştı." },
         { tense: "Future Simple", en: "We will finalize the contract before the fiscal year ends.", tr: "Mali yıl sona ermeden önce sözleşmeyi netleştireceğiz." },
         { tense: "Modal / Passive", en: "You ought to double-check calculations before submitting.", tr: "Teslim etmeden önce hesaplamaları iki kez kontrol etmelisiniz." }
@@ -1958,7 +1958,7 @@
     arise_from: "{B_TR}, {A_TR} doğar.",
     is_attributed_to: "{B_TR}, {A_TR} atfedilir.",
     is_ascribed_to: "{B_TR}, {A_TR} bağlanır.",
-    is_caused_by: "{B_TR}, {A_TR} tarafından oluşturulur.",
+    is_caused_by: "{B_TR}, {A_TR} tarafından meydana getirilir.",
 
     // Edat Öbekleri
     because_of_due_to_owing_to: "{A_TR} nedeniyle, {B_TR}.",
@@ -1978,7 +1978,7 @@
     consequently: "{A_TR}; bunun neticesinde, {B_TR}.",
     as_a_result_that: "{A_TR}; sonuç olarak, {B_TR}.",
     accordingly: "{A_TR}; bu doğrultuda, {B_TR}.",
-    in_that: "{B_TR}, çünkü {A_TR}.",
+    in_that: "{B_TR}, {A_TR} bakımından öyledir.",
     inasmuch_as_seeing_that: "{A_TR} mademki, {B_TR}.",
     owing_to_the_fact_that: "{A_TR} gerçeğinden dolayı, {B_TR}.",
     thereby_v_ing: "{A_TR}, böylelikle {B_TR}.",
