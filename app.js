@@ -13917,16 +13917,25 @@ function renderProfile() {
 
 function initSocialSystem() {
   const subtabAllUsers = document.getElementById('subtab-all-users');
+  const subtabOnline = document.getElementById('subtab-online');
   const subtabFollowing = document.getElementById('subtab-following');
   const searchInput = document.getElementById('social-search-input');
   const searchClear = document.getElementById('social-search-clear');
   const searchBtn = document.getElementById('btn-social-search');
+  const allSocialSubtabs = [subtabAllUsers, subtabOnline, subtabFollowing].filter(Boolean);
 
   if (subtabAllUsers) {
     subtabAllUsers.addEventListener('click', () => {
       activeSocialSubTab = 'all-users';
-      subtabAllUsers.classList.add('active');
-      if (subtabFollowing) subtabFollowing.classList.remove('active');
+      allSocialSubtabs.forEach(t => t.classList.toggle('active', t === subtabAllUsers));
+      renderSocialList();
+    });
+  }
+
+  if (subtabOnline) {
+    subtabOnline.addEventListener('click', () => {
+      activeSocialSubTab = 'online';
+      allSocialSubtabs.forEach(t => t.classList.toggle('active', t === subtabOnline));
       renderSocialList();
     });
   }
@@ -13934,8 +13943,7 @@ function initSocialSystem() {
   if (subtabFollowing) {
     subtabFollowing.addEventListener('click', () => {
       activeSocialSubTab = 'following';
-      subtabFollowing.classList.add('active');
-      if (subtabAllUsers) subtabAllUsers.classList.remove('active');
+      allSocialSubtabs.forEach(t => t.classList.toggle('active', t === subtabFollowing));
       renderSocialList();
     });
   }
@@ -13996,17 +14004,19 @@ async function renderSocialList() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name, profile_photo)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name, profile_photo, last_seen_at)')
         .order('xp', { ascending: false })
         .limit(50);
 
       if (!error && data && data.length > 0) {
+        const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000);
         competitors = data.map(item => {
           const isUser = item.username === state.username;
           let displayName = item.username;
           let email = '';
           let phone = '';
           let profilePhoto = '';
+          let lastSeenAt = null;
           if (item.profiles) {
             const fName = item.profiles.first_name || '';
             const lName = item.profiles.last_name || '';
@@ -14015,11 +14025,13 @@ async function renderSocialList() {
             email = item.profiles.email || '';
             phone = item.profiles.phone || '';
             profilePhoto = item.profiles.profile_photo || '';
+            lastSeenAt = item.profiles.last_seen_at || null;
           }
           if (isUser) {
             const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
             displayName = state.displayName || localFull || state.username;
           }
+          const isOnline = isUser || (lastSeenAt ? new Date(lastSeenAt) >= fiveMinutesAgo : false);
           return {
             username: item.username,
             displayName: displayName,
@@ -14028,7 +14040,8 @@ async function renderSocialList() {
             streak: isUser ? state.streak : 0,
             email: email,
             phone: phone,
-            profilePhoto: profilePhoto
+            profilePhoto: profilePhoto,
+            isOnline: isOnline
           };
         });
       }
@@ -14055,7 +14068,8 @@ async function renderSocialList() {
       streak: state.streak,
       isSelf: true,
       email: state.email || '',
-      phone: state.phone || ''
+      phone: state.phone || '',
+      isOnline: true
     });
   }
 
@@ -14064,13 +14078,14 @@ async function renderSocialList() {
     if (c.username === selfUsername || c.isSelf) {
       const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
       const selfDisplayName = state.displayName || localFull || selfUsername;
-      return { 
-        ...c, 
-        isSelf: true, 
-        displayName: selfDisplayName + ' (Sen)', 
-        avatarColor: state.avatarColor || c.avatarColor || '#5856D6', 
-        email: state.email || '', 
-        phone: state.phone || '' 
+      return {
+        ...c,
+        isSelf: true,
+        displayName: selfDisplayName + ' (Sen)',
+        avatarColor: state.avatarColor || c.avatarColor || '#5856D6',
+        email: state.email || '',
+        phone: state.phone || '',
+        isOnline: true
       };
     }
     return c;
@@ -14125,6 +14140,18 @@ async function renderSocialList() {
   // If in "Takip Ettiklerim" (following) tab, filter only self and followed users
   if (activeSocialSubTab === 'following') {
     competitors = competitors.filter(c => c.isSelf || (state.following && state.following.some(f => f.username === c.username || f.username === c.username.replace(' (Sen)', ''))));
+  } else if (activeSocialSubTab === 'online') {
+    competitors = competitors.filter(c => c.isOnline);
+  }
+
+  if (competitors.length === 0) {
+    const emptyMsg = activeSocialSubTab === 'online'
+      ? 'Şu anda çevrimiçi kullanıcı yok.'
+      : activeSocialSubTab === 'following'
+      ? 'Henüz kimseyi takip etmiyorsunuz.'
+      : 'Kullanıcı bulunamadı.';
+    contentEl.innerHTML = `<div style="text-align: center; padding: 24px 12px; color: var(--text-secondary); font-size: 0.88rem;">${emptyMsg}</div>`;
+    return;
   }
 
   contentEl.innerHTML = competitors.map((user, index) => {
@@ -14161,13 +14188,15 @@ async function renderSocialList() {
     }
 
     const rankBadgeHtml = `<span class="social-rank-badge rank-${rank <= 3 ? rank : 'other'}">${rank}</span>`;
+    const onlineDotHtml = user.isOnline ? `<span class="online-indicator-dot online" style="position: absolute; bottom: -2px; right: -2px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--bg-card); z-index: 10;"></span>` : '';
 
     return `
       <div class="friend-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); margin-bottom: 10px; transition: all 0.2s; box-sizing: border-box; width: 100%; min-width: 0; gap: 8px;">
         <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0;">
-          <div class="friend-avatar" style="${avatarStyle}">
+          <div class="friend-avatar ${user.isOnline ? 'avatar-online-halo' : ''}" style="${avatarStyle}">
             ${avatarContent}
             ${rankBadgeHtml}
+            ${onlineDotHtml}
           </div>
           <div class="friend-details" style="display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1;">
             <span class="friend-name" style="${user.isSelf ? 'font-weight: 800; color: var(--accent-primary);' : 'font-weight: 700; color: var(--text-primary);'} word-break: break-word; line-height: 1.25; display: block; font-size: 0.95rem;">${escapeHtml(displayNameToShow)}</span>
