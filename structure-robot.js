@@ -937,19 +937,19 @@
     },
     in_that: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Yöntem benzersizdir çünkü zaman tasarrufu sağlar." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Etkinlik unutulmazdı çünkü topluluğu birleştirdi." },
-        { clauseA: "has_v3", clauseB: ["has_v3_main"], trPattern: "Politika başarılı olmuştur çünkü yoksulluğu azaltmıştır." },
-        { clauseA: "v1_present", clauseB: ["will_v1"], trPattern: "Araç üstün olacaktır çünkü sıfır yakıt kullanacaktır." },
-        { clauseA: "v1_present", clauseB: ["can_may_v1"], trPattern: "Plan idealdir çünkü trafik sorunlarını çözebilir." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Yöntem, önemli ölçüde zaman tasarrufu sağlaması bakımından benzersizdir." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Etkinlik, topluluğu birleştirmesi bakımından unutulmazdı." },
+        { clauseA: "has_v3", clauseB: ["has_v3_main"], trPattern: "Politika, yoksulluğu azaltmış olması bakımından başarılı olmuştur." },
+        { clauseA: "v1_present", clauseB: ["will_v1"], trPattern: "Araç, sıfır yakıt kullanacak olması bakımından üstün olacaktır." },
+        { clauseA: "v1_present", clauseB: ["can_may_v1"], trPattern: "Plan, trafik sorunlarını çözebilecek olması bakımından idealdir." }
       ],
       ruleText: "IN THAT: -mesi bakımından / çünkü (+ Cümle).",
       tenseExamples: [
-        { tense: "Simple Present", en: "The method is unique in that it saves significant time.", tr: "Yöntem benzersizdir çünkü önemli ölçüde zaman tasarrufu sağlar." },
-        { tense: "Simple Past", en: "The event was memorable in that it united the community.", tr: "Etkinlik unutulmazdı çünkü topluluğu birleştirdi." },
-        { tense: "Present Perfect", en: "The policy has succeeded in that it has reduced poverty.", tr: "Politika başarılı olmuştur çünkü yoksulluğu azaltmıştır." },
-        { tense: "Future Simple", en: "The vehicle will be superior in that it will use zero fuel.", tr: "Araç üstün olacaktır çünkü sıfır yakıt kullanacaktır." },
-        { tense: "Modal / Passive", en: "The plan is ideal in that it could solve traffic issues.", tr: "Plan idealdir çünkü trafik sorunlarını çözebilir." }
+        { tense: "Simple Present", en: "The method is unique in that it saves significant time.", tr: "Yöntem, önemli ölçüde zaman tasarrufu sağlaması bakımından benzersizdir." },
+        { tense: "Simple Past", en: "The event was memorable in that it united the community.", tr: "Etkinlik, topluluğu birleştirmesi bakımından unutulmazdı." },
+        { tense: "Present Perfect", en: "The policy has succeeded in that it has reduced poverty.", tr: "Politika, yoksulluğu azaltmış olması bakımından başarılı olmuştur." },
+        { tense: "Future Simple", en: "The vehicle will be superior in that it will use zero fuel.", tr: "Araç, sıfır yakıt kullanacak olması bakımından üstün olacaktır." },
+        { tense: "Modal / Passive", en: "The plan is ideal in that it could solve traffic issues.", tr: "Plan, trafik sorunlarını çözebilecek olması bakımından idealdir." }
       ]
     },
     inasmuch_as_seeing_that: {
