@@ -1334,16 +1334,6 @@
         { tense: "Modal / Passive", en: "Precautions should be taken in order that errors may be minimized.", tr: "Hatalar en aza indirilebilsin diye tedbirler alınmalıdır." }
       ]
     },
-    having_v3: {
-      ruleText: "HAVING + V3 / HAVING BEEN + V3 (Kısaltma Yapısı)",
-      tenseExamples: [
-        { tense: "Simple Present", en: "Having finished the report, the researcher feels confident about findings.", tr: "Raporu bitirdikten sonra araştırmacı bulgular konusunda kendinden emin hisseder." },
-        { tense: "Simple Past", en: "Having analyzed the data yesterday, the team published the final study.", tr: "Dün verileri analiz ettikten sonra ekip nihai çalışmayı yayımladı." },
-        { tense: "Present Perfect", en: "Having passed rigorous safety tests, the new vaccine has received approval.", tr: "Titiz güvenlik testlerini geçtikten sonra yeni aşı onay almıştır." },
-        { tense: "Future Simple", en: "Having completed her training next month, she will lead the department.", tr: "Gelecek ay eğitimini tamamladıktan sonra departmana liderlik edecektir." },
-        { tense: "Modal / Passive", en: "Having been tested thoroughly, the equipment can be safely deployed.", tr: "Etraflıca test edildikten sonra ekipman güvenle konuşlandırılabilir." }
-      ]
-    },
     all_in_all: {
       ruleText: "ALL IN ALL / IN SUMMARY / IN SHORT / OVERALL (Özet)",
       tenseExamples: [
