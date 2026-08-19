@@ -2529,14 +2529,20 @@
             allowedClauseB = matchingPair.clauseB;
             if (state.selectedClauseB && allowedClauseB.includes(state.selectedClauseB)) {
               isValidCombination = true;
-              sentenceTRText = matchingPair.trPattern;
+              // Some rules (e.g. "when") have more than one valid clauseB per
+              // clauseA, each needing its own Turkish translation — use
+              // trPatternMap[clauseB] when present instead of the single
+              // flat trPattern, which was showing the same Turkish sentence
+              // for every clauseB choice regardless of meaning.
+              sentenceTRText = (matchingPair.trPatternMap && matchingPair.trPatternMap[state.selectedClauseB])
+                || matchingPair.trPattern;
               // Hand-curated example sentences (tenseExamples) are linked to
               // validPairs via an identical Turkish sentence — use the matching
               // curated English sentence instead of stitching raw clause samples,
               // which produces ungrammatical run-ons (e.g. "She studied hard
               // triggers she passed the exam.").
               if (rule.tenseExamples) {
-                curatedExample = rule.tenseExamples.find(ex => ex.tr === matchingPair.trPattern) || null;
+                curatedExample = rule.tenseExamples.find(ex => ex.tr === sentenceTRText) || null;
               }
             }
           } else {
