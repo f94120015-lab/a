@@ -53189,7 +53189,821 @@ if (typeof lessons !== 'undefined') {
             ]
           }
         ]
-      }
+      },
+{
+  "id": "u50_l4_ex2",
+  "title": "Diyalog Tamamlama",
+  "description": "Konuşmadaki eksik repliği bulun.",
+  "questions": [
+    {
+      "id": "u50_l4_d1",
+      "type": "multiple-choice",
+      "passage": "Researcher I: Have you finished analysing the survey responses?\nResearcher II: ----\nResearcher I: Good, then we can start drafting the results section tomorrow.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "No, I have never worked with survey data before.",
+        "The conference will be held in September.",
+        "Yes, I completed the last set of tables this morning.",
+        "I think the sample size should have been larger.",
+        "Our department moved to a new building last year."
+      ],
+      "correctIndex": 2,
+      "explanation": "İkinci konuşmacının cevabı, 'Good, then we can start drafting' yanıtını gerektirir; yani iş bitmiş olmalıdır.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d2",
+      "type": "multiple-choice",
+      "passage": "Editor: The reviewers asked for a clearer explanation of your method.\nAuthor: ----\nEditor: That would certainly address their main concern.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I could add a short diagram showing each step of the procedure.",
+        "I would rather withdraw the article entirely.",
+        "The reviewers are clearly mistaken about the topic.",
+        "My previous paper was published in the same journal.",
+        "I have not read their comments yet."
+      ],
+      "correctIndex": 0,
+      "explanation": "Editörün 'That would address their main concern' yanıtı, somut bir çözüm önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d3",
+      "type": "multiple-choice",
+      "passage": "Student: I'm worried that my thesis topic is too broad.\nAdvisor: ----\nStudent: That makes sense; I'll focus on the post-1990 period only.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Broad topics are always easier to defend.",
+        "You should change your department instead.",
+        "I have not supervised a thesis before.",
+        "Try narrowing it down to a single decade and see whether the material is manageable.",
+        "The deadline was extended by two weeks."
+      ],
+      "correctIndex": 3,
+      "explanation": "Öğrencinin 'I'll focus on the post-1990 period' cevabı, daraltma tavsiyesini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d4",
+      "type": "multiple-choice",
+      "passage": "Colleague I: Did the lab confirm the contamination in the second batch?\nColleague II: ----\nColleague I: Then we should repeat the whole series before publishing.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "No, the equipment was replaced last year.",
+        "Yes, and they suspect the same problem affected the third batch too.",
+        "I prefer working in the morning shift.",
+        "The results were published without any review.",
+        "We have not ordered new samples yet."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Then we should repeat the whole series' tepkisi, sorunun doğrulandığını ve yayıldığını bildiren bir cevabı gerektirir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d5",
+      "type": "multiple-choice",
+      "passage": "Patient: Should I stop taking the medication once the pain disappears?\nDoctor: ----\nPatient: I see, so I'll finish the full course as prescribed.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Yes, there is no reason to continue after that point.",
+        "The pharmacy closes at six o'clock.",
+        "You may double the dose if you prefer.",
+        "I will refer you to another specialist.",
+        "No, stopping early may allow the infection to return."
+      ],
+      "correctIndex": 4,
+      "explanation": "Hastanın 'so I'll finish the full course' cevabı, erken bırakmanın sakıncalı olduğunu söyleyen bir yanıtı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d6",
+      "type": "multiple-choice",
+      "passage": "Journalist: Your report claims the reform failed. Isn't that too strong a word?\nEconomist: ----\nJournalist: So it is a matter of which indicator you look at.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "No, every indicator points in the same direction.",
+        "It is strong, but it follows from the indicator we chose to measure.",
+        "I did not write that section of the report.",
+        "The reform was never actually implemented.",
+        "We will publish a revised version next year."
+      ],
+      "correctIndex": 1,
+      "explanation": "Gazetecinin 'a matter of which indicator you look at' özeti, göstergeye bağlılığı kabul eden bir cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d7",
+      "type": "multiple-choice",
+      "passage": "Librarian: These manuscripts cannot leave the reading room.\nVisitor: ----\nLibrarian: Certainly, photography without flash is permitted.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then I will take them home for the weekend.",
+        "I did not know the library was closed today.",
+        "Could you translate this passage for me?",
+        "I would like to borrow three novels as well.",
+        "Would it be possible to photograph a few pages instead?"
+      ],
+      "correctIndex": 4,
+      "explanation": "Kütüphanecinin 'photography without flash is permitted' yanıtı, fotoğraf çekme talebini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d8",
+      "type": "multiple-choice",
+      "passage": "Team leader: We are two weeks behind schedule.\nEngineer: ----\nTeam leader: Let's do that; a working prototype matters more than a complete one.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "We could postpone the secondary features and deliver the core system first.",
+        "We should add three more features to compensate.",
+        "The schedule was never realistic anyway.",
+        "I will be on leave for the next month.",
+        "The client has not signed the contract yet."
+      ],
+      "correctIndex": 0,
+      "explanation": "'A working prototype matters more than a complete one' onayı, ikincil özelliklerin ertelenmesi önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d9",
+      "type": "multiple-choice",
+      "passage": "Historian I: The archive has no records from that decade at all.\nHistorian II: ----\nHistorian I: True — absence of evidence is not evidence of absence.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then nothing of importance happened in those years.",
+        "We should stop researching that period.",
+        "That may reflect a fire in the building rather than an absence of activity.",
+        "The archive was founded only recently.",
+        "I have already published on this topic."
+      ],
+      "correctIndex": 2,
+      "explanation": "Birinci konuşmacının 'absence of evidence is not evidence of absence' onayı, boşluğun başka bir nedeni olabileceği önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d10",
+      "type": "multiple-choice",
+      "passage": "Referee: Your sample consists only of university students.\nResearcher: ----\nReferee: Please state that limitation explicitly in the discussion.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "The sample is representative of every age group.",
+        "I collected the data from three different countries.",
+        "That is not relevant to the research question.",
+        "You are right; I cannot generalise the findings to the wider population.",
+        "The study was funded by the university."
+      ],
+      "correctIndex": 3,
+      "explanation": "Hakemin 'state that limitation explicitly' talebi, sınırlılığın kabul edildiği bir cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d11",
+      "type": "multiple-choice",
+      "passage": "Architect: The council rejected the glass façade.\nClient: ----\nArchitect: Yes, they said it clashes with the historic street.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Did they approve the budget instead?",
+        "Shall we start construction next week then?",
+        "Was it because of the conservation rules in that district?",
+        "Have you finished the interior drawings?",
+        "Is the building already listed as a monument?"
+      ],
+      "correctIndex": 2,
+      "explanation": "Mimarın 'they said it clashes with the historic street' cevabı, koruma kurallarını soran bir soruyu takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d12",
+      "type": "multiple-choice",
+      "passage": "Nurse: The patient's temperature has risen again.\nDoctor: ----\nNurse: I'll prepare the sample right away.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Take another blood test before we change the treatment.",
+        "Then we can discharge him this afternoon.",
+        "Reduce the dose by half immediately.",
+        "There is no need to monitor him further.",
+        "Move him to the waiting area please."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hemşirenin 'I'll prepare the sample' cevabı, kan testi istemini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d13",
+      "type": "multiple-choice",
+      "passage": "Translator: Some of these legal terms have no exact equivalent.\nLawyer: ----\nTranslator: I'll add a footnote explaining the original term.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then simply omit those sentences.",
+        "Use whichever word sounds best to you.",
+        "The contract does not need to be translated.",
+        "In that case, keep the original and explain it rather than forcing a translation.",
+        "We can sign it without reading the clauses."
+      ],
+      "correctIndex": 3,
+      "explanation": "Çevirmenin 'I'll add a footnote explaining the original term' cevabı, orijinali koruyup açıklama önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d14",
+      "type": "multiple-choice",
+      "passage": "Economist I: Consumer confidence rose last month.\nEconomist II: ----\nEconomist I: Fair enough — one month is hardly a trend.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "That proves the crisis is completely over.",
+        "I would wait for the next quarter before calling it a recovery.",
+        "Confidence surveys are never published monthly.",
+        "The figure must have been calculated incorrectly.",
+        "We should revise our forecast upwards immediately."
+      ],
+      "correctIndex": 1,
+      "explanation": "'One month is hardly a trend' kabulü, beklemeyi öneren bir cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d15",
+      "type": "multiple-choice",
+      "passage": "Supervisor: Why did you exclude those twelve responses?\nStudent: ----\nSupervisor: That is a defensible criterion, but document it clearly.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I simply did not like the answers they gave.",
+        "There was no particular reason for it.",
+        "The software deleted them automatically.",
+        "I wanted to reach a round number.",
+        "They were completed in under a minute, which suggests inattentive answering."
+      ],
+      "correctIndex": 4,
+      "explanation": "Danışmanın 'defensible criterion' yorumu, gerekçeli bir dışlama ölçütü sunan cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d16",
+      "type": "multiple-choice",
+      "passage": "Curator: We are considering displaying the fragments unrestored.\nConservator: ----\nCurator: That is exactly why the label will explain the decision.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Restoration would destroy the fragments entirely.",
+        "Visitors may find them difficult to interpret without guidance.",
+        "Nobody visits that gallery anyway.",
+        "The fragments belong to another museum.",
+        "We should sell them to a private collector."
+      ],
+      "correctIndex": 1,
+      "explanation": "Küratörün 'the label will explain the decision' cevabı, ziyaretçilerin yorumlamakta zorlanacağı endişesini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d17",
+      "type": "multiple-choice",
+      "passage": "Programmer: The dataset is too large to fit in memory.\nAnalyst: ----\nProgrammer: Good idea, I'll process it in chunks then.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then buy a second computer for the office.",
+        "Delete half of the records to make it smaller.",
+        "The dataset was collected incorrectly.",
+        "We do not need that data for the report.",
+        "Could you read it in smaller sections instead of loading it all at once?"
+      ],
+      "correctIndex": 4,
+      "explanation": "Programcının 'I'll process it in chunks' cevabı, parçalı okuma önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d18",
+      "type": "multiple-choice",
+      "passage": "Teacher: Your essay argues both sides but never takes a position.\nStudent: ----\nTeacher: Balance is good, but the conclusion still needs your own judgement.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I thought staying neutral would make the argument look more balanced.",
+        "I ran out of time before the deadline.",
+        "I did not understand the essay question.",
+        "My sources contradicted each other completely.",
+        "I will rewrite it in a different language."
+      ],
+      "correctIndex": 0,
+      "explanation": "Öğretmenin 'Balance is good, but…' yanıtı, tarafsız kalma gerekçesini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d19",
+      "type": "multiple-choice",
+      "passage": "Biologist I: The species disappeared from the lake after 2005.\nBiologist II: ----\nBiologist I: We checked; the water temperature barely changed in that period.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Were they perhaps hunted by local fishermen?",
+        "Did anyone record their numbers before 1990?",
+        "Could warming water have driven them to deeper areas?",
+        "Was the lake drained during those years?",
+        "Have they reappeared in nearby rivers?"
+      ],
+      "correctIndex": 2,
+      "explanation": "Birinci konuşmacının 'the water temperature barely changed' cevabı, ısınmayı soran bir soruyu takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_d20",
+      "type": "multiple-choice",
+      "passage": "Client: Can you guarantee the system will never fail?\nEngineer: ----\nClient: I appreciate the honesty; let's discuss the backup plan then.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Yes, our systems have never failed anywhere.",
+        "Failure is not something we consider.",
+        "You should ask the sales department instead.",
+        "No system can be guaranteed, but we can make failures rare and recoverable.",
+        "The contract does not mention reliability."
+      ],
+      "correctIndex": 3,
+      "explanation": "Müşterinin 'I appreciate the honesty' tepkisi, mutlak garanti veremeyeceğini söyleyen dürüst bir cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l4_ex3",
+  "title": "Paragraf Tamamlama",
+  "description": "Paragrafta boş bırakılan yere gelecek cümleyi bulun.",
+  "questions": [
+    {
+      "id": "u50_l4_pc1",
+      "type": "multiple-choice",
+      "passage": "Archaeologists long assumed the settlement was abandoned immediately after the earthquake. ---- Pottery recovered from the upper layers dates from at least a century later, indicating continuous occupation.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The earthquake destroyed every building in the valley.",
+        "Pottery is rarely useful for dating a site.",
+        "Recent excavations have overturned that assumption.",
+        "The settlement was never properly mapped.",
+        "Most residents moved to the coastal cities."
+      ],
+      "correctIndex": 2,
+      "explanation": "Boşluktan sonraki cümle varsayımı çürüten kanıt sunuyor; boşluk bu dönüşü haber vermelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc2",
+      "type": "multiple-choice",
+      "passage": "Vaccines train the immune system by presenting a harmless version of a pathogen. ---- For this reason a second dose is often required to produce lasting protection.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The response they trigger, however, weakens over time in many people.",
+        "They are therefore effective for life after a single dose.",
+        "Most pathogens cannot be reproduced in a laboratory.",
+        "Immunity is entirely determined by genetics.",
+        "Side effects are the main obstacle to vaccination."
+      ],
+      "correctIndex": 0,
+      "explanation": "'For this reason a second dose is required' sonucu, korumanın zamanla zayıfladığını söyleyen bir cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc3",
+      "type": "multiple-choice",
+      "passage": "Cities that expanded around private cars now face chronic congestion. ---- Yet widening roads has repeatedly failed to solve the problem, because additional capacity attracts additional traffic.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Public transport was banned in these cities.",
+        "Congestion is mainly caused by pedestrians.",
+        "Car ownership has fallen sharply everywhere.",
+        "The obvious response has been to build more and wider roads.",
+        "Most of these cities were founded recently."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Yet widening roads has failed' zıtlığı, önce yol genişletme çözümünün sunulmasını gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc4",
+      "type": "multiple-choice",
+      "passage": "Bilingual children sometimes begin speaking slightly later than their peers. ---- By school age the difference has usually disappeared, and bilingual pupils often outperform others in tasks requiring mental flexibility.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Their vocabulary remains permanently smaller.",
+        "This delay once worried parents and teachers alike.",
+        "Most of them abandon one of the two languages.",
+        "Teachers rarely notice any difference at all.",
+        "Learning a third language becomes impossible."
+      ],
+      "correctIndex": 1,
+      "explanation": "'By school age the difference has disappeared' rahatlatması, önce bir endişenin dile getirilmesini gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc5",
+      "type": "multiple-choice",
+      "passage": "Medieval scribes worked in unheated rooms during long winters. ---- Their complaints, written in the margins of the manuscripts they copied, are among the few personal traces they left behind.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "They were generously paid for this difficult work.",
+        "Most of them could not read what they copied.",
+        "Manuscripts were produced only in summer.",
+        "Margins were always left completely blank.",
+        "Cold hands made careful lettering slow and painful."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle 'their complaints' diyor; boşluk şikâyet edilecek zorluğu tanıtmalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc6",
+      "type": "multiple-choice",
+      "passage": "Renewable energy output varies with weather, which complicates supply planning. ---- Large batteries and pumped-storage reservoirs are therefore being built alongside new wind and solar farms.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Renewable plants are cheaper than fossil-fuel ones.",
+        "The challenge is storing surplus power until demand rises.",
+        "Weather forecasting has become entirely unreliable.",
+        "Demand for electricity no longer changes during the day.",
+        "Wind farms cannot be built near the coast."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Bu yüzden bataryalar ve depolama inşa ediliyor' sonucu, depolama sorununu tanımlayan bir cümleyi takip eder.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc7",
+      "type": "multiple-choice",
+      "passage": "Early sociologists studied cities mainly through official statistics. ---- Ethnographers began living in the neighbourhoods they wrote about, recording conversations that no census could capture.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Statistics have since been abandoned entirely.",
+        "Cities were far smaller in that period.",
+        "Ethnography was invented much later.",
+        "Official records were destroyed during the war.",
+        "That distance began to close in the 1920s."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle yöntemdeki değişimi anlatıyor; boşluk bu geçişi haber vermelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc8",
+      "type": "multiple-choice",
+      "passage": "A drug that performs well in laboratory conditions may still fail in the clinic. ---- Patients differ in age, diet and other medications in ways that controlled experiments deliberately exclude.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The gap arises from the very control that makes trials reliable.",
+        "Laboratory results are usually falsified.",
+        "Clinical trials are no longer required by law.",
+        "Most drugs work identically in every patient.",
+        "Diet has no measurable effect on treatment."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sonraki cümle hastalar arası farkları anlatıyor; boşluk bu farkın nereden doğduğunu açıklamalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc9",
+      "type": "multiple-choice",
+      "passage": "Coastal wetlands absorb wave energy before it reaches the shore. ---- Where they have been drained for construction, storm damage further inland has increased sharply.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "They are of little ecological value.",
+        "They were formed only in the last century.",
+        "They function, in effect, as a natural barrier.",
+        "Storms rarely reach these regions.",
+        "Draining them improves water quality."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Kurutuldukları yerde hasar arttı' bulgusu, sulak alanların doğal bariyer işlevini tanımlayan bir cümleyi takip eder.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc10",
+      "type": "multiple-choice",
+      "passage": "Museums increasingly publish high-resolution images of their collections online. ---- Visitor numbers at the physical galleries have nevertheless continued to rise, suggesting that digital access whets rather than satisfies curiosity.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Photography inside museums remains forbidden.",
+        "Online collections are rarely consulted by anyone.",
+        "Most museums have closed their physical buildings.",
+        "Curators initially feared this would reduce attendance.",
+        "Digital images are of very poor quality."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Nevertheless… continued to rise' zıtlığı, önce bir düşüş korkusunun dile getirilmesini gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc11",
+      "type": "multiple-choice",
+      "passage": "Legal systems distinguish between intention and negligence. ---- The same act may therefore carry very different penalties depending on what the defendant knew at the time.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Both categories are punished identically everywhere.",
+        "Negligence is not recognised as a legal concept.",
+        "The distinction rests on the defendant's state of mind, not on the outcome.",
+        "Outcomes are the only factor courts consider.",
+        "Intention can always be measured precisely."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Aynı eylem farklı ceza taşır' sonucu, ayrımın failin zihin durumuna dayandığını söyleyen bir cümleyi takip eder.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc12",
+      "type": "multiple-choice",
+      "passage": "Honeybee colonies collapse for several overlapping reasons. ---- Isolating any single cause has proved difficult, since pesticides, parasites and habitat loss often act together.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Researchers rarely find one factor operating alone.",
+        "A single virus is responsible in every case.",
+        "Colonies have in fact been increasing steadily.",
+        "Pesticides have no effect on insect populations.",
+        "Beekeepers seldom report any losses."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sonraki cümle tek nedeni ayırmanın zorluğunu anlatıyor; boşluk bunun nedenini hazırlamalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc13",
+      "type": "multiple-choice",
+      "passage": "Machine translation improved dramatically once systems began learning from vast collections of human translations. ---- Idioms and culturally specific references still cause errors that a competent human translator would avoid.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Human translators are no longer needed.",
+        "Older systems produced flawless output.",
+        "The systems were trained without any data.",
+        "The improvement, however, has not been uniform across all kinds of text.",
+        "Idioms are the easiest part of any language."
+      ],
+      "correctIndex": 3,
+      "explanation": "Sonraki cümle kalan hataları anlatıyor; boşluk iyileşmenin her yerde aynı olmadığını belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc14",
+      "type": "multiple-choice",
+      "passage": "Ancient trade routes are usually reconstructed from written records. ---- Chemical analysis of pottery clay can reveal where a vessel was made, tracing exchanges that no document mentions.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Written records are always complete and reliable.",
+        "Where such records are missing, material evidence takes their place.",
+        "Pottery cannot be analysed scientifically.",
+        "Trade routes left no physical traces at all.",
+        "Documents were kept in every ancient city."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sonraki cümle maddi kanıtı anlatıyor; boşluk kayıt yokluğunda bu kanıta geçildiğini söylemelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc15",
+      "type": "multiple-choice",
+      "passage": "Sleep deprivation impairs attention long before people notice any drowsiness. ---- Drivers in this state often rate their own alertness as normal, which makes the risk particularly hard to manage.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Everyone can accurately judge their own tiredness.",
+        "Drowsiness always appears before any impairment.",
+        "Attention is unaffected by lost sleep.",
+        "Driving at night is entirely safe.",
+        "The most dangerous aspect is precisely this lack of awareness."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle sürücülerin kendini uyanık sanmasını anlatıyor; boşluk farkındalık eksikliğini tehlike olarak tanıtmalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc16",
+      "type": "multiple-choice",
+      "passage": "Minimum wage increases were long expected to reduce employment. ---- Studies comparing neighbouring regions with different wage floors have found little or no such effect.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Every study has confirmed that prediction.",
+        "The evidence gathered since the 1990s has been more mixed.",
+        "Wages have not changed in recent decades.",
+        "Employment cannot be measured accurately.",
+        "Neighbouring regions always share the same laws."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sonraki cümle beklentiyi desteklemeyen bulguları veriyor; boşluk kanıtın karışık olduğunu söylemelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc17",
+      "type": "multiple-choice",
+      "passage": "Volcanic ash can remain suspended in the atmosphere for years after a major eruption. ---- Tree rings and ice cores from distant continents record the resulting cool summers with remarkable precision.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "It settles to the ground within a few hours.",
+        "Eruptions have no effect on climate.",
+        "Tree rings cannot preserve climatic information.",
+        "Ice cores are found only near volcanoes.",
+        "During that time it reflects sunlight and lowers global temperatures."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle serin yazlardan söz ediyor; boşluk külün güneş ışığını yansıtıp sıcaklığı düşürdüğünü belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc18",
+      "type": "multiple-choice",
+      "passage": "Public libraries were founded to provide access to books people could not afford. ---- Many now lend tools, musical instruments and internet hotspots, redefining what a shared public resource can be.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Their function has broadened well beyond that original purpose.",
+        "They have kept exactly the same role ever since.",
+        "Books are no longer available in libraries.",
+        "Most libraries have been closed permanently.",
+        "Only wealthy readers use them today."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sonraki cümle alet ve enstrüman ödüncünden söz ediyor; boşluk işlevin genişlediğini söylemelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc19",
+      "type": "multiple-choice",
+      "passage": "Correlation between two variables does not establish that one causes the other. ---- Ice cream sales and drowning rates rise together, but both are driven by warm weather rather than by each other.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "One of them must always be the cause.",
+        "Correlations are never observed in real data.",
+        "A third factor may be producing both at once.",
+        "Warm weather has no effect on human behaviour.",
+        "Causation is easier to prove than correlation."
+      ],
+      "correctIndex": 2,
+      "explanation": "Sonraki cümledeki örnek üçüncü bir etkeni (sıcak hava) gösteriyor; boşluk bu olasılığı tanıtmalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4_pc20",
+      "type": "multiple-choice",
+      "passage": "Restoring a painting always involves a judgement about which state to preserve. ---- Removing a later layer of varnish may reveal the original colours, but it also erases part of the object's own history.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Restoration is a purely technical procedure.",
+        "Varnish layers carry no historical information.",
+        "Original colours can never be recovered.",
+        "Every intervention gains something and loses something else.",
+        "Paintings should never be cleaned at all."
+      ],
+      "correctIndex": 3,
+      "explanation": "Sonraki cümle hem kazanç hem kayıp anlatıyor; boşluk bu ikiliği genel ilke olarak koymalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    }
+  ]
+}
     ]
   }
 ];

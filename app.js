@@ -9248,7 +9248,7 @@ function renderMultipleChoice(container, question) {
   if (question.passage) {
     sentenceHtml = `
       <div style="text-align: left; background: rgba(16, 185, 129, 0.06); padding: 14px 18px; border-radius: 10px; border-left: 4px solid #10b981; margin-bottom: 14px; margin-top: 8px; max-height: 260px; overflow-y: auto;">
-        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 6px; letter-spacing: 0.5px;">📖 Okuma Parçası</span>
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 6px; letter-spacing: 0.5px;">${question.passageLabel || "📖 Okuma Parçası"}</span>
         <span style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.65;">${makeTextHoverable(question.passage)}</span>
       </div>
     ` + sentenceHtml;
@@ -12779,9 +12779,10 @@ const EXAM_SESSIONS = [
   {
     id: 'reading-1',
     lessonId: 'c50_p_l4',
-    title: 'Okuma Parçası Denemesi',
-    desc: '6 akademik parça · ana fikir, detay, çıkarım, kelime ve tutum soruları',
-    icon: '📖'
+    title: 'Okuma & Paragraf Denemesi',
+    desc: 'Okuma parçası, diyalog tamamlama ve paragraf tamamlama · 70 soru',
+    minutes: 80,
+    icon: '📝'
   }
 ];
 
