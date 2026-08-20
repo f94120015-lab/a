@@ -12775,33 +12775,72 @@ function nextQuestion() {
 // Sorular derslerde tanımlı ama hiçbir üniteye bağlı değil; böylece Dersler
 // sekmesinde görünmez, buna karşılık yarım kalan oturum geri yüklenirken
 // lessons üzerinden id ile bulunabilir.
-const EXAM_SESSIONS = [
-  { id: 'reading',     title: 'Okuma Parçası',        icon: '📖', minutes: 35, skill: 'Okuma Parçası',
-    desc: '6 akademik metin · ana fikir, detay, çıkarım, kelime ve tutum',
-    sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex1' }] },
-  { id: 'dialogue',    title: 'Diyalog Tamamlama',    icon: '💬', minutes: 20, skill: 'Diyalog Tamamlama',
+const EXAM_GROUPS = [
+  { id: 'reading', title: 'Okuma Parçası', icon: '📖', skill: 'Okuma Parçası',
+    desc: 'Akademik metinlerde ana fikir, detay, çıkarım, kelime ve tutum',
+    tests: [
+      { id: 'reading-1', label: 'Test 1', minutes: 35,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex1' }] },
+      { id: 'reading-2', label: 'Test 2', minutes: 25,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex1' }] }
+    ] },
+  { id: 'dialogue', title: 'Diyalog Tamamlama', icon: '💬', skill: 'Diyalog Tamamlama',
     desc: 'Konuşmadaki eksik repliği bulma',
-    sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex2' }] },
-  { id: 'para-comp',   title: 'Paragraf Tamamlama',   icon: '📄', minutes: 25, skill: 'Paragraf Tamamlama',
+    tests: [
+      { id: 'dialogue-1', label: 'Test 1', minutes: 20,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex2' }] },
+      { id: 'dialogue-2', label: 'Test 2', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex2' }] }
+    ] },
+  { id: 'para-comp', title: 'Paragraf Tamamlama', icon: '📄', skill: 'Paragraf Tamamlama',
     desc: 'Paragrafta boş bırakılan cümleyi bulma',
-    sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex3' }] },
-  { id: 'restatement', title: 'Yakın Anlamlı Cümle',  icon: '🔁', minutes: 20, skill: 'Yakın Anlamlı Cümle',
+    tests: [
+      { id: 'para-comp-1', label: 'Test 1', minutes: 25,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex3' }] },
+      { id: 'para-comp-2', label: 'Test 2', minutes: 20,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex3' }] }
+    ] },
+  { id: 'restatement', title: 'Yakın Anlamlı Cümle', icon: '🔁', skill: 'Yakın Anlamlı Cümle',
     desc: 'Verilen cümleye anlamca en yakın seçeneği bulma',
-    sources: [{ lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
-              { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] },
-  { id: 'irrelevant',  title: 'Akışı Bozan Cümle',    icon: '✂️', minutes: 15, skill: 'Akışı Bozan Cümle',
+    tests: [
+      { id: 'restatement-1', label: 'Test 1', minutes: 20,
+        sources: [{ lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
+                  { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] }
+    ] },
+  { id: 'irrelevant', title: 'Akışı Bozan Cümle', icon: '✂️', skill: 'Akışı Bozan Cümle',
     desc: 'Paragrafın anlam bütünlüğünü bozan cümleyi bulma',
-    sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] },
-  { id: 'ordering',    title: 'Paragraf Sıralama',    icon: '🔢', minutes: 15, skill: 'Paragraf Sıralama',
+    tests: [
+      { id: 'irrelevant-1', label: 'Test 1', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] }
+    ] },
+  { id: 'ordering', title: 'Paragraf Sıralama', icon: '🔢', skill: 'Paragraf Sıralama',
     desc: 'Karışık cümleleri anlamlı bir paragraf olacak şekilde dizme',
-    sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] },
-  { id: 'reference',   title: 'Zamir & Referans',     icon: '🔗', minutes: 12, skill: 'Zamir & Referans',
+    tests: [
+      { id: 'ordering-1', label: 'Test 1', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] }
+    ] },
+  { id: 'reference', title: 'Zamir & Referans', icon: '🔗', skill: 'Zamir & Referans',
     desc: 'this, the former, the latter gibi ifadelerin gönderdiği ismi bulma',
-    sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] },
-  { id: 'cloze',       title: 'Cloze Test',           icon: '🧩', minutes: 12, skill: 'Cloze Test',
+    tests: [
+      { id: 'reference-1', label: 'Test 1', minutes: 12,
+        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] }
+    ] },
+  { id: 'cloze', title: 'Cloze Test', icon: '🧩', skill: 'Cloze Test',
     desc: 'Paragraftaki boşluğa uygun geçiş bağlacını bulma',
-    sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] }
+    tests: [
+      { id: 'cloze-1', label: 'Test 1', minutes: 12,
+        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] }
+    ] }
 ];
+
+// Testi id ile bul; grup bilgisi (başlık, beceri etiketi) oturuma taşınır.
+function findExamTest(testId) {
+  for (const g of EXAM_GROUPS) {
+    const t = (g.tests || []).find(x => x.id === testId);
+    if (t) return Object.assign({}, t, { title: `${g.title} — ${t.label}`, skill: g.skill, icon: g.icon });
+  }
+  return null;
+}
 
 function getExamQuestions(session) {
   const out = [];
@@ -12822,23 +12861,27 @@ function renderExamTab() {
   const listEl = document.getElementById('exam-card-list');
   if (!listEl) return;
 
-  listEl.innerHTML = EXAM_SESSIONS.map(sx => {
-    const count = getExamQuestions(sx).length;
+  listEl.innerHTML = EXAM_GROUPS.map(g => {
+    const rows = (g.tests || []).map(t => {
+      const n = getExamQuestions(t).length;
+      return `
+        <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
+          <span class="text-sm-muted">${t.label} · ${n} soru · ${t.minutes} dk</span>
+          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
+                  data-exam-id="${t.id}" ${n ? '' : 'disabled'}>Başlat</button>
+        </div>`;
+    }).join('');
     return `
-      <div class="card-panel" style="gap: 12px;">
+      <div class="card-panel" style="gap: 10px;">
         <div class="flex-center-12">
-          <span class="icon-lg">${sx.icon}</span>
+          <span class="icon-lg">${g.icon}</span>
           <div class="flex-col-4">
-            <span class="section-title-sm">${sx.title}</span>
-            <span class="text-sm-muted">${sx.desc}</span>
+            <span class="section-title-sm">${g.title}</span>
+            <span class="text-sm-muted">${g.desc}</span>
           </div>
         </div>
-        <div class="flex-between-wrap-10">
-          <span class="exercise-q-badge">${count} Soru</span>
-          <button class="btn btn-primary" data-exam-id="${sx.id}" ${count ? '' : 'disabled'}>Denemeyi Başlat</button>
-        </div>
-      </div>
-    `;
+        ${rows}
+      </div>`;
   }).join('');
 
   listEl.querySelectorAll('[data-exam-id]').forEach(btn => {
@@ -12847,7 +12890,7 @@ function renderExamTab() {
 }
 
 function startExamSession(examId) {
-  const session = EXAM_SESSIONS.find(sx => sx.id === examId);
+  const session = findExamTest(examId);
   if (!session) return;
   const questions = getExamQuestions(session);
   if (!questions.length) {

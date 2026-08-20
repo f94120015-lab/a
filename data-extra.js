@@ -54003,6 +54003,1027 @@ if (typeof lessons !== 'undefined') {
       ]
     }
   ]
+},
+{
+  "id": "u50_l4b_ex1",
+  "title": "Okuma Parçası — Test 2",
+  "description": "Dört yeni akademik parça.",
+  "questions": [
+    {
+      "id": "u50_l4b_r1_1",
+      "type": "multiple-choice",
+      "passage": "In 1964 a murder in New York was reported to have been witnessed by dozens of neighbours, none of whom called the police. Psychologists explained the inaction with the idea that responsibility dissolves as the number of witnesses grows: each person assumes someone else will act. Later journalism showed the original account was exaggerated — several neighbours did call. The underlying effect, however, has been reproduced in controlled experiments many times. What survives is not the story but the mechanism it made famous, which is why researchers now cite the laboratory evidence rather than the case that gave the phenomenon its name.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "1964'teki cinayet hiçbir zaman aydınlatılamamıştır.",
+        "Psikologlar sorumluluk dağılımı fikrini terk etmiştir.",
+        "Gazetecilik psikoloji araştırmalarını genellikle çürütür.",
+        "Olayın anlatımı abartılı çıksa da ortaya attığı mekanizma deneylerle doğrulanmıştır.",
+        "Tanık sayısı arttıkça müdahale olasılığı artar."
+      ],
+      "correctIndex": 3,
+      "explanation": "Metin, hikâyenin abartılı olduğunu ama mekanizmanın laboratuvarda defalarca üretildiğini söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r1_2",
+      "type": "multiple-choice",
+      "passage": "In 1964 a murder in New York was reported to have been witnessed by dozens of neighbours, none of whom called the police. Psychologists explained the inaction with the idea that responsibility dissolves as the number of witnesses grows: each person assumes someone else will act. Later journalism showed the original account was exaggerated — several neighbours did call. The underlying effect, however, has been reproduced in controlled experiments many times. What survives is not the story but the mechanism it made famous, which is why researchers now cite the laboratory evidence rather than the case that gave the phenomenon its name.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre sorumluluğun dağılması ne anlama gelir?",
+      "options": [
+        "Polisin olaya geç müdahale etmesi",
+        "Tanık sayısı arttıkça her bireyin harekete geçme sorumluluğunu başkasına bırakması",
+        "Tanıkların olayı yanlış hatırlaması",
+        "Komşuların birbirini tanımaması",
+        "Gazetecilerin olayı çarpıtması"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metin bunu açıkça tanımlıyor: herkes bir başkasının harekete geçeceğini varsayar.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r1_3",
+      "type": "multiple-choice",
+      "passage": "In 1964 a murder in New York was reported to have been witnessed by dozens of neighbours, none of whom called the police. Psychologists explained the inaction with the idea that responsibility dissolves as the number of witnesses grows: each person assumes someone else will act. Later journalism showed the original account was exaggerated — several neighbours did call. The underlying effect, however, has been reproduced in controlled experiments many times. What survives is not the story but the mechanism it made famous, which is why researchers now cite the laboratory evidence rather than the case that gave the phenomenon its name.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Laboratuvar deneyleri gerçek hayatı hiçbir zaman yansıtmaz.",
+        "Olayın adı artık kullanılmamaktadır.",
+        "Komşuların hiçbiri polisi aramamıştır.",
+        "Psikoloji gazeteciliğe dayanmalıdır.",
+        "Bir kuramın geçerliliği, onu ünlü yapan olayın doğruluğundan bağımsız olabilir."
+      ],
+      "correctIndex": 4,
+      "explanation": "Son cümle, araştırmacıların artık olaya değil laboratuvar kanıtına atıf yaptığını söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r1_4",
+      "type": "multiple-choice",
+      "passage": "In 1964 a murder in New York was reported to have been witnessed by dozens of neighbours, none of whom called the police. Psychologists explained the inaction with the idea that responsibility dissolves as the number of witnesses grows: each person assumes someone else will act. Later journalism showed the original account was exaggerated — several neighbours did call. The underlying effect, however, has been reproduced in controlled experiments many times. What survives is not the story but the mechanism it made famous, which is why researchers now cite the laboratory evidence rather than the case that gave the phenomenon its name.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'dissolves' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "güçlenmek",
+        "yasallaşmak",
+        "dağılıp azalmak",
+        "kaydedilmek",
+        "paylaşılmak"
+      ],
+      "correctIndex": 2,
+      "explanation": "Sorumluluğun tanık sayısıyla birlikte dağılıp azalması kastediliyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r1_5",
+      "type": "multiple-choice",
+      "passage": "In 1964 a murder in New York was reported to have been witnessed by dozens of neighbours, none of whom called the police. Psychologists explained the inaction with the idea that responsibility dissolves as the number of witnesses grows: each person assumes someone else will act. Later journalism showed the original account was exaggerated — several neighbours did call. The underlying effect, however, has been reproduced in controlled experiments many times. What survives is not the story but the mechanism it made famous, which is why researchers now cite the laboratory evidence rather than the case that gave the phenomenon its name.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazarın tutumu nasıl tanımlanabilir?",
+      "options": [
+        "Hikâye ile mekanizmayı birbirinden ayıran, ölçülü",
+        "Psikologları yanıltıcı bulan",
+        "Gazetecileri açıkça suçlayan",
+        "Olayı tamamen uydurma sayan",
+        "Konuyu çözümsüz gören"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yazar hikâyenin abartısını kabul ederken mekanizmanın ayakta kaldığını belirtir; ölçülü bir ayrım yapar.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r2_1",
+      "type": "multiple-choice",
+      "passage": "Until the nineteenth century every town kept its own clock, set by the local position of the sun. The difference hardly mattered when travel took days. Railways changed that: a timetable is meaningless if each station measures noon differently, and early collisions were blamed on precisely this confusion. Standard time zones were introduced not by governments but by the railway companies themselves, and only later written into law. The clock most people live by today was, in origin, an engineering solution to a scheduling problem.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "Hükümetler saat dilimlerini kendi başlarına belirlemiştir.",
+        "Yerel saat uygulaması hiçbir sorun yaratmamıştır.",
+        "Standart saat dilimleri, demiryollarının zamanlama sorununa bulduğu mühendislik çözümüdür.",
+        "Demiryolları saat farkları yüzünden kapanmıştır.",
+        "Güneşe göre saat tutmak hâlâ yaygındır."
+      ],
+      "correctIndex": 2,
+      "explanation": "Son cümle bunu açıkça söylüyor: bugünkü saat, kökeninde bir zamanlama sorununun mühendislik çözümüdür.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r2_2",
+      "type": "multiple-choice",
+      "passage": "Until the nineteenth century every town kept its own clock, set by the local position of the sun. The difference hardly mattered when travel took days. Railways changed that: a timetable is meaningless if each station measures noon differently, and early collisions were blamed on precisely this confusion. Standard time zones were introduced not by governments but by the railway companies themselves, and only later written into law. The clock most people live by today was, in origin, an engineering solution to a scheduling problem.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre yerel saat farkları neden uzun süre sorun yaratmadı?",
+      "options": [
+        "Yolculuk günler sürdüğü için fark önemsizdi",
+        "Herkes aynı saati kullanıyordu",
+        "Saatler yeterince hassas değildi",
+        "Kasabalar arasında iletişim yoktu",
+        "Güneş her yerde aynı anda doğuyordu"
+      ],
+      "correctIndex": 0,
+      "explanation": "Metin bunu belirtiyor: 'The difference hardly mattered when travel took days.'",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r2_3",
+      "type": "multiple-choice",
+      "passage": "Until the nineteenth century every town kept its own clock, set by the local position of the sun. The difference hardly mattered when travel took days. Railways changed that: a timetable is meaningless if each station measures noon differently, and early collisions were blamed on precisely this confusion. Standard time zones were introduced not by governments but by the railway companies themselves, and only later written into law. The clock most people live by today was, in origin, an engineering solution to a scheduling problem.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Yasalar teknolojiden önce gelir.",
+        "Demiryolları saat dilimlerini yasallaştırmıştır.",
+        "Çarpışmaların tek nedeni hız sınırıydı.",
+        "Bir teknoloji, kendi ihtiyacına göre toplumsal bir standardı dayatabilir.",
+        "Standart saat önce hükümetlerce icat edilmiştir."
+      ],
+      "correctIndex": 3,
+      "explanation": "Standart saati şirketlerin başlatıp yasanın sonradan takip etmesi, teknolojinin standardı dayattığını gösterir.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r2_4",
+      "type": "multiple-choice",
+      "passage": "Until the nineteenth century every town kept its own clock, set by the local position of the sun. The difference hardly mattered when travel took days. Railways changed that: a timetable is meaningless if each station measures noon differently, and early collisions were blamed on precisely this confusion. Standard time zones were introduced not by governments but by the railway companies themselves, and only later written into law. The clock most people live by today was, in origin, an engineering solution to a scheduling problem.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'meaningless' kelimesi bu bağlamda neyi vurgular?",
+      "options": [
+        "Tarifelerin okunmasının zor olduğunu",
+        "Ortak bir zaman ölçüsü olmadan tarifenin işlevsiz kalacağını",
+        "Yolcuların tarifeye güvenmediğini",
+        "Trenlerin tarifesiz çalıştığını",
+        "Saatlerin bozuk olduğunu"
+      ],
+      "correctIndex": 1,
+      "explanation": "Her istasyon öğleyi farklı ölçüyorsa tarife işlevini yitirir.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r2_5",
+      "type": "multiple-choice",
+      "passage": "Until the nineteenth century every town kept its own clock, set by the local position of the sun. The difference hardly mattered when travel took days. Railways changed that: a timetable is meaningless if each station measures noon differently, and early collisions were blamed on precisely this confusion. Standard time zones were introduced not by governments but by the railway companies themselves, and only later written into law. The clock most people live by today was, in origin, an engineering solution to a scheduling problem.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazar son cümlede ne yapmaktadır?",
+      "options": [
+        "Demiryollarını eleştirmek",
+        "Hükümetleri sorumlu tutmak",
+        "Saat dilimlerinin kaldırılmasını önermek",
+        "Konuyu belirsiz bırakmak",
+        "Gündelik bir alışkanlığın kökenini teknik bir soruna bağlamak"
+      ],
+      "correctIndex": 4,
+      "explanation": "'In origin, an engineering solution' ifadesi gündelik saati teknik bir kökene bağlar.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r3_1",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, sometimes by several degrees at night. Asphalt and concrete absorb heat through the day and release it slowly after sunset, while the absence of vegetation removes the cooling that evaporation would provide. The effect is strongest precisely when residents need relief most, during summer heatwaves. Planting trees along streets reduces it measurably, though the benefit takes a decade to arrive, which makes the policy difficult to defend within a single electoral term.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "Şehirler kırsaldan her zaman daha serindir.",
+        "Ağaç dikmek ısı adası etkisini artırır.",
+        "Sıcak hava dalgaları kentleri etkilemez.",
+        "Kentsel ısı adası etkisi ölçülebilir biçimde azaltılabilir ama çözümün faydası geç gelir.",
+        "Asfalt geceleri ısıyı emer."
+      ],
+      "correctIndex": 3,
+      "explanation": "Metin hem etkiyi hem de ağaç dikiminin ölçülebilir ama on yıl gecikmeli faydasını anlatıyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r3_2",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, sometimes by several degrees at night. Asphalt and concrete absorb heat through the day and release it slowly after sunset, while the absence of vegetation removes the cooling that evaporation would provide. The effect is strongest precisely when residents need relief most, during summer heatwaves. Planting trees along streets reduces it measurably, though the benefit takes a decade to arrive, which makes the policy difficult to defend within a single electoral term.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre kentlerin geceleri daha sıcak olmasının nedeni nedir?",
+      "options": [
+        "Gece rüzgârlarının kesilmesi",
+        "Asfalt ve betonun gün boyu emdiği ısıyı yavaşça salması",
+        "Araç trafiğinin gece artması",
+        "Binaların gölge yapması",
+        "Yağmurun daha az yağması"
+      ],
+      "correctIndex": 1,
+      "explanation": "Metin bunu doğrudan belirtiyor: asfalt ve beton ısıyı emip gün batımından sonra yavaşça salar.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r3_3",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, sometimes by several degrees at night. Asphalt and concrete absorb heat through the day and release it slowly after sunset, while the absence of vegetation removes the cooling that evaporation would provide. The effect is strongest precisely when residents need relief most, during summer heatwaves. Planting trees along streets reduces it measurably, though the benefit takes a decade to arrive, which makes the policy difficult to defend within a single electoral term.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Ağaç dikimi hiçbir işe yaramaz.",
+        "Isı adası etkisi kışın en güçlüdür.",
+        "Bitki örtüsü ısıyı artırır.",
+        "Seçim dönemleri on yıl sürer.",
+        "Faydası uzun vadede ortaya çıkan politikalar siyasi olarak savunulması güç olabilir."
+      ],
+      "correctIndex": 4,
+      "explanation": "Son cümle, faydanın on yılda gelmesinin politikayı tek seçim dönemi içinde savunmayı zorlaştırdığını söyler.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r3_4",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, sometimes by several degrees at night. Asphalt and concrete absorb heat through the day and release it slowly after sunset, while the absence of vegetation removes the cooling that evaporation would provide. The effect is strongest precisely when residents need relief most, during summer heatwaves. Planting trees along streets reduces it measurably, though the benefit takes a decade to arrive, which makes the policy difficult to defend within a single electoral term.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'relief' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "yardım parası",
+        "kabartma süsleme",
+        "sıcaktan kurtulma, ferahlama",
+        "görev değişimi",
+        "vergi indirimi"
+      ],
+      "correctIndex": 2,
+      "explanation": "Bağlam sıcak hava dalgasında sakinlerin serinlemeye duyduğu ihtiyacı anlatıyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r3_5",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, sometimes by several degrees at night. Asphalt and concrete absorb heat through the day and release it slowly after sunset, while the absence of vegetation removes the cooling that evaporation would provide. The effect is strongest precisely when residents need relief most, during summer heatwaves. Planting trees along streets reduces it measurably, though the benefit takes a decade to arrive, which makes the policy difficult to defend within a single electoral term.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazarın ağaç dikimi politikasına yaklaşımı nasıldır?",
+      "options": [
+        "Etkili bulmakla birlikte uygulanmasındaki siyasi güçlüğü belirten",
+        "Tamamen gereksiz gören",
+        "Tek başına yeterli sayan",
+        "Maliyeti nedeniyle reddeden",
+        "Konuyu tartışmaya değer bulmayan"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Reduces it measurably, though…' yapısı hem etkiyi hem güçlüğü birlikte kabul eder.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r4_1",
+      "type": "multiple-choice",
+      "passage": "Writing was invented independently only a handful of times, and in each case it began as accounting rather than literature. The earliest Mesopotamian tablets record quantities of grain and livestock, not stories or laws. Narrative uses appear centuries afterwards. This order suggests that writing spread because it solved an administrative problem, and that its literary possibilities were discovered by people who had learned the system for other reasons entirely.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "İlk tabletler destan metinleri içerir.",
+        "Yazı dünyanın her yerinde aynı anda icat edilmiştir.",
+        "Yazı, edebiyat için değil yönetsel bir ihtiyaç için ortaya çıkmıştır.",
+        "Edebiyat yazıdan önce gelmiştir.",
+        "Muhasebe kayıtları hiçbir zaman yazıya geçirilmemiştir."
+      ],
+      "correctIndex": 2,
+      "explanation": "Metin, yazının her seferinde muhasebe olarak başladığını ve edebi kullanımın sonradan geldiğini söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r4_2",
+      "type": "multiple-choice",
+      "passage": "Writing was invented independently only a handful of times, and in each case it began as accounting rather than literature. The earliest Mesopotamian tablets record quantities of grain and livestock, not stories or laws. Narrative uses appear centuries afterwards. This order suggests that writing spread because it solved an administrative problem, and that its literary possibilities were discovered by people who had learned the system for other reasons entirely.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre en erken Mezopotamya tabletleri neyi kaydeder?",
+      "options": [
+        "Tahıl ve hayvan miktarlarını",
+        "Kral listelerini",
+        "Dini ilahileri",
+        "Yasa metinlerini",
+        "Savaş anlatılarını"
+      ],
+      "correctIndex": 0,
+      "explanation": "Metin bunu açıkça belirtiyor: tahıl ve hayvan miktarları.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r4_3",
+      "type": "multiple-choice",
+      "passage": "Writing was invented independently only a handful of times, and in each case it began as accounting rather than literature. The earliest Mesopotamian tablets record quantities of grain and livestock, not stories or laws. Narrative uses appear centuries afterwards. This order suggests that writing spread because it solved an administrative problem, and that its literary possibilities were discovered by people who had learned the system for other reasons entirely.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Yazıyı yalnızca yazarlar öğrenmiştir.",
+        "Muhasebe yazının tek kullanımı olarak kalmıştır.",
+        "Yazı birçok kez aynı yüzyılda icat edilmiştir.",
+        "Bir teknolojinin sonraki kullanımları, onu icat eden amaçtan bağımsız gelişebilir.",
+        "Anlatı metinleri tabletlerden daha eskidir."
+      ],
+      "correctIndex": 3,
+      "explanation": "Son cümle, edebi olanakların başka nedenlerle yazıyı öğrenmiş kişilerce keşfedildiğini söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r4_4",
+      "type": "multiple-choice",
+      "passage": "Writing was invented independently only a handful of times, and in each case it began as accounting rather than literature. The earliest Mesopotamian tablets record quantities of grain and livestock, not stories or laws. Narrative uses appear centuries afterwards. This order suggests that writing spread because it solved an administrative problem, and that its literary possibilities were discovered by people who had learned the system for other reasons entirely.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'independently' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "hızla",
+        "birbirinden habersiz, ayrı ayrı",
+        "resmî olarak",
+        "kesintisiz",
+        "ortaklaşa"
+      ],
+      "correctIndex": 1,
+      "explanation": "Yazının birkaç kez birbirinden bağımsız olarak icat edildiği kastediliyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4b_r4_5",
+      "type": "multiple-choice",
+      "passage": "Writing was invented independently only a handful of times, and in each case it began as accounting rather than literature. The earliest Mesopotamian tablets record quantities of grain and livestock, not stories or laws. Narrative uses appear centuries afterwards. This order suggests that writing spread because it solved an administrative problem, and that its literary possibilities were discovered by people who had learned the system for other reasons entirely.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazar 'This order suggests' ifadesiyle neye dikkat çekmektedir?",
+      "options": [
+        "Tabletlerin kronolojisinin belirsiz olduğuna",
+        "Edebiyatın muhasebeden üstün olduğuna",
+        "Mezopotamya'nın tek yazı merkezi olduğuna",
+        "Sıralamanın rastlantısal olduğuna",
+        "Kullanımların ortaya çıkış sırasının, yazının yayılma nedenini gösterdiğine"
+      ],
+      "correctIndex": 4,
+      "explanation": "Yazar, muhasebenin önce gelmesinden yazının neden yayıldığına dair bir çıkarım yapar.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l4b_ex2",
+  "title": "Diyalog Tamamlama — Test 2",
+  "description": "Yeni diyalog seti.",
+  "questions": [
+    {
+      "id": "u50_l4b_d1",
+      "type": "multiple-choice",
+      "passage": "Reviewer: Your dataset covers only three years.\nAuthor: ----\nReviewer: Then say so, and avoid claiming a long-term trend.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Three years is more than enough for any claim.",
+        "I collected the data myself in one week.",
+        "The journal did not ask for more data.",
+        "I agree that is too short to establish a stable pattern.",
+        "Trends cannot be measured statistically."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Then say so, and avoid claiming a long-term trend' yanıtı, sürenin kısalığını kabul eden bir cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d2",
+      "type": "multiple-choice",
+      "passage": "Manager: Sales dropped again this quarter.\nAnalyst: ----\nManager: So the decline is seasonal rather than structural.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "There is no pattern in the figures at all.",
+        "The same fall appears in this quarter every year.",
+        "We should close the branch immediately.",
+        "Our competitors reported the same growth.",
+        "The data has not been collected yet."
+      ],
+      "correctIndex": 1,
+      "explanation": "Yöneticinin 'seasonal rather than structural' sonucu, her yıl aynı çeyrekte tekrarlanan bir düşüşü bildiren cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d3",
+      "type": "multiple-choice",
+      "passage": "Guide: Please do not touch the frescoes.\nVisitor: ----\nGuide: Exactly — even clean hands leave oils on the surface.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Are photographs also forbidden here?",
+        "Should I wear gloves to touch them?",
+        "Were they painted in the last century?",
+        "Will the room be closed soon?",
+        "Is it because skin contact damages the pigment?"
+      ],
+      "correctIndex": 4,
+      "explanation": "Rehberin 'even clean hands leave oils' açıklaması, temasın pigmente zarar verip vermediğini soran bir soruyu takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d4",
+      "type": "multiple-choice",
+      "passage": "Coach: You keep losing pace in the final lap.\nAthlete: ----\nCoach: Then we will work on distributing your effort more evenly.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I have never run this distance before.",
+        "The track surface is much too soft.",
+        "I think I start too fast and have nothing left at the end.",
+        "My shoes were replaced last month.",
+        "I prefer training in the evening."
+      ],
+      "correctIndex": 2,
+      "explanation": "Antrenörün 'distributing your effort more evenly' çözümü, başta çok hızlı çıkma sorununu takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d5",
+      "type": "multiple-choice",
+      "passage": "Neighbour: The council is planning to cut down the old plane trees.\nResident: ----\nNeighbour: There is a petition; you can sign it at the library.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Is there anything residents can do to stop it?",
+        "Have the trees already been removed?",
+        "Do you know who planted them originally?",
+        "Will the road be widened afterwards?",
+        "Are plane trees native to this region?"
+      ],
+      "correctIndex": 0,
+      "explanation": "'There is a petition; you can sign it' yanıtı, ne yapılabileceğini soran bir soruyu takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d6",
+      "type": "multiple-choice",
+      "passage": "Professor: Your conclusion repeats the introduction almost word for word.\nStudent: ----\nProfessor: Precisely — tell the reader what the evidence changed.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Should I make the introduction longer instead?",
+        "Is repetition not a sign of consistency?",
+        "Should the conclusion say what the analysis actually added?",
+        "Do you want me to remove the conclusion?",
+        "Should I change the topic entirely?"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Tell the reader what the evidence changed' onayı, sonucun analizin kattığını söylemesi gerektiğini soran cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d7",
+      "type": "multiple-choice",
+      "passage": "Technician: The sensor readings drift after about an hour.\nEngineer: ----\nTechnician: I'll check the housing temperature first, then.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Heat build-up inside the casing is the most likely cause.",
+        "Sensors never lose accuracy over time.",
+        "Replace the whole unit without testing it.",
+        "The readings are irrelevant to the project.",
+        "We should stop recording data altogether."
+      ],
+      "correctIndex": 0,
+      "explanation": "Teknisyenin 'I'll check the housing temperature' cevabı, kasadaki ısı birikimini işaret eden bir açıklamayı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d8",
+      "type": "multiple-choice",
+      "passage": "Interviewer: Why did you leave your previous position?\nCandidate: ----\nInterviewer: That is a reasonable motive for changing roles.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I did not get along with anyone there.",
+        "The salary was the only thing that mattered.",
+        "I was not told why I had to leave.",
+        "I wanted to work on longer projects than that role allowed.",
+        "I have never held a position before."
+      ],
+      "correctIndex": 3,
+      "explanation": "Görüşmecinin 'a reasonable motive' değerlendirmesi, makul bir gerekçe sunan cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d9",
+      "type": "multiple-choice",
+      "passage": "Pharmacist: This medicine may cause drowsiness.\nCustomer: ----\nPharmacist: Then take it in the evening instead.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I usually forget to take my tablets.",
+        "I drive to work early every morning.",
+        "I have taken it many times before.",
+        "I do not have a prescription with me.",
+        "I would prefer a different brand."
+      ],
+      "correctIndex": 1,
+      "explanation": "Eczacının 'take it in the evening instead' önerisi, sabah araç kullandığını söyleyen bir cevabı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d10",
+      "type": "multiple-choice",
+      "passage": "Archivist: These letters are too fragile to handle.\nResearcher: ----\nArchivist: Yes, the digitised versions are available on request.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "May I take a few of them home?",
+        "Are they written in the original language?",
+        "Have they been published as a book?",
+        "Do you know who wrote them?",
+        "Could I consult scanned copies of them instead?"
+      ],
+      "correctIndex": 4,
+      "explanation": "Arşivcinin 'the digitised versions are available' cevabı, taranmış kopya talebini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d11",
+      "type": "multiple-choice",
+      "passage": "Farmer: The yield fell even though rainfall was normal.\nAgronomist: ----\nFarmer: We did plant the same crop three years running.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Rainfall is the only factor affecting yield.",
+        "The seeds must have been of poor quality.",
+        "Yields always fall in the third year.",
+        "Repeated planting of one crop can exhaust specific nutrients.",
+        "You should sell the land immediately."
+      ],
+      "correctIndex": 3,
+      "explanation": "Çiftçinin 'we did plant the same crop three years running' onayı, tek ürünün toprağı yorduğunu söyleyen açıklamayı takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d12",
+      "type": "multiple-choice",
+      "passage": "Producer: The documentary runs twenty minutes over.\nDirector: ----\nProducer: Cutting the interviews would weaken the argument, though.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "We should add another chapter instead.",
+        "We could shorten the interview sections to save time.",
+        "The length cannot be changed at all.",
+        "Nobody will notice the extra minutes.",
+        "Let us cancel the broadcast."
+      ],
+      "correctIndex": 1,
+      "explanation": "Yapımcının 'cutting the interviews would weaken the argument' itirazı, röportajları kısaltma önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d13",
+      "type": "multiple-choice",
+      "passage": "Volunteer: Should we distribute the blankets tonight?\nCoordinator: ----\nVolunteer: Understood, I'll wait for the shelter list.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Yes, hand them out anywhere in the city.",
+        "No, the blankets are not needed at all.",
+        "Keep them in storage until next winter.",
+        "Give them to whoever asks first.",
+        "Wait until we know which shelters are short of them."
+      ],
+      "correctIndex": 4,
+      "explanation": "Gönüllünün 'I'll wait for the shelter list' cevabı, hangi barınakların eksiği olduğunun beklenmesini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d14",
+      "type": "multiple-choice",
+      "passage": "Historian: The treaty was signed under considerable pressure.\nColleague: ----\nHistorian: True, but the delegates recorded their objections in writing.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Was the treaty ever actually enforced?",
+        "Were the delegates elected by their citizens?",
+        "Does that make its terms less legitimate today?",
+        "Did the pressure come from a foreign power?",
+        "Has the original document survived?"
+      ],
+      "correctIndex": 2,
+      "explanation": "'True, but the delegates recorded their objections' yanıtı, meşruiyeti sorgulayan bir soruyu takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_d15",
+      "type": "multiple-choice",
+      "passage": "Designer: Users keep missing the save button.\nDeveloper: ----\nDesigner: Let's try that before redesigning the whole toolbar.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "We could move it next to the field they edit last.",
+        "We should remove the button entirely.",
+        "Users will learn where it is eventually.",
+        "The toolbar cannot be modified.",
+        "Saving should happen only on exit."
+      ],
+      "correctIndex": 0,
+      "explanation": "Tasarımcının 'before redesigning the whole toolbar' yanıtı, küçük bir konum değişikliği önerisini takip eder.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l4b_ex3",
+  "title": "Paragraf Tamamlama — Test 2",
+  "description": "Yeni paragraf seti.",
+  "questions": [
+    {
+      "id": "u50_l4b_pc1",
+      "type": "multiple-choice",
+      "passage": "Antibiotics kill bacteria that are sensitive to them and leave resistant ones behind. ---- Each course of treatment therefore acts as a filter, gradually making the surviving population harder to treat.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Resistant bacteria disappear within days.",
+        "Antibiotics affect viruses in the same way.",
+        "Those survivors then multiply without competition.",
+        "Bacteria cannot reproduce after treatment.",
+        "Resistance is inherited only from the environment."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Bu nedenle her tedavi bir filtre görevi görür' sonucu, dirençlilerin rakipsiz çoğaldığını söyleyen bir cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc2",
+      "type": "multiple-choice",
+      "passage": "Museums acquired many objects during the colonial period without the consent of their communities of origin. ---- Some institutions have begun returning them, while others argue that they can be better preserved where they are.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The question of what should now happen to these collections divides curators.",
+        "All such objects have already been returned.",
+        "Colonial acquisitions were always fully documented.",
+        "Preservation is never a consideration in these debates.",
+        "Communities of origin have shown no interest in them."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sonraki cümle iki karşıt tutumu anlatıyor; boşluk bu bölünmeyi tanıtmalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc3",
+      "type": "multiple-choice",
+      "passage": "A language dies when its last fluent speaker dies, but the process begins much earlier. ---- Once a generation stops learning it at home, the outcome is effectively decided even if speakers remain for decades.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Languages disappear suddenly and without warning.",
+        "Written records prevent any language from dying.",
+        "Fluent speakers always teach their children.",
+        "The decisive moment is when parents stop passing it on to children.",
+        "The number of speakers is the only relevant measure."
+      ],
+      "correctIndex": 3,
+      "explanation": "Sonraki cümle 'once a generation stops learning it at home' diyor; boşluk aktarımın kesilmesini belirleyici an olarak tanıtmalıdır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc4",
+      "type": "multiple-choice",
+      "passage": "Solar panels lose a small percentage of their output every year. ---- Manufacturers therefore quote not only an initial capacity but also a guaranteed output after twenty or twenty-five years.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The loss is far too random to estimate.",
+        "This gradual decline is predictable enough to be written into a warranty.",
+        "Panels stop working completely after a decade.",
+        "Output actually increases with age.",
+        "Warranties are never offered for solar equipment."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Bu yüzden üreticiler 20-25 yıl sonrası için garanti veriyor' sonucu, düşüşün öngörülebilir olduğunu söyleyen bir cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc5",
+      "type": "multiple-choice",
+      "passage": "Juries are asked to disregard evidence that a judge rules inadmissible. ---- Experiments suggest the instruction can even make the excluded material more memorable than it would otherwise have been.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Jurors always follow such instructions perfectly.",
+        "Judges rarely exclude any evidence.",
+        "Inadmissible evidence is never presented in court.",
+        "Memory is unaffected by verbal instructions.",
+        "Psychologists doubt that people can deliberately forget on command."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle talimatın ters etkisini anlatıyor; boşluk emirle unutmanın şüpheli olduğunu belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc6",
+      "type": "multiple-choice",
+      "passage": "Rivers deposit sediment where their current slows, building deltas over centuries. ---- Dams upstream trap that sediment, and many deltas are now shrinking even though the rivers still reach the sea.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Deltas form only where the current is fastest.",
+        "Sediment plays no role in delta formation.",
+        "Dams increase the amount of sediment carried.",
+        "This process depends on a continuous supply of material from upstream.",
+        "Rivers rarely change course over time."
+      ],
+      "correctIndex": 3,
+      "explanation": "Sonraki cümle barajların tortuyu tuttuğunu söylüyor; boşluk sürecin yukarıdan gelen malzemeye bağlı olduğunu belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc7",
+      "type": "multiple-choice",
+      "passage": "Early photographs required exposures lasting several minutes. ---- This is why nineteenth-century portraits show stiff poses and unsmiling faces: holding a smile that long was impossible.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Photographers preferred serious subjects for artistic reasons.",
+        "Anyone who moved during that time appeared blurred or vanished altogether.",
+        "Exposure times were reduced almost immediately.",
+        "Smiling was considered improper in that century.",
+        "Portraits were painted rather than photographed."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Bu yüzden katı pozlar ve gülümsemeyen yüzler' açıklaması, hareket edenin bulanıklaştığını söyleyen bir cümleyi takip eder.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc8",
+      "type": "multiple-choice",
+      "passage": "Economists once treated unpaid household work as outside the economy. ---- Estimates now suggest that including it would raise measured national output by a quarter or more in some countries.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Household work has never been measured anywhere.",
+        "National output figures are entirely accurate.",
+        "Unpaid work has no economic value.",
+        "The exclusion is universally accepted today.",
+        "That exclusion has increasingly been criticised as arbitrary."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle dahil etmenin etkisini veriyor; boşluk dışlamanın eleştirildiğini belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc9",
+      "type": "multiple-choice",
+      "passage": "Coral bleaching occurs when stressed corals expel the algae living in their tissues. ---- If conditions improve quickly enough the algae can return, but prolonged stress leaves the coral without its main source of energy.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Bleaching is always immediately fatal.",
+        "Algae are harmful to healthy corals.",
+        "The corals are not dead at this stage, only weakened.",
+        "Corals produce all their energy themselves.",
+        "Bleached corals never recover under any conditions."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Koşullar düzelirse algler dönebilir' devamı, mercanın henüz ölmediğini söyleyen bir cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc10",
+      "type": "multiple-choice",
+      "passage": "Traffic accidents fall sharply when street lighting is improved. ---- Researchers comparing similar roads have found the reduction holds even after allowing for differences in traffic volume and speed limits.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The effect is not simply a result of fewer cars using darker roads.",
+        "Lighting has no measurable influence on safety.",
+        "Accidents occur mainly during daylight hours.",
+        "Traffic volume cannot be measured reliably.",
+        "Speed limits are identical on all roads."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sonraki cümle trafik hacmi ve hız sınırı farkları hesaba katıldığında bile etkinin sürdüğünü söylüyor; boşluk bu alternatif açıklamayı elemelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc11",
+      "type": "multiple-choice",
+      "passage": "Handwriting is disappearing from many school curricula. ---- Studies of students taking notes suggest that writing by hand forces a selection of what matters, whereas typing encourages transcription without processing.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Nobody has objected to this change.",
+        "Typing and handwriting produce identical results.",
+        "Its defenders argue that the loss is cognitive rather than merely cultural.",
+        "Note-taking has been abandoned in universities.",
+        "Handwriting was never taught systematically."
+      ],
+      "correctIndex": 2,
+      "explanation": "Sonraki cümle bilişsel farkı anlatıyor; boşluk savunucuların kaybı bilişsel gördüğünü belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc12",
+      "type": "multiple-choice",
+      "passage": "Volcanic soils are among the most fertile in the world. ---- This is why dense populations have repeatedly settled on the slopes of active volcanoes despite the obvious danger.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Ash weathers into minerals that crops absorb readily.",
+        "Volcanic regions receive almost no rainfall.",
+        "Such soils cannot support agriculture.",
+        "Eruptions occur only in uninhabited areas.",
+        "Fertility has no effect on settlement patterns."
+      ],
+      "correctIndex": 0,
+      "explanation": "'Bu yüzden yoğun nüfuslar yamaçlara yerleşti' sonucu, külün verimli mineraller oluşturduğunu söyleyen bir cümleyi takip eder.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc13",
+      "type": "multiple-choice",
+      "passage": "Peer review was introduced to filter unreliable research before publication. ---- Reviewers are unpaid, work under time pressure, and rarely have access to the underlying data, which limits what they can realistically detect.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "It succeeds completely in every discipline.",
+        "Reviewers are generously compensated for their work.",
+        "All submitted data is verified line by line.",
+        "The system does this less thoroughly than its reputation suggests.",
+        "Publication does not require any review."
+      ],
+      "correctIndex": 3,
+      "explanation": "Sonraki cümle hakemlerin sınırlarını sayıyor; boşluk sistemin sanıldığı kadar kapsamlı olmadığını belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc14",
+      "type": "multiple-choice",
+      "passage": "Migrating birds navigate using the earth's magnetic field. ---- Young birds released far from their route can still find it, which suggests the mechanism is inherited rather than learned from older birds.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "They rely entirely on landmarks they have seen before.",
+        "How they detect it is still not fully understood.",
+        "Magnetic fields do not vary across the earth.",
+        "Only older birds are able to migrate.",
+        "Navigation is learned during the first flight."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sonraki cümle mekanizmanın kalıtsal olduğunu söylüyor; boşluk mekanizmanın henüz tam anlaşılmadığını belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4b_pc15",
+      "type": "multiple-choice",
+      "passage": "Subtitles were originally added to films for deaf viewers. ---- Streaming platforms now report that a large share of hearing users keep them switched on, often to follow dialogue in noisy surroundings.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "They have remained limited to that purpose.",
+        "Deaf viewers no longer use subtitles.",
+        "Streaming platforms have removed the feature.",
+        "Subtitles interfere with understanding dialogue.",
+        "Their audience has since expanded far beyond that group."
+      ],
+      "correctIndex": 4,
+      "explanation": "Sonraki cümle işiten kullanıcıların da açtığını söylüyor; boşluk kitlenin genişlediğini belirtmelidir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    }
+  ]
 }
     ]
   }
