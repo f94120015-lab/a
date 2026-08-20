@@ -113,7 +113,7 @@ rawTopics.push(
   "startLessonId": 51,
   "originalIndex": 17,
   "title": "Ara Bölüm 3: Rica ve İzin İsteme Yapıları",
-  "desc": "Modallar ve Do/Would you mind if kalıplarıyla rica ve izin isteme yapıları",
+  "desc": "",
   "icon": "🤝",
   "numLessons": 2,
   "formulas": [
