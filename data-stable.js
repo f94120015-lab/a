@@ -37733,7 +37733,7 @@ const unitSentencesMap = {
         {
           "id": "u9l23ex1",
           "title": "Alıştırma 1: Soru Yapıları - Durum ve Modallar",
-          "description": "Durum, modal ve yardımcı fiil soru kalıplarını tanıma (15 Soru)",
+          "description": "Durum, modal ve yardımcı fiil soru kalıplarını tanıma (10 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -37762,35 +37762,6 @@ const unitSentencesMap = {
                 {
                   "left": "Was the philosophical concept valid?",
                   "right": "Felsefi kavram geçerli miydi?"
-                }
-              ]
-            },
-            {
-              "id": "u9l23_m2",
-              "type": "matching",
-              "prompt": "Hukuk ve iktisat alanındaki modal ve yardımcı fiil sorularını eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Kip Ekleri ve Zamanlar"
-              ],
-              "pairs": [
-                {
-                  "left": "Must legal authorities protect human rights?",
-                  "right": "Yasal yetkililer insan haklarını korumalı mıdır?"
-                },
-                {
-                  "left": "Could economic policies alter social structures?",
-                  "right": "Ekonomik politikalar toplumsal yapıları değiştirebilir miydi?"
-                },
-                {
-                  "left": "May researchers access legal archives at the conference?",
-                  "right": "Araştırmacılar konferansta yasal arşivlere erişebilir mi?"
-                },
-                {
-                  "left": "Would economists predict market fluctuations?",
-                  "right": "Ekonomistler piyasa dalgalanmalarını öngörür müydü?"
                 }
               ]
             },
@@ -37833,26 +37804,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "Should historians question the philosophical logic and ideas in ancient manuscripts?",
               "isEngToTr": false
-            },
-            {
-              "id": "u9l23_q5",
-              "type": "multiple-choice",
-              "prompt": "\"Is the empirical methodology of this psychological study reliable?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Temel Cümle Yapıları"
-              ],
-              "options": [
-                "Bu psikolojik çalışmanın ampirik metodolojisi güvenilir midir?",
-                "Bu psikolojik çalışmanın ampirik metodolojisi güvenilir miydi?",
-                "Bu psikolojik çalışmanın ampirik metodolojisi güvenilir olmalı mıdır?",
-                "Bu psikolojik çalışmanın ampirik metodolojisi güvenilir olabilir mi?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Is the empirical methodology of this psychological study reliable?",
-              "isEngToTr": true
             },
             {
               "id": "u9l23_q2",
@@ -37935,26 +37886,6 @@ const unitSentencesMap = {
               "translation": "Mahkeme nihai karardan önce salondaki arşiv belgelerini incelemeli mi?"
             },
             {
-              "id": "u9l23_q14",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun yardımcı fiili seçin:",
-              "sentence": "___ historians disregard the cultural context of ancient ruins, artifacts, and discovery?",
-              "options": [
-                "Should",
-                "Are",
-                "Were",
-                "Is"
-              ],
-              "correctIndex": 0,
-              "translation": "Tarihçiler antik kalıntıların, eserlerin ve keşiflerin kültürel bağlamını göz ardı etmeli midir?"
-            },
-            {
               "id": "u9l23_q16",
               "type": "word-bank",
               "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Could the doctor identify the primary causes of anxiety in patients?\"",
@@ -38031,45 +37962,6 @@ const unitSentencesMap = {
               "trSentence": "Filozoflar ahlaki değerlerin ve gerçeğin önemini tartışabilir mi?"
             },
             {
-              "id": "u9l23_q22",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Could the film director integrate historical facts with cinematic storytelling in his work?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "translation": "Could the film director integrate historical facts with cinematic storytelling in his work?",
-              "words": [
-                "Film",
-                "yönetmeni",
-                "eserinde",
-                "tarihsel",
-                "gerçekleri",
-                "sinematik",
-                "anlatı",
-                "ile",
-                "bütünleştirebildi",
-                "mi",
-                "hukuk"
-              ],
-              "correctOrder": [
-                "Film",
-                "yönetmeni",
-                "eserinde",
-                "tarihsel",
-                "gerçekleri",
-                "sinematik",
-                "anlatı",
-                "ile",
-                "bütünleştirebildi",
-                "mi"
-              ],
-              "enSentence": "Could the film director integrate historical facts with cinematic storytelling in his work?",
-              "isEngToTr": true
-            },
-            {
               "id": "u9l23_q7",
               "type": "translation-text",
               "prompt": "\"May the author attend the academic conference to evaluate the primary sources of the research project?\" cümlesini Türkçe'ye çevirin:",
@@ -38082,20 +37974,6 @@ const unitSentencesMap = {
               "correctSentence": "Yazar araştırma projesinin birincil kaynaklarını değerlendirmek için konferansa katılabilir mi?",
               "enSentence": "May the author attend the academic conference to evaluate the primary sources of the research project?",
               "isEngToTr": true
-            },
-            {
-              "id": "u9l23_q26",
-              "type": "translation-text",
-              "prompt": "\"Tarihçiler imparatorluğun çöküşü sırasındaki arşivsel belgeleri ve mektupları incelemeli midir?\" cümlesini İngilizce'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Saf Modallar"
-              ],
-              "correctSentence": "Should historians examine the archival documents and letters during the collapse of the empire?",
-              "enSentence": "Should historians examine the archival documents and letters during the collapse of the empire?",
-              "isEngToTr": false
             }
           ]
         }
@@ -38106,7 +37984,7 @@ const unitSentencesMap = {
         {
           "id": "u9l24ex1",
           "title": "Alıştırma 1: Soru Yapıları - Do/Does/Did ve There is/are",
-          "description": "Yardımcı fiil eylemleri ve var/yok soru kalıplarını tanıma (15 Soru)",
+          "description": "Yardımcı fiil eylemleri ve var/yok soru kalıplarını tanıma (10 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -38139,35 +38017,6 @@ const unitSentencesMap = {
               ]
             },
             {
-              "id": "u9l24_m2",
-              "type": "matching",
-              "prompt": "Ekonomi ve alanındaki eylem sorularını eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "SVO Yapısı"
-              ],
-              "pairs": [
-                {
-                  "left": "Does inflation affect consumer confidence and decisions?",
-                  "right": "Enflasyon tüketici güvenini ve kararlarını etkiler mi?"
-                },
-                {
-                  "left": "Did the psychologist observe the patient during therapy?",
-                  "right": "Psikolog terapi sırasında hastayı gözlemledi mi?"
-                },
-                {
-                  "left": "Do economists analyze market trends and raw data?",
-                  "right": "Ekonomistler piyasa eğilimlerini ve ham verileri analiz eder mi?"
-                },
-                {
-                  "left": "Did the committee publish the research findings in the report?",
-                  "right": "Komite raporda araştırma bulgularını yayımladı mı?"
-                }
-              ]
-            },
-            {
               "id": "u9l24_q1",
               "type": "multiple-choice",
               "prompt": "\"Did the archaeologist discover ancient artifacts in the ruins of the temple?\" cümlesinin Türkçe karşılığı hangisidir?",
@@ -38186,26 +38035,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "Did the archaeologist discover ancient artifacts in the ruins of the temple?",
               "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q3",
-              "type": "multiple-choice",
-              "prompt": "\"profesörü ders sırasında felsefi mantık kurallarını açıkladı mı?\" cümlesinin İngilizce karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Did the philosophy professor explain the rules of philosophical logic during the lecture?",
-                "Does the philosophy professor explain the rules of philosophical logic during the lecture?",
-                "Is the philosophy professor explaining the rules of philosophical logic during the lecture?",
-                "Has the philosophy professor explained the rules of philosophical logic during the lecture?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Did the philosophy professor explain the rules of philosophical logic during the lecture?",
-              "isEngToTr": false
             },
             {
               "id": "u9l24_q9",
@@ -38328,42 +38157,6 @@ const unitSentencesMap = {
               "translation": "Sosyolojik anketin metodolojisinde doğal yanlılıklar var mıdır?"
             },
             {
-              "id": "u9l24_q16",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"Did the research team gather statistical data from local communities?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Did the research team gather statistical data from local communities?",
-              "words": [
-                "Araştırma",
-                "ekibi",
-                "yerel",
-                "topluluklardan",
-                "istatistiksel",
-                "veri",
-                "topladı",
-                "mı",
-                "hukuk",
-                "yasa"
-              ],
-              "correctOrder": [
-                "Araştırma",
-                "ekibi",
-                "yerel",
-                "topluluklardan",
-                "istatistiksel",
-                "veri",
-                "topladı",
-                "mı"
-              ],
-              "enSentence": "Did the research team gather statistical data from local communities?",
-              "isEngToTr": true
-            },
-            {
               "id": "u9l24_q17",
               "type": "word-bank",
               "prompt": "Cümlenin İngilizce karşılığını doğru sırayla oluşturun: \"Mahkeme tarihi belgedeki imzayı inceledi mi?\"",
@@ -38404,46 +38197,6 @@ const unitSentencesMap = {
               "trSentence": "Mahkeme tarihi belgedeki imzayı inceledi mi?"
             },
             {
-              "id": "u9l24_q23",
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını doğru sırayla oluşturun: \"Sosyologlar kentleşme ile suç oranları arasındaki ilişkiyi araştırdı mı?\"",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "Fiil ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Sosyologlar kentleşme ile suç oranları arasındaki ilişkiyi araştırdı mı?",
-              "words": [
-                "Did",
-                "sociologists",
-                "investigate",
-                "the",
-                "relationship",
-                "between",
-                "urbanization",
-                "and",
-                "crime",
-                "rates",
-                "ethics"
-              ],
-              "correctOrder": [
-                "Did",
-                "sociologists",
-                "investigate",
-                "the",
-                "relationship",
-                "between",
-                "urbanization",
-                "and",
-                "crime",
-                "rates"
-              ],
-              "enSentence": "Did sociologists investigate the relationship between urbanization and crime rates?",
-              "isEngToTr": false,
-              "trSentence": "Sosyologlar kentleşme ile suç oranları arasındaki ilişkiyi araştırdı mı?"
-            },
-            {
               "id": "u9l24_q7",
               "type": "translation-text",
               "prompt": "\"Does the researcher rely on primary documents in the archive?\" cümlesini Türkçe'ye çevirin:",
@@ -38456,20 +38209,6 @@ const unitSentencesMap = {
               "correctSentence": "Araştırmacı arşivdeki birincil belgelere dayanıyor mu?",
               "enSentence": "Does the researcher rely on primary documents in the archive?",
               "isEngToTr": true
-            },
-            {
-              "id": "u9l24_q25",
-              "type": "translation-text",
-              "prompt": "\"Did the committee publish the final research report on climate change and economics?\" cümlesini Türkçe'ye çevirin:",
-              "grammarTags": [
-                "Soru Yapıları",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "correctSentence": "Komite iklim değişikliği ve ekonomi üzerine nihai araştırma raporunu yayımladı mı?",
-              "enSentence": "Did the committee publish the final research report on climate change and economics?",
-              "isEngToTr": true
             }
           ]
         }
@@ -38480,7 +38219,7 @@ const unitSentencesMap = {
         {
           "id": "u9l25ex1",
           "title": "Alıştırma 1: Soru Yapıları - Soru Kelimeleri (Wh- Questions)",
-          "description": "Soru kelimeli (Wh-) sorularda öbek ve cümle düzeyinde yapılar (15 Soru)",
+          "description": "Soru kelimeli (Wh-) sorularda öbek ve cümle düzeyinde yapılar (10 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -38509,35 +38248,6 @@ const unitSentencesMap = {
                 {
                   "left": "Who analyzed the psychological data of patients?",
                   "right": "Hastaların psikolojik verilerini kim analiz etti?"
-                }
-              ]
-            },
-            {
-              "id": "u9l25_m2",
-              "type": "matching",
-              "prompt": "soru yapılarını Türkçe karşılıklarıyla eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "SVO Yapısı"
-              ],
-              "pairs": [
-                {
-                  "left": "When did parliament pass the new corporate law?",
-                  "right": "Parlamento yeni şirketler yasasını ne zaman çıkardı?"
-                },
-                {
-                  "left": "How do sociologists measure urban poverty and difficulties?",
-                  "right": "Sosyologlar kentsel yoksulluğu ve zorlukları nasıl ölçer?"
-                },
-                {
-                  "left": "Which method is suitable for scientific research?",
-                  "right": "Bilimsel araştırma için hangi yöntem uygundur?"
-                },
-                {
-                  "left": "Whose theory explains social change and behavior?",
-                  "right": "Toplumsal değişimi ve davranışı kimin teorisi açıklar?"
                 }
               ]
             },
@@ -38580,26 +38290,6 @@ const unitSentencesMap = {
               "correctIndex": 0,
               "enSentence": "How do sociologists define social structure and cultural values?",
               "isEngToTr": false
-            },
-            {
-              "id": "u9l25_q9",
-              "type": "multiple-choice",
-              "prompt": "\"How do psychologists explain the emotional development of individuals during therapy?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geniş Zaman"
-              ],
-              "options": [
-                "Psikologlar terapi sırasında bireylerin duygusal gelişimini nasıl açıklar?",
-                "Psikologlar terapi sırasında bireylerin duygusal gelişimini nasıl açıklayabilir?",
-                "Psikologlar terapi sırasında bireylerin duygusal gelişimini nasıl açıklamalıdır?",
-                "Psikologlar terapi sırasında bireylerin duygusal gelişimini nasıl açıkladı?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "How do psychologists explain the emotional development of individuals during therapy?",
-              "isEngToTr": true
             },
             {
               "id": "u9l25_q2",
@@ -38660,46 +38350,6 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Oturum sırasında yeni yasal kararnameyi kimin yetkisi çıkardı?"
-            },
-            {
-              "id": "u9l25_q10",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
-              "sentence": "___ factor influenced the voting behavior of citizens in the election?",
-              "options": [
-                "Which",
-                "Where",
-                "Why",
-                "When"
-              ],
-              "correctIndex": 0,
-              "translation": "Seçimimde vatandaşların oy verme davranışını hangi faktör etkiledi?"
-            },
-            {
-              "id": "u9l25_q19",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
-              "sentence": "___ methodological approach did the research team utilize for the data collection?",
-              "options": [
-                "Which",
-                "Where",
-                "Why",
-                "When"
-              ],
-              "correctIndex": 0,
-              "translation": "Araştırma ekibi veri toplama için hangi metodolojik yaklaşımı kullandı?"
             },
             {
               "id": "u9l25_q16",
@@ -38776,48 +38426,6 @@ const unitSentencesMap = {
               "trSentence": "Sosyologlar toplumsal sınıf krizini ve sorunlarını nasıl analiz eder?"
             },
             {
-              "id": "u9l25_q23",
-              "type": "word-bank",
-              "prompt": "Cümlenin İngilizce karşılığını doğru sırayla oluşturun: \"Ekonomistler uluslararası ticaret anlaşmasının şartlarını nasıl değerlendirdi?\"",
-              "grammarTags": [
-                "Soru Yapıları (Wh-)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "Ekonomistler uluslararası ticaret anlaşmasının şartlarını nasıl değerlendirdi?",
-              "words": [
-                "How",
-                "did",
-                "economists",
-                "evaluate",
-                "the",
-                "terms",
-                "of",
-                "the",
-                "international",
-                "trade",
-                "agreement",
-                "ethics"
-              ],
-              "correctOrder": [
-                "How",
-                "did",
-                "economists",
-                "evaluate",
-                "the",
-                "terms",
-                "of",
-                "the",
-                "international",
-                "trade",
-                "agreement"
-              ],
-              "enSentence": "How did economists evaluate the terms of the international trade agreement?",
-              "isEngToTr": false,
-              "trSentence": "Ekonomistler uluslararası ticaret anlaşmasının şartlarını nasıl değerlendirdi?"
-            },
-            {
               "id": "u9l25_q7",
               "type": "translation-text",
               "prompt": "\"When did the ethics committee review the proposed research project at the conference?\" cümlesini Türkçe'ye çevirin:",
@@ -38854,38 +38462,9 @@ const unitSentencesMap = {
         {
           "id": "u9l26ex1",
           "title": "Alıştırma 1: Soru Yapıları - Edatlı Sorular ve Teyit Soruları (Tag Questions)",
-          "description": "Edatlı soru kalıpları, olumsuz sorular ve teyit sorularını tanıma (15 Soru)",
+          "description": "Edatlı soru kalıpları, olumsuz sorular ve teyit sorularını tanıma (10 Soru)",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
-            {
-              "id": "u9l26_m1",
-              "type": "matching",
-              "prompt": "Edatlı ve olumsuz soru kalıplarını Türkçe karşılıklarıyla eşleştirin.",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Olumsuz Soru"
-              ],
-              "pairs": [
-                {
-                  "left": "In which century did the empire collapse in history?",
-                  "right": "Tarihte imparatorluk hangi yüzyılda çöktü?"
-                },
-                {
-                  "left": "Under whose authority did the court act during the trial?",
-                  "right": "Duruşma sırasında mahkeme kimin yetkisi altında hareket etti?"
-                },
-                {
-                  "left": "Didn't the doctor examine the patient in the room?",
-                  "right": "Doktor odada hastayı incelemedi mi?"
-                },
-                {
-                  "left": "Isn't the legal framework clear to the board and committee?",
-                  "right": "Yasal çerçeve kurula ve komiteye açık değil midir?"
-                }
-              ]
-            },
             {
               "id": "u9l26_m2",
               "type": "matching",
@@ -38933,26 +38512,6 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "enSentence": "To what extent did the Industrial Revolution alter the structure of social stratification?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q3",
-              "type": "multiple-choice",
-              "prompt": "\"Didn't the ethics committee review the experimental results in the laboratory?\" cümlesinin Türkçe karşılığı hangisidir?",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "options": [
-                "Etik komitesi laboratuvardaki deneysel sonuçları gözden geçirmedi mi?",
-                "Etik komitesi laboratuvardaki deneysel sonuçları gözden geçiremez mi?",
-                "Etik komitesi laboratuvardaki deneysel sonuçları gözden geçirmemeli midir?",
-                "Etik komitesi laboratuvardaki deneysel sonuçları gözden geçirmiyor mu?"
-              ],
-              "correctIndex": 0,
-              "enSentence": "Didn't the ethics committee review the experimental results in the laboratory?",
               "isEngToTr": true
             },
             {
@@ -39016,26 +38575,6 @@ const unitSentencesMap = {
               "translation": "Sosyolog toplumsal hareketlilik üzerine çalışmayı yayınladı, değil mi?"
             },
             {
-              "id": "u9l26_q6",
-              "grammarTags": [
-                "Soru Yapıları (Olumsuz Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Olumsuz Soru"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun olumsuz soru kelimesini seçin:",
-              "sentence": "___ human rights essential for sustaining a democratic society?",
-              "options": [
-                "Aren't",
-                "Isn't",
-                "Didn't",
-                "Don't"
-              ],
-              "correctIndex": 0,
-              "translation": "Demokratik bir toplumu sürdürmek için insan hakları elzem değil midir?"
-            },
-            {
               "id": "u9l26_q12",
               "grammarTags": [
                 "Soru Yapıları (Edatlı Soru)",
@@ -39054,26 +38593,6 @@ const unitSentencesMap = {
               ],
               "correctIndex": 0,
               "translation": "Ekonomik reform paketi kimin siyasi liderliği altında yürürlüğe girdi?"
-            },
-            {
-              "id": "u9l26_q19",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "type": "fill-blank-dropdown",
-              "prompt": "Boşluğa gelecek en uygun soru kelimesini seçin:",
-              "sentence": "Under ___ regulatory framework did the financial authority suspend market trading?",
-              "options": [
-                "which",
-                "whose",
-                "what",
-                "where"
-              ],
-              "correctIndex": 0,
-              "translation": "Finansal otorite piyasa işlemlerini hangi düzenleyici çerçeve altında askıya aldı?"
             },
             {
               "id": "u9l26_q16",
@@ -39141,46 +38660,6 @@ const unitSentencesMap = {
                 "devraldı"
               ],
               "enSentence": "From which ancient civilization did the legal system inherit its core principles?",
-              "isEngToTr": true
-            },
-            {
-              "id": "u9l26_q24",
-              "type": "word-bank",
-              "prompt": "Cümlenin Türkçe karşılığını doğru sırayla oluşturun: \"To what extent did maritime trade shape the culture of ancient coastal city-states in history?\"",
-              "grammarTags": [
-                "Soru Yapıları (Edatlı Soru)",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları",
-                "Geçmiş Zaman"
-              ],
-              "translation": "To what extent did maritime trade shape the culture of ancient coastal city-states in history?",
-              "words": [
-                "Tarihte",
-                "deniz",
-                "ticareti",
-                "antik",
-                "kıyı",
-                "şehir",
-                "devletlerinin",
-                "kültürünü",
-                "ne",
-                "ölçüde",
-                "şekillendirdi"
-              ],
-              "correctOrder": [
-                "Tarihte",
-                "deniz",
-                "ticareti",
-                "antik",
-                "kıyı",
-                "şehir",
-                "devletlerinin",
-                "kültürünü",
-                "ne",
-                "ölçüde",
-                "şekillendirdi"
-              ],
-              "enSentence": "To what extent did maritime trade shape the culture of ancient coastal city-states in history?",
               "isEngToTr": true
             },
             {
