@@ -211,8 +211,8 @@
   const RULE_RULES = {
     by_the_time: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["will_have_v3"], trPattern: "O varana kadar projeyi tamamlamış olacaklar." },
-        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "İstasyona vardığında tren çoktan kalkmıştı." }
+        { clauseA: "v1_present", clauseB: ["will_have_v3"], trPattern: "Eve döneceğin zamana kadar tüm ev işlerini bitirmiş olacağım." },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "İtfaiyeciler varana kadar yangın depoyu mahvetmişti." }
       ],
       ruleText: "BY THE TIME (Zaman Çapası): By the time + V1 ➔ WILL HAVE V3 | By the time + V2 ➔ HAD V3",
       tenseExamples: [
@@ -239,12 +239,13 @@
     },
     so_far: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["has_v3_main"], trPattern: "Son yıllarda / Şu ana kadar birçok gelişme kaydedildi." },
+        { clauseA: "noun_phrase", clauseB: ["has_v3_main"], trPattern: "Şu ana kadar araştırmacılar elliden fazla yeni deniz türü keşfetti." },
         { clauseA: "v1_present", clauseB: ["has_v3_main"], trPattern: "Şu ana kadar tüm testleri geçtik." }
       ],
       ruleText: "SO FAR / UP TO NOW / HITHERTO / IN RECENT YEARS: Doğrudan Present Perfect (HAS/HAVE V3) gerektirir. Past V2 almaz!",
       tenseExamples: [
         { tense: "Present Perfect", en: "So far, researchers have discovered over fifty new marine species.", tr: "Şu ana kadar araştırmacılar elliden fazla yeni deniz türü keşfetti." },
+        { tense: "Present Perfect (Alt)", en: "So far, we have passed all the tests.", tr: "Şu ana kadar tüm testleri geçtik." },
         { tense: "Past Perfect", en: "Up to last year, the company had operated strictly within local markets.", tr: "Geçen yıla kadar şirket sadece yerel piyasalarda faaliyet göstermişti." },
         { tense: "Present Perfect Cont.", en: "Recently, scientists have been experimenting with new cancer treatments.", tr: "Son zamanlarda bilim insanları yeni kanser tedavileri üzerinde deneyler yapıyorlar." },
         { tense: "Future Perfect", en: "We will have finished half the syllabus so far by Friday.", tr: "Cuma gününe kadar müfredatın yarısını bitirmiş olacağız." },
@@ -266,16 +267,35 @@
     },
     prior_to: {
       validPairs: [
-        { clauseA: "v_ing_obj", clauseB: ["v2_main", "had_v3_main", "will_v1"], trPattern: "Savaştan / projeden önce hazırlıklar yapıldı." },
-        { clauseA: "noun_phrase", clauseB: ["v2_main", "had_v3_main", "will_v1"], trPattern: "Sınav döneminden önce ders çalıştı." }
+        {
+          clauseA: "v_ing_obj",
+          clauseB: ["v2_main", "had_v3_main", "will_v1"],
+          trPatternMap: {
+            v2_main: "Raporu göndermeden önce her rakamı iki kez gözden geçirdi.",
+            had_v3_main: "Denetimi tamamlamadan önce muhasebeci zaten birkaç hatayı işaretlemişti.",
+            will_v1: "Ürünü piyasaya sürmeden önce ekip pazarlama planını netleştirecek."
+          },
+          trPattern: "Raporu göndermeden önce her rakamı iki kez gözden geçirdi."
+        },
+        {
+          clauseA: "noun_phrase",
+          clauseB: ["v2_main", "had_v3_main", "will_v1"],
+          trPatternMap: {
+            v2_main: "Sanayi devriminden önce çoğu insan tarımda çalışıyordu.",
+            had_v3_main: "Birleşmeden önce iki şirket amansız rakipler olarak faaliyet göstermişti.",
+            will_v1: "Mali yıl sonundan önce sözleşmeyi netleştireceğiz."
+          },
+          trPattern: "Sanayi devriminden önce çoğu insan tarımda çalışıyordu."
+        }
       ],
       ruleText: "PRIOR TO / SUBSEQUENT TO: Akademik edat öbeğidir. Cümle almaz; V-ing veya İsim Öbeği alarak ana cümleye bağlanır.",
       tenseExamples: [
-        { tense: "Simple Present", en: "Please check all equipment prior to starting the experiment.", tr: "Deneye başlamadan önce lütfen tüm ekipmanları kontrol edin." },
-        { tense: "Simple Past", en: "Prior to the industrial revolution, most people worked in agriculture.", tr: "Sanayi devriminden önce çoğu insan tarımda çalışıyordu." },
-        { tense: "Present Perfect", en: "Prior to this launch, the team has tested the system extensively.", tr: "Bu lansmandan önce ekip sistemi kapsamlı bir şekilde test etti." },
-        { tense: "Future Simple", en: "We will finalize the contract prior to the fiscal year end.", tr: "Mali yıl sona ermeden önce sözleşmeyi netleştireceğiz." },
-        { tense: "Modal / Passive", en: "Calculations ought to be verified prior to submitting the report.", tr: "Raporu teslim etmeden önce hesaplamalar doğrulanmalıdır." }
+        { tense: "Simple Past (V-ing)", en: "Prior to submitting the report, she reviewed every figure twice.", tr: "Raporu göndermeden önce her rakamı iki kez gözden geçirdi." },
+        { tense: "Past Perfect (V-ing)", en: "Prior to completing the audit, the accountant had already flagged several errors.", tr: "Denetimi tamamlamadan önce muhasebeci zaten birkaç hatayı işaretlemişti." },
+        { tense: "Future Simple (V-ing)", en: "Prior to launching the product, the team will finalize the marketing plan.", tr: "Ürünü piyasaya sürmeden önce ekip pazarlama planını netleştirecek." },
+        { tense: "Simple Past (Noun)", en: "Prior to the industrial revolution, most people worked in agriculture.", tr: "Sanayi devriminden önce çoğu insan tarımda çalışıyordu." },
+        { tense: "Past Perfect (Noun)", en: "Prior to the merger, the two companies had operated as fierce rivals.", tr: "Birleşmeden önce iki şirket amansız rakipler olarak faaliyet göstermişti." },
+        { tense: "Future Simple (Noun)", en: "Prior to the fiscal year end, we will finalize the contract.", tr: "Mali yıl sonundan önce sözleşmeyi netleştireceğiz." }
       ]
     },
     upon_on: {
@@ -293,7 +313,15 @@
     },
     at_the_dawn: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["v2_main", "had_v3_main"], trPattern: "Sanayi devriminin şafağında fabrikalar kuruldu." }
+        {
+          clauseA: "noun_phrase",
+          clauseB: ["v2_main", "had_v3_main"],
+          trPatternMap: {
+            v2_main: "Sanayi çağının şafağında buharlı makineler ulaşımı dönüştürdü.",
+            had_v3_main: "Seçim arifesinde adaylar kampanyalarını çoktan tamamlamıştı."
+          },
+          trPattern: "Sanayi çağının şafağında buharlı makineler ulaşımı dönüştürdü."
+        }
       ],
       ruleText: "AT THE DAWN OF / ON THE EVE OF: Dönem / Tarih ismi alarak zaman çapası kurar.",
       tenseExamples: [
@@ -337,31 +365,32 @@
     },
     while_as: {
       validPairs: [
-        { 
-          clauseA: "was_were_ving", 
-          clauseB: ["v2_main", "was_were_ving_main"], 
+        {
+          clauseA: "was_were_ving",
+          clauseB: ["v2_main", "was_were_ving_main"],
           trPatternMap: {
-            v2_main: "Ders çalışıyorken kapı çaldı.",
-            was_were_ving_main: "Ders çalışıyorken kardeşi müzik dinliyordu."
+            v2_main: "O raporu hazırlıyorken bilgisayarı çöktü.",
+            was_were_ving_main: "O raporu hazırlıyorken kardeşi müzik dinliyordu."
           },
-          trPattern: "Ders çalışıyorken kapı çaldı." 
+          trPattern: "O raporu hazırlıyorken bilgisayarı çöktü."
         },
-        { 
-          clauseA: "is_ving", 
-          clauseB: ["v1_main", "will_v1"], 
+        {
+          clauseA: "is_ving",
+          clauseB: ["v1_main", "will_v1"],
           trPatternMap: {
-            v1_main: "Yağmur yağıyorken içeride otururuz.",
-            will_v1: "Yağmur yağıyorken içeride oturacağız."
+            v1_main: "Dışarıda yağmur yağıyorken içeride otururuz.",
+            will_v1: "Dışarıda yağmur yağıyorken içeride oturacağız."
           },
-          trPattern: "Yağmur yağıyorken içeride otururuz." 
+          trPattern: "Dışarıda yağmur yağıyorken içeride otururuz."
         }
       ],
       ruleText: "WHILE / AS (Eşzamanlılık): Yan cümle genellikle Continuous Tense (was/were V-ing) alır. Ana cümle V2 veya Continuous olur.",
       tenseExamples: [
         { tense: "Simple Present", en: "While some people prefer city life, others enjoy rural peace.", tr: "Bazı insanlar şehir yaşamını tercih ederken, diğerleri kırsal huzurdan keyif alır." },
         { tense: "Simple Past", en: "While she was preparing the report, her computer crashed.", tr: "O raporu hazırlıyorken bilgisayarı çöktü." },
-        { tense: "Present Continuous", en: "As markets are fluctuating today, investors take precautions.", tr: "Bugün piyasalar dalgalanıyorken yatırımcılar önlem alıyor." },
-        { tense: "Future Continuous", en: "While you are traveling next week, we will monitor your project.", tr: "Siz gelecek hafta seyahat ediyorken biz projenizi takip edeceğiz." },
+        { tense: "Past Continuous (Simultaneous)", en: "While she was preparing the report, her brother was listening to music.", tr: "O raporu hazırlıyorken kardeşi müzik dinliyordu." },
+        { tense: "Simple Present (during Present Cont.)", en: "While it is raining outside, we stay indoors.", tr: "Dışarıda yağmur yağıyorken içeride otururuz." },
+        { tense: "Future Simple (during Present Cont.)", en: "While it is raining outside, we will stay indoors.", tr: "Dışarıda yağmur yağıyorken içeride oturacağız." },
         { tense: "Modal / Passive", en: "You must remain seated while the plane is taking off.", tr: "Uçak havalanıyorken koltuğunuzda oturur halde kalmalısınız." }
       ]
     },
@@ -398,24 +427,25 @@
     },
     after: {
       validPairs: [
-        { clauseA: "had_v3", clauseB: ["v2_main"], trPattern: "Önceden çok çalıştıktan sonra sınavı geçti." },
+        { clauseA: "had_v3", clauseB: ["v2_main"], trPattern: "Aylarca sıkı çalıştıktan sonra sonunda sınavı geçti." },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sınav bittikten sonra eve gitti." },
-        { 
-          clauseA: "v1_present", 
-          clauseB: ["will_v1", "v1_main"], 
+        {
+          clauseA: "v1_present",
+          clauseB: ["will_v1", "v1_main"],
           trPatternMap: {
             will_v1: "Çok çalıştıktan sonra sınavı geçecek.",
             v1_main: "Çok çalıştıktan sonra sınavı geçer."
           },
-          trPattern: "Çok çalıştıktan sonra sınavı geçecek." 
+          trPattern: "Çok çalıştıktan sonra sınavı geçecek."
         }
       ],
       ruleText: "AFTER: Yan cümle öncelikli eylemdir ve 'Had V3' alabilir! After + Had V3 ➔ Ana Cümle V2.",
       tenseExamples: [
-        { tense: "Simple Present", en: "After water boils, add tea leaves and let it steep.", tr: "Su kaynadıktan sonra çay yapraklarını ekleyin ve demlenmeye bırakın." },
-        { tense: "Simple Past", en: "Subsequent to the meeting, the board released a statement.", tr: "Toplantının ardından yönetim kurulu bir bildiri yayımladı." },
+        { tense: "Past Perfect", en: "After she had studied hard for months, she finally passed the exam.", tr: "Aylarca sıkı çalıştıktan sonra sonunda sınavı geçti." },
+        { tense: "Simple Past", en: "After the exam ended, she went home.", tr: "Sınav bittikten sonra eve gitti." },
+        { tense: "Future Simple", en: "After she studies hard, she will pass the exam.", tr: "Çok çalıştıktan sonra sınavı geçecek." },
+        { tense: "Simple Present", en: "After she studies hard, she passes the exam.", tr: "Çok çalıştıktan sonra sınavı geçer." },
         { tense: "Present Perfect", en: "After he has completed military service, he will start work.", tr: "Askerlik hizmetini tamamladıktan sonra çalışmaya başlayacaktır." },
-        { tense: "Future Simple", en: "Following the software launch, users will receive updates.", tr: "Yazılım lansmanının ardından kullanıcılar güncellemeler alacaktır." },
         { tense: "Modal / Passive", en: "After taking this medicine, you should refrain from driving.", tr: "Bu ilacı aldıktan sonra araba kullanmaktan kaçınmalısınız." }
       ]
     },
@@ -457,11 +487,12 @@
       ],
       ruleText: "UNTIL / TILL: Eylemin son sınırını gösterir. Yan cümlesine asla 'will' gelemez. V1 ➔ Will V1; V2 ➔ V2.",
       tenseExamples: [
-        { tense: "Simple Present", en: "The library remains open until 10 PM every weekday.", tr: "Kütüphane hafta içi her gün saat 22:00'ye kadar açık kalır." },
-        { tense: "Simple Past", en: "They waited outside until the rain stopped completely yesterday.", tr: "Dün yağmur tamamen durana kadar dışarıda beklediler." },
+        { tense: "Future Simple", en: "We will wait until she arrives.", tr: "O gelene kadar bekleyeceğiz." },
+        { tense: "Simple Present", en: "We wait until she arrives.", tr: "O gelene kadar bekleriz." },
+        { tense: "Modal / Passive", en: "We can wait until she arrives.", tr: "O gelene kadar bekleyebiliriz." },
+        { tense: "Simple Past", en: "They waited until she arrived.", tr: "O gelene kadar beklediler." },
         { tense: "Present Perfect", en: "We will not decide until all data has been collected.", tr: "Tüm veriler toplanana kadar hiçbir karar almayacağız." },
-        { tense: "Future Simple", en: "I will stay with you until your bus arrives tomorrow.", tr: "Yarın otobüsün gelene kadar seninle kalacağım." },
-        { tense: "Modal / Passive", en: "You must keep trying until you achieve your target.", tr: "Hedefine ulaşana kadar denemeye devam etmelisin." }
+        { tense: "Modal / Passive (Alt)", en: "You must keep trying until you achieve your target.", tr: "Hedefine ulaşana kadar denemeye devam etmelisin." }
       ]
     },
     no_sooner_than: {
@@ -481,7 +512,14 @@
       validPairs: [
         { clauseA: "had_v3", clauseB: ["v2_main"], trPattern: "Henüz evden çıkmıştı ki yağmur başladı." }
       ],
-      ruleText: "HARDLY / BARELY ... WHEN (Devrik Yapı): 'Hardly had + Özne + V3 ... when + Özne + V2' kalıbı zorunludur!"
+      ruleText: "HARDLY / BARELY ... WHEN (Devrik Yapı): 'Hardly had + Özne + V3 ... when + Özne + V2' kalıbı zorunludur!",
+      tenseExamples: [
+        { tense: "Past Perfect (Devrik)", en: "Hardly had she left the house when it started to rain.", tr: "Henüz evden çıkmıştı ki yağmur başladı." },
+        { tense: "Past Perfect (Devrik)", en: "Hardly had the meeting begun when the fire alarm went off.", tr: "Toplantı henüz başlamıştı ki yangın alarmı çaldı." },
+        { tense: "Past Perfect (Devrik)", en: "Hardly had he sat down when the phone rang.", tr: "Henüz oturmuştu ki telefon çaldı." },
+        { tense: "Past Perfect (Devrik)", en: "Hardly had the plane landed when passengers began to applaud.", tr: "Uçak henüz inmişti ki yolcular alkışlamaya başladı." },
+        { tense: "Past Perfect (Devrik)", en: "Hardly had the store opened when customers rushed in.", tr: "Mağaza henüz açılmıştı ki müşteriler içeri hücum etti." }
+      ]
     },
     during_throughout: {
       validPairs: [
@@ -531,13 +569,13 @@
     },
     produce_produces: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v_ing_obj", "v1_main"], trPattern: "Fabrikalar kirli atıklar meydana getirir." },
+        { clauseA: "noun_phrase", clauseB: ["noun_phrase", "v_ing_obj", "v1_main"], trPattern: "Endüstriyel fabrikalar günlük olarak önemli miktarda karbon atığı meydana getirir." },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Kimyasal tepkime test sırasında zehirli olmayan bir gaz meydana getirdi." }
       ],
       ruleText: "PRODUCE / PRODUCES: NEDEN + produce(s) + ETKİ (Meydana getirmek).",
       tenseExamples: [
         { tense: "Simple Present", en: "Industrial factories produce significant amounts of carbon waste daily.", tr: "Endüstriyel fabrikalar günlük olarak önemli miktarda karbon atığı meydana getirir." },
-        { tense: "Simple Past", en: "The chemical reaction produced a non-toxic gas during the test.", tr: "Kimyasal tepkime test sırasında zehirli olmayan bir gaz üretti/meydana getirdi." },
+        { tense: "Simple Past", en: "The chemical reaction produced a non-toxic gas during the test.", tr: "Kimyasal tepkime test sırasında zehirli olmayan bir gaz meydana getirdi." },
         { tense: "Present Perfect", en: "Green technology initiatives have produced remarkable environmental benefits.", tr: "Yeşil teknoloji girişimleri kayda değer çevresel faydalar meydana getirmiştir." },
         { tense: "Future Simple", en: "The new solar plant will produce clean electricity for thousands of homes.", tr: "Yeni güneş santrali binlerce ev için temiz elektrik üretecektir." },
         { tense: "Modal / Passive", en: "High pressure can produce unexpected reactions in subterranean rocks.", tr: "Yüksek basınç yeraltı kayalarında beklenmedik tepkimeler meydana getirebilir." }
@@ -563,7 +601,7 @@
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Pilotun hızlı müdahalesi güvenli bir acil iniş ile sonuçlandı." },
         { clauseA: "has_v3", clauseB: ["has_v3_main"], trPattern: "Yeni politikaların uygulanması suç oranlarında dramatik bir düşüşle sonuçlanmıştır." },
         { clauseA: "future_date", clauseB: ["will_have_v3"], trPattern: "Sürekli yatırım gelecek yıla kadar toplam dijital dönüşümle sonuçlanmış olacaktır." },
-        { clauseA: "noun_phrase", clauseB: ["can_may_v1"], trPattern: "Tehlikeli maddelerin dikkatsizce taşınması endüstriyel kazalarla sonuçlanabilir." }
+        { clauseA: "noun_phrase", clauseB: ["can_may_v1"], trPattern: "Tehlikeli maddelerin dikkatsizce taşınması felaket niteliğinde endüstriyel kazalarla sonuçlanabilir." }
       ],
       ruleText: "RESULT IN: NEDEN + result in + ETKİ (İle sonuçlanmak).",
       tenseExamples: [
@@ -904,7 +942,7 @@
     as_a_result_that: {
       validPairs: [
         { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Proje iyi fonlanıyor; sonuç olarak ilerleme sorunsuz." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Şehri kar yağışı vurdu, bunun neticesinde uçuşlar yere indirildi." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Şehri yoğun kar yağışı vurdu, bunun neticesinde uçuşlar yere indirildi." },
         { clauseA: "has_v3", clauseB: ["has_v3_main"], trPattern: "Yeni yönetim devreye girdi; sonuç olarak gelirler yükselmiştir." },
         { clauseA: "v1_present", clauseB: ["will_v1"], trPattern: "Otomasyon genişleyecek, bunun neticesinde verimlilik artacaktır." },
         { clauseA: "v1_present", clauseB: ["can_may_v1"], trPattern: "Politikalar değişebilir, bunun neticesinde kurallar esnetilebilir." }
@@ -971,10 +1009,10 @@
     owing_to_the_fact_that: {
       validPairs: [
         { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Her gün pratik yapması gerçeğinden dolayı başarılı olur." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Fırtınanın vurması gerçeğinden dolayı uçuş ertelendi." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Fırtınanın vurması gerçeğinden dolayı uçuş iptal edildi." },
         { clauseA: "has_v3", clauseB: ["has_v3_main"], trPattern: "Herkesin desteklemiş olması gerçeğinden dolayı reform başarılı olmuştur." },
         { clauseA: "v1_present", clauseB: ["will_v1"], trPattern: "Tedariklerin biteceği gerçeğinden dolayı üretim duracaktır." },
-        { clauseA: "v1_present", clauseB: ["can_may_v1"], trPattern: "Fonların kesilebileceği gerçeğinden dolayı proje başarısız olabilir." }
+        { clauseA: "v1_present", clauseB: ["can_may_v1"], trPattern: "Fonların kesilebileceği gerçeğinden dolayı plan başarısız olabilir." }
       ],
       ruleText: "OWING TO THE FACT THAT: -dığı gerçeğinden dolayı (+ Cümle).",
       tenseExamples: [
@@ -1040,12 +1078,21 @@
     // Geçiş İfadeleri Kuralları
     however_nevertheless: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Çok çalıştı; yine de sınavda zorlandı." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Çok çalıştı; yine de sınavı geçemedi." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["v1_main", "will_v1"],
+          trPatternMap: {
+            v1_main: "Strateji risklidir; ancak büyük finansal getiriler sunar.",
+            will_v1: "Ekonomi yavaşlıyor; ancak yatırımlar artacaktır."
+          },
+          trPattern: "Strateji risklidir; ancak büyük finansal getiriler sunar."
+        },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Hava fırtınalıydı; yine de uçak dün zamanında havalandı." }
       ],
       ruleText: "HOWEVER / NEVERTHELESS / NONETHELESS: Zıtlık Geçiş İfadesi.",
       tenseExamples: [
         { tense: "Simple Present", en: "The strategy is risky; however, it offers substantial financial rewards.", tr: "Strateji risklidir; ancak büyük finansal getiriler sunar." },
+        { tense: "Present + Future", en: "The economy is slowing down; however, investments will increase.", tr: "Ekonomi yavaşlıyor; ancak yatırımlar artacaktır." },
         { tense: "Simple Past", en: "The weather was stormy; nevertheless, the flight took off on schedule yesterday.", tr: "Hava fırtınalıydı; yine de uçak dün zamanında havalandı." },
         { tense: "Present Perfect", en: "Prices have increased sharply; nonetheless, consumer demand has remained strong.", tr: "Fiyatlar keskin bir şekilde artmıştır; yine de tüketici talebi güçlü kalmıştır." },
         { tense: "Future Simple", en: "Competition will be tough; however, our team will secure the contract.", tr: "Rekabet zorlu olacaktır; ancak ekibimiz sözleşmeyi alacaktır." },
@@ -1068,7 +1115,7 @@
     },
     on_the_contrary: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Başarısız değil; tam tersine çok yetenekli." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "O tembel değildir; tam tersine günde on sekiz saat çalışır." }
       ],
       ruleText: "ON THE CONTRARY: Tam tersine / Aksine.",
       tenseExamples: [
@@ -1094,12 +1141,21 @@
     },
     in_addition_moreover: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Zekidir; üstelik çok disiplinlidir." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Raporu bitirdi; ayrıca sunumu da hazırladı." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["v1_main", "will_v1"],
+          trPatternMap: {
+            v1_main: "Dizüstü bilgisayar hafiftir; üstelik pili yirmi saat dayanır.",
+            will_v1: "Satışlar istikrarlı bir şekilde artıyor; üstelik kârlar gelecek yıl ikiye katlanacaktır."
+          },
+          trPattern: "Dizüstü bilgisayar hafiftir; üstelik pili yirmi saat dayanır."
+        },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Yazılı sınavı geçti; ayrıca dün mülakatta da harika bir performans sergiledi." }
       ],
       ruleText: "IN ADDITION / MOREOVER / FURTHERMORE: Ekleme İfadesi.",
       tenseExamples: [
         { tense: "Simple Present", en: "The laptop is lightweight; moreover, its battery lasts twenty hours.", tr: "Dizüstü bilgisayar hafiftir; üstelik pili yirmi saat dayanır." },
+        { tense: "Present + Future", en: "Sales are increasing steadily; moreover, profits will double next year.", tr: "Satışlar istikrarlı bir şekilde artıyor; üstelik kârlar gelecek yıl ikiye katlanacaktır." },
         { tense: "Simple Past", en: "She passed the written exam; furthermore, she aced the interview yesterday.", tr: "Yazılı sınavı geçti; ayrıca dün mülakatta da harika bir performans sergiledi." },
         { tense: "Present Perfect", en: "The country has invested in education; in addition, it has modernized healthcare.", tr: "Ülke eğitime yatırım yapmıştır; ayrıca sağlık hizmetlerini modernleştirmiştir." },
         { tense: "Future Simple", en: "The metro line will cut commute time; moreover, it will reduce traffic pollution.", tr: "Metro hattı ulaşım süresini kısaltacak; üstelik trafik kirliliğini azaltacaktır." },
@@ -1121,7 +1177,7 @@
     },
     likewise_similarly: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Fransa tedbir aldı; benzer şekilde Almanya da adımı attı." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Fransa yeşil politikalar benimsedi; benzer şekilde Almanya da temiz enerji teşvikleri başlattı." }
       ],
       ruleText: "LIKEWISE / SIMILARLY: Benzer şekilde.",
       tenseExamples: [
@@ -1147,7 +1203,7 @@
     },
     in_other_words_that_is: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Sınavı geçti; diğer bir deyişle mezun oldu." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Şirket sıfır karla çalışıyor; diğer bir deyişle her ay başabaş noktasına ulaşıyor." }
       ],
       ruleText: "IN OTHER WORDS / THAT IS: Diğer bir deyişle.",
       tenseExamples: [
@@ -1173,7 +1229,16 @@
     },
     if_type0_1: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Eğer çok çalışırsa sınavı geçecek." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["will_v1", "v1_main", "can_may_v1"],
+          trPatternMap: {
+            will_v1: "Sıkı çalışırsa sınavı kolayca geçecektir.",
+            v1_main: "Buzu ısıtırsan sıvı suya dönüşür.",
+            can_may_v1: "Yağmur devam ederse açık hava maçını erteleyebiliriz."
+          },
+          trPattern: "Sıkı çalışırsa sınavı kolayca geçecektir."
+        }
       ],
       ruleText: "IF Type 0 & 1 (Gerçek / Olası Koşul): Yan cümle Simple Present (V1), Ana cümle Will + V1, Present Simple veya Modal (Can/May) olur.",
       tenseExamples: [
@@ -1199,7 +1264,7 @@
     },
     if_type3: {
       validPairs: [
-        { clauseA: "had_v3", clauseB: ["would_have_v3"], trPattern: "Eğer (geçmişte) çok çalışmış olsaydı, sınavı geçmiş olacaktı." }
+        { clauseA: "had_v3", clauseB: ["would_have_v3"], trPattern: "Dersine iyice çalışmış olsaydı geçen hafta sınavı geçmiş olacaktı." }
       ],
       ruleText: "IF Type 3 (Geçmiş Zamanda Kaçırılmış Koşul / Pişmanlık): Yan cümle HAD + V3 (Past Perfect), Ana cümle WOULD / COULD + HAVE V3 gerektirir!",
       tenseExamples: [
@@ -1226,13 +1291,32 @@
     },
     although: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1", "can_may_v1"], trPattern: "Çok çalışmasına rağmen sınavda zorlanıyor." },
-        { clauseA: "v2_past", clauseB: ["v2_main", "would_v1"], trPattern: "Çok çalışmasına rağmen sınavı geçemedi." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["v1_main", "will_v1", "can_may_v1"],
+          trPatternMap: {
+            v1_main: "Elektrikli arabalar sessiz olmasına rağmen sık şarj molaları gerektirir.",
+            will_v1: "Her gün sıkı çalışmasına rağmen bitirmek için daha fazla zamana ihtiyaç duyacak.",
+            can_may_v1: "Karmaşık görünebilecek olsa da sistemde kolayca uzmanlaşılabilir."
+          },
+          trPattern: "Elektrikli arabalar sessiz olmasına rağmen sık şarj molaları gerektirir."
+        },
+        {
+          clauseA: "v2_past",
+          clauseB: ["v2_main", "would_v1"],
+          trPatternMap: {
+            v2_main: "Dersine iyice çalışmış olmasına rağmen dün sınavı zor buldu.",
+            would_v1: "Takım aylarca antrenman yapmasına rağmen, strateji değişmeden yine de kaybederdi."
+          },
+          trPattern: "Dersine iyice çalışmış olmasına rağmen dün sınavı zor buldu."
+        }
       ],
       ruleText: "ALTHOUGH (Zıtlık Bağlacı): Yan cümle ile ana cümle tense uyumu içerisinde olmalıdır (Past ➔ Past, Present ➔ Present).",
       tenseExamples: [
         { tense: "Simple Present", en: "Although electric cars are quiet, they require frequent charging stops.", tr: "Elektrikli arabalar sessiz olmasına rağmen sık şarj molaları gerektirir." },
+        { tense: "Present + Future", en: "Although she works hard every day, she will need more time to finish.", tr: "Her gün sıkı çalışmasına rağmen bitirmek için daha fazla zamana ihtiyaç duyacak." },
         { tense: "Simple Past", en: "Even though he studied thoroughly, he found the exam difficult yesterday.", tr: "Dersine iyice çalışmış olmasına rağmen dün sınavı zor buldu." },
+        { tense: "Past + Would", en: "Although the team practiced for months, they would still lose without a change in strategy.", tr: "Takım aylarca antrenman yapmasına rağmen, strateji değişmeden yine de kaybederdi." },
         { tense: "Present Perfect", en: "Although pollution levels have dropped, marine life is still under threat.", tr: "Kirlilik seviyeleri düşmüş olmasına rağmen deniz yaşamı hala tehdit altındadır." },
         { tense: "Future Simple", en: "Even though costs will rise next year, we will maintain product quality.", tr: "Gelecek yıl maliyetler artacak olsa bile ürün kalitesini koruyacağız." },
         { tense: "Modal / Passive", en: "Though it may sound complex, the system can be mastered easily.", tr: "Karmaşık görünebilecek olsa da sistemde kolayca uzmanlaşılabilir." }
@@ -1257,10 +1341,25 @@
     // Eksik Geçiş İfadeleri (transitions kategorisi)
     therefore_thus: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Çok çalışıyor; bu yüzden başarılı olacak." },
+        {
+          clauseA: "v1_present",
+          clauseB: ["v1_main", "will_v1"],
+          trPatternMap: {
+            will_v1: "Çok çalışıyor; bu yüzden başarılı olacak.",
+            v1_main: "Çok çalışıyor; bu yüzden başarılı olur."
+          },
+          trPattern: "Çok çalışıyor; bu yüzden başarılı olacak."
+        },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Çok çalıştı; dolayısıyla sınavı kazandı." }
       ],
-      ruleText: "THEREFORE / THUS / HENCE (Geçiş İfadesi): NEDEN Cümlesi; bu yüzden, ETKİ Cümlesi."
+      ruleText: "THEREFORE / THUS / HENCE (Geçiş İfadesi): NEDEN Cümlesi; bu yüzden, ETKİ Cümlesi.",
+      tenseExamples: [
+        { tense: "Future Simple", en: "She studies hard; therefore, she will be successful.", tr: "Çok çalışıyor; bu yüzden başarılı olacak." },
+        { tense: "Simple Present", en: "She studies hard; therefore, she succeeds.", tr: "Çok çalışıyor; bu yüzden başarılı olur." },
+        { tense: "Simple Past", en: "She studied hard; thus, she passed the exam.", tr: "Çok çalıştı; dolayısıyla sınavı kazandı." },
+        { tense: "Present Perfect", en: "Prices have risen sharply; therefore, consumers have cut their spending.", tr: "Fiyatlar keskin biçimde artmıştır; bu yüzden tüketiciler harcamalarını kısmıştır." },
+        { tense: "Modal / Passive", en: "The evidence is overwhelming; therefore, the verdict must be guilty.", tr: "Kanıtlar ezicidir; bu yüzden karar suçlu olmalıdır." }
+      ]
     },
     as_a_result_transition: {
       validPairs: [
@@ -1271,8 +1370,16 @@
     },
     accordingly_transition: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Bu doğrultuda gerekli adımlar atılacak." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Bu doğrultuda gerekli adımlar atıldı." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["v1_main", "will_v1"],
+          trPatternMap: {
+            v1_main: "Bütçe sınırları nettir; buna bağlı olarak fonları dikkatle tahsis ederiz.",
+            will_v1: "Gelecek çeyrekte maliyetler artacaktır; buna bağlı olarak fiyatlandırma planlarını ayarlayacağız."
+          },
+          trPattern: "Bütçe sınırları nettir; buna bağlı olarak fonları dikkatle tahsis ederiz."
+        },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Düzenlemeler dün değişti; buna bağlı olarak yönetim kurulu şirket politikalarını güncelledi." }
       ],
       ruleText: "ACCORDINGLY (Geçiş İfadesi): Buna bağlı olarak / Bu doğrultuda.",
       tenseExamples: [
@@ -1348,10 +1455,34 @@
     // ⏱️ Ek Zaman Bağlaçları
     whenever: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["will_v1", "v1_main", "can_may_v1"], trPattern: "Ne zaman çok çalışsa sınavı geçer / geçecek." },
-        { clauseA: "v2_past", clauseB: ["v2_main", "was_were_ving_main"], trPattern: "Ne zaman çalışsa sınavı geçerdi." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["will_v1", "v1_main", "can_may_v1"],
+          trPatternMap: {
+            v1_main: "O ne zaman çok çalışsa sınavı geçer.",
+            will_v1: "O ne zaman çok çalışsa sınavı geçecek.",
+            can_may_v1: "O ne zaman çok çalışsa sınavı geçebilir."
+          },
+          trPattern: "O ne zaman çok çalışsa sınavı geçer."
+        },
+        {
+          clauseA: "v2_past",
+          clauseB: ["v2_main", "was_were_ving_main"],
+          trPatternMap: {
+            v2_main: "O ne zaman çok çalıştıysa sınavı geçti.",
+            was_were_ving_main: "O ne zaman çok çalıştıysa herkes sohbet ediyordu."
+          },
+          trPattern: "O ne zaman çok çalıştıysa sınavı geçti."
+        }
       ],
-      ruleText: "WHENEVER / EVERY TIME: WHEN ile aynı zaman uyumu kuralına tabidir. Yan cümleye 'will' gelemez! V1 → V1/Will; V2 → V2."
+      ruleText: "WHENEVER / EVERY TIME: WHEN ile aynı zaman uyumu kuralına tabidir. Yan cümleye 'will' gelemez! V1 → V1/Will; V2 → V2.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "Whenever she studies hard, she passes the exam.", tr: "O ne zaman çok çalışsa sınavı geçer." },
+        { tense: "Future Simple", en: "Whenever she studies hard, she will pass the exam.", tr: "O ne zaman çok çalışsa sınavı geçecek." },
+        { tense: "Modal", en: "Whenever she studies hard, she can pass the exam.", tr: "O ne zaman çok çalışsa sınavı geçebilir." },
+        { tense: "Simple Past", en: "Whenever she studied hard, she passed the exam.", tr: "O ne zaman çok çalıştıysa sınavı geçti." },
+        { tense: "Past Continuous", en: "Whenever she studied hard, everyone else was chatting.", tr: "O ne zaman çok çalıştıysa herkes sohbet ediyordu." }
+      ]
     },
     the_moment: {
       validPairs: [
@@ -1362,13 +1493,13 @@
     },
     as_if_as_though: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Sanki sınavı geçmiş gibi davranıyor." },
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Kuantum mekaniği hakkında sanki önde gelen bir fizikçiymiş gibi konuşur." },
         { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Sanki sınavı geçmiş gibi davrandı." }
       ],
       ruleText: "AS IF / AS THOUGH (Sanki): Gerçek dışı durum için zaman bir derece geçmişe kayar. Present durumda → Past Simple; Past durumda → Past Perfect.",
       tenseExamples: [
         { tense: "Simple Present", en: "He talks about quantum mechanics as if he were a leading physicist.", tr: "Kuantum mekaniği hakkında sanki önde gelen bir fizikçiymiş gibi konuşur." },
-        { tense: "Simple Past", en: "She looked at me yesterday as though she had seen a ghost.", tr: "Dün bana sanki bir hayalet görmüş gibi baktı." },
+        { tense: "Simple Past", en: "She behaved as if she had passed the exam.", tr: "Sanki sınavı geçmiş gibi davrandı." },
         { tense: "Present Perfect", en: "The market has reacted as if a major financial crisis hit today.", tr: "Piyasa bugün sanki büyük bir finansal kriz vurmuş gibi tepki vermiştir." },
         { tense: "Future Simple", en: "They will act as though nothing happened when the manager arrives.", tr: "Müdür geldiğinde sanki hiçbir şey olmamış gibi davranacaklar." },
         { tense: "Modal / Passive", en: "The patient should be treated as if the infection were highly contagious.", tr: "Hastaya enfeksiyon sanki son derece bulaşıcıymış gibi muamele edilmelidir." }
@@ -1389,13 +1520,13 @@
     },
     would_rather: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Sınavı geçmesini tercih ederdim." },
-        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Sınavı geçmiş olmasını tercih ederdim." }
+        { clauseA: "v1_present", clauseB: ["v2_main"], trPattern: "Fırtına sırasında evde kalmanı tercih ederdim." },
+        { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "Dün o kararı vermeden önce onu aramış olmasını tercih ederdi." }
       ],
       ruleText: "WOULD RATHER / WOULD SOONER + Özne: Şu an/Gelecek için → Past Simple; Geçmiş için → Past Perfect. Zaman bir derece geçmişe kayar!",
       tenseExamples: [
-        { tense: "Simple Present", en: "I would rather you stayed at home during the storm.", tr: "Fırtına sırasında evde kalmanı tercih ederdim/isterim." },
-        { tense: "Simple Past", en: "She would rather he had called her before making that decision yesterday.", tr: "Dün o kararı almadan önce onu aramış olmasını tercih ederdi." },
+        { tense: "Simple Present", en: "I would rather you stayed at home during the storm.", tr: "Fırtına sırasında evde kalmanı tercih ederdim." },
+        { tense: "Simple Past", en: "She would rather he had called her before she made that decision yesterday.", tr: "Dün o kararı vermeden önce onu aramış olmasını tercih ederdi." },
         { tense: "Present Perfect", en: "They would rather we had finalized the report by now.", tr: "Raporu şu ana kadar netleştirmiş olmamızı tercih ederlerdi." },
         { tense: "Future Simple", en: "We would rather the team traveled by train tomorrow.", tr: "Ekibin yarın trenle seyahat etmesini tercih ederiz." },
         { tense: "Modal / Passive", en: "The board would rather the contract were reviewed by legal experts.", tr: "Yönetim kurulu sözleşmenin hukuk uzmanlarınca incelenmesini tercih eder." }
@@ -1419,9 +1550,24 @@
     },
     or_coord: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "Ders çalışır veya projeyi tamamlar." }
+        {
+          clauseA: "v1_present",
+          clauseB: ["v1_main", "will_v1"],
+          trPatternMap: {
+            v1_main: "Ders çalışır veya projeyi tamamlar.",
+            will_v1: "Ders çalışacak veya projeyi tamamlayacak."
+          },
+          trPattern: "Ders çalışır veya projeyi tamamlar."
+        }
       ],
-      ruleText: "OR (Seçenek Eş Bağlacı): Alternatif sunar."
+      ruleText: "OR (Seçenek Eş Bağlacı): Alternatif sunar.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "She studies hard or completes the project.", tr: "Ders çalışır veya projeyi tamamlar." },
+        { tense: "Future Simple", en: "She will study hard or will complete the project.", tr: "Ders çalışacak veya projeyi tamamlayacak." },
+        { tense: "Simple Past", en: "Yesterday, she studied hard or completed the project early.", tr: "Dün ya ders çalıştı ya da projeyi erken tamamladı." },
+        { tense: "Modal", en: "She can study hard or she may complete the project instead.", tr: "Ya ders çalışabilir ya da bunun yerine projeyi tamamlayabilir." },
+        { tense: "Present Perfect", en: "She has studied hard or has completed the project by now.", tr: "Şimdiye kadar ya ders çalışmıştır ya da projeyi tamamlamıştır." }
+      ]
     },
     nor_coord: {
       validPairs: [
@@ -1435,7 +1581,14 @@
         { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Sınavı geçer çünkü çok çalışır." },
         { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sınavı geçti çünkü çok çalıştı." }
       ],
-      ruleText: "FOR (Neden Eş Bağlacı): Cümle ortasında 'çünkü' anlamında kullanılır."
+      ruleText: "FOR (Neden Eş Bağlacı): Cümle ortasında 'çünkü' anlamında kullanılır.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "She passes the exam, for she studies hard.", tr: "Sınavı geçer çünkü çok çalışır." },
+        { tense: "Simple Past", en: "She passed the exam, for she studied hard.", tr: "Sınavı geçti çünkü çok çalıştı." },
+        { tense: "Present Perfect", en: "The team has succeeded, for it has worked diligently.", tr: "Ekip başardı çünkü özenle çalışmıştır." },
+        { tense: "Future Simple", en: "She will pass the exam, for she studies hard every day.", tr: "Sınavı geçecek çünkü her gün çok çalışır." },
+        { tense: "Modal / Passive", en: "The plan must be sound, for experts have reviewed it thoroughly.", tr: "Plan sağlam olmalı çünkü uzmanlar onu kapsamlıca incelemiştir." }
+      ]
     },
     so_coord: {
       validPairs: [
@@ -1448,8 +1601,8 @@
     // ═══ 2. EK SUBORDINATING ═══
     while_whereas: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "O çalışırken kardeş oynuyor." },
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "O çalıştı oysa kardeş oynadı." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Altın geleneksel bir güvenli limanken, kripto varlıklar vahşice dalgalanır." },
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Dün Tom kapalı alanda çalışmayı tercih ederken Jack açık hava sporlarını seçti." }
       ],
       ruleText: "WHILE / WHEREAS: Doğrudan zıtlık ve karşılaştırma bildirir.",
       tenseExamples: [
@@ -1470,14 +1623,32 @@
     // ═══ 3. PREPOSITIONAL PHRASES ═══
     despite_in_spite_of: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Zorluklara rağmen başardı." },
-        { clauseA: "v_ing_obj", clauseB: ["v2_main", "v1_main"], trPattern: "Çok çalışmasına rağmen sınavı geçemedi." }
+        {
+          clauseA: "noun_phrase",
+          clauseB: ["v2_main", "v1_main"],
+          trPatternMap: {
+            v2_main: "Zorluklara rağmen başardı.",
+            v1_main: "Zorluklara rağmen başarır."
+          },
+          trPattern: "Zorluklara rağmen başardı."
+        },
+        {
+          clauseA: "v_ing_obj",
+          clauseB: ["v2_main", "v1_main"],
+          trPatternMap: {
+            v2_main: "Çok çalışmasına rağmen sınavı geçemedi.",
+            v1_main: "Çok çalışmasına rağmen sınavı geçemiyor."
+          },
+          trPattern: "Çok çalışmasına rağmen sınavı geçemedi."
+        }
       ],
       ruleText: "DESPITE / IN SPITE OF: İsim veya V-ing alarak zıtlık bildirir.",
       tenseExamples: [
-        { tense: "Simple Present", en: "Despite the high price, smartphones sell rapidly worldwide.", tr: "Yüksek fiyatına rağmen akıllı telefonlar dünya çapında hızla satılıyor." },
-        { tense: "Simple Past", en: "In spite of heavy rain, the outdoor match proceeded as planned yesterday.", tr: "Şiddetli yağmura rağmen dün açık hava maçı planlandığı gibi devam etti." },
-        { tense: "Present Perfect", en: "Despite recent economic turbulence, the company has expanded its portfolio.", tr: "Son ekonomik çalkantılara rağmen şirket portföyünü genişletti." },
+        { tense: "Simple Past", en: "Despite the difficulties, he succeeded.", tr: "Zorluklara rağmen başardı." },
+        { tense: "Simple Present", en: "Despite the difficulties, he succeeds.", tr: "Zorluklara rağmen başarır." },
+        { tense: "Simple Past", en: "Despite studying hard, she couldn't pass the exam.", tr: "Çok çalışmasına rağmen sınavı geçemedi." },
+        { tense: "Simple Present", en: "Despite studying hard, she can't pass the exam.", tr: "Çok çalışmasına rağmen sınavı geçemiyor." },
+        { tense: "Present Perfect", en: "Despite recent economic turbulence, the company has expanded its portfolio.", tr: "Son ekonomik çalkantılara rağmen şirket portföyünü genişletmiştir." },
         { tense: "Future Simple", en: "In spite of upcoming market challenges, our brand will thrive.", tr: "Yaklaşan piyasa zorluklarına rağmen markamız gelişecektir." },
         { tense: "Modal / Passive", en: "Despite potential obstacles, we should persist in our diplomatic efforts.", tr: "Potansiyel engellere rağmen diplomatik çabalarımızda ısrarcı olmalıyız." }
       ]
@@ -1497,10 +1668,20 @@
     },
     in_addition_to_prep: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Buna ek olarak yeni adımlar atıldı." }
+        {
+          clauseA: "noun_phrase",
+          clauseB: ["v2_main", "v1_main"],
+          trPatternMap: {
+            v2_main: "Buna ek olarak yeni adımlar atıldı.",
+            v1_main: "Buna ek olarak yeni adımlar atılıyor."
+          },
+          trPattern: "Buna ek olarak yeni adımlar atıldı."
+        }
       ],
       ruleText: "IN ADDITION TO / ALONG WITH: İsim öbeği alarak ekleme yapar.",
       tenseExamples: [
+        { tense: "Simple Past", en: "In addition to the proposal, new steps were taken.", tr: "Buna ek olarak yeni adımlar atıldı." },
+        { tense: "Simple Present", en: "In addition to the proposal, new steps are being taken.", tr: "Buna ek olarak yeni adımlar atılıyor." },
         { tense: "Simple Present", en: "In addition to Spanish, she speaks French and Italian.", tr: "İspanyolcaya ek olarak Fransızca ve İtalyanca konuşuyor." },
         { tense: "Simple Past", en: "Along with the main proposal, the team submitted budget charts yesterday.", tr: "Ana teklifle birlikte ekip dün bütçe grafiklerini de sundu." },
         { tense: "Present Perfect", en: "In addition to expanding locally, the startup has secured global clients.", tr: "Yerelde büyümeye ek olarak girişim küresel müşteriler de edinmiştir." },
@@ -1523,7 +1704,10 @@
     },
     in_terms_of_in_light_of: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Açısından değerlendirildi." }
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPatternMap: {
+            v1_main: "Politika maliyet düşürme açısından etkilidir.",
+            v2_main: "Son delillerin ışığında yargıç dün davayı düşürdü."
+          }, trPattern: "Politika maliyet düşürme açısından etkilidir." }
       ],
       ruleText: "IN TERMS OF / IN LIGHT OF: İsim alarak bakış açısı bildirir.",
       tenseExamples: [
@@ -1549,7 +1733,10 @@
     },
     except_for_apart_from: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPattern: "Bu durum haricinde sorun yok." }
+        { clauseA: "noun_phrase", clauseB: ["v2_main", "v1_main"], trPatternMap: {
+            v1_main: "İngilizce haricinde akıcı şekilde Fransızca ve Almanca konuşuyor.",
+            v2_main: "Küçük bir hata dışında yazılım dün kusursuz çalıştı."
+          }, trPattern: "İngilizce haricinde akıcı şekilde Fransızca ve Almanca konuşuyor." }
       ],
       ruleText: "EXCEPT FOR / APART FROM / BARRING: İstisna bildirir.",
       tenseExamples: [
@@ -1591,9 +1778,16 @@
 
     first_firstly: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "İlk olarak bu adım atılır." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "İlk olarak proje planı hazırlanır." }
       ],
-      ruleText: "FIRST / FIRSTLY: Sıralama geçişidir."
+      ruleText: "FIRST / FIRSTLY: Sıralama geçişidir.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "First, the project plan is prepared.", tr: "İlk olarak proje planı hazırlanır." },
+        { tense: "Simple Past", en: "Firstly, the committee reviewed all applications yesterday.", tr: "İlk olarak komite dün tüm başvuruları inceledi." },
+        { tense: "Present Perfect", en: "First of all, the team has gathered the necessary data.", tr: "Öncelikle ekip gerekli verileri toplamıştır." },
+        { tense: "Future Simple", en: "Firstly, the engineers will inspect the bridge next week.", tr: "İlk olarak mühendisler gelecek hafta köprüyü inceleyecektir." },
+        { tense: "Modal / Passive", en: "First of all, the risks must be assessed carefully.", tr: "Öncelikle riskler dikkatle değerlendirilmelidir." }
+      ]
     },
     meanwhile: {
       validPairs: [
@@ -1603,9 +1797,16 @@
     },
     subsequently: {
       validPairs: [
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Sonrasında adım atıldı." }
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Şirket yeniden yapılanmayı tamamladı; sonrasında karlılığı arttı." }
       ],
-      ruleText: "SUBSEQUENTLY: Zaman geçişidir."
+      ruleText: "SUBSEQUENTLY: Zaman geçişidir.",
+      tenseExamples: [
+        { tense: "Simple Past", en: "The company completed its restructuring; subsequently, profits increased.", tr: "Şirket yeniden yapılanmayı tamamladı; sonrasında karlılığı arttı." },
+        { tense: "Simple Past", en: "The team fixed the server error yesterday; subsequently, traffic returned to normal.", tr: "Ekip dün sunucu hatasını düzeltti; sonrasında trafik normale döndü." },
+        { tense: "Present Perfect", en: "The government has approved the budget; subsequently, new projects have begun.", tr: "Hükümet bütçeyi onaylamıştır; sonrasında yeni projeler başlamıştır." },
+        { tense: "Future Simple", en: "The lab will finish testing next month; subsequently, the drug will enter production.", tr: "Laboratuvar testleri gelecek ay bitirecek; sonrasında ilaç üretime girecektir." },
+        { tense: "Past Perfect", en: "The city had built the new subway line; subsequently, congestion dropped sharply.", tr: "Şehir yeni metro hattını inşa etmişti; sonrasında trafik sıkışıklığı keskin şekilde azaldı." }
+      ]
     },
     eventually: {
       validPairs: [
@@ -1615,9 +1816,16 @@
     },
     in_summary: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Özetle başarılı bir süreçtir." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Veriler tutarlıdır; özetle proje başarılıdır." }
       ],
-      ruleText: "IN SUMMARY: Özet geçişidir."
+      ruleText: "IN SUMMARY: Özet geçişidir.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "The data is consistent; in summary, the project is successful.", tr: "Veriler tutarlıdır; özetle proje başarılıdır." },
+        { tense: "Simple Past", en: "Sales rose and costs fell last year; in short, the strategy worked.", tr: "Geçen yıl satışlar arttı ve maliyetler düştü; kısacası strateji işe yaradı." },
+        { tense: "Present Perfect", en: "The team has met every deadline; in brief, the plan has succeeded.", tr: "Ekip her son teslim tarihini karşılamıştır; kısacası plan başarılı olmuştur." },
+        { tense: "Future Simple", en: "Demand will keep rising next year; in summary, expansion will pay off.", tr: "Talep gelecek yıl artmaya devam edecek; özetle büyüme karşılığını verecektir." },
+        { tense: "Modal / Passive", en: "All risks have been addressed; in short, the plan should be approved.", tr: "Tüm riskler ele alınmıştır; kısacası plan onaylanmalıdır." }
+      ]
     },
 
     // ═══ 5. CORRELATIVE CONJUNCTIONS ═══
@@ -1635,9 +1843,16 @@
     },
     neither_nor: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "Ne çalışır ne de dinlenir." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "O ne çalışır ne de dinlenir; sürekli telaşlıdır." }
       ],
-      ruleText: "NEITHER ... NOR ...: İkili olumsuzluk."
+      ruleText: "NEITHER ... NOR ...: İkili olumsuzluk. İki paralel unsur (aynı özneye ait iki yüklem ya da iki isim) olumsuz bağlanır.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "He neither works efficiently nor rests properly; he is constantly stressed.", tr: "O ne çalışır ne de dinlenir; sürekli telaşlıdır." },
+        { tense: "Simple Past", en: "The company neither raised prices nor cut costs last quarter.", tr: "Şirket geçen çeyrekte ne fiyatları artırdı ne de maliyetleri kıstı." },
+        { tense: "Present Perfect", en: "The council has neither approved the plan nor rejected it so far.", tr: "Meclis şimdiye kadar planı ne onaylamış ne de reddetmiştir." },
+        { tense: "Future Simple", en: "The manager will neither delay the launch nor rush it carelessly.", tr: "Yönetici lansmanı ne erteleyecek ne de dikkatsizce hızlandıracaktır." },
+        { tense: "Modal / Passive", en: "Such data should neither be ignored nor be accepted without verification.", tr: "Bu tür veriler ne göz ardı edilmeli ne de doğrulanmadan kabul edilmelidir." }
+      ]
     },
     not_only_but_also: {
       validPairs: [
@@ -1647,9 +1862,16 @@
     },
     whether_or: {
       validPairs: [
-        { clauseA: "v1_present", clauseB: ["v1_main", "will_v1"], trPattern: "İster çalışsın ister çalışmasın başaracak." }
+        { clauseA: "v1_present", clauseB: ["v1_main"], trPattern: "İster çok çalışsın ister kestirme yollara başvursun, her zaman sınavı geçer." }
       ],
-      ruleText: "WHETHER ... OR ...: Seçenek/Koşul ikilisi."
+      ruleText: "WHETHER ... OR ...: İki paralel alternatif aynı yapı ve zamanla bağlanır (whether X or Y), ardından bu ikisinden bağımsız gerçekleşen bir sonuç gelir.",
+      tenseExamples: [
+        { tense: "Simple Present", en: "Whether she studies hard or takes shortcuts, she always passes the exam.", tr: "İster çok çalışsın ister kestirme yollara başvursun, her zaman sınavı geçer." },
+        { tense: "Simple Past", en: "Whether the team trained indoors or practiced outside, they won every match last season.", tr: "İster takım kapalı alanda antrenman yapsın ister dışarıda çalışsın, geçen sezon her maçı kazandı." },
+        { tense: "Present Perfect", en: "Whether investors have chosen bonds or stocks, they have all seen steady returns this year.", tr: "İster yatırımcılar tahvil ister hisse senedi seçmiş olsun, bu yıl hepsi istikrarlı getiri elde etmiştir." },
+        { tense: "Future Simple", en: "Whether the company launches the product early or delays it, sales will rise next year.", tr: "İster şirket ürünü erken piyasaya sürsün ister ertelesin, satışlar gelecek yıl artacaktır." },
+        { tense: "Modal / Passive", en: "Whether the report is approved or rejected, the findings must be published.", tr: "İster rapor onaylansın ister reddedilsin, bulgular yayımlanmalıdır." }
+      ]
     },
     just_as_so: {
       validPairs: [
@@ -1661,9 +1883,16 @@
     // ═══ 6. EK INVERTED ═══
     only_when_after_inv: {
       validPairs: [
-        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ancak çalıştıktan sonra başardı." }
+        { clauseA: "v2_past", clauseB: ["v2_main"], trPattern: "Ancak çok çalıştıktan sonra sınavı geçti." }
       ],
-      ruleText: "ONLY WHEN / AFTER: Devrik ana cümle yapısı gerektirir."
+      ruleText: "ONLY WHEN / AFTER: Devrik ana cümle yapısı gerektirir.",
+      tenseExamples: [
+        { tense: "Simple Past", en: "Only after she studied hard did she pass the exam.", tr: "Ancak çok çalıştıktan sonra sınavı geçti." },
+        { tense: "Simple Past", en: "Only when the alarm sounded did the workers leave the building yesterday.", tr: "Ancak alarm çaldıktan sonra işçiler dün binayı terk etti." },
+        { tense: "Present Perfect", en: "Only when the results have been verified can the report be published.", tr: "Ancak sonuçlar doğrulandıktan sonra rapor yayımlanabilir." },
+        { tense: "Future Simple", en: "Only after the inspection is complete will the factory reopen.", tr: "Ancak denetim tamamlandıktan sonra fabrika yeniden açılacaktır." },
+        { tense: "Past Perfect", en: "Only after the storm had passed did the rescue team arrive.", tr: "Ancak fırtına geçtikten sonra kurtarma ekibi ulaştı." }
+      ]
     },
 
     // ═══ 7. PARTICIPLE ═══
@@ -1690,9 +1919,16 @@
     },
     yesterday_ago_last: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["v2_main"], trPattern: "Dün / İki gün önce sınavı geçti." }
+        { clauseA: "noun_phrase", clauseB: ["v2_main"], trPattern: "Yönetim kurulu dün yeni bütçeyi onayladı." }
       ],
-      ruleText: "YESTERDAY / ... AGO / LAST ...: Tamamlanmış kesin geçmiş zaman zarfları KESİNLİKLE Simple Past (V2) zorunlu kılar. Has/Have V3 alamaz!"
+      ruleText: "YESTERDAY / ... AGO / LAST ...: Tamamlanmış kesin geçmiş zaman zarfları KESİNLİKLE Simple Past (V2) zorunlu kılar. Has/Have V3 alamaz!",
+      tenseExamples: [
+        { tense: "Simple Past", en: "Yesterday, the board approved the new budget.", tr: "Yönetim kurulu dün yeni bütçeyi onayladı." },
+        { tense: "Simple Past", en: "Two days ago, the factory shipped its first batch of products.", tr: "İki gün önce fabrika ilk ürün partisini gönderdi." },
+        { tense: "Simple Past", en: "Last month, the city opened a new public library downtown.", tr: "Geçen ay şehir merkezde yeni bir halk kütüphanesi açtı." },
+        { tense: "Simple Past", en: "Three years ago, the startup launched its very first product.", tr: "Üç yıl önce girişim ilk ürününü piyasaya sürdü." },
+        { tense: "Simple Past", en: "Last week, engineers completed the bridge inspection.", tr: "Geçen hafta mühendisler köprü denetimini tamamladı." }
+      ]
     },
     how_long_ago: {
       validPairs: [
@@ -1703,9 +1939,16 @@
     by_future_for: {
       validPairs: [
         { clauseA: "noun_phrase", clauseB: ["will_have_v3"], trPattern: "Gelecek yıla kadar proje tamamlanmış olacak." },
-        { clauseA: "future_date", clauseB: ["will_have_v3"], trPattern: "2050 yılına kadar proje tamamlanmış olacak." }
+        { clauseA: "future_date", clauseB: ["will_have_v3"], trPattern: "2050 yılına kadar araştırmacılar aşıyı geliştirmiş olacak." }
       ],
-      ruleText: "BY (Gelecek Tarih) + FOR (Süreç): Gelecekte tamamlanacak süreçleri ifade ettiği için Future Perfect (Will Have V3 / Will Have Been V-ing) zorunlu kılar."
+      ruleText: "BY (Gelecek Tarih) + FOR (Süreç): Gelecekte tamamlanacak süreçleri ifade ettiği için Future Perfect (Will Have V3 / Will Have Been V-ing) zorunlu kılar.",
+      tenseExamples: [
+        { tense: "Future Perfect", en: "By next year, the project will have been completed.", tr: "Gelecek yıla kadar proje tamamlanmış olacak." },
+        { tense: "Future Perfect", en: "By 2050, researchers will have developed the vaccine.", tr: "2050 yılına kadar araştırmacılar aşıyı geliştirmiş olacak." },
+        { tense: "Future Perfect", en: "By the end of this month, the company will have hired fifty new engineers.", tr: "Bu ayın sonuna kadar şirket elli yeni mühendis işe almış olacak." },
+        { tense: "Future Perfect Continuous", en: "By December, the team will have been working on this project for a decade.", tr: "Aralık ayına kadar ekip bu proje üzerinde on yıldır çalışıyor olacak." },
+        { tense: "Future Perfect", en: "By the time the ceremony starts, the guests will have arrived.", tr: "Tören başladığında konuklar çoktan gelmiş olacak." }
+      ]
     },
     always_continuous: {
       validPairs: [
@@ -1715,9 +1958,16 @@
     },
     modal_past_adverb: {
       validPairs: [
-        { clauseA: "noun_phrase", clauseB: ["would_have_v3"], trPattern: "Dün sınavı geçmiş olacaktı." }
+        { clauseA: "noun_phrase", clauseB: ["would_have_v3"], trPattern: "Dün trafik yüzünden geç kalmış olmalı." }
       ],
-      ruleText: "YESTERDAY / AGO / LAST + MODALS: Geçmiş zaman zarfı içeren ihtimal veya eleştiri cümleleri KESİNLİKLE Modal + HAVE V3 (Must have / Should have / Could have V3) gerektirir."
+      ruleText: "YESTERDAY / AGO / LAST + MODALS: Geçmiş zaman zarfı içeren ihtimal veya eleştiri cümleleri KESİNLİKLE Modal + HAVE V3 (Must have / Should have / Could have V3) gerektirir.",
+      tenseExamples: [
+        { tense: "Modal Perfect", en: "He must have been late yesterday because of traffic.", tr: "Dün trafik yüzünden geç kalmış olmalı." },
+        { tense: "Modal Perfect", en: "She should have submitted the report two days ago.", tr: "İki gün önce raporu teslim etmiş olmalıydı." },
+        { tense: "Modal Perfect", en: "They could have finished the project last week if they had more time.", tr: "Daha fazla zamanları olsaydı geçen hafta projeyi bitirmiş olabilirlerdi." },
+        { tense: "Modal Perfect", en: "The manager must have approved the plan last month.", tr: "Yönetici geçen ay planı onaylamış olmalı." },
+        { tense: "Modal Perfect", en: "You shouldn't have deleted those files yesterday.", tr: "Dün o dosyaları silmemeliydin." }
+      ]
     }
   };
 
