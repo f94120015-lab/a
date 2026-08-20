@@ -39587,26 +39587,6 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u9l1ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "___ the team protect the database?",
-            "options": [
-              "Is",
-              "Can",
-              "Are",
-              "Shoulds"
-            ],
-            "correctIndex": 1,
-            "translation": "Ekip veritabanını koruyabilir mi?"
-          },
-          {
             "id": "u9l1ex1_q7",
             "type": "multiple-choice",
             "grammarTags": [
@@ -39681,23 +39661,6 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": true
           },
           {
-            "id": "u9l1ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Is the financial stability essential?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Finansal istikrar temel midir?"
-          },
-          {
             "id": "u9l1ex1_q11",
             "type": "fill-blank-dropdown",
             "grammarTags": [
@@ -39716,67 +39679,6 @@ Object.assign(unitSentencesMap, {
             ],
             "correctIndex": 3,
             "translation": "Hukuk sistemi demokratik midir?"
-          },
-          {
-            "id": "u9l1ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Are the historical analysis findings conclusive?",
-            "isEngToTr": true,
-            "options": [
-              "Analiz bulguları kesin midir?",
-              "Tarihsel analiz bulguları kesin miydi?",
-              "Tarihsel analiz bulguları kesin midir?",
-              "Tarihsel analiz bulguları kesindir."
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u9l1ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "Was the geological survey ready?",
-            "translation": "Was the geological survey ready?",
-            "words": [
-              "Coğrafi",
-              "araştırma",
-              "hazır",
-              "mıydı?",
-              "nerededir?",
-              "başarılı"
-            ],
-            "correctOrder": [
-              "Coğrafi",
-              "araştırma",
-              "hazır",
-              "mıydı?"
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u9l1ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Can the local merchants improve the financial stability?\"</span>",
-            "correctSentence": "Yerel tüccarlar finansal istikrarı geliştirebilir mi?",
-            "translation": "Yerel tüccarlar finansal istikrarı geliştirebilir mi?"
           },
           {
             "id": "u9l1ex1_q15",
@@ -40015,114 +39917,6 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": false
           },
           {
-            "id": "u9l1ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Was the supreme court decision a vital precedent?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Yüksek mahkeme kararı hayati bir emsal miydi?"
-          },
-          {
-            "id": "u9l1ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "___ the media reports be on the television screen?",
-            "options": [
-              "Will",
-              "Is",
-              "Are",
-              "Shoulds"
-            ],
-            "correctIndex": 0,
-            "translation": "Medya raporları televizyon ekranında olacak mı?"
-          },
-          {
-            "id": "u9l1ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Are the geographical boundaries of the territory stable?",
-            "isEngToTr": true,
-            "options": [
-              "Sınırlar kararlı mıdır?",
-              "Bölgenin coğrafi sınırları kararlı mıydı?",
-              "Bölgenin coğrafi sınırları kararlıdır.",
-              "Bölgenin coğrafi sınırları kararlı mıdır?"
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u9l1ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "Was the unequal distribution of income an economic problem?",
-            "translation": "Adaletsiz gelir dağılımı ekonomik bir sorun muydu?",
-            "words": [
-              "Was",
-              "the",
-              "unequal",
-              "distribution",
-              "of",
-              "income",
-              "an",
-              "economic",
-              "problem?",
-              "Is",
-              "markets"
-            ],
-            "correctOrder": [
-              "Was",
-              "the",
-              "unequal",
-              "distribution",
-              "of",
-              "income",
-              "an",
-              "economic",
-              "problem?"
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u9l1ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Should the research team investigate the kinship patterns of the tribe?\"</span>",
-            "correctSentence": "Araştırma ekibi kabilenin akrabalık kalıplarını incelemeli midir?",
-            "translation": "Araştırma ekibi kabilenin akrabalık kalıplarını incelemeli midir?"
-          },
-          {
             "id": "u9l1ex2_q15",
             "type": "translation-text",
             "grammarTags": [
@@ -40263,26 +40057,6 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u9l2ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "___ the local market demand economic stability?",
-            "options": [
-              "Do",
-              "Did",
-              "Is",
-              "Does"
-            ],
-            "correctIndex": 3,
-            "translation": "Yerel piyasa ekonomik istikrar talep eder mi?"
-          },
-          {
             "id": "u9l2ex1_q7",
             "type": "multiple-choice",
             "grammarTags": [
@@ -40355,23 +40129,6 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": true
           },
           {
-            "id": "u9l2ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Did the museum administration preserve the paintings?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Müze yönetimi tabloları korudu mu?"
-          },
-          {
             "id": "u9l2ex1_q11",
             "type": "fill-blank-dropdown",
             "grammarTags": [
@@ -40390,71 +40147,6 @@ Object.assign(unitSentencesMap, {
             ],
             "correctIndex": 2,
             "translation": "Koordinatörler veritabanını güncelledi mi?"
-          },
-          {
-            "id": "u9l2ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Does the psychologist evaluate the behavioral patterns?",
-            "isEngToTr": true,
-            "options": [
-              "Psikolog davranışsal kalıpları değerlendirir mi?",
-              "Psikolog davranışları değerlendiriyor mu?",
-              "Psikolog davranışsal kalıpları değerlendirdi mi?",
-              "Psikolog davranışsal kalıpları değerlendirecek mi?"
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u9l2ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "Did the research team investigate the cognitive development?",
-            "translation": "Did the research team investigate the cognitive development?",
-            "words": [
-              "Araştırma",
-              "ekibi",
-              "bilişsel",
-              "gelişimi",
-              "inceledi",
-              "mi?",
-              "öğrendi",
-              "mi?"
-            ],
-            "correctOrder": [
-              "Araştırma",
-              "ekibi",
-              "bilişsel",
-              "gelişimi",
-              "inceledi",
-              "mi?"
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u9l2ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Do the local merchants require financial aid?\"</span>",
-            "correctSentence": "Yerel tüccarlar finansal yardıma ihtiyaç duyar mı?",
-            "translation": "Yerel tüccarlar finansal yardıma ihtiyaç duyar mı?"
           },
           {
             "id": "u9l2ex1_q15",
@@ -40699,120 +40391,6 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": false
           },
           {
-            "id": "u9l2ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Did the community leaders support the social changes in the village?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Topluluk liderleri köydeki toplumsal değişimleri destekledi mi?"
-          },
-          {
-            "id": "u9l2ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "___ the new policies resolve the economic disputes between the nations?",
-            "options": [
-              "Do",
-              "Did",
-              "Does",
-              "Is"
-            ],
-            "correctIndex": 1,
-            "translation": "Yeni politikalar ülkeler arasındaki ekonomik anlaşmazlıkları çözdü mü?"
-          },
-          {
-            "id": "u9l2ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Does the government evaluate the financial stability of the state bank?",
-            "isEngToTr": true,
-            "options": [
-              "Hükümet bankanın istikrarını değerlendirdi mi?",
-              "Hükümet bankanın istikrarını değerlendirecek mi?",
-              "Hükümet devlet bankasının finansal istikrarını değerlendirir mi?",
-              "Hükümet bankanın istikrarını değerlendiriyor mu?"
-            ],
-            "correctIndex": 2
-          },
-          {
-            "id": "u9l2ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "Did the supreme court decisions protect the constitutional rights of the citizens?",
-            "translation": "Yüksek mahkeme kararları vatandaşların anayasal haklarını korudu mu?",
-            "words": [
-              "Did",
-              "the",
-              "supreme",
-              "court",
-              "decisions",
-              "protect",
-              "the",
-              "constitutional",
-              "rights",
-              "of",
-              "the",
-              "citizens?",
-              "Do",
-              "laws"
-            ],
-            "correctOrder": [
-              "Did",
-              "the",
-              "supreme",
-              "court",
-              "decisions",
-              "protect",
-              "the",
-              "constitutional",
-              "rights",
-              "of",
-              "the",
-              "citizens?"
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u9l2ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Did the translation team complete the translation of the primary sources?\"</span>",
-            "correctSentence": "Çeviri ekibi birincil kaynakların çevirisini tamamladı mi?",
-            "translation": "Çeviri ekibi birincil kaynakların çevirisini tamamladı mi?"
-          },
-          {
             "id": "u9l2ex2_q15",
             "type": "translation-text",
             "grammarTags": [
@@ -41045,104 +40623,6 @@ Object.assign(unitSentencesMap, {
               "patterns?"
             ],
             "isEngToTr": true
-          },
-          {
-            "id": "u9l3ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Why is the financial stability essential?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Finansal istikrar neden esastır?"
-          },
-          {
-            "id": "u9l3ex1_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Where ___ the legal system democratic?",
-            "options": [
-              "is",
-              "are",
-              "was",
-              "can"
-            ],
-            "correctIndex": 0,
-            "translation": "Hukuk sistemi nerede demokratiktir?"
-          },
-          {
-            "id": "u9l3ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "When were the historical analysis findings conclusive?",
-            "isEngToTr": true,
-            "options": [
-              "Bulgular ne zaman kesindi?",
-              "Tarihsel analiz bulguları ne zaman kesindi?",
-              "Tarihsel analiz bulguları kesindir.",
-              "Tarihsel analiz bulguları ne zaman kesin olacak?"
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u9l3ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "Where was the geological survey ready?",
-            "translation": "Where was the geological survey ready?",
-            "words": [
-              "Coğrafi",
-              "araştırma",
-              "nerede",
-              "hazırdır?",
-              "nasıl",
-              "başarılı"
-            ],
-            "correctOrder": [
-              "Coğrafi",
-              "araştırma",
-              "nerede",
-              "hazırdır?"
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u9l3ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"How can the local merchants improve the financial stability?\"</span>",
-            "correctSentence": "Yerel tüccarlar finansal istikrarı nasıl geliştirebilir?",
-            "translation": "Yerel tüccarlar finansal istikrarı nasıl geliştirebilir?"
           },
           {
             "id": "u9l3ex1_q15",
@@ -41383,116 +40863,6 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": false
           },
           {
-            "id": "u9l3ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Why was the supreme court decision a vital precedent?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Yüksek mahkeme kararı neden hayati bir emsaldi?"
-          },
-          {
-            "id": "u9l3ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Where ___ the media reports be on the television screen?",
-            "options": [
-              "is",
-              "are",
-              "shoulds",
-              "will"
-            ],
-            "correctIndex": 3,
-            "translation": "Medya raporları televizyon ekranında nerede olacak?"
-          },
-          {
-            "id": "u9l3ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Why are the geographical boundaries of the territory stable?",
-            "isEngToTr": true,
-            "options": [
-              "Bölgenin coğrafi sınırları neden kararlıdır?",
-              "Sınırlar neden kararlıdır?",
-              "Bölgenin coğrafi sınırları neden kararlıydı?",
-              "Bölgenin coğrafi sınırları kararlıdır."
-            ],
-            "correctIndex": 0
-          },
-          {
-            "id": "u9l3ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "How was the unequal distribution of income an economic problem?",
-            "translation": "Adaletsiz gelir dağılımı nasıl ekonomik bir sorundu?",
-            "words": [
-              "How",
-              "was",
-              "the",
-              "unequal",
-              "distribution",
-              "of",
-              "income",
-              "an",
-              "economic",
-              "problem?",
-              "Is",
-              "markets"
-            ],
-            "correctOrder": [
-              "How",
-              "was",
-              "the",
-              "unequal",
-              "distribution",
-              "of",
-              "income",
-              "an",
-              "economic",
-              "problem?"
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u9l3ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"When should the research team investigate the kinship patterns of the tribe?\"</span>",
-            "correctSentence": "Araştırma ekibi kabilenin akrabalık kalıplarını ne zaman incelemeli?",
-            "translation": "Araştırma ekibi kabilenin akrabalık kalıplarını ne zaman incelemeli?"
-          },
-          {
             "id": "u9l3ex2_q15",
             "type": "translation-text",
             "grammarTags": [
@@ -41635,26 +41005,6 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u9l4ex1_q6",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "Why ___ the local market demand economic stability?",
-            "options": [
-              "does",
-              "do",
-              "did",
-              "is"
-            ],
-            "correctIndex": 0,
-            "translation": "Yerel piyasa neden ekonomik istikrar talep eder?"
-          },
-          {
             "id": "u9l4ex1_q7",
             "type": "multiple-choice",
             "grammarTags": [
@@ -41729,23 +41079,6 @@ Object.assign(unitSentencesMap, {
             "isEngToTr": true
           },
           {
-            "id": "u9l4ex1_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"How did the museum administration preserve the paintings?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Müze yönetimi tabloları nasıl korudu?"
-          },
-          {
             "id": "u9l4ex1_q11",
             "type": "fill-blank-dropdown",
             "grammarTags": [
@@ -41764,71 +41097,6 @@ Object.assign(unitSentencesMap, {
             ],
             "correctIndex": 1,
             "translation": "Koordinatörler veritabanını ne zaman güncelledi?"
-          },
-          {
-            "id": "u9l4ex1_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Why does the psychologist evaluate the behavioral patterns?",
-            "isEngToTr": true,
-            "options": [
-              "Psikolog davranışları neden değerlendiriyor?",
-              "Psikolog davranışsal kalıpları nasıl değerlendirdi?",
-              "Psikolog davranışsal kalıpları neden değerlendirecek?",
-              "Psikolog davranışsal kalıpları neden değerlendirir?"
-            ],
-            "correctIndex": 3
-          },
-          {
-            "id": "u9l4ex1_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
-            "enSentence": "How did the research team investigate the cognitive development?",
-            "translation": "How did the research team investigate the cognitive development?",
-            "words": [
-              "Araştırma",
-              "ekibi",
-              "bilişsel",
-              "gelişimi",
-              "nasıl",
-              "inceledi?",
-              "neden",
-              "öğrendi?"
-            ],
-            "correctOrder": [
-              "Araştırma",
-              "ekibi",
-              "bilişsel",
-              "gelişimi",
-              "nasıl",
-              "inceledi?"
-            ],
-            "isEngToTr": false
-          },
-          {
-            "id": "u9l4ex1_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Why do the local merchants require financial aid?\"</span>",
-            "correctSentence": "Yerel tüccarlar neden finansal yardıma ihtiyaç duyar?",
-            "translation": "Yerel tüccarlar neden finansal yardıma ihtiyaç duyar?"
           },
           {
             "id": "u9l4ex1_q15",
@@ -42075,122 +41343,6 @@ Object.assign(unitSentencesMap, {
               "inceledi?"
             ],
             "isEngToTr": false
-          },
-          {
-            "id": "u9l4ex2_q10",
-            "type": "true-false",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle dilbilgisel açıdan doğru mudur?<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"Why did the community leaders support the social changes in the village?\"</span>",
-            "options": [
-              "True",
-              "False"
-            ],
-            "correctIndex": 0,
-            "translation": "Topluluk liderleri köydeki toplumsal değişimleri neden destekledi?"
-          },
-          {
-            "id": "u9l4ex2_q11",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-            "sentence": "How ___ the new policies resolve the economic disputes between the nations?",
-            "options": [
-              "do",
-              "does",
-              "did",
-              "is"
-            ],
-            "correctIndex": 2,
-            "translation": "Yeni politikalar ülkeler arasındaki ekonomik anlaşmazlıkları nasıl çözdü?"
-          },
-          {
-            "id": "u9l4ex2_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümlenin en uygun Türkçe karşılığını seçin:",
-            "enSentence": "Why does the government evaluate the financial stability of the state bank?",
-            "isEngToTr": true,
-            "options": [
-              "Hükümet bankanın istikrarını neden değerlendirdi?",
-              "Hükümet devlet bankasının finansal istikrarını neden değerlendirir?",
-              "Hükümet bankanın istikrarını neden değerlendirecek?",
-              "Hükümet bankanın istikrarını neden değerlendiriyor?"
-            ],
-            "correctIndex": 1
-          },
-          {
-            "id": "u9l4ex2_q13",
-            "type": "word-bank",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Cümle bloklarını doğru sıraya koyarak İngilizce cümleyi oluşturun:",
-            "enSentence": "How did the supreme court decisions protect the constitutional rights of the citizens?",
-            "translation": "Yüksek mahkeme kararları vatandaşların anayasal haklarını nasıl korudu?",
-            "words": [
-              "How",
-              "did",
-              "the",
-              "supreme",
-              "court",
-              "decisions",
-              "protect",
-              "the",
-              "constitutional",
-              "rights",
-              "of",
-              "the",
-              "citizens?",
-              "Do",
-              "laws"
-            ],
-            "correctOrder": [
-              "How",
-              "did",
-              "the",
-              "supreme",
-              "court",
-              "decisions",
-              "protect",
-              "the",
-              "constitutional",
-              "rights",
-              "of",
-              "the",
-              "citizens?"
-            ],
-            "isEngToTr": true
-          },
-          {
-            "id": "u9l4ex2_q14",
-            "type": "translation-text",
-            "grammarTags": [
-              "Soru Yapıları",
-              "Question Inversion",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ],
-            "prompt": "Aşağıdaki ifadeyi Türkçeye çevirin:<br><br><span style=\"color: #4a90e2; font-weight: bold;\">\"When did the translation team complete the translation of the primary sources?\"</span>",
-            "correctSentence": "Çeviri ekibi birincil kaynakların çevirisini ne zaman tamamladı?",
-            "translation": "Çeviri ekibi birincil kaynakların çevirisini ne zaman tamamladı?"
           },
           {
             "id": "u9l4ex2_q15",
