@@ -5962,8 +5962,18 @@ async function enterApp() {
   if (lastScreen === 'auth-screen') {
     lastScreen = 'home-screen';
   }
-  const lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
-  
+  // Kaldırılan sekmeler yeni evlerine yönlendirilir; aksi halde o sekmede
+  // kalmış bir kullanıcı var olmayan bir içeriğe dönüp boş ekran görür.
+  const RETIRED_TABS = {
+    'ezber-robotu': 'transitions-matrix',
+    'cause-effect': 'structure-robot'
+  };
+  let lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
+  if (RETIRED_TABS[lastTab]) {
+    lastTab = RETIRED_TABS[lastTab];
+    localStorage.setItem('amok_last_tab', lastTab);
+  }
+
   if (lastScreen === 'quiz-screen') {
     const quizType = localStorage.getItem('amok_active_quiz_type');
     if (quizType) {

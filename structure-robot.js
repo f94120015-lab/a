@@ -2632,6 +2632,31 @@
       });
     }
 
+    // Neden-Etki Kılavuzu: Montaj Hattı ile aynı 34 bağlacın referans kartları.
+    // Ayrı bir sekme yerine burada bir mod olarak duruyor.
+    const btnGuide = document.getElementById("srobot-mode-guide");
+    const guidePanel = document.getElementById("ce-guide-panel");
+    const labContainer = document.querySelector(".srobot-lab-container");
+
+    function setGuideMode(on) {
+      if (guidePanel) guidePanel.style.display = on ? "block" : "none";
+      if (labContainer) labContainer.style.display = on ? "none" : "grid";
+      if (on && challengeCard) challengeCard.style.display = "none";
+      if (on && btnCheckChallenge) btnCheckChallenge.style.display = "none";
+      [btnSandbox, btnChallenge, btnGuide].forEach(b => {
+        if (!b) return;
+        const active = on ? b === btnGuide : b !== btnGuide && b.classList.contains("active");
+        b.style.background = active ? "var(--accent-primary)" : "transparent";
+        b.style.color = active ? "#fff" : "var(--text-secondary)";
+        b.classList.toggle("active", active);
+      });
+      if (on && typeof window.initCauseEffectTab === "function") window.initCauseEffectTab();
+    }
+
+    if (btnGuide) btnGuide.addEventListener("click", () => setGuideMode(true));
+    if (btnSandbox) btnSandbox.addEventListener("click", () => setGuideMode(false));
+    if (btnChallenge) btnChallenge.addEventListener("click", () => setGuideMode(false));
+
     if (btnReset) {
       btnReset.addEventListener("click", resetSlots);
     }

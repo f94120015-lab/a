@@ -143,16 +143,6 @@
             <span class="nav-tab-label">Dersler</span>
           </button>
           <div class="sidebar-section-label">Öğrenme & Matrisler</div>
-          <button class="nav-tab" data-tab="cause-effect">
-            <span class="nav-tab-icon nav-anim-cause-effect">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <path d="M6 16H22M22 16L16 10M22 16L16 22" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="6" cy="16" r="3" fill="#ec4899"/>
-                <path d="M26 10V22" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Neden-Etki</span>
-          </button>
           <button class="nav-tab" data-tab="time-matrix">
             <span class="nav-tab-icon nav-anim-time-matrix">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -410,53 +400,6 @@
           </div>
 
         <!-- NEDEN-ETKİ MATRİSİ (CETVEL I & II) SEKMESİ -->
-        <div id="tab-content-cause-effect" class="tab-content">
-          <div class="cause-effect-container page-container">
-            
-            <!-- Header Banner -->
-            <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(236, 72, 153, 0.12)); border: 1.5px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
-              <div class="flex-between-wrap-10">
-                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
-                  ⚡ Neden-Etki Matrisi <span style="font-size: 0.7rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">CETVEL I & II</span>
-                </h2>
-
-                <!-- Arama Kutusu -->
-                <div class="ce-search-wrap search-box">
-                  <input type="text" id="ce-search-input" placeholder="Yapı / kelime ara (due to, lead to)..." class="input-field-xs">
-                </div>
-              </div>
-
-              <p class="desc-text">
-                Akademik İngilizcede neden-sonuç ilişkisi kuran fiil, edat ve bağlaç kalıplarının canlı matrisi.
-              </p>
-
-              <!-- Yön Değiştirme Butonları (Cetvel I vs Cetvel II) -->
-              <div class="ce-direction-toggle-wrap flex-gap-8">
-                <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
-                  🔴 CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
-                </button>
-                <button type="button" class="ce-dir-btn segmented-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause">
-                  🔵 CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
-                </button>
-              </div>
-            </div>
-
-            <!-- Filtreleme Çipleri -->
-            <div class="ce-filter-chips flex-gap-8-wrap-mb20">
-              <button type="button" class="ce-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="verbs">⚡ Fiil Yapıları (causes, leads to...)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="prepositions">🔗 Edat Öbekleri (due to, owing to...)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="conjunctions">🌉 Cümle Bağlaçları (therefore, because...)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="patterns">✂️ Kısaltma & Kalıplar (thereby V-ing, in that...)</button>
-            </div>
-
-            <!-- Matris Kartları Grid Alanı -->
-            <div class="ce-matrix-grid grid-300" id="ce-matrix-grid">
-              <!-- JS ile dinamik olarak doldurulacak -->
-            </div>
-
-          </div>
-        </div>
 
         <!-- ETKİLEŞİMLİ ZAMAN & TENSE UYUMU MATRİSİ SEKMESİ -->
         <div id="tab-content-time-matrix" class="tab-content">
@@ -1559,6 +1502,9 @@
             <button id="srobot-mode-challenge" class="srobot-mode-btn" style="padding: 6px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
               🎯 Görev Modu (Puzzle)
             </button>
+            <button id="srobot-mode-guide" class="srobot-mode-btn" style="padding: 6px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
+              ⚡ Neden-Etki Kılavuzu
+            </button>
           </div>
         </div>
 
@@ -1664,6 +1610,55 @@
               ✨ GÖREVİ KONTROL ET & ONAYLA
             </button>
           </div>
+
+        <div id="ce-guide-panel" style="display: none;">
+          <div class="cause-effect-container page-container">
+            
+            <!-- Header Banner -->
+            <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(236, 72, 153, 0.12)); border: 1.5px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+              <div class="flex-between-wrap-10">
+                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
+                  ⚡ Neden-Etki Matrisi <span style="font-size: 0.7rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">CETVEL I & II</span>
+                </h2>
+
+                <!-- Arama Kutusu -->
+                <div class="ce-search-wrap search-box">
+                  <input type="text" id="ce-search-input" placeholder="Yapı / kelime ara (due to, lead to)..." class="input-field-xs">
+                </div>
+              </div>
+
+              <p class="desc-text">
+                Akademik İngilizcede neden-sonuç ilişkisi kuran fiil, edat ve bağlaç kalıplarının canlı matrisi.
+              </p>
+
+              <!-- Yön Değiştirme Butonları (Cetvel I vs Cetvel II) -->
+              <div class="ce-direction-toggle-wrap flex-gap-8">
+                <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                  🔴 CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
+                </button>
+                <button type="button" class="ce-dir-btn segmented-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause">
+                  🔵 CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
+                </button>
+              </div>
+            </div>
+
+            <!-- Filtreleme Çipleri -->
+            <div class="ce-filter-chips flex-gap-8-wrap-mb20">
+              <button type="button" class="ce-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="verbs">⚡ Fiil Yapıları (causes, leads to...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="prepositions">🔗 Edat Öbekleri (due to, owing to...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="conjunctions">🌉 Cümle Bağlaçları (therefore, because...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="patterns">✂️ Kısaltma & Kalıplar (thereby V-ing, in that...)</button>
+            </div>
+
+            <!-- Matris Kartları Grid Alanı -->
+            <div class="ce-matrix-grid grid-300" id="ce-matrix-grid">
+              <!-- JS ile dinamik olarak doldurulacak -->
+            </div>
+
+          </div>
+        </div>
+
 
           <!-- Component Palette (Piece Selection Area) -->
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 20px;">
