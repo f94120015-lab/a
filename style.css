@@ -11865,6 +11865,7 @@ nDown 0.3s ease;
 .ezber-stats-pills {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .ezber-stat-pill {
@@ -11884,6 +11885,16 @@ nDown 0.3s ease;
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+.ezber-play-area {
+  min-height: 320px;
+  display: flex;
+  align-items: stretch;
+}
+
+.ezber-play-area > .ez-card {
+  width: 100%;
 }
 
 .ez-mode-btn {
@@ -11984,6 +11995,25 @@ nDown 0.3s ease;
   box-shadow: var(--shadow-md);
 }
 
+.ez-opt-btn.ez-opt-correct {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.14);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+
+.ez-opt-btn.ez-opt-wrong {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.14);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+  animation: ezShake 0.35s ease;
+}
+
+@keyframes ezShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
 .ez-group-tag {
   background: #8b5cf6;
   color: white;
@@ -12031,6 +12061,19 @@ nDown 0.3s ease;
 .ez-dir-option:hover {
   transform: scale(1.02);
   box-shadow: var(--shadow-md);
+}
+
+.ez-dir-option.ez-opt-correct {
+  border-color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.14);
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+}
+
+.ez-dir-option.ez-opt-wrong {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.14);
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+  animation: ezShake 0.35s ease;
 }
 
 .ez-dir-arrow {

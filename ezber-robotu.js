@@ -199,6 +199,28 @@
       exampleEN: "Many health issues stem from lack of physical activity and poor sleep.",
       exampleTR: "Birçok sağlık sorunu fiziksel aktivite eksikliğinden ve kötü uykudan kaynaklanır."
     },
+    {
+      id: "spark_fuel_drive_verb",
+      label: "SPARK / FUEL / DRIVE / SPUR / IGNITE / FOSTER",
+      tr: "Ateşlemek / Körüklemek / Tetiklemek",
+      group: "G2",
+      category: "cause_effect",
+      direction: "cause_to_effect",
+      rule: "🔴 NEDEN ➔ ETKİ: Özne Neden'dir, Nesne ise Etki'dir. (Örn: Low interest rates fuel investment).",
+      exampleEN: "Rising fuel prices sparked widespread protests across the country.",
+      exampleTR: "Yükselen yakıt fiyatları ülke genelinde yaygın protestoları ateşledi."
+    },
+    {
+      id: "emanate_trace_back_verb",
+      label: "EMANATE FROM / SPRING FROM / GROW OUT OF / TRACE BACK TO / HAS ITS ROOTS IN",
+      tr: "Kaynaklanmak / Kökeni -e dayanmak",
+      group: "G2",
+      category: "cause_effect",
+      direction: "effect_to_cause",
+      rule: "🔵 ETKİ ➔ NEDEN: Özne Etki'dir, Nesne ise Neden'dir. (Örn: The tradition traces back to the 1800s).",
+      exampleEN: "Many modern legal systems trace back to ancient Roman law.",
+      exampleTR: "Birçok modern hukuk sistemi antik Roma hukukuna dayanır."
+    },
 
     // 4. EKLEME VE PARALELLİK (ADDITION)
     {
@@ -434,7 +456,8 @@
     timeLeft: 5,
     timerActive: false,
     boxLevels: {}, // { item_id: 1 | 2 | 3 } (Spaced Repetition)
-    filteredItems: []
+    filteredItems: [],
+    lastItemId: null
   };
 
   // LocalStorage sync for Spaced Repetition boxes
@@ -502,6 +525,10 @@
                 <span class="ezber-stat-icon">🎯</span>
                 <span class="ezber-stat-val" id="ez-accuracy-val">100%</span>
               </div>
+              <div class="ezber-stat-pill" title="Ustalaşılan Yapı Sayısı (Kutu 3)">
+                <span class="ezber-stat-icon">🧠</span>
+                <span class="ezber-stat-val" id="ez-mastery-val">0/${DRILL_ITEMS.length}</span>
+              </div>
             </div>
           </div>
 
@@ -557,6 +584,25 @@
 
   // ─── 5. SORU YÜKLEME VE MOD YÖNETİMİ ────────────────────────────────────
 
+  // Aralıklı Tekrar (Spaced Repetition) ağırlıklı seçim:
+  // Kutu 1 (zayıf/yeni) öğeler Kutu 3 (iyi bilinen) öğelerden 3 kat daha sık gelir.
+  // Bir önceki soruyla aynı öğe art arda tekrar gelmez.
+  function pickWeightedItem(pool) {
+    const candidates = pool.filter(i => i.id !== stateEZ.lastItemId);
+    const list = candidates.length > 0 ? candidates : pool;
+    const weights = list.map(i => {
+      const box = stateEZ.boxLevels[i.id] || 1;
+      return box >= 3 ? 1 : box === 2 ? 2 : 3;
+    });
+    const total = weights.reduce((a, b) => a + b, 0);
+    let r = Math.random() * total;
+    for (let idx = 0; idx < list.length; idx++) {
+      r -= weights[idx];
+      if (r <= 0) return list[idx];
+    }
+    return list[list.length - 1];
+  }
+
   function loadNextQuestion() {
     stateEZ.answered = false;
     stateEZ.selectedOption = null;
@@ -564,9 +610,8 @@
     const playArea = document.getElementById("ezber-play-area");
     if (!playArea) return;
 
-    // Rastgele bir öge seç
-    const randomIndex = Math.floor(Math.random() * DRILL_ITEMS.length);
-    const item = DRILL_ITEMS[randomIndex];
+    const item = pickWeightedItem(DRILL_ITEMS);
+    stateEZ.lastItemId = item.id;
 
     if (stateEZ.mode === "refleks") {
       renderRefleksMode(playArea, item);
@@ -587,14 +632,19 @@
     const streakEl = document.getElementById("ez-streak-val");
     const scoreEl = document.getElementById("ez-score-val");
     const accEl = document.getElementById("ez-accuracy-val");
+    const masteryEl = document.getElementById("ez-mastery-val");
 
     if (streakEl) streakEl.textContent = stateEZ.streak;
     if (scoreEl) scoreEl.textContent = stateEZ.score;
     if (accEl) {
-      const acc = stateEZ.totalQuestions > 0 
-        ? Math.round((stateEZ.correctCount / stateEZ.totalQuestions) * 100) 
+      const acc = stateEZ.totalQuestions > 0
+        ? Math.round((stateEZ.correctCount / stateEZ.totalQuestions) * 100)
         : 100;
       accEl.textContent = `${acc}%`;
+    }
+    if (masteryEl) {
+      const masteredCount = DRILL_ITEMS.filter(i => (stateEZ.boxLevels[i.id] || 1) >= 3).length;
+      masteryEl.textContent = `${masteredCount}/${DRILL_ITEMS.length}`;
     }
   }
 
@@ -639,6 +689,7 @@
       btn.onclick = function () {
         if (stateEZ.answered) return;
         const chosen = btn.dataset.group;
+        markOptionButtons(btns, btn, b => b.dataset.group === item.group);
         handleAnswer(chosen === item.group, item, chosen, container);
       };
     });
@@ -699,6 +750,7 @@
       btn.onclick = function () {
         if (stateEZ.answered) return;
         const isCorr = btn.dataset.correct === "true";
+        markOptionButtons(btns, btn, b => b.dataset.correct === "true");
         handleAnswer(isCorr, item, btn.textContent.trim(), container);
       };
     });
@@ -708,7 +760,8 @@
 
   function renderDirectionMode(container) {
     const dirItems = DRILL_ITEMS.filter(i => i.direction);
-    const randomDirItem = dirItems[Math.floor(Math.random() * dirItems.length)];
+    const randomDirItem = pickWeightedItem(dirItems);
+    stateEZ.lastItemId = randomDirItem.id;
 
     container.innerHTML = `
       <div class="ez-card ez-pop-in">
@@ -742,6 +795,7 @@
         if (stateEZ.answered) return;
         const chosenDir = btn.dataset.dir;
         const isCorr = chosenDir === randomDirItem.direction;
+        markOptionButtons(btns, btn, b => b.dataset.dir === randomDirItem.direction);
         handleAnswer(isCorr, randomDirItem, chosenDir, container);
       };
     });
@@ -751,9 +805,28 @@
 
   function renderTwinsMode(container) {
     const twinItems = DRILL_ITEMS.filter(i => i.twinId);
-    const sampleItem = twinItems[Math.floor(Math.random() * twinItems.length)];
+    const sampleItem = pickWeightedItem(twinItems);
+    stateEZ.lastItemId = sampleItem.id;
     const matchingTwins = DRILL_ITEMS.filter(i => i.twinId === sampleItem.twinId && i.id !== sampleItem.id);
-    const targetTwin = matchingTwins.length > 0 ? matchingTwins[0] : DRILL_ITEMS[0];
+    const targetTwin = matchingTwins.length > 0
+      ? matchingTwins[Math.floor(Math.random() * matchingTwins.length)]
+      : DRILL_ITEMS.find(i => i.id !== sampleItem.id) || DRILL_ITEMS[0];
+
+    // Gerçek, her seferinde değişen yanlış şıklar: farklı bir ikiz grubundan seçilir
+    const distractorPool = DRILL_ITEMS.filter(i => i.twinId && i.twinId !== sampleItem.twinId && i.id !== targetTwin.id);
+    const shuffledDistractors = [...distractorPool].sort(() => Math.random() - 0.5).slice(0, 3);
+
+    const options = [
+      { group: targetTwin.group, label: targetTwin.label, correct: true },
+      ...shuffledDistractors.map(d => ({ group: d.group, label: d.label, correct: false }))
+    ].sort(() => Math.random() - 0.5);
+
+    const optionsHTML = options.map(opt => `
+      <button class="ez-opt-btn" data-correct="${opt.correct}">
+        <span class="ez-group-tag">${opt.group}</span>
+        <span>${opt.label}</span>
+      </button>
+    `).join('');
 
     container.innerHTML = `
       <div class="ez-card ez-pop-in">
@@ -770,22 +843,7 @@
         </div>
 
         <div class="ez-grid-options">
-          <button class="ez-opt-btn" data-correct="true">
-            <span class="ez-group-tag">${targetTwin.group}</span>
-            <span>${targetTwin.label}</span>
-          </button>
-          <button class="ez-opt-btn" data-correct="false">
-            <span class="ez-group-tag">G1</span>
-            <span>BECAUSE / SINCE</span>
-          </button>
-          <button class="ez-opt-btn" data-correct="false">
-            <span class="ez-group-tag">G2</span>
-            <span>IN ADDITION TO</span>
-          </button>
-          <button class="ez-opt-btn" data-correct="false">
-            <span class="ez-group-tag">G4</span>
-            <span>OTHERWISE / OR ELSE</span>
-          </button>
+          ${optionsHTML}
         </div>
 
         <div class="ez-feedback-box" id="ez-feedback-box" style="display: none;"></div>
@@ -797,6 +855,7 @@
       btn.onclick = function () {
         if (stateEZ.answered) return;
         const isCorr = btn.dataset.correct === "true";
+        markOptionButtons(btns, btn, b => b.dataset.correct === "true");
         handleAnswer(isCorr, sampleItem, btn.textContent.trim(), container);
       };
     });
@@ -878,11 +937,29 @@
     }
   }
 
+  // Tıklanan ve doğru olan şıkkı görsel olarak işaretler, tüm şıkları kilitler.
+  function markOptionButtons(btns, clickedBtn, isCorrectFn) {
+    btns.forEach(b => {
+      b.disabled = true;
+      b.style.pointerEvents = "none";
+      if (isCorrectFn(b)) {
+        b.classList.add("ez-opt-correct");
+      } else if (b === clickedBtn) {
+        b.classList.add("ez-opt-wrong");
+      }
+    });
+  }
+
   // ─── 6. CEVAP KONTROLÜ VE CEVAP GÖSTERİMİ ─────────────────────────────────
 
   function handleAnswer(isCorrect, item, chosenVal, container) {
     stateEZ.answered = true;
     stateEZ.totalQuestions++;
+
+    // Aralıklı Tekrar: doğru cevap kutuyu bir yükseltir, yanlış cevap 1. kutuya döndürür.
+    const currentBox = stateEZ.boxLevels[item.id] || 1;
+    stateEZ.boxLevels[item.id] = isCorrect ? Math.min(currentBox + 1, 3) : 1;
+    saveBoxLevels();
 
     const feedbackBox = container.querySelector("#ez-feedback-box");
 
