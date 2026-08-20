@@ -4674,6 +4674,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined') {
       id: 104,
       title: chapter104Data.chapterName,
       description: chapter104Data.chapterDescription,
+      icon: "🧲",
       lessons: chapter104Data.lessons.map(l => l.id),
       pages: "220-239"
     });
@@ -4682,6 +4683,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined') {
       id: 104,
       title: chapter104Data.chapterName,
       description: chapter104Data.chapterDescription,
+      icon: "🧲",
       lessons: chapter104Data.lessons.map(l => l.id),
       pages: "220-239"
     });
@@ -51680,6 +51682,7 @@ if (typeof lessons !== 'undefined') {
       id: 50,
       title: "Paragraf Okuma ve YÖKDİL Soru Tipleri",
       description: "YÖKDİL ve YDS odaklı; referans kelime takibi (zamir soruları), akışı bozan cümle analizi (Roma rakamlı sorular), paragraf sıralama ve bağlaçlı geçiş pratikleri.",
+      icon: "📖",
       lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3"],
       formulas: [
         {

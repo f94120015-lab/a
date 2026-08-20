@@ -54554,6 +54554,9 @@ rawTopics.forEach((topic, uIdx) => {
     originalIndex: topic.originalIndex,
     title: unitTitle,
     description: unitDesc,
+    // Bölüm kartındaki silik filigran ikonu buradan geliyor; kopyalanmadığında
+    // kart filigransız kalıyordu.
+    icon: topic.icon || '',
     lessons: unitLessonIds,
     pages: unitPages,
     edits: topic.edits || []

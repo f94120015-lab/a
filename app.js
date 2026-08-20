@@ -7011,7 +7011,7 @@ function renderLessonTree() {
     const descHTML = noDescUnitIds.includes(unit.id) ? '' : `<p>${descCleaned}</p>`;
     const unitPct = totalInUnit > 0 ? Math.round((completedInUnit / totalInUnit) * 100) : 0;
     banner.innerHTML = `
-      <span class="unit-banner-icon-watermark" aria-hidden="true">${unit.icon || ''}</span>
+      <span class="unit-banner-icon-watermark" aria-hidden="true">${unit.icon || '📘'}</span>
       <div class="unit-banner-info">
         <h2 class="unit-banner-title-row">
           <span>${unitDisplayNames[unit.id]}</span>
