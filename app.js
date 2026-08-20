@@ -9228,6 +9228,18 @@ function renderMultipleChoice(container, question) {
     }
   }
 
+  // Okuma parçası: her soru kendi parçasını taşır (tekrar sistemi soruları
+  // tek tek çektiği için parça alıştırmada tutulamaz). sentence alanı kısa
+  // cümleler için tırnak içine alındığından paragraf kendi bloğunda durur.
+  if (question.passage) {
+    sentenceHtml = `
+      <div style="text-align: left; background: rgba(16, 185, 129, 0.06); padding: 14px 18px; border-radius: 10px; border-left: 4px solid #10b981; margin-bottom: 14px; margin-top: 8px; max-height: 260px; overflow-y: auto;">
+        <span style="font-size: 0.7rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; display: block; margin-bottom: 6px; letter-spacing: 0.5px;">📖 Okuma Parçası</span>
+        <span style="font-size: 0.95rem; color: var(--text-primary); line-height: 1.65;">${makeTextHoverable(question.passage)}</span>
+      </div>
+    ` + sentenceHtml;
+  }
+
   if (sentenceHtml && !sentenceHtml.includes('<div')) {
     const rawContent = (sentenceHtml.startsWith('"') && sentenceHtml.endsWith('"')) ? sentenceHtml.slice(1, -1) : sentenceHtml;
     sentenceHtml = `"${makeTextHoverable(rawContent)}"`;

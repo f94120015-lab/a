@@ -51683,7 +51683,7 @@ if (typeof lessons !== 'undefined') {
       title: "Paragraf Okuma ve YÖKDİL Soru Tipleri",
       description: "YÖKDİL ve YDS odaklı; referans kelime takibi (zamir soruları), akışı bozan cümle analizi (Roma rakamlı sorular), paragraf sıralama ve bağlaçlı geçiş pratikleri.",
       icon: "📖",
-      lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3"],
+      lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3", "c50_p_l4"],
       formulas: [
         {
           formula: "Reference Mapping & Context Clues",
@@ -52599,6 +52599,218 @@ if (typeof lessons !== 'undefined') {
                 "left": "Modern communication variables have replaced traditional letters. In spite of this technological intervention, ancient calligraphy is still studied as an artistic specimen.",
                 "right": "Ancient calligraphy remains a valuable subject of study despite modern tools."
               }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+,
+  {
+    "id": "c50_p_l4",
+    "unitId": 50,
+    "title": "Okuma Parçaları ve Paragraf Soruları",
+    "subtitle": "Akademik Parçalarda Ana Fikir, Detay, Çıkarım ve Kelime Analizi",
+    "konuAnlatimi": {
+      "baslik": "Okuma Parçası Sorularını Çözme Stratejisi",
+      "teorikMantik": "YÖKDİL ve YDS'de sınavın yaklaşık dörtte biri okuma parçalarından gelir. Her parçaya 4-5 soru sorulur ve soru tipleri sabittir: <strong>ana fikir</strong>, <strong>detay</strong>, <strong>çıkarım</strong>, <strong>bağlamdan kelime anlamı</strong> ve <strong>yazarın tutumu</strong>. Parçayı baştan sona ezberlemeye çalışmak yerine, önce soruyu okuyup hangi tipte olduğunu belirlemek ve parçada yalnızca ilgili yeri taramak süre kazandırır.",
+      "formul": "1) Soruyu oku, tipini belirle<br>2) Ana fikir sorusunda parçanın tamamına, detay sorusunda tek bir cümleye bak<br>3) Çıkarım sorularında metinde <em>yazmayan</em> ama metinden zorunlu olarak çıkan seçeneği ara<br>4) Kelime sorusunda kelimeyi kapatıp boşluğa ne gelirdi diye düşün<br>5) Tutum sorusunda yazarın değerlendirme bildiren kelimelerini (productive, concern, unexpectedly) izle",
+      "altinKural": "Bir seçenek doğru bilgi içerse bile parçada söylenmiyorsa yanlıştır. Cevabın dayanağı daima metnin kendisidir; genel kültür değil."
+    },
+    "exercises": [
+      {
+        "id": "u50_l4_ex1",
+        "title": "Alıştırma 1: Tarih ve Fen Bilimleri Parçaları",
+        "description": "İki akademik parça üzerinde ana fikir, detay, çıkarım, kelime ve tutum sorularını çözün.",
+        "questions": [
+          {
+            "id": "u50_l4_p1_q1",
+            "type": "multiple-choice",
+            "passage": "Before the printing press reached Anatolia, scribal workshops copied manuscripts by hand, and each copy carried the small errors of the scribe who produced it. Historians once treated these errors as damage to be corrected. Recent scholarship has reversed that judgement. Because a scribe's mistakes are distinctive, they allow researchers to group surviving copies into families and trace which workshop produced which manuscript. A misspelled place name repeated across twelve copies is no longer a flaw; it is evidence of a shared source. This shift has proved unexpectedly productive, since it lets historians reconstruct trade routes along which manuscripts travelled, even where no commercial records survive. What was once discarded as noise now carries the clearest signal.",
+            "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+            "options": [
+              "Matbaa Anadolu'ya ulaştıktan sonra el yazması üretimi tamamen durmuştur.",
+              "Tarihçiler yazıcı hatalarını düzeltmek için yeni yöntemler geliştirmiştir.",
+              "Yazıcı hataları, el yazmalarının kökenini ve dolaşımını izlemek için değerli bir kanıta dönüşmüştür.",
+              "El yazmalarının çoğu ticari kayıtlar sayesinde tarihlendirilmiştir.",
+              "Yazıcı atölyeleri arasındaki rekabet hata oranını artırmıştır."
+            ],
+            "correctIndex": 2,
+            "explanation": "Parça, bir zamanlar kusur sayılan hataların artık kaynak ve rota tespiti için kanıt olarak kullanıldığını anlatıyor; diğer seçenekler metinde desteklenmiyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p1_q2",
+            "type": "multiple-choice",
+            "passage": "Before the printing press reached Anatolia, scribal workshops copied manuscripts by hand, and each copy carried the small errors of the scribe who produced it. Historians once treated these errors as damage to be corrected. Recent scholarship has reversed that judgement. Because a scribe's mistakes are distinctive, they allow researchers to group surviving copies into families and trace which workshop produced which manuscript. A misspelled place name repeated across twelve copies is no longer a flaw; it is evidence of a shared source. This shift has proved unexpectedly productive, since it lets historians reconstruct trade routes along which manuscripts travelled, even where no commercial records survive. What was once discarded as noise now carries the clearest signal.",
+            "prompt": "Parçaya göre, on iki nüshada tekrar eden yanlış yazılmış bir yer adı neyi gösterir?",
+            "options": [
+              "Nüshaların ortak bir kaynaktan geldiğini",
+              "Yazıcının o bölgeyi hiç görmediğini",
+              "Nüshaların aynı tarihte üretildiğini",
+              "Metnin sonradan sansürlendiğini",
+              "Atölyenin ticari kayıt tutmadığını"
+            ],
+            "correctIndex": 0,
+            "explanation": "Metin bunu 'evidence of a shared source' (ortak bir kaynağın kanıtı) olarak tanımlıyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p1_q3",
+            "type": "multiple-choice",
+            "passage": "Before the printing press reached Anatolia, scribal workshops copied manuscripts by hand, and each copy carried the small errors of the scribe who produced it. Historians once treated these errors as damage to be corrected. Recent scholarship has reversed that judgement. Because a scribe's mistakes are distinctive, they allow researchers to group surviving copies into families and trace which workshop produced which manuscript. A misspelled place name repeated across twelve copies is no longer a flaw; it is evidence of a shared source. This shift has proved unexpectedly productive, since it lets historians reconstruct trade routes along which manuscripts travelled, even where no commercial records survive. What was once discarded as noise now carries the clearest signal.",
+            "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+            "options": [
+              "Yazıcılar hatalarını bilinçli olarak bir imza gibi bırakmıştır.",
+              "El yazması aileleri yalnızca aynı şehirde üretilen nüshalardan oluşur.",
+              "Hataların sayısı arttıkça nüshanın tarihi kesinleşir.",
+              "Ticari kayıtların bulunmadığı durumlarda bile el yazmaları ticaret yolları hakkında bilgi verebilir.",
+              "Matbaa öncesi dönemde yer adları standartlaştırılmıştır."
+            ],
+            "correctIndex": 3,
+            "explanation": "Son cümlelerde, ticari kayıt bulunmayan yerlerde bile rotaların yeniden kurulabildiği belirtiliyor. Yazıcıların hataları bilinçli bıraktığına dair bir ifade yok.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p1_q4",
+            "type": "multiple-choice",
+            "passage": "Before the printing press reached Anatolia, scribal workshops copied manuscripts by hand, and each copy carried the small errors of the scribe who produced it. Historians once treated these errors as damage to be corrected. Recent scholarship has reversed that judgement. Because a scribe's mistakes are distinctive, they allow researchers to group surviving copies into families and trace which workshop produced which manuscript. A misspelled place name repeated across twelve copies is no longer a flaw; it is evidence of a shared source. This shift has proved unexpectedly productive, since it lets historians reconstruct trade routes along which manuscripts travelled, even where no commercial records survive. What was once discarded as noise now carries the clearest signal.",
+            "prompt": "Parçada geçen 'distinctive' kelimesi anlamca aşağıdakilerden hangisine en yakındır?",
+            "options": [
+              "rastlantısal",
+              "ayırt edici",
+              "önemsiz",
+              "tekrarlanan",
+              "okunaksız"
+            ],
+            "correctIndex": 1,
+            "explanation": "Hataların ayırt edici olması, nüshaların gruplanmasını mümkün kılar; bağlam 'ayırt edici' anlamını gerektirir.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p1_q5",
+            "type": "multiple-choice",
+            "passage": "Before the printing press reached Anatolia, scribal workshops copied manuscripts by hand, and each copy carried the small errors of the scribe who produced it. Historians once treated these errors as damage to be corrected. Recent scholarship has reversed that judgement. Because a scribe's mistakes are distinctive, they allow researchers to group surviving copies into families and trace which workshop produced which manuscript. A misspelled place name repeated across twelve copies is no longer a flaw; it is evidence of a shared source. This shift has proved unexpectedly productive, since it lets historians reconstruct trade routes along which manuscripts travelled, even where no commercial records survive. What was once discarded as noise now carries the clearest signal.",
+            "prompt": "Yazarın parçadaki tutumu nasıl tanımlanabilir?",
+            "options": [
+              "El yazması çalışmalarının geleceğinden kaygı duyan",
+              "Eski tarihçileri dikkatsizlikle suçlayan",
+              "İki karşıt görüş arasında yansız kalan",
+              "Bulguların abartıldığını düşünen",
+              "Yöntemdeki değişimi olumlayan ve gerekçelendiren"
+            ],
+            "correctIndex": 4,
+            "explanation": "Yazar 'unexpectedly productive' (beklenmedik ölçüde verimli) diyerek yeni yaklaşımı olumluyor ve nedenini açıklıyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p2_q1",
+            "type": "multiple-choice",
+            "passage": "Coral reefs build their skeletons from calcium carbonate drawn out of seawater. As the ocean absorbs carbon dioxide from the atmosphere, its chemistry shifts and that mineral becomes harder to obtain, so reefs grow more slowly and their existing structures dissolve at the edges. Field studies once assumed every reef would decline at a similar rate. Measurements taken across the Pacific have complicated that expectation: reefs sitting near seagrass meadows fare noticeably better, because the meadows consume carbon dioxide during daylight and locally soften the change. The finding does not overturn the wider concern, since the meadows themselves depend on clear shallow water. It does suggest that protecting the two habitats together is more effective than treating either one alone.",
+            "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+            "options": [
+              "Mercan resiflerinin tamamı aynı hızda yok olmaktadır.",
+              "Deniz çayırlarının yakınındaki resifler okyanus kimyasındaki değişimden daha az etkilenmektedir.",
+              "Deniz çayırları mercan resiflerinin yerini almaktadır.",
+              "Kalsiyum karbonat okyanusta giderek bollaşmaktadır.",
+              "Pasifik'teki resifler diğer okyanuslardakinden daha dayanıklıdır."
+            ],
+            "correctIndex": 1,
+            "explanation": "Parçanın merkezinde, deniz çayırı yakınındaki resiflerin belirgin biçimde daha iyi durumda olduğu bulgusu var.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p2_q2",
+            "type": "multiple-choice",
+            "passage": "Coral reefs build their skeletons from calcium carbonate drawn out of seawater. As the ocean absorbs carbon dioxide from the atmosphere, its chemistry shifts and that mineral becomes harder to obtain, so reefs grow more slowly and their existing structures dissolve at the edges. Field studies once assumed every reef would decline at a similar rate. Measurements taken across the Pacific have complicated that expectation: reefs sitting near seagrass meadows fare noticeably better, because the meadows consume carbon dioxide during daylight and locally soften the change. The finding does not overturn the wider concern, since the meadows themselves depend on clear shallow water. It does suggest that protecting the two habitats together is more effective than treating either one alone.",
+            "prompt": "Parçaya göre deniz çayırları resiflere nasıl yarar sağlar?",
+            "options": [
+              "Resiflere doğrudan kalsiyum karbonat sağlarlar",
+              "Su sıcaklığını gece boyunca düşürürler",
+              "Resifleri güçlü akıntılardan korurlar",
+              "Resif üzerindeki yosunları temizlerler",
+              "Gündüz karbondioksit tüketerek yerel su kimyasını yumuşatırlar"
+            ],
+            "correctIndex": 4,
+            "explanation": "Metin bunu açıkça belirtiyor: çayırlar gündüz karbondioksit tüketip değişimi yerel olarak yumuşatır.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p2_q3",
+            "type": "multiple-choice",
+            "passage": "Coral reefs build their skeletons from calcium carbonate drawn out of seawater. As the ocean absorbs carbon dioxide from the atmosphere, its chemistry shifts and that mineral becomes harder to obtain, so reefs grow more slowly and their existing structures dissolve at the edges. Field studies once assumed every reef would decline at a similar rate. Measurements taken across the Pacific have complicated that expectation: reefs sitting near seagrass meadows fare noticeably better, because the meadows consume carbon dioxide during daylight and locally soften the change. The finding does not overturn the wider concern, since the meadows themselves depend on clear shallow water. It does suggest that protecting the two habitats together is more effective than treating either one alone.",
+            "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+            "options": [
+              "Deniz çayırlarının korunması dolaylı olarak resiflerin korunmasına da hizmet eder.",
+              "Deniz çayırları derin ve bulanık sularda daha hızlı yayılır.",
+              "Okyanus asitlenmesi artık resifler için bir tehdit sayılmamaktadır.",
+              "Resifler kalsiyum karbonatı atmosferden almaktadır.",
+              "Pasifik ölçümleri önceki tüm bulguları geçersiz kılmıştır."
+            ],
+            "correctIndex": 0,
+            "explanation": "Son cümle iki habitatın birlikte korunmasının daha etkili olduğunu söylüyor; ayrıca çayırlar berrak ve sığ suya bağımlı olduğu için asitlenme tehdidi ortadan kalkmıyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p2_q4",
+            "type": "multiple-choice",
+            "passage": "Coral reefs build their skeletons from calcium carbonate drawn out of seawater. As the ocean absorbs carbon dioxide from the atmosphere, its chemistry shifts and that mineral becomes harder to obtain, so reefs grow more slowly and their existing structures dissolve at the edges. Field studies once assumed every reef would decline at a similar rate. Measurements taken across the Pacific have complicated that expectation: reefs sitting near seagrass meadows fare noticeably better, because the meadows consume carbon dioxide during daylight and locally soften the change. The finding does not overturn the wider concern, since the meadows themselves depend on clear shallow water. It does suggest that protecting the two habitats together is more effective than treating either one alone.",
+            "prompt": "Parçada geçen 'complicated' kelimesi bu bağlamda ne anlama gelmektedir?",
+            "options": [
+              "tümüyle doğrulamak",
+              "ölçümü zorlaştırmak",
+              "beklentiyi karmaşıklaştırıp sorgulanır kılmak",
+              "sonucu geciktirmek",
+              "veriyi bozmak"
+            ],
+            "correctIndex": 2,
+            "explanation": "Ölçümler, tüm resiflerin benzer hızda gerileyeceği beklentisini basit olmaktan çıkarıp sorgulanır hale getirmiştir.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p2_q5",
+            "type": "multiple-choice",
+            "passage": "Coral reefs build their skeletons from calcium carbonate drawn out of seawater. As the ocean absorbs carbon dioxide from the atmosphere, its chemistry shifts and that mineral becomes harder to obtain, so reefs grow more slowly and their existing structures dissolve at the edges. Field studies once assumed every reef would decline at a similar rate. Measurements taken across the Pacific have complicated that expectation: reefs sitting near seagrass meadows fare noticeably better, because the meadows consume carbon dioxide during daylight and locally soften the change. The finding does not overturn the wider concern, since the meadows themselves depend on clear shallow water. It does suggest that protecting the two habitats together is more effective than treating either one alone.",
+            "prompt": "Yazar 'The finding does not overturn the wider concern' ifadesiyle ne demek istemektedir?",
+            "options": [
+              "Bulgu önceki araştırmaların yanlış olduğunu kanıtlar",
+              "Endişe yalnızca deniz çayırları için geçerlidir",
+              "Bulgu yeterince ölçüme dayanmamaktadır",
+              "Bulgu umut verse de asitlenmeye dair genel endişeyi ortadan kaldırmaz",
+              "Resiflerin korunması artık gereksizdir"
+            ],
+            "correctIndex": 3,
+            "explanation": "Yazar hemen ardından çayırların da berrak sığ suya bağımlı olduğunu ekleyerek genel endişenin sürdüğünü belirtir.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
             ]
           }
         ]
