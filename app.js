@@ -10349,6 +10349,22 @@ function getOptionMeaning(question, opt) {
 
   // Comprehensive dictionary of conjunctions, linkers, prepositions, phrasal modals & multi-word expressions
   const phrasalMap = {
+    "such": "öyle / o kadar (such ... that)",
+    "for this reason": "bu nedenle / bu yüzden",
+    "at the same time": "aynı zamanda / bir yandan da",
+    "by comparison": "kıyaslandığında / buna kıyasla",
+    "paradoxically": "çelişkili biçimde / ne gariptir ki",
+    "additionally": "ayrıca / ek olarak",
+    "alternatively": "alternatif olarak / ya da",
+    "subsequently": "sonrasında / ardından",
+    "simultaneously": "eşzamanlı olarak / aynı anda",
+    "unfortunately": "ne yazık ki",
+    "fortunately": "neyse ki",
+    "meanwhile": "bu arada / bu esnada",
+    "instead": "onun yerine / bunun yerine",
+    "albeit": "her ne kadar / -e rağmen",
+    "whether": "olup olmadığı / ister",
+    "than": "-den (karşılaştırma)",
     "even though": "-e rağmen",
     "much as": "-e rağmen / her ne kadar",
     "although": "-e rağmen / karşın",
@@ -10496,7 +10512,38 @@ function getOptionMeaning(question, opt) {
   const wordMeaning = typeof getWordMeaning === 'function' ? getWordMeaning(cleanOpt) : '';
   if (wordMeaning) return wordMeaning;
 
+  // Son çare: uygulamanın kendi bağlaç matrislerinden türetilen anlamlar.
+  // phrasalMap elle yazıldığı için "for this reason", "in fact" gibi kalıplar
+  // eksik kalıyordu; matrislerde bunların Türkçe karşılığı zaten mevcut.
+  const fromMatrix = getConnectorMeaning(cleanOpt);
+  if (fromMatrix) return fromMatrix;
+
   return '';
+}
+
+// TRANSITIONS / CAUSE_EFFECT / TIME matrislerindeki term–meaning çiftlerinden
+// tek seferlik bir arama tablosu kurar. Terimler "however / nevertheless" gibi
+// eğik çizgiyle ayrılmış olabildiğinden her parça ayrı anahtar olarak eklenir.
+let _connectorMeaningMap = null;
+function getConnectorMeaning(opt) {
+  if (!opt) return '';
+  if (!_connectorMeaningMap) {
+    _connectorMeaningMap = {};
+    const add = (term, meaning) => {
+      if (!term || !meaning) return;
+      String(term).split('/').forEach(part => {
+        const k = part.replace(/\([^)]*\)/g, '').trim().toLowerCase();
+        if (k && !_connectorMeaningMap[k]) _connectorMeaningMap[k] = String(meaning).trim();
+      });
+    };
+    [typeof TRANSITIONS_MATRIX_DATA !== 'undefined' ? TRANSITIONS_MATRIX_DATA : null,
+     typeof CAUSE_EFFECT_DATA !== 'undefined' ? CAUSE_EFFECT_DATA : null,
+     typeof TIME_MATRIX_DATA !== 'undefined' ? TIME_MATRIX_DATA : null].forEach(src => {
+      if (!src) return;
+      Object.values(src).forEach(list => (list || []).forEach(item => add(item.term, item.meaning)));
+    });
+  }
+  return _connectorMeaningMap[opt] || '';
 }
 
 
