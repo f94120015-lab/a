@@ -12776,19 +12776,46 @@ function nextQuestion() {
 // sekmesinde görünmez, buna karşılık yarım kalan oturum geri yüklenirken
 // lessons üzerinden id ile bulunabilir.
 const EXAM_SESSIONS = [
-  {
-    id: 'reading-1',
-    lessonId: 'c50_p_l4',
-    title: 'Okuma & Paragraf Denemesi',
-    desc: 'Okuma parçası, diyalog tamamlama ve paragraf tamamlama · 70 soru',
-    minutes: 80,
-    icon: '📝'
-  }
+  { id: 'reading',     title: 'Okuma Parçası',        icon: '📖', minutes: 35, skill: 'Okuma Parçası',
+    desc: '6 akademik metin · ana fikir, detay, çıkarım, kelime ve tutum',
+    sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex1' }] },
+  { id: 'dialogue',    title: 'Diyalog Tamamlama',    icon: '💬', minutes: 20, skill: 'Diyalog Tamamlama',
+    desc: 'Konuşmadaki eksik repliği bulma',
+    sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex2' }] },
+  { id: 'para-comp',   title: 'Paragraf Tamamlama',   icon: '📄', minutes: 25, skill: 'Paragraf Tamamlama',
+    desc: 'Paragrafta boş bırakılan cümleyi bulma',
+    sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex3' }] },
+  { id: 'restatement', title: 'Yakın Anlamlı Cümle',  icon: '🔁', minutes: 20, skill: 'Yakın Anlamlı Cümle',
+    desc: 'Verilen cümleye anlamca en yakın seçeneği bulma',
+    sources: [{ lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
+              { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] },
+  { id: 'irrelevant',  title: 'Akışı Bozan Cümle',    icon: '✂️', minutes: 15, skill: 'Akışı Bozan Cümle',
+    desc: 'Paragrafın anlam bütünlüğünü bozan cümleyi bulma',
+    sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] },
+  { id: 'ordering',    title: 'Paragraf Sıralama',    icon: '🔢', minutes: 15, skill: 'Paragraf Sıralama',
+    desc: 'Karışık cümleleri anlamlı bir paragraf olacak şekilde dizme',
+    sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] },
+  { id: 'reference',   title: 'Zamir & Referans',     icon: '🔗', minutes: 12, skill: 'Zamir & Referans',
+    desc: 'this, the former, the latter gibi ifadelerin gönderdiği ismi bulma',
+    sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] },
+  { id: 'cloze',       title: 'Cloze Test',           icon: '🧩', minutes: 12, skill: 'Cloze Test',
+    desc: 'Paragraftaki boşluğa uygun geçiş bağlacını bulma',
+    sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] }
 ];
 
 function getExamQuestions(session) {
-  const lesson = lessons.find(l => l.id === session.lessonId);
-  return lesson ? getLessonQuestions(lesson) : [];
+  const out = [];
+  (session.sources || []).forEach(src => {
+    const lesson = lessons.find(l => l.id === src.lessonId);
+    if (!lesson) return;
+    if (src.exerciseId) {
+      const ex = (lesson.exercises || []).find(e => e.id === src.exerciseId);
+      if (ex) out.push(...(ex.questions || []));
+    } else {
+      out.push(...getLessonQuestions(lesson));
+    }
+  });
+  return out;
 }
 
 function renderExamTab() {
@@ -12881,6 +12908,7 @@ function paintExamTimer() {
 // ── Beceri etiketi (sonuç dökümü için) ─────────────────────────────────────
 function getExamSkill(question) {
   if (question.examSkill) return question.examSkill;
+  if (examCurrent && examCurrent.skill) return examCurrent.skill;
   const p = String(question.prompt || '').toLowerCase();
   if (p.includes('ana fikri') || p.includes('başlık')) return 'Ana fikir';
   if (p.includes('çıkarılabilir') || p.includes('çıkarım')) return 'Çıkarım';
