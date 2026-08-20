@@ -2786,17 +2786,18 @@
       if (slotTitle3) slotTitle3.textContent = "ZORUNLU TENSE / YÜKLEM";
       if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Özne / İsim Öbeği - Yan Cümle Yok)";
     } else if (connObj && connObj.category === "cause_effect") {
-      // 🎯 Neden-Etki Fiil Şablonu: Neden Öbeği ➔ Neden-Etki Fiili ➔ Sonuç Öbeği
-      if (slotTitle1) slotTitle1.textContent = "NEDEN (CAUSE) ÖBEĞİ";
-      if (slotTitle2) slotTitle2.textContent = "NEDEN-ETKİ FİİLİ / EDATI";
+      // 🎯 Neden-Etki Fiil Şablonu. Yuva sırası her şablonda aynıdır:
+      // 1 = bağlaç/fiil, 2 = Cümle A zamanı, 3 = Cümle B zamanı.
+      if (slotTitle1) slotTitle1.textContent = "NEDEN-ETKİ FİİLİ / EDATI";
+      if (slotTitle2) slotTitle2.textContent = "NEDEN (CAUSE) ÖBEĞİ";
       if (slotTitle3) slotTitle3.textContent = "SONUÇ (EFFECT) ÖBEĞİ";
-      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Neden-Etki Fiilleri / Edatları)";
+      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Neden Öbeği Zamanları)";
     } else if (connObj && connObj.category === "transitions") {
-      // 🔀 Geçiş İfadesi Şablonu: Cümle A ➔ Geçiş İfadesi ➔ Cümle B
-      if (slotTitle1) slotTitle1.textContent = "BİRİNCİ YARGI (CÜMLE A)";
-      if (slotTitle2) slotTitle2.textContent = "GEÇİŞ İFADESİ";
+      // 🔀 Geçiş İfadesi Şablonu: Cümle A ; geçiş ifadesi , Cümle B
+      if (slotTitle1) slotTitle1.textContent = "GEÇİŞ İFADESİ";
+      if (slotTitle2) slotTitle2.textContent = "BİRİNCİ YARGI (CÜMLE A)";
       if (slotTitle3) slotTitle3.textContent = "İKİNCİ YARGI (CÜMLE B)";
-      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Geçiş İfadeleri)";
+      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Birinci Yargı Zamanları)";
     } else {
       // ⏱️ Standart Bağlaç Şablonu: Bağlaç ➔ Yan Cümle ➔ Ana Cümle
       if (slotTitle1) slotTitle1.textContent = "BAĞLAÇ / KOŞUL";
