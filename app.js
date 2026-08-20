@@ -12887,6 +12887,22 @@ const EXAM_GROUPS = [
         sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] },
       { id: 'cloze-2', label: 'Test 2', minutes: 12,
         sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1b_ex' }] }
+    ] },
+  { id: 'sent-comp', title: 'Cümle Tamamlama', icon: '🧱', skill: 'Cümle Tamamlama',
+    desc: 'Cümlede eksik bırakılan yan cümleyi bulma',
+    tests: [
+      { id: 'sent-comp-1', label: 'Test 1', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex1' }] },
+      { id: 'sent-comp-2', label: 'Test 2', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex2' }] }
+    ] },
+  { id: 'translation', title: 'Çeviri', icon: '🌐', skill: 'Çeviri',
+    desc: 'İngilizce–Türkçe ve Türkçe–İngilizce en uygun çeviriyi bulma',
+    tests: [
+      { id: 'translation-1', label: 'Test 1 · İng → Tür', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex1' }] },
+      { id: 'translation-2', label: 'Test 2 · Tür → İng', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex2' }] }
     ] }
 ];
 

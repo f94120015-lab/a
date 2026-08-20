@@ -35665,7 +35665,20 @@ if (typeof lessons !== 'undefined') {
 ];
     
     // We clear any duplicates from the lessons list that match the consolidated ids
-    const consolidatedIds = ["c40_l1_merged", "c40_l2_merged", "c40_l3_merged"];
+    const consolidatedIds = ["c40_l1_merged", "c40_l2_merged", "c40_l3_merged", "c56_l7"];
+
+    // Keşke Yapıları (I wish / If only) — konsolidasyon sırasında bölüm dışında kalmıştı.
+    const wishLesson = lessons.find(l => l.id === "c56_l7");
+    if (wishLesson) {
+      wishLesson.title = "Keşke Yapıları (I wish / If only)";
+      wishLesson.subtitle = "Gerçekleşmemiş dilek, sitem ve pişmanlık kalıpları";
+      wishLesson.konuAnlatimi = {
+        baslik: "Keşke Yapıları (I wish / If only)",
+        teorikMantik: "I wish ve If only, gerçekte olmayan bir durumu dile getirir; bu yüzden fiil daima bir zaman geriye kayar. Şimdiki zamana ait bir dilek için Past (V2 / were), geçmişe ait bir pişmanlık için Past Perfect (had V3), başkasının davranışına duyulan sitem için ise would V1 kullanılır. If only, I wish ile aynı yapıyı alır ancak vurgusu daha güçlüdür.",
+        formul: "Şimdiki dilek: I wish + S + V2 / were  |  Geçmiş pişmanlık: I wish + S + had V3  |  Sitem: I wish + S + would V1",
+        altinKural: "I wish I would... kurulmaz: would yalnızca öznesi farklı olan, değişmesi istenen davranışlar için kullanılır. Ayrıca to be fiilinde tüm öznelerle 'were' tercih edilir (I wish I were...)."
+      };
+    }
     
     overrides.forEach(ov => {
       const found = lessons.find(l => l.id === ov.id);
@@ -56232,6 +56245,754 @@ if (typeof lessons !== 'undefined') {
       "examSkill": "Paragraf Sıralama",
       "grammarTags": [
         "Paragraf Sıralama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_tr_ex1",
+  "title": "Çeviri — Test 1",
+  "description": "İngilizceden Türkçeye 10 soruluk akademik çeviri denemesi.",
+  "questions": [
+    {
+      "id": "u50_tr1_q1",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Had the government acted sooner, the epidemic could have been contained.\"</strong>",
+      "options": [
+        "Hükümet daha erken harekete geçseydi, salgın kontrol altına alınabilirdi.",
+        "Hükümet daha erken harekete geçtiği için salgın kontrol altına alındı.",
+        "Hükümet erken harekete geçerse salgın kontrol altına alınabilir.",
+        "Salgın kontrol altına alınsaydı hükümet daha erken harekete geçebilirdi.",
+        "Hükümetin erken harekete geçmesi salgını kontrol altına almaya yetmedi."
+      ],
+      "correctIndex": 0,
+      "explanation": "Had + S + V3 yapısı Type 3 devrik koşuldur; gerçekleşmemiş geçmişi anlatır. 'could have been contained' da geçmişe dönük gerçekleşmemiş ihtimaldir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q2",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Not until the 1960s did researchers recognise the role of plate tectonics.\"</strong>",
+      "options": [
+        "Araştırmacılar 1960'lara kadar levha tektoniğinin rolünü tartışmadı.",
+        "1960'lardan önce levha tektoniğinin bir rolü olduğu düşünülmüyordu.",
+        "Araştırmacılar levha tektoniğinin rolünü ancak 1960'larda fark etti.",
+        "1960'larda araştırmacılar levha tektoniğinin rolünü sorgulamaya başladı.",
+        "Levha tektoniğinin rolü 1960'lara kadar araştırmacılarca kabul edildi."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Not until ...' + devrik yapı Türkçeye 'ancak ... -dı' kalıbıyla aktarılır; olayın o tarihten önce gerçekleşmediğini vurgular.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q3",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The manuscript, most of which had been damaged by damp, was painstakingly restored.\"</strong>",
+      "options": [
+        "El yazması büyük bir titizlikle restore edildiğinden nemden zarar görmemişti.",
+        "Büyük bölümü nemden zarar görmüş olan el yazması, büyük bir titizlikle restore edildi.",
+        "Nem yüzünden zarar gören el yazmalarının çoğu titizlikle restore edildi.",
+        "El yazmasının çoğu restore edilirken nemden zarar gördü.",
+        "Titiz bir restorasyona rağmen el yazmasının çoğu nemden zarar gördü."
+      ],
+      "correctIndex": 1,
+      "explanation": "'most of which' ileri düzey sıfat cümleciğidir ve tek bir el yazmasının 'büyük bölümünü' niteler; ana yüklem 'was restored' edilgendir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q4",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Far from being a recent invention, the technique dates back to the Bronze Age.\"</strong>",
+      "options": [
+        "Teknik yakın dönemde icat edilmiş olsa da kökeni Tunç Çağı'na dayanır.",
+        "Tunç Çağı'ndan bu yana bu teknikte yakın döneme kadar bir yenilik olmamıştır.",
+        "Yakın dönemde icat edilen teknik, Tunç Çağı tekniklerinden uzaktır.",
+        "Teknik, yakın dönemde icat edilmiş olmak bir yana, Tunç Çağı'na kadar uzanmaktadır.",
+        "Tunç Çağı'na uzanan teknik, yakın dönemde yeniden icat edilmiştir."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Far from + V-ing' bir olasılığı kesin biçimde reddeder: '... olmak bir yana / şöyle dursun'. Zıtlık bağlacı ('-sa da') ile karıştırılmamalıdır.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q5",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"It is widely assumed that literacy rates rose steadily throughout the period.\"</strong>",
+      "options": [
+        "Okuryazarlık oranlarının bu dönem boyunca istikrarlı biçimde arttığı yaygın olarak varsayılmaktadır.",
+        "Bu dönemde okuryazarlık oranlarının arttığı kesin olarak kanıtlanmıştır.",
+        "Okuryazarlık oranları bu dönem boyunca yaygınlaştıkça istikrarlı biçimde arttı.",
+        "Yaygın varsayımın aksine okuryazarlık oranları bu dönemde artmamıştır.",
+        "Okuryazarlık oranlarının artması bu dönemin yaygınlaşmasını sağlamıştır."
+      ],
+      "correctIndex": 0,
+      "explanation": "'It is widely assumed that ...' sahte özneli aktarım pasifidir ve bir kesinlik değil, yaygın bir varsayım bildirir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q6",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The species is unlikely to survive unless its habitat is protected.\"</strong>",
+      "options": [
+        "Yaşam alanı korunursa türün hayatta kalması muhtemeldir.",
+        "Tür hayatta kalmadıkça yaşam alanının korunması olası değildir.",
+        "Yaşam alanı korunmadıkça türün hayatta kalması olası değildir.",
+        "Türün yaşam alanı korunmadığı için hayatta kalması beklenmemektedir.",
+        "Yaşam alanı korunmazsa tür kesinlikle yok olacaktır."
+      ],
+      "correctIndex": 2,
+      "explanation": "'be unlikely to' düşük ihtimal bildirir ('olası değil'); 'unless' ise 'olumsuz koşul' kurar: '-madıkça'. 'kesinlikle' aşırı yorumdur.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q7",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Rather than replacing traditional methods, the software complements them.\"</strong>",
+      "options": [
+        "Yazılım geleneksel yöntemleri tamamlamaktan çok onların yerini almaktadır.",
+        "Yazılım, geleneksel yöntemlerin yerini almak yerine onları tamamlamaktadır.",
+        "Geleneksel yöntemler yazılımın yerini aldığı için onu tamamlamaktadır.",
+        "Yazılım hem geleneksel yöntemlerin yerini almakta hem de onları tamamlamaktadır.",
+        "Geleneksel yöntemler yerine yazılımın tamamlanması gerekmektedir."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Rather than V-ing' tercih edilmeyen seçeneği başa alır: 'yerine'. Reddedilen eylem 'replacing', benimsenen eylem 'complements'tir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q8",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Having been excluded from formal education, many women pursued learning privately.\"</strong>",
+      "options": [
+        "Birçok kadın özel olarak öğrenim gördüğü için örgün eğitimin dışında kaldı.",
+        "Örgün eğitimden dışlanan kadınların çoğu öğrenimini tamamlayamadı.",
+        "Örgün eğitimin dışında bırakıldıkları için birçok kadın öğrenimini özel olarak sürdürdü.",
+        "Birçok kadın örgün eğitime alınmak için özel olarak öğrenim gördü.",
+        "Örgün eğitimden dışlanmalarına rağmen birçok kadın öğrenimini sürdüremedi."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Having been V3' edilgen ve önceliği vurgulayan kısaltmadır; ana cümleden önce gerçekleşen sebebi verir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q9",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"No sooner had the treaty been signed than hostilities resumed.\"</strong>",
+      "options": [
+        "Antlaşma imzalanmadan önce çatışmalar çoktan başlamıştı.",
+        "Çatışmalar yeniden başlamasaydı antlaşma imzalanacaktı.",
+        "Antlaşma imzalandığı hâlde çatışmalar yeniden başlamadı.",
+        "Antlaşma imzalanır imzalanmaz çatışmalar yeniden başladı.",
+        "Antlaşma imzalandıktan uzun süre sonra çatışmalar yeniden başladı."
+      ],
+      "correctIndex": 3,
+      "explanation": "'No sooner had + S + V3 than + V2' iki olay arasındaki anlık ardışıklığı bildirir: '-ır -maz'.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr1_q10",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The results should be interpreted with caution, given the small sample size.\"</strong>",
+      "options": [
+        "Örneklem küçüklüğü göz önünde bulundurulduğunda, sonuçlar temkinli yorumlanmalıdır.",
+        "Sonuçlar temkinli yorumlandığı için örneklem küçük tutulmuştur.",
+        "Küçük örneklem, sonuçların temkinli yorumlanmasını engellemektedir.",
+        "Örneklem küçük olsa da sonuçlar rahatlıkla yorumlanabilir.",
+        "Sonuçların yorumlanabilmesi için örneklemin küçültülmesi gerekir."
+      ],
+      "correctIndex": 0,
+      "explanation": "'given + isim öbeği' sebep/gerekçe bildirir: 'göz önünde bulundurulduğunda'. 'should' ise tavsiye kipidir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_tr_ex2",
+  "title": "Çeviri — Test 2",
+  "description": "Türkçeden İngilizceye 10 soruluk akademik çeviri denemesi.",
+  "questions": [
+    {
+      "id": "u50_tr2_q1",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Deney tekrarlanmadıkça bulguların güvenilir sayılması mümkün değildir.\"</strong>",
+      "options": [
+        "The findings cannot be considered reliable unless the experiment is repeated.",
+        "If the experiment is repeated, the findings will not be reliable.",
+        "The experiment cannot be repeated unless the findings are reliable.",
+        "Although the experiment was repeated, the findings are not reliable.",
+        "The findings are unreliable, so the experiment must not be repeated."
+      ],
+      "correctIndex": 0,
+      "explanation": "'-madıkça' olumsuz koşul bağlacı 'unless' ile karşılanır; 'sayılması mümkün değildir' ise 'cannot be considered' pasifidir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q2",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Kentin surları, yüzyıllar boyunca defalarca onarılmış olmasına rağmen ayakta kalmıştır.\"</strong>",
+      "options": [
+        "The city walls survived because they had been repaired repeatedly over the centuries.",
+        "The city walls have survived, although they were repaired repeatedly over the centuries.",
+        "Despite surviving, the city walls were repaired repeatedly over the centuries.",
+        "The city walls were repaired repeatedly over the centuries in order to survive.",
+        "Unless the city walls had been repaired repeatedly, they would not have survived."
+      ],
+      "correctIndex": 1,
+      "explanation": "'-mesine rağmen' zıtlık bildirir ve 'although' ile verilir; 'onarılmış olma' edilgendir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q3",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Araştırmacılar, iklim değişikliğinin göç örüntülerini hızlandırdığını öne sürmektedir.\"</strong>",
+      "options": [
+        "Researchers were surprised that climate change accelerated migration patterns.",
+        "Migration patterns are said to have accelerated climate change.",
+        "Researchers suggest that climate change has accelerated migration patterns.",
+        "Researchers suggest that migration patterns should accelerate climate change.",
+        "It is climate change that researchers accelerated through migration patterns."
+      ],
+      "correctIndex": 2,
+      "explanation": "'öne sürmektedir' = suggest; özne-nesne yönü korunmalıdır: hızlandıran iklim değişikliği, hızlanan göç örüntüleridir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q4",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Keşke bu verileri yayımlamadan önce ikinci bir analiz yaptırsaydık.\"</strong>",
+      "options": [
+        "I wish we have a second analysis carried out before publishing these data.",
+        "If only we would have a second analysis carried out before publishing these data.",
+        "We wish to have a second analysis carried out before we publish these data.",
+        "If only we had had a second analysis carried out before publishing these data.",
+        "I wish we had a second analysis carrying out before publishing these data."
+      ],
+      "correctIndex": 3,
+      "explanation": "Geçmişe yönelik pişmanlık 'If only + had V3' ile kurulur; 'yaptırmak' ise 'have something done' ettirgen yapısıdır: had had ... carried out.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q5",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Bu ilaç, yalnızca doktor gözetiminde kullanıldığı takdirde etkili olmaktadır.\"</strong>",
+      "options": [
+        "The drug is effective only if it is used under medical supervision.",
+        "The drug is effective unless it is used under medical supervision.",
+        "Only the drug used under medical supervision is not effective.",
+        "The drug should be used under medical supervision so that it is effective.",
+        "Even if it is used under medical supervision, the drug is effective."
+      ],
+      "correctIndex": 0,
+      "explanation": "'-diği takdirde' olumlu koşuldur ('if'); 'yalnızca' kısıtlaması 'only if' ile verilir. 'unless' anlamı tersine çevirirdi.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q6",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Ne kadar iyi tasarlanmış olursa olsun, hiçbir model bütün değişkenleri hesaba katamaz.\"</strong>",
+      "options": [
+        "No matter how well it is designed, every model accounts for all the variables.",
+        "However well designed it may be, no model can account for every variable.",
+        "Since it is well designed, no model can account for every variable.",
+        "However well a model is designed, it accounts for every variable.",
+        "As long as it is well designed, a model can account for every variable."
+      ],
+      "correctIndex": 1,
+      "explanation": "'ne kadar ... olursa olsun' = 'however + sıfat/zarf + S + V'; olumsuz genelleme 'no model' ile korunmalıdır.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q7",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Sanayileşmenin başlamasıyla birlikte kırsal nüfusun büyük bölümü şehirlere göç etti.\"</strong>",
+      "options": [
+        "Much of the rural population migrated to the cities so that industrialisation began.",
+        "The onset of industrialisation was caused by the rural population's migration to the cities.",
+        "With the onset of industrialisation, much of the rural population migrated to the cities.",
+        "As much of the rural population migrated to the cities, industrialisation had begun.",
+        "Before industrialisation began, much of the rural population had migrated to the cities."
+      ],
+      "correctIndex": 2,
+      "explanation": "'-mesiyle birlikte' eşzamanlılığı 'with the onset of + isim' kalıbı karşılar; neden-sonuç yönü ters çevrilmemelidir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q8",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Yazarın çoğu eleştirmen tarafından göz ardı edilen ilk romanı, sonradan bir başyapıt sayıldı.\"</strong>",
+      "options": [
+        "The author's first novel, most critics of which had overlooked it, was later regarded as a masterpiece.",
+        "The author's first novel overlooked most critics and was later regarded as a masterpiece.",
+        "Most critics overlooked the author's first novel, which was later regarding a masterpiece.",
+        "The author's first novel, which most critics had overlooked, was later regarded as a masterpiece.",
+        "Later regarded as a masterpiece, most critics had overlooked the author's first novel."
+      ],
+      "correctIndex": 3,
+      "explanation": "'göz ardı edilen' sıfat cümleciğidir; nesne konumundaki 'which' kullanılır ve ana yüklem 'was regarded' edilgen kalır.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q9",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Fonlama kesilmiş olmasaydı proje çoktan tamamlanmış olurdu.\"</strong>",
+      "options": [
+        "If the funding is not cut, the project would have been completed by now.",
+        "Had the funding not been cut, the project would have been completed by now.",
+        "Had the funding not cut, the project would be completed by now.",
+        "Unless the funding had been cut, the project has been completed by now.",
+        "If the funding had not been cut, the project will have been completed by now."
+      ],
+      "correctIndex": 1,
+      "explanation": "Type 3 devrik koşulda 'Had + S + not + V3' sırası kullanılır; sonuç cümlesi 'would have V3' kalır.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr2_q10",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin İngilizceye en uygun çevirisini bulunuz:<br><br><strong>\"Bu yöntemin daha ucuz olduğu doğrudur; ancak uygulanması çok daha uzun sürmektedir.\"</strong>",
+      "options": [
+        "It is true that this method is cheaper; however, it takes far longer to implement.",
+        "It is true that this method is cheaper, therefore it takes far longer to implement.",
+        "Although it is true that this method is cheaper, however it takes far longer to implement.",
+        "This method is truly cheaper, so it takes far longer to implement.",
+        "It is true that this method takes far longer; however, it is much cheaper to implement."
+      ],
+      "correctIndex": 0,
+      "explanation": "'ancak' zıtlık bildirir ve noktalı virgülden sonra 'however' ile verilir. 'Although' ile 'however' aynı cümlede birlikte kullanılmaz.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_sc_ex1",
+  "title": "Cümle Tamamlama — Test 1",
+  "description": "Eksik bırakılan yan cümleyi bulmaya yönelik 10 soruluk deneme.",
+  "questions": [
+    {
+      "id": "u50_sc1_q1",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, the committee postponed its decision until further evidence became available.</strong>",
+      "options": [
+        "Since the preliminary data were inconclusive",
+        "Because further evidence had already been gathered",
+        "So that the preliminary data were inconclusive",
+        "Despite the preliminary data being conclusive",
+        "Unless the preliminary data were inconclusive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ana cümle 'kararı ertelemek' der; buna sebep olan tek seçenek verilerin sonuca ulaştırmaması, yani 'inconclusive' olmasıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q2",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The vaccine proved remarkably effective in trials, _______.</strong>",
+      "options": [
+        "so its long-term benefits were established immediately",
+        "because it had never been tested on human subjects",
+        "although its long-term benefits have yet to be established",
+        "unless the trials are repeated on a larger sample",
+        "which the researchers had abandoned after the first phase"
+      ],
+      "correctIndex": 2,
+      "explanation": "Olumlu bir sonuç ile ihtiyatlı bir kayıt arasındaki zıtlık 'although' ile kurulur; 'have yet to be established' henüz kanıtlanmadığını bildirir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q3",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______ that the ancient city was destroyed by an earthquake rather than by invaders.</strong>",
+      "options": [
+        "Because of recent excavations",
+        "Recent excavations have confirmed",
+        "Recent excavations, which confirmed",
+        "Confirming by recent excavations",
+        "In spite of recent excavations confirming"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cümlede yüklem yoktur; 'that' isim cümleciğini nesne olarak alacak çekimli bir yükleme ('have confirmed') ihtiyaç vardır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q4",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>So dependent had the economy become on a single export _______.</strong>",
+      "options": [
+        "because a fall in prices triggered a nationwide recession",
+        "when a fall in prices triggered a nationwide recession",
+        "although a fall in prices triggered a nationwide recession",
+        "that a fall in prices triggered a nationwide recession",
+        "so a fall in prices triggered a nationwide recession"
+      ],
+      "correctIndex": 3,
+      "explanation": "'So + sıfat + devrik yardımcı fiil' yapısı daima 'that' ile tamamlanır ve derecenin sonucunu verir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q5",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, the museum has doubled the number of its annual visitors.</strong>",
+      "options": [
+        "By extending its opening hours and lowering ticket prices",
+        "To extend its opening hours and lower ticket prices",
+        "Extended its opening hours and lowered ticket prices",
+        "Unless it extends its opening hours and lowers ticket prices",
+        "Whether it extends its opening hours or lowers ticket prices"
+      ],
+      "correctIndex": 0,
+      "explanation": "'By + V-ing' bir sonuca hangi yolla ulaşıldığını bildirir; ana cümle gerçekleşmiş bir sonuç ('has doubled') verdiği için amaç mastarı uymaz.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q6",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The report recommends that every laboratory _______.</strong>",
+      "options": [
+        "keeps a detailed record of its disposal procedures",
+        "kept a detailed record of its disposal procedures",
+        "keep a detailed record of its disposal procedures",
+        "is keeping a detailed record of its disposal procedures",
+        "will keep a detailed record of its disposal procedures"
+      ],
+      "correctIndex": 2,
+      "explanation": "'recommend that' sonrası subjunctive gelir: özne ne olursa olsun fiil yalın hâlde (V1) kalır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q7",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Whales navigate over vast distances _______.</strong>",
+      "options": [
+        "in which they detect variations in the earth's magnetic field",
+        "by detecting variations in the earth's magnetic field",
+        "so that they detect variations in the earth's magnetic field",
+        "despite detecting variations in the earth's magnetic field",
+        "as if they detected variations in the earth's magnetic field"
+      ],
+      "correctIndex": 1,
+      "explanation": "Boşluk 'nasıl' sorusunun karşılığıdır; araç/yöntem bildiren 'by + V-ing' uygundur.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q8",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, few of them are ever read outside a narrow circle of specialists.</strong>",
+      "options": [
+        "Since thousands of academic articles are published each month",
+        "Although thousands of academic articles are published each month",
+        "Thousands of academic articles being published each month",
+        "In order that thousands of academic articles are published each month",
+        "As soon as thousands of academic articles are published each month"
+      ],
+      "correctIndex": 1,
+      "explanation": "Yüksek yayın sayısı ile çok az okunmaları arasında beklenmedik bir karşıtlık vardır; bu yüzden zıtlık bağlacı gerekir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q9",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The bridge would never have collapsed _______.</strong>",
+      "options": [
+        "if the original load calculations are followed",
+        "unless the original load calculations were followed",
+        "when the original load calculations had been followed",
+        "had the original load calculations been followed",
+        "provided that the original load calculations will be followed"
+      ],
+      "correctIndex": 3,
+      "explanation": "'would never have V3' Type 3 sonucudur; koşul kısmı 'if ... had been followed' ya da devriği 'had ... been followed' olmalıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc1_q10",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Researchers are still debating _______.</strong>",
+      "options": [
+        "that the paintings were produced by a single artist",
+        "whether the paintings were produced by a single artist",
+        "which the paintings were produced by a single artist",
+        "if were the paintings produced by a single artist",
+        "what the paintings were produced by a single artist"
+      ],
+      "correctIndex": 1,
+      "explanation": "'debate' fiili çözülmemiş bir soruyu nesne alır; kesinlik bildiren 'that' yerine ikilem bildiren 'whether' kullanılır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_sc_ex2",
+  "title": "Cümle Tamamlama — Test 2",
+  "description": "Bağlaç, kısaltma ve koşul odaklı 10 soruluk cümle tamamlama denemesi.",
+  "questions": [
+    {
+      "id": "u50_sc2_q1",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, the tradition survives in a handful of mountain villages.</strong>",
+      "options": [
+        "Owing to the pressures of modernisation",
+        "As a result of the pressures of modernisation",
+        "Despite the pressures of modernisation",
+        "So great are the pressures of modernisation",
+        "In case the pressures of modernisation increase"
+      ],
+      "correctIndex": 2,
+      "explanation": "Geleneğin baskılara karşın sürmesi beklenmedik bir sonuçtur; isim öbeği alan zıtlık edatı 'despite' gerekir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q2",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The new policy will take effect in January _______.</strong>",
+      "options": [
+        "provided that parliament approves the budget",
+        "in spite of parliament approving the budget",
+        "as though parliament approved the budget",
+        "no sooner than parliament approves the budget",
+        "so that parliament will approve the budget"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yürürlüğe girmesi bir ön koşula bağlanmıştır; 'provided that' resmi bir koşul bağlacıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q3",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, it soon became clear that the translation contained serious errors.</strong>",
+      "options": [
+        "Once the manuscript had been examined by a second scholar",
+        "Once the manuscript examined a second scholar",
+        "Unless the manuscript had been examined by a second scholar",
+        "So that the manuscript had been examined by a second scholar",
+        "Whereas the manuscript had been examined by a second scholar"
+      ],
+      "correctIndex": 0,
+      "explanation": "İnceleme, hataların anlaşılmasından önce gerçekleşmiştir; öncelik bildiren 'once' + edilgen perfect uygundur.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q4",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Antibiotics lose their effectiveness _______.</strong>",
+      "options": [
+        "although bacteria gradually develop resistance to them",
+        "as bacteria gradually develop resistance to them",
+        "in order that bacteria gradually develop resistance to them",
+        "unless bacteria gradually develop resistance to them",
+        "rather than bacteria gradually developing resistance to them"
+      ],
+      "correctIndex": 1,
+      "explanation": "Buradaki 'as' hem sebep hem eşzamanlı süreç bildirir: direnç geliştikçe etkinlik azalır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q5",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Not only did the eruption destroy the settlement _______.</strong>",
+      "options": [
+        "and it also altered the climate of the entire region",
+        "but also altering the climate of the entire region",
+        "but it also altered the climate of the entire region",
+        "however it also altered the climate of the entire region",
+        "as well as it altered the climate of the entire region"
+      ],
+      "correctIndex": 2,
+      "explanation": "'Not only' ile başlayan devrik cümle 'but ... also' ile tamamlanır; ikinci kısım çekimli bir cümle olmalıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q6",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______ is still a matter of considerable dispute among historians.</strong>",
+      "options": [
+        "That the empire's sudden collapse",
+        "What prompted the empire's sudden collapse",
+        "Which prompted the empire's sudden collapse",
+        "Because the empire suddenly collapsed",
+        "The empire's sudden collapse which prompted"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cümlenin öznesi eksiktir; 'what' hem özne görevi görüp hem de isim cümleciğini başlatan tek seçenektir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q7",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The committee agreed to fund the excavation _______.</strong>",
+      "options": [
+        "on condition that the finds remain in the country",
+        "on condition that the finds remained in the country",
+        "in condition that the finds remain in the country",
+        "despite the fact that the finds remain in the country",
+        "as long as the finds had remained in the country"
+      ],
+      "correctIndex": 0,
+      "explanation": "'on condition that' koşul bildirir ve ardından subjunctive/geniş zaman gelir; geçmiş çekim ana cümleyle uyuşmaz.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q8",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Solar panels are becoming cheaper every year, _______.</strong>",
+      "options": [
+        "that explains their rapid spread across rural areas",
+        "what explains their rapid spread across rural areas",
+        "which explains their rapid spread across rural areas",
+        "it explains their rapid spread across rural areas",
+        "explains their rapid spread across rural areas"
+      ],
+      "correctIndex": 2,
+      "explanation": "Virgülden sonra bütün bir cümleyi niteleyen bağlayıcı sıfat cümleciği kurulur; bu görevde yalnızca 'which' kullanılır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q9",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, the author revised the entire final chapter.</strong>",
+      "options": [
+        "Having received extensive criticism from her editor",
+        "Having been received extensive criticism from her editor",
+        "To receive extensive criticism from her editor",
+        "She had received extensive criticism from her editor",
+        "Received extensive criticism from her editor"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kısaltmanın öznesi ana cümlenin öznesiyle aynıdır ve eleştiriyi alan odur; etken öncelik kısaltması 'Having V3' gerekir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc2_q10",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The species is thought _______.</strong>",
+      "options": [
+        "that it disappeared from the region several centuries ago",
+        "to disappear from the region several centuries ago",
+        "having disappeared from the region several centuries ago",
+        "to have disappeared from the region several centuries ago",
+        "to be disappeared from the region several centuries ago"
+      ],
+      "correctIndex": 3,
+      "explanation": "'be thought to' aktarım pasifidir; ana yüklemden önce gerçekleşmiş bir olay 'to have V3' ile verilir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
       ]
     }
   ]
