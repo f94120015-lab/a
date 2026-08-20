@@ -77,7 +77,7 @@ rawTopics.push(
   "startLessonId": 41,
   "originalIndex": 13,
   "title": "Ara Bölüm 2: Tercih Bildiren Yapılar",
-  "desc": "Kitapta olmayıp müfredatı zenginleştirmek için eklenmiş, would rather yapılarını içeren dersler.",
+  "desc": "",
   "icon": "⚖️",
   "numLessons": 2,
   "formulas": [
@@ -113,7 +113,7 @@ rawTopics.push(
   "startLessonId": 51,
   "originalIndex": 17,
   "title": "Ara Bölüm 3: Rica ve İzin İsteme Yapıları",
-  "desc": "Kitapta olmayıp günlük ve dil kullanımını pekiştirmek için eklenmiş rica ve izin isteme yapıları.",
+  "desc": "Modallar ve Do/Would you mind if kalıplarıyla rica ve izin isteme yapıları",
   "icon": "🤝",
   "numLessons": 2,
   "formulas": [
