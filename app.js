@@ -26327,11 +26327,39 @@ function getTenseExamplesForTerm(term, category, defaultExamples) {
   return defaultExamples || [];
 }
 
+// Matris sekmelerinde bir kategori çipi, aktif modda hiç kayıt döndürmüyorsa
+// tıklanınca boş ekran veriyordu. Aktif moda göre karşılığı olmayan çipleri
+// gizler; "all" her zaman görünür kalır.
+// Seçili kategori bu modda yoksa "all"a düşer ve o çipi görsel olarak aktif
+// yapar; aksi halde gizlenmiş bir çip seçili kalıp yine boş ekran verirdi.
+function syncMatrixChips(chipSelector, list, categoryMatches, activeCategory, activeColor) {
+  const chips = document.querySelectorAll(chipSelector);
+  let stillAvailable = activeCategory === 'all';
+  chips.forEach(chip => {
+    const cat = chip.dataset.category;
+    if (cat === 'all') { chip.style.display = ''; return; }
+    const has = list.some(item => categoryMatches(item, cat));
+    chip.style.display = has ? '' : 'none';
+    if (has && cat === activeCategory) stillAvailable = true;
+  });
+  if (stillAvailable) return activeCategory;
+
+  chips.forEach(chip => {
+    const isAll = chip.dataset.category === 'all';
+    chip.classList.toggle('active', isAll);
+    chip.style.background = isAll ? activeColor : 'var(--bg-card)';
+    chip.style.color = isAll ? 'white' : 'var(--text-primary)';
+    chip.style.borderColor = isAll ? activeColor : 'var(--border-color)';
+  });
+  return 'all';
+}
+
 function renderCauseEffectMatrix() {
   const gridEl = document.getElementById('ce-matrix-grid');
   if (!gridEl) return;
 
   const rawList = CAUSE_EFFECT_DATA[ceActiveDirection] || [];
+  ceActiveCategory = syncMatrixChips('.ce-chip', rawList, (item, cat) => item.category === cat, ceActiveCategory, '#3b82f6');
   const filtered = rawList.filter(item => {
     const matchCategory = ceActiveCategory === 'all' || item.category === ceActiveCategory;
     const matchSearch = !ceSearchQuery ||
@@ -26700,6 +26728,8 @@ function renderTimeMatrix() {
   if (!gridEl) return;
 
   const rawList = TIME_MATRIX_DATA[tmActiveMode] || [];
+  tmActiveCategory = syncMatrixChips('.tm-chip', rawList, (item, cat) =>
+    item.category === cat || (cat === 'conjunctions' && item.category === 'inverted'), tmActiveCategory, '#8b5cf6');
   const filtered = rawList.filter(item => {
     const matchCategory = tmActiveCategory === 'all' ||
       item.category === tmActiveCategory ||
@@ -27610,6 +27640,7 @@ function renderTransitionsMatrix() {
   if (!gridEl) return;
 
   const rawList = TRANSITIONS_MATRIX_DATA[trmActiveMode] || [];
+  trmActiveCategory = syncMatrixChips('.trm-chip', rawList, (item, cat) => item.category === cat, trmActiveCategory, '#10b981');
   const filtered = rawList.filter(item => {
     const matchCategory = trmActiveCategory === 'all' || item.category === trmActiveCategory;
     const matchSearch = !trmSearchQuery ||
