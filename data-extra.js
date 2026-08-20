@@ -1772,6 +1772,41 @@
         ["(A) conducting", "(B) to pursue", "(C) across", "(D) tundra", "No error"],
         1,
         "Algı fiillerinden (watch, see, hear) sonra to-infinitive (to pursue) kullanılmaz. Eylemin tamamı veya bir süreci için yalın fiil (pursue) ya da present participle (pursuing) kullanılmalıdır."
+      ),
+      makeMC(
+        "c59_l1_ex2_q6",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"In addition to <u>analyze</u> (A) the sediment layers, the geologists <u>catalogued</u> (B) every fossil fragment <u>recovered</u> (C) from the excavation <u>site</u> (D).\"",
+        ["(A) analyze", "(B) catalogued", "(C) recovered", "(D) site", "No error"],
+        0,
+        "'In addition to' kalıbındaki 'to' bir edattır; arkasından yalın fiil (analyze) değil Gerund (analyzing) gelmelidir."
+      ),
+      makeMC(
+        "c59_l1_ex2_q7",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The spectrometer detects trace elements <u>present</u> (A) in the sample, a capability suited to <u>analyze</u> (B) materials <u>recovered</u> (C) from deep-sea <u>vents</u> (D).\"",
+        ["(A) present", "(B) analyze", "(C) recovered", "(D) vents", "No error"],
+        1,
+        "'Suited to' yapısındaki 'to' edattır; arkasından Gerund (analyzing) kullanılmalıdır. 'Present' ve 'recovered' ise isimleri niteleyen doğru kısaltmalardır."
+      ),
+      makeMC(
+        "c59_l1_ex2_q8",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"Strict quarantine protocols prevented the pathogen from <u>spreading</u> (A) beyond the port, <u>enabling</u> (B) health officials to focus on <u>contain</u> (C) the remaining <u>clusters</u> (D).\"",
+        ["(A) spreading", "(B) enabling", "(C) contain", "(D) clusters", "No error"],
+        2,
+        "'Focus on' kalıbındaki 'on' edattır; arkasından Gerund (containing) gelmelidir. 'From spreading' ise doğru kullanılmıştır."
+      ),
+      makeMC(
+        "c59_l1_ex2_q9",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"The auditors, <u>appointed</u> (A) by the regulator, recommended <u>to postpone</u> (B) the merger until the investigation into the <u>alleged</u> (C) irregularities was <u>complete</u> (D).\"",
+        ["(A) appointed", "(B) to postpone", "(C) alleged", "(D) complete", "No error"],
+        1,
+        "'Recommend' fiili nesne olarak to-infinitive değil Gerund alır: 'recommended postponing'. 'Appointed' ise doğru bir edilgen kısaltmadır."
+      ),
+      makeMC(
+        "c59_l1_ex2_q10",
+        "Identify the grammatically incorrect underlined part in the sentence:<br><br>\"Committed to <u>reducing</u> (A) its carbon output, the corporation replaced every vehicle <u>operated</u> (B) by its logistics division with models <u>powered</u> (C) by <u>hydrogen</u> (D).\"",
+        ["(A) reducing", "(B) operated", "(C) powered", "(D) hydrogen", "No error"],
+        4,
+        "Cümlede hata yoktur. 'Committed to' edat kalıbı doğru şekilde Gerund almış, 'operated' ve 'powered' ise isimleri niteleyen doğru edilgen kısaltmalardır."
       )
     ];
 
