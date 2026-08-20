@@ -13042,10 +13042,6 @@ function switchTab(tabId) {
     initTimeMatrixTab();
   } else if (tabId === 'transitions-matrix') {
     initTransitionsMatrixTab();
-  } else if (tabId === 'ezber-robotu') {
-    if (typeof initEzberRobotu === 'function') {
-      initEzberRobotu();
-    }
   } else if (tabId === 'structure-robot') {
     if (typeof initStructureRobot === 'function') {
       initStructureRobot();
@@ -27478,6 +27474,17 @@ function updateTrmChipSubtitles(mode) {
 }
 
 function initTransitionsMatrixTab() {
+  // Sekmeye her girişte kılavuz moduna dön: kullanıcı alıştırma modunda
+  // ayrılmışsa panel açık, matris gizli kalmasın.
+  const drillPanelInit = document.getElementById('tab-content-ezber-robotu');
+  if (drillPanelInit) drillPanelInit.classList.add('u-hidden');
+  ['trm-matrix-grid', 'trm-filter-chips'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('u-hidden');
+  });
+  const searchWrapInit = document.querySelector('.trm-search-wrap');
+  if (searchWrapInit) searchWrapInit.classList.remove('u-hidden');
+
   const modeBtns = document.querySelectorAll('.trm-dir-btn');
   modeBtns.forEach(btn => {
     btn.onclick = () => {
@@ -27492,9 +27499,24 @@ function initTransitionsMatrixTab() {
       btn.style.background = 'rgba(16, 185, 129, 0.15)';
       btn.style.color = '#10b981';
 
+      // "Alıştırma" modu matris değil, Bağlaç Robotu drill'ini gösterir.
+      const isDrill = btn.dataset.mode === 'drill';
+      const drillPanel = document.getElementById('tab-content-ezber-robotu');
+      const matrixGrid = document.getElementById('trm-matrix-grid');
+      const chipRow = document.getElementById('trm-filter-chips');
+      const searchWrap = document.querySelector('.trm-search-wrap');
+      [matrixGrid, chipRow, searchWrap].forEach(el => {
+        if (el) el.classList.toggle('u-hidden', isDrill);
+      });
+      if (drillPanel) drillPanel.classList.toggle('u-hidden', !isDrill);
+      if (isDrill) {
+        if (typeof initEzberRobotu === 'function') initEzberRobotu();
+        return;
+      }
+
       trmActiveMode = btn.dataset.mode;
       trmActiveCategory = 'all';
-      
+
       const filterChips = document.querySelectorAll('.trm-chip');
       filterChips.forEach(c => {
         if (c.dataset.category === 'all') {
