@@ -41403,7 +41403,7 @@ const unitSentencesMap = {
               "Fiil Tümleyici Mastar",
               "Sosyoloji"
             ],
-            "sentence": "Sociologists planning [to investigate] demographic shifts in urban areas",
+            "sentence": "Sociologists planning _______ demographic shifts in urban areas",
             "options": [
               "to be investigated",
               "to investigate",
@@ -41519,7 +41519,7 @@ const unitSentencesMap = {
               "Fiil Tümleyici Mastar",
               "Antropoloji"
             ],
-            "sentence": "Anthropologists failing [to discover] intact artifacts in ancient ruins",
+            "sentence": "Anthropologists failing _______ intact artifacts in ancient ruins",
             "options": [
               "to be discovered",
               "to discover",
@@ -41783,7 +41783,7 @@ const unitSentencesMap = {
               "Fiil Tümleyici Mastar",
               "Hukuk"
             ],
-            "sentence": "The High Court hesitates [to reverse] judicial decisions regarding civil liberties.",
+            "sentence": "The High Court hesitates _______ judicial decisions regarding civil liberties.",
             "options": [
               "to be reversed",
               "to have reversed",
@@ -41905,7 +41905,7 @@ const unitSentencesMap = {
               "Fiil Tümleyici Mastar",
               "Sinema"
             ],
-            "sentence": "Film archives agree [to restore] classic movies of cinema history.",
+            "sentence": "Film archives agree _______ classic movies of cinema history.",
             "options": [
               "to restore",
               "to be restored",
@@ -41966,7 +41966,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Sinema"
             ],
-            "sentence": "Film directors analyzing cinema history agree [to showcase] classic movies in international festivals.",
+            "sentence": "Film directors analyzing cinema history agree _______ classic movies in international festivals.",
             "options": [
               "to be showcased",
               "to have showcased",
@@ -42048,7 +42048,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Coğrafya"
             ],
-            "sentence": "Geographers mapping urban development strive [to protect] natural habitats in coastal zones.",
+            "sentence": "Geographers mapping urban development strive _______ natural habitats in coastal zones.",
             "options": [
               "to be protected",
               "to have protected",
@@ -42257,7 +42257,7 @@ const unitSentencesMap = {
               "Strüktürel Özne Mastarı",
               "Psikoloji"
             ],
-            "sentence": "It is essential for psychologists [to examine] emotional reactions in therapy sessions.",
+            "sentence": "It is essential for psychologists _______ emotional reactions in therapy sessions.",
             "options": [
               "to be examined",
               "to have examined",
@@ -42327,7 +42327,7 @@ const unitSentencesMap = {
               "Strüktürel Özne Mastarı",
               "İktisat"
             ],
-            "sentence": "It is vital for economists [to monitor] market fluctuations during inflation periods.",
+            "sentence": "It is vital for economists _______ market fluctuations during inflation periods.",
             "options": [
               "to be monitored",
               "to monitor",
@@ -42386,7 +42386,7 @@ const unitSentencesMap = {
               "Strüktürel Özne Mastarı",
               "Antropoloji"
             ],
-            "sentence": "It is important for anthropologists [to respect] cultural rituals of indigenous tribes.",
+            "sentence": "It is important for anthropologists _______ cultural rituals of indigenous tribes.",
             "options": [
               "to be respected",
               "to have respected",
@@ -42530,7 +42530,7 @@ const unitSentencesMap = {
               "Strüktürel Özne Mastarı",
               "İktisat"
             ],
-            "sentence": "It is necessary for economists [to monitor] market fluctuations before implementing financial policies.",
+            "sentence": "It is necessary for economists _______ market fluctuations before implementing financial policies.",
             "options": [
               "to monitor",
               "to be monitored",
@@ -42739,7 +42739,7 @@ const unitSentencesMap = {
               "Strüktürel Özne Mastarı",
               "Coğrafya"
             ],
-            "sentence": "It will be crucial for urban planners [to protect] natural habitats in coastal zones.",
+            "sentence": "It will be crucial for urban planners _______ natural habitats in coastal zones.",
             "options": [
               "to be protected",
               "to have protected",
@@ -42801,7 +42801,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "İletişim"
             ],
-            "sentence": "It was crucial for linguists studying dialectal variations [to record] spoken language samples.",
+            "sentence": "It was crucial for linguists studying dialectal variations _______ spoken language samples.",
             "options": [
               "to be recorded",
               "to have recorded",
@@ -42883,7 +42883,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Psikoloji"
             ],
-            "sentence": "It was difficult for psychologists researching cognitive stress [to isolate] emotional factors in clinical trials.",
+            "sentence": "It was difficult for psychologists researching cognitive stress _______ emotional factors in clinical trials.",
             "options": [
               "to be isolated",
               "to isolate",
@@ -43092,7 +43092,7 @@ const unitSentencesMap = {
               "Amaç Mastarı",
               "Hukuk"
             ],
-            "sentence": "Parliaments enact strict regulations [in order to] prevent corruption in public institutions.",
+            "sentence": "Parliaments enact strict regulations _______ prevent corruption in public institutions.",
             "options": [
               "because",
               "although",
@@ -43164,7 +43164,7 @@ const unitSentencesMap = {
               "Amaç Mastarı",
               "Psikoloji"
             ],
-            "sentence": "Therapists apply cognitive methods [in order to] alleviate anxiety among patients.",
+            "sentence": "Therapists apply cognitive methods _______ alleviate anxiety among patients.",
             "options": [
               "in order to",
               "owing to",
@@ -43230,7 +43230,7 @@ const unitSentencesMap = {
               "Amaç Mastarı",
               "İletişim"
             ],
-            "sentence": "Journalists verify primary sources [in order to] avoid publishing false news.",
+            "sentence": "Journalists verify primary sources _______ avoid publishing false news.",
             "options": [
               "since",
               "in order to",
@@ -43376,7 +43376,7 @@ const unitSentencesMap = {
               "Amaç Mastarı",
               "İktisat"
             ],
-            "sentence": "Economists revised tax laws [in order to] stimulate economic growth in underdeveloped regions.",
+            "sentence": "Economists revised tax laws _______ stimulate economic growth in underdeveloped regions.",
             "options": [
               "because of",
               "despite",
@@ -43472,7 +43472,7 @@ const unitSentencesMap = {
               "Amaç Mastarı",
               "Sinema"
             ],
-            "sentence": "Film directors adjusted camera angles [so as to] enhance cinematic aesthetics in movies.",
+            "sentence": "Film directors adjusted camera angles _______ enhance cinematic aesthetics in movies.",
             "options": [
               "owing to",
               "even if",
@@ -43576,7 +43576,7 @@ const unitSentencesMap = {
               "Amaç Mastarı",
               "Hukuk"
             ],
-            "sentence": "Judges consulted legal scholars [in order to] clarify complex judicial decisions.",
+            "sentence": "Judges consulted legal scholars _______ clarify complex judicial decisions.",
             "options": [
               "in spite of",
               "in order to",
@@ -43664,7 +43664,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Sosyoloji"
             ],
-            "sentence": "Scholars analyzing voting behavior gathered empirical data [so as to] evaluate election outcomes.",
+            "sentence": "Scholars analyzing voting behavior gathered empirical data _______ evaluate election outcomes.",
             "options": [
               "so as to",
               "because of",
@@ -43748,7 +43748,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Psikoloji"
             ],
-            "sentence": "Psychologists studying cognitive processes conducted therapy sessions [to] lower psychological stress.",
+            "sentence": "Psychologists studying cognitive processes conducted therapy sessions _______ lower psychological stress.",
             "options": [
               "in spite of",
               "provided that",
@@ -43957,7 +43957,7 @@ const unitSentencesMap = {
               "Soru Kelimeli Mastar Kısaltması",
               "Sinema"
             ],
-            "sentence": "Film directors explain [how to interpret] narrative structures in modern cinema.",
+            "sentence": "Film directors explain _______ narrative structures in modern cinema.",
             "options": [
               "how to interpret",
               "how to be interpreted",
@@ -44029,7 +44029,7 @@ const unitSentencesMap = {
               "Soru Kelimeli Mastar Kısaltması",
               "Tarih"
             ],
-            "sentence": "Archivists show researchers [where to locate] historical records of medieval wars.",
+            "sentence": "Archivists show researchers _______ historical records of medieval wars.",
             "options": [
               "where to be located",
               "where to have located",
@@ -44088,7 +44088,7 @@ const unitSentencesMap = {
               "Soru Kelimeli Mastar Kısaltması",
               "Sanat Tarihi"
             ],
-            "sentence": "Curators know [which architectural structures to restore] in historic districts.",
+            "sentence": "Curators know _______ in historic districts.",
             "options": [
               "which architectural structures to restore",
               "which architectural structures to be restored",
@@ -44236,7 +44236,7 @@ const unitSentencesMap = {
               "Soru Kelimeli Mastar Kısaltması",
               "Sosyoloji"
             ],
-            "sentence": "Sociologists learned [how to measure] demographic shifts in urban areas.",
+            "sentence": "Sociologists learned _______ demographic shifts in urban areas.",
             "options": [
               "how to be measured",
               "how to measure",
@@ -44451,7 +44451,7 @@ const unitSentencesMap = {
               "Soru Kelimeli Mastar Kısaltması",
               "İktisat"
             ],
-            "sentence": "Economists clarified [how to maintain] financial stability during currency fluctuations.",
+            "sentence": "Economists clarified _______ financial stability during currency fluctuations.",
             "options": [
               "how to maintain",
               "how to be maintained",
@@ -44512,7 +44512,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Antropoloji"
             ],
-            "sentence": "Anthropologists investigating ancient civilizations learned [how to preserve] cultural heritage artifacts.",
+            "sentence": "Anthropologists investigating ancient civilizations learned _______ cultural heritage artifacts.",
             "options": [
               "how to be preserved",
               "how to have preserved",
@@ -44596,7 +44596,7 @@ const unitSentencesMap = {
               "Participle Yapıları",
               "Sanat Tarihi"
             ],
-            "sentence": "Curators restoring architectural monuments decided [which historical ruins to protect] first.",
+            "sentence": "Curators restoring architectural monuments decided _______ first.",
             "options": [
               "which historical ruins to be protected",
               "which historical ruins to have protected",
