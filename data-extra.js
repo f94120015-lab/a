@@ -5545,7 +5545,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l1_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l1_merged_q1",
@@ -5885,7 +5885,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l2_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l2_merged_q1",
@@ -6225,7 +6225,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l3_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l3_merged_q1",
@@ -6565,7 +6565,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l4_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l4_merged_q1",
@@ -6905,7 +6905,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l9_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l9_merged_q1",
@@ -7245,7 +7245,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l10_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l10_merged_q1",
@@ -7585,7 +7585,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l1_q1",
@@ -7925,7 +7925,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l2_q1",
@@ -8265,7 +8265,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l3_q1",
@@ -8605,7 +8605,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l1_q1",
@@ -8945,7 +8945,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l2_q1",
@@ -9285,7 +9285,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l3_q1",
@@ -9625,7 +9625,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l4_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l4_q1",
@@ -9965,7 +9965,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l1_q1",
@@ -10305,7 +10305,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l2_q1",
@@ -10645,7 +10645,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l3_q1",
@@ -10985,7 +10985,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l4_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l4_q1",
@@ -11325,7 +11325,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l5_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l5_q1",
@@ -11665,7 +11665,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l6_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l6_q1",
@@ -12005,7 +12005,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l7_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l7_q1",
@@ -12366,7 +12366,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l1_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l1_merged_q1",
@@ -12705,7 +12705,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l2_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l2_merged_q1",
@@ -13044,7 +13044,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l3_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l3_merged_q1",
@@ -13383,7 +13383,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l4_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l4_merged_q1",
@@ -13722,7 +13722,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l9_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l9_merged_q1",
@@ -14061,7 +14061,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l10_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l10_merged_q1",
@@ -14400,7 +14400,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l1_q1",
@@ -14739,7 +14739,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l2_q1",
@@ -15078,7 +15078,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l3_q1",
@@ -15417,7 +15417,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l1_q1",
@@ -15756,7 +15756,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l2_q1",
@@ -16095,7 +16095,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l3_q1",
@@ -16434,7 +16434,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l4_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l4_q1",
@@ -16773,7 +16773,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l1_q1",
@@ -17112,7 +17112,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l2_q1",
@@ -17451,7 +17451,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l3_q1",
@@ -17790,7 +17790,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l4_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l4_q1",
@@ -18129,7 +18129,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l5_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l5_q1",
@@ -18468,7 +18468,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l6_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l6_q1",
@@ -18807,7 +18807,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l7_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l7_q1",
@@ -19167,7 +19167,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l1_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l1_merged_q1",
@@ -19506,7 +19506,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l2_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l2_merged_q1",
@@ -19845,7 +19845,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l3_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l3_merged_q1",
@@ -20184,7 +20184,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l4_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l4_merged_q1",
@@ -20523,7 +20523,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l9_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l9_merged_q1",
@@ -20862,7 +20862,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c40_l10_merged_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l10_merged_q1",
@@ -21201,7 +21201,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l1_q1",
@@ -21540,7 +21540,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l2_q1",
@@ -21879,7 +21879,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c105_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c105_l3_q1",
@@ -22218,7 +22218,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l1_q1",
@@ -22557,7 +22557,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l2_q1",
@@ -22896,7 +22896,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l3_q1",
@@ -23235,7 +23235,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c54_l4_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c54_l4_q1",
@@ -23574,7 +23574,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l1_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l1_q1",
@@ -23913,7 +23913,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l2_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l2_q1",
@@ -24252,7 +24252,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l3_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l3_q1",
@@ -24591,7 +24591,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l4_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l4_q1",
@@ -24930,7 +24930,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l5_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l5_q1",
@@ -25269,7 +25269,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l6_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l6_q1",
@@ -25608,7 +25608,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c56_l7_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c56_l7_q1",
@@ -34299,7 +34299,7 @@ if (typeof lessons !== 'undefined') {
       },
       {
         "id": "c40_l2_merged_ex3",
-        "title": "Alıştırma 3: 🔴 Grup 3 - İki Cümle Arasına Gelenler & Noktalama Kilitleri (15 Soru)",
+        "title": "Alıştırma 3: Geçiş Zarfları ve Noktalama",
         "description": "Geçiş Zarfları (Transitions) ve Noktalı Virgül (;) / Virgül (,) Disiplini",
         "questions": [
           {
@@ -42492,8 +42492,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c43_l2_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 3: Geçmiş ve Gelecek Zaman Edilgen Bükümleri (was V3, will be V3)",
-        "description": "2. Geçmiş ve Gelecek Zaman Edilgen Bükümleri (was V3, will be V3)",
+        "title": "Alıştırma 3: Geçmiş ve Gelecek Edilgen Bükümler",
+        "description": "Geçmiş ve gelecek zamanda edilgen çatı çekimlerini kurma ve çevirme.",
         "questions": [
           {
             "id": "c43_l02_e1_q1",
@@ -42654,8 +42654,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c43_l2_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 4: Geçmiş ve Gelecek Zaman Edilgen Bükümleri (was V3, will be V3)",
-        "description": "2. Geçmiş ve Gelecek Zaman Edilgen Bükümleri (was V3, will be V3)",
+        "title": "Alıştırma 4: Geçmiş ve Gelecek Edilgen Bükümler",
+        "description": "Geçmiş ve gelecek zamanda edilgen çatı çekimlerini kurma ve çevirme.",
         "questions": [
           {
             "id": "c43_l02_e2_q1",
@@ -45037,8 +45037,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c44_l3_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 5: Kesinlik Bildiren Geçmiş Zaman Zincirleri (must have been V3)",
-        "description": "3. Kesinlik Bildiren Geçmiş Zaman Zincirleri (must have been V3)",
+        "title": "Alıştırma 5: Kesinlik Bildiren Geçmiş Zincirler",
+        "description": "Geçmişe dönük kesinlik bildiren modal + have been + V3 zincirlerini çözümleme.",
         "questions": [
           {
             "id": "c44_l03_e1_q1",
@@ -45203,8 +45203,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c44_l3_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 6: Kesinlik Bildiren Geçmiş Zaman Zincirleri (must have been V3)",
-        "description": "3. Kesinlik Bildiren Geçmiş Zaman Zincirleri (must have been V3)",
+        "title": "Alıştırma 6: Kesinlik Bildiren Geçmiş Zincirler",
+        "description": "Geçmişe dönük kesinlik bildiren modal + have been + V3 zincirlerini çözümleme.",
         "questions": [
           {
             "id": "c44_l03_e2_q1",
@@ -45351,8 +45351,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c45_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 7: Şimdiki Zaman Söylentili Edilgen Süreçler (is said to be V3)",
-        "description": "Ders 1: Şimdiki Zaman Söylentili Edilgen Süreç Zincirleri (is said to be V-ing/V3)",
+        "title": "Alıştırma 7: Söylentili Edilgen Süreçler",
+        "description": "Söylenti bildiren edilgen yapıları (is said to be) cümle içinde tanıma.",
         "questions": [
           {
             "id": "c45_l01_e1_q1",
@@ -45523,8 +45523,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c45_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 8: Şimdiki Zaman Söylentili Edilgen Süreçler (is said to be V3)",
-        "description": "Ders 1: Şimdiki Zaman Söylentili Edilgen Süreç Zincirleri (is said to be V-ing/V3)",
+        "title": "Alıştırma 8: Söylentili Edilgen Süreçler",
+        "description": "Söylenti bildiren edilgen yapıları (is said to be) cümle içinde tanıma.",
         "questions": [
           {
             "id": "c45_l01_e2_q1",
@@ -45671,8 +45671,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c45_l2_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 9: Geçmiş Zaman Çekimli Edilgen Süreç Zincirleri (was believed to have been V3)",
-        "description": "Ders 2: Geçmiş Zaman Çekimli Edilgen Süreç Zincirleri (was believed to have been V3)",
+        "title": "Alıştırma 9: Geçmiş Edilgen Süreç Zincirleri",
+        "description": "Geçmişe dönük söylenti yapılarını (was believed to have been V3) çözümleme.",
         "questions": [
           {
             "id": "c45_l02_e1_q1",
@@ -45843,8 +45843,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c45_l2_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 10: Geçmiş Zaman Çekimli Edilgen Süreç Zincirleri (was believed to have been V3)",
-        "description": "Ders 2: Geçmiş Zaman Çekimli Edilgen Süreç Zincirleri (was believed to have been V3)",
+        "title": "Alıştırma 10: Geçmiş Edilgen Süreç Zincirleri",
+        "description": "Geçmişe dönük söylenti yapılarını (was believed to have been V3) çözümleme.",
         "questions": [
           {
             "id": "c45_l02_e2_q1",
@@ -45989,8 +45989,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c46_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 11: Çift Geçmiş Zaman Bükümlü Modal Matrisi (modal + have been being V3)",
-        "description": "Ders 1: Çift Geçmiş Zaman Bükümlü Modal Matrisi (modal + have been being V3)",
+        "title": "Alıştırma 11: Çift Bükümlü Modal Matrisi",
+        "description": "Çift bükümlü modal + have been being + V3 zincirlerini çözümleme.",
         "questions": [
           {
             "id": "c46_l01_e1_q1",
@@ -46165,8 +46165,8 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c46_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
-        "title": "Alıştırma 12: Çift Geçmiş Zaman Bükümlü Modal Matrisi (modal + have been being V3)",
-        "description": "Ders 1: Çift Geçmiş Zaman Bükümlü Modal Matrisi (modal + have been being V3)",
+        "title": "Alıştırma 12: Çift Bükümlü Modal Matrisi",
+        "description": "Çift bükümlü modal + have been being + V3 zincirlerini çözümleme.",
         "questions": [
           {
             "id": "c46_l01_e2_q1",
@@ -50578,7 +50578,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c49_l3_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 1: Uzun Yüklemli Cümle Çevirileri (İngilizce-Türkçe)",
-        "description": "Mega eylem zinciri barındıran İngilizce cümlelerin Türkçe karşılıklarını yüklem ve kalkan takibi yaparak eşleştirin.",
+        "description": "Uzun yüklem zincirli cümleleri yüklem takibi yaparak Türkçe karşılıklarıyla eşleştirin.",
         "questions": [
           {
             "id": "c49_l3_ex1_q1",
@@ -51726,7 +51726,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l1_ex1",
         "title": "Alıştırma 1: Zamir ve Referans İfade Takibi (Zamir Soruları)",
-        "description": "Paragraftaki 'this', 'the former', 'the latter' gibi referans zamirlerinin hangi isimlerin yerini tuttuğunu tespit edin.",
+        "description": "Paragraftaki this, the former, the latter gibi zamirlerin hangi isme gönderdiğini bulun.",
         "questions": [
           {
             "id": "u50_l1_q1",
@@ -51901,7 +51901,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l1_ex2",
         "title": "Alıştırma 2: Paragrafta Geçiş Bağlaçları (Cloze Test)",
-        "description": "Paragraftaki cümleler ve düşünceler arasındaki mantıksal geçişi sağlayan en uygun bağlacı (However, Consequently, Furthermore vb.) bulun.",
+        "description": "Paragraftaki cümleler arasındaki mantıksal geçişi sağlayan en uygun bağlacı bulun.",
         "questions": [
           {
             "id": "u50_l1_q13",
@@ -52289,7 +52289,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l2_ex2",
         "title": "Alıştırma 2: Karışık Cümleleri Sıralama (Paragraf Oluşturma)",
-        "description": "Karışık olarak verilen cümleleri mantıklı ve tutarlı bir paragraf akışı oluşturacak şekilde (giriş, gelişme, sonuç olarak) sıralayın.",
+        "description": "Karışık cümleleri giriş, gelişme ve sonuç akışı oluşturacak şekilde sıralayın.",
         "questions": [
           {
             "id": "u50_l2_q13",

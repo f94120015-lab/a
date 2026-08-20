@@ -37008,7 +37008,7 @@ const unitSentencesMap = {
         {
           "id": "u8l1ex1",
           "title": "Alıştırma 1: Yapısal Kalıplar (Öbek Düzeyi)",
-          "description": "Temel var/yok yapıları (there is / are / was / were / will be / has been) ve basit öbek seviyesi eşleştirmeleri (10 Soru)",
+          "description": "Temel var/yok yapılarını (there is/are/was/were) öbek düzeyinde eşleştirme.",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -37732,8 +37732,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l23ex1",
-          "title": "Alıştırma 1: Soru Yapıları - Durum ve Modallar",
-          "description": "Durum, modal ve yardımcı fiil soru kalıplarını tanıma (10 Soru)",
+          "title": "Alıştırma 1: Durum ve Modal Soruları",
+          "description": "Be ve modal yardımcı fiillerle kurulan soru kalıplarını tanıma.",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -37983,8 +37983,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l24ex1",
-          "title": "Alıştırma 1: Soru Yapıları - Do/Does/Did ve There is/are",
-          "description": "Yardımcı fiil eylemleri ve var/yok soru kalıplarını tanıma (10 Soru)",
+          "title": "Alıştırma 1: Do/Does/Did ve There is/are",
+          "description": "Do/Does/Did ve there is/are ile kurulan soru kalıplarını tanıma.",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -38218,8 +38218,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l25ex1",
-          "title": "Alıştırma 1: Soru Yapıları - Soru Kelimeleri (Wh- Questions)",
-          "description": "Soru kelimeli (Wh-) sorularda öbek ve cümle düzeyinde yapılar (10 Soru)",
+          "title": "Alıştırma 1: Wh- Soru Kelimeleri",
+          "description": "Wh- soru kelimeleriyle öbek ve cümle düzeyinde soru kurma.",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -38461,8 +38461,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u9l26ex1",
-          "title": "Alıştırma 1: Soru Yapıları - Edatlı Sorular ve Teyit Soruları (Tag Questions)",
-          "description": "Edatlı soru kalıpları, olumsuz sorular ve teyit sorularını tanıma (10 Soru)",
+          "title": "Alıştırma 1: Edatlı ve Teyit Soruları",
+          "description": "Edatlı soru kalıpları ve teyit sorularını (tag questions) tanıma.",
           "createdAt": "2026-07-27T00:00:00Z",
           "questions": [
             {
@@ -41105,7 +41105,7 @@ const unitSentencesMap = {
         {
           "id": "u12l1ex3",
           "title": "Alıştırma 3: İleri Seviye & Spiralleşme (Cümle Sentezi)",
-          "description": "Participle kısaltmalarının önceki dilbilgisi yapılarıyla (SVO, Soru Cümleleri, Var/Yok, İsim+Edat, Edilgen Çatı, Modallar) harmanlandığı ileri seviye cümle analizi.",
+          "description": "Participle kısaltmalarını önceki dilbilgisi yapılarıyla birleştiren ileri cümle analizi.",
           "questions": [
             {
               "id": "u12l1_ex3_q1",
@@ -61552,7 +61552,7 @@ const unitSentencesMap = {
         {
           "id": "u103l107ex1",
           "title": "Alıştırma 1: Alışkanlık & Uyum Yapıları (Sentezi)",
-          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "description": "Öbek düzeyinden cümle ve metin düzeyine uzanan kademeli sentez alıştırmaları.",
           "questions": [
             {
               "id": "u103l107_ex1_q1",
@@ -61845,7 +61845,7 @@ const unitSentencesMap = {
         {
           "id": "u103l108ex1",
           "title": "Alıştırma 1: İsteklilik & Eğilim Yapıları (Sentezi)",
-          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "description": "Öbek düzeyinden cümle ve metin düzeyine uzanan kademeli sentez alıştırmaları.",
           "questions": [
             {
               "id": "u103l108_ex1_q1",
@@ -62136,7 +62136,7 @@ const unitSentencesMap = {
         {
           "id": "u103l109ex1",
           "title": "Alıştırma 1: İhtimal, Kaçınılmazlık & Kesinlik Yapıları (Sentezi)",
-          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "description": "Öbek düzeyinden cümle ve metin düzeyine uzanan kademeli sentez alıştırmaları.",
           "questions": [
             {
               "id": "u103l109_ex1_q1",
@@ -62430,8 +62430,8 @@ const unitSentencesMap = {
       "exercises": [
         {
           "id": "u103l110ex1",
-          "title": "Alıştırma 1: Zorunluluk, Beklenti, Yetersizlik & Kader Yapıları (Sentezi)",
-          "description": "bağlamı: Öbek düzeyinden basit cümle düzeyine, oradan da entegre metinlere uzanan sentez alıştırmaları (15 Soru)",
+          "title": "Alıştırma 1: Zorunluluk ve Beklenti Yapıları",
+          "description": "Öbek düzeyinden cümle ve metin düzeyine uzanan kademeli sentez alıştırmaları.",
           "questions": [
             {
               "id": "u103l110_ex1_q1",

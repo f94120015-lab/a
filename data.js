@@ -25476,7 +25476,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u40l1ex3",
         "title": "Alıştırma 3: Sentez (Spiraling)",
-        "description": "Zıtlık bağlaçlarını, edilgen yapı, modallar ve mastarlar gibi geçmiş gramer konularıyla harmanlayarak çeviri ve cümle kurma çalışmaları.",
+        "description": "Zıtlık bağlaçlarını edilgen yapı, modallar ve mastarlarla birleştiren çeviri çalışmaları.",
         "questions": [
           {
             "id": "u40l1_ex3_q1",
@@ -25825,7 +25825,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u40l2ex3",
         "title": "Alıştırma 3: Sentez (Spiraling)",
-        "description": "Kıyaslama ve sebep yapılarını, edilgen çatı, phrasal modallar, used to gibi geçmiş gramer yapılarıyla sentezleyen çalışmalar.",
+        "description": "Kıyaslama ve sebep yapılarını edilgen çatı ve öbeksel modallarla birleştiren çalışmalar.",
         "questions": [
           {
             "id": "u40l2_ex3_q1",
@@ -26174,7 +26174,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u40l3ex3",
         "title": "Alıştırma 3: Sentez (Spiraling)",
-        "description": "Sebep, sonuç ve ekleme yapılarını; edilgen çatı, there is/are ve should/must modallarıyla sentezleyen cümle çevirileri.",
+        "description": "Sebep, sonuç ve ekleme yapılarını edilgen çatı ve modallarla birleştiren çeviriler.",
         "questions": [
           {
             "id": "u40l3_ex3_q1",
@@ -26285,7 +26285,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u40l4ex1",
         "title": "Alıştırma 1: İkili ve Amaç Öbekleri (Phrase Level)",
-        "description": "Hem... hem de, ya... ya da gibi ikili bağlaçları, amaç yapılarını, hariç tutma ve edat kombinasyonlarını ifade düzeyinde çalışma.",
+        "description": "İkili bağlaçlar, amaç yapıları ve edat kombinasyonlarını öbek düzeyinde tanıma.",
         "questions": [
           {
             "id": "u40l4_ex1_q1",
@@ -26523,7 +26523,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u40l4ex3",
         "title": "Alıştırma 3: Sentez (Spiraling)",
-        "description": "İkili, amaç ve edat kombinasyonlarını; participle kısaltmaları, öbeksel modallar ve etken/edilgen cümle refleksleriyle pekiştiren çalışmalar.",
+        "description": "İkili ve amaç yapılarını participle kısaltmaları ve öbeksel modallarla pekiştirme.",
         "questions": [
           {
             "id": "u40l4_ex3_q1",
@@ -28822,8 +28822,8 @@ Object.assign(unitSentencesMap, {
             "exercises": [
                         {
                                     "id": "u101_l3_ex0",
-                                    "title": "Alıştırma 1: Isınma, Türkçe Çeviri Kılavuzu & Devrik Tense Kilitleri (Temel Seviye)",
-                                    "description": "Devrik anlık zaman bağlaçlarının Türkçe çeviri mantıkları (-er ... -mez / henüz ... ki), çağırdığı zamanlar (Had V3 / V2) ve ikincil ek kilitleri (THAN / WHEN).",
+                                    "title": "Alıştırma 1: Devrik Zaman Kalıpları (Temel)",
+                                    "description": "No sooner ve Hardly kalıplarının Türkçe karşılıkları ve çağırdığı zaman yapıları (Had V3 / V2).",
                                     "questions": [
                                                 {
                                                             "id": "u101_l3_t1",
@@ -29185,7 +29185,7 @@ Object.assign(unitSentencesMap, {
                         },
                         {
                                     "id": "u101_l3_ex1",
-                                    "title": "Alıştırma 2: Devrik Anlık Zaman Kırılmaları Akademik Cümleler (No sooner... than & Hardly... when)",
+                                    "title": "Alıştırma 2: Akademik Devrik Cümleler",
                                     "description": "Akademik metinlerde No sooner... than ve Hardly... when devrik dizilimi ve tense uyumları.",
                                     "questions": [
                                                 {
@@ -29474,8 +29474,8 @@ Object.assign(unitSentencesMap, {
                         },
                         {
                                     "id": "u101_l3_ex2",
-                                    "title": "Alıştırma 3: Düz vs. Devrik Anlık Bağlaç Karşılaştırmaları & Çeviri (As soon as vs. No sooner)",
-                                    "description": "As soon as (Düz Cümle) ile No sooner/Hardly (Devrik Cümle) sözdizimi farkı, kural yasakları ve çevirisi.",
+                                    "title": "Alıştırma 3: Düz ve Devrik Karşılaştırması",
+                                    "description": "As soon as ile No sooner/Hardly arasındaki sözdizimi farkı ve çeviri kuralları.",
                                     "questions": [
                                                 {
                                                             "id": "u101_l3_q13",
@@ -31438,7 +31438,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l4ex1",
-        "title": "Alıştırma 4: Geçmişte Süreç ve Eşzamanlılık Zarfları (Past Continuous Refleksi)",
+        "title": "Alıştırma 4: Süreç ve Eşzamanlılık Zarfları",
         "description": "Geçmişte süreç ve eşzamanlılık zarfları ile Past Continuous refleksi alıştırmaları.",
         "questions": [
           {
@@ -31803,7 +31803,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l5ex1",
-        "title": "Alıştırma 5: Etkisi Süren ve Belirsiz Geçmiş Zarfları (Present Perfect Refleksi)",
+        "title": "Alıştırma 5: Present Perfect Zarfları",
         "description": "Yakın geçmiş zarfları ile Present Perfect refleksi alıştırmaları.",
         "questions": [
           {
@@ -32168,7 +32168,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l6ex1",
-        "title": "Alıştırma 6: Kesintisiz Süreç Zarfları (Present Perfect Continuous Refleksi)",
+        "title": "Alıştırma 6: Kesintisiz Süreç Zarfları",
         "description": "Kesintisiz süreç zarfları ile Present Perfect Continuous refleksi alıştırmaları.",
         "questions": [
           {
@@ -32533,7 +32533,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l7ex1",
-        "title": "Alıştırma 7: Gelecek Zaman ve Plan Zarfları (Simple Future & Be Going To Refleksi)",
+        "title": "Alıştırma 7: Gelecek Zaman ve Plan Zarfları",
         "description": "Gelecek zaman zarfları ile Gelecek Zaman refleksi alıştırmaları.",
         "questions": [
           {
@@ -32892,7 +32892,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l8ex1",
-        "title": "Alıştırma 8: Gelecekte Devam Eden, Tamamlanan ve Sınır Zarfları (Future Perfect & Past Perfect)",
+        "title": "Alıştırma 8: Sınır ve Öncelik Zarfları",
         "description": "Sınır ve öncelik zarfları ile Future Perfect ve Past Perfect refleksi alıştırmaları.",
         "questions": [
           {
@@ -34664,7 +34664,7 @@ Object.assign(unitSentencesMap, {
         {
           "id": "u62l4ex3",
           "title": "Alıştırma 3: Karma Zarflar ve Miktar (& Spiralleşme)",
-          "description": "Zaman, derece ve miktar belirteçlerinin edilgen, modal, soru ve zaman uyumlu ileri düzey cümlelerdeki kullanımı (10 Soru)",
+          "description": "Zaman, derece ve miktar belirteçlerinin ileri düzey cümlelerdeki kullanımı.",
           "questions": [
             {
               "id": "u62l4_ex3_q1",
@@ -45491,7 +45491,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l4ex1",
-        "title": "Alıştırma 4: Geçmişte Süreç ve Eşzamanlılık Zarfları (Past Continuous Refleksi)",
+        "title": "Alıştırma 4: Süreç ve Eşzamanlılık Zarfları",
         "description": "Geçmişte süreç ve eşzamanlılık zarfları ile Past Continuous refleksi alıştırmaları.",
         "questions": [
           {
@@ -45856,7 +45856,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l5ex1",
-        "title": "Alıştırma 5: Etkisi Süren ve Belirsiz Geçmiş Zarfları (Present Perfect Refleksi)",
+        "title": "Alıştırma 5: Present Perfect Zarfları",
         "description": "Yakın geçmiş zarfları ile Present Perfect refleksi alıştırmaları.",
         "questions": [
           {
@@ -46221,7 +46221,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l6ex1",
-        "title": "Alıştırma 6: Kesintisiz Süreç Zarfları (Present Perfect Continuous Refleksi)",
+        "title": "Alıştırma 6: Kesintisiz Süreç Zarfları",
         "description": "Kesintisiz süreç zarfları ile Present Perfect Continuous refleksi alıştırmaları.",
         "questions": [
           {
@@ -46586,7 +46586,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l7ex1",
-        "title": "Alıştırma 7: Gelecek Zaman ve Plan Zarfları (Simple Future & Be Going To Refleksi)",
+        "title": "Alıştırma 7: Gelecek Zaman ve Plan Zarfları",
         "description": "Gelecek zaman zarfları ile Gelecek Zaman refleksi alıştırmaları.",
         "questions": [
           {
@@ -46945,7 +46945,7 @@ Object.assign(unitSentencesMap, {
     "exercises": [
       {
         "id": "u102l8ex1",
-        "title": "Alıştırma 8: Gelecekte Devam Eden, Tamamlanan ve Sınır Zarfları (Future Perfect & Past Perfect)",
+        "title": "Alıştırma 8: Sınır ve Öncelik Zarfları",
         "description": "Sınır ve öncelik zarfları ile Future Perfect ve Past Perfect refleksi alıştırmaları.",
         "questions": [
           {
@@ -47317,7 +47317,7 @@ Object.assign(unitSentencesMap, {
       {
         "id": "u102l9ex1",
         "title": "Alıştırma 1: Tetikleyici Zarflar & Past-Present Paralelliği",
-        "description": "Soru kökündeki zaman zarfına göre Past-Present paralelliği kurma ve uyumsuz şıkları eleme alıştırmaları (15 Soru).",
+        "description": "Soru kökündeki zaman zarfına göre doğru tense seçimi ve uyumsuz şıkları eleme.",
         "questions": [
           {
             "id": "u102l9_q1",
@@ -52913,8 +52913,8 @@ if (typeof unitSentencesMap !== 'undefined') {
     "exercises": [
       {
         "id": "u26l80ex1",
-        "title": "Alıştırma 1: İleri Niteleyiciler (Where, When, Whose, Whom) — Öbek Düzeyi",
-        "description": "Yer, zaman, iyelik ve nesne ilgi zamirlerini öbek düzeyinde tanıma çalışmaları",
+        "title": "Alıştırma 1: İleri Niteleyiciler (Öbek Düzeyi)",
+        "description": "Where, when, whose ve whom ilgi zamirlerini öbek düzeyinde tanıma.",
         "questions": [
           {
             "id": "u26l80_ex1_q1",
@@ -53685,8 +53685,8 @@ if (typeof unitSentencesMap !== 'undefined') {
     "exercises": [
       {
         "id": "u26l81ex1",
-        "title": "Alıştırma 1: Edatlı ve Zamiri Düşmüş Sıfat Cümlecikleri — Öbek Düzeyi",
-        "description": "Edat takımlı ve ilgi zamiri düşürülmüş (omitted pronoun) relative clause yapılarını öbek düzeyinde tanıma çalışmaları",
+        "title": "Alıştırma 1: Edatlı ve Zamirsiz Sıfat Cümlecikleri",
+        "description": "Edat takımlı ve ilgi zamiri düşmüş sıfat cümleciklerini öbek düzeyinde tanıma.",
         "questions": [
           {
             "id": "u26l81_ex1_q1",
@@ -58932,14 +58932,14 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l1_ex1",
-                "title": "Alıştırma 1: Bildirim Cümlecikleri — Yapısal Giriş & Öbek Tanıma (15 Soru)",
-                "description": "That ve The Fact That yapılarının öbek ve temel cümle düzeyinde kavranması (Soru tipleri: Eşleştirme, Çeviri, Çoktan Seçmeli, Boşluk Doldurma, Kelime Dizilimi).",
+                "title": "Alıştırma 1: Bildirim Cümlecikleri (Giriş)",
+                "description": "That ve The Fact That yapılarını öbek ve temel cümle düzeyinde tanıma.",
                 "questions": [...rawNC["1"].exercises[0].questions, ...rawNC["1"].exercises[1].questions, ...rawNC["1"].exercises[2].questions]
               },
               {
                 "id": "nc_l1_ex2",
-                "title": "Alıştırma 2: Bildirim Cümlecikleri — Analiz & Çeviri Sentezi (15 Soru)",
-                "description": "The Fact That ve sahte özne bloklarının ileri düzey metinlerde analizi ve çevirisi (Soru tipleri: Çoktan Seçmeli, Açılır Menü, Kelime Havuzu, Yazma & Çeviri).",
+                "title": "Alıştırma 2: Bildirim Cümlecikleri (Analiz)",
+                "description": "The Fact That ve sahte özne bloklarını ileri düzey metinlerde analiz etme ve çevirme.",
                 "questions": [...rawNC["4"].exercises[0].questions, ...rawNC["4"].exercises[1].questions, ...rawNC["4"].exercises[2].questions]
               }
             ]
@@ -58980,7 +58980,7 @@ const unit37 = { lessons: [] };
             "exercises": [
               {
                 "id": "nc_l4_ex1",
-                "title": "Alıştırma 1: Noun Clause vs Relative Clause — Yapısal Ayrım Refleksleri (15 Soru)",
+                "title": "Alıştırma 1: Noun Clause / Relative Clause Ayrımı",
                 "description": "That/What farkı ile Relative Clause ve Noun Clause ayırt etme alıştırmaları.",
                 "questions": [...rawNC["7"].exercises[0].questions, ...rawNC["7"].exercises[1].questions, ...rawNC["7"].exercises[2].questions]
               },
@@ -72724,7 +72724,7 @@ const chapter40Data = {
       {
         "id": "c40_l1_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l1_q1",
@@ -73025,7 +73025,7 @@ const chapter40Data = {
       {
         "id": "c40_l2_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l2_q1",
@@ -73326,7 +73326,7 @@ const chapter40Data = {
       {
         "id": "c40_l3_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l3_q1",
@@ -73627,7 +73627,7 @@ const chapter40Data = {
       {
         "id": "c40_l4_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l4_q1",
@@ -73928,7 +73928,7 @@ const chapter40Data = {
       {
         "id": "c40_l5_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l5_q1",
@@ -74229,7 +74229,7 @@ const chapter40Data = {
       {
         "id": "c40_l6_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l6_q1",
@@ -74530,7 +74530,7 @@ const chapter40Data = {
       {
         "id": "c40_l7_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l7_q1",
@@ -74831,7 +74831,7 @@ const chapter40Data = {
       {
         "id": "c40_l8_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l8_q1",
@@ -75132,7 +75132,7 @@ const chapter40Data = {
       {
         "id": "c40_l9_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l9_q1",
@@ -75772,7 +75772,7 @@ const chapter40Data = {
       {
         "id": "c40_l11_m_ex1",
         "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "1-5: Basit Giriş | 6-10: Orta Analiz | 11-12: Tip 3 Eşleştirme | 13-14: Tip 4 Cloze Paragraf | 15: Tip 5 Dönüştürme",
+        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
         "questions": [
           {
             "id": "c40_l11_q1",
