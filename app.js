@@ -7145,6 +7145,17 @@ function showQuestionTypesModal(title, typesList) {
 
 
 
+// Birleştirilmiş dersler (ör. c59_l1 -> c58_l1) alıştırmalarını kaynak dersteki
+// numaralarıyla taşıdığı için başlıkta "Alıştırma 1" yazan bir alıştırma listede
+// 4. sırada görünebiliyor. Numarayı listedeki konumdan türeterek eşitliyoruz.
+function correctExerciseNumber(lesson) {
+  const title = (lesson && lesson.activeExerciseTitle) || '';
+  if (!/Alıştırma\s*\d+/i.test(title) || !Array.isArray(lesson.exercises)) return title;
+  const idx = lesson.exercises.findIndex(ex => ex.id === lesson.activeExerciseId);
+  if (idx < 0) return title;
+  return title.replace(/Alıştırma\s*\d+/i, `Alıştırma ${idx + 1}`);
+}
+
 function cleanExerciseTitle(title, idx) {
   if (!title) return `${idx}. Alıştırma`;
   let cleaned = title.replace(/^Alıştırma\s*\d+\s*:\s*/i, '');
@@ -8421,8 +8432,9 @@ function updateQuizMetadata() {
   
   let exLabel = '';
   if (currentLesson.activeExerciseTitle) {
-    const exMatch = /(Alıştırma \d+)/i.exec(currentLesson.activeExerciseTitle);
-    exLabel = exMatch ? exMatch[1] : currentLesson.activeExerciseTitle;
+    const correctedTitle = correctExerciseNumber(currentLesson);
+    const exMatch = /(Alıştırma \d+)/i.exec(correctedTitle);
+    exLabel = exMatch ? exMatch[1] : correctedTitle;
   }
 
   const total = currentQuizQuestions.length;
@@ -12771,7 +12783,7 @@ function completeLesson() {
   let newAchievements = [];
 
   const earnedXP = isSuccess ? correctCount * XP_PER_CORRECT : 0;
-  const exTitle = currentLesson.activeExerciseTitle ? ` - ${currentLesson.activeExerciseTitle}` : '';
+  const exTitle = currentLesson.activeExerciseTitle ? ` - ${correctExerciseNumber(currentLesson)}` : '';
 
   if (isSuccess) {
     // Dersi tamamlanan listesine ekle
