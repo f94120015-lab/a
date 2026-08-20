@@ -52,3 +52,33 @@ appContent = appContent.replace(
 
 fs.writeFileSync(targetPath, appContent, 'utf8');
 console.log('Successfully wrote injected app.js to www/app.js');
+
+// ── Cache-busting ────────────────────────────────────────────────────────────
+// index.html pins every asset to a hand-written "?v=3.4.0" that nobody remembers
+// to bump, so browsers keep serving stale data.js / app.js after a deploy.
+// Rewrite each ?v= in www/index.html to a hash of that asset's own contents:
+// changed files get a fresh URL, unchanged ones stay cached.
+const crypto = require('crypto');
+const wwwIndexPath = path.join(__dirname, 'www', 'index.html');
+
+if (fs.existsSync(wwwIndexPath)) {
+  let html = fs.readFileSync(wwwIndexPath, 'utf8');
+  let stamped = 0;
+
+  html = html.replace(/(src|href)="([^"?]+)\?v=[^"]*"/g, (match, attr, file) => {
+    const assetPath = path.join(__dirname, 'www', file);
+    if (!fs.existsSync(assetPath)) return match;
+    const hash = crypto
+      .createHash('md5')
+      .update(fs.readFileSync(assetPath))
+      .digest('hex')
+      .slice(0, 8);
+    stamped++;
+    return `${attr}="${file}?v=${hash}"`;
+  });
+
+  fs.writeFileSync(wwwIndexPath, html, 'utf8');
+  console.log(`Cache-busted ${stamped} asset reference(s) in www/index.html`);
+} else {
+  console.warn('www/index.html not found — skipped cache-busting.');
+}
