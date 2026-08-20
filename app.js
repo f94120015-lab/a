@@ -27477,13 +27477,13 @@ function initTransitionsMatrixTab() {
   // Sekmeye her girişte kılavuz moduna dön: kullanıcı alıştırma modunda
   // ayrılmışsa panel açık, matris gizli kalmasın.
   const drillPanelInit = document.getElementById('tab-content-ezber-robotu');
-  if (drillPanelInit) drillPanelInit.classList.add('u-hidden');
+  if (drillPanelInit) drillPanelInit.style.display = 'none';
   ['trm-matrix-grid', 'trm-filter-chips'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.classList.remove('u-hidden');
+    if (el) el.style.display = '';
   });
   const searchWrapInit = document.querySelector('.trm-search-wrap');
-  if (searchWrapInit) searchWrapInit.classList.remove('u-hidden');
+  if (searchWrapInit) searchWrapInit.style.display = '';
 
   const modeBtns = document.querySelectorAll('.trm-dir-btn');
   modeBtns.forEach(btn => {
@@ -27500,15 +27500,17 @@ function initTransitionsMatrixTab() {
       btn.style.color = '#10b981';
 
       // "Alıştırma" modu matris değil, Bağlaç Robotu drill'ini gösterir.
+      // Inline display kullanılıyor: .u-hidden, .grid-300 / .flex-* gibi aynı
+      // özgüllükte ve stylesheet'te daha sonra gelen kurallara karşı kaybeder.
       const isDrill = btn.dataset.mode === 'drill';
       const drillPanel = document.getElementById('tab-content-ezber-robotu');
       const matrixGrid = document.getElementById('trm-matrix-grid');
       const chipRow = document.getElementById('trm-filter-chips');
       const searchWrap = document.querySelector('.trm-search-wrap');
-      [matrixGrid, chipRow, searchWrap].forEach(el => {
-        if (el) el.classList.toggle('u-hidden', isDrill);
-      });
-      if (drillPanel) drillPanel.classList.toggle('u-hidden', !isDrill);
+      if (matrixGrid) matrixGrid.style.display = isDrill ? 'none' : '';
+      if (chipRow) chipRow.style.display = isDrill ? 'none' : '';
+      if (searchWrap) searchWrap.style.display = isDrill ? 'none' : '';
+      if (drillPanel) drillPanel.style.display = isDrill ? 'block' : 'none';
       if (isDrill) {
         if (typeof initEzberRobotu === 'function') initEzberRobotu();
         return;
