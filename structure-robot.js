@@ -2641,6 +2641,11 @@
     function setGuideMode(on) {
       if (guidePanel) guidePanel.style.display = on ? "block" : "none";
       if (labContainer) labContainer.style.display = on ? "none" : "grid";
+      // Parça matrisleri (1./2./3. Matris Parçaları) lab-container'ın DIŞINDA
+      // duruyor; ayrıca gizlenmezlerse kılavuzun altında görünmeye devam eder.
+      document.querySelectorAll(".srobot-piece-section").forEach(sec => {
+        sec.style.display = on ? "none" : "";
+      });
       if (on && challengeCard) challengeCard.style.display = "none";
       if (on && btnCheckChallenge) btnCheckChallenge.style.display = "none";
       [btnSandbox, btnChallenge, btnGuide].forEach(b => {
