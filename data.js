@@ -55388,7 +55388,11 @@ rawTopics.forEach((topic, uIdx) => {
     if (unitId === 2 && l === 1) lId = 902;
     if (unitId === 15 && l === 1) lId = 915;
     if (unitId === 8 && l === 2) lId = 908;
-    if (unitId === 8 && l === 2) lId = 908;
+    // Ünite 9 (Soru Strüktürleri) 23'ten başlar ama ünite 8 (There) 21'den 5 ders
+    // sürdüğü için 24 ve 25 iki üniteye birden düşüyordu; ünite 8 önce işlendiği
+    // için ünite 9'un 2. ve 3. dersleri yerine ünite 8'in dersleri görünüyordu.
+    if (unitId === 9 && l === 1) lId = 909;
+    if (unitId === 9 && l === 2) lId = 910;
     unitLessonIds.push(lId);
   }
 
@@ -55410,7 +55414,8 @@ rawTopics.forEach((topic, uIdx) => {
     if (unitId === 2 && lIdx === 1) lessonId = 902;
     if (unitId === 15 && lIdx === 1) lessonId = 915;
     if (unitId === 8 && lIdx === 2) lessonId = 908;
-    if (unitId === 8 && lIdx === 2) lessonId = 908;
+    if (unitId === 9 && lIdx === 1) lessonId = 909;
+    if (unitId === 9 && lIdx === 2) lessonId = 910;
 
     // Ders indeksine göre soruları dinamik oluştur veya doğrudan soru listesini ekle
     const questions = [];
