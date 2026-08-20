@@ -12805,31 +12805,41 @@ const EXAM_GROUPS = [
     tests: [
       { id: 'restatement-1', label: 'Test 1', minutes: 20,
         sources: [{ lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
-                  { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] }
+                  { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] },
+      { id: 'restatement-2', label: 'Test 2', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_rs_ex' }] }
     ] },
   { id: 'irrelevant', title: 'Akışı Bozan Cümle', icon: '✂️', skill: 'Akışı Bozan Cümle',
     desc: 'Paragrafın anlam bütünlüğünü bozan cümleyi bulma',
     tests: [
       { id: 'irrelevant-1', label: 'Test 1', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] }
+        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] },
+      { id: 'irrelevant-2', label: 'Test 2', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2b_ex' }] }
     ] },
   { id: 'ordering', title: 'Paragraf Sıralama', icon: '🔢', skill: 'Paragraf Sıralama',
     desc: 'Karışık cümleleri anlamlı bir paragraf olacak şekilde dizme',
     tests: [
       { id: 'ordering-1', label: 'Test 1', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] }
+        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] },
+      { id: 'ordering-2', label: 'Test 2', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2c_ex' }] }
     ] },
   { id: 'reference', title: 'Zamir & Referans', icon: '🔗', skill: 'Zamir & Referans',
     desc: 'this, the former, the latter gibi ifadelerin gönderdiği ismi bulma',
     tests: [
       { id: 'reference-1', label: 'Test 1', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] }
+        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] },
+      { id: 'reference-2', label: 'Test 2', minutes: 12,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1c_ex' }] }
     ] },
   { id: 'cloze', title: 'Cloze Test', icon: '🧩', skill: 'Cloze Test',
     desc: 'Paragraftaki boşluğa uygun geçiş bağlacını bulma',
     tests: [
       { id: 'cloze-1', label: 'Test 1', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] }
+        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] },
+      { id: 'cloze-2', label: 'Test 2', minutes: 12,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1b_ex' }] }
     ] }
 ];
 
