@@ -1692,13 +1692,7 @@
         1,
         "'Put off' phrasal verb'ü kendisinden sonra gelen eylemi nesne olarak Gerund (-ing) biçiminde alır."
       ),
-      makeMC(
-        "c59_l1_ex1_q5",
-        "_______ by peer-reviewed journals remains the primary benchmark for assessing scientific validity.",
-        ["Being evaluated", "Evaluating", "To evaluate", "Evaluated", "Having evaluated"],
-        0,
-        "Cümlenin öznesi pasif bir Gerund olmalıdır. Makaleler değerlendirme işini kendisi yapmaz, değerlendirilirler (Being evaluated)."
-      ),
+      
       makeMC(
         "c59_l1_ex1_q6",
         "In his memoirs, the diplomat acknowledged _______ confidential state cables during the geopolitical crisis.",
@@ -1740,34 +1734,6 @@
         ["authorize", "authorizing", "be authorized", "to authorize", "authorized"],
         1,
         "'Object to' yapısındaki 'to' edattır (preposition). Bu nedenle kendisinden sonra yalın fiil değil, Gerund (authorizing) gelmelidir."
-      ),
-      makeMC(
-        "c59_l1_ex1_q12",
-        "Economists are looking forward to _______ the long-term impact of the newly ratified trade treaties.",
-        ["evaluate", "evaluating", "have evaluated", "be evaluating", "to evaluate"],
-        1,
-        "'Look forward to' kalıbındaki 'to' edat olduğu için arkasından Gerund (-ing) yapısı gelmelidir."
-      ),
-      makeMC(
-        "c59_l1_ex1_q13",
-        "Nomadic tribes, being accustomed to _______ in hyper-arid environments, display unique physiological traits.",
-        ["survive", "surviving", "having survived", "be survived", "to survive"],
-        1,
-        "'Be accustomed to' yapısında 'to' edat işlevindedir ve kendisinden sonra Gerund (surviving) gelir."
-      ),
-      makeMC(
-        "c59_l1_ex1_q14",
-        "During the examination, the lead engineer confessed to _______ the safety protocols.",
-        ["bypass", "bypassing", "have bypassed", "to bypass", "be bypassing"],
-        1,
-        "'Confess to' kalıbındaki 'to' edat olduğu için ardından Gerund (bypassing) getirilmelidir."
-      ),
-      makeMC(
-        "c59_l1_ex1_q15",
-        "The conglomerate restructured its division with a view to _______ novel aerospace materials.",
-        ["develop", "developing", "to develop", "developed", "having developed"],
-        1,
-        "'With a view to' (amacıyla) kalıbı edat olan 'to' içerdiğinden daima Gerund (developing) ile devam eder."
       )
     ];
 
