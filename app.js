@@ -2042,7 +2042,7 @@ function playCompletionSound(isSuccess = true) {
   try {
     if (isSuccess) {
       const audio = new Audio('assets/uy_aha.mp3');
-      audio.volume = 0.9;
+      audio.volume = 0.54;
       audio.play().catch(e => {
         console.warn("Audio play blocked or failed:", e);
       });
