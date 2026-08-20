@@ -12914,9 +12914,35 @@ function getExamQuestions(session) {
   return out;
 }
 
+// Deneme sınavı yalnızca yerel geliştirme ortamında açık; yayındaki sürümde
+// dersler tamamlanmadan erişilmesin diye kilitli gösterilir.
+function isExamUnlocked() {
+  return window.location.hostname === 'localhost' ||
+         window.location.hostname === '127.0.0.1' ||
+         window.location.protocol === 'file:';
+}
+
+function renderExamLocked(listEl) {
+  listEl.innerHTML = `
+    <div style="grid-column: 1 / -1; display: flex; justify-content: center; padding: 24px 8px;">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 40px 28px; max-width: 480px; width: 100%; text-align: center; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: center; gap: 18px; box-sizing: border-box;">
+        <div style="font-size: 4.5rem; line-height: 1; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15)); animation: pulse 2s infinite;">🔒</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-primary); margin: 0;">Deneme Sınavı Kilitli</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+          Bu uygulamayı tüm dersleri bitirdikten sonra açabilirsiniz.
+        </p>
+      </div>
+    </div>`;
+}
+
 function renderExamTab() {
   const listEl = document.getElementById('exam-card-list');
   if (!listEl) return;
+
+  if (!isExamUnlocked()) {
+    renderExamLocked(listEl);
+    return;
+  }
 
   listEl.innerHTML = EXAM_GROUPS.map(g => {
     const rows = (g.tests || []).map(t => {
@@ -12947,6 +12973,10 @@ function renderExamTab() {
 }
 
 function startExamSession(examId) {
+  if (!isExamUnlocked()) {
+    showToast('Bu uygulamayı tüm dersleri bitirdikten sonra açabilirsiniz.', 'info');
+    return;
+  }
   const session = findExamTest(examId);
   if (!session) return;
   const questions = getExamQuestions(session);
