@@ -55922,6 +55922,12 @@ const unit35 = {
     {
       lessonId: "u35_l5",
       lessonTitle: "5. Cümle Parsing & Çözümleme Stratejileri — Cümle Düzeyi",
+      konuAnlatimi: {
+        baslik: "Sıfat-Fiil mi, Çekimli Yüklem mi? (<span style='color: #ff6b6b; font-weight: bold;'>V-ing</span> / <span style='color: #ff6b6b; font-weight: bold;'>V3</span> Ayırt Etme Testleri)",
+        teorikMantik: "Cümle çözümlemede en çok hata, bir <span style='color: #ff6b6b; font-weight: bold;'>-ing</span> ya da <span style='color: #ff6b6b; font-weight: bold;'>-ed</span> kelimesinin ana yüklem sanılmasından çıkar. <br><br><strong>-ing kolaydır:</strong> önünde <i>is/am/are/was/were</i> yoksa asla çekimli yüklem değildir. <br><br><strong>Asıl tuzak -ed'dedir:</strong> düzenli fiillerde past simple ile past participle aynı yazılır (<i>preserved</i> / <i>preserved</i>). Burada <u>be yardımcı fiili aramak işe yaramaz</u>, çünkü etken past simple de yardımcı fiil almaz: <i>Economists <strong>modified</strong> trade policies.</i> (çekimli yüklem) <br><br>Ayrımı yapan asıl ölçüt, <span style='color: #ff6b6b; font-weight: bold;'>-ed'den sonra ne geldiğidir</span>: arkasından <strong>nesne</strong> geliyorsa çekimli past simple, <strong>edat / by-öbeği</strong> geliyorsa ya da hiçbir şey gelmiyorsa sıfat-fiil kısaltmasıdır.",
+        formul: "1) Cümlede zaten çekimli bir yüklem var mı? (bağlaç yoksa ikincisi olamaz)<br>2) -ed'den sonra <strong>nesne</strong> mi, <strong>edat</strong> mı geliyor?<br>3) Önündeki isim bu eylemi yapabilir mi? (yapamıyorsa edilgen kısaltmadır)<br>4) Düzensiz fiilse şekle bak: <i>wrote</i> (past simple) ≠ <i>written</i> (participle)<br>5) Başına <i>which was / were</i> ekleyince anlamlı mı? (anlamlıysa kısaltmadır)",
+        altinKural: "The sources <strong>preserved</strong> <u>their integrity</u>. ➔ arkasında NESNE var, çekimli past simple.<br>The sources <strong>preserved</strong> <u>in the archives</u> are rare. ➔ arkasında EDAT var, sıfat-fiil kısaltması; ana yüklem <i>are</i>."
+      },
       description: `<strong>💡 Cümle Parsing'in "Altın Formülleri" Nedir?</strong><br>Uzun ve karmaşık cümleleri doğru çözümlemek (parsing) ve ana ögeleri bulmak için şu 3 altın kuralı uygulayınız:<br>1. <strong>Özne - Yüklem Ayrımı (The Core):</strong> Ana özne ile ana yüklem arasına giren tüm ek açıklamaları ve kısaltmaları geçici olarak cümleden eleyin.<br>2. <strong>Kısaltmalar Yüklem Değildir:</strong> Cümledeki <strong>V-ing</strong>, <strong>V3</strong> veya <strong>to V0</strong> yapıları niteleyici kısaltmalardır (modifiers); asla cümlenin ana fiili (Main Verb) olamazlar.<br>3. <strong>Uyum ve Bağlaç Kontrolü:</strong> Kısaltma öbeklerinin nitelenen özne ile aktif/pasif uyumuna ve iki çekimli yüklem varsa arada bağlaç olup olmadığına dikkat edin.<br><br>⚠️ <strong>Önemli Kural:</strong> Bir cümlede bağlaç olmadan birden fazla ana yüklem bulunamaz. Birden fazla yüklem varsa, biri kısaltılmış (reduction) ya da bir bağlaçla bağlanmış olmak zorundadır.<br><br><hr style="border: 0; border-top: 1px dashed #ccc; margin: 15px 0;"><br><strong>🧠 Cümle Çözümleme Algoritması</strong><br><br><strong>ADIM 1:</strong> Virgüller veya tireler arasına girmiş olan tüm kısaltma öbeklerini (parenthetical modifiers) parantez içine alarak yok sayın. Geriye kalan çekimli fiil ana yükleminizdir (Main Verb).<br>• <strong>Örnek:</strong> The documents, [preserved in legal archives], <u>were written</u>... (were written = Main Verb)<br><br><strong>ADIM 2:</strong> Cümledeki Noun Clause veya Relative Clause bağlaçlarını (that, which, who vb.) bularak yan cümle sınırlarını çizin. Ana cümlenin yüklemi ile yan cümlenin yüklemini birbirine karıştırmayın.<br><br><strong>ADIM 3:</strong> Kısaltmalarda yapısal veya uyum hatası olup olmadığını kontrol edin.<br>• Eylem edilgense relative clause kısaltmasında bağlaç kalamaz (örn: <i>which finalized by...</i> Hatalı ➔ <i>finalized by...</i> veya <i>which was finalized by...</i> olmalıdır).<br>• Kısaltma biçimleri dilbilgisel formüllere uymalıdır (örn: <i>Having</i>'den sonra V3 gelmelidir: <i>Having evaluated</i>).`,
       exercises: [
         {
@@ -56276,6 +56282,9 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof uni
           title: titlesMap[l.lessonId] || l.lessonTitle,
           subtitle: l.lessonTitle,
           description: l.description || "",
+          // konuAnlatimi ders başlamadan önce tam ekran gösteriliyor; buraya
+          // kopyalanmazsa kaynakta tanımlı olsa bile hiç görünmüyor.
+          konuAnlatimi: l.konuAnlatimi || undefined,
           icon: "📖",
           unitId: 35,
           questions: [],
@@ -56286,6 +56295,7 @@ if (typeof units !== 'undefined' && typeof lessons !== 'undefined' && typeof uni
         lessonObj.title = titlesMap[l.lessonId] || l.lessonTitle;
         lessonObj.subtitle = l.lessonTitle;
         lessonObj.description = l.description || "";
+        if (l.konuAnlatimi) lessonObj.konuAnlatimi = l.konuAnlatimi;
         lessonObj.exercises = l.exercises || [];
       }
     });
