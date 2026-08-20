@@ -1885,6 +1885,7 @@ let wasTranslationCorrect = true;
 let isTranslationGateTriggered = false;
 let isPlacementMode = false;
 let isReviewMode = false;
+let examSessionLabel = null; // Deneme oturumlarında başlıkta 'Hızlı Tekrar' yerine kullanılır
 let reviewQuestions = [];
 let reviewSessionCorrectIds = [];
 let placementQuestionsList = [];
@@ -8419,7 +8420,7 @@ function updateQuizMetadata() {
 
   if (isReviewMode) {
     const total = reviewQuestions.length;
-    metadataEl.innerHTML = `Hızlı Tekrar • Soru ${currentQuestionIndex + 1}/${total}${newBadge}`;
+    metadataEl.innerHTML = `${examSessionLabel || 'Hızlı Tekrar'} • Soru ${currentQuestionIndex + 1}/${total}${newBadge}`;
     return;
   }
 
@@ -12737,8 +12738,85 @@ function nextQuestion() {
   renderQuestion();
 }
 
+// ============================================================
+// DENEME SINAVI SEKMESİ
+// ============================================================
+// Sorular derslerde tanımlı ama hiçbir üniteye bağlı değil; böylece Dersler
+// sekmesinde görünmez, buna karşılık yarım kalan oturum geri yüklenirken
+// lessons üzerinden id ile bulunabilir.
+const EXAM_SESSIONS = [
+  {
+    id: 'reading-1',
+    lessonId: 'c50_p_l4',
+    title: 'Okuma Parçası Denemesi',
+    desc: '6 akademik parça · ana fikir, detay, çıkarım, kelime ve tutum soruları',
+    icon: '📖'
+  }
+];
+
+function getExamQuestions(session) {
+  const lesson = lessons.find(l => l.id === session.lessonId);
+  return lesson ? getLessonQuestions(lesson) : [];
+}
+
+function renderExamTab() {
+  const listEl = document.getElementById('exam-card-list');
+  if (!listEl) return;
+
+  listEl.innerHTML = EXAM_SESSIONS.map(sx => {
+    const count = getExamQuestions(sx).length;
+    return `
+      <div class="card-panel" style="gap: 12px;">
+        <div class="flex-center-12">
+          <span class="icon-lg">${sx.icon}</span>
+          <div class="flex-col-4">
+            <span class="section-title-sm">${sx.title}</span>
+            <span class="text-sm-muted">${sx.desc}</span>
+          </div>
+        </div>
+        <div class="flex-between-wrap-10">
+          <span class="exercise-q-badge">${count} Soru</span>
+          <button class="btn btn-primary" data-exam-id="${sx.id}" ${count ? '' : 'disabled'}>Denemeyi Başlat</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  listEl.querySelectorAll('[data-exam-id]').forEach(btn => {
+    btn.onclick = () => startExamSession(btn.dataset.examId);
+  });
+}
+
+function startExamSession(examId) {
+  const session = EXAM_SESSIONS.find(sx => sx.id === examId);
+  if (!session) return;
+  const questions = getExamQuestions(session);
+  if (!questions.length) {
+    showToast('Bu denemede henüz soru bulunmuyor.', 'info');
+    return;
+  }
+
+  // Tekrar oturumu altyapısını yeniden kullanıyoruz: can kaybı yok, ilerleme
+  // kaydı ve mevcut soru arayüzü hazır geliyor.
+  quizSessionId++;
+  isReviewMode = true;
+  examSessionLabel = session.title;
+  reviewQuestions = questions;
+  reviewSessionCorrectIds = [];
+  currentQuestionIndex = 0;
+  correctCount = 0;
+  wrongCount = 0;
+
+  localStorage.setItem('amok_active_quiz_type', 'review');
+  localStorage.setItem('amok_active_review_question_ids', JSON.stringify(questions.map(q => q.id)));
+
+  showScreen('quiz-screen');
+  renderQuestion();
+}
+
 function completeReviewSession() {
   isReviewMode = false;
+  examSessionLabel = null;
 
   // Oturum bittiğinde doğru cevaplanan soruları hatalı listesinden düşür
   if (reviewSessionCorrectIds && reviewSessionCorrectIds.length > 0) {
@@ -13064,6 +13142,8 @@ function switchTab(tabId) {
     initTimeMatrixTab();
   } else if (tabId === 'transitions-matrix') {
     initTransitionsMatrixTab();
+  } else if (tabId === 'exam') {
+    renderExamTab();
   } else if (tabId === 'structure-robot') {
     if (typeof initStructureRobot === 'function') {
       initStructureRobot();

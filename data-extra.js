@@ -51683,7 +51683,7 @@ if (typeof lessons !== 'undefined') {
       title: "Paragraf Okuma ve YÖKDİL Soru Tipleri",
       description: "YÖKDİL ve YDS odaklı; referans kelime takibi (zamir soruları), akışı bozan cümle analizi (Roma rakamlı sorular), paragraf sıralama ve bağlaçlı geçiş pratikleri.",
       icon: "📖",
-      lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3", "c50_p_l4"],
+      lessons: ["c50_p_l1", "c50_p_l2", "c50_p_l3"],
       formulas: [
         {
           formula: "Reference Mapping & Context Clues",
@@ -52605,23 +52605,18 @@ if (typeof lessons !== 'undefined') {
       }
     ]
   }
+
 ,
   {
     "id": "c50_p_l4",
     "unitId": 50,
-    "title": "Okuma Parçaları ve Paragraf Soruları",
-    "subtitle": "Akademik Parçalarda Ana Fikir, Detay, Çıkarım ve Kelime Analizi",
-    "konuAnlatimi": {
-      "baslik": "Okuma Parçası Sorularını Çözme Stratejisi",
-      "teorikMantik": "YÖKDİL ve YDS'de sınavın yaklaşık dörtte biri okuma parçalarından gelir. Her parçaya 4-5 soru sorulur ve soru tipleri sabittir: <strong>ana fikir</strong>, <strong>detay</strong>, <strong>çıkarım</strong>, <strong>bağlamdan kelime anlamı</strong> ve <strong>yazarın tutumu</strong>. Parçayı baştan sona ezberlemeye çalışmak yerine, önce soruyu okuyup hangi tipte olduğunu belirlemek ve parçada yalnızca ilgili yeri taramak süre kazandırır.",
-      "formul": "1) Soruyu oku, tipini belirle<br>2) Ana fikir sorusunda parçanın tamamına, detay sorusunda tek bir cümleye bak<br>3) Çıkarım sorularında metinde <em>yazmayan</em> ama metinden zorunlu olarak çıkan seçeneği ara<br>4) Kelime sorusunda kelimeyi kapatıp boşluğa ne gelirdi diye düşün<br>5) Tutum sorusunda yazarın değerlendirme bildiren kelimelerini (productive, concern, unexpectedly) izle",
-      "altinKural": "Bir seçenek doğru bilgi içerse bile parçada söylenmiyorsa yanlıştır. Cevabın dayanağı daima metnin kendisidir; genel kültür değil."
-    },
+    "title": "Okuma Parçaları (Deneme)",
+    "subtitle": "Akademik Parçalarda Ana Fikir, Detay, Çıkarım, Kelime ve Tutum",
     "exercises": [
       {
         "id": "u50_l4_ex1",
-        "title": "Alıştırma 1: Tarih ve Fen Bilimleri Parçaları",
-        "description": "İki akademik parça üzerinde ana fikir, detay, çıkarım, kelime ve tutum sorularını çözün.",
+        "title": "Okuma Parçası Denemesi",
+        "description": "Altı akademik parça üzerinde 30 soruluk okuma denemesi.",
         "questions": [
           {
             "id": "u50_l4_p1_q1",
@@ -52636,7 +52631,7 @@ if (typeof lessons !== 'undefined') {
               "Yazıcı atölyeleri arasındaki rekabet hata oranını artırmıştır."
             ],
             "correctIndex": 2,
-            "explanation": "Parça, bir zamanlar kusur sayılan hataların artık kaynak ve rota tespiti için kanıt olarak kullanıldığını anlatıyor; diğer seçenekler metinde desteklenmiyor.",
+            "explanation": "Parça, bir zamanlar kusur sayılan hataların artık kaynak ve rota tespitinde kanıt olarak kullanıldığını anlatıyor.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52671,10 +52666,10 @@ if (typeof lessons !== 'undefined') {
               "El yazması aileleri yalnızca aynı şehirde üretilen nüshalardan oluşur.",
               "Hataların sayısı arttıkça nüshanın tarihi kesinleşir.",
               "Ticari kayıtların bulunmadığı durumlarda bile el yazmaları ticaret yolları hakkında bilgi verebilir.",
-              "Matbaa öncesi dönemde yer adları standartlaştırılmıştır."
+              "Matbaa öncesinde yer adları standartlaştırılmıştır."
             ],
             "correctIndex": 3,
-            "explanation": "Son cümlelerde, ticari kayıt bulunmayan yerlerde bile rotaların yeniden kurulabildiği belirtiliyor. Yazıcıların hataları bilinçli bıraktığına dair bir ifade yok.",
+            "explanation": "Son cümlelerde ticari kayıt bulunmayan yerlerde bile rotaların yeniden kurulabildiği belirtiliyor.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52684,7 +52679,7 @@ if (typeof lessons !== 'undefined') {
             "id": "u50_l4_p1_q4",
             "type": "multiple-choice",
             "passage": "Before the printing press reached Anatolia, scribal workshops copied manuscripts by hand, and each copy carried the small errors of the scribe who produced it. Historians once treated these errors as damage to be corrected. Recent scholarship has reversed that judgement. Because a scribe's mistakes are distinctive, they allow researchers to group surviving copies into families and trace which workshop produced which manuscript. A misspelled place name repeated across twelve copies is no longer a flaw; it is evidence of a shared source. This shift has proved unexpectedly productive, since it lets historians reconstruct trade routes along which manuscripts travelled, even where no commercial records survive. What was once discarded as noise now carries the clearest signal.",
-            "prompt": "Parçada geçen 'distinctive' kelimesi anlamca aşağıdakilerden hangisine en yakındır?",
+            "prompt": "Parçada geçen 'distinctive' kelimesi anlamca hangisine en yakındır?",
             "options": [
               "rastlantısal",
               "ayırt edici",
@@ -52693,7 +52688,7 @@ if (typeof lessons !== 'undefined') {
               "okunaksız"
             ],
             "correctIndex": 1,
-            "explanation": "Hataların ayırt edici olması, nüshaların gruplanmasını mümkün kılar; bağlam 'ayırt edici' anlamını gerektirir.",
+            "explanation": "Hataların ayırt edici olması nüshaların gruplanmasını mümkün kılar.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52712,7 +52707,7 @@ if (typeof lessons !== 'undefined') {
               "Yöntemdeki değişimi olumlayan ve gerekçelendiren"
             ],
             "correctIndex": 4,
-            "explanation": "Yazar 'unexpectedly productive' (beklenmedik ölçüde verimli) diyerek yeni yaklaşımı olumluyor ve nedenini açıklıyor.",
+            "explanation": "'Unexpectedly productive' ifadesiyle yeni yaklaşım olumlanıyor ve nedeni açıklanıyor.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52731,7 +52726,7 @@ if (typeof lessons !== 'undefined') {
               "Pasifik'teki resifler diğer okyanuslardakinden daha dayanıklıdır."
             ],
             "correctIndex": 1,
-            "explanation": "Parçanın merkezinde, deniz çayırı yakınındaki resiflerin belirgin biçimde daha iyi durumda olduğu bulgusu var.",
+            "explanation": "Metnin merkezinde, deniz çayırı yakınındaki resiflerin belirgin biçimde daha iyi durumda olduğu bulgusu var.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52764,12 +52759,12 @@ if (typeof lessons !== 'undefined') {
             "options": [
               "Deniz çayırlarının korunması dolaylı olarak resiflerin korunmasına da hizmet eder.",
               "Deniz çayırları derin ve bulanık sularda daha hızlı yayılır.",
-              "Okyanus asitlenmesi artık resifler için bir tehdit sayılmamaktadır.",
+              "Okyanus asitlenmesi artık resifler için tehdit sayılmamaktadır.",
               "Resifler kalsiyum karbonatı atmosferden almaktadır.",
               "Pasifik ölçümleri önceki tüm bulguları geçersiz kılmıştır."
             ],
             "correctIndex": 0,
-            "explanation": "Son cümle iki habitatın birlikte korunmasının daha etkili olduğunu söylüyor; ayrıca çayırlar berrak ve sığ suya bağımlı olduğu için asitlenme tehdidi ortadan kalkmıyor.",
+            "explanation": "Son cümle iki habitatın birlikte korunmasının daha etkili olduğunu söylüyor.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52788,7 +52783,7 @@ if (typeof lessons !== 'undefined') {
               "veriyi bozmak"
             ],
             "correctIndex": 2,
-            "explanation": "Ölçümler, tüm resiflerin benzer hızda gerileyeceği beklentisini basit olmaktan çıkarıp sorgulanır hale getirmiştir.",
+            "explanation": "Ölçümler, tüm resiflerin benzer hızda gerileyeceği beklentisini sorgulanır hale getirmiştir.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"
@@ -52807,7 +52802,387 @@ if (typeof lessons !== 'undefined') {
               "Resiflerin korunması artık gereksizdir"
             ],
             "correctIndex": 3,
-            "explanation": "Yazar hemen ardından çayırların da berrak sığ suya bağımlı olduğunu ekleyerek genel endişenin sürdüğünü belirtir.",
+            "explanation": "Yazar hemen ardından çayırların da berrak sığ suya bağımlı olduğunu ekleyerek endişenin sürdüğünü belirtir.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p3_q1",
+            "type": "multiple-choice",
+            "passage": "When a supreme court overturns one of its own earlier rulings, it does more than settle a single dispute. Legal systems that rely on precedent treat past decisions as binding, so a reversal forces lower courts to reread decades of settled cases. Critics argue that this instability undermines the predictability law is meant to provide. Defenders answer that a court unable to correct itself would preserve reasoning the society has since rejected. What the debate often overlooks is the pace of change. Reversals announced abruptly generate confusion, whereas courts that first narrow a precedent through a series of smaller rulings give lower courts time to adjust. The disagreement, then, may be less about whether precedent should change than about how quickly.",
+            "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+            "options": [
+              "Yüksek mahkemeler kendi kararlarını asla bozmamalıdır.",
+              "Emsal karar sistemi hukuki öngörülebilirliği tamamen ortadan kaldırır.",
+              "Emsal kararların değişip değişmemesinden çok, bu değişimin hızı belirleyicidir.",
+              "Alt mahkemeler emsal kararları uygulamakta zorlanmaktadır.",
+              "Hukuk sistemleri giderek emsal karardan uzaklaşmaktadır."
+            ],
+            "correctIndex": 2,
+            "explanation": "Son cümle tartışmanın 'whether' değil 'how quickly' üzerine olabileceğini söylüyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p3_q2",
+            "type": "multiple-choice",
+            "passage": "When a supreme court overturns one of its own earlier rulings, it does more than settle a single dispute. Legal systems that rely on precedent treat past decisions as binding, so a reversal forces lower courts to reread decades of settled cases. Critics argue that this instability undermines the predictability law is meant to provide. Defenders answer that a court unable to correct itself would preserve reasoning the society has since rejected. What the debate often overlooks is the pace of change. Reversals announced abruptly generate confusion, whereas courts that first narrow a precedent through a series of smaller rulings give lower courts time to adjust. The disagreement, then, may be less about whether precedent should change than about how quickly.",
+            "prompt": "Parçaya göre emsal bir kararın bozulması alt mahkemeler açısından ne sonuç doğurur?",
+            "options": [
+              "Onlarca yıllık yerleşik içtihadı yeniden okumayı gerektirir",
+              "Yeni davaların görülmesini süresiz olarak durdurur",
+              "Alt mahkemelerin yetkisini genişletir",
+              "Emsal kararı bağlayıcı olmaktan çıkarır",
+              "Yalnızca ilgili tek davayı etkiler"
+            ],
+            "correctIndex": 0,
+            "explanation": "Metin bunu doğrudan belirtiyor: 'forces lower courts to reread decades of settled cases'.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p3_q3",
+            "type": "multiple-choice",
+            "passage": "When a supreme court overturns one of its own earlier rulings, it does more than settle a single dispute. Legal systems that rely on precedent treat past decisions as binding, so a reversal forces lower courts to reread decades of settled cases. Critics argue that this instability undermines the predictability law is meant to provide. Defenders answer that a court unable to correct itself would preserve reasoning the society has since rejected. What the debate often overlooks is the pace of change. Reversals announced abruptly generate confusion, whereas courts that first narrow a precedent through a series of smaller rulings give lower courts time to adjust. The disagreement, then, may be less about whether precedent should change than about how quickly.",
+            "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+            "options": [
+              "Eleştirmenler mahkemelerin hata yapmadığını savunur.",
+              "Emsal karar sistemi yalnızca yüksek mahkemeleri bağlar.",
+              "Toplumsal değerler hukuku etkilemez.",
+              "Kademeli olarak daraltılan bir emsal, ani bozmadan daha az karışıklık yaratır.",
+              "Ani bozmalar öngörülebilirliği artırır."
+            ],
+            "correctIndex": 3,
+            "explanation": "Metin, önce daraltarak ilerleyen mahkemelerin alt mahkemelere uyum süresi tanıdığını belirtiyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p3_q4",
+            "type": "multiple-choice",
+            "passage": "When a supreme court overturns one of its own earlier rulings, it does more than settle a single dispute. Legal systems that rely on precedent treat past decisions as binding, so a reversal forces lower courts to reread decades of settled cases. Critics argue that this instability undermines the predictability law is meant to provide. Defenders answer that a court unable to correct itself would preserve reasoning the society has since rejected. What the debate often overlooks is the pace of change. Reversals announced abruptly generate confusion, whereas courts that first narrow a precedent through a series of smaller rulings give lower courts time to adjust. The disagreement, then, may be less about whether precedent should change than about how quickly.",
+            "prompt": "Parçada geçen 'binding' kelimesi anlamca hangisine en yakındır?",
+            "options": [
+              "tartışmalı",
+              "bağlayıcı",
+              "geçici",
+              "isteğe bağlı",
+              "yazılı"
+            ],
+            "correctIndex": 1,
+            "explanation": "Emsale dayanan sistemlerde geçmiş kararlar bağlayıcı sayılır.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p3_q5",
+            "type": "multiple-choice",
+            "passage": "When a supreme court overturns one of its own earlier rulings, it does more than settle a single dispute. Legal systems that rely on precedent treat past decisions as binding, so a reversal forces lower courts to reread decades of settled cases. Critics argue that this instability undermines the predictability law is meant to provide. Defenders answer that a court unable to correct itself would preserve reasoning the society has since rejected. What the debate often overlooks is the pace of change. Reversals announced abruptly generate confusion, whereas courts that first narrow a precedent through a series of smaller rulings give lower courts time to adjust. The disagreement, then, may be less about whether precedent should change than about how quickly.",
+            "prompt": "Yazarın tartışmaya yaklaşımı nasıldır?",
+            "options": [
+              "Eleştirmenlerin görüşünü açıkça benimser",
+              "Savunucuları gerekçesiz bulur",
+              "Tartışmayı önemsiz görür",
+              "Mahkemeleri kararsızlıkla suçlar",
+              "Her iki tarafın gözden kaçırdığı bir boyuta dikkat çeker"
+            ],
+            "correctIndex": 4,
+            "explanation": "'What the debate often overlooks is the pace of change' ifadesi yazarın kendi katkısını ortaya koyar.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p4_q1",
+            "type": "multiple-choice",
+            "passage": "Sociologists have long observed that people find jobs more often through acquaintances than through close friends. The explanation is that close friends move in the same circles and hear the same news, while acquaintances bridge separate networks and carry information that would not otherwise arrive. Recent work in dense cities has tested whether physical proximity changes this pattern. It does, but not as expected: in neighbourhoods where residents encounter many acquaintances daily, the advantage of those weak connections shrinks, because the information they carry begins to overlap. The benefit depends less on the number of acquaintances than on how distinct their circles remain. Density multiplies contacts without necessarily multiplying what those contacts know.",
+            "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+            "options": [
+              "Yakın arkadaşlar iş bulmada tanıdıklardan daha etkilidir.",
+              "Zayıf bağların değeri, taşıdıkları bilginin ne kadar farklı olduğuna bağlıdır.",
+              "Kentsel yoğunluk tanıdık sayısını azaltmaktadır.",
+              "Tanıdıklar her koşulda daha fazla bilgi taşır.",
+              "İş bulma süreçleri artık sosyal ağlardan bağımsızdır."
+            ],
+            "correctIndex": 1,
+            "explanation": "Metin, faydanın tanıdık sayısına değil çevrelerin ayrıklığına bağlı olduğunu söylüyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p4_q2",
+            "type": "multiple-choice",
+            "passage": "Sociologists have long observed that people find jobs more often through acquaintances than through close friends. The explanation is that close friends move in the same circles and hear the same news, while acquaintances bridge separate networks and carry information that would not otherwise arrive. Recent work in dense cities has tested whether physical proximity changes this pattern. It does, but not as expected: in neighbourhoods where residents encounter many acquaintances daily, the advantage of those weak connections shrinks, because the information they carry begins to overlap. The benefit depends less on the number of acquaintances than on how distinct their circles remain. Density multiplies contacts without necessarily multiplying what those contacts know.",
+            "prompt": "Parçaya göre tanıdıklar neden yakın arkadaşlardan farklı bilgi taşır?",
+            "options": [
+              "Daha fazla iş deneyimine sahip oldukları için",
+              "Daha sık görüşüldüğü için",
+              "Aynı mahallede yaşadıkları için",
+              "Daha güvenilir oldukları için",
+              "Ayrı ağlar arasında köprü kurdukları için"
+            ],
+            "correctIndex": 4,
+            "explanation": "Metin bunu açıkça belirtiyor: 'acquaintances bridge separate networks'.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p4_q3",
+            "type": "multiple-choice",
+            "passage": "Sociologists have long observed that people find jobs more often through acquaintances than through close friends. The explanation is that close friends move in the same circles and hear the same news, while acquaintances bridge separate networks and carry information that would not otherwise arrive. Recent work in dense cities has tested whether physical proximity changes this pattern. It does, but not as expected: in neighbourhoods where residents encounter many acquaintances daily, the advantage of those weak connections shrinks, because the information they carry begins to overlap. The benefit depends less on the number of acquaintances than on how distinct their circles remain. Density multiplies contacts without necessarily multiplying what those contacts know.",
+            "prompt": "Yoğun kentlerde yapılan çalışmadan ne çıkarılabilir?",
+            "options": [
+              "Temas sayısının artması, edinilen bilginin çeşitliliğini artırmayabilir.",
+              "Yoğun mahallelerde zayıf bağların avantajı büyür.",
+              "Fiziksel yakınlık iş bulmayı imkânsızlaştırır.",
+              "Tanıdıklar yoğun kentlerde tamamen ortadan kalkar.",
+              "Yakın arkadaşlar yoğun kentlerde daha yararlı olur."
+            ],
+            "correctIndex": 0,
+            "explanation": "Son cümle: yoğunluk temasları çoğaltır ama bu temasların bildiklerini mutlaka çoğaltmaz.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p4_q4",
+            "type": "multiple-choice",
+            "passage": "Sociologists have long observed that people find jobs more often through acquaintances than through close friends. The explanation is that close friends move in the same circles and hear the same news, while acquaintances bridge separate networks and carry information that would not otherwise arrive. Recent work in dense cities has tested whether physical proximity changes this pattern. It does, but not as expected: in neighbourhoods where residents encounter many acquaintances daily, the advantage of those weak connections shrinks, because the information they carry begins to overlap. The benefit depends less on the number of acquaintances than on how distinct their circles remain. Density multiplies contacts without necessarily multiplying what those contacts know.",
+            "prompt": "Parçada geçen 'overlap' kelimesi bu bağlamda ne anlama gelmektedir?",
+            "options": [
+              "tamamen kaybolmak",
+              "hızla yayılmak",
+              "birbiriyle örtüşmek",
+              "yanlış anlaşılmak",
+              "değer kazanmak"
+            ],
+            "correctIndex": 2,
+            "explanation": "Tanıdıkların taşıdığı bilginin örtüşmeye başlaması avantajı azaltır.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p4_q5",
+            "type": "multiple-choice",
+            "passage": "Sociologists have long observed that people find jobs more often through acquaintances than through close friends. The explanation is that close friends move in the same circles and hear the same news, while acquaintances bridge separate networks and carry information that would not otherwise arrive. Recent work in dense cities has tested whether physical proximity changes this pattern. It does, but not as expected: in neighbourhoods where residents encounter many acquaintances daily, the advantage of those weak connections shrinks, because the information they carry begins to overlap. The benefit depends less on the number of acquaintances than on how distinct their circles remain. Density multiplies contacts without necessarily multiplying what those contacts know.",
+            "prompt": "Yazarın bulguya yaklaşımı nasıldır?",
+            "options": [
+              "Önceki sosyoloji çalışmalarını geçersiz sayar",
+              "Kentsel yoğunluğu olumsuzlar",
+              "Bulguyu yetersiz veriye dayandığı için reddeder",
+              "Beklenenden farklı çıkan sonucu nedeniyle birlikte açıklar",
+              "Konuyu tartışmaya kapalı görür"
+            ],
+            "correctIndex": 3,
+            "explanation": "'It does, but not as expected' diyerek sonucu ve nedenini birlikte ortaya koyar.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p5_q1",
+            "type": "multiple-choice",
+            "passage": "During deep sleep the brain replays sequences of activity recorded while awake, and this replay is thought to move memories from temporary storage into more durable form. Experiments in which sleep is interrupted show impaired recall the following day, which seemed to confirm the mechanism directly. The interpretation is complicated by a second finding: participants deprived of sleep also perform worse on tasks requiring no memory at all. Fatigue alone can therefore account for part of the deficit. Researchers now separate the two by disrupting only the specific stage in which replay occurs, leaving total sleep time unchanged. Under those conditions recall still declines, which supports the original claim without relying on general tiredness to explain it.",
+            "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+            "options": [
+              "Uyku yoksunluğunun hafızayla hiçbir ilgisi yoktur.",
+              "Derin uyku yalnızca fiziksel dinlenme sağlar.",
+              "Uykunun belirli bir evresini hedefleyen deneyler, hafıza iddiasını yorgunluktan bağımsız olarak desteklemiştir.",
+              "Yorgunluk hafıza kaybının tek nedenidir.",
+              "Hafıza kalıcılığı uyanıkken belirlenir."
+            ],
+            "correctIndex": 2,
+            "explanation": "Metin, yalnızca ilgili evreyi bozan deneylerin özgün iddiayı desteklediğini söylüyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p5_q2",
+            "type": "multiple-choice",
+            "passage": "During deep sleep the brain replays sequences of activity recorded while awake, and this replay is thought to move memories from temporary storage into more durable form. Experiments in which sleep is interrupted show impaired recall the following day, which seemed to confirm the mechanism directly. The interpretation is complicated by a second finding: participants deprived of sleep also perform worse on tasks requiring no memory at all. Fatigue alone can therefore account for part of the deficit. Researchers now separate the two by disrupting only the specific stage in which replay occurs, leaving total sleep time unchanged. Under those conditions recall still declines, which supports the original claim without relying on general tiredness to explain it.",
+            "prompt": "Parçaya göre derin uyku sırasında beyin ne yapar?",
+            "options": [
+              "Uyanıkken kaydedilen etkinlik dizilerini yeniden oynatır",
+              "Yeni bilgileri ilk kez kodlar",
+              "Tüm geçici anıları siler",
+              "Kas hareketlerini denetler",
+              "Duyusal girdileri artırır"
+            ],
+            "correctIndex": 0,
+            "explanation": "İlk cümlede belirtiliyor: beyin uyanıkken kaydedilen dizileri yeniden oynatır.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p5_q3",
+            "type": "multiple-choice",
+            "passage": "During deep sleep the brain replays sequences of activity recorded while awake, and this replay is thought to move memories from temporary storage into more durable form. Experiments in which sleep is interrupted show impaired recall the following day, which seemed to confirm the mechanism directly. The interpretation is complicated by a second finding: participants deprived of sleep also perform worse on tasks requiring no memory at all. Fatigue alone can therefore account for part of the deficit. Researchers now separate the two by disrupting only the specific stage in which replay occurs, leaving total sleep time unchanged. Under those conditions recall still declines, which supports the original claim without relying on general tiredness to explain it.",
+            "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+            "options": [
+              "Uyku bölünmesi yalnızca hafıza görevlerini etkiler.",
+              "Yorgunluk ölçülemeyen bir değişkendir.",
+              "Replay olmadan da anılar kalıcı hale gelir.",
+              "Toplam uyku süresi sabit tutulduğunda bile hafıza kaybı gözlenebilir.",
+              "Deneyler hafıza iddiasını çürütmüştür."
+            ],
+            "correctIndex": 3,
+            "explanation": "İlgili evre bozulup toplam süre değiştirilmediğinde bile hatırlamanın gerilediği belirtiliyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p5_q4",
+            "type": "multiple-choice",
+            "passage": "During deep sleep the brain replays sequences of activity recorded while awake, and this replay is thought to move memories from temporary storage into more durable form. Experiments in which sleep is interrupted show impaired recall the following day, which seemed to confirm the mechanism directly. The interpretation is complicated by a second finding: participants deprived of sleep also perform worse on tasks requiring no memory at all. Fatigue alone can therefore account for part of the deficit. Researchers now separate the two by disrupting only the specific stage in which replay occurs, leaving total sleep time unchanged. Under those conditions recall still declines, which supports the original claim without relying on general tiredness to explain it.",
+            "prompt": "Parçada geçen 'deficit' kelimesi bu bağlamda ne anlama gelmektedir?",
+            "options": [
+              "uyku süresi",
+              "performanstaki düşüş",
+              "bellek kapasitesi",
+              "deney hatası",
+              "dinlenme ihtiyacı"
+            ],
+            "correctIndex": 1,
+            "explanation": "Bağlamda 'deficit', görev performansındaki düşüşü ifade eder.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p5_q5",
+            "type": "multiple-choice",
+            "passage": "During deep sleep the brain replays sequences of activity recorded while awake, and this replay is thought to move memories from temporary storage into more durable form. Experiments in which sleep is interrupted show impaired recall the following day, which seemed to confirm the mechanism directly. The interpretation is complicated by a second finding: participants deprived of sleep also perform worse on tasks requiring no memory at all. Fatigue alone can therefore account for part of the deficit. Researchers now separate the two by disrupting only the specific stage in which replay occurs, leaving total sleep time unchanged. Under those conditions recall still declines, which supports the original claim without relying on general tiredness to explain it.",
+            "prompt": "Yazar ikinci bulguyu neden aktarmaktadır?",
+            "options": [
+              "Uyku araştırmalarını gereksiz bulduğu için",
+              "Deneylerin yanlış yapıldığını kanıtlamak için",
+              "Yorgunluğun ölçülemeyeceğini savunmak için",
+              "Hafıza kavramını tanımlamak için",
+              "İlk yorumun tek başına yeterli olmadığını göstermek için"
+            ],
+            "correctIndex": 4,
+            "explanation": "'The interpretation is complicated by a second finding' ifadesi, ilk yorumun sorgulanması içindir.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p6_q1",
+            "type": "multiple-choice",
+            "passage": "Small loans offered to borrowers without collateral were once expected to lift large numbers of households out of poverty. Evaluations carried out over the following two decades produced more modest results: borrowers rarely escaped poverty outright, though many reported greater control over when and how they spent. Some economists concluded that the original promise had been oversold. Others noted that the evaluations measured income almost exclusively, and that a household able to absorb a sudden expense without selling its livestock has gained something income figures do not capture. The disagreement persists partly because the two sides are not measuring the same thing. What counts as success determines whether the evidence looks like failure.",
+            "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+            "options": [
+              "Mikrokredi yoksulluğu tümüyle ortadan kaldırmıştır.",
+              "Mikrokredi tartışması, büyük ölçüde başarının nasıl ölçüldüğü sorusundan kaynaklanmaktadır.",
+              "Değerlendirmeler gelir dışındaki her ölçütü dikkate almıştır.",
+              "İktisatçılar mikrokredi konusunda tam bir uzlaşıya varmıştır.",
+              "Teminatsız krediler artık verilmemektedir."
+            ],
+            "correctIndex": 1,
+            "explanation": "Son iki cümle, tarafların aynı şeyi ölçmediğini ve başarı tanımının sonucu belirlediğini söylüyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p6_q2",
+            "type": "multiple-choice",
+            "passage": "Small loans offered to borrowers without collateral were once expected to lift large numbers of households out of poverty. Evaluations carried out over the following two decades produced more modest results: borrowers rarely escaped poverty outright, though many reported greater control over when and how they spent. Some economists concluded that the original promise had been oversold. Others noted that the evaluations measured income almost exclusively, and that a household able to absorb a sudden expense without selling its livestock has gained something income figures do not capture. The disagreement persists partly because the two sides are not measuring the same thing. What counts as success determines whether the evidence looks like failure.",
+            "prompt": "Parçaya göre değerlendirmelerin ortaya koyduğu sonuç nedir?",
+            "options": [
+              "Borçluların tamamı gelirlerini iki katına çıkarmıştır.",
+              "Krediler hiçbir davranış değişikliği yaratmamıştır.",
+              "Hanelerin çoğu hayvanlarını satmak zorunda kalmıştır.",
+              "Krediler yalnızca kentsel hanelere ulaşmıştır.",
+              "Borçlular nadiren yoksulluktan çıkmış ama harcamaları üzerinde daha fazla denetim bildirmiştir."
+            ],
+            "correctIndex": 4,
+            "explanation": "Metin bunu doğrudan belirtiyor: yoksulluktan çıkış nadir, ancak harcama denetimi artmıştır.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p6_q3",
+            "type": "multiple-choice",
+            "passage": "Small loans offered to borrowers without collateral were once expected to lift large numbers of households out of poverty. Evaluations carried out over the following two decades produced more modest results: borrowers rarely escaped poverty outright, though many reported greater control over when and how they spent. Some economists concluded that the original promise had been oversold. Others noted that the evaluations measured income almost exclusively, and that a household able to absorb a sudden expense without selling its livestock has gained something income figures do not capture. The disagreement persists partly because the two sides are not measuring the same thing. What counts as success determines whether the evidence looks like failure.",
+            "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+            "options": [
+              "Gelir verileri, hanelerin ani giderlere dayanma kapasitesini yansıtmayabilir.",
+              "Gelir ölçümü hane refahını eksiksiz yansıtır.",
+              "Mikrokredi değerlendirmeleri gelir dışı ölçütlere ağırlık vermiştir.",
+              "Hayvan satmak refah artışının göstergesidir.",
+              "İki taraf da aynı ölçütü kullanmaktadır."
+            ],
+            "correctIndex": 0,
+            "explanation": "Metin, ani gideri hayvanını satmadan karşılayabilen hanenin gelir rakamlarına yansımayan bir kazanım elde ettiğini söylüyor.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p6_q4",
+            "type": "multiple-choice",
+            "passage": "Small loans offered to borrowers without collateral were once expected to lift large numbers of households out of poverty. Evaluations carried out over the following two decades produced more modest results: borrowers rarely escaped poverty outright, though many reported greater control over when and how they spent. Some economists concluded that the original promise had been oversold. Others noted that the evaluations measured income almost exclusively, and that a household able to absorb a sudden expense without selling its livestock has gained something income figures do not capture. The disagreement persists partly because the two sides are not measuring the same thing. What counts as success determines whether the evidence looks like failure.",
+            "prompt": "Parçada geçen 'oversold' kelimesi anlamca hangisine en yakındır?",
+            "options": [
+              "gizlice pazarlanmış",
+              "ucuza satılmış",
+              "olduğundan fazla vaat edilmiş",
+              "yeniden düzenlenmiş",
+              "yaygın biçimde benimsenmiş"
+            ],
+            "correctIndex": 2,
+            "explanation": "Bazı iktisatçılara göre özgün vaat abartılmış, yani olduğundan fazla sunulmuştur.",
+            "grammarTags": [
+              "Paragraf Okuma",
+              "Reading Comprehension"
+            ]
+          },
+          {
+            "id": "u50_l4_p6_q5",
+            "type": "multiple-choice",
+            "passage": "Small loans offered to borrowers without collateral were once expected to lift large numbers of households out of poverty. Evaluations carried out over the following two decades produced more modest results: borrowers rarely escaped poverty outright, though many reported greater control over when and how they spent. Some economists concluded that the original promise had been oversold. Others noted that the evaluations measured income almost exclusively, and that a household able to absorb a sudden expense without selling its livestock has gained something income figures do not capture. The disagreement persists partly because the two sides are not measuring the same thing. What counts as success determines whether the evidence looks like failure.",
+            "prompt": "Yazarın tartışmaya bakışı nasıl tanımlanabilir?",
+            "options": [
+              "Mikrokrediyi tümüyle başarısız ilan eden",
+              "Değerlendirmeleri güvenilmez bulan",
+              "Bir tarafı açıkça haklı çıkaran",
+              "Anlaşmazlığın kaynağını ölçüt farkına bağlayan",
+              "Konuyu çözümsüz gören"
+            ],
+            "correctIndex": 3,
+            "explanation": "Yazar, tarafların aynı şeyi ölçmemesini anlaşmazlığın nedeni olarak gösterir.",
             "grammarTags": [
               "Paragraf Okuma",
               "Reading Comprehension"

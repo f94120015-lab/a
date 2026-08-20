@@ -191,6 +191,15 @@
             </span>
             <span class="nav-tab-label">Yapı Robotu</span>
           </button>
+          <button class="nav-tab" data-tab="exam">
+            <span class="nav-tab-icon">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="6" y="4" width="20" height="24" rx="3" fill="#10b981" opacity="0.85" stroke="#34d399" stroke-width="2"/>
+                <path d="M11 11H21M11 16H21M11 21H17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Deneme Sınavı</span>
+          </button>
 
           <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
@@ -1472,6 +1481,23 @@
       <!-- ════════════════════════════════════════════════════════
            YAPI ROBOTU (STRUCTURE LAB) EKRANI
            ════════════════════════════════════════════════════════ -->
+      <!-- DENEME SINAVI SEKMESİ -->
+      <div id="tab-content-exam" class="tab-content">
+        <div class="page-container">
+          <div style="background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(59,130,246,0.10)); border: 1.5px solid rgba(16,185,129,0.28); border-radius: var(--radius-lg); padding: 20px 22px; margin-bottom: 18px;">
+            <h2 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; margin: 0 0 6px 0; color: var(--text-primary);">
+              📝 Okuma Parçası Denemesi
+            </h2>
+            <p class="desc-text" style="margin: 0;">
+              YÖKDİL / YDS formatında altı akademik parça ve 30 soru. Her parçada ana fikir, detay,
+              çıkarım, bağlamdan kelime ve yazarın tutumu soruları yer alır; şıklar sınavdaki gibi beştir.
+            </p>
+          </div>
+
+          <div id="exam-card-list" class="grid-300"></div>
+        </div>
+      </div>
+
       <div id="tab-content-structure-robot" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
         
         <!-- Header & Mode Switcher (Compact & Sleek Glassmorphism) -->
