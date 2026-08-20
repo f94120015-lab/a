@@ -1886,6 +1886,11 @@ let isTranslationGateTriggered = false;
 let isPlacementMode = false;
 let isReviewMode = false;
 let examSessionLabel = null; // Deneme oturumlarında başlıkta 'Hızlı Tekrar' yerine kullanılır
+let isExamMode = false;      // Deneme: cevap anında gösterilmez, süre işler
+let examAnswers = [];        // {id, correct, skill}
+let examTimerId = null;
+let examEndsAt = 0;
+let examCurrent = null;
 let reviewQuestions = [];
 let reviewSessionCorrectIds = [];
 let placementQuestionsList = [];
@@ -1894,6 +1899,12 @@ let isCurrentExercisePassed = true;
 
 // Aktif quiz durumunu tarayıcı hafızasına kaydet (yenilemeden sonra devam etmek için)
 function saveActiveQuizState() {
+  // Deneme oturumu yarıda kalırsa "tekrar" olarak geri yüklenirdi: süre ve
+  // geciktirilmiş geri bildirim kaybolur, oturum yanlış modda açılırdı.
+  if (isExamMode) {
+    localStorage.removeItem('amok_active_quiz_type');
+    return;
+  }
   if (isReviewMode) {
     localStorage.setItem('amok_active_quiz_type', 'review');
   } else if (isFormationMode) {
@@ -8420,7 +8431,9 @@ function updateQuizMetadata() {
 
   if (isReviewMode) {
     const total = reviewQuestions.length;
-    metadataEl.innerHTML = `${examSessionLabel || 'Hızlı Tekrar'} • Soru ${currentQuestionIndex + 1}/${total}${newBadge}`;
+    const timerHtml = isExamMode ? ` • <span id="exam-timer" style="font-weight:800;">--:--</span>` : '';
+    metadataEl.innerHTML = `${examSessionLabel || 'Hızlı Tekrar'} • Soru ${currentQuestionIndex + 1}/${total}${timerHtml}${newBadge}`;
+    if (isExamMode) paintExamTimer();
     return;
   }
 
@@ -12322,6 +12335,20 @@ function checkAnswer() {
   isAnswerChecked = true;
   state.totalQuestionsAnswered = (state.totalQuestionsAnswered || 0) + 1;
 
+  // Deneme modu: doğru/yanlış anında gösterilmez. Cevap kaydedilip bir sonraki
+  // soruya geçilir; tüm geri bildirim sınav sonundaki sonuç ekranında verilir.
+  if (isExamMode) {
+    examAnswers.push({
+      id: question.id,
+      correct: !!isCorrect,
+      skill: getExamSkill(question),
+      selected: selectedAnswer
+    });
+    if (isCorrect) correctCount++; else wrongCount++;
+    nextQuestion();
+    return;
+  }
+
   // Apply visual styles and call feedback rendering functions
   switch (activeType) {
     case 'multiple-choice':
@@ -12697,6 +12724,8 @@ function skipQuestion() {
   if (currentQuestionIndex >= total) {
     if (isFormationMode) {
       completeFormationTour();
+    } else if (isExamMode) {
+      completeExamSession();
     } else if (isReviewMode) {
       completeReviewSession();
     } else {
@@ -12727,6 +12756,8 @@ function nextQuestion() {
   if (currentQuestionIndex >= total) {
     if (isFormationMode) {
       completeFormationTour();
+    } else if (isExamMode) {
+      completeExamSession();
     } else if (isReviewMode) {
       completeReviewSession();
     } else {
@@ -12799,19 +12830,133 @@ function startExamSession(examId) {
   // Tekrar oturumu altyapısını yeniden kullanıyoruz: can kaybı yok, ilerleme
   // kaydı ve mevcut soru arayüzü hazır geliyor.
   quizSessionId++;
-  isReviewMode = true;
+  isReviewMode = true;   // soru kaynağı ve can muafiyeti bu bayraktan geliyor
+  isExamMode = true;
   examSessionLabel = session.title;
+  examCurrent = session;
+  examAnswers = [];
   reviewQuestions = questions;
   reviewSessionCorrectIds = [];
   currentQuestionIndex = 0;
   correctCount = 0;
   wrongCount = 0;
 
-  localStorage.setItem('amok_active_quiz_type', 'review');
-  localStorage.setItem('amok_active_review_question_ids', JSON.stringify(questions.map(q => q.id)));
+  startExamTimer(session.minutes || 35);
 
   showScreen('quiz-screen');
   renderQuestion();
+}
+
+// ── Süre ───────────────────────────────────────────────────────────────────
+function startExamTimer(minutes) {
+  stopExamTimer();
+  examEndsAt = Date.now() + minutes * 60 * 1000;
+  examTimerId = setInterval(() => {
+    if (!isExamMode) { stopExamTimer(); return; }
+    if (Date.now() >= examEndsAt) {
+      stopExamTimer();
+      showToast('Süre doldu. Deneme sonlandırıldı.', 'info');
+      completeExamSession();
+      return;
+    }
+    paintExamTimer();
+  }, 1000);
+}
+
+function stopExamTimer() {
+  if (examTimerId) { clearInterval(examTimerId); examTimerId = null; }
+}
+
+function paintExamTimer() {
+  const el = document.getElementById('exam-timer');
+  if (!el) return;
+  const left = Math.max(0, examEndsAt - Date.now());
+  const m = Math.floor(left / 60000);
+  const sec = Math.floor((left % 60000) / 1000);
+  el.textContent = `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+  el.style.color = left < 5 * 60 * 1000 ? 'var(--color-wrong)' : '';
+}
+
+// ── Beceri etiketi (sonuç dökümü için) ─────────────────────────────────────
+function getExamSkill(question) {
+  if (question.examSkill) return question.examSkill;
+  const p = String(question.prompt || '').toLowerCase();
+  if (p.includes('ana fikri') || p.includes('başlık')) return 'Ana fikir';
+  if (p.includes('çıkarılabilir') || p.includes('çıkarım')) return 'Çıkarım';
+  if (p.includes('kelimesi') || p.includes('anlamca')) return 'Kelime';
+  if (p.includes('tutum') || p.includes('ne demek istemektedir') ||
+      p.includes('neden aktarmaktadır') || p.includes('yaklaşımı') || p.includes('bakışı')) return 'Tutum / Amaç';
+  if (p.includes('parçaya göre') || p.includes('göre')) return 'Detay';
+  return (question.grammarTags && question.grammarTags[0]) || 'Diğer';
+}
+
+// ── Sonuç ekranı ───────────────────────────────────────────────────────────
+function completeExamSession() {
+  stopExamTimer();
+  const answers = examAnswers.slice();
+  const questions = reviewQuestions.slice();
+  const label = examSessionLabel || 'Deneme';
+
+  isExamMode = false;
+  isReviewMode = false;
+  examSessionLabel = null;
+  localStorage.removeItem('amok_active_quiz_type');
+
+  const total = questions.length;
+  const right = answers.filter(a => a.correct).length;
+  const pct = total ? Math.round((right / total) * 100) : 0;
+
+  const bySkill = {};
+  answers.forEach(a => {
+    const k = a.skill || 'Diğer';
+    bySkill[k] = bySkill[k] || { right: 0, total: 0 };
+    bySkill[k].total++;
+    if (a.correct) bySkill[k].right++;
+  });
+
+  const wrongList = answers.filter(a => !a.correct).map(a => {
+    const q = questions.find(x => x.id === a.id);
+    if (!q) return '';
+    const correctOpt = q.options ? q.options[q.correctIndex] : '';
+    const chosen = (q.options && typeof a.selected === 'number') ? q.options[a.selected] : null;
+    return `
+      <div style="border:1px solid var(--border-color); border-radius: var(--radius-md); padding: 12px 14px; margin-bottom: 10px; background: var(--bg-card);">
+        <div class="text-label" style="margin-bottom:6px;">${q.prompt}</div>
+        ${chosen ? `<div class="text-sm-muted" style="color: var(--color-wrong);">Senin cevabın: ${chosen}</div>` : ''}
+        <div class="text-sm-muted" style="color: var(--color-correct);">Doğru cevap: ${correctOpt}</div>
+        ${q.explanation ? `<div class="text-sm-muted" style="margin-top:6px;">${q.explanation}</div>` : ''}
+      </div>`;
+  }).join('');
+
+  state.xp += right * XP_PER_CORRECT;
+  saveState();
+  updateTopBar();
+
+  playCompletionSound(true);
+  showScreen('home-screen');
+  switchTab('exam');
+
+  const listEl = document.getElementById('exam-card-list');
+  if (listEl) {
+    listEl.innerHTML = `
+      <div class="card-panel" style="grid-column: 1 / -1; gap: 16px;">
+        <div class="flex-between-wrap-10">
+          <span class="section-title-sm">${label} — Sonuç</span>
+          <span class="exercise-q-badge">${right}/${total} · %${pct}</span>
+        </div>
+        <div>
+          <div class="text-label" style="margin-bottom:8px;">Soru tipine göre döküm</div>
+          ${Object.entries(bySkill).map(([k, v]) =>
+            `<div class="flex-between-wrap-10" style="margin-bottom:6px;">
+               <span class="text-sm-muted">${k}</span>
+               <span class="text-label-muted">${v.right}/${v.total}</span>
+             </div>`).join('')}
+        </div>
+        ${wrongList ? `<div><div class="text-label" style="margin:6px 0 8px;">Yanlış yaptığın sorular</div>${wrongList}</div>`
+                    : '<div class="text-sm-muted">Tüm soruları doğru yanıtladın. 🎉</div>'}
+        <button class="btn btn-primary" onclick="renderExamTab()">Denemelere Dön</button>
+      </div>`;
+  }
 }
 
 function completeReviewSession() {
