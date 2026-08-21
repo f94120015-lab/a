@@ -28000,7 +28000,9 @@ function updateTrmChipSubtitles(mode) {
       exemplification: "💡 Örnekleme & Açıklama (for instance, namely...)",
       purpose_condition: "🎯 Amaç & Şart (otherwise, or else...)",
       summary_emphasis: "📌 Özet & Vurgu (in brief, indeed...)",
-      focus_exception: "🔍 Odaklanma & İstisna (as for, regarding...)"
+      focus_exception: "🔍 Odaklanma & İstisna (as for, regarding...)",
+      time_transition: "⏳ Zaman Geçişleri (meanwhile, subsequently...)",
+      correlative: "🔗 İkiz Bağlaçlar (not only... but also)"
     },
     subordinate_preps: {
       all: "🧪 Tümü (All)",
@@ -28009,7 +28011,9 @@ function updateTrmChipSubtitles(mode) {
       exemplification: "💡 Örnekleme & Açıklama (such as, like, including...)",
       purpose_condition: "🎯 Amaç & Şart (so that, in order to, lest...)",
       summary_emphasis: "📌 Özet & Vurgu (in brief, overall...)",
-      focus_exception: "🔍 Odaklanma & İstisna (apart from, barring...)"
+      focus_exception: "🔍 Odaklanma & İstisna (apart from, in terms of...)",
+      time_transition: "⏳ Zaman Geçişleri (meanwhile, subsequently...)",
+      correlative: "🔗 İkiz Bağlaçlar (either... or, neither... nor)"
     }
   };
 
@@ -28229,3 +28233,1086 @@ function toggleTrmCard(idx) {
   renderTransitionsMatrix();
 }
 
+
+
+// ============================================================
+// Öncelik 1 bağlaç genişletmesi (50 terim). Envanterde hiç karşılığı olmayan
+// aileler: koşul (if ailesi), ikiz bağlaçlar, zaman geçiş zarfları, whereas.
+// Matrisler const ama içlerindeki diziler değiştirilebilir; bu blok dosya
+// sonunda çalıştığı için sekme ilk kez çizilmeden önce eklemeler tamamlanır.
+// ============================================================
+(function extendConnectorMatrices() {
+  const push = (list, items) => {
+    if (!Array.isArray(list)) return;
+    items.forEach(it => {
+      if (!list.some(x => x.term === it.term)) list.push(it);
+    });
+  };
+
+  if (typeof TRANSITIONS_MATRIX_DATA !== 'undefined') {
+    push(TRANSITIONS_MATRIX_DATA.sentence_connectors, [
+  {
+    "term": "yet",
+    "category": "contrast",
+    "meaning": "yine de, buna karşın (Bağlaç)",
+    "rule": "📐 NOKTALAMA: Cümle 1, yet Cümle 2.",
+    "trap": "⚠️ 'but' gibi davranır: kendisinden önce virgül alır, noktalı virgül almaz. Cümle başında da kullanılabilir.",
+    "examples": [
+      {
+        "en": "The evidence was thin, yet the theory gained wide acceptance.",
+        "tr": "Kanıt zayıftı, yine de kuram geniş kabul gördü."
+      },
+      {
+        "en": "She had trained for months, yet she withdrew before the final.",
+        "tr": "Aylarca antrenman yapmıştı, yine de finalden önce çekildi."
+      },
+      {
+        "en": "The method is simple, yet remarkably accurate.",
+        "tr": "Yöntem basit, yine de son derece isabetli."
+      }
+    ]
+  },
+  {
+    "term": "still",
+    "category": "contrast",
+    "meaning": "yine de, buna rağmen (Vurgulu Geçiş)",
+    "rule": "📐 NOKTALAMA: Cümle 1. Still, Cümle 2. OR Özne + still + Fiil",
+    "trap": "⚠️ Zaman zarfı olan 'still' (hâlâ) ile karıştırılmamalıdır; geçiş anlamında cümle başında ve virgülle kullanılır.",
+    "examples": [
+      {
+        "en": "The costs were considerable. Still, the council approved the project.",
+        "tr": "Maliyetler hatırı sayılırdı. Yine de meclis projeyi onayladı."
+      },
+      {
+        "en": "Few readers noticed the change. Still, it altered the meaning entirely.",
+        "tr": "Çok az okur değişikliği fark etti. Yine de anlamı bütünüyle değiştirdi."
+      },
+      {
+        "en": "He apologised twice; still, the damage was done.",
+        "tr": "İki kez özür diledi; yine de zarar oluşmuştu."
+      }
+    ]
+  },
+  {
+    "term": "even so",
+    "category": "contrast",
+    "meaning": "buna rağmen, öyle olsa bile",
+    "rule": "📐 NOKTALAMA: Cümle 1. Even so, Cümle 2.",
+    "trap": "⚠️ Kabul edilen bir gerçeğin ardından beklenmedik sonucu getirir; 'even though' ile karıştırılmamalıdır, o yan cümle bağlacıdır.",
+    "examples": [
+      {
+        "en": "The sample was small. Even so, the pattern was unmistakable.",
+        "tr": "Örneklem küçüktü. Buna rağmen örüntü apaçıktı."
+      },
+      {
+        "en": "Funding was cut by half. Even so, the team met every deadline.",
+        "tr": "Fon yarıya indirildi. Buna rağmen ekip her teslim tarihine yetişti."
+      },
+      {
+        "en": "The translation is imperfect. Even so, it conveys the argument.",
+        "tr": "Çeviri kusurlu. Yine de savı aktarıyor."
+      }
+    ]
+  },
+  {
+    "term": "instead",
+    "category": "contrast",
+    "meaning": "onun yerine, bunun yerine",
+    "rule": "📐 NOKTALAMA: Cümle 1. Instead, Cümle 2.",
+    "trap": "⚠️ Tek başına kullanıldığında zarf olup arkasından isim almaz. İsim alan biçimi 'instead of'tur.",
+    "examples": [
+      {
+        "en": "The museum did not sell the painting. Instead, it lent the work to a regional gallery.",
+        "tr": "Müze tabloyu satmadı. Bunun yerine eseri bir bölge galerisine ödünç verdi."
+      },
+      {
+        "en": "He did not answer the question. Instead, he repeated his opening remarks.",
+        "tr": "Soruyu yanıtlamadı. Bunun yerine açılış sözlerini yineledi."
+      },
+      {
+        "en": "The road was not widened. Instead, a tram line was built.",
+        "tr": "Yol genişletilmedi. Bunun yerine bir tramvay hattı yapıldı."
+      }
+    ]
+  },
+  {
+    "term": "meanwhile",
+    "category": "time_transition",
+    "meaning": "bu arada, bu sırada",
+    "rule": "📐 NOKTALAMA: Cümle 1. Meanwhile, Cümle 2.",
+    "trap": "⚠️ Eşzamanlı ikinci bir gelişmeyi tanıtır; sebep veya zıtlık bildirmez.",
+    "examples": [
+      {
+        "en": "The committee debated the wording. Meanwhile, the deadline approached.",
+        "tr": "Komite ifadeyi tartıştı. Bu arada teslim tarihi yaklaşıyordu."
+      },
+      {
+        "en": "Prices rose in the capital. Meanwhile, rural markets remained stable.",
+        "tr": "Başkentte fiyatlar arttı. Bu arada kırsal pazarlar durağan kaldı."
+      },
+      {
+        "en": "The ship was being repaired. Meanwhile, the crew was housed ashore.",
+        "tr": "Gemi onarılıyordu. Bu sırada mürettebat karada barındırıldı."
+      }
+    ]
+  },
+  {
+    "term": "in the meantime",
+    "category": "time_transition",
+    "meaning": "o arada, bu süre zarfında",
+    "rule": "📐 NOKTALAMA: Cümle 1. In the meantime, Cümle 2.",
+    "trap": "⚠️ 'meanwhile' ile eş anlamlıdır ancak beklenen bir olaya kadar geçen süreyi vurgular.",
+    "examples": [
+      {
+        "en": "The results will be published in June. In the meantime, the data remain confidential.",
+        "tr": "Sonuçlar haziranda yayımlanacak. O arada veriler gizli kalacak."
+      },
+      {
+        "en": "A new bridge is planned. In the meantime, a ferry carries the traffic.",
+        "tr": "Yeni bir köprü planlanıyor. Bu süre zarfında trafiği bir feribot taşıyor."
+      },
+      {
+        "en": "Repairs will take a year. In the meantime, the collection is in storage.",
+        "tr": "Onarım bir yıl sürecek. O arada koleksiyon depoda."
+      }
+    ]
+  },
+  {
+    "term": "subsequently",
+    "category": "time_transition",
+    "meaning": "sonrasında, daha sonra",
+    "rule": "📐 NOKTALAMA: Cümle 1. Subsequently, Cümle 2.",
+    "trap": "⚠️ Sonralığı bildirir, sonuç bildirmez; 'consequently' (bu nedenle) ile karıştırılması klasik bir tuzaktır.",
+    "examples": [
+      {
+        "en": "The manuscript was catalogued in 1890. Subsequently, it was moved to the national library.",
+        "tr": "El yazması 1890'da kataloglandı. Sonrasında ulusal kütüphaneye taşındı."
+      },
+      {
+        "en": "The drug passed the first trial. Subsequently, it was tested on a larger group.",
+        "tr": "İlaç ilk denemeyi geçti. Daha sonra daha geniş bir grupta denendi."
+      },
+      {
+        "en": "She studied law. Subsequently, she turned to archival research.",
+        "tr": "Hukuk okudu. Sonrasında arşiv araştırmasına yöneldi."
+      }
+    ]
+  },
+  {
+    "term": "afterwards",
+    "category": "time_transition",
+    "meaning": "sonradan, ardından",
+    "rule": "📐 NOKTALAMA: Cümle 1. Afterwards, Cümle 2.",
+    "trap": "⚠️ Günlük dilde 'subsequently'nin karşılığıdır; akademik metinde daha az resmîdir.",
+    "examples": [
+      {
+        "en": "The lecture ended at six. Afterwards, the audience moved to the reading room.",
+        "tr": "Ders altıda bitti. Ardından dinleyiciler okuma salonuna geçti."
+      },
+      {
+        "en": "The site was excavated in spring. Afterwards, it was covered again.",
+        "tr": "Alan ilkbaharda kazıldı. Sonradan yeniden örtüldü."
+      },
+      {
+        "en": "They signed the agreement. Afterwards, neither side referred to it.",
+        "tr": "Anlaşmayı imzaladılar. Ardından iki taraf da ondan söz etmedi."
+      }
+    ]
+  },
+  {
+    "term": "previously",
+    "category": "time_transition",
+    "meaning": "daha önce, önceden",
+    "rule": "📐 NOKTALAMA: Cümle 1. Previously, Cümle 2.",
+    "trap": "⚠️ Geriye dönük bir zaman kurar ve genellikle Past Perfect ile birlikte çalışır.",
+    "examples": [
+      {
+        "en": "The role went to a newcomer. Previously, it had always been given to a senior actor.",
+        "tr": "Rol bir yeni gelene verildi. Daha önce hep kıdemli bir oyuncuya verilirdi."
+      },
+      {
+        "en": "The tax was abolished in 1994. Previously, it had raised a third of local revenue.",
+        "tr": "Vergi 1994'te kaldırıldı. Önceden yerel gelirin üçte birini sağlıyordu."
+      },
+      {
+        "en": "The species was found in Anatolia. Previously, it had been recorded only in the Balkans.",
+        "tr": "Tür Anadolu'da bulundu. Daha önce yalnızca Balkanlar'da kaydedilmişti."
+      }
+    ]
+  },
+  {
+    "term": "thereafter",
+    "category": "time_transition",
+    "meaning": "ondan sonra, o tarihten itibaren",
+    "rule": "📐 NOKTALAMA: Cümle 1. Thereafter, Cümle 2.",
+    "trap": "⚠️ Belirli bir andan sonrasını işaret eder; resmî ve akademik registerde kullanılır.",
+    "examples": [
+      {
+        "en": "The charter was granted in 1215. Thereafter, the town held its own market.",
+        "tr": "Berat 1215'te verildi. Ondan sonra kasaba kendi pazarını kurdu."
+      },
+      {
+        "en": "The first edition sold out in weeks. Thereafter, it was reprinted annually.",
+        "tr": "İlk baskı haftalar içinde tükendi. O tarihten itibaren her yıl yeniden basıldı."
+      },
+      {
+        "en": "He resigned in March. Thereafter, he refused all interviews.",
+        "tr": "Mart'ta istifa etti. Ondan sonra bütün görüşmeleri reddetti."
+      }
+    ]
+  },
+  {
+    "term": "also",
+    "category": "addition",
+    "meaning": "ayrıca, -de/-da",
+    "rule": "📐 NOKTALAMA: Özne + also + Fiil OR Cümle 1. Also, Cümle 2.",
+    "trap": "⚠️ Yardımcı fiil varsa ondan sonra, yoksa esas fiilden önce gelir. Olumsuz cümlede 'either' kullanılır.",
+    "examples": [
+      {
+        "en": "The report is thorough; it also proposes a timetable.",
+        "tr": "Rapor kapsamlı; ayrıca bir takvim de öneriyor."
+      },
+      {
+        "en": "She has also published on medieval trade routes.",
+        "tr": "Ayrıca ortaçağ ticaret yolları üzerine de yayın yaptı."
+      },
+      {
+        "en": "The grant covers equipment. Also, it funds two research posts.",
+        "tr": "Hibe ekipmanı karşılıyor. Ayrıca iki araştırma kadrosunu da destekliyor."
+      }
+    ]
+  },
+  {
+    "term": "not to mention",
+    "category": "addition",
+    "meaning": "-i saymazsak bile, üstüne üstlük",
+    "rule": "📐 NOKTALAMA: Cümle, not to mention + İsim Öbeği.",
+    "trap": "⚠️ Arkasından tam cümle değil, isim öbeği veya V-ing alır; söylenene ek bir ağırlık katar.",
+    "examples": [
+      {
+        "en": "The project ran two years late, not to mention the cost overruns.",
+        "tr": "Proje iki yıl gecikti, maliyet aşımlarını saymazsak bile."
+      },
+      {
+        "en": "The route is long and exposed, not to mention the lack of shelter.",
+        "tr": "Güzergâh uzun ve korunaksız, barınak yokluğunu saymazsak bile."
+      },
+      {
+        "en": "He speaks four languages, not to mention reading two more.",
+        "tr": "Dört dil konuşuyor, iki dili daha okuduğunu saymazsak bile."
+      }
+    ]
+  },
+  {
+    "term": "to sum up",
+    "category": "summary_emphasis",
+    "meaning": "özetlemek gerekirse, kısacası",
+    "rule": "📐 NOKTALAMA: To sum up, Cümle.",
+    "trap": "⚠️ Yalnızca metnin veya paragrafın sonunda kullanılır; ortasında kullanılması anlatım hatasıdır.",
+    "examples": [
+      {
+        "en": "To sum up, the reform improved access without lowering standards.",
+        "tr": "Özetlemek gerekirse reform, standartları düşürmeden erişimi iyileştirdi."
+      },
+      {
+        "en": "To sum up, three factors explain the decline.",
+        "tr": "Özetle, düşüşü üç etken açıklıyor."
+      },
+      {
+        "en": "To sum up, the evidence supports the second hypothesis.",
+        "tr": "Kısacası kanıtlar ikinci varsayımı destekliyor."
+      }
+    ]
+  },
+  {
+    "term": "in conclusion",
+    "category": "summary_emphasis",
+    "meaning": "sonuç olarak, son olarak",
+    "rule": "📐 NOKTALAMA: In conclusion, Cümle.",
+    "trap": "⚠️ Sonuç bildiren 'consequently' ile karıştırılmamalıdır; bu kalıp metni kapatır, neden-sonuç kurmaz.",
+    "examples": [
+      {
+        "en": "In conclusion, the policy achieved its stated aim but at considerable cost.",
+        "tr": "Sonuç olarak politika belirtilen amacına ulaştı ama hatırı sayılır bir bedelle."
+      },
+      {
+        "en": "In conclusion, further study of the northern sites is needed.",
+        "tr": "Son olarak kuzeydeki alanların daha fazla incelenmesi gerekiyor."
+      },
+      {
+        "en": "In conclusion, neither model accounts for the anomaly.",
+        "tr": "Sonuç olarak iki model de anormalliği açıklamıyor."
+      }
+    ]
+  },
+  {
+    "term": "on the whole",
+    "category": "summary_emphasis",
+    "meaning": "genel olarak, büyük ölçüde",
+    "rule": "📐 NOKTALAMA: On the whole, Cümle.",
+    "trap": "⚠️ Ayrıntılardaki istisnaları kabul ederek genel bir yargı verir; kesinlik iddia etmez.",
+    "examples": [
+      {
+        "en": "On the whole, the translation is faithful to the original.",
+        "tr": "Genel olarak çeviri aslına sadıktır."
+      },
+      {
+        "en": "On the whole, the reforms were welcomed by teachers.",
+        "tr": "Büyük ölçüde reformlar öğretmenlerce olumlu karşılandı."
+      },
+      {
+        "en": "On the whole, the data support the earlier findings.",
+        "tr": "Genel olarak veriler önceki bulguları destekliyor."
+      }
+    ]
+  },
+  {
+    "term": "ultimately",
+    "category": "summary_emphasis",
+    "meaning": "nihayetinde, sonuçta",
+    "rule": "📐 NOKTALAMA: Ultimately, Cümle. OR Özne + ultimately + Fiil",
+    "trap": "⚠️ Hem 'sonunda' (zaman) hem 'esasen' (değerlendirme) anlamı taşır; bağlamdan ayırt edilir.",
+    "examples": [
+      {
+        "en": "Ultimately, the decision rested with the ministry.",
+        "tr": "Nihayetinde karar bakanlığa aitti."
+      },
+      {
+        "en": "Ultimately, what matters is whether the method can be replicated.",
+        "tr": "Sonuçta önemli olan yöntemin yinelenip yinelenemeyeceğidir."
+      },
+      {
+        "en": "The dispute ultimately reached the highest court.",
+        "tr": "Anlaşmazlık nihayetinde en yüksek mahkemeye ulaştı."
+      }
+    ]
+  },
+  {
+    "term": "above all",
+    "category": "summary_emphasis",
+    "meaning": "her şeyden önce, en önemlisi",
+    "rule": "📐 NOKTALAMA: Above all, Cümle.",
+    "trap": "⚠️ Sayılan ögeler arasından en önemlisini öne çıkarır; yeni bilgi eklemez, sıralama yapar.",
+    "examples": [
+      {
+        "en": "Above all, the study shows how fragile the consensus was.",
+        "tr": "Her şeyden önce çalışma, uzlaşmanın ne kadar kırılgan olduğunu gösteriyor."
+      },
+      {
+        "en": "Above all, the archive needs a stable temperature.",
+        "tr": "En önemlisi arşivin istikrarlı bir sıcaklığa ihtiyacı var."
+      },
+      {
+        "en": "Above all, the method must be reproducible.",
+        "tr": "Her şeyden önce yöntem yinelenebilir olmalıdır."
+      }
+    ]
+  },
+  {
+    "term": "notably",
+    "category": "summary_emphasis",
+    "meaning": "özellikle, dikkat çekici biçimde",
+    "rule": "📐 NOKTALAMA: Cümle, notably + İsim Öbeği. OR Notably, Cümle.",
+    "trap": "⚠️ Hem örnek öne çıkarır hem de kayda değerliği vurgular; 'namely'den farkı, sayılanların tamamını vermemesidir.",
+    "examples": [
+      {
+        "en": "Several countries abstained, notably the two largest exporters.",
+        "tr": "Birkaç ülke çekimser kaldı, özellikle en büyük iki ihracatçı."
+      },
+      {
+        "en": "Notably, none of the reviewers raised the question of sample size.",
+        "tr": "Dikkat çekici biçimde, hakemlerin hiçbiri örneklem büyüklüğünü sormadı."
+      },
+      {
+        "en": "The style changed after 1600, notably in the treatment of light.",
+        "tr": "Üslup 1600'den sonra değişti, özellikle ışığın işlenişinde."
+      }
+    ]
+  }
+]);
+    push(TRANSITIONS_MATRIX_DATA.subordinate_preps, [
+  {
+    "term": "whereas",
+    "category": "contrast",
+    "meaning": "oysa, -iken (Karşılaştırmalı Zıtlık)",
+    "rule": "📐 FORMÜL: Cümle 1, whereas + Özne + Fiil",
+    "trap": "⚠️ İki durumu karşı karşıya koyar; 'although' gibi ödün bildirmez. Arkasından asla isim öbeği almaz.",
+    "examples": [
+      {
+        "en": "Northern dialects preserved the vowel, whereas southern ones lost it.",
+        "tr": "Kuzey lehçeleri ünlüyü korudu, oysa güney lehçeleri onu yitirdi."
+      },
+      {
+        "en": "Coal output fell steadily, whereas gas production doubled.",
+        "tr": "Kömür üretimi istikrarlı biçimde düştü, oysa gaz üretimi ikiye katlandı."
+      },
+      {
+        "en": "Whereas the first study used interviews, the second relied on records.",
+        "tr": "İlk çalışma görüşme kullanırken ikincisi kayıtlara dayandı."
+      }
+    ]
+  },
+  {
+    "term": "if",
+    "category": "purpose_condition",
+    "meaning": "eğer (Temel Koşul Bağlacı)",
+    "rule": "📐 FORMÜL: If + Özne + Fiil, Cümle",
+    "trap": "⚠️ Koşul cümleciğinde 'will' kullanılmaz: 'If it will rain' yanlıştır, 'If it rains' doğrudur.",
+    "examples": [
+      {
+        "en": "If the sample is contaminated, the results are worthless.",
+        "tr": "Örnek kirlenmişse sonuçlar değersizdir."
+      },
+      {
+        "en": "If the council approves the plan, work will begin in April.",
+        "tr": "Meclis planı onaylarsa çalışma nisanda başlayacak."
+      },
+      {
+        "en": "If she had checked the figures, the error would have surfaced.",
+        "tr": "Rakamları kontrol etseydi hata ortaya çıkardı."
+      }
+    ]
+  },
+  {
+    "term": "even if",
+    "category": "purpose_condition",
+    "meaning": "-se bile (Ödün Veren Koşul)",
+    "rule": "📐 FORMÜL: Even if + Özne + Fiil, Cümle",
+    "trap": "⚠️ 'even though' gerçekleşmiş bir durumu, 'even if' ise varsayımsal bir durumu bildirir. İkisi karıştırılmamalıdır.",
+    "examples": [
+      {
+        "en": "Even if the funding is restored, the team cannot meet the deadline.",
+        "tr": "Fon geri verilse bile ekip teslim tarihine yetişemez."
+      },
+      {
+        "en": "Even if we had left earlier, we would have missed the connection.",
+        "tr": "Daha erken çıksaydık bile aktarmayı kaçırırdık."
+      },
+      {
+        "en": "The rule applies even if the applicant lives abroad.",
+        "tr": "Kural, başvuran yurt dışında yaşasa bile geçerlidir."
+      }
+    ]
+  },
+  {
+    "term": "as long as",
+    "category": "purpose_condition",
+    "meaning": "-dığı sürece, şartıyla",
+    "rule": "📐 FORMÜL: Cümle, as long as + Özne + Geniş/Şimdiki Zaman",
+    "trap": "⚠️ Hem süre hem koşul bildirir; koşul anlamında gelecek zaman almaz ('as long as it will rain' yanlıştır).",
+    "examples": [
+      {
+        "en": "The licence remains valid as long as the fee is paid annually.",
+        "tr": "Ruhsat, ücret her yıl ödendiği sürece geçerli kalır."
+      },
+      {
+        "en": "As long as the temperature stays below zero, the samples are safe.",
+        "tr": "Sıcaklık sıfırın altında kaldığı sürece örnekler güvendedir."
+      },
+      {
+        "en": "You may cite the archive as long as you credit the collection.",
+        "tr": "Koleksiyonu kaynak gösterdiğiniz sürece arşivden alıntı yapabilirsiniz."
+      }
+    ]
+  },
+  {
+    "term": "so long as",
+    "category": "purpose_condition",
+    "meaning": "-dığı müddetçe, şartıyla",
+    "rule": "📐 FORMÜL: Cümle, so long as + Özne + Geniş Zaman",
+    "trap": "⚠️ 'as long as' ile aynı anlamdadır; yazı dilinde biraz daha resmîdir.",
+    "examples": [
+      {
+        "en": "The data may be shared so long as the participants remain anonymous.",
+        "tr": "Katılımcılar anonim kaldığı müddetçe veriler paylaşılabilir."
+      },
+      {
+        "en": "So long as the bridge is inspected yearly, the load limit stands.",
+        "tr": "Köprü her yıl denetlendiği sürece yük sınırı geçerlidir."
+      },
+      {
+        "en": "The offer holds so long as the terms are unchanged.",
+        "tr": "Koşullar değişmediği müddetçe teklif geçerlidir."
+      }
+    ]
+  },
+  {
+    "term": "only if",
+    "category": "purpose_condition",
+    "meaning": "ancak ... ise, yalnızca ... şartıyla",
+    "rule": "📐 FORMÜL: Only if + Cümle 1, + Devrik Ana Cümle (yardımcı fiil + özne)",
+    "trap": "⚠️ Cümle başında kullanıldığında ana cümle DEVRİK kurulur: 'Only if you register can you attend.'",
+    "examples": [
+      {
+        "en": "Only if the sample is refrigerated can the analysis be considered reliable.",
+        "tr": "Ancak örnek soğutulursa analiz güvenilir sayılabilir."
+      },
+      {
+        "en": "Only if both parties agree will the contract take effect.",
+        "tr": "Ancak iki taraf da kabul ederse sözleşme yürürlüğe girer."
+      },
+      {
+        "en": "The drug works only if it is taken with food.",
+        "tr": "İlaç ancak yemekle alınırsa etki eder."
+      }
+    ]
+  },
+  {
+    "term": "on condition that",
+    "category": "purpose_condition",
+    "meaning": "-mesi koşuluyla",
+    "rule": "📐 FORMÜL: Cümle, on condition that + Özne + Geniş Zaman / Yalın Fiil",
+    "trap": "⚠️ Resmî bir koşul kalıbıdır; ardından gelecek zaman değil geniş zaman ya da yalın fiil gelir.",
+    "examples": [
+      {
+        "en": "The committee funded the excavation on condition that the finds remain in the country.",
+        "tr": "Komite, buluntular ülkede kalması koşuluyla kazıyı fonladı."
+      },
+      {
+        "en": "He was released on condition that he report weekly.",
+        "tr": "Haftalık bildirimde bulunması koşuluyla serbest bırakıldı."
+      },
+      {
+        "en": "Access is granted on condition that the material is not reproduced.",
+        "tr": "Malzemenin çoğaltılmaması koşuluyla erişim veriliyor."
+      }
+    ]
+  },
+  {
+    "term": "but for",
+    "category": "purpose_condition",
+    "meaning": "-olmasaydı (Gizli Şart)",
+    "rule": "📐 FORMÜL: But for + İsim Öbeği, Özne + would have V3 / would V1",
+    "trap": "⚠️ Arkasından cümle değil isim öbeği alır ve daima varsayımsal bir sonuç cümlesi ister.",
+    "examples": [
+      {
+        "en": "But for the legal objections, the report would have been published sooner.",
+        "tr": "Hukuki itirazlar olmasaydı rapor daha erken yayımlanırdı."
+      },
+      {
+        "en": "But for her intervention, the manuscript would have been lost.",
+        "tr": "Onun müdahalesi olmasaydı el yazması kaybolurdu."
+      },
+      {
+        "en": "But for the storm, the survey would have finished on schedule.",
+        "tr": "Fırtına olmasaydı ölçüm zamanında biterdi."
+      }
+    ]
+  },
+  {
+    "term": "whether or not",
+    "category": "purpose_condition",
+    "meaning": "olsa da olmasa da, -ip -mediğine bakılmaksızın",
+    "rule": "📐 FORMÜL: Whether or not + Özne + Fiil, Cümle",
+    "trap": "⚠️ 'if' ile değiştirilemez: 'if' tek bir olasılık kurar, bu kalıp iki olasılığı birden kapsar.",
+    "examples": [
+      {
+        "en": "Whether or not the grant is renewed, the fieldwork will continue.",
+        "tr": "Hibe yenilensin ya da yenilenmesin saha çalışması sürecek."
+      },
+      {
+        "en": "The rule applies whether or not the applicant is a resident.",
+        "tr": "Kural, başvuran yerleşik olsun olmasın geçerlidir."
+      },
+      {
+        "en": "Whether or not you agree, the deadline stands.",
+        "tr": "Katılsanız da katılmasanız da teslim tarihi geçerli."
+      }
+    ]
+  },
+  {
+    "term": "if only",
+    "category": "purpose_condition",
+    "meaning": "keşke (Pişmanlık / Dilek)",
+    "rule": "📐 FORMÜL: If only + Özne + V2 / had V3 / would V1",
+    "trap": "⚠️ Gerçekleşmemiş bir durumu anlatır, bu yüzden fiil daima bir zaman geriye kayar; 'I wish'ten daha vurguludur.",
+    "examples": [
+      {
+        "en": "If only the records had been digitised before the fire.",
+        "tr": "Keşke kayıtlar yangından önce sayısallaştırılsaydı."
+      },
+      {
+        "en": "If only we knew who commissioned the painting.",
+        "tr": "Keşke tabloyu kimin ısmarladığını bilseydik."
+      },
+      {
+        "en": "If only they would publish the raw data.",
+        "tr": "Keşke ham veriyi yayımlasalar."
+      }
+    ]
+  },
+  {
+    "term": "supposing / assuming (that)",
+    "category": "purpose_condition",
+    "meaning": "diyelim ki, varsayalım ki",
+    "rule": "📐 FORMÜL: Supposing / Assuming (that) + Özne + Fiil, Cümle",
+    "trap": "⚠️ 'if' ile aynı yapıyı alır ancak varsayımı öne çıkarır; 'that' düşürülebilir.",
+    "examples": [
+      {
+        "en": "Assuming that the dating is correct, the settlement predates the wall.",
+        "tr": "Tarihlendirmenin doğru olduğunu varsayarsak yerleşim surdan öncedir."
+      },
+      {
+        "en": "Supposing the ferry is cancelled, how will the supplies arrive?",
+        "tr": "Diyelim ki feribot iptal edildi, malzemeler nasıl ulaşacak?"
+      },
+      {
+        "en": "Assuming no further delays, the volume appears in autumn.",
+        "tr": "Başka gecikme olmadığını varsayarsak cilt sonbaharda çıkar."
+      }
+    ]
+  },
+  {
+    "term": "were it not for / had it not been for",
+    "category": "purpose_condition",
+    "meaning": "olmasaydı (Devrik Gizli Şart)",
+    "rule": "📐 FORMÜL: Were it not for + İsim (şimdi) | Had it not been for + İsim (geçmiş), Cümle",
+    "trap": "⚠️ 'if it were not for' ve 'if it had not been for' kalıplarının devrik biçimidir; arkasından isim öbeği gelir.",
+    "examples": [
+      {
+        "en": "Had it not been for the donor's gift, the gallery would have closed.",
+        "tr": "Bağışçının hediyesi olmasaydı galeri kapanırdı."
+      },
+      {
+        "en": "Were it not for the subsidy, the line would be unprofitable.",
+        "tr": "Sübvansiyon olmasaydı hat kârsız olurdu."
+      },
+      {
+        "en": "Had it not been for the storm, the fleet would have reached the port.",
+        "tr": "Fırtına olmasaydı filo limana ulaşırdı."
+      }
+    ]
+  },
+  {
+    "term": "not only ... but also",
+    "category": "correlative",
+    "meaning": "yalnızca ... değil, aynı zamanda",
+    "rule": "📐 FORMÜL: Not only + Devrik Cümle, but ... also + Cümle 2",
+    "trap": "⚠️ Cümle başında kullanıldığında ilk kısım DEVRİK olur: 'Not only did the eruption destroy ...'. İki taraf dilbilgisel olarak paralel olmalıdır.",
+    "examples": [
+      {
+        "en": "Not only did the eruption destroy the settlement, but it also altered the region's climate.",
+        "tr": "Patlama yalnızca yerleşimi yok etmekle kalmadı, aynı zamanda bölgenin iklimini de değiştirdi."
+      },
+      {
+        "en": "The reform not only raised standards but also widened access.",
+        "tr": "Reform yalnızca standartları yükseltmedi, erişimi de genişletti."
+      },
+      {
+        "en": "Not only is the method faster, but it is also cheaper.",
+        "tr": "Yöntem yalnızca daha hızlı değil, aynı zamanda daha ucuz."
+      }
+    ]
+  },
+  {
+    "term": "both ... and",
+    "category": "correlative",
+    "meaning": "hem ... hem de",
+    "rule": "📐 FORMÜL: both + Öge 1 + and + Öge 2 (daima ÇOĞUL yüklem)",
+    "trap": "⚠️ Bağladığı iki öge aynı türden olmalıdır ve yüklem çoğul çekilir: 'Both the report and the map are missing.'",
+    "examples": [
+      {
+        "en": "Both the report and the accompanying map are missing from the file.",
+        "tr": "Hem rapor hem de ekindeki harita dosyada yok."
+      },
+      {
+        "en": "The technique is used both in medicine and in archaeology.",
+        "tr": "Teknik hem tıpta hem de arkeolojide kullanılıyor."
+      },
+      {
+        "en": "Both funding and expertise were lacking.",
+        "tr": "Hem fon hem de uzmanlık eksikti."
+      }
+    ]
+  },
+  {
+    "term": "either ... or",
+    "category": "correlative",
+    "meaning": "ya ... ya da",
+    "rule": "📐 FORMÜL: either + Öge 1 + or + Öge 2 (yüklem YAKIN özneye uyar)",
+    "trap": "⚠️ Yüklem, kendisine en yakın özneye göre çekilir: 'Either the samples or the record is wrong.'",
+    "examples": [
+      {
+        "en": "Either the samples or the record is mislabelled.",
+        "tr": "Ya örnekler ya da kayıt yanlış etiketlenmiş."
+      },
+      {
+        "en": "The species is found either in wetlands or on riverbanks.",
+        "tr": "Tür ya sulak alanlarda ya da nehir kıyılarında bulunur."
+      },
+      {
+        "en": "Either you cite the source or you remove the passage.",
+        "tr": "Ya kaynağı gösterirsin ya da pasajı çıkarırsın."
+      }
+    ]
+  },
+  {
+    "term": "neither ... nor",
+    "category": "correlative",
+    "meaning": "ne ... ne de",
+    "rule": "📐 FORMÜL: neither + Öge 1 + nor + Öge 2 (yüklem OLUMLU çekilir)",
+    "trap": "⚠️ Yapı zaten olumsuzdur, yükleme ikinci bir olumsuzluk eklenmez: 'Neither model explains' doğru, 'does not explain' yanlıştır.",
+    "examples": [
+      {
+        "en": "Neither the first model nor the second explains the anomaly.",
+        "tr": "Ne ilk model ne de ikincisi anormalliği açıklıyor."
+      },
+      {
+        "en": "The text is neither a translation nor an original composition.",
+        "tr": "Metin ne bir çeviri ne de özgün bir telif."
+      },
+      {
+        "en": "Neither funding nor equipment was available that year.",
+        "tr": "O yıl ne fon ne de ekipman mevcuttu."
+      }
+    ]
+  },
+  {
+    "term": "whether ... or",
+    "category": "correlative",
+    "meaning": "ister ... ister, ... mi yoksa ... mı",
+    "rule": "📐 FORMÜL: whether + Seçenek 1 + or + Seçenek 2",
+    "trap": "⚠️ Çözülmemiş bir ikilem kurar; kesinlik bildiren 'that' ile değiştirilemez ve edattan sonra 'if' yerine bu kullanılır.",
+    "examples": [
+      {
+        "en": "Historians still debate whether the fire began in the bakery or in the warehouse.",
+        "tr": "Tarihçiler yangının fırında mı yoksa depoda mı başladığını hâlâ tartışıyor."
+      },
+      {
+        "en": "The result is the same whether you measure by weight or by volume.",
+        "tr": "İster ağırlıkla ister hacimle ölçün sonuç aynıdır."
+      },
+      {
+        "en": "It is unclear whether the letter was sent or merely drafted.",
+        "tr": "Mektubun gönderildiği mi yoksa yalnızca taslak mı kaldığı belirsiz."
+      }
+    ]
+  },
+  {
+    "term": "as well as",
+    "category": "addition",
+    "meaning": "-in yanı sıra, hem de",
+    "rule": "📐 FORMÜL: Cümle, as well as + İsim Öbeği / V-ing",
+    "trap": "⚠️ Arkasından tam cümle almaz. Özneye eklendiğinde yüklem İLK özneye göre çekilir: 'The director, as well as the actors, was present.'",
+    "examples": [
+      {
+        "en": "The grant covers equipment as well as travel.",
+        "tr": "Hibe, seyahatin yanı sıra ekipmanı da karşılıyor."
+      },
+      {
+        "en": "She edits the journal as well as teaching two courses.",
+        "tr": "Dergiyi yönetmenin yanı sıra iki ders de veriyor."
+      },
+      {
+        "en": "The director, as well as the actors, was present at the rehearsal.",
+        "tr": "Oyuncuların yanı sıra yönetmen de provada hazır bulundu."
+      }
+    ]
+  },
+  {
+    "term": "in addition to",
+    "category": "addition",
+    "meaning": "-e ek olarak",
+    "rule": "📐 FORMÜL: In addition to + İsim Öbeği / V-ing, Cümle",
+    "trap": "⚠️ Geçiş zarfı olan 'in addition' ile karıştırılmamalıdır: 'to' aldığında isim ister, almadığında bağımsız cümle ile kullanılır.",
+    "examples": [
+      {
+        "en": "In addition to the printed catalogue, an online database is available.",
+        "tr": "Basılı kataloğa ek olarak çevrimiçi bir veri tabanı da mevcut."
+      },
+      {
+        "en": "In addition to teaching, he supervises four doctoral students.",
+        "tr": "Ders vermeye ek olarak dört doktora öğrencisine danışmanlık yapıyor."
+      },
+      {
+        "en": "In addition to the cost, the delay damaged the museum's reputation.",
+        "tr": "Maliyete ek olarak gecikme müzenin itibarına da zarar verdi."
+      }
+    ]
+  },
+  {
+    "term": "in terms of",
+    "category": "focus_exception",
+    "meaning": "açısından, bakımından",
+    "rule": "📐 FORMÜL: In terms of + İsim Öbeği, Cümle",
+    "trap": "⚠️ Arkasından cümle almaz. Değerlendirmenin hangi ölçüte göre yapıldığını belirtir.",
+    "examples": [
+      {
+        "en": "In terms of cost, the second design is clearly preferable.",
+        "tr": "Maliyet açısından ikinci tasarım açıkça tercih edilebilir."
+      },
+      {
+        "en": "The two methods differ little in terms of accuracy.",
+        "tr": "İki yöntem doğruluk bakımından çok az farklılık gösterir."
+      },
+      {
+        "en": "In terms of scale, the project has no precedent.",
+        "tr": "Ölçek açısından projenin bir öncülü yok."
+      }
+    ]
+  },
+  {
+    "term": "with regard to",
+    "category": "focus_exception",
+    "meaning": "-e ilişkin, -e gelince",
+    "rule": "📐 FORMÜL: With regard to + İsim Öbeği, Cümle",
+    "trap": "⚠️ 'regarding' ile eş anlamlıdır; 'with regards to' biçimi yanlıştır, tekil 'regard' kullanılır.",
+    "examples": [
+      {
+        "en": "With regard to the second question, the evidence is inconclusive.",
+        "tr": "İkinci soruya ilişkin kanıtlar sonuca ulaştırmıyor."
+      },
+      {
+        "en": "With regard to funding, no decision has been announced.",
+        "tr": "Fona ilişkin herhangi bir karar açıklanmadı."
+      },
+      {
+        "en": "With regard to dating, the two teams disagree.",
+        "tr": "Tarihlendirmeye gelince iki ekip anlaşamıyor."
+      }
+    ]
+  },
+  {
+    "term": "when it comes to",
+    "category": "focus_exception",
+    "meaning": "söz konusu olunca, -e gelince",
+    "rule": "📐 FORMÜL: When it comes to + İsim Öbeği / V-ing, Cümle",
+    "trap": "⚠️ 'to' bir edattır, mastar değil: arkasından yalın fiil değil V-ing gelir ('when it comes to writing').",
+    "examples": [
+      {
+        "en": "When it comes to accuracy, the older instrument still performs better.",
+        "tr": "Doğruluk söz konusu olunca eski cihaz hâlâ daha iyi çalışıyor."
+      },
+      {
+        "en": "When it comes to funding research, priorities shift with each government.",
+        "tr": "Araştırma fonlaması söz konusu olunca öncelikler her hükûmetle değişiyor."
+      },
+      {
+        "en": "When it comes to storage, humidity matters more than temperature.",
+        "tr": "Depolama söz konusu olunca nem, sıcaklıktan daha önemlidir."
+      }
+    ]
+  },
+  {
+    "term": "as far as ... is concerned",
+    "category": "focus_exception",
+    "meaning": "-e gelince, ... söz konusu olduğunda",
+    "rule": "📐 FORMÜL: As far as + İsim + is/are concerned, Cümle",
+    "trap": "⚠️ İsim ile 'is concerned' arasına başka öge girmez ve kalıp bir bütün olarak korunur.",
+    "examples": [
+      {
+        "en": "As far as the timetable is concerned, nothing has changed.",
+        "tr": "Takvime gelince hiçbir şey değişmedi."
+      },
+      {
+        "en": "As far as the archive is concerned, access remains restricted.",
+        "tr": "Arşiv söz konusu olduğunda erişim kısıtlı kalıyor."
+      },
+      {
+        "en": "As far as costs are concerned, the estimate was accurate.",
+        "tr": "Maliyetlere gelince tahmin isabetliydi."
+      }
+    ]
+  },
+  {
+    "term": "except that",
+    "category": "focus_exception",
+    "meaning": "şu var ki, ancak (Cümle Alan İstisna)",
+    "rule": "📐 FORMÜL: Cümle, except that + Özne + Fiil",
+    "trap": "⚠️ İsim alan 'except for' ile karıştırılmamalıdır; 'except that' arkasından tam cümle ister.",
+    "examples": [
+      {
+        "en": "The two editions are identical, except that the later one omits the preface.",
+        "tr": "İki baskı aynı, şu var ki sonraki önsözü çıkarmış."
+      },
+      {
+        "en": "Nothing is known of her early life, except that she was born in Bursa.",
+        "tr": "Erken yaşamı hakkında Bursa'da doğduğu dışında bir şey bilinmiyor."
+      },
+      {
+        "en": "The plan was accepted, except that the budget was halved.",
+        "tr": "Plan kabul edildi, ancak bütçe yarıya indirildi."
+      }
+    ]
+  }
+]);
+  }
+  if (typeof CAUSE_EFFECT_DATA !== 'undefined') {
+    push(CAUSE_EFFECT_DATA.effect_to_cause, [
+  {
+    "term": "now that",
+    "category": "conjunctions",
+    "meaning": "artık, madem ki (Yeni Durum Sebebi)",
+    "rule": "📐 FORMÜL: Now that + Özne + Fiil, Cümle",
+    "trap": "⚠️ Yeni ortaya çıkmış ve hâlen geçerli bir sebebi bildirir; 'because'tan farkı bu güncellik vurgusudur.",
+    "examples": [
+      {
+        "en": "Now that the archive has been digitised, researchers can work remotely.",
+        "tr": "Arşiv sayısallaştırıldığına göre araştırmacılar uzaktan çalışabilir."
+      },
+      {
+        "en": "Now that the border is open, trade has resumed.",
+        "tr": "Sınır artık açık olduğuna göre ticaret yeniden başladı."
+      },
+      {
+        "en": "Now that we have the raw data, the claim can be tested.",
+        "tr": "Ham veri elimizde olduğuna göre iddia sınanabilir."
+      }
+    ]
+  },
+  {
+    "term": "considering (that)",
+    "category": "conjunctions",
+    "meaning": "göz önüne alındığında, -e göre",
+    "rule": "📐 FORMÜL: Considering (that) + Cümle OR Considering + İsim Öbeği",
+    "trap": "⚠️ Hem cümle hem isim öbeği alabilen az sayıdaki sebep bağlacından biridir; bir yargıyı gerekçeye bağlar.",
+    "examples": [
+      {
+        "en": "Considering that the sample was tiny, the result is surprisingly consistent.",
+        "tr": "Örneklemin çok küçük olduğu göz önüne alındığında sonuç şaşırtıcı biçimde tutarlı."
+      },
+      {
+        "en": "Considering its age, the manuscript is in excellent condition.",
+        "tr": "Yaşı göz önüne alındığında el yazması mükemmel durumda."
+      },
+      {
+        "en": "Considering the cost, the outcome was disappointing.",
+        "tr": "Maliyet göz önüne alındığında sonuç hayal kırıklığıydı."
+      }
+    ]
+  },
+  {
+    "term": "thanks to",
+    "category": "prepositions",
+    "meaning": "sayesinde",
+    "rule": "📐 FORMÜL: Thanks to + İsim Öbeği, Cümle",
+    "trap": "⚠️ Yalnızca OLUMLU sonuçlar için kullanılır; olumsuz bir sonuç için 'because of' ya da 'owing to' gerekir.",
+    "examples": [
+      {
+        "en": "Thanks to a private donation, the collection remained intact.",
+        "tr": "Özel bir bağış sayesinde koleksiyon bütün kaldı."
+      },
+      {
+        "en": "Thanks to the new filter, the readings are far more stable.",
+        "tr": "Yeni filtre sayesinde ölçümler çok daha kararlı."
+      },
+      {
+        "en": "Thanks to her notes, the experiment could be repeated.",
+        "tr": "Onun notları sayesinde deney yinelenebildi."
+      }
+    ]
+  }
+]);
+    push(CAUSE_EFFECT_DATA.cause_to_effect, [
+  {
+    "term": "so (bağlaç)",
+    "category": "conjunctions",
+    "meaning": "bu yüzden, bu nedenle (Bağlaç)",
+    "rule": "📐 NOKTALAMA: Cümle 1, so Cümle 2.",
+    "trap": "⚠️ Bir geçiş zarfı değil bağlaçtır: kendisinden önce virgül alır, noktalı virgül almaz ve cümle başında kullanılmaz.",
+    "examples": [
+      {
+        "en": "The road was flooded, so the delivery was postponed.",
+        "tr": "Yol su altındaydı, bu yüzden teslimat ertelendi."
+      },
+      {
+        "en": "The results were inconclusive, so the trial was extended.",
+        "tr": "Sonuçlar belirsizdi, bu nedenle deneme uzatıldı."
+      },
+      {
+        "en": "No record survives, so the date remains uncertain.",
+        "tr": "Hiçbir kayıt kalmamış, bu yüzden tarih belirsiz."
+      }
+    ]
+  },
+  {
+    "term": "that is why",
+    "category": "conjunctions",
+    "meaning": "işte bu yüzden",
+    "rule": "📐 NOKTALAMA: Cümle 1. That is why Cümle 2.",
+    "trap": "⚠️ Kendisinden sonra virgül almaz; 'that is' (yani) kalıbıyla karıştırılmamalıdır.",
+    "examples": [
+      {
+        "en": "The pigment fades in daylight. That is why the room is kept dark.",
+        "tr": "Pigment gün ışığında soluyor. İşte bu yüzden oda karanlık tutuluyor."
+      },
+      {
+        "en": "The bridge carries heavy traffic. That is why it is inspected twice a year.",
+        "tr": "Köprü ağır trafik taşıyor. İşte bu yüzden yılda iki kez denetleniyor."
+      },
+      {
+        "en": "The soil is acidic. That is why bone rarely survives here.",
+        "tr": "Toprak asidik. İşte bu yüzden burada kemik nadiren korunur."
+      }
+    ]
+  },
+  {
+    "term": "for this reason",
+    "category": "conjunctions",
+    "meaning": "bu nedenle, bu sebeple",
+    "rule": "📐 NOKTALAMA: Cümle 1. For this reason, Cümle 2.",
+    "trap": "⚠️ Geçiş zarfı gibi davranır ve arkasından virgül alır; öncesinde nokta ya da noktalı virgül gerekir.",
+    "examples": [
+      {
+        "en": "Ice cores trap air from the distant past. For this reason, they are the best record of ancient climate.",
+        "tr": "Buz çekirdekleri uzak geçmişten hava hapseder. Bu nedenle eski iklimin en iyi kaydıdır."
+      },
+      {
+        "en": "The species breeds only once a decade. For this reason, its recovery is slow.",
+        "tr": "Tür on yılda bir ürer. Bu sebeple toparlanması yavaştır."
+      },
+      {
+        "en": "The document is unsigned. For this reason, its authorship is disputed.",
+        "tr": "Belge imzasız. Bu nedenle kime ait olduğu tartışmalı."
+      }
+    ]
+  }
+]);
+  }
+  if (typeof TIME_MATRIX_DATA !== 'undefined') {
+    push(TIME_MATRIX_DATA.time_markers, [
+  {
+    "term": "ever since",
+    "category": "conjunctions",
+    "meaning": "-den beri (Kesintisiz Süreç)",
+    "rule": "📐 FORMÜL: Ever since + V2 / İsim, Ana Cümle Present Perfect",
+    "trap": "⚠️ 'since'in vurgulu biçimidir; ana cümle daima Present Perfect ya da Present Perfect Continuous olur.",
+    "examples": [
+      {
+        "en": "Ever since the mill closed, the town has relied on tourism.",
+        "tr": "Fabrika kapandığından beri kasaba turizme bel bağladı."
+      },
+      {
+        "en": "Ever since 1990, the glacier has retreated every summer.",
+        "tr": "1990'dan beri buzul her yaz geri çekiliyor."
+      },
+      {
+        "en": "She has written on the subject ever since her doctorate.",
+        "tr": "Doktorasından beri bu konuda yazıyor."
+      }
+    ]
+  },
+  {
+    "term": "whenever",
+    "category": "conjunctions",
+    "meaning": "her ne zaman, -dığı her seferde",
+    "rule": "📐 FORMÜL: Whenever + Özne + Fiil, Cümle",
+    "trap": "⚠️ Tekrarlanan bir durumu bildirir; koşul cümleciği gibi davranır ve gelecek zaman almaz.",
+    "examples": [
+      {
+        "en": "Whenever the river rises, the lower fields are flooded.",
+        "tr": "Nehir her yükseldiğinde alçak tarlalar su altında kalır."
+      },
+      {
+        "en": "Whenever a new edition appears, the older readings are quietly dropped.",
+        "tr": "Her yeni baskı çıktığında eski okumalar sessizce çıkarılır."
+      },
+      {
+        "en": "The alarm sounds whenever the temperature exceeds four degrees.",
+        "tr": "Sıcaklık dört dereceyi aştığı her seferde alarm çalar."
+      }
+    ]
+  }
+]);
+  }
+})();
