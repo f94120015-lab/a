@@ -12839,7 +12839,9 @@ const EXAM_GROUPS = [
       { id: 'reading-1', label: 'Test 1', minutes: 35,
         sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex1' }] },
       { id: 'reading-2', label: 'Test 2', minutes: 25,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex1' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex1' }] },
+      { id: 'reading-3', label: 'Test 3', minutes: 25,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex1' }] }
     ] },
   { id: 'dialogue', title: 'Diyalog Tamamlama', icon: '💬', skill: 'Diyalog Tamamlama',
     desc: 'Konuşmadaki eksik repliği bulma',
@@ -12847,7 +12849,9 @@ const EXAM_GROUPS = [
       { id: 'dialogue-1', label: 'Test 1', minutes: 20,
         sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex2' }] },
       { id: 'dialogue-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex2' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex2' }] },
+      { id: 'dialogue-3', label: 'Test 3', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex2' }] }
     ] },
   { id: 'para-comp', title: 'Paragraf Tamamlama', icon: '📄', skill: 'Paragraf Tamamlama',
     desc: 'Paragrafta boş bırakılan cümleyi bulma',
@@ -12855,7 +12859,9 @@ const EXAM_GROUPS = [
       { id: 'para-comp-1', label: 'Test 1', minutes: 25,
         sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex3' }] },
       { id: 'para-comp-2', label: 'Test 2', minutes: 20,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex3' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex3' }] },
+      { id: 'para-comp-3', label: 'Test 3', minutes: 20,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex3' }] }
     ] },
   { id: 'restatement', title: 'Yakın Anlamlı Cümle', icon: '🔁', skill: 'Yakın Anlamlı Cümle',
     desc: 'Verilen cümleye anlamca en yakın seçeneği bulma',
@@ -12864,7 +12870,9 @@ const EXAM_GROUPS = [
         sources: [{ lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
                   { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] },
       { id: 'restatement-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_rs_ex' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_rs_ex' }] },
+      { id: 'restatement-3', label: 'Test 3', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_rs3_ex' }] }
     ] },
   { id: 'irrelevant', title: 'Akışı Bozan Cümle', icon: '✂️', skill: 'Akışı Bozan Cümle',
     desc: 'Paragrafın anlam bütünlüğünü bozan cümleyi bulma',
@@ -12872,7 +12880,9 @@ const EXAM_GROUPS = [
       { id: 'irrelevant-1', label: 'Test 1', minutes: 15,
         sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] },
       { id: 'irrelevant-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2b_ex' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2b_ex' }] },
+      { id: 'irrelevant-3', label: 'Test 3', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2d_ex' }] }
     ] },
   { id: 'ordering', title: 'Paragraf Sıralama', icon: '🔢', skill: 'Paragraf Sıralama',
     desc: 'Karışık cümleleri anlamlı bir paragraf olacak şekilde dizme',
@@ -12880,7 +12890,9 @@ const EXAM_GROUPS = [
       { id: 'ordering-1', label: 'Test 1', minutes: 15,
         sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] },
       { id: 'ordering-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2c_ex' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2c_ex' }] },
+      { id: 'ordering-3', label: 'Test 3', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2e_ex' }] }
     ] },
   { id: 'reference', title: 'Zamir & Referans', icon: '🔗', skill: 'Zamir & Referans',
     desc: 'this, the former, the latter gibi ifadelerin gönderdiği ismi bulma',
@@ -12888,7 +12900,9 @@ const EXAM_GROUPS = [
       { id: 'reference-1', label: 'Test 1', minutes: 12,
         sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] },
       { id: 'reference-2', label: 'Test 2', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1c_ex' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1c_ex' }] },
+      { id: 'reference-3', label: 'Test 3', minutes: 12,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1d_ex' }] }
     ] },
   { id: 'cloze', title: 'Cloze Test', icon: '🧩', skill: 'Cloze Test',
     desc: 'Paragraftaki boşluğa uygun geçiş bağlacını bulma',
@@ -12896,7 +12910,9 @@ const EXAM_GROUPS = [
       { id: 'cloze-1', label: 'Test 1', minutes: 12,
         sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] },
       { id: 'cloze-2', label: 'Test 2', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1b_ex' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1b_ex' }] },
+      { id: 'cloze-3', label: 'Test 3', minutes: 12,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1e_ex' }] }
     ] },
   { id: 'sent-comp', title: 'Cümle Tamamlama', icon: '🧱', skill: 'Cümle Tamamlama',
     desc: 'Cümlede eksik bırakılan yan cümleyi bulma',
@@ -12904,7 +12920,9 @@ const EXAM_GROUPS = [
       { id: 'sent-comp-1', label: 'Test 1', minutes: 15,
         sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex1' }] },
       { id: 'sent-comp-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex2' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex2' }] },
+      { id: 'sent-comp-3', label: 'Test 3', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex3' }] }
     ] },
   { id: 'translation', title: 'Çeviri', icon: '🌐', skill: 'Çeviri',
     desc: 'İngilizce–Türkçe ve Türkçe–İngilizce en uygun çeviriyi bulma',
@@ -12912,7 +12930,9 @@ const EXAM_GROUPS = [
       { id: 'translation-1', label: 'Test 1 · İng → Tür', minutes: 15,
         sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex1' }] },
       { id: 'translation-2', label: 'Test 2 · Tür → İng', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex2' }] }
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex2' }] },
+      { id: 'translation-3', label: 'Test 3 · İng → Tür', minutes: 15,
+        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex3' }] }
     ] }
 ];
 

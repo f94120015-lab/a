@@ -39514,6 +39514,2612 @@ if (typeof lessons !== 'undefined') {
       ]
     }
   ]
+},
+{
+  "id": "u50_l4c_ex1",
+  "title": "Okuma Parçası — Test 3",
+  "description": "Dört akademik parça üzerinde 20 soruluk okuma denemesi.",
+  "questions": [
+    {
+      "id": "u50_l4c_r1_1",
+      "type": "multiple-choice",
+      "passage": "For half a century the clay tablets found at Knossos resisted every attempt at reading. Scholars assumed the script recorded an unknown language of ancient Crete, and this assumption steered them away from Greek. Michael Ventris, an architect rather than a classicist, treated the problem as a grid of relationships instead of a search for meaning, and the values he derived produced recognisable Greek words. The decipherment owed less to new evidence than to the abandonment of an idea everyone had accepted, which is why it is often cited as a warning about the cost of shared assumptions.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "Knossos tabletleri hâlâ tam olarak okunamamıştır.",
+        "Antik Girit'te Yunanca dışında bir dil konuşulmamıştır.",
+        "Mimarlar dil bilimcilerden daha iyi çözümleme yapar.",
+        "Yazının çözülmesini sağlayan şey yeni bulgular değil, herkesin paylaştığı bir varsayımdan vazgeçilmesidir.",
+        "Ventris çalışmasını klasik filoloji eğitimine borçludur."
+      ],
+      "correctIndex": 3,
+      "explanation": "Metin, çözümün 'yeni kanıttan çok herkesin kabul ettiği bir fikrin terk edilmesine' dayandığını söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r1_2",
+      "type": "multiple-choice",
+      "passage": "For half a century the clay tablets found at Knossos resisted every attempt at reading. Scholars assumed the script recorded an unknown language of ancient Crete, and this assumption steered them away from Greek. Michael Ventris, an architect rather than a classicist, treated the problem as a grid of relationships instead of a search for meaning, and the values he derived produced recognisable Greek words. The decipherment owed less to new evidence than to the abandonment of an idea everyone had accepted, which is why it is often cited as a warning about the cost of shared assumptions.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre bilim insanlarını yanlış yöne sürükleyen şey nedir?",
+      "options": [
+        "Tabletlerin kilden yapılmış olması",
+        "Ventris'in mimar olması",
+        "Yazının bilinmeyen bir Girit diline ait olduğu varsayımı",
+        "Tabletlerin sayısının azlığı",
+        "Yunancanın o dönemde yazılmamış olması"
+      ],
+      "correctIndex": 2,
+      "explanation": "Metin bu varsayımın araştırmacıları 'Yunancadan uzaklaştırdığını' açıkça belirtiyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r1_3",
+      "type": "multiple-choice",
+      "passage": "For half a century the clay tablets found at Knossos resisted every attempt at reading. Scholars assumed the script recorded an unknown language of ancient Crete, and this assumption steered them away from Greek. Michael Ventris, an architect rather than a classicist, treated the problem as a grid of relationships instead of a search for meaning, and the values he derived produced recognisable Greek words. The decipherment owed less to new evidence than to the abandonment of an idea everyone had accepted, which is why it is often cited as a warning about the cost of shared assumptions.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Kil tabletler yalnızca ticari kayıtlar içerir.",
+        "Alan dışından gelen biri, yerleşik kabullere daha az bağlı olabilir.",
+        "Çözümleme yarım yüzyıl daha sürecektir.",
+        "Klasik filologlar Yunanca bilmemektedir.",
+        "Yeni kanıt olmadan hiçbir yazı çözülemez."
+      ],
+      "correctIndex": 1,
+      "explanation": "Ventris'in klasikçi olmaması ve sorunu farklı ele alması, alan dışılığın avantajına işaret eder.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r1_4",
+      "type": "multiple-choice",
+      "passage": "For half a century the clay tablets found at Knossos resisted every attempt at reading. Scholars assumed the script recorded an unknown language of ancient Crete, and this assumption steered them away from Greek. Michael Ventris, an architect rather than a classicist, treated the problem as a grid of relationships instead of a search for meaning, and the values he derived produced recognisable Greek words. The decipherment owed less to new evidence than to the abandonment of an idea everyone had accepted, which is why it is often cited as a warning about the cost of shared assumptions.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'steered' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "hızlandırmak",
+        "gizlemek",
+        "engellemek",
+        "kanıtlamak",
+        "yönlendirmek"
+      ],
+      "correctIndex": 4,
+      "explanation": "'steered them away from Greek' = onları Yunancadan uzağa yönlendirdi.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r1_5",
+      "type": "multiple-choice",
+      "passage": "For half a century the clay tablets found at Knossos resisted every attempt at reading. Scholars assumed the script recorded an unknown language of ancient Crete, and this assumption steered them away from Greek. Michael Ventris, an architect rather than a classicist, treated the problem as a grid of relationships instead of a search for meaning, and the values he derived produced recognisable Greek words. The decipherment owed less to new evidence than to the abandonment of an idea everyone had accepted, which is why it is often cited as a warning about the cost of shared assumptions.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazarın anlatıma yaklaşımı nasıl tanımlanabilir?",
+      "options": [
+        "Alaycı",
+        "Kayıtsız",
+        "Savunmacı",
+        "Açıklayıcı ve ders çıkaran",
+        "Karamsar"
+      ],
+      "correctIndex": 3,
+      "explanation": "Yazar olayı anlatıp sonunda ortak varsayımların bedeli konusunda bir ders çıkarıyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r2_1",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, chiefly because asphalt and concrete absorb heat during the day and release it slowly at night. Planting trees lowers the temperature in two ways: the canopy blocks sunlight before it reaches the pavement, and the water the leaves release cools the surrounding air. The benefit is not evenly distributed. Wealthier districts typically have far more canopy cover, so the neighbourhoods that suffer most from heat are usually the ones with the fewest trees.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "Şehirler kırsal alanlardan daha soğuktur.",
+        "Ağaçlar şehirleri serinletir, ancak bu yarardan en çok ihtiyacı olan mahalleler yararlanamaz.",
+        "Asfalt ısıyı geceleri emer.",
+        "Ağaç dikmek şehirlerdeki tek çözümdür.",
+        "Zengin mahalleler daha sıcaktır."
+      ],
+      "correctIndex": 1,
+      "explanation": "Metin hem mekanizmayı anlatıyor hem de yararın eşit dağılmadığını vurguluyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r2_2",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, chiefly because asphalt and concrete absorb heat during the day and release it slowly at night. Planting trees lowers the temperature in two ways: the canopy blocks sunlight before it reaches the pavement, and the water the leaves release cools the surrounding air. The benefit is not evenly distributed. Wealthier districts typically have far more canopy cover, so the neighbourhoods that suffer most from heat are usually the ones with the fewest trees.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre ağaçlar sıcaklığı hangi iki yolla düşürür?",
+      "options": [
+        "Rüzgârı keserek ve nem tutarak",
+        "Beton üretimini azaltarak ve gölge yaparak",
+        "Kaldırımı gölgeleyerek ve yapraklardan su salarak",
+        "Karbondioksit tutarak ve su depolayarak",
+        "Geceleri ısı yayarak ve gündüz gölge yaparak"
+      ],
+      "correctIndex": 2,
+      "explanation": "Metin gölgelemeyi ve yapraklardan salınan suyun havayı serinletmesini sayıyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r2_3",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, chiefly because asphalt and concrete absorb heat during the day and release it slowly at night. Planting trees lowers the temperature in two ways: the canopy blocks sunlight before it reaches the pavement, and the water the leaves release cools the surrounding air. The benefit is not evenly distributed. Wealthier districts typically have far more canopy cover, so the neighbourhoods that suffer most from heat are usually the ones with the fewest trees.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Ağaç dikimi kentlerde tamamen durdurulmuştur.",
+        "Beton ısıyı hiç tutmaz.",
+        "Kırsal alanlarda ağaç bulunmaz.",
+        "Sıcaklık farkı yalnızca gündüz görülür.",
+        "Ağaç örtüsünün dağılımı gelir düzeyiyle ilişkilidir."
+      ],
+      "correctIndex": 4,
+      "explanation": "Varlıklı bölgelerin çok daha fazla örtüye sahip olduğu doğrudan söyleniyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r2_4",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, chiefly because asphalt and concrete absorb heat during the day and release it slowly at night. Planting trees lowers the temperature in two ways: the canopy blocks sunlight before it reaches the pavement, and the water the leaves release cools the surrounding air. The benefit is not evenly distributed. Wealthier districts typically have far more canopy cover, so the neighbourhoods that suffer most from heat are usually the ones with the fewest trees.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'canopy' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "kök sistemi",
+        "çatı kaplaması",
+        "ağaç örtüsü / taç",
+        "gövde",
+        "yaprak dökümü"
+      ],
+      "correctIndex": 2,
+      "explanation": "'canopy blocks sunlight' ifadesi ağaçların üst örtüsünü karşılar.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r2_5",
+      "type": "multiple-choice",
+      "passage": "Cities are consistently warmer than the countryside around them, chiefly because asphalt and concrete absorb heat during the day and release it slowly at night. Planting trees lowers the temperature in two ways: the canopy blocks sunlight before it reaches the pavement, and the water the leaves release cools the surrounding air. The benefit is not evenly distributed. Wealthier districts typically have far more canopy cover, so the neighbourhoods that suffer most from heat are usually the ones with the fewest trees.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazarın tutumu nasıl tanımlanabilir?",
+      "options": [
+        "Tarafsız ama umursamaz",
+        "Eleştirel bir farkındalık taşıyan",
+        "Aşırı iyimser",
+        "Öfkeli",
+        "Şüpheci ve inkârcı"
+      ],
+      "correctIndex": 1,
+      "explanation": "Yazar çözümü anlatırken eşitsiz dağılıma dikkat çekerek eleştirel bir not düşüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r3_1",
+      "type": "multiple-choice",
+      "passage": "The Dutch tulip episode of the 1630s is routinely offered as the first speculative bubble, a moment when an entire nation supposedly lost its reason over flower bulbs. Recent economic history complicates the picture. The contracts being traded were futures, most were never settled, and the participants formed a narrow circle of merchants rather than the general public. Prices did rise sharply and then collapse, but the wider economy shows no sign of the ruin later accounts describe. The story endured because it was useful to moralists, not because it was accurate.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "Lale çılgınlığı Hollanda ekonomisini yıkmıştır.",
+        "Lale fiyatları hiçbir zaman yükselmemiştir.",
+        "Vadeli sözleşmeler 17. yüzyılda bilinmiyordu.",
+        "Yaygın lale çılgınlığı anlatısı, tarihsel bulgularla tam olarak örtüşmemektedir.",
+        "Ahlakçılar ekonomi tarihine katkı sunmuştur."
+      ],
+      "correctIndex": 3,
+      "explanation": "Metin, öykünün doğruluğundan çok işe yararlığı nedeniyle sürdüğünü söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r3_2",
+      "type": "multiple-choice",
+      "passage": "The Dutch tulip episode of the 1630s is routinely offered as the first speculative bubble, a moment when an entire nation supposedly lost its reason over flower bulbs. Recent economic history complicates the picture. The contracts being traded were futures, most were never settled, and the participants formed a narrow circle of merchants rather than the general public. Prices did rise sharply and then collapse, but the wider economy shows no sign of the ruin later accounts describe. The story endured because it was useful to moralists, not because it was accurate.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre işlem görenler aslında neydi?",
+      "options": [
+        "Vadeli sözleşmeler",
+        "Lale soğanlarının kendisi",
+        "Devlet tahvilleri",
+        "Toprak tapuları",
+        "Gemi hisseleri"
+      ],
+      "correctIndex": 0,
+      "explanation": "'The contracts being traded were futures' ifadesi bunu açıkça belirtiyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r3_3",
+      "type": "multiple-choice",
+      "passage": "The Dutch tulip episode of the 1630s is routinely offered as the first speculative bubble, a moment when an entire nation supposedly lost its reason over flower bulbs. Recent economic history complicates the picture. The contracts being traded were futures, most were never settled, and the participants formed a narrow circle of merchants rather than the general public. Prices did rise sharply and then collapse, but the wider economy shows no sign of the ruin later accounts describe. The story endured because it was useful to moralists, not because it was accurate.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Bir anlatının yaygınlığı doğruluğunun kanıtı değildir.",
+        "Fiyat balonları hiçbir zaman yaşanmamıştır.",
+        "Hollanda'da tüm halk lale ticaretine katılmıştır.",
+        "Ekonomi tarihi 1630'lara ilgi duymaz.",
+        "Sözleşmelerin çoğu yerine getirilmiştir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Öykünün yararlı olduğu için sürmesi, yaygınlığın doğrulukla eşitlenemeyeceğini gösterir.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r3_4",
+      "type": "multiple-choice",
+      "passage": "The Dutch tulip episode of the 1630s is routinely offered as the first speculative bubble, a moment when an entire nation supposedly lost its reason over flower bulbs. Recent economic history complicates the picture. The contracts being traded were futures, most were never settled, and the participants formed a narrow circle of merchants rather than the general public. Prices did rise sharply and then collapse, but the wider economy shows no sign of the ruin later accounts describe. The story endured because it was useful to moralists, not because it was accurate.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'settled' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "ifa edilmek / kapatılmak",
+        "yatıştırılmak",
+        "yerleşilmek",
+        "kararlaştırılmak",
+        "kaydedilmek"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sözleşme bağlamında 'settled', yükümlülüğün yerine getirilip kapatılmasıdır.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r3_5",
+      "type": "multiple-choice",
+      "passage": "The Dutch tulip episode of the 1630s is routinely offered as the first speculative bubble, a moment when an entire nation supposedly lost its reason over flower bulbs. Recent economic history complicates the picture. The contracts being traded were futures, most were never settled, and the participants formed a narrow circle of merchants rather than the general public. Prices did rise sharply and then collapse, but the wider economy shows no sign of the ruin later accounts describe. The story endured because it was useful to moralists, not because it was accurate.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazarın yaygın anlatıya yaklaşımı nasıldır?",
+      "options": [
+        "Düzeltici ve mesafeli",
+        "Onu bütünüyle onaylayan",
+        "Alaycı ve küçümseyen",
+        "İlgisiz",
+        "Duygusal"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yazar anlatıyı reddetmeden düzeltiyor; ölçülü bir mesafe koruyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r4_1",
+      "type": "multiple-choice",
+      "passage": "Placebos were long thought to work only when patients were deceived. A series of trials has challenged that assumption by telling participants openly that they were receiving inert pills, and reporting measurable relief in conditions such as chronic pain and fatigue. The findings do not suggest that the pills themselves act on the body. What appears to matter is the ritual of treatment and the expectation it creates. Researchers remain cautious: the effects are modest, the conditions studied are ones where symptoms are self-reported, and no one is proposing that placebos replace active drugs.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçanın ana fikri aşağıdakilerden hangisidir?",
+      "options": [
+        "Plasebolar etkin ilaçların yerini almalıdır.",
+        "Hastanın aldatılması plasebonun tek koşuludur.",
+        "Plasebo etkisi bilim insanlarınca tamamen reddedilmiştir.",
+        "Kronik ağrı yalnızca plasebo ile tedavi edilir.",
+        "Açık uçlu denemeler, plasebonun aldatma olmadan da ölçülebilir etki verebildiğini göstermektedir."
+      ],
+      "correctIndex": 4,
+      "explanation": "Metin, hastalara açıkça söylenmesine rağmen ölçülebilir rahatlama bildirildiğini aktarıyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r4_2",
+      "type": "multiple-choice",
+      "passage": "Placebos were long thought to work only when patients were deceived. A series of trials has challenged that assumption by telling participants openly that they were receiving inert pills, and reporting measurable relief in conditions such as chronic pain and fatigue. The findings do not suggest that the pills themselves act on the body. What appears to matter is the ritual of treatment and the expectation it creates. Researchers remain cautious: the effects are modest, the conditions studied are ones where symptoms are self-reported, and no one is proposing that placebos replace active drugs.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçaya göre etkiyi yaratan şey nedir?",
+      "options": [
+        "Hapların içindeki etken madde",
+        "Hastaların ilaç geçmişi",
+        "Tedavi ritüeli ve yarattığı beklenti",
+        "Denemelerin süresi",
+        "Araştırmacıların temkinli tutumu"
+      ],
+      "correctIndex": 2,
+      "explanation": "'What appears to matter is the ritual of treatment and the expectation it creates' cümlesi bunu söylüyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r4_3",
+      "type": "multiple-choice",
+      "passage": "Placebos were long thought to work only when patients were deceived. A series of trials has challenged that assumption by telling participants openly that they were receiving inert pills, and reporting measurable relief in conditions such as chronic pain and fatigue. The findings do not suggest that the pills themselves act on the body. What appears to matter is the ritual of treatment and the expectation it creates. Researchers remain cautious: the effects are modest, the conditions studied are ones where symptoms are self-reported, and no one is proposing that placebos replace active drugs.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçadan aşağıdakilerden hangisi çıkarılabilir?",
+      "options": [
+        "Etkin ilaçlar artık gereksizdir.",
+        "Plasebolar her hastalıkta aynı sonucu verir.",
+        "Belirtilerin hasta tarafından bildirilmesi sonucu güçlendirir.",
+        "Araştırmacılar bulgulardan tümüyle emindir.",
+        "Bulgular güçlü ama sınırlı bir alana aittir."
+      ],
+      "correctIndex": 4,
+      "explanation": "Etkilerin ölçülü olması ve incelenen durumların dar olması, sınırlı bir geçerliliğe işaret eder.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r4_4",
+      "type": "multiple-choice",
+      "passage": "Placebos were long thought to work only when patients were deceived. A series of trials has challenged that assumption by telling participants openly that they were receiving inert pills, and reporting measurable relief in conditions such as chronic pain and fatigue. The findings do not suggest that the pills themselves act on the body. What appears to matter is the ritual of treatment and the expectation it creates. Researchers remain cautious: the effects are modest, the conditions studied are ones where symptoms are self-reported, and no one is proposing that placebos replace active drugs.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Parçada geçen 'inert' kelimesi bu bağlamda ne anlama gelmektedir?",
+      "options": [
+        "deneysel",
+        "zararlı",
+        "pahalı",
+        "etkisiz / tesirsiz",
+        "bağımlılık yapan"
+      ],
+      "correctIndex": 3,
+      "explanation": "'inert pills', içinde etkin madde bulunmayan haplardır.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    },
+    {
+      "id": "u50_l4c_r4_5",
+      "type": "multiple-choice",
+      "passage": "Placebos were long thought to work only when patients were deceived. A series of trials has challenged that assumption by telling participants openly that they were receiving inert pills, and reporting measurable relief in conditions such as chronic pain and fatigue. The findings do not suggest that the pills themselves act on the body. What appears to matter is the ritual of treatment and the expectation it creates. Researchers remain cautious: the effects are modest, the conditions studied are ones where symptoms are self-reported, and no one is proposing that placebos replace active drugs.",
+      "passageLabel": "📖 Okuma Parçası",
+      "prompt": "Yazarın tutumu nasıl tanımlanabilir?",
+      "options": [
+        "Coşkulu",
+        "İhtiyatlı ve dengeli",
+        "Reddedici",
+        "Küçümseyici",
+        "Kararsız"
+      ],
+      "correctIndex": 1,
+      "explanation": "Yazar bulguyu aktarıp araştırmacıların çekincelerini de sıralıyor.",
+      "examSkill": "Okuma Parçası",
+      "grammarTags": [
+        "Okuma Parçası"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l4c_ex2",
+  "title": "Diyalog Tamamlama — Test 3",
+  "description": "On beş soruluk diyalog tamamlama denemesi.",
+  "questions": [
+    {
+      "id": "u50_l4c_d1",
+      "type": "multiple-choice",
+      "passage": "Editor: The article is well argued, but it runs to nine thousand words.\nWriter: ----\nEditor: Cut the third section then; the argument survives without it.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I can add another two thousand if you like.",
+        "Length has never mattered to your readers.",
+        "Which part do you think carries the least weight?",
+        "I would rather withdraw it altogether.",
+        "The word count was agreed in advance."
+      ],
+      "correctIndex": 2,
+      "explanation": "Editörün 'üçüncü bölümü çıkar' yanıtı, hangi kısmın gereksiz olduğunu soran bir replikten sonra gelir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d2",
+      "type": "multiple-choice",
+      "passage": "Student: I keep rereading the same page and nothing stays with me.\nTutor: ----\nStudent: I hadn't thought of writing it down as I go.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then you should read it a fourth time.",
+        "Perhaps the book is simply too advanced.",
+        "Most students find that chapter easy.",
+        "Try summarising each paragraph in your own words before moving on.",
+        "Reading speed is what you need to work on."
+      ],
+      "correctIndex": 3,
+      "explanation": "Öğrencinin 'yazarak ilerlemeyi düşünmemiştim' yanıtı, özet çıkarmayı öneren bir tavsiyeyi izler.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d3",
+      "type": "multiple-choice",
+      "passage": "Patient: Do I have to finish the whole course of antibiotics?\nDoctor: ----\nPatient: So stopping early could actually make things worse.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Only if the symptoms come back.",
+        "You may stop as soon as you feel better.",
+        "That depends entirely on your own judgement.",
+        "Yes — the bacteria that survive a shortened course are the hardest to treat.",
+        "The dosage matters more than the duration."
+      ],
+      "correctIndex": 3,
+      "explanation": "Hastanın 'erken bırakmak durumu kötüleştirebilir' çıkarımı, hayatta kalan bakterileri anlatan bir cevaptan gelir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d4",
+      "type": "multiple-choice",
+      "passage": "Curator: Visitors walk past the early rooms in under a minute.\nDesigner: ----\nCurator: We could start with the objects people already recognise.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then we should remove those rooms entirely.",
+        "Most museums have the same problem with lighting.",
+        "Perhaps the opening simply gives them no reason to stop.",
+        "The labels are too short as they are.",
+        "Visitor numbers have risen this year."
+      ],
+      "correctIndex": 2,
+      "explanation": "Küratörün 'tanıdık nesnelerle başlayabiliriz' önerisi, açılışın ilgi çekmediği saptamasını izler.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d5",
+      "type": "multiple-choice",
+      "passage": "Reviewer: You describe the sample as representative.\nAuthor: ----\nReviewer: Then the word should not appear in the abstract.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I accept that it is representative only of urban households.",
+        "Representative is the standard term in this field.",
+        "It was drawn from four different regions.",
+        "The sample size was calculated in advance.",
+        "No study can ever be fully representative."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hakemin 'o hâlde bu kelime özette geçmemeli' tepkisi, temsil gücünün sınırlı olduğunu kabul eden bir yanıta verilir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d6",
+      "type": "multiple-choice",
+      "passage": "Manager: The team missed the deadline for the third time.\nSupervisor: ----\nManager: Then the schedule is the problem, not the people.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "They simply need to work longer hours.",
+        "I will replace two members of the team.",
+        "Each time the estimate was made before the requirements were final.",
+        "Deadlines are rarely met in this industry.",
+        "The clients keep changing their minds about the budget."
+      ],
+      "correctIndex": 2,
+      "explanation": "Yöneticinin 'sorun takvimde, insanlarda değil' sonucu, tahminlerin erken yapıldığını söyleyen bir açıklamayı izler.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d7",
+      "type": "multiple-choice",
+      "passage": "Traveller: Is the northern route open at this time of year?\nGuide: ----\nTraveller: I'd rather take the longer road than risk being turned back.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "It is open all year without exception.",
+        "Nobody uses that route any more.",
+        "The southern road is closed for repairs.",
+        "You will need a permit either way.",
+        "It usually is, but a single snowfall can close it for days."
+      ],
+      "correctIndex": 4,
+      "explanation": "Yolcunun 'geri çevrilme riski' endişesi, yolun kapanabileceğini söyleyen bir cevaptan doğar.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d8",
+      "type": "multiple-choice",
+      "passage": "Archaeologist: The pottery in this layer is far older than the coins above it.\nColleague: ----\nArchaeologist: Exactly — which is why we cannot date the layer from the pottery alone.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then the coins must have been buried first.",
+        "The layer should be excavated again.",
+        "The pottery was probably imported.",
+        "Coins are always more reliable than pottery.",
+        "Older objects can end up in later layers through disturbance."
+      ],
+      "correctIndex": 4,
+      "explanation": "Arkeoloğun 'bu yüzden yalnızca çanak çömlekle tarihlendiremeyiz' onayı, karışma ihtimalini dile getiren bir replikle uyuşur.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d9",
+      "type": "multiple-choice",
+      "passage": "Coach: You are training harder than anyone, but your times are getting worse.\nAthlete: ----\nCoach: Then we cut the volume in half this week.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "I have not had a full rest day in three weeks.",
+        "The track surface has changed recently.",
+        "I will add an extra session on Sundays.",
+        "My times were never that good to begin with.",
+        "Perhaps the timing equipment is faulty."
+      ],
+      "correctIndex": 0,
+      "explanation": "Antrenörün yükü yarıya indirme kararı, dinlenmediğini söyleyen bir yanıttan sonra anlam kazanır.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d10",
+      "type": "multiple-choice",
+      "passage": "Librarian: These manuscripts cannot leave the building.\nResearcher: ----\nLibrarian: Photography is fine, as long as you use no flash.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then I will have to cancel my project.",
+        "Could I photograph the pages I need instead?",
+        "May I borrow them for a single afternoon?",
+        "Are copies available in another library?",
+        "Who decided on that restriction?"
+      ],
+      "correctIndex": 1,
+      "explanation": "Kütüphanecinin 'flaşsız fotoğraf sorun değil' yanıtı, fotoğraf çekmeyi öneren bir soruyu izler.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d11",
+      "type": "multiple-choice",
+      "passage": "Journalist: Your report contradicts the figures the ministry published.\nAnalyst: ----\nJournalist: So the disagreement is about method, not about the data.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "The ministry's figures are simply invented.",
+        "We used the same data but counted part-time work differently.",
+        "Our sample was collected a year earlier.",
+        "I have not seen the ministry's report.",
+        "Both sets of figures are equally unreliable."
+      ],
+      "correctIndex": 1,
+      "explanation": "Gazetecinin 'anlaşmazlık yöntemde' sonucu, aynı veriyi farklı sayan bir açıklamadan çıkar.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d12",
+      "type": "multiple-choice",
+      "passage": "Neighbour: The council says the old bridge is unsafe.\nEngineer: ----\nNeighbour: So it could be repaired rather than demolished.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Unsafe in this case means the railings, not the structure.",
+        "It should have been replaced years ago.",
+        "Every bridge of that age is beyond saving.",
+        "The council rarely inspects such bridges.",
+        "Demolition is always cheaper in the long run."
+      ],
+      "correctIndex": 0,
+      "explanation": "Komşunun 'onarılabilir' çıkarımı, sorunun taşıyıcı yapıda olmadığını söyleyen bir cevaba dayanır.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d13",
+      "type": "multiple-choice",
+      "passage": "Teacher: Half the class scored below forty on the exam.\nHead: ----\nTeacher: I did warn them the format would change.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Then the class is simply not working hard enough.",
+        "Exam results always fall at this time of year.",
+        "You should mark the papers again more generously.",
+        "Perhaps the paper tested something you had not taught.",
+        "The other classes performed just as badly."
+      ],
+      "correctIndex": 3,
+      "explanation": "Öğretmenin 'formatın değişeceğini söylemiştim' savunması, sınavın öğretilmeyeni ölçtüğü iddiasına verilir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d14",
+      "type": "multiple-choice",
+      "passage": "Buyer: The paintings are attributed to the same workshop.\nExpert: ----\nBuyer: Then the attribution rests on style alone.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Both are signed on the reverse.",
+        "There are documents linking them to the master himself.",
+        "The canvases come from the same supplier.",
+        "They were bought at the same auction.",
+        "No record survives of who painted either of them."
+      ],
+      "correctIndex": 4,
+      "explanation": "Alıcının 'atıf yalnızca üsluba dayanıyor' sonucu, belge bulunmadığını söyleyen bir yanıtı gerektirir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_d15",
+      "type": "multiple-choice",
+      "passage": "Volunteer: Should we plant the saplings now or wait until spring?\nForester: ----\nVolunteer: Then we prepare the ground now and plant in March.",
+      "passageLabel": "💬 Diyalog",
+      "prompt": "Konuşmayı tamamlayan en uygun ifadeyi bulunuz:",
+      "options": [
+        "Now is always better than later.",
+        "Spring planting gives the roots a full season before the summer heat.",
+        "The season makes very little difference.",
+        "We have no saplings left this year.",
+        "March is far too late for this species."
+      ],
+      "correctIndex": 1,
+      "explanation": "Gönüllünün 'Mart'ta dikeriz' kararı, ilkbahar dikimini savunan bir cevaptan gelir.",
+      "examSkill": "Diyalog Tamamlama",
+      "grammarTags": [
+        "Diyalog Tamamlama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l4c_ex3",
+  "title": "Paragraf Tamamlama — Test 3",
+  "description": "Paragrafta boş bırakılan cümleyi bulmaya yönelik 15 soruluk deneme.",
+  "questions": [
+    {
+      "id": "u50_l4c_pc1",
+      "type": "multiple-choice",
+      "passage": "Coral reefs depend on algae that live inside the coral tissue and supply most of its food. ---- Without that partner the coral turns white and, if the heat persists, starves.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Reefs recover fully within a single season.",
+        "Algae are found in every marine environment.",
+        "When the water warms beyond a certain point, the coral expels the algae.",
+        "Fish populations decline for unrelated reasons.",
+        "Corals can produce their own food when necessary."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Without that partner' ifadesi, ortağın atıldığını anlatan bir cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc2",
+      "type": "multiple-choice",
+      "passage": "Early printers had no way of correcting a page once the type was locked in the frame. ---- Readers were therefore expected to make the changes by hand before reading.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Printing was much faster than copying by hand.",
+        "The frames were made of wood rather than metal.",
+        "Correction became possible only in the nineteenth century.",
+        "Most early books were printed in Latin.",
+        "Errors discovered later were listed on a separate sheet bound into the book."
+      ],
+      "correctIndex": 4,
+      "explanation": "'Okurların düzeltmeleri elle yapması' beklentisi, hataların ayrı bir listede verildiğini söyleyen cümleyle bağlanır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc3",
+      "type": "multiple-choice",
+      "passage": "A language does not disappear when its last speaker dies; it disappears when parents stop passing it to their children. ---- By the time only the elderly speak it, the decisive step has already been taken.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Written records preserve every language indefinitely.",
+        "Most languages are spoken by fewer than ten thousand people.",
+        "The process is usually complete within a single generation.",
+        "Governments can reverse the trend through legislation.",
+        "That decision is rarely deliberate and often goes unnoticed."
+      ],
+      "correctIndex": 4,
+      "explanation": "'Belirleyici adım çoktan atılmıştır' cümlesi, fark edilmeden alınan bir kararı anlatan cümleyi izler.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc4",
+      "type": "multiple-choice",
+      "passage": "Vaccines are tested first on small groups to establish safety, then on progressively larger ones. ---- Only at the final stage does the sample become big enough to reveal side effects that occur in one person in ten thousand.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Most vaccines fail at the second stage.",
+        "The first stage is usually the longest.",
+        "Side effects are identified before the trials begin.",
+        "Larger groups make the results harder to interpret.",
+        "Each stage answers a different question."
+      ],
+      "correctIndex": 4,
+      "explanation": "Boşluktan sonraki cümle aşamaların farklı işlevlerini örnekler; genel ilkeyi veren cümle uygundur.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc5",
+      "type": "multiple-choice",
+      "passage": "The canal cut the journey between the two seas from three weeks to eleven hours. ---- Ports that had grown wealthy on the long route around the peninsula lost their traffic within a decade.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Construction had taken almost twenty years.",
+        "The canal was widened twice afterwards.",
+        "Ships were charged a toll for using it.",
+        "The saving in time was not distributed evenly.",
+        "Sailing remained popular for another century."
+      ],
+      "correctIndex": 3,
+      "explanation": "Kazananlar ve kaybedenlerden söz eden sonuç cümlesi, kazancın eşit dağılmadığını söyleyen bir cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc6",
+      "type": "multiple-choice",
+      "passage": "Sleep was long regarded as a period of simple inactivity. ---- Recordings of brain activity showed patterns as complex as those of waking, and in some phases more intense.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "That view survived until the invention of the microscope.",
+        "The introduction of the electroencephalograph ended that assumption.",
+        "Most adults sleep between seven and nine hours.",
+        "Dreams were studied long before sleep itself.",
+        "Inactivity is difficult to measure precisely."
+      ],
+      "correctIndex": 1,
+      "explanation": "Sonraki cümle beyin kayıtlarından söz ettiği için, ölçüm aracını tanıtan bir cümle gerekir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc7",
+      "type": "multiple-choice",
+      "passage": "Museums increasingly return objects taken during colonial rule. ---- Others argue that the objects belong where they were made, and that access can be arranged in other ways.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The debate has been settled in most countries.",
+        "Very few objects have actually been returned.",
+        "Colonial rule ended in the twentieth century.",
+        "Some curators warn that dispersing collections weakens comparative study.",
+        "Visitors rarely notice which objects are missing."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Others argue' ifadesi, karşı tarafın görüşünü veren bir cümleyi zorunlu kılar.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc8",
+      "type": "multiple-choice",
+      "passage": "A city that widens its roads to reduce congestion often finds the traffic worse within a few years. ---- The extra capacity is absorbed almost as soon as it appears.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Drivers who had avoided the route return to it, and new journeys are made that were not made before.",
+        "Road building is more expensive than it looks.",
+        "Public transport becomes cheaper as a result.",
+        "Congestion is measured differently in each city.",
+        "The effect is limited to very large cities."
+      ],
+      "correctIndex": 0,
+      "explanation": "'Ek kapasite hemen soğurulur' cümlesi, yeni trafiğin nereden geldiğini açıklayan bir cümleyle tamamlanır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc9",
+      "type": "multiple-choice",
+      "passage": "Fingerprint evidence was accepted in court for a century before anyone tested how reliable examiners actually were. ---- The error rates that emerged were low but not zero, and courts have since been more careful about how the evidence is described.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Fingerprints are formed before birth and never change.",
+        "The first controlled studies were carried out only recently.",
+        "Examiners are trained for several years.",
+        "No two fingerprints have ever been found identical.",
+        "Courts rarely admit scientific evidence."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Ortaya çıkan hata oranları' ifadesi, çalışmaların yeni yapıldığını söyleyen bir cümleyi izler.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc10",
+      "type": "multiple-choice",
+      "passage": "Bees communicate the location of food through a movement often called a dance. ---- The angle of the movement encodes direction relative to the sun, and its duration encodes distance.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "It is not decorative but informational.",
+        "Other insects use scent trails instead.",
+        "The dance is performed outside the hive.",
+        "Bees rarely travel more than a kilometre.",
+        "The behaviour was described in the 1970s."
+      ],
+      "correctIndex": 0,
+      "explanation": "Açı ve sürenin bilgi taşıdığını anlatan cümle, dansın bilgi amaçlı olduğunu söyleyen bir cümleyi tamamlar.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc11",
+      "type": "multiple-choice",
+      "passage": "Translators of poetry must choose what to sacrifice, since no version can preserve sound, sense and form at once. ---- What matters is that the choice be made deliberately rather than by default.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Most translators prefer to keep the rhyme.",
+        "Poetry is untranslatable in principle.",
+        "Some give up the metre to keep the imagery; others do the reverse.",
+        "Prose presents no such difficulty.",
+        "Readers seldom compare translations."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Seçimin bilinçli yapılması' vurgusu, farklı seçim örneklerini veren bir cümleyi izler.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc12",
+      "type": "multiple-choice",
+      "passage": "The eruption darkened skies across the northern hemisphere for more than a year. ---- Harvests failed from New England to Switzerland, and 1816 became known as the year without a summer.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Volcanic ash is rich in minerals.",
+        "Temperatures fell by little more than a degree, but that was enough.",
+        "The volcano itself was on the other side of the world.",
+        "Contemporary observers blamed sunspots.",
+        "The eruption was the largest ever recorded."
+      ],
+      "correctIndex": 1,
+      "explanation": "Hasat başarısızlıklarını anlatan sonuç, küçük ama yeterli bir sıcaklık düşüşünü söyleyen cümleyle bağlanır.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc13",
+      "type": "multiple-choice",
+      "passage": "Handwriting was taught for hours each week in schools well into the twentieth century. ---- Time once spent on penmanship now goes to keyboard skills and to subjects that did not exist a generation ago.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "Legible handwriting remains a useful skill.",
+        "Teachers were themselves trained in calligraphy.",
+        "Pens were expensive at the time.",
+        "That emphasis has almost entirely disappeared.",
+        "Examinations are still written by hand."
+      ],
+      "correctIndex": 3,
+      "explanation": "Sonraki cümle zamanın başka derslere kaydığını söylediği için, vurgunun kaybolduğunu belirten cümle gerekir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc14",
+      "type": "multiple-choice",
+      "passage": "Wild wolves avoid people, but the animals that became dogs did the opposite. ---- Tolerating human presence gave them access to food that other wolves could not reach.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The boldest individuals lingered near settlements instead of fleeing.",
+        "The two species separated around fifteen thousand years ago.",
+        "Dogs were bred for hunting from the beginning.",
+        "Wolves hunt in packs of up to twenty.",
+        "Domestication happened only once."
+      ],
+      "correctIndex": 0,
+      "explanation": "'İnsan varlığına katlanmak' ifadesi, yerleşimlerin yakınında kalan bireyleri anlatan cümleyi gerektirir.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_l4c_pc15",
+      "type": "multiple-choice",
+      "passage": "Statistical significance tells you how unlikely a result is if nothing real is going on. ---- A tiny effect measured in a very large sample can be significant and still be of no practical use whatever.",
+      "passageLabel": "📄 Paragraf",
+      "prompt": "Parçada boş bırakılan yere gelmesi gereken cümleyi bulunuz:",
+      "options": [
+        "The threshold was chosen arbitrarily.",
+        "Most researchers calculate it incorrectly.",
+        "It says nothing about how large the effect is.",
+        "Large samples are difficult to obtain.",
+        "Significance and probability are the same thing."
+      ],
+      "correctIndex": 2,
+      "explanation": "Küçük ama anlamlı etki örneği, anlamlılığın büyüklüğü ölçmediğini söyleyen cümleyi izler.",
+      "examSkill": "Paragraf Tamamlama",
+      "grammarTags": [
+        "Paragraf Tamamlama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l2d_ex",
+  "title": "Akışı Bozan Cümle — Test 3",
+  "description": "Paragrafın bütünlüğünü bozan cümleyi bulmaya yönelik 12 soruluk deneme.",
+  "questions": [
+    {
+      "id": "u50_l2d_q1",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence IV",
+        "Sentence II",
+        "Sentence III",
+        "Sentence I",
+        "Sentence V"
+      ],
+      "correctIndex": 0,
+      "explanation": "IV. cümle manastır bahçelerinden söz eder; paragraf el yazması kopyalama ve hataların izini konu alır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Medieval scribes copied manuscripts by hand in monastery workshops. [II] A single Bible could take a skilled copyist more than a year to complete. [III] Errors accumulated as each copy was made from an earlier copy. [IV] Monastery gardens supplied most of the herbs used in local medicine. [V] Scholars now use those inherited errors to reconstruct the family tree of surviving texts.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q2",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence V",
+        "Sentence II",
+        "Sentence III",
+        "Sentence IV",
+        "Sentence I"
+      ],
+      "correctIndex": 0,
+      "explanation": "V. cümle yüzeydeki planktonlardan söz eder; paragraf ışıksız derin deniz bacalarını anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Deep-sea vents release mineral-rich water at temperatures above three hundred degrees. [II] Entire communities of organisms live there without any sunlight. [III] They draw their energy from chemical reactions rather than photosynthesis. [IV] The discovery forced biologists to widen their definition of a habitable environment. [V] Surface plankton blooms are visible from orbit in spring.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q3",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence IV",
+        "Sentence III",
+        "Sentence II",
+        "Sentence V"
+      ],
+      "correctIndex": 1,
+      "explanation": "IV. cümle kanal teknelerinin çekilişini anlatır; paragraf demiryolunun kömürden yolcuya geçişini konu alır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] The first public railways were built to carry coal, not passengers. [II] Mine owners wanted a cheaper way of moving heavy loads to the nearest canal. [III] Passenger services began almost as an afterthought. [IV] Canal boats were usually pulled by horses walking along the bank. [V] Within thirty years they were carrying more people than freight.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q4",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence II",
+        "Sentence III",
+        "Sentence IV",
+        "Sentence V"
+      ],
+      "correctIndex": 4,
+      "explanation": "V. cümle bugünün ikmal yöntemini anlatır; paragraf kahramanlık çağındaki beslenme ve iskorbüt sorununu ele alır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Antarctic explorers of the heroic age relied almost entirely on dried and tinned food. [II] Scurvy appeared on several expeditions despite ample supplies. [III] The tinning process destroyed the vitamin C the crews needed. [IV] Fresh seal meat, which some parties refused on principle, would have prevented it. [V] Modern polar stations are resupplied by aircraft twice a year.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q5",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence II",
+        "Sentence V",
+        "Sentence IV",
+        "Sentence III"
+      ],
+      "correctIndex": 2,
+      "explanation": "V. cümle yetişkinlikte dil öğrenmeye geçer; paragraf iki dilli çocukların dil değiştirmesini savunur.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Bilingual children often mix words from both languages in a single sentence. [II] Parents sometimes read this as a sign of confusion. [III] Studies show the switches follow the grammar of both languages precisely. [IV] The behaviour reflects competence rather than a failure to separate them. [V] Learning a third language in adulthood takes considerably longer.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q6",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence II",
+        "Sentence III",
+        "Sentence V",
+        "Sentence IV"
+      ],
+      "correctIndex": 4,
+      "explanation": "IV. cümle camera obscura'nın tarihine sapar; paragraf fotoğrafın tarafsız sayılması ile rötuş pratiği arasındaki çelişkiyi anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Photographs were treated as neutral records of fact for much of the nineteenth century. [II] Retouching was practised almost from the beginning of the medium. [III] Figures were removed from official portraits when they fell from favour. [IV] The camera obscura had been known to artists for centuries. [V] The belief in photographic honesty survived long after the manipulation began.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q7",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence II",
+        "Sentence III",
+        "Sentence V",
+        "Sentence IV"
+      ],
+      "correctIndex": 3,
+      "explanation": "V. cümle buğday fiyatlarına geçer; paragraf ekşi maya ile ticari mayanın tat ve tekdüzelik farkını anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Sourdough bread rises through wild yeasts and bacteria already present in the flour and air. [II] Each starter develops a slightly different community of organisms. [III] Bakers in different cities therefore obtain noticeably different flavours from the same recipe. [IV] Commercial yeast, introduced in the nineteenth century, made the process faster and far more uniform. [V] Wheat prices rose sharply during the same period.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q8",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence V",
+        "Sentence II",
+        "Sentence III",
+        "Sentence IV",
+        "Sentence I"
+      ],
+      "correctIndex": 0,
+      "explanation": "V. cümle yol yapımına geçer; paragraf Roma betonunun deniz suyundaki davranışını anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Roman concrete has survived two thousand years in seawater that destroys modern equivalents. [II] Analysis shows that seawater reacts with the volcanic ash in the mixture. [III] The reaction produces new crystals that grow into cracks and seal them. [IV] The material becomes stronger with age rather than weaker. [V] Roman roads were built in layers over a bed of compacted stone.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q9",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence II",
+        "Sentence IV",
+        "Sentence III",
+        "Sentence V"
+      ],
+      "correctIndex": 2,
+      "explanation": "IV. cümle baskı maliyetlerinden söz eder; paragraf haritalardaki hayali kıyıların sürmesini ve sonunu anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Cartographers of the sixteenth century filled unexplored regions with speculative coastlines. [II] Blank space on a map suggested ignorance and discouraged buyers. [III] Some invented territories were copied from map to map for two hundred years. [IV] Printing costs fell steadily throughout the period. [V] They disappeared only when ships were sent to the coordinates and found open water.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q10",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence II",
+        "Sentence III",
+        "Sentence V",
+        "Sentence IV"
+      ],
+      "correctIndex": 3,
+      "explanation": "V. cümle göçe geçer; paragraf kent gürültüsünün kuş ötüşünün perdesini yükseltmesini anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Birdsong in cities is measurably higher in pitch than the same species produces in woodland. [II] Traffic noise is concentrated at low frequencies. [III] A song pitched above that range carries further through the city. [IV] Females respond to the altered songs as readily as to the original ones. [V] Many species migrate thousands of kilometres each autumn.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q11",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence IV",
+        "Sentence III",
+        "Sentence II",
+        "Sentence V"
+      ],
+      "correctIndex": 1,
+      "explanation": "IV. cümle Yunanca eğitimine sapar; paragraf palimpsestlerden metin kurtarmayı anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] The rediscovery of a lost Greek text often depended on a single surviving copy. [II] That copy was frequently a palimpsest, scraped clean and written over with a later work. [III] Ultraviolet imaging can now recover the erased layer without damaging the page. [IV] Greek was taught in western Europe throughout the Middle Ages. [V] Several works known only by title have been read again in this way.",
+      "passageLabel": "✂️ Paragraf"
+    },
+    {
+      "id": "u50_l2d_q12",
+      "type": "multiple-choice",
+      "prompt": "Paragrafın akışını bozan cümleyi seçiniz:",
+      "options": [
+        "Sentence I",
+        "Sentence V",
+        "Sentence III",
+        "Sentence IV",
+        "Sentence II"
+      ],
+      "correctIndex": 1,
+      "explanation": "V. cümle lokomotif menziline geçer; paragraf saat dilimlerinin demiryolu kaynaklı doğuşunu anlatır.",
+      "examSkill": "Akışı Bozan Cümle",
+      "grammarTags": [
+        "Akışı Bozan Cümle"
+      ],
+      "passage": "[I] Standard time zones were created for the convenience of railway companies, not governments. [II] Before them each town kept its own clock by the sun. [III] A timetable covering several towns was therefore almost impossible to write. [IV] The railways imposed a single time along their lines and the public followed. [V] Steam locomotives burned coal at a rate that limited their range.",
+      "passageLabel": "✂️ Paragraf"
+    }
+  ]
+},
+{
+  "id": "u50_l2e_ex",
+  "title": "Paragraf Sıralama — Test 3",
+  "description": "Karışık verilen cümleleri anlamlı bir paragraf hâline getirme denemesi.",
+  "questions": [
+    {
+      "id": "u50_l2e_q1",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] The surviving letters were then catalogued and made available to researchers. [B] A fire in 1911 destroyed most of the family archive. [C] What remained was found decades later in a neighbour's attic.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "C",
+        "A"
+      ],
+      "explanation": "Önce kayıp (B), sonra beklenmedik buluntu (C), en sonda kataloglama (A).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q2",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Farmers began leaving strips of land uncultivated along the field edges. [B] Pollinator numbers had fallen sharply across the region. [C] Bee counts in those fields recovered within three seasons.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation": "Sorun (B), alınan önlem (A), ölçülen sonuç (C) sırası izlenir.",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q3",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Only then did it become clear that the inscription was a forgery. [B] The stone was displayed for forty years as the earliest example of the script. [C] Chemical analysis of the patina was finally carried out in 1998.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "C",
+        "A"
+      ],
+      "explanation": "Uzun süren kabul (B), yapılan analiz (C), ortaya çıkan sonuç (A).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q4",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Readers complained that the new typeface was tiring over long passages. [B] The newspaper redesigned its pages to fit more text on each sheet. [C] The editors reverted to the older face within two months.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation": "Değişiklik (B), gelen tepki (A), geri dönüş (C).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q5",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Ships began carrying ballast water from one ocean to another. [B] Species carried in that water established themselves in ports far from home. [C] Several countries now require the water to be exchanged in mid-ocean.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanation": "Uygulama (A), doğurduğu sorun (B), getirilen düzenleme (C).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q6",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] The result was a map of the seafloor detailed enough to reveal the mid-ocean ridge. [B] Sonar had been developed during the war to detect submarines. [C] Oceanographers turned the same equipment downwards in the years that followed.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "C",
+        "A"
+      ],
+      "explanation": "Teknolojinin kökeni (B), yeni kullanımı (C), elde edilen sonuç (A).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q7",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Attendance at the free evening sessions doubled in the first year. [B] The gallery had been open only during working hours. [C] Trustees agreed to stay open until nine on Thursdays.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "C",
+        "A"
+      ],
+      "explanation": "Mevcut durum (B), alınan karar (C), sonuç (A).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q8",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Manuscript copies of the pamphlet circulated instead, passed from hand to hand. [B] The censor refused the work a printing licence. [C] By the time the ban was lifted the text was already widely known.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation": "Yasak (B), dolaşan el yazmaları (A), yasağın anlamsızlaşması (C).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q9",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Engineers discovered that the vibration matched the rhythm of pedestrians' steps. [B] The footbridge swayed noticeably on the day it opened. [C] Dampers were fitted and the bridge reopened two years later.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "A",
+        "C"
+      ],
+      "explanation": "Belirti (B), teşhis (A), çözüm (C).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q10",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Seeds stored in the vault can be withdrawn to restore a crop after a disaster. [B] Agriculture has come to depend on a small number of high-yielding varieties. [C] A seed bank was built inside a mountain to preserve the older ones.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "C",
+        "A"
+      ],
+      "explanation": "Bağımlılık (B), kurulan banka (C), sağladığı imkân (A).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q11",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] Astronomers now use the same stars to measure distances across the galaxy. [B] Henrietta Leavitt noticed that certain variable stars pulsed at a rate tied to their brightness. [C] That relationship turned brightness into a reliable measure of distance.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "B",
+        "C",
+        "A"
+      ],
+      "explanation": "Gözlem (B), çıkarılan ilişki (C), bugünkü kullanımı (A).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    },
+    {
+      "id": "u50_l2e_q12",
+      "type": "vector-assembly",
+      "prompt": "Cümleleri anlamlı bir bütün oluşturacak şekilde (girişten sonuca) doğru sıraya dizin:",
+      "sentence": "[A] The council replaced the signs with a single shared surface and no markings at all. [B] Drivers slowed down because they no longer knew who had priority. [C] The junction had accumulated more warning signs than any other in the town.",
+      "scrambled_elements": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correct_sequence": [
+        "C",
+        "A",
+        "B"
+      ],
+      "explanation": "Başlangıç durumu (C), yapılan müdahale (A), ortaya çıkan davranış (B).",
+      "examSkill": "Paragraf Sıralama",
+      "grammarTags": [
+        "Paragraf Sıralama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_l1d_ex",
+  "title": "Zamir & Referans — Test 3",
+  "description": "Metindeki gönderme ifadelerinin karşılığını bulmaya yönelik 12 soruluk deneme.",
+  "questions": [
+    {
+      "id": "u50_l1d_q1",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'This caution' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Antikaların satın alınması",
+        "Her eser için belgelenmiş bir geçmiş istenmesi",
+        "Müzelerin genişlemesi",
+        "Ticaretin yavaşlaması",
+        "Eserlerin kökeni"
+      ],
+      "correctIndex": 1,
+      "explanation": "'This caution', belgelenmiş geçmiş talep etme tutumunu karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Museums that once bought antiquities without asking where they came from now demand a documented history for every acquisition. <b>This caution</b> has slowed the trade considerably.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q2",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'That loss' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Barajların inşası",
+        "Kıyı şeridinin uzunluğu",
+        "Tortunun barajlarda tutulması",
+        "Deltaların küçülmesi",
+        "Yıllık ölçüm yöntemi"
+      ],
+      "correctIndex": 3,
+      "explanation": "'That loss', bir önceki cümlede anlatılan delta küçülmesini karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Dams upstream trap the sediment that once travelled to the coast, and the deltas there are now shrinking. <b>That loss</b> is measured in square kilometres a year.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q3",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'The practice' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "El yıkama alışkanlığı",
+        "Ölüm oranlarının karşılaştırılması",
+        "Cerrahi eğitimin değişmesi",
+        "Koğuşların ayrılması",
+        "Hastalar arasında el yıkamadan ameliyat etmek"
+      ],
+      "correctIndex": 4,
+      "explanation": "'The practice', önceki cümlede anlatılan el yıkamama uygulamasıdır.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Surgeons once operated without washing their hands between patients. <b>The practice</b> ended only after mortality figures from two neighbouring wards were compared.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q4",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'Such coincidences' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Aynı keşfin birbirinden bağımsız olarak aynı anda yapılması",
+        "Makalelerin geç yayımlanması",
+        "Ekiplerin iş birliği yapması",
+        "Bir haftalık gecikme",
+        "Alanın gerilemesi"
+      ],
+      "correctIndex": 0,
+      "explanation": "'Such coincidences', birbirinden habersiz iki ekibin aynı keşfi yapmasını karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Two teams published the same discovery within a week of each other, and neither had seen the other's work. <b>Such coincidences</b> are common when a field is ready for a particular question.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q5",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'That difficulty' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "İlk cildin son cilt çıkmadan eskimesi",
+        "Sözlüğün yetmiş yıl sürmesi",
+        "Ciltlerin sayısı",
+        "Editörlerin değişmesi",
+        "Sözlüğün satılmaması"
+      ],
+      "correctIndex": 0,
+      "explanation": "'That difficulty', tamamlanmadan eskime sorununu karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "The dictionary took seventy years to complete and its first volume was out of date before the last appeared. <b>That difficulty</b> faces every project of comparable length.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q6",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'It' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Bölge",
+        "Deprem",
+        "Sismik dalgaların şiddeti",
+        "Şehirlerin büyüklüğü",
+        "Yumuşak tortu zemin"
+      ],
+      "correctIndex": 4,
+      "explanation": "'It', dalgaları büyüten yumuşak tortu zeminini karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Cities in the region were built on soft sediment that amplifies seismic waves. <b>It</b> turns a moderate earthquake into a destructive one.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q7",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'The latter' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "İnceleme kopyalarının erken gönderilmesi",
+        "Eleştirmenlerin yazıları",
+        "Bölümlerin tamamının aynı anda yayımlanması",
+        "Yayıncıların takvimi",
+        "Kamusal tartışma"
+      ],
+      "correctIndex": 2,
+      "explanation": "'The latter', ikinci olarak anılan uygulamayı, yani bölümlerin toptan yayımlanmasını karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Publishers send review copies to critics months in advance; broadcasters release episodes all at once. <b>The latter</b> makes sustained public discussion much harder to build.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q8",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'These landmarks' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Uçaklar",
+        "Demiryolu hatları ve nehirler",
+        "Bulutlar",
+        "Havaalanları",
+        "Pusula ve harita"
+      ],
+      "correctIndex": 1,
+      "explanation": "'These landmarks', yer işareti olarak izlenen demiryolları ve nehirlerdir.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Early aviators navigated by following railway lines and rivers. <b>These landmarks</b> disappeared the moment cloud closed in beneath them.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q9",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'The delay' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "1945'te üye kabulü",
+        "Resmî tarihin yazılması",
+        "Derneğin kuruluşu",
+        "Kadınların 1962'ye kadar kütüphaneye alınmaması",
+        "Kütüphanenin taşınması"
+      ],
+      "correctIndex": 3,
+      "explanation": "'The delay', kütüphane erişiminin on yedi yıl geciktirilmesini karşılar.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "The society admitted its first women members in 1945, but they were barred from the library until 1962. <b>The delay</b> is rarely mentioned in the official history.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q10",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'This insurance' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Hastalıkların yayılması",
+        "Verimin ölçüt hâline gelmesi",
+        "Her üründen birkaç çeşit yetiştirme",
+        "Ürünlerin satışı",
+        "Tarım politikaları"
+      ],
+      "correctIndex": 2,
+      "explanation": "'This insurance', birden fazla çeşit yetiştirerek riski dağıtma alışkanlığıdır.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "Farmers kept several varieties of each crop so that a disease affecting one would leave the others standing. <b>This insurance</b> was abandoned when yields became the only measure of success.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q11",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'This effect' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Tekrarlanan soru sonrası güvenin artması",
+        "Tanığın yalan söylemesi",
+        "Görüşmelerin kaydedilmesi",
+        "Sorunun yanlış sorulması",
+        "Cevabın doğruluğu"
+      ],
+      "correctIndex": 0,
+      "explanation": "'This effect', tekrar sorulduğunda güvenin artması olgusudur.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "A witness who is asked the same question repeatedly tends to become more confident in the answer, whether or not it is correct. <b>This effect</b> is one reason interviews are now recorded in full.",
+      "passageLabel": "🔗 Paragraf"
+    },
+    {
+      "id": "u50_l1d_q12",
+      "type": "multiple-choice",
+      "prompt": "Metindeki 'These survivals' ifadesi hangisine atıfta bulunmaktadır?",
+      "options": [
+        "Fabrikanın kapanması",
+        "Kasabanın adı, futbol kulübü ve geçit töreni",
+        "Sanayinin gerilemesi",
+        "1978 yılı",
+        "Kasabanın nüfusu"
+      ],
+      "correctIndex": 1,
+      "explanation": "'These survivals', sanayiden geriye kalan ad, kulüp ve tören gibi ögelerdir.",
+      "examSkill": "Zamir & Referans",
+      "grammarTags": [
+        "Zamir & Referans"
+      ],
+      "passage": "The mill closed in 1978, but the town kept its name, its football club and its annual parade. <b>These survivals</b> outlasted the industry that created them by more than a generation.",
+      "passageLabel": "🔗 Paragraf"
+    }
+  ]
+},
+{
+  "id": "u50_l1e_ex",
+  "title": "Cloze Test — Test 3",
+  "description": "Paragrafta boş bırakılan geçiş bağlacını bulmaya yönelik 12 soruluk deneme.",
+  "questions": [
+    {
+      "id": "u50_l1e_q1",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "The museum lowered its ticket prices and extended its hours. ____, attendance in the first quarter fell by a further eight per cent.",
+      "options": [
+        "Nevertheless",
+        "Consequently",
+        "Likewise",
+        "In other words",
+        "For this reason"
+      ],
+      "correctIndex": 0,
+      "explanation": "Alınan önlemlere rağmen ziyaretin düşmesi beklenmedik bir sonuçtur; zıtlık gerekir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q2",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Groundwater is drawn from the aquifer faster than rainfall can replace it. ____, the water table has fallen by nearly a metre a year.",
+      "options": [
+        "Nonetheless",
+        "For example",
+        "By contrast",
+        "As a result",
+        "Admittedly"
+      ],
+      "correctIndex": 3,
+      "explanation": "Aşırı çekim, su tablasının düşmesinin doğrudan sonucudur.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q3",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Written sources for the period are almost entirely official. ____, they record what the administration wished to preserve rather than what ordinary people experienced.",
+      "options": [
+        "Instead",
+        "However",
+        "In other words",
+        "Nevertheless",
+        "Similarly"
+      ],
+      "correctIndex": 2,
+      "explanation": "İkinci cümle birincinin açıklamasıdır; yeniden ifade bağlacı gerekir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q4",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Electric motors deliver full torque from a standstill. ____, combustion engines must reach several thousand revolutions before they do the same.",
+      "options": [
+        "By contrast",
+        "Therefore",
+        "Furthermore",
+        "That is",
+        "In addition"
+      ],
+      "correctIndex": 0,
+      "explanation": "İki motor türü karşıt biçimde kıyaslanmaktadır.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q5",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "The treaty was signed by every state in the region. ____, three of them have yet to ratify it in their own parliaments.",
+      "options": [
+        "Accordingly",
+        "Even so",
+        "Moreover",
+        "Namely",
+        "Hence"
+      ],
+      "correctIndex": 1,
+      "explanation": "İmzalanmasına karşın onaylanmaması bir çelişki bildirir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q6",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Several everyday materials expand when heated and contract when cooled. ____, bridges are built with gaps that absorb the movement.",
+      "options": [
+        "In contrast",
+        "For this reason",
+        "Otherwise",
+        "Even so",
+        "Meanwhile"
+      ],
+      "correctIndex": 1,
+      "explanation": "Köprülerdeki boşluklar, genleşmenin doğrudan sonucu olarak tasarlanır.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q7",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "The vaccine must be kept below minus seventy degrees until the moment of use. ____, it loses its effectiveness within hours.",
+      "options": [
+        "Besides",
+        "Similarly",
+        "In fact",
+        "Otherwise",
+        "Thereafter"
+      ],
+      "correctIndex": 3,
+      "explanation": "Koşul yerine getirilmezse ortaya çıkacak durum 'otherwise' ile verilir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q8",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "The excavation produced very few objects of value. ____, it settled a question that had been open for fifty years.",
+      "options": [
+        "Consequently",
+        "Thus",
+        "Likewise",
+        "In short",
+        "Nevertheless"
+      ],
+      "correctIndex": 4,
+      "explanation": "Az buluntu ile önemli bir sonuç arasındaki karşıtlık zıtlık bağlacı gerektirir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q9",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Some seabirds can drink salt water because they excrete the excess through glands above the eyes. ____, they can remain at sea for months without returning to land.",
+      "options": [
+        "However",
+        "Even so",
+        "On the contrary",
+        "By comparison",
+        "In this way"
+      ],
+      "correctIndex": 4,
+      "explanation": "İkinci cümle, birinci cümledeki mekanizmanın sağladığı sonucu 'bu yolla' bağıyla verir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q10",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Many of the buildings were listed and could not legally be altered. ____, the developer redesigned the scheme around them.",
+      "options": [
+        "Nevertheless",
+        "Accordingly",
+        "In fact",
+        "For instance",
+        "Conversely"
+      ],
+      "correctIndex": 1,
+      "explanation": "Yasal kısıtlama, tasarımın değiştirilmesinin gerekçesidir.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q11",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "The survey covered only households with a fixed telephone line. ____, it systematically excluded younger and poorer respondents.",
+      "options": [
+        "In consequence",
+        "On the other hand",
+        "All the same",
+        "By contrast",
+        "Alternatively"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yöntemin sınırı, dışlanmanın doğrudan sonucudur.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    },
+    {
+      "id": "u50_l1e_q12",
+      "type": "fill-blank-dropdown",
+      "prompt": "Boşluğa gelecek en uygun geçiş kelimesini seçin:",
+      "sentence": "Handwritten notes are slower to produce than typed ones. ____, students who take them tend to remember more of the lecture.",
+      "options": [
+        "Therefore",
+        "Namely",
+        "Yet",
+        "Likewise",
+        "Hence"
+      ],
+      "correctIndex": 2,
+      "explanation": "Yavaş olmasına karşın daha iyi hatırlanması beklenmedik bir sonuçtur.",
+      "examSkill": "Cloze Test",
+      "grammarTags": [
+        "Cloze Test"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_rs3_ex",
+  "title": "Yakın Anlamlı Cümle — Test 3",
+  "description": "Verilen cümleye anlamca en yakın seçeneği bulmaya yönelik 12 soruluk deneme.",
+  "questions": [
+    {
+      "id": "u50_rs3_q1",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"Had the warning been issued an hour earlier, most of the village could have been evacuated.\"</strong>",
+      "options": [
+        "The warning came too late for most of the village to be evacuated.",
+        "The village was evacuated an hour after the warning.",
+        "The village was evacuated because the warning came early.",
+        "An earlier warning would not have helped the village.",
+        "Most of the village refused to leave despite the warning."
+      ],
+      "correctIndex": 0,
+      "explanation": "Type 3 devrik koşul, gerçekleşmemiş bir imkânı anlatır: uyarı geç kaldı, tahliye yapılamadı.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q2",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"No sooner had the results been announced than the opposition demanded a recount.\"</strong>",
+      "options": [
+        "The opposition demanded a recount as soon as the results were announced.",
+        "The results were announced only after the recount was completed.",
+        "The opposition demanded a recount before the results were announced.",
+        "The recount was refused although the opposition demanded it.",
+        "The results were announced long after the recount."
+      ],
+      "correctIndex": 0,
+      "explanation": "'No sooner ... than' anlık ardışıklık bildirir: açıklanır açıklanmaz.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q3",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"The scheme is unlikely to succeed unless local businesses are consulted first.\"</strong>",
+      "options": [
+        "The scheme will succeed whether or not businesses are consulted.",
+        "Without consulting local businesses first, the scheme has little chance of succeeding.",
+        "Consulting local businesses would make the scheme fail.",
+        "Local businesses have already been consulted about the scheme.",
+        "The scheme has failed because businesses were not consulted."
+      ],
+      "correctIndex": 1,
+      "explanation": "'unlikely to' düşük ihtimal, 'unless' ise olumsuz koşul kurar.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q4",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"Far from discouraging applicants, the higher fee attracted a record number of them.\"</strong>",
+      "options": [
+        "The higher fee discouraged a record number of applicants.",
+        "Applicants were discouraged by the fee but applied anyway.",
+        "The fee was raised in order to attract more applicants.",
+        "The higher fee did not put applicants off; it drew more of them than ever.",
+        "A record number of applicants complained about the fee."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Far from V-ing' beklenen etkiyi kesin biçimde reddeder.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q5",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"However carefully the text is edited, a few errors always remain.\"</strong>",
+      "options": [
+        "Careful editing removes every error from the text.",
+        "The text is never edited carefully enough to matter.",
+        "No matter how carefully it is edited, the text still contains some errors.",
+        "Errors remain because the text is edited carelessly.",
+        "A few errors are deliberately left in the text."
+      ],
+      "correctIndex": 2,
+      "explanation": "'However + zarf' ödün bildirir: ne kadar dikkatli olursa olsun.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q6",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"The company is said to have concealed the test results for over a year.\"</strong>",
+      "options": [
+        "The company proved that the results had been concealed.",
+        "It is claimed that the company hid the test results for more than a year.",
+        "The company admitted concealing the results for a year.",
+        "The results were published within a year of the tests.",
+        "The company was accused of falsifying the test results."
+      ],
+      "correctIndex": 1,
+      "explanation": "'is said to have V3' aktarım pasifidir; iddiayı bildirir, kanıtı değil.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q7",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"Rather than banning the substance outright, the agency restricted its use in food.\"</strong>",
+      "options": [
+        "The agency banned the substance and then restricted it.",
+        "The agency neither banned nor restricted the substance.",
+        "The substance was banned in food but allowed elsewhere.",
+        "The agency was unable to restrict the substance.",
+        "Instead of imposing a complete ban, the agency limited the substance's use in food."
+      ],
+      "correctIndex": 4,
+      "explanation": "'Rather than V-ing' reddedilen seçeneği başa alır.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q8",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"Only after the third inspection was the fault in the wiring identified.\"</strong>",
+      "options": [
+        "The fault was identified before the third inspection.",
+        "Three inspections failed to identify the fault.",
+        "The wiring was replaced after the third inspection.",
+        "The fault in the wiring was not found until the third inspection.",
+        "The third inspection was cancelled once the fault was found."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Only after ... + devrik yapı', olayın o ana kadar gerçekleşmediğini vurgular.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q9",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"Being unable to read the inscription, the excavators recorded it photographically.\"</strong>",
+      "options": [
+        "The excavators read the inscription and then photographed it.",
+        "Since they could not read the inscription, the excavators documented it in photographs.",
+        "The inscription was photographed although it could be read easily.",
+        "The excavators refused to record the inscription.",
+        "Photographs made the inscription impossible to read."
+      ],
+      "correctIndex": 1,
+      "explanation": "'Being unable to' sebep bildiren etken kısaltmadır.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q10",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"The report would have been published sooner but for the legal objections.\"</strong>",
+      "options": [
+        "Legal objections were raised after the report was published.",
+        "The report was published early despite legal objections.",
+        "The legal objections delayed the publication of the report.",
+        "There were no legal objections to the report.",
+        "The report was never published because of legal objections."
+      ],
+      "correctIndex": 2,
+      "explanation": "'but for' gizli şart kurar: itirazlar olmasaydı daha erken yayımlanacaktı.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q11",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"Not only did the drought reduce the harvest, but it also emptied the reservoirs.\"</strong>",
+      "options": [
+        "The drought reduced the harvest and emptied the reservoirs as well.",
+        "The drought emptied the reservoirs but left the harvest untouched.",
+        "Neither the harvest nor the reservoirs were affected by the drought.",
+        "The reservoirs were emptied in order to save the harvest.",
+        "The harvest was reduced although the reservoirs stayed full."
+      ],
+      "correctIndex": 0,
+      "explanation": "'Not only ... but also' iki olumsuz etkiyi birlikte sayar.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    },
+    {
+      "id": "u50_rs3_q12",
+      "type": "multiple-choice",
+      "prompt": "Verilen cümleye anlamca en yakın seçeneği bulunuz:<br><br><strong>\"It was the delay in ordering parts, not the design itself, that caused the failure.\"</strong>",
+      "options": [
+        "The design and the delay were equally responsible for the failure.",
+        "Neither the design nor the delay caused the failure.",
+        "Ordering the parts earlier would have exposed the design fault.",
+        "The design failed before the parts were ordered.",
+        "The failure resulted from the late ordering of parts rather than from the design."
+      ],
+      "correctIndex": 4,
+      "explanation": "'It was ... that' vurgu yapısı sorumluyu gecikme olarak sabitler.",
+      "examSkill": "Yakın Anlamlı Cümle",
+      "grammarTags": [
+        "Yakın Anlamlı Cümle"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_sc_ex3",
+  "title": "Cümle Tamamlama — Test 3",
+  "description": "Bağlaç, kısaltma ve koşul odaklı 10 soruluk cümle tamamlama denemesi.",
+  "questions": [
+    {
+      "id": "u50_sc3_q1",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, the expedition turned back within sight of the summit.</strong>",
+      "options": [
+        "Because the weather had improved overnight",
+        "Unless the storm cleared before morning",
+        "So that the summit could finally be reached",
+        "With supplies running low and one climber injured",
+        "In order to reach the summit at dawn"
+      ],
+      "correctIndex": 3,
+      "explanation": "Geri dönme kararının gerekçesini veren tek seçenek, azalan erzak ve yaralı tırmanıcıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q2",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The treaty has never been ratified, _______.</strong>",
+      "options": [
+        "so it entered into force immediately",
+        "unless the parties agree to sign it",
+        "because every parliament approved it",
+        "which is why it carries no legal force today",
+        "although no state has ever signed it"
+      ],
+      "correctIndex": 3,
+      "explanation": "Onaylanmamış olmanın doğal sonucu, hukuki bağlayıcılığın bulunmamasıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q3",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______ that the species had been extinct for two centuries.</strong>",
+      "options": [
+        "In spite of the recent sighting",
+        "Ornithologists had long assumed",
+        "Because of the forest clearance",
+        "The species which was believed",
+        "Having assumed for two centuries"
+      ],
+      "correctIndex": 1,
+      "explanation": "Cümlede 'that' isim cümleciğini alacak çekimli bir yüklem eksiktir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q4",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>So convincing was the forgery _______.</strong>",
+      "options": [
+        "that it hung in the national collection for thirty years",
+        "although the museum bought it immediately",
+        "because two independent experts authenticated it",
+        "when the analysis was finally carried out",
+        "so the curators never questioned it"
+      ],
+      "correctIndex": 0,
+      "explanation": "'So + sıfat + devrik yapı' daima 'that' ile tamamlanır ve derecenin sonucunu verir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q5",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, the factory continued to operate for another decade.</strong>",
+      "options": [
+        "By closing two of its three production lines",
+        "In order to be declared unprofitable",
+        "Having been declared unprofitable in 1971",
+        "Whether or not it remained profitable",
+        "So that it could be declared unprofitable"
+      ],
+      "correctIndex": 2,
+      "explanation": "On yıl daha çalışması, kârsız ilan edilmiş olmasına rağmen gerçekleşen bir durumdur; öncelik kısaltması uygundur.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q6",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The guidelines require that every sample _______.</strong>",
+      "options": [
+        "is stored below four degrees",
+        "be stored below four degrees",
+        "was stored below four degrees",
+        "will be stored below four degrees",
+        "has been stored below four degrees"
+      ],
+      "correctIndex": 1,
+      "explanation": "'require that' sonrası subjunctive gelir; fiil yalın hâlde kalır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q7",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Migrating birds keep their bearing at night _______.</strong>",
+      "options": [
+        "so that the stars rotate around a fixed point",
+        "as if the stars had no fixed pattern",
+        "despite using the pattern of stars",
+        "in which the stars indicate direction",
+        "by using the pattern of stars around the celestial pole"
+      ],
+      "correctIndex": 4,
+      "explanation": "Boşluk 'nasıl' sorusunun karşılığıdır; yöntem bildiren 'by + V-ing' uygundur.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q8",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>_______, almost none of them survives in its original binding.</strong>",
+      "options": [
+        "Although several thousand medieval manuscripts have come down to us",
+        "Since these manuscripts were copied with great care",
+        "As soon as the manuscripts were rebound",
+        "In case the bindings were damaged",
+        "So that the manuscripts could be preserved"
+      ],
+      "correctIndex": 0,
+      "explanation": "Çok sayıda el yazmasının ulaşması ile hiçbirinin özgün cildini korumaması arasındaki karşıtlık zıtlık bağlacı gerektirir.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q9",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>The embankment would have held _______.</strong>",
+      "options": [
+        "if the river rises another metre",
+        "unless the repairs were completed",
+        "had the repairs been completed on schedule",
+        "when the repairs had been finished",
+        "provided that the repairs will be completed"
+      ],
+      "correctIndex": 2,
+      "explanation": "'would have V3' Type 3 sonucudur; koşul kısmı devrik 'had + V3' olmalıdır.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    },
+    {
+      "id": "u50_sc3_q10",
+      "type": "multiple-choice",
+      "prompt": "Cümleyi en uygun biçimde tamamlayan seçeneği bulunuz:<br><br><strong>Historians still disagree about _______.</strong>",
+      "options": [
+        "that the fire started in the bakery",
+        "what the fire started in the bakery",
+        "which the fire started in the bakery",
+        "if did the fire start in the bakery",
+        "whether the fire started in the bakery or in the warehouse"
+      ],
+      "correctIndex": 4,
+      "explanation": "'disagree about' çözülmemiş bir soruyu alır; ikilem bildiren 'whether ... or' uygundur.",
+      "examSkill": "Cümle Tamamlama",
+      "grammarTags": [
+        "Cümle Tamamlama"
+      ]
+    }
+  ]
+},
+{
+  "id": "u50_tr_ex3",
+  "title": "Çeviri — Test 3",
+  "description": "İngilizceden Türkçeye 10 soruluk akademik çeviri denemesi.",
+  "questions": [
+    {
+      "id": "u50_tr3_q1",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Not until the closing decades of the century did the practice become widespread.\"</strong>",
+      "options": [
+        "Uygulama, yüzyılın son onyıllarına kadar yaygınlığını korudu.",
+        "Yüzyılın son onyıllarında uygulama tartışılmaya başlandı.",
+        "Yüzyılın sonuna doğru uygulama yaygınlığını yitirdi.",
+        "Uygulama yüzyılın başından beri yaygındı.",
+        "Uygulama ancak yüzyılın son onyıllarında yaygınlaştı."
+      ],
+      "correctIndex": 4,
+      "explanation": "'Not until ...' + devrik yapı, olayın o tarihten önce gerçekleşmediğini vurgular: 'ancak ... -dı'.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q2",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The theory, which few of his contemporaries accepted, is now taught as settled fact.\"</strong>",
+      "options": [
+        "Çağdaşlarından çok azının kabul ettiği kuram, bugün yerleşik bir gerçek olarak öğretilmektedir.",
+        "Kuram, çağdaşları tarafından kabul edildiği için bugün ders kitaplarındadır.",
+        "Çağdaşlarının çoğunun kabul ettiği kuram bugün tartışmalı sayılmaktadır.",
+        "Kuramı kabul eden çağdaşları bugün unutulmuştur.",
+        "Bugün öğretilen kuram, çağdaşlarının kuramından farklıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "'which few of his contemporaries accepted' nesne konumunda sıfat cümleciğidir; 'few' azlığı bildirir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q3",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Having been trained as a lawyer, she approached the archive with a different set of questions.\"</strong>",
+      "options": [
+        "Hukuk eğitimi almak için arşive farklı sorularla yaklaştı.",
+        "Arşivde çalıştıktan sonra hukuk eğitimi almaya karar verdi.",
+        "Hukuk eğitimi almış olduğu için arşive farklı bir soru dizisiyle yaklaştı.",
+        "Hukukçu olarak yetiştirilmesine rağmen arşive farklı sorular yöneltemedi.",
+        "Hukukçular arşive her zaman farklı sorularla yaklaşır."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Having been V3' önceliği ve sebebi bildiren edilgen kısaltmadır.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q4",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The committee recommended that the findings be withheld until the trial ended.\"</strong>",
+      "options": [
+        "Duruşma bitmeden bulguların açıklanması komitece zorunlu tutuldu.",
+        "Komite bulguları duruşma bitene kadar sakladı.",
+        "Komite, duruşma bittiğinde bulguların açıklandığını bildirdi.",
+        "Komite, bulguların duruşma bitene kadar saklanmasını önerdi.",
+        "Komite bulguların saklanmasına karşı çıktı."
+      ],
+      "correctIndex": 3,
+      "explanation": "'recommend that + yalın fiil' subjunctive kalıbıdır ve öneri bildirir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q5",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Were the funding to be withdrawn, the laboratory would close within months.\"</strong>",
+      "options": [
+        "Fon çekildiği için laboratuvar birkaç ay içinde kapandı.",
+        "Laboratuvar kapanmadıkça fon çekilmeyecektir.",
+        "Fon çekilecek olsa laboratuvar birkaç ay içinde kapanır.",
+        "Fon çekilmediği sürece laboratuvar aylarca açık kalacaktır.",
+        "Laboratuvar kapandığı için fon geri çekildi."
+      ],
+      "correctIndex": 2,
+      "explanation": "'Were + S + to V1' geleceğe yönelik Type 2 devrik koşuldur.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q6",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The manuscript is thought to have circulated privately long before it was printed.\"</strong>",
+      "options": [
+        "El yazmasının basıldıktan sonra elden ele dolaştığı bilinmektedir.",
+        "El yazmasının, basılmasından çok önce özel olarak dolaştığı düşünülmektedir.",
+        "El yazması basılmadan önce hiç okunmamıştı.",
+        "El yazmasının basılması dolaşımını engellemiştir.",
+        "El yazması basılmadan önce yalnızca yazarında kalmıştır."
+      ],
+      "correctIndex": 1,
+      "explanation": "'is thought to have V3', aktarım pasifi ile ana yüklemden önceki bir olayı bildirir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q7",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Only if the sample is refrigerated immediately can the analysis be considered reliable.\"</strong>",
+      "options": [
+        "Örnek soğutulmasa bile analiz güvenilir sayılabilir.",
+        "Analiz güvenilir olduğunda örnek soğutulmalıdır.",
+        "Örnek hemen soğutulursa analiz güvenilirliğini yitirir.",
+        "Örneğin soğutulması analizden sonra yapılmalıdır.",
+        "Analizin güvenilir sayılabilmesi, ancak örneğin hemen soğutulmasıyla mümkündür."
+      ],
+      "correctIndex": 4,
+      "explanation": "'Only if' cümle başındayken ana cümle devrik kurulur ve tek koşulu vurgular.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q8",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"Rather than expanding the road, the city invested in a tram line.\"</strong>",
+      "options": [
+        "Kent, tramvay hattı yerine yolu genişletmeyi tercih etti.",
+        "Kent hem yolu genişletti hem de tramvay hattı yaptı.",
+        "Yolun genişletilmesi tramvay hattının yapımını hızlandırdı.",
+        "Kent, yolu genişletmek yerine bir tramvay hattına yatırım yaptı.",
+        "Tramvay hattı yapılmadığı için yol genişletildi."
+      ],
+      "correctIndex": 3,
+      "explanation": "'Rather than V-ing' tercih edilmeyen seçeneği başa alır.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q9",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"No matter how many times the experiment was repeated, the anomaly persisted.\"</strong>",
+      "options": [
+        "Deney birkaç kez tekrarlandığında anormallik kayboldu.",
+        "Deney kaç kez tekrarlanırsa tekrarlansın, anormallik ortadan kalkmadı.",
+        "Anormallik sürdüğü için deney tekrarlanmadı.",
+        "Deneyin tekrarlanması anormalliği ortaya çıkardı.",
+        "Anormallik yalnızca ilk deneyde görüldü."
+      ],
+      "correctIndex": 1,
+      "explanation": "'No matter how ...' ödün bildirir: '-sa da / ne kadar ... olursa olsun'.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    },
+    {
+      "id": "u50_tr3_q10",
+      "type": "multiple-choice",
+      "prompt": "Aşağıdaki cümlenin Türkçeye en uygun çevirisini bulunuz:<br><br><strong>\"The report, most of whose recommendations were ignored, has since been vindicated.\"</strong>",
+      "options": [
+        "Tavsiyelerinin çoğu göz ardı edilen rapor, sonradan haklı çıkmıştır.",
+        "Rapor, tavsiyeleri göz ardı edildiği için hiç yayımlanmadı.",
+        "Tavsiyelerinin çoğu uygulanan rapor, sonradan geçersiz sayıldı.",
+        "Raporun tavsiyeleri uygulandıkça haklılığı azalmıştır.",
+        "Rapor, tavsiyeleri nedeniyle eleştirilmiştir."
+      ],
+      "correctIndex": 0,
+      "explanation": "'most of whose ...' ileri düzey iyelik sıfat cümleciğidir; 'vindicated' haklı çıkmayı bildirir.",
+      "examSkill": "Çeviri",
+      "grammarTags": [
+        "Çeviri"
+      ]
+    }
+  ]
 }
     ]
   }
