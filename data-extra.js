@@ -39550,3 +39550,42 @@ if (typeof lessons !== 'undefined') {
     }
   }
 })();
+
+// ============================================================
+// Bölüm 3 "İsim Tamlaması" tek derslikti; dersi Bölüm 2 "İsim ve Edat
+// Yapıları"nın 4. dersi yapıp boşalan bölümü kaldırıyoruz. Ders id'si (10)
+// korunuyor, çünkü tamamlanan dersler completedLessons içinde id ile tutulur.
+// ============================================================
+(function mergeNounPhraseUnitIntoPrepositionUnit() {
+  if (typeof units === 'undefined' || typeof lessons === 'undefined') return;
+
+  const target = units.find(u => String(u.id) === '1');   // İsim ve Edat Yapıları
+  const source = units.find(u => String(u.id) === '3');   // İsim Tamlaması
+  if (!target || !source) return;
+
+  source.lessons.forEach(lId => {
+    if (!target.lessons.includes(lId)) target.lessons.push(lId);
+    const l = lessons.find(x => String(x.id) === String(lId));
+    if (l) l.unitId = target.id;
+  });
+
+  units.splice(units.indexOf(source), 1);
+
+  target.lessons.forEach((lId, idx) => {
+    const l = lessons.find(x => String(x.id) === String(lId));
+    if (!l) return;
+    l.displayId = idx + 1;
+    l.title = (idx + 1) + ". " + String(l.title).replace(/^\d+[.:\s]*/, "");
+  });
+
+  // unitSentencesMap ders sırasıyla (1-tabanlı) anahtarlanır; taşınan dersin
+  // cümle havuzu da yeni sırasına geçmeli, yoksa sözlük ondan beslenemez.
+  if (typeof unitSentencesMap !== 'undefined') {
+    const src = unitSentencesMap["3"];
+    if (src && src["1"]) {
+      unitSentencesMap["1"] = unitSentencesMap["1"] || {};
+      unitSentencesMap["1"][String(target.lessons.length)] = src["1"];
+    }
+    delete unitSentencesMap["3"];
+  }
+})();
