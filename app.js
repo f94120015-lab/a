@@ -13018,6 +13018,72 @@ function renderExamTab() {
   });
 }
 
+// ── Bağlaç Kuralları alıştırması ────────────────────────────────────────────
+// Deneme sınavından farklı olarak süresiz ve kilitsizdir; geri bildirim her
+// sorudan sonra anında gelir. Tekrar modu altyapısını kullandığı için can
+// kaybı yoktur.
+const CONNECTOR_DRILL_LESSON_ID = 'cdrill_l1';
+
+function renderConnectorDrillTab() {
+  const listEl = document.getElementById('connector-drill-list');
+  if (!listEl) return;
+
+  const lesson = lessons.find(l => l.id === CONNECTOR_DRILL_LESSON_ID);
+  const exercises = (lesson && lesson.exercises) || [];
+  if (!exercises.length) {
+    listEl.innerHTML = '<p class="text-sm-muted">Bu alıştırma henüz hazır değil.</p>';
+    return;
+  }
+
+  const icons = ['📐', '🧩', '🔍'];
+  listEl.innerHTML = exercises.map((ex, i) => {
+    const n = (ex.questions || []).length;
+    return `
+      <div class="card-panel" style="gap: 10px;">
+        <div class="flex-center-12">
+          <span class="icon-lg">${icons[i % icons.length]}</span>
+          <div class="flex-col-4">
+            <span class="section-title-sm">${ex.title}</span>
+            <span class="text-sm-muted">${ex.description || ''}</span>
+          </div>
+        </div>
+        <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
+          <span class="text-sm-muted">${n} soru · süresiz</span>
+          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
+                  data-drill-ex="${ex.id}" ${n ? '' : 'disabled'}>Başlat</button>
+        </div>
+      </div>`;
+  }).join('');
+
+  listEl.querySelectorAll('[data-drill-ex]').forEach(btn => {
+    btn.onclick = () => startConnectorDrill(btn.dataset.drillEx);
+  });
+}
+
+function startConnectorDrill(exerciseId) {
+  const lesson = lessons.find(l => l.id === CONNECTOR_DRILL_LESSON_ID);
+  const ex = lesson && (lesson.exercises || []).find(e => e.id === exerciseId);
+  const questions = (ex && ex.questions) || [];
+  if (!questions.length) {
+    showToast('Bu alıştırmada henüz soru bulunmuyor.', 'info');
+    return;
+  }
+
+  quizSessionId++;
+  isReviewMode = true;    // can kaybı yok, soru kaynağı reviewQuestions
+  isExamMode = false;     // geri bildirim anında gelsin
+  examCurrent = null;
+  examSessionLabel = '';
+  reviewQuestions = questions;
+  reviewSessionCorrectIds = [];
+  currentQuestionIndex = 0;
+  correctCount = 0;
+  wrongCount = 0;
+
+  showScreen('quiz-screen');
+  renderQuestion();
+}
+
 function startExamSession(examId) {
   if (!isExamUnlocked()) {
     showToast('Bu uygulamayı tüm dersleri bitirdikten sonra açabilirsiniz.', 'info');
@@ -13494,6 +13560,8 @@ function switchTab(tabId) {
     initTransitionsMatrixTab();
   } else if (tabId === 'exam') {
     renderExamTab();
+  } else if (tabId === 'connector-drill') {
+    renderConnectorDrillTab();
   } else if (tabId === 'structure-robot') {
     if (typeof initStructureRobot === 'function') {
       initStructureRobot();

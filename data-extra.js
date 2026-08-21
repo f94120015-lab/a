@@ -42272,3 +42272,325 @@ if (typeof lessons !== 'undefined') {
     if (d) u.description = d;
   });
 })();
+
+
+// ============================================================
+// Bağlaçların yapısal kuralları alıştırması. Matristeki rule/trap alanlarından
+// üretildi: noktalama, tamamlayıcı tipi ve kural ihlali. Ders bilerek hiçbir
+// bölüme bağlanmadı; kendi sol sekmesinden açılıyor (bkz. renderConnectorDrillTab).
+// ============================================================
+(function addConnectorDrillLesson() {
+  if (typeof lessons === 'undefined') return;
+  const drill = {
+  "id": "cdrill_l1",
+  "unitId": 22,
+  "title": "Bağlaçların Yapısal Kuralları",
+  "subtitle": "Noktalama, tamamlayıcı ve kural ihlali",
+  "konuAnlatimi": {
+    "baslik": "Bağlaçların Yapısal Kuralları",
+    "teorikMantik": "Bağlaçlar anlamlarından çok aldıkları yapıya göre ayrılır. Geçiş zarfları (however, nevertheless) iki bağımsız cümle arasında durur ve noktalı virgül ya da nokta ister. Yan cümle bağlaçları (although, even though) özne + fiil alır. Edatlar (despite, in spite of) ise yalnızca isim öbeği veya V-ing alır. Üçü de Türkçeye çoğu zaman aynı biçimde çevrildiği için ayrım anlamdan değil, boşluktan sonra gelen yapıdan yapılır.",
+    "formul": "Cümle 1; however, Cümle 2  |  Although + Özne + Fiil, Cümle  |  Despite + İsim Öbeği / V-ing, Cümle",
+    "altinKural": "Geçiş zarfı iki bağımsız cümleyi virgülle bağlayamaz. 'despite of' diye bir kalıp yoktur. Cümle sonunda kullanılabilen tek zıtlık bağlacı 'though'dur."
+  },
+  "exercises": [
+    {
+      "id": "cdrill_ex1",
+      "title": "Alıştırma 1: Noktalama Kuralları",
+      "description": "Geçiş zarflarının noktalı virgül, nokta ve virgül tercihleri.",
+      "questions": [
+        {
+          "id": "cdrill_p1",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The strategy is risky ___ however, it offers substantial financial rewards.",
+          "options": [
+            ".",
+            ",",
+            ";",
+            ":"
+          ],
+          "correctIndex": 2,
+          "translation": "Strateji risklidir; ancak büyük finansal getiriler sunar.",
+          "explanation": "İki bağımsız cümle 'however' ile bağlanıyor ve 'however' küçük harfle devam ediyor. Nokta konsaydı büyük harf gerekirdi; virgül ise bağımsız iki cümleyi tek başına bağlayamaz. Doğru işaret noktalı virgüldür.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p2",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The trial faced budget cuts ___ Nevertheless, the researchers proceeded.",
+          "options": [
+            ".",
+            ",",
+            ";",
+            ":"
+          ],
+          "correctIndex": 0,
+          "translation": "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti.",
+          "explanation": "'Nevertheless' büyük harfle başladığı için kendisinden önce cümle bitmiş olmalıdır; yani nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p3",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "Prices have increased sharply ___ nonetheless, consumer demand has remained strong.",
+          "options": [
+            ";",
+            ",",
+            ".",
+            ":"
+          ],
+          "correctIndex": 0,
+          "translation": "Fiyatlar keskin biçimde arttı; buna rağmen tüketici talebi güçlü kaldı.",
+          "explanation": "'nonetheless' küçük harfle devam ettiği için cümle bitmemiştir. Geçiş zarfı iki bağımsız cümleyi bağlarken noktalı virgül alır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p4",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "Submit the form before Friday ___ or else your application will be rejected.",
+          "options": [
+            ";",
+            ",",
+            ".",
+            ":"
+          ],
+          "correctIndex": 1,
+          "translation": "Formu cumadan önce gönderin, yoksa başvurunuz reddedilecek.",
+          "explanation": "'or else' bir geçiş zarfı değil, bağlaç işlevi gören bir kalıptır ve kendisinden önce virgül alır: Cümle 1, or else Cümle 2.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p5",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The survey covered two regions ___ namely the north and the west.",
+          "options": [
+            ";",
+            ":",
+            ".",
+            ","
+          ],
+          "correctIndex": 3,
+          "translation": "Anket iki bölgeyi kapsadı, yani kuzey ve batıyı.",
+          "explanation": "'namely' arkasından tam cümle değil, tek tek sayılan öğeler getirir; bu yüzden noktalı virgül veya nokta değil virgül kullanılır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cdrill_ex2",
+      "title": "Alıştırma 2: Bağlaçtan Sonra Ne Gelir",
+      "description": "Tam cümle mi, isim öbeği mi, V-ing mi ayrımı.",
+      "questions": [
+        {
+          "id": "cdrill_c1",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the heavy rain, the match went ahead as planned.",
+          "options": [
+            "Whereas",
+            "Although",
+            "Even though",
+            "However",
+            "Despite"
+          ],
+          "correctIndex": 4,
+          "translation": "Şiddetli yağmura rağmen maç planlandığı gibi oynandı.",
+          "explanation": "Boşluktan sonra isim öbeği ('the heavy rain') geliyor. Although, even though ve whereas tam cümle ister; however ise bağımsız cümle ile kullanılır. İsim öbeği alan tek seçenek 'Despite'tır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c2",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ it was raining heavily, the match went ahead as planned.",
+          "options": [
+            "Although",
+            "Despite",
+            "In spite of",
+            "Nevertheless",
+            "Regardless of"
+          ],
+          "correctIndex": 0,
+          "translation": "Şiddetli yağmur yağmasına rağmen maç planlandığı gibi oynandı.",
+          "explanation": "Boşluktan sonra özne + fiil ('it was raining') geliyor. Despite, in spite of ve regardless of isim öbeği ister; nevertheless yan cümle başlatamaz. Tam cümle alan tek seçenek 'Although'dur.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c3",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "The equipment was outdated; ____, the team completed the survey on time.",
+          "options": [
+            "although",
+            "however",
+            "despite",
+            "even though",
+            "in spite of"
+          ],
+          "correctIndex": 1,
+          "translation": "Ekipman eskiydi; yine de ekip anketi zamanında tamamladı.",
+          "explanation": "Noktalı virgülden sonra bağımsız bir cümle geliyor. Bu konumda yalnızca geçiş zarfı kullanılabilir; although ve even though yan cümle kurar, despite ve in spite of isim ister.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c4",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ having very little funding, the group published three papers that year.",
+          "options": [
+            "Even though",
+            "Although",
+            "In spite of",
+            "Nonetheless",
+            "Though"
+          ],
+          "correctIndex": 2,
+          "translation": "Çok az fon almasına rağmen grup o yıl üç makale yayımladı.",
+          "explanation": "Boşluktan sonra V-ing ('having') geliyor. Although, even though ve though özne + fiil ister; nonetheless bağımsız cümle ile kullanılır. V-ing alan tek seçenek 'In spite of'tır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c5",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "The results were promising. The sample was very small, ____.",
+          "options": [
+            "despite",
+            "however",
+            "although",
+            "though",
+            "whereas"
+          ],
+          "correctIndex": 3,
+          "translation": "Sonuçlar umut vericiydi. Yine de örneklem çok küçüktü.",
+          "explanation": "Boşluk cümlenin sonunda ve tek başına. Cümle sonunda kullanılabilen tek zıtlık bağlacı 'though'dur; although ve whereas yalnızca yan cümle başında, however ise cümle başında ya da noktalı virgülden sonra yer alır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cdrill_ex3",
+      "title": "Alıştırma 3: Kural İhlali Avcılığı",
+      "description": "Matristeki tuzaklardan üretilen hatalı cümleler.",
+      "questions": [
+        {
+          "id": "cdrill_e1",
+          "type": "error-spotting",
+          "prompt": "Cümledeki bağlaç hatasını bulunuz:",
+          "sentence": "Despite of the heavy traffic, the delegation arrived on time.",
+          "options": [
+            "arrived",
+            "the heavy traffic",
+            "Despite of",
+            "on time"
+          ],
+          "correctIndex": 2,
+          "translation": "Yoğun trafiğe rağmen heyet zamanında ulaştı.",
+          "explanation": "'Despite' yanına asla 'of' almaz. 'In spite of' vardır, 'despite of' yoktur; doğrusu 'Despite the heavy traffic' olmalıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e2",
+          "type": "error-spotting",
+          "prompt": "Cümledeki bağlaç hatasını bulunuz:",
+          "sentence": "Although the financial risks, the board authorized the investment.",
+          "options": [
+            "the financial risks",
+            "Although",
+            "the board",
+            "authorized"
+          ],
+          "correctIndex": 1,
+          "translation": "Finansal risklere rağmen yönetim kurulu yatırıma izin verdi.",
+          "explanation": "'Although' arkasından doğrudan isim öbeği almaz, tam cümle ister. Burada isim öbeği geldiği için 'Despite' ya da 'In spite of' kullanılmalıydı.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e3",
+          "type": "error-spotting",
+          "prompt": "Cümledeki noktalama hatasını bulunuz:",
+          "sentence": "The data were incomplete, however, the study was published without revision.",
+          "options": [
+            "incomplete,",
+            "however",
+            "the study",
+            "without revision"
+          ],
+          "correctIndex": 0,
+          "translation": "Veriler eksikti; ancak çalışma düzeltilmeden yayımlandı.",
+          "explanation": "Geçiş zarfı iki bağımsız cümleyi virgülle bağlayamaz. 'incomplete' sonrası virgül yerine noktalı virgül gelmelidir: '... were incomplete; however, ...'",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e4",
+          "type": "error-spotting",
+          "prompt": "Cümledeki yüklem hatasını bulunuz:",
+          "sentence": "The curator locked the case lest the manuscript would be damaged.",
+          "options": [
+            "locked",
+            "lest",
+            "damaged",
+            "would be"
+          ],
+          "correctIndex": 3,
+          "translation": "Küratör, el yazması zarar görmesin diye vitrini kilitledi.",
+          "explanation": "'lest' arkasından yalın fiil (V1) ya da 'should + V1' ister; 'would' almaz. Doğrusu 'lest the manuscript be damaged' olmalıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e5",
+          "type": "error-spotting",
+          "prompt": "Cümledeki bağlaç hatasını bulunuz:",
+          "sentence": "The museum exhibits several materials, such as it displays bronze and glass.",
+          "options": [
+            "such as",
+            "several materials",
+            "exhibits",
+            "bronze and glass"
+          ],
+          "correctIndex": 0,
+          "translation": "Müze bronz ve cam gibi çeşitli malzemeler sergiliyor.",
+          "explanation": "'such as' arkasından cümle almaz, yalnızca örnek isimleri getirir. Doğrusu 'such as bronze and glass' olmalıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        }
+      ]
+    }
+  ]
+};
+  const existing = lessons.find(l => l.id === drill.id);
+  if (existing) Object.assign(existing, drill); else lessons.push(drill);
+})();
