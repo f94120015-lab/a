@@ -39589,3 +39589,80 @@ if (typeof lessons !== 'undefined') {
     delete unitSentencesMap["3"];
   }
 })();
+
+// ============================================================
+// Eşleştirme sorusu hedef kalıbı doğrudan gösterir (4 İngilizce ifade ile
+// Türkçe karşılıkları yan yana), yani öğretici bir açılış sorusudur. Uygulamanın
+// kendi baskın düzeni de bu yönde: eşleştirme içeren 152 alıştırmanın 104'ünde
+// bu soru zaten ilk sırada ve generateDynamicExercises de onu başa koyuyor.
+// Geriye kalanların bir bölümünde 5. sıraya düşmüş; onları başa alıyoruz.
+//
+// Yalnızca tam 5. sıradaki eşleştirmeler taşınır. Daha geç sıradakiler
+// (8., 10., 11.) "1-5 öbek / 6-10 cümle / 11-15 akademik" kademesine göre
+// yerleştirilmiş; onları başa almak akademik seviyeyi ısınma sorusu yapardı.
+// ============================================================
+(function moveMatchingQuestionToFront() {
+  if (typeof lessons === 'undefined') return;
+
+  lessons.forEach(lesson => {
+    (lesson.exercises || []).forEach(ex => {
+      const qs = ex.questions;
+      if (!Array.isArray(qs) || qs.length < 10) return;
+      const idx = qs.findIndex(q => q && q.type === 'matching');
+      if (idx !== 4) return;
+      qs.unshift(qs.splice(idx, 1)[0]);
+    });
+  });
+})();
+
+// ============================================================
+// Bölüm kartı açıklamaları: kısa, tek cümlelik ve sınava hazırlanan bir
+// öğrencinin tanıdığı terimlerle. Eskiden bazıları 150 karakteri aşıyor,
+// bazıları ("mühendislik", "matris", "zirve", "çapa") ders kitabında
+// karşılaşılmayan bir dil kullanıyordu; iki bölümün açıklaması ise boştu.
+// ============================================================
+(function rewriteUnitDescriptions() {
+  if (typeof units === 'undefined') return;
+
+  const desc = {
+    6:   "Özne + to be kalıbıyla kurulan temel cümleler; isim, sıfat ve edat tümleçleri.",
+    1:   "İsimleri niteleyen of/from edat öbekleri ve zincirleme edat grupları.",
+    2:   "Fiillerle birlikte kullanılan edat öbekleri ve zarf tümleçleri.",
+    7:   "Geçişli fiillerle kurulan özne - fiil - nesne dizilimi.",
+    70:  "can, must, should gibi modallar ve 12 temel zamanın çekimleri.",
+    9:   "Wh- soruları, yardımcı fiilli sorular ve edatla biten soru kalıpları.",
+    12:  "V-ing ve V3 sıfatları ile sıfat cümleciği kısaltmaları.",
+    8:   "there is/are, exist, remain kalıpları ve modallı var/yok yapıları.",
+    102: "Zaman zarflarına göre doğru zamanı seçme ve tense uyumu.",
+    101: "since, by the time, before/after, no sooner ... than ve it is time kalıpları.",
+    13:  "would rather, would prefer ve prefer ile tercih bildirme.",
+    17:  "Modallarla rica etme ve would/do you mind if ile izin isteme.",
+    104: "be able to, have to, had better, used to ve get used to kalıpları.",
+    103: "be used to, be willing to, be likely to, be supposed to kalıpları.",
+    10:  "Zaman ve modal temelli edilgen çatı ile edilgen mastarlar.",
+    62:  "many, few, little gibi niceleyiciler ile zaman ve derece zarfları.",
+    22:  "Bağlaçlar, geçiş ifadeleri ve noktalama ile cümle ilişkileri.",
+    40:  "Zıtlık, sebep-sonuç, ekleme ve amaç bağlaçları.",
+    32:  "Zaman, sebep, zıtlık, amaç, derece ve koşul zarf cümlecikleri.",
+    26:  "who, which, whose ile sıfat cümlecikleri; as ... as ve üstünlük yapıları.",
+    28:  "that, whether ve wh- ile kurulan isim cümlecikleri; subjunctive kalıplar.",
+    14:  "Fiilden sonra gerund/infinitive seçimi, amaç mastarları ve how to kısaltmaları.",
+    29:  "It is clear that ... gibi kişisiz ve edilgen cümle girişleri.",
+    35:  "Sıfat ve zarf cümleciği kısaltmaları ile gerund - infinitive ayrımı.",
+    36:  "likely, tend to, appear to ile kesinliği yumuşatan akademik anlatım.",
+    37:  "most of which, many of whom, by which time gibi ileri düzey kalıplar.",
+    38:  "hardly ... when, not only ... but also, only if ile kurulan devrik cümleler.",
+    39:  "Zaman uyumu, bağlaç seçimi, Type 0-3 ve karma koşul cümleleri.",
+    57:  "Sınavlarda en çok çıkan deyimsel fiiller (phrasal verbs).",
+    52:  "as if/as though, be about to, ettirgen çatı ve lest/but for kalıpları.",
+    43:  "is said to have been V3 gibi çok öğeli fiil zincirlerini çözümleme.",
+    66:  "Gerund - infinitive kısayolları, since/for ve by kuralları, eleme taktikleri.",
+    49:  "Uzun ve çok öğeli yüklem öbeklerini tanıma ve çeviri pratiği.",
+    50:  "Zamir takibi, akışı bozan cümle, paragraf sıralama ve cloze soruları."
+  };
+
+  units.forEach(u => {
+    const d = desc[u.id];
+    if (d) u.description = d;
+  });
+})();

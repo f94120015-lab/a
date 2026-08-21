@@ -76,7 +76,17 @@ function cleanAcademicUnitTitle(title) {
     'YDS / YÖKDİL / YDT Sınav Kilitleri ve Hızlı Refleks Stratejileri': 'YDS / YÖKDİL / YDT Sınav Stratejileri',
     'Sentaktik Çözümleme: Gerund, Participle ve Infinitive Sentezi': 'Fiilimsiler ve Kısaltma Sentezi (Gerund & Participle)',
     'Sentaktik Kriptoloji: Past Participle ve Edilgen Sentez': 'İleri Düzey Kısaltma ve Edilgen Yapılar',
-    'Yarı-Modallar ve Modal Benzeri Yapılar': 'Yarı-Modallar ve Tavsiye/Alışkanlık Yapıları'
+    'Yarı-Modallar ve Modal Benzeri Yapılar': 'Yarı-Modallar ve Tavsiye/Alışkanlık Yapıları',
+    // Sınav diline daha yakın, kısa bölüm adları. Parantez içindeki her şey
+    // aşağıda siliniyor, o yüzden İngilizce karşılıklar başlığa gömülmemeli.
+    'Present ve past participle sıfatları': 'Sıfat-Fiiller ve Participle Yapıları',
+    "Existential 'There' ve Varlık/Yokluk Yapıları": 'There is / There are Yapıları',
+    'YÖKDİL Kısaltma (Reduction) ve Gerund & Infinitive Master Class': 'Kısaltmalar, Gerund ve Infinitive',
+    'Master Inversion & Devriklik': 'Devrik Cümle Yapıları',
+    'Master Tenses, Conjunctions & Conditionals': 'Zamanlar, Bağlaçlar ve Koşul Cümleleri',
+    'İhtimal Modalları, As Yapıları, Ettirgen & Subjunctive': 'Modallar, Ettirgen ve Subjunctive Yapılar',
+    'Çok Öğeli Fiil Zincirleri & Cümle Analizi': 'Uzun Fiil Zincirleri ve Cümle Çözümleme',
+    'YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Çapaları & Kısaltma Kilitleri': 'YDS/YÖKDİL Sınav Taktikleri'
   };
 
   let cleaned = t
