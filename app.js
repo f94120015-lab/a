@@ -9154,7 +9154,12 @@ function renderQuestion() {
     }
   }
 
-  if (question.grammarTags && question.grammarTags.length > 0) {
+  // Yapısal Kurallar alıştırmalarında genel etiket ("ZAMAN UYUMU KURALLARI")
+  // her soruda aynı olduğu için bilgi taşımıyordu; onun yerine sorunun
+  // çalıştırdığı terimler tıklanabilir çip olarak gösterilir.
+  if (renderDrillFormulaHint(body, question)) {
+    // terim çipleri çizildi; genel etiket satırına gerek yok
+  } else if (question.grammarTags && question.grammarTags.length > 0) {
     const rawCleaned = question.grammarTags
       .filter(t => {
         if (!t) return false;
@@ -13125,6 +13130,59 @@ function renderConnectorDrillTab() {
   });
 }
 
+// ── Soru içi formül hatırlatıcısı ──────────────────────────────────────────
+// Sorunun terim etiketleri tıklanabilir çip olarak çizilir; çipe basınca o
+// terimin kuralı ve tuzağı cümlenin üstünde açılır. Varsayılan kapalı,
+// açıldıysa oturum boyunca açık kalır -- öğrenci 10 soruda 10 kez tıklamasın.
+let drillHintOpen = false;
+
+function renderDrillFormulaHint(body, question) {
+  const terms = (question && question.terms) || [];
+  if (!activeDrillSession || !terms.length) return false;
+
+  const cards = terms.map(findRuleCard).filter(Boolean);
+  if (!cards.length) return false;
+
+  const chips = cards.map((c, i) => `
+    <button type="button" class="drill-hint-chip" data-hint-index="${i}"
+            style="font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;
+                   background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8);
+                   border: 1px solid rgba(139, 126, 200, 0.3); cursor: pointer;">
+      📐 ${c.term}
+    </button>`).join('');
+
+  const panels = cards.map((c, i) => `
+    <div class="drill-hint-panel" data-hint-panel="${i}"
+         style="display: ${drillHintOpen ? 'block' : 'none'}; text-align: left; margin: 0 auto 12px auto;
+                max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
+                border: 1px solid var(--border-color); background: var(--bg-card);">
+      <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">
+        ${String(c.rule || c.formula || '').replace(/\n/g, '<br>')}
+      </div>
+      ${c.trap ? `<div style="margin-top: 5px; font-size: 0.78rem; color: #ef4444; line-height: 1.5;">${c.trap}</div>` : ''}
+    </div>`).join('');
+
+  body.insertAdjacentHTML('afterbegin', `
+    <div class="drill-hint-wrap" style="width: 100%; margin: 0 auto 14px auto;">
+      <div style="display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 8px;">
+        ${chips}
+      </div>
+      ${panels}
+    </div>`);
+
+  const wrap = body.querySelector('.drill-hint-wrap');
+  wrap.querySelectorAll('.drill-hint-chip').forEach(btn => {
+    btn.onclick = () => {
+      const panel = wrap.querySelector(`[data-hint-panel="${btn.dataset.hintIndex}"]`);
+      const willOpen = panel.style.display === 'none';
+      panel.style.display = willOpen ? 'block' : 'none';
+      // Tercih oturum boyunca hatırlanır.
+      drillHintOpen = willOpen;
+    };
+  });
+  return true;
+}
+
 // ── Kural brifingi ──────────────────────────────────────────────────────────
 // Alıştırmaların kuralları matrislerde zaten yazılı; eksik olan yönlendirmeydi.
 // Her soru çalıştırdığı terimlerle etiketli (questions[].terms), brifing de o
@@ -13241,25 +13299,27 @@ function startConnectorDrill(lessonId, exerciseId, testIndex) {
     return;
   }
 
+  const label = `${ex.title} — Test ${(testIndex || 0) + 1}`;
+
   // Bir alıştırmanın ilk testinde kurallar otomatik gösterilir; sonrasında
   // öğrenci isterse kart üzerindeki "Kuralları gör" ile açar.
   if (!drillBriefSeen(exerciseId)) {
     markDrillBriefSeen(exerciseId);
-    showRuleBriefing(`${ex.title} — Test ${(testIndex || 0) + 1}`,
-                     drillBriefCards(questions),
-                     () => runConnectorDrill(questions));
+    showRuleBriefing(label, drillBriefCards(questions), () => runConnectorDrill(questions, label));
     return;
   }
-  runConnectorDrill(questions);
+  runConnectorDrill(questions, label);
 }
 
-function runConnectorDrill(questions) {
+function runConnectorDrill(questions, label) {
   activeDrillSession = true;
   quizSessionId++;
   isReviewMode = true;    // can kaybı yok, soru kaynağı reviewQuestions
   isExamMode = false;     // geri bildirim anında gelsin
   examCurrent = null;
-  examSessionLabel = '';
+  // Başlık tekrar modundan geliyordu ve 'Hızlı Tekrar' yazıyordu; alıştırmanın
+  // kendi adı zaten elimizde.
+  examSessionLabel = label || 'Yapısal Kurallar';
   reviewQuestions = questions;
   reviewSessionCorrectIds = [];
   currentQuestionIndex = 0;
