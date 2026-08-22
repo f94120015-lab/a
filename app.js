@@ -8217,6 +8217,8 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
   updateQuizUI();
   showScreen('quiz-screen');
 
+  activeDrillSession = false;
+
   if (isRestore) {
     renderQuestion();
   } else {
@@ -13023,6 +13025,10 @@ function renderExamTab() {
 // sorudan sonra anında gelir. Tekrar modu altyapısını kullandığı için can
 // kaybı yoktur.
 let drillActiveSection = 'cdrill_l1';
+// Alıştırma, tekrar modunun altyapısını ödünç alıyor; oturum bitince tekrar
+// ekranı 'Dersler'e dönüyordu. Bu işaret, bitişte hangi sekmeye dönüleceğini
+// ve hangi mesajın verileceğini ayırt eder.
+let activeDrillSession = false;
 
 const CONNECTOR_DRILL_SECTIONS = [
   { lessonId: 'cdrill_l1', title: '🔗 Bağlaç Kuralları',
@@ -13248,6 +13254,7 @@ function startConnectorDrill(lessonId, exerciseId, testIndex) {
 }
 
 function runConnectorDrill(questions) {
+  activeDrillSession = true;
   quizSessionId++;
   isReviewMode = true;    // can kaybı yok, soru kaynağı reviewQuestions
   isExamMode = false;     // geri bildirim anında gelsin
@@ -13264,6 +13271,7 @@ function runConnectorDrill(questions) {
 }
 
 function startExamSession(examId) {
+  activeDrillSession = false;
   if (!isExamUnlocked()) {
     showToast('Bu uygulamayı tüm dersleri bitirdikten sonra açabilirsiniz.', 'info');
     return;
@@ -13423,17 +13431,23 @@ function completeReviewSession() {
     });
   }
 
-  updateDailyTaskProgress('review', 1);
+  const wasDrill = activeDrillSession;
+  activeDrillSession = false;
+
+  if (!wasDrill) updateDailyTaskProgress('review', 1);
   saveState();
   playCompletionSound(true);
-  showToast('Tekrar oturumu tamamlandı! Yanlışlarını pekiştirdin. 🎉', 'success');
-  
+  showToast(wasDrill ? 'Test tamamlandı! 🎉'
+                     : 'Tekrar oturumu tamamlandı! Yanlışlarını pekiştirdin. 🎉', 'success');
+
   updateTopBar();
   renderLessonTree();
   // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
   checkReviewBanner();
   showScreen('home-screen');
-  switchTab('lessons');
+  // Alıştırmadan gelindiyse Yapısal Kurallar sekmesine dönülür; hangi alt
+  // bölümde kalındığı drillActiveSection'da zaten duruyor.
+  switchTab(wasDrill ? 'connector-drill' : 'lessons');
 }
 
 function completeFormationTour() {
@@ -15899,12 +15913,16 @@ function initEventListeners() {
   document.getElementById('quiz-close').addEventListener('click', () => {
     if (confirm('Dersten çıkmak istediğine emin misin? İlerleme kaybedilecek.')) {
       const wasReview = isReviewMode;
+      const wasDrill = activeDrillSession;
       isReviewMode = false;
+      activeDrillSession = false;
       updateTopBar();
       renderLessonTree();
       // renderAchievements(); // BAŞARIMLAR DEVRE DIŞI
       showScreen('home-screen');
-      if (wasReview) {
+      if (wasDrill) {
+        switchTab('connector-drill');
+      } else if (wasReview) {
         switchTab('lessons');
       }
     }
@@ -17191,6 +17209,7 @@ function checkAndShowReviewPrompt() {
 }
 
 function startReviewMode(isRestore = false) {
+  activeDrillSession = false;
   if (!isRestore && (!state.wrongQuestions || state.wrongQuestions.length === 0)) {
     showToast('Harika! Tekrar edilecek hatalı sorunuz bulunmamaktadır.', 'success');
     return;
