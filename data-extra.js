@@ -47830,3 +47830,2319 @@ if (typeof lessons !== 'undefined') {
   const existing = lessons.find(l => l.id === drill.id);
   if (existing) Object.assign(existing, drill); else lessons.push(drill);
 })();
+
+
+// ============================================================
+// Zaman uyumu alıştırması. Bağlaç setinin kardeşi: orada kural noktalama ve
+// tamamlayıcı tipiydi, burada kural cümlenin iki tarafındaki ZAMAN. Ders
+// bilerek hiçbir bölüme bağlanmadı; Bağlaç Kuralları sekmesinden açılıyor.
+// ============================================================
+(function addTenseDrillLesson() {
+  if (typeof lessons === 'undefined') return;
+  const drill = {
+  "id": "tdrill_l1",
+  "unitId": 102,
+  "title": "Zaman Uyumu Kuralları",
+  "subtitle": "Çapalar, iki cümlecik uyumu, devrik kilitler",
+  "konuAnlatimi": {
+    "baslik": "Zaman Uyumu Kuralları",
+    "teorikMantik": "Bazı zaman ifadeleri cümlenin zamanını serbest bırakmaz, hesaplanabilir kılar. 'by the time' yan cümlesi geniş zamansa ana cümle Will Have V3, geçmiş zamansa Had V3 olmak zorundadır. 'since' bir nokta, 'for' bir süre, 'ago' ise geçmişte kapalı bir andır; üçü üç ayrı zaman ister. Zaman ve koşul bağlaçlarının yan cümlesine ise hiçbir koşulda 'will' gelmez.",
+    "formul": "By the time + V1 ➔ Will Have V3  |  By the time + V2 ➔ Had V3  |  have/has V3 + since + V2  |  for + süre ➔ Perfect  |  süre + ago ➔ V2",
+    "altinKural": "Zaman ve koşul yan cümlelerinde gelecek zaman geniş zamanla verilir: 'when it rains', 'when it will rain' değil. Devrik kalıplarda ilk eylem Had V3, ikincisi V2'dir; iki Past Perfect üst üste gelmez."
+  },
+  "exercises": [
+    {
+      "id": "tdrill_ex1",
+      "title": "Alıştırma 1: Çapa → Zaman",
+      "description": "for, ago, already, yet, just gibi çapaların dayattığı zaman.",
+      "questions": [
+        {
+          "id": "tdrill_a1",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The instrument ____ out of use for eight years.",
+          "options": [
+            "will be",
+            "was",
+            "is",
+            "had been",
+            "has been"
+          ],
+          "correctIndex": 4,
+          "translation": "Cihaz sekiz yıldır kullanım dışı.",
+          "explanation": "'for + süre' şu ana uzanan bir süreç kurar ve Present Perfect ister. Simple Past bu süreci kapatırdı.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a2",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The kiln ____ nearly two centuries ago.",
+          "options": [
+            "is abandoned",
+            "has been abandoned",
+            "had been abandoned",
+            "was abandoned",
+            "will be abandoned"
+          ],
+          "correctIndex": 3,
+          "translation": "Fırın yaklaşık iki yüzyıl önce terk edildi.",
+          "explanation": "'ago' geçmişte KAPALI bir an bildirir ve yalnızca Simple Past alır; Present Perfect ile asla kullanılmaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a3",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The site ____ closed to visitors since the 2019 collapse.",
+          "options": [
+            "has remained",
+            "remained",
+            "remains",
+            "had remained",
+            "was remaining"
+          ],
+          "correctIndex": 0,
+          "translation": "Alan 2019'daki çökmeden beri ziyarete kapalı kaldı.",
+          "explanation": "'since + geçmiş nokta' ana cümlede Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a4",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The committee ____ the revised budget.",
+          "options": [
+            "has already approved",
+            "already approved",
+            "already approves",
+            "was already approving",
+            "already approve"
+          ],
+          "correctIndex": 0,
+          "translation": "Komite düzeltilmiş bütçeyi çoktan onayladı.",
+          "explanation": "'already' olumlu cümlede Present Perfect ile kullanılır ve yardımcı fiil ile V3 arasına girer.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a5",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The final report ____ published yet.",
+          "options": [
+            "was not",
+            "has not been",
+            "is not",
+            "had not been",
+            "will not be"
+          ],
+          "correctIndex": 1,
+          "translation": "Nihai rapor henüz yayımlanmadı.",
+          "explanation": "'yet' olumsuz cümlede Present Perfect ister ve cümlenin sonunda yer alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a6",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The laboratory ____ its preliminary findings.",
+          "options": [
+            "just released",
+            "has just released",
+            "just releases",
+            "was just releasing",
+            "just release"
+          ],
+          "correctIndex": 1,
+          "translation": "Laboratuvar ön bulgularını az önce açıkladı.",
+          "explanation": "'just' çok yakın geçmişi bildirir ve Present Perfect ile yardımcı fiilden sonra gelir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a7",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "____ the manuscript ever been exhibited abroad?",
+          "options": [
+            "Had",
+            "Did",
+            "Was",
+            "Is",
+            "Has"
+          ],
+          "correctIndex": 4,
+          "translation": "El yazması hiç yurt dışında sergilendi mi?",
+          "explanation": "'ever' deneyim sorar ve Present Perfect ister: 'Has ... ever been V3?'",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a8",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The species ____ recorded north of the river.",
+          "options": [
+            "is never",
+            "never was",
+            "has never been",
+            "never had been",
+            "will never be"
+          ],
+          "correctIndex": 2,
+          "translation": "Tür nehrin kuzeyinde hiçbir zaman kaydedilmedi.",
+          "explanation": "'never' deneyimsizlik bildirir ve Present Perfect alır; ayrıca kendisi olumsuz olduğu için ikinci bir olumsuzluk gerekmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a9",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "Attendance ____ sharply lately.",
+          "options": [
+            "has fallen",
+            "fell",
+            "falls",
+            "had fallen",
+            "was falling"
+          ],
+          "correctIndex": 0,
+          "translation": "Katılım son zamanlarda keskin biçimde düştü.",
+          "explanation": "'lately' belirsiz bir yakın geçmiş kurar ve Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a10",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "Over the past decade the glacier ____ by two kilometres.",
+          "options": [
+            "was retreating",
+            "retreated",
+            "retreats",
+            "had retreated",
+            "has retreated"
+          ],
+          "correctIndex": 4,
+          "translation": "Son on yılda buzul iki kilometre geri çekildi.",
+          "explanation": "'over the past + süre' şu ana uzanan bir pencere açar; Simple Past almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a11",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "How long ____ the archive been closed to the public?",
+          "options": [
+            "has",
+            "did",
+            "was",
+            "is",
+            "were"
+          ],
+          "correctIndex": 0,
+          "translation": "Arşiv ne kadar süredir halka kapalı?",
+          "explanation": "'How long' süregelen bir durumu sorduğunda Perfect kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a12",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "They ____ the first edition forty years ago.",
+          "options": [
+            "publish",
+            "have published",
+            "had published",
+            "published",
+            "were publishing"
+          ],
+          "correctIndex": 3,
+          "translation": "İlk baskıyı kırk yıl önce yayımladılar.",
+          "explanation": "'ago' Simple Past kilididir; Present Perfect ile birlikte kullanılamaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a13",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "In the last five years the collection ____ in size.",
+          "options": [
+            "doubles",
+            "doubled",
+            "has doubled",
+            "had doubled",
+            "was doubling"
+          ],
+          "correctIndex": 2,
+          "translation": "Son beş yılda koleksiyon iki katına çıktı.",
+          "explanation": "'in the last + süre' şu ana kadar olan bir aralıktır ve Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a14",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The journal ____ little on the subject lately.",
+          "options": [
+            "published",
+            "has published",
+            "publishes",
+            "had published",
+            "was publishing"
+          ],
+          "correctIndex": 1,
+          "translation": "Dergi son zamanlarda konu üzerine az yayın yaptı.",
+          "explanation": "'lately' Present Perfect çapasıdır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a15",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "She had been working on the catalogue ____ a decade before it appeared.",
+          "options": [
+            "ago",
+            "since",
+            "for",
+            "by",
+            "during"
+          ],
+          "correctIndex": 2,
+          "translation": "Katalog çıkmadan önce on yıldır üzerinde çalışıyordu.",
+          "explanation": "'a decade' bir SÜREdir, nokta değil; bu yüzden 'since' değil 'for' gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a16",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The instrument has been out of use ____ 2016.",
+          "options": [
+            "for",
+            "since",
+            "ago",
+            "by",
+            "within"
+          ],
+          "correctIndex": 1,
+          "translation": "Cihaz 2016'dan beri kullanım dışı.",
+          "explanation": "'2016' bir başlangıç NOKTASIdır; süre değil. Nokta 'since', süre 'for' alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a17",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "No new species ____ in the valley so far.",
+          "options": [
+            "is recorded",
+            "was recorded",
+            "has been recorded",
+            "had been recorded",
+            "will be recorded"
+          ],
+          "correctIndex": 2,
+          "translation": "Vadide şimdiye kadar yeni bir tür kaydedilmedi.",
+          "explanation": "'so far' şu ana kadarki durumu bildirir ve Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a18",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "Researchers ____ the 1970s data recently.",
+          "options": [
+            "had revisited",
+            "revisited",
+            "revisit",
+            "have been revisiting",
+            "were revisiting"
+          ],
+          "correctIndex": 3,
+          "translation": "Araştırmacılar son zamanlarda 1970'lerin verisini yeniden ele alıyor.",
+          "explanation": "'recently' süregelen bir yakın geçmiş kurduğunda Present Perfect Continuous uygundur.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a19",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "Two volumes ____ in translation.",
+          "options": [
+            "were already appearing",
+            "already appeared",
+            "already appear",
+            "had already appeared",
+            "have already appeared"
+          ],
+          "correctIndex": 4,
+          "translation": "İki cilt çeviride çoktan yayımlandı.",
+          "explanation": "'already' olumlu cümlede Present Perfect alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a20",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "____ the results been verified yet?",
+          "options": [
+            "Are",
+            "Did",
+            "Were",
+            "Have",
+            "Had"
+          ],
+          "correctIndex": 3,
+          "translation": "Sonuçlar henüz doğrulandı mı?",
+          "explanation": "'yet' soru cümlesinde Present Perfect ister ve sona gelir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a21",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The wall collapsed only a few weeks ____.",
+          "options": [
+            "before",
+            "since",
+            "for",
+            "ago",
+            "by"
+          ],
+          "correctIndex": 3,
+          "translation": "Duvar daha birkaç hafta önce çöktü.",
+          "explanation": "Süreden sonra gelip geçmişte kapalı bir an kuran ifade 'ago'dur; 'since' ve 'for' fiilden önce gelir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a22",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The excavation ____ the lowest layer yet.",
+          "options": [
+            "does not reach",
+            "did not reach",
+            "has not reached",
+            "had not reached",
+            "will not reach"
+          ],
+          "correctIndex": 2,
+          "translation": "Kazı henüz en alt katmana ulaşmadı.",
+          "explanation": "'yet' olumsuz cümlede Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a23",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "Over the past century the marshes ____ almost entirely.",
+          "options": [
+            "had disappeared",
+            "disappeared",
+            "disappear",
+            "have disappeared",
+            "were disappearing"
+          ],
+          "correctIndex": 3,
+          "translation": "Son yüzyılda bataklıklar neredeyse tümüyle yok oldu.",
+          "explanation": "'over the past century' şu ana uzanır; Present Perfect gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a24",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "How long ____ they been excavating before the funding stopped?",
+          "options": [
+            "are",
+            "have",
+            "did",
+            "were",
+            "had"
+          ],
+          "correctIndex": 4,
+          "translation": "Fon kesilmeden önce ne kadar süredir kazı yapıyorlardı?",
+          "explanation": "Referans noktası geçmişte ('before the funding stopped') olduğu için Past Perfect Continuous gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a25",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "He ____ the original before that afternoon.",
+          "options": [
+            "had never seen",
+            "has never seen",
+            "never saw",
+            "never sees",
+            "was never seeing"
+          ],
+          "correctIndex": 0,
+          "translation": "O öğleden önce aslını hiç görmemişti.",
+          "explanation": "'before that afternoon' referansı geçmişte kurduğu için 'never' Past Perfect alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a26",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "She ____ the transcription when the power failed.",
+          "options": [
+            "had just finished",
+            "has just finished",
+            "just finished",
+            "just finishes",
+            "was just finishing"
+          ],
+          "correctIndex": 0,
+          "translation": "Elektrik kesildiğinde çeviri yazımı henüz bitirmişti.",
+          "explanation": "Referans noktası geçmişte olduğu için 'just' Past Perfect ile kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a27",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The museum ____ a second panel.",
+          "options": [
+            "just acquired",
+            "just acquires",
+            "has just acquired",
+            "had just acquired",
+            "was just acquiring"
+          ],
+          "correctIndex": 2,
+          "translation": "Müze az önce ikinci bir pano edindi.",
+          "explanation": "Şimdiye bağlı yakın geçmiş için 'just' + Present Perfect kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a28",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "By the time the grant arrived, the team ____.",
+          "options": [
+            "was already leaving",
+            "has already left",
+            "already left",
+            "already leaves",
+            "had already left"
+          ],
+          "correctIndex": 4,
+          "translation": "Hibe geldiğinde ekip çoktan ayrılmıştı.",
+          "explanation": "'By the time + V2' ana cümlede Had V3 ister; 'already' de bu kilide uyar.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a29",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "How long ____ you been working on the index?",
+          "options": [
+            "did",
+            "have",
+            "were",
+            "are",
+            "had"
+          ],
+          "correctIndex": 1,
+          "translation": "Ne kadar süredir dizin üzerinde çalışıyorsun?",
+          "explanation": "Şu ana kadar süregelen bir eylem sorulduğu için Present Perfect Continuous gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_a30",
+          "type": "fill-blank-dropdown",
+          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "sentence": "The site has remained closed ____ three seasons.",
+          "options": [
+            "since",
+            "for",
+            "ago",
+            "by",
+            "until"
+          ],
+          "correctIndex": 1,
+          "translation": "Alan üç sezondur kapalı kaldı.",
+          "explanation": "'three seasons' bir süredir; süre 'for', başlangıç noktası 'since' alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tdrill_ex2",
+      "title": "Alıştırma 2: İki Cümlecik Uyumu",
+      "description": "Yan cümlenin zamanı ana cümlenin zamanını nasıl belirler.",
+      "questions": [
+        {
+          "id": "tdrill_b1",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "By the time the inspectors arrive, the samples ____ for six hours.",
+          "options": [
+            "have been thawing",
+            "will have been thawing",
+            "had been thawing",
+            "are thawing",
+            "thawed"
+          ],
+          "correctIndex": 1,
+          "translation": "Müfettişler geldiğinde örnekler altı saattir çözülüyor olacak.",
+          "explanation": "'By the time + V1 (arrive)' ana cümlede Will Have V3 ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b2",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "By the time the grant was approved, the team ____ the site.",
+          "options": [
+            "had left",
+            "has left",
+            "will have left",
+            "left",
+            "leaves"
+          ],
+          "correctIndex": 0,
+          "translation": "Hibe onaylandığında ekip alandan ayrılmıştı.",
+          "explanation": "'By the time + V2 (was approved)' ana cümlede Had V3 ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b3",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "By 2040 the restoration ____ more than the original construction.",
+          "options": [
+            "cost",
+            "has cost",
+            "had cost",
+            "costs",
+            "will have cost"
+          ],
+          "correctIndex": 4,
+          "translation": "2040'a kadar restorasyon özgün inşaattan pahalıya mal olmuş olacak.",
+          "explanation": "'By + gelecek tarih' Will Have V3 kilidini uygular.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b4",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "By 1900 the guild ____ most of its privileges.",
+          "options": [
+            "lost",
+            "has lost",
+            "will have lost",
+            "had lost",
+            "loses"
+          ],
+          "correctIndex": 3,
+          "translation": "1900'e gelindiğinde lonca ayrıcalıklarının çoğunu yitirmişti.",
+          "explanation": "'By + geçmiş tarih' Had V3 kilidini uygular.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b5",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The town ____ on tourism since the mill closed.",
+          "options": [
+            "will depend",
+            "depended",
+            "depends",
+            "had depended",
+            "has depended"
+          ],
+          "correctIndex": 4,
+          "translation": "Fabrika kapandığından beri kasaba turizme bağımlı.",
+          "explanation": "'since + V2' ana cümlede Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b6",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "After the conservator ____ the varnish, the underdrawing became visible.",
+          "options": [
+            "has removed",
+            "had removed",
+            "removes",
+            "will remove",
+            "was removing"
+          ],
+          "correctIndex": 1,
+          "translation": "Restoratör verniği kaldırdıktan sonra alt çizim görünür oldu.",
+          "explanation": "'after' yan cümlesi öncelikli eylemdir ve Had V3 alır; ana cümle V2 kalır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b7",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Before the second survey ____, no trace of the wall had been found.",
+          "options": [
+            "had been carried out",
+            "has been carried out",
+            "will be carried out",
+            "is carried out",
+            "was carried out"
+          ],
+          "correctIndex": 4,
+          "translation": "İkinci ölçüm yapılmadan önce duvardan hiçbir iz bulunamamıştı.",
+          "explanation": "'before + V2' ana cümlede Had V3 ister; önce gerçekleşen eylem ana cümlededir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b8",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "When the funding is restored, the excavation ____.",
+          "options": [
+            "would resume",
+            "resumes",
+            "resumed",
+            "has resumed",
+            "will resume"
+          ],
+          "correctIndex": 4,
+          "translation": "Fon geri verildiğinde kazı yeniden başlayacak.",
+          "explanation": "'when + V1' ana cümlede Will V1 ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b9",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "When the storm reached the coast, the fleet ____ into harbour.",
+          "options": [
+            "will already withdraw",
+            "has already withdrawn",
+            "had already withdrawn",
+            "already withdraws",
+            "is already withdrawing"
+          ],
+          "correctIndex": 2,
+          "translation": "Fırtına kıyıya ulaştığında filo çoktan limana çekilmişti.",
+          "explanation": "'when + V2' ile önceki bir eylem anlatılıyorsa ana cümle Had V3 alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b10",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "As soon as the permit arrives, work on the foundations ____.",
+          "options": [
+            "began",
+            "begins",
+            "will begin",
+            "has begun",
+            "would begin"
+          ],
+          "correctIndex": 2,
+          "translation": "İzin gelir gelmez temel çalışmaları başlayacak.",
+          "explanation": "'as soon as + V1' ana cümlede Will V1 ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b11",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The samples must stay sealed until the analysis ____.",
+          "options": [
+            "has been completing",
+            "will be complete",
+            "was complete",
+            "is complete",
+            "would be complete"
+          ],
+          "correctIndex": 3,
+          "translation": "Analiz tamamlanana kadar örnekler mühürlü kalmalıdır.",
+          "explanation": "'until' yan cümlesine 'will' gelmez; geniş zaman kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b12",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Whenever the river rises above four metres, the lower fields ____.",
+          "options": [
+            "flooded",
+            "will flood",
+            "flood",
+            "have flooded",
+            "are flooding"
+          ],
+          "correctIndex": 2,
+          "translation": "Nehir dört metrenin üzerine her çıktığında alçak tarlalar su altında kalır.",
+          "explanation": "'whenever' tekrarlanan bir durum kurar; iki taraf da geniş zaman alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b13",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Every time they reopened the trench, the sides ____.",
+          "options": [
+            "collapsed",
+            "have collapsed",
+            "will collapse",
+            "collapse",
+            "had collapsed"
+          ],
+          "correctIndex": 0,
+          "translation": "Hendeği her yeniden açtıklarında kenarlar çöküyordu.",
+          "explanation": "'every time + V2' ana cümlede de V2 ister; iki eylem aynı geçmiş düzlemde tekrarlanır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b14",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The last time the vault was opened, two seals ____ intact.",
+          "options": [
+            "had been found",
+            "have been found",
+            "will be found",
+            "are found",
+            "were found"
+          ],
+          "correctIndex": 4,
+          "translation": "Kasa en son açıldığında iki mühür sağlam bulundu.",
+          "explanation": "'the last time + V2' geçmişte kapalı bir anı işaret eder; ana cümle de V2 alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b15",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The first time she visited the site, the excavation ____.",
+          "options": [
+            "already closes",
+            "has already closed",
+            "had already closed",
+            "will already close",
+            "already close"
+          ],
+          "correctIndex": 2,
+          "translation": "Alanı ilk ziyaretinde kazı çoktan kapanmıştı.",
+          "explanation": "Ziyaretten ÖNCE gerçekleşmiş bir eylem anlatıldığı için ana cümle Had V3 alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b16",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "This is the first time the panel ____ the country.",
+          "options": [
+            "has left",
+            "leaves",
+            "left",
+            "had left",
+            "will leave"
+          ],
+          "correctIndex": 0,
+          "translation": "Pano ilk kez ülke dışına çıkıyor.",
+          "explanation": "'This is the first time' ana cümlesi Present olsa da yan cümle Present Perfect alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b17",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "It was the third time the committee ____ the proposal.",
+          "options": [
+            "has rejected",
+            "had rejected",
+            "rejected",
+            "rejects",
+            "would reject"
+          ],
+          "correctIndex": 1,
+          "translation": "Komite teklifi üçüncü kez reddediyordu.",
+          "explanation": "Ana cümle 'It was' geçmiş olduğu için yan cümle Past Perfect'e kayar.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b18",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "It is three years since the last full survey ____.",
+          "options": [
+            "has been carried out",
+            "was carried out",
+            "had been carried out",
+            "is carried out",
+            "will be carried out"
+          ],
+          "correctIndex": 1,
+          "translation": "Son kapsamlı ölçüm yapılalı üç yıl oldu.",
+          "explanation": "'It is + süre + since' kalıbında 'since' yan cümlesi Simple Past kalır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b19",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "It has been a decade since the museum ____ the collection.",
+          "options": [
+            "acquired",
+            "has acquired",
+            "had acquired",
+            "acquires",
+            "will acquire"
+          ],
+          "correctIndex": 0,
+          "translation": "Müze koleksiyonu edineli on yıl oldu.",
+          "explanation": "Ana cümle 'It has been' olsa da 'since' yan cümlesi V2 kalır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b20",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The wing reopens in 2030; by then the restoration ____ twice the estimate.",
+          "options": [
+            "costs",
+            "has cost",
+            "had cost",
+            "will have cost",
+            "cost"
+          ],
+          "correctIndex": 3,
+          "translation": "Kanat 2030'da açılıyor; o zamana kadar restorasyon tahminin iki katına mal olmuş olacak.",
+          "explanation": "'by then' gelecek bir noktaya işaret ettiğinde Will Have V3 gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b21",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The charter was signed in 1215; by then the town ____ a market for a generation.",
+          "options": [
+            "has held",
+            "had held",
+            "will have held",
+            "held",
+            "holds"
+          ],
+          "correctIndex": 1,
+          "translation": "Berat 1215'te imzalandı; o zamana kadar kasaba bir kuşaktır pazar kurmuştu.",
+          "explanation": "'by then' geçmiş bir noktaya işaret ettiğinde Had V3 gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b22",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "While the technician ____ the sensor, the power failed twice.",
+          "options": [
+            "was calibrating",
+            "calibrated",
+            "has calibrated",
+            "calibrates",
+            "had calibrated"
+          ],
+          "correctIndex": 0,
+          "translation": "Teknisyen sensörü kalibre ederken elektrik iki kez kesildi.",
+          "explanation": "'while' eşzamanlı süregelen eylemi bildirir ve Continuous ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b23",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Ever since the mill closed, the town ____ on a single employer.",
+          "options": [
+            "will depend",
+            "depended",
+            "depends",
+            "had depended",
+            "has depended"
+          ],
+          "correctIndex": 4,
+          "translation": "Fabrika kapandığından beri kasaba tek bir işverene bağımlı.",
+          "explanation": "'ever since' ana cümlede Present Perfect ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b24",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "By the time you read this, the samples ____ to the laboratory.",
+          "options": [
+            "had been sent",
+            "have been sent",
+            "will have been sent",
+            "are sent",
+            "were sent"
+          ],
+          "correctIndex": 2,
+          "translation": "Sen bunu okuduğunda örnekler laboratuvara gönderilmiş olacak.",
+          "explanation": "'By the time + V1 (read)' ana cümlede Will Have V3 ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b25",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "After the funding had been withdrawn, the team ____ within a month.",
+          "options": [
+            "disbands",
+            "has disbanded",
+            "had disbanded",
+            "disbanded",
+            "will disband"
+          ],
+          "correctIndex": 3,
+          "translation": "Fon geri çekildikten sonra ekip bir ay içinde dağıldı.",
+          "explanation": "'after + had V3' ana cümlede V2 ister; iki Past Perfect üst üste gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b26",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Once the treaty ____, the border posts were dismantled.",
+          "options": [
+            "has been signed",
+            "had been signed",
+            "is signed",
+            "will be signed",
+            "signs"
+          ],
+          "correctIndex": 1,
+          "translation": "Antlaşma imzalandıktan sonra sınır karakolları söküldü.",
+          "explanation": "'once' öncelik bildirdiğinde yan cümle Had V3, ana cümle V2 alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b27",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Before the printing press ____, each copy was made by hand.",
+          "options": [
+            "will appear",
+            "has appeared",
+            "appeared",
+            "appears",
+            "had appeared"
+          ],
+          "correctIndex": 2,
+          "translation": "Matbaa ortaya çıkmadan önce her nüsha elle yapılırdı.",
+          "explanation": "'before + V2' ana cümlede V2 ya da Had V3 ister; yan cümleye 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b28",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "The moment the seal ____, the chamber will be photographed.",
+          "options": [
+            "has been broken",
+            "will be broken",
+            "was broken",
+            "is broken",
+            "had been broken"
+          ],
+          "correctIndex": 3,
+          "translation": "Mühür kırılır kırılmaz oda fotoğraflanacak.",
+          "explanation": "'the moment' bir zaman bağlacıdır; yan cümlesine 'will' gelmez, geniş zaman kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b29",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "Each time a new edition appears, the older readings ____.",
+          "options": [
+            "are dropped",
+            "will be dropped",
+            "were dropped",
+            "have been dropped",
+            "had been dropped"
+          ],
+          "correctIndex": 0,
+          "translation": "Her yeni baskı çıktığında eski okumalar çıkarılır.",
+          "explanation": "'each time + V1' tekrarlanan bir kural bildirir; ana cümle de geniş zaman alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_b30",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümlenin zamanına göre ana cümlenin doğru biçimini seçin:",
+          "sentence": "No trace of the settlement had survived by the time the area ____.",
+          "options": [
+            "will be excavated",
+            "has been excavated",
+            "is excavated",
+            "was excavated",
+            "had been excavated"
+          ],
+          "correctIndex": 3,
+          "translation": "Alan kazıldığı zamana kadar yerleşimden hiçbir iz kalmamıştı.",
+          "explanation": "Ana cümle Had V3 olduğuna göre 'by the time' yan cümlesi V2 olmalıdır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tdrill_ex3",
+      "title": "Alıştırma 3: Devrik Zaman Kilitleri",
+      "description": "no sooner ... than, hardly ... when, it was not until ... that.",
+      "questions": [
+        {
+          "id": "tdrill_c1",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "No sooner ____ the treaty been signed than hostilities resumed.",
+          "options": [
+            "had",
+            "has",
+            "did",
+            "was",
+            "would"
+          ],
+          "correctIndex": 0,
+          "translation": "Antlaşma imzalanır imzalanmaz çatışmalar yeniden başladı.",
+          "explanation": "'No sooner' cümle başındayken yardımcı fiil özneden önce gelir ve daima 'had' olur: No sooner had + Ö + V3.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c2",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "No sooner had the results been announced ____ the opposition demanded a recount.",
+          "options": [
+            "then",
+            "when",
+            "than",
+            "that",
+            "as"
+          ],
+          "correctIndex": 2,
+          "translation": "Sonuçlar açıklanır açıklanmaz muhalefet yeniden sayım istedi.",
+          "explanation": "'No sooner' daima 'than' ile eşleşir; 'when' yalnızca 'hardly / barely / scarcely' ile kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c3",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "Hardly had the excavation begun ____ the first mosaic appeared.",
+          "options": [
+            "when",
+            "than",
+            "then",
+            "that",
+            "after"
+          ],
+          "correctIndex": 0,
+          "translation": "Kazı henüz başlamıştı ki ilk mozaik ortaya çıktı.",
+          "explanation": "'Hardly / barely / scarcely' daima 'when' ile eşleşir; 'than' yalnızca 'no sooner' ile kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c4",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "Scarcely ____ she opened the folder when the lights went out.",
+          "options": [
+            "has",
+            "had",
+            "did",
+            "was",
+            "would"
+          ],
+          "correctIndex": 1,
+          "translation": "Dosyayı henüz açmıştı ki ışıklar söndü.",
+          "explanation": "'Scarcely' cümle başındayken devrik yapı kurulur ve yardımcı fiil 'had' olur.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c5",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "No sooner had the ship left the harbour than the storm ____.",
+          "options": [
+            "breaks",
+            "had broken",
+            "has broken",
+            "broke",
+            "would break"
+          ],
+          "correctIndex": 3,
+          "translation": "Gemi limandan ayrılır ayrılmaz fırtına koptu.",
+          "explanation": "Devrik kalıpta ilk eylem Had V3, ikinci eylem V2 olur; iki Past Perfect üst üste gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c6",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "It was not until 1964 ____ the script was finally deciphered.",
+          "options": [
+            "then",
+            "when",
+            "which",
+            "that",
+            "as"
+          ],
+          "correctIndex": 3,
+          "translation": "Yazı ancak 1964'te çözülebildi.",
+          "explanation": "'It was not until ... that' bir vurgu kalıbıdır; 'that' düşürülemez ve 'when' ile değiştirilemez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c7",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "Not until the funding was restored ____ the excavation resume.",
+          "options": [
+            "did",
+            "was",
+            "had",
+            "has",
+            "would"
+          ],
+          "correctIndex": 0,
+          "translation": "Kazı ancak fon geri verildiğinde yeniden başladı.",
+          "explanation": "'Not until' cümle başındayken ana cümle devrik kurulur: did + özne + V1.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c8",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "It was not until the second survey ____ the wall was located.",
+          "options": [
+            "then",
+            "when",
+            "which",
+            "that",
+            "where"
+          ],
+          "correctIndex": 3,
+          "translation": "Duvar ancak ikinci ölçümde bulundu.",
+          "explanation": "Kalıbın ikinci parçası daima 'that'tir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c9",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "Not until 1960 ____ researchers recognise the role of plate tectonics.",
+          "options": [
+            "had",
+            "did",
+            "have",
+            "were",
+            "would"
+          ],
+          "correctIndex": 1,
+          "translation": "Araştırmacılar levha tektoniğinin rolünü ancak 1960'ta fark etti.",
+          "explanation": "Devrik yapıda 'did' kullanıldığı için esas fiil yalın kalır: 'did ... recognise'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c10",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "Hardly ____ the manuscript been catalogued when a second copy was discovered.",
+          "options": [
+            "was",
+            "has",
+            "did",
+            "had",
+            "would"
+          ],
+          "correctIndex": 3,
+          "translation": "El yazması henüz kataloglanmıştı ki ikinci bir nüsha bulundu.",
+          "explanation": "'Hardly' devrik yapısında yardımcı fiil 'had' olur ve özneden önce gelir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c11",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "No sooner had the kiln reached temperature than the glaze ____.",
+          "options": [
+            "has fused",
+            "had fused",
+            "fused",
+            "fuses",
+            "would fuse"
+          ],
+          "correctIndex": 2,
+          "translation": "Fırın sıcaklığa ulaşır ulaşmaz sır kaynadı.",
+          "explanation": "'than' sonrası ikinci eylem Simple Past alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c12",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "____ had the delegates taken their seats when the session was suspended.",
+          "options": [
+            "Not until",
+            "Than",
+            "Barely",
+            "Sooner",
+            "Only"
+          ],
+          "correctIndex": 2,
+          "translation": "Delegeler yerlerine henüz oturmuştu ki oturum askıya alındı.",
+          "explanation": "'when' ile eşleşen devrik başlangıçlar 'hardly / barely / scarcely'dir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c13",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "It was not until the archive was digitised ____ the letters became accessible.",
+          "options": [
+            "as",
+            "when",
+            "then",
+            "which",
+            "that"
+          ],
+          "correctIndex": 4,
+          "translation": "Mektuplar ancak arşiv sayısallaştırıldığında erişilebilir oldu.",
+          "explanation": "Kalıp 'It was not until ... that' biçiminde tamamlanır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c14",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "Not until the last inspection ____ the fault in the wiring identified.",
+          "options": [
+            "were",
+            "did",
+            "had",
+            "has",
+            "was"
+          ],
+          "correctIndex": 4,
+          "translation": "Kablolamadaki arıza ancak son denetimde tespit edildi.",
+          "explanation": "Edilgen bir ana cümlede devrik yapı 'was + özne + V3' biçiminde kurulur.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c15",
+          "type": "fill-blank-dropdown",
+          "prompt": "Devrik zaman yapısına uygun biçimi seçin:",
+          "sentence": "No sooner ____ than the second wave arrived.",
+          "options": [
+            "did the first repairs complete",
+            "the first repairs had been completed",
+            "had the first repairs been completed",
+            "were the first repairs completing",
+            "the first repairs were completed"
+          ],
+          "correctIndex": 2,
+          "translation": "İlk onarımlar biter bitmez ikinci dalga geldi.",
+          "explanation": "'No sooner' sonrası devrik sıra gerekir: had + özne + V3.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c16",
+          "type": "error-spotting",
+          "prompt": "Cümledeki devrik yapı hatasını bulunuz:",
+          "sentence": "No sooner the treaty had been signed than hostilities resumed.",
+          "options": [
+            "resumed",
+            "than",
+            "hostilities",
+            "No sooner the treaty had been signed"
+          ],
+          "correctIndex": 3,
+          "translation": "Antlaşma imzalanır imzalanmaz çatışmalar yeniden başladı.",
+          "explanation": "'No sooner' cümle başındayken devrik sıra zorunludur: 'No sooner had the treaty been signed ...'",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c17",
+          "type": "error-spotting",
+          "prompt": "Cümledeki bağlaç hatasını bulunuz:",
+          "sentence": "Hardly had the excavation begun than the first mosaic appeared.",
+          "options": [
+            "Hardly had",
+            "than",
+            "the excavation begun",
+            "appeared"
+          ],
+          "correctIndex": 1,
+          "translation": "Kazı henüz başlamıştı ki ilk mozaik ortaya çıktı.",
+          "explanation": "'Hardly' ile eşleşen bağlaç 'when'dir; 'than' yalnızca 'no sooner' ile kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c18",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman hatasını bulunuz:",
+          "sentence": "No sooner had the ship left the harbour than the storm had broken.",
+          "options": [
+            "had the ship left",
+            "the harbour",
+            "than",
+            "had broken"
+          ],
+          "correctIndex": 3,
+          "translation": "Gemi limandan ayrılır ayrılmaz fırtına koptu.",
+          "explanation": "Devrik kalıpta ikinci eylem Simple Past olur; iki Past Perfect üst üste gelmez. Doğrusu 'the storm broke'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c19",
+          "type": "error-spotting",
+          "prompt": "Cümledeki yapı hatasını bulunuz:",
+          "sentence": "It was not until 1964 when the script was finally deciphered.",
+          "options": [
+            "when",
+            "1964",
+            "It was not until",
+            "was deciphered"
+          ],
+          "correctIndex": 0,
+          "translation": "Yazı ancak 1964'te çözülebildi.",
+          "explanation": "Vurgu kalıbı 'that' ile tamamlanır; 'when' kullanılmaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_c20",
+          "type": "error-spotting",
+          "prompt": "Cümledeki devrik yapı hatasını bulunuz:",
+          "sentence": "Not until the funding was restored the excavation resumed.",
+          "options": [
+            "Not until",
+            "the excavation resumed",
+            "the funding was restored",
+            "restored"
+          ],
+          "correctIndex": 1,
+          "translation": "Kazı ancak fon geri verildiğinde yeniden başladı.",
+          "explanation": "'Not until' başta olduğunda ana cümle devrik kurulur: 'did the excavation resume'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tdrill_ex4",
+      "title": "Alıştırma 4: Yan Cümlede Will Yasağı",
+      "description": "Zaman ve koşul bağlaçlarının gelecek zamanı reddetmesi.",
+      "questions": [
+        {
+          "id": "tdrill_e1",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The alarm will sound as soon as the temperature ____ four degrees.",
+          "options": [
+            "exceeds",
+            "will exceed",
+            "would exceed",
+            "has exceeded",
+            "exceeded"
+          ],
+          "correctIndex": 0,
+          "translation": "Sıcaklık dört dereceyi aşar aşmaz alarm çalacak.",
+          "explanation": "'as soon as' yan cümlesine 'will' gelmez; gelecek anlamı geniş zamanla verilir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e2",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "We will begin the survey when the ground ____.",
+          "options": [
+            "would thaw",
+            "will thaw",
+            "thaws",
+            "has thawing",
+            "thawed"
+          ],
+          "correctIndex": 2,
+          "translation": "Zemin çözüldüğünde ölçüme başlayacağız.",
+          "explanation": "'when' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e3",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The licence remains valid as long as the fee ____ annually.",
+          "options": [
+            "would be paid",
+            "will be paid",
+            "is paid",
+            "was paid",
+            "has paid"
+          ],
+          "correctIndex": 2,
+          "translation": "Ücret her yıl ödendiği sürece ruhsat geçerli kalır.",
+          "explanation": "'as long as' bir koşul bağlacıdır; yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e4",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Keep the samples sealed until the analysis ____.",
+          "options": [
+            "is complete",
+            "will be complete",
+            "would be complete",
+            "was complete",
+            "has completing"
+          ],
+          "correctIndex": 0,
+          "translation": "Analiz tamamlanana kadar örnekleri mühürlü tutun.",
+          "explanation": "'until' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e5",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Take a copy of the key in case the caretaker ____ unavailable.",
+          "options": [
+            "is",
+            "will be",
+            "would be",
+            "was",
+            "has been"
+          ],
+          "correctIndex": 0,
+          "translation": "Bakıcı bulunamazsa diye anahtarın bir kopyasını alın.",
+          "explanation": "'in case' önlem bildirir ve yan cümlesine 'will' almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e6",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The border posts will be dismantled once the treaty ____.",
+          "options": [
+            "has signing",
+            "will be signed",
+            "would be signed",
+            "was signed",
+            "is signed"
+          ],
+          "correctIndex": 4,
+          "translation": "Antlaşma imzalandığında sınır karakolları sökülecek.",
+          "explanation": "'once' bir zaman bağlacıdır; yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e7",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Before the results ____, no announcement will be made.",
+          "options": [
+            "has verified",
+            "will be verified",
+            "would be verified",
+            "were verified",
+            "are verified"
+          ],
+          "correctIndex": 4,
+          "translation": "Sonuçlar doğrulanmadan önce hiçbir açıklama yapılmayacak.",
+          "explanation": "'before' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e8",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "After the permit ____, work will start immediately.",
+          "options": [
+            "arrived",
+            "will arrive",
+            "would arrive",
+            "arrives",
+            "has arriving"
+          ],
+          "correctIndex": 3,
+          "translation": "İzin geldikten sonra çalışma hemen başlayacak.",
+          "explanation": "'after' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e9",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Whenever the sensor ____ a fault, the system shuts down.",
+          "options": [
+            "has detecting",
+            "will detect",
+            "would detect",
+            "detected",
+            "detects"
+          ],
+          "correctIndex": 4,
+          "translation": "Sensör bir arıza saptadığı her seferde sistem kapanır.",
+          "explanation": "'whenever' tekrarlanan durum kurar; 'will' almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e10",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The chamber will be photographed the moment the seal ____.",
+          "options": [
+            "was broken",
+            "will be broken",
+            "would be broken",
+            "is broken",
+            "has breaking"
+          ],
+          "correctIndex": 3,
+          "translation": "Mühür kırılır kırılmaz oda fotoğraflanacak.",
+          "explanation": "'the moment' zaman bağlacıdır; 'will' almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e11",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Every time the pressure ____, the valve opens automatically.",
+          "options": [
+            "would rise",
+            "will rise",
+            "rises",
+            "rose",
+            "has rising"
+          ],
+          "correctIndex": 2,
+          "translation": "Basınç her yükseldiğinde vana otomatik açılır.",
+          "explanation": "'every time' tekrarlanan durum kurar; 'will' almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e12",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The permit stands so long as the owner ____ any structural change.",
+          "options": [
+            "will report",
+            "reports",
+            "would report",
+            "reported",
+            "has reporting"
+          ],
+          "correctIndex": 1,
+          "translation": "Sahibi yapısal her değişikliği bildirdiği sürece izin geçerlidir.",
+          "explanation": "'so long as' koşul bağlacıdır; 'will' almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e13",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "By the time the inspectors ____, the samples will have thawed.",
+          "options": [
+            "will arrive",
+            "arrive",
+            "would arrive",
+            "arrived",
+            "have arriving"
+          ],
+          "correctIndex": 1,
+          "translation": "Müfettişler geldiğinde örnekler çözülmüş olacak.",
+          "explanation": "'by the time' yan cümlesine 'will' gelmez; gelecek anlamı geniş zamanla verilir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e14",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The site will remain closed until the retaining wall ____.",
+          "options": [
+            "has rebuilding",
+            "will be rebuilt",
+            "would be rebuilt",
+            "was rebuilt",
+            "is rebuilt"
+          ],
+          "correctIndex": 4,
+          "translation": "İstinat duvarı yeniden örülene kadar alan kapalı kalacak.",
+          "explanation": "'until' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e15",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "As soon as the ferry ____, the supplies will be unloaded.",
+          "options": [
+            "will dock",
+            "docks",
+            "would dock",
+            "docked",
+            "has docking"
+          ],
+          "correctIndex": 1,
+          "translation": "Feribot yanaşır yanaşmaz malzemeler boşaltılacak.",
+          "explanation": "'as soon as' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e16",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Provided that parliament ____ the budget, the policy takes effect in January.",
+          "options": [
+            "approves",
+            "will approve",
+            "would approve",
+            "approved",
+            "has approving"
+          ],
+          "correctIndex": 0,
+          "translation": "Parlamento bütçeyi onaylarsa politika ocakta yürürlüğe girer.",
+          "explanation": "'provided that' koşul bağlacıdır; 'will' almaz.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e17",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Unless the habitat ____, the species will not survive.",
+          "options": [
+            "will be protected",
+            "is protected",
+            "would be protected",
+            "was protected",
+            "has protecting"
+          ],
+          "correctIndex": 1,
+          "translation": "Yaşam alanı korunmadıkça tür hayatta kalamayacak.",
+          "explanation": "'unless' koşul bağlacıdır; yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e18",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "When the archive ____ next year, researchers will work remotely.",
+          "options": [
+            "reopened",
+            "will reopen",
+            "would reopen",
+            "reopens",
+            "has reopening"
+          ],
+          "correctIndex": 3,
+          "translation": "Arşiv gelecek yıl yeniden açıldığında araştırmacılar uzaktan çalışacak.",
+          "explanation": "'next year' geleceği bildirse de 'when' yan cümlesi geniş zaman alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e19",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "The kiln must cool before the door ____.",
+          "options": [
+            "was opened",
+            "will be opened",
+            "would be opened",
+            "is opened",
+            "has opening"
+          ],
+          "correctIndex": 3,
+          "translation": "Kapı açılmadan önce fırın soğumalıdır.",
+          "explanation": "'before' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_e20",
+          "type": "fill-blank-dropdown",
+          "prompt": "Yan cümleye gelebilecek doğru fiil biçimini seçin:",
+          "sentence": "Once the data ____, the model will be recalibrated.",
+          "options": [
+            "would be cleaned",
+            "will have been cleaned",
+            "have been cleaned",
+            "were cleaned",
+            "has cleaned"
+          ],
+          "correctIndex": 2,
+          "translation": "Veri temizlendiğinde model yeniden kalibre edilecek.",
+          "explanation": "'once' yan cümlesine 'will' gelmez; tamamlanmışlık gerekiyorsa Present Perfect kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tdrill_ex5",
+      "title": "Alıştırma 5: Kural İhlali Avcılığı",
+      "description": "Zaman uyumu kurallarını çiğneyen cümleleri bulma.",
+      "questions": [
+        {
+          "id": "tdrill_f1",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "The instrument has been out of use since eight years.",
+          "options": [
+            "has been",
+            "out of use",
+            "since",
+            "eight years"
+          ],
+          "correctIndex": 2,
+          "translation": "Cihaz sekiz yıldır kullanım dışı.",
+          "explanation": "'eight years' bir SÜREdir; süre 'for' alır. 'since' yalnızca başlangıç noktasıyla kullanılır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f2",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "They have published the first edition forty years ago.",
+          "options": [
+            "the first edition",
+            "have published",
+            "forty years",
+            "ago"
+          ],
+          "correctIndex": 1,
+          "translation": "İlk baskıyı kırk yıl önce yayımladılar.",
+          "explanation": "'ago' Present Perfect almaz. Doğrusu Simple Past: 'They published ...'",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f3",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "By the time the grant was approved, the team has left the site.",
+          "options": [
+            "By the time",
+            "was approved",
+            "has left",
+            "the site"
+          ],
+          "correctIndex": 2,
+          "translation": "Hibe onaylandığında ekip alandan ayrılmıştı.",
+          "explanation": "'By the time + V2' ana cümlede Had V3 ister; Present Perfect gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f4",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "By 2040 the restoration has cost more than the original construction.",
+          "options": [
+            "By 2040",
+            "the restoration",
+            "has cost",
+            "the original construction"
+          ],
+          "correctIndex": 2,
+          "translation": "2040'a kadar restorasyon özgün inşaattan pahalıya mal olmuş olacak.",
+          "explanation": "'By + gelecek tarih' Will Have V3 ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f5",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "The town has depended on tourism since the mill has closed.",
+          "options": [
+            "has closed",
+            "on tourism",
+            "since",
+            "has depended"
+          ],
+          "correctIndex": 0,
+          "translation": "Fabrika kapandığından beri kasaba turizme bağımlı.",
+          "explanation": "'since' yan cümlesi Simple Past kalır; Present Perfect gelmez. Doğrusu 'since the mill closed'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f6",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "This is the first time the panel leaves the country.",
+          "options": [
+            "This is",
+            "the first time",
+            "leaves",
+            "the panel"
+          ],
+          "correctIndex": 2,
+          "translation": "Pano ilk kez ülke dışına çıkıyor.",
+          "explanation": "'This is the first time' yan cümlesi Present Perfect alır: 'has left'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f7",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "It is three years since the last survey has been carried out.",
+          "options": [
+            "has been carried out",
+            "three years",
+            "since",
+            "It is"
+          ],
+          "correctIndex": 0,
+          "translation": "Son kapsamlı ölçüm yapılalı üç yıl oldu.",
+          "explanation": "'It is + süre + since' kalıbında yan cümle Simple Past kalır: 'was carried out'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f8",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "After the conservator has removed the varnish, the underdrawing became visible.",
+          "options": [
+            "After",
+            "has removed",
+            "the varnish",
+            "became"
+          ],
+          "correctIndex": 1,
+          "translation": "Restoratör verniği kaldırdıktan sonra alt çizim görünür oldu.",
+          "explanation": "'after' yan cümlesi öncelikli eylemdir ve Had V3 alır: 'had removed'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f9",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "The excavation will resume when the funding will be restored.",
+          "options": [
+            "will resume",
+            "when",
+            "will be restored",
+            "the funding"
+          ],
+          "correctIndex": 2,
+          "translation": "Fon geri verildiğinde kazı yeniden başlayacak.",
+          "explanation": "'when' yan cümlesine 'will' gelmez; geniş zaman kullanılır: 'is restored'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f10",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "The samples must stay sealed until the analysis will be complete.",
+          "options": [
+            "must stay",
+            "sealed",
+            "until",
+            "will be complete"
+          ],
+          "correctIndex": 3,
+          "translation": "Analiz tamamlanana kadar örnekler mühürlü kalmalıdır.",
+          "explanation": "'until' yan cümlesine 'will' gelmez.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f11",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "No new species has been recorded in the valley in 1990.",
+          "options": [
+            "has been recorded",
+            "in the valley",
+            "No new species",
+            "in 1990"
+          ],
+          "correctIndex": 3,
+          "translation": "Vadide 1990'da yeni bir tür kaydedilmedi.",
+          "explanation": "'in 1990' kapalı bir geçmiş tarihtir ve Present Perfect ile kullanılamaz; ya Simple Past ya da 'so far' gibi bir çapa gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f12",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "Over the past decade the glacier retreated by two kilometres.",
+          "options": [
+            "retreated",
+            "the glacier",
+            "Over the past decade",
+            "two kilometres"
+          ],
+          "correctIndex": 0,
+          "translation": "Son on yılda buzul iki kilometre geri çekildi.",
+          "explanation": "'over the past + süre' şu ana uzanır ve Present Perfect ister: 'has retreated'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f13",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "The last time the vault was opened, two seals have been found intact.",
+          "options": [
+            "The last time",
+            "was opened",
+            "intact",
+            "have been found"
+          ],
+          "correctIndex": 3,
+          "translation": "Kasa en son açıldığında iki mühür sağlam bulundu.",
+          "explanation": "'the last time + V2' geçmişte kapalı bir andır; ana cümle de Simple Past alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f14",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "How long do you work on the index?",
+          "options": [
+            "How long",
+            "on the index",
+            "you work",
+            "do"
+          ],
+          "correctIndex": 3,
+          "translation": "Ne kadar süredir dizin üzerinde çalışıyorsun?",
+          "explanation": "Süregelen bir durum sorulduğunda Present Simple değil Perfect kullanılır: 'have you been working'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f15",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "The committee already has approved the revised budget.",
+          "options": [
+            "already has approved",
+            "The committee",
+            "the revised budget",
+            "revised"
+          ],
+          "correctIndex": 0,
+          "translation": "Komite düzeltilmiş bütçeyi çoktan onayladı.",
+          "explanation": "'already' yardımcı fiil ile V3 arasına girer: 'has already approved'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f16",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "The final report has not yet been published yet.",
+          "options": [
+            "yet been",
+            "has not",
+            "published",
+            "yet"
+          ],
+          "correctIndex": 0,
+          "translation": "Nihai rapor henüz yayımlanmadı.",
+          "explanation": "'yet' cümlede bir kez kullanılır ve sona gelir; ikinci 'yet' fazladır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f17",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "Every time they reopened the trench, the sides have collapsed.",
+          "options": [
+            "Every time",
+            "have collapsed",
+            "the sides",
+            "reopened"
+          ],
+          "correctIndex": 1,
+          "translation": "Hendeği her yeniden açtıklarında kenarlar çöküyordu.",
+          "explanation": "'every time + V2' ana cümlede de Simple Past ister.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f18",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman uyumu hatasını bulunuz:",
+          "sentence": "While the technician calibrated the sensor, the power failed twice.",
+          "options": [
+            "While",
+            "calibrated",
+            "the power",
+            "failed"
+          ],
+          "correctIndex": 1,
+          "translation": "Teknisyen sensörü kalibre ederken elektrik iki kez kesildi.",
+          "explanation": "'while' eşzamanlı süregelen eylem bildirir ve Continuous ister: 'was calibrating'.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f19",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "The building is used to house the town archive.",
+          "options": [
+            "The building",
+            "is used to",
+            "house",
+            "the town archive"
+          ],
+          "correctIndex": 1,
+          "translation": "Bina eskiden kasaba arşivini barındırırdı.",
+          "explanation": "Geçmiş alışkanlık 'used to + V1' ile kurulur. 'be used to' alışkın olmak demektir ve V-ing alır.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        },
+        {
+          "id": "tdrill_f20",
+          "type": "error-spotting",
+          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "sentence": "As a student he would be very interested in inscriptions.",
+          "options": [
+            "As a student",
+            "in inscriptions",
+            "very interested",
+            "would be"
+          ],
+          "correctIndex": 3,
+          "translation": "Öğrenciyken yazıtlara çok ilgi duyardı.",
+          "explanation": "Alışkanlık bildiren 'would' durum fiilleriyle kullanılmaz; 'be' için 'used to be' gerekir.",
+          "grammarTags": [
+            "Zaman Uyumu Kuralları"
+          ]
+        }
+      ]
+    }
+  ]
+};
+  const existing = lessons.find(l => l.id === drill.id);
+  if (existing) Object.assign(existing, drill); else lessons.push(drill);
+})();

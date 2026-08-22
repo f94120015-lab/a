@@ -13022,7 +13022,16 @@ function renderExamTab() {
 // Deneme sınavından farklı olarak süresiz ve kilitsizdir; geri bildirim her
 // sorudan sonra anında gelir. Tekrar modu altyapısını kullandığı için can
 // kaybı yoktur.
-const CONNECTOR_DRILL_LESSON_ID = 'cdrill_l1';
+const CONNECTOR_DRILL_SECTIONS = [
+  { lessonId: 'cdrill_l1', title: '🔗 Bağlaç Kuralları',
+    desc: 'Kural noktalama ve tamamlayıcı tipidir: hangi işaret gelir, boşluktan sonra ne durur.',
+    icons: { cdrill_ex1: '📐', cdrill_ex2: '🧩', cdrill_ex6: '🎯',
+             cdrill_ex3: '🔍', cdrill_ex4: '🔗', cdrill_ex5: '↔️' } },
+  { lessonId: 'tdrill_l1', title: '⏳ Zaman Uyumu Kuralları',
+    desc: 'Kural zamandır: terim, cümlenin iki tarafına gelebilecek çekimleri belirler.',
+    icons: { tdrill_ex1: '⚓', tdrill_ex2: '🔀', tdrill_ex3: '⚡',
+             tdrill_ex4: '🚫', tdrill_ex5: '🔍' } }
+];
 
 // Her alıştırma 10'ar soruluk testlere bölünüp öyle listelenir: 80 soruluk tek
 // bir düğme caydırıcı, 10 soruluk bir test oturulup bitirilebilir bir hedef.
@@ -13041,46 +13050,51 @@ function renderConnectorDrillTab() {
   const listEl = document.getElementById('connector-drill-list');
   if (!listEl) return;
 
-  const lesson = lessons.find(l => l.id === CONNECTOR_DRILL_LESSON_ID);
-  const exercises = (lesson && lesson.exercises) || [];
-  if (!exercises.length) {
-    listEl.innerHTML = '<p class="text-sm-muted">Bu alıştırma henüz hazır değil.</p>';
-    return;
-  }
+  const html = CONNECTOR_DRILL_SECTIONS.map(sec => {
+    const lesson = lessons.find(l => l.id === sec.lessonId);
+    const exercises = (lesson && lesson.exercises) || [];
+    if (!exercises.length) return '';
 
-  // Her alıştırmanın kendi simgesi olsun; döngüsel bir liste kartları
-  // birbirinin kopyası gibi gösteriyordu.
-  const icons = { cdrill_ex1: '📐', cdrill_ex2: '🧩', cdrill_ex6: '🎯',
-                  cdrill_ex3: '🔍', cdrill_ex4: '🔗', cdrill_ex5: '↔️' };
-
-  listEl.innerHTML = exercises.map((ex, i) => {
-    const tests = connectorDrillTests(ex);
-    const rows = tests.map((chunk, t) => `
+    const cards = exercises.map(ex => {
+      const tests = connectorDrillTests(ex);
+      const rows = tests.map((chunk, t) => `
         <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
           <span class="text-sm-muted">Test ${t + 1} · ${chunk.length} soru</span>
           <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
-                  data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
+                  data-drill-lesson="${sec.lessonId}" data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
         </div>`).join('');
-    return `
+      return `
       <div class="card-panel" style="gap: 10px;">
         <div class="flex-center-12">
-          <span class="icon-lg">${icons[ex.id] || '📘'}</span>
+          <span class="icon-lg">${sec.icons[ex.id] || '📘'}</span>
           <div class="flex-col-4">
             <span class="section-title-sm">${ex.title}</span>
             <span class="text-sm-muted">${ex.description || ''}</span>
           </div>
         </div>
-        ${rows || '<p class="text-sm-muted">Bu alıştırmada henüz soru yok.</p>'}
+        ${rows}
       </div>`;
+    }).join('');
+
+    const total = exercises.reduce((a, e) => a + (e.questions || []).length, 0);
+    return `
+      <div style="grid-column: 1 / -1; margin: 10px 0 2px;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; margin: 0 0 4px;">${sec.title}</h3>
+        <p class="text-sm-muted" style="margin: 0;">${sec.desc} · ${exercises.length} alıştırma, ${total} soru</p>
+      </div>
+      ${cards}`;
   }).join('');
 
+  listEl.innerHTML = html || '<p class="text-sm-muted">Bu alıştırma henüz hazır değil.</p>';
+
   listEl.querySelectorAll('[data-drill-ex]').forEach(btn => {
-    btn.onclick = () => startConnectorDrill(btn.dataset.drillEx, parseInt(btn.dataset.drillTest, 10) || 0);
+    btn.onclick = () => startConnectorDrill(btn.dataset.drillLesson, btn.dataset.drillEx,
+                                            parseInt(btn.dataset.drillTest, 10) || 0);
   });
 }
 
-function startConnectorDrill(exerciseId, testIndex) {
-  const lesson = lessons.find(l => l.id === CONNECTOR_DRILL_LESSON_ID);
+function startConnectorDrill(lessonId, exerciseId, testIndex) {
+  const lesson = lessons.find(l => l.id === lessonId);
   const ex = lesson && (lesson.exercises || []).find(e => e.id === exerciseId);
   const questions = connectorDrillTests(ex)[testIndex || 0] || [];
   if (!questions.length) {
@@ -27292,7 +27306,9 @@ function renderTimeMatrix() {
       inverted: 'DEVRİK YAPILAR',
       prepositions: 'EDAT ÖBEĞİ',
       eras: 'ÇAĞ & DÖNEM',
-      reductions: 'ZAMAN KISALTMASI'
+      reductions: 'ZAMAN KISALTMASI',
+      perfect_anchors: 'PERFECT ÇAPASI',
+      patterns: 'ZAMAN KALIBI'
     };
     const catLabel = catLabelMap[item.category] || 'ZAMAN';
 
@@ -29334,4 +29350,431 @@ function toggleTrmCard(idx) {
   }
 ]);
   }
+})();
+
+
+// ============================================================
+// Zaman uyumu genişletmesi (17 terim). Ölçüt: terimin varlığı cümlenin iki
+// tarafındaki zamanı HESAPLANABİLİR kılmalı -- by the time kuralındaki gibi.
+// Bu yüzden 'nowadays' ya da 'be about to' gibi zaman anlamı taşıyan ama zaman
+// uyumu dayatmayan ifadeler kapsam dışı bırakıldı.
+// ============================================================
+(function extendTimeMatrix() {
+  if (typeof TIME_MATRIX_DATA === 'undefined') return;
+  const push = (list, items) => {
+    if (!Array.isArray(list)) return;
+    items.forEach(it => { if (!list.some(x => x.term === it.term)) list.push(it); });
+  };
+  push(TIME_MATRIX_DATA.tense_harmony, [
+  {
+    "term": "for + süre",
+    "category": "perfect_anchors",
+    "meaning": "-dir, boyunca (Süre Çapası)",
+    "rule": "📐 KURAL: Ana Cümle HAVE/HAS V3 + for + Süre  ||  Geçmiş bağlamda: HAD V3 + for + Süre",
+    "trap": "⚠️ 'since' bir NOKTA, 'for' bir SÜRE ister: since 2015 / for eight years. 'for' asla Simple Past ile 'ago' anlamı vermez.",
+    "examples": [
+      {
+        "en": "The instrument has been out of use for eight years.",
+        "tr": "Cihaz sekiz yıldır kullanım dışı.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "She had been working on the catalogue for a decade before it appeared.",
+        "tr": "Katalog çıkmadan önce on yıldır üzerinde çalışıyordu.",
+        "tense": "Past Perfect Continuous"
+      },
+      {
+        "en": "The site has remained closed for three seasons.",
+        "tr": "Alan üç sezondur kapalı kaldı.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "already",
+    "category": "perfect_anchors",
+    "meaning": "çoktan, hâlihazırda",
+    "rule": "📐 KURAL: Özne + have/has + already + V3  (olumlu cümle)",
+    "trap": "⚠️ Beklenenden ERKEN gerçekleşmiş bir eylemi bildirir; olumsuz cümlede 'already' değil 'yet' kullanılır.",
+    "examples": [
+      {
+        "en": "The committee has already approved the revised budget.",
+        "tr": "Komite düzeltilmiş bütçeyi çoktan onayladı.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "By the time the grant arrived, the team had already left.",
+        "tr": "Hibe geldiğinde ekip çoktan ayrılmıştı.",
+        "tense": "Past Perfect"
+      },
+      {
+        "en": "Two volumes have already appeared in translation.",
+        "tr": "İki cilt çeviride çoktan yayımlandı.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "yet",
+    "category": "perfect_anchors",
+    "meaning": "henüz (Olumsuz / Soru)",
+    "rule": "📐 KURAL: Özne + have/has + not + V3 + yet  ||  Have/Has + Özne + V3 + yet?",
+    "trap": "⚠️ Daima cümlenin SONUNDA yer alır ve yalnızca olumsuz ya da soru cümlesinde kullanılır; olumlu cümlede 'already' gerekir.",
+    "examples": [
+      {
+        "en": "The final report has not been published yet.",
+        "tr": "Nihai rapor henüz yayımlanmadı.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "Have the results been verified yet?",
+        "tr": "Sonuçlar henüz doğrulandı mı?",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "The excavation has not reached the lowest layer yet.",
+        "tr": "Kazı henüz en alt katmana ulaşmadı.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "just",
+    "category": "perfect_anchors",
+    "meaning": "az önce, henüz",
+    "rule": "📐 KURAL: Özne + have/has + just + V3",
+    "trap": "⚠️ Çok yakın geçmişi bildirir ve yardımcı fiil ile esas fiilin ARASINA girer; cümle sonuna gelmez.",
+    "examples": [
+      {
+        "en": "The laboratory has just released its preliminary findings.",
+        "tr": "Laboratuvar ön bulgularını az önce açıkladı.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "She had just finished the transcription when the power failed.",
+        "tr": "Elektrik kesildiğinde çeviri yazımı henüz bitirmişti.",
+        "tense": "Past Perfect"
+      },
+      {
+        "en": "The museum has just acquired a second panel.",
+        "tr": "Müze az önce ikinci bir pano edindi.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "ever / never",
+    "category": "perfect_anchors",
+    "meaning": "hiç / hiçbir zaman",
+    "rule": "📐 KURAL: Have/Has + Özne + ever + V3?  ||  Özne + have/has + never + V3",
+    "trap": "⚠️ 'never' zaten olumsuzdur; yükleme ikinci bir olumsuzluk eklenmez ('has never not seen' yanlıştır).",
+    "examples": [
+      {
+        "en": "Has the manuscript ever been exhibited outside the country?",
+        "tr": "El yazması hiç yurt dışında sergilendi mi?",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "The species has never been recorded north of the river.",
+        "tr": "Tür nehrin kuzeyinde hiçbir zaman kaydedilmedi.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "He had never seen the original before that afternoon.",
+        "tr": "O öğleden önce aslını hiç görmemişti.",
+        "tense": "Past Perfect"
+      }
+    ]
+  },
+  {
+    "term": "lately / recently",
+    "category": "perfect_anchors",
+    "meaning": "son zamanlarda, geçenlerde",
+    "rule": "📐 KURAL: Özne + have/has + V3 / have been V-ing + lately",
+    "trap": "⚠️ Belirsiz ve süregelen bir yakın geçmiş kurar; kesin bir tarihle ('last year') birlikte kullanılmaz.",
+    "examples": [
+      {
+        "en": "Attendance has fallen sharply lately.",
+        "tr": "Katılım son zamanlarda keskin biçimde düştü.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "Researchers have been revisiting the 1970s data recently.",
+        "tr": "Araştırmacılar son zamanlarda 1970'lerin verisini yeniden ele alıyor.",
+        "tense": "Present Perfect Continuous"
+      },
+      {
+        "en": "The journal has published little on the subject lately.",
+        "tr": "Dergi son zamanlarda konu üzerine az yayın yaptı.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "over the past / in the last + süre",
+    "category": "perfect_anchors",
+    "meaning": "son ... içinde",
+    "rule": "📐 KURAL: Over the past / In the last + Süre → Ana Cümle HAVE/HAS V3",
+    "trap": "⚠️ Şu ana kadar uzanan bir pencere açar; bu yüzden Simple Past almaz. 'In 1990' gibi kapalı bir tarihle karıştırılmamalıdır.",
+    "examples": [
+      {
+        "en": "Over the past decade the glacier has retreated by two kilometres.",
+        "tr": "Son on yılda buzul iki kilometre geri çekildi.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "In the last five years the collection has doubled in size.",
+        "tr": "Son beş yılda koleksiyon iki katına çıktı.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "Over the past century the marshes have almost disappeared.",
+        "tr": "Son yüzyılda bataklıklar neredeyse yok oldu.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "how long",
+    "category": "perfect_anchors",
+    "meaning": "ne kadar süredir / ne kadar sürede",
+    "rule": "📐 KURAL: How long + have/has + Özne + V3 / been V-ing?  (süregelen durum)",
+    "trap": "⚠️ Süregelen bir durum sorulurken Present Simple değil Perfect kullanılır: 'How long do you work here' değil 'How long have you worked here'.",
+    "examples": [
+      {
+        "en": "How long has the archive been closed to the public?",
+        "tr": "Arşiv ne kadar süredir halka kapalı?",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "How long had they been excavating before the funding stopped?",
+        "tr": "Fon kesilmeden önce ne kadar süredir kazı yapıyorlardı?",
+        "tense": "Past Perfect Continuous"
+      },
+      {
+        "en": "How long have you been working on the index?",
+        "tr": "Ne kadar süredir dizin üzerinde çalışıyorsun?",
+        "tense": "Present Perfect Continuous"
+      }
+    ]
+  }
+]);
+  push(TIME_MATRIX_DATA.tense_harmony, [
+  {
+    "term": "ago",
+    "category": "patterns",
+    "meaning": "önce (Geçmiş Kilidi)",
+    "rule": "📐 KURAL: Süre + ago → Ana Cümle yalnızca V2 (Simple Past)",
+    "trap": "⚠️ 'ago' ASLA Present Perfect almaz. 'since' bir başlangıç noktası, 'for' bir süre, 'ago' ise geçmişte kapalı bir andır: he left two years ago / he has been away for two years.",
+    "examples": [
+      {
+        "en": "The kiln was abandoned nearly two centuries ago.",
+        "tr": "Fırın yaklaşık iki yüzyıl önce terk edildi.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "They published the first edition forty years ago.",
+        "tr": "İlk baskıyı kırk yıl önce yayımladılar.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "The wall collapsed only a few weeks ago.",
+        "tr": "Duvar daha birkaç hafta önce çöktü.",
+        "tense": "Simple Past"
+      }
+    ]
+  },
+  {
+    "term": "this is the first / second time (that)",
+    "category": "patterns",
+    "meaning": "ilk / ikinci kez ... -yor",
+    "rule": "📐 KURAL: This is the first time (that) + Özne + have/has V3",
+    "trap": "⚠️ Ana cümle Present ('This is') olmasına rağmen yan cümle Present Perfect alır; Simple Present gelmez.",
+    "examples": [
+      {
+        "en": "This is the first time the panel has left the country.",
+        "tr": "Pano ilk kez ülke dışına çıkıyor.",
+        "tense": "Present Perfect"
+      },
+      {
+        "en": "It was the third time the committee had rejected the proposal.",
+        "tr": "Komite teklifi üçüncü kez reddediyordu.",
+        "tense": "Past Perfect"
+      },
+      {
+        "en": "This is the first time I have seen the two folios together.",
+        "tr": "İki yaprağı ilk kez bir arada görüyorum.",
+        "tense": "Present Perfect"
+      }
+    ]
+  },
+  {
+    "term": "it is / it has been + süre + since",
+    "category": "patterns",
+    "meaning": "... olalı ... oldu",
+    "rule": "📐 KURAL: It is / It has been + Süre + since + Özne + V2",
+    "trap": "⚠️ 'since' yan cümlesi Simple Past kalır; Present Perfect almaz. Ana cümle 'It is' ya da 'It has been' olabilir, anlam değişmez.",
+    "examples": [
+      {
+        "en": "It is three years since the last full survey was carried out.",
+        "tr": "Son kapsamlı ölçüm yapılalı üç yıl oldu.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "It has been a decade since the museum acquired the collection.",
+        "tr": "Müze koleksiyonu edineli on yıl oldu.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "It was two months since they had heard from the site.",
+        "tr": "Alandan haber alalı iki ay olmuştu.",
+        "tense": "Past Perfect"
+      }
+    ]
+  },
+  {
+    "term": "every time / each time",
+    "category": "patterns",
+    "meaning": "her ... -dığında",
+    "rule": "📐 KURAL: Every time + Özne + V1, Ana Cümle V1  ||  Every time + V2, Ana Cümle V2",
+    "trap": "⚠️ Tekrarlanan bir durum kurar ve yan cümlesine 'will' gelmez; koşul cümleciği gibi davranır.",
+    "examples": [
+      {
+        "en": "Every time the river rises, the lower fields flood.",
+        "tr": "Nehir her yükseldiğinde alçak tarlalar su altında kalır.",
+        "tense": "Simple Present"
+      },
+      {
+        "en": "Every time they reopened the trench, the sides collapsed.",
+        "tr": "Hendeği her yeniden açtıklarında kenarlar çöküyordu.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "Each time a new edition appears, the older readings are dropped.",
+        "tr": "Her yeni baskı çıktığında eski okumalar çıkarılır.",
+        "tense": "Simple Present"
+      }
+    ]
+  },
+  {
+    "term": "the first / last time",
+    "category": "patterns",
+    "meaning": "ilk / son kez ... -dığında",
+    "rule": "📐 KURAL: The last time + Özne + V2, Ana Cümle V2 / HAD V3",
+    "trap": "⚠️ Geçmişte kapalı bir anı işaret eder; bu yüzden Present Perfect değil Simple Past alır.",
+    "examples": [
+      {
+        "en": "The last time the vault was opened, two seals were found intact.",
+        "tr": "Kasa en son açıldığında iki mühür sağlam bulundu.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "The first time she visited the site, the excavation had already closed.",
+        "tr": "Alanı ilk ziyaretinde kazı çoktan kapanmıştı.",
+        "tense": "Past Perfect"
+      },
+      {
+        "en": "The last time we met, the manuscript was still unpublished.",
+        "tr": "En son görüştüğümüzde el yazması hâlâ yayımlanmamıştı.",
+        "tense": "Simple Past"
+      }
+    ]
+  },
+  {
+    "term": "by then / by that time",
+    "category": "patterns",
+    "meaning": "o zamana kadar, o zamana gelindiğinde",
+    "rule": "📐 KURAL: By then → HAD V3 (geçmiş)  ||  By then → WILL HAVE V3 (gelecek)",
+    "trap": "⚠️ 'by the time' bir yan cümle alır, 'by then' ise tek başına bir zaman zarfıdır; ikisi de aynı Perfect kilidini uygular.",
+    "examples": [
+      {
+        "en": "The charter was signed in 1215; by then the town had held a market for a generation.",
+        "tr": "Berat 1215'te imzalandı; o zamana kadar kasaba bir kuşaktır pazar kurmuştu.",
+        "tense": "Past Perfect"
+      },
+      {
+        "en": "The wing reopens in 2030; by then the restoration will have cost twice the estimate.",
+        "tr": "Kanat 2030'da açılıyor; o zamana kadar restorasyon tahminin iki katına mal olmuş olacak.",
+        "tense": "Future Perfect"
+      },
+      {
+        "en": "By that time the original workshop had closed.",
+        "tr": "O zamana gelindiğinde özgün atölye kapanmıştı.",
+        "tense": "Past Perfect"
+      }
+    ]
+  },
+  {
+    "term": "used to + V1",
+    "category": "patterns",
+    "meaning": "eskiden ... -irdi",
+    "rule": "📐 KURAL: Özne + used to + V1 → yalnızca GEÇMİŞ; şimdiki durumla karşıtlık kurar",
+    "trap": "⚠️ 'be used to + V-ing' (alışkın olmak) ile karıştırılmamalıdır. 'used to' yalnızca geçmişe aittir, geniş zaman karşılığı yoktur.",
+    "examples": [
+      {
+        "en": "The building used to house the town archive.",
+        "tr": "Bina eskiden kasaba arşivini barındırırdı.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "Ships used to unload directly onto the quay.",
+        "tr": "Gemiler eskiden doğrudan rıhtıma boşaltma yapardı.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "She used to work on Byzantine seals before turning to numismatics.",
+        "tr": "Nümismatiğe yönelmeden önce Bizans mühürleri üzerine çalışırdı.",
+        "tense": "Simple Past"
+      }
+    ]
+  },
+  {
+    "term": "would (alışkanlık)",
+    "category": "patterns",
+    "meaning": "eskiden ... -irdi (Tekrarlanan Eylem)",
+    "rule": "📐 KURAL: Özne + would + V1 → geçmişte TEKRARLANAN eylem",
+    "trap": "⚠️ Yalnızca eylem fiilleriyle kullanılır; durum fiillerinde (be, have, know, own) 'used to' gerekir. 'would be' geçmiş alışkanlık bildirmez.",
+    "examples": [
+      {
+        "en": "Every autumn the villagers would repair the terrace walls.",
+        "tr": "Her sonbahar köylüler taraça duvarlarını onarırdı.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "The curator would spend whole mornings in the store room.",
+        "tr": "Küratör bütün sabahları depo odasında geçirirdi.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "As a student he would copy inscriptions by hand.",
+        "tr": "Öğrenciyken yazıtları elle kopyalardı.",
+        "tense": "Simple Past"
+      }
+    ]
+  },
+  {
+    "term": "it was not until ... that",
+    "category": "patterns",
+    "meaning": "ancak ... -dığında ... oldu",
+    "rule": "📐 KURAL: It was not until + Zaman/Cümle + that + Özne + V2  ||  Devrik: Not until ... did + Özne + V1",
+    "trap": "⚠️ Vurgu yapısıdır ve 'that' düşürülemez. Devrik biçiminde ana cümle yardımcı fiille kurulur: 'Not until 1960 did researchers recognise ...'",
+    "examples": [
+      {
+        "en": "It was not until 1964 that the script was finally deciphered.",
+        "tr": "Yazı ancak 1964'te çözülebildi.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "It was not until the second survey that the wall was located.",
+        "tr": "Duvar ancak ikinci ölçümde bulundu.",
+        "tense": "Simple Past"
+      },
+      {
+        "en": "Not until the funding was restored did the excavation resume.",
+        "tr": "Kazı ancak fon geri verildiğinde yeniden başladı.",
+        "tense": "Simple Past"
+      }
+    ]
+  }
+]);
 })();
