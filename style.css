@@ -12538,6 +12538,9 @@ nDown 0.3s ease;
 /* ── Extracted utility classes (from repeated inline styles) ── */
 .u-hidden { display: none; }
 .pill-toggle { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer; }
+.drill-tab { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
+.drill-tab:hover { border-color: var(--accent-primary); }
+.drill-tab.active { background: var(--accent-primary); border-color: var(--accent-primary); color: #fff; font-weight: 700; }
 .text-label-xs { font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); }
 .flex-col-4 { display: flex; flex-direction: column; gap: 4px; }
 .text-label { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); }

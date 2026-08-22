@@ -13022,6 +13022,8 @@ function renderExamTab() {
 // Deneme sınavından farklı olarak süresiz ve kilitsizdir; geri bildirim her
 // sorudan sonra anında gelir. Tekrar modu altyapısını kullandığı için can
 // kaybı yoktur.
+let drillActiveSection = 'cdrill_l1';
+
 const CONNECTOR_DRILL_SECTIONS = [
   { lessonId: 'cdrill_l1', title: '🔗 Bağlaç Kuralları',
     desc: 'Kural noktalama ve tamamlayıcı tipidir: hangi işaret gelir, boşluktan sonra ne durur.',
@@ -13051,20 +13053,40 @@ function renderConnectorDrillTab() {
   const listEl = document.getElementById('connector-drill-list');
   if (!listEl) return;
 
-  const html = CONNECTOR_DRILL_SECTIONS.map(sec => {
-    const lesson = lessons.find(l => l.id === sec.lessonId);
-    const exercises = (lesson && lesson.exercises) || [];
-    if (!exercises.length) return '';
+  document.querySelectorAll('.drill-tab').forEach(btn => {
+    const on = btn.dataset.drillSection === drillActiveSection;
+    btn.classList.toggle('active', on);
+    btn.classList.toggle('pill-toggle', !on);
+    btn.onclick = () => {
+      drillActiveSection = btn.dataset.drillSection;
+      renderConnectorDrillTab();
+    };
+  });
 
-    const cards = exercises.map(ex => {
-      const tests = connectorDrillTests(ex);
-      const rows = tests.map((chunk, t) => `
-        <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
-          <span class="text-sm-muted">Test ${t + 1} · ${chunk.length} soru</span>
-          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
-                  data-drill-lesson="${sec.lessonId}" data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
-        </div>`).join('');
-      return `
+  const sec = CONNECTOR_DRILL_SECTIONS.find(x => x.lessonId === drillActiveSection)
+           || CONNECTOR_DRILL_SECTIONS[0];
+  const lesson = lessons.find(l => l.id === sec.lessonId);
+  const exercises = (lesson && lesson.exercises) || [];
+  if (!exercises.length) {
+    listEl.innerHTML = '<p class="text-sm-muted">Bu alıştırma henüz hazır değil.</p>';
+    return;
+  }
+
+  const total = exercises.reduce((a, e) => a + (e.questions || []).length, 0);
+  const head = `
+    <div style="grid-column: 1 / -1; margin: 2px 0;">
+      <p class="text-sm-muted" style="margin: 0;">${sec.desc} · ${exercises.length} alıştırma, ${total} soru</p>
+    </div>`;
+
+  const cards = exercises.map(ex => {
+    const tests = connectorDrillTests(ex);
+    const rows = tests.map((chunk, t) => `
+      <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
+        <span class="text-sm-muted">Test ${t + 1} · ${chunk.length} soru</span>
+        <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
+                data-drill-lesson="${sec.lessonId}" data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
+      </div>`).join('');
+    return `
       <div class="card-panel" style="gap: 10px;">
         <div class="flex-center-12">
           <span class="icon-lg">${sec.icons[ex.id] || '📘'}</span>
@@ -13075,18 +13097,9 @@ function renderConnectorDrillTab() {
         </div>
         ${rows}
       </div>`;
-    }).join('');
-
-    const total = exercises.reduce((a, e) => a + (e.questions || []).length, 0);
-    return `
-      <div style="grid-column: 1 / -1; margin: 10px 0 2px;">
-        <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; margin: 0 0 4px;">${sec.title}</h3>
-        <p class="text-sm-muted" style="margin: 0;">${sec.desc} · ${exercises.length} alıştırma, ${total} soru</p>
-      </div>
-      ${cards}`;
   }).join('');
 
-  listEl.innerHTML = html || '<p class="text-sm-muted">Bu alıştırma henüz hazır değil.</p>';
+  listEl.innerHTML = head + cards;
 
   listEl.querySelectorAll('[data-drill-ex]').forEach(btn => {
     btn.onclick = () => startConnectorDrill(btn.dataset.drillLesson, btn.dataset.drillEx,
