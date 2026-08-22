@@ -42304,12 +42304,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
           "sentence": "The strategy is risky ___ however, it offers substantial financial rewards.",
           "options": [
-            ";",
-            ",",
             ".",
+            ",",
+            ";",
             ":"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "translation": "Strateji risklidir; ancak büyük finansal getiriler sunar.",
           "explanation": "İki bağımsız cümle 'however' ile bağlanıyor ve 'however' küçük harfle devam ediyor. Nokta konsaydı büyük harf gerekirdi; virgül ise bağımsız iki cümleyi tek başına bağlayamaz. Doğru işaret noktalı virgüldür.",
           "grammarTags": [
@@ -42322,12 +42322,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
           "sentence": "The trial faced budget cuts ___ Nevertheless, the researchers proceeded.",
           "options": [
-            ";",
             ".",
+            ";",
             ",",
             ":"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "translation": "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti.",
           "explanation": "'Nevertheless' büyük harfle başladığı için kendisinden önce cümle bitmiş olmalıdır; yani nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
@@ -42358,12 +42358,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
           "sentence": "Submit the form before Friday ___ or else your application will be rejected.",
           "options": [
-            ";",
-            ".",
             ",",
+            ".",
+            ";",
             ":"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "translation": "Formu cumadan önce gönderin, yoksa başvurunuz reddedilecek.",
           "explanation": "'or else' bir geçiş zarfı değil, bağlaç işlevi gören bir kalıptır ve kendisinden önce virgül alır: Cümle 1, or else Cümle 2.",
           "grammarTags": [
@@ -42414,10 +42414,10 @@ if (typeof lessons !== 'undefined') {
           "options": [
             ";",
             ",",
-            ".",
-            ":"
+            ":",
+            "."
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "translation": "Arşivde 4.000 mektup var. Üstelik çoğu yayımlanmamış.",
           "explanation": "'Moreover' büyük harfle başladığına göre önceki cümle bitmiştir; nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
@@ -42430,12 +42430,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
           "sentence": "The soil was too acidic ___ so the bone fragments did not survive.",
           "options": [
-            ",",
+            ":",
             ";",
             ".",
-            ":"
+            ","
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "translation": "Toprak fazla asidikti, bu yüzden kemik parçaları korunamadı.",
           "explanation": "'so' bir geçiş zarfı değil bağlaçtır; kendisinden önce virgül alır. Noktalı virgül yalnızca geçiş zarflarıyla kullanılır.",
           "grammarTags": [
@@ -42450,10 +42450,10 @@ if (typeof lessons !== 'undefined') {
           "options": [
             ":",
             ",",
-            ".",
-            ";"
+            ";",
+            "."
           ],
-          "correctIndex": 3,
+          "correctIndex": 2,
           "translation": "Cuma'dan önce kayıt olun; aksi takdirde yeriniz başkasına verilecek.",
           "explanation": "'otherwise' küçük harfle devam ediyor ve bir geçiş zarfı; iki bağımsız cümle arasında noktalı virgül ister.",
           "grammarTags": [
@@ -42485,11 +42485,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "Rainfall increased sharply ___ Nevertheless, the reservoirs remained below capacity.",
           "options": [
             ";",
-            ".",
+            ":",
             ",",
-            ":"
+            "."
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "translation": "Yağış keskin biçimde arttı. Buna rağmen barajlar kapasitenin altında kaldı.",
           "explanation": "'Nevertheless' büyük harfle başlıyor; öncesinde cümlenin nokta ile bitmesi gerekir.",
           "grammarTags": [
@@ -42521,11 +42521,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "The northern route is shorter ___ Conversely, it is impassable for four months a year.",
           "options": [
             ";",
-            ".",
             ",",
+            ".",
             ":"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "translation": "Kuzey güzergâhı daha kısa. Buna karşılık yılın dört ayı geçilemez.",
           "explanation": "'Conversely' büyük harfle başladığı için önceki cümle noktayla bitmiştir.",
           "grammarTags": [
@@ -42539,11 +42539,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "Two species were recorded ___ namely the common swift and the pallid swift.",
           "options": [
             ";",
-            ":",
+            ",",
             ".",
-            ","
+            ":"
           ],
-          "correctIndex": 3,
+          "correctIndex": 1,
           "translation": "İki tür kaydedildi, yani ebabil ve boz ebabil.",
           "explanation": "'namely' arkasından tam cümle değil, tek tek sayılan ögeler getirir; bu yüzden virgül kullanılır.",
           "grammarTags": [
@@ -42567,6 +42567,96 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ]
+        },
+        {
+          "id": "cdrill_p16",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The survey covered every district ___ Specifically, it sampled 40 households in each.",
+          "options": [
+            ";",
+            ".",
+            ",",
+            ":"
+          ],
+          "correctIndex": 1,
+          "translation": "Anket her ilçeyi kapsadı. Özel olarak her birinde 40 hane örneklendi.",
+          "explanation": "'Specifically' büyük harfle başladığı için önceki cümle noktayla bitmiştir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p17",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The tax was abolished in 1994 ___ Previously, it had funded a third of local services.",
+          "options": [
+            ";",
+            ".",
+            ",",
+            ":"
+          ],
+          "correctIndex": 1,
+          "translation": "Vergi 1994'te kaldırıldı. Daha önce yerel hizmetlerin üçte birini finanse ediyordu.",
+          "explanation": "'Previously' büyük harfle başlıyor; noktalı virgülden sonra büyük harf gelmez, bu yüzden nokta gerekir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p18",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The charter was granted in 1215 ___ thereafter, the town held its own weekly market.",
+          "options": [
+            ",",
+            ";",
+            ".",
+            ":"
+          ],
+          "correctIndex": 1,
+          "translation": "Berat 1215'te verildi; ondan sonra kasaba kendi haftalık pazarını kurdu.",
+          "explanation": "'thereafter' küçük harfle devam ediyor, yani cümle bitmemiş. İki bağımsız cümleyi bağlayan geçiş zarfı noktalı virgül ister.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p19",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The estimate was accurate ___ accordingly, no revision was needed.",
+          "options": [
+            ";",
+            ",",
+            ".",
+            ":"
+          ],
+          "correctIndex": 0,
+          "translation": "Tahmin isabetliydi; dolayısıyla bir düzeltmeye gerek kalmadı.",
+          "explanation": "'accordingly' küçük harfle devam eden bir geçiş zarfıdır; öncesinde noktalı virgül gerekir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_p20",
+          "type": "punctuation-check",
+          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
+          "sentence": "The pigment fades in daylight ___ That is why the room is kept dark.",
+          "options": [
+            ";",
+            ",",
+            ".",
+            ":"
+          ],
+          "correctIndex": 2,
+          "translation": "Pigment gün ışığında soluyor. İşte bu yüzden oda karanlık tutuluyor.",
+          "explanation": "'That is why' büyük harfle başlıyor; önceki cümlenin noktayla bitmesi gerekir. Ayrıca kendisinden sonra virgül almaz.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
         }
       ]
     },
@@ -42582,12 +42672,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "____ the heavy rain, the match went ahead as planned.",
           "options": [
             "Even though",
-            "Although",
             "Despite",
+            "Although",
             "However",
             "Whereas"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "translation": "Şiddetli yağmura rağmen maç planlandığı gibi oynandı.",
           "explanation": "Boşluktan sonra isim öbeği ('the heavy rain') geliyor. Although, even though ve whereas tam cümle ister; however ise bağımsız cümle ile kullanılır. İsim öbeği alan tek seçenek 'Despite'tır.",
           "grammarTags": [
@@ -42601,12 +42691,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "____ it was raining heavily, the match went ahead as planned.",
           "options": [
             "Despite",
-            "Although",
+            "Regardless of",
             "In spite of",
             "Nevertheless",
-            "Regardless of"
+            "Although"
           ],
-          "correctIndex": 1,
+          "correctIndex": 4,
           "translation": "Şiddetli yağmur yağmasına rağmen maç planlandığı gibi oynandı.",
           "explanation": "Boşluktan sonra özne + fiil ('it was raining') geliyor. Despite, in spite of ve regardless of isim öbeği ister; nevertheless yan cümle başlatamaz. Tam cümle alan tek seçenek 'Although'dur.",
           "grammarTags": [
@@ -42639,12 +42729,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "____ having very little funding, the group published three papers that year.",
           "options": [
             "Even though",
-            "Although",
             "In spite of",
+            "Although",
             "Nonetheless",
             "Though"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "translation": "Çok az fon almasına rağmen grup o yıl üç makale yayımladı.",
           "explanation": "Boşluktan sonra V-ing ('having') geliyor. Although, even though ve though özne + fiil ister; nonetheless bağımsız cümle ile kullanılır. V-ing alan tek seçenek 'In spite of'tır.",
           "grammarTags": [
@@ -42658,12 +42748,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "The results were promising. The sample was very small, ____.",
           "options": [
             "however",
-            "though",
+            "whereas",
             "although",
             "despite",
-            "whereas"
+            "though"
           ],
-          "correctIndex": 1,
+          "correctIndex": 4,
           "translation": "Sonuçlar umut vericiydi. Yine de örneklem çok küçüktü.",
           "explanation": "Boşluk cümlenin sonunda ve tek başına. Cümle sonunda kullanılabilen tek zıtlık bağlacı 'though'dur; although ve whereas yalnızca yan cümle başında, however ise cümle başında ya da noktalı virgülden sonra yer alır.",
           "grammarTags": [
@@ -42678,11 +42768,11 @@ if (typeof lessons !== 'undefined') {
           "options": [
             "Regardless of",
             "Despite",
-            "But for",
+            "If",
             "In case of",
-            "If"
+            "But for"
           ],
-          "correctIndex": 4,
+          "correctIndex": 2,
           "translation": "Örnek kirlenmişse sonuçlara güvenilemez.",
           "explanation": "Boşluktan sonra özne + fiil geliyor. Despite, but for, in case of ve regardless of isim öbeği ister; tam cümle alan tek seçenek 'If'tir.",
           "grammarTags": [
@@ -42735,11 +42825,11 @@ if (typeof lessons !== 'undefined') {
           "options": [
             "besides that",
             "in addition",
-            "moreover",
+            "as well as",
             "furthermore",
-            "as well as"
+            "moreover"
           ],
-          "correctIndex": 4,
+          "correctIndex": 2,
           "translation": "Hibe, seyahat ve konaklamanın yanı sıra ekipmanı da karşılıyor.",
           "explanation": "Boşluktan sonra isim öbeği geliyor. In addition, moreover ve furthermore bağımsız cümle ile kullanılan geçiş zarflarıdır; isim öbeği alan tek seçenek 'as well as'tir.",
           "grammarTags": [
@@ -42752,13 +42842,13 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
           "sentence": "____ the printed catalogue, an online database is now available.",
           "options": [
-            "In addition to",
             "In addition",
+            "In addition to",
             "Moreover",
             "Furthermore",
             "Additionally"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "translation": "Basılı kataloğa ek olarak artık çevrimiçi bir veri tabanı da mevcut.",
           "explanation": "Boşluktan sonra isim öbeği geliyor. 'In addition' ve diğerleri bağımsız cümle ister; isim alabilmesi için 'to' gerekir.",
           "grammarTags": [
@@ -42773,11 +42863,11 @@ if (typeof lessons !== 'undefined') {
           "options": [
             "Instead of",
             "Despite",
-            "In spite of",
+            "As long as",
             "But for",
-            "As long as"
+            "In spite of"
           ],
-          "correctIndex": 4,
+          "correctIndex": 2,
           "translation": "Sıcaklık sıfırın altında kaldığı sürece örnekler kararlı kalır.",
           "explanation": "Boşluktan sonra özne + fiil geliyor ve anlam koşul bildiriyor. Diğer dört seçenek isim öbeği isteyen edatlardır.",
           "grammarTags": [
@@ -42791,12 +42881,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "____ both parties agree in writing will the contract take effect.",
           "options": [
             "Even if",
-            "Only if",
-            "As long as",
             "Provided that",
+            "As long as",
+            "Only if",
             "Unless"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "translation": "Ancak iki taraf da yazılı olarak kabul ederse sözleşme yürürlüğe girer.",
           "explanation": "Ana cümle devrik kurulmuş ('will the contract take effect'). Cümle başında kendisinden sonra devrik ana cümle gerektiren tek koşul kalıbı 'Only if'tir.",
           "grammarTags": [
@@ -42809,13 +42899,13 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
           "sentence": "____ the grant is renewed, the fieldwork will continue as planned.",
           "options": [
-            "Whether or not",
-            "If",
             "Unless",
+            "If",
+            "Whether or not",
             "Provided that",
             "In case"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "translation": "Hibe yenilensin ya da yenilenmesin saha çalışması planlandığı gibi sürecek.",
           "explanation": "Ana cümle her iki olasılıkta da geçerli bir sonuç bildiriyor. Tek bir olasılık kuran if, unless, provided that ve in case bu anlamı veremez.",
           "grammarTags": [
@@ -42829,12 +42919,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "Neither the first model ____ the second explains the anomaly.",
           "options": [
             "or",
-            "nor",
-            "and",
             "but",
+            "and",
+            "nor",
             "either"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "translation": "Ne ilk model ne de ikincisi anormalliği açıklıyor.",
           "explanation": "'Neither' ile başlayan ikiz bağlaç yapısı daima 'nor' ile tamamlanır; 'or' yalnızca 'either' ile eşleşir.",
           "grammarTags": [
@@ -42867,12 +42957,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "____ the archive has been digitised, researchers can consult it from abroad.",
           "options": [
             "Owing to",
-            "Despite",
-            "Thanks to",
             "Now that",
+            "Thanks to",
+            "Despite",
             "Because of"
           ],
-          "correctIndex": 3,
+          "correctIndex": 1,
           "translation": "Arşiv sayısallaştırıldığına göre araştırmacılar ona yurt dışından erişebiliyor.",
           "explanation": "Boşluktan sonra özne + fiil geliyor. Thanks to, owing to, because of ve despite isim öbeği ister; tam cümle alan tek seçenek 'Now that'tir.",
           "grammarTags": [
@@ -42906,11 +42996,11 @@ if (typeof lessons !== 'undefined') {
           "options": [
             "Whereas",
             "Except that",
-            "In terms of",
+            "As far as",
             "Even though",
-            "As far as"
+            "In terms of"
           ],
-          "correctIndex": 2,
+          "correctIndex": 4,
           "translation": "Doğruluk açısından eski cihaz hâlâ yenisinden iyi.",
           "explanation": "Boşluktan sonra tek bir isim geliyor. Except that, whereas ve even though tam cümle ister; 'as far as' ise '... is concerned' ile tamamlanmadan kullanılamaz.",
           "grammarTags": [
@@ -42924,12 +43014,12 @@ if (typeof lessons !== 'undefined') {
           "sentence": "The two editions are identical, ____ the later one omits the preface.",
           "options": [
             "regardless of",
-            "except for",
+            "except that",
             "apart from",
             "instead of",
-            "except that"
+            "except for"
           ],
-          "correctIndex": 4,
+          "correctIndex": 1,
           "translation": "İki baskı aynı, şu var ki sonraki önsözü çıkarmış.",
           "explanation": "Boşluktan sonra tam cümle geliyor. Except for, apart from, instead of ve regardless of isim öbeği ister; cümle alan tek biçim 'except that'tir.",
           "grammarTags": [
@@ -42951,6 +43041,253 @@ if (typeof lessons !== 'undefined') {
           "correctIndex": 3,
           "translation": "Fabrika kapandığından beri kasaba turizme bağımlı.",
           "explanation": "Ana cümle Present Perfect ('has depended') ve boşluktan sonra tam cümle var. During, throughout ve prior to isim ister; 'in the meantime' ise bağımsız cümle ile kullanılan bir geçiş zarfıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c21",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "The finds may leave the country ____ they are returned within a year.",
+          "options": [
+            "because of",
+            "in spite of",
+            "regardless of",
+            "apart from",
+            "on condition that"
+          ],
+          "correctIndex": 4,
+          "translation": "Buluntular, bir yıl içinde iade edilmeleri koşuluyla ülkeden çıkabilir.",
+          "explanation": "Boşluktan sonra tam cümle geliyor ve anlam bir koşul bildiriyor. Diğer dört seçenek isim öbeği isteyen edatlardır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c22",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the dating is correct, the settlement predates the city wall.",
+          "options": [
+            "In terms of",
+            "Despite",
+            "Owing to",
+            "Instead of",
+            "Assuming that"
+          ],
+          "correctIndex": 4,
+          "translation": "Tarihlendirmenin doğru olduğunu varsayarsak yerleşim, kent surundan öncedir.",
+          "explanation": "Boşluktan sonra tam cümle var ve bir varsayım kuruluyor. Kalan dört seçenek isim öbeği alır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c23",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the donor's endowment, the gallery would have closed in 1994.",
+          "options": [
+            "Had it not been for",
+            "If",
+            "Even though",
+            "Unless",
+            "Whenever"
+          ],
+          "correctIndex": 0,
+          "translation": "Bağışçının vakfı olmasaydı galeri 1994'te kapanırdı.",
+          "explanation": "Boşluktan sonra isim öbeği geliyor ve sonuç cümlesi 'would have V3'. Bu iki koşulu birden karşılayan tek yapı devrik gizli şarttır; diğerleri tam cümle ister.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c24",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the river rises above four metres, the lower fields are flooded.",
+          "options": [
+            "Whenever",
+            "During",
+            "Throughout",
+            "Prior to",
+            "In the meantime"
+          ],
+          "correctIndex": 0,
+          "translation": "Nehir dört metrenin üzerine her çıktığında alçak tarlalar su altında kalır.",
+          "explanation": "Boşluktan sonra tam cümle geliyor ve tekrarlanan bir durum anlatılıyor. During, throughout ve prior to isim ister; 'in the meantime' bağımsız cümle ile kullanılır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c25",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "The museum holds several bronzes, ____ two of the earliest known mirrors.",
+          "options": [
+            "including",
+            "include",
+            "included",
+            "in addition",
+            "moreover"
+          ],
+          "correctIndex": 0,
+          "translation": "Müzede, bilinen en eski aynalardan ikisi dahil olmak üzere birkaç bronz eser var.",
+          "explanation": "Boşluk isim öbeğini genel isme bağlıyor. 'include' ve 'included' çekimli fiil biçimleridir; 'in addition' ve 'moreover' ise bağımsız cümle ister.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c26",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the northern route is shorter, ____ it is the more dangerous of the two.",
+          "options": [
+            "Although / but",
+            "Just as / so",
+            "Despite / yet",
+            "Whereas / however",
+            "Even though / still"
+          ],
+          "correctIndex": 1,
+          "translation": "Kuzey güzergâhı nasıl daha kısaysa, aynı şekilde ikisinin daha tehlikelisidir de.",
+          "explanation": "'Just as + Cümle 1, so + Cümle 2' birebir benzetişim kalıbıdır ve iki parçası birlikte kullanılır. Diğer seçenekler aynı cümlede iki zıtlık işaretini birden kullandığı için hatalıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c27",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ as the method may seem, it requires years of training to apply.",
+          "options": [
+            "Simple",
+            "Simply",
+            "Simpler",
+            "The simple",
+            "A simple"
+          ],
+          "correctIndex": 0,
+          "translation": "Yöntem ne kadar basit görünse de uygulanması yıllarca eğitim gerektirir.",
+          "explanation": "'Sıfat + as + Özne + Fiil' devrik zıtlık kalıbıdır ve başa sıfatın yalın hâli gelir: 'Simple as it may seem ...' = 'Although it may seem simple ...'",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c28",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the objections raised at the hearing, the permit was granted.",
+          "options": [
+            "Even though",
+            "Although",
+            "Notwithstanding",
+            "Whereas",
+            "In that"
+          ],
+          "correctIndex": 2,
+          "translation": "Duruşmada dile getirilen itirazlara rağmen izin verildi.",
+          "explanation": "Boşluktan sonra isim öbeği geliyor. Although, even though, whereas ve in that tam cümle ister; isim alan resmî zıtlık edatı 'notwithstanding'dir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c29",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "It was ____ a convincing forgery that two independent experts authenticated it.",
+          "options": [
+            "such",
+            "so",
+            "very",
+            "too",
+            "much"
+          ],
+          "correctIndex": 0,
+          "translation": "O kadar inandırıcı bir sahtecilikti ki iki bağımsız uzman onu gerçek saydı.",
+          "explanation": "Boşluktan sonra 'a + sıfat + isim' geliyor. 'so' yalnızca sıfat/zarf alır ('so convincing'); isim öbeği alan biçim 'such'tır: such + a + sıfat + isim + that.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c30",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the sample was tiny, the result is surprisingly consistent.",
+          "options": [
+            "Considering that",
+            "In terms of",
+            "Thanks to",
+            "Apart from",
+            "Notwithstanding"
+          ],
+          "correctIndex": 0,
+          "translation": "Örneklemin çok küçük olduğu göz önüne alındığında sonuç şaşırtıcı biçimde tutarlı.",
+          "explanation": "Boşluktan sonra tam cümle geliyor ve bir yargı gerekçeye bağlanıyor. Diğer dört seçenek isim öbeği isteyen edatlardır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c31",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "The samples must stay frozen ____ the analysis is complete.",
+          "options": [
+            "until",
+            "by",
+            "during",
+            "throughout",
+            "prior to"
+          ],
+          "correctIndex": 0,
+          "translation": "Örnekler analiz tamamlanana kadar donmuş kalmalıdır.",
+          "explanation": "Boşluktan sonra tam cümle geliyor. By, during, throughout ve prior to isim öbeği ister; cümle alan tek zaman bağlacı 'until'dır. Ayrıca 'until' sonrası gelecek zaman kullanılmaz.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c32",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the permit arrives, work on the foundations will begin.",
+          "options": [
+            "As soon as",
+            "Upon",
+            "Prior to",
+            "During",
+            "Subsequent to"
+          ],
+          "correctIndex": 0,
+          "translation": "İzin gelir gelmez temel çalışmaları başlayacak.",
+          "explanation": "Boşluktan sonra tam cümle geliyor. Upon, prior to, during ve subsequent to isim ya da V-ing ister. Ayrıca 'as soon as' sonrası 'will' kullanılmaz, geniş zaman gelir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_c33",
+          "type": "fill-blank-dropdown",
+          "prompt": "Boşluktan sonra gelen yapıya uygun bağlacı seçin:",
+          "sentence": "____ the archive is closed to the public, the request was refused.",
+          "options": [
+            "Given that",
+            "Given",
+            "In view of",
+            "Because of",
+            "On account of"
+          ],
+          "correctIndex": 0,
+          "translation": "Arşivin halka kapalı olması nedeniyle talep reddedildi.",
+          "explanation": "Boşluktan sonra tam cümle geliyor. 'Given', 'in view of', 'because of' ve 'on account of' isim öbeği ister; cümle alabilmesi için 'that' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ]
@@ -42987,11 +43324,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "Although the financial risks, the board authorized the investment.",
           "options": [
             "the board",
-            "the financial risks",
             "Although",
+            "the financial risks",
             "authorized"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "translation": "Finansal risklere rağmen yönetim kurulu yatırıma izin verdi.",
           "explanation": "'Although' arkasından doğrudan isim öbeği almaz, tam cümle ister. Burada isim öbeği geldiği için 'Despite' ya da 'In spite of' kullanılmalıydı.",
           "grammarTags": [
@@ -43022,12 +43359,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki yüklem hatasını bulunuz:",
           "sentence": "The curator locked the case lest the manuscript would be damaged.",
           "options": [
-            "would be",
             "lest",
+            "would be",
             "locked",
             "damaged"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "translation": "Küratör, el yazması zarar görmesin diye vitrini kilitledi.",
           "explanation": "'lest' arkasından yalın fiil (V1) ya da 'should + V1' ister; 'would' almaz. Doğrusu 'lest the manuscript be damaged' olmalıdır.",
           "grammarTags": [
@@ -43042,10 +43379,10 @@ if (typeof lessons !== 'undefined') {
           "options": [
             "exhibits",
             "several materials",
-            "such as",
-            "bronze and glass"
+            "bronze and glass",
+            "such as"
           ],
-          "correctIndex": 2,
+          "correctIndex": 3,
           "translation": "Müze bronz ve cam gibi çeşitli malzemeler sergiliyor.",
           "explanation": "'such as' arkasından cümle almaz, yalnızca örnek isimleri getirir. Doğrusu 'such as bronze and glass' olmalıdır.",
           "grammarTags": [
@@ -43058,12 +43395,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki bağlaç hatasını bulunuz:",
           "sentence": "With regards to the second question, the evidence is inconclusive.",
           "options": [
-            "inconclusive",
+            "With regards to",
             "the second question",
             "the evidence",
-            "With regards to"
+            "inconclusive"
           ],
-          "correctIndex": 3,
+          "correctIndex": 0,
           "translation": "İkinci soruya ilişkin kanıtlar sonuca ulaştırmıyor.",
           "explanation": "Kalıp tekil hâlde kullanılır: 'with regard to'. 'With regards' yalnızca mektup sonundaki selam ifadesidir.",
           "grammarTags": [
@@ -43113,11 +43450,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "Not only the eruption destroyed the settlement, but it also changed the climate.",
           "options": [
             "the climate",
-            "the settlement",
+            "Not only the eruption destroyed",
             "but it also",
-            "Not only the eruption destroyed"
+            "the settlement"
           ],
-          "correctIndex": 3,
+          "correctIndex": 1,
           "translation": "Patlama yalnızca yerleşimi yok etmedi, iklimi de değiştirdi.",
           "explanation": "Cümle 'Not only' ile başladığında ana cümle devrik kurulmalıdır: 'Not only did the eruption destroy ...'",
           "grammarTags": [
@@ -43148,12 +43485,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki yüklem hatasını bulunuz:",
           "sentence": "If the council will approve the plan, work begins in April.",
           "options": [
-            "will approve",
-            "If",
             "the plan",
+            "If",
+            "will approve",
             "begins"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "translation": "Meclis planı onaylarsa çalışma nisanda başlayacak.",
           "explanation": "'if' ile kurulan koşul cümleciğinde 'will' bulunmaz; doğrusu 'If the council approves' olmalıdır.",
           "grammarTags": [
@@ -43168,10 +43505,10 @@ if (typeof lessons !== 'undefined') {
           "options": [
             "When it comes to",
             "structure",
-            "a research proposal",
-            "write"
+            "write",
+            "a research proposal"
           ],
-          "correctIndex": 3,
+          "correctIndex": 2,
           "translation": "Araştırma önerisi yazmak söz konusu olunca yapı, uzunluktan önemlidir.",
           "explanation": "Buradaki 'to' bir edattır, mastar eki değil; arkasından V-ing gelir. Doğrusu 'when it comes to writing' olmalıdır.",
           "grammarTags": [
@@ -43184,12 +43521,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki bağlaç hatasını bulunuz:",
           "sentence": "Thanks to the delay in ordering parts, the whole assembly line stopped.",
           "options": [
-            "the delay",
             "Thanks to",
+            "the delay",
             "ordering parts",
             "stopped"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "translation": "Parça siparişindeki gecikme yüzünden bütün montaj hattı durdu.",
           "explanation": "'Thanks to' yalnızca olumlu sonuçlar için kullanılır. Olumsuz bir sonuçta 'Because of' ya da 'Owing to' gerekir.",
           "grammarTags": [
@@ -43202,12 +43539,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki bağlaç hatasını bulunuz:",
           "sentence": "So the road was flooded, the delivery had to be postponed.",
           "options": [
-            "So",
             "the road was flooded",
+            "So",
             "the delivery",
             "postponed"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "translation": "Yol su altında olduğu için teslimat ertelenmek zorunda kaldı.",
           "explanation": "'so' bir bağlaçtır ve cümle başında kullanılmaz; iki cümle arasında virgülle yer alır. Cümle başı için 'Since' ya da 'Because' gerekir.",
           "grammarTags": [
@@ -43221,11 +43558,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "The manuscript was catalogued in 1890. Consequently, it was moved to the national library.",
           "options": [
             "catalogued",
-            "Consequently",
+            "was moved",
             "in 1890",
-            "was moved"
+            "Consequently"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "translation": "El yazması 1890'da kataloglandı. Sonrasında ulusal kütüphaneye taşındı.",
           "explanation": "Kataloglama, taşınmanın sebebi değil yalnızca öncesidir. Sonuç değil sonralık bildiren 'Subsequently' kullanılmalıdır.",
           "grammarTags": [
@@ -43238,12 +43575,12 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki bağlaç hatasını bulunuz:",
           "sentence": "Instead the printed catalogue, an online database is now available.",
           "options": [
-            "Instead",
+            "now available",
             "the printed catalogue",
             "an online database",
-            "now available"
+            "Instead"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "translation": "Basılı kataloğun yerine artık çevrimiçi bir veri tabanı var.",
           "explanation": "'Instead' tek başına zarftır ve arkasından isim almaz. İsim alan biçimi 'Instead of'tur.",
           "grammarTags": [
@@ -43275,11 +43612,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "In addition the printed edition, a digital facsimile was released.",
           "options": [
             "the printed edition",
-            "In addition",
+            "was released",
             "a digital facsimile",
-            "was released"
+            "In addition"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "translation": "Basılı baskıya ek olarak dijital bir tıpkıbasım da yayımlandı.",
           "explanation": "'In addition' bağımsız cümle ile kullanılır; isim öbeği alabilmesi için 'to' gerekir: 'In addition to the printed edition'.",
           "grammarTags": [
@@ -43293,11 +43630,11 @@ if (typeof lessons !== 'undefined') {
           "sentence": "As far as the timetable concerned, nothing has changed since March.",
           "options": [
             "As far as",
-            "the timetable",
             "concerned",
+            "the timetable",
             "has changed"
           ],
-          "correctIndex": 2,
+          "correctIndex": 1,
           "translation": "Takvime gelince mart ayından beri hiçbir şey değişmedi.",
           "explanation": "Kalıp eksik kurulmuş; 'is' düşürülemez. Doğrusu 'As far as the timetable is concerned' olmalıdır.",
           "grammarTags": [
@@ -43310,14 +43647,86 @@ if (typeof lessons !== 'undefined') {
           "prompt": "Cümledeki yüklem hatasını bulunuz:",
           "sentence": "Either the samples or the record are mislabelled.",
           "options": [
-            "Either",
             "are mislabelled",
+            "Either",
             "or",
             "the samples"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "translation": "Ya örnekler ya da kayıt yanlış etiketlenmiş.",
           "explanation": "'Either ... or' yapısında yüklem kendisine en yakın özneye uyar. En yakın özne tekil 'the record' olduğu için 'is mislabelled' olmalıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e21",
+          "type": "error-spotting",
+          "prompt": "Cümledeki bağlaç hatasını bulunuz:",
+          "sentence": "Notwithstanding the permit was granted, the residents appealed the decision.",
+          "options": [
+            "Notwithstanding",
+            "the permit was granted",
+            "the residents",
+            "appealed"
+          ],
+          "correctIndex": 0,
+          "translation": "İzin verilmiş olmasına rağmen sakinler karara itiraz etti.",
+          "explanation": "'Notwithstanding' bir edattır ve arkasından isim öbeği alır. Cümle kullanılacaksa 'Although the permit was granted' denmelidir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e22",
+          "type": "error-spotting",
+          "prompt": "Cümledeki bağlaç hatasını bulunuz:",
+          "sentence": "The collection includes several bronzes, include two early mirrors.",
+          "options": [
+            "includes",
+            "several bronzes",
+            "include",
+            "two early mirrors"
+          ],
+          "correctIndex": 2,
+          "translation": "Koleksiyonda, iki erken ayna dahil olmak üzere birkaç bronz eser var.",
+          "explanation": "İkinci öbek çekimli fiil alamaz; örnekleri bağlayan biçim 'including' olmalıdır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e23",
+          "type": "error-spotting",
+          "prompt": "Cümledeki yön hatasını bulunuz:",
+          "sentence": "The widespread crop failure resulted in the prolonged drought of that summer.",
+          "options": [
+            "resulted in",
+            "widespread",
+            "the prolonged drought",
+            "that summer"
+          ],
+          "correctIndex": 0,
+          "translation": "Yaygın ürün kaybı, o yazki uzun kuraklıktan kaynaklanıyordu.",
+          "explanation": "Kuraklık neden, ürün kaybı sonuçtur. 'result in' nedenden sonuca gider; burada yön ters olduğu için 'resulted from' gerekir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları"
+          ]
+        },
+        {
+          "id": "cdrill_e24",
+          "type": "error-spotting",
+          "prompt": "Cümledeki yapı hatasını bulunuz:",
+          "sentence": "The excavation was suspended owing to the funding had been withdrawn.",
+          "options": [
+            "was suspended",
+            "the funding",
+            "owing to",
+            "had been withdrawn"
+          ],
+          "correctIndex": 2,
+          "translation": "Fon geri çekildiği için kazı askıya alındı.",
+          "explanation": "'owing to' bir edattır ve arkasından cümle almaz. Cümle gelecekse 'owing to the fact that' kullanılmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ]
@@ -43977,6 +44386,413 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cdrill_ex5",
+      "title": "Alıştırma 5: Neden-Sonuç Yönü",
+      "description": "Fiilin özneyi neden mi sonuç mu yaptığını ayırt etme.",
+      "questions": [
+        {
+          "id": "cdrill_d1",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Prolonged drought ____ widespread crop failure across the region.",
+          "options": [
+            "was due to",
+            "resulted from",
+            "stemmed from",
+            "arose from",
+            "led to"
+          ],
+          "correctIndex": 4,
+          "translation": "Uzun süren kuraklık bölge genelinde yaygın ürün kaybına yol açtı.",
+          "explanation": "Özne (kuraklık) NEDEN, nesne (ürün kaybı) SONUÇ. 'result from', 'stem from', 'arise from' ve 'be due to' ters yönde çalışır: özneyi sonuç yapar.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d2",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The new tax ____ a sharp fall in imports within six months.",
+          "options": [
+            "resulted from",
+            "brought about",
+            "originated in",
+            "was attributed to",
+            "arose out of"
+          ],
+          "correctIndex": 1,
+          "translation": "Yeni vergi altı ay içinde ithalatta keskin bir düşüşe yol açtı.",
+          "explanation": "Vergi neden, düşüş sonuçtur. Diğer dört ifade özneyi sonuç konumuna koyar.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d3",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "A single mistranslation ____ decades of scholarly confusion.",
+          "options": [
+            "gave rise to",
+            "resulted from",
+            "stemmed from",
+            "was rooted in",
+            "originated from"
+          ],
+          "correctIndex": 0,
+          "translation": "Tek bir yanlış çeviri onlarca yıllık akademik karışıklığa yol açtı.",
+          "explanation": "'give rise to' nedenden sonuca gider. Kalan dört ifade sonuçtan nedene gittiği için özneyi yanlış konuma alır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d4",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Poor ventilation ____ the rapid spread of the infection in the ward.",
+          "options": [
+            "stemmed from",
+            "resulted from",
+            "was due to",
+            "arose from",
+            "contributed to"
+          ],
+          "correctIndex": 4,
+          "translation": "Kötü havalandırma, enfeksiyonun koğuşta hızla yayılmasına katkıda bulundu.",
+          "explanation": "'contribute to' kısmi bir NEDEN bildirir ve nedenden sonuca gider.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d5",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The 1834 reforms ____ the modern civil service.",
+          "options": [
+            "stemmed from",
+            "resulted from",
+            "were attributed to",
+            "paved the way for",
+            "arose out of"
+          ],
+          "correctIndex": 3,
+          "translation": "1834 reformları modern kamu hizmetinin yolunu açtı.",
+          "explanation": "'pave the way for' önceleyen nedeni bildirir; özne neden, nesne sonuçtur.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d6",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Years of negotiation ____ a treaty that satisfied neither side.",
+          "options": [
+            "resulted from",
+            "culminated in",
+            "originated in",
+            "were caused by",
+            "were due to"
+          ],
+          "correctIndex": 1,
+          "translation": "Yıllarca süren müzakere, iki tarafı da memnun etmeyen bir antlaşmayla sonuçlandı.",
+          "explanation": "'culminate in' bir sürecin vardığı SONUCU verir; özne süreç, nesne sonuçtur.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d7",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Faulty insulation ____ the fire that destroyed the archive.",
+          "options": [
+            "was attributed to",
+            "resulted from",
+            "was responsible for",
+            "stemmed from",
+            "arose from"
+          ],
+          "correctIndex": 2,
+          "translation": "Hatalı yalıtım, arşivi yok eden yangının sorumlusuydu.",
+          "explanation": "'be responsible for' özneyi NEDEN yapar. 'be attributed to' ise tersine özneyi sonuç konumuna alır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d8",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The shortage of copper ____ a search for cheaper alternatives.",
+          "options": [
+            "arose out of",
+            "resulted from",
+            "was due to",
+            "originated in",
+            "triggered"
+          ],
+          "correctIndex": 4,
+          "translation": "Bakır kıtlığı daha ucuz alternatif arayışını tetikledi.",
+          "explanation": "'trigger' ani bir başlatıcı NEDEN bildirir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d9",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The drug ____ a mild drop in blood pressure in most patients.",
+          "options": [
+            "is ascribed to",
+            "results from",
+            "stems from",
+            "is due to",
+            "produces"
+          ],
+          "correctIndex": 4,
+          "translation": "İlaç çoğu hastada hafif bir tansiyon düşüşü üretir.",
+          "explanation": "'produce' nedenden sonuca giden en yalın fiillerden biridir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d10",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Sudden cooling ____ the mineral to crystallise in unusual patterns.",
+          "options": [
+            "arose from",
+            "resulted from",
+            "induced",
+            "was caused by",
+            "stemmed from"
+          ],
+          "correctIndex": 2,
+          "translation": "Ani soğuma, mineralin alışılmadık örüntülerde kristalleşmesine yol açtı.",
+          "explanation": "'induce' nedenden sonuca gider ve 'induce something to do' kalıbını alır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d11",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The delta's retreat ____ the dams built upstream in the 1970s.",
+          "options": [
+            "brings about",
+            "leads to",
+            "is due to",
+            "gives rise to",
+            "triggers"
+          ],
+          "correctIndex": 2,
+          "translation": "Deltanın geri çekilmesi, 1970'lerde yukarı havzada yapılan barajlardan kaynaklanmaktadır.",
+          "explanation": "Özne (geri çekilme) SONUÇ, nesne (barajlar) NEDEN. 'lead to' ve benzerleri yönü tersine çevirir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d12",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Most of the errors in the edition ____ a single corrupt manuscript.",
+          "options": [
+            "bring about",
+            "result in",
+            "lead to",
+            "result from",
+            "pave the way for"
+          ],
+          "correctIndex": 3,
+          "translation": "Baskıdaki hataların çoğu tek bir bozuk el yazmasından kaynaklanmaktadır.",
+          "explanation": "'result from' sonuçtan nedene, 'result in' ise nedenden sonuca gider. Bu ikisi sınavda en sık karıştırılan çiftlerdendir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d13",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The dispute ____ an ambiguity in the original charter.",
+          "options": [
+            "gives rise to",
+            "stems from",
+            "culminates in",
+            "triggers",
+            "produces"
+          ],
+          "correctIndex": 1,
+          "translation": "Anlaşmazlık, özgün beratdaki bir muğlaklıktan kaynaklanmaktadır.",
+          "explanation": "'stem from' özneyi SONUÇ, nesneyi kök NEDEN yapar.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d14",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The technique ____ workshops in fifteenth-century Flanders.",
+          "options": [
+            "led to",
+            "originated in",
+            "brought about",
+            "paved the way for",
+            "induced"
+          ],
+          "correctIndex": 1,
+          "translation": "Teknik, on beşinci yüzyıl Flandra atölyelerinde doğmuştur.",
+          "explanation": "'originate in/from' kökeni bildirir; özne, kaynağı sorulan şeydir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d15",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Many of the objections ____ a misunderstanding of the methodology.",
+          "options": [
+            "arise from",
+            "give rise to",
+            "result in",
+            "trigger",
+            "produce"
+          ],
+          "correctIndex": 0,
+          "translation": "İtirazların çoğu yöntemin yanlış anlaşılmasından doğmaktadır.",
+          "explanation": "'arise from' sonuçtan nedene gider; 'give rise to' ise tam tersidir. Aynı kökten iki zıt yönlü kalıptır.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d16",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The collapse of the tower ____ corrosion in the anchor bolts.",
+          "options": [
+            "leads to",
+            "brings about",
+            "results in",
+            "is attributed to",
+            "triggers"
+          ],
+          "correctIndex": 3,
+          "translation": "Kulenin çökmesi, ankraj cıvatalarındaki korozyona atfedilmektedir.",
+          "explanation": "'be attributed to' bir sonucu varsayılan bir nedene bağlar; özne daima sonuçtur.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d17",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The style ____ a much older local tradition of wood carving.",
+          "options": [
+            "is rooted in",
+            "gives rise to",
+            "culminates in",
+            "paves the way for",
+            "produces"
+          ],
+          "correctIndex": 0,
+          "translation": "Üslup, çok daha eski bir yerel ahşap oyma geleneğine dayanmaktadır.",
+          "explanation": "'be rooted in' kökeni bildirir ve özneyi sonuç konumunda tutar.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d18",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "Nearly half the delays ____ late delivery of the steel frames.",
+          "options": [
+            "bring about",
+            "cause",
+            "result in",
+            "are caused by",
+            "trigger"
+          ],
+          "correctIndex": 3,
+          "translation": "Gecikmelerin neredeyse yarısı çelik çerçevelerin geç teslimatından kaynaklanmaktadır.",
+          "explanation": "Edilgen 'be caused by' yönü tersine çevirir: özne sonuç, 'by' sonrası nedendir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d19",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The report is valuable ____ it records testimony no longer obtainable.",
+          "options": [
+            "in that",
+            "so that",
+            "in order that",
+            "such that",
+            "now that"
+          ],
+          "correctIndex": 0,
+          "translation": "Rapor, artık elde edilemeyecek tanıklıkları kaydettiği için değerlidir.",
+          "explanation": "'in that' bir yargının hangi bakımdan geçerli olduğunu açıklar: '-mesi bakımından / -diği için'.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
+          ]
+        },
+        {
+          "id": "cdrill_d20",
+          "type": "fill-blank-dropdown",
+          "prompt": "Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:",
+          "sentence": "The excavation was suspended ____ the funding had been withdrawn.",
+          "options": [
+            "due to",
+            "owing to",
+            "owing to the fact that",
+            "because of",
+            "on account of"
+          ],
+          "correctIndex": 2,
+          "translation": "Fon geri çekildiği için kazı askıya alındı.",
+          "explanation": "Boşluktan sonra tam cümle geliyor. 'owing to', 'due to', 'because of' ve 'on account of' isim öbeği ister; cümle alabilmesi için 'the fact that' eklenmelidir.",
+          "grammarTags": [
+            "Bağlaç Yapısal Kuralları",
+            "Neden-Sonuç Yönü"
           ]
         }
       ]
