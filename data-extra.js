@@ -42314,6 +42314,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki bağımsız cümle 'however' ile bağlanıyor ve 'however' küçük harfle devam ediyor. Nokta konsaydı büyük harf gerekirdi; virgül ise bağımsız iki cümleyi tek başına bağlayamaz. Doğru işaret noktalı virgüldür.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however"
           ]
         },
         {
@@ -42332,6 +42335,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Nevertheless' büyük harfle başladığı için kendisinden önce cümle bitmiş olmalıdır; yani nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nevertheless"
           ]
         },
         {
@@ -42350,6 +42356,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'nonetheless' küçük harfle devam ettiği için cümle bitmemiştir. Geçiş zarfı iki bağımsız cümleyi bağlarken noktalı virgül alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nonetheless"
           ]
         },
         {
@@ -42368,6 +42377,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'or else' bir geçiş zarfı değil, bağlaç işlevi gören bir kalıptır ve kendisinden önce virgül alır: Cümle 1, or else Cümle 2.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "or else"
           ]
         },
         {
@@ -42386,6 +42398,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'namely' arkasından tam cümle değil, tek tek sayılan öğeler getirir; bu yüzden noktalı virgül veya nokta değil virgül kullanılır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "namely"
           ]
         },
         {
@@ -42404,6 +42419,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'therefore' küçük harfle devam ettiği için cümle bitmemiştir. Geçiş zarfı iki bağımsız cümleyi bağlarken noktalı virgül alır; virgül burada cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "therefore"
           ]
         },
         {
@@ -42422,6 +42440,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Moreover' büyük harfle başladığına göre önceki cümle bitmiştir; nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "moreover"
           ]
         },
         {
@@ -42458,6 +42479,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'otherwise' küçük harfle devam ediyor ve bir geçiş zarfı; iki bağımsız cümle arasında noktalı virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "otherwise"
           ]
         },
         {
@@ -42476,6 +42500,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'that is' burada tam cümle değil, sayılan ögeler getiriyor. Açıklama getiren bu kullanımda virgül yeterlidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "that is (i.e.)"
           ]
         },
         {
@@ -42494,6 +42521,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Nevertheless' büyük harfle başlıyor; öncesinde cümlenin nokta ile bitmesi gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nevertheless"
           ]
         },
         {
@@ -42512,6 +42542,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'in fact' burada bağımsız bir cümle değil, önceki ifadeyi düzelten bir ek getiriyor; bu kullanımda virgül alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in fact / as a matter of fact"
           ]
         },
         {
@@ -42530,6 +42563,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Conversely' büyük harfle başladığı için önceki cümle noktayla bitmiştir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "conversely"
           ]
         },
         {
@@ -42548,6 +42584,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'namely' arkasından tam cümle değil, tek tek sayılan ögeler getirir; bu yüzden virgül kullanılır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "namely"
           ]
         },
         {
@@ -42566,6 +42605,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'for this reason' bir geçiş zarfı öbeğidir ve küçük harfle devam ediyor; iki bağımsız cümle arasında noktalı virgül gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "for this reason"
           ]
         },
         {
@@ -42584,6 +42626,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Specifically' büyük harfle başladığı için önceki cümle noktayla bitmiştir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "specifically"
           ]
         },
         {
@@ -42602,6 +42647,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Previously' büyük harfle başlıyor; noktalı virgülden sonra büyük harf gelmez, bu yüzden nokta gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "previously"
           ]
         },
         {
@@ -42620,6 +42668,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'thereafter' küçük harfle devam ediyor, yani cümle bitmemiş. İki bağımsız cümleyi bağlayan geçiş zarfı noktalı virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "thereafter"
           ]
         },
         {
@@ -42638,6 +42689,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'accordingly' küçük harfle devam eden bir geçiş zarfıdır; öncesinde noktalı virgül gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "accordingly"
           ]
         },
         {
@@ -42656,6 +42710,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'That is why' büyük harfle başlıyor; önceki cümlenin noktayla bitmesi gerekir. Ayrıca kendisinden sonra virgül almaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "that is (i.e.)",
+            "that is why"
           ]
         },
         {
@@ -42674,6 +42732,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'thus' küçük harfle devam ediyor, yani cümle bitmemiş. Sonuç bildiren geçiş zarfı iki bağımsız cümle arasında noktalı virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "thus"
           ]
         },
         {
@@ -42692,6 +42753,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Hence' büyük harfle başlıyor; öncesinde cümlenin noktayla bitmesi gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "hence"
           ]
         },
         {
@@ -42710,6 +42774,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'consequently' küçük harfle devam eden bir geçiş zarfıdır; noktalı virgül gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "consequently / as a consequence"
           ]
         },
         {
@@ -42728,6 +42795,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'As a result' büyük harfle başladığı için önceki cümle noktayla kapanmıştır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as a result / with the result that"
           ]
         },
         {
@@ -42746,6 +42816,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Besides' büyük harfle başlıyor; noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "besides"
           ]
         },
         {
@@ -42764,6 +42837,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'what is more' küçük harfle devam eden bir ekleme zarfıdır; iki bağımsız cümle arasında noktalı virgül alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "what is more"
           ]
         },
         {
@@ -42782,6 +42858,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Likewise' büyük harfle başlıyor; öncesinde nokta gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "likewise"
           ]
         },
         {
@@ -42800,6 +42879,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Similarly' büyük harfle başladığı için önceki cümle noktayla bitmelidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "similarly"
           ]
         },
         {
@@ -42818,6 +42900,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'In the same way' büyük harfle başlıyor; noktalı virgülden sonra büyük harf gelmez.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in the same way"
           ]
         },
         {
@@ -42836,6 +42921,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'On the other hand' büyük harfle başladığı için öncesinde nokta gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the other hand"
           ]
         },
         {
@@ -42854,6 +42942,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'In contrast' büyük harfle başlıyor; önceki cümle noktayla kapanmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in contrast / by contrast"
           ]
         },
         {
@@ -42872,6 +42963,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'On the contrary' olumsuz bir iddiayı düzeltir ve büyük harfle başladığı için öncesinde nokta gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the contrary"
           ]
         },
         {
@@ -42890,6 +42984,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'For instance' büyük harfle başlıyor; önceki cümle noktayla bitmelidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "for instance"
           ]
         },
         {
@@ -42908,6 +43005,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'that is' burada bağımsız bir cümleyi değil, önceki ifadenin açıklamasını getiriyor; bu kullanımda virgül alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "that is (i.e.)"
           ]
         },
         {
@@ -42926,6 +43026,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Indeed' büyük harfle başlıyor; noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "indeed"
           ]
         },
         {
@@ -42944,6 +43047,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'In brief' büyük harfle başladığı için öncesinde nokta gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in brief / in short"
           ]
         },
         {
@@ -42962,6 +43068,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'accordingly' küçük harfle devam eden bir sonuç zarfıdır; iki bağımsız cümle arasında noktalı virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "accordingly"
           ]
         },
         {
@@ -42980,6 +43089,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'That is why' büyük harfle başlıyor; öncesinde nokta gerekir ve kendisinden sonra virgül almaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "that is (i.e.)",
+            "that is why"
           ]
         },
         {
@@ -42998,6 +43111,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'For this reason' büyük harfle başladığı için önceki cümle noktayla kapanmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "for this reason"
           ]
         },
         {
@@ -43016,6 +43132,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Accordingly' büyük harfle başlıyor; noktalı virgülden sonra büyük harf kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "accordingly"
           ]
         }
       ]
@@ -43042,6 +43161,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği ('the heavy rain') geliyor. Although, even though ve whereas tam cümle ister; however ise bağımsız cümle ile kullanılır. İsim öbeği alan tek seçenek 'Despite'tır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "even though",
+            "despite"
           ]
         },
         {
@@ -43061,6 +43186,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra özne + fiil ('it was raining') geliyor. Despite, in spite of ve regardless of isim öbeği ister; nevertheless yan cümle başlatamaz. Tam cümle alan tek seçenek 'Although'dur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nevertheless",
+            "although",
+            "despite",
+            "in spite of"
           ]
         },
         {
@@ -43080,6 +43211,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Noktalı virgülden sonra bağımsız bir cümle geliyor. Bu konumda yalnızca geçiş zarfı kullanılabilir; although ve even though yan cümle kurar, despite ve in spite of isim ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although",
+            "even though",
+            "despite",
+            "in spite of"
           ]
         },
         {
@@ -43099,6 +43236,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra V-ing ('having') geliyor. Although, even though ve though özne + fiil ister; nonetheless bağımsız cümle ile kullanılır. V-ing alan tek seçenek 'In spite of'tır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nonetheless",
+            "although",
+            "even though",
+            "in spite of"
           ]
         },
         {
@@ -43118,6 +43261,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluk cümlenin sonunda ve tek başına. Cümle sonunda kullanılabilen tek zıtlık bağlacı 'though'dur; although ve whereas yalnızca yan cümle başında, however ise cümle başında ya da noktalı virgülden sonra yer alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "whereas",
+            "despite"
           ]
         },
         {
@@ -43137,6 +43286,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra özne + fiil geliyor. Despite, but for, in case of ve regardless of isim öbeği ister; tam cümle alan tek seçenek 'If'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "despite",
+            "regardless of / irrespective of",
+            "in case / in the event of",
+            "if"
           ]
         },
         {
@@ -43156,6 +43311,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği ('the legal objections') ve ardından 'would have V3' geliyor. Bu iki koşulu birden karşılayan tek seçenek gizli şart edatı 'But for'tur; diğerleri tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "but for",
+            "unless",
+            "even if",
+            "whether or not"
           ]
         },
         {
@@ -43175,6 +43336,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki durum karşı karşıya konuyor ve boşluktan sonra tam cümle geliyor. Diğer dört seçeneğin hepsi isim öbeği isteyen edatlardır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "despite",
+            "in spite of",
+            "regardless of / irrespective of",
+            "apart from / aside from"
           ]
         },
         {
@@ -43194,6 +43361,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor. In addition, moreover ve furthermore bağımsız cümle ile kullanılan geçiş zarflarıdır; isim öbeği alan tek seçenek 'as well as'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "furthermore",
+            "moreover",
+            "in addition",
+            "as well as"
           ]
         },
         {
@@ -43213,6 +43386,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor. 'In addition' ve diğerleri bağımsız cümle ister; isim alabilmesi için 'to' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "furthermore",
+            "moreover",
+            "in addition to"
           ]
         },
         {
@@ -43232,6 +43410,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra özne + fiil geliyor ve anlam koşul bildiriyor. Diğer dört seçenek isim öbeği isteyen edatlardır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "instead",
+            "despite",
+            "in spite of",
+            "as long as"
           ]
         },
         {
@@ -43251,6 +43435,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle devrik kurulmuş ('will the contract take effect'). Cümle başında kendisinden sonra devrik ana cümle gerektiren tek koşul kalıbı 'Only if'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "only if",
+            "provided that / providing that",
+            "unless",
+            "even if"
           ]
         },
         {
@@ -43270,6 +43460,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle her iki olasılıkta da geçerli bir sonuç bildiriyor. Tek bir olasılık kuran if, unless, provided that ve in case bu anlamı veremez.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "provided that / providing that",
+            "unless",
+            "in case / in the event of",
+            "if"
           ]
         },
         {
@@ -43308,6 +43504,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Cümle 'Not only' ile başladığında ana cümle devrik kurulur: yardımcı fiil özneden önce gelir. Geçmiş zaman olduğu için 'did' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "also"
           ]
         },
         {
@@ -43327,6 +43526,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra özne + fiil geliyor. Thanks to, owing to, because of ve despite isim öbeği ister; tam cümle alan tek seçenek 'Now that'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "despite",
+            "because of / due to / owing to",
+            "because / since / as",
+            "now that"
           ]
         },
         {
@@ -43346,6 +43551,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor ve sonuç olumlu. Because, since, seeing that ve now that tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as",
+            "inasmuch as / seeing that / given that",
+            "now that",
+            "thanks to"
           ]
         },
         {
@@ -43365,6 +43576,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tek bir isim geliyor. Except that, whereas ve even though tam cümle ister; 'as far as' ise '... is concerned' ile tamamlanmadan kullanılamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even though",
+            "whereas",
+            "except that",
+            "still"
           ]
         },
         {
@@ -43384,6 +43601,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor. Except for, apart from, instead of ve regardless of isim öbeği ister; cümle alan tek biçim 'except that'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "instead",
+            "regardless of / irrespective of",
+            "apart from / aside from",
+            "barring / except for"
           ]
         },
         {
@@ -43403,6 +43626,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle Present Perfect ('has depended') ve boşluktan sonra tam cümle var. During, throughout ve prior to isim ister; 'in the meantime' ise bağımsız cümle ile kullanılan bir geçiş zarfıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in the meantime",
+            "because / since / as"
           ]
         },
         {
@@ -43422,6 +43649,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor ve anlam bir koşul bildiriyor. Diğer dört seçenek isim öbeği isteyen edatlardır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in spite of",
+            "regardless of / irrespective of",
+            "apart from / aside from",
+            "on condition that"
           ]
         },
         {
@@ -43441,6 +43674,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle var ve bir varsayım kuruluyor. Kalan dört seçenek isim öbeği alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "instead",
+            "despite",
+            "supposing / assuming (that)",
+            "in terms of"
           ]
         },
         {
@@ -43460,6 +43699,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor ve sonuç cümlesi 'would have V3'. Bu iki koşulu birden karşılayan tek yapı devrik gizli şarttır; diğerleri tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even though",
+            "unless",
+            "if",
+            "were it not for / had it not been for"
           ]
         },
         {
@@ -43479,6 +43724,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor ve tekrarlanan bir durum anlatılıyor. During, throughout ve prior to isim ister; 'in the meantime' bağımsız cümle ile kullanılır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in the meantime"
           ]
         },
         {
@@ -43498,6 +43746,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluk isim öbeğini genel isme bağlıyor. 'include' ve 'included' çekimli fiil biçimleridir; 'in addition' ve 'moreover' ise bağımsız cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "moreover",
+            "in addition",
+            "including"
           ]
         },
         {
@@ -43517,6 +43770,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Just as + Cümle 1, so + Cümle 2' birebir benzetişim kalıbıdır ve iki parçası birlikte kullanılır. Diğer seçenekler aynı cümlede iki zıtlık işaretini birden kullandığı için hatalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so (bağlaç)",
+            "however",
+            "still",
+            "although"
           ]
         },
         {
@@ -43536,6 +43795,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Sıfat + as + Özne + Fiil' devrik zıtlık kalıbıdır ve başa sıfatın yalın hâli gelir: 'Simple as it may seem ...' = 'Although it may seem simple ...'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although"
           ]
         },
         {
@@ -43555,6 +43817,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor. Although, even though, whereas ve in that tam cümle ister; isim alan resmî zıtlık edatı 'notwithstanding'dir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although",
+            "even though",
+            "notwithstanding",
+            "whereas"
           ]
         },
         {
@@ -43593,6 +43861,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor ve bir yargı gerekçeye bağlanıyor. Diğer dört seçenek isim öbeği isteyen edatlardır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "notwithstanding",
+            "apart from / aside from",
+            "in terms of",
+            "considering (that)"
           ]
         },
         {
@@ -43650,6 +43924,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor. 'Given', 'in view of', 'because of' ve 'on account of' isim öbeği ister; cümle alabilmesi için 'that' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because of / due to / owing to",
+            "on account of / in view of",
+            "because / since / as",
+            "inasmuch as / seeing that / given that"
           ]
         },
         {
@@ -43688,6 +43968,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Buradaki 'while' EŞZAMANLILIK bildiriyor, zıtlık değil. 'Whereas' yalnızca karşıtlık kurar ve süregelen bir eylemle kullanılmaz; kalan üçü zıtlık bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "whereas",
+            "even though",
+            "in spite of",
+            "regardless of / irrespective of"
           ]
         },
         {
@@ -43726,6 +44012,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor; bu konumda 'after' edat işlevi görür. Although, whereas ve as soon as tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although",
+            "whereas"
           ]
         },
         {
@@ -43745,6 +44035,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Burada BENZETME yapılıyor: bina katedrale benzetiliyor. 'Such as' ve 'including' örnekleme yapar, yani katedrali binanın bir örneği sayardı ki bu anlamsızdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "such as",
+            "including",
+            "namely",
+            "like"
           ]
         },
         {
@@ -43764,6 +44060,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Burada ÖRNEKLEME var: ud ve viyol, çalgıların örnekleridir. 'such as' arkasından cümle değil örnek isimleri alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "such as",
+            "namely",
+            "like"
           ]
         },
         {
@@ -43783,6 +44084,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor. 'in case of', 'by virtue of' ve 'as a result of' isim öbeği ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in case / in the event of",
+            "as a result / with the result that",
+            "by virtue of / on the grounds of",
+            "as a result of / as a consequence of"
           ]
         },
         {
@@ -43802,6 +44109,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor. Because, since ve seeing that tam cümle ister; 'by virtue that' diye bir kalıp yoktur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as",
+            "inasmuch as / seeing that / given that",
+            "by virtue of / on the grounds of"
           ]
         },
         {
@@ -43821,6 +44133,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor. 'As a result', 'consequently', 'therefore' ve 'thus' bağımsız cümle ile kullanılan geçiş zarflarıdır; isim alabilmesi için 'of' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "therefore",
+            "thus",
+            "consequently / as a consequence",
+            "as a result / with the result that"
           ]
         },
         {
@@ -43840,6 +44158,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor. Dört seçenek de isim öbeği isteyen edattır; cümle alabilmesi için 'the fact that' eklenmelidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because of / due to / owing to",
+            "on account of / in view of",
+            "owing to the fact that"
           ]
         },
         {
@@ -43859,6 +44182,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra yalın fiil ('finish') geliyor. 'in order that' ve 'so that' özne + fiil ister; 'with a view' ise 'to + V-ing' alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so that / in order that",
+            "in order to / so as to"
           ]
         },
         {
@@ -43878,6 +44205,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Gerçek dışı bir benzetme kuruluyor ve fiil bir zaman geriye kaymış ('had witnessed'). Bu yapıyı yalnızca 'as if / as though' alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as if / as though",
+            "in that"
           ]
         },
         {
@@ -43897,6 +44228,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor ve konu değiştiriliyor. 'As far as' kalıbı '... is concerned' olmadan kullanılamaz; whereas ve in that tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "whereas",
+            "in that",
+            "as for / as regards"
           ]
         },
         {
@@ -43916,6 +44252,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıp 'to' ile tamamlanır ve arkasından isim öbeği alır; 'with respect' tek başına bu işlevi görmez.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "with respect to / regarding",
+            "whereas"
           ]
         },
         {
@@ -43954,6 +44294,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle, yan cümledeki eylemin tamamlanmasının ardından gelen kalıcı bir sonucu bildiriyor. 'By the time' bir sınır, 'until' bir süre, 'so long as' bir koşul kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so long as",
+            "in the meantime"
           ]
         },
         {
@@ -43973,6 +44317,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle Past Perfect ('had collapsed'): olay, yan cümledeki andan ÖNCE tamamlanmış. Bu öncelik ilişkisini kuran tek bağlaç 'by the time'dır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44011,6 +44358,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle Present Perfect ve boşluktan sonra isim öbeği var; süregelen bir başlangıç noktası bildiren 'ever since' uygundur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44049,6 +44399,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'However + zarf + özne + fiil' kalıbı 'ne kadar ... olursa olsun' anlamı verir. 'Although' ve 'whereas' doğrudan özne alır, 'despite' isim ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "despite",
+            "whereas"
           ]
         },
         {
@@ -44068,6 +44424,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Sıfat + as + özne + fiil' devrik ödün kalıbıdır ve başa sıfatın yalın hâli gelir: 'Simple as it may appear ...'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "despite"
           ]
         },
         {
@@ -44087,6 +44448,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci cümle 'so' ile başlıyor; bu, 'Just as ... so ...' birebir benzetişim kalıbının ikinci yarısıdır. Diğer seçenekler 'so' ile tamamlanmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "just as ... so (too)",
+            "in contrast / by contrast",
+            "even though",
+            "despite"
           ]
         },
         {
@@ -44106,6 +44473,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Virgülden sonra isim öbeği geliyor. Diğer dört ifade bağımsız cümle ile kullanılan geçiş zarflarıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "besides",
+            "what is more",
+            "similarly",
+            "in the same way"
           ]
         },
         {
@@ -44125,6 +44498,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Virgülden sonra doğrudan bağlaç geliyor. 'Otherwise' bu konumda kendi virgülünü ister; virgülle bağlanan biçim 'or else'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "otherwise",
+            "or else",
+            "so that / in order that",
+            "even if"
           ]
         },
         {
@@ -44144,6 +44523,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra yalın fiil geliyor. In order that, so long as ve on condition that özne + fiil ister; 'lest' ise olumsuz amaç bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so that / in order that",
+            "lest / for fear that",
+            "so long as",
+            "on condition that"
           ]
         },
         {
@@ -44163,6 +44548,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra yalın fiil ('be') geliyor ve olumsuz bir amaç bildiriliyor. Bu iki koşulu birden karşılayan tek bağlaç 'lest'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "lest / for fear that",
+            "so that / in order that",
+            "in order to / so as to",
+            "provided that / providing that"
           ]
         },
         {
@@ -44182,6 +44573,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği ve ardından 'would have V3' geliyor. Bu ikisini birden karşılayan tek yapı devrik gizli şarttır; kalan dördü tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "provided that / providing that",
+            "unless",
+            "even if",
+            "if only"
           ]
         },
         {
@@ -44201,6 +44598,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci cümle 'the narrower' ile başlıyor; bu, 'the + komparatif ..., the + komparatif ...' çift derecelendirme kalıbının ikinci yarısıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however"
           ]
         },
         {
@@ -44220,6 +44620,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor. Barring ve with regard to isim ister, 'as though' benzetme kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as if / as though",
+            "barring / except for",
+            "with regard to",
+            "except that"
           ]
         },
         {
@@ -44239,6 +44645,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir dönem eşiği bildiriliyor ve boşluktan sonra isim öbeği geliyor. Kalan dört seçenek tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44296,6 +44705,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Future Perfect ile birlikte bir SINIR bildiren çapa 'by'dır; 'until' süregelen bir durumu, 'since' başlangıcı işaret eder.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44334,6 +44746,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir olayın hemen öncesini bildiren kalıp bütün hâlinde kullanılır. 'At the dawn' eksik; 'by the time' ve 'ever since' tam cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44353,6 +44768,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor; kalan dört seçenek bağımsız cümle ile kullanılan geçiş zarflarıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "moreover",
+            "in addition",
+            "besides",
+            "what is more"
           ]
         },
         {
@@ -44372,6 +44793,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği geliyor; 'in addition' isim alabilmek için 'to' ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "furthermore",
+            "besides",
+            "likewise",
+            "still"
           ]
         },
         {
@@ -44391,6 +44818,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra isim öbeği ve ardından 'would have V3' geliyor; bu ikisini karşılayan tek yapı devrik gizli şarttır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "unless",
+            "even if",
+            "if only",
+            "supposing / assuming (that)"
           ]
         },
         {
@@ -44410,6 +44843,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sonuç cümlesi 'would V1', yani şimdiki zamana ait varsayım. Şimdiki zaman için devrik gizli şart 'Were it not for' biçimindedir; 'Had it not been for' geçmişe aittir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "were it not for / had it not been for",
+            "unless",
+            "if"
           ]
         },
         {
@@ -44429,6 +44867,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'However + sıfat + özne + fiil' kalıbı 'ne kadar ... olursa olsun' anlamı verir. 'As' kalıbı sıfatın başa alınmasını ister ('Simple as the rule looks').",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "despite",
+            "whereas"
           ]
         },
         {
@@ -44448,6 +44892,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Sıfat + as + özne + fiil' devrik ödün kalıbıdır; sıfat başa alındığında bağlaç 'as' (ya da 'though') olur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "despite",
+            "whereas"
           ]
         },
         {
@@ -44467,6 +44917,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'However + zarf + özne + fiil' kalıbı ödün bildirir. 'Although' doğrudan özne alır, 'despite' isim ister, 'whatever' isim öbeğiyle çalışır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "despite",
+            "even so"
           ]
         },
         {
@@ -44486,6 +44942,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sıfat boşluktan SONRA geldiği için 'However + sıfat + özne + fiil' kalıbı gerekir. 'As' kalıbında sıfat başa alınır: 'Convincing as it looks'.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "although",
+            "whereas"
           ]
         },
         {
@@ -44505,6 +44966,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Future Perfect ile bir SINIR bildiren çapa 'by'dır; 'until' süregelen bir durumu, 'since' başlangıcı, 'throughout' bütün bir süreyi işaret eder.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44524,6 +44988,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Past Perfect ile birlikte geçmişte bir sınır bildiren çapa 'By'dır: 'By 1900 ... had V3'.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -44543,6 +45010,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra tam cümle geliyor ve bir koşul/durum bildiriliyor. Despite, in spite of ve regardless of isim öbeği ister; 'whereas' ise iki durumu karşı karşıya koyar, burada koşul kurulmuyor.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "despite",
+            "in spite of",
+            "regardless of / irrespective of",
+            "whereas"
           ]
         }
       ]
@@ -44569,6 +45042,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sayılan üç kazanım bir kapanış yargısına bağlanıyor. 'Above all' sayılanlar arasından birini öne çıkarırdı, 'notably' dikkat çekerdi, 'in fact' düzeltirdi; kapanış yapan tek ifade 'In conclusion'dır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in fact / as a matter of fact",
+            "in conclusion",
+            "above all",
+            "notably"
           ]
         },
         {
@@ -44588,6 +45067,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sayılanlar arasından EN önemlisi öne çıkarılıyor. 'In conclusion' metni kapatır, 'on the whole' genel bir yargı verir; sıralama yapan tek ifade 'Above all'dır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in conclusion",
+            "on the whole",
+            "above all",
+            "meanwhile"
           ]
         },
         {
@@ -44607,6 +45092,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İstisnalar kabul edilip genel bir yargıya varılıyor. 'On the whole' tam bunu yapar; 'above all' sıralama, 'specifically' daraltma yapardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "specifically",
+            "on the whole",
+            "above all",
+            "in the same way"
           ]
         },
         {
@@ -44626,6 +45117,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci cümle birinciyi güçlü bir kanıtla pekiştiriyor. 'Indeed' bu pekiştirmeyi yapar; 'besides' yeni bir ekleme, 'conversely' ise karşıtlık kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "conversely",
+            "besides",
+            "indeed",
+            "otherwise"
           ]
         },
         {
@@ -44645,6 +45142,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Yanlış bir kanı düzeltiliyor. 'In fact' düzeltme yapar; 'similarly' ve 'in the same way' benzerlik, 'to sum up' özet kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "similarly",
+            "in the same way",
+            "in fact / as a matter of fact",
+            "to sum up"
           ]
         },
         {
@@ -44664,6 +45167,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sayılanlar tek bir yargıda toplanıyor. 'Notably' ve 'above all' seçme yapar, 'even so' zıtlık kurar; özetleyen tek ifade 'To sum up'tır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even so",
+            "to sum up",
+            "above all",
+            "notably"
           ]
         },
         {
@@ -44683,6 +45192,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Genel bir ifadeden kayda değer bir örneğe geçiliyor ve arkasından isim öbeği geliyor. Diğer dört ifade bağımsız cümle ile kullanılır ve özet bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "overall / all in all",
+            "in conclusion",
+            "on the whole",
+            "ultimately"
           ]
         },
         {
@@ -44702,6 +45217,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Uzun bir sürecin vardığı son nokta bildiriliyor. 'Ultimately' bunu yapar; 'notably' dikkat çeker, 'in fact' düzeltir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in fact / as a matter of fact",
+            "ultimately",
+            "notably",
+            "besides"
           ]
         },
         {
@@ -44721,6 +45242,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bütüne bakan bir değerlendirme yapılıyor. 'Otherwise' koşul, 'previously' zaman, 'except that' istisna bildirirdi.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "otherwise",
+            "previously",
+            "except that",
+            "overall / all in all"
           ]
         },
         {
@@ -44740,6 +45267,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Genel bir ifadenin ardından somut bir örnek geliyor. 'In other words' yeniden ifade eder, 'specifically' ise genel ifadeyi daraltır, örnek vermez.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in other words",
+            "specifically",
+            "conversely",
+            "for example"
           ]
         },
         {
@@ -44759,6 +45292,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Genel ifade tek tek kapsamıyla daraltılıyor, bir örnek verilmiyor. 'For example' yalnızca bir örnek verirdi; burada kapsamın tamamı sayılıyor.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "for example",
+            "on the contrary",
+            "specifically",
+            "even so"
           ]
         },
         {
@@ -44778,6 +45317,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci cümle birinciyi başka sözcüklerle yeniden ifade ediyor. Örnekleme yapan üç seçenek bu işlevi göremez.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "for instance",
+            "as an illustration",
+            "in other words",
+            "previously"
           ]
         },
         {
@@ -44797,6 +45342,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir örnek üzerinden gösterme yapılıyor. 'Specifically' daraltma, 'in other words' yeniden ifade, 'ultimately' sonuç bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in other words",
+            "specifically",
+            "ultimately",
+            "as an illustration"
           ]
         },
         {
@@ -44816,6 +45367,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Örnekler doğrudan isim olarak sıralanıyor ve öncesinde virgül var. 'For instance' bu konumda kendi virgülünü ister, 'in other words' yeniden ifade eder; isim listesi alan biçim 'such as'tır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "for instance",
+            "in other words",
+            "such as",
+            "as an illustration"
           ]
         },
         {
@@ -44835,6 +45392,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bütünün içindeki bir alt kümeye işaret ediliyor. 'Including' bunu yapar; kalan seçenekler ya çekimli fiil içerir ya da bağımsız cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "including",
+            "in addition",
+            "for example",
+            "still"
           ]
         },
         {
@@ -44854,6 +45417,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kabul edilen bir gerçeğin ardından beklenmedik bir sonuç geliyor. 'Conversely' ve 'in contrast' iki durumu kıyaslar, 'on the other hand' seçenek sunar; ödün verip zıtlık kuran tek ifade 'Even so'dur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the other hand",
+            "in contrast / by contrast",
+            "conversely",
+            "even so"
           ]
         },
         {
@@ -44873,6 +45442,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki durum birbirinin mantıksal tersi olarak veriliyor. 'Even so' ödün verirdi, 'besides' ekleme yapardı, 'indeed' pekiştirirdi.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "besides",
+            "indeed",
+            "even so",
+            "conversely"
           ]
         },
         {
@@ -44892,6 +45467,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki bulgu arasındaki açık fark vurgulanıyor. 'Likewise' benzerlik kurardı, 'namely' sayardı, 'even so' ödün verirdi.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "likewise",
+            "namely",
+            "even so",
+            "in contrast / by contrast"
           ]
         },
         {
@@ -44911,6 +45492,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki seçenek karşılaştırılıyor, biri diğerini çürütmüyor. 'On the other hand' tam bu işlevdedir; 'in fact' düzeltme, 'indeed' pekiştirme yapardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the other hand",
+            "indeed",
+            "in fact / as a matter of fact",
+            "even so"
           ]
         },
         {
@@ -44930,6 +45517,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Virgülden sonra beklenmedik bir sonuç geliyor. Therefore, thus ve hence sonuç bildirir; 'so' da sonuç kurar. Virgülle bağlanan zıtlık bağlacı 'yet'tir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "therefore",
+            "thus",
+            "hence"
           ]
         },
         {
@@ -44949,6 +45541,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İlk cümledeki olumsuz tabloya aynı yönde bir ağırlık ekleniyor. 'Even so' ve 'conversely' zıtlık kurardı, 'namely' sayardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "conversely",
+            "namely",
+            "even so",
+            "what is more"
           ]
         },
         {
@@ -44968,6 +45566,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci bir engel ekleniyor. 'In contrast' karşıtlık, 'otherwise' koşul, 'specifically' daraltma kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in contrast / by contrast",
+            "specifically",
+            "otherwise",
+            "besides"
           ]
         },
         {
@@ -44987,6 +45591,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki durum aynı yönde. 'Conversely' ve 'even so' karşıtlık kurar, 'in fact' düzeltme yapar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "conversely",
+            "in fact / as a matter of fact",
+            "even so",
+            "similarly"
           ]
         },
         {
@@ -45006,6 +45616,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki uygulama arasındaki yöntem benzerliği kuruluyor. 'On the contrary' çürütme, 'not to mention' ekleme, 'except that' istisna bildirirdi.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the contrary",
+            "not to mention",
+            "except that",
+            "in the same way"
           ]
         },
         {
@@ -45025,6 +45641,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki olay EŞZAMANLI. Subsequently, afterwards ve thereafter sonralık, 'previously' ise öncelik bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "subsequently",
+            "afterwards",
+            "previously",
+            "thereafter"
           ]
         },
         {
@@ -45044,6 +45666,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci olay birinciden SONRA. 'Meanwhile' ve 'in the meantime' eşzamanlılık, 'previously' öncelik bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "meanwhile",
+            "in the meantime",
+            "previously",
+            "even so"
           ]
         },
         {
@@ -45063,6 +45691,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle Past Perfect ('had funded'): olay 1994'ten ÖNCEye ait. Kalan dört seçenek sonralık ya da eşzamanlılık bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "meanwhile",
+            "subsequently",
+            "afterwards",
+            "previously"
           ]
         },
         {
@@ -45082,6 +45716,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Belirli bir andan itibaren süregelen bir durum bildiriliyor. 'Previously' öncelik, 'meanwhile' eşzamanlılık kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "meanwhile",
+            "previously",
+            "conversely",
+            "even so"
           ]
         },
         {
@@ -45101,6 +45741,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sonralık bildiriliyor ve günlük bir anlatım tercih ediliyor. 'Meanwhile' ve 'in the meantime' eşzamanlılık kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "meanwhile",
+            "in the meantime",
+            "afterwards",
+            "previously"
           ]
         },
         {
@@ -45120,6 +45766,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Koşul yerine getirilmezse doğacak sonuç bildiriliyor. 'Even if' ödün, 'so long as' koşul, 'whether or not' iki olasılık kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even if",
+            "so long as",
+            "whether or not",
+            "otherwise"
           ]
         },
         {
@@ -45139,6 +45791,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçerliliğin sürmesi bir koşulun sürmesine bağlanıyor. 'Even if' ödün, 'whether or not' iki olasılık, 'if only' dilek bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even if",
+            "whether or not",
+            "if only",
+            "otherwise"
           ]
         },
         {
@@ -45158,6 +45816,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sonuç her iki olasılıkta da aynı. Kalan dört seçenek tek bir koşula bağlar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so that / in order that",
+            "so long as",
+            "on condition that",
+            "whether or not"
           ]
         },
         {
@@ -45177,6 +45841,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Gerçekleşmemiş bir geçmişe duyulan pişmanlık bildiriliyor ve fiil 'had V3'e kaymış. Bu yapıyı yalnızca 'If only' alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "if only",
+            "even if",
+            "so long as",
+            "on condition that"
           ]
         },
         {
@@ -45196,6 +45866,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Onay resmî bir şarta bağlanmış. 'Even if' ödün, 'whether or not' iki olasılık, 'in order to' amaç bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in order to / so as to",
+            "even if",
+            "whether or not",
+            "otherwise"
           ]
         },
         {
@@ -45215,6 +45891,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir varsayım kurulup sonucu çıkarılıyor. 'Even if' ödün verir, 'whether or not' iki olasılık kapsar, 'if only' dilek bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even if",
+            "whether or not",
+            "if only",
+            "so long as"
           ]
         },
         {
@@ -45234,6 +45916,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Koşul gerçekleşse DE sonuç değişmiyor; bu ödün anlamını yalnızca 'Even if' verir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even if",
+            "so that / in order that",
+            "so long as",
+            "on condition that"
           ]
         },
         {
@@ -45253,6 +45941,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Konu değiştiriliyor ve boşluktan sonra isim öbeği geliyor. 'Except that' cümle ister, 'barring' istisna kurar, 'as if' benzetme yapar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as if / as though",
+            "barring / except for",
+            "except that",
+            "with regard to"
           ]
         },
         {
@@ -45272,6 +45966,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıp 'to' ile tamamlanır ve isim öbeği alır. 'When it comes' de eksik; tam biçimi 'when it comes to'dur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "when it comes to",
+            "with respect to / regarding",
+            "as if / as though",
+            "except that"
           ]
         },
         {
@@ -45291,6 +45991,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir bütünden istisna çıkarılıyor ve boşluktan sonra isim öbeği geliyor. 'Except that' cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "except that",
+            "as if / as though",
+            "barring / except for",
+            "with regard to"
           ]
         },
         {
@@ -45310,6 +46016,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Gerçek dışı bir benzetme kuruluyor ve fiil bir zaman geriye kaymış. Bu yapıyı yalnızca 'as if / as though' alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as if / as though",
+            "barring / except for",
+            "with regard to",
+            "when it comes to"
           ]
         },
         {
@@ -45329,6 +46041,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir konu öne çıkarılıyor ve boşluktan sonra isim öbeği geliyor. 'Except that' cümle ister, 'barring' istisna kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "barring / except for",
+            "except that",
+            "as if / as though",
+            "when it comes to"
           ]
         },
         {
@@ -45348,6 +46066,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Bir durumun bir ana KADAR sürmesi bildiriliyor. 'By the time' o andaki durumu, 'as soon as' anlık ardışıklığı, 'ever since' süregelen geçmişi kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -45367,6 +46088,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kabul edilen bir olgunun ardından onu sınırlayan bir kayıt geliyor; bu zıtlığı 'Nonetheless' kurar. 'Likewise' benzerlik, 'namely' sayma, 'in brief' özet, 'thereafter' ise sonralık bildirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nonetheless",
+            "likewise",
+            "namely",
+            "in brief / in short"
           ]
         },
         {
@@ -45386,6 +46113,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci cümle birincinin yarattığı beklentiyi daraltıyor. 'Moreover' eklerdi, 'likewise' benzetirdi, 'indeed' pekiştirirdi.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "moreover",
+            "likewise",
+            "indeed",
+            "however"
           ]
         },
         {
@@ -45405,6 +46138,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İlk cümledeki eksikliğe rağmen ikinci cümle olumlu bir bulgu veriyor. Kalan dört seçenek sonuç bildirir, zıtlık değil.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "even so",
+            "thus",
+            "hence",
+            "consequently / as a consequence"
           ]
         },
         {
@@ -45424,6 +46163,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Az yük taşımasına karşın sık denetlenmesi beklenmedik. 'In contrast' iki durumu kıyaslar, 'otherwise' koşul kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in contrast / by contrast",
+            "otherwise",
+            "namely",
+            "even so"
           ]
         },
         {
@@ -45443,6 +46188,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Beklenen sonucun tersi gerçekleşmiş. 'Consequently' ve 'accordingly' beklenen sonucu, 'similarly' benzerliği verirdi.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "similarly",
+            "consequently / as a consequence",
+            "accordingly",
+            "nevertheless"
           ]
         },
         {
@@ -45462,6 +46213,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sıcaklık, eşit kaynaşmanın doğrudan sebebi. Kalan dört seçenek zıtlık ya da koşul kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nevertheless",
+            "conversely",
+            "otherwise",
+            "even so"
           ]
         },
         {
@@ -45481,6 +46238,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci cümle beklenmedik bir gerçeği açıklayarak birinciyi düzeltiyor. 'Accordingly' sonuç, 'likewise' benzerlik kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "likewise",
+            "accordingly",
+            "namely",
+            "in fact / as a matter of fact"
           ]
         },
         {
@@ -45500,6 +46263,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kayıplara karşın bir şeylerin sürdüğü söyleniyor. 'Consequently' sonuç, 'specifically' daraltma, 'similarly' benzerlik kurardı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "similarly",
+            "specifically",
+            "consequently / as a consequence",
+            "even so"
           ]
         }
       ]
@@ -45525,6 +46294,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Despite' yanına asla 'of' almaz. 'In spite of' vardır, 'despite of' yoktur; doğrusu 'Despite the heavy traffic' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "despite",
+            "in spite of"
           ]
         },
         {
@@ -45543,6 +46316,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Although' arkasından doğrudan isim öbeği almaz, tam cümle ister. Burada isim öbeği geldiği için 'Despite' ya da 'In spite of' kullanılmalıydı.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although",
+            "despite",
+            "in spite of"
           ]
         },
         {
@@ -45561,6 +46339,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçiş zarfı iki bağımsız cümleyi virgülle bağlayamaz. 'incomplete' sonrası virgül yerine noktalı virgül gelmelidir: '... were incomplete; however, ...'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however"
           ]
         },
         {
@@ -45579,6 +46360,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'lest' arkasından yalın fiil (V1) ya da 'should + V1' ister; 'would' almaz. Doğrusu 'lest the manuscript be damaged' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "lest / for fear that"
           ]
         },
         {
@@ -45597,6 +46381,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'such as' arkasından cümle almaz, yalnızca örnek isimleri getirir. Doğrusu 'such as bronze and glass' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "such as"
           ]
         },
         {
@@ -45615,6 +46402,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıp tekil hâlde kullanılır: 'with regard to'. 'With regards' yalnızca mektup sonundaki selam ifadesidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "with regard to"
           ]
         },
         {
@@ -45633,6 +46423,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Neither ... nor' yapısı zaten olumsuzdur; yükleme ikinci bir olumsuzluk eklenmez. Doğrusu 'explains' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "neither ... nor"
           ]
         },
         {
@@ -45651,6 +46444,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Both ... and' daima çoğul özne kurar; yüklem 'are missing' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "both ... and"
           ]
         },
         {
@@ -45669,6 +46465,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Cümle 'Not only' ile başladığında ana cümle devrik kurulmalıdır: 'Not only did the eruption destroy ...'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "also"
           ]
         },
         {
@@ -45687,6 +46486,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Koşul cümleciğinde gelecek zaman kullanılmaz. Doğrusu 'as long as the fee is paid' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as long as"
           ]
         },
         {
@@ -45705,6 +46507,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'if' ile kurulan koşul cümleciğinde 'will' bulunmaz; doğrusu 'If the council approves' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -45723,6 +46528,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Buradaki 'to' bir edattır, mastar eki değil; arkasından V-ing gelir. Doğrusu 'when it comes to writing' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "when it comes to"
           ]
         },
         {
@@ -45741,6 +46549,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Thanks to' yalnızca olumlu sonuçlar için kullanılır. Olumsuz bir sonuçta 'Because of' ya da 'Owing to' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because of / due to / owing to",
+            "because / since / as",
+            "thanks to"
           ]
         },
         {
@@ -45759,6 +46572,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'so' bir bağlaçtır ve cümle başında kullanılmaz; iki cümle arasında virgülle yer alır. Cümle başı için 'Since' ya da 'Because' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as",
+            "so (bağlaç)"
           ]
         },
         {
@@ -45777,6 +46594,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kataloglama, taşınmanın sebebi değil yalnızca öncesidir. Sonuç değil sonralık bildiren 'Subsequently' kullanılmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "subsequently",
+            "consequently / as a consequence"
           ]
         },
         {
@@ -45795,6 +46616,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Instead' tek başına zarftır ve arkasından isim almaz. İsim alan biçimi 'Instead of'tur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "instead"
           ]
         },
         {
@@ -45813,6 +46637,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'But for' arkasından cümle değil isim öbeği alır. Cümle kullanılacaksa 'If the funding had not been cut' denmelidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "if",
+            "but for"
           ]
         },
         {
@@ -45831,6 +46659,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'In addition' bağımsız cümle ile kullanılır; isim öbeği alabilmesi için 'to' gerekir: 'In addition to the printed edition'.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in addition to"
           ]
         },
         {
@@ -45849,6 +46680,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıp eksik kurulmuş; 'is' düşürülemez. Doğrusu 'As far as the timetable is concerned' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because / since / as"
           ]
         },
         {
@@ -45867,6 +46701,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Either ... or' yapısında yüklem kendisine en yakın özneye uyar. En yakın özne tekil 'the record' olduğu için 'is mislabelled' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "either ... or"
           ]
         },
         {
@@ -45885,6 +46722,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Notwithstanding' bir edattır ve arkasından isim öbeği alır. Cümle kullanılacaksa 'Although the permit was granted' denmelidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although",
+            "notwithstanding"
           ]
         },
         {
@@ -45903,6 +46744,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İkinci öbek çekimli fiil alamaz; örnekleri bağlayan biçim 'including' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "including"
           ]
         },
         {
@@ -45921,6 +46765,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kuraklık neden, ürün kaybı sonuçtur. 'result in' nedenden sonuca gider; burada yön ters olduğu için 'resulted from' gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "result in / results in",
+            "result from / results from"
           ]
         },
         {
@@ -45939,6 +46787,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'owing to' bir edattır ve arkasından cümle almaz. Cümle gelecekse 'owing to the fact that' kullanılmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "because of / due to / owing to",
+            "owing to the fact that"
           ]
         },
         {
@@ -45957,6 +46809,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Just as' kalıbı 'so' ile tamamlanır, 'and' ile değil. Doğrusu 'Just as the north relied on timber, so the south depended on olive oil' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so (bağlaç)"
           ]
         },
         {
@@ -45975,6 +46830,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'thereby' arkasından V-ing alır. Doğrusu 'thereby causing the varnish to crack' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "cause / causes"
           ]
         },
         {
@@ -45993,6 +46851,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'On the contrary' bir iddiayı ÇÜRÜTÜR; burada çürütülen bir iddia yok, iki durum kıyaslanıyor. Doğrusu 'On the other hand' ya da 'In contrast' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the other hand",
+            "in contrast / by contrast",
+            "on the contrary"
           ]
         },
         {
@@ -46011,6 +46874,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Likewise' BENZERLİK bildirir, ama balıkçılık ile tahıl birbirine benzemiyor, karşıtlık kuruyor. Doğrusu 'By contrast' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in contrast / by contrast",
+            "likewise"
           ]
         },
         {
@@ -46029,6 +46896,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'so + sıfat' yapısı 'that' ile tamamlanır; 'so that' amaç bağlacıdır ve burada ikinci bir 'so' fazladan kalmıştır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so that / in order that"
           ]
         },
         {
@@ -46047,6 +46917,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıp 'so much so that' biçimindedir; 'that' düşürülemez.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so that / in order that",
+            "so much so that",
+            "so (bağlaç)"
           ]
         },
         {
@@ -46065,6 +46940,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Cümle başındaki özetleme zarfı virgülle ayrılır: 'In brief, the excavation ...'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in brief / in short",
+            "produce / produces"
           ]
         },
         {
@@ -46083,6 +46962,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'not to mention' arkasından isim öbeği alır ve cümlenin sonunda yer alır: '... ran two years late, not to mention the doubled cost.'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "not to mention",
+            "also"
           ]
         },
         {
@@ -46101,6 +46984,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Meanwhile' eşzamanlılık bildirir, sebep değil. Fonun çekilmesi kazının terk edilme SEBEBİdir; doğrusu 'The funding had been withdrawn; consequently, ...' gibi bir sonuç bağlacıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "meanwhile",
+            "consequently / as a consequence"
           ]
         },
         {
@@ -46119,6 +47006,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "İki kalıp birbirine karışmış: ya 'As for the second volume, ...' ya da 'As far as the second volume is concerned, ...' denmelidir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as for / as regards"
           ]
         },
         {
@@ -46137,6 +47027,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'That is why' bağımsız bir cümle başlatır; öncesinde virgül değil nokta ya da noktalı virgül gerekir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "that is (i.e.)",
+            "that is why"
           ]
         },
         {
@@ -46191,6 +47085,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Despite' asla 'of' almaz. 'In spite of' vardır, 'despite of' yoktur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "despite",
+            "in spite of"
           ]
         },
         {
@@ -46209,6 +47107,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Whereas' iki farklı durumu karşı karşıya koyar; burada ise kabul edilen bir ödün var. Doğrusu 'although' ya da 'even though' olmalıdır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "although",
+            "even though",
+            "whereas"
           ]
         },
         {
@@ -46227,6 +47130,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Not only' cümle başında devrik yapı ister: 'Not only was the report late, ...'",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "also"
           ]
         }
       ]
@@ -46260,6 +47166,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nevertheless",
+            "in brief / in short",
+            "as for / as regards",
+            "although"
           ]
         },
         {
@@ -46286,6 +47198,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "conversely",
+            "overall / all in all",
+            "with respect to / regarding",
+            "even though"
           ]
         },
         {
@@ -46312,6 +47230,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "furthermore",
+            "to sum up",
+            "despite",
+            "However + Adj / Adv + S + V"
           ]
         },
         {
@@ -46338,6 +47262,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "that is (i.e.)",
+            "or else",
+            "in conclusion",
+            "in spite of"
           ]
         },
         {
@@ -46364,6 +47294,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "otherwise",
+            "in order to / so as to",
+            "as well as"
           ]
         },
         {
@@ -46390,6 +47325,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "lest / for fear that",
+            "whereas",
+            "only if",
+            "in addition to"
           ]
         },
         {
@@ -46416,6 +47357,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "nonetheless",
+            "not to mention",
+            "if only"
           ]
         },
         {
@@ -46442,6 +47388,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the other hand",
+            "on the whole",
+            "regardless of / irrespective of",
+            "provided that / providing that"
           ]
         },
         {
@@ -46468,6 +47420,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in contrast / by contrast",
+            "above all",
+            "in case / in the event of",
+            "apart from / aside from"
           ]
         },
         {
@@ -46494,6 +47452,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "moreover",
+            "indeed",
+            "as if / as though",
+            "barring / except for"
           ]
         },
         {
@@ -46520,6 +47484,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in addition",
+            "but for",
+            "when it comes to"
           ]
         },
         {
@@ -46546,6 +47515,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "however",
+            "for instance",
+            "cause / causes",
+            "therefore"
           ]
         },
         {
@@ -46572,6 +47547,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "on the contrary",
+            "for example",
+            "so that / in order that",
+            "lead to / leads to"
           ]
         },
         {
@@ -46598,6 +47579,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "as an illustration",
+            "still",
+            "unless",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -46624,6 +47611,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "what is more",
+            "even so",
+            "as long as",
+            "on account of / in view of"
           ]
         },
         {
@@ -46650,6 +47643,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "likewise",
+            "meanwhile",
+            "so long as",
+            "by virtue of / on the grounds of"
           ]
         },
         {
@@ -46676,6 +47675,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "similarly",
+            "in the meantime",
+            "the more ... the more",
+            "as a result / with the result that"
           ]
         },
         {
@@ -46702,6 +47707,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in the same way",
+            "subsequently",
+            "not only ... but also",
+            "in terms of"
           ]
         },
         {
@@ -46728,6 +47739,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "afterwards",
+            "both ... and",
+            "with regard to"
           ]
         },
         {
@@ -46754,6 +47770,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in fact / as a matter of fact",
+            "either ... or",
+            "as far as ... is concerned",
+            "because / since / as"
           ]
         },
         {
@@ -46780,6 +47802,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "ultimately",
+            "neither ... nor",
+            "thereby + V-ing"
           ]
         },
         {
@@ -46806,6 +47833,10 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "notably",
+            "so ... that / such ... that"
           ]
         },
         {
@@ -46832,6 +47863,10 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so that / in order that",
+            "so much so that"
           ]
         },
         {
@@ -46858,6 +47893,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "in other words",
+            "result in / results in",
+            "thus"
           ]
         },
         {
@@ -46884,6 +47924,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "namely",
+            "instead",
+            "bring about / brings about",
+            "hence"
           ]
         },
         {
@@ -46910,6 +47956,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "specifically",
+            "even if",
+            "trigger / triggers",
+            "consequently / as a consequence"
           ]
         },
         {
@@ -46936,6 +47988,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "besides",
+            "such as",
+            "on condition that",
+            "give rise to / gives rise to"
           ]
         },
         {
@@ -46962,6 +48020,12 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "also",
+            "like",
+            "whether or not",
+            "thanks to"
           ]
         },
         {
@@ -46988,6 +48052,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "previously",
+            "just as ... so (too)",
+            "including"
           ]
         },
         {
@@ -47014,6 +48083,11 @@ if (typeof lessons !== 'undefined') {
           ],
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "thereafter",
+            "though",
+            "whether ... or"
           ]
         }
       ]
@@ -47041,6 +48115,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result from / results from",
+            "stem from / stems from",
+            "arise from / out of",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47061,6 +48141,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result from / results from",
+            "arise from / out of"
           ]
         },
         {
@@ -47081,6 +48165,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "give rise to / gives rise to",
+            "result from / results from",
+            "originate from / in"
           ]
         },
         {
@@ -47101,6 +48190,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "contribute to / contributes to",
+            "result from / results from",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47121,6 +48215,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "pave the way for",
+            "result from / results from",
+            "arise from / out of"
           ]
         },
         {
@@ -47141,6 +48240,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "culminate in / culminates in",
+            "cause / causes",
+            "result from / results from",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47161,6 +48266,9 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result from / results from"
           ]
         },
         {
@@ -47181,6 +48289,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "trigger / triggers",
+            "result from / results from",
+            "arise from / out of",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47201,6 +48315,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "produce / produces",
+            "is due to / are due to",
+            "result from / results from",
+            "stem from / stems from"
           ]
         },
         {
@@ -47221,6 +48341,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "induce / provoke / prompt",
+            "cause / causes",
+            "result from / results from"
           ]
         },
         {
@@ -47241,6 +48366,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "lead to / leads to",
+            "bring about / brings about",
+            "trigger / triggers",
+            "give rise to / gives rise to"
           ]
         },
         {
@@ -47261,6 +48392,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result in / results in",
+            "result from / results from",
+            "lead to / leads to",
+            "bring about / brings about"
           ]
         },
         {
@@ -47281,6 +48418,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "stem from / stems from",
+            "trigger / triggers",
+            "give rise to / gives rise to",
+            "culminate in / culminates in"
           ]
         },
         {
@@ -47301,6 +48444,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "pave the way for",
+            "induce / provoke / prompt"
           ]
         },
         {
@@ -47321,6 +48468,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "give rise to / gives rise to",
+            "arise from / out of",
+            "result in / results in",
+            "trigger / triggers"
           ]
         },
         {
@@ -47341,6 +48494,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "lead to / leads to",
+            "result in / results in",
+            "bring about / brings about",
+            "trigger / triggers"
           ]
         },
         {
@@ -47361,6 +48520,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "give rise to / gives rise to",
+            "pave the way for",
+            "culminate in / culminates in",
+            "produce / produces"
           ]
         },
         {
@@ -47381,6 +48546,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "cause / causes",
+            "result in / results in",
+            "bring about / brings about",
+            "trigger / triggers"
           ]
         },
         {
@@ -47401,6 +48572,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "in that",
+            "so that / in order that",
+            "now that"
           ]
         },
         {
@@ -47421,6 +48597,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "because of / due to / owing to",
+            "on account of / in view of",
+            "because / since / as",
+            "owing to the fact that"
           ]
         },
         {
@@ -47441,6 +48623,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "contribute to / contributes to",
+            "result from / results from",
+            "arise from / out of"
           ]
         },
         {
@@ -47461,6 +48648,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "pave the way for",
+            "result from / results from"
           ]
         },
         {
@@ -47481,6 +48672,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result from / results from",
+            "arise from / out of"
           ]
         },
         {
@@ -47501,6 +48696,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "trigger / triggers",
+            "produce / produces"
           ]
         },
         {
@@ -47521,6 +48720,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "lead to / leads to",
+            "give rise to / gives rise to",
+            "culminate in / culminates in",
+            "induce / provoke / prompt"
           ]
         },
         {
@@ -47541,6 +48746,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "cause / causes",
+            "result in / results in",
+            "bring about / brings about",
+            "pave the way for"
           ]
         },
         {
@@ -47561,6 +48772,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "because / since / as",
+            "inasmuch as / seeing that / given that",
+            "now that",
+            "by virtue of / on the grounds of"
           ]
         },
         {
@@ -47581,6 +48798,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result in / results in",
+            "trigger / triggers"
           ]
         },
         {
@@ -47601,6 +48822,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "pave the way for",
+            "result from / results from",
+            "arise from / out of"
           ]
         },
         {
@@ -47621,6 +48847,9 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result from / results from"
           ]
         },
         {
@@ -47641,6 +48870,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result in / results in",
+            "result from / results from",
+            "lead to / leads to",
+            "bring about / brings about"
           ]
         },
         {
@@ -47661,6 +48896,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "stem from / stems from",
+            "give rise to / gives rise to",
+            "culminate in / culminates in",
+            "produce / produces"
           ]
         },
         {
@@ -47681,6 +48922,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "contribute to / contributes to",
+            "result from / results from",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47701,6 +48947,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "therefore",
+            "accordingly",
+            "thus"
           ]
         },
         {
@@ -47721,6 +48972,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "so that / in order that",
+            "so much so that",
+            "that is (i.e.)",
+            "accordingly"
           ]
         },
         {
@@ -47741,6 +48998,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "because of / due to / owing to",
+            "on account of / in view of",
+            "owing to the fact that",
+            "considering (that)"
           ]
         },
         {
@@ -47761,6 +49024,12 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "considering (that)",
+            "because of / due to / owing to",
+            "on account of / in view of",
+            "by virtue of / on the grounds of"
           ]
         },
         {
@@ -47781,6 +49050,11 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "result from / results from",
+            "arise from / out of",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47801,6 +49075,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "trigger / triggers",
+            "because of / due to / owing to"
           ]
         },
         {
@@ -47821,6 +49099,10 @@ if (typeof lessons !== 'undefined') {
           "grammarTags": [
             "Bağlaç Yapısal Kuralları",
             "Neden-Sonuç Yönü"
+          ],
+          "terms": [
+            "culminate in / culminates in",
+            "result from / results from"
           ]
         }
       ]
@@ -47873,6 +49155,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'for + süre' şu ana uzanan bir süreç kurar ve Present Perfect ister. Simple Past bu süreci kapatırdı.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "for + süre"
           ]
         },
         {
@@ -47892,6 +49177,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ago' geçmişte KAPALI bir an bildirir ve yalnızca Simple Past alır; Present Perfect ile asla kullanılmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ago"
           ]
         },
         {
@@ -47911,6 +49199,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'since + geçmiş nokta' ana cümlede Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since"
           ]
         },
         {
@@ -47930,6 +49221,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'already' olumlu cümlede Present Perfect ile kullanılır ve yardımcı fiil ile V3 arasına girer.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "already"
           ]
         },
         {
@@ -47949,6 +49243,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'yet' olumsuz cümlede Present Perfect ister ve cümlenin sonunda yer alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "yet (Perfect zarfı)"
           ]
         },
         {
@@ -47968,6 +49265,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'just' çok yakın geçmişi bildirir ve Present Perfect ile yardımcı fiilden sonra gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "just"
           ]
         },
         {
@@ -47987,6 +49287,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ever' deneyim sorar ve Present Perfect ister: 'Has ... ever been V3?'",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ever / never"
           ]
         },
         {
@@ -48006,6 +49309,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'never' deneyimsizlik bildirir ve Present Perfect alır; ayrıca kendisi olumsuz olduğu için ikinci bir olumsuzluk gerekmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ever / never"
           ]
         },
         {
@@ -48025,6 +49331,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'lately' belirsiz bir yakın geçmiş kurar ve Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "lately / recently"
           ]
         },
         {
@@ -48044,6 +49353,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'over the past + süre' şu ana uzanan bir pencere açar; Simple Past almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "over the past / in the last + süre"
           ]
         },
         {
@@ -48063,6 +49375,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'How long' süregelen bir durumu sorduğunda Perfect kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "how long"
           ]
         },
         {
@@ -48082,6 +49397,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ago' Simple Past kilididir; Present Perfect ile birlikte kullanılamaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ago",
+            "the first / last time"
           ]
         },
         {
@@ -48101,6 +49420,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'in the last + süre' şu ana kadar olan bir aralıktır ve Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "over the past / in the last + süre"
           ]
         },
         {
@@ -48120,6 +49442,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'lately' Present Perfect çapasıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "lately / recently"
           ]
         },
         {
@@ -48139,6 +49464,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'a decade' bir SÜREdir, nokta değil; bu yüzden 'since' değil 'for' gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since",
+            "before",
+            "during / throughout",
+            "ago"
           ]
         },
         {
@@ -48158,6 +49489,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'2016' bir başlangıç NOKTASIdır; süre değil. Nokta 'since', süre 'for' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since",
+            "ago"
           ]
         },
         {
@@ -48177,6 +49512,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'so far' şu ana kadarki durumu bildirir ve Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "so far / up to now / hitherto / in recent years"
           ]
         },
         {
@@ -48196,6 +49534,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'recently' süregelen bir yakın geçmiş kurduğunda Present Perfect Continuous uygundur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "lately / recently"
           ]
         },
         {
@@ -48215,6 +49556,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'already' olumlu cümlede Present Perfect alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "already"
           ]
         },
         {
@@ -48234,6 +49578,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'yet' soru cümlesinde Present Perfect ister ve sona gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "yet (Perfect zarfı)"
           ]
         },
         {
@@ -48253,6 +49600,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Süreden sonra gelip geçmişte kapalı bir an kuran ifade 'ago'dur; 'since' ve 'for' fiilden önce gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since",
+            "ago",
+            "before"
           ]
         },
         {
@@ -48272,6 +49624,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'yet' olumsuz cümlede Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "yet (Perfect zarfı)"
           ]
         },
         {
@@ -48291,6 +49646,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'over the past century' şu ana uzanır; Present Perfect gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "over the past / in the last + süre"
           ]
         },
         {
@@ -48310,6 +49668,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Referans noktası geçmişte ('before the funding stopped') olduğu için Past Perfect Continuous gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "how long"
           ]
         },
         {
@@ -48329,6 +49691,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'before that afternoon' referansı geçmişte kurduğu için 'never' Past Perfect alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "ever / never"
           ]
         },
         {
@@ -48348,6 +49714,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Referans noktası geçmişte olduğu için 'just' Past Perfect ile kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "just",
+            "when"
           ]
         },
         {
@@ -48367,6 +49737,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Şimdiye bağlı yakın geçmiş için 'just' + Present Perfect kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "just"
           ]
         },
         {
@@ -48386,6 +49759,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By the time + V2' ana cümlede Had V3 ister; 'already' de bu kilide uyar.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time",
+            "already"
           ]
         },
         {
@@ -48405,6 +49782,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Şu ana kadar süregelen bir eylem sorulduğu için Present Perfect Continuous gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "how long"
           ]
         },
         {
@@ -48424,6 +49804,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'three seasons' bir süredir; süre 'for', başlangıç noktası 'since' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since",
+            "until / till",
+            "ago"
           ]
         },
         {
@@ -48443,6 +49828,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by now' şu ana kadar tamamlanmışlığı bildirir ve Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by now"
           ]
         },
         {
@@ -48462,6 +49850,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by now' Present Perfect çapasıdır; Simple Past almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by now"
           ]
         },
         {
@@ -48481,6 +49872,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'since then' şu ana uzanan bir süreç kurar ve Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since then"
           ]
         },
         {
@@ -48500,6 +49894,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'since then' ana cümlede Perfect ister; olumsuzda da kural değişmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since then"
           ]
         },
         {
@@ -48519,6 +49916,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'to date', 'so far'ın resmî karşılığıdır ve Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "so far / up to now / hitherto / in recent years",
+            "to date"
           ]
         },
         {
@@ -48538,6 +49939,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'to date' Simple Past ile kullanılmaz; şu ana kadarki toplamı bildirir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "to date"
           ]
         },
         {
@@ -48557,6 +49961,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'all along' baştan bu yana süregelen bir durumu bildirir; geçmiş anlatısında Past Perfect alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "all along"
           ]
         },
         {
@@ -48576,6 +49983,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'all along' şimdiye uzandığında Present Perfect kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "all along"
           ]
         },
         {
@@ -48595,6 +50005,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Olumsuz cümlede 'in + süre' şu ana kadar süren bir yokluğu bildirir ve Present Perfect ister; 'ago' ile karıştırılmamalıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ago"
           ]
         },
         {
@@ -48633,6 +50046,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by now' geçmiş bir anlatıda Past Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by now"
           ]
         },
         {
@@ -48651,6 +50067,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by now' Perfect ister; doğrusu 'has appeared'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by now"
           ]
         },
         {
@@ -48670,6 +50089,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Referans noktası geçmişte olduğunda 'since then' Past Perfect alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since then"
           ]
         },
         {
@@ -48689,6 +50111,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'to date' Present Perfect çapasıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "to date"
           ]
         },
         {
@@ -48708,6 +50133,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'all along' geçmiş anlatısında Past Perfect ile kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "all along"
           ]
         },
         {
@@ -48745,6 +50173,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'to date' Simple Past almaz; doğrusu 'has been recovered'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "to date"
           ]
         },
         {
@@ -48781,6 +50212,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'since then' Perfect ister; doğrusu 'has relied'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since then"
           ]
         },
         {
@@ -48799,6 +50233,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'all along' baştan bu yana süregelen bir durumu bildirir; geçmiş anlatısında Past Perfect gerekir: 'had been'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "all along"
           ]
         }
       ]
@@ -48825,6 +50262,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By the time + V1 (arrive)' ana cümlede Will Have V3 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time",
+            "for + süre"
           ]
         },
         {
@@ -48844,6 +50285,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By the time + V2 (was approved)' ana cümlede Had V3 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time"
           ]
         },
         {
@@ -48863,6 +50307,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By + gelecek tarih' Will Have V3 kilidini uygular.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by + Gelecek / Geçmiş Zaman Çapası"
           ]
         },
         {
@@ -48901,6 +50348,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'since + V2' ana cümlede Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since"
           ]
         },
         {
@@ -48920,6 +50370,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'after' yan cümlesi öncelikli eylemdir ve Had V3 alır; ana cümle V2 kalır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "after"
           ]
         },
         {
@@ -48939,6 +50392,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'before + V2' ana cümlede Had V3 ister; önce gerçekleşen eylem ana cümlededir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before"
           ]
         },
         {
@@ -48958,6 +50414,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'when + V1' ana cümlede Will V1 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when"
           ]
         },
         {
@@ -48977,6 +50436,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'when + V2' ile önceki bir eylem anlatılıyorsa ana cümle Had V3 alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when",
+            "already"
           ]
         },
         {
@@ -48996,6 +50459,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as soon as + V1' ana cümlede Will V1 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -49015,6 +50481,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'until' yan cümlesine 'will' gelmez; geniş zaman kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -49034,6 +50503,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'whenever' tekrarlanan bir durum kurar; iki taraf da geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "whenever"
           ]
         },
         {
@@ -49053,6 +50525,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'every time + V2' ana cümlede de V2 ister; iki eylem aynı geçmiş düzlemde tekrarlanır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "every time / each time"
           ]
         },
         {
@@ -49072,6 +50547,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the last time + V2' geçmişte kapalı bir anı işaret eder; ana cümle de V2 alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the first / last time"
           ]
         },
         {
@@ -49091,6 +50569,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ziyaretten ÖNCE gerçekleşmiş bir eylem anlatıldığı için ana cümle Had V3 alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "already",
+            "the first / last time"
           ]
         },
         {
@@ -49110,6 +50592,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'This is the first time' ana cümlesi Present olsa da yan cümle Present Perfect alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "this is the first / second time (that)",
+            "the first / last time"
           ]
         },
         {
@@ -49148,6 +50634,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is + süre + since' kalıbında 'since' yan cümlesi Simple Past kalır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is / it has been + süre + since"
           ]
         },
         {
@@ -49167,6 +50656,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle 'It has been' olsa da 'since' yan cümlesi V2 kalır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is / it has been + süre + since"
           ]
         },
         {
@@ -49186,6 +50678,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by then' gelecek bir noktaya işaret ettiğinde Will Have V3 gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by then / by that time"
           ]
         },
         {
@@ -49205,6 +50700,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by then' geçmiş bir noktaya işaret ettiğinde Had V3 gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by then / by that time",
+            "for + süre"
           ]
         },
         {
@@ -49224,6 +50723,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'while' eşzamanlı süregelen eylemi bildirir ve Continuous ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "while / as"
           ]
         },
         {
@@ -49243,6 +50745,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ever since' ana cümlede Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ever since"
           ]
         },
         {
@@ -49262,6 +50767,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By the time + V1 (read)' ana cümlede Will Have V3 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time"
           ]
         },
         {
@@ -49281,6 +50789,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'after + had V3' ana cümlede V2 ister; iki Past Perfect üst üste gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "after"
           ]
         },
         {
@@ -49300,6 +50811,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'once' öncelik bildirdiğinde yan cümle Had V3, ana cümle V2 alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -49319,6 +50833,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'before + V2' ana cümlede V2 ya da Had V3 ister; yan cümleye 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before"
           ]
         },
         {
@@ -49338,6 +50855,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the moment' bir zaman bağlacıdır; yan cümlesine 'will' gelmez, geniş zaman kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -49357,6 +50877,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'each time + V1' tekrarlanan bir kural bildirir; ana cümle de geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "every time / each time"
           ]
         },
         {
@@ -49376,6 +50899,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle Had V3 olduğuna göre 'by the time' yan cümlesi V2 olmalıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time"
           ]
         },
         {
@@ -49395,6 +50921,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'while' eşzamanlı süregelen eylem bildirir ve Continuous ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "while / as"
           ]
         },
         {
@@ -49414,6 +50943,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçmişte kesintiye uğrayan süregelen eylem Past Continuous alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "while / as"
           ]
         },
         {
@@ -49433,6 +50965,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'whenever' tekrarlanan bir kural kurar; iki taraf da geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "whenever"
           ]
         },
         {
@@ -49452,6 +50987,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'whenever + V2' ana cümlede de Simple Past ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "whenever"
           ]
         },
         {
@@ -49471,6 +51009,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ever since' ana cümlede Present Perfect ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ever since"
           ]
         },
         {
@@ -49490,6 +51031,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ever since + tarih' Present Perfect çapasıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ever since"
           ]
         },
         {
@@ -49509,6 +51053,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Karşılaştırma anından ÖNCEye ait bir durum anlatıldığı için Past Perfect gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the first / last time"
           ]
         },
         {
@@ -49528,6 +51075,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the last time + V2' geçmişte kapalı bir andır; ana cümle de Simple Past alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the first / last time"
           ]
         },
         {
@@ -49547,6 +51097,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by then' geleceğe işaret ettiğinde Will Have V3 gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by then / by that time"
           ]
         },
         {
@@ -49566,6 +51119,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by then' geçmiş bir noktaya işaret ettiğinde Had V3 gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by then / by that time"
           ]
         }
       ]
@@ -49611,6 +51167,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'No sooner' daima 'than' ile eşleşir; 'when' yalnızca 'hardly / barely / scarcely' ile kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "hardly / barely / scarcely ... when"
           ]
         },
         {
@@ -49630,6 +51189,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Hardly / barely / scarcely' daima 'when' ile eşleşir; 'than' yalnızca 'no sooner' ile kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "hardly / barely / scarcely ... when",
+            "after",
+            "the first / last time"
           ]
         },
         {
@@ -49649,6 +51213,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Scarcely' cümle başındayken devrik yapı kurulur ve yardımcı fiil 'had' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when"
           ]
         },
         {
@@ -49687,6 +51254,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It was not until ... that' bir vurgu kalıbıdır; 'that' düşürülemez ve 'when' ile değiştirilemez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when",
+            "until / till",
+            "it was not until ... that"
           ]
         },
         {
@@ -49706,6 +51278,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Not until' cümle başındayken ana cümle devrik kurulur: did + özne + V1.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -49725,6 +51300,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıbın ikinci parçası daima 'that'tir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when",
+            "until / till"
           ]
         },
         {
@@ -49744,6 +51323,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Devrik yapıda 'did' kullanıldığı için esas fiil yalın kalır: 'did ... recognise'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -49763,6 +51345,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Hardly' devrik yapısında yardımcı fiil 'had' olur ve özneden önce gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "hardly / barely / scarcely ... when"
           ]
         },
         {
@@ -49801,6 +51386,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'when' ile eşleşen devrik başlangıçlar 'hardly / barely / scarcely'dir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "hardly / barely / scarcely ... when",
+            "until / till"
           ]
         },
         {
@@ -49820,6 +51409,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Kalıp 'It was not until ... that' biçiminde tamamlanır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till",
+            "it was not until ... that",
+            "when"
           ]
         },
         {
@@ -49839,6 +51433,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Edilgen bir ana cümlede devrik yapı 'was + özne + V3' biçiminde kurulur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -49858,6 +51455,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'No sooner' sonrası devrik sıra gerekir: had + özne + V3.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the first / last time"
           ]
         },
         {
@@ -49894,6 +51494,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Hardly' ile eşleşen bağlaç 'when'dir; 'than' yalnızca 'no sooner' ile kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "hardly / barely / scarcely ... when",
+            "the first / last time"
           ]
         },
         {
@@ -49930,6 +51534,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Vurgu kalıbı 'that' ile tamamlanır; 'when' kullanılmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when",
+            "until / till"
           ]
         },
         {
@@ -49948,6 +51556,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Not until' başta olduğunda ana cümle devrik kurulur: 'did the excavation resume'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         }
       ]
@@ -49974,6 +51585,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as soon as' yan cümlesine 'will' gelmez; gelecek anlamı geniş zamanla verilir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -49993,6 +51607,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'when' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when"
           ]
         },
         {
@@ -50012,6 +51629,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as long as' bir koşul bağlacıdır; yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as long as"
           ]
         },
         {
@@ -50031,6 +51651,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'until' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -50050,6 +51673,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'in case' önlem bildirir ve yan cümlesine 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "in case / in the event of"
           ]
         },
         {
@@ -50069,6 +51695,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'once' bir zaman bağlacıdır; yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -50088,6 +51717,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'before' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before"
           ]
         },
         {
@@ -50107,6 +51739,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'after' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "after"
           ]
         },
         {
@@ -50126,6 +51761,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'whenever' tekrarlanan durum kurar; 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "whenever"
           ]
         },
         {
@@ -50145,6 +51783,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the moment' zaman bağlacıdır; 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -50164,6 +51805,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'every time' tekrarlanan durum kurar; 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "every time / each time"
           ]
         },
         {
@@ -50183,6 +51827,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'so long as' koşul bağlacıdır; 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "so long as"
           ]
         },
         {
@@ -50202,6 +51849,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'by the time' yan cümlesine 'will' gelmez; gelecek anlamı geniş zamanla verilir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time"
           ]
         },
         {
@@ -50221,6 +51871,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'until' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -50240,6 +51893,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as soon as' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -50259,6 +51915,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'provided that' koşul bağlacıdır; 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "provided that / providing that"
           ]
         },
         {
@@ -50278,6 +51937,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'unless' koşul bağlacıdır; yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "unless"
           ]
         },
         {
@@ -50297,6 +51959,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'next year' geleceği bildirse de 'when' yan cümlesi geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when"
           ]
         },
         {
@@ -50316,6 +51981,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'before' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before"
           ]
         },
         {
@@ -50335,6 +52003,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'once' yan cümlesine 'will' gelmez; tamamlanmışlık gerekiyorsa Present Perfect kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment"
           ]
         }
       ]
@@ -50360,6 +52031,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'eight years' bir SÜREdir; süre 'for' alır. 'since' yalnızca başlangıç noktasıyla kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since"
           ]
         },
         {
@@ -50378,6 +52052,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ago' Present Perfect almaz. Doğrusu Simple Past: 'They published ...'",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ago",
+            "the first / last time"
           ]
         },
         {
@@ -50396,6 +52074,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By the time + V2' ana cümlede Had V3 ister; Present Perfect gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by the time"
           ]
         },
         {
@@ -50414,6 +52095,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'By + gelecek tarih' Will Have V3 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "by + Gelecek / Geçmiş Zaman Çapası"
           ]
         },
         {
@@ -50432,6 +52116,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'since' yan cümlesi Simple Past kalır; Present Perfect gelmez. Doğrusu 'since the mill closed'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since"
           ]
         },
         {
@@ -50450,6 +52137,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'This is the first time' yan cümlesi Present Perfect alır: 'has left'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "this is the first / second time (that)",
+            "the first / last time"
           ]
         },
         {
@@ -50468,6 +52159,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is + süre + since' kalıbında yan cümle Simple Past kalır: 'was carried out'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is / it has been + süre + since"
           ]
         },
         {
@@ -50486,6 +52180,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'after' yan cümlesi öncelikli eylemdir ve Had V3 alır: 'had removed'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "after"
           ]
         },
         {
@@ -50504,6 +52201,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'when' yan cümlesine 'will' gelmez; geniş zaman kullanılır: 'is restored'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when"
           ]
         },
         {
@@ -50522,6 +52222,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'until' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "until / till"
           ]
         },
         {
@@ -50540,6 +52243,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'in 1990' kapalı bir geçmiş tarihtir ve Present Perfect ile kullanılamaz; ya Simple Past ya da 'so far' gibi bir çapa gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "so far / up to now / hitherto / in recent years"
           ]
         },
         {
@@ -50558,6 +52264,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'over the past + süre' şu ana uzanır ve Present Perfect ister: 'has retreated'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "over the past / in the last + süre"
           ]
         },
         {
@@ -50576,6 +52285,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the last time + V2' geçmişte kapalı bir andır; ana cümle de Simple Past alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the first / last time"
           ]
         },
         {
@@ -50594,6 +52306,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Süregelen bir durum sorulduğunda Present Simple değil Perfect kullanılır: 'have you been working'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "how long"
           ]
         },
         {
@@ -50612,6 +52327,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'already' yardımcı fiil ile V3 arasına girer: 'has already approved'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "already"
           ]
         },
         {
@@ -50630,6 +52348,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'yet' cümlede bir kez kullanılır ve sona gelir; ikinci 'yet' fazladır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "yet (Perfect zarfı)"
           ]
         },
         {
@@ -50648,6 +52369,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'every time + V2' ana cümlede de Simple Past ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "every time / each time"
           ]
         },
         {
@@ -50666,6 +52390,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'while' eşzamanlı süregelen eylem bildirir ve Continuous ister: 'was calibrating'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "while / as"
           ]
         },
         {
@@ -50684,6 +52411,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçmiş alışkanlık 'used to + V1' ile kurulur. 'be used to' alışkın olmak demektir ve V-ing alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "used to + V1"
           ]
         },
         {
@@ -50702,6 +52432,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Alışkanlık bildiren 'would' durum fiilleriyle kullanılmaz; 'be' için 'used to be' gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would (alışkanlık)"
           ]
         },
         {
@@ -50720,6 +52453,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'eight years' bir süredir ve 'for' ister; 'since' yalnızca başlangıç noktasıyla kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "since"
           ]
         },
         {
@@ -50738,6 +52474,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'a decade' süre bildirdiği için 'for' gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "since"
           ]
         },
         {
@@ -50774,6 +52514,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'would' alışkanlık bildirirken yalın fiil alır; ayrıca 'own' bir durum fiilidir ve bu yapıda kullanılmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would (alışkanlık)"
           ]
         },
         {
@@ -50792,6 +52535,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'while' süregelen eylem ister; doğrusu 'was calibrating'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "while / as"
           ]
         },
         {
@@ -50810,6 +52556,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'whenever' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "whenever"
           ]
         },
         {
@@ -50828,6 +52577,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'ever since' ana cümlede Present Perfect ister: 'has been kept'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ever since"
           ]
         },
         {
@@ -50846,6 +52598,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'provided that' yan cümlesine gelecek zaman gelmez: 'approves'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "provided that / providing that"
           ]
         },
         {
@@ -50864,6 +52619,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'in case' yan cümlesine 'will' gelmez: 'is unavailable'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "in case / in the event of"
           ]
         },
         {
@@ -50882,6 +52640,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Birinci cümle geçmişte gerçekleşmiştir; 'otherwise' gerçek dışı geçmiş kurar ve 'would have missed' ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "otherwise"
           ]
         }
       ]
@@ -50908,6 +52669,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 1: gerçekleşebilir koşul. Yan cümle V1 ise ana cümle 'will V1' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -50927,6 +52691,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 2: yan cümledeki V2 geçmişi değil, şimdiki gerçek dışılığı gösterir; ana cümle 'would V1' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -50946,6 +52713,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 3: yan cümle 'had V3' ise ana cümle 'would have V3' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -50965,6 +52735,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Karma tip: koşul geçmişte ('had V3') ama sonuç şimdiye uzanıyor ('now'), bu yüzden ana cümle 'would V1' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -50984,6 +52757,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 0/1: koşul cümleciğine 'will' gelmez; geniş zaman kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -51003,6 +52779,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 2'de 'to be' fiili tüm öznelerle 'were' alır; bu gerçek dışılığın işaretidir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "if"
           ]
         },
         {
@@ -51022,6 +52802,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'unless' bir koşul bağlacıdır; yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "unless"
           ]
         },
         {
@@ -51041,6 +52824,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'unless' yan cümlesi olumlu ve geniş zaman kalır; 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "unless"
           ]
         },
         {
@@ -51060,6 +52846,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle 'could not' gerçek dışılık bildirdiği için yan cümle Tip 2 çekimini alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "even if"
           ]
         },
         {
@@ -51079,6 +52868,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle 'would have V3' olduğuna göre koşul Tip 3'tür: 'had V3'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "even if"
           ]
         },
         {
@@ -51098,6 +52890,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'provided that' yan cümlesine gelecek zaman gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "provided that / providing that"
           ]
         },
         {
@@ -51117,6 +52912,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'in case' önlem bildirir ve yan cümlesine 'will' almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "in case / in the event of"
           ]
         },
         {
@@ -51136,6 +52934,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Gerçek ve yakın bir uyarı olduğu için ikinci cümle 'will V1' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "otherwise"
           ]
         },
         {
@@ -51155,6 +52956,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Birinci cümle geçmişte gerçekleşmiş; 'otherwise' gerçek dışı geçmiş kurar ve 'would have V3' ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "otherwise"
           ]
         },
         {
@@ -51174,6 +52978,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'or else' gerçek bir uyarı bildirir ve 'will' alır; gerçek dışı geçmiş için kullanılmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "or else",
+            "before"
           ]
         },
         {
@@ -51193,6 +53001,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'but for' gizli şarttır ve geçmişe dönük gerçek dışı sonuç ister: 'would have V3'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "but for"
           ]
         },
         {
@@ -51212,6 +53023,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Had it not been for' geçmişe aittir ve 'would have V3' ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "were it not for / had it not been for"
           ]
         },
         {
@@ -51231,6 +53045,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sonuç 'would V1', yani şimdiye ait. Şimdiki gerçek dışılık için 'Were it not for' kullanılır; 'Had it not been for' geçmişe aittir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "were it not for / had it not been for",
+            "unless",
+            "if"
           ]
         },
         {
@@ -51250,6 +53069,12 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 1'in devrik biçimi 'Should + Özne + V1' şeklindedir ve düşük bir olasılık bildirir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment",
+            "during / throughout",
+            "unless",
+            "if"
           ]
         },
         {
@@ -51269,6 +53094,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 3'ün devrik biçimi 'Had + Özne + V3'tür.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "unless",
+            "if"
           ]
         },
         {
@@ -51288,6 +53117,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Tip 0: değişmez bir gerçek bildirilir; iki taraf da geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -51307,6 +53139,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Karma tip: koşul geçmişte, sonuç bugüne uzanıyor ('today'), bu yüzden 'would V1'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -51326,6 +53161,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Karma tip: koşul şimdiye ait bir durum ('were'), sonuç geçmişe ('years ago'), bu yüzden 'would have V3'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "ago",
+            "if"
           ]
         },
         {
@@ -51345,6 +53184,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'on condition that' resmî bir koşuldur; yan cümlesine gelecek zaman gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "on condition that"
           ]
         },
         {
@@ -51364,6 +53206,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'assuming that' gerçekleşebilir bir varsayım kurar ve geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "supposing / assuming (that)"
           ]
         },
         {
@@ -51383,6 +53228,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçmişe dönük pişmanlık 'If only + had V3' ile kurulur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if only",
+            "before",
+            "would (alışkanlık)"
           ]
         },
         {
@@ -51421,6 +53271,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle 'would V1' olduğuna göre koşul Tip 2'dir; 'to be' fiili 'were' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if"
           ]
         },
         {
@@ -51478,6 +53331,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the next time' geleceğe dönük olsa da yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the next time"
           ]
         },
         {
@@ -51497,6 +53353,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the next time + V1' ana cümlede 'will V1' ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the next time"
           ]
         },
         {
@@ -51516,6 +53375,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'from then on' geçmişteki bir ana bağlıdır; Present Perfect değil Simple Past alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "from then on"
           ]
         },
         {
@@ -51535,6 +53397,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'from then on' geçmiş anlatısında kullanılır ve V2 ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "from then on"
           ]
         },
         {
@@ -51554,6 +53419,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Boşluktan sonra doğrudan V3 geliyor, özne yok; öncelik bildiren etken kısaltma 'Having V3'tür.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when",
+            "after",
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -51573,6 +53443,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Pano restore EDİLEN taraftır; edilgen öncelik kısaltması 'Having been V3' gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "after",
+            "as soon as / once / the moment",
+            "already"
           ]
         },
         {
@@ -51592,6 +53467,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle 'will' ile gerçek bir gelecek kurduğu için yan cümle geniş zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "even if"
           ]
         },
         {
@@ -51611,6 +53489,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle 'would have V3' olduğuna göre koşul Tip 3'tür.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "even if"
           ]
         },
         {
@@ -51630,6 +53511,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'or else' gerçek ve yakın bir uyarı bildirir; ana cümle 'will' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "or else",
+            "before"
           ]
         },
         {
@@ -51649,6 +53534,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'but for' geçmişe dönük gizli şart kurduğunda sonuç 'would have V3' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "but for"
           ]
         },
         {
@@ -51668,6 +53556,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the next time' yan cümlesine 'will' gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the next time"
           ]
         },
         {
@@ -51686,6 +53577,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'the next time' yan cümlesine gelecek zaman gelmez: 'is opened'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "the next time"
           ]
         },
         {
@@ -51705,6 +53599,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'from then on' geçmişte başlayıp tekrarlanan bir alışkanlığı 'would V1' ile bildirir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "from then on",
+            "would (alışkanlık)"
           ]
         },
         {
@@ -51723,6 +53621,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'from then on' geçmişteki bir ana bağlıdır; Present Perfect değil Simple Past alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "from then on"
           ]
         },
         {
@@ -51742,6 +53643,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Edilgen öncelik kısaltması 'Having been V3' biçimindedir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "when",
+            "after",
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -51761,6 +53667,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'or else' gerçek bir uyarı bildirir ve 'will' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "or else"
           ]
         },
         {
@@ -51780,6 +53689,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'but for' şimdiye dönük gizli şart kurduğunda sonuç 'would V1' olur; 'today' bunu belirler.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "but for"
           ]
         },
         {
@@ -51799,6 +53711,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sonuç 'would have V3', yani geçmişe ait; bu yüzden 'Had it not been for' gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "were it not for / had it not been for",
+            "unless",
+            "if"
           ]
         },
         {
@@ -51818,6 +53735,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Were it not for' şimdiki/geleceğe dönük gerçek dışılıktır ve 'would V1' ister.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "were it not for / had it not been for"
           ]
         },
         {
@@ -51836,6 +53756,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Sonuç geçmişe ait ('in 1994'), bu yüzden koşul da geçmiş olmalıdır: 'Had it not been for'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "were it not for / had it not been for"
           ]
         }
       ]
@@ -51862,6 +53785,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Şimdiye ait bir dilek bir zaman geriye kayar; 'to be' fiilinde tüm öznelerle 'were' kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "I wish"
           ]
         },
         {
@@ -51881,6 +53807,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçmişe dönük pişmanlık 'wish + had V3' ile kurulur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "I wish"
           ]
         },
         {
@@ -51900,6 +53830,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Başkasının davranışına duyulan sitem 'wish + would V1' ile bildirilir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "I wish"
           ]
         },
         {
@@ -51919,6 +53852,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Şimdiye ait bir dilek V2 alır; 'wish I would know' kurulmaz çünkü özne aynıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "I wish"
           ]
         },
         {
@@ -51938,6 +53874,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'would rather' öznesi farklıysa V2 alır ve 'to' kullanılmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would rather"
           ]
         },
         {
@@ -51957,6 +53896,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'would rather' aynı özneyle yalın fiil alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would rather"
           ]
         },
         {
@@ -51976,6 +53918,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçmişte gerçekleşmemiş bir tercih 'would rather + Özne + had V3' ile kurulur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would rather",
+            "before"
           ]
         },
         {
@@ -51995,6 +53941,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is (high) time' ana cümlesi Present olsa da yan cümle V2 alır; bu geçmiş değil, yapılmamışlığa sitemdir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is (high) time"
           ]
         },
         {
@@ -52014,6 +53963,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is time + Özne + V2' kalıbıdır; 'we go' yanlıştır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is (high) time",
+            "before"
           ]
         },
         {
@@ -52033,6 +53986,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as though' gerçek dışı ve ÖNCEKİ bir durumu bildirdiğinde 'had V3' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as if / as though"
           ]
         },
         {
@@ -52052,6 +54008,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as if' gerçek dışı bir eşzamanlılık bildirdiğinde 'were' kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as if / as though"
           ]
         },
         {
@@ -52071,6 +54030,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'as if' GERÇEK bir çıkarım bildirdiğinde zaman kayması olmaz; olağan çekim korunur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as if / as though",
+            "lately / recently"
           ]
         },
         {
@@ -52089,6 +54052,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'wish + would' yalnızca öznesi FARKLI olan davranışlar için kullanılır; aynı öznede V2 gelir: 'I wish I knew'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "I wish"
           ]
         },
         {
@@ -52107,6 +54073,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is time' yan cümlesi V2 alır: 'we went'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is (high) time",
+            "before"
           ]
         },
         {
@@ -52125,6 +54095,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'would rather + Özne' yapısında 'to' kullanılmaz ve fiil V2 olur: 'we handled'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would rather"
           ]
         },
         {
@@ -52143,6 +54116,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Geçmişe dönük pişmanlıkta 'had V3' gerekir: 'had photographed'. V2 şimdiye ait dilek bildirir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "I wish"
           ]
         },
         {
@@ -52162,6 +54139,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'If only' geçmiş pişmanlıkta 'had V3' alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if only",
+            "before"
           ]
         },
         {
@@ -52181,6 +54162,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Şimdiye ait bir dilek V2 alır; aynı öznede 'would' kullanılmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "if only"
           ]
         },
         {
@@ -52200,6 +54184,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'would rather + Özne' yapısının olumsuzu da V2 ile kurulur: 'you did not break'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "would rather",
+            "until / till"
           ]
         },
         {
@@ -52219,6 +54207,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle geçmişte olsa da kalıp yine V2 alır; 'had reached'e kaymaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is (high) time"
           ]
         }
       ]
@@ -52245,6 +54236,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'recommend that' subjunctive tetikler; üçüncü tekil şahısta bile fiil yalın kalır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "suggest / recommend / insist / demand + that"
           ]
         },
         {
@@ -52264,6 +54258,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Ana cümle geçmişte olsa da subjunctive fiil yalın kalır; zaman kayması olmaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "suggest / recommend / insist / demand + that"
           ]
         },
         {
@@ -52302,6 +54299,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is essential that' subjunctive tetikler; edilgen biçimi 'be + V3' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is essential / vital / imperative that"
           ]
         },
         {
@@ -52321,6 +54321,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'imperative that' kalıbı yalın fiil ister; ana cümlenin geçmiş olması bunu değiştirmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is essential / vital / imperative that",
+            "before"
           ]
         },
         {
@@ -52340,6 +54344,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'vital that' subjunctive tetikler ve edilgende 'be V3' gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is essential / vital / imperative that"
           ]
         },
         {
@@ -52358,6 +54365,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Subjunctive'de üçüncü tekil şahısta -s eklenmez: 'keep'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "suggest / recommend / insist / demand + that"
           ]
         },
         {
@@ -52376,6 +54386,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'It is essential that' yalın fiil ister; doğrusu 'be frozen'dır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "it is essential / vital / imperative that"
           ]
         },
         {
@@ -52395,6 +54408,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Seldom' cümle başındayken devriklik zorunludur; geniş zamanda yardımcı fiil 'does' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "seldom / rarely"
           ]
         },
         {
@@ -52414,6 +54430,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'been compared' bir Perfect edilgen; yardımcı fiil 'had' olmalıdır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "seldom / rarely"
           ]
         },
         {
@@ -52433,6 +54453,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Never before' daima bir Perfect ister; Simple Past ('did') almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "never before"
           ]
         },
         {
@@ -52452,6 +54475,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Şimdiye uzanan bir karşılaştırma olduğu için Present Perfect kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "never before"
           ]
         },
         {
@@ -52471,6 +54497,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Devriklik ANA cümlede olur ve geçmişte 'did + V1' biçimini alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "only then / only after / only when"
           ]
         },
         {
@@ -52490,6 +54519,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Edilgen bir ana cümlede devrik yapı 'was + özne + V3' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "only then / only after / only when"
           ]
         },
         {
@@ -52509,6 +54541,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Yapı zaten olumsuzdur; modal olumsuzlanmaz ve özneden önce gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "under no circumstances / on no account"
           ]
         },
         {
@@ -52528,6 +54563,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'At no time' devrik yapı ister; geçmişte 'did + özne + V1' kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "at no time / not once"
           ]
         },
         {
@@ -52547,6 +54585,11 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'been tested' Perfect edilgendir; yardımcı fiil 'had' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "as soon as / once / the moment",
+            "at no time / not once",
+            "since"
           ]
         },
         {
@@ -52566,6 +54609,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Little did + Özne + V1' kalıbı yalnızca know/realise/suspect gibi fiillerle kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "little did + Özne"
           ]
         },
         {
@@ -52584,6 +54630,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Seldom' cümle başındayken devriklik zorunludur: 'Seldom does the committee overturn'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "seldom / rarely"
           ]
         },
         {
@@ -52602,6 +54651,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'been exhibited' Perfect edilgendir ve 'had' ister; 'did' ile birlikte kullanılamaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "never before"
           ]
         },
         {
@@ -52621,6 +54673,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Devriklik ana cümlededir ve geçmişte 'did + V1' biçimini alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "only then / only after / only when"
           ]
         },
         {
@@ -52640,6 +54695,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Edilgen ana cümlede devrik yapı 'was + özne + V3' olur.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "only then / only after / only when"
           ]
         },
         {
@@ -52659,6 +54717,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Yapı zaten olumsuzdur; modal olumsuzlanmaz ve özneden önce gelir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "before",
+            "under no circumstances / on no account"
           ]
         },
         {
@@ -52678,6 +54740,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Under no circumstances' devrik yapı ister; olumsuzluk zaten kalıpta olduğu için fiil olumlu kalır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "under no circumstances / on no account"
           ]
         },
         {
@@ -52697,6 +54762,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Edilgen ana cümlede 'was + özne + V3' devrik sırası kullanılır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "during / throughout",
+            "at no time / not once"
           ]
         },
         {
@@ -52716,6 +54785,10 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Little did + Özne + V1' kalıbı geçmişte 'did' alır ve esas fiil yalın kalır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "little did + Özne",
+            "already"
           ]
         },
         {
@@ -52753,6 +54826,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "Olumsuz zarf öbeği başta olduğunda modal özneden önce gelir: 'may the manuscript leave'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "under no circumstances / on no account"
           ]
         },
         {
@@ -52771,6 +54847,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'At no time' zaten olumsuzdur; ikinci bir olumsuzluk eklenmez ve fiil yalın kalır: 'consult'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "at no time / not once"
           ]
         },
         {
@@ -52789,6 +54868,9 @@ if (typeof lessons !== 'undefined') {
           "explanation": "'Only after' başta olduğunda ana cümle devrik kurulur: 'was the fault identified'.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
+          ],
+          "terms": [
+            "only then / only after / only when"
           ]
         }
       ]

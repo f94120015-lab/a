@@ -13083,8 +13083,12 @@ function renderConnectorDrillTab() {
     const rows = tests.map((chunk, t) => `
       <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
         <span class="text-sm-muted">Test ${t + 1} · ${chunk.length} soru</span>
-        <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
-                data-drill-lesson="${sec.lessonId}" data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
+        <div style="display: flex; gap: 6px;">
+          <button class="btn btn-secondary" style="padding: 6px 10px; font-size: 0.78rem;"
+                  data-brief-ex="${ex.id}" data-brief-test="${t}" title="Bu testin kurallarını göster">📖 Kurallar</button>
+          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
+                  data-drill-lesson="${sec.lessonId}" data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
+        </div>
       </div>`).join('');
     return `
       <div class="card-panel" style="gap: 10px;">
@@ -13105,6 +13109,121 @@ function renderConnectorDrillTab() {
     btn.onclick = () => startConnectorDrill(btn.dataset.drillLesson, btn.dataset.drillEx,
                                             parseInt(btn.dataset.drillTest, 10) || 0);
   });
+  listEl.querySelectorAll('[data-brief-ex]').forEach(btn => {
+    btn.onclick = () => {
+      const e = exercises.find(x => x.id === btn.dataset.briefEx);
+      const t = parseInt(btn.dataset.briefTest, 10) || 0;
+      const chunk = connectorDrillTests(e)[t] || [];
+      showRuleBriefing(`${e.title} — Test ${t + 1}`, drillBriefCards(chunk), null);
+    };
+  });
+}
+
+// ── Kural brifingi ──────────────────────────────────────────────────────────
+// Alıştırmaların kuralları matrislerde zaten yazılı; eksik olan yönlendirmeydi.
+// Her soru çalıştırdığı terimlerle etiketli (questions[].terms), brifing de o
+// etiketlerden derleniyor: testte en sık geçen terimlerin kartları gösterilir.
+const DRILL_BRIEF_KEY = 'amok_drill_briefed';
+const DRILL_BRIEF_MAX = 6;
+
+function findRuleCard(term) {
+  const srcs = [typeof TIME_MATRIX_DATA !== 'undefined' ? TIME_MATRIX_DATA : null,
+                typeof TRANSITIONS_MATRIX_DATA !== 'undefined' ? TRANSITIONS_MATRIX_DATA : null,
+                typeof CAUSE_EFFECT_DATA !== 'undefined' ? CAUSE_EFFECT_DATA : null];
+  for (const src of srcs) {
+    if (!src) continue;
+    for (const list of Object.values(src)) {
+      const hit = (list || []).find(x => x.term === term);
+      if (hit) return hit;
+    }
+  }
+  return null;
+}
+
+// Testteki sorulardan, en sık geçen terimlerin kartlarını çıkarır.
+function drillBriefCards(questions) {
+  const freq = {}, first = {};
+  (questions || []).forEach(q => (q.terms || []).forEach((t, i) => {
+    freq[t] = (freq[t] || 0) + 1;
+    // Etiketler açıklamada geçenler önde olacak şekilde sıralı; ilk görülen
+    // konumu sıklık eşitliğinde ayırt edici olarak saklıyoruz.
+    if (first[t] === undefined || i < first[t]) first[t] = i;
+  }));
+  return Object.keys(freq)
+    .sort((a, b) => (freq[b] - freq[a]) || (first[a] - first[b]))
+    .map(findRuleCard)
+    .filter(Boolean)
+    .slice(0, DRILL_BRIEF_MAX);
+}
+
+function drillBriefSeen(exerciseId) {
+  try {
+    return (JSON.parse(localStorage.getItem(DRILL_BRIEF_KEY) || '[]') || []).includes(exerciseId);
+  } catch (e) { return false; }
+}
+
+function markDrillBriefSeen(exerciseId) {
+  try {
+    const seen = JSON.parse(localStorage.getItem(DRILL_BRIEF_KEY) || '[]') || [];
+    if (!seen.includes(exerciseId)) {
+      seen.push(exerciseId);
+      localStorage.setItem(DRILL_BRIEF_KEY, JSON.stringify(seen));
+    }
+  } catch (e) { /* depolama kapalıysa brifing yine çalışır, sadece hatırlanmaz */ }
+}
+
+function showRuleBriefing(title, cards, onStart) {
+  const old = document.getElementById('drill-brief-modal');
+  if (old) old.remove();
+
+  if (!cards.length) { if (onStart) onStart(); return; }
+
+  const body = cards.map(c => {
+    const ex = (c.examples || [])[0];
+    return `
+      <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px 16px; background: var(--bg-card);">
+        <div style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;">
+          <span style="font-weight: 800; font-size: 1rem; color: var(--text-primary);">${c.term}</span>
+          <span style="font-size: 0.82rem; color: var(--text-secondary);">${c.meaning || ''}</span>
+        </div>
+        <div style="margin-top: 8px; font-size: 0.85rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">
+          ${String(c.rule || c.formula || '').replace(/\n/g, '<br>')}
+        </div>
+        ${c.trap ? `<div style="margin-top: 6px; font-size: 0.82rem; color: #ef4444; line-height: 1.5;">${c.trap}</div>` : ''}
+        ${ex ? `<div style="margin-top: 8px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
+                  🇬🇧 ${ex.en}<br><span style="font-style: italic;">🇹🇷 ${ex.tr}</span>
+                </div>` : ''}
+      </div>`;
+  }).join('');
+
+  const modal = document.createElement('div');
+  modal.id = 'drill-brief-modal';
+  modal.style.cssText = 'position:fixed; inset:0; background:rgba(10,10,18,0.75); backdrop-filter:blur(10px);' +
+    'z-index:10000; display:flex; align-items:center; justify-content:center; padding:20px;';
+  modal.innerHTML = `
+    <div style="background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-xl);
+                max-width: 640px; width: 100%; max-height: 86vh; display: flex; flex-direction: column;
+                box-shadow: var(--shadow-lg); overflow: hidden;">
+      <div style="padding: 20px 24px 12px;">
+        <span style="font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; color: var(--text-secondary);">BAŞLAMADAN ÖNCE</span>
+        <h2 style="margin: 6px 0 0; font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800; color: var(--text-primary);">${title}</h2>
+        <p style="margin: 6px 0 0; font-size: 0.85rem; color: var(--text-secondary);">Bu testte çalışacağın kurallar:</p>
+      </div>
+      <div style="padding: 4px 24px 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
+        ${body}
+      </div>
+      <div style="padding: 14px 24px 20px; border-top: 1px solid var(--border-color); display: flex; gap: 10px; justify-content: flex-end;">
+        <button class="btn btn-secondary" id="drill-brief-close" style="padding: 10px 18px;">Kapat</button>
+        ${onStart ? '<button class="btn btn-primary" id="drill-brief-start" style="padding: 10px 22px;">Anladım, başla</button>' : ''}
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const close = () => modal.remove();
+  modal.querySelector('#drill-brief-close').onclick = close;
+  const startBtn = modal.querySelector('#drill-brief-start');
+  if (startBtn) startBtn.onclick = () => { close(); onStart(); };
+  modal.onclick = e => { if (e.target === modal) close(); };
 }
 
 function startConnectorDrill(lessonId, exerciseId, testIndex) {
@@ -13116,6 +13235,19 @@ function startConnectorDrill(lessonId, exerciseId, testIndex) {
     return;
   }
 
+  // Bir alıştırmanın ilk testinde kurallar otomatik gösterilir; sonrasında
+  // öğrenci isterse kart üzerindeki "Kuralları gör" ile açar.
+  if (!drillBriefSeen(exerciseId)) {
+    markDrillBriefSeen(exerciseId);
+    showRuleBriefing(`${ex.title} — Test ${(testIndex || 0) + 1}`,
+                     drillBriefCards(questions),
+                     () => runConnectorDrill(questions));
+    return;
+  }
+  runConnectorDrill(questions);
+}
+
+function runConnectorDrill(questions) {
   quizSessionId++;
   isReviewMode = true;    // can kaybı yok, soru kaynağı reviewQuestions
   isExamMode = false;     // geri bildirim anında gelsin
