@@ -13024,6 +13024,19 @@ function renderExamTab() {
 // kaybı yoktur.
 const CONNECTOR_DRILL_LESSON_ID = 'cdrill_l1';
 
+// Her alıştırma 10'ar soruluk testlere bölünüp öyle listelenir: 80 soruluk tek
+// bir düğme caydırıcı, 10 soruluk bir test oturulup bitirilebilir bir hedef.
+const CONNECTOR_DRILL_TEST_SIZE = 10;
+
+function connectorDrillTests(ex) {
+  const qs = (ex && ex.questions) || [];
+  const out = [];
+  for (let i = 0; i < qs.length; i += CONNECTOR_DRILL_TEST_SIZE) {
+    out.push(qs.slice(i, i + CONNECTOR_DRILL_TEST_SIZE));
+  }
+  return out;
+}
+
 function renderConnectorDrillTab() {
   const listEl = document.getElementById('connector-drill-list');
   if (!listEl) return;
@@ -13035,37 +13048,43 @@ function renderConnectorDrillTab() {
     return;
   }
 
-  const icons = ['📐', '🧩', '🔍'];
+  // Her alıştırmanın kendi simgesi olsun; döngüsel bir liste kartları
+  // birbirinin kopyası gibi gösteriyordu.
+  const icons = { cdrill_ex1: '📐', cdrill_ex2: '🧩', cdrill_ex6: '🎯',
+                  cdrill_ex3: '🔍', cdrill_ex4: '🔗', cdrill_ex5: '↔️' };
+
   listEl.innerHTML = exercises.map((ex, i) => {
-    const n = (ex.questions || []).length;
+    const tests = connectorDrillTests(ex);
+    const rows = tests.map((chunk, t) => `
+        <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
+          <span class="text-sm-muted">Test ${t + 1} · ${chunk.length} soru</span>
+          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
+                  data-drill-ex="${ex.id}" data-drill-test="${t}">Başlat</button>
+        </div>`).join('');
     return `
       <div class="card-panel" style="gap: 10px;">
         <div class="flex-center-12">
-          <span class="icon-lg">${icons[i % icons.length]}</span>
+          <span class="icon-lg">${icons[ex.id] || '📘'}</span>
           <div class="flex-col-4">
             <span class="section-title-sm">${ex.title}</span>
             <span class="text-sm-muted">${ex.description || ''}</span>
           </div>
         </div>
-        <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
-          <span class="text-sm-muted">${n} soru · süresiz</span>
-          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;"
-                  data-drill-ex="${ex.id}" ${n ? '' : 'disabled'}>Başlat</button>
-        </div>
+        ${rows || '<p class="text-sm-muted">Bu alıştırmada henüz soru yok.</p>'}
       </div>`;
   }).join('');
 
   listEl.querySelectorAll('[data-drill-ex]').forEach(btn => {
-    btn.onclick = () => startConnectorDrill(btn.dataset.drillEx);
+    btn.onclick = () => startConnectorDrill(btn.dataset.drillEx, parseInt(btn.dataset.drillTest, 10) || 0);
   });
 }
 
-function startConnectorDrill(exerciseId) {
+function startConnectorDrill(exerciseId, testIndex) {
   const lesson = lessons.find(l => l.id === CONNECTOR_DRILL_LESSON_ID);
   const ex = lesson && (lesson.exercises || []).find(e => e.id === exerciseId);
-  const questions = (ex && ex.questions) || [];
+  const questions = connectorDrillTests(ex)[testIndex || 0] || [];
   if (!questions.length) {
-    showToast('Bu alıştırmada henüz soru bulunmuyor.', 'info');
+    showToast('Bu testte henüz soru bulunmuyor.', 'info');
     return;
   }
 

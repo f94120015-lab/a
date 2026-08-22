@@ -44549,7 +44549,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex6",
-      "title": "Alıştırma 6: Anlam Ayrımı",
+      "title": "Alıştırma 3: Anlam Ayrımı",
       "description": "Aynı aileden bağlaçlar arasında bağlama göre doğru olanı seçme.",
       "questions": [
         {
@@ -45506,7 +45506,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex3",
-      "title": "Alıştırma 3: Kural İhlali Avcılığı",
+      "title": "Alıştırma 4: Kural İhlali Avcılığı",
       "description": "Matristeki tuzaklardan üretilen hatalı cümleler.",
       "questions": [
         {
@@ -46233,7 +46233,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex4",
-      "title": "Alıştırma 4: Yapı Eşleştirme",
+      "title": "Alıştırma 5: Yapı Eşleştirme",
       "description": "Bağlacı, kendisinden sonra gelen yapıyla veya anlamıyla eşleştir.",
       "questions": [
         {
@@ -47020,7 +47020,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex5",
-      "title": "Alıştırma 5: Neden-Sonuç Yönü",
+      "title": "Alıştırma 6: Neden-Sonuç Yönü",
       "description": "Fiilin özneyi neden mi sonuç mu yaptığını ayırt etme.",
       "questions": [
         {
