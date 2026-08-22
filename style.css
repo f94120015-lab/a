@@ -4873,6 +4873,18 @@ input {
   border: 1px solid rgba(20, 184, 166, 0.3);
 }
 
+.tm-category-badge.unreal_past {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.tm-category-badge.subjunctive {
+  background: rgba(217, 119, 6, 0.15);
+  color: #d97706;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
 .tm-meaning-text {
   font-size: 0.9rem;
   color: var(--text-secondary);

@@ -13030,7 +13030,8 @@ const CONNECTOR_DRILL_SECTIONS = [
   { lessonId: 'tdrill_l1', title: '⏳ Zaman Uyumu Kuralları',
     desc: 'Kural zamandır: terim, cümlenin iki tarafına gelebilecek çekimleri belirler.',
     icons: { tdrill_ex1: '⚓', tdrill_ex2: '🔀', tdrill_ex3: '⚡',
-             tdrill_ex4: '🚫', tdrill_ex5: '🔍' } }
+             tdrill_ex4: '🚫', tdrill_ex5: '🔍', tdrill_ex6: '🔀',
+             tdrill_ex7: '💭', tdrill_ex8: '📜' } }
 ];
 
 // Her alıştırma 10'ar soruluk testlere bölünüp öyle listelenir: 80 soruluk tek
@@ -27308,7 +27309,9 @@ function renderTimeMatrix() {
       eras: 'ÇAĞ & DÖNEM',
       reductions: 'ZAMAN KISALTMASI',
       perfect_anchors: 'PERFECT ÇAPASI',
-      patterns: 'ZAMAN KALIBI'
+      patterns: 'ZAMAN KALIBI',
+      unreal_past: 'GERÇEK DIŞI GEÇMİŞ',
+      subjunctive: 'SUBJUNCTIVE'
     };
     const catLabel = catLabelMap[item.category] || 'ZAMAN';
 
@@ -28287,7 +28290,7 @@ function toggleTrmCard(idx) {
   if (typeof TRANSITIONS_MATRIX_DATA !== 'undefined') {
     push(TRANSITIONS_MATRIX_DATA.sentence_connectors, [
   {
-    "term": "yet",
+    "term": "yet (zıtlık bağlacı)",
     "category": "contrast",
     "meaning": "yine de, buna karşın (Bağlaç)",
     "rule": "📐 NOKTALAMA: Cümle 1, yet Cümle 2.",
@@ -29415,7 +29418,7 @@ function toggleTrmCard(idx) {
     ]
   },
   {
-    "term": "yet",
+    "term": "yet (Perfect zarfı)",
     "category": "perfect_anchors",
     "meaning": "henüz (Olumsuz / Soru)",
     "rule": "📐 KURAL: Özne + have/has + not + V3 + yet  ||  Have/Has + Özne + V3 + yet?",
@@ -29777,4 +29780,527 @@ function toggleTrmCard(idx) {
     ]
   }
 ]);
+})();
+
+
+// ============================================================
+// Zaman uyumu genişletmesi 2. Ölçüt yine aynı: terim cümlenin iki tarafındaki
+// çekimi hesaplanabilir kılmalı. İki iş yapar:
+//   1) Koşul kartlarının kural metnini düzeltir. 'if' kartı yalnızca yapıyı
+//      ("If + Özne + Fiil") anlatıyordu; Tip 1/2/3 zaman karşılığı hiçbir yerde
+//      yazılı değildi, oysa ölçütün en saf örneği tam budur.
+//   2) Gerçek dışı geçmiş, subjunctive, devrik olumsuz zarf ve Perfect çapası
+//      ailelerinden 18 kart ekler.
+// ============================================================
+(function extendTenseLocks() {
+  const RULES = {
+  "if": {
+    "rule": "📐 TİP 1: If + V1 ➔ WILL V1  |  TİP 2: If + V2 ➔ WOULD V1\n📐 TİP 3: If + HAD V3 ➔ WOULD HAVE V3  |  KARMA: If + HAD V3 ➔ WOULD V1 (şimdiye uzanan sonuç)",
+    "trap": "⚠️ Koşul cümleciğine 'will' ya da 'would' gelmez: 'If it rains' doğru, 'If it will rain' yanlıştır. Tipi belirleyen şey zamanın kendisi değil, gerçeklik derecesidir: Tip 2'deki V2 geçmişi değil, şimdiki gerçek dışılığı gösterir."
+  },
+  "unless": {
+    "rule": "📐 FORMÜL: Unless + Olumlu Yan Cümle (V1 / V2), Ana Cümle (will V1 / would V1)",
+    "trap": "⚠️ 'Unless' zaten olumsuzdur, yan cümlesine 'not' almaz. Yan cümlesine 'will' de gelmez: 'unless it rains' doğru, 'unless it will rain' yanlıştır."
+  },
+  "even if": {
+    "rule": "📐 FORMÜL: Even if + V1 ➔ WILL V1  |  Even if + V2 ➔ WOULD V1  |  Even if + HAD V3 ➔ WOULD HAVE V3",
+    "trap": "⚠️ 'if' ile aynı zaman uyumunu izler, farkı anlamdadır: koşul gerçekleşse DE sonuç değişmez. 'even though' ise gerçekleşmiş bir durumu bildirir ve bu tablo ona uygulanmaz."
+  },
+  "provided that / providing that": {
+    "rule": "📐 FORMÜL: Provided that + V1 (Geniş Zaman), Ana Cümle WILL V1",
+    "trap": "⚠️ 'If' bağlacının resmî karşılığıdır ve aynı kısıtı taşır: yan cümlesine gelecek zaman gelmez. Yalnızca olumlu, gerçekleşebilir koşullarda kullanılır; Tip 2 ve Tip 3 varsayımlarında kullanılmaz."
+  },
+  "in case / in the event of": {
+    "rule": "📐 FORMÜL: in case + Özne + V1 / V2 (ÖNLEM)  ||  in the event of + İsim Öbeği",
+    "trap": "⚠️ Yan cümlesine 'will' gelmez. 'If' ile aynı şey değildir: 'if' koşula BAĞLAR, 'in case' ise olasılığa karşı ÖNCEDEN önlem aldırır — 'Take a key in case he is out' (çıkmadan önce al)."
+  },
+  "otherwise": {
+    "rule": "📐 NOKTALAMA: Cümle 1; otherwise, Cümle 2.\n📐 ZAMAN: Şimdiki gerçek dışılık ➔ WOULD V1  |  Geçmiş gerçek dışılık ➔ WOULD HAVE V3",
+    "trap": "⚠️ Gizli bir koşul kurar: 'Hurry; otherwise you will miss it' (gerçek) ama 'He left early; otherwise he would have missed it' (gerçek dışı geçmiş). İkinci cümlenin çekimi bu ayrımı gösterir."
+  },
+  "or else": {
+    "rule": "📐 NOKTALAMA: Cümle 1, or else Cümle 2 (WILL V1)",
+    "trap": "⚠️ 'otherwise' ile eş anlamlıdır ancak gerçek ve yakın bir uyarı bildirir; gerçek dışı geçmiş için ('would have V3') kullanılmaz."
+  },
+  "but for": {
+    "rule": "📐 FORMÜL: But for + İsim Öbeği, Özne + WOULD HAVE V3 (geçmiş) / WOULD V1 (şimdi)",
+    "trap": "⚠️ Arkasından cümle değil isim öbeği alır ve daima gerçek dışı bir sonuç cümlesi ister; 'will' ile kullanılmaz."
+  },
+  "were it not for / had it not been for": {
+    "rule": "📐 FORMÜL: Were it not for + İsim ➔ WOULD V1 (şimdi)\n📐 Had it not been for + İsim ➔ WOULD HAVE V3 (geçmiş)",
+    "trap": "⚠️ 'if it were not for' ve 'if it had not been for' kalıplarının devrik biçimidir. Hangisinin kullanılacağını sonuç cümlesinin zamanı belirler."
+  },
+  "as if / as though": {
+    "rule": "📐 FORMÜL: Özne + Fiil + as if / as though + Özne + V2 / WERE (şimdi) veya HAD V3 (öncelik)",
+    "trap": "⚠️ Gerçek dışılık bildirdiğinde fiil bir zaman geriye kayar; ana cümle şimdiki zamanda olsa bile yan cümle V2 alır. Gerçek bir benzerlikte ise kayma olmaz: 'It looks as if it is going to rain.'"
+  }
+};
+  const NEW = {
+  "unreal_past": [
+    {
+      "term": "I wish",
+      "category": "unreal_past",
+      "meaning": "keşke (Gerçekleşmemiş Dilek)",
+      "rule": "📐 KURAL: I wish + V2/WERE (şimdi)  |  + HAD V3 (geçmiş pişmanlık)  |  + WOULD V1 (sitem)",
+      "trap": "⚠️ 'I wish I would' kurulmaz: 'would' yalnızca öznesi farklı olan, değişmesi istenen davranışlar için kullanılır. To be fiilinde tüm öznelerle 'were' tercih edilir.",
+      "examples": [
+        {
+          "en": "I wish the archive were open at weekends.",
+          "tr": "Keşke arşiv hafta sonları açık olsa.",
+          "tense": "Past Subjunctive"
+        },
+        {
+          "en": "I wish we had photographed the inscription before the stone was moved.",
+          "tr": "Keşke taş taşınmadan önce yazıtı fotoğraflasaydık.",
+          "tense": "Past Perfect"
+        },
+        {
+          "en": "I wish they would publish the raw data.",
+          "tr": "Keşke ham veriyi yayımlasalar.",
+          "tense": "would + V1"
+        }
+      ]
+    },
+    {
+      "term": "would rather",
+      "category": "unreal_past",
+      "meaning": "tercih ederdim ki (Öznesi Değişen Tercih)",
+      "rule": "📐 KURAL: would rather + V1 (aynı özne)  |  would rather + Özne + V2 (farklı özne, şimdi/gelecek)  |  + Özne + HAD V3 (geçmiş)",
+      "trap": "⚠️ Özne aynıysa yalın fiil, farklıysa V2 gelir: 'I would rather stay' ama 'I would rather you stayed'. İkinci yapıda 'to' kullanılmaz.",
+      "examples": [
+        {
+          "en": "I would rather consult the original than the facsimile.",
+          "tr": "Tıpkıbasım yerine aslına başvurmayı tercih ederim.",
+          "tense": "Bare Infinitive"
+        },
+        {
+          "en": "The curator would rather we handled the folios with gloves.",
+          "tr": "Küratör yaprakları eldivenle tutmamızı tercih ederdi.",
+          "tense": "Past Subjunctive"
+        },
+        {
+          "en": "She would rather they had consulted her before the sale.",
+          "tr": "Satıştan önce kendisine danışmalarını tercih ederdi.",
+          "tense": "Past Perfect"
+        }
+      ]
+    },
+    {
+      "term": "it is (high) time",
+      "category": "unreal_past",
+      "meaning": "artık ... -mesi gerekir",
+      "rule": "📐 KURAL: It is (high) time + Özne + V2  ||  It is time + to V1 (özne belirtilmezse)",
+      "trap": "⚠️ Ana cümle Present ('It is') olmasına rağmen yan cümle V2 alır; bu geçmiş değil, yapılmamışlığa duyulan sitemdir. 'It is time we go' yanlıştır, 'we went' doğrudur.",
+      "examples": [
+        {
+          "en": "It is high time the catalogue was revised.",
+          "tr": "Kataloğun artık gözden geçirilmesi gerekiyor.",
+          "tense": "Past Subjunctive"
+        },
+        {
+          "en": "It is time we left if we want to reach the site before dark.",
+          "tr": "Alana karanlık basmadan varmak istiyorsak artık çıkmamız gerek.",
+          "tense": "Past Subjunctive"
+        },
+        {
+          "en": "It is time to review the storage conditions.",
+          "tr": "Depolama koşullarını gözden geçirmenin zamanı geldi.",
+          "tense": "to + V1"
+        }
+      ]
+    }
+  ],
+  "subjunctive": [
+    {
+      "term": "suggest / recommend / insist / demand + that",
+      "category": "subjunctive",
+      "meaning": "önermek, ısrar etmek, talep etmek",
+      "rule": "📐 KURAL: Fiil + that + Özne + V1 (YALIN FİİL, özne ne olursa olsun)",
+      "trap": "⚠️ Üçüncü tekil şahısta bile fiile -s eklenmez ve 'to' kullanılmaz: 'recommend that every laboratory keep' doğru, 'keeps' ya da 'to keep' yanlıştır. Olumsuzu 'not + V1' ile kurulur.",
+      "examples": [
+        {
+          "en": "The report recommends that every laboratory keep a disposal record.",
+          "tr": "Rapor, her laboratuvarın bir bertaraf kaydı tutmasını öneriyor.",
+          "tense": "Subjunctive V1"
+        },
+        {
+          "en": "The committee insisted that the finds remain in the country.",
+          "tr": "Komite buluntuların ülkede kalmasında ısrar etti.",
+          "tense": "Subjunctive V1"
+        },
+        {
+          "en": "She demanded that the panel not be moved again.",
+          "tr": "Panonun bir daha taşınmamasını talep etti.",
+          "tense": "Subjunctive V1"
+        }
+      ]
+    },
+    {
+      "term": "it is essential / vital / imperative that",
+      "category": "subjunctive",
+      "meaning": "... olması şarttır / hayatidir",
+      "rule": "📐 KURAL: It is essential / vital / imperative / crucial + that + Özne + V1 (YALIN FİİL)",
+      "trap": "⚠️ Sahte özneli bu kalıp da subjunctive tetikler; 'is' ya da 'should be' değil yalın fiil gelir. 'It is essential that the sample is frozen' yerine 'be frozen' kullanılır.",
+      "examples": [
+        {
+          "en": "It is essential that the sample be frozen within an hour.",
+          "tr": "Örneğin bir saat içinde dondurulması şarttır.",
+          "tense": "Subjunctive V1"
+        },
+        {
+          "en": "It is vital that the readings be checked by a second observer.",
+          "tr": "Ölçümlerin ikinci bir gözlemcice denetlenmesi hayatidir.",
+          "tense": "Subjunctive V1"
+        },
+        {
+          "en": "It was imperative that no one enter the chamber before the survey.",
+          "tr": "Ölçümden önce odaya kimsenin girmemesi zorunluydu.",
+          "tense": "Subjunctive V1"
+        }
+      ]
+    }
+  ],
+  "inverted": [
+    {
+      "term": "seldom / rarely",
+      "category": "inverted",
+      "meaning": "nadiren (Devrik Sıklık Zarfı)",
+      "rule": "📐 DEVRİK KURAL: Seldom / Rarely + Yardımcı Fiil + Özne + V1/V3",
+      "trap": "⚠️ Cümle başındayken devriklik ZORUNLUDUR: 'Seldom does the committee meet' doğru, 'Seldom the committee meets' yanlıştır. Cümle ortasında kullanılırsa devriklik olmaz.",
+      "examples": [
+        {
+          "en": "Seldom does the committee overturn a curatorial decision.",
+          "tr": "Komite nadiren bir küratörlük kararını bozar.",
+          "tense": "Simple Present"
+        },
+        {
+          "en": "Rarely had the two versions been compared before 1998.",
+          "tr": "1998'den önce iki sürüm nadiren karşılaştırılmıştı.",
+          "tense": "Past Perfect"
+        },
+        {
+          "en": "Seldom is the original put on public display.",
+          "tr": "Aslı nadiren halka sergilenir.",
+          "tense": "Present Passive"
+        }
+      ]
+    },
+    {
+      "term": "never before",
+      "category": "inverted",
+      "meaning": "daha önce hiç (Devrik + Perfect)",
+      "rule": "📐 DEVRİK KURAL: Never before + HAD/HAS + Özne + V3",
+      "trap": "⚠️ Daima bir Perfect zaman ister; Simple Past almaz. 'Never before did they see' yanlıştır, 'had they seen' doğrudur.",
+      "examples": [
+        {
+          "en": "Never before had the two folios been exhibited together.",
+          "tr": "İki yaprak daha önce hiç birlikte sergilenmemişti.",
+          "tense": "Past Perfect"
+        },
+        {
+          "en": "Never before has the collection attracted so many visitors.",
+          "tr": "Koleksiyon daha önce hiç bu kadar ziyaretçi çekmemişti.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "Never before had such a quantity of glass been recovered from one site.",
+          "tr": "Tek bir alandan daha önce hiç bu kadar cam çıkarılmamıştı.",
+          "tense": "Past Perfect"
+        }
+      ]
+    },
+    {
+      "term": "only then / only after / only when",
+      "category": "inverted",
+      "meaning": "ancak o zaman / ancak ... -dıktan sonra",
+      "rule": "📐 DEVRİK KURAL: Only then / Only after + Öbek veya Cümle, + Yardımcı Fiil + Özne + V1",
+      "trap": "⚠️ Devriklik 'only' öbeğinde değil ANA cümlede olur: 'Only after the analysis did the team publish' — 'did' ana cümlenin yardımcı fiilidir.",
+      "examples": [
+        {
+          "en": "Only then did the significance of the inscription become clear.",
+          "tr": "Yazıtın önemi ancak o zaman anlaşıldı.",
+          "tense": "Simple Past"
+        },
+        {
+          "en": "Only after the third inspection was the fault identified.",
+          "tr": "Arıza ancak üçüncü denetimde tespit edildi.",
+          "tense": "Past Passive"
+        },
+        {
+          "en": "Only when the funding was restored did the excavation resume.",
+          "tr": "Kazı ancak fon geri verildiğinde yeniden başladı.",
+          "tense": "Simple Past"
+        }
+      ]
+    },
+    {
+      "term": "under no circumstances / on no account",
+      "category": "inverted",
+      "meaning": "hiçbir koşulda (Devrik Yasak)",
+      "rule": "📐 DEVRİK KURAL: Under no circumstances + Yardımcı Fiil + Özne + V1",
+      "trap": "⚠️ Yapı zaten olumsuzdur; ana fiile ikinci bir olumsuzluk eklenmez. 'Under no circumstances should you not open it' yanlıştır.",
+      "examples": [
+        {
+          "en": "Under no circumstances may the manuscript leave the reading room.",
+          "tr": "El yazması hiçbir koşulda okuma salonundan çıkarılamaz.",
+          "tense": "Modal"
+        },
+        {
+          "en": "On no account should the seal be broken before the survey.",
+          "tr": "Mühür ölçümden önce hiçbir surette kırılmamalıdır.",
+          "tense": "Modal Passive"
+        },
+        {
+          "en": "Under no circumstances was the public informed.",
+          "tr": "Kamuoyu hiçbir koşulda bilgilendirilmedi.",
+          "tense": "Past Passive"
+        }
+      ]
+    },
+    {
+      "term": "at no time / not once",
+      "category": "inverted",
+      "meaning": "hiçbir zaman / bir kez bile",
+      "rule": "📐 DEVRİK KURAL: At no time / Not once + Yardımcı Fiil + Özne + V1/V3",
+      "trap": "⚠️ Cümle başındayken devriklik zorunludur ve yapı zaten olumsuz olduğu için fiile 'not' eklenmez.",
+      "examples": [
+        {
+          "en": "At no time did the committee consult the original donors.",
+          "tr": "Komite hiçbir zaman özgün bağışçılara danışmadı.",
+          "tense": "Simple Past"
+        },
+        {
+          "en": "Not once had the alarm been tested since installation.",
+          "tr": "Alarm kurulumdan bu yana bir kez bile test edilmemişti.",
+          "tense": "Past Perfect"
+        },
+        {
+          "en": "At no time was the site left unattended.",
+          "tr": "Alan hiçbir zaman gözetimsiz bırakılmadı.",
+          "tense": "Past Passive"
+        }
+      ]
+    },
+    {
+      "term": "little did + Özne",
+      "category": "inverted",
+      "meaning": "hiç ... değildi / aklına gelmezdi",
+      "rule": "📐 DEVRİK KURAL: Little + did/does + Özne + V1  (yalnızca know / realise / suspect / imagine ile)",
+      "trap": "⚠️ Buradaki 'little' miktar değil olumsuzluk bildirir ve dar bir fiil kümesiyle kullanılır. 'Little did he go' gibi bir kullanım yoktur.",
+      "examples": [
+        {
+          "en": "Little did the excavators realise that the layer was intrusive.",
+          "tr": "Kazıcılar katmanın sonradan karıştığını hiç fark etmemişti.",
+          "tense": "Simple Past"
+        },
+        {
+          "en": "Little did she know that the second copy had already surfaced.",
+          "tr": "İkinci nüshanın çoktan ortaya çıktığından hiç haberi yoktu.",
+          "tense": "Simple Past"
+        },
+        {
+          "en": "Little do we know about the workshop that produced them.",
+          "tr": "Onları üreten atölye hakkında pek az şey biliyoruz.",
+          "tense": "Simple Present"
+        }
+      ]
+    }
+  ],
+  "perfect_anchors": [
+    {
+      "term": "by now",
+      "category": "perfect_anchors",
+      "meaning": "şimdiye kadar, artık",
+      "rule": "📐 KURAL: By now → HAVE/HAS V3  (geçmiş bağlamda: HAD V3)",
+      "trap": "⚠️ 'by the time' bir yan cümle alır, 'by now' ise tek başına durur; ikisi de Perfect ister. Simple Past almaz.",
+      "examples": [
+        {
+          "en": "The samples should have thawed by now.",
+          "tr": "Örnekler şimdiye kadar çözülmüş olmalı.",
+          "tense": "Perfect Modal"
+        },
+        {
+          "en": "By now the second volume has appeared in three languages.",
+          "tr": "İkinci cilt şimdiye kadar üç dilde yayımlandı.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "By now the trench had filled with water.",
+          "tr": "O ana kadar hendek suyla dolmuştu.",
+          "tense": "Past Perfect"
+        }
+      ]
+    },
+    {
+      "term": "since then",
+      "category": "perfect_anchors",
+      "meaning": "o zamandan beri",
+      "rule": "📐 KURAL: Since then → HAVE/HAS V3  (geçmiş bağlamda: HAD V3)",
+      "trap": "⚠️ 'since' bir yan cümle ya da tarih alır; 'since then' ise tek başına bir zarftır. İkisi de ana cümlede Perfect ister.",
+      "examples": [
+        {
+          "en": "The mill closed in 1978; since then the town has relied on tourism.",
+          "tr": "Fabrika 1978'de kapandı; o zamandan beri kasaba turizme bel bağladı.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "The wall was recorded in 1890 and has not been seen since then.",
+          "tr": "Duvar 1890'da kaydedildi ve o zamandan beri görülmedi.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "She left the institute in March; since then no replacement had been appointed.",
+          "tr": "Mart'ta enstitüden ayrıldı; o zamandan beri yerine kimse atanmamıştı.",
+          "tense": "Past Perfect"
+        }
+      ]
+    },
+    {
+      "term": "to date",
+      "category": "perfect_anchors",
+      "meaning": "bugüne kadar (Akademik Çapa)",
+      "rule": "📐 KURAL: To date → HAVE/HAS V3",
+      "trap": "⚠️ 'so far'ın resmî karşılığıdır ve akademik metinlerde tercih edilir; Simple Past ile kullanılmaz.",
+      "examples": [
+        {
+          "en": "To date no comparable object has been recovered in the region.",
+          "tr": "Bugüne kadar bölgede benzeri bir nesne bulunmadı.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "Only nine folios have been identified to date.",
+          "tr": "Bugüne kadar yalnızca dokuz yaprak tespit edildi.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "To date the theory has withstood every test.",
+          "tr": "Kuram bugüne kadar her sınamaya dayandı.",
+          "tense": "Present Perfect"
+        }
+      ]
+    },
+    {
+      "term": "all along",
+      "category": "perfect_anchors",
+      "meaning": "baştan beri",
+      "rule": "📐 KURAL: All along → HAVE/HAS V3 / HAD V3  (baştan bu yana süregelen durum)",
+      "trap": "⚠️ Bir durumun başından beri sürdüğünü bildirir; bu yüzden Perfect ister. Genellikle bir yanılgının düzeltilmesinde kullanılır.",
+      "examples": [
+        {
+          "en": "The correct reading had been in the margin all along.",
+          "tr": "Doğru okuma baştan beri kenar boşluğundaymış.",
+          "tense": "Past Perfect"
+        },
+        {
+          "en": "The two fragments have belonged to the same panel all along.",
+          "tr": "İki parça baştan beri aynı panoya aitmiş.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "They had suspected the attribution all along.",
+          "tr": "Atfı baştan beri şüpheyle karşılamışlardı.",
+          "tense": "Past Perfect"
+        }
+      ]
+    },
+    {
+      "term": "in / for years (olumsuz)",
+      "category": "perfect_anchors",
+      "meaning": "yıllardır ... -medi",
+      "rule": "📐 KURAL: Olumsuz Perfect + in / for + Süre  →  have/has not V3 in years",
+      "trap": "⚠️ Olumsuz cümlede 'in years' ile 'for years' aynı anlamı verir; 'ago' ile karıştırılmamalıdır çünkü şu ana kadar süren bir yokluğu bildirir.",
+      "examples": [
+        {
+          "en": "The chamber has not been opened in forty years.",
+          "tr": "Oda kırk yıldır açılmadı.",
+          "tense": "Present Perfect"
+        },
+        {
+          "en": "No comparable find had been reported in decades.",
+          "tr": "Onlarca yıldır benzer bir buluntu bildirilmemişti.",
+          "tense": "Past Perfect"
+        },
+        {
+          "en": "The society has not met in years.",
+          "tr": "Dernek yıllardır toplanmadı.",
+          "tense": "Present Perfect"
+        }
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "term": "the next time",
+      "category": "patterns",
+      "meaning": "bir dahaki sefere",
+      "rule": "📐 KURAL: The next time + Özne + V1, Ana Cümle WILL V1",
+      "trap": "⚠️ Geleceğe dönük olmasına rağmen yan cümlesine 'will' gelmez; 'the last time' ise geçmişe aittir ve V2 alır.",
+      "examples": [
+        {
+          "en": "The next time the vault is opened, every seal will be photographed.",
+          "tr": "Kasa bir dahaki açıldığında her mühür fotoğraflanacak.",
+          "tense": "Simple Present"
+        },
+        {
+          "en": "The next time she visits, the new wing will be open.",
+          "tr": "Bir dahaki gelişinde yeni kanat açık olacak.",
+          "tense": "Simple Present"
+        },
+        {
+          "en": "The next time the river rises, the barriers will be tested.",
+          "tr": "Nehir bir dahaki yükselişinde bariyerler sınanacak.",
+          "tense": "Simple Present"
+        }
+      ]
+    },
+    {
+      "term": "from then on",
+      "category": "patterns",
+      "meaning": "o tarihten itibaren",
+      "rule": "📐 KURAL: From then on → V2 / WOULD V1  (geçmişte başlayıp süren durum)",
+      "trap": "⚠️ 'thereafter' ile eş anlamlıdır ve daima geçmiş anlatısında kullanılır; Present Perfect almaz, çünkü şimdiye değil geçmişteki bir ana bağlıdır.",
+      "examples": [
+        {
+          "en": "The charter was granted in 1215; from then on the town held its own market.",
+          "tr": "Berat 1215'te verildi; o tarihten itibaren kasaba kendi pazarını kurdu.",
+          "tense": "Simple Past"
+        },
+        {
+          "en": "From then on every find was recorded photographically.",
+          "tr": "O tarihten itibaren her buluntu fotoğrafla kaydedildi.",
+          "tense": "Past Passive"
+        },
+        {
+          "en": "From then on she would spend every summer at the site.",
+          "tr": "O tarihten itibaren her yazı alanda geçirirdi.",
+          "tense": "would + V1"
+        }
+      ]
+    }
+  ]
+};
+
+  const eachCard = fn => {
+    [typeof TRANSITIONS_MATRIX_DATA !== 'undefined' ? TRANSITIONS_MATRIX_DATA : null,
+     typeof CAUSE_EFFECT_DATA !== 'undefined' ? CAUSE_EFFECT_DATA : null,
+     typeof TIME_MATRIX_DATA !== 'undefined' ? TIME_MATRIX_DATA : null].forEach(src => {
+      if (!src) return;
+      Object.values(src).forEach(list => (list || []).forEach(fn));
+    });
+  };
+  eachCard(card => {
+    const patch = RULES[card.term];
+    if (patch) { card.rule = patch.rule; card.trap = patch.trap; }
+  });
+
+  if (typeof TIME_MATRIX_DATA === 'undefined') return;
+  const push = (list, items) => {
+    if (!Array.isArray(list)) return;
+    items.forEach(it => { if (!list.some(x => x.term === it.term)) list.push(it); });
+  };
+  push(TIME_MATRIX_DATA.tense_harmony, NEW.unreal_past);
+  push(TIME_MATRIX_DATA.tense_harmony, NEW.subjunctive);
+  push(TIME_MATRIX_DATA.tense_harmony, NEW.perfect_anchors);
+  push(TIME_MATRIX_DATA.tense_harmony, NEW.patterns);
+  push(TIME_MATRIX_DATA.time_markers,  NEW.inverted);
 })();
