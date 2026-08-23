@@ -42295,23 +42295,24 @@ if (typeof lessons !== 'undefined') {
   "exercises": [
     {
       "id": "cdrill_ex1",
-      "title": "Alıştırma 1: Noktalama Kuralları",
-      "description": "Geçiş zarflarının noktalı virgül, nokta ve virgül tercihleri.",
+      "title": "Alıştırma 1: Noktalamaya Göre Bağlaç",
+      "description": "Noktalama verilir, boşluğa gelecek bağlaç sorulur — sınavdaki biçim.",
       "questions": [
         {
           "id": "cdrill_p1",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The strategy is risky ___ however, it offers substantial financial rewards.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The strategy is risky; ____, it offers substantial financial rewards.",
           "options": [
-            ";",
-            ",",
-            ".",
-            ":"
+            "and",
+            "but",
+            "although",
+            "however",
+            "so"
           ],
-          "correctIndex": 0,
+          "correctIndex": 3,
           "translation": "Strateji risklidir; ancak büyük finansal getiriler sunar.",
-          "explanation": "İki bağımsız cümle 'however' ile bağlanıyor ve 'however' küçük harfle devam ediyor. Nokta konsaydı büyük harf gerekirdi; virgül ise bağımsız iki cümleyi tek başına bağlayamaz. Doğru işaret noktalı virgüldür.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'but', 'and' ve 'so' bağlaçtır ve noktalı virgülden sonra virgül almaz; 'although' ise yan cümle kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42321,18 +42322,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p2",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The trial faced budget cuts ___ Nevertheless, the researchers proceeded.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The trial faced budget cuts. ____, the researchers proceeded.",
           "options": [
-            ",",
-            ".",
-            ";",
-            ":"
+            "Although",
+            "But",
+            "Nevertheless",
+            "And",
+            "Because"
           ],
-          "correctIndex": 1,
+          "correctIndex": 2,
           "translation": "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti.",
-          "explanation": "'Nevertheless' büyük harfle başladığı için kendisinden önce cümle bitmiş olmalıdır; yani nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek bağımsız bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42342,18 +42344,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p3",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Prices have increased sharply ___ nonetheless, consumer demand has remained strong.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Prices have increased sharply; ____, consumer demand has remained strong.",
           "options": [
-            ".",
-            ",",
-            ";",
-            ":"
+            "nonetheless",
+            "but",
+            "whereas",
+            "and",
+            "yet"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "translation": "Fiyatlar keskin biçimde arttı; buna rağmen tüketici talebi güçlü kaldı.",
-          "explanation": "'nonetheless' küçük harfle devam ettiği için cümle bitmemiştir. Geçiş zarfı iki bağımsız cümleyi bağlarken noktalı virgül alır.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'but', 'and' ve 'yet' virgülle bağlanır, 'whereas' ise yan cümle kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42363,18 +42366,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p4",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Submit the form before Friday ___ or else your application will be rejected.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Submit the form before Friday, ____ your place will be given away.",
           "options": [
-            ".",
-            ";",
-            ":",
-            ","
+            "nevertheless",
+            "otherwise",
+            "or else",
+            "therefore",
+            "however"
           ],
-          "correctIndex": 3,
-          "translation": "Formu cumadan önce gönderin, yoksa başvurunuz reddedilecek.",
-          "explanation": "'or else' bir geçiş zarfı değil, bağlaç işlevi gören bir kalıptır ve kendisinden önce virgül alır: Cümle 1, or else Cümle 2.",
+          "correctIndex": 2,
+          "translation": "Formu cumadan önce gönderin, yoksa yeriniz başkasına verilecek.",
+          "explanation": "Tek bir virgülden sonra ikinci bir virgül yok; bu konum geçiş zarfı değil bağlaç ister. 'otherwise', 'nevertheless', 'therefore' ve 'however' geçiş zarfıdır ve öncesinde noktalı virgül, sonrasında virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42384,18 +42388,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p5",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The survey covered two regions ___ namely the north and the west.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The survey covered two regions, ____ the north and the west.",
           "options": [
-            ",",
-            ".",
-            ";",
-            ":"
+            "instead",
+            "therefore",
+            "however",
+            "besides",
+            "namely"
           ],
-          "correctIndex": 0,
+          "correctIndex": 4,
           "translation": "Anket iki bölgeyi kapsadı, yani kuzey ve batıyı.",
-          "explanation": "'namely' arkasından tam cümle değil, tek tek sayılan öğeler getirir; bu yüzden noktalı virgül veya nokta değil virgül kullanılır.",
+          "explanation": "Virgülden sonra tam cümle değil, tek tek sayılan öğeler geliyor. Kalan dört seçenek bağımsız cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42405,18 +42410,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p6",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The first trial failed ___ therefore, the protocol was rewritten from scratch.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The first trial failed; ____, the protocol was rewritten from scratch.",
           "options": [
-            ".",
-            ",",
-            ":",
-            ";"
+            "so",
+            "therefore",
+            "but",
+            "because",
+            "although"
           ],
-          "correctIndex": 3,
+          "correctIndex": 1,
           "translation": "İlk deneme başarısız oldu; bu nedenle protokol baştan yazıldı.",
-          "explanation": "'therefore' küçük harfle devam ettiği için cümle bitmemiştir. Geçiş zarfı iki bağımsız cümleyi bağlarken noktalı virgül alır; virgül burada cümle düşüklüğü yaratır.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'so' ve 'but' virgülle bağlanır; 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42426,18 +42432,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p7",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The archive holds 4,000 letters ___ Moreover, most of them are unpublished.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The archive holds 4,000 letters. ____, most of them are unpublished.",
           "options": [
-            ".",
-            ";",
-            ":",
-            ","
+            "And",
+            "Moreover",
+            "But",
+            "Because",
+            "So"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "translation": "Arşivde 4.000 mektup var. Üstelik çoğu yayımlanmamış.",
-          "explanation": "'Moreover' büyük harfle başladığına göre önceki cümle bitmiştir; nokta gerekir. Noktalı virgülden sonra büyük harf kullanılmaz.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek cümle başında bu biçimde kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42447,36 +42454,41 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p8",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The soil was too acidic ___ so the bone fragments did not survive.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The soil was too acidic, ____ the bone fragments did not survive.",
           "options": [
-            ":",
-            ".",
-            ",",
-            ";"
+            "thus",
+            "therefore",
+            "so",
+            "hence",
+            "consequently"
           ],
           "correctIndex": 2,
           "translation": "Toprak fazla asidikti, bu yüzden kemik parçaları korunamadı.",
-          "explanation": "'so' bir geçiş zarfı değil bağlaçtır; kendisinden önce virgül alır. Noktalı virgül yalnızca geçiş zarflarıyla kullanılır.",
+          "explanation": "Tek bir virgülden sonra ikinci bir virgül yok; bu konum geçiş zarfı değil bağlaç ister. Beş seçenek de aynı anlamı taşır; ayırt eden şey noktalamadır. 'so' bir bağlaçtır ve virgül alır, diğer dördü geçiş zarfıdır ve noktalı virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
+          ],
+          "terms": [
+            "so (bağlaç)"
           ]
         },
         {
           "id": "cdrill_p9",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Register before Friday ___ otherwise, your place will be given to someone else.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Register before Friday; ____, your place will be given to someone else.",
           "options": [
-            ",",
-            ".",
-            ";",
-            ":"
+            "otherwise",
+            "or else",
+            "and",
+            "because",
+            "although"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "translation": "Cuma'dan önce kayıt olun; aksi takdirde yeriniz başkasına verilecek.",
-          "explanation": "'otherwise' küçük harfle devam ediyor ve bir geçiş zarfı; iki bağımsız cümle arasında noktalı virgül ister.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'or else' ve 'and' virgülle bağlanır; 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42486,18 +42498,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p10",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The study covers three periods ___ that is, the early, middle and late Bronze Age.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The manuscript is incomplete, ____ the final quire is missing.",
           "options": [
-            ".",
-            ",",
-            ";",
-            ":"
+            "therefore",
+            "that is",
+            "however",
+            "namely",
+            "besides"
           ],
           "correctIndex": 1,
-          "translation": "Çalışma üç dönemi kapsıyor, yani erken, orta ve geç Tunç Çağı'nı.",
-          "explanation": "'that is' burada tam cümle değil, sayılan ögeler getiriyor. Açıklama getiren bu kullanımda virgül yeterlidir.",
+          "translation": "El yazması eksik, yani son forma kayıp.",
+          "explanation": "Tek bir virgülden sonra ikinci bir virgül yok; bu konum geçiş zarfı değil bağlaç ister. 'therefore', 'however' ve 'besides' noktalı virgül ister; 'namely' ise cümle değil öğe listesi alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42507,18 +42520,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p11",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Rainfall increased sharply ___ Nevertheless, the reservoirs remained below capacity.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Rainfall increased sharply that decade. ____, the reservoirs remained below capacity.",
           "options": [
-            ",",
-            ";",
-            ".",
-            ":"
+            "Similarly",
+            "Consequently",
+            "Nevertheless",
+            "Namely",
+            "Furthermore"
           ],
           "correctIndex": 2,
-          "translation": "Yağış keskin biçimde arttı. Buna rağmen barajlar kapasitenin altında kaldı.",
-          "explanation": "'Nevertheless' büyük harfle başlıyor; öncesinde cümlenin nokta ile bitmesi gerekir.",
+          "translation": "O on yılda yağış keskin biçimde arttı. Buna rağmen barajlar kapasitenin altında kaldı.",
+          "explanation": "Noktadan sonra geçiş zarfı gerekiyor ve anlam beklenmedik bir sonuç bildiriyor; kalan dördü sonuç, benzerlik, sayma ve ekleme kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42528,18 +42542,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p12",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The measurements were repeated twice ___ in fact, three times in the final round.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The measurements were repeated twice, ____ three times in the final round.",
           "options": [
-            ":",
-            ".",
-            ";",
-            ","
+            "in fact",
+            "therefore",
+            "however",
+            "besides",
+            "nonetheless"
           ],
-          "correctIndex": 3,
+          "correctIndex": 0,
           "translation": "Ölçümler iki kez yinelendi, aslında son turda üç kez.",
-          "explanation": "'in fact' burada bağımsız bir cümle değil, önceki ifadeyi düzelten bir ek getiriyor; bu kullanımda virgül alır.",
+          "explanation": "Tek bir virgülden sonra ikinci bir virgül yok; bu konum geçiş zarfı değil bağlaç ister. Kalan dört seçenek bağımsız cümle ile kullanılır ve noktalı virgül ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42549,18 +42564,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p13",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The northern route is shorter ___ Conversely, it is impassable for four months a year.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The northern route is shorter; ____, it is impassable for four months a year.",
           "options": [
-            ",",
-            ";",
-            ".",
-            ":"
+            "moreover",
+            "therefore",
+            "conversely",
+            "so",
+            "because"
           ],
           "correctIndex": 2,
-          "translation": "Kuzey güzergâhı daha kısa. Buna karşılık yılın dört ayı geçilemez.",
-          "explanation": "'Conversely' büyük harfle başladığı için önceki cümle noktayla bitmiştir.",
+          "translation": "Kuzey güzergâhı daha kısa; buna karşılık yılın dört ayı geçilemez.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'so' virgül alır, 'because' yan cümle kurar; 'therefore' ve 'moreover' ise anlamca uymaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42570,18 +42586,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p14",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Two species were recorded ___ namely the common swift and the pallid swift.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Two species were recorded, ____ the common swift and the pallid swift.",
           "options": [
-            ";",
-            ",",
-            ".",
-            ":"
+            "namely",
+            "however",
+            "therefore",
+            "instead",
+            "besides"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "translation": "İki tür kaydedildi, yani ebabil ve boz ebabil.",
-          "explanation": "'namely' arkasından tam cümle değil, tek tek sayılan ögeler getirir; bu yüzden virgül kullanılır.",
+          "explanation": "Virgülden sonra iki isim sıralanıyor, cümle gelmiyor. Kalan dört seçenek bağımsız cümle ister.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42591,18 +42608,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p15",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The manuscript is undated ___ for this reason, its place in the sequence is disputed.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The manuscript is undated; ____, its place in the sequence is disputed.",
           "options": [
-            ":",
-            ",",
-            ";",
-            "."
+            "for this reason",
+            "because",
+            "since",
+            "although",
+            "so"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "translation": "El yazması tarihsiz; bu nedenle dizideki yeri tartışmalı.",
-          "explanation": "'for this reason' bir geçiş zarfı öbeğidir ve küçük harfle devam ediyor; iki bağımsız cümle arasında noktalı virgül gerekir.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'because' ve 'since' yan cümle kurar, 'so' ise virgül alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42612,18 +42630,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p16",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The survey covered every district ___ Specifically, it sampled 40 households in each.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The clause applies to all heritable property. ____, it covers land, buildings and standing timber.",
           "options": [
-            ".",
-            ":",
-            ",",
-            ";"
+            "But",
+            "Although",
+            "Because",
+            "And",
+            "Specifically"
           ],
-          "correctIndex": 0,
-          "translation": "Anket her ilçeyi kapsadı. Özel olarak her birinde 40 hane örneklendi.",
-          "explanation": "'Specifically' büyük harfle başladığı için önceki cümle noktayla bitmiştir.",
+          "correctIndex": 4,
+          "translation": "Madde tüm miras kalabilir mülkü kapsar. Özel olarak arazi, bina ve dikili keresteyi içerir.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek yeni bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42633,18 +42652,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p17",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The tax was abolished in 1994 ___ Previously, it had funded a third of local services.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The tax was abolished in 1994. ____, it had funded a third of local services.",
           "options": [
-            ";",
-            ":",
-            ",",
-            "."
+            "Therefore",
+            "Subsequently",
+            "Meanwhile",
+            "Previously",
+            "Nevertheless"
           ],
           "correctIndex": 3,
           "translation": "Vergi 1994'te kaldırıldı. Daha önce yerel hizmetlerin üçte birini finanse ediyordu.",
-          "explanation": "'Previously' büyük harfle başlıyor; noktalı virgülden sonra büyük harf gelmez, bu yüzden nokta gerekir.",
+          "explanation": "Noktadan sonra geçiş zarfı gerekiyor; ana cümle Past Perfect olduğu için öncelik bildiren biçim aranır. 'Subsequently' ve 'meanwhile' sonralık ve eşzamanlılık kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42654,18 +42674,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p18",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The charter was granted in 1215 ___ thereafter, the town held its own weekly market.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The charter was granted in 1215; ____, the town held its own weekly market.",
           "options": [
-            ";",
-            ",",
-            ".",
-            ":"
+            "while",
+            "previously",
+            "and",
+            "because",
+            "thereafter"
           ],
-          "correctIndex": 0,
+          "correctIndex": 4,
           "translation": "Berat 1215'te verildi; ondan sonra kasaba kendi haftalık pazarını kurdu.",
-          "explanation": "'thereafter' küçük harfle devam ediyor, yani cümle bitmemiş. İki bağımsız cümleyi bağlayan geçiş zarfı noktalı virgül ister.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'and' virgül alır, 'because' ve 'while' yan cümle kurar; 'previously' ise yönü tersine çevirir.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42675,18 +42696,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p19",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The estimate was accurate ___ accordingly, no revision was needed.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The estimate proved accurate; ____, no revision was filed.",
           "options": [
-            ",",
-            ";",
-            ".",
-            ":"
+            "while",
+            "although",
+            "because",
+            "accordingly",
+            "and"
           ],
-          "correctIndex": 1,
-          "translation": "Tahmin isabetliydi; dolayısıyla bir düzeltmeye gerek kalmadı.",
-          "explanation": "'accordingly' küçük harfle devam eden bir geçiş zarfıdır; öncesinde noktalı virgül gerekir.",
+          "correctIndex": 3,
+          "translation": "Tahmin isabetli çıktı; dolayısıyla bir düzeltme sunulmadı.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42696,40 +42718,41 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p20",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The pigment fades in daylight ___ That is why the room is kept dark.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The pigment fades in daylight. ____ the room is kept dark.",
           "options": [
-            ",",
-            ";",
-            ".",
-            ":"
+            "That is why",
+            "Therefore,",
+            "However,",
+            "Because",
+            "Although"
           ],
-          "correctIndex": 2,
+          "correctIndex": 0,
           "translation": "Pigment gün ışığında soluyor. İşte bu yüzden oda karanlık tutuluyor.",
-          "explanation": "'That is why' büyük harfle başlıyor; önceki cümlenin noktayla bitmesi gerekir. Ayrıca kendisinden sonra virgül almaz.",
+          "explanation": "Boşluktan sonra doğrudan özne geliyor, virgül yok. 'That is why' kendisinden sonra virgül almaz; 'Therefore,' ve 'However,' alır. 'Because' ve 'Although' ise yan cümle kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "that is (i.e.)",
             "that is why"
           ]
         },
         {
           "id": "cdrill_p21",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The alloy resists corrosion ___ thus, it is used in marine fittings.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The alloy resists corrosion; ____, it is used in marine fittings.",
           "options": [
-            ":",
-            ";",
-            ".",
-            ","
+            "because",
+            "but",
+            "although",
+            "thus",
+            "and"
           ],
-          "correctIndex": 1,
+          "correctIndex": 3,
           "translation": "Alaşım korozyona direniyor; bu yüzden deniz bağlantı elemanlarında kullanılıyor.",
-          "explanation": "'thus' küçük harfle devam ediyor, yani cümle bitmemiş. Sonuç bildiren geçiş zarfı iki bağımsız cümle arasında noktalı virgül ister.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'but' ve 'and' virgülle bağlanır; 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42739,18 +42762,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p22",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "No contemporary account survives ___ Hence, the date rests on indirect evidence.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "No contemporary account survives. ____, the date rests on indirect evidence.",
           "options": [
-            ".",
-            ":",
-            ";",
-            ","
+            "Although",
+            "But",
+            "Hence",
+            "And",
+            "While"
           ],
-          "correctIndex": 0,
+          "correctIndex": 2,
           "translation": "Çağdaş hiçbir kayıt kalmamış. Bu nedenle tarih dolaylı kanıta dayanıyor.",
-          "explanation": "'Hence' büyük harfle başlıyor; öncesinde cümlenin noktayla bitmesi gerekir.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek bağımsız bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42760,18 +42784,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p23",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The funding was withdrawn ___ consequently, the second phase was cancelled.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The funding was withdrawn; ____, the second phase was cancelled.",
           "options": [
-            ";",
-            ",",
-            ":",
-            "."
+            "consequently",
+            "because",
+            "since",
+            "although",
+            "and"
           ],
           "correctIndex": 0,
           "translation": "Fon geri çekildi; sonuç olarak ikinci aşama iptal edildi.",
-          "explanation": "'consequently' küçük harfle devam eden bir geçiş zarfıdır; noktalı virgül gerekir.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'because' ve 'since' yan cümle kurar, 'and' ise virgül alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42781,18 +42806,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p24",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Three inspectors filed identical reports ___ As a result, the case was reopened.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Three inspectors filed identical reports. ____, the case was reopened.",
           "options": [
-            ",",
-            ".",
-            ";",
-            ":"
+            "Because",
+            "As a result",
+            "Since",
+            "Although",
+            "So"
           ],
           "correctIndex": 1,
           "translation": "Üç müfettiş aynı raporu verdi. Sonuç olarak dava yeniden açıldı.",
-          "explanation": "'As a result' büyük harfle başladığı için önceki cümle noktayla kapanmıştır.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. 'So' bir bağlaçtır ve cümle başında kullanılmaz; kalan üçü yan cümle kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42802,18 +42828,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p25",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The road is impassable in winter ___ Besides, the ferry stops running in November.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The road is impassable in winter. ____, the ferry stops running in November.",
           "options": [
-            ";",
-            ",",
-            ":",
-            "."
+            "So",
+            "But",
+            "Although",
+            "Besides",
+            "Because"
           ],
           "correctIndex": 3,
           "translation": "Yol kışın geçilmez. Ayrıca feribot kasımda seferlerini durduruyor.",
-          "explanation": "'Besides' büyük harfle başlıyor; noktalı virgülden sonra büyük harf kullanılmaz.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek yeni bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42823,18 +42850,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p26",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The first edition sold out in a month ___ what is more, it was reprinted twice that year.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The first edition sold out in a month; ____, it was reprinted twice that year.",
           "options": [
-            ",",
-            ".",
-            ";",
-            ":"
+            "although",
+            "but",
+            "what is more",
+            "because",
+            "so"
           ],
           "correctIndex": 2,
           "translation": "İlk baskı bir ayda tükendi; dahası o yıl iki kez yeniden basıldı.",
-          "explanation": "'what is more' küçük harfle devam eden bir ekleme zarfıdır; iki bağımsız cümle arasında noktalı virgül alır.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'but' ve 'so' virgülle bağlanır; 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42844,18 +42872,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p27",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Southern colonies exported sugar ___ Likewise, the northern ports specialised in timber.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Southern colonies exported sugar. ____, the northern ports specialised in timber.",
           "options": [
-            ":",
-            ".",
-            ",",
-            ";"
+            "So",
+            "But",
+            "Although",
+            "Because",
+            "Likewise"
           ],
-          "correctIndex": 1,
+          "correctIndex": 4,
           "translation": "Güney kolonileri şeker ihraç etti. Aynı şekilde kuzey limanları keresteye yoğunlaştı.",
-          "explanation": "'Likewise' büyük harfle başlıyor; öncesinde nokta gerekir.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek cümle başında bu biçimde kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42865,18 +42894,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p28",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Urban wages rose steadily ___ Similarly, rural incomes improved after 1870.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Urban wages rose steadily. ____, rural incomes improved after 1870.",
           "options": [
-            ".",
-            ":",
-            ",",
-            ";"
+            "Whereas",
+            "Similarly",
+            "Although",
+            "Because",
+            "But"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "translation": "Kentsel ücretler istikrarlı biçimde arttı. Benzer biçimde kırsal gelirler 1870'ten sonra iyileşti.",
-          "explanation": "'Similarly' büyük harfle başladığı için önceki cümle noktayla bitmelidir.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. 'Whereas', 'Although' ve 'Because' yan cümle kurar, 'But' ise virgülle bağlanır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42886,18 +42916,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p29",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The eastern wall was rebuilt in brick ___ In the same way, the tower was reinforced.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The eastern wall was rebuilt in brick. ____, the tower was reinforced.",
           "options": [
-            ";",
-            ".",
-            ",",
-            ":"
+            "Although",
+            "In the same way",
+            "Because",
+            "But",
+            "So"
           ],
           "correctIndex": 1,
           "translation": "Doğu duvarı tuğlayla yeniden örüldü. Aynı biçimde kule de takviye edildi.",
-          "explanation": "'In the same way' büyük harfle başlıyor; noktalı virgülden sonra büyük harf gelmez.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek bağımsız bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42907,18 +42938,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p30",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Northern soils are heavy and wet ___ On the other hand, the southern plain drains freely.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Rail freight is slow but very cheap. ____, road haulage is fast and costly.",
           "options": [
-            ";",
-            ".",
-            ",",
-            ":"
+            "Although",
+            "Because",
+            "On the other hand",
+            "So",
+            "And"
           ],
-          "correctIndex": 1,
-          "translation": "Kuzey toprakları ağır ve ıslak. Öte yandan güney ovası kolayca süzülür.",
-          "explanation": "'On the other hand' büyük harfle başladığı için öncesinde nokta gerekir.",
+          "correctIndex": 2,
+          "translation": "Demiryolu taşımacılığı yavaş ama çok ucuz. Öte yandan karayolu taşımacılığı hızlı ve pahalı.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek cümle başında bu biçimde kullanılmaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42928,18 +42960,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p31",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The first survey found no trace of the wall ___ In contrast, the 2019 excavation exposed its foundation.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The first survey found no trace of the wall. ____, the 2019 excavation exposed its foundation.",
           "options": [
-            ".",
-            ",",
-            ";",
-            ":"
+            "Because",
+            "In contrast",
+            "So",
+            "Although",
+            "And"
           ],
-          "correctIndex": 0,
+          "correctIndex": 1,
           "translation": "İlk ölçüm duvardan hiçbir iz bulamadı. Buna karşılık 2019 kazısı temelini açığa çıkardı.",
-          "explanation": "'In contrast' büyük harfle başlıyor; önceki cümle noktayla kapanmalıdır.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek yeni bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42949,18 +42982,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p32",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The reform did not reduce inequality ___ On the contrary, it widened the gap.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The reform did not reduce inequality. ____, it widened the gap.",
           "options": [
-            ",",
-            ".",
-            ":",
-            ";"
+            "On the contrary",
+            "Because",
+            "So",
+            "Although",
+            "And"
           ],
-          "correctIndex": 1,
+          "correctIndex": 0,
           "translation": "Reform eşitsizliği azaltmadı. Aksine aradaki farkı büyüttü.",
-          "explanation": "'On the contrary' olumsuz bir iddiayı düzeltir ve büyük harfle başladığı için öncesinde nokta gerekir.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Ayrıca 'On the contrary' olumsuz bir iddiayı çürütür; buradaki bağlam tam olarak budur.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42970,18 +43004,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p33",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Many species were recorded ___ For instance, the survey listed nine kinds of orchid.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Many woodland birds were recorded. ____, the survey listed nine species of woodpecker.",
           "options": [
-            ";",
-            ",",
-            ":",
-            "."
+            "So",
+            "Because",
+            "Although",
+            "For instance",
+            "But"
           ],
           "correctIndex": 3,
-          "translation": "Birçok tür kaydedildi. Örneğin ölçüm dokuz çeşit orkide sıraladı.",
-          "explanation": "'For instance' büyük harfle başlıyor; önceki cümle noktayla bitmelidir.",
+          "translation": "Birçok orman kuşu kaydedildi. Örneğin ölçüm dokuz ağaçkakan türü sıraladı.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek bağımsız bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42991,18 +43026,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p34",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The manuscript is incomplete ___ that is, the final quire is missing.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The two editions differ in one respect, ____ the later one omits the preface.",
           "options": [
-            ":",
-            ";",
-            ",",
-            "."
+            "so",
+            "but",
+            "although",
+            "because",
+            "that is"
           ],
-          "correctIndex": 2,
-          "translation": "El yazması eksik, yani son forma kayıp.",
-          "explanation": "'that is' burada bağımsız bir cümleyi değil, önceki ifadenin açıklamasını getiriyor; bu kullanımda virgül alır.",
+          "correctIndex": 4,
+          "translation": "İki baskı tek bir noktada ayrılıyor, şu var ki sonraki önsözü çıkarmış.",
+          "explanation": "Tek bir virgülden sonra ikinci bir virgül yok; bu konum geçiş zarfı değil bağlaç ister. 'that is' bir açıklama getirir ve virgülle kullanılır; kalan dördü farklı bir ilişki kurar.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -43012,18 +43048,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p35",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The two accounts agree on every detail ___ Indeed, the wording is identical in places.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The two accounts agree on every detail; ____, the wording is identical in places.",
           "options": [
-            ",",
-            ";",
-            ".",
-            ":"
+            "whereas",
+            "but",
+            "although",
+            "because",
+            "indeed"
           ],
-          "correctIndex": 2,
-          "translation": "İki anlatı her ayrıntıda örtüşüyor. Nitekim yer yer sözcükler bile aynı.",
-          "explanation": "'Indeed' büyük harfle başlıyor; noktalı virgülden sonra büyük harf kullanılmaz.",
+          "correctIndex": 4,
+          "translation": "İki anlatı her ayrıntıda örtüşüyor; nitekim yer yer sözcükler bile aynı.",
+          "explanation": "Noktalı virgülden sonra virgüllü bir boşluk var; bu konumu yalnızca geçiş zarfı doldurur. 'but' virgülle bağlanır; 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -43033,18 +43070,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p36",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The trench yielded no pottery ___ In brief, the layer could not be dated.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The trench yielded no pottery at all. ____, the layer could not be dated.",
           "options": [
-            ".",
-            ",",
-            ";",
-            ":"
+            "But",
+            "Because",
+            "Although",
+            "So",
+            "In brief"
           ],
-          "correctIndex": 0,
-          "translation": "Hendekten çanak çömlek çıkmadı. Kısacası katman tarihlendirilemedi.",
-          "explanation": "'In brief' büyük harfle başladığı için öncesinde nokta gerekir.",
+          "correctIndex": 4,
+          "translation": "Hendekten hiç çanak çömlek çıkmadı. Kısacası katman tarihlendirilemedi.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. Kalan dört seçenek yeni bir cümleyi bu biçimde başlatamaz.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -43054,18 +43092,19 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p37",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The estimate proved accurate ___ accordingly, no revision was filed.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The kiln collapsed twice in one season. ____, the design was abandoned.",
           "options": [
-            ",",
-            ":",
-            ".",
-            ";"
+            "Because",
+            "Accordingly",
+            "Since",
+            "Although",
+            "While"
           ],
-          "correctIndex": 3,
-          "translation": "Tahmin isabetli çıktı; dolayısıyla bir düzeltme sunulmadı.",
-          "explanation": "'accordingly' küçük harfle devam eden bir sonuç zarfıdır; iki bağımsız cümle arasında noktalı virgül ister.",
+          "correctIndex": 1,
+          "translation": "Fırın tek bir sezonda iki kez çöktü. Bunun üzerine tasarımdan vazgeçildi.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -43075,40 +43114,41 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p38",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The pigment fades under daylight ___ That is why the room is kept dark.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The bridge carries heavy traffic. ____ it is inspected twice a year.",
           "options": [
-            ";",
-            ",",
-            ":",
-            "."
+            "Although",
+            "Therefore,",
+            "Moreover,",
+            "Because",
+            "That is why"
           ],
-          "correctIndex": 3,
-          "translation": "Pigment gün ışığında soluyor. İşte bu yüzden oda karanlık tutuluyor.",
-          "explanation": "'That is why' büyük harfle başlıyor; öncesinde nokta gerekir ve kendisinden sonra virgül almaz.",
+          "correctIndex": 4,
+          "translation": "Köprü ağır trafik taşıyor. İşte bu yüzden yılda iki kez denetleniyor.",
+          "explanation": "Boşluktan sonra virgül yok, doğrudan özne geliyor. 'That is why' virgül almaz; 'Therefore,' ve 'Moreover,' alır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "that is (i.e.)",
             "that is why"
           ]
         },
         {
           "id": "cdrill_p39",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "Ice cores trap ancient air ___ For this reason, they are the best climate record we have.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "Ice cores trap air from the distant past. ____, they are the best climate record we have.",
           "options": [
-            ";",
-            ",",
-            ":",
-            "."
+            "Although",
+            "Because",
+            "Since",
+            "For this reason",
+            "While"
           ],
           "correctIndex": 3,
-          "translation": "Buz çekirdekleri eski havayı hapseder. Bu nedenle sahip olduğumuz en iyi iklim kaydıdır.",
-          "explanation": "'For this reason' büyük harfle başladığı için önceki cümle noktayla kapanmalıdır.",
+          "translation": "Buz çekirdekleri uzak geçmişten hava hapseder. Bu nedenle sahip olduğumuz en iyi iklim kaydıdır.",
+          "explanation": "Boşluk yeni bir cümlenin başında ve virgülle ayrılıyor; bu konumu yalnızca geçiş zarfı doldurur. 'although', 'because', 'while' gibi bağlaçlar yan cümle kurar ve bu konumda cümle düşüklüğü yaratır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -43118,23 +43158,24 @@ if (typeof lessons !== 'undefined') {
         },
         {
           "id": "cdrill_p40",
-          "type": "punctuation-check",
-          "prompt": "Cümlenin yapısına göre boşluğa gelmesi gereken noktalama işaretini seçin:",
-          "sentence": "The kiln collapsed twice ___ Accordingly, the design was abandoned.",
+          "type": "fill-blank-dropdown",
+          "prompt": "Noktalamaya ve anlama uygun bağlacı seçin:",
+          "sentence": "The road was flooded overnight, ____ the delivery had to be postponed.",
           "options": [
-            ",",
-            ":",
-            ";",
-            "."
+            "thus",
+            "therefore",
+            "hence",
+            "so",
+            "accordingly"
           ],
           "correctIndex": 3,
-          "translation": "Fırın iki kez çöktü. Bunun üzerine tasarımdan vazgeçildi.",
-          "explanation": "'Accordingly' büyük harfle başlıyor; noktalı virgülden sonra büyük harf kullanılmaz.",
+          "translation": "Yol gece boyunca su altında kaldı, bu yüzden teslimat ertelenmek zorunda kaldı.",
+          "explanation": "Tek bir virgülden sonra ikinci bir virgül yok; bu konum geçiş zarfı değil bağlaç ister. Beş seçenek de sonuç bildirir; ayırt eden noktalamadır. Yalnızca 'so' bir bağlaçtır ve virgülle kullanılır.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "accordingly"
+            "so (bağlaç)"
           ]
         }
       ]
