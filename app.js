@@ -13132,6 +13132,30 @@ const CONNECTOR_DRILL_SECTIONS = [
             <code style="font-size: 0.85em;">No sooner <strong>had</strong> the treaty <strong>been signed than</strong> hostilities <strong>resumed</strong>.</code>
           </div>
         </div>
+        <p style="margin: 14px 0 6px; font-weight: 800;">Edilgen cümlenin zamanını nasıl bulursun</p>
+        <p style="margin: 0 0 8px; line-height: 1.65;">
+          Edilgen cümlede <strong>V3 hiçbir zaman bilgisi taşımaz</strong>; sabittir, hiç
+          değişmez. Zamanı daima baştaki <strong>be</strong> fiili belirler. Yukarıdaki
+          kuralların hiçbiri çatıya bakmaz: yan cümle etken de olsa edilgen de olsa,
+          zamanı aynıysa kural aynı işler.
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          <strong>is / are</strong> approved &nbsp;→&nbsp; Geniş Zaman<br>
+          <strong>was / were</strong> approved &nbsp;→&nbsp; Geçmiş Zaman &nbsp;<span style="opacity:.75">(V2 karşılığı)</span><br>
+          <strong>has / have been</strong> approved &nbsp;→&nbsp; Present Perfect<br>
+          <strong>had been</strong> approved &nbsp;→&nbsp; Past Perfect &nbsp;<span style="opacity:.75">(Had V3 karşılığı)</span><br>
+          <strong>will be</strong> approved &nbsp;→&nbsp; Gelecek Zaman
+        </div>
+        <p style="margin: 10px 0 0; line-height: 1.65;">
+          Bir edilgen cümlenin zamanını ararken <em>approved</em>'a hiç bakma —
+          <strong><em>was</em>'a bak.</strong> Bu yüzden aşağıdaki iki cümle
+          <em>by the time</em> kuralı açısından aynıdır:
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          By the time the committee <strong>approved</strong> the grant, the team <strong>had left</strong>. &nbsp;✓<br>
+          By the time the grant <strong>was approved</strong>, the team <strong>had left</strong>. &nbsp;✓
+        </div>
+
         <p style="margin: 14px 0 6px; font-weight: 800;">Altın kural: yan cümlede <em>will</em> yok</p>
         <p style="margin: 0 0 8px; line-height: 1.65;">
           Zaman ve koşul yan cümlelerinde gelecek zaman kullanılmaz; gelecek anlamı
