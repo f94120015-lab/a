@@ -13275,43 +13275,79 @@ function renderDrillFormulaHint(body, question) {
   const cards = terms.map(findRuleCard).filter(Boolean);
   if (!cards.length) return false;
 
-  const chips = cards.map((c, i) => `
-    <button type="button" class="drill-hint-chip" data-hint-index="${i}"
-            style="font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;
-                   background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8);
-                   border: 1px solid rgba(139, 126, 200, 0.3); cursor: pointer;">
-      📐 ${c.term}
-    </button>`).join('');
+  // Etiketlenen terim çoğu soruda aynı zamanda DOĞRU CEVAPTIR. Terim adını
+  // çipe ya da panele yazmak, öğrenci hatırlatıcıyı açmadan bile cevabı ele
+  // verir. Bu yüzden şıklarda geçen terimlerin adı maskelenir; geriye kuralın
+  // yapısal bilgisi kalır (";" sonrası virgüllü boşluk hangi sınıfı ister).
+  const inOptions = new Set((question.options || []).map(o => String(o).toLowerCase().trim()));
+  // Son güvenlik katmanı: kural metni ne söylerse söylesin, doğru cevabın
+  // kendisi hatırlatıcıda görünmemeli. Hata avcılığı sorularında cevap hatalı
+  // öbektir ve tuzak metni çoğu zaman doğru biçimi adıyla anıyordu.
+  const answer = String((question.options || [])[question.correctIndex] || '').trim();
+  const maskAnswer = text => {
+    if (answer.length < 2) return text;
+    const esc = answer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return String(text || '').replace(new RegExp('\\b' + esc + '\\b', 'gi'), '____');
+  };
+  const leaks = term => {
+    const t = String(term).toLowerCase();
+    return [...inOptions].some(o => o && (o === t || t.includes(o) || o.includes(t)));
+  };
+  const mask = (text, term) => {
+    let out = String(text || '');
+    String(term).split(/[\/|]/).forEach(part => {
+      const p = part.replace(/\([^)]*\)/g, '').trim();
+      if (p.length < 2) return;
+      const esc = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      out = out.replace(new RegExp('\\b' + esc + '\\b', 'gi'), '____');
+    });
+    return out;
+  };
 
-  const panels = cards.map((c, i) => `
-    <div class="drill-hint-panel" data-hint-panel="${i}"
-         style="display: ${drillHintOpen ? 'block' : 'none'}; text-align: left; margin: 0 auto 12px auto;
-                max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
-                border: 1px solid var(--border-color); background: var(--bg-card);">
-      <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">
-        ${String(c.rule || c.formula || '').replace(/\n/g, '<br>')}
-      </div>
-      ${c.trap ? `<div style="margin-top: 5px; font-size: 0.78rem; color: #ef4444; line-height: 1.5;">${c.trap}</div>` : ''}
-    </div>`).join('');
+  const panels = cards.map((c, i) => {
+    const hide = leaks(c.term);
+    const head = hide
+      ? '<span style="font-weight: 800;">Bu boşluğun kuralı</span>'
+      : `<span style="font-weight: 800;">${maskAnswer(c.term)}</span>
+         <span style="font-size: 0.78rem; color: var(--text-secondary);">${maskAnswer(c.meaning || '')}</span>`;
+    const rule = String(c.rule || c.formula || '');
+    const trap = String(c.trap || '');
+    return `
+      <div class="drill-hint-panel" data-hint-panel="${i}"
+           style="display: ${drillHintOpen ? 'block' : 'none'}; text-align: left; margin: 0 auto 8px auto;
+                  max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
+                  border: 1px solid var(--border-color); background: var(--bg-card);">
+        <div style="display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px;">${head}</div>
+        <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">
+          ${maskAnswer(hide ? mask(rule, c.term) : rule).replace(/\n/g, '<br>')}
+        </div>
+        ${trap ? `<div style="margin-top: 5px; font-size: 0.78rem; color: #ef4444; line-height: 1.5;">${maskAnswer(hide ? mask(trap, c.term) : trap)}</div>` : ''}
+      </div>`;
+  }).join('');
 
+  // Tek ve nötr bir düğme: etiketinde terim adı geçmez.
   body.insertAdjacentHTML('afterbegin', `
     <div class="drill-hint-wrap" style="width: 100%; margin: 0 auto 14px auto;">
-      <div style="display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 8px;">
-        ${chips}
+      <div style="display: flex; justify-content: center; margin-bottom: 8px;">
+        <button type="button" class="drill-hint-chip"
+                style="font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;
+                       background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8);
+                       border: 1px solid rgba(139, 126, 200, 0.3); cursor: pointer;">
+          📐 ${drillHintOpen ? 'Kuralı gizle' : 'Kuralı hatırlat'}
+        </button>
       </div>
       ${panels}
     </div>`);
 
   const wrap = body.querySelector('.drill-hint-wrap');
-  wrap.querySelectorAll('.drill-hint-chip').forEach(btn => {
-    btn.onclick = () => {
-      const panel = wrap.querySelector(`[data-hint-panel="${btn.dataset.hintIndex}"]`);
-      const willOpen = panel.style.display === 'none';
-      panel.style.display = willOpen ? 'block' : 'none';
-      // Tercih oturum boyunca hatırlanır.
-      drillHintOpen = willOpen;
-    };
-  });
+  const chip = wrap.querySelector('.drill-hint-chip');
+  chip.onclick = () => {
+    drillHintOpen = !drillHintOpen;
+    wrap.querySelectorAll('.drill-hint-panel').forEach(p => {
+      p.style.display = drillHintOpen ? 'block' : 'none';
+    });
+    chip.textContent = drillHintOpen ? '📐 Kuralı gizle' : '📐 Kuralı hatırlat';
+  };
   return true;
 }
 
