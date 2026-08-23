@@ -13116,8 +13116,14 @@ const CONNECTOR_DRILL_SECTIONS = [
             <strong>2. İki cümlecik kuralı</strong> — by the time · since · after · before · when<br>
             <strong>Bir tarafın zamanı diğerini belirler.</strong> Yan cümleye bakıp ana cümleyi
             hesaplarsın; sınavda en çok bu sorulur.<br>
-            <code style="font-size: 0.85em;">By the time the inspectors <strong>arrive</strong> (V1), the samples <strong>will have thawed</strong>.</code><br>
-            <code style="font-size: 0.85em;">By the time the grant <strong>was approved</strong> (V2), the team <strong>had left</strong>.</code>
+            <code style="font-size: 0.85em;">By the time the inspectors <strong>arrive</strong> (Geniş Zaman), the samples <strong>will have thawed</strong>.</code><br>
+            <code style="font-size: 0.85em;">By the time the grant <strong>arrived</strong> (Geçmiş Zaman), the team <strong>had left</strong>.</code><br>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">
+              Kurallardaki V1 / V2 / V3 kısaltmaları cümlenin <strong>zamanını</strong> gösterir,
+              görünen fiilin biçimini değil. Edilgen cümlede ikisi ayrışır:
+              <em>was approved</em> zaman olarak Geçmiş Zamandır (V2 olan <em>was</em>'tır),
+              ama görünen fiil <em>approved</em>, yani V3'tür.
+            </span>
           </div>
           <div style="padding: 10px 14px; border-left: 3px solid #ef4444; background: rgba(239,68,68,0.07); border-radius: 0 8px 8px 0;">
             <strong>3. Devrik kilit</strong> — no sooner ... than · hardly/scarcely ... when<br>
