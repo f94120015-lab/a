@@ -13038,6 +13038,57 @@ let activeDrillSession = false;
 const CONNECTOR_DRILL_SECTIONS = [
   { lessonId: 'cdrill_l1', title: '🔗 Bağlaç Kuralları',
     desc: 'Kural noktalama ve tamamlayıcı tipidir: hangi işaret gelir, boşluktan sonra ne durur.',
+    // Testler bu ayrımı 40 soruda ölçüyordu ama hiçbir kart sınıfların kendisini
+    // anlatmıyordu; öğrenci 'geçiş zarfı' teriminin ne demek olduğunu okumadan
+    // sınanıyordu.
+    intro: {
+      title: 'Önce şunu bil: üç sınıf',
+      html: `
+        <p style="margin: 0 0 12px; line-height: 1.65;">
+          Aşağıdaki üç grup Türkçeye çoğu zaman aynı biçimde çevrilir
+          (<em>ama, ancak, bu yüzden</em>), ama İngilizcede ayrı sınıflardır ve
+          <strong>farklı noktalama</strong> ister. Bütün noktalama kuralları bu ayrımdan doğar.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="padding: 10px 14px; border-left: 3px solid #10b981; background: rgba(16,185,129,0.07); border-radius: 0 8px 8px 0;">
+            <strong>1. Bağlaç</strong> — and · but · or · so · yet · for · nor<br>
+            İki bağımsız cümleyi <strong>gerçekten birleştirir</strong>. Virgül alır.<br>
+            <code style="font-size: 0.85em;">The plan is risky<strong>, but</strong> it offers rewards.</code>
+          </div>
+          <div style="padding: 10px 14px; border-left: 3px solid #8b5cf6; background: rgba(139,92,246,0.07); border-radius: 0 8px 8px 0;">
+            <strong>2. Geçiş zarfı</strong> — however · therefore · moreover · nevertheless · thus · besides<br>
+            Aslında bağlaç <strong>değil, zarftır</strong>. Hiçbir şeyi birleştirmez, yalnızca ilişkiyi
+            işaret eder. Cümleler ayrı kaldığı için araya <strong>noktalı virgül ya da nokta</strong> girer.<br>
+            <code style="font-size: 0.85em;">The plan is risky<strong>; however,</strong> it offers rewards.</code>
+          </div>
+          <div style="padding: 10px 14px; border-left: 3px solid #f59e0b; background: rgba(245,158,11,0.07); border-radius: 0 8px 8px 0;">
+            <strong>3. Yan cümle bağlacı</strong> — although · because · while · when · if · since<br>
+            Bağımsız değil <strong>yan cümle</strong> kurar; o parça tek başına cümle olamaz.<br>
+            <code style="font-size: 0.85em;"><strong>Although</strong> the plan is risky, it offers rewards.</code>
+          </div>
+        </div>
+        <p style="margin: 14px 0 6px; font-weight: 800;">En kesin ayırt edici: hareket testi</p>
+        <p style="margin: 0 0 8px; line-height: 1.65;">
+          Geçiş zarfı zarf olduğu için <strong>yerinden oynayabilir</strong>; bağlaç oynayamaz,
+          çünkü iki cümleyi tutan çivi odur.
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          The plan is risky; <strong>however,</strong> it offers rewards. &nbsp;✓<br>
+          The plan is risky; it, <strong>however,</strong> offers rewards. &nbsp;✓<br>
+          The plan is risky; it offers rewards, <strong>however.</strong> &nbsp;✓<br>
+          <span style="opacity:.85">The plan is risky, <strong>but</strong> it offers rewards. &nbsp;✓</span><br>
+          <span style="color:#ef4444;">The plan is risky; it offers rewards, <strong>but.</strong> &nbsp;✗</span>
+        </div>
+        <p style="margin: 12px 0 0; line-height: 1.65;">
+          Emin değilsen kelimeyi cümlenin sonuna atmayı dene. <strong>Gidiyorsa</strong> geçiş
+          zarfıdır, noktalı virgül ister. <strong>Gitmiyorsa</strong> bağlaçtır, virgül alır.
+        </p>
+        <p style="margin: 12px 0 0; line-height: 1.65; color: var(--text-secondary);">
+          En sık yapılan hata bu ayrımı atlamaktan doğar:
+          <span style="color:#ef4444;">The plan is risky, however it offers rewards.</span>
+          — virgülle bağlanmış iki bağımsız cümle.
+        </p>`
+    },
     icons: { cdrill_ex1: '📐', cdrill_ex2: '🧩', cdrill_ex6: '🎯',
              cdrill_ex3: '🔍', cdrill_ex4: '🔗', cdrill_ex5: '↔️' } },
   { lessonId: 'tdrill_l1', title: '⏳ Zaman Uyumu Kuralları',
@@ -13084,7 +13135,21 @@ function renderConnectorDrillTab() {
   }
 
   const total = exercises.reduce((a, e) => a + (e.questions || []).length, 0);
-  const head = `
+  // Temel ayrım kartı ilk gelişte açık gelir, sonra kapatılabilir ve tercih hatırlanır.
+  const introOpen = !drillIntroCollapsed(sec.lessonId);
+  const intro = sec.intro ? `
+    <div class="card-panel" style="grid-column: 1 / -1; gap: 0; padding: 18px 22px;">
+      <button type="button" id="drill-intro-toggle"
+              style="display: flex; align-items: center; justify-content: space-between; gap: 12px;
+                     background: none; border: none; padding: 0; cursor: pointer; width: 100%; text-align: left;">
+        <span class="section-title-sm">📚 ${sec.intro.title}</span>
+        <span class="text-sm-muted" id="drill-intro-caret">${introOpen ? '▲ Gizle' : '▼ Göster'}</span>
+      </button>
+      <div id="drill-intro-body" style="display: ${introOpen ? 'block' : 'none'}; margin-top: 14px; font-size: 0.9rem; color: var(--text-primary);">
+        ${sec.intro.html}
+      </div>
+    </div>` : '';
+  const head = intro + `
     <div style="grid-column: 1 / -1; margin: 2px 0;">
       <p class="text-sm-muted" style="margin: 0;">${sec.desc} · ${exercises.length} alıştırma, ${total} soru</p>
     </div>`;
@@ -13120,6 +13185,17 @@ function renderConnectorDrillTab() {
     btn.onclick = () => startConnectorDrill(btn.dataset.drillLesson, btn.dataset.drillEx,
                                             parseInt(btn.dataset.drillTest, 10) || 0);
   });
+  const introToggle = listEl.querySelector('#drill-intro-toggle');
+  if (introToggle) {
+    introToggle.onclick = () => {
+      const bodyEl = listEl.querySelector('#drill-intro-body');
+      const open = bodyEl.style.display === 'none';
+      bodyEl.style.display = open ? 'block' : 'none';
+      listEl.querySelector('#drill-intro-caret').textContent = open ? '▲ Gizle' : '▼ Göster';
+      setDrillIntroCollapsed(sec.lessonId, !open);
+    };
+  }
+
   listEl.querySelectorAll('[data-brief-ex]').forEach(btn => {
     btn.onclick = () => {
       const e = exercises.find(x => x.id === btn.dataset.briefEx);
@@ -13187,6 +13263,23 @@ function renderDrillFormulaHint(body, question) {
 // Alıştırmaların kuralları matrislerde zaten yazılı; eksik olan yönlendirmeydi.
 // Her soru çalıştırdığı terimlerle etiketli (questions[].terms), brifing de o
 // etiketlerden derleniyor: testte en sık geçen terimlerin kartları gösterilir.
+const DRILL_INTRO_KEY = 'amok_drill_intro_collapsed';
+
+function drillIntroCollapsed(lessonId) {
+  try {
+    return (JSON.parse(localStorage.getItem(DRILL_INTRO_KEY) || '[]') || []).includes(lessonId);
+  } catch (e) { return false; }
+}
+
+function setDrillIntroCollapsed(lessonId, collapsed) {
+  try {
+    let list = JSON.parse(localStorage.getItem(DRILL_INTRO_KEY) || '[]') || [];
+    list = list.filter(x => x !== lessonId);
+    if (collapsed) list.push(lessonId);
+    localStorage.setItem(DRILL_INTRO_KEY, JSON.stringify(list));
+  } catch (e) { /* depolama kapalıysa kart yine çalışır, tercih hatırlanmaz */ }
+}
+
 const DRILL_BRIEF_KEY = 'amok_drill_briefed';
 const DRILL_BRIEF_MAX = 6;
 
