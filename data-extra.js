@@ -50323,7 +50323,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 4,
           "translation": "Hibe onaylandığında ekip alandan ayrılmıştı.",
-          "explanation": "'By the time + V2 (was approved)' ana cümlede Had V3 ister.",
+          "explanation": "'By the time' yan cümlesi Geçmiş Zamanda ('was approved' edilgendir; zamanı taşıyan 'was', V2'dir). Yan cümle Geçmiş Zamansa ana cümle Had V3 alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -50585,7 +50585,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 4,
           "translation": "Kasa en son açıldığında iki mühür sağlam bulundu.",
-          "explanation": "'the last time + V2' geçmişte kapalı bir anı işaret eder; ana cümle de V2 alır.",
+          "explanation": "'the last time' yan cümlesi Geçmiş Zamanda ('was opened' edilgendir, zamanı 'was' taşır) ve geçmişte kapalı bir anı işaret eder; ana cümle de Geçmiş Zaman alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -50849,7 +50849,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 1,
           "translation": "Antlaşma imzalandıktan sonra sınır karakolları söküldü.",
-          "explanation": "'once' öncelik bildirdiğinde yan cümle Had V3, ana cümle V2 alır.",
+          "explanation": "'once' öncelik bildirdiğinde yan cümle Had V3, ana cümle Geçmiş Zaman alır ('were dismantled' edilgendir; zamanı 'were' taşır).",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -52112,7 +52112,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 2,
           "translation": "Hibe onaylandığında ekip alandan ayrılmıştı.",
-          "explanation": "'By the time + V2' ana cümlede Had V3 ister; Present Perfect gelmez.",
+          "explanation": "'By the time' yan cümlesi Geçmiş Zamanda ('was approved'); bu durumda ana cümle Had V3 ister, Present Perfect gelmez.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -52323,7 +52323,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 2,
           "translation": "Kasa en son açıldığında iki mühür sağlam bulundu.",
-          "explanation": "'the last time + V2' geçmişte kapalı bir andır; ana cümle de Simple Past alır.",
+          "explanation": "'the last time' yan cümlesi Geçmiş Zamanda ('was opened') ve geçmişte kapalı bir andır; ana cümle de Simple Past alır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
