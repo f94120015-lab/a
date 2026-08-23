@@ -13093,6 +13093,62 @@ const CONNECTOR_DRILL_SECTIONS = [
              cdrill_ex3: '🔍', cdrill_ex4: '🔗', cdrill_ex5: '↔️' } },
   { lessonId: 'tdrill_l1', title: '⏳ Zaman Uyumu Kuralları',
     desc: 'Kural zamandır: terim, cümlenin iki tarafına gelebilecek çekimleri belirler.',
+    // Bağlaç bölümündekinin karşılığı: buradaki alıştırmalar terimlerin zamanı
+    // NASIL kısıtladığını ölçüyor, ama kısıtlama biçimlerinin kendisi hiçbir
+    // kartta anlatılmıyordu.
+    intro: {
+      title: 'Önce şunu bil: kilidin üç biçimi',
+      html: `
+        <p style="margin: 0 0 12px; line-height: 1.65;">
+          Buradaki terimlerin ortak özelliği şu: hangisi geçerse geçsin, cümlenin
+          zamanı <strong>serbest kalmaz</strong>. Ama kısıtlamanın üç ayrı biçimi var
+          ve soruyu okurken önce hangisiyle karşı karşıya olduğunu görmek gerekir.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="padding: 10px 14px; border-left: 3px solid #3b82f6; background: rgba(59,130,246,0.07); border-radius: 0 8px 8px 0;">
+            <strong>1. Tek taraflı çapa</strong> — for · ago · already · yet · just · so far · to date<br>
+            Tek bir cümlenin zamanını sabitler; ikinci cümleye ihtiyaç yoktur.
+            Çapayı gördüğün an çekim bellidir.<br>
+            <code style="font-size: 0.85em;">The instrument <strong>has been</strong> out of use <strong>for eight years</strong>.</code><br>
+            <code style="font-size: 0.85em;">The kiln <strong>was abandoned</strong> two centuries <strong>ago</strong>.</code>
+          </div>
+          <div style="padding: 10px 14px; border-left: 3px solid #8b5cf6; background: rgba(139,92,246,0.07); border-radius: 0 8px 8px 0;">
+            <strong>2. İki cümlecik kuralı</strong> — by the time · since · after · before · when<br>
+            <strong>Bir tarafın zamanı diğerini belirler.</strong> Yan cümleye bakıp ana cümleyi
+            hesaplarsın; sınavda en çok bu sorulur.<br>
+            <code style="font-size: 0.85em;">By the time the inspectors <strong>arrive</strong> (V1), the samples <strong>will have thawed</strong>.</code><br>
+            <code style="font-size: 0.85em;">By the time the grant <strong>was approved</strong> (V2), the team <strong>had left</strong>.</code>
+          </div>
+          <div style="padding: 10px 14px; border-left: 3px solid #ef4444; background: rgba(239,68,68,0.07); border-radius: 0 8px 8px 0;">
+            <strong>3. Devrik kilit</strong> — no sooner ... than · hardly/scarcely ... when<br>
+            <strong>İki taraf da sabittir</strong>, üstelik kelime sırası da bozulur:
+            ilk eylem <em>had V3</em>, ikinci eylem <em>V2</em>. İki Past Perfect üst üste gelmez.<br>
+            <code style="font-size: 0.85em;">No sooner <strong>had</strong> the treaty <strong>been signed than</strong> hostilities <strong>resumed</strong>.</code>
+          </div>
+        </div>
+        <p style="margin: 14px 0 6px; font-weight: 800;">Altın kural: yan cümlede <em>will</em> yok</p>
+        <p style="margin: 0 0 8px; line-height: 1.65;">
+          Zaman ve koşul yan cümlelerinde gelecek zaman kullanılmaz; gelecek anlamı
+          geniş zamanla verilir ve <em>will</em> ana cümleye kalır. Bu tek kural
+          <strong>when · until · as soon as · before · after · once · whenever · if · unless ·
+          as long as · in case · provided that</strong> için birden geçerlidir.
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          The alarm will sound as soon as the temperature <strong>exceeds</strong> four degrees. &nbsp;✓<br>
+          <span style="color:#ef4444;">The alarm will sound as soon as the temperature <strong>will exceed</strong> four degrees. &nbsp;✗</span>
+        </div>
+        <p style="margin: 14px 0 6px; font-weight: 800;">En sık karışan üçlü: since · for · ago</p>
+        <p style="margin: 0; line-height: 1.65;">
+          Üçü de Türkçede birbirine yakın çevrilir, ama üçü üç ayrı şey ister:
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          <strong>since</strong> + başlangıç NOKTASI &nbsp;→&nbsp; has been out of use <strong>since 2016</strong><br>
+          <strong>for</strong> + SÜRE &nbsp;→&nbsp; has been out of use <strong>for eight years</strong><br>
+          <strong>ago</strong> + geçmişte KAPALI an &nbsp;→&nbsp; <strong>was abandoned</strong> two centuries ago<br>
+          <span style="color:#ef4444;">has been out of use <strong>since eight years</strong> &nbsp;✗ &nbsp;(süre 'for' ister)</span><br>
+          <span style="color:#ef4444;"><strong>has published</strong> it forty years ago &nbsp;✗ &nbsp;('ago' Perfect almaz)</span>
+        </div>`
+    },
     icons: { tdrill_ex1: '⚓', tdrill_ex2: '🔀', tdrill_ex3: '⚡',
              tdrill_ex4: '🚫', tdrill_ex5: '🔍', tdrill_ex6: '🔀',
              tdrill_ex7: '💭', tdrill_ex8: '📜' } }
