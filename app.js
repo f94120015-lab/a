@@ -13189,6 +13189,40 @@ const CONNECTOR_DRILL_SECTIONS = [
           The alarm will sound as soon as the temperature <strong>exceeds</strong> four degrees. &nbsp;✓<br>
           <span style="color:#ef4444;">The alarm will sound as soon as the temperature <strong>will exceed</strong> four degrees. &nbsp;✗</span>
         </div>
+
+        <p style="margin: 12px 0 6px; font-weight: 700;">Yan cümleyi nasıl tanırsın</p>
+        <p style="margin: 0 0 8px; line-height: 1.65;">
+          Öznesi ve fiili olan, ama <strong>tek başına cümle olamayan</strong> parçadır; onu
+          bağımlı kılan şey başındaki bağlaçtır. En kesin test: <strong>bağlacı sil, tek
+          başına oku.</strong> Geriye tam bir cümle kalıyorsa, o parça yan cümledir.
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          <strong>When</strong> the rain stops &nbsp;→&nbsp; tek başına eksik &nbsp;→&nbsp; yan cümle<br>
+          the rain stops &nbsp;→&nbsp; bağlaç silinince tam cümle
+        </div>
+        <p style="margin: 8px 0 0; line-height: 1.65;">
+          İkinci ipucu virgüldür: yan cümle başta ise virgülle ayrılır, sonda ise ayrılmaz —
+          <em>When the rain stops<strong>,</strong> we will leave</em> / <em>We will leave when the rain stops</em>.
+        </p>
+
+        <p style="margin: 12px 0 6px; font-weight: 700; color: #ef4444;">Dikkat: kural her yan cümlede geçerli değil</p>
+        <p style="margin: 0 0 8px; line-height: 1.65;">
+          Yasak yalnızca <strong>zaman ve koşul</strong> yan cümleleri içindir. Aynı kelime
+          <strong>isim cümleciği</strong> kurduğunda <em>will</em> serbesttir:
+        </p>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+          We will leave <strong>when he arrives</strong>. &nbsp;✓ &nbsp;<span style="opacity:.75">zaman → will yok</span><br>
+          I don't know <strong>when he will arrive</strong>. &nbsp;✓ &nbsp;<span style="opacity:.75">isim cümleciği → will serbest</span><br>
+          <strong>If it rains</strong>, we will cancel. &nbsp;✓ &nbsp;<span style="opacity:.75">koşul → will yok</span><br>
+          I don't know <strong>if it will rain</strong>. &nbsp;✓ &nbsp;<span style="opacity:.75">isim cümleciği → will serbest</span>
+        </div>
+        <p style="margin: 8px 0 0; line-height: 1.65;">
+          Ayırt etme testi — <strong>yerine ne koyabiliyorsun?</strong>
+          <em>then</em> koyabiliyorsan zaman yan cümlesidir (<em>We will leave <strong>then</strong></em>),
+          <em>it</em> koyabiliyorsan isim cümleciğidir (<em>I don't know <strong>it</strong></em>).
+          İsim cümleciği fiilin nesnesidir; zaman yan cümlesi ise ana eylemin ne zaman
+          olduğunu söyler.
+        </p>
         <p style="margin: 14px 0 6px; font-weight: 800;">En sık karışan üçlü: since · for · ago</p>
         <p style="margin: 0; line-height: 1.65;">
           Üçü de Türkçede birbirine yakın çevrilir, ama üçü üç ayrı şey ister:
