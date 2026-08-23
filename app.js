@@ -13132,28 +13132,50 @@ const CONNECTOR_DRILL_SECTIONS = [
             <code style="font-size: 0.85em;">No sooner <strong>had</strong> the treaty <strong>been signed than</strong> hostilities <strong>resumed</strong>.</code>
           </div>
         </div>
-        <p style="margin: 14px 0 6px; font-weight: 800;">Edilgen cümlenin zamanını nasıl bulursun</p>
+        <p style="margin: 14px 0 6px; font-weight: 800;">Zamanı ilk yardımcı fiil taşır</p>
         <p style="margin: 0 0 8px; line-height: 1.65;">
-          Edilgen cümlede <strong>V3 hiçbir zaman bilgisi taşımaz</strong>; sabittir, hiç
-          değişmez. Zamanı daima baştaki <strong>be</strong> fiili belirler. Yukarıdaki
-          kuralların hiçbiri çatıya bakmaz: yan cümle etken de olsa edilgen de olsa,
-          zamanı aynıysa kural aynı işler.
+          Yukarıdaki kuralların hiçbiri <strong>çatıya</strong> (etken/edilgen) ya da
+          <strong>görünüşe</strong> (basit/sürerlik) bakmaz. Bunlar zamandan bağımsız
+          bilgilerdir. Aynı zaman dört ayrı görünümde karşına çıkabilir:
+        </p>
+        <div style="overflow-x: auto;">
+          <table style="border-collapse: collapse; font-size: 0.82rem; min-width: 420px;">
+            <tr>
+              <th></th>
+              <th style="text-align: left; padding: 4px 12px 4px 0; font-weight: 800;">Etken</th>
+              <th style="text-align: left; padding: 4px 0; font-weight: 800;">Edilgen</th>
+            </tr>
+            <tr>
+              <td style="padding: 4px 12px 4px 0; font-weight: 700;">Basit</td>
+              <td style="padding: 4px 12px 4px 0; font-family: ui-monospace, monospace;">the committee <strong>approved</strong> it</td>
+              <td style="padding: 4px 0; font-family: ui-monospace, monospace;">it <strong>was</strong> approved</td>
+            </tr>
+            <tr>
+              <td style="padding: 4px 12px 4px 0; font-weight: 700;">Sürerlik</td>
+              <td style="padding: 4px 12px 4px 0; font-family: ui-monospace, monospace;">the committee <strong>was</strong> approving it</td>
+              <td style="padding: 4px 0; font-family: ui-monospace, monospace;">it <strong>was</strong> being approved</td>
+            </tr>
+          </table>
+        </div>
+        <p style="margin: 10px 0 8px; line-height: 1.65;">
+          Dördü de <strong>Geçmiş Zaman</strong>dır. Buradan çıkan tek kural şudur:
         </p>
         <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
-          <strong>is / are</strong> approved &nbsp;→&nbsp; Geniş Zaman<br>
-          <strong>was / were</strong> approved &nbsp;→&nbsp; Geçmiş Zaman &nbsp;<span style="opacity:.75">(V2 karşılığı)</span><br>
-          <strong>has / have been</strong> approved &nbsp;→&nbsp; Present Perfect<br>
-          <strong>had been</strong> approved &nbsp;→&nbsp; Past Perfect &nbsp;<span style="opacity:.75">(Had V3 karşılığı)</span><br>
-          <strong>will be</strong> approved &nbsp;→&nbsp; Gelecek Zaman
+          <strong>approved</strong> &nbsp;→&nbsp; zaman fiilin kendisinde<br>
+          <strong>was</strong> approving &nbsp;→&nbsp; zaman <em>was</em>'ta<br>
+          <strong>was</strong> approved &nbsp;→&nbsp; zaman <em>was</em>'ta<br>
+          <strong>was</strong> being approved &nbsp;→&nbsp; zaman <em>was</em>'ta<br>
+          <strong>had</strong> been approved &nbsp;→&nbsp; zaman <em>had</em>'de<br>
+          <strong>will</strong> have been approved &nbsp;→&nbsp; zaman <em>will</em>'de
         </div>
         <p style="margin: 10px 0 0; line-height: 1.65;">
-          Bir edilgen cümlenin zamanını ararken <em>approved</em>'a hiç bakma —
-          <strong><em>was</em>'a bak.</strong> Bu yüzden aşağıdaki iki cümle
-          <em>by the time</em> kuralı açısından aynıdır:
+          Arkasından ne gelirse gelsin — <em>-ing</em>, <em>V3</em>, <em>been</em>, hepsi birden —
+          <strong>zaman baştaki ilk yardımcı fiildedir</strong>; gerisi çatı ve görünüş bilgisidir.
+          Bu yüzden uzun bir yüklem zinciri görünce paniklemeye gerek yok:
         </p>
         <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
-          By the time the committee <strong>approved</strong> the grant, the team <strong>had left</strong>. &nbsp;✓<br>
-          By the time the grant <strong>was approved</strong>, the team <strong>had left</strong>. &nbsp;✓
+          By the time the report <strong>was</strong> being reviewed, the team <strong>had left</strong>. &nbsp;✓<br>
+          <span style="opacity:.8">ilk yardımcı <strong>was</strong> → Geçmiş Zaman → ana cümle <strong>had V3</strong></span>
         </div>
 
         <p style="margin: 14px 0 6px; font-weight: 800;">Altın kural: yan cümlede <em>will</em> yok</p>
