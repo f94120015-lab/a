@@ -6637,6 +6637,11 @@ input {
   box-shadow: 0 0 0 3px var(--color-active-glow);
 }
 
+/* Kilitli sekme: içerik silinmeden gizlenir, yerine kilit kartı görünür. */
+.tab-content.tab-locked > *:not(.tab-lock-overlay) {
+  display: none !important;
+}
+
 /* ============================================================
    HOVER KELİME ANLAMLARI (TOOLTIP) STİLLERİ
    ============================================================ */

@@ -13112,6 +13112,52 @@ function isExamUnlocked() {
          window.location.protocol === 'file:';
 }
 
+// Dersler, Hakkında ve Geri Bildirim dışındaki tüm sol menü sekmeleri, deneme
+// sınavıyla aynı kilide tabidir. Admin sekmesi zaten yalnızca geliştirme
+// ortamında görünür, Profil ise sol menüde değil kullanıcı menüsündedir.
+const LOCKED_TABS = ['time-matrix', 'transitions-matrix', 'simulator',
+                     'structure-robot', 'exam', 'connector-drill'];
+
+// Başlık sekmenin kendi etiketinden okunur; yeni bir sekme eklendiğinde burada
+// ayrıca bir metin tutmak gerekmesin.
+function lockedTabTitle(tabId) {
+  const label = document.querySelector(`.nav-tab[data-tab="${tabId}"] .nav-tab-label`);
+  const name = label ? label.textContent.trim() : '';
+  return name ? `${name} Kilitli` : 'Bu Bölüm Kilitli';
+}
+
+function lockCardHtml(title) {
+  return `
+    <div class="tab-lock-overlay" style="display: flex; justify-content: center; padding: 24px 8px;">
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 40px 28px; max-width: 480px; width: 100%; text-align: center; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: center; gap: 18px; box-sizing: border-box;">
+        <div style="font-size: 4.5rem; line-height: 1; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15)); animation: pulse 2s infinite;">🔒</div>
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-primary); margin: 0;">${title}</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+          Bu uygulamayı tüm dersleri bitirdikten sonra açabilirsiniz.
+        </p>
+      </div>
+    </div>`;
+}
+
+// Kilitli sekmenin içeriği silinmez, gizlenir: kilit açıldığında (yerel
+// geliştirme) sekmenin init fonksiyonları aradığı elemanları yerinde bulur.
+function applyTabLock(tabId) {
+  const el = document.getElementById('tab-content-' + tabId);
+  if (!el) return false;
+
+  const existing = Array.from(el.children).find(c => c.classList.contains('tab-lock-overlay'));
+  const locked = LOCKED_TABS.includes(tabId) && !isExamUnlocked();
+
+  if (!locked) {
+    el.classList.remove('tab-locked');
+    if (existing) existing.remove();
+    return false;
+  }
+  if (!existing) el.insertAdjacentHTML('beforeend', lockCardHtml(lockedTabTitle(tabId)));
+  el.classList.add('tab-locked');
+  return true;
+}
+
 function renderExamLocked(listEl) {
   listEl.innerHTML = `
     <div style="grid-column: 1 / -1; display: flex; justify-content: center; padding: 24px 8px;">
@@ -14205,6 +14251,10 @@ function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(content => {
     content.classList.toggle('active', content.id === `tab-content-${tabId}`);
   });
+
+  // Kilitli sekmede init çalıştırılmaz; kilit kartı içeriğin yerini alır.
+  if (applyTabLock(tabId)) return;
+
   if (tabId === 'profile') {
     switchProfileHub(state.activeProfileHub || 'info');
   } else if (tabId === 'simulator') {
