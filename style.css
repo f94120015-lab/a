@@ -10159,6 +10159,14 @@ input:checked + .slider:before {
   font-weight: 700 !important;
 }
 
+/* Bir gramer kalıbının içindeki her kelime kalıbın ağırlığını alsın. Aksi hâlde
+   temel kelimeler (basic-word, ağırlığı miras alır) 700'e çıkarken içerik
+   kelimeleri .hoverable-word'ün 500'ünde kalıyor ve tek öbek iki kalınlıkta
+   görünüyordu. */
+[class*="gpattern-"] .hoverable-word {
+  font-weight: inherit;
+}
+
 /* Matrix & Modal Selection Button Styling */
 .matrix-cell-btn, .modal-matrix-btn, .cond-matrix-btn {
   padding: 8px 12px;
