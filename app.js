@@ -8686,67 +8686,6 @@ function applyClozeHighlighting(question) {
   question.sentence = sentence;
 }
 
-// ── Gramer kalıbı renk anahtarı ────────────────────────────────────────────
-// highlightGrammarPatterns cümledeki yapıları renkli kesik çizgiyle işaretler.
-// Renk tek başına bir şey öğretmiyordu: öğrenci pembe çizgiyi görüyor ama neyi
-// gösterdiğini bilmiyordu. Anahtar yalnızca ekrandaki cümlede gerçekten geçen
-// kalıpları listeler, on maddelik bir tablo değil.
-const GPATTERN_LEGEND = [
-  { cls: 'gpattern-infinitive',       color: '#9333ea', label: 'Mastar',            hint: 'to + V1 · how to · in order to' },
-  { cls: 'gpattern-prep-ing',         color: '#7c3aed', label: 'Edat + fiil',       hint: 'before / by / without + V-ing' },
-  { cls: 'gpattern-pron-of-the-noun', color: '#db2777', label: 'Miktar + of the',   hint: 'some / each / most of the + isim' },
-  { cls: 'gpattern-noun-of-the-noun', color: '#1d4ed8', label: 'İsim tamlaması',    hint: 'isim + of the + isim' },
-  { cls: 'gpattern-noun-of-noun',     color: '#0891b2', label: 'Belirtisiz tamlama', hint: 'isim + of + isim' },
-  { cls: 'gpattern-noun-from-noun',   color: '#0369a1', label: 'Kaynak öbeği',      hint: 'isim + from + isim' },
-  { cls: 'gpattern-ed-noun',          color: '#0d9488', label: 'V3 + isim',         hint: 'sıfat görevli past participle' },
-  { cls: 'gpattern-ing-noun',         color: '#16a34a', label: 'V-ing + isim',      hint: 'sıfat görevli present participle' },
-  { cls: 'gpattern-adv-ed-noun',      color: '#65a30d', label: 'Zarf + V3 + isim',  hint: 'strictly enforced rules' },
-  { cls: 'gpattern-noun-noun',        color: '#d97706', label: 'Bileşik isim',      hint: 'isim + isim' }
-];
-
-// Tercih oturum boyunca hatırlanır; öğrenci on soruda on kez açmasın.
-let gpatternLegendOpen = false;
-
-function renderGrammarLegend(body) {
-  if (!body) return;
-  // Aynı soru iki kez çizilirse anahtar da iki kez eklenmesin.
-  const stale = body.querySelector('.gpattern-legend-wrap');
-  if (stale) stale.remove();
-
-  const present = GPATTERN_LEGEND.filter(p => body.querySelector('.' + p.cls));
-  if (!present.length) return;
-
-  const rows = present.map(p => `
-    <div style="display: flex; align-items: baseline; gap: 8px; padding: 3px 0;">
-      <span style="flex: none; width: 22px; border-bottom: 2px dashed ${p.color};"></span>
-      <span style="font-size: 0.78rem; font-weight: 700; color: ${p.color};">${p.label}</span>
-      <span style="font-size: 0.72rem; color: var(--text-muted);">${p.hint}</span>
-    </div>`).join('');
-
-  body.insertAdjacentHTML('beforeend', `
-    <div class="gpattern-legend-wrap" style="width: 100%; margin: 14px auto 0 auto; text-align: center;">
-      <button type="button" class="gpattern-legend-toggle"
-              style="font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;
-                     background: rgba(139, 126, 200, 0.12); color: var(--text-muted);
-                     border: 1px solid var(--border-color); cursor: pointer;">
-        🎨 Renkler ne demek?
-      </button>
-      <div class="gpattern-legend-panel"
-           style="display: ${gpatternLegendOpen ? 'block' : 'none'}; text-align: left; margin: 8px auto 0 auto;
-                  max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
-                  border: 1px solid var(--border-color); background: var(--bg-card);">
-        ${rows}
-      </div>
-    </div>`);
-
-  const wrap = body.querySelector('.gpattern-legend-wrap');
-  const panel = wrap.querySelector('.gpattern-legend-panel');
-  wrap.querySelector('.gpattern-legend-toggle').onclick = () => {
-    gpatternLegendOpen = panel.style.display === 'none';
-    panel.style.display = gpatternLegendOpen ? 'block' : 'none';
-  };
-}
-
 function renderQuestion() {
   // Dismiss any active collocation success popup when transitioning to a new question
   const existingPopup = document.getElementById('collocation-popup');
@@ -9321,9 +9260,6 @@ function renderQuestion() {
     `;
     body.insertAdjacentHTML('afterbegin', badgeHtml);
   }
-
-  // Cümledeki renkli kalıpların anahtarı, gövde tamamen çizildikten sonra.
-  renderGrammarLegend(body);
 
   // Restore prompt text so data remains unmodified
   question.prompt = originalPrompt;
