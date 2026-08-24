@@ -34828,19 +34828,19 @@ Object.assign(unitSentencesMap, {
               "grammarTags": [
                 "İsim ve Edat Yapıları",
                 "Noun + Prepositional Phrase",
-                "İsim Tamlamaları",
-                "İsim ve Edat Yapıları"
+                "İsim Tamlamaları"
               ],
               "prompt": "Boşluğu doldur:",
               "sentence": "The document ___ the Ottoman era is a primary source.",
               "options": [
-                "from",
+                "at",
                 "in",
                 "of",
                 "with"
               ],
               "correctIndex": 2,
-              "translation": "Osmanlı döneminin belgesi birincil bir kaynaktır."
+              "translation": "Osmanlı döneminin belgesi birincil bir kaynaktır.",
+              "explanation": "İki ismi 'in/-ın' ilişkisiyle bağlayan edat 'of'tur: the document of the era = dönemin belgesi. 'at', 'in' ve 'with' bu tamlamayı kuramaz."
             },
             {
               "id": "u1l1ex1_q3",
@@ -35145,7 +35145,7 @@ Object.assign(unitSentencesMap, {
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "The translation ___ the primary sources is a basic requirement.",
               "options": [
-                "from",
+                "at",
                 "in",
                 "of",
                 "by"
@@ -35786,7 +35786,7 @@ Object.assign(unitSentencesMap, {
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
               "sentence": "The development of the behavior ___ the children is rapid.",
               "options": [
-                "in",
+                "by",
                 "from",
                 "at",
                 "of"
