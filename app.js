@@ -8686,6 +8686,103 @@ function applyClozeHighlighting(question) {
   question.sentence = sentence;
 }
 
+// ── Ders kuralı hatırlatıcısı ──────────────────────────────────────────────
+// Soru başındaki etiket rozetleri ("TERCİHLER", "WOULD RATHER") dersin adını
+// tekrar ediyordu, öğrenciye kural vermiyordu. Yerlerine dersin kendi formülünü
+// açan tek bir düğme geliyor. Kaynak sırası: konu anlatımının formülü, dersin
+// formula/example alanı, en sonda açıklama.
+let lessonHintOpen = false;
+
+function lessonRuleContent(lesson) {
+  if (!lesson) return null;
+  const strip = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const ka = lesson.konuAnlatimi || {};
+  const formula = strip(ka.formul) || strip(lesson.formula);
+  const golden  = strip(ka.altinKural);
+  let   desc    = strip(lesson.description) || strip(ka.teorikMantik);
+  // Teorik mantık paragrafı bir hatırlatıcı için fazla uzun; ilk cümleleri yeter.
+  if (desc.length > 260) desc = desc.slice(0, 257).replace(/\s+\S*$/, '') + '…';
+  // Bazı derslerin örneği madde madde uzayan bir liste; hatırlatıcı bir ders
+  // sayfası değil, ilk örnek yeter.
+  let example = strip(lesson.example);
+  if (example.length > 200) example = example.slice(0, 197).replace(/\s+\S*$/, '') + '…';
+  if (!formula && !golden && !desc) return null;
+  return { formula, golden, desc, example };
+}
+
+function renderLessonRuleHint(body, question) {
+  // Tekrar ve kelime türetme oturumlarında sorular başka derslerden toplanır;
+  // currentLesson o sorunun dersi olmadığı için yanlış kuralı gösterirdi.
+  if (isReviewMode || isFormationMode) return false;
+
+  const content = lessonRuleContent(currentLesson);
+  if (!content) return false;
+
+  // Hatırlatıcı cevabı ele vermemeli. Doğru şık nerede geçerse maskelenir;
+  // örnek cümle bir şıkkı içeriyorsa hiç gösterilmez -- kırpılmış bir örnek
+  // öğretmiyor, sadece kafa karıştırıyor.
+  const options = (question.options || []).map(o => String(o).trim()).filter(Boolean);
+  const answer = String(options[question.correctIndex] || '').trim();
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const maskAnswer = text => {
+    const out = String(text || '');
+    if (answer.length < 2) return out;
+    return out.replace(new RegExp('\\b' + esc(answer) + '\\b', 'gi'), '____');
+  };
+  const leaksOption = text => {
+    const low = String(text || '').toLowerCase();
+    return options.some(o => o.length >= 3 && low.includes(o.toLowerCase()));
+  };
+
+  const rows = [];
+  if (content.formula) rows.push(`
+    <div style="font-size: 0.85rem; font-weight: 800; color: var(--accent-primary); line-height: 1.5;">
+      ${maskAnswer(content.formula)}
+    </div>`);
+  if (content.golden) rows.push(`
+    <div style="margin-top: 6px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
+      🔑 ${maskAnswer(content.golden)}
+    </div>`);
+  if (content.desc) rows.push(`
+    <div style="margin-top: 6px; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
+      ${maskAnswer(content.desc)}
+    </div>`);
+  if (content.example && !leaksOption(content.example)) rows.push(`
+    <div style="margin-top: 6px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; font-style: italic;">
+      ${maskAnswer(content.example)}
+    </div>`);
+  if (!rows.length) return false;
+
+  body.insertAdjacentHTML('afterbegin', `
+    <div class="lesson-hint-wrap" style="width: 100%; margin: 0 auto 14px auto;">
+      <div style="display: flex; justify-content: center; margin-bottom: 8px;">
+        <button type="button" class="lesson-hint-chip"
+                style="font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;
+                       background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8);
+                       border: 1px solid rgba(139, 126, 200, 0.3); cursor: pointer;">
+          📐 ${lessonHintOpen ? 'Kuralı gizle' : 'Kuralı hatırlat'}
+        </button>
+      </div>
+      <div class="lesson-hint-panel"
+           style="display: ${lessonHintOpen ? 'block' : 'none'}; text-align: left; margin: 0 auto;
+                  max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
+                  border: 1px solid var(--border-color); background: var(--bg-card);">
+        ${rows.join('')}
+      </div>
+    </div>`);
+
+  const wrap = body.querySelector('.lesson-hint-wrap');
+  const chip = wrap.querySelector('.lesson-hint-chip');
+  const panel = wrap.querySelector('.lesson-hint-panel');
+  chip.onclick = () => {
+    // Tercih oturum boyunca hatırlanır; öğrenci her soruda yeniden açmasın.
+    lessonHintOpen = !lessonHintOpen;
+    panel.style.display = lessonHintOpen ? 'block' : 'none';
+    chip.textContent = lessonHintOpen ? '📐 Kuralı gizle' : '📐 Kuralı hatırlat';
+  };
+  return true;
+}
+
 function renderQuestion() {
   // Dismiss any active collocation success popup when transitioning to a new question
   const existingPopup = document.getElementById('collocation-popup');
@@ -9216,40 +9313,12 @@ function renderQuestion() {
     }
   }
 
-  // Yapısal Kurallar alıştırmalarında genel etiket ("ZAMAN UYUMU KURALLARI")
-  // her soruda aynı olduğu için bilgi taşımıyordu; onun yerine sorunun
-  // çalıştırdığı terimler tıklanabilir çip olarak gösterilir.
-  if (renderDrillFormulaHint(body, question)) {
-    // terim çipleri çizildi; genel etiket satırına gerek yok
-  } else if (question.grammarTags && question.grammarTags.length > 0) {
-    const rawCleaned = question.grammarTags
-      .filter(t => {
-        if (!t) return false;
-        const lower = t.toLowerCase().trim();
-        const nonGrammarTags = [
-          'antropoloji', 'arkeoloji', 'coğrafya', 'hukuk', 'humanities', 
-          'politika', 'psikoloji', 'sanat tarihi', 'sinema', 'sosyoloji', 
-          'tarih', 'iktisat', 'iletişim', 'beşeri bilimler'
-        ];
-        return !nonGrammarTags.includes(lower);
-      })
-      .map(t => t.replace(/^Önceki Konu:\s*/i, "").replace(/\s*\(.*?\)/g, "").trim())
-      .filter(t => t.length > 0);
-
-    const cleanedTags = Array.from(new Set(rawCleaned));
-
-    if (cleanedTags.length > 0) {
-      const tagsHtml = `
-        <div class="quiz-grammar-tags-inside" style="display: flex; gap: 6px; flex-wrap: wrap; margin: 0 auto 16px auto; justify-content: center; width: 100%;">
-          ${cleanedTags.map(tag => `
-            <span class="quiz-grammar-tag-badge" style="font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 9999px; background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8); border: 1px solid rgba(139, 126, 200, 0.3); text-transform: uppercase; letter-spacing: 0.05em;">
-              ${tag}
-            </span>
-          `).join('')}
-        </div>
-      `;
-      body.insertAdjacentHTML('afterbegin', tagsHtml);
-    }
+  // Soru başındaki rozetler ("TERCİHLER", "WOULD RATHER") dersin adını tekrar
+  // ediyordu; kural vermedikleri için kaldırıldı. Yerlerinde, o bölümün kendi
+  // formülünü açan tek bir düğme var. Drill oturumları kendi hatırlatıcısını
+  // kullanır, çünkü orada kural soru başına değişir.
+  if (!renderDrillFormulaHint(body, question)) {
+    renderLessonRuleHint(body, question);
   }
 
   if (question.topic) {
