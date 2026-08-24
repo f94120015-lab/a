@@ -60532,7 +60532,7 @@ const unit37_advanced_relative = {
             "id": "c38_l1_q10",
             "type": "multiple-fill-blank",
             "prompt": "Boşlukları 'no sooner ... than' yapısına uygun şekilde sırasıyla doldurun:",
-            "sentence": "No sooner ___ the team analyzed the economic indicator ___ the inflation levelss increased rapidly.",
+            "sentence": "No sooner ___ the team analyzed the economic indicator ___ the inflation levels increased rapidly.",
             "corrects": [
               "had",
               "than"
@@ -60758,7 +60758,7 @@ const unit37_advanced_relative = {
               },
               {
                 "left": "Not since the economic crisis of 2008",
-                "right": "has the state faced such high inflation levelsss."
+                "right": "has the state faced such high inflation levels."
               },
               {
                 "left": "Only by conducting qualitative interviews",
@@ -60859,7 +60859,7 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l2_q6",
             "type": "fill-blank",
-            "prompt": "Only when yapısının gerektirdiği doğru devrik yardımcı fiili yazın:<br><br>Only when the central bank calibrated the monetary policy did the inflation levelss ___ resolver levels.",
+            "prompt": "Only when yapısının gerektirdiği doğru devrik yardımcı fiili yazın:<br><br>Only when the central bank calibrated the monetary policy did the inflation levels ___ resolver levels.",
             "options": [
               "reached",
               "reach",
@@ -61838,8 +61838,8 @@ const unit37_advanced_relative = {
           {
             "id": "c38_l4_q17",
             "type": "true-false",
-            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Though complex the model was, it explained the inflation levelsss.",
-            "englishPhrase": "Though complex the model was, it explained the inflation levelsss.",
+            "prompt": "Aşağıdaki cümlenin yapısı gramer açısından doğru mudur?<br><br>Though complex the model was, it explained the inflation levels.",
+            "englishPhrase": "Though complex the model was, it explained the inflation levels.",
             "turkishTranslation": "Hata tespiti: Devrik zıtlık yapısında sıfat 'though' kelimesinden önce gelmelidir ('Complex though the model was...'). Sıfat sonda kalırsa devriklik kurulamaz.",
             "correctAnswer": "false",
             "grammarTags": [

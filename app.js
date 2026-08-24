@@ -3483,8 +3483,17 @@ const fallbackDictionary = {
 
 // Get the meaning of a word with various fallback logic
 function getWordMeaning(word) {
-  const clean = word.toLowerCase().trim();
-  
+  let clean = word.toLowerCase().trim();
+
+  // İyelik eki kelimenin parçası değil: "director's" sözlükte aranmadan önce
+  // "director"a indirgenir. Aksi hâlde her isim bir de iyelikli biçimiyle
+  // ayrıca girilmek zorunda kalıyordu.
+  if (clean.endsWith("'s") || clean.endsWith("\u2019s")) {
+    clean = clean.slice(0, -2);
+  } else if (clean.endsWith("s'") || clean.endsWith("s\u2019")) {
+    clean = clean.slice(0, -1);
+  }
+
   // Check main dictionary
   if (wordDictionary[clean]) return wordDictionary[clean];
   
