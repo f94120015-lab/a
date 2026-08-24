@@ -10096,75 +10096,79 @@ input:checked + .slider:before {
 
 /* Premium Academic Grammar Pattern Highlights */
 .gpattern-adv-ed-noun {
-  color: var(--accent-primary) !important;
+  color: #65a30d !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed var(--accent-primary);
+  border-bottom: 2px dashed #65a30d;
   display: inline-block;
 }
 .gpattern-pron-of-the-noun {
-  color: #ec4899 !important;
+  color: #db2777 !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #ec4899;
+  border-bottom: 2px dashed #db2777;
   display: inline-block;
 }
 .gpattern-noun-of-the-noun {
-  color: #3b82f6 !important;
+  color: #1d4ed8 !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #3b82f6;
+  border-bottom: 2px dashed #1d4ed8;
   display: inline-block;
 }
 .gpattern-noun-of-noun {
-  color: #10b981 !important;
+  color: #0891b2 !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #10b981;
+  border-bottom: 2px dashed #0891b2;
   display: inline-block;
 }
 .gpattern-noun-from-noun {
-  color: #8b5cf6 !important;
+  color: #0369a1 !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #8b5cf6;
+  border-bottom: 2px dashed #0369a1;
   display: inline-block;
 }
 .gpattern-ed-noun {
-  color: #06b6d4 !important;
+  color: #0d9488 !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #06b6d4;
+  border-bottom: 2px dashed #0d9488;
   display: inline-block;
 }
 .gpattern-ing-noun {
-  color: #3b82f6 !important;
+  color: #16a34a !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #3b82f6;
+  border-bottom: 2px dashed #16a34a;
   display: inline-block;
 }
 .gpattern-prep-ing {
-  color: #ec4899 !important;
+  color: #7c3aed !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #ec4899;
+  border-bottom: 2px dashed #7c3aed;
   display: inline-block;
 }
 .gpattern-noun-noun {
-  color: #f59e0b !important;
+  color: #d97706 !important;
   font-weight: 700 !important;
-  border-bottom: 2px dashed #f59e0b;
+  border-bottom: 2px dashed #d97706;
   display: inline-block;
 }
 .gpattern-infinitive {
-  color: #9c27b0 !important;
+  color: #9333ea !important;
   font-weight: 700 !important;
+  border-bottom: 2px dashed #9333ea;
   display: inline-block;
 }
 .gpattern-infinitive .hoverable-word {
-  color: #9c27b0 !important;
+  color: #9333ea !important;
   font-weight: 700 !important;
 }
 
 /* Bir gramer kalıbının içindeki her kelime kalıbın ağırlığını alsın. Aksi hâlde
    temel kelimeler (basic-word, ağırlığı miras alır) 700'e çıkarken içerik
    kelimeleri .hoverable-word'ün 500'ünde kalıyor ve tek öbek iki kalınlıkta
-   görünüyordu. */
+   görünüyordu. Sözlük çizgisi de burada susar: kalıbın kesik çizgisi zaten
+   kelimelerin altından geçiyor, ikisi üst üste binince ikisi de okunmuyordu.
+   Anlam kutusu dokununca yine açılır. */
 [class*="gpattern-"] .hoverable-word {
   font-weight: inherit;
+  border-bottom: none;
 }
 
 /* Matrix & Modal Selection Button Styling */
