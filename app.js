@@ -8705,7 +8705,13 @@ function lessonRuleContent(lesson) {
   // Bazı derslerin örneği madde madde uzayan bir liste; hatırlatıcı bir ders
   // sayfası değil, ilk örnek yeter.
   let example = strip(lesson.example);
-  if (example.length > 200) example = example.slice(0, 197).replace(/\s+\S*$/, '') + '…';
+  if (example.length > 200) {
+    // Örnekler " | " ile ayrılıyorsa yarım bir örnekle kesmek yerine son tam
+    // örnekten sonra bitir.
+    const cut = example.lastIndexOf(' | ', 200);
+    example = cut > 40 ? example.slice(0, cut) + ' …'
+                       : example.slice(0, 197).replace(/\s+\S*$/, '') + '…';
+  }
   if (!formula && !golden && !desc) return null;
   return { formula, golden, desc, example };
 }
