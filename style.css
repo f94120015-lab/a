@@ -6658,6 +6658,13 @@ input {
   color: var(--accent-primary, #5ab07f);
 }
 
+/* Temel kelimeler (the, is, of...) için alt çizgiyi gizle: anlam kutusu yine
+   çalışır, sadece cümlenin altı baştan sona noktalanmaz. */
+.hoverable-word.basic-word {
+  border-bottom: none;
+  font-weight: inherit;
+}
+
 /* Anlamı olmayan kelimeler için alt çizgiyi gizle */
 .hoverable-word.no-meaning {
   border-bottom: none;

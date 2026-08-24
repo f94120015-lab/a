@@ -3481,6 +3481,53 @@ const fallbackDictionary = {
   "younger": "daha genç"
 };
 
+// Altı çizilmeyecek temel kelimeler. Anlamları yine dokununca görünür; sadece
+// noktalı çizgi gösterilmez, çünkü her kelimenin altı çizilince cümle okunmaz
+// hâle geliyordu. Buradaki ölçüt "öğrenci bunu zaten biliyor" — artikeller,
+// zamirler, yardımcı fiiller, modallar, sık edat ve bağlaçlar.
+const BASIC_WORDS = new Set([
+  // Artikeller ve belirleyiciler
+  "a", "an", "the", "this", "that", "these", "those", "some", "any", "no",
+  "each", "every", "all", "both", "either", "neither", "another", "other",
+  "such", "same", "own",
+  // Zamirler
+  "i", "you", "he", "she", "it", "we", "they",
+  "me", "him", "her", "us", "them",
+  "my", "your", "his", "its", "our", "their",
+  "mine", "yours", "hers", "ours", "theirs",
+  "myself", "yourself", "himself", "herself", "itself",
+  "ourselves", "yourselves", "themselves",
+  "who", "whom", "whose", "which", "what", "where", "when", "why", "how",
+  "there", "here", "one", "ones", "someone", "something", "anyone", "anything",
+  "everyone", "everything", "nobody", "nothing", "somebody", "anybody", "everybody",
+  // be / have / do
+  "am", "is", "are", "was", "were", "be", "been", "being",
+  "have", "has", "had", "having",
+  "do", "does", "did", "done", "doing",
+  // Modallar
+  "can", "could", "may", "might", "must", "shall", "should",
+  "will", "would", "ought", "need", "dare",
+  // Sık edatlar
+  "in", "on", "at", "to", "of", "for", "from", "by", "with", "without",
+  "about", "into", "onto", "over", "under", "above", "below", "between",
+  "among", "through", "during", "before", "after", "since", "until", "till",
+  "against", "along", "across", "around", "behind", "beyond", "beside",
+  "within", "upon", "off", "out", "up", "down", "near", "toward", "towards",
+  // Bağlaçlar ve sık zarflar
+  "and", "or", "but", "so", "if", "than", "then", "as", "because", "while",
+  "though", "although", "unless", "whether", "not", "too", "very", "also",
+  "just", "only", "even", "still", "yet", "more", "most", "less", "least",
+  "much", "many", "few", "little", "lot", "lots", "well", "now", "always",
+  "never", "often", "sometimes", "usually", "again", "ever", "almost", "quite",
+  "rather", "already", "however", "therefore", "thus", "yes", "s", "t", "n",
+  // Kesme işareti kelime karakteri sayıldığı için kısaltmalar tek parça gelir
+  "i'm", "it's", "that's", "there's", "he's", "she's", "we're", "you're",
+  "they're", "i've", "we've", "you've", "they've", "i'll", "we'll", "you'll",
+  "don't", "doesn't", "didn't", "isn't", "aren't", "wasn't", "weren't",
+  "can't", "won't", "wouldn't", "couldn't", "shouldn't", "haven't", "hasn't",
+  "hadn't", "mustn't"
+]);
+
 // Get the meaning of a word with various fallback logic
 function getWordMeaning(word) {
   let clean = word.toLowerCase().trim();
@@ -3765,7 +3812,13 @@ function makeTextHoverable(text, isOption = false) {
           isToBe = true;
         }
       }
-      const className = isToBe ? 'hoverable-word to-be-highlight' : 'hoverable-word';
+      // Temel kelimelerin altını çizme: anlam yine dokununca gelir, ama cümle
+      // okunur kalır. Unit 1'de kırmızıya boyanan "to be" biçimleri istisna,
+      // orada çizgi kastın parçası.
+      let className = isToBe ? 'hoverable-word to-be-highlight' : 'hoverable-word';
+      if (!isToBe && BASIC_WORDS.has(word.toLowerCase())) {
+        className += ' basic-word';
+      }
 
       if (meaning) {
         // Escape double quotes inside attribute
