@@ -4601,28 +4601,38 @@ function buildUnitReviewExercises(unitId, lessonId, qPool) {
   const shuffledPool = shuffle(qPool);
 
   const selectedQuestions = [];
+  // Kimlik: id dışındaki bütün alanlar. Eskiden yalnızca cümleye bakılıyordu,
+  // bu yüzden aynı cümlenin farklı formatları tek soruya iniyor, ardından
+  // "fallback" döngüsü 20'ye tamamlamak için AYNI soruyu tekrar kopyalıyordu.
+  const idOf = (q) => { const c = { ...q }; delete c.id; return JSON.stringify(c); };
+  const seenQuestions = new Set();
   const seenSentences = new Set();
+  const take = (q) => {
+    const copiedQ = JSON.parse(JSON.stringify(q));
+    copiedQ.id = `u${unitId}l${lessonId}_rev_${selectedQuestions.length}`;
+    selectedQuestions.push(copiedQ);
+  };
 
+  // 1. tur: her cümleden bir soru -- değerlendirme bölümün geneline yayılsın.
   for (const q of shuffledPool) {
     if (selectedQuestions.length >= 20) break;
+    const key = idOf(q);
+    if (seenQuestions.has(key)) continue;
     const sentenceKey = q.en || q.sentence || q.prompt;
-    if (sentenceKey && !seenSentences.has(sentenceKey)) {
-      seenSentences.add(sentenceKey);
-
-      const copiedQ = JSON.parse(JSON.stringify(q));
-      copiedQ.id = `u${unitId}l${lessonId}_rev_${selectedQuestions.length}`;
-      selectedQuestions.push(copiedQ);
-    }
+    if (sentenceKey && seenSentences.has(sentenceKey)) continue;
+    if (sentenceKey) seenSentences.add(sentenceKey);
+    seenQuestions.add(key);
+    take(q);
   }
 
-  // Fallback
-  if (selectedQuestions.length < 20) {
-    for (const q of shuffledPool) {
-      if (selectedQuestions.length >= 20) break;
-      const copiedQ = JSON.parse(JSON.stringify(q));
-      copiedQ.id = `u${unitId}l${lessonId}_rev_${selectedQuestions.length}`;
-      selectedQuestions.push(copiedQ);
-    }
+  // 2. tur: kalan yerler aynı cümlelerin başka formatlarıyla doldurulur.
+  // Havuz yetmiyorsa test kısa kalır; aynı soru ikinci kez sorulmaz.
+  for (const q of shuffledPool) {
+    if (selectedQuestions.length >= 20) break;
+    const key = idOf(q);
+    if (seenQuestions.has(key)) continue;
+    seenQuestions.add(key);
+    take(q);
   }
 
   return [

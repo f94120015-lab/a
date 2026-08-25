@@ -31116,7 +31116,7 @@ Object.assign(unitSentencesMap, {
               "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (yarın yapacaktır)",
               "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "In 1998, historians discovered new archival records.",
             "isEngToTr": true,
             "grammarTags": [
@@ -31195,25 +31195,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q6",
+            "id": "u102l3_v1_m",
             "type": "matching",
             "prompt": "Yönerge: Kesin Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "yesterday analyzed data",
-                "right": "verileri analiz etti"
+                "left": "last year acquired manuscripts",
+                "right": "geçen yıl el yazması satın aldı"
               },
               {
-                "left": "yesterday published research",
-                "right": "araştırmayı yayımladı"
+                "left": "last year restored the facade",
+                "right": "geçen yıl cepheyi restore etti"
               },
               {
-                "left": "yesterday examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "last year catalogued the coins",
+                "right": "geçen yıl sikkeleri kataloguladı"
               },
               {
-                "left": "yesterday observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "last year opened the annex",
+                "right": "geçen yıl ek binayı açtı"
               }
             ],
             "grammarTags": [
@@ -31225,39 +31225,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q7",
+            "id": "u102l3_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (yesterday) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (last year / ago) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Last year, the museum acquired three Ottoman manuscripts.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (genellikle yapar)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (yarın yapacaktır)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "In 1998, historians discovered new archival records.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Past",
-              "Kesin Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>In 1998, historians ___ new archival records.",
-            "sentence": "In 1998, historians ___ new archival records.",
-            "options": [
-              "discovered",
-              "discover",
-              "discovering",
-              "will discover"
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı. (genellikle yapar)",
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı. (şu an yapıyor)",
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
+            "enSentence": "Last year, the museum acquired three Ottoman manuscripts.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Past",
@@ -31267,26 +31246,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q9",
+            "id": "u102l3_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Last year, the museum ___ three Ottoman manuscripts.",
+            "sentence": "Last year, the museum ___ three Ottoman manuscripts.",
+            "options": [
+              "acquired",
+              "acquires",
+              "acquiring",
+              "will acquire"
+            ],
+            "correctIndex": 0,
+            "translation": "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Past",
+              "Kesin Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l3_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>In 1998, historians discovered new archival records.",
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Last year, the museum acquired three Ottoman manuscripts.",
+            "translation": "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+            "enSentence": "Last year, the museum acquired three Ottoman manuscripts.",
             "words": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Geçen",
+              "yıl",
+              "müze",
+              "üç",
+              "Osmanlı",
+              "el yazması",
+              "satın aldı"
             ],
             "correctOrder": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Geçen",
+              "yıl",
+              "müze",
+              "üç",
+              "Osmanlı",
+              "el yazması",
+              "satın aldı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -31298,11 +31300,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q10",
+            "id": "u102l3_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Last year, the museum acquired three Ottoman manuscripts.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+            "enSentence": "Last year, the museum acquired three Ottoman manuscripts.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -31313,25 +31315,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q11",
+            "id": "u102l3_v2_m",
             "type": "matching",
             "prompt": "Yönerge: Kesin Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "yesterday analyzed data",
-                "right": "verileri analiz etti"
+                "left": "two months ago approved the budget",
+                "right": "iki ay önce bütçeyi onayladı"
               },
               {
-                "left": "yesterday published research",
-                "right": "araştırmayı yayımladı"
+                "left": "two months ago rejected the appeal",
+                "right": "iki ay önce itirazı reddetti"
               },
               {
-                "left": "yesterday examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "two months ago signed the protocol",
+                "right": "iki ay önce protokolü imzaladı"
               },
               {
-                "left": "yesterday observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "two months ago published the report",
+                "right": "iki ay önce raporu yayımladı"
               }
             ],
             "grammarTags": [
@@ -31343,39 +31345,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q12",
+            "id": "u102l3_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (yesterday) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (last year / ago) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The council approved the restoration budget two months ago.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (genellikle yapar)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (yarın yapacaktır)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "In 1998, historians discovered new archival records.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Past",
-              "Kesin Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l3_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>In 1998, historians ___ new archival records.",
-            "sentence": "In 1998, historians ___ new archival records.",
-            "options": [
-              "discovered",
-              "discover",
-              "discovering",
-              "will discover"
+              "Konsey restorasyon bütçesini iki ay önce onayladı.",
+              "Konsey restorasyon bütçesini iki ay önce onayladı. (genellikle yapar)",
+              "Konsey restorasyon bütçesini iki ay önce onayladı. (şu an yapıyor)",
+              "Konsey restorasyon bütçesini iki ay önce onayladı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
+            "enSentence": "The council approved the restoration budget two months ago.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Past",
@@ -31385,26 +31366,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q14",
+            "id": "u102l3_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The council ___ the restoration budget two months ago.",
+            "sentence": "The council ___ the restoration budget two months ago.",
+            "options": [
+              "approved",
+              "approves",
+              "has approved",
+              "will approve"
+            ],
+            "correctIndex": 0,
+            "translation": "Konsey restorasyon bütçesini iki ay önce onayladı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Past",
+              "Kesin Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l3_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>In 1998, historians discovered new archival records.",
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The council approved the restoration budget two months ago.",
+            "translation": "Konsey restorasyon bütçesini iki ay önce onayladı.",
+            "enSentence": "The council approved the restoration budget two months ago.",
             "words": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Konsey",
+              "restorasyon",
+              "bütçesini",
+              "iki",
+              "ay",
+              "önce",
+              "onayladı"
             ],
             "correctOrder": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Konsey",
+              "restorasyon",
+              "bütçesini",
+              "iki",
+              "ay",
+              "önce",
+              "onayladı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -31416,11 +31420,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q15",
+            "id": "u102l3_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The council approved the restoration budget two months ago.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Konsey restorasyon bütçesini iki ay önce onayladı.",
+            "enSentence": "The council approved the restoration budget two months ago.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -31481,7 +31485,7 @@ Object.assign(unitSentencesMap, {
               "Arkeologlar sahada kazı yaparken yağmur başladı. (yarın yapacaktır)",
               "Arkeologlar sahada kazı yaparken yağmur başladı. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "While archaeologists were excavating the site, rain started.",
             "isEngToTr": true,
             "grammarTags": [
@@ -31560,25 +31564,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q6",
+            "id": "u102l4_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişte Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "while analyzed data",
-                "right": "verileri analiz etti"
+                "left": "was calibrating the seismograph",
+                "right": "sismografı kalibre ediyordu"
               },
               {
-                "left": "while published research",
-                "right": "araştırmayı yayımladı"
+                "left": "were recording the tremors",
+                "right": "sarsıntıları kaydediyorlardı"
               },
               {
-                "left": "while examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "was monitoring the sensors",
+                "right": "sensörleri izliyordu"
               },
               {
-                "left": "while observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "were checking the readings",
+                "right": "ölçümleri kontrol ediyorlardı"
               }
             ],
             "grammarTags": [
@@ -31590,39 +31594,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q7",
+            "id": "u102l4_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (at five yesterday / while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"At five yesterday, the technicians were calibrating the seismograph.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Arkeologlar sahada kazı yaparken yağmur başladı.",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (genellikle yapar)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (yarın yapacaktır)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "While archaeologists were excavating the site, rain started.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Past Continuous",
-              "Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l4_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>While archaeologists ___ the site, rain started.",
-            "sentence": "While archaeologists ___ the site, rain started.",
-            "options": [
-              "were excavating",
-              "excavated",
-              "excavate",
-              "will excavate"
+              "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+              "Dün beşte teknisyenler sismografı kalibre ediyordu. (genellikle yapar)",
+              "Dün beşte teknisyenler sismografı kalibre ediyordu. (şu an yapıyor)",
+              "Dün beşte teknisyenler sismografı kalibre ediyordu. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
+            "enSentence": "At five yesterday, the technicians were calibrating the seismograph.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Past Continuous",
@@ -31632,26 +31615,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q9",
+            "id": "u102l4_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>At five yesterday, the technicians ___ the seismograph.",
+            "sentence": "At five yesterday, the technicians ___ the seismograph.",
+            "options": [
+              "were calibrating",
+              "calibrated",
+              "have calibrated",
+              "will calibrate"
+            ],
+            "correctIndex": 0,
+            "translation": "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Past Continuous",
+              "Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l4_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>While archaeologists were excavating the site, rain started.",
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>At five yesterday, the technicians were calibrating the seismograph.",
+            "translation": "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+            "enSentence": "At five yesterday, the technicians were calibrating the seismograph.",
             "words": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Dün",
+              "beşte",
+              "teknisyenler",
+              "sismografı",
+              "kalibre",
+              "ediyordu"
             ],
             "correctOrder": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Dün",
+              "beşte",
+              "teknisyenler",
+              "sismografı",
+              "kalibre",
+              "ediyordu"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -31663,11 +31667,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q10",
+            "id": "u102l4_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"At five yesterday, the technicians were calibrating the seismograph.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+            "enSentence": "At five yesterday, the technicians were calibrating the seismograph.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -31678,25 +31682,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q11",
+            "id": "u102l4_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişte Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "while analyzed data",
-                "right": "verileri analiz etti"
+                "left": "while the curator was cataloguing",
+                "right": "küratör kataloglarken"
               },
               {
-                "left": "while published research",
-                "right": "araştırmayı yayımladı"
+                "left": "while the team was excavating",
+                "right": "ekip kazı yaparken"
               },
               {
-                "left": "while examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "while the lamp was flickering",
+                "right": "lamba titrerken"
               },
               {
-                "left": "while observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "while the archive was closing",
+                "right": "arşiv kapanırken"
               }
             ],
             "grammarTags": [
@@ -31708,39 +31712,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q12",
+            "id": "u102l4_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (at five yesterday / while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"While the curator was cataloguing the coins, the power failed.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Arkeologlar sahada kazı yaparken yağmur başladı.",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (genellikle yapar)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (yarın yapacaktır)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "While archaeologists were excavating the site, rain started.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Past Continuous",
-              "Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l4_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>While archaeologists ___ the site, rain started.",
-            "sentence": "While archaeologists ___ the site, rain started.",
-            "options": [
-              "were excavating",
-              "excavated",
-              "excavate",
-              "will excavate"
+              "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+              "Küratör sikkeleri katalogluyorken elektrik kesildi. (genellikle yapar)",
+              "Küratör sikkeleri katalogluyorken elektrik kesildi. (şu an yapıyor)",
+              "Küratör sikkeleri katalogluyorken elektrik kesildi. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
+            "enSentence": "While the curator was cataloguing the coins, the power failed.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Past Continuous",
@@ -31750,26 +31733,45 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q14",
+            "id": "u102l4_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>While the curator ___ the coins, the power failed.",
+            "sentence": "While the curator ___ the coins, the power failed.",
+            "options": [
+              "was cataloguing",
+              "catalogued",
+              "has catalogued",
+              "will catalogue"
+            ],
+            "correctIndex": 0,
+            "translation": "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Past Continuous",
+              "Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l4_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>While archaeologists were excavating the site, rain started.",
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>While the curator was cataloguing the coins, the power failed.",
+            "translation": "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+            "enSentence": "While the curator was cataloguing the coins, the power failed.",
             "words": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Küratör",
+              "sikkeleri",
+              "katalogluyorken",
+              "elektrik",
+              "kesildi"
             ],
             "correctOrder": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Küratör",
+              "sikkeleri",
+              "katalogluyorken",
+              "elektrik",
+              "kesildi"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -31781,11 +31783,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q15",
+            "id": "u102l4_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"While the curator was cataloguing the coins, the power failed.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+            "enSentence": "While the curator was cataloguing the coins, the power failed.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -31846,7 +31848,7 @@ Object.assign(unitSentencesMap, {
               "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (yarın yapacaktır)",
               "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "Economists have recently modified trade policies.",
             "isEngToTr": true,
             "grammarTags": [
@@ -31925,25 +31927,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q6",
+            "id": "u102l5_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Yakın Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Etkisi Süren Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "recently analyzed data",
-                "right": "verileri analiz etti"
+                "left": "has published four reports so far",
+                "right": "şimdiye kadar dört rapor yayımladı"
               },
               {
-                "left": "recently published research",
-                "right": "araştırmayı yayımladı"
+                "left": "has collected three datasets so far",
+                "right": "şimdiye kadar üç veri kümesi topladı"
               },
               {
-                "left": "recently examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "has trained ten researchers so far",
+                "right": "şimdiye kadar on araştırmacı yetiştirdi"
               },
               {
-                "left": "recently observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "has funded two surveys so far",
+                "right": "şimdiye kadar iki araştırmayı finanse etti"
               }
             ],
             "grammarTags": [
@@ -31955,39 +31957,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q7",
+            "id": "u102l5_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (recently) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Economists have recently modified trade policies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (so far / since) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The institute has published four reports so far.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (genellikle yapar)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (yarın yapacaktır)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "Economists have recently modified trade policies.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect",
-              "Yakın Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l5_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.",
-            "sentence": "Economists _______ trade policies recently.",
-            "options": [
-              "have modified",
-              "modify",
-              "modified",
-              "will modify"
+              "Enstitü şimdiye kadar dört rapor yayımladı.",
+              "Enstitü şimdiye kadar dört rapor yayımladı. (genellikle yapar)",
+              "Enstitü şimdiye kadar dört rapor yayımladı. (şu an yapıyor)",
+              "Enstitü şimdiye kadar dört rapor yayımladı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
+            "enSentence": "The institute has published four reports so far.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect",
@@ -31997,26 +31978,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q9",
+            "id": "u102l5_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The institute ___ four reports so far.",
+            "sentence": "The institute ___ four reports so far.",
+            "options": [
+              "has published",
+              "published",
+              "had published",
+              "will publish"
+            ],
+            "correctIndex": 0,
+            "translation": "Enstitü şimdiye kadar dört rapor yayımladı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect",
+              "Yakın Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l5_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Economists have recently modified trade policies.",
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The institute has published four reports so far.",
+            "translation": "Enstitü şimdiye kadar dört rapor yayımladı.",
+            "enSentence": "The institute has published four reports so far.",
             "words": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Enstitü",
+              "şimdiye",
+              "kadar",
+              "dört",
+              "rapor",
+              "yayımladı"
             ],
             "correctOrder": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Enstitü",
+              "şimdiye",
+              "kadar",
+              "dört",
+              "rapor",
+              "yayımladı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -32028,11 +32030,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q10",
+            "id": "u102l5_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Economists have recently modified trade policies.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The institute has published four reports so far.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Enstitü şimdiye kadar dört rapor yayımladı.",
+            "enSentence": "The institute has published four reports so far.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -32043,25 +32045,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q11",
+            "id": "u102l5_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Yakın Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Etkisi Süren Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "recently analyzed data",
-                "right": "verileri analiz etti"
+                "left": "have monitored the glacier since 2004",
+                "right": "buzulu 2004'ten beri izliyor"
               },
               {
-                "left": "recently published research",
-                "right": "araştırmayı yayımladı"
+                "left": "have studied the delta since 2010",
+                "right": "deltayı 2010'dan beri inceliyor"
               },
               {
-                "left": "recently examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "have recorded the data for six years",
+                "right": "verileri altı yıldır kaydediyor"
               },
               {
-                "left": "recently observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "have worked there since the survey",
+                "right": "araştırmadan beri orada çalışıyor"
               }
             ],
             "grammarTags": [
@@ -32073,39 +32075,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q12",
+            "id": "u102l5_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (recently) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Economists have recently modified trade policies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (so far / since) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Researchers have monitored the glacier since 2004.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (genellikle yapar)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (yarın yapacaktır)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "Economists have recently modified trade policies.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect",
-              "Yakın Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l5_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.",
-            "sentence": "Economists _______ trade policies recently.",
-            "options": [
-              "have modified",
-              "modify",
-              "modified",
-              "will modify"
+              "Araştırmacılar buzulu 2004'ten beri izliyor.",
+              "Araştırmacılar buzulu 2004'ten beri izliyor. (genellikle yapar)",
+              "Araştırmacılar buzulu 2004'ten beri izliyor. (şu an yapıyor)",
+              "Araştırmacılar buzulu 2004'ten beri izliyor. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
+            "enSentence": "Researchers have monitored the glacier since 2004.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect",
@@ -32115,26 +32096,45 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q14",
+            "id": "u102l5_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Researchers ___ the glacier since 2004.",
+            "sentence": "Researchers ___ the glacier since 2004.",
+            "options": [
+              "have monitored",
+              "monitored",
+              "had monitored",
+              "monitor"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırmacılar buzulu 2004'ten beri izliyor.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect",
+              "Yakın Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l5_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Economists have recently modified trade policies.",
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Researchers have monitored the glacier since 2004.",
+            "translation": "Araştırmacılar buzulu 2004'ten beri izliyor.",
+            "enSentence": "Researchers have monitored the glacier since 2004.",
             "words": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Araştırmacılar",
+              "buzulu",
+              "2004'ten",
+              "beri",
+              "izliyor"
             ],
             "correctOrder": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Araştırmacılar",
+              "buzulu",
+              "2004'ten",
+              "beri",
+              "izliyor"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -32146,11 +32146,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q15",
+            "id": "u102l5_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Economists have recently modified trade policies.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Researchers have monitored the glacier since 2004.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Araştırmacılar buzulu 2004'ten beri izliyor.",
+            "enSentence": "Researchers have monitored the glacier since 2004.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -32211,7 +32211,7 @@ Object.assign(unitSentencesMap, {
               "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (yarın yapacaktır)",
               "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
             "isEngToTr": true,
             "grammarTags": [
@@ -32290,25 +32290,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q6",
+            "id": "u102l6_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Kesintisiz Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişin Geçmişi Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "for 5 years analyzed data",
-                "right": "verileri analiz etti"
+                "left": "had filed the reports",
+                "right": "raporları teslim etmişti"
               },
               {
-                "left": "for 5 years published research",
-                "right": "araştırmayı yayımladı"
+                "left": "had closed the accounts",
+                "right": "hesapları kapatmıştı"
               },
               {
-                "left": "for 5 years examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "had signed the statements",
+                "right": "beyanları imzalamıştı"
               },
               {
-                "left": "for 5 years observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "had checked the invoices",
+                "right": "faturaları kontrol etmişti"
               }
             ],
             "grammarTags": [
@@ -32320,39 +32320,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q7",
+            "id": "u102l6_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (for 5 years) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by the time / already) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By the time the auditors arrived, the accountant had filed the reports.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (genellikle yapar)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (yarın yapacaktır)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect Continuous",
-              "Kesintisiz Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l6_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Psychologists ___ cognitive behaviors for five years.",
-            "sentence": "Psychologists ___ cognitive behaviors for five years.",
-            "options": [
-              "have been studying",
-              "studied",
-              "study",
-              "will study"
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti. (genellikle yapar)",
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti. (şu an yapıyor)",
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
+            "enSentence": "By the time the auditors arrived, the accountant had filed the reports.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect Continuous",
@@ -32362,26 +32341,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q9",
+            "id": "u102l6_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By the time the auditors arrived, the accountant ___ the reports.",
+            "sentence": "By the time the auditors arrived, the accountant ___ the reports.",
+            "options": [
+              "had filed",
+              "filed",
+              "has filed",
+              "will file"
+            ],
+            "correctIndex": 0,
+            "translation": "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect Continuous",
+              "Kesintisiz Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l6_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Psychologists have been studying cognitive behaviors for five years.",
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By the time the auditors arrived, the accountant had filed the reports.",
+            "translation": "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+            "enSentence": "By the time the auditors arrived, the accountant had filed the reports.",
             "words": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Denetçiler",
+              "geldiğinde",
+              "muhasebeci",
+              "raporları",
+              "teslim",
+              "etmişti"
             ],
             "correctOrder": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Denetçiler",
+              "geldiğinde",
+              "muhasebeci",
+              "raporları",
+              "teslim",
+              "etmişti"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -32393,11 +32393,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q10",
+            "id": "u102l6_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By the time the auditors arrived, the accountant had filed the reports.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+            "enSentence": "By the time the auditors arrived, the accountant had filed the reports.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -32408,25 +32408,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q11",
+            "id": "u102l6_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Kesintisiz Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişin Geçmişi Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "for 5 years analyzed data",
-                "right": "verileri analiz etti"
+                "left": "had already mapped the cave",
+                "right": "mağarayı çoktan haritalamıştı"
               },
               {
-                "left": "for 5 years published research",
-                "right": "araştırmayı yayımladı"
+                "left": "had already sealed the entrance",
+                "right": "girişi çoktan kapatmıştı"
               },
               {
-                "left": "for 5 years examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "had already measured the chamber",
+                "right": "odayı çoktan ölçmüştü"
               },
               {
-                "left": "for 5 years observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "had already photographed the walls",
+                "right": "duvarları çoktan fotoğraflamıştı"
               }
             ],
             "grammarTags": [
@@ -32438,39 +32438,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q12",
+            "id": "u102l6_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (for 5 years) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by the time / already) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The team had already mapped the cave before the rains began.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (genellikle yapar)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (yarın yapacaktır)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect Continuous",
-              "Kesintisiz Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l6_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Psychologists ___ cognitive behaviors for five years.",
-            "sentence": "Psychologists ___ cognitive behaviors for five years.",
-            "options": [
-              "have been studying",
-              "studied",
-              "study",
-              "will study"
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı. (genellikle yapar)",
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı. (şu an yapıyor)",
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
+            "enSentence": "The team had already mapped the cave before the rains began.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect Continuous",
@@ -32480,26 +32459,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q14",
+            "id": "u102l6_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The team ___ the cave before the rains began.",
+            "sentence": "The team ___ the cave before the rains began.",
+            "options": [
+              "had already mapped",
+              "already mapped",
+              "has already mapped",
+              "will already map"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect Continuous",
+              "Kesintisiz Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l6_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Psychologists have been studying cognitive behaviors for five years.",
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The team had already mapped the cave before the rains began.",
+            "translation": "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+            "enSentence": "The team had already mapped the cave before the rains began.",
             "words": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Ekip",
+              "yağmurlar",
+              "başlamadan",
+              "önce",
+              "mağarayı",
+              "çoktan",
+              "haritalamıştı"
             ],
             "correctOrder": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Ekip",
+              "yağmurlar",
+              "başlamadan",
+              "önce",
+              "mağarayı",
+              "çoktan",
+              "haritalamıştı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -32511,11 +32513,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q15",
+            "id": "u102l6_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The team had already mapped the cave before the rains began.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+            "enSentence": "The team had already mapped the cave before the rains began.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -32576,7 +32578,7 @@ Object.assign(unitSentencesMap, {
               "Kurul hukuki raporu yarın yayımlayacaktır. (yarın yapacaktır)",
               "Kurul hukuki raporu yarın yayımlayacaktır. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "The committee will publish the legal report tomorrow.",
             "isEngToTr": true,
             "grammarTags": [
@@ -32653,25 +32655,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q6",
+            "id": "u102l7_v1_m",
             "type": "matching",
             "prompt": "Yönerge: Gelecek Zaman Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "tomorrow analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will announce the regulation next week",
+                "right": "düzenlemeyi gelecek hafta açıklayacak"
               },
               {
-                "left": "tomorrow published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will publish the guidelines next month",
+                "right": "yönergeleri gelecek ay yayımlayacak"
               },
               {
-                "left": "tomorrow examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will review the appeals next term",
+                "right": "itirazları gelecek dönem inceleyecek"
               },
               {
-                "left": "tomorrow observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will open the archive next spring",
+                "right": "arşivi gelecek bahar açacak"
               }
             ],
             "grammarTags": [
@@ -32683,39 +32685,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q7",
+            "id": "u102l7_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (next week / tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The ministry will announce the new regulation next week.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Kurul hukuki raporu yarın yayımlayacaktır.",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (genellikle yapar)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (yarın yapacaktır)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "The committee will publish the legal report tomorrow.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Future",
-              "Gelecek Zaman Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l7_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The committee ___ the legal report tomorrow.",
-            "sentence": "The committee ___ the legal report tomorrow.",
-            "options": [
-              "will publish",
-              "published",
-              "publishes",
-              "is publishing"
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak. (genellikle yapar)",
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak. (şu an yapıyor)",
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
+            "enSentence": "The ministry will announce the new regulation next week.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Future",
@@ -32725,24 +32706,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q9",
+            "id": "u102l7_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The ministry ___ the new regulation next week.",
+            "sentence": "The ministry ___ the new regulation next week.",
+            "options": [
+              "will announce",
+              "announced",
+              "has announced",
+              "announcing"
+            ],
+            "correctIndex": 0,
+            "translation": "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Future",
+              "Gelecek Zaman Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l7_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The committee will publish the legal report tomorrow.",
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The ministry will announce the new regulation next week.",
+            "translation": "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+            "enSentence": "The ministry will announce the new regulation next week.",
             "words": [
-              "Kurul",
-              "hukuki",
-              "raporu",
-              "yarın",
-              "yayımlayacaktır"
+              "Bakanlık",
+              "yeni",
+              "düzenlemeyi",
+              "gelecek",
+              "hafta",
+              "açıklayacak"
             ],
             "correctOrder": [
-              "Kurul",
-              "hukuki",
-              "raporu",
-              "yarın",
-              "yayımlayacaktır"
+              "Bakanlık",
+              "yeni",
+              "düzenlemeyi",
+              "gelecek",
+              "hafta",
+              "açıklayacak"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -32754,11 +32758,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q10",
+            "id": "u102l7_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The ministry will announce the new regulation next week.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+            "enSentence": "The ministry will announce the new regulation next week.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -32769,25 +32773,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q11",
+            "id": "u102l7_v2_m",
             "type": "matching",
             "prompt": "Yönerge: Gelecek Zaman Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "tomorrow analyzed data",
-                "right": "verileri analiz etti"
+                "left": "is going to test the prototype tomorrow",
+                "right": "prototipi yarın test edecek"
               },
               {
-                "left": "tomorrow published research",
-                "right": "araştırmayı yayımladı"
+                "left": "is going to repeat the trial tomorrow",
+                "right": "denemeyi yarın tekrarlayacak"
               },
               {
-                "left": "tomorrow examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "is going to calibrate the sensors soon",
+                "right": "sensörleri yakında kalibre edecek"
               },
               {
-                "left": "tomorrow observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "is going to submit the results soon",
+                "right": "sonuçları yakında sunacak"
               }
             ],
             "grammarTags": [
@@ -32799,39 +32803,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q12",
+            "id": "u102l7_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (next week / tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The laboratory is going to test the prototype tomorrow.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Kurul hukuki raporu yarın yayımlayacaktır.",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (genellikle yapar)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (yarın yapacaktır)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "The committee will publish the legal report tomorrow.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Future",
-              "Gelecek Zaman Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l7_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The committee ___ the legal report tomorrow.",
-            "sentence": "The committee ___ the legal report tomorrow.",
-            "options": [
-              "will publish",
-              "published",
-              "publishes",
-              "is publishing"
+              "Laboratuvar prototipi yarın test edecek.",
+              "Laboratuvar prototipi yarın test edecek. (genellikle yapar)",
+              "Laboratuvar prototipi yarın test edecek. (şu an yapıyor)",
+              "Laboratuvar prototipi yarın test edecek. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
+            "enSentence": "The laboratory is going to test the prototype tomorrow.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Future",
@@ -32841,24 +32824,45 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q14",
+            "id": "u102l7_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The laboratory ___ the prototype tomorrow.",
+            "sentence": "The laboratory ___ the prototype tomorrow.",
+            "options": [
+              "is going to test",
+              "tested",
+              "has tested",
+              "was testing"
+            ],
+            "correctIndex": 0,
+            "translation": "Laboratuvar prototipi yarın test edecek.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Future",
+              "Gelecek Zaman Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l7_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The committee will publish the legal report tomorrow.",
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The laboratory is going to test the prototype tomorrow.",
+            "translation": "Laboratuvar prototipi yarın test edecek.",
+            "enSentence": "The laboratory is going to test the prototype tomorrow.",
             "words": [
-              "Kurul",
-              "hukuki",
-              "raporu",
+              "Laboratuvar",
+              "prototipi",
               "yarın",
-              "yayımlayacaktır"
+              "test",
+              "edecek"
             ],
             "correctOrder": [
-              "Kurul",
-              "hukuki",
-              "raporu",
+              "Laboratuvar",
+              "prototipi",
               "yarın",
-              "yayımlayacaktır"
+              "test",
+              "edecek"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -32870,11 +32874,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q15",
+            "id": "u102l7_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The laboratory is going to test the prototype tomorrow.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Laboratuvar prototipi yarın test edecek.",
+            "enSentence": "The laboratory is going to test the prototype tomorrow.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -32935,7 +32939,7 @@ Object.assign(unitSentencesMap, {
               "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (yarın yapacaktır)",
               "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "By 2030, the government will have completed the economic reform.",
             "isEngToTr": true,
             "grammarTags": [
@@ -33016,25 +33020,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q6",
+            "id": "u102l8_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Sınır Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Gelecekte Tamamlanma Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "by 2030 analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will have digitised the archive by 2030",
+                "right": "2030'a kadar arşivi dijitalleştirmiş olacak"
               },
               {
-                "left": "by 2030 published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will have completed the survey by June",
+                "right": "haziran'a kadar araştırmayı tamamlamış olacak"
               },
               {
-                "left": "by 2030 examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will have restored the facade by winter",
+                "right": "kışa kadar cepheyi restore etmiş olacak"
               },
               {
-                "left": "by 2030 observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will have trained the staff by autumn",
+                "right": "sonbahara kadar personeli eğitmiş olacak"
               }
             ],
             "grammarTags": [
@@ -33046,39 +33050,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q7",
+            "id": "u102l8_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (by 2030) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by 2030 / by the time) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By 2030, the agency will have digitised the entire archive.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (genellikle yapar)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (yarın yapacaktır)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "By 2030, the government will have completed the economic reform.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Future Perfect",
-              "Sınır Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l8_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By 2030, the government ___ the economic reform.",
-            "sentence": "By 2030, the government ___ the economic reform.",
-            "options": [
-              "will have completed",
-              "completed",
-              "completes",
-              "will complete"
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak. (genellikle yapar)",
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak. (şu an yapıyor)",
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
+            "enSentence": "By 2030, the agency will have digitised the entire archive.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Future Perfect",
@@ -33088,28 +33071,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q9",
+            "id": "u102l8_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By 2030, the agency ___ the entire archive.",
+            "sentence": "By 2030, the agency ___ the entire archive.",
+            "options": [
+              "will have digitised",
+              "will digitise",
+              "has digitised",
+              "digitised"
+            ],
+            "correctIndex": 0,
+            "translation": "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Future Perfect",
+              "Sınır Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l8_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By 2030, the government will have completed the economic reform.",
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By 2030, the agency will have digitised the entire archive.",
+            "translation": "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+            "enSentence": "By 2030, the agency will have digitised the entire archive.",
             "words": [
-              "2030",
-              "yılına",
+              "2030'a",
               "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "kurum",
+              "tüm",
+              "arşivi",
+              "dijitalleştirmiş",
+              "olacak"
             ],
             "correctOrder": [
-              "2030",
-              "yılına",
+              "2030'a",
               "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "kurum",
+              "tüm",
+              "arşivi",
+              "dijitalleştirmiş",
+              "olacak"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -33121,11 +33125,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q10",
+            "id": "u102l8_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By 2030, the agency will have digitised the entire archive.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+            "enSentence": "By 2030, the agency will have digitised the entire archive.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -33136,25 +33140,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q11",
+            "id": "u102l8_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Sınır Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Gelecekte Tamamlanma Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "by 2030 analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will have restored two frescoes",
+                "right": "iki freski restore etmiş olacak"
               },
               {
-                "left": "by 2030 published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will have cleaned the mosaics",
+                "right": "mozaikleri temizlemiş olacak"
               },
               {
-                "left": "by 2030 examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will have secured the scaffolding",
+                "right": "iskeleyi sağlamlaştırmış olacak"
               },
               {
-                "left": "by 2030 observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will have documented the layers",
+                "right": "katmanları belgelemiş olacak"
               }
             ],
             "grammarTags": [
@@ -33166,39 +33170,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q12",
+            "id": "u102l8_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (by 2030) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by 2030 / by the time) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By the time the season ends, the crew will have restored two frescoes.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (genellikle yapar)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (yarın yapacaktır)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "By 2030, the government will have completed the economic reform.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Future Perfect",
-              "Sınır Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l8_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By 2030, the government ___ the economic reform.",
-            "sentence": "By 2030, the government ___ the economic reform.",
-            "options": [
-              "will have completed",
-              "completed",
-              "completes",
-              "will complete"
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak. (genellikle yapar)",
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak. (şu an yapıyor)",
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
+            "enSentence": "By the time the season ends, the crew will have restored two frescoes.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Future Perfect",
@@ -33208,28 +33191,51 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q14",
+            "id": "u102l8_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By the time the season ends, the crew ___ two frescoes.",
+            "sentence": "By the time the season ends, the crew ___ two frescoes.",
+            "options": [
+              "will have restored",
+              "will restore",
+              "had restored",
+              "restores"
+            ],
+            "correctIndex": 0,
+            "translation": "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Future Perfect",
+              "Sınır Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l8_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By 2030, the government will have completed the economic reform.",
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By the time the season ends, the crew will have restored two frescoes.",
+            "translation": "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+            "enSentence": "By the time the season ends, the crew will have restored two frescoes.",
             "words": [
-              "2030",
-              "yılına",
-              "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "Sezon",
+              "bittiğinde",
+              "ekip",
+              "iki",
+              "freski",
+              "restore",
+              "etmiş",
+              "olacak"
             ],
             "correctOrder": [
-              "2030",
-              "yılına",
-              "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "Sezon",
+              "bittiğinde",
+              "ekip",
+              "iki",
+              "freski",
+              "restore",
+              "etmiş",
+              "olacak"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -33241,11 +33247,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q15",
+            "id": "u102l8_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By the time the season ends, the crew will have restored two frescoes.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+            "enSentence": "By the time the season ends, the crew will have restored two frescoes.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -44321,7 +44327,7 @@ Object.assign(unitSentencesMap, {
               "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (yarın yapacaktır)",
               "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "In 1998, historians discovered new archival records.",
             "isEngToTr": true,
             "grammarTags": [
@@ -44400,25 +44406,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q6",
+            "id": "u102l3_v1_m",
             "type": "matching",
             "prompt": "Yönerge: Kesin Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "yesterday analyzed data",
-                "right": "verileri analiz etti"
+                "left": "last year acquired manuscripts",
+                "right": "geçen yıl el yazması satın aldı"
               },
               {
-                "left": "yesterday published research",
-                "right": "araştırmayı yayımladı"
+                "left": "last year restored the facade",
+                "right": "geçen yıl cepheyi restore etti"
               },
               {
-                "left": "yesterday examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "last year catalogued the coins",
+                "right": "geçen yıl sikkeleri kataloguladı"
               },
               {
-                "left": "yesterday observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "last year opened the annex",
+                "right": "geçen yıl ek binayı açtı"
               }
             ],
             "grammarTags": [
@@ -44430,39 +44436,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q7",
+            "id": "u102l3_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (yesterday) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (last year / ago) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Last year, the museum acquired three Ottoman manuscripts.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (genellikle yapar)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (yarın yapacaktır)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "In 1998, historians discovered new archival records.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Past",
-              "Kesin Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l3_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>In 1998, historians ___ new archival records.",
-            "sentence": "In 1998, historians ___ new archival records.",
-            "options": [
-              "discovered",
-              "discover",
-              "discovering",
-              "will discover"
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı. (genellikle yapar)",
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı. (şu an yapıyor)",
+              "Geçen yıl müze üç Osmanlı el yazması satın aldı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
+            "enSentence": "Last year, the museum acquired three Ottoman manuscripts.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Past",
@@ -44472,26 +44457,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q9",
+            "id": "u102l3_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Last year, the museum ___ three Ottoman manuscripts.",
+            "sentence": "Last year, the museum ___ three Ottoman manuscripts.",
+            "options": [
+              "acquired",
+              "acquires",
+              "acquiring",
+              "will acquire"
+            ],
+            "correctIndex": 0,
+            "translation": "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Past",
+              "Kesin Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l3_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>In 1998, historians discovered new archival records.",
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Last year, the museum acquired three Ottoman manuscripts.",
+            "translation": "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+            "enSentence": "Last year, the museum acquired three Ottoman manuscripts.",
             "words": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Geçen",
+              "yıl",
+              "müze",
+              "üç",
+              "Osmanlı",
+              "el yazması",
+              "satın aldı"
             ],
             "correctOrder": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Geçen",
+              "yıl",
+              "müze",
+              "üç",
+              "Osmanlı",
+              "el yazması",
+              "satın aldı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -44503,11 +44511,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q10",
+            "id": "u102l3_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Last year, the museum acquired three Ottoman manuscripts.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Geçen yıl müze üç Osmanlı el yazması satın aldı.",
+            "enSentence": "Last year, the museum acquired three Ottoman manuscripts.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -44518,25 +44526,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q11",
+            "id": "u102l3_v2_m",
             "type": "matching",
             "prompt": "Yönerge: Kesin Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "yesterday analyzed data",
-                "right": "verileri analiz etti"
+                "left": "two months ago approved the budget",
+                "right": "iki ay önce bütçeyi onayladı"
               },
               {
-                "left": "yesterday published research",
-                "right": "araştırmayı yayımladı"
+                "left": "two months ago rejected the appeal",
+                "right": "iki ay önce itirazı reddetti"
               },
               {
-                "left": "yesterday examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "two months ago signed the protocol",
+                "right": "iki ay önce protokolü imzaladı"
               },
               {
-                "left": "yesterday observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "two months ago published the report",
+                "right": "iki ay önce raporu yayımladı"
               }
             ],
             "grammarTags": [
@@ -44548,39 +44556,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q12",
+            "id": "u102l3_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (yesterday) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (last year / ago) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The council approved the restoration budget two months ago.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (genellikle yapar)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (yarın yapacaktır)",
-              "1998'de tarihçiler yeni arşiv kayıtları keşfetti. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "In 1998, historians discovered new archival records.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Past",
-              "Kesin Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l3_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>In 1998, historians ___ new archival records.",
-            "sentence": "In 1998, historians ___ new archival records.",
-            "options": [
-              "discovered",
-              "discover",
-              "discovering",
-              "will discover"
+              "Konsey restorasyon bütçesini iki ay önce onayladı.",
+              "Konsey restorasyon bütçesini iki ay önce onayladı. (genellikle yapar)",
+              "Konsey restorasyon bütçesini iki ay önce onayladı. (şu an yapıyor)",
+              "Konsey restorasyon bütçesini iki ay önce onayladı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
+            "enSentence": "The council approved the restoration budget two months ago.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Past",
@@ -44590,26 +44577,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q14",
+            "id": "u102l3_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The council ___ the restoration budget two months ago.",
+            "sentence": "The council ___ the restoration budget two months ago.",
+            "options": [
+              "approved",
+              "approves",
+              "has approved",
+              "will approve"
+            ],
+            "correctIndex": 0,
+            "translation": "Konsey restorasyon bütçesini iki ay önce onayladı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Past",
+              "Kesin Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l3_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>In 1998, historians discovered new archival records.",
-            "translation": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The council approved the restoration budget two months ago.",
+            "translation": "Konsey restorasyon bütçesini iki ay önce onayladı.",
+            "enSentence": "The council approved the restoration budget two months ago.",
             "words": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Konsey",
+              "restorasyon",
+              "bütçesini",
+              "iki",
+              "ay",
+              "önce",
+              "onayladı"
             ],
             "correctOrder": [
-              "1998'de",
-              "tarihçiler",
-              "yeni",
-              "arşiv",
-              "kayıtları",
-              "keşfetti"
+              "Konsey",
+              "restorasyon",
+              "bütçesini",
+              "iki",
+              "ay",
+              "önce",
+              "onayladı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -44621,11 +44631,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l3_q15",
+            "id": "u102l3_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"In 1998, historians discovered new archival records.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "1998'de tarihçiler yeni arşiv kayıtları keşfetti.",
-            "enSentence": "In 1998, historians discovered new archival records.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The council approved the restoration budget two months ago.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Konsey restorasyon bütçesini iki ay önce onayladı.",
+            "enSentence": "The council approved the restoration budget two months ago.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -44686,7 +44696,7 @@ Object.assign(unitSentencesMap, {
               "Arkeologlar sahada kazı yaparken yağmur başladı. (yarın yapacaktır)",
               "Arkeologlar sahada kazı yaparken yağmur başladı. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "While archaeologists were excavating the site, rain started.",
             "isEngToTr": true,
             "grammarTags": [
@@ -44765,25 +44775,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q6",
+            "id": "u102l4_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişte Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "while analyzed data",
-                "right": "verileri analiz etti"
+                "left": "was calibrating the seismograph",
+                "right": "sismografı kalibre ediyordu"
               },
               {
-                "left": "while published research",
-                "right": "araştırmayı yayımladı"
+                "left": "were recording the tremors",
+                "right": "sarsıntıları kaydediyorlardı"
               },
               {
-                "left": "while examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "was monitoring the sensors",
+                "right": "sensörleri izliyordu"
               },
               {
-                "left": "while observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "were checking the readings",
+                "right": "ölçümleri kontrol ediyorlardı"
               }
             ],
             "grammarTags": [
@@ -44795,39 +44805,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q7",
+            "id": "u102l4_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (at five yesterday / while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"At five yesterday, the technicians were calibrating the seismograph.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Arkeologlar sahada kazı yaparken yağmur başladı.",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (genellikle yapar)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (yarın yapacaktır)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "While archaeologists were excavating the site, rain started.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Past Continuous",
-              "Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l4_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>While archaeologists ___ the site, rain started.",
-            "sentence": "While archaeologists ___ the site, rain started.",
-            "options": [
-              "were excavating",
-              "excavated",
-              "excavate",
-              "will excavate"
+              "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+              "Dün beşte teknisyenler sismografı kalibre ediyordu. (genellikle yapar)",
+              "Dün beşte teknisyenler sismografı kalibre ediyordu. (şu an yapıyor)",
+              "Dün beşte teknisyenler sismografı kalibre ediyordu. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
+            "enSentence": "At five yesterday, the technicians were calibrating the seismograph.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Past Continuous",
@@ -44837,26 +44826,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q9",
+            "id": "u102l4_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>At five yesterday, the technicians ___ the seismograph.",
+            "sentence": "At five yesterday, the technicians ___ the seismograph.",
+            "options": [
+              "were calibrating",
+              "calibrated",
+              "have calibrated",
+              "will calibrate"
+            ],
+            "correctIndex": 0,
+            "translation": "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Past Continuous",
+              "Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l4_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>While archaeologists were excavating the site, rain started.",
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>At five yesterday, the technicians were calibrating the seismograph.",
+            "translation": "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+            "enSentence": "At five yesterday, the technicians were calibrating the seismograph.",
             "words": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Dün",
+              "beşte",
+              "teknisyenler",
+              "sismografı",
+              "kalibre",
+              "ediyordu"
             ],
             "correctOrder": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Dün",
+              "beşte",
+              "teknisyenler",
+              "sismografı",
+              "kalibre",
+              "ediyordu"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -44868,11 +44878,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q10",
+            "id": "u102l4_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"At five yesterday, the technicians were calibrating the seismograph.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Dün beşte teknisyenler sismografı kalibre ediyordu.",
+            "enSentence": "At five yesterday, the technicians were calibrating the seismograph.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -44883,25 +44893,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q11",
+            "id": "u102l4_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişte Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "while analyzed data",
-                "right": "verileri analiz etti"
+                "left": "while the curator was cataloguing",
+                "right": "küratör kataloglarken"
               },
               {
-                "left": "while published research",
-                "right": "araştırmayı yayımladı"
+                "left": "while the team was excavating",
+                "right": "ekip kazı yaparken"
               },
               {
-                "left": "while examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "while the lamp was flickering",
+                "right": "lamba titrerken"
               },
               {
-                "left": "while observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "while the archive was closing",
+                "right": "arşiv kapanırken"
               }
             ],
             "grammarTags": [
@@ -44913,39 +44923,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q12",
+            "id": "u102l4_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (at five yesterday / while) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"While the curator was cataloguing the coins, the power failed.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Arkeologlar sahada kazı yaparken yağmur başladı.",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (genellikle yapar)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (yarın yapacaktır)",
-              "Arkeologlar sahada kazı yaparken yağmur başladı. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "While archaeologists were excavating the site, rain started.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Past Continuous",
-              "Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l4_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>While archaeologists ___ the site, rain started.",
-            "sentence": "While archaeologists ___ the site, rain started.",
-            "options": [
-              "were excavating",
-              "excavated",
-              "excavate",
-              "will excavate"
+              "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+              "Küratör sikkeleri katalogluyorken elektrik kesildi. (genellikle yapar)",
+              "Küratör sikkeleri katalogluyorken elektrik kesildi. (şu an yapıyor)",
+              "Küratör sikkeleri katalogluyorken elektrik kesildi. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
+            "enSentence": "While the curator was cataloguing the coins, the power failed.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Past Continuous",
@@ -44955,26 +44944,45 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q14",
+            "id": "u102l4_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>While the curator ___ the coins, the power failed.",
+            "sentence": "While the curator ___ the coins, the power failed.",
+            "options": [
+              "was cataloguing",
+              "catalogued",
+              "has catalogued",
+              "will catalogue"
+            ],
+            "correctIndex": 0,
+            "translation": "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Past Continuous",
+              "Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l4_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>While archaeologists were excavating the site, rain started.",
-            "translation": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>While the curator was cataloguing the coins, the power failed.",
+            "translation": "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+            "enSentence": "While the curator was cataloguing the coins, the power failed.",
             "words": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Küratör",
+              "sikkeleri",
+              "katalogluyorken",
+              "elektrik",
+              "kesildi"
             ],
             "correctOrder": [
-              "Arkeologlar",
-              "sahada",
-              "kazı",
-              "yaparken",
-              "yağmur",
-              "başladı"
+              "Küratör",
+              "sikkeleri",
+              "katalogluyorken",
+              "elektrik",
+              "kesildi"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -44986,11 +44994,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l4_q15",
+            "id": "u102l4_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"While archaeologists were excavating the site, rain started.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Arkeologlar sahada kazı yaparken yağmur başladı.",
-            "enSentence": "While archaeologists were excavating the site, rain started.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"While the curator was cataloguing the coins, the power failed.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Küratör sikkeleri katalogluyorken elektrik kesildi.",
+            "enSentence": "While the curator was cataloguing the coins, the power failed.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -45051,7 +45059,7 @@ Object.assign(unitSentencesMap, {
               "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (yarın yapacaktır)",
               "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "Economists have recently modified trade policies.",
             "isEngToTr": true,
             "grammarTags": [
@@ -45130,25 +45138,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q6",
+            "id": "u102l5_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Yakın Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Etkisi Süren Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "recently analyzed data",
-                "right": "verileri analiz etti"
+                "left": "has published four reports so far",
+                "right": "şimdiye kadar dört rapor yayımladı"
               },
               {
-                "left": "recently published research",
-                "right": "araştırmayı yayımladı"
+                "left": "has collected three datasets so far",
+                "right": "şimdiye kadar üç veri kümesi topladı"
               },
               {
-                "left": "recently examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "has trained ten researchers so far",
+                "right": "şimdiye kadar on araştırmacı yetiştirdi"
               },
               {
-                "left": "recently observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "has funded two surveys so far",
+                "right": "şimdiye kadar iki araştırmayı finanse etti"
               }
             ],
             "grammarTags": [
@@ -45160,39 +45168,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q7",
+            "id": "u102l5_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (recently) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Economists have recently modified trade policies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (so far / since) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The institute has published four reports so far.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (genellikle yapar)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (yarın yapacaktır)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "Economists have recently modified trade policies.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect",
-              "Yakın Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l5_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.",
-            "sentence": "Economists _______ trade policies recently.",
-            "options": [
-              "have modified",
-              "modify",
-              "modified",
-              "will modify"
+              "Enstitü şimdiye kadar dört rapor yayımladı.",
+              "Enstitü şimdiye kadar dört rapor yayımladı. (genellikle yapar)",
+              "Enstitü şimdiye kadar dört rapor yayımladı. (şu an yapıyor)",
+              "Enstitü şimdiye kadar dört rapor yayımladı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
+            "enSentence": "The institute has published four reports so far.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect",
@@ -45202,26 +45189,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q9",
+            "id": "u102l5_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The institute ___ four reports so far.",
+            "sentence": "The institute ___ four reports so far.",
+            "options": [
+              "has published",
+              "published",
+              "had published",
+              "will publish"
+            ],
+            "correctIndex": 0,
+            "translation": "Enstitü şimdiye kadar dört rapor yayımladı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect",
+              "Yakın Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l5_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Economists have recently modified trade policies.",
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The institute has published four reports so far.",
+            "translation": "Enstitü şimdiye kadar dört rapor yayımladı.",
+            "enSentence": "The institute has published four reports so far.",
             "words": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Enstitü",
+              "şimdiye",
+              "kadar",
+              "dört",
+              "rapor",
+              "yayımladı"
             ],
             "correctOrder": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Enstitü",
+              "şimdiye",
+              "kadar",
+              "dört",
+              "rapor",
+              "yayımladı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -45233,11 +45241,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q10",
+            "id": "u102l5_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Economists have recently modified trade policies.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The institute has published four reports so far.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Enstitü şimdiye kadar dört rapor yayımladı.",
+            "enSentence": "The institute has published four reports so far.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -45248,25 +45256,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q11",
+            "id": "u102l5_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Yakın Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Etkisi Süren Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "recently analyzed data",
-                "right": "verileri analiz etti"
+                "left": "have monitored the glacier since 2004",
+                "right": "buzulu 2004'ten beri izliyor"
               },
               {
-                "left": "recently published research",
-                "right": "araştırmayı yayımladı"
+                "left": "have studied the delta since 2010",
+                "right": "deltayı 2010'dan beri inceliyor"
               },
               {
-                "left": "recently examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "have recorded the data for six years",
+                "right": "verileri altı yıldır kaydediyor"
               },
               {
-                "left": "recently observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "have worked there since the survey",
+                "right": "araştırmadan beri orada çalışıyor"
               }
             ],
             "grammarTags": [
@@ -45278,39 +45286,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q12",
+            "id": "u102l5_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (recently) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Economists have recently modified trade policies.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (so far / since) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Researchers have monitored the glacier since 2004.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (genellikle yapar)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (yarın yapacaktır)",
-              "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "Economists have recently modified trade policies.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect",
-              "Yakın Geçmiş Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l5_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.",
-            "sentence": "Economists _______ trade policies recently.",
-            "options": [
-              "have modified",
-              "modify",
-              "modified",
-              "will modify"
+              "Araştırmacılar buzulu 2004'ten beri izliyor.",
+              "Araştırmacılar buzulu 2004'ten beri izliyor. (genellikle yapar)",
+              "Araştırmacılar buzulu 2004'ten beri izliyor. (şu an yapıyor)",
+              "Araştırmacılar buzulu 2004'ten beri izliyor. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
+            "enSentence": "Researchers have monitored the glacier since 2004.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect",
@@ -45320,26 +45307,45 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q14",
+            "id": "u102l5_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Researchers ___ the glacier since 2004.",
+            "sentence": "Researchers ___ the glacier since 2004.",
+            "options": [
+              "have monitored",
+              "monitored",
+              "had monitored",
+              "monitor"
+            ],
+            "correctIndex": 0,
+            "translation": "Araştırmacılar buzulu 2004'ten beri izliyor.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect",
+              "Yakın Geçmiş Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l5_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Economists have recently modified trade policies.",
-            "translation": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Researchers have monitored the glacier since 2004.",
+            "translation": "Araştırmacılar buzulu 2004'ten beri izliyor.",
+            "enSentence": "Researchers have monitored the glacier since 2004.",
             "words": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Araştırmacılar",
+              "buzulu",
+              "2004'ten",
+              "beri",
+              "izliyor"
             ],
             "correctOrder": [
-              "İktisatçılar",
-              "son",
-              "zamanlarda",
-              "ticaret",
-              "politikalarını",
-              "değiştirdi"
+              "Araştırmacılar",
+              "buzulu",
+              "2004'ten",
+              "beri",
+              "izliyor"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -45351,11 +45357,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l5_q15",
+            "id": "u102l5_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Economists have recently modified trade policies.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "İktisatçılar son zamanlarda ticaret politikalarını değiştirdi.",
-            "enSentence": "Economists have recently modified trade policies.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Researchers have monitored the glacier since 2004.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Araştırmacılar buzulu 2004'ten beri izliyor.",
+            "enSentence": "Researchers have monitored the glacier since 2004.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -45416,7 +45422,7 @@ Object.assign(unitSentencesMap, {
               "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (yarın yapacaktır)",
               "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
             "isEngToTr": true,
             "grammarTags": [
@@ -45495,25 +45501,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q6",
+            "id": "u102l6_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Kesintisiz Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişin Geçmişi Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "for 5 years analyzed data",
-                "right": "verileri analiz etti"
+                "left": "had filed the reports",
+                "right": "raporları teslim etmişti"
               },
               {
-                "left": "for 5 years published research",
-                "right": "araştırmayı yayımladı"
+                "left": "had closed the accounts",
+                "right": "hesapları kapatmıştı"
               },
               {
-                "left": "for 5 years examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "had signed the statements",
+                "right": "beyanları imzalamıştı"
               },
               {
-                "left": "for 5 years observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "had checked the invoices",
+                "right": "faturaları kontrol etmişti"
               }
             ],
             "grammarTags": [
@@ -45525,39 +45531,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q7",
+            "id": "u102l6_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (for 5 years) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by the time / already) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By the time the auditors arrived, the accountant had filed the reports.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (genellikle yapar)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (yarın yapacaktır)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect Continuous",
-              "Kesintisiz Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l6_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Psychologists ___ cognitive behaviors for five years.",
-            "sentence": "Psychologists ___ cognitive behaviors for five years.",
-            "options": [
-              "have been studying",
-              "studied",
-              "study",
-              "will study"
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti. (genellikle yapar)",
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti. (şu an yapıyor)",
+              "Denetçiler geldiğinde muhasebeci raporları teslim etmişti. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
+            "enSentence": "By the time the auditors arrived, the accountant had filed the reports.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect Continuous",
@@ -45567,26 +45552,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q9",
+            "id": "u102l6_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By the time the auditors arrived, the accountant ___ the reports.",
+            "sentence": "By the time the auditors arrived, the accountant ___ the reports.",
+            "options": [
+              "had filed",
+              "filed",
+              "has filed",
+              "will file"
+            ],
+            "correctIndex": 0,
+            "translation": "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect Continuous",
+              "Kesintisiz Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l6_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Psychologists have been studying cognitive behaviors for five years.",
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By the time the auditors arrived, the accountant had filed the reports.",
+            "translation": "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+            "enSentence": "By the time the auditors arrived, the accountant had filed the reports.",
             "words": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Denetçiler",
+              "geldiğinde",
+              "muhasebeci",
+              "raporları",
+              "teslim",
+              "etmişti"
             ],
             "correctOrder": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Denetçiler",
+              "geldiğinde",
+              "muhasebeci",
+              "raporları",
+              "teslim",
+              "etmişti"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -45598,11 +45604,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q10",
+            "id": "u102l6_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By the time the auditors arrived, the accountant had filed the reports.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Denetçiler geldiğinde muhasebeci raporları teslim etmişti.",
+            "enSentence": "By the time the auditors arrived, the accountant had filed the reports.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -45613,25 +45619,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q11",
+            "id": "u102l6_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Kesintisiz Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Geçmişin Geçmişi Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "for 5 years analyzed data",
-                "right": "verileri analiz etti"
+                "left": "had already mapped the cave",
+                "right": "mağarayı çoktan haritalamıştı"
               },
               {
-                "left": "for 5 years published research",
-                "right": "araştırmayı yayımladı"
+                "left": "had already sealed the entrance",
+                "right": "girişi çoktan kapatmıştı"
               },
               {
-                "left": "for 5 years examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "had already measured the chamber",
+                "right": "odayı çoktan ölçmüştü"
               },
               {
-                "left": "for 5 years observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "had already photographed the walls",
+                "right": "duvarları çoktan fotoğraflamıştı"
               }
             ],
             "grammarTags": [
@@ -45643,39 +45649,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q12",
+            "id": "u102l6_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (for 5 years) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by the time / already) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The team had already mapped the cave before the rains began.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (genellikle yapar)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (yarın yapacaktır)",
-              "Psikologlar beş yıldır bilişsel davranışları incelemektedir. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Present Perfect Continuous",
-              "Kesintisiz Süreç Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l6_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>Psychologists ___ cognitive behaviors for five years.",
-            "sentence": "Psychologists ___ cognitive behaviors for five years.",
-            "options": [
-              "have been studying",
-              "studied",
-              "study",
-              "will study"
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı. (genellikle yapar)",
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı. (şu an yapıyor)",
+              "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
+            "enSentence": "The team had already mapped the cave before the rains began.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Present Perfect Continuous",
@@ -45685,26 +45670,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q14",
+            "id": "u102l6_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The team ___ the cave before the rains began.",
+            "sentence": "The team ___ the cave before the rains began.",
+            "options": [
+              "had already mapped",
+              "already mapped",
+              "has already mapped",
+              "will already map"
+            ],
+            "correctIndex": 0,
+            "translation": "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Present Perfect Continuous",
+              "Kesintisiz Süreç Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l6_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>Psychologists have been studying cognitive behaviors for five years.",
-            "translation": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The team had already mapped the cave before the rains began.",
+            "translation": "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+            "enSentence": "The team had already mapped the cave before the rains began.",
             "words": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Ekip",
+              "yağmurlar",
+              "başlamadan",
+              "önce",
+              "mağarayı",
+              "çoktan",
+              "haritalamıştı"
             ],
             "correctOrder": [
-              "Psikologlar",
-              "beş",
-              "yıldır",
-              "bilişsel",
-              "davranışları",
-              "incelemektedir"
+              "Ekip",
+              "yağmurlar",
+              "başlamadan",
+              "önce",
+              "mağarayı",
+              "çoktan",
+              "haritalamıştı"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -45716,11 +45724,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l6_q15",
+            "id": "u102l6_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"Psychologists have been studying cognitive behaviors for five years.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Psikologlar beş yıldır bilişsel davranışları incelemektedir.",
-            "enSentence": "Psychologists have been studying cognitive behaviors for five years.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The team had already mapped the cave before the rains began.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Ekip yağmurlar başlamadan önce mağarayı çoktan haritalamıştı.",
+            "enSentence": "The team had already mapped the cave before the rains began.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -45781,7 +45789,7 @@ Object.assign(unitSentencesMap, {
               "Kurul hukuki raporu yarın yayımlayacaktır. (yarın yapacaktır)",
               "Kurul hukuki raporu yarın yayımlayacaktır. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "The committee will publish the legal report tomorrow.",
             "isEngToTr": true,
             "grammarTags": [
@@ -45858,25 +45866,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q6",
+            "id": "u102l7_v1_m",
             "type": "matching",
             "prompt": "Yönerge: Gelecek Zaman Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "tomorrow analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will announce the regulation next week",
+                "right": "düzenlemeyi gelecek hafta açıklayacak"
               },
               {
-                "left": "tomorrow published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will publish the guidelines next month",
+                "right": "yönergeleri gelecek ay yayımlayacak"
               },
               {
-                "left": "tomorrow examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will review the appeals next term",
+                "right": "itirazları gelecek dönem inceleyecek"
               },
               {
-                "left": "tomorrow observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will open the archive next spring",
+                "right": "arşivi gelecek bahar açacak"
               }
             ],
             "grammarTags": [
@@ -45888,39 +45896,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q7",
+            "id": "u102l7_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (next week / tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The ministry will announce the new regulation next week.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Kurul hukuki raporu yarın yayımlayacaktır.",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (genellikle yapar)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (yarın yapacaktır)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "The committee will publish the legal report tomorrow.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Future",
-              "Gelecek Zaman Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l7_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The committee ___ the legal report tomorrow.",
-            "sentence": "The committee ___ the legal report tomorrow.",
-            "options": [
-              "will publish",
-              "published",
-              "publishes",
-              "is publishing"
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak. (genellikle yapar)",
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak. (şu an yapıyor)",
+              "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
+            "enSentence": "The ministry will announce the new regulation next week.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Future",
@@ -45930,24 +45917,47 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q9",
+            "id": "u102l7_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The ministry ___ the new regulation next week.",
+            "sentence": "The ministry ___ the new regulation next week.",
+            "options": [
+              "will announce",
+              "announced",
+              "has announced",
+              "announcing"
+            ],
+            "correctIndex": 0,
+            "translation": "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Future",
+              "Gelecek Zaman Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l7_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The committee will publish the legal report tomorrow.",
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The ministry will announce the new regulation next week.",
+            "translation": "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+            "enSentence": "The ministry will announce the new regulation next week.",
             "words": [
-              "Kurul",
-              "hukuki",
-              "raporu",
-              "yarın",
-              "yayımlayacaktır"
+              "Bakanlık",
+              "yeni",
+              "düzenlemeyi",
+              "gelecek",
+              "hafta",
+              "açıklayacak"
             ],
             "correctOrder": [
-              "Kurul",
-              "hukuki",
-              "raporu",
-              "yarın",
-              "yayımlayacaktır"
+              "Bakanlık",
+              "yeni",
+              "düzenlemeyi",
+              "gelecek",
+              "hafta",
+              "açıklayacak"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -45959,11 +45969,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q10",
+            "id": "u102l7_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The ministry will announce the new regulation next week.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Bakanlık yeni düzenlemeyi gelecek hafta açıklayacak.",
+            "enSentence": "The ministry will announce the new regulation next week.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -45974,25 +45984,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q11",
+            "id": "u102l7_v2_m",
             "type": "matching",
             "prompt": "Yönerge: Gelecek Zaman Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "tomorrow analyzed data",
-                "right": "verileri analiz etti"
+                "left": "is going to test the prototype tomorrow",
+                "right": "prototipi yarın test edecek"
               },
               {
-                "left": "tomorrow published research",
-                "right": "araştırmayı yayımladı"
+                "left": "is going to repeat the trial tomorrow",
+                "right": "denemeyi yarın tekrarlayacak"
               },
               {
-                "left": "tomorrow examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "is going to calibrate the sensors soon",
+                "right": "sensörleri yakında kalibre edecek"
               },
               {
-                "left": "tomorrow observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "is going to submit the results soon",
+                "right": "sonuçları yakında sunacak"
               }
             ],
             "grammarTags": [
@@ -46004,39 +46014,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q12",
+            "id": "u102l7_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (next week / tomorrow) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"The laboratory is going to test the prototype tomorrow.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "Kurul hukuki raporu yarın yayımlayacaktır.",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (genellikle yapar)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (yarın yapacaktır)",
-              "Kurul hukuki raporu yarın yayımlayacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "The committee will publish the legal report tomorrow.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Simple Future",
-              "Gelecek Zaman Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l7_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The committee ___ the legal report tomorrow.",
-            "sentence": "The committee ___ the legal report tomorrow.",
-            "options": [
-              "will publish",
-              "published",
-              "publishes",
-              "is publishing"
+              "Laboratuvar prototipi yarın test edecek.",
+              "Laboratuvar prototipi yarın test edecek. (genellikle yapar)",
+              "Laboratuvar prototipi yarın test edecek. (şu an yapıyor)",
+              "Laboratuvar prototipi yarın test edecek. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
+            "enSentence": "The laboratory is going to test the prototype tomorrow.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Simple Future",
@@ -46046,24 +46035,45 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q14",
+            "id": "u102l7_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>The laboratory ___ the prototype tomorrow.",
+            "sentence": "The laboratory ___ the prototype tomorrow.",
+            "options": [
+              "is going to test",
+              "tested",
+              "has tested",
+              "was testing"
+            ],
+            "correctIndex": 0,
+            "translation": "Laboratuvar prototipi yarın test edecek.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Simple Future",
+              "Gelecek Zaman Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l7_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The committee will publish the legal report tomorrow.",
-            "translation": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>The laboratory is going to test the prototype tomorrow.",
+            "translation": "Laboratuvar prototipi yarın test edecek.",
+            "enSentence": "The laboratory is going to test the prototype tomorrow.",
             "words": [
-              "Kurul",
-              "hukuki",
-              "raporu",
+              "Laboratuvar",
+              "prototipi",
               "yarın",
-              "yayımlayacaktır"
+              "test",
+              "edecek"
             ],
             "correctOrder": [
-              "Kurul",
-              "hukuki",
-              "raporu",
+              "Laboratuvar",
+              "prototipi",
               "yarın",
-              "yayımlayacaktır"
+              "test",
+              "edecek"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -46075,11 +46085,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l7_q15",
+            "id": "u102l7_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The committee will publish the legal report tomorrow.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "Kurul hukuki raporu yarın yayımlayacaktır.",
-            "enSentence": "The committee will publish the legal report tomorrow.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"The laboratory is going to test the prototype tomorrow.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Laboratuvar prototipi yarın test edecek.",
+            "enSentence": "The laboratory is going to test the prototype tomorrow.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -46140,7 +46150,7 @@ Object.assign(unitSentencesMap, {
               "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (yarın yapacaktır)",
               "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (şu an yapıyor)"
             ],
-            "correctIndex": 1,
+            "correctIndex": 0,
             "enSentence": "By 2030, the government will have completed the economic reform.",
             "isEngToTr": true,
             "grammarTags": [
@@ -46221,25 +46231,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q6",
+            "id": "u102l8_v1_m",
             "type": "matching",
-            "prompt": "Yönerge: Sınır Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Gelecekte Tamamlanma Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "by 2030 analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will have digitised the archive by 2030",
+                "right": "2030'a kadar arşivi dijitalleştirmiş olacak"
               },
               {
-                "left": "by 2030 published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will have completed the survey by June",
+                "right": "haziran'a kadar araştırmayı tamamlamış olacak"
               },
               {
-                "left": "by 2030 examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will have restored the facade by winter",
+                "right": "kışa kadar cepheyi restore etmiş olacak"
               },
               {
-                "left": "by 2030 observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will have trained the staff by autumn",
+                "right": "sonbahara kadar personeli eğitmiş olacak"
               }
             ],
             "grammarTags": [
@@ -46251,39 +46261,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q7",
+            "id": "u102l8_v1_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (by 2030) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by 2030 / by the time) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By 2030, the agency will have digitised the entire archive.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (genellikle yapar)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (yarın yapacaktır)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 2,
-            "enSentence": "By 2030, the government will have completed the economic reform.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Future Perfect",
-              "Sınır Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l8_q8",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By 2030, the government ___ the economic reform.",
-            "sentence": "By 2030, the government ___ the economic reform.",
-            "options": [
-              "will have completed",
-              "completed",
-              "completes",
-              "will complete"
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak. (genellikle yapar)",
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak. (şu an yapıyor)",
+              "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
+            "enSentence": "By 2030, the agency will have digitised the entire archive.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Future Perfect",
@@ -46293,28 +46282,49 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q9",
+            "id": "u102l8_v1_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By 2030, the agency ___ the entire archive.",
+            "sentence": "By 2030, the agency ___ the entire archive.",
+            "options": [
+              "will have digitised",
+              "will digitise",
+              "has digitised",
+              "digitised"
+            ],
+            "correctIndex": 0,
+            "translation": "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Future Perfect",
+              "Sınır Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l8_v1_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By 2030, the government will have completed the economic reform.",
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By 2030, the agency will have digitised the entire archive.",
+            "translation": "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+            "enSentence": "By 2030, the agency will have digitised the entire archive.",
             "words": [
-              "2030",
-              "yılına",
+              "2030'a",
               "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "kurum",
+              "tüm",
+              "arşivi",
+              "dijitalleştirmiş",
+              "olacak"
             ],
             "correctOrder": [
-              "2030",
-              "yılına",
+              "2030'a",
               "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "kurum",
+              "tüm",
+              "arşivi",
+              "dijitalleştirmiş",
+              "olacak"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -46326,11 +46336,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q10",
+            "id": "u102l8_v1_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By 2030, the agency will have digitised the entire archive.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "2030'a kadar kurum tüm arşivi dijitalleştirmiş olacak.",
+            "enSentence": "By 2030, the agency will have digitised the entire archive.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
@@ -46341,25 +46351,25 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q11",
+            "id": "u102l8_v2_m",
             "type": "matching",
-            "prompt": "Yönerge: Sınır Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
+            "prompt": "Yönerge: Gelecekte Tamamlanma Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "by 2030 analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will have restored two frescoes",
+                "right": "iki freski restore etmiş olacak"
               },
               {
-                "left": "by 2030 published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will have cleaned the mosaics",
+                "right": "mozaikleri temizlemiş olacak"
               },
               {
-                "left": "by 2030 examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will have secured the scaffolding",
+                "right": "iskeleyi sağlamlaştırmış olacak"
               },
               {
-                "left": "by 2030 observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will have documented the layers",
+                "right": "katmanları belgelemiş olacak"
               }
             ],
             "grammarTags": [
@@ -46371,39 +46381,18 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q12",
+            "id": "u102l8_v2_c",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Zaman zarfı (by 2030) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesinin Türkçe karşılığı hangisidir?",
+            "prompt": "Yönerge: Zaman zarfı (by 2030 / by the time) ve tense uyumuna göre doğru cümleyi seçiniz.<br><br>\"By the time the season ends, the crew will have restored two frescoes.\" cümlesinin Türkçe karşılığı hangisidir?",
             "options": [
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (genellikle yapar)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (yarın yapacaktır)",
-              "2030 yılına kadar hükümet reformu tamamlamış olacaktır. (şu an yapıyor)"
-            ],
-            "correctIndex": 3,
-            "enSentence": "By 2030, the government will have completed the economic reform.",
-            "isEngToTr": true,
-            "grammarTags": [
-              "Zaman Zarfları ve Tense Uyumu",
-              "Future Perfect",
-              "Sınır Zarfları",
-              "İsim Tamlamaları",
-              "İsim ve Edat Yapıları"
-            ]
-          },
-          {
-            "id": "u102l8_q13",
-            "type": "fill-blank-dropdown",
-            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By 2030, the government ___ the economic reform.",
-            "sentence": "By 2030, the government ___ the economic reform.",
-            "options": [
-              "will have completed",
-              "completed",
-              "completes",
-              "will complete"
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak. (genellikle yapar)",
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak. (şu an yapıyor)",
+              "Sezon bittiğinde ekip iki freski restore etmiş olacak. (yarın yapacaktır)"
             ],
             "correctIndex": 0,
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
+            "enSentence": "By the time the season ends, the crew will have restored two frescoes.",
+            "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
               "Future Perfect",
@@ -46413,28 +46402,51 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q14",
+            "id": "u102l8_v2_f",
+            "type": "fill-blank-dropdown",
+            "prompt": "Yönerge: Boşluğa gelecek en uygun eylem formunu seçiniz.<br><br>By the time the season ends, the crew ___ two frescoes.",
+            "sentence": "By the time the season ends, the crew ___ two frescoes.",
+            "options": [
+              "will have restored",
+              "will restore",
+              "had restored",
+              "restores"
+            ],
+            "correctIndex": 0,
+            "translation": "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+            "grammarTags": [
+              "Zaman Zarfları ve Tense Uyumu",
+              "Future Perfect",
+              "Sınır Zarfları",
+              "İsim Tamlamaları",
+              "İsim ve Edat Yapıları"
+            ]
+          },
+          {
+            "id": "u102l8_v2_w",
             "type": "word-bank",
-            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By 2030, the government will have completed the economic reform.",
-            "translation": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: Cümlenin Türkçe karşılığını kelime havuzundan doğru sırayla oluşturunuz.<br><br>By the time the season ends, the crew will have restored two frescoes.",
+            "translation": "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+            "enSentence": "By the time the season ends, the crew will have restored two frescoes.",
             "words": [
-              "2030",
-              "yılına",
-              "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "Sezon",
+              "bittiğinde",
+              "ekip",
+              "iki",
+              "freski",
+              "restore",
+              "etmiş",
+              "olacak"
             ],
             "correctOrder": [
-              "2030",
-              "yılına",
-              "kadar",
-              "hükümet",
-              "reformu",
-              "tamamlamış",
-              "olacaktır"
+              "Sezon",
+              "bittiğinde",
+              "ekip",
+              "iki",
+              "freski",
+              "restore",
+              "etmiş",
+              "olacak"
             ],
             "isEngToTr": true,
             "grammarTags": [
@@ -46446,11 +46458,11 @@ Object.assign(unitSentencesMap, {
             ]
           },
           {
-            "id": "u102l8_q15",
+            "id": "u102l8_v2_t",
             "type": "translation-text",
-            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By 2030, the government will have completed the economic reform.\" cümlesini Türkçe'ye çevirin:",
-            "correctSentence": "2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
-            "enSentence": "By 2030, the government will have completed the economic reform.",
+            "prompt": "Yönerge: İfadeyi Türkçe'ye çeviriniz.<br><br>\"By the time the season ends, the crew will have restored two frescoes.\" cümlesini Türkçe'ye çevirin:",
+            "correctSentence": "Sezon bittiğinde ekip iki freski restore etmiş olacak.",
+            "enSentence": "By the time the season ends, the crew will have restored two frescoes.",
             "isEngToTr": true,
             "grammarTags": [
               "Zaman Zarfları ve Tense Uyumu",
