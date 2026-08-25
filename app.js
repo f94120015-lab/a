@@ -10620,9 +10620,15 @@ function formatEnglishInfinitiveHighlight(text) {
 }
 
 function renderMatching(container, question) {
-  const shuffledRight = [...question.pairs].sort(() => Math.random() - 0.5);
+  // Bazı sorular eşleştirmeyi [sol, sağ] dizisi olarak taşıyor; nesneye
+  // çevrilmezse kutular boş çiziliyordu.
+  const pairs = (question.pairs || [])
+    .map(p => (Array.isArray(p) ? { left: p[0], right: p[1] } : p))
+    .filter(p => p && p.left !== undefined && p.right !== undefined);
+  question.pairs = pairs;
+  const shuffledRight = [...pairs].sort(() => Math.random() - 0.5);
 
-  const isLeftEnglish = question.pairs && question.pairs.length > 0 && /^[a-zA-Z]/.test(question.pairs[0].left);
+  const isLeftEnglish = pairs.length > 0 && /^[a-zA-Z]/.test(pairs[0].left);
   const leftHeader = question.leftHeader || (isLeftEnglish ? "İngilizce İfade" : "Türkçe Karşılık");
   const rightHeader = question.rightHeader || (isLeftEnglish ? "Türkçe Karşılık" : "İngilizce İfade");
 
@@ -10631,7 +10637,7 @@ function renderMatching(container, question) {
     <div class="match-grid">
       <span class="match-col-header">${leftHeader}</span>
       <span class="match-col-header">${rightHeader}</span>
-      ${question.pairs.map((pair, i) => `
+      ${pairs.map((pair, i) => `
         <button class="match-item match-left" data-left="${escapeAttr(pair.left)}" data-pair-index="${i}">${isLeftEnglish ? formatEnglishInfinitiveHighlight(pair.left) : pair.left}</button>
         <button class="match-item match-right" data-right="${escapeAttr(shuffledRight[i].right)}">${!isLeftEnglish ? formatEnglishInfinitiveHighlight(shuffledRight[i].right) : makeTextHoverable(shuffledRight[i].right, true)}</button>
       `).join('')}
@@ -10639,11 +10645,11 @@ function renderMatching(container, question) {
   `;
 
   matchState = {
-    pairs: question.pairs,
+    pairs: pairs,
     selectedLeftBtn: null,
     selectedRightBtn: null,
     matchedCount: 0,
-    totalPairs: question.pairs.length,
+    totalPairs: pairs.length,
     wrongAttempts: 0
   };
 
@@ -12758,9 +12764,19 @@ function checkAnswer() {
       break;
     case 'true-false':
       {
-        const targetCorrect = (question.isTrue !== undefined)
-          ? Boolean(question.isTrue)
-          : (question.correctAnswer === true || String(question.correctAnswer).toLowerCase() === 'true');
+        // Soruların bir kısmı doğru cevabı isTrue/correctAnswer yerine
+        // options: ["True","False"] + correctIndex olarak taşıyor. O alanlar
+        // okunmadığında cevap her zaman "yanlış" sayılıyordu; doğru cevabı
+        // True olan sorular bu yüzden hatalı puanlanıyordu.
+        let targetCorrect;
+        if (question.isTrue !== undefined) {
+          targetCorrect = Boolean(question.isTrue);
+        } else if (question.correctAnswer !== undefined) {
+          targetCorrect = question.correctAnswer === true || String(question.correctAnswer).toLowerCase() === 'true';
+        } else {
+          const picked = String((question.options || [])[question.correctIndex] || '');
+          targetCorrect = /^(true|doğru|dogru|yes|evet)$/i.test(picked.trim());
+        }
         isCorrect = Boolean(selectedAnswer) === targetCorrect;
       }
       break;

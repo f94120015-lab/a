@@ -27858,7 +27858,8 @@ if (typeof lessons !== 'undefined') {
               "Baskı altyapısı kurulduğu tam o esnada, dramatik metnin bölgesel editörlerce değiştirilmekte/tahrif edilmekte olduğuna geçmişte inanılıyordu.",
               "Metnin gelecekte yeni baskı teknolojileriyle mutasyona uğrayacağı kesinleşmiştir.",
               "Eserin orijinal el yazmasının hiçbir değişikliğe uğramadan günümüze ulaştığı resmi olarak kanıtlanmıştır."
-            ]
+            ],
+            "correctIndex": 0
           }
         ]
       },
@@ -31203,7 +31204,8 @@ if (typeof lessons !== 'undefined') {
               "Baskı altyapısı kurulduğu tam o esnada, dramatik metnin bölgesel editörlerce değiştirilmekte/tahrif edilmekte olduğuna geçmişte inanılıyordu.",
               "Metnin gelecekte yeni baskı teknolojileriyle mutasyona uğrayacağı kesinleşmiştir.",
               "Eserin orijinal el yazmasının hiçbir değişikliğe uğramadan günümüze ulaştığı resmi olarak kanıtlanmıştır."
-            ]
+            ],
+            "correctIndex": 0
           }
         ]
       }

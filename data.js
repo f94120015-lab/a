@@ -60444,7 +60444,7 @@ const unit37_advanced_relative = {
                       "Little has the film director known that the political drama would cause a nationwide debate among cinema critics.",
                       "Little did the film director know that the political drama would cause a nationwide debate among cinema critics."
                     ],
-                    "correctIndex": 3,
+                    "correctIndex": 2,
                     "translation": "Film yönetmeni, siyasi dramanın sinema eleştirmenleri arasında ülke çapında bir tartışmayı tetikleyeceğini neredeyse hiç bilmiyordu.",
                     "explanation": "Little olumsuz anlam taşıyan bir zarf olarak cümlenin başına geldiğinde, Simple Past tense için 'did + özne + V1' devrik yapısı kurulmalıdır.",
                     "grammarTags": [
@@ -60612,7 +60612,7 @@ const unit37_advanced_relative = {
                       "Rarely the institution publishes such highly critical findings on social integration.",
                       "Rarely does the institution publish such highly critical findings on social integration."
                     ],
-                    "correctIndex": 3,
+                    "correctIndex": 2,
                     "translation": "Kurum, toplumsal entegrasyon konusunda bu derece kritik bulguları nadiren yayınlar.",
                     "explanation": "Geniş zamanlı (publishes) düz cümleyi 'Rarely' ile devrik yaparken 'does + subject + V1' yapısı kullanılmalıdır.",
                     "grammarTags": [
@@ -60761,23 +60761,23 @@ const unit37_advanced_relative = {
                 "type": "matching",
                 "prompt": "Cümle başındaki olumsuzluk öbeğini doğru devrik devamıyla eşleştirin.<br><br>Match the negative fronting:",
                 "pairs": [
-                  [
-                    "At no time",
-                    "was the laboratory aware of the contamination."
-                  ],
-                  [
-                    "Not once",
-                    "did the tribunal overturn a regional ruling."
-                  ],
-                  [
-                    "In no way",
-                    "can the ministry justify the six-month delay."
-                  ],
-                  [
-                    "Not for a moment",
-                    "did the delegates believe the official statement."
-                  ]
-                ],
+              {
+                "left": "At no time",
+                "right": "was the laboratory aware of the contamination."
+              },
+              {
+                "left": "Not once",
+                "right": "did the tribunal overturn a regional ruling."
+              },
+              {
+                "left": "In no way",
+                "right": "can the ministry justify the six-month delay."
+              },
+              {
+                "left": "Not for a moment",
+                "right": "did the delegates believe the official statement."
+              }
+            ],
                 "explanation": "Kesin olumsuzluk öbekleri başa geldiğinde yardımcı fiil özneden önce gelir; hangi yardımcı fiilin geleceğini cümlenin zamanı belirler.",
                 "grammarTags": [
                   "Devrik Cümle (Inversion)",
@@ -61361,23 +61361,23 @@ const unit37_advanced_relative = {
                 "type": "matching",
                 "prompt": "Kısıtlayıcı öbeği doğru devrik devamıyla eşleştirin.<br><br>Match the restrictive fronting:",
                 "pairs": [
-                  [
-                    "Only then",
-                    "did the engineers realise the scale of the fault."
-                  ],
-                  [
-                    "Only in this way",
-                    "could the museum preserve the fragile textiles."
-                  ],
-                  [
-                    "Nowhere else",
-                    "can such a complete archive be found."
-                  ],
-                  [
-                    "On no account",
-                    "should the seal be broken before the inspection."
-                  ]
-                ],
+              {
+                "left": "Only then",
+                "right": "did the engineers realise the scale of the fault."
+              },
+              {
+                "left": "Only in this way",
+                "right": "could the museum preserve the fragile textiles."
+              },
+              {
+                "left": "Nowhere else",
+                "right": "can such a complete archive be found."
+              },
+              {
+                "left": "On no account",
+                "right": "should the seal be broken before the inspection."
+              }
+            ],
                 "explanation": "Kısıtlayıcı öbekten sonra ana cümle devriktir: yardımcı fiil ya da modal özneden önce gelir.",
                 "grammarTags": [
                   "Devrik Cümle (Inversion)",
@@ -62346,23 +62346,23 @@ const unit37_advanced_relative = {
                 "type": "matching",
                 "prompt": "Devrik sonuç başlangıcını doğru devamıyla eşleştirin.<br><br>Match the result inversions:",
                 "pairs": [
-                  [
-                    "So severe was the drought",
-                    "that the entire harvest failed."
-                  ],
-                  [
-                    "Such was the public reaction",
-                    "that the ministry withdrew the draft."
-                  ],
-                  [
-                    "So rapidly has the technology evolved",
-                    "that regulations lag years behind."
-                  ],
-                  [
-                    "Such were the losses",
-                    "that the firm restructured its debt."
-                  ]
-                ],
+              {
+                "left": "So severe was the drought",
+                "right": "that the entire harvest failed."
+              },
+              {
+                "left": "Such was the public reaction",
+                "right": "that the ministry withdrew the draft."
+              },
+              {
+                "left": "So rapidly has the technology evolved",
+                "right": "that regulations lag years behind."
+              },
+              {
+                "left": "Such were the losses",
+                "right": "that the firm restructured its debt."
+              }
+            ],
                 "explanation": "So + sıfat ve Such + be kalıpları başa alındığında 'be' fiili özneden önce gelir ve cümle 'that' ile sonucu bildirir.",
                 "grammarTags": [
                   "Devrik Cümle (Inversion)",
@@ -62623,7 +62623,7 @@ const unit37_advanced_relative = {
                       "Attached to the survey the historic archives were explaining the legal verdict.",
                       "Attached to the survey were the historic archives explaining the legal verdict."
                     ],
-                    "correctIndex": 3,
+                    "correctIndex": 2,
                     "translation": "Yargı kararını detaylandıran tarihi arşivler rapora eklenmişti.",
                     "explanation": "Edilgen sıfat-fiil devrikliklerinde, V3 ortaç öbeği (Attached to the survey) başa çekilir ve 'be' fiili (were) özneden önce gelir.",
                     "grammarTags": [
@@ -62934,23 +62934,23 @@ const unit37_advanced_relative = {
                 "type": "matching",
                 "prompt": "Devrik başlangıcı doğru devamıyla eşleştirin.<br><br>Match the emphatic inversions:",
                 "pairs": [
-                  [
-                    "In vain",
-                    "did the negotiators attempt to revive the treaty."
-                  ],
-                  [
-                    "Well may",
-                    "the public question the ministry's silence."
-                  ],
-                  [
-                    "Not until the funding arrived",
-                    "did the excavation resume."
-                  ],
-                  [
-                    "So fragile were the tablets",
-                    "that they were never displayed."
-                  ]
-                ],
+              {
+                "left": "In vain",
+                "right": "did the negotiators attempt to revive the treaty."
+              },
+              {
+                "left": "Well may",
+                "right": "the public question the ministry's silence."
+              },
+              {
+                "left": "Not until the funding arrived",
+                "right": "did the excavation resume."
+              },
+              {
+                "left": "So fragile were the tablets",
+                "right": "that they were never displayed."
+              }
+            ],
                 "explanation": "In vain ve well may vurgulu, edebi devriklik kurar; yardımcı fiil ya da modal özneden önce gelir.",
                 "grammarTags": [
                   "Devrik Cümle (Inversion)",
