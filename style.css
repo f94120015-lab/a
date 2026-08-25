@@ -12685,12 +12685,31 @@ nDown 0.3s ease;
   line-height: 1.45;
   color: var(--text-secondary);
 }
-.popover-example-en { color: var(--text-primary); }
-/* Çeviri örneğin altında, ondan bir tık geride durur. */
+/* Bir örnek üç parçadan oluşabiliyor: hangi kalıbı gösterdiği (etiket),
+   İngilizce cümle ve Türkçe karşılığı. Üçü de ayrı tonda. */
+.popover-example-label {
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 2px;
+}
+.popover-example-en {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+/* Çeviri kaynak cümleden bir tık geride: daha soluk, italik, sola çizgili. */
 .popover-example-tr {
-  margin-top: 1px;
+  margin-top: 2px;
   padding-left: 8px;
-  border-left: 2px solid var(--border-color);
+  border-left: 2px solid var(--accent-primary-light, rgba(99, 102, 241, 0.25));
   font-size: 0.74rem;
+  font-style: italic;
   color: var(--text-muted);
+}
+.popover-example-item + .popover-example-item {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border-light, var(--border-color));
 }

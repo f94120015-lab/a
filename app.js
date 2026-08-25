@@ -7267,17 +7267,94 @@ function titleWords(text) {
 // tamamı ortaksa numaralı sade ada düşer.
 // Örnek cümleler panoyu formülden önce dolduruyordu; kural görünsün diye
 // formülün altına, katlanmış bir bloğa alındı.
+// Türkçe harfler ASCII \b sınırını bozuyor ("açıktır" içindeki a, \ba\b ile
+// eşleşiyordu); sözcük sınırları Unicode üzerinden kuruluyor.
+const exWordRe = list => new RegExp('(?<![\\p{L}])(?:' + list + ')(?![\\p{L}])', 'iu');
+const EX_EN_WORDS = exWordRe('the|a|an|is|are|was|were|be|been|have|has|had|will|would|could|should|can|they|we|you|it|of|in|on|at|to|that|this|and|or|but|by|for|not|with|from');
+const EX_TR_WORDS = exWordRe('bir|ve|için|ile|bu|şu|olan|değil|daha|çok|gibi|kadar|sonra|önce|olarak|acaba|hangi');
+const EX_TR_SUFFIX = /(?<![\p{L}])\p{L}+(iniz|ınız|unuz|ünüz|dır|dir|dur|dür|tır|tir|mış|miş|muş|müş|acak|ecek|ları|leri|ması|mesi|dan|den|tan|ten|nın|nin|nun|nün)(?![\p{L}])/iu;
+
+const exWordCount = s => String(s).split(/\s+/).filter(Boolean).length;
+const exLooksEnglish = s => EX_EN_WORDS.test(s);
+const exLooksTurkish = s => /[ğşıçöüĞŞİÇÖÜ]/u.test(s) || EX_TR_WORDS.test(s) || EX_TR_SUFFIX.test(s);
+const exIsTranslation = s => !!s && exWordCount(s) >= 2 && exLooksTurkish(s) && !exLooksEnglish(s);
+
+// Örneklerin çoğu "Etiket: İngilizce cümle: Türkçe karşılık" ya da "İngilizce
+// cümle (Türkçe karşılık)" biçiminde tek parça yazılmış. Ton farkı verebilmek
+// için düz metin üzerinde parçalara ayrılır; dönen değerler metin konumudur.
+function splitExampleLine(text) {
+  let s = String(text || '').trim();
+  if (!s) return null;
+  let label = '';
+  const head = s.match(/^([^:]{3,45}):\s*(\S[\s\S]*)$/);
+  if (head && exWordCount(head[2]) >= 3 &&
+      (!exLooksEnglish(head[1]) || (/\([^()]*\)\s*$/.test(head[1]) && exWordCount(head[1]) <= 5))) {
+    label = head[1].trim();
+    s = head[2].trim();
+  }
+  const paren = s.match(/^(.*\S)\s*\(([^()]{8,})\)\s*\.?\s*$/);
+  if (paren && exIsTranslation(paren[2])) return { label, en: paren[1].trim(), tr: paren[2].trim() };
+  const idx = s.lastIndexOf(':');
+  if (idx > 0) {
+    const left = s.slice(0, idx).trim(), right = s.slice(idx + 1).trim();
+    if (left && exIsTranslation(right)) return { label, en: left, tr: right };
+  }
+  return label ? { label, en: s, tr: '' } : null;
+}
+
+// Örnek metinleri renkli <span>'ler taşıyabiliyor; ayrım düz metin üzerinde
+// bulunduğu için parçaların etiketleri dengeli değilse biçimlendirme atılır.
+function balancedTags(html) {
+  const open = (html.match(/<span\b/gi) || []).length;
+  const close = (html.match(/<\/span>/gi) || []).length;
+  return open === close;
+}
+
+function splitExampleHTML(html) {
+  const raw = String(html || '');
+  const plain = raw.replace(/<[^>]+>/g, '');
+  const parts = splitExampleLine(plain);
+  if (!parts) return null;
+  // Düz metindeki konumu HTML içindeki konuma çevir.
+  const mapIndex = textIdx => {
+    let seen = 0;
+    for (let i = 0; i < raw.length; i++) {
+      if (raw[i] === '<') { i = raw.indexOf('>', i); if (i === -1) return raw.length; continue; }
+      if (seen === textIdx) return i;
+      seen++;
+    }
+    return raw.length;
+  };
+  const enStart = plain.indexOf(parts.en);
+  const enEnd = enStart + parts.en.length;
+  if (enStart < 0) return { label: parts.label, en: parts.en, tr: parts.tr };
+  const enHtml = raw.slice(mapIndex(enStart), mapIndex(enEnd)).trim();
+  return balancedTags(enHtml)
+    ? { label: parts.label, en: enHtml, tr: parts.tr }
+    : { label: parts.label, en: parts.en, tr: parts.tr };
+}
+
 function examplesBlockHTML(example, label, exampleTr) {
   const split = text => String(text || '').split(/<br\s*\/?>/i).map(s => s.replace(/^\s*[•·-]\s*/, '').trim());
   const items = split(example);
   // Çeviriler örneklerle aynı sırada; bir kısmı zaten cümlenin içinde geçtiği
   // için karşılığı boş bırakılmış olabilir.
   const trs = split(exampleTr);
-  const rows = items.map((s, i) => s ? `
+  const rows = items.map((s, i) => {
+    if (!s) return '';
+    // Çeviri ya ayrı alandan gelir ya da cümlenin içine gömülmüştür; ayrıştırma
+    // her iki durumda da çalışır, çünkü baştaki etiketi de o ayırıyor.
+    const parts = splitExampleHTML(s);
+    const en = parts ? parts.en : s;
+    const tr = trs[i] || (parts ? parts.tr : '');
+    const tag = parts && parts.label ? parts.label : '';
+    return `
     <div class="popover-example-item">
-      <div class="popover-example-en">${s}</div>
-      ${trs[i] ? `<div class="popover-example-tr">${trs[i]}</div>` : ''}
-    </div>` : '').filter(Boolean);
+      ${tag ? `<div class="popover-example-label">${tag}</div>` : ''}
+      <div class="popover-example-en">${en}</div>
+      ${tr ? `<div class="popover-example-tr">${tr}</div>` : ''}
+    </div>`;
+  }).filter(Boolean);
   if (!rows.length) return '';
   return `
     <details class="popover-examples">
