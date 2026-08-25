@@ -1721,10 +1721,10 @@ input {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-xl);
-  padding: 18px;
+  padding: 14px 14px 12px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   animation: popoverFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateX(-50%);
   backdrop-filter: blur(8px);
@@ -1761,7 +1761,7 @@ input {
 .popover-header {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .popover-title {
@@ -1777,10 +1777,10 @@ input {
 }
 
 .popover-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .popover-body {
@@ -1877,10 +1877,10 @@ input {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 12px;
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   box-shadow: var(--shadow-sm);
   transition: all 0.2s ease;
 }
@@ -6897,12 +6897,12 @@ input {
    POPOVER ALISTIRMA LISTESI TASARIMI
    ============================================================ */
 .popover-exercises-container {
-  margin-top: 14px;
+  margin-top: 8px;
   border-top: 1px solid var(--border-color);
-  padding-top: 14px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 /* "Alıştırma henüz yüklenmemiş" badge on lesson nodes */
@@ -6963,10 +6963,10 @@ input {
 
 .popover-exercises-title {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 2px;
+  margin-bottom: 0;
   letter-spacing: 0.01em;
 }
 
@@ -7025,12 +7025,12 @@ input {
 .popover-exercise-row .exercise-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-width: 0;
 }
 
 .popover-exercise-row .exercise-icon {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   flex-shrink: 0;
 }
 
@@ -12658,8 +12658,8 @@ nDown 0.3s ease;
 }
 
 .popover-examples {
-  margin-top: 10px;
-  padding-top: 8px;
+  margin-top: 6px;
+  padding-top: 6px;
   border-top: 1px dashed var(--border-color);
 }
 .popover-examples > summary {

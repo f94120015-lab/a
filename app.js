@@ -7512,7 +7512,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       rows.push(`<div class="grammar-formula"><span class="formula-badge">Formül</span>${formulaRowsHTML(formulaSrc, { hideTitleLike: lesson.title })}</div>`);
     }
     if (descSrc && !isGenericDescription(descSrc)) {
-      rows.push(`<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${rows.length ? 'margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-color);' : ''} line-height: 1.4;">${descSrc}</div>`);
+      rows.push(`<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${rows.length ? 'margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border-color);' : ''} line-height: 1.4;">${descSrc}</div>`);
     }
     const examples = examplesBlockHTML(exampleSrc, exampleLabel, exampleTrSrc);
     if (examples) rows.push(examples);
@@ -13369,15 +13369,17 @@ function getExamQuestions(session) {
 
 // Deneme sınavı yalnızca yerel geliştirme ortamında açık; yayındaki sürümde
 // dersler tamamlanmadan erişilmesin diye kilitli gösterilir.
+// Matrisler, robotlar, Yapısal Kurallar ve Deneme Sınavı web sürümünde de
+// açık. Kilit yalnızca localhost/file: ortamında açılıyordu, yani mobil paket
+// zaten açıktı; kapalı olan tek sürüm webdi. Kilit düzeneği (LOCKED_TABS,
+// applyTabLock, renderExamLocked) yerinde duruyor: geri almak için bu
+// fonksiyonu eski konak/protokol kontrolüne döndürmek yeterli.
 function isExamUnlocked() {
-  return window.location.hostname === 'localhost' ||
-         window.location.hostname === '127.0.0.1' ||
-         window.location.protocol === 'file:';
+  return true;
 }
 
-// Dersler, Hakkında ve Geri Bildirim dışındaki tüm sol menü sekmeleri, deneme
-// sınavıyla aynı kilide tabidir. Admin sekmesi zaten yalnızca geliştirme
-// ortamında görünür, Profil ise sol menüde değil kullanıcı menüsündedir.
+// Kilit geri getirilmek istenirse hangi sekmeleri kapsayacağının listesi.
+// isExamUnlocked() true döndüğü sürece bu liste etkisizdir.
 const LOCKED_TABS = ['time-matrix', 'transitions-matrix', 'simulator',
                      'structure-robot', 'exam', 'connector-drill'];
 
