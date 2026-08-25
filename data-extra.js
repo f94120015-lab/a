@@ -4344,7 +4344,7 @@ if (typeof lessons !== 'undefined') {
     "id": "c40_l1_merged",
     "unitId": 39,
     "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Zaman uyumunda temel ilke Present-Present ve Past-Past dengesidir. 'By the time' eylemin tamamlanma sınırını (miladını), 'Since' ise eylemin başladığı geçmiş noktayı belirler.",
@@ -4353,1010 +4353,844 @@ if (typeof lessons !== 'undefined') {
     "exercises": [
       {
         "id": "c40_l1_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "By the time sınır kilidi ile Since süreç kilidinin çekim eşleşmeleri.",
         "questions": [
-          {
-            "id": "c40_l1_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The archive directorate will review the archival registers provided that the restoration plan is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Arşiv müdürlüğü, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the central bank had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
-            "sentence": "If the central bank had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "englishPhrase": "If the central bank had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Merkez bankası gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l1_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the advisory committee ___ the new housing policy.\"",
-            "options": [
-              "evaluated",
-              "evaluates",
-              "will evaluate",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Araştırma enstitüsü, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q4",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The excavation team will review the archival registers provided that the restoration plan is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Kazı ekibi, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q5",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central bank insisted that the monetary committee ___ the new tariff policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluate",
-              "evaluates",
-              "evaluated"
-            ],
-            "correctIndex": 1,
-            "translation": "Merkez bankası, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the research institute had reviewed the field survey records, the funding dispute would not have occurred.\"",
-            "sentence": "If the research institute had reviewed the field survey records, the funding dispute would not have occurred.",
-            "englishPhrase": "If the research institute had reviewed the field survey records, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Araştırma enstitüsü saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l1_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The archive directorate insisted that the heritage committee ___ the new conservation policy.\"",
-            "options": [
-              "evaluated",
-              "evaluate",
-              "evaluates",
-              "will evaluate"
-            ],
-            "correctIndex": 1,
-            "translation": "Arşiv müdürlüğü, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The central bank will review the customs declarations provided that the funding request is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Merkez bankası, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q9",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the advisory committee ___ the new housing policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluates",
-              "evaluate",
-              "evaluated"
-            ],
-            "correctIndex": 2,
-            "translation": "Saha ekibi, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the agree was strict, the agreed community maintained its akademik.\"",
-            "translation": "AGREE kuralları sert olmasına rağmen, agreed topluluğu durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "agree",
-              "was",
-              "strict,",
-              "the",
-              "agreed",
-              "community",
-              "maintained",
-              "its",
-              "akademik."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "agree",
-              "was",
-              "strict,",
-              "the",
-              "agreed",
-              "community",
-              "maintained",
-              "its",
-              "akademik.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l1_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the changes the policy, / the alarak will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the changes the policy,",
-                "right": "the alarak will support the reform."
+                "id": "c40_l1_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the committee ___ the final report, the submission deadline had already passed.",
+                "options": [
+                  "reviewed",
+                  "reviews",
+                  "will review",
+                  "has reviewed"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite nihai raporu incelediğinde başvuru süresi çoktan dolmuştu.",
+                "explanation": "'By the time' geçmiş bağlamında yan cümlede V2, ana cümlede Had V3 ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "Since the allow was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l1_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "englishPhrase": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Fon geldiğinde laboratuvar pilot çalışmayı tamamlamış olacak.",
+                "explanation": "Gelecek bağlamında 'By the time + V1' ana cümlede 'will have V3' çeker; dizilim doğrudur.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l1_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scientists ___ the same glacier since the monitoring station opened in 2004.",
+                "options": [
+                  "have measured",
+                  "measured",
+                  "had measured",
+                  "measure"
+                ],
+                "correctIndex": 0,
+                "translation": "Bilim insanları izleme istasyonu 2004'te açıldığından beri aynı buzulu ölçüyor.",
+                "explanation": "'Since + V2' günümüze uzanan süreçte ana cümleye Have/Has V3 getirir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "englishPhrase": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Arşiv dijitalleştirildiğinden beri araştırmacılar kayıtlara uzaktan erişiyor.",
+                "explanation": "Süreç günümüze uzandığı için Past Perfect değil Present Perfect gerekir: 'have accessed'.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the audit team arrived, the accountants ___ the missing invoices.",
+                "options": [
+                  "had located",
+                  "located",
+                  "have located",
+                  "would locate"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetim ekibi geldiğinde muhasebeciler eksik faturaları bulmuştu.",
+                "explanation": "Yan cümle V2 ise ana cümlede önceliği Had V3 mühürler.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the trade agreement was signed, exports to the region have risen sharply.",
+                "options": [
+                  "Since",
+                  "By the time",
+                  "Until",
+                  "As soon as"
+                ],
+                "correctIndex": 0,
+                "translation": "Ticaret anlaşması imzalandığından beri bölgeye ihracat hızla arttı.",
+                "explanation": "Ana cümlede 'have risen' bulunduğu için başlangıç noktası bildiren 'Since' gerekir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "By 2030, the ministry ___ the entire rail network.",
+                "options": [
+                  "will have modernised",
+                  "will modernise",
+                  "has modernised",
+                  "had modernised"
+                ],
+                "correctIndex": 0,
+                "translation": "2030'a kadar bakanlık tüm demiryolu ağını modernize etmiş olacak.",
+                "explanation": "'By + gelecek tarih' eylemin o sınırda tamamlanmış olmasını, yani Future Perfect ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle 'By the time' kuralına uyar?",
+                "options": [
+                  "By the time the ferry docked, the passengers had collected their luggage.",
+                  "By the time the ferry docked, the passengers have collected their luggage.",
+                  "By the time the ferry docked, the passengers collect their luggage.",
+                  "By the time the ferry had docked, the passengers will collect their luggage."
+                ],
+                "correctIndex": 0,
+                "translation": "Feribot yanaştığında yolcular bagajlarını almıştı.",
+                "explanation": "Geçmiş bağlamda doğru dizilim 'By the time + V2 , Had V3'tür.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The institute has published four monographs ___ 2019.",
+                "options": [
+                  "since",
+                  "for",
+                  "by",
+                  "until"
+                ],
+                "correctIndex": 0,
+                "translation": "Enstitü 2019'dan beri dört monografi yayımladı.",
+                "explanation": "Belirli bir başlangıç noktası verildiğinde 'since', süre verildiğinde 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The team has been analysing the soil samples ___ six weeks.",
+                "options": [
+                  "for",
+                  "since",
+                  "by",
+                  "from"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip toprak örneklerini altı haftadır analiz ediyor.",
+                "explanation": "'six weeks' bir süre uzunluğudur; süre ile 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q11",
+                "type": "matching",
+                "prompt": "Yan cümledeki kalıbı doğru ana cümleyle eşleştirin:",
+                "leftHeader": "Yan Cümle",
+                "rightHeader": "Ana Cümle",
+                "pairs": [
+                  {
+                    "left": "By the time the storm reached the coast,",
+                    "right": "the harbour had been evacuated."
+                  },
+                  {
+                    "left": "By the time you receive this notice,",
+                    "right": "the committee will have announced its decision."
+                  },
+                  {
+                    "left": "Since the new protocol took effect,",
+                    "right": "complaint rates have fallen steadily."
+                  }
+                ],
+                "explanation": "Geçmiş sınır Had V3, gelecek sınır Will Have V3, süreç ise Have/Has V3 ile tamamlanır."
+              },
+              {
+                "id": "c40_l1_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman ifadesini gerektirdiği çekimle eşleştirin:",
+                "leftHeader": "Zaman İfadesi",
+                "rightHeader": "Gerekli Çekim",
+                "pairs": [
+                  {
+                    "left": "since the archive opened",
+                    "right": "have/has + V3"
+                  },
+                  {
+                    "left": "by the time the audit ended",
+                    "right": "had + V3"
+                  },
+                  {
+                    "left": "by next spring",
+                    "right": "will have + V3"
+                  }
+                ],
+                "explanation": "Since süreci, by the time ve by + gelecek tarih ise tamamlanma sınırını işaretler."
+              },
+              {
+                "id": "c40_l1_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The national library began digitising its manuscript collection in 2016. Since that decision was taken, more than forty thousand pages have been made publicly available. By the time the current phase ends next winter, the library will have processed the entire medieval section.",
+                "sentence": "Which structure correctly completes the timeline described in the paragraph?",
+                "options": [
+                  "By the time the phase ends, the library will have processed the medieval section.",
+                  "By the time the phase ends, the library processed the medieval section.",
+                  "Since the phase ends, the library had processed the medieval section."
+                ],
+                "correctIndex": 0,
+                "translation": "Bu aşama bittiğinde kütüphane ortaçağ bölümünü işlemiş olacak.",
+                "explanation": "Paragraf gelecekteki bir sınır veriyor; sınırda tamamlanma Future Perfect ile kurulur."
+              },
+              {
+                "id": "c40_l1_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "When the excavation permit was finally granted, the field team had already spent two seasons preparing the site survey. Since the permit arrived, the team has recovered several inscribed tablets that were previously thought lost.",
+                "sentence": "According to the paragraph, which sentence states the correct time relation?",
+                "options": [
+                  "Since the permit arrived, the team has recovered several tablets.",
+                  "Since the permit arrived, the team had recovered several tablets.",
+                  "By the time the permit arrived, the team recovers several tablets."
+                ],
+                "correctIndex": 0,
+                "translation": "İzin geldiğinden beri ekip birkaç tablet çıkardı.",
+                "explanation": "Başlangıç noktasından bugüne uzanan süreç Present Perfect ile aktarılır."
               }
             ]
-          },
-          {
-            "id": "c40_l1_merged_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the advisory committee ___ the new housing policy.\"",
-            "options": [
-              "evaluate",
-              "evaluated",
-              "evaluates",
-              "will evaluate"
-            ],
-            "correctIndex": 0,
-            "translation": "Anket birimi, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the also changes the policy, / the alter will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the also changes the policy,",
-                "right": "the alter will support the reform."
-              },
-              {
-                "left": "Since the altered was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l1_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audit team insisted that the monetary committee ___ the new tariff policy.\"",
-            "options": [
-              "evaluated",
-              "evaluates",
-              "evaluate",
-              "will evaluate"
-            ],
-            "correctIndex": 2,
-            "translation": "Denetim ekibi, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The amended concluded that the among and the analysis were stable.\"",
-            "correctAnswer": "AMENDED uzmanı, among ve analysis durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "AMENDED uzmanı, among ve analysis durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "baslik": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
       "teorikMantik": "Bu ders 2. Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect"
     },
     "exercises": [
       {
         "id": "c40_l2_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Until, as soon as, before, after, while ve when bağlaçlarının çekim kilitleri.",
         "questions": [
-          {
-            "id": "c40_l2_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The ethics board will review the case files provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Etik kurul, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the audit team had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
-            "sentence": "If the audit team had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "englishPhrase": "If the audit team had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Denetim ekibi gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l2_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the advisory committee ___ the new housing policy.\"",
-            "options": [
-              "evaluates",
-              "evaluate",
-              "evaluated",
-              "will evaluate"
-            ],
-            "correctIndex": 1,
-            "translation": "Etik inceleme kurulu, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q4",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The appeals chamber will review the case files provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Temyiz dairesi, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q5",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The trade ministry insisted that the monetary committee ___ the new tariff policy.\"",
-            "options": [
-              "evaluates",
-              "evaluate",
-              "evaluated",
-              "will evaluate"
-            ],
-            "correctIndex": 1,
-            "translation": "Ticaret bakanlığı, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the field team had reviewed the field survey records, the funding dispute would not have occurred.\"",
-            "sentence": "If the field team had reviewed the field survey records, the funding dispute would not have occurred.",
-            "englishPhrase": "If the field team had reviewed the field survey records, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Saha ekibi saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l2_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the advisory committee ___ the new disclosure policy.\"",
-            "options": [
-              "evaluate",
-              "will evaluate",
-              "evaluated",
-              "evaluates"
-            ],
-            "correctIndex": 0,
-            "translation": "Etik kurul, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The audit team will review the customs declarations provided that the funding request is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Denetim ekibi, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q9",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the ethics committee ___ the new housing policy.\"",
-            "options": [
-              "evaluates",
-              "will evaluate",
-              "evaluated",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Araştırma enstitüsü, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the artifacts was strict, the association community maintained its attached.\"",
-            "translation": "ARTIFACTS kuralları sert olmasına rağmen, association topluluğu attached durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "artifacts",
-              "was",
-              "strict,",
-              "the",
-              "association",
-              "community",
-              "maintained",
-              "its",
-              "attached."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "artifacts",
-              "was",
-              "strict,",
-              "the",
-              "association",
-              "community",
-              "maintained",
-              "its",
-              "attached.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l2_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the attached changes the policy, / the attended will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the attached changes the policy,",
-                "right": "the attended will support the reform."
+                "id": "c40_l2_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The committee will not release the figures until the auditors ___ their review.",
+                "options": [
+                  "complete",
+                  "will complete",
+                  "completed",
+                  "would complete"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetçiler incelemelerini tamamlayana kadar komite rakamları açıklamayacak.",
+                "explanation": "Zaman bağlacından sonra gelecek anlamı için WILL değil Present Simple (V1) kullanılır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "Since the audience was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l2_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "englishPhrase": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Sonuçlar gelir gelmez laboratuvar özeti yayımlayacak.",
+                "explanation": "'As soon as' yan cümlesinde WILL yasaktır; doğru biçim 'as soon as the results arrive'.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l2_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "While the technicians ___ the turbine, a power surge damaged the control unit.",
+                "options": [
+                  "were inspecting",
+                  "inspect",
+                  "have inspected",
+                  "will inspect"
+                ],
+                "correctIndex": 0,
+                "translation": "Teknisyenler türbini incelerken bir elektrik dalgalanması kontrol ünitesine zarar verdi.",
+                "explanation": "'While' süregelen bir arka plana işaret eder; Past Continuous ile kurulur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "After the ministry had approved the budget, the tender process began.",
+                "englishPhrase": "After the ministry had approved the budget, the tender process began.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Bakanlık bütçeyi onayladıktan sonra ihale süreci başladı.",
+                "explanation": "'After' önce olan eyleme Had V3, sonraki eyleme V2 verir; dizilim doğrudur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Before the regulation ___ into force, exporters had stockpiled the affected goods.",
+                "options": [
+                  "came",
+                  "had come",
+                  "comes",
+                  "will come"
+                ],
+                "correctIndex": 0,
+                "translation": "Düzenleme yürürlüğe girmeden önce ihracatçılar etkilenen malları stoklamıştı.",
+                "explanation": "'Before' sonraki eyleme V2, önceki eyleme Had V3 verir.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the vaccine was distributed nationwide, infection rates fell within two months.",
+                "options": [
+                  "After",
+                  "Until",
+                  "While",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Aşı ülke genelinde dağıtıldıktan sonra enfeksiyon oranları iki ay içinde düştü.",
+                "explanation": "İki geçmiş olay arasında sıralama kuran bağlaç 'after'tır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The archaeologist kept excavating ___ the light faded.",
+                "options": [
+                  "until",
+                  "as soon as",
+                  "before",
+                  "while"
+                ],
+                "correctIndex": 0,
+                "translation": "Arkeolog ışık kaybolana kadar kazmayı sürdürdü.",
+                "explanation": "Bir eylemin bittiği noktayı 'until' işaretler.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle zaman bağlacı kuralına uyar?",
+                "options": [
+                  "When the report is published, the committee will convene.",
+                  "When the report will be published, the committee will convene.",
+                  "When the report published, the committee convenes.",
+                  "When the report is published, the committee convened."
+                ],
+                "correctIndex": 0,
+                "translation": "Rapor yayımlandığında komite toplanacak.",
+                "explanation": "Yan cümle Present Simple, ana cümle Will V1 olur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the researchers were collecting samples, the weather station recorded a sudden drop.",
+                "options": [
+                  "While",
+                  "Until",
+                  "After",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Araştırmacılar numune toplarken meteoroloji istasyonu ani bir düşüş kaydetti.",
+                "explanation": "Süregelen bir eylemi kesen olay 'while' ile bağlanır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "As soon as the software ___ the anomaly, it locks the affected account.",
+                "options": [
+                  "detects",
+                  "will detect",
+                  "detected",
+                  "is detecting"
+                ],
+                "correctIndex": 0,
+                "translation": "Yazılım anormalliği tespit eder etmez etkilenen hesabı kilitler.",
+                "explanation": "Genel doğru anlatımında yan ve ana cümlenin ikisi de Present Simple kalır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q11",
+                "type": "matching",
+                "prompt": "Bağlacı doğru devam eden cümleyle eşleştirin:",
+                "leftHeader": "Zaman Bağlacı",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "The board will decide as soon as",
+                    "right": "the legal opinion arrives."
+                  },
+                  {
+                    "left": "The ferry had already left when",
+                    "right": "the delegation reached the port."
+                  },
+                  {
+                    "left": "The generators ran continuously until",
+                    "right": "the main grid was restored."
+                  }
+                ],
+                "explanation": "As soon as gelecek için Present, when geçmiş için V2, until ise bitiş sınırı ister."
+              },
+              {
+                "id": "c40_l2_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman bağlacını üstlendiği işlevle eşleştirin:",
+                "leftHeader": "Bağlaç",
+                "rightHeader": "İşlevi",
+                "pairs": [
+                  {
+                    "left": "until",
+                    "right": "eylemin bittiği sınırı verir"
+                  },
+                  {
+                    "left": "while",
+                    "right": "eşzamanlı süregelen arka planı verir"
+                  },
+                  {
+                    "left": "after",
+                    "right": "önce gerçekleşen eylemi işaretler"
+                  }
+                ],
+                "explanation": "Her bağlaç farklı bir zaman ilişkisi kurar: sınır, eşzamanlılık, öncelik."
+              },
+              {
+                "id": "c40_l2_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The observatory suspends all measurements while the calibration cycle is running. As soon as the cycle finishes, the operators reopen the dome. Until the humidity sensors are replaced next month, however, night sessions remain limited to four hours.",
+                "sentence": "According to the paragraph, when do the operators reopen the dome?",
+                "options": [
+                  "As soon as the calibration cycle finishes.",
+                  "While the calibration cycle is running.",
+                  "Until the humidity sensors are replaced."
+                ],
+                "correctIndex": 0,
+                "translation": "Kalibrasyon döngüsü biter bitmez operatörler kubbeyi yeniden açar.",
+                "explanation": "'As soon as the cycle finishes' peş peşeliği kuran ifadedir."
+              },
+              {
+                "id": "c40_l2_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "After the flood barriers had been reinforced, the municipality resumed construction on the riverside district. While the works continued, engineers monitored the water level hourly. The permits will not be extended until the final safety report is filed.",
+                "sentence": "Which sentence matches the time relations in the paragraph?",
+                "options": [
+                  "The permits will not be extended until the safety report is filed.",
+                  "The permits will not be extended until the safety report will be filed.",
+                  "The permits were not extended while the safety report is filed."
+                ],
+                "correctIndex": 0,
+                "translation": "Nihai güvenlik raporu sunulana kadar izinler uzatılmayacak.",
+                "explanation": "'Until' yan cümlesinde WILL kullanılmaz; Present Simple gelir."
               }
             ]
-          },
-          {
-            "id": "c40_l2_merged_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the ethics committee ___ the new housing policy.\"",
-            "options": [
-              "evaluate",
-              "evaluates",
-              "will evaluate",
-              "evaluated"
-            ],
-            "correctIndex": 0,
-            "translation": "Saha ekibi, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the author changes the policy, / the authority will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the author changes the policy,",
-                "right": "the authority will support the reform."
-              },
-              {
-                "left": "Since the authorize was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l2_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The rating agency insisted that the monetary committee ___ the new tariff policy.\"",
-            "options": [
-              "evaluated",
-              "evaluates",
-              "will evaluate",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Derecelendirme kuruluşu, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The avoided concluded that the bank and the barriers were stable.\"",
-            "correctAnswer": "AVOIDED uzmanı, bank ve barriers durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "AVOIDED uzmanı, bank ve barriers durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "baslik": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
       "teorikMantik": "Bu ders 3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0"
     },
     "exercises": [
       {
         "id": "c40_l3_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Once ile anlık geçiş kalıplarının (no sooner / hardly) devrik dizilimi.",
         "questions": [
-          {
-            "id": "c40_l3_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The legal commission will review the case files provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Hukuk komisyonu, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the research committee had reviewed the project reports, the funding dispute would not have occurred.\"",
-            "sentence": "If the research committee had reviewed the project reports, the funding dispute would not have occurred.",
-            "englishPhrase": "If the research committee had reviewed the project reports, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Araştırma komitesi proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l3_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The clinical board insisted that the ethics committee ___ the new screening policy.\"",
-            "options": [
-              "evaluated",
-              "will evaluate",
-              "evaluates",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Klinik kurul, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q4",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The bar association will review the case files provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Baro, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q5",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the advisory committee ___ the new funding policy.\"",
-            "options": [
-              "evaluates",
-              "evaluate",
-              "evaluated",
-              "will evaluate"
-            ],
-            "correctIndex": 1,
-            "translation": "Araştırma komitesi, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the clinical board had reviewed the patient records, the consent dispute would not have occurred.\"",
-            "sentence": "If the clinical board had reviewed the patient records, the consent dispute would not have occurred.",
-            "englishPhrase": "If the clinical board had reviewed the patient records, the consent dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Klinik kurul hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l3_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the advisory committee ___ the new disclosure policy.\"",
-            "options": [
-              "evaluated",
-              "evaluate",
-              "evaluates",
-              "will evaluate"
-            ],
-            "correctIndex": 1,
-            "translation": "Temyiz dairesi, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The research committee will review the project reports provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma komitesi, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q9",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research unit insisted that the ethics committee ___ the new screening policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluates",
-              "evaluated",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Araştırma birimi, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the board was strict, the border community maintained its borders.\"",
-            "translation": "BOARD kuralları sert olmasına rağmen, border topluluğu borders durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "board",
-              "was",
-              "strict,",
-              "the",
-              "border",
-              "community",
-              "maintained",
-              "its",
-              "borders."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "board",
-              "was",
-              "strict,",
-              "the",
-              "border",
-              "community",
-              "maintained",
-              "its",
-              "borders.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l3_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the borders changes the policy, / the boundaries will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the borders changes the policy,",
-                "right": "the boundaries will support the reform."
+                "id": "c40_l3_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "No sooner ___ the minister announced the reform than the markets reacted.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Bakan reformu açıklar açıklamaz piyasalar tepki verdi.",
+                "explanation": "'No sooner' başa geldiğinde devrik yapı 'had + özne + V3' kurulur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "Since the boundary was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l3_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Hardly had the delegation arrived when the negotiations resumed.",
+                "englishPhrase": "Hardly had the delegation arrived when the negotiations resumed.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Delegasyon gelir gelmez müzakereler yeniden başladı.",
+                "explanation": "Hardly + had + özne + V3 ... when + V2 dizilimi kuraldır; cümle doğrudur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l3_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Once the prototype ___ the stress test, the team filed the patent application.",
+                "options": [
+                  "passed",
+                  "passes",
+                  "had passed",
+                  "will pass"
+                ],
+                "correctIndex": 0,
+                "translation": "Prototip dayanıklılık testini geçince ekip patent başvurusunu yaptı.",
+                "explanation": "'Once' geçmiş anlatımında iki eylemi de V2 ile sıralayabilir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "englishPhrase": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Alarm çalar çalmaz personel binayı boşalttı.",
+                "explanation": "'No sooner' ikincil ek olarak 'than' ister; 'when' yalnızca hardly/scarcely ile gelir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scarcely had the results been verified ___ the journal requested a revision.",
+                "options": [
+                  "when",
+                  "than",
+                  "then",
+                  "as"
+                ],
+                "correctIndex": 0,
+                "translation": "Sonuçlar doğrulanır doğrulanmaz dergi bir revizyon istedi.",
+                "explanation": "Scarcely/Hardly/Barely kalıpları 'when' (ya da before) ekiyle tamamlanır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle devrik anlık geçiş kuralına uyar?",
+                "options": [
+                  "No sooner had the ship docked than the inspectors boarded it.",
+                  "No sooner the ship had docked than the inspectors boarded it.",
+                  "No sooner did the ship dock when the inspectors boarded it.",
+                  "No sooner has the ship docked than the inspectors boarded it."
+                ],
+                "correctIndex": 0,
+                "translation": "Gemi yanaşır yanaşmaz müfettişler gemiye çıktı.",
+                "explanation": "Yardımcı fiil özneden önce gelir ve ikinci eylem V2 olur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the committee had reviewed the objection, the ruling was published.",
+                "options": [
+                  "Once",
+                  "No sooner",
+                  "Hardly",
+                  "Than"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite itirazı inceledikten sonra karar yayımlandı.",
+                "explanation": "Devrik kurulmayan düz cümlede sıralama bağlacı 'once' kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Hardly ___ the excavation begun when heavy rain halted the work.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Kazı başlar başlamaz şiddetli yağmur çalışmayı durdurdu.",
+                "explanation": "Hardly başa geldiğinde Past Perfect devrik kurulur: had + özne + V3.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "'As soon as the referee blew the whistle, the players left the pitch.' cümlesinin devrik karşılığı hangisidir?",
+                "options": [
+                  "No sooner had the referee blown the whistle than the players left the pitch.",
+                  "No sooner the referee blew the whistle than the players left the pitch.",
+                  "Hardly the referee had blown the whistle than the players left the pitch.",
+                  "No sooner had the referee blown the whistle when the players left the pitch."
+                ],
+                "correctIndex": 0,
+                "translation": "Hakem düdüğü çalar çalmaz oyuncular sahadan ayrıldı.",
+                "explanation": "As soon as yapısı devriğe çevrilirken 'No sooner had + V3 ... than + V2' kalıbı kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Once the archive ___ catalogued, researchers may request digital copies.",
+                "options": [
+                  "has been",
+                  "will be",
+                  "had been",
+                  "is being"
+                ],
+                "correctIndex": 0,
+                "translation": "Arşiv kataloglandıktan sonra araştırmacılar dijital kopya isteyebilir.",
+                "explanation": "'Once' yan cümlesinde gelecek için WILL değil Present Perfect/Present kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q11",
+                "type": "matching",
+                "prompt": "Devrik başlangıcı doğru devamıyla eşleştirin:",
+                "leftHeader": "Devrik Başlangıç",
+                "rightHeader": "İkincil Ek ve Devamı",
+                "pairs": [
+                  {
+                    "left": "No sooner had the satellite entered orbit",
+                    "right": "than the ground station lost contact."
+                  },
+                  {
+                    "left": "Hardly had the surgeon completed the procedure",
+                    "right": "when the monitors stabilised."
+                  },
+                  {
+                    "left": "Once the licence had been renewed,",
+                    "right": "the workshop reopened to visitors."
+                  }
+                ],
+                "explanation": "No sooner 'than', hardly 'when' alır; once ise düz sıralama kurar."
+              },
+              {
+                "id": "c40_l3_merged_q12",
+                "type": "matching",
+                "prompt": "Kalıbı gerektirdiği ikincil ekle eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "İkincil Ek",
+                "pairs": [
+                  {
+                    "left": "No sooner + had + S + V3",
+                    "right": "than"
+                  },
+                  {
+                    "left": "Hardly + had + S + V3",
+                    "right": "when / before"
+                  },
+                  {
+                    "left": "Once + S + V2",
+                    "right": "(ek almaz)"
+                  }
+                ],
+                "explanation": "Anlık geçiş kalıplarının ikincil eki sabittir; karıştırılırsa cümle bozulur."
+              },
+              {
+                "id": "c40_l3_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The eruption was recorded at 04:12. No sooner had the seismographs registered the first tremor than the civil protection agency issued a regional alert. Hardly had the alert reached the coastal villages when the first evacuation buses departed.",
+                "sentence": "Which sentence follows the inversion rules used in the paragraph?",
+                "options": [
+                  "No sooner had the tremor been registered than the alert was issued.",
+                  "No sooner the tremor had been registered when the alert was issued.",
+                  "Hardly had the tremor been registered than the alert was issued."
+                ],
+                "correctIndex": 0,
+                "translation": "Sarsıntı kaydedilir kaydedilmez uyarı yayımlandı.",
+                "explanation": "No sooner 'than' ile, hardly 'when' ile tamamlanır; devrik dizilim korunmalıdır."
+              },
+              {
+                "id": "c40_l3_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Once the restoration team had removed the later plaster layers, an earlier fresco became visible. Hardly had the discovery been announced when three universities requested access to the site.",
+                "sentence": "According to the paragraph, what happened immediately after the announcement?",
+                "options": [
+                  "Three universities requested access to the site.",
+                  "The restoration team removed the plaster layers.",
+                  "The fresco was covered again."
+                ],
+                "correctIndex": 0,
+                "translation": "Duyurunun hemen ardından üç üniversite alana erişim talep etti.",
+                "explanation": "'Hardly ... when' iki olay arasındaki anlık geçişi kurar."
               }
             ]
-          },
-          {
-            "id": "c40_l3_merged_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The assessment team insisted that the ethics committee ___ the new screening policy.\"",
-            "options": [
-              "evaluated",
-              "will evaluate",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Değerlendirme ekibi, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the broadcasted changes the policy, / the budget will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the broadcasted changes the policy,",
-                "right": "the budget will support the reform."
-              },
-              {
-                "left": "Since the bulun was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l3_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the advisory committee ___ the new funding policy.\"",
-            "options": [
-              "evaluated",
-              "will evaluate",
-              "evaluates",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Üniversite senatosu, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The calibrated concluded that the case and the cause were stable.\"",
-            "correctAnswer": "CALIBRATED uzmanı, case ve cause durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "CALIBRATED uzmanı, case ve cause durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
@@ -5364,7 +5198,7 @@ if (typeof lessons !== 'undefined') {
     "id": "c56_l7",
     "unitId": 39,
     "title": "20. Keşke Yapıları",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "20. Keşke Yapıları",
       "teorikMantik": "Bu ders 20. Keşke Yapıları yapısının sentaks ve anlam kurallarını pekiştirir.",
@@ -5373,330 +5207,274 @@ if (typeof lessons !== 'undefined') {
     "exercises": [
       {
         "id": "c56_l7_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Wish ve if only kalıplarında zaman kayması ve pişmanlık ayrımı.",
         "questions": [
-          {
-            "id": "c56_l7_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The university senate will review the project reports provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Üniversite senatosu, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the survey unit had reviewed the field survey records, the funding dispute would not have occurred.\"",
-            "sentence": "If the survey unit had reviewed the field survey records, the funding dispute would not have occurred.",
-            "englishPhrase": "If the survey unit had reviewed the field survey records, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Anket birimi saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c56_l7_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the advisory committee ___ the new disclosure policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluates",
-              "evaluated",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Hukuk komisyonu, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q4",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The editorial board will review the project reports provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Yayın kurulu, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q5",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the ethics committee ___ the new housing policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Anket birimi, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the ethics board had reviewed the case files, the licensing dispute would not have occurred.\"",
-            "sentence": "If the ethics board had reviewed the case files, the licensing dispute would not have occurred.",
-            "englishPhrase": "If the ethics board had reviewed the case files, the licensing dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Etik kurul dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c56_l7_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the advisory committee ___ the new funding policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Yayın kurulu, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The research institute will review the field survey records provided that the revised protocol is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma enstitüsü, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q9",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bar association insisted that the advisory committee ___ the new disclosure policy.\"",
-            "options": [
-              "evaluate",
-              "will evaluate",
-              "evaluates",
-              "evaluated"
-            ],
-            "correctIndex": 0,
-            "translation": "Baro, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the study was strict, the subject community maintained its subjunctive.\"",
-            "translation": "STUDY kuralları sert olmasına rağmen, subject topluluğu subjunctive durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "study",
-              "was",
-              "strict,",
-              "the",
-              "subject",
-              "community",
-              "maintained",
-              "its",
-              "subjunctive."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "study",
-              "was",
-              "strict,",
-              "the",
-              "subject",
-              "community",
-              "maintained",
-              "its",
-              "subjunctive.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c56_l7_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the subjunctive changes the policy, / the such will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the subjunctive changes the policy,",
-                "right": "the such will support the reform."
+                "id": "c56_l7_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The curator wishes the gallery ___ larger windows.",
+                "options": [
+                  "had",
+                  "has",
+                  "will have",
+                  "would have had"
+                ],
+                "correctIndex": 0,
+                "translation": "Küratör galerinin daha büyük pencereleri olmasını isterdi.",
+                "explanation": "Şu anki gerçeğe duyulan pişmanlık 'wish + V2' ile kurulur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
               },
               {
-                "left": "Since the sudden was established,",
-                "right": "the community has maintained stability."
+                "id": "c56_l7_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "I wish I had checked the calibration before the session started.",
+                "englishPhrase": "I wish I had checked the calibration before the session started.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Keşke oturum başlamadan önce kalibrasyonu kontrol etseydim.",
+                "explanation": "Geçmişe duyulan pişmanlık 'wish + had V3' ile kurulur; cümle doğrudur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c56_l7_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The team wishes the funding body ___ its decision more quickly.",
+                "options": [
+                  "would announce",
+                  "announces",
+                  "announced would",
+                  "will announce"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip, fon kuruluşunun kararını daha hızlı açıklamasını istiyor.",
+                "explanation": "Başkasının davranışından duyulan rahatsızlık 'wish + would V1' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "If only the archive would be catalogued before the fire, the records would have survived.",
+                "englishPhrase": "If only the archive would be catalogued before the fire, the records would have survived.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Keşke arşiv yangından önce kataloglanmış olsaydı, kayıtlar kurtulurdu.",
+                "explanation": "Geçmiş için 'would be' değil 'had been' gerekir: 'If only the archive had been catalogued'.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "If only we ___ the sensors last winter, the data gap would be smaller now.",
+                "options": [
+                  "had replaced",
+                  "replaced",
+                  "would replace",
+                  "have replaced"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke sensörleri geçen kış değiştirseydik, şimdi veri boşluğu daha küçük olurdu.",
+                "explanation": "Geçmiş koşul 'had V3' ile kurulur; sonucu bugüne bakarsa karma koşul oluşur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle şu anki bir duruma duyulan pişmanlığı anlatır?",
+                "options": [
+                  "I wish the laboratory were closer to the campus.",
+                  "I wish the laboratory had been closer to the campus.",
+                  "I wish the laboratory will be closer to the campus.",
+                  "I wish the laboratory is closer to the campus."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke laboratuvar kampüse daha yakın olsa.",
+                "explanation": "Şimdiki gerçeğin tersi 'wish + V2 (were)' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The editors wish the author ___ the deadline last month.",
+                "options": [
+                  "had met",
+                  "met",
+                  "would meet",
+                  "has met"
+                ],
+                "correctIndex": 0,
+                "translation": "Editörler yazarın geçen ay teslim tarihine uymasını isterdi.",
+                "explanation": "'last month' geçmiş bağlamıdır; wish sonrası had V3 gerekir.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q8",
+                "type": "multiple-choice",
+                "prompt": "'It is a pity that the sensors keep failing.' cümlesinin wish karşılığı hangisidir?",
+                "options": [
+                  "I wish the sensors would stop failing.",
+                  "I wish the sensors stopped failing yesterday.",
+                  "I wish the sensors had stopped failing now.",
+                  "I wish the sensors will stop failing."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke sensörler arıza vermeyi bıraksa.",
+                "explanation": "Süregelen rahatsız edici davranış 'wish + would V1' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "If only the committee ___ the objection, the ruling would be different today.",
+                "options": [
+                  "had considered",
+                  "considered",
+                  "would consider",
+                  "has considered"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke komite itirazı dikkate alsaydı, bugün karar farklı olurdu.",
+                "explanation": "Geçmiş koşul + bugünkü sonuç karma yapısıdır: had V3 ... would V1.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "'I wish I ___ more time in the archive during the fellowship.'",
+                "options": [
+                  "had spent",
+                  "spent",
+                  "would spend",
+                  "have spent"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke burs süresince arşivde daha fazla zaman geçirseydim.",
+                "explanation": "Bitmiş bir dönem anlatıldığı için geçmiş pişmanlığı had V3 ister.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q11",
+                "type": "matching",
+                "prompt": "Kalıbı anlattığı duruma eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "Anlatılan Durum",
+                "pairs": [
+                  {
+                    "left": "wish + V2",
+                    "right": "şu anki gerçeğe duyulan pişmanlık"
+                  },
+                  {
+                    "left": "wish + had V3",
+                    "right": "geçmişte olan/olmayan şeye pişmanlık"
+                  },
+                  {
+                    "left": "wish + would V1",
+                    "right": "başkasının davranışından duyulan rahatsızlık"
+                  }
+                ],
+                "explanation": "Wish sonrası çekim, pişmanlığın hangi zamana ait olduğunu belirler."
+              },
+              {
+                "id": "c56_l7_q12",
+                "type": "matching",
+                "prompt": "Cümle başlangıcını doğru devamıyla eşleştirin:",
+                "leftHeader": "Başlangıç",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "I wish the storm",
+                    "right": "were over by now."
+                  },
+                  {
+                    "left": "I wish the crew",
+                    "right": "had secured the equipment last night."
+                  },
+                  {
+                    "left": "I wish the neighbours",
+                    "right": "would lower the volume after midnight."
+                  }
+                ],
+                "explanation": "Şimdiki durum V2, geçmiş had V3, davranış şikâyeti would V1 alır."
+              },
+              {
+                "id": "c56_l7_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The restoration was postponed twice. The director now says she wishes the foundation had released the funds a year earlier, and that she wishes the current schedule were less compressed.",
+                "sentence": "Which structure expresses regret about the past in the paragraph?",
+                "options": [
+                  "she wishes the foundation had released the funds earlier",
+                  "she wishes the current schedule were less compressed",
+                  "she wishes the foundation would release the funds"
+                ],
+                "correctIndex": 0,
+                "translation": "Vakfın fonu bir yıl önce serbest bırakmış olmasını isterdi.",
+                "explanation": "Geçmişe dönük pişmanlık 'wish + had V3' ile kurulur."
+              },
+              {
+                "id": "c56_l7_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Field notes from the 1970s are incomplete. Researchers often say: if only the original team had recorded the coordinates, the sites could be relocated today. Many also wish the notebooks were stored in a single archive rather than four.",
+                "sentence": "Which sentence uses 'if only' correctly for a past regret?",
+                "options": [
+                  "If only the team had recorded the coordinates.",
+                  "If only the team would record the coordinates.",
+                  "If only the team recorded the coordinates yesterday."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke ekip koordinatları kaydetmiş olsaydı.",
+                "explanation": "'If only' geçmiş pişmanlığında had V3 alır."
               }
             ]
-          },
-          {
-            "id": "c56_l7_q12",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the disciplinary board ___ the new disclosure policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluate",
-              "evaluated",
-              "evaluates"
-            ],
-            "correctIndex": 1,
-            "translation": "Etik kurul, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the suggested changes the policy, / the supervision will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the suggested changes the policy,",
-                "right": "the supervision will support the reform."
-              },
-              {
-                "left": "Since the support was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c56_l7_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the ethics committee ___ the new housing policy.\"",
-            "options": [
-              "evaluates",
-              "will evaluate",
-              "evaluated",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Etik inceleme kurulu, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The survey concluded that the symbolic and the symposia were stable.\"",
-            "correctAnswer": "SURVEY uzmanı, symbolic ve symposia durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "SURVEY uzmanı, symbolic ve symposia durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   }
@@ -5725,7 +5503,7 @@ if (typeof lessons !== 'undefined') {
     "id": "c40_l1_merged",
     "unitId": 39,
     "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Zaman uyumunda temel ilke Present-Present ve Past-Past dengesidir. 'By the time' eylemin tamamlanma sınırını (miladını), 'Since' ise eylemin başladığı geçmiş noktayı belirler.",
@@ -5734,1007 +5512,844 @@ if (typeof lessons !== 'undefined') {
     "exercises": [
       {
         "id": "c40_l1_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "By the time sınır kilidi ile Since süreç kilidinin çekim eşleşmeleri.",
         "questions": [
-          {
-            "id": "c40_l1_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The heritage council will review the archival registers provided that the restoration plan is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Miras konseyi, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the trade ministry had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
-            "sentence": "If the trade ministry had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "englishPhrase": "If the trade ministry had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Ticaret bakanlığı gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l1_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the steering group ___ the new housing policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Araştırma enstitüsü, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archive directorate approved the restoration plan, ___ was supported by the heritage committee.\"",
-            "options": [
-              "which was supported by the heritage committee",
-              "because was supported by the heritage committee",
-              "so was supported by the heritage committee",
-              "although was supported by the heritage committee"
-            ],
-            "correctIndex": 0,
-            "translation": "Arşiv müdürlüğü, miras komitesi tarafından desteklenen restorasyon planını onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l1_merged_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The central bank analyzed the customs declarations, ___ was crucial for market stability.\"",
-            "options": [
-              "whom",
-              "which",
-              "where",
-              "that"
-            ],
-            "correctIndex": 1,
-            "translation": "Merkez bankası, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l1_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the ethics review board had reviewed the field survey records, the funding dispute would not have occurred.\"",
-            "sentence": "If the ethics review board had reviewed the field survey records, the funding dispute would not have occurred.",
-            "englishPhrase": "If the ethics review board had reviewed the field survey records, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Etik inceleme kurulu saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l1_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The excavation team insisted that the heritage committee ___ the new conservation policy.\"",
-            "options": [
-              "evaluates",
-              "will evaluate",
-              "evaluate",
-              "evaluated"
-            ],
-            "correctIndex": 2,
-            "translation": "Kazı ekibi, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The trade ministry will review the customs declarations provided that the funding request is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Ticaret bakanlığı, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research institute approved the revised protocol, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 2,
-            "translation": "Araştırma enstitüsü, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l1_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the agree was strict, the agreed community maintained its akademik.\"",
-            "translation": "AGREE kuralları sert olmasına rağmen, agreed topluluğu durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "agree",
-              "was",
-              "strict,",
-              "the",
-              "agreed",
-              "community",
-              "maintained",
-              "its",
-              "akademik."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "agree",
-              "was",
-              "strict,",
-              "the",
-              "agreed",
-              "community",
-              "maintained",
-              "its",
-              "akademik.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l1_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the changes the policy, / the alarak will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the changes the policy,",
-                "right": "the alarak will support the reform."
+                "id": "c40_l1_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the committee ___ the final report, the submission deadline had already passed.",
+                "options": [
+                  "reviewed",
+                  "reviews",
+                  "will review",
+                  "has reviewed"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite nihai raporu incelediğinde başvuru süresi çoktan dolmuştu.",
+                "explanation": "'By the time' geçmiş bağlamında yan cümlede V2, ana cümlede Had V3 ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "Since the allow was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l1_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "englishPhrase": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Fon geldiğinde laboratuvar pilot çalışmayı tamamlamış olacak.",
+                "explanation": "Gelecek bağlamında 'By the time + V1' ana cümlede 'will have V3' çeker; dizilim doğrudur.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l1_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scientists ___ the same glacier since the monitoring station opened in 2004.",
+                "options": [
+                  "have measured",
+                  "measured",
+                  "had measured",
+                  "measure"
+                ],
+                "correctIndex": 0,
+                "translation": "Bilim insanları izleme istasyonu 2004'te açıldığından beri aynı buzulu ölçüyor.",
+                "explanation": "'Since + V2' günümüze uzanan süreçte ana cümleye Have/Has V3 getirir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "englishPhrase": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Arşiv dijitalleştirildiğinden beri araştırmacılar kayıtlara uzaktan erişiyor.",
+                "explanation": "Süreç günümüze uzandığı için Past Perfect değil Present Perfect gerekir: 'have accessed'.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the audit team arrived, the accountants ___ the missing invoices.",
+                "options": [
+                  "had located",
+                  "located",
+                  "have located",
+                  "would locate"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetim ekibi geldiğinde muhasebeciler eksik faturaları bulmuştu.",
+                "explanation": "Yan cümle V2 ise ana cümlede önceliği Had V3 mühürler.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the trade agreement was signed, exports to the region have risen sharply.",
+                "options": [
+                  "Since",
+                  "By the time",
+                  "Until",
+                  "As soon as"
+                ],
+                "correctIndex": 0,
+                "translation": "Ticaret anlaşması imzalandığından beri bölgeye ihracat hızla arttı.",
+                "explanation": "Ana cümlede 'have risen' bulunduğu için başlangıç noktası bildiren 'Since' gerekir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "By 2030, the ministry ___ the entire rail network.",
+                "options": [
+                  "will have modernised",
+                  "will modernise",
+                  "has modernised",
+                  "had modernised"
+                ],
+                "correctIndex": 0,
+                "translation": "2030'a kadar bakanlık tüm demiryolu ağını modernize etmiş olacak.",
+                "explanation": "'By + gelecek tarih' eylemin o sınırda tamamlanmış olmasını, yani Future Perfect ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle 'By the time' kuralına uyar?",
+                "options": [
+                  "By the time the ferry docked, the passengers had collected their luggage.",
+                  "By the time the ferry docked, the passengers have collected their luggage.",
+                  "By the time the ferry docked, the passengers collect their luggage.",
+                  "By the time the ferry had docked, the passengers will collect their luggage."
+                ],
+                "correctIndex": 0,
+                "translation": "Feribot yanaştığında yolcular bagajlarını almıştı.",
+                "explanation": "Geçmiş bağlamda doğru dizilim 'By the time + V2 , Had V3'tür.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The institute has published four monographs ___ 2019.",
+                "options": [
+                  "since",
+                  "for",
+                  "by",
+                  "until"
+                ],
+                "correctIndex": 0,
+                "translation": "Enstitü 2019'dan beri dört monografi yayımladı.",
+                "explanation": "Belirli bir başlangıç noktası verildiğinde 'since', süre verildiğinde 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The team has been analysing the soil samples ___ six weeks.",
+                "options": [
+                  "for",
+                  "since",
+                  "by",
+                  "from"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip toprak örneklerini altı haftadır analiz ediyor.",
+                "explanation": "'six weeks' bir süre uzunluğudur; süre ile 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q11",
+                "type": "matching",
+                "prompt": "Yan cümledeki kalıbı doğru ana cümleyle eşleştirin:",
+                "leftHeader": "Yan Cümle",
+                "rightHeader": "Ana Cümle",
+                "pairs": [
+                  {
+                    "left": "By the time the storm reached the coast,",
+                    "right": "the harbour had been evacuated."
+                  },
+                  {
+                    "left": "By the time you receive this notice,",
+                    "right": "the committee will have announced its decision."
+                  },
+                  {
+                    "left": "Since the new protocol took effect,",
+                    "right": "complaint rates have fallen steadily."
+                  }
+                ],
+                "explanation": "Geçmiş sınır Had V3, gelecek sınır Will Have V3, süreç ise Have/Has V3 ile tamamlanır."
+              },
+              {
+                "id": "c40_l1_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman ifadesini gerektirdiği çekimle eşleştirin:",
+                "leftHeader": "Zaman İfadesi",
+                "rightHeader": "Gerekli Çekim",
+                "pairs": [
+                  {
+                    "left": "since the archive opened",
+                    "right": "have/has + V3"
+                  },
+                  {
+                    "left": "by the time the audit ended",
+                    "right": "had + V3"
+                  },
+                  {
+                    "left": "by next spring",
+                    "right": "will have + V3"
+                  }
+                ],
+                "explanation": "Since süreci, by the time ve by + gelecek tarih ise tamamlanma sınırını işaretler."
+              },
+              {
+                "id": "c40_l1_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The national library began digitising its manuscript collection in 2016. Since that decision was taken, more than forty thousand pages have been made publicly available. By the time the current phase ends next winter, the library will have processed the entire medieval section.",
+                "sentence": "Which structure correctly completes the timeline described in the paragraph?",
+                "options": [
+                  "By the time the phase ends, the library will have processed the medieval section.",
+                  "By the time the phase ends, the library processed the medieval section.",
+                  "Since the phase ends, the library had processed the medieval section."
+                ],
+                "correctIndex": 0,
+                "translation": "Bu aşama bittiğinde kütüphane ortaçağ bölümünü işlemiş olacak.",
+                "explanation": "Paragraf gelecekteki bir sınır veriyor; sınırda tamamlanma Future Perfect ile kurulur."
+              },
+              {
+                "id": "c40_l1_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "When the excavation permit was finally granted, the field team had already spent two seasons preparing the site survey. Since the permit arrived, the team has recovered several inscribed tablets that were previously thought lost.",
+                "sentence": "According to the paragraph, which sentence states the correct time relation?",
+                "options": [
+                  "Since the permit arrived, the team has recovered several tablets.",
+                  "Since the permit arrived, the team had recovered several tablets.",
+                  "By the time the permit arrived, the team recovers several tablets."
+                ],
+                "correctIndex": 0,
+                "translation": "İzin geldiğinden beri ekip birkaç tablet çıkardı.",
+                "explanation": "Başlangıç noktasından bugüne uzanan süreç Present Perfect ile aktarılır."
               }
             ]
-          },
-          {
-            "id": "c40_l1_merged_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research institute analyzed the field survey records, ___ was crucial for social cohesion.\"",
-            "options": [
-              "which",
-              "where",
-              "whom",
-              "that"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma enstitüsü, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l1_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the also changes the policy, / the alter will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the also changes the policy,",
-                "right": "the alter will support the reform."
-              },
-              {
-                "left": "Since the altered was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l1_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central bank insisted that the budget commission ___ the new tariff policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluate",
-              "evaluated",
-              "evaluates"
-            ],
-            "correctIndex": 1,
-            "translation": "Merkez bankası, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The amended concluded that the among and the analysis were stable.\"",
-            "correctAnswer": "AMENDED uzmanı, among ve analysis durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "AMENDED uzmanı, among ve analysis durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "baslik": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
       "teorikMantik": "Bu ders 2. Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect"
     },
     "exercises": [
       {
         "id": "c40_l2_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Until, as soon as, before, after, while ve when bağlaçlarının çekim kilitleri.",
         "questions": [
-          {
-            "id": "c40_l2_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The ethics board will review the arbitration records provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Etik kurul, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the rating agency had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
-            "sentence": "If the rating agency had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "englishPhrase": "If the rating agency had reviewed the customs declarations, the tariff dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Derecelendirme kuruluşu gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l2_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the steering group ___ the new housing policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluates",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Saha ekibi, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics board approved the revised procedure, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 1,
-            "translation": "Etik kurul, danışma komitesi tarafından desteklenen revize usulü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l2_merged_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The audit team analyzed the customs declarations, ___ was crucial for market stability.\"",
-            "options": [
-              "whom",
-              "where",
-              "which",
-              "that"
-            ],
-            "correctIndex": 2,
-            "translation": "Denetim ekibi, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l2_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research institute had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
-            "sentence": "If the research institute had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "englishPhrase": "If the research institute had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Araştırma enstitüsü görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l2_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the disciplinary board ___ the new disclosure policy.\"",
-            "options": [
-              "evaluate",
-              "will evaluate",
-              "evaluates",
-              "evaluated"
-            ],
-            "correctIndex": 0,
-            "translation": "Temyiz dairesi, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The rating agency will review the customs declarations provided that the funding request is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Derecelendirme kuruluşu, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The field team approved the revised protocol, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 1,
-            "translation": "Saha ekibi, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l2_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the artifacts was strict, the association community maintained its attached.\"",
-            "translation": "ARTIFACTS kuralları sert olmasına rağmen, association topluluğu attached durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "artifacts",
-              "was",
-              "strict,",
-              "the",
-              "association",
-              "community",
-              "maintained",
-              "its",
-              "attached."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "artifacts",
-              "was",
-              "strict,",
-              "the",
-              "association",
-              "community",
-              "maintained",
-              "its",
-              "attached.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l2_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the attached changes the policy, / the attended will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the attached changes the policy,",
-                "right": "the attended will support the reform."
+                "id": "c40_l2_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The committee will not release the figures until the auditors ___ their review.",
+                "options": [
+                  "complete",
+                  "will complete",
+                  "completed",
+                  "would complete"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetçiler incelemelerini tamamlayana kadar komite rakamları açıklamayacak.",
+                "explanation": "Zaman bağlacından sonra gelecek anlamı için WILL değil Present Simple (V1) kullanılır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "Since the audience was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l2_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "englishPhrase": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Sonuçlar gelir gelmez laboratuvar özeti yayımlayacak.",
+                "explanation": "'As soon as' yan cümlesinde WILL yasaktır; doğru biçim 'as soon as the results arrive'.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l2_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "While the technicians ___ the turbine, a power surge damaged the control unit.",
+                "options": [
+                  "were inspecting",
+                  "inspect",
+                  "have inspected",
+                  "will inspect"
+                ],
+                "correctIndex": 0,
+                "translation": "Teknisyenler türbini incelerken bir elektrik dalgalanması kontrol ünitesine zarar verdi.",
+                "explanation": "'While' süregelen bir arka plana işaret eder; Past Continuous ile kurulur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "After the ministry had approved the budget, the tender process began.",
+                "englishPhrase": "After the ministry had approved the budget, the tender process began.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Bakanlık bütçeyi onayladıktan sonra ihale süreci başladı.",
+                "explanation": "'After' önce olan eyleme Had V3, sonraki eyleme V2 verir; dizilim doğrudur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Before the regulation ___ into force, exporters had stockpiled the affected goods.",
+                "options": [
+                  "came",
+                  "had come",
+                  "comes",
+                  "will come"
+                ],
+                "correctIndex": 0,
+                "translation": "Düzenleme yürürlüğe girmeden önce ihracatçılar etkilenen malları stoklamıştı.",
+                "explanation": "'Before' sonraki eyleme V2, önceki eyleme Had V3 verir.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the vaccine was distributed nationwide, infection rates fell within two months.",
+                "options": [
+                  "After",
+                  "Until",
+                  "While",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Aşı ülke genelinde dağıtıldıktan sonra enfeksiyon oranları iki ay içinde düştü.",
+                "explanation": "İki geçmiş olay arasında sıralama kuran bağlaç 'after'tır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The archaeologist kept excavating ___ the light faded.",
+                "options": [
+                  "until",
+                  "as soon as",
+                  "before",
+                  "while"
+                ],
+                "correctIndex": 0,
+                "translation": "Arkeolog ışık kaybolana kadar kazmayı sürdürdü.",
+                "explanation": "Bir eylemin bittiği noktayı 'until' işaretler.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle zaman bağlacı kuralına uyar?",
+                "options": [
+                  "When the report is published, the committee will convene.",
+                  "When the report will be published, the committee will convene.",
+                  "When the report published, the committee convenes.",
+                  "When the report is published, the committee convened."
+                ],
+                "correctIndex": 0,
+                "translation": "Rapor yayımlandığında komite toplanacak.",
+                "explanation": "Yan cümle Present Simple, ana cümle Will V1 olur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the researchers were collecting samples, the weather station recorded a sudden drop.",
+                "options": [
+                  "While",
+                  "Until",
+                  "After",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Araştırmacılar numune toplarken meteoroloji istasyonu ani bir düşüş kaydetti.",
+                "explanation": "Süregelen bir eylemi kesen olay 'while' ile bağlanır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "As soon as the software ___ the anomaly, it locks the affected account.",
+                "options": [
+                  "detects",
+                  "will detect",
+                  "detected",
+                  "is detecting"
+                ],
+                "correctIndex": 0,
+                "translation": "Yazılım anormalliği tespit eder etmez etkilenen hesabı kilitler.",
+                "explanation": "Genel doğru anlatımında yan ve ana cümlenin ikisi de Present Simple kalır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q11",
+                "type": "matching",
+                "prompt": "Bağlacı doğru devam eden cümleyle eşleştirin:",
+                "leftHeader": "Zaman Bağlacı",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "The board will decide as soon as",
+                    "right": "the legal opinion arrives."
+                  },
+                  {
+                    "left": "The ferry had already left when",
+                    "right": "the delegation reached the port."
+                  },
+                  {
+                    "left": "The generators ran continuously until",
+                    "right": "the main grid was restored."
+                  }
+                ],
+                "explanation": "As soon as gelecek için Present, when geçmiş için V2, until ise bitiş sınırı ister."
+              },
+              {
+                "id": "c40_l2_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman bağlacını üstlendiği işlevle eşleştirin:",
+                "leftHeader": "Bağlaç",
+                "rightHeader": "İşlevi",
+                "pairs": [
+                  {
+                    "left": "until",
+                    "right": "eylemin bittiği sınırı verir"
+                  },
+                  {
+                    "left": "while",
+                    "right": "eşzamanlı süregelen arka planı verir"
+                  },
+                  {
+                    "left": "after",
+                    "right": "önce gerçekleşen eylemi işaretler"
+                  }
+                ],
+                "explanation": "Her bağlaç farklı bir zaman ilişkisi kurar: sınır, eşzamanlılık, öncelik."
+              },
+              {
+                "id": "c40_l2_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The observatory suspends all measurements while the calibration cycle is running. As soon as the cycle finishes, the operators reopen the dome. Until the humidity sensors are replaced next month, however, night sessions remain limited to four hours.",
+                "sentence": "According to the paragraph, when do the operators reopen the dome?",
+                "options": [
+                  "As soon as the calibration cycle finishes.",
+                  "While the calibration cycle is running.",
+                  "Until the humidity sensors are replaced."
+                ],
+                "correctIndex": 0,
+                "translation": "Kalibrasyon döngüsü biter bitmez operatörler kubbeyi yeniden açar.",
+                "explanation": "'As soon as the cycle finishes' peş peşeliği kuran ifadedir."
+              },
+              {
+                "id": "c40_l2_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "After the flood barriers had been reinforced, the municipality resumed construction on the riverside district. While the works continued, engineers monitored the water level hourly. The permits will not be extended until the final safety report is filed.",
+                "sentence": "Which sentence matches the time relations in the paragraph?",
+                "options": [
+                  "The permits will not be extended until the safety report is filed.",
+                  "The permits will not be extended until the safety report will be filed.",
+                  "The permits were not extended while the safety report is filed."
+                ],
+                "correctIndex": 0,
+                "translation": "Nihai güvenlik raporu sunulana kadar izinler uzatılmayacak.",
+                "explanation": "'Until' yan cümlesinde WILL kullanılmaz; Present Simple gelir."
               }
             ]
-          },
-          {
-            "id": "c40_l2_merged_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The field team analyzed the field survey records, ___ was crucial for social cohesion.\"",
-            "options": [
-              "where",
-              "that",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 2,
-            "translation": "Saha ekibi, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l2_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the author changes the policy, / the authority will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the author changes the policy,",
-                "right": "the authority will support the reform."
-              },
-              {
-                "left": "Since the authorize was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l2_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audit team insisted that the budget commission ___ the new tariff policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluate",
-              "evaluated",
-              "evaluates"
-            ],
-            "correctIndex": 1,
-            "translation": "Denetim ekibi, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The avoided concluded that the bank and the barriers were stable.\"",
-            "correctAnswer": "AVOIDED uzmanı, bank ve barriers durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "AVOIDED uzmanı, bank ve barriers durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "baslik": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
       "teorikMantik": "Bu ders 3. Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0"
     },
     "exercises": [
       {
         "id": "c40_l3_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Once ile anlık geçiş kalıplarının (no sooner / hardly) devrik dizilimi.",
         "questions": [
-          {
-            "id": "c40_l3_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The appeals chamber will review the arbitration records provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Temyiz dairesi, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the university senate had reviewed the project reports, the funding dispute would not have occurred.\"",
-            "sentence": "If the university senate had reviewed the project reports, the funding dispute would not have occurred.",
-            "englishPhrase": "If the university senate had reviewed the project reports, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Üniversite senatosu proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l3_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics panel insisted that the ethics committee ___ the new screening policy.\"",
-            "options": [
-              "evaluated",
-              "will evaluate",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Etik heyet, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The appeals chamber approved the revised procedure, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 0,
-            "translation": "Temyiz dairesi, danışma komitesi tarafından desteklenen revize usulü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l3_merged_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research committee analyzed the project reports, ___ was crucial for institutional stability.\"",
-            "options": [
-              "where",
-              "that",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 2,
-            "translation": "Araştırma komitesi, kurumsal istikrar için kritik olan proje raporlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l3_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the research unit had reviewed the patient records, the consent dispute would not have occurred.\"",
-            "sentence": "If the research unit had reviewed the patient records, the consent dispute would not have occurred.",
-            "englishPhrase": "If the research unit had reviewed the patient records, the consent dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Araştırma birimi hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l3_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the disciplinary board ___ the new disclosure policy.\"",
-            "options": [
-              "evaluate",
-              "evaluates",
-              "evaluated",
-              "will evaluate"
-            ],
-            "correctIndex": 0,
-            "translation": "Hukuk komisyonu, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The planning office will review the project reports provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Planlama ofisi, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The clinical board approved the consent procedure, ___ was supported by the ethics committee.\"",
-            "options": [
-              "which was supported by the ethics committee",
-              "because was supported by the ethics committee",
-              "so was supported by the ethics committee",
-              "although was supported by the ethics committee"
-            ],
-            "correctIndex": 0,
-            "translation": "Klinik kurul, etik komite tarafından desteklenen onam prosedürünü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l3_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the board was strict, the border community maintained its borders.\"",
-            "translation": "BOARD kuralları sert olmasına rağmen, border topluluğu borders durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "board",
-              "was",
-              "strict,",
-              "the",
-              "border",
-              "community",
-              "maintained",
-              "its",
-              "borders."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "board",
-              "was",
-              "strict,",
-              "the",
-              "border",
-              "community",
-              "maintained",
-              "its",
-              "borders.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l3_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the borders changes the policy, / the boundaries will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the borders changes the policy,",
-                "right": "the boundaries will support the reform."
+                "id": "c40_l3_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "No sooner ___ the minister announced the reform than the markets reacted.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Bakan reformu açıklar açıklamaz piyasalar tepki verdi.",
+                "explanation": "'No sooner' başa geldiğinde devrik yapı 'had + özne + V3' kurulur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "Since the boundary was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l3_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Hardly had the delegation arrived when the negotiations resumed.",
+                "englishPhrase": "Hardly had the delegation arrived when the negotiations resumed.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Delegasyon gelir gelmez müzakereler yeniden başladı.",
+                "explanation": "Hardly + had + özne + V3 ... when + V2 dizilimi kuraldır; cümle doğrudur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l3_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Once the prototype ___ the stress test, the team filed the patent application.",
+                "options": [
+                  "passed",
+                  "passes",
+                  "had passed",
+                  "will pass"
+                ],
+                "correctIndex": 0,
+                "translation": "Prototip dayanıklılık testini geçince ekip patent başvurusunu yaptı.",
+                "explanation": "'Once' geçmiş anlatımında iki eylemi de V2 ile sıralayabilir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "englishPhrase": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Alarm çalar çalmaz personel binayı boşalttı.",
+                "explanation": "'No sooner' ikincil ek olarak 'than' ister; 'when' yalnızca hardly/scarcely ile gelir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scarcely had the results been verified ___ the journal requested a revision.",
+                "options": [
+                  "when",
+                  "than",
+                  "then",
+                  "as"
+                ],
+                "correctIndex": 0,
+                "translation": "Sonuçlar doğrulanır doğrulanmaz dergi bir revizyon istedi.",
+                "explanation": "Scarcely/Hardly/Barely kalıpları 'when' (ya da before) ekiyle tamamlanır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle devrik anlık geçiş kuralına uyar?",
+                "options": [
+                  "No sooner had the ship docked than the inspectors boarded it.",
+                  "No sooner the ship had docked than the inspectors boarded it.",
+                  "No sooner did the ship dock when the inspectors boarded it.",
+                  "No sooner has the ship docked than the inspectors boarded it."
+                ],
+                "correctIndex": 0,
+                "translation": "Gemi yanaşır yanaşmaz müfettişler gemiye çıktı.",
+                "explanation": "Yardımcı fiil özneden önce gelir ve ikinci eylem V2 olur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the committee had reviewed the objection, the ruling was published.",
+                "options": [
+                  "Once",
+                  "No sooner",
+                  "Hardly",
+                  "Than"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite itirazı inceledikten sonra karar yayımlandı.",
+                "explanation": "Devrik kurulmayan düz cümlede sıralama bağlacı 'once' kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Hardly ___ the excavation begun when heavy rain halted the work.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Kazı başlar başlamaz şiddetli yağmur çalışmayı durdurdu.",
+                "explanation": "Hardly başa geldiğinde Past Perfect devrik kurulur: had + özne + V3.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "'As soon as the referee blew the whistle, the players left the pitch.' cümlesinin devrik karşılığı hangisidir?",
+                "options": [
+                  "No sooner had the referee blown the whistle than the players left the pitch.",
+                  "No sooner the referee blew the whistle than the players left the pitch.",
+                  "Hardly the referee had blown the whistle than the players left the pitch.",
+                  "No sooner had the referee blown the whistle when the players left the pitch."
+                ],
+                "correctIndex": 0,
+                "translation": "Hakem düdüğü çalar çalmaz oyuncular sahadan ayrıldı.",
+                "explanation": "As soon as yapısı devriğe çevrilirken 'No sooner had + V3 ... than + V2' kalıbı kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Once the archive ___ catalogued, researchers may request digital copies.",
+                "options": [
+                  "has been",
+                  "will be",
+                  "had been",
+                  "is being"
+                ],
+                "correctIndex": 0,
+                "translation": "Arşiv kataloglandıktan sonra araştırmacılar dijital kopya isteyebilir.",
+                "explanation": "'Once' yan cümlesinde gelecek için WILL değil Present Perfect/Present kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q11",
+                "type": "matching",
+                "prompt": "Devrik başlangıcı doğru devamıyla eşleştirin:",
+                "leftHeader": "Devrik Başlangıç",
+                "rightHeader": "İkincil Ek ve Devamı",
+                "pairs": [
+                  {
+                    "left": "No sooner had the satellite entered orbit",
+                    "right": "than the ground station lost contact."
+                  },
+                  {
+                    "left": "Hardly had the surgeon completed the procedure",
+                    "right": "when the monitors stabilised."
+                  },
+                  {
+                    "left": "Once the licence had been renewed,",
+                    "right": "the workshop reopened to visitors."
+                  }
+                ],
+                "explanation": "No sooner 'than', hardly 'when' alır; once ise düz sıralama kurar."
+              },
+              {
+                "id": "c40_l3_merged_q12",
+                "type": "matching",
+                "prompt": "Kalıbı gerektirdiği ikincil ekle eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "İkincil Ek",
+                "pairs": [
+                  {
+                    "left": "No sooner + had + S + V3",
+                    "right": "than"
+                  },
+                  {
+                    "left": "Hardly + had + S + V3",
+                    "right": "when / before"
+                  },
+                  {
+                    "left": "Once + S + V2",
+                    "right": "(ek almaz)"
+                  }
+                ],
+                "explanation": "Anlık geçiş kalıplarının ikincil eki sabittir; karıştırılırsa cümle bozulur."
+              },
+              {
+                "id": "c40_l3_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The eruption was recorded at 04:12. No sooner had the seismographs registered the first tremor than the civil protection agency issued a regional alert. Hardly had the alert reached the coastal villages when the first evacuation buses departed.",
+                "sentence": "Which sentence follows the inversion rules used in the paragraph?",
+                "options": [
+                  "No sooner had the tremor been registered than the alert was issued.",
+                  "No sooner the tremor had been registered when the alert was issued.",
+                  "Hardly had the tremor been registered than the alert was issued."
+                ],
+                "correctIndex": 0,
+                "translation": "Sarsıntı kaydedilir kaydedilmez uyarı yayımlandı.",
+                "explanation": "No sooner 'than' ile, hardly 'when' ile tamamlanır; devrik dizilim korunmalıdır."
+              },
+              {
+                "id": "c40_l3_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Once the restoration team had removed the later plaster layers, an earlier fresco became visible. Hardly had the discovery been announced when three universities requested access to the site.",
+                "sentence": "According to the paragraph, what happened immediately after the announcement?",
+                "options": [
+                  "Three universities requested access to the site.",
+                  "The restoration team removed the plaster layers.",
+                  "The fresco was covered again."
+                ],
+                "correctIndex": 0,
+                "translation": "Duyurunun hemen ardından üç üniversite alana erişim talep etti.",
+                "explanation": "'Hardly ... when' iki olay arasındaki anlık geçişi kurar."
               }
             ]
-          },
-          {
-            "id": "c40_l3_merged_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The clinical board analyzed the patient records, ___ was crucial for patient safety.\"",
-            "options": [
-              "that",
-              "whom",
-              "where",
-              "which"
-            ],
-            "correctIndex": 3,
-            "translation": "Klinik kurul, hasta güvenliği için kritik olan hasta kayıtlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l3_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the broadcasted changes the policy, / the budget will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the broadcasted changes the policy,",
-                "right": "the budget will support the reform."
-              },
-              {
-                "left": "Since the bulun was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l3_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the advisory committee ___ the new funding policy.\"",
-            "options": [
-              "evaluate",
-              "evaluates",
-              "evaluated",
-              "will evaluate"
-            ],
-            "correctIndex": 0,
-            "translation": "Planlama ofisi, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The calibrated concluded that the case and the cause were stable.\"",
-            "correctAnswer": "CALIBRATED uzmanı, case ve cause durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "CALIBRATED uzmanı, case ve cause durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
@@ -6742,7 +6357,7 @@ if (typeof lessons !== 'undefined') {
     "id": "c56_l7",
     "unitId": 39,
     "title": "20. Keşke Yapıları",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "20. Keşke Yapıları",
       "teorikMantik": "Bu ders 20. Keşke Yapıları yapısının sentaks ve anlam kurallarını pekiştirir.",
@@ -6751,329 +6366,274 @@ if (typeof lessons !== 'undefined') {
     "exercises": [
       {
         "id": "c56_l7_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Wish ve if only kalıplarında zaman kayması ve pişmanlık ayrımı.",
         "questions": [
-          {
-            "id": "c56_l7_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The research committee will review the laboratory records provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma komitesi, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the field team had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
-            "sentence": "If the field team had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "englishPhrase": "If the field team had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Saha ekibi görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c56_l7_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bar association insisted that the disciplinary board ___ the new disclosure policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluates",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Baro, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research committee approved the revised proposal, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 3,
-            "translation": "Araştırma komitesi, danışma komitesi tarafından desteklenen revize öneriyi onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c56_l7_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The survey unit analyzed the field survey records, ___ was crucial for social cohesion.\"",
-            "options": [
-              "where",
-              "that",
-              "whom",
-              "which"
-            ],
-            "correctIndex": 3,
-            "translation": "Anket birimi, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c56_l7_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the appeals chamber had reviewed the case files, the licensing dispute would not have occurred.\"",
-            "sentence": "If the appeals chamber had reviewed the case files, the licensing dispute would not have occurred.",
-            "englishPhrase": "If the appeals chamber had reviewed the case files, the licensing dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Temyiz dairesi dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c56_l7_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the academic board ___ the new funding policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Araştırma komitesi, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The field team will review the field survey records provided that the revised protocol is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Saha ekibi, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The legal commission approved the revised procedure, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 2,
-            "translation": "Hukuk komisyonu, danışma komitesi tarafından desteklenen revize usulü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c56_l7_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the study was strict, the subject community maintained its subjunctive.\"",
-            "translation": "STUDY kuralları sert olmasına rağmen, subject topluluğu subjunctive durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "study",
-              "was",
-              "strict,",
-              "the",
-              "subject",
-              "community",
-              "maintained",
-              "its",
-              "subjunctive."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "study",
-              "was",
-              "strict,",
-              "the",
-              "subject",
-              "community",
-              "maintained",
-              "its",
-              "subjunctive.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c56_l7_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the subjunctive changes the policy, / the such will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the subjunctive changes the policy,",
-                "right": "the such will support the reform."
+                "id": "c56_l7_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The curator wishes the gallery ___ larger windows.",
+                "options": [
+                  "had",
+                  "has",
+                  "will have",
+                  "would have had"
+                ],
+                "correctIndex": 0,
+                "translation": "Küratör galerinin daha büyük pencereleri olmasını isterdi.",
+                "explanation": "Şu anki gerçeğe duyulan pişmanlık 'wish + V2' ile kurulur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
               },
               {
-                "left": "Since the sudden was established,",
-                "right": "the community has maintained stability."
+                "id": "c56_l7_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "I wish I had checked the calibration before the session started.",
+                "englishPhrase": "I wish I had checked the calibration before the session started.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Keşke oturum başlamadan önce kalibrasyonu kontrol etseydim.",
+                "explanation": "Geçmişe duyulan pişmanlık 'wish + had V3' ile kurulur; cümle doğrudur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c56_l7_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The team wishes the funding body ___ its decision more quickly.",
+                "options": [
+                  "would announce",
+                  "announces",
+                  "announced would",
+                  "will announce"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip, fon kuruluşunun kararını daha hızlı açıklamasını istiyor.",
+                "explanation": "Başkasının davranışından duyulan rahatsızlık 'wish + would V1' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "If only the archive would be catalogued before the fire, the records would have survived.",
+                "englishPhrase": "If only the archive would be catalogued before the fire, the records would have survived.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Keşke arşiv yangından önce kataloglanmış olsaydı, kayıtlar kurtulurdu.",
+                "explanation": "Geçmiş için 'would be' değil 'had been' gerekir: 'If only the archive had been catalogued'.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "If only we ___ the sensors last winter, the data gap would be smaller now.",
+                "options": [
+                  "had replaced",
+                  "replaced",
+                  "would replace",
+                  "have replaced"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke sensörleri geçen kış değiştirseydik, şimdi veri boşluğu daha küçük olurdu.",
+                "explanation": "Geçmiş koşul 'had V3' ile kurulur; sonucu bugüne bakarsa karma koşul oluşur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle şu anki bir duruma duyulan pişmanlığı anlatır?",
+                "options": [
+                  "I wish the laboratory were closer to the campus.",
+                  "I wish the laboratory had been closer to the campus.",
+                  "I wish the laboratory will be closer to the campus.",
+                  "I wish the laboratory is closer to the campus."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke laboratuvar kampüse daha yakın olsa.",
+                "explanation": "Şimdiki gerçeğin tersi 'wish + V2 (were)' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The editors wish the author ___ the deadline last month.",
+                "options": [
+                  "had met",
+                  "met",
+                  "would meet",
+                  "has met"
+                ],
+                "correctIndex": 0,
+                "translation": "Editörler yazarın geçen ay teslim tarihine uymasını isterdi.",
+                "explanation": "'last month' geçmiş bağlamıdır; wish sonrası had V3 gerekir.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q8",
+                "type": "multiple-choice",
+                "prompt": "'It is a pity that the sensors keep failing.' cümlesinin wish karşılığı hangisidir?",
+                "options": [
+                  "I wish the sensors would stop failing.",
+                  "I wish the sensors stopped failing yesterday.",
+                  "I wish the sensors had stopped failing now.",
+                  "I wish the sensors will stop failing."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke sensörler arıza vermeyi bıraksa.",
+                "explanation": "Süregelen rahatsız edici davranış 'wish + would V1' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "If only the committee ___ the objection, the ruling would be different today.",
+                "options": [
+                  "had considered",
+                  "considered",
+                  "would consider",
+                  "has considered"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke komite itirazı dikkate alsaydı, bugün karar farklı olurdu.",
+                "explanation": "Geçmiş koşul + bugünkü sonuç karma yapısıdır: had V3 ... would V1.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "'I wish I ___ more time in the archive during the fellowship.'",
+                "options": [
+                  "had spent",
+                  "spent",
+                  "would spend",
+                  "have spent"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke burs süresince arşivde daha fazla zaman geçirseydim.",
+                "explanation": "Bitmiş bir dönem anlatıldığı için geçmiş pişmanlığı had V3 ister.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q11",
+                "type": "matching",
+                "prompt": "Kalıbı anlattığı duruma eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "Anlatılan Durum",
+                "pairs": [
+                  {
+                    "left": "wish + V2",
+                    "right": "şu anki gerçeğe duyulan pişmanlık"
+                  },
+                  {
+                    "left": "wish + had V3",
+                    "right": "geçmişte olan/olmayan şeye pişmanlık"
+                  },
+                  {
+                    "left": "wish + would V1",
+                    "right": "başkasının davranışından duyulan rahatsızlık"
+                  }
+                ],
+                "explanation": "Wish sonrası çekim, pişmanlığın hangi zamana ait olduğunu belirler."
+              },
+              {
+                "id": "c56_l7_q12",
+                "type": "matching",
+                "prompt": "Cümle başlangıcını doğru devamıyla eşleştirin:",
+                "leftHeader": "Başlangıç",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "I wish the storm",
+                    "right": "were over by now."
+                  },
+                  {
+                    "left": "I wish the crew",
+                    "right": "had secured the equipment last night."
+                  },
+                  {
+                    "left": "I wish the neighbours",
+                    "right": "would lower the volume after midnight."
+                  }
+                ],
+                "explanation": "Şimdiki durum V2, geçmiş had V3, davranış şikâyeti would V1 alır."
+              },
+              {
+                "id": "c56_l7_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The restoration was postponed twice. The director now says she wishes the foundation had released the funds a year earlier, and that she wishes the current schedule were less compressed.",
+                "sentence": "Which structure expresses regret about the past in the paragraph?",
+                "options": [
+                  "she wishes the foundation had released the funds earlier",
+                  "she wishes the current schedule were less compressed",
+                  "she wishes the foundation would release the funds"
+                ],
+                "correctIndex": 0,
+                "translation": "Vakfın fonu bir yıl önce serbest bırakmış olmasını isterdi.",
+                "explanation": "Geçmişe dönük pişmanlık 'wish + had V3' ile kurulur."
+              },
+              {
+                "id": "c56_l7_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Field notes from the 1970s are incomplete. Researchers often say: if only the original team had recorded the coordinates, the sites could be relocated today. Many also wish the notebooks were stored in a single archive rather than four.",
+                "sentence": "Which sentence uses 'if only' correctly for a past regret?",
+                "options": [
+                  "If only the team had recorded the coordinates.",
+                  "If only the team would record the coordinates.",
+                  "If only the team recorded the coordinates yesterday."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke ekip koordinatları kaydetmiş olsaydı.",
+                "explanation": "'If only' geçmiş pişmanlığında had V3 alır."
               }
             ]
-          },
-          {
-            "id": "c56_l7_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics board analyzed the case files, ___ was crucial for judicial consistency.\"",
-            "options": [
-              "that",
-              "which",
-              "whom",
-              "where"
-            ],
-            "correctIndex": 1,
-            "translation": "Etik kurul, yargısal tutarlılık için kritik olan dava dosyalarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c56_l7_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the suggested changes the policy, / the supervision will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the suggested changes the policy,",
-                "right": "the supervision will support the reform."
-              },
-              {
-                "left": "Since the support was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c56_l7_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the steering group ___ the new housing policy.\"",
-            "options": [
-              "evaluate",
-              "evaluated",
-              "evaluates",
-              "will evaluate"
-            ],
-            "correctIndex": 0,
-            "translation": "Anket birimi, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The survey concluded that the symbolic and the symposia were stable.\"",
-            "correctAnswer": "SURVEY uzmanı, symbolic ve symposia durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "SURVEY uzmanı, symbolic ve symposia durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   }
@@ -7102,7 +6662,7 @@ if (typeof lessons !== 'undefined') {
     "id": "c40_l1_merged",
     "unitId": 39,
     "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Bu ders Zaman Uyumu & Kronolojik Öncelik Matrisi (by the time, since) yapısının sentaks ve anlam kurallarını pekiştirir.",
@@ -7111,1007 +6671,844 @@ if (typeof lessons !== 'undefined') {
     "exercises": [
       {
         "id": "c40_l1_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "By the time sınır kilidi ile Since süreç kilidinin çekim eşleşmeleri.",
         "questions": [
-          {
-            "id": "c40_l1_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The manuscript department will review the archival registers provided that the restoration plan is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "El yazmaları bölümü, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the central bank had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.\"",
-            "sentence": "If the central bank had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
-            "englishPhrase": "If the central bank had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Merkez bankası çeyreklik bilançoları incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l1_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the steering group ___ the new housing policy.\"",
-            "options": [
-              "evaluated",
-              "will evaluate",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Etik inceleme kurulu, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The excavation team approved the restoration plan, ___ was supported by the heritage committee.\"",
-            "options": [
-              "which was supported by the heritage committee",
-              "because was supported by the heritage committee",
-              "so was supported by the heritage committee",
-              "although was supported by the heritage committee"
-            ],
-            "correctIndex": 1,
-            "translation": "Kazı ekibi, miras komitesi tarafından desteklenen restorasyon planını onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l1_merged_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The trade ministry analyzed the customs declarations, ___ was crucial for market stability.\"",
-            "options": [
-              "where",
-              "which",
-              "that",
-              "whom"
-            ],
-            "correctIndex": 1,
-            "translation": "Ticaret bakanlığı, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l1_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the survey unit had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
-            "sentence": "If the survey unit had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "englishPhrase": "If the survey unit had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Anket birimi görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l1_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The heritage council insisted that the heritage committee ___ the new conservation policy.\"",
-            "options": [
-              "evaluated",
-              "evaluate",
-              "will evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 1,
-            "translation": "Miras konseyi, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The central bank will review the quarterly balance sheets provided that the funding request is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Merkez bankası, fon talebi onaylandığı sürece çeyreklik bilançoları inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l1_merged_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The survey unit approved the revised protocol, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 3,
-            "translation": "Anket birimi, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l1_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the agree was strict, the agreed community maintained its akademik.\"",
-            "translation": "AGREE kuralları sert olmasına rağmen, agreed topluluğu durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "agree",
-              "was",
-              "strict,",
-              "the",
-              "agreed",
-              "community",
-              "maintained",
-              "its",
-              "akademik."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "agree",
-              "was",
-              "strict,",
-              "the",
-              "agreed",
-              "community",
-              "maintained",
-              "its",
-              "akademik.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l1_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the changes the policy, / the alarak will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the changes the policy,",
-                "right": "the alarak will support the reform."
+                "id": "c40_l1_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the committee ___ the final report, the submission deadline had already passed.",
+                "options": [
+                  "reviewed",
+                  "reviews",
+                  "will review",
+                  "has reviewed"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite nihai raporu incelediğinde başvuru süresi çoktan dolmuştu.",
+                "explanation": "'By the time' geçmiş bağlamında yan cümlede V2, ana cümlede Had V3 ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "Since the allow was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l1_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "englishPhrase": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Fon geldiğinde laboratuvar pilot çalışmayı tamamlamış olacak.",
+                "explanation": "Gelecek bağlamında 'By the time + V1' ana cümlede 'will have V3' çeker; dizilim doğrudur.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l1_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scientists ___ the same glacier since the monitoring station opened in 2004.",
+                "options": [
+                  "have measured",
+                  "measured",
+                  "had measured",
+                  "measure"
+                ],
+                "correctIndex": 0,
+                "translation": "Bilim insanları izleme istasyonu 2004'te açıldığından beri aynı buzulu ölçüyor.",
+                "explanation": "'Since + V2' günümüze uzanan süreçte ana cümleye Have/Has V3 getirir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "englishPhrase": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Arşiv dijitalleştirildiğinden beri araştırmacılar kayıtlara uzaktan erişiyor.",
+                "explanation": "Süreç günümüze uzandığı için Past Perfect değil Present Perfect gerekir: 'have accessed'.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the audit team arrived, the accountants ___ the missing invoices.",
+                "options": [
+                  "had located",
+                  "located",
+                  "have located",
+                  "would locate"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetim ekibi geldiğinde muhasebeciler eksik faturaları bulmuştu.",
+                "explanation": "Yan cümle V2 ise ana cümlede önceliği Had V3 mühürler.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the trade agreement was signed, exports to the region have risen sharply.",
+                "options": [
+                  "Since",
+                  "By the time",
+                  "Until",
+                  "As soon as"
+                ],
+                "correctIndex": 0,
+                "translation": "Ticaret anlaşması imzalandığından beri bölgeye ihracat hızla arttı.",
+                "explanation": "Ana cümlede 'have risen' bulunduğu için başlangıç noktası bildiren 'Since' gerekir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "By 2030, the ministry ___ the entire rail network.",
+                "options": [
+                  "will have modernised",
+                  "will modernise",
+                  "has modernised",
+                  "had modernised"
+                ],
+                "correctIndex": 0,
+                "translation": "2030'a kadar bakanlık tüm demiryolu ağını modernize etmiş olacak.",
+                "explanation": "'By + gelecek tarih' eylemin o sınırda tamamlanmış olmasını, yani Future Perfect ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle 'By the time' kuralına uyar?",
+                "options": [
+                  "By the time the ferry docked, the passengers had collected their luggage.",
+                  "By the time the ferry docked, the passengers have collected their luggage.",
+                  "By the time the ferry docked, the passengers collect their luggage.",
+                  "By the time the ferry had docked, the passengers will collect their luggage."
+                ],
+                "correctIndex": 0,
+                "translation": "Feribot yanaştığında yolcular bagajlarını almıştı.",
+                "explanation": "Geçmiş bağlamda doğru dizilim 'By the time + V2 , Had V3'tür.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The institute has published four monographs ___ 2019.",
+                "options": [
+                  "since",
+                  "for",
+                  "by",
+                  "until"
+                ],
+                "correctIndex": 0,
+                "translation": "Enstitü 2019'dan beri dört monografi yayımladı.",
+                "explanation": "Belirli bir başlangıç noktası verildiğinde 'since', süre verildiğinde 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The team has been analysing the soil samples ___ six weeks.",
+                "options": [
+                  "for",
+                  "since",
+                  "by",
+                  "from"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip toprak örneklerini altı haftadır analiz ediyor.",
+                "explanation": "'six weeks' bir süre uzunluğudur; süre ile 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q11",
+                "type": "matching",
+                "prompt": "Yan cümledeki kalıbı doğru ana cümleyle eşleştirin:",
+                "leftHeader": "Yan Cümle",
+                "rightHeader": "Ana Cümle",
+                "pairs": [
+                  {
+                    "left": "By the time the storm reached the coast,",
+                    "right": "the harbour had been evacuated."
+                  },
+                  {
+                    "left": "By the time you receive this notice,",
+                    "right": "the committee will have announced its decision."
+                  },
+                  {
+                    "left": "Since the new protocol took effect,",
+                    "right": "complaint rates have fallen steadily."
+                  }
+                ],
+                "explanation": "Geçmiş sınır Had V3, gelecek sınır Will Have V3, süreç ise Have/Has V3 ile tamamlanır."
+              },
+              {
+                "id": "c40_l1_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman ifadesini gerektirdiği çekimle eşleştirin:",
+                "leftHeader": "Zaman İfadesi",
+                "rightHeader": "Gerekli Çekim",
+                "pairs": [
+                  {
+                    "left": "since the archive opened",
+                    "right": "have/has + V3"
+                  },
+                  {
+                    "left": "by the time the audit ended",
+                    "right": "had + V3"
+                  },
+                  {
+                    "left": "by next spring",
+                    "right": "will have + V3"
+                  }
+                ],
+                "explanation": "Since süreci, by the time ve by + gelecek tarih ise tamamlanma sınırını işaretler."
+              },
+              {
+                "id": "c40_l1_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The national library began digitising its manuscript collection in 2016. Since that decision was taken, more than forty thousand pages have been made publicly available. By the time the current phase ends next winter, the library will have processed the entire medieval section.",
+                "sentence": "Which structure correctly completes the timeline described in the paragraph?",
+                "options": [
+                  "By the time the phase ends, the library will have processed the medieval section.",
+                  "By the time the phase ends, the library processed the medieval section.",
+                  "Since the phase ends, the library had processed the medieval section."
+                ],
+                "correctIndex": 0,
+                "translation": "Bu aşama bittiğinde kütüphane ortaçağ bölümünü işlemiş olacak.",
+                "explanation": "Paragraf gelecekteki bir sınır veriyor; sınırda tamamlanma Future Perfect ile kurulur."
+              },
+              {
+                "id": "c40_l1_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "When the excavation permit was finally granted, the field team had already spent two seasons preparing the site survey. Since the permit arrived, the team has recovered several inscribed tablets that were previously thought lost.",
+                "sentence": "According to the paragraph, which sentence states the correct time relation?",
+                "options": [
+                  "Since the permit arrived, the team has recovered several tablets.",
+                  "Since the permit arrived, the team had recovered several tablets.",
+                  "By the time the permit arrived, the team recovers several tablets."
+                ],
+                "correctIndex": 0,
+                "translation": "İzin geldiğinden beri ekip birkaç tablet çıkardı.",
+                "explanation": "Başlangıç noktasından bugüne uzanan süreç Present Perfect ile aktarılır."
               }
             ]
-          },
-          {
-            "id": "c40_l1_merged_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics review board analyzed the field survey records, ___ was crucial for social cohesion.\"",
-            "options": [
-              "whom",
-              "which",
-              "that",
-              "where"
-            ],
-            "correctIndex": 1,
-            "translation": "Etik inceleme kurulu, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l1_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Tarih"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the also changes the policy, / the alter will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the also changes the policy,",
-                "right": "the alter will support the reform."
-              },
-              {
-                "left": "Since the altered was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l1_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The trade ministry insisted that the budget commission ___ the new tariff policy.\"",
-            "options": [
-              "evaluate",
-              "will evaluate",
-              "evaluated",
-              "evaluates"
-            ],
-            "correctIndex": 0,
-            "translation": "Ticaret bakanlığı, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l1_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Zaman Uyumu",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The amended concluded that the among and the analysis were stable.\"",
-            "correctAnswer": "AMENDED uzmanı, among ve analysis durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "AMENDED uzmanı, among ve analysis durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "baslik": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
       "teorikMantik": "Bu ders Koşul Yapıları & Gerçek Dışı Varsayımlar (if, provided that, unless, but for) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect"
     },
     "exercises": [
       {
         "id": "c40_l2_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Until, as soon as, before, after, while ve when bağlaçlarının çekim kilitleri.",
         "questions": [
-          {
-            "id": "c40_l2_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The legal commission will review the arbitration records provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Hukuk komisyonu, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the audit team had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.\"",
-            "sentence": "If the audit team had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
-            "englishPhrase": "If the audit team had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Denetim ekibi çeyreklik bilançoları incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l2_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the evaluation panel ___ the new housing policy.\"",
-            "options": [
-              "evaluates",
-              "will evaluate",
-              "evaluated",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Araştırma enstitüsü, değerlendirme heyetinin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bar association approved the revised procedure, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 2,
-            "translation": "Baro, danışma komitesi tarafından desteklenen revize usulü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l2_merged_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The rating agency analyzed the customs declarations, ___ was crucial for market stability.\"",
-            "options": [
-              "that",
-              "which",
-              "whom",
-              "where"
-            ],
-            "correctIndex": 1,
-            "translation": "Derecelendirme kuruluşu, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l2_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the ethics review board had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
-            "sentence": "If the ethics review board had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "englishPhrase": "If the ethics review board had reviewed the interview transcripts, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Etik inceleme kurulu görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l2_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the review panel ___ the new disclosure policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Etik kurul, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The audit team will review the quarterly balance sheets provided that the funding request is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Denetim ekibi, fon talebi onaylandığı sürece çeyreklik bilançoları inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l2_merged_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics review board approved the revised protocol, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 1,
-            "translation": "Etik inceleme kurulu, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l2_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the artifacts was strict, the association community maintained its attached.\"",
-            "translation": "ARTIFACTS kuralları sert olmasına rağmen, association topluluğu attached durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "artifacts",
-              "was",
-              "strict,",
-              "the",
-              "association",
-              "community",
-              "maintained",
-              "its",
-              "attached."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "artifacts",
-              "was",
-              "strict,",
-              "the",
-              "association",
-              "community",
-              "maintained",
-              "its",
-              "attached.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l2_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the attached changes the policy, / the attended will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the attached changes the policy,",
-                "right": "the attended will support the reform."
+                "id": "c40_l2_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The committee will not release the figures until the auditors ___ their review.",
+                "options": [
+                  "complete",
+                  "will complete",
+                  "completed",
+                  "would complete"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetçiler incelemelerini tamamlayana kadar komite rakamları açıklamayacak.",
+                "explanation": "Zaman bağlacından sonra gelecek anlamı için WILL değil Present Simple (V1) kullanılır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "Since the audience was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l2_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "englishPhrase": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Sonuçlar gelir gelmez laboratuvar özeti yayımlayacak.",
+                "explanation": "'As soon as' yan cümlesinde WILL yasaktır; doğru biçim 'as soon as the results arrive'.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l2_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "While the technicians ___ the turbine, a power surge damaged the control unit.",
+                "options": [
+                  "were inspecting",
+                  "inspect",
+                  "have inspected",
+                  "will inspect"
+                ],
+                "correctIndex": 0,
+                "translation": "Teknisyenler türbini incelerken bir elektrik dalgalanması kontrol ünitesine zarar verdi.",
+                "explanation": "'While' süregelen bir arka plana işaret eder; Past Continuous ile kurulur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "After the ministry had approved the budget, the tender process began.",
+                "englishPhrase": "After the ministry had approved the budget, the tender process began.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Bakanlık bütçeyi onayladıktan sonra ihale süreci başladı.",
+                "explanation": "'After' önce olan eyleme Had V3, sonraki eyleme V2 verir; dizilim doğrudur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Before the regulation ___ into force, exporters had stockpiled the affected goods.",
+                "options": [
+                  "came",
+                  "had come",
+                  "comes",
+                  "will come"
+                ],
+                "correctIndex": 0,
+                "translation": "Düzenleme yürürlüğe girmeden önce ihracatçılar etkilenen malları stoklamıştı.",
+                "explanation": "'Before' sonraki eyleme V2, önceki eyleme Had V3 verir.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the vaccine was distributed nationwide, infection rates fell within two months.",
+                "options": [
+                  "After",
+                  "Until",
+                  "While",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Aşı ülke genelinde dağıtıldıktan sonra enfeksiyon oranları iki ay içinde düştü.",
+                "explanation": "İki geçmiş olay arasında sıralama kuran bağlaç 'after'tır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The archaeologist kept excavating ___ the light faded.",
+                "options": [
+                  "until",
+                  "as soon as",
+                  "before",
+                  "while"
+                ],
+                "correctIndex": 0,
+                "translation": "Arkeolog ışık kaybolana kadar kazmayı sürdürdü.",
+                "explanation": "Bir eylemin bittiği noktayı 'until' işaretler.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle zaman bağlacı kuralına uyar?",
+                "options": [
+                  "When the report is published, the committee will convene.",
+                  "When the report will be published, the committee will convene.",
+                  "When the report published, the committee convenes.",
+                  "When the report is published, the committee convened."
+                ],
+                "correctIndex": 0,
+                "translation": "Rapor yayımlandığında komite toplanacak.",
+                "explanation": "Yan cümle Present Simple, ana cümle Will V1 olur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the researchers were collecting samples, the weather station recorded a sudden drop.",
+                "options": [
+                  "While",
+                  "Until",
+                  "After",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Araştırmacılar numune toplarken meteoroloji istasyonu ani bir düşüş kaydetti.",
+                "explanation": "Süregelen bir eylemi kesen olay 'while' ile bağlanır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "As soon as the software ___ the anomaly, it locks the affected account.",
+                "options": [
+                  "detects",
+                  "will detect",
+                  "detected",
+                  "is detecting"
+                ],
+                "correctIndex": 0,
+                "translation": "Yazılım anormalliği tespit eder etmez etkilenen hesabı kilitler.",
+                "explanation": "Genel doğru anlatımında yan ve ana cümlenin ikisi de Present Simple kalır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q11",
+                "type": "matching",
+                "prompt": "Bağlacı doğru devam eden cümleyle eşleştirin:",
+                "leftHeader": "Zaman Bağlacı",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "The board will decide as soon as",
+                    "right": "the legal opinion arrives."
+                  },
+                  {
+                    "left": "The ferry had already left when",
+                    "right": "the delegation reached the port."
+                  },
+                  {
+                    "left": "The generators ran continuously until",
+                    "right": "the main grid was restored."
+                  }
+                ],
+                "explanation": "As soon as gelecek için Present, when geçmiş için V2, until ise bitiş sınırı ister."
+              },
+              {
+                "id": "c40_l2_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman bağlacını üstlendiği işlevle eşleştirin:",
+                "leftHeader": "Bağlaç",
+                "rightHeader": "İşlevi",
+                "pairs": [
+                  {
+                    "left": "until",
+                    "right": "eylemin bittiği sınırı verir"
+                  },
+                  {
+                    "left": "while",
+                    "right": "eşzamanlı süregelen arka planı verir"
+                  },
+                  {
+                    "left": "after",
+                    "right": "önce gerçekleşen eylemi işaretler"
+                  }
+                ],
+                "explanation": "Her bağlaç farklı bir zaman ilişkisi kurar: sınır, eşzamanlılık, öncelik."
+              },
+              {
+                "id": "c40_l2_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The observatory suspends all measurements while the calibration cycle is running. As soon as the cycle finishes, the operators reopen the dome. Until the humidity sensors are replaced next month, however, night sessions remain limited to four hours.",
+                "sentence": "According to the paragraph, when do the operators reopen the dome?",
+                "options": [
+                  "As soon as the calibration cycle finishes.",
+                  "While the calibration cycle is running.",
+                  "Until the humidity sensors are replaced."
+                ],
+                "correctIndex": 0,
+                "translation": "Kalibrasyon döngüsü biter bitmez operatörler kubbeyi yeniden açar.",
+                "explanation": "'As soon as the cycle finishes' peş peşeliği kuran ifadedir."
+              },
+              {
+                "id": "c40_l2_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "After the flood barriers had been reinforced, the municipality resumed construction on the riverside district. While the works continued, engineers monitored the water level hourly. The permits will not be extended until the final safety report is filed.",
+                "sentence": "Which sentence matches the time relations in the paragraph?",
+                "options": [
+                  "The permits will not be extended until the safety report is filed.",
+                  "The permits will not be extended until the safety report will be filed.",
+                  "The permits were not extended while the safety report is filed."
+                ],
+                "correctIndex": 0,
+                "translation": "Nihai güvenlik raporu sunulana kadar izinler uzatılmayacak.",
+                "explanation": "'Until' yan cümlesinde WILL kullanılmaz; Present Simple gelir."
               }
             ]
-          },
-          {
-            "id": "c40_l2_merged_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research institute analyzed the interview transcripts, ___ was crucial for social cohesion.\"",
-            "options": [
-              "which",
-              "where",
-              "that",
-              "whom"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma enstitüsü, toplumsal uyum için kritik olan görüşme dökümlerini analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l2_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the author changes the policy, / the authority will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the author changes the policy,",
-                "right": "the authority will support the reform."
-              },
-              {
-                "left": "Since the authorize was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l2_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "İktisat"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The rating agency insisted that the budget commission ___ the new tariff policy.\"",
-            "options": [
-              "evaluate",
-              "will evaluate",
-              "evaluates",
-              "evaluated"
-            ],
-            "correctIndex": 0,
-            "translation": "Derecelendirme kuruluşu, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l2_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The avoided concluded that the bank and the barriers were stable.\"",
-            "correctAnswer": "AVOIDED uzmanı, bank ve barriers durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "AVOIDED uzmanı, bank ve barriers durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "baslik": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
       "teorikMantik": "Bu ders Subjunctive ve İstek/Zorunluluk Kip Kilitleri (demand that, it is crucial that, should) yapısının sentaks ve anlam kurallarını pekiştirir.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0"
     },
     "exercises": [
       {
         "id": "c40_l3_merged_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Once ile anlık geçiş kalıplarının (no sooner / hardly) devrik dizilimi.",
         "questions": [
-          {
-            "id": "c40_l3_merged_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The bar association will review the arbitration records provided that the revised procedure is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Baro, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the editorial board had reviewed the project reports, the funding dispute would not have occurred.\"",
-            "sentence": "If the editorial board had reviewed the project reports, the funding dispute would not have occurred.",
-            "englishPhrase": "If the editorial board had reviewed the project reports, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Yayın kurulu proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l3_merged_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The clinical board insisted that the clinical panel ___ the new screening policy.\"",
-            "options": [
-              "evaluate",
-              "evaluates",
-              "evaluated",
-              "will evaluate"
-            ],
-            "correctIndex": 0,
-            "translation": "Klinik kurul, klinik heyetin yeni tarama politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics board approved the revised procedure, ___ was supported by the disciplinary board.\"",
-            "options": [
-              "which was supported by the disciplinary board",
-              "because was supported by the disciplinary board",
-              "so was supported by the disciplinary board",
-              "although was supported by the disciplinary board"
-            ],
-            "correctIndex": 3,
-            "translation": "Etik kurul, disiplin kurulu tarafından desteklenen revize usulü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l3_merged_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The university senate analyzed the project reports, ___ was crucial for institutional stability.\"",
-            "options": [
-              "where",
-              "that",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 2,
-            "translation": "Üniversite senatosu, kurumsal istikrar için kritik olan proje raporlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l3_merged_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the assessment team had reviewed the patient records, the consent dispute would not have occurred.\"",
-            "sentence": "If the assessment team had reviewed the patient records, the consent dispute would not have occurred.",
-            "englishPhrase": "If the assessment team had reviewed the patient records, the consent dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Değerlendirme ekibi hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c40_l3_merged_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the review panel ___ the new disclosure policy.\"",
-            "options": [
-              "evaluate",
-              "evaluated",
-              "will evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 0,
-            "translation": "Temyiz dairesi, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The university senate will review the laboratory records provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Üniversite senatosu, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c40_l3_merged_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research unit approved the consent procedure, ___ was supported by the ethics committee.\"",
-            "options": [
-              "which was supported by the ethics committee",
-              "because was supported by the ethics committee",
-              "so was supported by the ethics committee",
-              "although was supported by the ethics committee"
-            ],
-            "correctIndex": 1,
-            "translation": "Araştırma birimi, etik komite tarafından desteklenen onam prosedürünü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c40_l3_merged_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the board was strict, the border community maintained its borders.\"",
-            "translation": "BOARD kuralları sert olmasına rağmen, border topluluğu borders durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "board",
-              "was",
-              "strict,",
-              "the",
-              "border",
-              "community",
-              "maintained",
-              "its",
-              "borders."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "board",
-              "was",
-              "strict,",
-              "the",
-              "border",
-              "community",
-              "maintained",
-              "its",
-              "borders.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c40_l3_merged_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the borders changes the policy, / the boundaries will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the borders changes the policy,",
-                "right": "the boundaries will support the reform."
+                "id": "c40_l3_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "No sooner ___ the minister announced the reform than the markets reacted.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Bakan reformu açıklar açıklamaz piyasalar tepki verdi.",
+                "explanation": "'No sooner' başa geldiğinde devrik yapı 'had + özne + V3' kurulur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "Since the boundary was established,",
-                "right": "the community has maintained stability."
+                "id": "c40_l3_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Hardly had the delegation arrived when the negotiations resumed.",
+                "englishPhrase": "Hardly had the delegation arrived when the negotiations resumed.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Delegasyon gelir gelmez müzakereler yeniden başladı.",
+                "explanation": "Hardly + had + özne + V3 ... when + V2 dizilimi kuraldır; cümle doğrudur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c40_l3_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Once the prototype ___ the stress test, the team filed the patent application.",
+                "options": [
+                  "passed",
+                  "passes",
+                  "had passed",
+                  "will pass"
+                ],
+                "correctIndex": 0,
+                "translation": "Prototip dayanıklılık testini geçince ekip patent başvurusunu yaptı.",
+                "explanation": "'Once' geçmiş anlatımında iki eylemi de V2 ile sıralayabilir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "englishPhrase": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Alarm çalar çalmaz personel binayı boşalttı.",
+                "explanation": "'No sooner' ikincil ek olarak 'than' ister; 'when' yalnızca hardly/scarcely ile gelir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scarcely had the results been verified ___ the journal requested a revision.",
+                "options": [
+                  "when",
+                  "than",
+                  "then",
+                  "as"
+                ],
+                "correctIndex": 0,
+                "translation": "Sonuçlar doğrulanır doğrulanmaz dergi bir revizyon istedi.",
+                "explanation": "Scarcely/Hardly/Barely kalıpları 'when' (ya da before) ekiyle tamamlanır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle devrik anlık geçiş kuralına uyar?",
+                "options": [
+                  "No sooner had the ship docked than the inspectors boarded it.",
+                  "No sooner the ship had docked than the inspectors boarded it.",
+                  "No sooner did the ship dock when the inspectors boarded it.",
+                  "No sooner has the ship docked than the inspectors boarded it."
+                ],
+                "correctIndex": 0,
+                "translation": "Gemi yanaşır yanaşmaz müfettişler gemiye çıktı.",
+                "explanation": "Yardımcı fiil özneden önce gelir ve ikinci eylem V2 olur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the committee had reviewed the objection, the ruling was published.",
+                "options": [
+                  "Once",
+                  "No sooner",
+                  "Hardly",
+                  "Than"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite itirazı inceledikten sonra karar yayımlandı.",
+                "explanation": "Devrik kurulmayan düz cümlede sıralama bağlacı 'once' kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Hardly ___ the excavation begun when heavy rain halted the work.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Kazı başlar başlamaz şiddetli yağmur çalışmayı durdurdu.",
+                "explanation": "Hardly başa geldiğinde Past Perfect devrik kurulur: had + özne + V3.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "'As soon as the referee blew the whistle, the players left the pitch.' cümlesinin devrik karşılığı hangisidir?",
+                "options": [
+                  "No sooner had the referee blown the whistle than the players left the pitch.",
+                  "No sooner the referee blew the whistle than the players left the pitch.",
+                  "Hardly the referee had blown the whistle than the players left the pitch.",
+                  "No sooner had the referee blown the whistle when the players left the pitch."
+                ],
+                "correctIndex": 0,
+                "translation": "Hakem düdüğü çalar çalmaz oyuncular sahadan ayrıldı.",
+                "explanation": "As soon as yapısı devriğe çevrilirken 'No sooner had + V3 ... than + V2' kalıbı kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Once the archive ___ catalogued, researchers may request digital copies.",
+                "options": [
+                  "has been",
+                  "will be",
+                  "had been",
+                  "is being"
+                ],
+                "correctIndex": 0,
+                "translation": "Arşiv kataloglandıktan sonra araştırmacılar dijital kopya isteyebilir.",
+                "explanation": "'Once' yan cümlesinde gelecek için WILL değil Present Perfect/Present kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q11",
+                "type": "matching",
+                "prompt": "Devrik başlangıcı doğru devamıyla eşleştirin:",
+                "leftHeader": "Devrik Başlangıç",
+                "rightHeader": "İkincil Ek ve Devamı",
+                "pairs": [
+                  {
+                    "left": "No sooner had the satellite entered orbit",
+                    "right": "than the ground station lost contact."
+                  },
+                  {
+                    "left": "Hardly had the surgeon completed the procedure",
+                    "right": "when the monitors stabilised."
+                  },
+                  {
+                    "left": "Once the licence had been renewed,",
+                    "right": "the workshop reopened to visitors."
+                  }
+                ],
+                "explanation": "No sooner 'than', hardly 'when' alır; once ise düz sıralama kurar."
+              },
+              {
+                "id": "c40_l3_merged_q12",
+                "type": "matching",
+                "prompt": "Kalıbı gerektirdiği ikincil ekle eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "İkincil Ek",
+                "pairs": [
+                  {
+                    "left": "No sooner + had + S + V3",
+                    "right": "than"
+                  },
+                  {
+                    "left": "Hardly + had + S + V3",
+                    "right": "when / before"
+                  },
+                  {
+                    "left": "Once + S + V2",
+                    "right": "(ek almaz)"
+                  }
+                ],
+                "explanation": "Anlık geçiş kalıplarının ikincil eki sabittir; karıştırılırsa cümle bozulur."
+              },
+              {
+                "id": "c40_l3_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The eruption was recorded at 04:12. No sooner had the seismographs registered the first tremor than the civil protection agency issued a regional alert. Hardly had the alert reached the coastal villages when the first evacuation buses departed.",
+                "sentence": "Which sentence follows the inversion rules used in the paragraph?",
+                "options": [
+                  "No sooner had the tremor been registered than the alert was issued.",
+                  "No sooner the tremor had been registered when the alert was issued.",
+                  "Hardly had the tremor been registered than the alert was issued."
+                ],
+                "correctIndex": 0,
+                "translation": "Sarsıntı kaydedilir kaydedilmez uyarı yayımlandı.",
+                "explanation": "No sooner 'than' ile, hardly 'when' ile tamamlanır; devrik dizilim korunmalıdır."
+              },
+              {
+                "id": "c40_l3_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Once the restoration team had removed the later plaster layers, an earlier fresco became visible. Hardly had the discovery been announced when three universities requested access to the site.",
+                "sentence": "According to the paragraph, what happened immediately after the announcement?",
+                "options": [
+                  "Three universities requested access to the site.",
+                  "The restoration team removed the plaster layers.",
+                  "The fresco was covered again."
+                ],
+                "correctIndex": 0,
+                "translation": "Duyurunun hemen ardından üç üniversite alana erişim talep etti.",
+                "explanation": "'Hardly ... when' iki olay arasındaki anlık geçişi kurar."
               }
             ]
-          },
-          {
-            "id": "c40_l3_merged_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research unit analyzed the patient records, ___ was crucial for patient safety.\"",
-            "options": [
-              "which",
-              "that",
-              "whom",
-              "where"
-            ],
-            "correctIndex": 0,
-            "translation": "Araştırma birimi, hasta güvenliği için kritik olan hasta kayıtlarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c40_l3_merged_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the broadcasted changes the policy, / the budget will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the broadcasted changes the policy,",
-                "right": "the budget will support the reform."
-              },
-              {
-                "left": "Since the bulun was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c40_l3_merged_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Politika"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the academic board ___ the new funding policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluated",
-              "evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 2,
-            "translation": "Üniversite senatosu, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c40_l3_merged_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Modallar (Modals)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Psikoloji"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The calibrated concluded that the case and the cause were stable.\"",
-            "correctAnswer": "CALIBRATED uzmanı, case ve cause durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "CALIBRATED uzmanı, case ve cause durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   },
@@ -8119,7 +7516,7 @@ if (typeof lessons !== 'undefined') {
     "id": "c56_l7",
     "unitId": 39,
     "title": "Keşke Yapıları",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "Keşke Yapıları",
       "teorikMantik": "Bu ders Keşke Yapıları yapısının sentaks ve anlam kurallarını pekiştirir.",
@@ -8128,329 +7525,274 @@ if (typeof lessons !== 'undefined') {
     "exercises": [
       {
         "id": "c56_l7_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Wish ve if only kalıplarında zaman kayması ve pişmanlık ayrımı.",
         "questions": [
-          {
-            "id": "c56_l7_q1",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The editorial board will review the laboratory records provided that the revised proposal is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Yayın kurulu, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q2",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research institute had reviewed the census tables, the funding dispute would not have occurred.\"",
-            "sentence": "If the research institute had reviewed the census tables, the funding dispute would not have occurred.",
-            "englishPhrase": "If the research institute had reviewed the census tables, the funding dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Araştırma enstitüsü nüfus sayımı tablolarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c56_l7_q3",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the review panel ___ the new disclosure policy.\"",
-            "options": [
-              "evaluated",
-              "evaluate",
-              "will evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 1,
-            "translation": "Hukuk komisyonu, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q4",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The university senate approved the revised proposal, ___ was supported by the advisory committee.\"",
-            "options": [
-              "which was supported by the advisory committee",
-              "because was supported by the advisory committee",
-              "so was supported by the advisory committee",
-              "although was supported by the advisory committee"
-            ],
-            "correctIndex": 1,
-            "translation": "Üniversite senatosu, danışma komitesi tarafından desteklenen revize öneriyi onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c56_l7_q5",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The field team analyzed the interview transcripts, ___ was crucial for social cohesion.\"",
-            "options": [
-              "where",
-              "that",
-              "whom",
-              "which"
-            ],
-            "correctIndex": 3,
-            "translation": "Saha ekibi, toplumsal uyum için kritik olan görüşme dökümlerini analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c56_l7_q6",
-            "type": "true-false",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the legal commission had reviewed the case files, the licensing dispute would not have occurred.\"",
-            "sentence": "If the legal commission had reviewed the case files, the licensing dispute would not have occurred.",
-            "englishPhrase": "If the legal commission had reviewed the case files, the licensing dispute would not have occurred.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Hukuk komisyonu dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
-            "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
-          },
-          {
-            "id": "c56_l7_q7",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the academic board ___ the new funding policy.\"",
-            "options": [
-              "will evaluate",
-              "evaluates",
-              "evaluated",
-              "evaluate"
-            ],
-            "correctIndex": 3,
-            "translation": "Yayın kurulu, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q8",
-            "type": "fill-blank-dropdown",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:",
-            "sentence": "The survey unit will review the field survey records provided that the revised protocol is ___ .",
-            "options": [
-              "approved",
-              "approving",
-              "approve",
-              "to approve"
-            ],
-            "correctIndex": 0,
-            "translation": "Anket birimi, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
-            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
-          },
-          {
-            "id": "c56_l7_q9",
-            "type": "sentence-connector",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The appeals chamber approved the revised procedure, ___ was supported by the disciplinary board.\"",
-            "options": [
-              "which was supported by the disciplinary board",
-              "because was supported by the disciplinary board",
-              "so was supported by the disciplinary board",
-              "although was supported by the disciplinary board"
-            ],
-            "correctIndex": 3,
-            "translation": "Temyiz dairesi, disiplin kurulu tarafından desteklenen revize usulü onayladı.",
-            "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
-          },
-          {
-            "id": "c56_l7_q10",
-            "type": "word-bank",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Reconstruct the sentence in English using the correct word blocks:<br><br>\"Although the study was strict, the subject community maintained its subjunctive.\"",
-            "translation": "STUDY kuralları sert olmasına rağmen, subject topluluğu subjunctive durumunu korudu.",
-            "correctOrder": [
-              "Although",
-              "the",
-              "study",
-              "was",
-              "strict,",
-              "the",
-              "subject",
-              "community",
-              "maintained",
-              "its",
-              "subjunctive."
-            ],
-            "words": [
-              "Although",
-              "the",
-              "study",
-              "was",
-              "strict,",
-              "the",
-              "subject",
-              "community",
-              "maintained",
-              "its",
-              "subjunctive.",
-              "however",
-              "despite"
-            ]
-          },
-          {
-            "id": "c56_l7_q11",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the subjunctive changes the policy, / the such will support the reform.\"",
-            "pairs": [
               {
-                "left": "If the subjunctive changes the policy,",
-                "right": "the such will support the reform."
+                "id": "c56_l7_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The curator wishes the gallery ___ larger windows.",
+                "options": [
+                  "had",
+                  "has",
+                  "will have",
+                  "would have had"
+                ],
+                "correctIndex": 0,
+                "translation": "Küratör galerinin daha büyük pencereleri olmasını isterdi.",
+                "explanation": "Şu anki gerçeğe duyulan pişmanlık 'wish + V2' ile kurulur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
               },
               {
-                "left": "Since the sudden was established,",
-                "right": "the community has maintained stability."
+                "id": "c56_l7_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "I wish I had checked the calibration before the session started.",
+                "englishPhrase": "I wish I had checked the calibration before the session started.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Keşke oturum başlamadan önce kalibrasyonu kontrol etseydim.",
+                "explanation": "Geçmişe duyulan pişmanlık 'wish + had V3' ile kurulur; cümle doğrudur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
               },
               {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
+                "id": "c56_l7_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The team wishes the funding body ___ its decision more quickly.",
+                "options": [
+                  "would announce",
+                  "announces",
+                  "announced would",
+                  "will announce"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip, fon kuruluşunun kararını daha hızlı açıklamasını istiyor.",
+                "explanation": "Başkasının davranışından duyulan rahatsızlık 'wish + would V1' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "If only the archive would be catalogued before the fire, the records would have survived.",
+                "englishPhrase": "If only the archive would be catalogued before the fire, the records would have survived.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Keşke arşiv yangından önce kataloglanmış olsaydı, kayıtlar kurtulurdu.",
+                "explanation": "Geçmiş için 'would be' değil 'had been' gerekir: 'If only the archive had been catalogued'.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "If only we ___ the sensors last winter, the data gap would be smaller now.",
+                "options": [
+                  "had replaced",
+                  "replaced",
+                  "would replace",
+                  "have replaced"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke sensörleri geçen kış değiştirseydik, şimdi veri boşluğu daha küçük olurdu.",
+                "explanation": "Geçmiş koşul 'had V3' ile kurulur; sonucu bugüne bakarsa karma koşul oluşur.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle şu anki bir duruma duyulan pişmanlığı anlatır?",
+                "options": [
+                  "I wish the laboratory were closer to the campus.",
+                  "I wish the laboratory had been closer to the campus.",
+                  "I wish the laboratory will be closer to the campus.",
+                  "I wish the laboratory is closer to the campus."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke laboratuvar kampüse daha yakın olsa.",
+                "explanation": "Şimdiki gerçeğin tersi 'wish + V2 (were)' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The editors wish the author ___ the deadline last month.",
+                "options": [
+                  "had met",
+                  "met",
+                  "would meet",
+                  "has met"
+                ],
+                "correctIndex": 0,
+                "translation": "Editörler yazarın geçen ay teslim tarihine uymasını isterdi.",
+                "explanation": "'last month' geçmiş bağlamıdır; wish sonrası had V3 gerekir.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q8",
+                "type": "multiple-choice",
+                "prompt": "'It is a pity that the sensors keep failing.' cümlesinin wish karşılığı hangisidir?",
+                "options": [
+                  "I wish the sensors would stop failing.",
+                  "I wish the sensors stopped failing yesterday.",
+                  "I wish the sensors had stopped failing now.",
+                  "I wish the sensors will stop failing."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke sensörler arıza vermeyi bıraksa.",
+                "explanation": "Süregelen rahatsız edici davranış 'wish + would V1' ile anlatılır.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "If only the committee ___ the objection, the ruling would be different today.",
+                "options": [
+                  "had considered",
+                  "considered",
+                  "would consider",
+                  "has considered"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke komite itirazı dikkate alsaydı, bugün karar farklı olurdu.",
+                "explanation": "Geçmiş koşul + bugünkü sonuç karma yapısıdır: had V3 ... would V1.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "'I wish I ___ more time in the archive during the fellowship.'",
+                "options": [
+                  "had spent",
+                  "spent",
+                  "would spend",
+                  "have spent"
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke burs süresince arşivde daha fazla zaman geçirseydim.",
+                "explanation": "Bitmiş bir dönem anlatıldığı için geçmiş pişmanlığı had V3 ister.",
+                "hint": {
+                  "formula": "wish + V2 (şimdiki pişmanlık) | wish + had V3 (geçmiş pişmanlık) | wish + would V1 (şikâyet/istek) | If only + aynı kurallar",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Wish sonrası zaman bir derece geriye kayar."
+                }
+              },
+              {
+                "id": "c56_l7_q11",
+                "type": "matching",
+                "prompt": "Kalıbı anlattığı duruma eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "Anlatılan Durum",
+                "pairs": [
+                  {
+                    "left": "wish + V2",
+                    "right": "şu anki gerçeğe duyulan pişmanlık"
+                  },
+                  {
+                    "left": "wish + had V3",
+                    "right": "geçmişte olan/olmayan şeye pişmanlık"
+                  },
+                  {
+                    "left": "wish + would V1",
+                    "right": "başkasının davranışından duyulan rahatsızlık"
+                  }
+                ],
+                "explanation": "Wish sonrası çekim, pişmanlığın hangi zamana ait olduğunu belirler."
+              },
+              {
+                "id": "c56_l7_q12",
+                "type": "matching",
+                "prompt": "Cümle başlangıcını doğru devamıyla eşleştirin:",
+                "leftHeader": "Başlangıç",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "I wish the storm",
+                    "right": "were over by now."
+                  },
+                  {
+                    "left": "I wish the crew",
+                    "right": "had secured the equipment last night."
+                  },
+                  {
+                    "left": "I wish the neighbours",
+                    "right": "would lower the volume after midnight."
+                  }
+                ],
+                "explanation": "Şimdiki durum V2, geçmiş had V3, davranış şikâyeti would V1 alır."
+              },
+              {
+                "id": "c56_l7_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The restoration was postponed twice. The director now says she wishes the foundation had released the funds a year earlier, and that she wishes the current schedule were less compressed.",
+                "sentence": "Which structure expresses regret about the past in the paragraph?",
+                "options": [
+                  "she wishes the foundation had released the funds earlier",
+                  "she wishes the current schedule were less compressed",
+                  "she wishes the foundation would release the funds"
+                ],
+                "correctIndex": 0,
+                "translation": "Vakfın fonu bir yıl önce serbest bırakmış olmasını isterdi.",
+                "explanation": "Geçmişe dönük pişmanlık 'wish + had V3' ile kurulur."
+              },
+              {
+                "id": "c56_l7_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Field notes from the 1970s are incomplete. Researchers often say: if only the original team had recorded the coordinates, the sites could be relocated today. Many also wish the notebooks were stored in a single archive rather than four.",
+                "sentence": "Which sentence uses 'if only' correctly for a past regret?",
+                "options": [
+                  "If only the team had recorded the coordinates.",
+                  "If only the team would record the coordinates.",
+                  "If only the team recorded the coordinates yesterday."
+                ],
+                "correctIndex": 0,
+                "translation": "Keşke ekip koordinatları kaydetmiş olsaydı.",
+                "explanation": "'If only' geçmiş pişmanlığında had V3 alır."
               }
             ]
-          },
-          {
-            "id": "c56_l7_q12",
-            "type": "context-distractor",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The appeals chamber analyzed the case files, ___ was crucial for judicial consistency.\"",
-            "options": [
-              "that",
-              "where",
-              "which",
-              "whom"
-            ],
-            "correctIndex": 2,
-            "translation": "Temyiz dairesi, yargısal tutarlılık için kritik olan dava dosyalarını analiz etti.",
-            "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
-          },
-          {
-            "id": "c56_l7_q13",
-            "type": "matching",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Humanities"
-            ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the suggested changes the policy, / the supervision will support the reform.\"",
-            "pairs": [
-              {
-                "left": "If the suggested changes the policy,",
-                "right": "the supervision will support the reform."
-              },
-              {
-                "left": "Since the support was established,",
-                "right": "the community has maintained stability."
-              },
-              {
-                "left": "By the time they completed the excavation,",
-                "right": "the team had analyzed the heritage."
-              }
-            ]
-          },
-          {
-            "id": "c56_l7_q14",
-            "type": "multiple-choice",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Sosyoloji"
-            ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the evaluation panel ___ the new housing policy.\"",
-            "options": [
-              "evaluate",
-              "evaluated",
-              "will evaluate",
-              "evaluates"
-            ],
-            "correctIndex": 0,
-            "translation": "Saha ekibi, değerlendirme heyetinin yeni konut politikasını değerlendirmesinde ısrar etti.",
-            "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
-          },
-          {
-            "id": "c56_l7_q15",
-            "type": "translation-text",
-            "grammarTags": [
-              "Koşul Cümlecikleri (If Clauses)",
-              "İsim ve Edat Yapıları",
-              "İsim Tamlamaları",
-              "Hukuk"
-            ],
-            "prompt": "Translate the following sentence into Turkish:<br><br>\"The survey concluded that the symbolic and the symposia were stable.\"",
-            "correctAnswer": "SURVEY uzmanı, symbolic ve symposia durumlarının istikrarlı olduğu sonucuna vardı.",
-            "translation": "SURVEY uzmanı, symbolic ve symposia durumlarının istikrarlı olduğu sonucuna vardı."
-          }
-        ]
       }
     ]
   }
@@ -10150,10 +9492,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+    "title": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
     "subtitle": "Sentaks ve Noktalama Kuralları: İsim Alan Edatlar (despite, due to), Cümle Alan Bağlaçlar (although, because) ve İki Cümle Arası Geçişler (however, therefore)",
     "konuAnlatimi": {
-      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "baslik": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
       "teorikMantik": "Bu ders, bağlaçların yapısal gruplarını (cümle alan, isim alan, geçiş alan) ve noktalama kurallarını kapsar.",
       "formul": "Although + SVO | Despite + Noun | SVO; however, SVO"
     },
@@ -12119,10 +11461,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+    "title": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
     "subtitle": "Type 0, 1, 2, 3, Mix ve Devrik Koşul Yapılarının Sentaks ve Çeviri Kuralları",
     "konuAnlatimi": {
-      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "baslik": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
       "teorikMantik": "Bu ders, Type 0-1-2-3 koşul yapılarını, devrik, alternatif ve mixed conditionals kombinasyonlarını ve wish clause kalıplarını kapsar.",
       "formul": "If had V3 ➔ would have V3 | Had + Subject + V3 | I wish + V2/Had V3"
     },
@@ -16159,10 +15501,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+    "title": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
     "subtitle": "Sentaks ve Noktalama Kuralları: İsim Alan Edatlar (despite, due to), Cümle Alan Bağlaçlar (although, because) ve İki Cümle Arası Geçişler (however, therefore)",
     "konuAnlatimi": {
-      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "baslik": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
       "teorikMantik": "<div style='display:flex; flex-direction:column; gap:10px; text-align:left;'><div style='background:rgba(16,185,129,0.12); border:1px solid #10b981; border-radius:10px; padding:10px 12px; color:var(--text-primary);'><strong style='color:#10b981;'>🟢 GRUP 1 (YEŞİL) - İSİM & V-ING ALANLAR (Edatlar / Prepositions):</strong><br>Arkasından <u>asla tam cümle almaz</u>. Yalnızca İsim, İsim Öbeği veya V-ing alır.<br><em>Örnekler: Despite, In spite of, Due to, Owing to, On account of, In addition to, With a view to, As a consequence of, Notwithstanding.</em></div><div style='background:rgba(59,130,246,0.12); border:1px solid #3b82f6; border-radius:10px; padding:10px 12px; color:var(--text-primary);'><strong style='color:#3b82f6;'>🔵 GRUP 2 (MAVİ) - CÜMLE (ÖZNE+YÜKLEM) ALANLAR (Cümle Bağlaçları):</strong><br>Arkasından mutlaka <u>Tam Cümle (Özne + Yüklem / S+V)</u> gerektirir.<br><em>Örnekler: Although, Even though, Though, Because, Since, As, While, Whereas, In order that, So that, Provided that.</em></div><div style='background:rgba(239,68,68,0.12); border:1px solid #ef4444; border-radius:10px; padding:10px 12px; color:var(--text-primary);'><strong style='color:#ef4444;'>🔴 GRUP 3 (KIRMIZI) - İKİ CÜMLE ARASINA GELENLER (Geçiş Zarfları / Transitions):</strong><br>İki bağımsız cümleyi birbirine bağlar. Noktalama kuralı: <u>Cümle 1; Transition, Cümle 2.</u> veya <u>Cümle 1. Transition, Cümle 2.</u><br><em>Örnekler: However, Nevertheless, Furthermore, Moreover, Consequently, Therefore, On the other hand.</em></div></div>",
       "formul": "🟢 GRUP 1: Edat + Noun / V-ing (İsim Alanlar) | 🔵 GRUP 2: Bağlaç + S+V+O (Tam Cümle Alanlar) | 🔴 GRUP 3: Cümle 1; Transition, Cümle 2. (İki Cümle Arasına Gelenler)",
       "altinKural": "⚠️ SINAV TUZAĞI: 'Despite / In spite of / Due to' (Grup 1) yapılarından sonra fiil içeren tam cümle GELEMEZ! Tam cümlelerin önüne 'Although / Because' (Grup 2) getirilir. İki cümle arasında noktalı virgül (;) varsa 'However / Therefore' (Grup 3) seçilir."
@@ -17148,10 +16490,10 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+    "title": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
     "subtitle": "Type 0, 1, 2, 3, Mix ve Devrik Koşul Yapılarının Sentaks ve Çeviri Kuralları",
     "konuAnlatimi": {
-      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "baslik": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
       "teorikMantik": "Koşul yapılarında Type 0 genel bilimsel gerçekleri (is applied ➔ expand), Type 1 gelecek olasılıklarını (lowers ➔ will increase), Type 2 günümüz hayali durumlarını (allocated ➔ would recruit), Type 3 geçmiş imkansız durumları (had reviewed ➔ would have dismissed), Mix Conditionals geçmiş neden/bugün sonuç çaprazlamasını (had negotiated ➔ would be today), Devriklik ise If'siz yapıları (Had...V3 / Were...to V1 / Should...V1) ifade eder.",
       "formul": "Type 0 (V1➔V1) | Type 1 (V1➔Will V1) | Type 2 (V2➔Would V1) | Type 3 (Had V3➔Would Have V3) | Mix (Had V3➔Would V1) | Devrik (Had/Were/Should)",
       "altinKural": "Type 0-1-2-3, Mix ve Devrik yapılar arasında zaman uyumları katidir. 'If' bağlacı kaldırıldığında devriklik başa gelen Had/Were/Should ile sağlanır."

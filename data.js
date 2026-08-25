@@ -70739,7 +70739,7 @@ const chapter40Data = {
     "id": "c40_l1_merged",
     "unitId": 39,
     "title": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
       "teorikMantik": "Zaman uyumunda temel ilke Present-Present ve Past-Past dengesidir. 'By the time' eylemin tamamlanma sınırını (miladını), 'Since' ise eylemin başladığı geçmiş noktayı belirler.",
@@ -70749,300 +70749,285 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l1_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "By the time sınır kilidi ile Since süreç kilidinin çekim eşleşmeleri.",
         "questions": [
-          {
-            "id": "c40_l1_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "History scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Tarih dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l1_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l1_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Political science scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Siyaset dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l1_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In anthropological studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In anthropological studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Antropoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Antropoloji alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l1_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Cultural studies scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Kültür dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l1_q6",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in film studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sinema metin analizi."
-            }
-          },
-          {
-            "id": "c40_l1_q7",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in literature demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Edebiyat metin analizi."
-            }
-          },
-          {
-            "id": "c40_l1_q8",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l1_q9",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in history demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Tarih metin analizi."
-            }
-          },
-          {
-            "id": "c40_l1_q10",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l1_q11",
-            "type": "matching",
-            "prompt": "[/ Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l1_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the committee ___ the final report, the submission deadline had already passed.",
+                "options": [
+                  "reviewed",
+                  "reviews",
+                  "will review",
+                  "has reviewed"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite nihai raporu incelediğinde başvuru süresi çoktan dolmuştu.",
+                "explanation": "'By the time' geçmiş bağlamında yan cümlede V2, ana cümlede Had V3 ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "Provided that funding is secured for tarih,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l1_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "englishPhrase": "By the time the funding arrives, the laboratory will have completed the pilot study.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Fon geldiğinde laboratuvar pilot çalışmayı tamamlamış olacak.",
+                "explanation": "Gelecek bağlamında 'By the time + V1' ana cümlede 'will have V3' çeker; dizilim doğrudur.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
               },
               {
-                "left": "Unless policy makers consult experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l1_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scientists ___ the same glacier since the monitoring station opened in 2004.",
+                "options": [
+                  "have measured",
+                  "measured",
+                  "had measured",
+                  "measure"
+                ],
+                "correctIndex": 0,
+                "translation": "Bilim insanları izleme istasyonu 2004'te açıldığından beri aynı buzulu ölçüyor.",
+                "explanation": "'Since + V2' günümüze uzanan süreçte ana cümleye Have/Has V3 getirir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "englishPhrase": "Since the archive was digitised, researchers had accessed the records remotely.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Arşiv dijitalleştirildiğinden beri araştırmacılar kayıtlara uzaktan erişiyor.",
+                "explanation": "Süreç günümüze uzandığı için Past Perfect değil Present Perfect gerekir: 'have accessed'.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "By the time the audit team arrived, the accountants ___ the missing invoices.",
+                "options": [
+                  "had located",
+                  "located",
+                  "have located",
+                  "would locate"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetim ekibi geldiğinde muhasebeciler eksik faturaları bulmuştu.",
+                "explanation": "Yan cümle V2 ise ana cümlede önceliği Had V3 mühürler.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the trade agreement was signed, exports to the region have risen sharply.",
+                "options": [
+                  "Since",
+                  "By the time",
+                  "Until",
+                  "As soon as"
+                ],
+                "correctIndex": 0,
+                "translation": "Ticaret anlaşması imzalandığından beri bölgeye ihracat hızla arttı.",
+                "explanation": "Ana cümlede 'have risen' bulunduğu için başlangıç noktası bildiren 'Since' gerekir.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "By 2030, the ministry ___ the entire rail network.",
+                "options": [
+                  "will have modernised",
+                  "will modernise",
+                  "has modernised",
+                  "had modernised"
+                ],
+                "correctIndex": 0,
+                "translation": "2030'a kadar bakanlık tüm demiryolu ağını modernize etmiş olacak.",
+                "explanation": "'By + gelecek tarih' eylemin o sınırda tamamlanmış olmasını, yani Future Perfect ister.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle 'By the time' kuralına uyar?",
+                "options": [
+                  "By the time the ferry docked, the passengers had collected their luggage.",
+                  "By the time the ferry docked, the passengers have collected their luggage.",
+                  "By the time the ferry docked, the passengers collect their luggage.",
+                  "By the time the ferry had docked, the passengers will collect their luggage."
+                ],
+                "correctIndex": 0,
+                "translation": "Feribot yanaştığında yolcular bagajlarını almıştı.",
+                "explanation": "Geçmiş bağlamda doğru dizilim 'By the time + V2 , Had V3'tür.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The institute has published four monographs ___ 2019.",
+                "options": [
+                  "since",
+                  "for",
+                  "by",
+                  "until"
+                ],
+                "correctIndex": 0,
+                "translation": "Enstitü 2019'dan beri dört monografi yayımladı.",
+                "explanation": "Belirli bir başlangıç noktası verildiğinde 'since', süre verildiğinde 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The team has been analysing the soil samples ___ six weeks.",
+                "options": [
+                  "for",
+                  "since",
+                  "by",
+                  "from"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip toprak örneklerini altı haftadır analiz ediyor.",
+                "explanation": "'six weeks' bir süre uzunluğudur; süre ile 'for' kullanılır.",
+                "hint": {
+                  "formula": "By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3 | Since + V2 ➔ Have/Has V3",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman sınırı ve süreç kuralı."
+                }
+              },
+              {
+                "id": "c40_l1_merged_q11",
+                "type": "matching",
+                "prompt": "Yan cümledeki kalıbı doğru ana cümleyle eşleştirin:",
+                "leftHeader": "Yan Cümle",
+                "rightHeader": "Ana Cümle",
+                "pairs": [
+                  {
+                    "left": "By the time the storm reached the coast,",
+                    "right": "the harbour had been evacuated."
+                  },
+                  {
+                    "left": "By the time you receive this notice,",
+                    "right": "the committee will have announced its decision."
+                  },
+                  {
+                    "left": "Since the new protocol took effect,",
+                    "right": "complaint rates have fallen steadily."
+                  }
+                ],
+                "explanation": "Geçmiş sınır Had V3, gelecek sınır Will Have V3, süreç ise Have/Has V3 ile tamamlanır."
+              },
+              {
+                "id": "c40_l1_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman ifadesini gerektirdiği çekimle eşleştirin:",
+                "leftHeader": "Zaman İfadesi",
+                "rightHeader": "Gerekli Çekim",
+                "pairs": [
+                  {
+                    "left": "since the archive opened",
+                    "right": "have/has + V3"
+                  },
+                  {
+                    "left": "by the time the audit ended",
+                    "right": "had + V3"
+                  },
+                  {
+                    "left": "by next spring",
+                    "right": "will have + V3"
+                  }
+                ],
+                "explanation": "Since süreci, by the time ve by + gelecek tarih ise tamamlanma sınırını işaretler."
+              },
+              {
+                "id": "c40_l1_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The national library began digitising its manuscript collection in 2016. Since that decision was taken, more than forty thousand pages have been made publicly available. By the time the current phase ends next winter, the library will have processed the entire medieval section.",
+                "sentence": "Which structure correctly completes the timeline described in the paragraph?",
+                "options": [
+                  "By the time the phase ends, the library will have processed the medieval section.",
+                  "By the time the phase ends, the library processed the medieval section.",
+                  "Since the phase ends, the library had processed the medieval section."
+                ],
+                "correctIndex": 0,
+                "translation": "Bu aşama bittiğinde kütüphane ortaçağ bölümünü işlemiş olacak.",
+                "explanation": "Paragraf gelecekteki bir sınır veriyor; sınırda tamamlanma Future Perfect ile kurulur."
+              },
+              {
+                "id": "c40_l1_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "When the excavation permit was finally granted, the field team had already spent two seasons preparing the site survey. Since the permit arrived, the team has recovered several inscribed tablets that were previously thought lost.",
+                "sentence": "According to the paragraph, which sentence states the correct time relation?",
+                "options": [
+                  "Since the permit arrived, the team has recovered several tablets.",
+                  "Since the permit arrived, the team had recovered several tablets.",
+                  "By the time the permit arrived, the team recovers several tablets."
+                ],
+                "correctIndex": 0,
+                "translation": "İzin geldiğinden beri ekip birkaç tablet çıkardı.",
+                "explanation": "Başlangıç noktasından bugüne uzanan süreç Present Perfect ile aktarılır."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l1_q12",
-            "type": "matching",
-            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the political science manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in anthropology paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze kültür trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l1_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in film studies has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in film studies, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l1_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of literature, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "[/ Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, scholars managed to publish seminal treatises.",
-              "Because scholars faced censorship, they could not publish treatises.",
-              "Unless scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   },
   {
     "id": "c40_l2_merged",
     "unitId": 39,
-    "title": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
+      "baslik": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
       "teorikMantik": "Koşul ve dilek cümlelerinde zaman 1 derece geriye kayar (Backshift). Şu anki hayali durumlar Past Simple ile, geçmişteki pişmanlıklar Past Perfect (Had V3) ile ifade edilir.",
       "formul": "If Type 1: Present ➔ Will V1 | Type 2: Past (V2) ➔ Would V1 | Type 3: Had V3 ➔ Would Have V3 | Wish + Past/Past Perfect",
       "altinKural": "'Unless' olumsuz anlam taşır (madıkça/medikçe); yan cümlesine ayrıca 'not' gelemez! 'I wish / If only' yapılarından sonra 'will/would' ile şikayet bildirilir."
@@ -71050,300 +71035,285 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l2_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Until, as soon as, before, after, while ve when bağlaçlarının çekim kilitleri.",
         "questions": [
-          {
-            "id": "c40_l2_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l2_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In political studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In political studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Siyaset çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Siyaset alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l2_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Anthropology scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Antropoloji dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l2_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In cultural studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In cultural studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Kültür çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Kültür alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l2_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Film studies scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Sinema dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l2_q6",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in literature demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Edebiyat metin analizi."
-            }
-          },
-          {
-            "id": "c40_l2_q7",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 7] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l2_q8",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in history demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Tarih metin analizi."
-            }
-          },
-          {
-            "id": "c40_l2_q9",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l2_q10",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in political science demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Siyaset metin analizi."
-            }
-          },
-          {
-            "id": "c40_l2_q11",
-            "type": "matching",
-            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although history theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l2_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The committee will not release the figures until the auditors ___ their review.",
+                "options": [
+                  "complete",
+                  "will complete",
+                  "completed",
+                  "would complete"
+                ],
+                "correctIndex": 0,
+                "translation": "Denetçiler incelemelerini tamamlayana kadar komite rakamları açıklamayacak.",
+                "explanation": "Zaman bağlacından sonra gelecek anlamı için WILL değil Present Simple (V1) kullanılır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "Provided that funding is secured for psikoloji,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l2_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "englishPhrase": "As soon as the results will arrive, the laboratory will publish the summary.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Sonuçlar gelir gelmez laboratuvar özeti yayımlayacak.",
+                "explanation": "'As soon as' yan cümlesinde WILL yasaktır; doğru biçim 'as soon as the results arrive'.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
               },
               {
-                "left": "Unless policy makers consult political science experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l2_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "While the technicians ___ the turbine, a power surge damaged the control unit.",
+                "options": [
+                  "were inspecting",
+                  "inspect",
+                  "have inspected",
+                  "will inspect"
+                ],
+                "correctIndex": 0,
+                "translation": "Teknisyenler türbini incelerken bir elektrik dalgalanması kontrol ünitesine zarar verdi.",
+                "explanation": "'While' süregelen bir arka plana işaret eder; Past Continuous ile kurulur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "After the ministry had approved the budget, the tender process began.",
+                "englishPhrase": "After the ministry had approved the budget, the tender process began.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Bakanlık bütçeyi onayladıktan sonra ihale süreci başladı.",
+                "explanation": "'After' önce olan eyleme Had V3, sonraki eyleme V2 verir; dizilim doğrudur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Before the regulation ___ into force, exporters had stockpiled the affected goods.",
+                "options": [
+                  "came",
+                  "had come",
+                  "comes",
+                  "will come"
+                ],
+                "correctIndex": 0,
+                "translation": "Düzenleme yürürlüğe girmeden önce ihracatçılar etkilenen malları stoklamıştı.",
+                "explanation": "'Before' sonraki eyleme V2, önceki eyleme Had V3 verir.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the vaccine was distributed nationwide, infection rates fell within two months.",
+                "options": [
+                  "After",
+                  "Until",
+                  "While",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Aşı ülke genelinde dağıtıldıktan sonra enfeksiyon oranları iki ay içinde düştü.",
+                "explanation": "İki geçmiş olay arasında sıralama kuran bağlaç 'after'tır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The archaeologist kept excavating ___ the light faded.",
+                "options": [
+                  "until",
+                  "as soon as",
+                  "before",
+                  "while"
+                ],
+                "correctIndex": 0,
+                "translation": "Arkeolog ışık kaybolana kadar kazmayı sürdürdü.",
+                "explanation": "Bir eylemin bittiği noktayı 'until' işaretler.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle zaman bağlacı kuralına uyar?",
+                "options": [
+                  "When the report is published, the committee will convene.",
+                  "When the report will be published, the committee will convene.",
+                  "When the report published, the committee convenes.",
+                  "When the report is published, the committee convened."
+                ],
+                "correctIndex": 0,
+                "translation": "Rapor yayımlandığında komite toplanacak.",
+                "explanation": "Yan cümle Present Simple, ana cümle Will V1 olur.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the researchers were collecting samples, the weather station recorded a sudden drop.",
+                "options": [
+                  "While",
+                  "Until",
+                  "After",
+                  "Unless"
+                ],
+                "correctIndex": 0,
+                "translation": "Araştırmacılar numune toplarken meteoroloji istasyonu ani bir düşüş kaydetti.",
+                "explanation": "Süregelen bir eylemi kesen olay 'while' ile bağlanır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "As soon as the software ___ the anomaly, it locks the affected account.",
+                "options": [
+                  "detects",
+                  "will detect",
+                  "detected",
+                  "is detecting"
+                ],
+                "correctIndex": 0,
+                "translation": "Yazılım anormalliği tespit eder etmez etkilenen hesabı kilitler.",
+                "explanation": "Genel doğru anlatımında yan ve ana cümlenin ikisi de Present Simple kalır.",
+                "hint": {
+                  "formula": "Time conjunction + Present (V1) ➔ Will V1 | Time conjunction + V2 ➔ V2 / Was-Were V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Zaman bağlacı yan cümlesinde WILL kullanılmaz."
+                }
+              },
+              {
+                "id": "c40_l2_merged_q11",
+                "type": "matching",
+                "prompt": "Bağlacı doğru devam eden cümleyle eşleştirin:",
+                "leftHeader": "Zaman Bağlacı",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "The board will decide as soon as",
+                    "right": "the legal opinion arrives."
+                  },
+                  {
+                    "left": "The ferry had already left when",
+                    "right": "the delegation reached the port."
+                  },
+                  {
+                    "left": "The generators ran continuously until",
+                    "right": "the main grid was restored."
+                  }
+                ],
+                "explanation": "As soon as gelecek için Present, when geçmiş için V2, until ise bitiş sınırı ister."
+              },
+              {
+                "id": "c40_l2_merged_q12",
+                "type": "matching",
+                "prompt": "Zaman bağlacını üstlendiği işlevle eşleştirin:",
+                "leftHeader": "Bağlaç",
+                "rightHeader": "İşlevi",
+                "pairs": [
+                  {
+                    "left": "until",
+                    "right": "eylemin bittiği sınırı verir"
+                  },
+                  {
+                    "left": "while",
+                    "right": "eşzamanlı süregelen arka planı verir"
+                  },
+                  {
+                    "left": "after",
+                    "right": "önce gerçekleşen eylemi işaretler"
+                  }
+                ],
+                "explanation": "Her bağlaç farklı bir zaman ilişkisi kurar: sınır, eşzamanlılık, öncelik."
+              },
+              {
+                "id": "c40_l2_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The observatory suspends all measurements while the calibration cycle is running. As soon as the cycle finishes, the operators reopen the dome. Until the humidity sensors are replaced next month, however, night sessions remain limited to four hours.",
+                "sentence": "According to the paragraph, when do the operators reopen the dome?",
+                "options": [
+                  "As soon as the calibration cycle finishes.",
+                  "While the calibration cycle is running.",
+                  "Until the humidity sensors are replaced."
+                ],
+                "correctIndex": 0,
+                "translation": "Kalibrasyon döngüsü biter bitmez operatörler kubbeyi yeniden açar.",
+                "explanation": "'As soon as the cycle finishes' peş peşeliği kuran ifadedir."
+              },
+              {
+                "id": "c40_l2_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "After the flood barriers had been reinforced, the municipality resumed construction on the riverside district. While the works continued, engineers monitored the water level hourly. The permits will not be extended until the final safety report is filed.",
+                "sentence": "Which sentence matches the time relations in the paragraph?",
+                "options": [
+                  "The permits will not be extended until the safety report is filed.",
+                  "The permits will not be extended until the safety report will be filed.",
+                  "The permits were not extended while the safety report is filed."
+                ],
+                "correctIndex": 0,
+                "translation": "Nihai güvenlik raporu sunulana kadar izinler uzatılmayacak.",
+                "explanation": "'Until' yan cümlesinde WILL kullanılmaz; Present Simple gelir."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l2_q12",
-            "type": "matching",
-            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the anthropology manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in cultural studies paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze sinema trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l2_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in literature has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in literature, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l2_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of sociology, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although history scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, history scholars managed to publish seminal treatises.",
-              "Because history scholars faced censorship, they could not publish treatises.",
-              "Unless history scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   },
   {
     "id": "c40_l3_merged",
     "unitId": 39,
-    "title": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "title": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
-      "baslik": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "baslik": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
       "teorikMantik": "Tavsiye, emir, aciliyet veya hayati önem bildiren fiil ve sıfatlardan sonra gelen 'that' bağlacında özne ne olursa olsun fiil yalın kök (bare infinitive / V0) kalır.",
       "formul": "Subject + (insist/demand/recommend/suggest/require) + THAT + Subject + V0 (yalın) | It is vital/essential THAT + Subject + V0",
       "altinKural": "Özne 'he/she/it' veya pasif olsa dahi V-s takısı veya am/is/are almaz! Örn: 'insist that he BE present' veya 'recommend that the report BE revised'."
@@ -71351,290 +71321,274 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l3_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Once ile anlık geçiş kalıplarının (no sooner / hardly) devrik dizilimi.",
         "questions": [
-          {
-            "id": "c40_l3_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Political science scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Siyaset dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l3_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In anthropological studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In anthropological studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Antropoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Antropoloji alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l3_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Cultural studies scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Kültür dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l3_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In film studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In film studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Sinema çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sinema alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l3_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Literature scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Edebiyat dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l3_q6",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l3_q7",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in history demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Tarih metin analizi."
-            }
-          },
-          {
-            "id": "c40_l3_q8",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 8] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l3_q9",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in political science demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Siyaset metin analizi."
-            }
-          },
-          {
-            "id": "c40_l3_q10",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in anthropology demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Antropoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Antropoloji metin analizi."
-            }
-          },
-          {
-            "id": "c40_l3_q11",
-            "type": "matching",
-            "prompt": "[/ Tip 3 Eşleştirme - Soru 11] Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l3_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "No sooner ___ the minister announced the reform than the markets reacted.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Bakan reformu açıklar açıklamaz piyasalar tepki verdi.",
+                "explanation": "'No sooner' başa geldiğinde devrik yapı 'had + özne + V3' kurulur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "Provided that funding is secured for siyaset,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l3_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Hardly had the delegation arrived when the negotiations resumed.",
+                "englishPhrase": "Hardly had the delegation arrived when the negotiations resumed.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Delegasyon gelir gelmez müzakereler yeniden başladı.",
+                "explanation": "Hardly + had + özne + V3 ... when + V2 dizilimi kuraldır; cümle doğrudur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
               },
               {
-                "left": "Unless policy makers consult anthropology experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l3_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Once the prototype ___ the stress test, the team filed the patent application.",
+                "options": [
+                  "passed",
+                  "passes",
+                  "had passed",
+                  "will pass"
+                ],
+                "correctIndex": 0,
+                "translation": "Prototip dayanıklılık testini geçince ekip patent başvurusunu yaptı.",
+                "explanation": "'Once' geçmiş anlatımında iki eylemi de V2 ile sıralayabilir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "englishPhrase": "No sooner had the alarm sounded when the staff evacuated the building.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Alarm çalar çalmaz personel binayı boşalttı.",
+                "explanation": "'No sooner' ikincil ek olarak 'than' ister; 'when' yalnızca hardly/scarcely ile gelir.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Scarcely had the results been verified ___ the journal requested a revision.",
+                "options": [
+                  "when",
+                  "than",
+                  "then",
+                  "as"
+                ],
+                "correctIndex": 0,
+                "translation": "Sonuçlar doğrulanır doğrulanmaz dergi bir revizyon istedi.",
+                "explanation": "Scarcely/Hardly/Barely kalıpları 'when' (ya da before) ekiyle tamamlanır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle devrik anlık geçiş kuralına uyar?",
+                "options": [
+                  "No sooner had the ship docked than the inspectors boarded it.",
+                  "No sooner the ship had docked than the inspectors boarded it.",
+                  "No sooner did the ship dock when the inspectors boarded it.",
+                  "No sooner has the ship docked than the inspectors boarded it."
+                ],
+                "correctIndex": 0,
+                "translation": "Gemi yanaşır yanaşmaz müfettişler gemiye çıktı.",
+                "explanation": "Yardımcı fiil özneden önce gelir ve ikinci eylem V2 olur.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ the committee had reviewed the objection, the ruling was published.",
+                "options": [
+                  "Once",
+                  "No sooner",
+                  "Hardly",
+                  "Than"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite itirazı inceledikten sonra karar yayımlandı.",
+                "explanation": "Devrik kurulmayan düz cümlede sıralama bağlacı 'once' kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Hardly ___ the excavation begun when heavy rain halted the work.",
+                "options": [
+                  "had",
+                  "has",
+                  "did",
+                  "was"
+                ],
+                "correctIndex": 0,
+                "translation": "Kazı başlar başlamaz şiddetli yağmur çalışmayı durdurdu.",
+                "explanation": "Hardly başa geldiğinde Past Perfect devrik kurulur: had + özne + V3.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "'As soon as the referee blew the whistle, the players left the pitch.' cümlesinin devrik karşılığı hangisidir?",
+                "options": [
+                  "No sooner had the referee blown the whistle than the players left the pitch.",
+                  "No sooner the referee blew the whistle than the players left the pitch.",
+                  "Hardly the referee had blown the whistle than the players left the pitch.",
+                  "No sooner had the referee blown the whistle when the players left the pitch."
+                ],
+                "correctIndex": 0,
+                "translation": "Hakem düdüğü çalar çalmaz oyuncular sahadan ayrıldı.",
+                "explanation": "As soon as yapısı devriğe çevrilirken 'No sooner had + V3 ... than + V2' kalıbı kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Once the archive ___ catalogued, researchers may request digital copies.",
+                "options": [
+                  "has been",
+                  "will be",
+                  "had been",
+                  "is being"
+                ],
+                "correctIndex": 0,
+                "translation": "Arşiv kataloglandıktan sonra araştırmacılar dijital kopya isteyebilir.",
+                "explanation": "'Once' yan cümlesinde gelecek için WILL değil Present Perfect/Present kullanılır.",
+                "hint": {
+                  "formula": "Once + V2 ➔ V2 | No sooner + HAD + S + V3 ➔ THAN + S + V2 | Hardly/Scarcely + HAD + S + V3 ➔ WHEN + S + V2",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Anlık geçişte devrik kurgu zorunludur."
+                }
+              },
+              {
+                "id": "c40_l3_merged_q11",
+                "type": "matching",
+                "prompt": "Devrik başlangıcı doğru devamıyla eşleştirin:",
+                "leftHeader": "Devrik Başlangıç",
+                "rightHeader": "İkincil Ek ve Devamı",
+                "pairs": [
+                  {
+                    "left": "No sooner had the satellite entered orbit",
+                    "right": "than the ground station lost contact."
+                  },
+                  {
+                    "left": "Hardly had the surgeon completed the procedure",
+                    "right": "when the monitors stabilised."
+                  },
+                  {
+                    "left": "Once the licence had been renewed,",
+                    "right": "the workshop reopened to visitors."
+                  }
+                ],
+                "explanation": "No sooner 'than', hardly 'when' alır; once ise düz sıralama kurar."
+              },
+              {
+                "id": "c40_l3_merged_q12",
+                "type": "matching",
+                "prompt": "Kalıbı gerektirdiği ikincil ekle eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "İkincil Ek",
+                "pairs": [
+                  {
+                    "left": "No sooner + had + S + V3",
+                    "right": "than"
+                  },
+                  {
+                    "left": "Hardly + had + S + V3",
+                    "right": "when / before"
+                  },
+                  {
+                    "left": "Once + S + V2",
+                    "right": "(ek almaz)"
+                  }
+                ],
+                "explanation": "Anlık geçiş kalıplarının ikincil eki sabittir; karıştırılırsa cümle bozulur."
+              },
+              {
+                "id": "c40_l3_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The eruption was recorded at 04:12. No sooner had the seismographs registered the first tremor than the civil protection agency issued a regional alert. Hardly had the alert reached the coastal villages when the first evacuation buses departed.",
+                "sentence": "Which sentence follows the inversion rules used in the paragraph?",
+                "options": [
+                  "No sooner had the tremor been registered than the alert was issued.",
+                  "No sooner the tremor had been registered when the alert was issued.",
+                  "Hardly had the tremor been registered than the alert was issued."
+                ],
+                "correctIndex": 0,
+                "translation": "Sarsıntı kaydedilir kaydedilmez uyarı yayımlandı.",
+                "explanation": "No sooner 'than' ile, hardly 'when' ile tamamlanır; devrik dizilim korunmalıdır."
+              },
+              {
+                "id": "c40_l3_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Once the restoration team had removed the later plaster layers, an earlier fresco became visible. Hardly had the discovery been announced when three universities requested access to the site.",
+                "sentence": "According to the paragraph, what happened immediately after the announcement?",
+                "options": [
+                  "Three universities requested access to the site.",
+                  "The restoration team removed the plaster layers.",
+                  "The fresco was covered again."
+                ],
+                "correctIndex": 0,
+                "translation": "Duyurunun hemen ardından üç üniversite alana erişim talep etti.",
+                "explanation": "'Hardly ... when' iki olay arasındaki anlık geçişi kurar."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l3_q12",
-            "type": "matching",
-            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the cultural studies manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in film studies paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze edebiyat trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l3_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in sociology has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in sociology, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l3_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of history, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "[/ Tip 5 Cümle Dönüştürme - Soru 15] Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, scholars managed to publish seminal treatises.",
-              "Because scholars faced censorship, they could not publish treatises.",
-              "Unless scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   },
@@ -71642,7 +71596,7 @@ const chapter40Data = {
     "id": "c40_l5_merged",
     "unitId": "39_2",
     "title": "5. Sıfat Cümlecikleri & Edat Kısıtlamaları",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "5. Sıfat Cümlecikleri & Edat Kısıtlamaları (Relative Clauses & Prepositions)",
       "teorikMantik": "Relative Clauses bir ismi niteler. Edat ile başlayan tanımlamalarda (preposition + relative pronoun) sadece 'Which' (nesne/kavram) ve 'Whom' (insan) kullanılabilir.",
@@ -71652,290 +71606,274 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l5_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "İlgi zamirlerinin özne/nesne konumu ve edatlı kullanım kısıtları.",
         "questions": [
-          {
-            "id": "c40_l5_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Cultural studies scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Kültür dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l5_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In film studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In film studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Sinema çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Sinema alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l5_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Literature scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Edebiyat dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l5_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l5_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "History scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Tarih dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l5_q6",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 6] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l5_q7",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in political science demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Siyaset metin analizi."
-            }
-          },
-          {
-            "id": "c40_l5_q8",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in anthropology demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Antropoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Antropoloji metin analizi."
-            }
-          },
-          {
-            "id": "c40_l5_q9",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in cultural studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Kültür metin analizi."
-            }
-          },
-          {
-            "id": "c40_l5_q10",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in film studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sinema metin analizi."
-            }
-          },
-          {
-            "id": "c40_l5_q11",
-            "type": "matching",
-            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although anthropology theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l5_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The laboratory ___ published the retraction has since revised its peer-review policy.",
+                "options": [
+                  "that",
+                  "whom",
+                  "where",
+                  "what"
+                ],
+                "correctIndex": 0,
+                "translation": "Geri çekme metnini yayımlayan laboratuvar o zamandan beri hakem politikasını yeniledi.",
+                "explanation": "Zamirden hemen sonra fiil geliyorsa zamir özne konumundadır: that/which uygundur.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
               },
               {
-                "left": "Provided that funding is secured for kültür,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l5_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "The archive in that the manuscripts are stored was renovated last year.",
+                "englishPhrase": "The archive in that the manuscripts are stored was renovated last year.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "El yazmalarının saklandığı arşiv geçen yıl yenilendi.",
+                "explanation": "Edattan sonra 'that' kullanılamaz; doğru biçim 'in which'tir.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
               },
               {
-                "left": "Unless policy makers consult film studies experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l5_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The economist ___ the committee consulted refused to sign the final report.",
+                "options": [
+                  "whom",
+                  "which",
+                  "whose",
+                  "where"
+                ],
+                "correctIndex": 0,
+                "translation": "Komitenin danıştığı iktisatçı nihai raporu imzalamayı reddetti.",
+                "explanation": "Zamirden sonra özne + fiil geliyorsa zamir nesne konumundadır; insanlar için resmî biçim 'whom'dur.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "The village where the survey was conducted lies beyond the northern ridge.",
+                "englishPhrase": "The village where the survey was conducted lies beyond the northern ridge.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Anketin yapıldığı köy kuzey sırtının ötesinde yer alır.",
+                "explanation": "'Where' yer bildiren ismi niteler ve ardından tam bir cümle gelir; dizilim doğrudur.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The primary sources ___ which the historian based her argument were destroyed in the fire.",
+                "options": [
+                  "on",
+                  "that",
+                  "where",
+                  "what"
+                ],
+                "correctIndex": 0,
+                "translation": "Tarihçinin savını dayandırdığı birincil kaynaklar yangında yok oldu.",
+                "explanation": "Fiilin aldığı edat (base on) zamirin başına çekilir: 'on which'.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle edatlı ilgi zamiri kuralına uyar?",
+                "options": [
+                  "The committee to which the appeal was submitted has not replied.",
+                  "The committee to that the appeal was submitted has not replied.",
+                  "The committee to which the appeal was submitted it has not replied.",
+                  "The committee which the appeal was submitted to which has not replied."
+                ],
+                "correctIndex": 0,
+                "translation": "İtirazın sunulduğu komite henüz yanıt vermedi.",
+                "explanation": "Edattan sonra yalnızca which/whom gelir ve zamir düşürülemez.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The dataset ___ the team compiled last spring is now publicly available.",
+                "options": [
+                  "(zamir yok)",
+                  "who",
+                  "whose",
+                  "where"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekibin geçen bahar derlediği veri kümesi artık kamuya açık.",
+                "explanation": "Nesne konumundaki ilgi zamiri düşürülebilir; isim öbeğinin ardından doğrudan özne gelir.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The philologist ___ dissertation reshaped the field retired last month.",
+                "options": [
+                  "whose",
+                  "who",
+                  "which",
+                  "whom"
+                ],
+                "correctIndex": 0,
+                "translation": "Doktora tezi alanı yeniden şekillendiren filolog geçen ay emekli oldu.",
+                "explanation": "İki isim arasında aitlik kuran zamir 'whose'dur.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The decade ___ the trade routes shifted is documented in only two chronicles.",
+                "options": [
+                  "when",
+                  "which",
+                  "where",
+                  "whom"
+                ],
+                "correctIndex": 0,
+                "translation": "Ticaret yollarının değiştiği on yıl yalnızca iki vakayinamede belgelenmiştir.",
+                "explanation": "Zaman ismini niteleyen bağlayıcı 'when'dir.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Non-defining (virgüllü) sıfat cümleciğinde hangisi kullanılamaz?",
+                "options": [
+                  "that",
+                  "which",
+                  "who",
+                  "whose"
+                ],
+                "correctIndex": 0,
+                "translation": "Virgülden sonra gelen tanımlayıcı olmayan cümlecikte 'that' kullanılmaz.",
+                "explanation": "Virgülle ayrılan ek bilgi cümleciğinde 'that' yasaktır; which/who tercih edilir.",
+                "hint": {
+                  "formula": "Noun + who/which/that + V | Preposition + which/whom (that kullanılamaz) | Nesne konumunda zamir düşebilir",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Edattan sonra that gelmez, zamir düşürülemez."
+                }
+              },
+              {
+                "id": "c40_l5_merged_q11",
+                "type": "matching",
+                "prompt": "İlgi zamirini doğru kullanımıyla eşleştirin:",
+                "leftHeader": "Zamir",
+                "rightHeader": "Kullanımı",
+                "pairs": [
+                  {
+                    "left": "whose",
+                    "right": "iki ismin arasında aitlik kurar"
+                  },
+                  {
+                    "left": "whom",
+                    "right": "nesne konumunda insanı niteler"
+                  },
+                  {
+                    "left": "in which",
+                    "right": "edatla birlikte cansız ismi niteler"
+                  }
+                ],
+                "explanation": "Zamirin konumu ve edat gereksinimi hangi biçimin gerektiğini belirler."
+              },
+              {
+                "id": "c40_l5_merged_q12",
+                "type": "matching",
+                "prompt": "Cümle başlangıcını doğru devamıyla eşleştirin:",
+                "leftHeader": "İsim Öbeği",
+                "rightHeader": "Sıfat Cümleciği",
+                "pairs": [
+                  {
+                    "left": "The chemist",
+                    "right": "who isolated the compound later won a national prize."
+                  },
+                  {
+                    "left": "The compound",
+                    "right": "which the chemist isolated remains unstable at room temperature."
+                  },
+                  {
+                    "left": "The laboratory",
+                    "right": "in which the compound was isolated has since been closed."
+                  }
+                ],
+                "explanation": "Zamirden sonra fiil gelirse özne, özne gelirse nesne, edat varsa 'in which' konumu söz konusudur."
+              },
+              {
+                "id": "c40_l5_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The survey team relied on two registers. The first, which the municipality had compiled in 1908, listed every household by street. The second register, on which the later census was based, recorded only landowners.",
+                "sentence": "Which sentence uses the relative structure of the paragraph correctly?",
+                "options": [
+                  "The register on which the census was based recorded only landowners.",
+                  "The register on that the census was based recorded only landowners.",
+                  "The register the census was based recorded only landowners."
+                ],
+                "correctIndex": 0,
+                "translation": "Sayımın dayandığı sicil yalnızca toprak sahiplerini kaydetmişti.",
+                "explanation": "Edat zamirin başına çekildiğinde yalnızca 'which' kullanılabilir."
+              },
+              {
+                "id": "c40_l5_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The ethnographer whose fieldnotes were published posthumously spent nine years in the region. The villages she visited have since merged into a single municipality.",
+                "sentence": "In the second sentence, which relative pronoun has been omitted?",
+                "options": [
+                  "that / which (nesne konumunda)",
+                  "who (özne konumunda)",
+                  "whose (aitlik)"
+                ],
+                "correctIndex": 0,
+                "translation": "'The villages she visited' ifadesinde nesne konumundaki ilgi zamiri düşürülmüştür.",
+                "explanation": "Nesne konumundaki zamir düşebilir; isim öbeğinin ardından doğrudan özne gelmesi bunun işaretidir."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l5_q12",
-            "type": "matching",
-            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the literature manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze tarih trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l5_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in psychology has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in psychology, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l5_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of political science, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although anthropology scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, anthropology scholars managed to publish seminal treatises.",
-              "Because anthropology scholars faced censorship, they could not publish treatises.",
-              "Unless anthropology scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   },
@@ -71943,7 +71881,7 @@ const chapter40Data = {
     "id": "c40_l6_merged",
     "unitId": "39_2",
     "title": "6. Kısaltmalar",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "6. Kısaltmalar (Participle & Gerund Reductions)",
       "teorikMantik": "Cümle birleştirme ve kısaltmalarda etken eylemler için 'V-ing', edilgen eylemler için 'V3', kronolojik olarak önce tamamlanmış etken eylemler için 'Having V3' kullanılır.",
@@ -71953,290 +71891,273 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l6_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Sıfat ve zarf cümleciklerinin ortaç yapılarıyla kısaltılması.",
         "questions": [
-          {
-            "id": "c40_l6_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Film studies scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Sinema dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l6_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In literary studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In literary studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Edebiyat çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Edebiyat alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l6_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l6_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In historical studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In historical studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Tarih çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Tarih alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l6_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l6_q6",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in political science demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Siyaset metin analizi."
-            }
-          },
-          {
-            "id": "c40_l6_q7",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in anthropology demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Antropoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Antropoloji metin analizi."
-            }
-          },
-          {
-            "id": "c40_l6_q8",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in cultural studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Kültür metin analizi."
-            }
-          },
-          {
-            "id": "c40_l6_q9",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in film studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sinema metin analizi."
-            }
-          },
-          {
-            "id": "c40_l6_q10",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in literature demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Edebiyat metin analizi."
-            }
-          },
-          {
-            "id": "c40_l6_q11",
-            "type": "matching",
-            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although cultural studies theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l6_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The samples ___ in the northern basin were transferred to the central laboratory.",
+                "options": [
+                  "collected",
+                  "collecting",
+                  "which collecting",
+                  "to collect"
+                ],
+                "correctIndex": 0,
+                "translation": "Kuzey havzasında toplanan numuneler merkez laboratuvara aktarıldı.",
+                "explanation": "Edilgen bir sıfat cümleciği kısaltılırken V3 kullanılır: 'which were collected' ➔ 'collected'.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
               },
               {
-                "left": "Provided that funding is secured for sinema,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l6_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "The researchers analysing the sediment layers published their findings last month.",
+                "englishPhrase": "The researchers analysing the sediment layers published their findings last month.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Tortu katmanlarını analiz eden araştırmacılar bulgularını geçen ay yayımladı.",
+                "explanation": "Aktif sıfat cümleciği V-ing ile kısaltılır: 'who are analysing' ➔ 'analysing'.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
               },
               {
-                "left": "Unless policy makers consult literature experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l6_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "___ the earlier results, the committee requested an independent verification.",
+                "options": [
+                  "Having reviewed",
+                  "Reviewing had",
+                  "Reviewed",
+                  "To have reviewed"
+                ],
+                "correctIndex": 0,
+                "translation": "Önceki sonuçları inceledikten sonra komite bağımsız bir doğrulama istedi.",
+                "explanation": "Önce gerçekleşen eylem 'Having + V3' ile kısaltılır.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Written in the fourteenth century, the manuscript survived three fires.",
+                "englishPhrase": "Written in the fourteenth century, the manuscript survived three fires.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "On dördüncü yüzyılda yazılan el yazması üç yangından sağ çıktı.",
+                "explanation": "Edilgen zarf cümleciği başta V3 ile kısaltılır; özne ana cümleyle aynıdır.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "While ___ the coastal route, the surveyors recorded four unmapped springs.",
+                "options": [
+                  "mapping",
+                  "mapped",
+                  "they mapping",
+                  "to map"
+                ],
+                "correctIndex": 0,
+                "translation": "Kıyı güzergâhını haritalarken haritacılar kayıtsız dört kaynak tespit etti.",
+                "explanation": "Zaman bağlacından sonra özne düşer ve fiil V-ing olur: 'while they were mapping' ➔ 'while mapping'.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "'The report which was submitted last week' ifadesinin doğru kısaltması hangisidir?",
+                "options": [
+                  "The report submitted last week",
+                  "The report submitting last week",
+                  "The report having submitted last week",
+                  "The report to submit last week"
+                ],
+                "correctIndex": 0,
+                "translation": "Geçen hafta sunulan rapor.",
+                "explanation": "Edilgen yapıda 'which was' düşer, geriye V3 kalır.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Hangi kısaltma yanlıştır?",
+                "options": [
+                  "Approving the budget, the council was dissolved by the governor.",
+                  "Approved by the council, the budget took effect in March.",
+                  "Having approved the budget, the council adjourned the session.",
+                  "The budget approved in March covers two fiscal years."
+                ],
+                "correctIndex": 0,
+                "translation": "Bütçeyi onaylayan konsey vali tarafından feshedildi.",
+                "explanation": "Kısaltmada ortacın öznesi ana cümlenin öznesiyle aynı olmalıdır; burada özne uyumu bozuktur.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ by unusually heavy rainfall, the excavation was suspended for a week.",
+                "options": [
+                  "Interrupted",
+                  "Interrupting",
+                  "Having interrupted",
+                  "To interrupt"
+                ],
+                "correctIndex": 0,
+                "translation": "Alışılmadık şiddetli yağış nedeniyle kesintiye uğrayan kazı bir hafta askıya alındı.",
+                "explanation": "Özne eylemi yapmıyor, ona maruz kalıyorsa edilgen ortaç (V3) kullanılır.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The delegates ___ the closing session received the printed minutes.",
+                "options": [
+                  "attending",
+                  "attended",
+                  "having attended by",
+                  "to attend"
+                ],
+                "correctIndex": 0,
+                "translation": "Kapanış oturumuna katılan delegeler basılı tutanakları aldı.",
+                "explanation": "Aktif anlamda niteleme V-ing ile kurulur.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "'After the technicians had calibrated the sensors, they restarted the system.' cümlesinin kısaltması hangisidir?",
+                "options": [
+                  "Having calibrated the sensors, the technicians restarted the system.",
+                  "Calibrated the sensors, the technicians restarted the system.",
+                  "Calibrating the sensors, the technicians had restarted the system.",
+                  "Having been calibrated the sensors, the technicians restarted the system."
+                ],
+                "correctIndex": 0,
+                "translation": "Sensörleri kalibre ettikten sonra teknisyenler sistemi yeniden başlattı.",
+                "explanation": "Önce biten aktif eylem 'Having + V3' ile kısaltılır.",
+                "hint": {
+                  "formula": "Aktif ➔ V-ing | Edilgen ➔ V3 | Öncelik ➔ Having V3 | Zaman bağlacı + V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Kısaltmada zamir ve yardımcı fiil düşer."
+                }
+              },
+              {
+                "id": "c40_l6_merged_q11",
+                "type": "matching",
+                "prompt": "Uzun yapıyı kısaltılmış karşılığıyla eşleştirin:",
+                "leftHeader": "Uzun Yapı",
+                "rightHeader": "Kısaltma",
+                "pairs": [
+                  {
+                    "left": "the documents which were sealed in 1920",
+                    "right": "the documents sealed in 1920"
+                  },
+                  {
+                    "left": "the scholars who are editing the volume",
+                    "right": "the scholars editing the volume"
+                  },
+                  {
+                    "left": "after the board had signed the protocol",
+                    "right": "having signed the protocol"
+                  }
+                ],
+                "explanation": "Edilgen V3, aktif V-ing, öncelik ise Having V3 ile kısaltılır."
+              },
+              {
+                "id": "c40_l6_merged_q12",
+                "type": "matching",
+                "prompt": "Ortaç biçimini işleviyle eşleştirin:",
+                "leftHeader": "Biçim",
+                "rightHeader": "İşlevi",
+                "pairs": [
+                  {
+                    "left": "V-ing",
+                    "right": "aktif, eşzamanlı eylem"
+                  },
+                  {
+                    "left": "V3",
+                    "right": "edilgen niteleme"
+                  },
+                  {
+                    "left": "Having V3",
+                    "right": "önce tamamlanmış eylem"
+                  }
+                ],
+                "explanation": "Ortacın biçimi çatıyı ve zaman sırasını taşır."
+              },
+              {
+                "id": "c40_l6_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Founded in 1893, the institute originally trained surveyors. The archives held in its basement include maps drawn by the first generation of graduates. Having digitised these maps, the staff opened the collection to remote researchers.",
+                "sentence": "Which reduced structure appears in the paragraph?",
+                "options": [
+                  "Having digitised these maps (önce tamamlanmış aktif eylem)",
+                  "Digitising these maps (eşzamanlı edilgen eylem)",
+                  "Digitised these maps (edilgen niteleme)"
+                ],
+                "correctIndex": 0,
+                "translation": "'Having digitised' önce tamamlanmış aktif eylemi kısaltır.",
+                "explanation": "Having + V3 kalıbı ana eylemden önce biten eylemi gösterir."
+              },
+              {
+                "id": "c40_l6_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The bridge, damaged during the winter storms, was closed to heavy vehicles. Engineers inspecting the piers found corrosion in two supports. Reinforced with steel collars, the structure reopened in April.",
+                "sentence": "Which sentence uses the same reduction pattern as 'Reinforced with steel collars'?",
+                "options": [
+                  "Written in haste, the memorandum contained several errors.",
+                  "Writing in haste, the memorandum contained several errors.",
+                  "Having written in haste, the memorandum contained several errors."
+                ],
+                "correctIndex": 0,
+                "translation": "Aceleyle yazılan muhtıra birkaç hata içeriyordu.",
+                "explanation": "Özne eyleme maruz kaldığı için edilgen ortaç (V3) kullanılır."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l6_q12",
-            "type": "matching",
-            "prompt": "[/ Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in history paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l6_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in political science has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in political science, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l6_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of anthropology, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although cultural studies scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, cultural studies scholars managed to publish seminal treatises.",
-              "Because cultural studies scholars faced censorship, they could not publish treatises.",
-              "Unless cultural studies scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   },
@@ -72244,7 +72165,7 @@ const chapter40Data = {
     "id": "c40_l7_merged",
     "unitId": "39_2",
     "title": "7. Amaç & Tercih Yapıları",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "7. Amaç & Tercih Yapıları (In order to / Would Rather / Prefer)",
       "teorikMantik": "Amaç bildiren yapılarda 'to / in order to / so as to' arkasından fiil yalın (V0) alırken, 'so that / in order that' arkasından tam cümle (SVO) alır.",
@@ -72254,290 +72175,275 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l7_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Amaç bildiren mastar ve bağlaç yapıları ile tercih kalıpları.",
         "questions": [
-          {
-            "id": "c40_l7_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Literature scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Edebiyat dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l7_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l7_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "History scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Tarih dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l7_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l7_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Political science scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Siyaset uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Siyaset dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l7_q6",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in anthropology demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Antropoloji alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Antropoloji metin analizi."
-            }
-          },
-          {
-            "id": "c40_l7_q7",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in cultural studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Kültür metin analizi."
-            }
-          },
-          {
-            "id": "c40_l7_q8",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in film studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sinema metin analizi."
-            }
-          },
-          {
-            "id": "c40_l7_q9",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in literature demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Edebiyat metin analizi."
-            }
-          },
-          {
-            "id": "c40_l7_q10",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 10] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l7_q11",
-            "type": "matching",
-            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although film studies theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l7_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The ministry revised the guidelines in order to ___ regional inequalities.",
+                "options": [
+                  "reduce",
+                  "reducing",
+                  "reduced",
+                  "reduces"
+                ],
+                "correctIndex": 0,
+                "translation": "Bakanlık bölgesel eşitsizlikleri azaltmak için yönergeleri gözden geçirdi.",
+                "explanation": "'in order to' arkasından fiilin yalın hâlini (V1) alır.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
               },
               {
-                "left": "Provided that funding is secured for edebiyat,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l7_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "The laboratory installed a backup generator so that the samples would not thaw.",
+                "englishPhrase": "The laboratory installed a backup generator so that the samples would not thaw.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Laboratuvar numuneler çözülmesin diye yedek jeneratör kurdu.",
+                "explanation": "'so that' özne + modal + V1 ister; dizilim doğrudur.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
               },
               {
-                "left": "Unless policy makers consult experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l7_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "I would rather ___ the interim results before the press briefing.",
+                "options": [
+                  "announce",
+                  "to announce",
+                  "announcing",
+                  "announced"
+                ],
+                "correctIndex": 0,
+                "translation": "Basın toplantısından önce ara sonuçları açıklamayı tercih ederim.",
+                "explanation": "'would rather' aynı özne için yalın fiil (V1) alır.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "The committee would rather the archive was closed during the renovation.",
+                "englishPhrase": "The committee would rather the archive was closed during the renovation.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Komite, tadilat sırasında arşivin kapalı olmasını tercih eder.",
+                "explanation": "Farklı özne söz konusuysa 'would rather + S + V2' kullanılır; cümle doğrudur.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "The team relocated the servers so as ___ interrupt the night processing.",
+                "options": [
+                  "not to",
+                  "to not",
+                  "for not",
+                  "not"
+                ],
+                "correctIndex": 0,
+                "translation": "Ekip gece işlemesini kesintiye uğratmamak için sunucuları taşıdı.",
+                "explanation": "Olumsuz amaç 'so as not to + V1' biçiminde kurulur.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle amaç yapısı kuralına uyar?",
+                "options": [
+                  "The council raised the barrier in order to protect the lower district.",
+                  "The council raised the barrier in order protecting the lower district.",
+                  "The council raised the barrier so that protect the lower district.",
+                  "The council raised the barrier for to protect the lower district."
+                ],
+                "correctIndex": 0,
+                "translation": "Konsey alt bölgeyi korumak için bariyeri yükseltti.",
+                "explanation": "'in order to' + V1 doğru kalıptır.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The editors prefer publishing short reports ___ waiting for a full monograph.",
+                "options": [
+                  "to",
+                  "than",
+                  "from",
+                  "over than"
+                ],
+                "correctIndex": 0,
+                "translation": "Editörler tam bir monografi beklemektense kısa raporlar yayımlamayı tercih ediyor.",
+                "explanation": "'prefer V-ing to V-ing' kalıbında karşılaştırma edatı 'to'dur.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The archive extended its opening hours ___ visiting scholars could finish their work.",
+                "options": [
+                  "so that",
+                  "in order to",
+                  "so as to",
+                  "for"
+                ],
+                "correctIndex": 0,
+                "translation": "Arşiv, ziyaretçi akademisyenler işlerini bitirebilsin diye açılış saatlerini uzattı.",
+                "explanation": "Arkasından özne + modal geldiği için 'so that' gerekir.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "'I would rather you ___ the draft before Friday.'",
+                "options": [
+                  "submitted",
+                  "submit",
+                  "to submit",
+                  "submitting"
+                ],
+                "correctIndex": 0,
+                "translation": "Taslağı cuma öncesinde teslim etmeni tercih ederim.",
+                "explanation": "Farklı özne için 'would rather + S + V2' kullanılır.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "The foundation funded the survey ___ mapping the flood plain.",
+                "options": [
+                  "with a view to",
+                  "in order to",
+                  "so as to",
+                  "so that"
+                ],
+                "correctIndex": 0,
+                "translation": "Vakıf, taşkın ovasını haritalamak amacıyla araştırmayı finanse etti.",
+                "explanation": "'with a view to' edat konumundadır ve arkasından V-ing alır.",
+                "hint": {
+                  "formula": "to / in order to / so as to + V1 | so that / in order that + S + modal + V1 | would rather + V1 / would rather + S + V2 | prefer V-ing to V-ing",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Amaç mastarı yalın fiil, so that ise özne + modal ister."
+                }
+              },
+              {
+                "id": "c40_l7_merged_q11",
+                "type": "matching",
+                "prompt": "Amaç yapısını gerektirdiği devamla eşleştirin:",
+                "leftHeader": "Yapı",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "in order to",
+                    "right": "+ V1"
+                  },
+                  {
+                    "left": "so that",
+                    "right": "+ özne + modal + V1"
+                  },
+                  {
+                    "left": "with a view to",
+                    "right": "+ V-ing"
+                  }
+                ],
+                "explanation": "Mastar yapıları yalın fiil, bağlaç yapıları özne + modal, edat yapıları V-ing ister."
+              },
+              {
+                "id": "c40_l7_merged_q12",
+                "type": "matching",
+                "prompt": "Tercih kalıbını doğru devamıyla eşleştirin:",
+                "leftHeader": "Kalıp",
+                "rightHeader": "Devamı",
+                "pairs": [
+                  {
+                    "left": "would rather (aynı özne)",
+                    "right": "+ V1"
+                  },
+                  {
+                    "left": "would rather (farklı özne)",
+                    "right": "+ S + V2"
+                  },
+                  {
+                    "left": "prefer",
+                    "right": "+ V-ing to V-ing"
+                  }
+                ],
+                "explanation": "Tercih kalıplarında öznenin aynı olup olmaması çekimi belirler."
+              },
+              {
+                "id": "c40_l7_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The museum moved its fragile textiles to a climate-controlled wing in order to slow further deterioration. Curators extended the loan period so that partner institutions could complete their own conservation work. Most of them would rather postpone the exhibition than display damaged pieces.",
+                "sentence": "Which structure correctly completes a purpose clause with a subject?",
+                "options": [
+                  "so that partner institutions could complete their work",
+                  "in order to partner institutions complete their work",
+                  "so as to partner institutions could complete their work"
+                ],
+                "correctIndex": 0,
+                "translation": "Ortak kurumlar kendi koruma çalışmalarını tamamlayabilsin diye.",
+                "explanation": "Özne taşıyan amaç cümleciği yalnızca 'so that' ile kurulur."
+              },
+              {
+                "id": "c40_l7_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "The department introduced remote defences with a view to reducing travel costs. Supervisors would rather candidates presented in person, but the policy remains in force so that international students can participate.",
+                "sentence": "Which preference pattern appears in the paragraph?",
+                "options": [
+                  "would rather + özne + V2",
+                  "would rather + to V1",
+                  "prefer + to V-ing"
+                ],
+                "correctIndex": 0,
+                "translation": "'would rather candidates presented' farklı özne için V2 kullanımıdır.",
+                "explanation": "Farklı özne söz konusuysa would rather ardından V2 gelir."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l7_q12",
-            "type": "matching",
-            "prompt": "Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the history manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze siyaset trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l7_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in anthropology has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in anthropology, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l7_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of cultural studies, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although film studies scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, film studies scholars managed to publish seminal treatises.",
-              "Because film studies scholars faced censorship, they could not publish treatises.",
-              "Unless film studies scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   },
@@ -72545,7 +72451,7 @@ const chapter40Data = {
     "id": "c40_l8_merged",
     "unitId": "39_3",
     "title": "8. Devrik Cümle Mimarisi & Zaman Kilitleri",
-    "subtitle": "15 Kademeli Soru Matrisi",
+    "subtitle": "Kademeli Soru Matrisi",
     "konuAnlatimi": {
       "baslik": "8. Devrik Cümle Mimarisi & Zaman Kilitleri (Inversion)",
       "teorikMantik": "Kısıtlama, olumsuzluk veya nadirlik bildiren zarafet öbekleri cümle başına geldiğinde, cümle soru formuna bürünür (Yardımcı Fiil + Özne + Fiil).",
@@ -72555,290 +72461,274 @@ const chapter40Data = {
     "exercises": [
       {
         "id": "c40_l8_m_ex1",
-        "title": "Alıştırma 1: 15 Kademeli Soru Matrisi",
-        "description": "Basit girişten cloze paragraf ve cümle dönüştürmeye uzanan kademeli soru dizisi.",
+        "title": "Alıştırma 1: Kademeli Soru Matrisi",
+        "description": "Olumsuzluk ve kısıtlama öbekleri başa geldiğinde kurulan devrik dizilim.",
         "questions": [
-          {
-            "id": "c40_l8_q1",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l8_q2",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In historical studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In historical studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Tarih çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Tarih alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l8_q3",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l8_q4",
-            "type": "true-false",
-            "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In political studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In political studies, researchers must adhere to strict guidelines.",
-            "isTrue": true,
-            "correctAnswer": "true",
-            "translation": "Siyaset çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
-            "explanation": "Cümle yapısı ve modal kullanımı tam ve doğrudur.",
-            "hint": {
-              "formula": "Must + V1 -> Zorunluluk kuralı",
-              "mirror": "Doğru gramer dizilimi.",
-              "academicNote": "Siyaset alanı kuralı."
-            }
-          },
-          {
-            "id": "c40_l8_q5",
-            "type": "fill-blank-dropdown",
-            "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Anthropology scholars note that academic analysis ___ when methodological standards are applied.",
-            "options": [
-              "improves",
-              "will have improved",
-              "had improved",
-              "improved"
-            ],
-            "correctIndex": 0,
-            "translation": "Antropoloji uzmanları, metodolojik standartlar uygulandığında analizin geliştiğini belirtiyor.",
-            "explanation": "Geniş zaman ve genel doğrularda V1 çekimi tercih edilir.",
-            "hint": {
-              "formula": "Academic Truth -> Present Simple",
-              "mirror": "Genel kural doğrulaması.",
-              "academicNote": "Antropoloji dersi temel yapısı."
-            }
-          },
-          {
-            "id": "c40_l8_q6",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in cultural studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Kültür alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Kültür metin analizi."
-            }
-          },
-          {
-            "id": "c40_l8_q7",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in film studies demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Sinema alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Sinema metin analizi."
-            }
-          },
-          {
-            "id": "c40_l8_q8",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in literature demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Edebiyat alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Edebiyat metin analizi."
-            }
-          },
-          {
-            "id": "c40_l8_q9",
-            "type": "multiple-choice",
-            "prompt": "[/ Orta - Soru 9] Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "metin analizi."
-            }
-          },
-          {
-            "id": "c40_l8_q10",
-            "type": "multiple-choice",
-            "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in history demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
-            "options": [
-              "will be / is",
-              "was / will be",
-              "had been / is",
-              "would be / was"
-            ],
-            "correctIndex": 0,
-            "translation": "Tarih alanındaki son bulgular, kamu güveni korunduğu sürece kurumsal reformun etkili olacağını göstermektedir.",
-            "explanation": "Provided that + Present Simple (is) -> Will V1 (will be) Type 1 şart uyumu.",
-            "hint": {
-              "formula": "Provided that + Present -> Will V1",
-              "mirror": "Şart ve gelecek sonuç dengesi.",
-              "academicNote": "Tarih metin analizi."
-            }
-          },
-          {
-            "id": "c40_l8_q11",
-            "type": "matching",
-            "prompt": "Sol sütundaki yan cümleleri doğru ana cümlelerle eşleştirin:",
-            "leftHeader": "Bağlaç / Yan Cümle",
-            "rightHeader": "Tamamlayıcı Ana Cümle",
-            "pairs": [
               {
-                "left": "Although literature theories evolved quickly,",
-                "right": "foundational principles remained largely intact."
+                "id": "c40_l8_merged_q1",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Not only ___ the museum extend its hours, but it also waived the entrance fee.",
+                "options": [
+                  "did",
+                  "was",
+                  "has",
+                  "it did"
+                ],
+                "correctIndex": 0,
+                "translation": "Müze yalnızca saatlerini uzatmakla kalmadı, giriş ücretini de kaldırdı.",
+                "explanation": "'Not only' başa geldiğinde yardımcı fiil özneden önce gelir: did + özne + V1.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
               },
               {
-                "left": "Provided that funding is secured for sosyoloji,",
-                "right": "the research council will publish the annual report."
+                "id": "c40_l8_merged_q2",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Rarely has the council overturned a decision of the technical board.",
+                "englishPhrase": "Rarely has the council overturned a decision of the technical board.",
+                "isTrue": true,
+                "correctAnswer": "true",
+                "translation": "Konsey, teknik kurulun bir kararını nadiren bozmuştur.",
+                "explanation": "'Rarely' başa gelince has + özne + V3 devrik dizilimi kurulur; cümle doğrudur.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
               },
               {
-                "left": "Unless policy makers consult history experts,",
-                "right": "social reforms will encounter structural resistance."
+                "id": "c40_l8_merged_q3",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Never before ___ the observatory recorded such a sudden magnetic shift.",
+                "options": [
+                  "had",
+                  "did have",
+                  "was",
+                  "has been"
+                ],
+                "correctIndex": 0,
+                "translation": "Gözlemevi daha önce hiç bu kadar ani bir manyetik kayma kaydetmemişti.",
+                "explanation": "'Never before' geçmişin geçmişinde had + özne + V3 ister.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q4",
+                "type": "true-false",
+                "prompt": "Verilen cümle dil bilgisi kurallarına göre doğru mu?",
+                "sentence": "Only when the water level dropped the engineers could inspect the piers.",
+                "englishPhrase": "Only when the water level dropped the engineers could inspect the piers.",
+                "isTrue": false,
+                "correctAnswer": "false",
+                "translation": "Ancak su seviyesi düştüğünde mühendisler ayakları inceleyebildi.",
+                "explanation": "'Only when' yapısında ana cümle devrik olmalıdır: 'could the engineers inspect'.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q5",
+                "type": "fill-blank-dropdown",
+                "prompt": "Boşluğa gelecek en uygun seçeneği belirleyin:",
+                "sentence": "Seldom ___ a single excavation yield so many inscribed fragments.",
+                "options": [
+                  "does",
+                  "is",
+                  "has",
+                  "it does"
+                ],
+                "correctIndex": 0,
+                "translation": "Tek bir kazı nadiren bu kadar çok yazıtlı parça verir.",
+                "explanation": "'Seldom' başa geldiğinde does + özne + V1 dizilimi gelir.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q6",
+                "type": "multiple-choice",
+                "prompt": "Hangi cümle devrik yapı kuralına uyar?",
+                "options": [
+                  "Under no circumstances may the samples leave the building.",
+                  "Under no circumstances the samples may leave the building.",
+                  "Under no circumstances leave may the samples the building.",
+                  "Under no circumstances the samples leave may the building."
+                ],
+                "correctIndex": 0,
+                "translation": "Numuneler hiçbir koşulda binadan çıkarılamaz.",
+                "explanation": "Olumsuz öbekten sonra modal özneden önce gelir.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q7",
+                "type": "multiple-choice",
+                "prompt": "'The minister did not comment, and the spokesperson did not either.' cümlesinin devrik karşılığı hangisidir?",
+                "options": [
+                  "Nor did the spokesperson comment.",
+                  "Neither the spokesperson commented.",
+                  "Nor the spokesperson did comment.",
+                  "Neither did commented the spokesperson."
+                ],
+                "correctIndex": 0,
+                "translation": "Sözcü de yorum yapmadı.",
+                "explanation": "Nor/Neither başa geldiğinde yardımcı fiil özneden önce gelir.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q8",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "___ had the ceasefire been announced than the border crossings reopened.",
+                "options": [
+                  "No sooner",
+                  "Hardly",
+                  "Only when",
+                  "Not only"
+                ],
+                "correctIndex": 0,
+                "translation": "Ateşkes ilan edilir edilmez sınır kapıları yeniden açıldı.",
+                "explanation": "'than' ikincil ekini yalnızca 'no sooner' alır.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q9",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Little ___ the committee know that the archive had already been transferred.",
+                "options": [
+                  "did",
+                  "was",
+                  "had",
+                  "does"
+                ],
+                "correctIndex": 0,
+                "translation": "Komite arşivin çoktan devredildiğini hiç bilmiyordu.",
+                "explanation": "'Little' olumsuz anlamlı bir öbektir ve devrik dizilim çeker.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q10",
+                "type": "multiple-choice",
+                "prompt": "Kurala en uygun seçeneği işaretleyin:",
+                "sentence": "Not only ___ but they also revised the entire methodology section.",
+                "options": [
+                  "did the authors add new data",
+                  "the authors did add new data",
+                  "added the authors new data",
+                  "the authors added new data"
+                ],
+                "correctIndex": 0,
+                "translation": "Yazarlar yalnızca yeni veri eklemekle kalmadı, tüm yöntem bölümünü de yeniledi.",
+                "explanation": "Not only ile başlayan bölümde yardımcı fiil özneden önce gelir.",
+                "hint": {
+                  "formula": "Not only + AUX + S + V ➔ but also | Never/Rarely/Seldom + AUX + S + V | No sooner + HAD + S + V3 ➔ THAN | Only when + clause + AUX + S + V",
+                  "mirror": "Kalıbın doğru dizilimi.",
+                  "academicNote": "Olumsuz veya kısıtlayıcı öbek başa gelince cümle soru dizilimine geçer."
+                }
+              },
+              {
+                "id": "c40_l8_merged_q11",
+                "type": "matching",
+                "prompt": "Devrik başlangıcı doğru devamıyla eşleştirin:",
+                "leftHeader": "Başlangıç Öbeği",
+                "rightHeader": "Devrik Devam",
+                "pairs": [
+                  {
+                    "left": "Not only",
+                    "right": "did the agency publish the data"
+                  },
+                  {
+                    "left": "Only after the audit",
+                    "right": "was the budget released"
+                  },
+                  {
+                    "left": "Under no circumstances",
+                    "right": "may the seal be broken"
+                  }
+                ],
+                "explanation": "Her kısıtlayıcı öbek ardından yardımcı fiil + özne dizilimi gelir."
+              },
+              {
+                "id": "c40_l8_merged_q12",
+                "type": "matching",
+                "prompt": "Öbeği çektiği yardımcı fiil kalıbıyla eşleştirin:",
+                "leftHeader": "Öbek",
+                "rightHeader": "Kalıp",
+                "pairs": [
+                  {
+                    "left": "Never before",
+                    "right": "had + S + V3"
+                  },
+                  {
+                    "left": "Seldom",
+                    "right": "does/did + S + V1"
+                  },
+                  {
+                    "left": "No sooner",
+                    "right": "had + S + V3 ... than"
+                  }
+                ],
+                "explanation": "Devrik yapıda hangi yardımcı fiilin geleceğini zaman belirler."
+              },
+              {
+                "id": "c40_l8_merged_q13",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Not only did the expedition map the northern glacier, but it also recorded three previously unknown meltwater channels. Rarely has a single season produced so much new data. Only when the ice retreated further did the team gain access to the lower valley.",
+                "sentence": "Which sentence keeps the inversion pattern of the paragraph?",
+                "options": [
+                  "Only when the ice retreated did the team gain access.",
+                  "Only when the ice retreated the team gained access.",
+                  "Only when did the ice retreat the team gained access."
+                ],
+                "correctIndex": 0,
+                "translation": "Ancak buz çekildiğinde ekip erişim sağlayabildi.",
+                "explanation": "'Only when' yapısında devrik dizilim ana cümlede kurulur."
+              },
+              {
+                "id": "c40_l8_merged_q14",
+                "type": "multiple-choice",
+                "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
+                "paragraph": "Seldom does a municipal archive attract international attention. Not only was the collection catalogued within a year, but it was also fully digitised. Never before had a regional institution completed such a project unaided.",
+                "sentence": "Which auxiliary pattern does 'Never before' require in the paragraph?",
+                "options": [
+                  "had + özne + V3",
+                  "did + özne + V1",
+                  "was + özne + V-ing"
+                ],
+                "correctIndex": 0,
+                "translation": "'Never before' geçmişin geçmişinde had + özne + V3 ister.",
+                "explanation": "Zaman geçmişin geçmişi olduğu için devrik yardımcı fiil 'had' olur."
               }
-            ],
-            "explanation": "Bağlaç türü (Although/Provided that/Unless) ile ana cümlelerin anlamsal ve gramer uyumu eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l8_q12",
-            "type": "matching",
-            "prompt": "[/ Tip 3 Eşleştirme - Soru 12] Cümle parçalarını doğru gramer terazisinde eşleştirin:",
-            "leftHeader": "Şart / Sebep Öbeği",
-            "rightHeader": "Sonuç / Uyum Bloğu",
-            "pairs": [
-              {
-                "left": "No sooner had the manuscript been published",
-                "right": "than international scholars initiated debate."
-              },
-              {
-                "left": "Due to significant changes in political science paradigms,",
-                "right": "academic institutions updated their curriculum."
-              },
-              {
-                "left": "In order to analyze antropoloji trends thoroughly,",
-                "right": "researchers compiled extensive quantitative data."
-              }
-            ],
-            "explanation": "Inversion (No sooner...than), Edat (Due to) ve Amaç (In order to) yapıları eksiksiz eşleştirilmiştir."
-          },
-          {
-            "id": "c40_l8_q13",
-            "type": "multiple-choice",
-            "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
-            "paragraph": "Academic research in cultural studies has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in cultural studies, what condition is necessary for historical conclusions to be definitive?",
-            "options": [
-              "Archival data must be cross-referenced with modern field observations.",
-              "Modern field observations should be ignored entirely.",
-              "Early theories must be accepted without empirical verification."
-            ],
-            "correctIndex": 0,
-            "translation": "Tarihsel sonuçların kesin olması için arşiv verilerinin modern saha gözlemleriyle çapraz kontrol edilmesi gerekir.",
-            "explanation": "Paragraftaki 'unless archival data is cross-referenced... conclusions remain tentative' şart cümlesinin doğru anlam çıkarımıdır."
-          },
-          {
-            "id": "c40_l8_q14",
-            "type": "multiple-choice",
-            "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of film studies, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
-            "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
-            "options": [
-              "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",
-              "Past Perfect AND Simple Present only",
-              "Continuous Tense AND Mixed Conditionals"
-            ],
-            "correctIndex": 0,
-            "translation": "Paragrafta Subjunctive (insist that... be) ve Future Perfect (will have evaluated) kilit yapıları yer almaktadır.",
-            "explanation": "Metindeki 'insist that methodology be' (Subjunctive) ve 'will have evaluated' (Future Perfect) yapıları tam örtüşür."
-          },
-          {
-            "id": "c40_l15_q15",
-            "type": "multiple-choice",
-            "prompt": "Verilen cümlenin eşdeğer bağlaçlı dönüştürülmüş halini seçin:",
-            "sentence": "Although literature scholars faced severe censorship, they managed to publish seminal treatises.",
-            "options": [
-              "In spite of facing severe censorship, literature scholars managed to publish seminal treatises.",
-              "Because literature scholars faced censorship, they could not publish treatises.",
-              "Unless literature scholars face censorship, they will publish seminal treatises."
-            ],
-            "correctIndex": 0,
-            "translation": "Şiddetli sansüre maruz kalmalarına RAĞMEN sosyoloji/tarih uzmanları çığır açan eserler yayınlamayı başardı.",
-            "explanation": "'Although + SVO' zıtlık cümlesi, anlamı bozulmadan 'In spite of + V-ing' yapısına dönüştürülmüştür."
-          }
-        ]
+            ]
       }
     ]
   }
@@ -86396,8 +86286,8 @@ const chapter66Data = {
 
       // Unit 39
       "c40_l1_merged": "1. Zaman Uyumu & Kronolojik Öncelik Matrisi (By the Time / Since)",
-      "c40_l2_merged": "2. Zaman Bağlaçları (Until, As Soon As, Before, After, While, As, When)",
-      "c40_l3_merged": "3. Zaman Bağlaçları & Sadeleştirme (Once, No Sooner... Than, Hardly... When)",
+      "c40_l2_merged": "2. Bağlaç, Edat ve Geçiş Yapıları (Despite, Although, However)",
+      "c40_l3_merged": "3. Koşul Yapıları (Type 0-3, Mix & Devrik Şart)",
 
       // Unit 39_2
       "c40_l4_merged": "4. İleri Düzey Zaman İlişkileri (Directly, Immediately, The Moment, Scarcely... When)",
