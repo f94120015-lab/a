@@ -6974,8 +6974,13 @@ input {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  max-height: 240px;
+  /* Derslerin çoğunda 1-3 alıştırma var; sabit 240px bunları bile kesiyordu.
+     Sınır artık ekrana göre: normal dersler tam görünüyor, 8-12 alıştırmalı
+     birkaç ders kendi içinde kayıyor. */
+  max-height: 480px; /* min() desteklemeyen eski motorlar için */
+  max-height: min(52vh, 600px);
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding-right: 4px;
 }
 
