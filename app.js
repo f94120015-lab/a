@@ -810,6 +810,28 @@ function translateTurkishPlaceholdersInEnglish(text) {
   });
 }
 
+// ── Yönerge yön tespiti ─────────────────────────────────────────────────────
+// "İngilizce ifadenin Türkçe karşılığını oluşturun" gibi iki dili birden anan
+// yönergelerde hedef dil, yönergede EN SON anılan dildir. Eski kural "ingilizce"
+// kelimesini görür görmez yönü Türkçe→İngilizce sayıyordu; bu yüzden bu tür
+// sorularda kaynak cümle yerine cevabın kendisi (Türkçe çeviri) ekrana geliyordu.
+// null döner: yönergede dil adı geçmiyor.
+function detectPromptDirection(prompt) {
+  if (!prompt || typeof prompt !== 'string') return null;
+  const clean = prompt
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/İ/g, 'i')
+    .replace(/ı/g, 'i')
+    .replace(/I/g, 'i')
+    .toLowerCase()
+    .replace(/\u0069\u0307/g, 'i');
+  const lastIndexOfAny = (words) => words.reduce((acc, w) => Math.max(acc, clean.lastIndexOf(w)), -1);
+  const engIdx = lastIndexOfAny(['ingilizce', 'english']);
+  const trIdx = lastIndexOfAny(['türkçe', 'turkce', 'turkish']);
+  if (engIdx === -1 && trIdx === -1) return null;
+  return trIdx > engIdx; // true => hedef Türkçe (Eng → Tr)
+}
+
 function sanitizeQuestions(questions) {
   if (!questions || !Array.isArray(questions)) return;
 
@@ -848,17 +870,9 @@ function sanitizeQuestions(questions) {
 
     // Dynamic correction of isEngToTr mismatch based on prompt context
     if (q.prompt && typeof q.prompt === 'string') {
-      const promptClean = q.prompt
-        .replace(/İ/g, 'i')
-        .replace(/ı/g, 'i')
-        .replace(/I/g, 'i')
-        .toLowerCase()
-        .replace(/\u0069\u0307/g, 'i');
-      
-      if (promptClean.includes("ingilizce") || promptClean.includes("english")) {
-        q.isEngToTr = false;
-      } else if (promptClean.includes("türkçe") || promptClean.includes("turkce") || promptClean.includes("turkish")) {
-        q.isEngToTr = true;
+      const promptDirection = detectPromptDirection(q.prompt);
+      if (promptDirection !== null) {
+        q.isEngToTr = promptDirection;
       }
     }
 
@@ -905,17 +919,11 @@ function sanitizeQuestions(questions) {
         }
       }
 
-      // Check translation direction (handling Turkish character lowercasing quirks)
-      const promptClean = (q.prompt || "")
-        .replace(/İ/g, 'i')
-        .replace(/ı/g, 'i')
-        .replace(/I/g, 'i')
-        .toLowerCase()
-        .replace(/\u0069\u0307/g, 'i');
-      
-      const isToEnglish = promptClean.includes("ingilizce") || promptClean.includes("english");
-      
-      const isEngToTr = !isToEnglish;
+      // Check translation direction (target language = the one mentioned last)
+      const promptDirection = detectPromptDirection(q.prompt);
+      const isEngToTr = q.isEngToTr !== undefined
+        ? q.isEngToTr
+        : (promptDirection !== null ? promptDirection : true);
       
       let targetSentence = "";
       if (isEngToTr) {
@@ -1017,7 +1025,7 @@ function sanitizeQuestions(questions) {
     // 4. Word bank translation
     const isEngToTr = q.isEngToTr !== undefined
       ? q.isEngToTr
-      : (q.prompt && (q.prompt.includes("Türkçe") || q.prompt.includes("Turkish")));
+      : (detectPromptDirection(q.prompt) === true);
 
     if (q.type === 'word-bank') {
       if (isEngToTr) {
@@ -10436,7 +10444,9 @@ function renderWordBank(container, question) {
   // Apply grammatical chunking to all word ordering sentences with 3 or more elements
   if (Array.isArray(question.correctOrder) && question.correctOrder.length >= 3 && !question.correctOrder.some(w => w.includes(' '))) {
     const fullSentence = question.correctOrder.join(' ');
-    const isEngToTr = question.isEngToTr || (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
+    const isEngToTr = question.isEngToTr !== undefined
+      ? question.isEngToTr
+      : (detectPromptDirection(question.prompt) === true);
     const segments = segmentSentence(fullSentence, isEngToTr);
     const distractors = question.words.filter(w => !question.correctOrder.includes(w));
     
@@ -10490,7 +10500,7 @@ function renderWordBank(container, question) {
 
   const isEngToTr = question.isEngToTr !== undefined
     ? question.isEngToTr
-    : (question.prompt && (question.prompt.includes("Türkçe") || question.prompt.includes("Turkish")));
+    : (detectPromptDirection(question.prompt) === true);
 
   // Eğer Türkçe çeviri/dizme isteniyorsa (isEngToTr == true), gösterilecek kaynak cümle İngilizce olmalıdır.
   let displaySentence = "";

@@ -38833,7 +38833,7 @@ Object.assign(unitSentencesMap, {
             ],
             "prompt": "Cümlenin Türkçe karşılığını oluşturun:",
             "enSentence": "There was a successful excavation in the valley.",
-            "translation": "There was a successful excavation in the valley.",
+            "translation": "Vadide başarılı bir kazı vardı.",
             "words": [
               "Vadide",
               "başarılı",
@@ -47711,8 +47711,8 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u22l66_ex2_wb_0",
             "type": "word-bank",
             "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Although the access was restricted, the cinema archive was visited.",
-            "trSentence": "Although the access was restricted, the cinema archive was visited.",
+            "translation": "Erişim kısıtlanmış olmasına rağmen sinema arşivi ziyaret edildi.",
+            "trSentence": "Erişim kısıtlanmış olmasına rağmen sinema arşivi ziyaret edildi.",
             "words": [
               "Although",
               "the",
@@ -48326,8 +48326,8 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u22l67_ex2_wb_0",
             "type": "word-bank",
             "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Because the data was confidential, the archive access was restricted.",
-            "trSentence": "Because the data was confidential, the archive access was restricted.",
+            "translation": "Veriler gizli olduğu için arşiv erişimi kısıtlandı.",
+            "trSentence": "Veriler gizli olduğu için arşiv erişimi kısıtlandı.",
             "words": [
               "Because",
               "the",
@@ -48945,8 +48945,8 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u22l68_ex2_wb_0",
             "type": "word-bank",
             "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "The budget was limited; therefore, the sociological research was cancelled.",
-            "trSentence": "The budget was limited; therefore, the sociological research was cancelled.",
+            "translation": "Bütçe sınırlıydı; bu yüzden sosyolojik araştırma iptal edildi.",
+            "trSentence": "Bütçe sınırlıydı; bu yüzden sosyolojik araştırma iptal edildi.",
             "words": [
               "The",
               "budget",
@@ -49565,8 +49565,8 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u22l69_ex2_wb_0",
             "type": "word-bank",
             "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "Empirical data depends on many parameters, such as survey results.",
-            "trSentence": "Empirical data depends on many parameters, such as survey results.",
+            "translation": "Ampirik veriler, anket sonuçları gibi birçok parametreye bağlıdır.",
+            "trSentence": "Ampirik veriler, anket sonuçları gibi birçok parametreye bağlıdır.",
             "words": [
               "Empirical",
               "data",
@@ -50182,8 +50182,8 @@ if (typeof unitSentencesMap !== 'undefined') {
             "id": "u22l70_ex2_wb_0",
             "type": "word-bank",
             "prompt": "Cümlenin İngilizce karşılığını oluşturun:",
-            "translation": "The financial agreements must be signed; otherwise, the project will be cancelled.",
-            "trSentence": "The financial agreements must be signed; otherwise, the project will be cancelled.",
+            "translation": "Finansal anlaşmalar imzalanmalıdır; aksi takdirde proje iptal edilecek.",
+            "trSentence": "Finansal anlaşmalar imzalanmalıdır; aksi takdirde proje iptal edilecek.",
             "words": [
               "The",
               "financial",
@@ -54944,17 +54944,40 @@ const placementQuestions = [
               }
             });
 
+            // Alıştırmadaki İngilizce metinden gelen sözcükler Türkçe çeldirici
+            // havuzuna sızabiliyor ("framework", "suspended" gibi). Bunları ayıkla.
+            const exerciseEnWords = [];
+            exercise.questions.forEach(q => {
+              [q.enSentence, q.sentence, q.mainSentence].forEach(text => {
+                if (typeof text !== 'string') return;
+                text.replace(/<[^>]+>/g, ' ').split(/\s+/).forEach(w => {
+                  const clean = w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, "");
+                  if (clean && !exerciseEnWords.includes(clean)) exerciseEnWords.push(clean);
+                });
+              });
+            });
+            const looksEnglish = (w) => /^[A-Za-z']+$/.test(w) && exerciseEnWords.some(e => e.toLowerCase() === w.toLowerCase());
+
             // Helper to convert an English-target word-bank to a Turkish-target word-bank
             const convertToTrWordBank = (q) => {
               if (!q.translation || !q.enSentence) return;
+              // translation alanı İngilizce cümlenin kopyasıysa hedef sözcükler
+              // kaynak cümleyle birebir aynı olur; soru cevabı ekranda gösterir.
+              // Böyle bozuk kayıtlarda dönüştürmeden vazgeç.
+              if (q.translation.trim() === q.enSentence.trim()) return;
 
               const sourceEn = q.enSentence;
               const targetWords = q.translation.split(/\s+/).map(w => w.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, ""));
 
-              const unique = exerciseTrWords.filter(w => !targetWords.includes(w));
+              const unique = exerciseTrWords.filter(w => !targetWords.includes(w) && !looksEnglish(w));
               const shuffled = shuffle(unique);
-              while (shuffled.length < 3) {
-                shuffled.push("ve");
+              // Havuz yetersizse tek bir "ve" yerine farklı Türkçe çeldiriciler kullan;
+              // aynı sözcüğün üç kez tekrarlanması bariz bir dolgu izlenimi veriyordu.
+              const fillers = ["ve", "ancak", "çünkü", "rağmen", "için", "daha", "gibi"];
+              for (let f = 0; f < fillers.length && shuffled.length < 3; f++) {
+                if (!targetWords.includes(fillers[f]) && !shuffled.includes(fillers[f])) {
+                  shuffled.push(fillers[f]);
+                }
               }
               const distractors = shuffled.slice(0, 3);
               const words = shuffle([...targetWords, ...distractors]);
