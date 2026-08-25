@@ -9116,14 +9116,14 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the edat changes the policy, / the edebi will support the reform.\"",
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the ministry changes the policy, / the faculty will support the reform.\"",
             "pairs": [
               {
-                "left": "If the edat changes the policy,",
-                "right": "the edebi will support the reform."
+                "left": "If the ministry changes the policy,",
+                "right": "the faculty will support the reform."
               },
               {
-                "left": "Since the edebiyat was established,",
+                "left": "Since the literature department was established,",
                 "right": "the community has maintained stability."
               },
               {
@@ -14313,11 +14313,11 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the sinema changes the policy, / the siyaset will support the reform.\"",
+            "prompt": "Match the clauses to form correct sentences:<br><br>\"If the film institute changes the policy, / the policy board will support the reform.\"",
             "pairs": [
               {
-                "left": "If the sinema changes the policy,",
-                "right": "the siyaset will support the reform."
+                "left": "If the film institute changes the policy,",
+                "right": "the policy board will support the reform."
               },
               {
                 "left": "Since the social was established,",
@@ -32816,7 +32816,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q1",
             "type": "fill-blank-dropdown",
             "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Siyaset scholars note that academic analysis ___ when methodological standards are applied.",
+            "sentence": "Political science scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -32836,8 +32836,8 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q2",
             "type": "true-false",
             "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In antropoloji studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In antropoloji studies, researchers must adhere to strict guidelines.",
+            "sentence": "In anthropological studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In anthropological studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
             "translation": "Antropoloji çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
@@ -32852,7 +32852,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q3",
             "type": "fill-blank-dropdown",
             "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Kültür scholars note that academic analysis ___ when methodological standards are applied.",
+            "sentence": "Cultural studies scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -32872,8 +32872,8 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q4",
             "type": "true-false",
             "prompt": "Verilen cümle doğru mu?",
-            "sentence": "In sinema studies, researchers must adhere to strict guidelines.",
-            "englishPhrase": "In sinema studies, researchers must adhere to strict guidelines.",
+            "sentence": "In film studies, researchers must adhere to strict guidelines.",
+            "englishPhrase": "In film studies, researchers must adhere to strict guidelines.",
             "isTrue": true,
             "correctAnswer": "true",
             "translation": "Sinema çalışmalarında araştırmacılar katı yönergelere uymalıdır.",
@@ -32888,7 +32888,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q5",
             "type": "fill-blank-dropdown",
             "prompt": "Kurala en uygun seçeneği belirleyin:",
-            "sentence": "Edebiyat scholars note that academic analysis ___ when methodological standards are applied.",
+            "sentence": "Literature scholars note that academic analysis ___ when methodological standards are applied.",
             "options": [
               "improves",
               "will have improved",
@@ -32928,7 +32928,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q7",
             "type": "multiple-choice",
             "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in tarih demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "sentence": "Recent findings in history demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -32968,7 +32968,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q9",
             "type": "multiple-choice",
             "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in siyaset demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "sentence": "Recent findings in political science demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -32988,7 +32988,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q10",
             "type": "multiple-choice",
             "prompt": "Boşluğa gelebilecek en uygun bağlaç / zaman yapısını seçin:",
-            "sentence": "Recent findings in antropoloji demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
+            "sentence": "Recent findings in anthropology demonstrate that institutional reform ___ effective provided that public trust ___ maintained.",
             "options": [
               "will be / is",
               "was / will be",
@@ -33020,7 +33020,7 @@ if (typeof lessons !== 'undefined') {
                 "right": "the research council will publish the annual report."
               },
               {
-                "left": "Unless policy makers consult antropoloji experts,",
+                "left": "Unless policy makers consult anthropology experts,",
                 "right": "social reforms will encounter structural resistance."
               }
             ],
@@ -33034,11 +33034,11 @@ if (typeof lessons !== 'undefined') {
             "rightHeader": "Sonuç / Uyum Bloğu",
             "pairs": [
               {
-                "left": "No sooner had the kültür manuscript been published",
+                "left": "No sooner had the cultural studies manuscript been published",
                 "right": "than international scholars initiated debate."
               },
               {
-                "left": "Due to significant changes in sinema paradigms,",
+                "left": "Due to significant changes in film studies paradigms,",
                 "right": "academic institutions updated their curriculum."
               },
               {
@@ -33053,7 +33053,7 @@ if (typeof lessons !== 'undefined') {
             "type": "multiple-choice",
             "prompt": "Okuma parçasına göre en uygun yapıyı bulun:",
             "paragraph": "Academic research in has expanded rapidly over the past decade. Scholars emphasize that unless archival data is cross-referenced with modern field observations, historical conclusions remain tentative. Furthermore, recent monographs suggest that early theories were significantly influenced by cultural biases.",
-            "sentence": "Based on the paragraph in sosyoloji, what condition is necessary for historical conclusions to be definitive?",
+            "sentence": "Based on the paragraph in sociology, what condition is necessary for historical conclusions to be definitive?",
             "options": [
               "Archival data must be cross-referenced with modern field observations.",
               "Modern field observations should be ignored entirely.",
@@ -33067,7 +33067,7 @@ if (typeof lessons !== 'undefined') {
             "id": "c40_l11_q14",
             "type": "multiple-choice",
             "prompt": "Paragraftaki gramer kilitlerini değerlendirin:",
-            "paragraph": "In the field of tarih, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
+            "paragraph": "In the field of history, experts insist that methodology be rigorously peer-reviewed before publication. By the time international symposia convene next spring, panel chairs will have evaluated over one hundred research abstracts.",
             "sentence": "Which two grammatical structures are specifically demonstrated in the passage?",
             "options": [
               "Subjunctive (insist that methodology be...) AND Future Perfect (will have evaluated)",

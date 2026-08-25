@@ -43844,7 +43844,7 @@ const unitSentencesMap = {
               "Orta çağ çatışmalarını belgeleyen tarihçiler, arşiv kayıtlarını aydınlatmak amacıyla Latince metinleri çevirdi.",
               "Latince metinleri aydınlatan orta çağ çatışmaları, arşiv kayıtlarını çevirmek amacıyla tarihçilerce belgelendi.",
               "Arşiv kayıtlarını belgeleyen tarihçiler, orta çağ çatışmalarını aydınlatmak amacıyla Latince metinleri çevirdi.",
-              "Arşiv kayıtlarınca çevrilen Latince metinler, orta çağ çatışmalarını belgelemek için tarihçileri aydınlattı."
+              "Arşiv kayıtlarınca çevrilen Latince metinler, orta çağ çatışmalarını belgelemek için historyçileri aydınlattı."
             ],
             "correctIndex": 2,
             "enSentence": "Historians documenting archival records translated Latin texts in order to illuminate medieval conflicts.",
@@ -56293,7 +56293,7 @@ const unitSentencesMap = {
               "prompt": "\"Historians analyzed the context of the legal dispute before the government delayed the commission.\" cümlesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "Hükümet komisyonu geciktirmeden önce tarihçiler yasal anlaşmazlığın bağlamını analiz ettiler.",
-                "Hükümet komisyonu geciktirdiği için tarihçiler yasal anlaşmazlığın bağlamını analiz ettiler.",
+                "Hükümet komisyonu geciktirdiği için historyçiler yasal anlaşmazlığın bağlamını analiz ettiler.",
                 "Tarihçiler yasal anlaşmazlığın bağlamını analiz ettikten sonra hükümet komisyonu geciktirdi.",
                 "Hükümet komisyonu geciktirse de tarihçiler yasal anlaşmazlığın bağlamını analiz etmediler."
               ],
@@ -62011,7 +62011,7 @@ const unitSentencesMap = {
                 },
                 {
                   "left": "Because primary sources were restricted by state authorities, historians <span style=\"color: #ff6b6b; font-weight: bold;\">were unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">publish</span> preliminary conclusions.",
-                  "right": "Birincil kaynaklar devlet makamlarınca kısıtlandığı için tarihçiler ön sonuçları yayımlamaya isteksizdi."
+                  "right": "Birincil kaynaklar devlet makamlarınca kısıtlandığı için historyçiler ön sonuçları yayımlamaya isteksizdi."
                 },
                 {
                   "left": "Having spent decades analyzing traditional canons, the committee <span style=\"color: #ff6b6b; font-weight: bold;\">was reluctant to</span> <span style=\"color: #10b981; font-weight: bold;\">revise</span> the literary curriculum.",
@@ -62030,14 +62030,14 @@ const unitSentencesMap = {
               "prompt": "[Nedensellik Bağlaçlı Cümle] \"<span style=\"color: #ff6b6b; font-weight: bold;\">Because primary sources were restricted by state authorities, historians were unwilling to publish preliminary conclusions.</span>\" ifadesinin Türkçe karşılığı hangisidir?",
               "options": [
                 "Disiplinler arası çerçeveleri entegre etmeye istekli akademisyenler, kültür tarihinde sıklıkla özgün perspektifler keşfederler.",
-                "Birincil kaynaklar devlet makamlarınca kısıtlandığı için tarihçiler ön sonuçları yayımlamaya isteksizdi.",
+                "Birincil kaynaklar devlet makamlarınca kısıtlandığı için historyçiler ön sonuçları yayımlamaya isteksizdi.",
                 "Geleneksel kanonları analiz ederek on yıllar geçirmiş olan komite, edebi müfredatı revize etmeye gönülsüzdü.",
                 "Bağımsız araştırmacılar saha notlarını paylaşmaya istekliyse, karşılaştırmalı antropoloji önemli bir ilerleme kaydedecektir."
               ],
               "correctIndex": 1,
               "enSentence": "Because primary sources were restricted by state authorities, historians <span style=\"color: #ff6b6b; font-weight: bold;\">were unwilling to</span> <span style=\"color: #10b981; font-weight: bold;\">publish</span> preliminary conclusions.",
               "isEngToTr": true,
-              "explanation": "<b>Doğru Cevap:</b> Birincil kaynaklar devlet makamlarınca kısıtlandığı için tarihçiler ön sonuçları yayımlamaya isteksizdi."
+              "explanation": "<b>Doğru Cevap:</b> Birincil kaynaklar devlet makamlarınca kısıtlandığı için historyçiler ön sonuçları yayımlamaya isteksizdi."
             },
             {
               "id": "u103l108_ex1_q13",
