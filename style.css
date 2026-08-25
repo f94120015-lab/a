@@ -12609,3 +12609,88 @@ nDown 0.3s ease;
 .accent-gradient-bg { background: linear-gradient(135deg, var(--accent-primary, #8B7EC8), var(--accent-primary-hover, #7A6DB8)); }
 .input-field-md-2 { width: 100%; padding: 10px 14px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; box-sizing: border-box; }
 .btn-pill-solid { padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; }
+
+/* ── Kural hatırlatıcısındaki formül ─────────────────────────────────────── */
+/* Kalıplar tek satırlık düz metin yerine ok'un iki yakası ayrılmış kartlar
+   halinde çiziliyor: göz "koşul → sonuç" eşleşmesini taramadan görüyor. */
+.rule-formula { display: flex; flex-direction: column; gap: 6px; }
+.rule-formula-title {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-muted);
+}
+.rule-formula-row {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+  padding: 7px 10px; border-radius: var(--radius-md);
+  background: var(--accent-primary-light, rgba(99, 102, 241, 0.1));
+  border-left: 3px solid var(--accent-primary, #6366F1);
+  font-size: 0.85rem; line-height: 1.45;
+}
+.rule-formula-from { font-weight: 700; color: var(--text-secondary); }
+.rule-formula-arrow { font-weight: 800; color: var(--accent-primary, #6366F1); }
+.rule-formula-to { font-weight: 800; color: var(--accent-primary, #6366F1); }
+.rule-formula-note {
+  margin-left: auto; padding: 2px 8px; border-radius: 9999px;
+  font-size: 0.68rem; font-weight: 700; white-space: nowrap;
+  background: var(--bg-card); color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+[data-theme="dark"] .rule-formula-row { background: rgba(139, 126, 200, 0.16); }
+
+/* Formül rozeti satırın solunda kalır, kalıplar sağda kendi sütununu kurar. */
+.grammar-formula { align-items: flex-start; }
+.grammar-formula .formula-badge { flex-shrink: 0; margin-top: 3px; }
+.grammar-formula .rule-formula { flex: 1; min-width: 0; }
+.rule-formula-from, .rule-formula-to, .rule-formula-note { overflow-wrap: anywhere; }
+
+/* ── Ders panosu: başlık notu ve katlanan örnekler ───────────────────────── */
+.popover-title-note {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.popover-examples {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border-color);
+}
+.popover-examples > summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.popover-examples > summary::-webkit-details-marker { display: none; }
+.popover-examples > summary::before {
+  content: '▸';
+  font-size: 0.8em;
+  transition: transform 0.15s ease;
+}
+.popover-examples[open] > summary::before { transform: rotate(90deg); }
+.popover-examples-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 7px;
+}
+.popover-example-item {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+.popover-example-en { color: var(--text-primary); }
+/* Çeviri örneğin altında, ondan bir tık geride durur. */
+.popover-example-tr {
+  margin-top: 1px;
+  padding-left: 8px;
+  border-left: 2px solid var(--border-color);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}

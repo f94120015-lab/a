@@ -12,22 +12,22 @@ rawTopics.push(
   "formulas": [
     {
       "formula": "That / The Fact That / It is + Adj + that + Clause",
-      "example": "The study confirmed that the hypothesis is valid / The fact that datasets conflict invalidates the report.",
+      "example": "The study confirmed that the hypothesis is valid / The fact that datasets conflict invalidates the report.", "exampleTr": "Çalışma, hipotezin geçerli olduğunu doğruladı. / Veri kümelerinin çelişmesi raporu geçersiz kılıyor.",
       "description": "Nesne/Özne konumundaki that cümleleri, the fact that soyut isim blokları, impersonal/vurgulu sahte özne yapımları ve sıfat arkası that kullanımları."
     },
     {
       "formula": "Wh- Word / Whether / If + Clause",
-      "example": "Whether inflation will decline remains uncertain / They discussed the plan about how to allocate resources.",
+      "example": "Whether inflation will decline remains uncertain / They discussed the plan about how to allocate resources.", "exampleTr": "Enflasyonun düşüp düşmeyeceği belirsizliğini koruyor. / Kaynakların nasıl dağıtılacağına dair planı görüştüler.",
       "description": "If/whether dolaylı soru yapıları, wh- soru kelimeleri (what, how, why, when, where), -ever genellemeleri (whatever, whoever) ve edat sonrası isim cümlecikleri."
     },
     {
       "formula": "Subjunctive That Clause / Noun Clause vs. Adjective Clause / That vs. What",
-      "example": "They recommended that the report be submitted immediately / The finding that data leaked (Noun Clause) vs The finding that was published (Adjective Clause).",
+      "example": "They recommended that the report be submitted immediately / The finding that data leaked (Noun Clause) vs The finding that was published (Adjective Clause).", "exampleTr": "Raporun derhal sunulmasını önerdiler. / Verilerin sızdığı bulgusu (isim cümleciği) ile yayımlanan bulgu (sıfat cümleciği).",
       "description": "Zorunluluk/tavsiye bildiren subjunctive yapılar, Noun Clause ile Relative Clause arasındaki yapısal farklar ve that/what ayrımı."
     },
     {
       "formula": "Mixed Noun Clause Syntax & Academic Reading",
-      "example": "Comprehensive analysis of all Noun Clause sentence patterns on academic passages.",
+      "example": "Comprehensive analysis of all Noun Clause sentence patterns on academic passages.", "exampleTr": "Akademik parçalar üzerinde bütün isim cümleciği kalıplarının kapsamlı analizi.",
       "description": "Tüm Noun Clause yapılarının metinler üzerinde karışık test edilmesi."
     }
   ],
@@ -84,7 +84,7 @@ rawTopics.push(
     {
       "formula": "Subject + would rather + V1 (Present)",
       "example": "I would rather live in Bodrum: Bodrum'da yaşamayı tercih ederim.",
-      "description": "Kişinin kendisi için şimdiki veya geniş zamandaki tercihlerini belirtirken 'would rather' yapısından sonra fiilin yalın hali (V1) kullanılır."
+      "description": "'would rather' sonrası fiilin yalın hâli (V1)."
     },
     {
       "formula": "Subject + would rather + have + V3 (Past)",
@@ -223,29 +223,29 @@ rawTopics.push(
   "formulas": [
     {
       "formula": "1. Since & By the time (Zaman Sınırları): Since + V2 ➔ Have/Has V3 (Günümüz) | Since + V2 ➔ Had V3 (Geçmiş Bağlam) | By the time + V2 ➔ Had V3 | By the time + V1 ➔ Will Have V3",
-      "example": "• Since (Günümüz): Scientists <span style=\"color: #51cf66; font-weight: bold;\">have analyzed</span> data since the project <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.<br>• Since (Geçmiş Bağlam): Until 2020, they <span style=\"color: #da77f2; font-weight: bold;\">had analyzed</span> data since the project <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.<br>• By the time (Geçmiş): By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, they <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.<br>• By the time (Gelecek): By the time you <span style=\"color: #51cf66; font-weight: bold;\">arrive</span>, we <span style=\"color: #20c997; font-weight: bold;\">will have completed</span> the test.",
+      "example": "• Since (Günümüz): Scientists <span style=\"color: #51cf66; font-weight: bold;\">have analyzed</span> data since the project <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.<br>• Since (Geçmiş Bağlam): Until 2020, they <span style=\"color: #da77f2; font-weight: bold;\">had analyzed</span> data since the project <span style=\"color: #ff6b6b; font-weight: bold;\">began</span>.<br>• By the time (Geçmiş): By the time we <span style=\"color: #ff6b6b; font-weight: bold;\">arrived</span>, they <span style=\"color: #da77f2; font-weight: bold;\">had left</span>.<br>• By the time (Gelecek): By the time you <span style=\"color: #51cf66; font-weight: bold;\">arrive</span>, we <span style=\"color: #20c997; font-weight: bold;\">will have completed</span> the test.", "exampleTr": "Bilim insanları, proje başladığından beri verileri analiz ediyor.<br>2020'ye kadar, proje başladığından beri verileri analiz etmişlerdi.<br>Biz vardığımızda onlar çoktan gitmişti.<br>Sen vardığında biz testi tamamlamış olacağız.",
       "description": "Since geçmişteki başlangıç noktasından günümüze uzanan süreçte Present Perfect (Have/Has V3), geçmişte kalmış süreç bağlamında ise Past Perfect (Had V3) alır. By the time ise eylemin tamamlandığı son sınırı (Past/Future Perfect) mühürler."
     },
     {
       "formula": "2. Kronolojik Öncelik & Eşzamanlılık: After + Had V3 ➔ V2 | Before + V2 ➔ Had V3 | While + Continuous ➔ V2",
-      "example": "• After Önceliği: After the team <span style=\"color: #da77f2; font-weight: bold;\">had published</span> the study, they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> an award.<br>• Before Önceliği: Before the market <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, experts <span style=\"color: #da77f2; font-weight: bold;\">had warned</span> investors.<br>• While Eşzamanlılığı: While analysts <span style=\"color: #4a90e2; font-weight: bold;\">were collecting</span> samples, a power outage <span style=\"color: #ff6b6b; font-weight: bold;\">occurred</span>.",
+      "example": "• After Önceliği: After the team <span style=\"color: #da77f2; font-weight: bold;\">had published</span> the study, they <span style=\"color: #ff6b6b; font-weight: bold;\">received</span> an award.<br>• Before Önceliği: Before the market <span style=\"color: #ff6b6b; font-weight: bold;\">crashed</span>, experts <span style=\"color: #da77f2; font-weight: bold;\">had warned</span> investors.<br>• While Eşzamanlılığı: While analysts <span style=\"color: #4a90e2; font-weight: bold;\">were collecting</span> samples, a power outage <span style=\"color: #ff6b6b; font-weight: bold;\">occurred</span>.", "exampleTr": "Ekip çalışmayı yayımladıktan sonra bir ödül aldı.<br>Piyasa çökmeden önce uzmanlar yatırımcıları uyarmıştı.<br>Analistler numune toplarken elektrik kesintisi oldu.",
       "description": "After ilk gerçekleşen geçmiş eyleme (Had V3), Before sonraki eyleme (V2), While ise devam eden sürece (was/were Ving) odaklanır."
     },
     {
-      "formula": "3. Devrik Anlık Zaman Kırılması: No sooner + HAD + Subject + V3 ... THAN + Subject + V2",
-      "example": "• No sooner ... than: <span style=\"color: #e67e22; font-weight: bold;\">No sooner had</span> the scientist <span style=\"color: #da77f2; font-weight: bold;\">announced</span> the findings <span style=\"color: #e67e22; font-weight: bold;\">than</span> debate <span style=\"color: #ff6b6b; font-weight: bold;\">erupted</span>.<br>• Hardly ... when: <span style=\"color: #e67e22; font-weight: bold;\">Hardly had</span> the probe <span style=\"color: #da77f2; font-weight: bold;\">landed</span> <span style=\"color: #e67e22; font-weight: bold;\">when</span> signals <span style=\"color: #ff6b6b; font-weight: bold;\">were transmitted</span>.",
+      "formula": "3. Devrik Anlık Zaman Kırılması: No sooner + HAD + Subject + V3 ➔ THAN + Subject + V2 | Hardly/Scarcely/Barely + HAD + Subject + V3 ➔ WHEN/BEFORE + Subject + V2",
+      "example": "• No sooner ... than: <span style=\"color: #e67e22; font-weight: bold;\">No sooner had</span> the scientist <span style=\"color: #da77f2; font-weight: bold;\">announced</span> the findings <span style=\"color: #e67e22; font-weight: bold;\">than</span> debate <span style=\"color: #ff6b6b; font-weight: bold;\">erupted</span>.<br>• Hardly ... when: <span style=\"color: #e67e22; font-weight: bold;\">Hardly had</span> the probe <span style=\"color: #da77f2; font-weight: bold;\">landed</span> <span style=\"color: #e67e22; font-weight: bold;\">when</span> signals <span style=\"color: #ff6b6b; font-weight: bold;\">were transmitted</span>.", "exampleTr": "Bilim insanı bulguları açıklar açıklamaz tartışma patlak verdi.<br>Sonda iner inmez sinyaller iletildi.",
       "description": "Bir eylemin hemen ardından diğerinin başladığı anlık geçişlerde 'No sooner... than' veya 'Hardly... when' devrik kurgusu (Had + Özne + V3) zorunludur."
     },
     {
       "formula": "4. Unreal Present & Süperlatif: It is (high) time + Subject + V2 (vs to V1) | Superlative + Present/Past Perfect",
-      "example": "• Özneli Unreal Present: It is high time we <span style=\"color: #ff6b6b; font-weight: bold;\">revised</span> the laws.<br>• Öznesiz Mastar: It is time <span style=\"color: #4a90e2; font-weight: bold;\">to start</span> the exam.<br>• Süperlatif Mühürü: This IS the best book I <span style=\"color: #51cf66; font-weight: bold;\">have ever read</span>.",
+      "example": "• Özneli Unreal Present: It is high time we <span style=\"color: #ff6b6b; font-weight: bold;\">revised</span> the laws.<br>• Öznesiz Mastar: It is time <span style=\"color: #4a90e2; font-weight: bold;\">to start</span> the exam.<br>• Süperlatif Mühürü: This IS the best book I <span style=\"color: #51cf66; font-weight: bold;\">have ever read</span>.", "exampleTr": "Artık yasaları gözden geçirmemizin tam zamanı.<br>Sınava başlama zamanı.<br>Bu, şimdiye kadar okuduğum en iyi kitaptır.",
       "description": "It is time sonrasında özne varsa V2, özne yoksa to V1 gelir. Süperlatif yapılarda Present Perfect (Have/Has V3) tecrübe vurgusunu tamamlar."
     }
   ],
   "subtitles": [
     "1. <span style=\"color: #10b981; font-weight: bold;\">\"Since\"</span> ve <span style=\"color: #06b6d4; font-weight: bold;\">\"By the Time\"</span> Zaman Sınırları (<span style=\"color: #10b981; font-weight: bold;\">Süreç</span> ve <span style=\"color: #06b6d4; font-weight: bold;\">Sınır Kilitleri</span>)",
     "2. Kronolojik Öncelik & Eşzamanlılık (<span style=\"color: #3b82f6; font-weight: bold;\">Before</span>, <span style=\"color: #8b5cf6; font-weight: bold;\">After</span>, <span style=\"color: #ec4899; font-weight: bold;\">While</span>)",
-    "3. Devrik Anlık Zaman Kırılmaları (<span style=\"color: #f59e0b; font-weight: bold;\">No sooner... than</span> / <span style=\"color: #ef4444; font-weight: bold;\">Hardly... when</span>)",
+    "3. Devrik Anlık Zaman Kırılmaları (<span style=\"color: #f59e0b; font-weight: bold;\">No sooner</span> / <span style=\"color: #ef4444; font-weight: bold;\">Hardly</span>)",
     "4. Varsayımsal Zaman Kaymaları (<span style=\"color: #6366f1; font-weight: bold;\">It's time</span>) ve <span style=\"color: #10b981; font-weight: bold;\">Süperlatif Mühürleri</span>"
 ]
 },
@@ -267,22 +267,22 @@ rawTopics.push(
   "formulas": [
     {
       "formula": "Although / Even though + SVO VEYA Despite / In spite of + Noun VEYA SVO; however / nevertheless, SVO",
-      "example": "Although the commission authorized the research, the funding was delayed; however, the historians continued.",
+      "example": "Although the commission authorized the research, the funding was delayed; however, the historians continued.", "exampleTr": "Komisyon araştırmaya izin vermesine rağmen fon gecikti; yine de tarihçiler çalışmayı sürdürdü.",
       "description": "Temel ve ileri seviye zıtlık bağlaçları, edatları ve geçiş kelimeleri."
     },
     {
       "formula": "While / Whereas + SVO VEYA Unlike / Contrary to + Noun VEYA because / since / as + SVO",
-      "example": "Whereas documentary films analyze historical events, fiction movies create imaginary worlds because they prioritize entertainment.",
+      "example": "Whereas documentary films analyze historical events, fiction movies create imaginary worlds because they prioritize entertainment.", "exampleTr": "Belgesel filmler tarihsel olayları incelerken kurgu filmler, eğlenceyi öncelediği için hayali dünyalar kurar.",
       "description": "Saf kıyaslama bağlaçları, karşıtlık edatları ve cümle alan sebep bağlaçları."
     },
     {
       "formula": "Due to / Because of + Noun; therefore / consequently, SVO VEYA In addition to + Noun VEYA SVO; furthermore, SVO",
-      "example": "Due to legal disputes, the economists preferred to modify the trade agreement; consequently, they held a commission meeting.",
+      "example": "Due to legal disputes, the economists preferred to modify the trade agreement; consequently, they held a commission meeting.", "exampleTr": "Hukuki anlaşmazlıklar nedeniyle iktisatçılar ticaret anlaşmasını değiştirmeyi tercih etti; sonuç olarak bir komisyon toplantısı düzenlediler.",
       "description": "Sebep-sonuç edatları, sonuç geçişleri, ekleme bağlaçları ve örneklendirme/açıklama."
     },
     {
       "formula": "Neither...nor / Either...or VEYA so that + SVO VEYA in order to / so as to + V1 VEYA rather than / in terms of + Noun",
-      "example": "Neither the art historians nor the commission was willing to authorize the funding so that they could preserve the cultural heritage rather than depending on foreign aid.",
+      "example": "Neither the art historians nor the commission was willing to authorize the funding so that they could preserve the cultural heritage rather than depending on foreign aid.", "exampleTr": "Ne sanat tarihçileri ne de komisyon, kültürel mirası dış yardıma bel bağlamak yerine koruyabilmek için fona onay vermeye istekliydi.",
       "description": "İkili bağlaçlar, amaç-sonuç bağlaçları, hariç tutma ve ileri düzey edat kombinasyonları."
     }
   ],
@@ -26472,7 +26472,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u40l4_ex2_q6",
             "type": "fill-blank",
-            "prompt": "Boşlukları sırasıyla klavyeden doldurunuz (örn: neither ... nor):",
+            "prompt": "Boşlukları sırasıyla klavyeden doldurunuz (örn: both ... and):",
             "sentence": "___ the sociologist ___ the psychologist was able to verify the empirical hypothesis.",
             "options": ["Neither / nor", "Either / nor", "Both / nor", "Whether / nor"],
             "correctIndex": 0,
@@ -28850,7 +28850,7 @@ Object.assign(unitSentencesMap, {
                                                 {
                                                             "id": "u101_l3_t2",
                                                             "type": "fill-blank-dropdown",
-                                                            "prompt": "No sooner ... than (🇹🇷 '-er ... -mez') yapısının çağırdığı devrik yardımcı fiili ve ikincil bağlaç ekini seçiniz:\n\n\"No sooner ___ the scientist announced the discovery ___ debate erupted.\"",
+                                                            "prompt": "Devrik anlık zaman yapısının (🇹🇷 '-er ... -mez') çağırdığı yardımcı fiili ve ikincil bağlaç ekini seçiniz:\n\n\"No sooner ___ the scientist announced the discovery ___ debate erupted.\"",
                                                             "sentence": "No sooner ___ the scientist announced the discovery ___ debate erupted.",
                                                             "options": [
                                                                         "had / than",
@@ -28947,7 +28947,7 @@ Object.assign(unitSentencesMap, {
                                                 {
                                                             "id": "u101_l3_t6",
                                                             "type": "structure-match",
-                                                            "prompt": "Hardly / Scarcely / Barely ... when (🇹🇷 Çeviri Mantığı: '-er ... -mez' / '... henüz yapmıştı ki ... oldu') bağlaçlarının çağırdığı zaman ve ek formülünü seçiniz:",
+                                                            "prompt": "Hardly / Scarcely / Barely (🇹🇷 Çeviri Mantığı: '-er ... -mez' / '... henüz yapmıştı ki ... oldu') bağlaçlarının çağırdığı zaman ve ek formülünü seçiniz:",
                                                             "options": [
                                                                         "Hardly/Scarcely/Barely + HAD + Subject + V3 ... WHEN/BEFORE + Subject + V2",
                                                                         "Hardly + Subject + V2 ... THAN + Subject + Had V3",
@@ -28969,7 +28969,7 @@ Object.assign(unitSentencesMap, {
                                                 {
                                                             "id": "u101_l3_t7",
                                                             "type": "fill-blank-dropdown",
-                                                            "prompt": "Hardly ... when (🇹🇷 'henüz yapmıştı ki ... oldu') bağlacının çağırdığı yardımcı fiili ve ikincil eki seçiniz:\n\n\"Hardly ___ the plane landed ___ a thunderstorm hit the airport.\"",
+                                                            "prompt": "Hardly (🇹🇷 'henüz yapmıştı ki ... oldu') bağlacının çağırdığı yardımcı fiili ve ikincil eki seçiniz:\n\n\"Hardly ___ the plane landed ___ a thunderstorm hit the airport.\"",
                                                             "sentence": "Hardly ___ the plane landed ___ a thunderstorm hit the airport.",
                                                             "options": [
                                                                         "had / when",
@@ -47194,7 +47194,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u102l9_q36",
             "type": "multiple-choice",
-            "prompt": "Yönerge: 1. 'in 2010' geçmiş bağlamı. 2. 'By the time + V2, Had V3'. 3. İşletmeler iflasa sürüklendi (Pasif had been forced).<br><br>By the time the economic crisis ___ resolved in 2010, hundreds of small businesses ___ forced into bankruptcy.",
+            "prompt": "Yönerge: 1. 'in 2010' geçmiş bağlamı. 2. 'By the time + V2, Had V3' kuralı. 3. İkinci boşluk pasif çatı ister.<br><br>By the time the economic crisis ___ resolved in 2010, hundreds of small businesses ___ forced into bankruptcy.",
             "options": [
               "was / had been",
               "is / will have been",
@@ -47214,7 +47214,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u102l9_q37",
             "type": "multiple-choice",
-            "prompt": "Yönerge: 1. 'yesterday afternoon' kilidi. 2. Sunucu çöktü (Aktif V2), veriler aktarıldı (Pasif was transferred).<br><br>When the primary server ___ yesterday afternoon, confidential data ___ automatically to a backup cloud system.",
+            "prompt": "Yönerge: 1. 'yesterday afternoon' kilidi. 2. Sunucu çöktü (aktif çatı), veriler aktarıldı (pasif çatı).<br><br>When the primary server ___ yesterday afternoon, confidential data ___ automatically to a backup cloud system.",
             "options": [
               "crashed / was transferred",
               "will crash / transferred",
@@ -47274,7 +47274,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u102l9_q40",
             "type": "multiple-choice",
-            "prompt": "Yönerge: 1. 'in 1985' ➔ Simple Past (was identified). 2. 'until recently' ➔ Past Simple (was not understood). Pasif uyum kontrolü.<br><br>The genetic mutation ___ originally in 1985, but its actual medical significance ___ until recently.",
+            "prompt": "Yönerge: 1. 'in 1985' ➔ Simple Past. 2. 'until recently' ➔ Past Simple. Her iki boşlukta pasif uyum kontrolü.<br><br>The genetic mutation ___ originally in 1985, but its actual medical significance ___ until recently.",
             "options": [
               "was identified / was not understood",
               "identified / has not understood",
@@ -47334,7 +47334,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u102l9_q43",
             "type": "multiple-choice",
-            "prompt": "Yönerge: 1. 'last month' + 'While' past uyumu. 2. Araştırmacı yürütüyordu (Aktif was conducting), numuneler bozuldu (Pasif were corrupted).<br><br>While the lead researcher ___ the field experiment last month, vital data samples ___ due to a sudden power loss.",
+            "prompt": "Yönerge: 1. 'last month' + 'While' past uyumu. 2. Araştırmacı yürütüyordu (aktif, süreç), numuneler bozuldu (pasif).<br><br>While the lead researcher ___ the field experiment last month, vital data samples ___ due to a sudden power loss.",
             "options": [
               "was conducting / were corrupted",
               "conducted / corrupting",
@@ -47354,7 +47354,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u102l9_q44",
             "type": "multiple-choice",
-            "prompt": "Yönerge: 1. 'so far' ➔ Present Perfect (have increased). 2. Genel durum ➔ Simple Present (remain).<br><br>Although clean energy investments ___ dramatically so far, fossil fuels ___ the dominant energy source worldwide.",
+            "prompt": "Yönerge: 1. 'so far' ➔ Present Perfect. 2. Genel durum ➔ Simple Present.<br><br>Although clean energy investments ___ dramatically so far, fossil fuels ___ the dominant energy source worldwide.",
             "options": [
               "have increased / remain",
               "increased / remained",
@@ -47374,7 +47374,7 @@ Object.assign(unitSentencesMap, {
           {
             "id": "u102l9_q45",
             "type": "multiple-choice",
-            "prompt": "Yönerge: Akademik Sınav Simülasyonu: 1. 'By the time ... next year' formülü. 2. Yan cümlede WILL olmaz (B elenir). 3. Pasif Gelecek Mükemmel Zaman (will have been kept) doğrulaması yapın.<br><br>By the time the ancient scroll ___ by language experts next year, it ___ in a controlled laboratory vault for over six months.",
+            "prompt": "Yönerge: Akademik Sınav Simülasyonu: 1. 'By the time ... next year' formülü. 2. Yan cümlede WILL olmaz. 3. Ana cümlede pasif Gelecek Mükemmel Zaman doğrulaması yapın.<br><br>By the time the ancient scroll ___ by language experts next year, it ___ in a controlled laboratory vault for over six months.",
             "options": [
               "is translated / will have been kept",
               "will be translated / has been kept",
@@ -54684,6 +54684,7 @@ rawTopics.forEach((topic, uIdx) => {
       exercises: lessonExercises,
       formula: topic.formulas && topic.formulas[lIdx] ? topic.formulas[lIdx].formula : "",
       example: topic.formulas && topic.formulas[lIdx] ? topic.formulas[lIdx].example : "",
+      exampleTr: topic.formulas && topic.formulas[lIdx] ? (topic.formulas[lIdx].exampleTr || "") : "",
       description: topic.formulas && topic.formulas[lIdx] ? (topic.formulas[lIdx].description || "") : "",
       pages: lessonPages
     });
@@ -66198,7 +66199,7 @@ const chapter40Data = {
             ],
             "correctIndex": 0,
             "translation": "Fabrika grubu, karbon emisyonlarını azaltmak amacıyla filtreleri yükseltti.",
-            "explanation": "The factory group (subject) upgraded (verb) the filters (object) so as to (purpose marker) reduce (V1) carbon emissions (object) yapısı tam olarak ilk seçenekteki şablonu karşılar.",
+            "explanation": "The factory group (subject) upgraded (verb) the filters (object) so as to (purpose marker) reduce (V1) carbon emissions (object) yapısı tam olarak doğru seçenekteki şablonu karşılar.",
             "hint": {
               "formula": "S + V + O + so as to + V1 + O",
               "mirror": "Karbon emisyonlarını azaltma amacı.",
@@ -70119,7 +70120,7 @@ const chapter40Data = {
                 ],
                 "correctIndex": 0,
                 "translation": "Şirket geçen ay vergi reformunu kabul etmiş olsaydı, bugün başı belada olmazdı.",
-                "explanation": "Geçmiş şartı devrik (Had the firm accepted) ve günümüz sonucunu (would not be in trouble today) veren ilk seçenek karma koşul için doğrudur.",
+                "explanation": "Geçmiş şartı devrik (Had the firm accepted) ve günümüz sonucunu (would not be in trouble today) veren seçenek karma koşul için doğrudur.",
                 "hint": {
                     "formula": "did not accept -> [Had accepted] (Inverted) , are in trouble -> [would not be] + today",
                     "mirror": "Geçen ayın reddi (did not accept last month) ile bugünün sorunu (today) ilişkisi.",
@@ -70677,7 +70678,7 @@ const chapter40Data = {
                 ],
                 "correctIndex": 0,
                 "translation": "Eğer laboratuvar ekibi alp hava basıncını simüle etmiş olsaydı, hibrit tohumlar şu an solmazdı.",
-                "explanation": "Geçmiş şartı devrik past perfect (Had the laboratory team simulated) ve günümüz sonuç eylemini (would not wither now) veren ilk seçenek karma devrik koşul için doğrudur.",
+                "explanation": "Geçmiş şartı devrik past perfect (Had the laboratory team simulated) ve günümüz sonuç eylemini (would not wither now) veren seçenek karma devrik koşul için doğrudur.",
                 "hint": {
                     "formula": "did not simulate -> [Had simulated] (Inverted) , wither now -> [would not wither] + now",
                     "mirror": "Geçmiş simülasyon eksikliği ile şimdiki solma (wither now) ilişkisini dönüştürün.",
@@ -72898,17 +72899,17 @@ const chapter40Data = {
       "formulas": [
         {
           "formula": "Suggest / Insist on / It is no use / There is no point in / Have difficulty -> + V-ing Çekimi",
-          "example": "suggest analyzing / insist on validating",
+          "example": "suggest analyzing / insist on validating", "exampleTr": "analiz etmeyi önermek / doğrulamakta ısrar etmek",
           "description": "Gerund ve Infinitive yapıları için hızlı refleks ve sınav taktikleri meydan okuması."
         },
         {
           "formula": "Time Clause + Present Simple -> Main Clause + Future / By the time + V2 -> Had V3",
-          "example": "before they analyse / by the time we arrived",
+          "example": "before they analyse / by the time we arrived", "exampleTr": "onlar analiz etmeden önce / biz vardığımızda",
           "description": "Zaman ve kronoloji refleks testi"
         },
         {
           "formula": "What-Question -> Well... + Explanation / Negative Statement -> Neither + Auxiliary + Subject",
-          "example": "Well, we must analyze / Neither did the principal researcher",
+          "example": "Well, we must analyze / Neither did the principal researcher", "exampleTr": "Şey, analiz etmeliyiz / Baş araştırmacı da etmedi",
           "description": "mülakat ve diyalog refleksleri"
         }
       ],
@@ -72989,7 +72990,7 @@ const chapter40Data = {
       "formulas": [
         {
           "formula": "is likely to V1 / was to have V3 / supposed to V1 / used to Ving / bound to be V3 / doomed to have been V3",
-          "example": "was used to tracking / doomed to have been compromised",
+          "example": "was used to tracking / doomed to have been compromised", "exampleTr": "izlemeye alışkındı / ele geçirilmiş olmaya mahkûm",
           "description": "Zaman bükümleri, edilgenlik matrisleri ve mükemmel zaman kaymaları."
         }
       ],
@@ -77408,7 +77409,7 @@ const chapter40Data = {
         "type": "titan-boundary-defense",
         "prompt": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
         "question": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
-        "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation validation servers deviated.",
+        "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation servers deviated.",
         "options": [
           "Hem geçmişteki beklenti olasılığını hem de o beklentiye konu olan 'şifrenin çözümlenmiş olması' eylemini katmanlı olarak geçmişe gömer; yazar sorumluluk almaz.",
           "Metinlerin şu an canlı olarak sistem yöneticileri tarafından okunduğunu kanıtlar.",
@@ -77662,7 +77663,7 @@ const chapter40Data = {
     "formulas": [
         {
             "formula": "is likely to be V3 / should have been V3 / was supposed to be V3 / is certain to have V3",
-            "example": "is likely to be mutated / should have been derived",
+            "example": "is likely to be mutated / should have been derived", "exampleTr": "değişime uğraması muhtemel / türetilmiş olmalıydı",
             "description": "5 öğeli eylem trenleri ve renk kodlu geometrik sentaks."
         }
     ],
@@ -77734,7 +77735,7 @@ const chapter40Data = {
       "formulas": [
         {
           "formula": "is rumored to have been V3 / is certain to have been V3 / is likely to have been V3 / is supposed to have been V3",
-          "example": "is rumored to have been validated / is likely to have been mutated",
+          "example": "is rumored to have been validated / is likely to have been mutated", "exampleTr": "doğrulandığı söyleniyor / değişime uğramış olması muhtemel",
           "description": "6 öğeli phrasal modal perfect passive mega zincirler ve morfolojik dizilim."
         }
       ],
@@ -78449,7 +78450,7 @@ const chapter40Data = {
         "formulas": [
           {
             "formula": "is rumored to have been being V3 / is supposed to have been being V3",
-            "example": "is rumored to have been being compromised",
+            "example": "is rumored to have been being compromised", "exampleTr": "ele geçiriliyor olduğu söyleniyor",
             "description": "7 öğeli phrasal modal perfect continuous passive hiper zincirler."
           }
         ],
@@ -78469,7 +78470,7 @@ const chapter40Data = {
         "formulas": [
           {
             "formula": "must have been supposed to have been V3 / should have been bound to have been V3",
-            "example": "must have been supposed to have been validated",
+            "example": "must have been supposed to have been validated", "exampleTr": "doğrulanmış olması gerekiyor olmalıydı",
             "description": "8 öğeli phrasal modal perfect passive ultra zincirler."
           }
         ],
@@ -78488,7 +78489,7 @@ const chapter40Data = {
         "formulas": [
           {
             "formula": "is/are likely to have been V3 / could have been expected to have been V3",
-            "example": "could have been expected to have been read",
+            "example": "could have been expected to have been read", "exampleTr": "okunmuş olması beklenebilirdi",
             "description": "Vagon ve zincir genişleme matrisi."
           }
         ],
@@ -78507,7 +78508,7 @@ const chapter40Data = {
         "formulas": [
           {
             "formula": "was/were rumored to have been V3 / will be rumored to have been V3",
-            "example": "was/were rumored to have been manipulated",
+            "example": "was/were rumored to have been manipulated", "exampleTr": "üzerinde oynandığı söyleniyordu",
             "description": "Zaman kayma ve yönelim matrisi."
           }
         ],
@@ -78526,7 +78527,7 @@ const chapter40Data = {
         "formulas": [
           {
             "formula": "All Advanced Structures Combined",
-            "example": "The criteria are supposed to have been validated before any anomalies deviate the parameters.",
+            "example": "The criteria are supposed to have been validated before any anomalies deviate the parameters.", "exampleTr": "Ölçütlerin, herhangi bir anormallik parametreleri saptırmadan önce doğrulanmış olması gerekiyor.",
             "description": "Karmaşık sınav tipi cümleler."
           }
         ],
@@ -78548,7 +78549,7 @@ const chapter40Data = {
         "formulas": [
           {
             "formula": "Mega, Hyper, and Ultra Chains Combined",
-            "example": "Were the infrastructure to have been compromised, the parameters would have been bound to mutate.",
+            "example": "Were the infrastructure to have been compromised, the parameters would have been bound to mutate.", "exampleTr": "Altyapı ele geçirilmiş olsaydı, parametrelerin değişmesi kaçınılmaz olurdu.",
             "description": "Nihai büyük usta seviyesi."
           }
         ],
@@ -82473,7 +82474,7 @@ const chapter40Data = {
         "Kumlu toprakta yetişen çalılar, gübreyle işlendiğinde bitki formuna dönüşür."
       ],
       "correctIndex": 0,
-      "explanation": "Cümledeki 'in the form of a bush' (çalı şeklinde), 'sandy soil' (kumlu toprak) ve 'treated with manure' (gübreyle işlenmiş) ifadeleri 1. seçenekte kusursuzca aktarılmıştır."
+      "explanation": "Cümledeki 'in the form of a bush' (çalı şeklinde), 'sandy soil' (kumlu toprak) ve 'treated with manure' (gübreyle işlenmiş) ifadeleri doğru seçenekte kusursuzca aktarılmıştır."
     },
     {
       "id": "u99_l1_ex3_mc2",
@@ -82488,7 +82489,7 @@ const chapter40Data = {
         "Gıdalar, protein ve azottan zengin diğer elementlerin oluşumu için gereklidir."
       ],
       "correctIndex": 0,
-      "explanation": "rich in nitrogen' (azot bakımından zengin) ve 'in the form of protein' (protein formundaki) ifadeleri 1. seçenekte doğru eşleşmiştir."
+      "explanation": "rich in nitrogen' (azot bakımından zengin) ve 'in the form of protein' (protein formundaki) ifadeleri doğru seçenekte eksiksiz eşleşmiştir."
     },
     {
       "id": "u99_l1_ex3_mc3",
@@ -82533,7 +82534,7 @@ const chapter40Data = {
         "Ağır killi topraklarda bakla yetiştirmek oldukça zordur."
       ],
       "correctIndex": 0,
-      "explanation": "grow best in heavy clay soil' (en iyi ağır killi toprakta yetişir) ifadesi 1. seçenekte doğru verilmiştir."
+      "explanation": "grow best in heavy clay soil' (en iyi ağır killi toprakta yetişir) ifadesi doğru seçenekte eksiksiz verilmiştir."
     }
   ];
 
@@ -85777,7 +85778,7 @@ const chapter66Data = {
         {
           "id": "c66_l3_ex1",
           "title": "Alıştırma 1: Tarih vs Betimleme Ayrımı",
-          "description": "Spesifik tarih ile betimleme zamanlarını ayırt edin.",
+          "description": "Spesifik tarih ile betimleme zamanlarının ayrımı.",
           "questions": [
             {
               "id": "c66_l3_q1",
@@ -86071,7 +86072,7 @@ const chapter66Data = {
         {
           "id": "c66_l7_ex1",
           "title": "Alıştırma 1: Sıralama Sıfatları ve To V1",
-          "description": "First, Last, Only sıfatlarından sonraki To V1 kısaltmasını uygulayın.",
+          "description": "First, Last, Only sonrası To V1 kısaltması.",
           "questions": [
             {
               "id": "c66_l7_q1",

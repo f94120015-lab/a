@@ -7250,6 +7250,72 @@ function correctExerciseNumber(lesson) {
   return title.replace(/Alıştırma\s*\d+/i, `Alıştırma ${idx + 1}`);
 }
 
+// Ders panosunda aynı konu adı üst üste üç kez yazılıyordu: ders başlığında,
+// alıştırma başlığında, bir de alıştırma açıklamasında. Aşağıdaki üç yardımcı
+// tekrar eden kısmı ayıklar; ayırt edici kısım olduğu gibi kalır.
+function titleWords(text) {
+  return String(text || '')
+    .replace(/<[^>]+>/g, ' ')
+    .toLocaleLowerCase('tr-TR')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !['ile','ver','the','and','için','olan'].includes(w));
+}
+
+// Alıştırma başlığından, ders başlığıyla ortak olan baştaki sözcükleri atar.
+// "Since & By the Time Zaman Sınırları I" -> "Zaman Sınırları I" gibi değil,
+// tamamı ortaksa numaralı sade ada düşer.
+// Örnek cümleler panoyu formülden önce dolduruyordu; kural görünsün diye
+// formülün altına, katlanmış bir bloğa alındı.
+function examplesBlockHTML(example, label, exampleTr) {
+  const split = text => String(text || '').split(/<br\s*\/?>/i).map(s => s.replace(/^\s*[•·-]\s*/, '').trim());
+  const items = split(example);
+  // Çeviriler örneklerle aynı sırada; bir kısmı zaten cümlenin içinde geçtiği
+  // için karşılığı boş bırakılmış olabilir.
+  const trs = split(exampleTr);
+  const rows = items.map((s, i) => s ? `
+    <div class="popover-example-item">
+      <div class="popover-example-en">${s}</div>
+      ${trs[i] ? `<div class="popover-example-tr">${trs[i]}</div>` : ''}
+    </div>` : '').filter(Boolean);
+  if (!rows.length) return '';
+  return `
+    <details class="popover-examples">
+      <summary>${rows.length} ${label || 'örnek'}</summary>
+      <div class="popover-examples-list">${rows.join('')}</div>
+    </details>`;
+}
+
+function trimSharedLead(exTitle, lessonTitle) {
+  const lessonSet = new Set(titleWords(lessonTitle));
+  if (!lessonSet.size) return exTitle;
+  const tokens = String(exTitle).split(/\s+/);
+  let cut = 0;
+  for (const tok of tokens) {
+    const w = titleWords(tok)[0];
+    // Bağlaç/işaret gibi kısa parçalar tek başına kesmeyi sürdürmez.
+    if (w === undefined) { cut++; continue; }
+    if (!lessonSet.has(w)) break;
+    cut++;
+  }
+  // Başlığın tamamı ders adının tekrarıysa geriye ayırt edici bir şey kalmaz;
+  // çağıran taraf sıra numaralı sade ada döner.
+  if (cut === tokens.length) return '';
+  if (!cut) return exTitle;
+  const rest = tokens.slice(cut).join(' ').replace(/^[\s:–—-]+/, '').trim();
+  return rest.length >= 3 ? rest.charAt(0).toLocaleUpperCase('tr-TR') + rest.slice(1) : exTitle;
+}
+
+// Açıklama, başlığın kelimelerini tekrarlamaktan ibaretse gösterilmez.
+function isRedundantText(text, comparedTo) {
+  const words = titleWords(text);
+  if (!words.length) return true;
+  const ref = new Set(titleWords(comparedTo));
+  if (!ref.size) return false;
+  const shared = words.filter(w => ref.has(w)).length;
+  return shared / words.length >= 0.6;
+}
+
 function cleanExerciseTitle(title, idx) {
   if (!title) return `${idx}. Alıştırma`;
   let cleaned = title.replace(/^Alıştırma\s*\d+\s*:\s*/i, '');
@@ -7265,6 +7331,12 @@ function cleanExerciseTitle(title, idx) {
 function cleanExerciseDescription(desc) {
   if (!desc) return '';
   
+  // Soru sayısı satırdaki rozette zaten yazıyor; soru tipi de alıştırma
+  // başlığında geçiyor. İkisi de açıklamadan düşer.
+  desc = String(desc)
+    .replace(/\(\s*\d+\s*soru\s*\)/gi, '')
+    .replace(/\((?:[^()]*\b(?:çoktan seçmeli|kelime havuzu|kelime bankası|word bank|boşluk doldurma|eşleştirme|sıralama|çeviri)[^()]*)\)/gi, '');
+
   // Detect range like (1-15), (Cümleler 1-15), (13-24)
   const rangeMatch = desc.match(/\((?:Cümleler\s+)?(\d+-\d+)\)/i) || desc.match(/\b(\d+-\d+)\b/);
   const rangeStr = rangeMatch ? `Cümleler ${rangeMatch[1]}` : '';
@@ -7280,16 +7352,24 @@ function cleanExerciseDescription(desc) {
     'öbek eşleştirme', 'katmanlı çeviri', 'paketleri', 'soruları'
   ];
   
+  // Kelime sınırı olmadan silince "çevirisi" -> "si" gibi kırıntılar kalıyordu;
+  // anahtar sözcük ancak kendi başına (ya da Türkçe ekiyle) geçtiğinde atılır.
   keywords.forEach(kw => {
-    const regex = new RegExp(kw, 'gi');
-    baseText = baseText.replace(regex, '');
+    const esc = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(^|\\s)${esc}(?=\\s|[.,;]|$)`, 'gi');
+    baseText = baseText.replace(regex, '$1');
   });
   
-  // Clean leftovers like commas, conjunctions, symbols
+  // Anahtar sözcük çıkınca geriye kalan boşta virgül/bağlaç artıkları toplanır;
+  // cümlenin kendi noktalaması korunur, yoksa açıklama telgraf gibi okunuyordu.
   baseText = baseText
-    .replace(/[\s,;&+•\-\/]+/g, ' ')
-    .replace(/\bve\b/gi, ' ')
+    .replace(/[•]/g, ' ')
     .replace(/\s+/g, ' ')
+    .replace(/\s+([.,;])/g, '$1')
+    .replace(/([,;])\s*(?=[,;])/g, '')
+    .replace(/(^|[,;])\s*ve\s*(?=[,;.]|$)/gi, '$1')
+    .replace(/^[\s,;.\-–—]+/, '')
+    .replace(/[\s,;\-–—]+$/, '')
     .trim();
     
   if (baseText.length > 10) {
@@ -7297,7 +7377,9 @@ function cleanExerciseDescription(desc) {
     return rangeStr ? `${baseText} (${rangeStr})` : baseText;
   }
   
-  return rangeStr || 'Genel Pratik';
+  // Elde bir şey kalmadıysa "Genel Pratik" gibi bir dolgu yazmak yerine hiç
+  // yazma; satırda zaten başlık ve soru sayısı var.
+  return rangeStr || '';
 }
 
 function isGenericDescription(desc) {
@@ -7344,23 +7426,31 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const topic = rawTopics.find(t => (t.id !== undefined ? t.id : (rawTopics.indexOf(t) + 1)) === unit.id);
   const lessonIndex = unit.lessons.indexOf(lessonId);
 
+  const exampleLabel = lesson.unitId === 8 ? 'rehber çeviri' : 'örnek';
+  // Kutunun parçaları ayrı ayrı kuruluyor: gerçek bir kalıp yoksa FORMÜL satırı
+  // hiç yazılmıyor, kutu da geriye bir şey kalmadıysa hiç açılmıyor.
+  const previewBox = (formulaSrc, descSrc, exampleSrc, exampleTrSrc) => {
+    const rows = [];
+    if (looksLikeRealFormula(formulaSrc)) {
+      rows.push(`<div class="grammar-formula"><span class="formula-badge">Formül</span>${formulaRowsHTML(formulaSrc, { hideTitleLike: lesson.title })}</div>`);
+    }
+    if (descSrc && !isGenericDescription(descSrc)) {
+      rows.push(`<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${rows.length ? 'margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-color);' : ''} line-height: 1.4;">${descSrc}</div>`);
+    }
+    const examples = examplesBlockHTML(exampleSrc, exampleLabel, exampleTrSrc);
+    if (examples) rows.push(examples);
+    return rows.length ? `<div class="grammar-preview-box">${rows.join('')}</div>` : '';
+  };
+
   if (topic) {
     if (lesson.konuAnlatimi) {
-      const formula = lesson.konuAnlatimi.formul || lesson.konuAnlatimi.formula;
-      const description = lesson.konuAnlatimi.teorikMantik || lesson.konuAnlatimi.description;
-      previewHTML = `
-        <div class="grammar-preview-box">
-          ${formula ? `<div class="grammar-formula"><span class="formula-badge">Formül</span> ${formula}</div>` : ''}
-          ${description && !isGenericDescription(description) ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${formula ? 'margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);' : ''} line-height: 1.4;">${description}</div>` : ''}
-        </div>
-      `;
+      previewHTML = previewBox(
+        lesson.konuAnlatimi.formul || lesson.konuAnlatimi.formula,
+        lesson.konuAnlatimi.teorikMantik || lesson.konuAnlatimi.description,
+        lesson.konuAnlatimi.ornek || lesson.example,
+        lesson.konuAnlatimi.ornekCeviri || lesson.exampleTr);
     } else if (lesson.formula && lesson.example) {
-      previewHTML = `
-        <div class="grammar-preview-box">
-          <div class="grammar-formula"><span class="formula-badge">Formül</span> ${lesson.formula}</div>
-          ${lesson.description && !isGenericDescription(lesson.description) ? `<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.4; padding-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15);">${lesson.description}</div>` : ''}
-        </div>
-      `;
+      previewHTML = previewBox(lesson.formula, lesson.description, lesson.example, lesson.exampleTr);
     } else if (lesson.description && !isGenericDescription(lesson.description)) {
       previewHTML = `
         <div class="grammar-preview-box">
@@ -7400,12 +7490,9 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   const isUnlocked = isLessonUnlocked(lessonId);
 
-  let popoverSubtitleHTML = lesson.subtitle;
-  if (lesson.formula && lesson.example) {
-    const isThereUnit = lesson.unitId === 8;
-    const labelText = isThereUnit ? "Rehber Çeviriler" : "Örnek Çeviri";
-    popoverSubtitleHTML = `${lesson.subtitle}<br><span class="popover-example-translation" style="font-size: 0.8rem; display: block; margin-top: 4px; font-weight: normal; opacity: 0.9; color: var(--text-secondary);">${labelText}: <strong>${lesson.example}</strong></span>`;
-  }
+  // Altyazı bazı derslerde başlığın kopyası; aynı satırı iki kez yazmayız.
+  const rawSubtitle = String(lesson.subtitle || '').trim();
+  const popoverSubtitleHTML = (!rawSubtitle || isRedundantText(rawSubtitle, lesson.title)) ? '' : rawSubtitle;
   /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
   if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
     popoverSubtitleHTML += `<br><span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 4px; font-weight: normal;">Eski Sırası: ${lesson.originalLessonId}. Ders</span>`;
@@ -7446,6 +7533,14 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         }
       }
       
+      // Ders adı zaten panonun tepesinde yazıyor; satırda yalnızca alıştırmayı
+      // diğerlerinden ayıran kısım kalır.
+      const rawExTitle = String(ex.title || '').replace(/^Alıştırma\s*\d+\s*:?\s*/i, '').trim();
+      const shortExTitle = trimSharedLead(rawExTitle, lesson.title);
+      const exTitle = cleanExerciseTitle(shortExTitle || 'Alıştırma', index + 1);
+      const cleanedDesc = cleanExerciseDescription(ex.description);
+      const exDesc = isRedundantText(cleanedDesc, `${lesson.title} ${rawExTitle}`) ? '' : cleanedDesc;
+
       const statusText = (isExCompleted && !isLocalEnvironment()) ? '✓ Tamamlandı' : (isExUnlocked ? 'Başlat' : 'Kilitli 🔒');
       const rowClass = isExUnlocked ? '' : 'locked';
       const badgeClass = isExCompleted ? 'completed' : '';
@@ -7456,10 +7551,10 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
             <span class="exercise-icon">${isExCompleted ? '✅' : '📝'}</span>
             <div class="exercise-meta">
               <div class="exercise-title-wrap">
-                <span class="exercise-title">${cleanExerciseTitle(ex.title, index + 1)}</span>
+                <span class="exercise-title">${exTitle}</span>
                 <span class="exercise-q-badge ${badgeClass}">${ex.questions ? ex.questions.length : 0} Soru</span>
               </div>
-              <span class="exercise-subtitle">${cleanExerciseDescription(ex.description)}</span>
+              ${exDesc ? `<span class="exercise-subtitle">${exDesc}</span>` : ''}
             </div>
           </div>
           <div class="qp-btn-group">
@@ -7512,11 +7607,17 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
     const uIdx = units.findIndex(u => u.id === unitId);
     const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
+    // Başlıktaki sondaki parantez konunun ikinci bir adı; başlığı iki satıra
+    // şişirmek yerine altına soluk bir not olarak iner.
+    const titleParts = String(lesson.title || '').match(/^([\s\S]*?)\s*\(([^()]*)\)\s*$/);
+    const titleMain = titleParts ? titleParts[1] : String(lesson.title || '');
+    const titleNote = titleParts && !isRedundantText(titleParts[2], titleParts[1]) ? titleParts[2] : '';
     popover.innerHTML = `
     <div class="popover-arrow"></div>
     <div class="popover-header">
-      <h4 class="popover-title">${lesson.title.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</h4>
-      <span class="popover-subtitle">${popoverSubtitleHTML}</span>
+      <h4 class="popover-title">${titleMain.replace(/(\([^)]+\))/g, `<span class="unit-text-color-${colorIndex}">$1</span>`)}</h4>
+      ${titleNote ? `<span class="popover-title-note">${titleNote}</span>` : ''}
+      ${popoverSubtitleHTML ? `<span class="popover-subtitle">${popoverSubtitleHTML}</span>` : ''}
     </div>
     ${previewHTML ? `<div class="popover-body">${previewHTML}</div>` : ''}
     ${popoverFooterHTML}
@@ -8260,6 +8361,7 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
     wrongCount = parseInt(localStorage.getItem('amok_active_wrong_count') || '0', 10);
   } else {
     currentQuestionIndex = 0;
+    quizShuffleEpoch++;
     correctCount = 0;
     wrongCount = 0;
   }
@@ -8324,26 +8426,10 @@ function showKonuAnlatimi(konu, callback) {
     box-sizing: border-box;
   `;
 
-  // Format multiline or '|' separated formula text cleanly into distinct cards
+  // Formül kartları tüm ekranlarla aynı dizgiyi kullanır: başlık ayrı, her
+  // kalıp kendi satırında, ok'un iki yakası işaretli.
   const rawFormul = (konu.formul || '').trim();
-  const formulaLines = rawFormul.includes('|') 
-    ? rawFormul.split('|').map(s => s.trim()).filter(Boolean)
-    : rawFormul.split('\n').map(s => s.trim()).filter(Boolean);
-  
-  let formattedFormulHTML = '';
-  if (formulaLines.length > 0) {
-    formattedFormulHTML = formulaLines.map(line => {
-      const cleanLine = line.replace(/->/g, '➔');
-      return `
-        <div style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; line-height: 1.55; color: var(--text-primary); background: var(--color-correct-bg); padding: 10px 14px; border-radius: 12px; border: 1px solid var(--color-correct-border);">
-          <span style="color: var(--color-correct); font-weight: bold; flex-shrink: 0;">⚡</span>
-          <span style="font-family: var(--font-body); font-weight: 600;">${cleanLine}</span>
-        </div>
-      `;
-    }).join('');
-  } else {
-    formattedFormulHTML = `<div style="color: var(--text-primary); font-size: 0.88rem; font-family: var(--font-body);">${rawFormul}</div>`;
-  }
+  const formattedFormulHTML = looksLikeRealFormula(rawFormul) ? formulaRowsHTML(rawFormul) : '';
 
   modal.innerHTML = `
     <div style="background: var(--bg-card); color: var(--text-primary); width: 100%; max-width: 540px; max-height: 90vh; overflow-y: auto; border-radius: 24px; box-shadow: var(--shadow-xl); padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; border: 1px solid var(--border-color); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transform: scale(0.96); transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); position: relative;">
@@ -8697,7 +8783,8 @@ function lessonRuleContent(lesson) {
   if (!lesson) return null;
   const strip = s => String(s || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   const ka = lesson.konuAnlatimi || {};
-  const formula = strip(ka.formul) || strip(lesson.formula);
+  const rawFormula = strip(ka.formul) || strip(lesson.formula);
+  const formula = looksLikeRealFormula(rawFormula) ? rawFormula : '';
   const golden  = strip(ka.altinKural);
   let   desc    = strip(lesson.description) || strip(ka.teorikMantik);
   // Teorik mantık paragrafı bir hatırlatıcı için fazla uzun; ilk cümleleri yeter.
@@ -8714,6 +8801,68 @@ function lessonRuleContent(lesson) {
   }
   if (!formula && !golden && !desc) return null;
   return { formula, golden, desc, example };
+}
+
+// Formül satırı çoğu derste tek bir kalıp, bazı derslerde ise "Başlık: kalıp |
+// kalıp | kalıp" biçiminde bir duvar. Düz metin olarak basıldığında öğrenci
+// hangi koşulun hangi sonucu doğurduğunu ayıklamak zorunda kalıyordu; burada
+// başlık, kalıplar ve ok'un iki yakası ayrı ayrı işaretleniyor.
+// Kural metinlerinin bir kısmı kalıp değil düz cümledir; onları kart dizgisine
+// sokmak okunurluğu artırmaz, sadece parçalar.
+// Bazı derslerin "formula" alanı kalıp değil, konunun bir başka adıdır
+// ("Nicelik Belirteçleri (Quantifiers)", "BY Rules", "Karma Test"). Bunları
+// FORMÜL başlığı altında göstermek öğrenciye hiçbir şey söylemiyor; kalıp
+// işareti taşımayan metinler formül sayılmaz.
+function looksLikeRealFormula(text) {
+  const s = String(text || '').replace(/<[^>]+>/g, ' ').trim();
+  if (!s) return false;
+  return /[➔→]|->|=>|\+|\bV[123]\b|V-ing|\bSVO\b|\bS\s*\+|\[[^\]]+\]|\.{3}|\bSubject\b|\bObject\b|\bNoun\b|\bVerb\b|\bAdj\w*\b|\bClause\b|\bGerund\b|\bInfinitive\b|___|\bam\/is\/are\b|\bhas\/have\b/i.test(s);
+}
+
+function looksLikeFormula(text) {
+  return /[➔→]|\|/.test(String(text || ''));
+}
+
+function formulaRowsHTML(raw, opts) {
+  // Birkaç formül alanı kasıtlı olarak <span> ile renklendirilmiş; onları
+  // kaçırmak ham etiket gösterirdi. Geri kalan her şey metin sayılır.
+  const markup = /<[a-z][^>]*>/i.test(String(raw || ''));
+  const esc = s => markup ? String(s)
+    : String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  let text = String(raw || '').replace(/->/g, '➔').trim().replace(/^\d+[.)]\s*/, '');
+  if (!text) return '';
+
+  // "Since & By the time (Zaman Sınırları): ..." -- iki nokta öncesi kalıbın
+  // adıdır, kalıbın kendisi değil. Yalnızca devamı gerçek bir kalıpsa ayrılır.
+  let title = '';
+  // Başlık ancak devamı gerçekten kalıp gibi duruyorsa ayrılır: ya bir ok
+  // içerir ya da metin birden çok kalıba bölünüyordur.
+  const head = text.match(/^([^:]{3,70}):\s*(\S.*)$/);
+  if (head && (/[➔→]/.test(head[2]) || text.includes('|'))) {
+    title = head[1].trim(); text = head[2].trim();
+  }
+
+  const parts = text.split(/\s*\|\s*|\n+/).map(s => s.trim()).filter(Boolean);
+  const cells = parts.map(part => {
+    // Sondaki parantez kalıbın parçası değil, kullanım notu: ayrı bir etiket.
+    let note = '';
+    const tail = part.match(/^(.*\S)\s*\(([^()]{2,40})\)\s*$/);
+    if (tail) { part = tail[1]; note = tail[2]; }
+
+    const arrow = part.split(/\s*(?:➔|→|=>)\s*/);
+    const body = arrow.length === 2
+      ? `<span class="rule-formula-from">${esc(arrow[0])}</span>
+         <span class="rule-formula-arrow" aria-hidden="true">➔</span>
+         <span class="rule-formula-to">${esc(arrow[1])}</span>`
+      : `<span class="rule-formula-to">${esc(part)}</span>`;
+    return `<div class="rule-formula-row">${body}${
+      note ? `<span class="rule-formula-note">${esc(note)}</span>` : ''}</div>`;
+  }).join('');
+
+  // Panoda formülün başlığı çoğu derste ders adının kopyası; iki kez okutmayız.
+  if (title && opts && opts.hideTitleLike && isRedundantText(title, opts.hideTitleLike)) title = '';
+  return `<div class="rule-formula">${
+    title ? `<div class="rule-formula-title">${esc(title)}</div>` : ''}${cells}</div>`;
 }
 
 function renderLessonRuleHint(body, question) {
@@ -8741,10 +8890,7 @@ function renderLessonRuleHint(body, question) {
   };
 
   const rows = [];
-  if (content.formula) rows.push(`
-    <div style="font-size: 0.85rem; font-weight: 800; color: var(--accent-primary); line-height: 1.5;">
-      ${maskAnswer(content.formula)}
-    </div>`);
+  if (content.formula) rows.push(formulaRowsHTML(maskAnswer(content.formula)));
   if (content.golden) rows.push(`
     <div style="margin-top: 6px; font-size: 0.8rem; color: var(--text-primary); line-height: 1.5;">
       🔑 ${maskAnswer(content.golden)}
@@ -8787,6 +8933,44 @@ function renderLessonRuleHint(body, question) {
     chip.textContent = lessonHintOpen ? '📐 Kuralı gizle' : '📐 Kuralı hatırlat';
   };
   return true;
+}
+
+// Şıkların sırası veride sabit ve büyük ölçüde çarpık: soruların üçte ikisinde
+// doğru cevap 1. sırada duruyordu, yani okumadan hep ilki işaretlenerek geçilebiliyordu.
+// Sıra soruya özel olarak bir kez karıştırılır; aynı soru yeniden çizildiğinde
+// (cevaptan sonra, geri dönüşte) şıklar yerinden oynamasın diye işaretlenir.
+// Her yeni oturumda sıra yeniden çekilir; oturum içinde aynı soru tekrar
+// çizildiğinde (canlar dolduktan sonra, panelden atlayınca) yerinden oynamaz.
+let quizShuffleEpoch = 0;
+
+const SHUFFLE_OPTION_TYPES = new Set([
+  'multiple-choice', 'fill-blank-dropdown', 'fill-blank', 'error-spotting',
+  'context-clue', 'context-distractor', 'sentence-connector', 'structure-match',
+  'punctuation-check', 'inversion-transformer', 'preposition-magnet',
+  'chain-expansion-differential', 'structural-deconstruction',
+  'vector-velocity-shift', 'titan-boundary-defense', 'suffix-decapitation',
+  'reverse-engineering-translation', 'vagon-to-suffix-match'
+]);
+
+function shuffleQuestionOptions(question, activeType) {
+  if (!question || question.__shuffleEpoch === quizShuffleEpoch) return;
+  // true-false'ta sıra anlamlı (DOĞRU/YANLIŞ), spotlight zaten kendi içinde karıştırıyor.
+  if (!SHUFFLE_OPTION_TYPES.has(question.type) && !SHUFFLE_OPTION_TYPES.has(activeType)) return;
+  const options = question.options;
+  if (!Array.isArray(options) || options.length < 2) return;
+  if (typeof question.correctIndex !== 'number') return;
+  if (question.correctIndex < 0 || question.correctIndex >= options.length) return;
+
+  const order = options.map((opt, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+  question.options = order.map(i => options[i]);
+  question.correctIndex = order.indexOf(question.correctIndex);
+  // Bazı sorular doğru cevabı ayrıca metin olarak da tutuyor; o alan sıradan bağımsız.
+  Object.defineProperty(question, '__shuffleEpoch',
+    { value: quizShuffleEpoch, enumerable: false, configurable: true, writable: true });
 }
 
 function renderQuestion() {
@@ -9061,6 +9245,8 @@ function renderQuestion() {
     question.prompt = formatPromptWithTags(question.prompt);
   }
 
+  shuffleQuestionOptions(question, activeType);
+
   try {
     switch (activeType) {
       case 'multiple-choice':
@@ -9279,8 +9465,8 @@ function renderQuestion() {
             </h4>
             <span class="u101-hud-badge" style="background: var(--bg-secondary); color: var(--text-secondary); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; border: 1px solid var(--border-color);">BÖLÜM 38</span>
           </div>
-          <div class="u101-hud-formula" style="background: var(--bg-secondary); border: 1px solid var(--border-color); padding: 10px 14px; border-radius: 10px; font-family: monospace; font-size: 0.88rem; font-weight: 600; color: var(--text-primary); margin-bottom: 10px;">
-            ${hudFormula}
+          <div class="u101-hud-formula" style="margin-bottom: 10px;">
+            ${formulaRowsHTML(hudFormula)}
           </div>
           <div class="u101-trap-alert" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 10px; padding: 10px 14px; line-height: 1.5; margin-bottom: 10px;">
             <span style="font-size: 1.1rem; flex-shrink: 0;">💡</span>
@@ -13587,9 +13773,10 @@ function renderDrillFormulaHint(body, question) {
                   max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
                   border: 1px solid var(--border-color); background: var(--bg-card);">
         <div style="display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px;">${head}</div>
-        <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">
-          ${maskAnswer(hide ? mask(rule, c.term) : rule).replace(/\n/g, '<br>')}
-        </div>
+        ${(txt => looksLikeFormula(txt)
+             ? formulaRowsHTML(txt)
+             : `<div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">${txt.replace(/\n/g, '<br>')}</div>`
+          )(maskAnswer(hide ? mask(rule, c.term) : rule))}
         ${trap ? `<div style="margin-top: 5px; font-size: 0.78rem; color: #ef4444; line-height: 1.5;">${maskAnswer(hide ? mask(trap, c.term) : trap)}</div>` : ''}
       </div>`;
   }).join('');
@@ -13705,7 +13892,7 @@ function showRuleBriefing(title, cards, onStart) {
           <span style="font-size: 0.82rem; color: var(--text-secondary);">${c.meaning || ''}</span>
         </div>
         <div style="margin-top: 8px; font-size: 0.85rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">
-          ${String(c.rule || c.formula || '').replace(/\n/g, '<br>')}
+          ${(txt => looksLikeFormula(txt) ? formulaRowsHTML(txt) : txt.replace(/\n/g, '<br>'))(String(c.rule || c.formula || ''))}
         </div>
         ${c.trap ? `<div style="margin-top: 6px; font-size: 0.82rem; color: #ef4444; line-height: 1.5;">${c.trap}</div>` : ''}
         ${ex ? `<div style="margin-top: 8px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
@@ -13777,6 +13964,7 @@ function runConnectorDrill(questions, label) {
   reviewQuestions = questions;
   reviewSessionCorrectIds = [];
   currentQuestionIndex = 0;
+  quizShuffleEpoch++;
   correctCount = 0;
   wrongCount = 0;
 
@@ -13809,6 +13997,7 @@ function startExamSession(examId) {
   reviewQuestions = questions;
   reviewSessionCorrectIds = [];
   currentQuestionIndex = 0;
+  quizShuffleEpoch++;
   correctCount = 0;
   wrongCount = 0;
 
@@ -16156,6 +16345,7 @@ function startFormationTour(isRestore = false) {
     wrongCount = parseInt(localStorage.getItem('amok_active_wrong_count') || '0', 10);
   } else {
     currentQuestionIndex = 0;
+    quizShuffleEpoch++;
     correctCount = 0;
     wrongCount = 0;
   }
@@ -17764,6 +17954,7 @@ function startReviewMode(isRestore = false) {
     }
   } else {
     currentQuestionIndex = 0;
+    quizShuffleEpoch++;
     correctCount = 0;
     wrongCount = 0;
     reviewSessionCorrectIds = []; // Reset correctly answered list for this session
@@ -20836,41 +21027,14 @@ function getGrammarExplanationHtml(question, selectedAnswer) {
   }
 
   let formulaHtml = '';
-  if (typeof currentLesson !== 'undefined' && currentLesson && currentLesson.formula) {
-    let rawFormula = currentLesson.formula;
-    if (rawFormula.includes('|')) {
-      let parts = rawFormula.split('|').map(p => p.trim()).filter(Boolean);
-      let titleHeader = '';
-      let formulaItems = [];
-
-      if (parts[0].includes(':')) {
-        const colonIdx = parts[0].indexOf(':');
-        titleHeader = parts[0].substring(0, colonIdx + 1).trim();
-        formulaItems.push(parts[0].substring(colonIdx + 1).trim());
-        for (let i = 1; i < parts.length; i++) {
-          formulaItems.push(parts[i]);
-        }
-      } else {
-        formulaItems = parts;
-      }
-
-      const itemsHtml = formulaItems.map(f => `<div style="margin-top: 4px;"><code style="color: var(--text-primary); font-family: monospace; font-size: 0.92rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 4px; display: inline-block;">${f}</code></div>`).join('');
-
-      formulaHtml = `
-      <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); font-size: 0.9rem;">
-        <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 6px;">🧪 Ders Formülü (Grammar Formula):</span>
-        ${titleHeader ? `<div style="font-weight: 600; color: var(--text-primary); margin-bottom: 4px;">${titleHeader}</div>` : ''}
-        ${itemsHtml}
+  if (typeof currentLesson !== 'undefined' && currentLesson && looksLikeRealFormula(currentLesson.formula)) {
+    // Ayrıştırma ortak yardımcıda; burada yalnızca kutu ve başlığı var.
+    formulaHtml = `
+      <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md);">
+        <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 8px; font-size: 0.9rem;">🧪 Ders Formülü (Grammar Formula):</span>
+        ${formulaRowsHTML(currentLesson.formula)}
       </div>
-      `;
-    } else {
-      formulaHtml = `
-      <div style="margin-top: 12px; padding: 12px 16px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: var(--radius-md); font-size: 0.9rem;">
-        <span style="font-weight: 700; color: #3b82f6; display: block; margin-bottom: 4px;">🧪 Ders Formülü (Grammar Formula):</span>
-        <code style="color: var(--text-primary); font-family: monospace; font-size: 0.95rem; font-weight: bold; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">${currentLesson.formula}</code>
-      </div>
-      `;
-    }
+    `;
   }
 
   return `

@@ -19088,7 +19088,7 @@ const rawTopics = [
       },
       {
         "formula": "Subject + Be + Adjective + Noun / Prepositional Phrase",
-        "example": "The student is an English doctor | The student is in the train",
+        "example": "The student is an English doctor | The student is in the train", "exampleTr": "Öğrenci İngiliz bir doktordur | Öğrenci trendedir",
         "description": "Sıfat+İsim tamlamaları ve yer/durum belirten edat takımları ile zenginleştirilmiş temel cümle yapıları."
       }
     ],
@@ -19585,17 +19585,17 @@ const rawTopics = [
       },
       {
         "formula": "Connector + Clause VEYA SVO + Connector + SVO",
-        "example": "• Özet/Netice: Critical configuration components experienced stress, and as a result, the primary cloud network suffered a latency spike.<br>• İkincil Netice: The parsing algorithm functions precisely, so even small syntax variations are flagged.",
+        "example": "• Özet/Netice: Critical configuration components experienced stress, and as a result, the primary cloud network suffered a latency spike.<br>• İkincil Netice: The parsing algorithm functions precisely, so even small syntax variations are flagged.", "exampleTr": "Kritik yapılandırma bileşenleri zorlandı ve sonuç olarak birincil bulut ağında gecikme sıçraması yaşandı.<br>Ayrıştırma algoritması tam isabetle çalışır, bu yüzden küçük sözdizimi farkları bile işaretlenir.",
         "description": "Cümleler arası mantıksal geçişler kuran, bir sürecin neticesini bildiren veya özetleyen bağlaç yapımları (<strong>as a result</strong>, <strong>in conclusion</strong>, <strong>so</strong>, <strong>on the whole</strong>)."
       },
       {
         "formula": "SVO + such as + Noun Phrase VEYA for example / for instance / that is",
-        "example": "• Örneklendirme: Advanced technical frameworks require strict compliance codes to regulate volatile dimensions such as boundary parameter shifts.<br>• Açıklama: Monografiler nitel araştırma sunar; for example, modern söz dizimi modelleri incelenir.",
+        "example": "• Örneklendirme: Advanced technical frameworks require strict compliance codes to regulate volatile dimensions such as boundary parameter shifts.<br>• Açıklama: Monografiler nitel araştırma sunar; for example, modern söz dizimi modelleri incelenir.", "exampleTr": "İleri teknik çerçeveler, sınır parametresi kaymaları gibi oynak boyutları düzenlemek için katı uyum kuralları gerektirir.<br>",
         "description": "metinlerde karmaşık teorileri somutlaştırmak, örnekler vermek veya bir önceki ifadeyi açıklamak için kullanılan köprülerdir (<strong>such as</strong>, <strong>for example</strong>, <strong>for instance</strong>, <strong>that is (to say)</strong>)."
       },
       {
         "formula": "even if + Clause, Main Clause VEYA SVO; otherwise, SVO",
-        "example": "• İstisnai Koşul: Even if frontend developers optimize application builds thoroughly, hardware constraints on older devices will still display lag.<br>• Sakıncalı Durum: You must run diagnostic tools; otherwise, the database system will collapse.",
+        "example": "• İstisnai Koşul: Even if frontend developers optimize application builds thoroughly, hardware constraints on older devices will still display lag.<br>• Sakıncalı Durum: You must run diagnostic tools; otherwise, the database system will collapse.", "exampleTr": "Ön yüz geliştiricileri uygulama derlemelerini iyice optimize etse bile, eski cihazlardaki donanım kısıtları yine de gecikme gösterecektir.<br>Tanılama araçlarını çalıştırmalısın; aksi hâlde veri tabanı sistemi çöker.",
         "description": "Teknik ve kurgularda istisnai durumları, sakıncalı olasılıkları veya genel eğilimlerin dışındaki senaryoları kurgulayan bağıntılar (<strong>even if</strong>, <strong>otherwise</strong>, <strong>in many cases</strong>, <strong>in some cases</strong>)."
       },
       {

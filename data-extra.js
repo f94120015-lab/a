@@ -648,7 +648,7 @@
       id: "u28l91ex4",
       createdAt: "2026-07-18T17:54:00Z",
       title: "Alıştırma 4: İnteraktif Hata ve Yapı Analizi — Kısım I",
-      description: "Yeni soru tipleriyle (structure-match, spotlight, true-false, multiple-fill-blank) karma pekiştirme (İlk 10 Soru).",
+      description: "Karma soru tipleriyle pekiştirme — ilk 10 soru.",
       questions: u28_l4_ex4_questions.slice(0, 10)
     });
 
@@ -657,7 +657,7 @@
       id: "u28l91ex5",
       createdAt: "2026-07-18T18:02:00Z",
       title: "Alıştırma 5: İnteraktif Hata ve Yapı Analizi — Kısım II",
-      description: "Yeni soru tipleriyle (structure-match, spotlight, true-false, multiple-fill-blank) karma pekiştirme (Son 10 Soru).",
+      description: "Karma soru tipleriyle pekiştirme — son 10 soru.",
       questions: u28_l4_ex4_questions.slice(10, 20)
     });
   }
@@ -1311,17 +1311,17 @@
         },
         {
           "formula": "Prepositional 'to' -> look forward to / object to / be used to / with a view to + V-ing",
-          "example": "opposed to implementing / looking forward to releasing",
+          "example": "opposed to implementing / looking forward to releasing", "exampleTr": "uygulamaya karşı çıkmak / yayımlamayı dört gözle beklemek",
           "description": "Edat olan 'to' sonrasında gerund gelme zorunluluğu."
         },
         {
           "formula": "Sentence-Initial Reductions vs. Noun Adjuncts -> Examining... (Active) vs. Seen... (Passive)",
-          "example": "Examining the scroll (Archaeologist) vs. Seen from the peak (Valley)",
+          "example": "Examining the scroll (Archaeologist) vs. Seen from the peak (Valley)", "exampleTr": "Tomarı incelerken (arkeolog) ile zirveden bakıldığında (vadi)",
           "description": "Cümle başı kısaltmalar ve amaç/sıfat niteleme farkları."
         },
         {
           "formula": "Gerund vs. Participle -> Syntactic Role",
-          "example": "Subject / Complement vs. Adverbial / Reduced Relative",
+          "example": "Subject / Complement vs. Adverbial / Reduced Relative", "exampleTr": "Özne / tümleç ile zarf / kısaltılmış sıfat cümleciği",
           "description": "-ing ekinin isim-fiil mi sıfat-fiil mi olduğunu ayırt etme."
         }
       ],
@@ -1932,32 +1932,32 @@
       "formulas": [
         {
           "formula": "Reduced Passive Relative Clause -> Noun + V3 (unearthed / implemented)",
-          "example": "artifacts unearthed (which were unearthed) / regulations implemented",
+          "example": "artifacts unearthed (which were unearthed) / regulations implemented", "exampleTr": "gün yüzüne çıkarılan eserler / yürürlüğe konan düzenlemeler",
           "description": "İlgi cümleciklerinin edilgen kısaltmalarında past participle kullanımı."
         },
         {
           "formula": "Passive Participle Clause (Opener/Closer) -> V3..., S + V + O",
-          "example": "Alarmed by the collapse, the agency intervened. / Accompanied by nurses, the patient left.",
+          "example": "Alarmed by the collapse, the agency intervened. / Accompanied by nurses, the patient left.", "exampleTr": "Çöküşten telaşlanan kurum müdahale etti. / Hemşireler eşliğinde hasta ayrıldı.",
           "description": "Zarf cümleciklerinin edilgen kısaltmalarında cümle başı ve sonu past participle kullanımı."
         },
         {
           "formula": "Experiencing (-ed) vs. Causing (-ing) -> Adjectival Distinction",
-          "example": "agitated subjects (feeling) vs. worrying development (causing)",
+          "example": "agitated subjects (feeling) vs. worrying development (causing)", "exampleTr": "tedirgin olan denekler (hisseden) ile endişelendiren gelişme (hissettiren)",
           "description": "Sıfatlaşmış ortaçlarda duygu deneyimleyen ile duyguya sebep olan ayrımı."
         },
         {
           "formula": "Perfect Passive Participle -> Having been + V3",
-          "example": "Having been criticized by reviewers, the paper was rejected.",
+          "example": "Having been criticized by reviewers, the paper was rejected.", "exampleTr": "Hakemlerce eleştirilen makale reddedildi.",
           "description": "Zarf cümleciklerinde geçmişteki edilgen eylemlerin öncelik-sonralık ilişkisiyle kısaltılması."
         },
         {
           "formula": "Causative Passive -> Have/Get + Object + V3",
-          "example": "had the sequence analyzed / got the servers backed up",
+          "example": "had the sequence analyzed / got the servers backed up", "exampleTr": "diziyi analiz ettirdi / sunucuları yedekletti",
           "description": "Ettirgen yapılarda nesnenin edilgen durumu için past participle kullanımı."
         },
         {
           "formula": "Past Participle after Stative Verbs -> remain / become + V3",
-          "example": "remained unconvinced / became alarmed",
+          "example": "remained unconvinced / became alarmed", "exampleTr": "ikna olmamış hâlde kaldı / telaşlandı",
           "description": "Durum bildiren bağlama fiillerinden sonra adjectival past participle kullanımı."
         }
       ],
@@ -2334,7 +2334,7 @@ const chapter104Data = {
           id: "c104_l1_ex1",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 1: Öbek Düzeyi (Yetenek ve Zorunluluk)",
-          description: "Yarı-modalların yetenek ve zorunluluk biçimlerinin (<span style='color: #ff6b6b; font-weight: bold;'>be able to</span>, <span style='color: #ff6b6b; font-weight: bold;'>have to</span>, <span style='color: #ff6b6b; font-weight: bold;'>needn't</span>, <span style='color: #ff6b6b; font-weight: bold;'>had to</span>) öbek düzeyinde Türkçe karşılıklarıyla tespiti.",
+          description: "<span style='color: #ff6b6b; font-weight: bold;'>be able to</span>, <span style='color: #ff6b6b; font-weight: bold;'>have to</span>, <span style='color: #ff6b6b; font-weight: bold;'>needn't</span>, <span style='color: #ff6b6b; font-weight: bold;'>had to</span> öbeklerinin Türkçe karşılıkları.",
           questions: [
             {
               id: "c104_l1_ex1_q1",
@@ -2477,7 +2477,7 @@ const chapter104Data = {
           id: "c104_l1_ex2",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 2: Cümle Düzeyi (Boşluk Doldurma)",
-          description: "Yetenek ve zorunluluk yapılarını doğru dilbilgisi kurallarına göre boşluklara yerleştirin.",
+          description: "Yetenek ve zorunluluk çekimlerinin cümle içinde seçimi.",
           questions: [
             {
               id: "c104_l1_ex2_q1",
@@ -2605,7 +2605,7 @@ const chapter104Data = {
           id: "c104_l1_ex3",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 3: Sentez (Word Bank)",
-          description: "Karışık Türkçe öbekleri doğru sıraya dizerek İngilizce cümlelerin karşılıklarını oluşturun.",
+          description: "Türkçe öbeklerden İngilizce cümle kurulumu.",
           questions: [
             {
               id: "c104_l1_ex3_q1",
@@ -2717,7 +2717,7 @@ const chapter104Data = {
           id: "c104_l2_ex1",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 1: Öbek Düzeyi (Tavsiye ve Alışkanlık)",
-          description: "Kibar tavsiye, geçmiş alışkanlıklar ve alışkınlık yapılarının (<span style='color: #ff6b6b; font-weight: bold;'>had better</span>, <span style='color: #ff6b6b; font-weight: bold;'>ought to</span>, <span style='color: #ff6b6b; font-weight: bold;'>used to</span>, <span style='color: #ff6b6b; font-weight: bold;'>be used to</span>) tespiti.",
+          description: "<span style='color: #ff6b6b; font-weight: bold;'>had better</span>, <span style='color: #ff6b6b; font-weight: bold;'>ought to</span>, <span style='color: #ff6b6b; font-weight: bold;'>used to</span>, <span style='color: #ff6b6b; font-weight: bold;'>be used to</span> öbeklerinin Türkçe karşılıkları.",
           questions: [
             {
               id: "c104_l2_ex1_q1",
@@ -2860,7 +2860,7 @@ const chapter104Data = {
           id: "c104_l2_ex2",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 2: Cümle Düzeyi (Boşluk Doldurma)",
-          description: "Tavsiye ve alışkanlık kalıplarını uygun çekimleriyle cümlelerdeki boşluklara yerleştirin.",
+          description: "Tavsiye ve alışkanlık kalıplarının cümle içinde çekimi.",
           questions: [
             {
               id: "c104_l2_ex2_q1",
@@ -2988,7 +2988,7 @@ const chapter104Data = {
           id: "c104_l2_ex3",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 3: Sentez (Word Bank)",
-          description: "Karışık kelime öbeklerini sıralayarak tavsiye ve alışkanlık cümlelerini Türkçe karşılıklarıyla kurun.",
+          description: "Türkçe öbeklerden tavsiye ve alışkanlık cümleleri.",
           questions: [
             {
               id: "c104_l2_ex3_q1",
@@ -3246,7 +3246,7 @@ const chapter104Data = {
           id: "c104_l3_ex2",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 2: Cümle Düzeyi (Boşluk Doldurma)",
-          description: "İleri düzey cümlelerdeki boşlukları en uygun yarı-modal çekimleriyle doldurun.",
+          description: "İleri düzey cümlelerde yarı-modal çekimi.",
           questions: [
             {
               id: "c104_l3_ex2_q1",
@@ -3374,7 +3374,7 @@ const chapter104Data = {
           id: "c104_l3_ex3",
           createdAt: "2026-07-25T02:00:00Z",
           title: "Alıştırma 3: Sentez (Word Bank)",
-          description: "İleri düzey cümle bloklarını sıralayarak tam çevirileri oluşturun.",
+          description: "İleri düzey blokların tam çevirisi.",
           questions: [
             {
               id: "c104_l3_ex3_q1",
@@ -4365,8 +4365,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The abstracts will analyze the academic provided that the accepted reform is approved.\"",
-            "sentence": "The abstracts will analyze the academic provided that the accepted reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The archive directorate will review the archival registers provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -4374,8 +4374,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ABSTRACTS uzmanı, accepted reformu onaylandığı sürece academic konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Arşiv müdürlüğü, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q2",
@@ -4386,12 +4386,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.\"",
-            "sentence": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
-            "englishPhrase": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the central bank had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
+            "sentence": "If the central bank had reviewed the customs declarations, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the central bank had reviewed the customs declarations, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer accepted account monografilerini inceleseydi, achieve anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Merkez bankası gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -4403,7 +4403,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The achieve insisted that the achieved committee ___ the constitutional adaptation policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the advisory committee ___ the new housing policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -4411,7 +4411,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ACHIEVE uzmanı, achieved komitesinin anayasal adaptation politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma enstitüsü, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4423,8 +4423,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The adaptation will analyze the adapting provided that the adhere reform is approved.\"",
-            "sentence": "The adaptation will analyze the adapting provided that the adhere reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The excavation team will review the archival registers provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -4432,8 +4432,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ADAPTATION uzmanı, adhere reformu onaylandığı sürece adapting konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Kazı ekibi, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q5",
@@ -4444,7 +4444,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The adhere insisted that the adjectival committee ___ the constitutional administration policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central bank insisted that the monetary committee ___ the new tariff policy.\"",
             "options": [
               "will evaluate",
               "evaluate",
@@ -4452,7 +4452,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 1,
-            "translation": "ADHERE uzmanı, adjectival komitesinin anayasal administration politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Merkez bankası, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4464,12 +4464,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.\"",
-            "sentence": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
-            "englishPhrase": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the research institute had reviewed the field survey records, the funding dispute would not have occurred.\"",
+            "sentence": "If the research institute had reviewed the field survey records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research institute had reviewed the field survey records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer administration admired monografilerini inceleseydi, advanced anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma enstitüsü saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -4481,7 +4481,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The advanced insisted that the adverb committee ___ the constitutional adverbial policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The archive directorate insisted that the heritage committee ___ the new conservation policy.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -4489,7 +4489,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 1,
-            "translation": "ADVANCED uzmanı, adverb komitesinin anayasal adverbial politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Arşiv müdürlüğü, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4501,8 +4501,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The adverbial will analyze the affected provided that the after reform is approved.\"",
-            "sentence": "The adverbial will analyze the affected provided that the after reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The central bank will review the customs declarations provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -4510,8 +4510,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ADVERBIAL uzmanı, after reformu onaylandığı sürece affected konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Merkez bankası, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q9",
@@ -4522,7 +4522,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The after insisted that the against committee ___ the constitutional agree policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the advisory committee ___ the new housing policy.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -4530,7 +4530,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 2,
-            "translation": "AFTER uzmanı, against komitesinin anayasal agree politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Saha ekibi, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4607,7 +4607,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The allow insisted that the along committee ___ the constitutional also policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the advisory committee ___ the new housing policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -4615,7 +4615,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "ALLOW uzmanı, along komitesinin anayasal also politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Anket birimi, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4652,7 +4652,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The altered insisted that the although committee ___ the constitutional amended policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audit team insisted that the monetary committee ___ the new tariff policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -4660,7 +4660,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "ALTERED uzmanı, although komitesinin anayasal amended politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Denetim ekibi, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4705,8 +4705,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The analysis will analyze the analyze provided that the analyzed reform is approved.\"",
-            "sentence": "The analysis will analyze the analyze provided that the analyzed reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The ethics board will review the case files provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -4714,8 +4714,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ANALYSIS uzmanı, analyzed reformu onaylandığı sürece analyze konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Etik kurul, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q2",
@@ -4726,12 +4726,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.\"",
-            "sentence": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
-            "englishPhrase": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the audit team had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
+            "sentence": "If the audit team had reviewed the customs declarations, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the audit team had reviewed the customs declarations, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer analyzed analyzing monografilerini inceleseydi, ancient anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Denetim ekibi gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -4743,7 +4743,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ancient insisted that the announced committee ___ the constitutional anthropologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the advisory committee ___ the new housing policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -4751,7 +4751,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 1,
-            "translation": "ANCIENT uzmanı, announced komitesinin anayasal anthropologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik inceleme kurulu, danışma komitesinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4763,8 +4763,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The anthropologist will analyze the anthropologists provided that the anticipate reform is approved.\"",
-            "sentence": "The anthropologist will analyze the anthropologists provided that the anticipate reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The appeals chamber will review the case files provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -4772,8 +4772,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ANTHROPOLOGIST uzmanı, anticipate reformu onaylandığı sürece anthropologists konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Temyiz dairesi, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q5",
@@ -4784,7 +4784,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The anticipate insisted that the antropoloji committee ___ the constitutional applied policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The trade ministry insisted that the monetary committee ___ the new tariff policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -4792,7 +4792,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 1,
-            "translation": "ANTICIPATE uzmanı, antropoloji komitesinin anayasal applied politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Ticaret bakanlığı, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4804,12 +4804,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the applied had reviewed the approve monographs, the approved dispute would not have occurred.\"",
-            "sentence": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
-            "englishPhrase": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the field team had reviewed the field survey records, the funding dispute would not have occurred.\"",
+            "sentence": "If the field team had reviewed the field survey records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the field team had reviewed the field survey records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer applied approve monografilerini inceleseydi, approved anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Saha ekibi saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -4821,7 +4821,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The approved insisted that the archaeological committee ___ the constitutional archaeologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the advisory committee ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -4829,7 +4829,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "APPROVED uzmanı, archaeological komitesinin anayasal archaeologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik kurul, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4841,8 +4841,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The archaeologist will analyze the architecture provided that the archival reform is approved.\"",
-            "sentence": "The archaeologist will analyze the architecture provided that the archival reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The audit team will review the customs declarations provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -4850,8 +4850,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ARCHAEOLOGIST uzmanı, archival reformu onaylandığı sürece architecture konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Denetim ekibi, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q9",
@@ -4862,7 +4862,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The archival insisted that the archives committee ___ the constitutional artifacts policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the ethics committee ___ the new housing policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -4870,7 +4870,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ARCHIVAL uzmanı, archives komitesinin anayasal artifacts politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma enstitüsü, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4947,7 +4947,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audience insisted that the audit committee ___ the constitutional author policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the ethics committee ___ the new housing policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -4955,7 +4955,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "AUDIENCE uzmanı, audit komitesinin anayasal author politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Saha ekibi, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -4992,7 +4992,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The authorize insisted that the auxiliary committee ___ the constitutional avoided policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The rating agency insisted that the monetary committee ___ the new tariff policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -5000,7 +5000,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "AUTHORIZE uzmanı, auxiliary komitesinin anayasal avoided politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Derecelendirme kuruluşu, para politikası komitesinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5045,8 +5045,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The barriers will analyze the based provided that the basit reform is approved.\"",
-            "sentence": "The barriers will analyze the based provided that the basit reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The legal commission will review the case files provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5054,8 +5054,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BARRIERS uzmanı, basit reformu onaylandığı sürece based konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Hukuk komisyonu, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q2",
@@ -5066,12 +5066,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.\"",
-            "sentence": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
-            "englishPhrase": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the research committee had reviewed the project reports, the funding dispute would not have occurred.\"",
+            "sentence": "If the research committee had reviewed the project reports, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research committee had reviewed the project reports, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer basit beautiful monografilerini inceleseydi, because anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma komitesi proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -5083,7 +5083,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The because insisted that the been committee ___ the constitutional before policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The clinical board insisted that the ethics committee ___ the new screening policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -5091,7 +5091,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "BECAUSE uzmanı, been komitesinin anayasal before politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Klinik kurul, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5103,8 +5103,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The before will analyze the began provided that the behavior reform is approved.\"",
-            "sentence": "The before will analyze the began provided that the behavior reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The bar association will review the case files provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5112,8 +5112,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BEFORE uzmanı, behavior reformu onaylandığı sürece began konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Baro, revize usul onaylandığı sürece dava dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q5",
@@ -5124,7 +5124,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The behavior insisted that the behavioral committee ___ the constitutional behind policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the advisory committee ___ the new funding policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -5132,7 +5132,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 1,
-            "translation": "BEHAVIOR uzmanı, behavioral komitesinin anayasal behind politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5144,12 +5144,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.\"",
-            "sentence": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
-            "englishPhrase": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the clinical board had reviewed the patient records, the consent dispute would not have occurred.\"",
+            "sentence": "If the clinical board had reviewed the patient records, the consent dispute would not have occurred.",
+            "englishPhrase": "If the clinical board had reviewed the patient records, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer behind bekleri monografilerini inceleseydi, belirleyin anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Klinik kurul hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -5161,7 +5161,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The belirleyin insisted that the belirte committee ___ the constitutional biases policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the advisory committee ___ the new disclosure policy.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -5169,7 +5169,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 1,
-            "translation": "BELIRLEYIN uzmanı, belirte komitesinin anayasal biases politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Temyiz dairesi, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5181,8 +5181,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The biases will analyze the bildiren provided that the bilgisi reform is approved.\"",
-            "sentence": "The biases will analyze the bildiren provided that the bilgisi reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research committee will review the project reports provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5190,8 +5190,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BIASES uzmanı, bilgisi reformu onaylandığı sürece bildiren konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma komitesi, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q9",
@@ -5202,7 +5202,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bilgisi insisted that the bilgisine committee ___ the constitutional board policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research unit insisted that the ethics committee ___ the new screening policy.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -5210,7 +5210,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "BILGISI uzmanı, bilgisine komitesinin anayasal board politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma birimi, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5287,7 +5287,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The boundary insisted that the broadcast committee ___ the constitutional broadcasted policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The assessment team insisted that the ethics committee ___ the new screening policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -5295,7 +5295,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "BOUNDARY uzmanı, broadcast komitesinin anayasal broadcasted politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Değerlendirme ekibi, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5332,7 +5332,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bulun insisted that the business committee ___ the constitutional calibrated policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the advisory committee ___ the new funding policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -5340,7 +5340,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "BULUN uzmanı, business komitesinin anayasal calibrated politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5385,8 +5385,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The spite will analyze the spring provided that the staging reform is approved.\"",
-            "sentence": "The spite will analyze the spring provided that the staging reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The university senate will review the project reports provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5394,8 +5394,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "SPITE uzmanı, staging reformu onaylandığı sürece spring konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Üniversite senatosu, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q2",
@@ -5406,12 +5406,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the staging had reviewed the stand monographs, the standards dispute would not have occurred.\"",
-            "sentence": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
-            "englishPhrase": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the survey unit had reviewed the field survey records, the funding dispute would not have occurred.\"",
+            "sentence": "If the survey unit had reviewed the field survey records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the survey unit had reviewed the field survey records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer staging stand monografilerini inceleseydi, standards anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Anket birimi saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -5423,7 +5423,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The standards insisted that the standing committee ___ the constitutional stands policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the advisory committee ___ the new disclosure policy.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -5431,7 +5431,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "STANDARDS uzmanı, standing komitesinin anayasal stands politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Hukuk komisyonu, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5443,8 +5443,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The stands will analyze the state provided that the states reform is approved.\"",
-            "sentence": "The stands will analyze the state provided that the states reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The editorial board will review the project reports provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5452,8 +5452,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "STANDS uzmanı, states reformu onaylandığı sürece state konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Yayın kurulu, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q5",
@@ -5464,7 +5464,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The states insisted that the statue committee ___ the constitutional statues policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the ethics committee ___ the new housing policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -5472,7 +5472,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "STATES uzmanı, statue komitesinin anayasal statues politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Anket birimi, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5484,12 +5484,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the statues had reviewed the stood monographs, the stop dispute would not have occurred.\"",
-            "sentence": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
-            "englishPhrase": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the ethics board had reviewed the case files, the licensing dispute would not have occurred.\"",
+            "sentence": "If the ethics board had reviewed the case files, the licensing dispute would not have occurred.",
+            "englishPhrase": "If the ethics board had reviewed the case files, the licensing dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer statues stood monografilerini inceleseydi, stop anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik kurul dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -5501,7 +5501,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The stop insisted that the strict committee ___ the constitutional strong policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the advisory committee ___ the new funding policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -5509,7 +5509,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "STOP uzmanı, strict komitesinin anayasal strong politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5521,8 +5521,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The strong will analyze the structures provided that the student reform is approved.\"",
-            "sentence": "The strong will analyze the structures provided that the student reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research institute will review the field survey records provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5530,8 +5530,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "STRONG uzmanı, student reformu onaylandığı sürece structures konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma enstitüsü, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q9",
@@ -5542,7 +5542,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The student insisted that the studies committee ___ the constitutional study policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bar association insisted that the advisory committee ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -5550,7 +5550,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "STUDENT uzmanı, studies komitesinin anayasal study politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Baro, danışma komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5627,7 +5627,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The sudden insisted that the suggest committee ___ the constitutional suggested policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the disciplinary board ___ the new disclosure policy.\"",
             "options": [
               "will evaluate",
               "evaluate",
@@ -5635,7 +5635,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "SUDDEN uzmanı, suggest komitesinin anayasal suggested politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik kurul, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5672,7 +5672,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The support insisted that the supported committee ___ the constitutional survey policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the ethics committee ___ the new housing policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -5680,7 +5680,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "SUPPORT uzmanı, supported komitesinin anayasal survey politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik inceleme kurulu, etik komitenin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5746,8 +5746,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The abstracts will analyze the academic provided that the accepted reform is approved.\"",
-            "sentence": "The abstracts will analyze the academic provided that the accepted reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The heritage council will review the archival registers provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5755,8 +5755,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ABSTRACTS uzmanı, accepted reformu onaylandığı sürece academic konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Miras konseyi, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q2",
@@ -5767,12 +5767,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.\"",
-            "sentence": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
-            "englishPhrase": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the trade ministry had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
+            "sentence": "If the trade ministry had reviewed the customs declarations, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the trade ministry had reviewed the customs declarations, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer accepted account monografilerini inceleseydi, achieve anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Ticaret bakanlığı gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -5784,7 +5784,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The achieve insisted that the achieved committee ___ the constitutional adaptation policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the steering group ___ the new housing policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -5792,7 +5792,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "ACHIEVE uzmanı, achieved komitesinin anayasal adaptation politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma enstitüsü, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5804,15 +5804,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The adaptation approved the guidelines, ___ was supported by the adapting committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archive directorate approved the restoration plan, ___ was supported by the heritage committee.\"",
             "options": [
-              "which was supported by the adapting committee",
-              "because was supported by the adapting committee",
-              "so was supported by the adapting committee",
-              "although was supported by the adapting committee"
+              "which was supported by the heritage committee",
+              "because was supported by the heritage committee",
+              "so was supported by the heritage committee",
+              "although was supported by the heritage committee"
             ],
             "correctIndex": 0,
-            "translation": "ADAPTATION uzmanı, adapting komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Arşiv müdürlüğü, miras komitesi tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -5824,7 +5824,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The adhere analyzed the adjectival documents, ___ was crucial for the administration stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The central bank analyzed the customs declarations, ___ was crucial for market stability.\"",
             "options": [
               "whom",
               "which",
@@ -5832,7 +5832,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 1,
-            "translation": "ADHERE uzmanı, administration istikrarı için kritik olan adjectival belgelerini analiz etti.",
+            "translation": "Merkez bankası, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -5844,12 +5844,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.\"",
-            "sentence": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
-            "englishPhrase": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the ethics review board had reviewed the field survey records, the funding dispute would not have occurred.\"",
+            "sentence": "If the ethics review board had reviewed the field survey records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the ethics review board had reviewed the field survey records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer administration admired monografilerini inceleseydi, advanced anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik inceleme kurulu saha anketi kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -5861,7 +5861,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The advanced insisted that the adverb committee ___ the constitutional adverbial policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The excavation team insisted that the heritage committee ___ the new conservation policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -5869,7 +5869,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 2,
-            "translation": "ADVANCED uzmanı, adverb komitesinin anayasal adverbial politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Kazı ekibi, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -5881,8 +5881,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The adverbial will analyze the affected provided that the after reform is approved.\"",
-            "sentence": "The adverbial will analyze the affected provided that the after reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The trade ministry will review the customs declarations provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -5890,8 +5890,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ADVERBIAL uzmanı, after reformu onaylandığı sürece affected konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Ticaret bakanlığı, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q9",
@@ -5902,15 +5902,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The after approved the guidelines, ___ was supported by the against committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research institute approved the revised protocol, ___ was supported by the advisory committee.\"",
             "options": [
-              "because was supported by the against committee",
-              "although was supported by the against committee",
-              "which was supported by the against committee",
-              "so was supported by the against committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 2,
-            "translation": "AFTER uzmanı, against komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma enstitüsü, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -5987,7 +5987,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The allow analyzed the along documents, ___ was crucial for the also stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research institute analyzed the field survey records, ___ was crucial for social cohesion.\"",
             "options": [
               "which",
               "where",
@@ -5995,7 +5995,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 0,
-            "translation": "ALLOW uzmanı, also istikrarı için kritik olan along belgelerini analiz etti.",
+            "translation": "Araştırma enstitüsü, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -6032,7 +6032,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The altered insisted that the although committee ___ the constitutional amended policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central bank insisted that the budget commission ___ the new tariff policy.\"",
             "options": [
               "will evaluate",
               "evaluate",
@@ -6040,7 +6040,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "ALTERED uzmanı, although komitesinin anayasal amended politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Merkez bankası, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6085,8 +6085,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The analysis will analyze the analyze provided that the analyzed reform is approved.\"",
-            "sentence": "The analysis will analyze the analyze provided that the analyzed reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The ethics board will review the arbitration records provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -6094,8 +6094,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ANALYSIS uzmanı, analyzed reformu onaylandığı sürece analyze konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Etik kurul, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q2",
@@ -6106,12 +6106,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.\"",
-            "sentence": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
-            "englishPhrase": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the rating agency had reviewed the customs declarations, the tariff dispute would not have occurred.\"",
+            "sentence": "If the rating agency had reviewed the customs declarations, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the rating agency had reviewed the customs declarations, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer analyzed analyzing monografilerini inceleseydi, ancient anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Derecelendirme kuruluşu gümrük beyannamelerini incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -6123,7 +6123,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ancient insisted that the announced committee ___ the constitutional anthropologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the steering group ___ the new housing policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -6131,7 +6131,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ANCIENT uzmanı, announced komitesinin anayasal anthropologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Saha ekibi, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6143,15 +6143,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The anthropologist approved the guidelines, ___ was supported by the anthropologists committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics board approved the revised procedure, ___ was supported by the advisory committee.\"",
             "options": [
-              "because was supported by the anthropologists committee",
-              "which was supported by the anthropologists committee",
-              "so was supported by the anthropologists committee",
-              "although was supported by the anthropologists committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 1,
-            "translation": "ANTHROPOLOGIST uzmanı, anthropologists komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik kurul, danışma komitesi tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -6163,7 +6163,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The anticipate analyzed the antropoloji documents, ___ was crucial for the applied stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The audit team analyzed the customs declarations, ___ was crucial for market stability.\"",
             "options": [
               "whom",
               "where",
@@ -6171,7 +6171,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 2,
-            "translation": "ANTICIPATE uzmanı, applied istikrarı için kritik olan antropoloji belgelerini analiz etti.",
+            "translation": "Denetim ekibi, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -6183,12 +6183,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the applied had reviewed the approve monographs, the approved dispute would not have occurred.\"",
-            "sentence": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
-            "englishPhrase": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research institute had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
+            "sentence": "If the research institute had reviewed the interview transcripts, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research institute had reviewed the interview transcripts, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer applied approve monografilerini inceleseydi, approved anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma enstitüsü görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -6200,7 +6200,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The approved insisted that the archaeological committee ___ the constitutional archaeologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the disciplinary board ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -6208,7 +6208,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "APPROVED uzmanı, archaeological komitesinin anayasal archaeologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Temyiz dairesi, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6220,8 +6220,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The archaeologist will analyze the architecture provided that the archival reform is approved.\"",
-            "sentence": "The archaeologist will analyze the architecture provided that the archival reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The rating agency will review the customs declarations provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -6229,8 +6229,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ARCHAEOLOGIST uzmanı, archival reformu onaylandığı sürece architecture konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Derecelendirme kuruluşu, fon talebi onaylandığı sürece gümrük beyannamelerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q9",
@@ -6241,15 +6241,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archival approved the guidelines, ___ was supported by the archives committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The field team approved the revised protocol, ___ was supported by the advisory committee.\"",
             "options": [
-              "so was supported by the archives committee",
-              "which was supported by the archives committee",
-              "because was supported by the archives committee",
-              "although was supported by the archives committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 1,
-            "translation": "ARCHIVAL uzmanı, archives komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Saha ekibi, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -6326,7 +6326,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The audience analyzed the audit documents, ___ was crucial for the author stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The field team analyzed the field survey records, ___ was crucial for social cohesion.\"",
             "options": [
               "where",
               "that",
@@ -6334,7 +6334,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "AUDIENCE uzmanı, author istikrarı için kritik olan audit belgelerini analiz etti.",
+            "translation": "Saha ekibi, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -6371,7 +6371,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The authorize insisted that the auxiliary committee ___ the constitutional avoided policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audit team insisted that the budget commission ___ the new tariff policy.\"",
             "options": [
               "will evaluate",
               "evaluate",
@@ -6379,7 +6379,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "AUTHORIZE uzmanı, auxiliary komitesinin anayasal avoided politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Denetim ekibi, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6424,8 +6424,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The barriers will analyze the based provided that the basit reform is approved.\"",
-            "sentence": "The barriers will analyze the based provided that the basit reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The appeals chamber will review the arbitration records provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -6433,8 +6433,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BARRIERS uzmanı, basit reformu onaylandığı sürece based konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Temyiz dairesi, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q2",
@@ -6445,12 +6445,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.\"",
-            "sentence": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
-            "englishPhrase": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the university senate had reviewed the project reports, the funding dispute would not have occurred.\"",
+            "sentence": "If the university senate had reviewed the project reports, the funding dispute would not have occurred.",
+            "englishPhrase": "If the university senate had reviewed the project reports, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer basit beautiful monografilerini inceleseydi, because anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Üniversite senatosu proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -6462,7 +6462,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The because insisted that the been committee ___ the constitutional before policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics panel insisted that the ethics committee ___ the new screening policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -6470,7 +6470,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "BECAUSE uzmanı, been komitesinin anayasal before politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik heyet, etik komitenin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6482,15 +6482,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The before approved the guidelines, ___ was supported by the began committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The appeals chamber approved the revised procedure, ___ was supported by the advisory committee.\"",
             "options": [
-              "which was supported by the began committee",
-              "so was supported by the began committee",
-              "although was supported by the began committee",
-              "because was supported by the began committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 0,
-            "translation": "BEFORE uzmanı, began komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Temyiz dairesi, danışma komitesi tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -6502,7 +6502,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The behavior analyzed the behavioral documents, ___ was crucial for the behind stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research committee analyzed the project reports, ___ was crucial for institutional stability.\"",
             "options": [
               "where",
               "that",
@@ -6510,7 +6510,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "BEHAVIOR uzmanı, behind istikrarı için kritik olan behavioral belgelerini analiz etti.",
+            "translation": "Araştırma komitesi, kurumsal istikrar için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -6522,12 +6522,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.\"",
-            "sentence": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
-            "englishPhrase": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the research unit had reviewed the patient records, the consent dispute would not have occurred.\"",
+            "sentence": "If the research unit had reviewed the patient records, the consent dispute would not have occurred.",
+            "englishPhrase": "If the research unit had reviewed the patient records, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer behind bekleri monografilerini inceleseydi, belirleyin anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma birimi hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -6539,7 +6539,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The belirleyin insisted that the belirte committee ___ the constitutional biases policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the disciplinary board ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -6547,7 +6547,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "BELIRLEYIN uzmanı, belirte komitesinin anayasal biases politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Hukuk komisyonu, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6559,8 +6559,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The biases will analyze the bildiren provided that the bilgisi reform is approved.\"",
-            "sentence": "The biases will analyze the bildiren provided that the bilgisi reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The planning office will review the project reports provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -6568,8 +6568,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BIASES uzmanı, bilgisi reformu onaylandığı sürece bildiren konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Planlama ofisi, revize öneri onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q9",
@@ -6580,15 +6580,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bilgisi approved the guidelines, ___ was supported by the bilgisine committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The clinical board approved the consent procedure, ___ was supported by the ethics committee.\"",
             "options": [
-              "which was supported by the bilgisine committee",
-              "although was supported by the bilgisine committee",
-              "because was supported by the bilgisine committee",
-              "so was supported by the bilgisine committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 0,
-            "translation": "BILGISI uzmanı, bilgisine komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Klinik kurul, etik komite tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -6665,7 +6665,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The boundary analyzed the broadcast documents, ___ was crucial for the broadcasted stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The clinical board analyzed the patient records, ___ was crucial for patient safety.\"",
             "options": [
               "that",
               "whom",
@@ -6673,7 +6673,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "BOUNDARY uzmanı, broadcasted istikrarı için kritik olan broadcast belgelerini analiz etti.",
+            "translation": "Klinik kurul, hasta güvenliği için kritik olan hasta kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -6710,7 +6710,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bulun insisted that the business committee ___ the constitutional calibrated policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the advisory committee ___ the new funding policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -6718,7 +6718,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "BULUN uzmanı, business komitesinin anayasal calibrated politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, danışma komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6763,8 +6763,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The spite will analyze the spring provided that the staging reform is approved.\"",
-            "sentence": "The spite will analyze the spring provided that the staging reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research committee will review the laboratory records provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -6772,8 +6772,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "SPITE uzmanı, staging reformu onaylandığı sürece spring konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma komitesi, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q2",
@@ -6784,12 +6784,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the staging had reviewed the stand monographs, the standards dispute would not have occurred.\"",
-            "sentence": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
-            "englishPhrase": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the field team had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
+            "sentence": "If the field team had reviewed the interview transcripts, the funding dispute would not have occurred.",
+            "englishPhrase": "If the field team had reviewed the interview transcripts, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer staging stand monografilerini inceleseydi, standards anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Saha ekibi görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -6801,7 +6801,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The standards insisted that the standing committee ___ the constitutional stands policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bar association insisted that the disciplinary board ___ the new disclosure policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -6809,7 +6809,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "STANDARDS uzmanı, standing komitesinin anayasal stands politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Baro, disiplin kurulunun yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6821,15 +6821,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The stands approved the guidelines, ___ was supported by the state committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research committee approved the revised proposal, ___ was supported by the advisory committee.\"",
             "options": [
-              "so was supported by the state committee",
-              "although was supported by the state committee",
-              "because was supported by the state committee",
-              "which was supported by the state committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 3,
-            "translation": "STANDS uzmanı, state komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma komitesi, danışma komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -6841,7 +6841,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The states analyzed the statue documents, ___ was crucial for the statues stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The survey unit analyzed the field survey records, ___ was crucial for social cohesion.\"",
             "options": [
               "where",
               "that",
@@ -6849,7 +6849,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "STATES uzmanı, statues istikrarı için kritik olan statue belgelerini analiz etti.",
+            "translation": "Anket birimi, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -6861,12 +6861,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the statues had reviewed the stood monographs, the stop dispute would not have occurred.\"",
-            "sentence": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
-            "englishPhrase": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the appeals chamber had reviewed the case files, the licensing dispute would not have occurred.\"",
+            "sentence": "If the appeals chamber had reviewed the case files, the licensing dispute would not have occurred.",
+            "englishPhrase": "If the appeals chamber had reviewed the case files, the licensing dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer statues stood monografilerini inceleseydi, stop anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Temyiz dairesi dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -6878,7 +6878,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The stop insisted that the strict committee ___ the constitutional strong policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the academic board ___ the new funding policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -6886,7 +6886,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "STOP uzmanı, strict komitesinin anayasal strong politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -6898,8 +6898,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The strong will analyze the structures provided that the student reform is approved.\"",
-            "sentence": "The strong will analyze the structures provided that the student reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The field team will review the field survey records provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -6907,8 +6907,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "STRONG uzmanı, student reformu onaylandığı sürece structures konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Saha ekibi, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q9",
@@ -6919,15 +6919,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The student approved the guidelines, ___ was supported by the studies committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The legal commission approved the revised procedure, ___ was supported by the advisory committee.\"",
             "options": [
-              "although was supported by the studies committee",
-              "so was supported by the studies committee",
-              "which was supported by the studies committee",
-              "because was supported by the studies committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 2,
-            "translation": "STUDENT uzmanı, studies komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Hukuk komisyonu, danışma komitesi tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -7004,7 +7004,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The sudden analyzed the suggest documents, ___ was crucial for the suggested stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics board analyzed the case files, ___ was crucial for judicial consistency.\"",
             "options": [
               "that",
               "which",
@@ -7012,7 +7012,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 1,
-            "translation": "SUDDEN uzmanı, suggested istikrarı için kritik olan suggest belgelerini analiz etti.",
+            "translation": "Etik kurul, yargısal tutarlılık için kritik olan dava dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -7049,7 +7049,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The support insisted that the supported committee ___ the constitutional survey policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the steering group ___ the new housing policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -7057,7 +7057,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "SUPPORT uzmanı, supported komitesinin anayasal survey politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Anket birimi, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7123,8 +7123,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The abstracts will analyze the academic provided that the accepted reform is approved.\"",
-            "sentence": "The abstracts will analyze the academic provided that the accepted reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The manuscript department will review the archival registers provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -7132,8 +7132,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ABSTRACTS uzmanı, accepted reformu onaylandığı sürece academic konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "El yazmaları bölümü, restorasyon planı onaylandığı sürece arşiv defterlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q2",
@@ -7144,12 +7144,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.\"",
-            "sentence": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
-            "englishPhrase": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the central bank had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.\"",
+            "sentence": "If the central bank had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the central bank had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer accepted account monografilerini inceleseydi, achieve anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Merkez bankası çeyreklik bilançoları incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -7161,7 +7161,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The achieve insisted that the achieved committee ___ the constitutional adaptation policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the steering group ___ the new housing policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -7169,7 +7169,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "ACHIEVE uzmanı, achieved komitesinin anayasal adaptation politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik inceleme kurulu, yürütme grubunun yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7181,15 +7181,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The adaptation approved the guidelines, ___ was supported by the adapting committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The excavation team approved the restoration plan, ___ was supported by the heritage committee.\"",
             "options": [
-              "so was supported by the adapting committee",
-              "which was supported by the adapting committee",
-              "because was supported by the adapting committee",
-              "although was supported by the adapting committee"
+              "which was supported by the heritage committee",
+              "because was supported by the heritage committee",
+              "so was supported by the heritage committee",
+              "although was supported by the heritage committee"
             ],
             "correctIndex": 1,
-            "translation": "ADAPTATION uzmanı, adapting komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Kazı ekibi, miras komitesi tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -7201,7 +7201,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The adhere analyzed the adjectival documents, ___ was crucial for the administration stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The trade ministry analyzed the customs declarations, ___ was crucial for market stability.\"",
             "options": [
               "where",
               "which",
@@ -7209,7 +7209,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 1,
-            "translation": "ADHERE uzmanı, administration istikrarı için kritik olan adjectival belgelerini analiz etti.",
+            "translation": "Ticaret bakanlığı, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -7221,12 +7221,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.\"",
-            "sentence": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
-            "englishPhrase": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the survey unit had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
+            "sentence": "If the survey unit had reviewed the interview transcripts, the funding dispute would not have occurred.",
+            "englishPhrase": "If the survey unit had reviewed the interview transcripts, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer administration admired monografilerini inceleseydi, advanced anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Anket birimi görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -7238,7 +7238,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The advanced insisted that the adverb committee ___ the constitutional adverbial policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The heritage council insisted that the heritage committee ___ the new conservation policy.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -7246,7 +7246,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "ADVANCED uzmanı, adverb komitesinin anayasal adverbial politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Miras konseyi, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7258,8 +7258,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The adverbial will analyze the affected provided that the after reform is approved.\"",
-            "sentence": "The adverbial will analyze the affected provided that the after reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The central bank will review the quarterly balance sheets provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -7267,8 +7267,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ADVERBIAL uzmanı, after reformu onaylandığı sürece affected konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Merkez bankası, fon talebi onaylandığı sürece çeyreklik bilançoları inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q9",
@@ -7279,15 +7279,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The after approved the guidelines, ___ was supported by the against committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The survey unit approved the revised protocol, ___ was supported by the advisory committee.\"",
             "options": [
-              "although was supported by the against committee",
-              "so was supported by the against committee",
-              "because was supported by the against committee",
-              "which was supported by the against committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 3,
-            "translation": "AFTER uzmanı, against komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Anket birimi, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -7364,7 +7364,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The allow analyzed the along documents, ___ was crucial for the also stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics review board analyzed the field survey records, ___ was crucial for social cohesion.\"",
             "options": [
               "whom",
               "which",
@@ -7372,7 +7372,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 1,
-            "translation": "ALLOW uzmanı, also istikrarı için kritik olan along belgelerini analiz etti.",
+            "translation": "Etik inceleme kurulu, toplumsal uyum için kritik olan saha anketi kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -7409,7 +7409,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The altered insisted that the although committee ___ the constitutional amended policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The trade ministry insisted that the budget commission ___ the new tariff policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -7417,7 +7417,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "ALTERED uzmanı, although komitesinin anayasal amended politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Ticaret bakanlığı, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7462,8 +7462,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The analysis will analyze the analyze provided that the analyzed reform is approved.\"",
-            "sentence": "The analysis will analyze the analyze provided that the analyzed reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The legal commission will review the arbitration records provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -7471,8 +7471,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ANALYSIS uzmanı, analyzed reformu onaylandığı sürece analyze konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Hukuk komisyonu, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q2",
@@ -7483,12 +7483,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.\"",
-            "sentence": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
-            "englishPhrase": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the audit team had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.\"",
+            "sentence": "If the audit team had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the audit team had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer analyzed analyzing monografilerini inceleseydi, ancient anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Denetim ekibi çeyreklik bilançoları incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -7500,7 +7500,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ancient insisted that the announced committee ___ the constitutional anthropologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the evaluation panel ___ the new housing policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -7508,7 +7508,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ANCIENT uzmanı, announced komitesinin anayasal anthropologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma enstitüsü, değerlendirme heyetinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7520,15 +7520,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The anthropologist approved the guidelines, ___ was supported by the anthropologists committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bar association approved the revised procedure, ___ was supported by the advisory committee.\"",
             "options": [
-              "so was supported by the anthropologists committee",
-              "because was supported by the anthropologists committee",
-              "which was supported by the anthropologists committee",
-              "although was supported by the anthropologists committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 2,
-            "translation": "ANTHROPOLOGIST uzmanı, anthropologists komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Baro, danışma komitesi tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -7540,7 +7540,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The anticipate analyzed the antropoloji documents, ___ was crucial for the applied stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The rating agency analyzed the customs declarations, ___ was crucial for market stability.\"",
             "options": [
               "that",
               "which",
@@ -7548,7 +7548,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 1,
-            "translation": "ANTICIPATE uzmanı, applied istikrarı için kritik olan antropoloji belgelerini analiz etti.",
+            "translation": "Derecelendirme kuruluşu, piyasa istikrarı için kritik olan gümrük beyannamelerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -7560,12 +7560,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the applied had reviewed the approve monographs, the approved dispute would not have occurred.\"",
-            "sentence": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
-            "englishPhrase": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the ethics review board had reviewed the interview transcripts, the funding dispute would not have occurred.\"",
+            "sentence": "If the ethics review board had reviewed the interview transcripts, the funding dispute would not have occurred.",
+            "englishPhrase": "If the ethics review board had reviewed the interview transcripts, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer applied approve monografilerini inceleseydi, approved anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik inceleme kurulu görüşme dökümlerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -7577,7 +7577,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The approved insisted that the archaeological committee ___ the constitutional archaeologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the review panel ___ the new disclosure policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -7585,7 +7585,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "APPROVED uzmanı, archaeological komitesinin anayasal archaeologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik kurul, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7597,8 +7597,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The archaeologist will analyze the architecture provided that the archival reform is approved.\"",
-            "sentence": "The archaeologist will analyze the architecture provided that the archival reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The audit team will review the quarterly balance sheets provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -7606,8 +7606,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ARCHAEOLOGIST uzmanı, archival reformu onaylandığı sürece architecture konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Denetim ekibi, fon talebi onaylandığı sürece çeyreklik bilançoları inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q9",
@@ -7618,15 +7618,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archival approved the guidelines, ___ was supported by the archives committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics review board approved the revised protocol, ___ was supported by the advisory committee.\"",
             "options": [
-              "because was supported by the archives committee",
-              "which was supported by the archives committee",
-              "although was supported by the archives committee",
-              "so was supported by the archives committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 1,
-            "translation": "ARCHIVAL uzmanı, archives komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik inceleme kurulu, danışma komitesi tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -7703,7 +7703,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The audience analyzed the audit documents, ___ was crucial for the author stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research institute analyzed the interview transcripts, ___ was crucial for social cohesion.\"",
             "options": [
               "which",
               "where",
@@ -7711,7 +7711,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "AUDIENCE uzmanı, author istikrarı için kritik olan audit belgelerini analiz etti.",
+            "translation": "Araştırma enstitüsü, toplumsal uyum için kritik olan görüşme dökümlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -7748,7 +7748,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The authorize insisted that the auxiliary committee ___ the constitutional avoided policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The rating agency insisted that the budget commission ___ the new tariff policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -7756,7 +7756,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "AUTHORIZE uzmanı, auxiliary komitesinin anayasal avoided politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Derecelendirme kuruluşu, bütçe komisyonunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7801,8 +7801,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The barriers will analyze the based provided that the basit reform is approved.\"",
-            "sentence": "The barriers will analyze the based provided that the basit reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The bar association will review the arbitration records provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -7810,8 +7810,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BARRIERS uzmanı, basit reformu onaylandığı sürece based konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Baro, revize usul onaylandığı sürece tahkim kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q2",
@@ -7822,12 +7822,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.\"",
-            "sentence": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
-            "englishPhrase": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the editorial board had reviewed the project reports, the funding dispute would not have occurred.\"",
+            "sentence": "If the editorial board had reviewed the project reports, the funding dispute would not have occurred.",
+            "englishPhrase": "If the editorial board had reviewed the project reports, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer basit beautiful monografilerini inceleseydi, because anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Yayın kurulu proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -7839,7 +7839,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The because insisted that the been committee ___ the constitutional before policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The clinical board insisted that the clinical panel ___ the new screening policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -7847,7 +7847,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "BECAUSE uzmanı, been komitesinin anayasal before politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Klinik kurul, klinik heyetin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7859,15 +7859,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The before approved the guidelines, ___ was supported by the began committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics board approved the revised procedure, ___ was supported by the disciplinary board.\"",
             "options": [
-              "so was supported by the began committee",
-              "although was supported by the began committee",
-              "because was supported by the began committee",
-              "which was supported by the began committee"
+              "which was supported by the disciplinary board",
+              "because was supported by the disciplinary board",
+              "so was supported by the disciplinary board",
+              "although was supported by the disciplinary board"
             ],
             "correctIndex": 3,
-            "translation": "BEFORE uzmanı, began komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik kurul, disiplin kurulu tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -7879,7 +7879,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The behavior analyzed the behavioral documents, ___ was crucial for the behind stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The university senate analyzed the project reports, ___ was crucial for institutional stability.\"",
             "options": [
               "where",
               "that",
@@ -7887,7 +7887,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "BEHAVIOR uzmanı, behind istikrarı için kritik olan behavioral belgelerini analiz etti.",
+            "translation": "Üniversite senatosu, kurumsal istikrar için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -7899,12 +7899,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.\"",
-            "sentence": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
-            "englishPhrase": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the assessment team had reviewed the patient records, the consent dispute would not have occurred.\"",
+            "sentence": "If the assessment team had reviewed the patient records, the consent dispute would not have occurred.",
+            "englishPhrase": "If the assessment team had reviewed the patient records, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer behind bekleri monografilerini inceleseydi, belirleyin anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Değerlendirme ekibi hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -7916,7 +7916,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The belirleyin insisted that the belirte committee ___ the constitutional biases policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the review panel ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -7924,7 +7924,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "BELIRLEYIN uzmanı, belirte komitesinin anayasal biases politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Temyiz dairesi, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -7936,8 +7936,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The biases will analyze the bildiren provided that the bilgisi reform is approved.\"",
-            "sentence": "The biases will analyze the bildiren provided that the bilgisi reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The university senate will review the laboratory records provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -7945,8 +7945,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BIASES uzmanı, bilgisi reformu onaylandığı sürece bildiren konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Üniversite senatosu, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q9",
@@ -7957,15 +7957,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bilgisi approved the guidelines, ___ was supported by the bilgisine committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research unit approved the consent procedure, ___ was supported by the ethics committee.\"",
             "options": [
-              "because was supported by the bilgisine committee",
-              "which was supported by the bilgisine committee",
-              "so was supported by the bilgisine committee",
-              "although was supported by the bilgisine committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 1,
-            "translation": "BILGISI uzmanı, bilgisine komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma birimi, etik komite tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -8042,7 +8042,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The boundary analyzed the broadcast documents, ___ was crucial for the broadcasted stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research unit analyzed the patient records, ___ was crucial for patient safety.\"",
             "options": [
               "which",
               "that",
@@ -8050,7 +8050,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 0,
-            "translation": "BOUNDARY uzmanı, broadcasted istikrarı için kritik olan broadcast belgelerini analiz etti.",
+            "translation": "Araştırma birimi, hasta güvenliği için kritik olan hasta kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -8087,7 +8087,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bulun insisted that the business committee ___ the constitutional calibrated policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the academic board ___ the new funding policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -8095,7 +8095,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "BULUN uzmanı, business komitesinin anayasal calibrated politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8140,8 +8140,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The spite will analyze the spring provided that the staging reform is approved.\"",
-            "sentence": "The spite will analyze the spring provided that the staging reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The editorial board will review the laboratory records provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -8149,8 +8149,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "SPITE uzmanı, staging reformu onaylandığı sürece spring konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Yayın kurulu, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q2",
@@ -8161,12 +8161,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the staging had reviewed the stand monographs, the standards dispute would not have occurred.\"",
-            "sentence": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
-            "englishPhrase": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research institute had reviewed the census tables, the funding dispute would not have occurred.\"",
+            "sentence": "If the research institute had reviewed the census tables, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research institute had reviewed the census tables, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer staging stand monografilerini inceleseydi, standards anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma enstitüsü nüfus sayımı tablolarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -8178,7 +8178,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The standards insisted that the standing committee ___ the constitutional stands policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the review panel ___ the new disclosure policy.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -8186,7 +8186,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "STANDARDS uzmanı, standing komitesinin anayasal stands politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Hukuk komisyonu, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8198,15 +8198,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The stands approved the guidelines, ___ was supported by the state committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The university senate approved the revised proposal, ___ was supported by the advisory committee.\"",
             "options": [
-              "because was supported by the state committee",
-              "which was supported by the state committee",
-              "although was supported by the state committee",
-              "so was supported by the state committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 1,
-            "translation": "STANDS uzmanı, state komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Üniversite senatosu, danışma komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -8218,7 +8218,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The states analyzed the statue documents, ___ was crucial for the statues stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The field team analyzed the interview transcripts, ___ was crucial for social cohesion.\"",
             "options": [
               "where",
               "that",
@@ -8226,7 +8226,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "STATES uzmanı, statues istikrarı için kritik olan statue belgelerini analiz etti.",
+            "translation": "Saha ekibi, toplumsal uyum için kritik olan görüşme dökümlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -8238,12 +8238,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the statues had reviewed the stood monographs, the stop dispute would not have occurred.\"",
-            "sentence": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
-            "englishPhrase": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the legal commission had reviewed the case files, the licensing dispute would not have occurred.\"",
+            "sentence": "If the legal commission had reviewed the case files, the licensing dispute would not have occurred.",
+            "englishPhrase": "If the legal commission had reviewed the case files, the licensing dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer statues stood monografilerini inceleseydi, stop anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Hukuk komisyonu dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -8255,7 +8255,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The stop insisted that the strict committee ___ the constitutional strong policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the academic board ___ the new funding policy.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -8263,7 +8263,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "STOP uzmanı, strict komitesinin anayasal strong politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8275,8 +8275,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The strong will analyze the structures provided that the student reform is approved.\"",
-            "sentence": "The strong will analyze the structures provided that the student reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The survey unit will review the field survey records provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -8284,8 +8284,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "STRONG uzmanı, student reformu onaylandığı sürece structures konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Anket birimi, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q9",
@@ -8296,15 +8296,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The student approved the guidelines, ___ was supported by the studies committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The appeals chamber approved the revised procedure, ___ was supported by the disciplinary board.\"",
             "options": [
-              "because was supported by the studies committee",
-              "although was supported by the studies committee",
-              "so was supported by the studies committee",
-              "which was supported by the studies committee"
+              "which was supported by the disciplinary board",
+              "because was supported by the disciplinary board",
+              "so was supported by the disciplinary board",
+              "although was supported by the disciplinary board"
             ],
             "correctIndex": 3,
-            "translation": "STUDENT uzmanı, studies komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Temyiz dairesi, disiplin kurulu tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -8381,7 +8381,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The sudden analyzed the suggest documents, ___ was crucial for the suggested stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The appeals chamber analyzed the case files, ___ was crucial for judicial consistency.\"",
             "options": [
               "that",
               "where",
@@ -8389,7 +8389,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "SUDDEN uzmanı, suggested istikrarı için kritik olan suggest belgelerini analiz etti.",
+            "translation": "Temyiz dairesi, yargısal tutarlılık için kritik olan dava dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -8426,7 +8426,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The support insisted that the supported committee ___ the constitutional survey policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the evaluation panel ___ the new housing policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -8434,7 +8434,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "SUPPORT uzmanı, supported komitesinin anayasal survey politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Saha ekibi, değerlendirme heyetinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8529,8 +8529,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The abstracts will analyze the academic provided that the accepted reform is approved.\"",
-            "sentence": "The abstracts will analyze the academic provided that the accepted reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The archive directorate will review the excavation reports provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -8538,8 +8538,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ABSTRACTS uzmanı, accepted reformu onaylandığı sürece academic konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Arşiv müdürlüğü, restorasyon planı onaylandığı sürece kazı raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q2",
@@ -8550,12 +8550,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.\"",
-            "sentence": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
-            "englishPhrase": "If the accepted had reviewed the account monographs, the achieve dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the trade ministry had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.\"",
+            "sentence": "If the trade ministry had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the trade ministry had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer accepted account monografilerini inceleseydi, achieve anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Ticaret bakanlığı çeyreklik bilançoları incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -8567,7 +8567,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The achieve insisted that the achieved committee ___ the constitutional adaptation policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the evaluation panel ___ the new housing policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -8575,7 +8575,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "ACHIEVE uzmanı, achieved komitesinin anayasal adaptation politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Anket birimi, değerlendirme heyetinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8587,15 +8587,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The adaptation approved the guidelines, ___ was supported by the adapting committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The heritage council approved the restoration plan, ___ was supported by the heritage committee.\"",
             "options": [
-              "although was supported by the adapting committee",
-              "which was supported by the adapting committee",
-              "because was supported by the adapting committee",
-              "so was supported by the adapting committee"
+              "which was supported by the heritage committee",
+              "because was supported by the heritage committee",
+              "so was supported by the heritage committee",
+              "although was supported by the heritage committee"
             ],
             "correctIndex": 1,
-            "translation": "ADAPTATION uzmanı, adapting komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Miras konseyi, miras komitesi tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -8607,7 +8607,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The adhere analyzed the adjectival documents, ___ was crucial for the administration stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The central bank analyzed the quarterly balance sheets, ___ was crucial for market stability.\"",
             "options": [
               "where",
               "whom",
@@ -8615,7 +8615,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "ADHERE uzmanı, administration istikrarı için kritik olan adjectival belgelerini analiz etti.",
+            "translation": "Merkez bankası, piyasa istikrarı için kritik olan çeyreklik bilançoları analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -8627,12 +8627,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.\"",
-            "sentence": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
-            "englishPhrase": "If the administration had reviewed the admired monographs, the advanced dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the field team had reviewed the census tables, the funding dispute would not have occurred.\"",
+            "sentence": "If the field team had reviewed the census tables, the funding dispute would not have occurred.",
+            "englishPhrase": "If the field team had reviewed the census tables, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer administration admired monografilerini inceleseydi, advanced anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Saha ekibi nüfus sayımı tablolarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -8644,7 +8644,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The advanced insisted that the adverb committee ___ the constitutional adverbial policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The manuscript department insisted that the heritage committee ___ the new conservation policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -8652,7 +8652,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ADVANCED uzmanı, adverb komitesinin anayasal adverbial politikasını değerlendirmesinde ısrar etti.",
+            "translation": "El yazmaları bölümü, miras komitesinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8664,8 +8664,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The adverbial will analyze the affected provided that the after reform is approved.\"",
-            "sentence": "The adverbial will analyze the affected provided that the after reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The trade ministry will review the quarterly balance sheets provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -8673,8 +8673,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ADVERBIAL uzmanı, after reformu onaylandığı sürece affected konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Ticaret bakanlığı, fon talebi onaylandığı sürece çeyreklik bilançoları inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l1_merged_q9",
@@ -8685,15 +8685,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The after approved the guidelines, ___ was supported by the against committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research institute approved the revised protocol, ___ was supported by the ethics committee.\"",
             "options": [
-              "although was supported by the against committee",
-              "which was supported by the against committee",
-              "because was supported by the against committee",
-              "so was supported by the against committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 1,
-            "translation": "AFTER uzmanı, against komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma enstitüsü, etik komite tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -8770,7 +8770,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The allow analyzed the along documents, ___ was crucial for the also stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The survey unit analyzed the interview transcripts, ___ was crucial for social cohesion.\"",
             "options": [
               "where",
               "which",
@@ -8778,7 +8778,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 1,
-            "translation": "ALLOW uzmanı, also istikrarı için kritik olan along belgelerini analiz etti.",
+            "translation": "Anket birimi, toplumsal uyum için kritik olan görüşme dökümlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -8815,7 +8815,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The altered insisted that the although committee ___ the constitutional amended policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central bank insisted that the audit board ___ the new tariff policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -8823,7 +8823,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ALTERED uzmanı, although komitesinin anayasal amended politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Merkez bankası, denetim kurulunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8855,8 +8855,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The director will analyze the discover provided that the discovery reform is approved.\"",
-            "sentence": "The director will analyze the discover provided that the discovery reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The excavation team will review the excavation reports provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -8864,8 +8864,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "DIRECTOR uzmanı, discovery reformu onaylandığı sürece discover konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Kazı ekibi, restorasyon planı onaylandığı sürece kazı raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c105_l1_q2",
@@ -8876,12 +8876,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the discovery had reviewed the dispute monographs, the disputes dispute would not have occurred.\"",
-            "sentence": "If the discovery had reviewed the dispute monographs, the disputes dispute would not have occurred.",
-            "englishPhrase": "If the discovery had reviewed the dispute monographs, the disputes dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the rating agency had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.\"",
+            "sentence": "If the rating agency had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the rating agency had reviewed the quarterly balance sheets, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer discovery dispute monografilerini inceleseydi, disputes anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Derecelendirme kuruluşu çeyreklik bilançoları incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -8893,7 +8893,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Arkeoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The disputes insisted that the distribution committee ___ the constitutional dizerek policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the academic board ___ the new funding policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -8901,7 +8901,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "DISPUTES uzmanı, distribution komitesinin anayasal dizerek politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, akademik kurulun yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8913,15 +8913,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The dizerek approved the guidelines, ___ was supported by the document committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The manuscript department approved the restoration plan, ___ was supported by the heritage committee.\"",
             "options": [
-              "so was supported by the document committee",
-              "which was supported by the document committee",
-              "because was supported by the document committee",
-              "although was supported by the document committee"
+              "which was supported by the heritage committee",
+              "because was supported by the heritage committee",
+              "so was supported by the heritage committee",
+              "although was supported by the heritage committee"
             ],
             "correctIndex": 1,
-            "translation": "DIZEREK uzmanı, document komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "El yazmaları bölümü, miras komitesi tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -8933,7 +8933,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The documentary analyzed the documented documents, ___ was crucial for the documents stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The audit team analyzed the quarterly balance sheets, ___ was crucial for market stability.\"",
             "options": [
               "whom",
               "where",
@@ -8941,7 +8941,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 2,
-            "translation": "DOCUMENTARY uzmanı, documents istikrarı için kritik olan documented belgelerini analiz etti.",
+            "translation": "Denetim ekibi, piyasa istikrarı için kritik olan çeyreklik bilançoları analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -8953,12 +8953,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Arkeoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the documents had reviewed the does monographs, the doldurun dispute would not have occurred.\"",
-            "sentence": "If the documents had reviewed the does monographs, the doldurun dispute would not have occurred.",
-            "englishPhrase": "If the documents had reviewed the does monographs, the doldurun dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the planning office had reviewed the project reports, the funding dispute would not have occurred.\"",
+            "sentence": "If the planning office had reviewed the project reports, the funding dispute would not have occurred.",
+            "englishPhrase": "If the planning office had reviewed the project reports, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer documents does monografilerini inceleseydi, doldurun anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Planlama ofisi proje raporlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -8970,7 +8970,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The doldurun insisted that the drama committee ___ the constitutional dramatically policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The archive directorate insisted that the academic board ___ the new conservation policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -8978,7 +8978,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "DOLDURUN uzmanı, drama komitesinin anayasal dramatically politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Arşiv müdürlüğü, akademik kurulun yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -8990,8 +8990,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The dramatically will analyze the dropped provided that the during reform is approved.\"",
-            "sentence": "The dramatically will analyze the dropped provided that the during reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The rating agency will review the quarterly balance sheets provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -8999,8 +8999,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "DRAMATICALLY uzmanı, during reformu onaylandığı sürece dropped konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Derecelendirme kuruluşu, fon talebi onaylandığı sürece çeyreklik bilançoları inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c105_l1_q9",
@@ -9011,15 +9011,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Arkeoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The during approved the guidelines, ___ was supported by the dynamics committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The editorial board approved the revised proposal, ___ was supported by the advisory committee.\"",
             "options": [
-              "although was supported by the dynamics committee",
-              "so was supported by the dynamics committee",
-              "because was supported by the dynamics committee",
-              "which was supported by the dynamics committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 3,
-            "translation": "DURING uzmanı, dynamics komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Yayın kurulu, danışma komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -9096,7 +9096,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Arkeoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The economists analyzed the economy documents, ___ was crucial for the edat stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The editorial board analyzed the project reports, ___ was crucial for institutional stability.\"",
             "options": [
               "which",
               "that",
@@ -9104,7 +9104,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "ECONOMISTS uzmanı, edat istikrarı için kritik olan economy belgelerini analiz etti.",
+            "translation": "Yayın kurulu, kurumsal istikrar için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -9141,7 +9141,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The edebiyat insisted that the edilgen committee ___ the constitutional effective policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audit team insisted that the audit board ___ the new tariff policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -9149,7 +9149,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "EDEBIYAT uzmanı, edilgen komitesinin anayasal effective politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Denetim ekibi, denetim kurulunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9181,8 +9181,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The ekilde will analyze the ekimini provided that the else reform is approved.\"",
-            "sentence": "The ekilde will analyze the ekimini provided that the else reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The clinical board will review the patient records provided that the consent procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -9190,8 +9190,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "EKILDE uzmanı, else reformu onaylandığı sürece ekimini konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Klinik kurul, onam prosedürü onaylandığı sürece hasta kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c105_l2_q2",
@@ -9202,12 +9202,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the else had reviewed the emphasis monographs, the emphasize dispute would not have occurred.\"",
-            "sentence": "If the else had reviewed the emphasis monographs, the emphasize dispute would not have occurred.",
-            "englishPhrase": "If the else had reviewed the emphasis monographs, the emphasize dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the survey unit had reviewed the census tables, the funding dispute would not have occurred.\"",
+            "sentence": "If the survey unit had reviewed the census tables, the funding dispute would not have occurred.",
+            "englishPhrase": "If the survey unit had reviewed the census tables, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer else emphasis monografilerini inceleseydi, emphasize anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Anket birimi nüfus sayımı tablolarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -9219,7 +9219,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The emphasize insisted that the empire committee ___ the constitutional empirical policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bar association insisted that the review panel ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -9227,7 +9227,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "EMPHASIZE uzmanı, empire komitesinin anayasal empirical politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Baro, inceleme heyetinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9239,15 +9239,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The empirical approved the guidelines, ___ was supported by the encountered committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The assessment team approved the consent procedure, ___ was supported by the ethics committee.\"",
             "options": [
-              "although was supported by the encountered committee",
-              "which was supported by the encountered committee",
-              "because was supported by the encountered committee",
-              "so was supported by the encountered committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 1,
-            "translation": "EMPIRICAL uzmanı, encountered komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Değerlendirme ekibi, etik komite tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -9259,7 +9259,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The endorse analyzed the entirely documents, ___ was crucial for the erlendirin stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics review board analyzed the interview transcripts, ___ was crucial for social cohesion.\"",
             "options": [
               "which",
               "where",
@@ -9267,7 +9267,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 0,
-            "translation": "ENDORSE uzmanı, erlendirin istikrarı için kritik olan entirely belgelerini analiz etti.",
+            "translation": "Etik inceleme kurulu, toplumsal uyum için kritik olan görüşme dökümlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -9279,12 +9279,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the erlendirin had reviewed the error monographs, the errors dispute would not have occurred.\"",
-            "sentence": "If the erlendirin had reviewed the error monographs, the errors dispute would not have occurred.",
-            "englishPhrase": "If the erlendirin had reviewed the error monographs, the errors dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the bar association had reviewed the case files, the licensing dispute would not have occurred.\"",
+            "sentence": "If the bar association had reviewed the case files, the licensing dispute would not have occurred.",
+            "englishPhrase": "If the bar association had reviewed the case files, the licensing dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer erlendirin error monografilerini inceleseydi, errors anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Baro dava dosyalarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -9296,7 +9296,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The errors insisted that the esas committee ___ the constitutional ethnographic policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research unit insisted that the clinical panel ___ the new screening policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -9304,7 +9304,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 1,
-            "translation": "ERRORS uzmanı, esas komitesinin anayasal ethnographic politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma birimi, klinik heyetin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9316,8 +9316,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The ethnographic will analyze the evaluated provided that the evidence reform is approved.\"",
-            "sentence": "The ethnographic will analyze the evaluated provided that the evidence reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The ethics review board will review the field survey records provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -9325,8 +9325,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ETHNOGRAPHIC uzmanı, evidence reformu onaylandığı sürece evaluated konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Etik inceleme kurulu, revize protokol onaylandığı sürece saha anketi kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c105_l2_q9",
@@ -9337,15 +9337,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The evidence approved the guidelines, ___ was supported by the evirin committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The legal commission approved the revised procedure, ___ was supported by the disciplinary board.\"",
             "options": [
-              "so was supported by the evirin committee",
-              "which was supported by the evirin committee",
-              "because was supported by the evirin committee",
-              "although was supported by the evirin committee"
+              "which was supported by the disciplinary board",
+              "because was supported by the disciplinary board",
+              "so was supported by the disciplinary board",
+              "although was supported by the disciplinary board"
             ],
             "correctIndex": 1,
-            "translation": "EVIDENCE uzmanı, evirin komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Hukuk komisyonu, disiplin kurulu tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -9422,7 +9422,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The excavations analyzed the exception documents, ___ was crucial for the exhibition stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The legal commission analyzed the case files, ___ was crucial for judicial consistency.\"",
             "options": [
               "which",
               "whom",
@@ -9430,7 +9430,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 0,
-            "translation": "EXCAVATIONS uzmanı, exhibition istikrarı için kritik olan exception belgelerini analiz etti.",
+            "translation": "Hukuk komisyonu, yargısal tutarlılık için kritik olan dava dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -9467,7 +9467,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The expanded insisted that the experience committee ___ the constitutional experiments policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the evaluation panel ___ the new housing policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -9475,7 +9475,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "EXPANDED uzmanı, experience komitesinin anayasal experiments politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik inceleme kurulu, değerlendirme heyetinin yeni konut politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9507,8 +9507,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The explained will analyze the explaining provided that the eylemsi reform is approved.\"",
-            "sentence": "The explained will analyze the explaining provided that the eylemsi reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research institute will review the interview transcripts provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -9516,8 +9516,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "EXPLAINED uzmanı, eylemsi reformu onaylandığı sürece explaining konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma enstitüsü, revize protokol onaylandığı sürece görüşme dökümlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c105_l3_q2",
@@ -9528,12 +9528,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the eylemsi had reviewed the face monographs, the faced dispute would not have occurred.\"",
-            "sentence": "If the eylemsi had reviewed the face monographs, the faced dispute would not have occurred.",
-            "englishPhrase": "If the eylemsi had reviewed the face monographs, the faced dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the research committee had reviewed the laboratory records, the funding dispute would not have occurred.\"",
+            "sentence": "If the research committee had reviewed the laboratory records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research committee had reviewed the laboratory records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer eylemsi face monografilerini inceleseydi, faced anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma komitesi laboratuvar kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -9545,7 +9545,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The faced insisted that the facing committee ___ the constitutional fails policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The excavation team insisted that the academic board ___ the new conservation policy.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -9553,7 +9553,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "FACED uzmanı, facing komitesinin anayasal fails politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Kazı ekibi, akademik kurulun yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9565,15 +9565,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The fails approved the guidelines, ___ was supported by the favorable committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The field team approved the revised protocol, ___ was supported by the ethics committee.\"",
             "options": [
-              "which was supported by the favorable committee",
-              "because was supported by the favorable committee",
-              "so was supported by the favorable committee",
-              "although was supported by the favorable committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 0,
-            "translation": "FAILS uzmanı, favorable komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Saha ekibi, etik komite tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -9585,7 +9585,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The feedback analyzed the field documents, ___ was crucial for the fiil stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The planning office analyzed the project reports, ___ was crucial for institutional stability.\"",
             "options": [
               "which",
               "where",
@@ -9593,7 +9593,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "FEEDBACK uzmanı, fiil istikrarı için kritik olan field belgelerini analiz etti.",
+            "translation": "Planlama ofisi, kurumsal istikrar için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -9605,12 +9605,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the fiil had reviewed the fiili monographs, the fiilinin dispute would not have occurred.\"",
-            "sentence": "If the fiil had reviewed the fiili monographs, the fiilinin dispute would not have occurred.",
-            "englishPhrase": "If the fiil had reviewed the fiili monographs, the fiilinin dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Zaman Uyumu rules?<br><br>\"If the archive directorate had reviewed the archival registers, the ownership dispute would not have occurred.\"",
+            "sentence": "If the archive directorate had reviewed the archival registers, the ownership dispute would not have occurred.",
+            "englishPhrase": "If the archive directorate had reviewed the archival registers, the ownership dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer fiil fiili monografilerini inceleseydi, fiilinin anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Arşiv müdürlüğü arşiv defterlerini incelemiş olsaydı, mülkiyet anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -9622,7 +9622,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The fiilinin insisted that the files committee ___ the constitutional film policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the advisory committee ___ the integration programme.\"",
             "options": [
               "will evaluate",
               "evaluate",
@@ -9630,7 +9630,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "FIILININ uzmanı, files komitesinin anayasal film politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma enstitüsü, danışma komitesinin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9642,8 +9642,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The film will analyze the financial provided that the find reform is approved.\"",
-            "sentence": "The film will analyze the financial provided that the find reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The planning office will review the laboratory records provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -9651,8 +9651,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "FILM uzmanı, find reformu onaylandığı sürece financial konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Planlama ofisi, revize öneri onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c105_l3_q9",
@@ -9663,15 +9663,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The find approved the guidelines, ___ was supported by the findings committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archive directorate approved the restoration plan, ___ was supported by the academic board.\"",
             "options": [
-              "which was supported by the findings committee",
-              "so was supported by the findings committee",
-              "because was supported by the findings committee",
-              "although was supported by the findings committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 0,
-            "translation": "FIND uzmanı, findings komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Arşiv müdürlüğü, akademik kurul tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -9748,7 +9748,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The formda analyzed the founder documents, ___ was crucial for the framework stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The archive directorate analyzed the archival registers, ___ was crucial for archival integrity.\"",
             "options": [
               "that",
               "which",
@@ -9756,7 +9756,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 1,
-            "translation": "FORMDA uzmanı, framework istikrarı için kritik olan founder belgelerini analiz etti.",
+            "translation": "Arşiv müdürlüğü, arşiv bütünlüğü için kritik olan arşiv defterlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -9793,7 +9793,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The furthermore insisted that the future committee ___ the constitutional gardens policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the evaluation panel ___ the new funding policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -9801,7 +9801,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 1,
-            "translation": "FURTHERMORE uzmanı, future komitesinin anayasal gardens politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, değerlendirme heyetinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9833,8 +9833,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The council will analyze the court provided that the crash reform is approved.\"",
-            "sentence": "The council will analyze the court provided that the crash reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research unit will review the patient records provided that the consent procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -9842,8 +9842,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "COUNCIL uzmanı, crash reformu onaylandığı sürece court konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma birimi, onam prosedürü onaylandığı sürece hasta kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l10_merged_q2",
@@ -9854,12 +9854,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Geçmiş Zaman Modalları (Perfect Modals) rules?<br><br>\"If the crash had reviewed the crisis monographs, the critic dispute would not have occurred.\"",
-            "sentence": "If the crash had reviewed the crisis monographs, the critic dispute would not have occurred.",
-            "englishPhrase": "If the crash had reviewed the crisis monographs, the critic dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Geçmiş Zaman Modalları (Perfect Modals) rules?<br><br>\"If the excavation team had reviewed the archival registers, the ownership dispute would not have occurred.\"",
+            "sentence": "If the excavation team had reviewed the archival registers, the ownership dispute would not have occurred.",
+            "englishPhrase": "If the excavation team had reviewed the archival registers, the ownership dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer crash crisis monografilerini inceleseydi, critic anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Kazı ekibi arşiv defterlerini incelemiş olsaydı, mülkiyet anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -9871,7 +9871,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The critic insisted that the critical committee ___ the constitutional critics policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the evaluation panel ___ the new funding policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -9879,7 +9879,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 2,
-            "translation": "CRITIC uzmanı, critical komitesinin anayasal critics politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, değerlendirme heyetinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9891,15 +9891,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The critics approved the guidelines, ___ was supported by the cross committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics panel approved the consent procedure, ___ was supported by the ethics committee.\"",
             "options": [
-              "which was supported by the cross committee",
-              "because was supported by the cross committee",
-              "so was supported by the cross committee",
-              "although was supported by the cross committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 0,
-            "translation": "CRITICS uzmanı, cross komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik heyet, etik komite tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -9911,7 +9911,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The cultural analyzed the daki documents, ___ was crucial for the data stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The excavation team analyzed the archival registers, ___ was crucial for archival integrity.\"",
             "options": [
               "whom",
               "where",
@@ -9919,7 +9919,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 2,
-            "translation": "CULTURAL uzmanı, data istikrarı için kritik olan daki belgelerini analiz etti.",
+            "translation": "Kazı ekibi, arşiv bütünlüğü için kritik olan arşiv defterlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -9931,12 +9931,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Geçmiş Zaman Modalları (Perfect Modals) rules?<br><br>\"If the data had reviewed the debate monographs, the decade dispute would not have occurred.\"",
-            "sentence": "If the data had reviewed the debate monographs, the decade dispute would not have occurred.",
-            "englishPhrase": "If the data had reviewed the debate monographs, the decade dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Geçmiş Zaman Modalları (Perfect Modals) rules?<br><br>\"If the university senate had reviewed the laboratory records, the funding dispute would not have occurred.\"",
+            "sentence": "If the university senate had reviewed the laboratory records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the university senate had reviewed the laboratory records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer data debate monografilerini inceleseydi, decade anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Üniversite senatosu laboratuvar kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -9948,7 +9948,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The decade insisted that the decision committee ___ the constitutional decrease policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The assessment team insisted that the clinical panel ___ the new screening policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -9956,7 +9956,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "DECADE uzmanı, decision komitesinin anayasal decrease politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Değerlendirme ekibi, klinik heyetin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -9968,8 +9968,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The decrease will analyze the deficit provided that the definitive reform is approved.\"",
-            "sentence": "The decrease will analyze the deficit provided that the definitive reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The heritage council will review the excavation reports provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -9977,8 +9977,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "DECREASE uzmanı, definitive reformu onaylandığı sürece deficit konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Miras konseyi, restorasyon planı onaylandığı sürece kazı raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l10_merged_q9",
@@ -9989,15 +9989,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The definitive approved the guidelines, ___ was supported by the demographic committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The planning office approved the revised proposal, ___ was supported by the advisory committee.\"",
             "options": [
-              "so was supported by the demographic committee",
-              "which was supported by the demographic committee",
-              "although was supported by the demographic committee",
-              "because was supported by the demographic committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 1,
-            "translation": "DEFINITIVE uzmanı, demographic komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Planlama ofisi, danışma komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -10074,7 +10074,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The deployment analyzed the determiner documents, ___ was crucial for the devrik stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research committee analyzed the laboratory records, ___ was crucial for institutional stability.\"",
             "options": [
               "where",
               "which",
@@ -10082,7 +10082,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 1,
-            "translation": "DEPLOYMENT uzmanı, devrik istikrarı için kritik olan determiner belgelerini analiz etti.",
+            "translation": "Araştırma komitesi, kurumsal istikrar için kritik olan laboratuvar kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -10119,7 +10119,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The devrikliklerini insisted that the difficult committee ___ the constitutional directional policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The heritage council insisted that the academic board ___ the new conservation policy.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -10127,7 +10127,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "DEVRIKLIKLERINI uzmanı, difficult komitesinin anayasal directional politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Miras konseyi, akademik kurulun yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10172,8 +10172,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The cause will analyze the censorship provided that the center reform is approved.\"",
-            "sentence": "The cause will analyze the censorship provided that the center reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research committee will review the technical annexes provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -10181,8 +10181,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "CAUSE uzmanı, center reformu onaylandığı sürece censorship konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma komitesi, revize öneri onaylandığı sürece teknik ekleri inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l4_merged_q2",
@@ -10193,12 +10193,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Sıfat Cümlecikleri (Relative Clauses) rules?<br><br>\"If the center had reviewed the central monographs, the certificate dispute would not have occurred.\"",
-            "sentence": "If the center had reviewed the central monographs, the certificate dispute would not have occurred.",
-            "englishPhrase": "If the center had reviewed the central monographs, the certificate dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Sıfat Cümlecikleri (Relative Clauses) rules?<br><br>\"If the editorial board had reviewed the laboratory records, the funding dispute would not have occurred.\"",
+            "sentence": "If the editorial board had reviewed the laboratory records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the editorial board had reviewed the laboratory records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer center central monografilerini inceleseydi, certificate anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Yayın kurulu laboratuvar kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -10210,7 +10210,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The certificate insisted that the chairs committee ___ the constitutional challenged policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the evaluation panel ___ the new funding policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -10218,7 +10218,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "CERTIFICATE uzmanı, chairs komitesinin anayasal challenged politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, değerlendirme heyetinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10230,15 +10230,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The challenged approved the guidelines, ___ was supported by the change committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research committee approved the revised proposal, ___ was supported by the academic board.\"",
             "options": [
-              "so was supported by the change committee",
-              "although was supported by the change committee",
-              "which was supported by the change committee",
-              "because was supported by the change committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 2,
-            "translation": "CHALLENGED uzmanı, change komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma komitesi, akademik kurul tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -10250,7 +10250,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The changes analyzed the cinema documents, ___ was crucial for the circumstances stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The university senate analyzed the laboratory records, ___ was crucial for institutional stability.\"",
             "options": [
               "whom",
               "that",
@@ -10258,7 +10258,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "CHANGES uzmanı, circumstances istikrarı için kritik olan cinema belgelerini analiz etti.",
+            "translation": "Üniversite senatosu, kurumsal istikrar için kritik olan laboratuvar kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -10270,12 +10270,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Sıfat Cümlecikleri (Relative Clauses) rules?<br><br>\"If the circumstances had reviewed the civil monographs, the civilization dispute would not have occurred.\"",
-            "sentence": "If the circumstances had reviewed the civil monographs, the civilization dispute would not have occurred.",
-            "englishPhrase": "If the circumstances had reviewed the civil monographs, the civilization dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Sıfat Cümlecikleri (Relative Clauses) rules?<br><br>\"If the planning office had reviewed the laboratory records, the funding dispute would not have occurred.\"",
+            "sentence": "If the planning office had reviewed the laboratory records, the funding dispute would not have occurred.",
+            "englishPhrase": "If the planning office had reviewed the laboratory records, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer circumstances civil monografilerini inceleseydi, civilization anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Planlama ofisi laboratuvar kayıtlarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -10287,7 +10287,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The civilization insisted that the civilizations committee ___ the constitutional claims policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the evaluation panel ___ the new funding policy.\"",
             "options": [
               "evaluates",
               "evaluated",
@@ -10295,7 +10295,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "CIVILIZATION uzmanı, civilizations komitesinin anayasal claims politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, değerlendirme heyetinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10307,8 +10307,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The claims will analyze the clauses provided that the clear reform is approved.\"",
-            "sentence": "The claims will analyze the clauses provided that the clear reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The university senate will review the technical annexes provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -10316,8 +10316,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "CLAIMS uzmanı, clear reformu onaylandığı sürece clauses konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Üniversite senatosu, revize öneri onaylandığı sürece teknik ekleri inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l4_merged_q9",
@@ -10328,15 +10328,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The clear approved the guidelines, ___ was supported by the cognitive committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The university senate approved the revised proposal, ___ was supported by the academic board.\"",
             "options": [
-              "which was supported by the cognitive committee",
-              "although was supported by the cognitive committee",
-              "because was supported by the cognitive committee",
-              "so was supported by the cognitive committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 0,
-            "translation": "CLEAR uzmanı, cognitive komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Üniversite senatosu, akademik kurul tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -10413,7 +10413,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The columns analyzed the commercial documents, ___ was crucial for the committee stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The editorial board analyzed the laboratory records, ___ was crucial for institutional stability.\"",
             "options": [
               "that",
               "whom",
@@ -10421,7 +10421,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "COLUMNS uzmanı, committee istikrarı için kritik olan commercial belgelerini analiz etti.",
+            "translation": "Yayın kurulu, kurumsal istikrar için kritik olan laboratuvar kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -10458,7 +10458,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The comparative insisted that the complete committee ___ the constitutional completed policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the steering committee ___ the new funding policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -10466,7 +10466,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "COMPARATIVE uzmanı, complete komitesinin anayasal completed politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, yürütme komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10498,8 +10498,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The complex will analyze the concerned provided that the concessive reform is approved.\"",
-            "sentence": "The complex will analyze the concerned provided that the concessive reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The central bank will review the subsidy records provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -10507,8 +10507,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "COMPLEX uzmanı, concessive reformu onaylandığı sürece concerned konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Merkez bankası, fon talebi onaylandığı sürece teşvik kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l9_merged_q2",
@@ -10519,12 +10519,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the concessive had reviewed the conclusions monographs, the condition dispute would not have occurred.\"",
-            "sentence": "If the concessive had reviewed the conclusions monographs, the condition dispute would not have occurred.",
-            "englishPhrase": "If the concessive had reviewed the conclusions monographs, the condition dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the heritage council had reviewed the archival registers, the ownership dispute would not have occurred.\"",
+            "sentence": "If the heritage council had reviewed the archival registers, the ownership dispute would not have occurred.",
+            "englishPhrase": "If the heritage council had reviewed the archival registers, the ownership dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer concessive conclusions monografilerini inceleseydi, condition anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Miras konseyi arşiv defterlerini incelemiş olsaydı, mülkiyet anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -10536,7 +10536,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The condition insisted that the conditional committee ___ the constitutional conditionals policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the advisory committee ___ the integration programme.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -10544,7 +10544,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "CONDITION uzmanı, conditional komitesinin anayasal conditionals politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Saha ekibi, danışma komitesinin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10556,15 +10556,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The conditionals approved the guidelines, ___ was supported by the conduct committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The central bank approved the funding request, ___ was supported by the monetary committee.\"",
             "options": [
-              "because was supported by the conduct committee",
-              "so was supported by the conduct committee",
-              "which was supported by the conduct committee",
-              "although was supported by the conduct committee"
+              "which was supported by the monetary committee",
+              "because was supported by the monetary committee",
+              "so was supported by the monetary committee",
+              "although was supported by the monetary committee"
             ],
             "correctIndex": 2,
-            "translation": "CONDITIONALS uzmanı, conduct komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Merkez bankası, para politikası komitesi tarafından desteklenen fon talebini onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -10576,7 +10576,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The conducting analyzed the conference documents, ___ was crucial for the conflict stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The heritage council analyzed the archival registers, ___ was crucial for archival integrity.\"",
             "options": [
               "whom",
               "that",
@@ -10584,7 +10584,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 2,
-            "translation": "CONDUCTING uzmanı, conflict istikrarı için kritik olan conference belgelerini analiz etti.",
+            "translation": "Miras konseyi, arşiv bütünlüğü için kritik olan arşiv defterlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -10596,12 +10596,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the conflict had reviewed the conjunction monographs, the connection dispute would not have occurred.\"",
-            "sentence": "If the conflict had reviewed the conjunction monographs, the connection dispute would not have occurred.",
-            "englishPhrase": "If the conflict had reviewed the conjunction monographs, the connection dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the ethics review board had reviewed the census tables, the funding dispute would not have occurred.\"",
+            "sentence": "If the ethics review board had reviewed the census tables, the funding dispute would not have occurred.",
+            "englishPhrase": "If the ethics review board had reviewed the census tables, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer conflict conjunction monografilerini inceleseydi, connection anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik inceleme kurulu nüfus sayımı tablolarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -10613,7 +10613,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The connection insisted that the connector committee ___ the constitutional consequences policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The trade ministry insisted that the audit board ___ the new tariff policy.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -10621,7 +10621,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "CONNECTION uzmanı, connector komitesinin anayasal consequences politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Ticaret bakanlığı, denetim kurulunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10633,8 +10633,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The consequences will analyze the constitutional provided that the contact reform is approved.\"",
-            "sentence": "The consequences will analyze the constitutional provided that the contact reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The manuscript department will review the excavation reports provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -10642,8 +10642,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "CONSEQUENCES uzmanı, contact reformu onaylandığı sürece constitutional konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "El yazmaları bölümü, restorasyon planı onaylandığı sürece kazı raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l9_merged_q9",
@@ -10654,15 +10654,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The contact approved the guidelines, ___ was supported by the contain committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The survey unit approved the revised protocol, ___ was supported by the ethics committee.\"",
             "options": [
-              "although was supported by the contain committee",
-              "because was supported by the contain committee",
-              "so was supported by the contain committee",
-              "which was supported by the contain committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 3,
-            "translation": "CONTACT uzmanı, contain komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Anket birimi, etik komite tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -10739,7 +10739,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The contract analyzed the contradiction documents, ___ was crucial for the contrast stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research institute analyzed the census tables, ___ was crucial for social cohesion.\"",
             "options": [
               "which",
               "that",
@@ -10747,7 +10747,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 0,
-            "translation": "CONTRACT uzmanı, contrast istikrarı için kritik olan contradiction belgelerini analiz etti.",
+            "translation": "Araştırma enstitüsü, toplumsal uyum için kritik olan nüfus sayımı tablolarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -10784,7 +10784,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The convene insisted that the coordinator committee ___ the constitutional corrupted policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The manuscript department insisted that the academic board ___ the new conservation policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -10792,7 +10792,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "CONVENE uzmanı, coordinator komitesinin anayasal corrupted politikasını değerlendirmesinde ısrar etti.",
+            "translation": "El yazmaları bölümü, akademik kurulun yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10824,8 +10824,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The gelecek will analyze the general provided that the geographic reform is approved.\"",
-            "sentence": "The gelecek will analyze the general provided that the geographic reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The editorial board will review the technical annexes provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -10833,8 +10833,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "GELECEK uzmanı, geographic reformu onaylandığı sürece general konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Yayın kurulu, revize öneri onaylandığı sürece teknik ekleri inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l1_q2",
@@ -10845,12 +10845,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the geographic had reviewed the geopolitical monographs, the gerektirdi dispute would not have occurred.\"",
-            "sentence": "If the geographic had reviewed the geopolitical monographs, the gerektirdi dispute would not have occurred.",
-            "englishPhrase": "If the geographic had reviewed the geopolitical monographs, the gerektirdi dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the research committee had reviewed the technical annexes, the funding dispute would not have occurred.\"",
+            "sentence": "If the research committee had reviewed the technical annexes, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research committee had reviewed the technical annexes, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer geographic geopolitical monografilerini inceleseydi, gerektirdi anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma komitesi teknik ekleri incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -10862,7 +10862,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The gerektirdi insisted that the gerundial committee ___ the constitutional getirin policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the steering committee ___ the new funding policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -10870,7 +10870,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "GEREKTIRDI uzmanı, gerundial komitesinin anayasal getirin politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, yürütme komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10882,15 +10882,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The getirin approved the guidelines, ___ was supported by the global committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The editorial board approved the revised proposal, ___ was supported by the academic board.\"",
             "options": [
-              "so was supported by the global committee",
-              "because was supported by the global committee",
-              "although was supported by the global committee",
-              "which was supported by the global committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 3,
-            "translation": "GETIRIN uzmanı, global komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Yayın kurulu, akademik kurul tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -10902,7 +10902,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The golden analyzed the government documents, ___ was crucial for the gramer stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The planning office analyzed the laboratory records, ___ was crucial for institutional stability.\"",
             "options": [
               "where",
               "whom",
@@ -10910,7 +10910,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 2,
-            "translation": "GOLDEN uzmanı, gramer istikrarı için kritik olan government belgelerini analiz etti.",
+            "translation": "Planlama ofisi, kurumsal istikrar için kritik olan laboratuvar kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -10922,12 +10922,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the gramer had reviewed the grammatical monographs, the grand dispute would not have occurred.\"",
-            "sentence": "If the gramer had reviewed the grammatical monographs, the grand dispute would not have occurred.",
-            "englishPhrase": "If the gramer had reviewed the grammatical monographs, the grand dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the university senate had reviewed the technical annexes, the funding dispute would not have occurred.\"",
+            "sentence": "If the university senate had reviewed the technical annexes, the funding dispute would not have occurred.",
+            "englishPhrase": "If the university senate had reviewed the technical annexes, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer gramer grammatical monografilerini inceleseydi, grand anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Üniversite senatosu teknik ekleri incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -10939,7 +10939,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The grand insisted that the guidelines committee ___ the constitutional guides policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the steering committee ___ the new funding policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -10947,7 +10947,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 1,
-            "translation": "GRAND uzmanı, guidelines komitesinin anayasal guides politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, yürütme komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -10959,8 +10959,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The guides will analyze the halini provided that the hangisi reform is approved.\"",
-            "sentence": "The guides will analyze the halini provided that the hangisi reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The planning office will review the technical annexes provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -10968,8 +10968,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "GUIDES uzmanı, hangisi reformu onaylandığı sürece halini konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Planlama ofisi, revize öneri onaylandığı sürece teknik ekleri inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l1_q9",
@@ -10980,15 +10980,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The hangisi approved the guidelines, ___ was supported by the happen committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The planning office approved the revised proposal, ___ was supported by the academic board.\"",
             "options": [
-              "because was supported by the happen committee",
-              "although was supported by the happen committee",
-              "which was supported by the happen committee",
-              "so was supported by the happen committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 2,
-            "translation": "HANGISI uzmanı, happen komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Planlama ofisi, akademik kurul tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -11065,7 +11065,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The hidden analyzed the high documents, ___ was crucial for the highly stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research committee analyzed the technical annexes, ___ was crucial for institutional stability.\"",
             "options": [
               "that",
               "where",
@@ -11073,7 +11073,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "HIDDEN uzmanı, highly istikrarı için kritik olan high belgelerini analiz etti.",
+            "translation": "Araştırma komitesi, kurumsal istikrar için kritik olan teknik ekleri analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -11110,7 +11110,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The historians insisted that the historic committee ___ the constitutional historical policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the steering committee ___ the new funding policy.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -11118,7 +11118,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "HISTORIANS uzmanı, historic komitesinin anayasal historical politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, yürütme komitesinin yeni fon politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11150,8 +11150,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The hundred will analyze the hypothesis provided that the identified reform is approved.\"",
-            "sentence": "The hundred will analyze the hypothesis provided that the identified reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The ethics board will review the contract annexes provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -11159,8 +11159,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "HUNDRED uzmanı, identified reformu onaylandığı sürece hypothesis konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Etik kurul, revize usul onaylandığı sürece sözleşme eklerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l2_q2",
@@ -11171,12 +11171,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the identified had reviewed the identify monographs, the ifadelerle dispute would not have occurred.\"",
-            "sentence": "If the identified had reviewed the identify monographs, the ifadelerle dispute would not have occurred.",
-            "englishPhrase": "If the identified had reviewed the identify monographs, the ifadelerle dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the research institute had reviewed the migration statistics, the funding dispute would not have occurred.\"",
+            "sentence": "If the research institute had reviewed the migration statistics, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research institute had reviewed the migration statistics, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer identified identify monografilerini inceleseydi, ifadelerle anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma enstitüsü göç istatistiklerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -11188,7 +11188,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ifadelerle insisted that the ifadesini committee ___ the constitutional ifadesiyle policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics panel insisted that the clinical panel ___ the new screening policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -11196,7 +11196,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "IFADELERLE uzmanı, ifadesini komitesinin anayasal ifadesiyle politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik heyet, klinik heyetin yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11208,15 +11208,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ifadesiyle approved the guidelines, ___ was supported by the ifadeyi committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bar association approved the revised procedure, ___ was supported by the disciplinary board.\"",
             "options": [
-              "although was supported by the ifadeyi committee",
-              "which was supported by the ifadeyi committee",
-              "so was supported by the ifadeyi committee",
-              "because was supported by the ifadeyi committee"
+              "which was supported by the disciplinary board",
+              "because was supported by the disciplinary board",
+              "so was supported by the disciplinary board",
+              "although was supported by the disciplinary board"
             ],
             "correctIndex": 1,
-            "translation": "IFADESIYLE uzmanı, ifadeyi komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Baro, disiplin kurulu tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -11228,7 +11228,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ignored analyzed the ileri documents, ___ was crucial for the illegal stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The field team analyzed the census tables, ___ was crucial for social cohesion.\"",
             "options": [
               "that",
               "whom",
@@ -11236,7 +11236,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "IGNORED uzmanı, illegal istikrarı için kritik olan ileri belgelerini analiz etti.",
+            "translation": "Saha ekibi, toplumsal uyum için kritik olan nüfus sayımı tablolarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -11248,12 +11248,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the illegal had reviewed the imini monographs, the immense dispute would not have occurred.\"",
-            "sentence": "If the illegal had reviewed the imini monographs, the immense dispute would not have occurred.",
-            "englishPhrase": "If the illegal had reviewed the imini monographs, the immense dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the ethics panel had reviewed the patient records, the consent dispute would not have occurred.\"",
+            "sentence": "If the ethics panel had reviewed the patient records, the consent dispute would not have occurred.",
+            "englishPhrase": "If the ethics panel had reviewed the patient records, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer illegal imini monografilerini inceleseydi, immense anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik heyet hasta kayıtlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -11265,7 +11265,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The immense insisted that the impact committee ___ the constitutional implement policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the oversight committee ___ the new disclosure policy.\"",
             "options": [
               "evaluates",
               "evaluated",
@@ -11273,7 +11273,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "IMMENSE uzmanı, impact komitesinin anayasal implement politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik kurul, denetim komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11285,8 +11285,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The implement will analyze the implemented provided that the important reform is approved.\"",
-            "sentence": "The implement will analyze the implemented provided that the important reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The field team will review the interview transcripts provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -11294,8 +11294,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "IMPLEMENT uzmanı, important reformu onaylandığı sürece implemented konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Saha ekibi, revize protokol onaylandığı sürece görüşme dökümlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l2_q9",
@@ -11306,15 +11306,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The important approved the guidelines, ___ was supported by the improved committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The clinical board approved the consent procedure, ___ was supported by the clinical panel.\"",
             "options": [
-              "which was supported by the improved committee",
-              "because was supported by the improved committee",
-              "although was supported by the improved committee",
-              "so was supported by the improved committee"
+              "which was supported by the clinical panel",
+              "because was supported by the clinical panel",
+              "so was supported by the clinical panel",
+              "although was supported by the clinical panel"
             ],
             "correctIndex": 0,
-            "translation": "IMPORTANT uzmanı, improved komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Klinik kurul, klinik heyet tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -11391,7 +11391,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The indicator analyzed the inflation documents, ___ was crucial for the influenced stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The assessment team analyzed the patient records, ___ was crucial for patient safety.\"",
             "options": [
               "which",
               "where",
@@ -11399,7 +11399,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "INDICATOR uzmanı, influenced istikrarı için kritik olan inflation belgelerini analiz etti.",
+            "translation": "Değerlendirme ekibi, hasta güvenliği için kritik olan hasta kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -11436,7 +11436,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The iniz insisted that the insist committee ___ the constitutional instability policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the advisory committee ___ the integration programme.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -11444,7 +11444,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "INIZ uzmanı, insist komitesinin anayasal instability politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Anket birimi, danışma komitesinin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11476,8 +11476,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The institutional will analyze the integration provided that the international reform is approved.\"",
-            "sentence": "The institutional will analyze the integration provided that the international reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research committee will review the evaluation files provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -11485,8 +11485,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "INSTITUTIONAL uzmanı, international reformu onaylandığı sürece integration konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma komitesi, revize öneri onaylandığı sürece değerlendirme dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l3_q2",
@@ -11497,12 +11497,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the international had reviewed the intervene monographs, the intervened dispute would not have occurred.\"",
-            "sentence": "If the international had reviewed the intervene monographs, the intervened dispute would not have occurred.",
-            "englishPhrase": "If the international had reviewed the intervene monographs, the intervened dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the editorial board had reviewed the technical annexes, the funding dispute would not have occurred.\"",
+            "sentence": "If the editorial board had reviewed the technical annexes, the funding dispute would not have occurred.",
+            "englishPhrase": "If the editorial board had reviewed the technical annexes, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer international intervene monografilerini inceleseydi, intervened anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Yayın kurulu teknik ekleri incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -11514,7 +11514,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The intervened insisted that the interviews committee ___ the constitutional into policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the advisory committee ___ the publication guideline.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -11522,7 +11522,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "INTERVENED uzmanı, interviews komitesinin anayasal into politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, danışma komitesinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11534,15 +11534,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The into approved the guidelines, ___ was supported by the inversion committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research committee approved the revised proposal, ___ was supported by the evaluation panel.\"",
             "options": [
-              "although was supported by the inversion committee",
-              "so was supported by the inversion committee",
-              "which was supported by the inversion committee",
-              "because was supported by the inversion committee"
+              "which was supported by the evaluation panel",
+              "because was supported by the evaluation panel",
+              "so was supported by the evaluation panel",
+              "although was supported by the evaluation panel"
             ],
             "correctIndex": 2,
-            "translation": "INTO uzmanı, inversion komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma komitesi, değerlendirme heyeti tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -11554,7 +11554,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The inversions analyzed the inverted documents, ___ was crucial for the izili stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The university senate analyzed the technical annexes, ___ was crucial for institutional stability.\"",
             "options": [
               "which",
               "that",
@@ -11562,7 +11562,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "INVERSIONS uzmanı, izili istikrarı için kritik olan inverted belgelerini analiz etti.",
+            "translation": "Üniversite senatosu, kurumsal istikrar için kritik olan teknik ekleri analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -11574,12 +11574,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the izili had reviewed the joint monographs, the judicial dispute would not have occurred.\"",
-            "sentence": "If the izili had reviewed the joint monographs, the judicial dispute would not have occurred.",
-            "englishPhrase": "If the izili had reviewed the joint monographs, the judicial dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the planning office had reviewed the technical annexes, the funding dispute would not have occurred.\"",
+            "sentence": "If the planning office had reviewed the technical annexes, the funding dispute would not have occurred.",
+            "englishPhrase": "If the planning office had reviewed the technical annexes, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer izili joint monografilerini inceleseydi, judicial anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Planlama ofisi teknik ekleri incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -11591,7 +11591,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The judicial insisted that the jurisdiction committee ___ the constitutional kelimeleri policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the advisory committee ___ the publication guideline.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -11599,7 +11599,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "JUDICIAL uzmanı, jurisdiction komitesinin anayasal kelimeleri politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, danışma komitesinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11611,8 +11611,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The kelimeleri will analyze the kelimeyi provided that the kilitlerini reform is approved.\"",
-            "sentence": "The kelimeleri will analyze the kelimeyi provided that the kilitlerini reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The university senate will review the evaluation files provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -11620,8 +11620,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "KELIMELERI uzmanı, kilitlerini reformu onaylandığı sürece kelimeyi konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Üniversite senatosu, revize öneri onaylandığı sürece değerlendirme dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l3_q9",
@@ -11632,15 +11632,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The kilitlerini approved the guidelines, ___ was supported by the kinship committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The university senate approved the revised proposal, ___ was supported by the evaluation panel.\"",
             "options": [
-              "so was supported by the kinship committee",
-              "which was supported by the kinship committee",
-              "although was supported by the kinship committee",
-              "because was supported by the kinship committee"
+              "which was supported by the evaluation panel",
+              "because was supported by the evaluation panel",
+              "so was supported by the evaluation panel",
+              "although was supported by the evaluation panel"
             ],
             "correctIndex": 1,
-            "translation": "KILITLERINI uzmanı, kinship komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Üniversite senatosu, değerlendirme heyeti tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -11717,7 +11717,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The konum analyzed the korelasyonlu documents, ___ was crucial for the korelasyonuna stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The editorial board analyzed the technical annexes, ___ was crucial for institutional stability.\"",
             "options": [
               "which",
               "that",
@@ -11725,7 +11725,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "KONUM uzmanı, korelasyonuna istikrarı için kritik olan korelasyonlu belgelerini analiz etti.",
+            "translation": "Yayın kurulu, kurumsal istikrar için kritik olan teknik ekleri analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -11762,7 +11762,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The kural insisted that the kurala committee ___ the constitutional kuran policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the advisory committee ___ the publication guideline.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -11770,7 +11770,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 1,
-            "translation": "KURAL uzmanı, kurala komitesinin anayasal kuran politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, danışma komitesinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11802,8 +11802,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The lang will analyze the launch provided that the lawyer reform is approved.\"",
-            "sentence": "The lang will analyze the launch provided that the lawyer reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The archive directorate will review the manuscript catalogues provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -11811,8 +11811,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "LANG uzmanı, lawyer reformu onaylandığı sürece launch konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Arşiv müdürlüğü, restorasyon planı onaylandığı sürece el yazması kataloglarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l4_q2",
@@ -11823,12 +11823,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the lawyer had reviewed the lawyers monographs, the layan dispute would not have occurred.\"",
-            "sentence": "If the lawyer had reviewed the lawyers monographs, the layan dispute would not have occurred.",
-            "englishPhrase": "If the lawyer had reviewed the lawyers monographs, the layan dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the central bank had reviewed the subsidy records, the tariff dispute would not have occurred.\"",
+            "sentence": "If the central bank had reviewed the subsidy records, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the central bank had reviewed the subsidy records, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer lawyer lawyers monografilerini inceleseydi, layan anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Merkez bankası teşvik kayıtlarını incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -11840,7 +11840,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The layan insisted that the laying committee ___ the constitutional leaders policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the advisory committee ___ the publication guideline.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -11848,7 +11848,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "LAYAN uzmanı, laying komitesinin anayasal leaders politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, danışma komitesinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11860,15 +11860,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The leaders approved the guidelines, ___ was supported by the legal committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The excavation team approved the restoration plan, ___ was supported by the academic board.\"",
             "options": [
-              "so was supported by the legal committee",
-              "although was supported by the legal committee",
-              "which was supported by the legal committee",
-              "because was supported by the legal committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 2,
-            "translation": "LEADERS uzmanı, legal komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Kazı ekibi, akademik kurul tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -11880,7 +11880,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The leri analyzed the levels documents, ___ was crucial for the levels stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The trade ministry analyzed the quarterly balance sheets, ___ was crucial for market stability.\"",
             "options": [
               "where",
               "which",
@@ -11888,7 +11888,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 1,
-            "translation": "LERI uzmanı, levels istikrarı için kritik olan levels belgelerini analiz etti.",
+            "translation": "Ticaret bakanlığı, piyasa istikrarı için kritik olan çeyreklik bilançoları analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -11900,12 +11900,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the levels had reviewed the levels monographs, the levi dispute would not have occurred.\"",
-            "sentence": "If the levels had reviewed the levels monographs, the levi dispute would not have occurred.",
-            "englishPhrase": "If the levels had reviewed the levels monographs, the levi dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Bağlaçlar rules?<br><br>\"If the research committee had reviewed the evaluation files, the funding dispute would not have occurred.\"",
+            "sentence": "If the research committee had reviewed the evaluation files, the funding dispute would not have occurred.",
+            "englishPhrase": "If the research committee had reviewed the evaluation files, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer levels levels monografilerini inceleseydi, levi anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma komitesi değerlendirme dosyalarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -11917,7 +11917,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The levi insisted that the library committee ___ the constitutional lies policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The archive directorate insisted that the restoration panel ___ the new conservation policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -11925,7 +11925,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "LEVI uzmanı, library komitesinin anayasal lies politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Arşiv müdürlüğü, restorasyon heyetinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -11937,8 +11937,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The lies will analyze the linked provided that the little reform is approved.\"",
-            "sentence": "The lies will analyze the linked provided that the little reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The audit team will review the subsidy records provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -11946,8 +11946,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "LIES uzmanı, little reformu onaylandığı sürece linked konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Denetim ekibi, fon talebi onaylandığı sürece teşvik kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c54_l4_q9",
@@ -11958,15 +11958,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The little approved the guidelines, ___ was supported by the local committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The editorial board approved the revised proposal, ___ was supported by the evaluation panel.\"",
             "options": [
-              "although was supported by the local committee",
-              "so was supported by the local committee",
-              "because was supported by the local committee",
-              "which was supported by the local committee"
+              "which was supported by the evaluation panel",
+              "because was supported by the evaluation panel",
+              "so was supported by the evaluation panel",
+              "although was supported by the evaluation panel"
             ],
             "correctIndex": 3,
-            "translation": "LITTLE uzmanı, local komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Yayın kurulu, değerlendirme heyeti tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -12043,7 +12043,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The main analyzed the maintained documents, ___ was crucial for the managed stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The planning office analyzed the technical annexes, ___ was crucial for institutional stability.\"",
             "options": [
               "which",
               "whom",
@@ -12051,7 +12051,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 0,
-            "translation": "MAIN uzmanı, managed istikrarı için kritik olan maintained belgelerini analiz etti.",
+            "translation": "Planlama ofisi, kurumsal istikrar için kritik olan teknik ekleri analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -12088,7 +12088,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The manuscripts insisted that the many committee ___ the constitutional market policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The rating agency insisted that the audit board ___ the new tariff policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -12096,7 +12096,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "MANUSCRIPTS uzmanı, many komitesinin anayasal market politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Derecelendirme kuruluşu, denetim kurulunun yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12141,8 +12141,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The analysis will analyze the analyze provided that the analyzed reform is approved.\"",
-            "sentence": "The analysis will analyze the analyze provided that the analyzed reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The appeals chamber will review the contract annexes provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -12150,8 +12150,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ANALYSIS uzmanı, analyzed reformu onaylandığı sürece analyze konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Temyiz dairesi, revize usul onaylandığı sürece sözleşme eklerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q2",
@@ -12162,12 +12162,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.\"",
-            "sentence": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
-            "englishPhrase": "If the analyzed had reviewed the analyzing monographs, the ancient dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the audit team had reviewed the subsidy records, the tariff dispute would not have occurred.\"",
+            "sentence": "If the audit team had reviewed the subsidy records, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the audit team had reviewed the subsidy records, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer analyzed analyzing monografilerini inceleseydi, ancient anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Denetim ekibi teşvik kayıtlarını incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -12179,7 +12179,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ancient insisted that the announced committee ___ the constitutional anthropologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics review board insisted that the advisory committee ___ the integration programme.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -12187,7 +12187,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "ANCIENT uzmanı, announced komitesinin anayasal anthropologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik inceleme kurulu, danışma komitesinin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12199,15 +12199,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The anthropologist approved the guidelines, ___ was supported by the anthropologists committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics board approved the revised procedure, ___ was supported by the review panel.\"",
             "options": [
-              "although was supported by the anthropologists committee",
-              "because was supported by the anthropologists committee",
-              "so was supported by the anthropologists committee",
-              "which was supported by the anthropologists committee"
+              "which was supported by the review panel",
+              "because was supported by the review panel",
+              "so was supported by the review panel",
+              "although was supported by the review panel"
             ],
             "correctIndex": 3,
-            "translation": "ANTHROPOLOGIST uzmanı, anthropologists komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik kurul, inceleme heyeti tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -12219,7 +12219,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The anticipate analyzed the antropoloji documents, ___ was crucial for the applied stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The rating agency analyzed the quarterly balance sheets, ___ was crucial for market stability.\"",
             "options": [
               "which",
               "that",
@@ -12227,7 +12227,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 0,
-            "translation": "ANTICIPATE uzmanı, applied istikrarı için kritik olan antropoloji belgelerini analiz etti.",
+            "translation": "Derecelendirme kuruluşu, piyasa istikrarı için kritik olan çeyreklik bilançoları analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -12239,12 +12239,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the applied had reviewed the approve monographs, the approved dispute would not have occurred.\"",
-            "sentence": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
-            "englishPhrase": "If the applied had reviewed the approve monographs, the approved dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the field team had reviewed the migration statistics, the funding dispute would not have occurred.\"",
+            "sentence": "If the field team had reviewed the migration statistics, the funding dispute would not have occurred.",
+            "englishPhrase": "If the field team had reviewed the migration statistics, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer applied approve monografilerini inceleseydi, approved anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Saha ekibi göç istatistiklerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -12256,7 +12256,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The approved insisted that the archaeological committee ___ the constitutional archaeologist policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the oversight committee ___ the new disclosure policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -12264,7 +12264,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "APPROVED uzmanı, archaeological komitesinin anayasal archaeologist politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Temyiz dairesi, denetim komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12276,8 +12276,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The archaeologist will analyze the architecture provided that the archival reform is approved.\"",
-            "sentence": "The archaeologist will analyze the architecture provided that the archival reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The trade ministry will review the subsidy records provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -12285,8 +12285,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "ARCHAEOLOGIST uzmanı, archival reformu onaylandığı sürece architecture konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Ticaret bakanlığı, fon talebi onaylandığı sürece teşvik kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l2_merged_q9",
@@ -12297,15 +12297,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The archival approved the guidelines, ___ was supported by the archives committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics review board approved the revised protocol, ___ was supported by the ethics committee.\"",
             "options": [
-              "although was supported by the archives committee",
-              "so was supported by the archives committee",
-              "because was supported by the archives committee",
-              "which was supported by the archives committee"
+              "which was supported by the ethics committee",
+              "because was supported by the ethics committee",
+              "so was supported by the ethics committee",
+              "although was supported by the ethics committee"
             ],
             "correctIndex": 3,
-            "translation": "ARCHIVAL uzmanı, archives komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik inceleme kurulu, etik komite tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -12382,7 +12382,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The audience analyzed the audit documents, ___ was crucial for the author stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The survey unit analyzed the census tables, ___ was crucial for social cohesion.\"",
             "options": [
               "where",
               "that",
@@ -12390,7 +12390,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "AUDIENCE uzmanı, author istikrarı için kritik olan audit belgelerini analiz etti.",
+            "translation": "Anket birimi, toplumsal uyum için kritik olan nüfus sayımı tablolarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -12427,7 +12427,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The authorize insisted that the auxiliary committee ___ the constitutional avoided policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The central bank insisted that the trade council ___ the new tariff policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -12435,7 +12435,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "AUTHORIZE uzmanı, auxiliary komitesinin anayasal avoided politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Merkez bankası, ticaret konseyinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12467,8 +12467,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The media will analyze the medieval provided that the mekansal reform is approved.\"",
-            "sentence": "The media will analyze the medieval provided that the mekansal reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The legal commission will review the contract annexes provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -12476,8 +12476,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "MEDIA uzmanı, mekansal reformu onaylandığı sürece medieval konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Hukuk komisyonu, revize usul onaylandığı sürece sözleşme eklerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l1_q2",
@@ -12488,12 +12488,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the mekansal had reviewed the members monographs, the merchants dispute would not have occurred.\"",
-            "sentence": "If the mekansal had reviewed the members monographs, the merchants dispute would not have occurred.",
-            "englishPhrase": "If the mekansal had reviewed the members monographs, the merchants dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the trade ministry had reviewed the subsidy records, the tariff dispute would not have occurred.\"",
+            "sentence": "If the trade ministry had reviewed the subsidy records, the tariff dispute would not have occurred.",
+            "englishPhrase": "If the trade ministry had reviewed the subsidy records, the tariff dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer mekansal members monografilerini inceleseydi, merchants anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Ticaret bakanlığı teşvik kayıtlarını incelemiş olsaydı, tarife anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -12505,7 +12505,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The merchants insisted that the methodological committee ___ the constitutional methodology policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research institute insisted that the ethics committee ___ the integration programme.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -12513,7 +12513,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "MERCHANTS uzmanı, methodological komitesinin anayasal methodology politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma enstitüsü, etik komitenin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12525,15 +12525,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The methodology approved the guidelines, ___ was supported by the methods committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The appeals chamber approved the revised procedure, ___ was supported by the review panel.\"",
             "options": [
-              "so was supported by the methods committee",
-              "which was supported by the methods committee",
-              "although was supported by the methods committee",
-              "because was supported by the methods committee"
+              "which was supported by the review panel",
+              "because was supported by the review panel",
+              "so was supported by the review panel",
+              "although was supported by the review panel"
             ],
             "correctIndex": 1,
-            "translation": "METHODOLOGY uzmanı, methods komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Temyiz dairesi, inceleme heyeti tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -12545,7 +12545,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The migration analyzed the mixed documents, ___ was crucial for the mleci stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The central bank analyzed the subsidy records, ___ was crucial for market stability.\"",
             "options": [
               "which",
               "that",
@@ -12553,7 +12553,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 0,
-            "translation": "MIGRATION uzmanı, mleci istikrarı için kritik olan mixed belgelerini analiz etti.",
+            "translation": "Merkez bankası, piyasa istikrarı için kritik olan teşvik kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -12565,12 +12565,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the mleci had reviewed the mleciklerini monographs, the mledeki dispute would not have occurred.\"",
-            "sentence": "If the mleci had reviewed the mleciklerini monographs, the mledeki dispute would not have occurred.",
-            "englishPhrase": "If the mleci had reviewed the mleciklerini monographs, the mledeki dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the survey unit had reviewed the migration statistics, the funding dispute would not have occurred.\"",
+            "sentence": "If the survey unit had reviewed the migration statistics, the funding dispute would not have occurred.",
+            "englishPhrase": "If the survey unit had reviewed the migration statistics, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer mleci mleciklerini monografilerini inceleseydi, mledeki anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Anket birimi göç istatistiklerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -12582,7 +12582,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The mledeki insisted that the mlelerden committee ___ the constitutional mleleri policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The legal commission insisted that the oversight committee ___ the new disclosure policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -12590,7 +12590,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "MLEDEKI uzmanı, mlelerden komitesinin anayasal mleleri politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Hukuk komisyonu, denetim komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12602,8 +12602,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The mleleri will analyze the mleleriyle provided that the mlelerle reform is approved.\"",
-            "sentence": "The mleleri will analyze the mleleriyle provided that the mlelerle reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The rating agency will review the subsidy records provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -12611,8 +12611,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "MLELERI uzmanı, mlelerle reformu onaylandığı sürece mleleriyle konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Derecelendirme kuruluşu, fon talebi onaylandığı sürece teşvik kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l1_q9",
@@ -12623,15 +12623,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The mlelerle approved the guidelines, ___ was supported by the mlenin committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research institute approved the revised protocol, ___ was supported by the steering group.\"",
             "options": [
-              "which was supported by the mlenin committee",
-              "because was supported by the mlenin committee",
-              "although was supported by the mlenin committee",
-              "so was supported by the mlenin committee"
+              "which was supported by the steering group",
+              "because was supported by the steering group",
+              "so was supported by the steering group",
+              "although was supported by the steering group"
             ],
             "correctIndex": 0,
-            "translation": "MLELERLE uzmanı, mlenin komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma enstitüsü, yürütme grubu tarafından desteklenen revize protokolü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -12708,7 +12708,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The modern analyzed the modifier documents, ___ was crucial for the modify stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics review board analyzed the census tables, ___ was crucial for social cohesion.\"",
             "options": [
               "that",
               "whom",
@@ -12716,7 +12716,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 2,
-            "translation": "MODERN uzmanı, modify istikrarı için kritik olan modifier belgelerini analiz etti.",
+            "translation": "Etik inceleme kurulu, toplumsal uyum için kritik olan nüfus sayımı tablolarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -12753,7 +12753,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The monographs insisted that the movie committee ___ the constitutional municipal policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The audit team insisted that the trade council ___ the new tariff policy.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -12761,7 +12761,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "MONOGRAPHS uzmanı, movie komitesinin anayasal municipal politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Denetim ekibi, ticaret konseyinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12793,8 +12793,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The must will analyze the narrative provided that the nationwide reform is approved.\"",
-            "sentence": "The must will analyze the narrative provided that the nationwide reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The excavation team will review the manuscript catalogues provided that the restoration plan is ___ .",
             "options": [
               "approved",
               "approving",
@@ -12802,8 +12802,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "MUST uzmanı, nationwide reformu onaylandığı sürece narrative konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Kazı ekibi, restorasyon planı onaylandığı sürece el yazması kataloglarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l2_q2",
@@ -12814,12 +12814,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the nationwide had reviewed the ndaki monographs, the ndan dispute would not have occurred.\"",
-            "sentence": "If the nationwide had reviewed the ndaki monographs, the ndan dispute would not have occurred.",
-            "englishPhrase": "If the nationwide had reviewed the ndaki monographs, the ndan dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the clinical board had reviewed the assessment forms, the consent dispute would not have occurred.\"",
+            "sentence": "If the clinical board had reviewed the assessment forms, the consent dispute would not have occurred.",
+            "englishPhrase": "If the clinical board had reviewed the assessment forms, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer nationwide ndaki monografilerini inceleseydi, ndan anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Klinik kurul değerlendirme formlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -12831,7 +12831,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ndan insisted that the necessary committee ___ the constitutional neighboring policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the academic board ___ the publication guideline.\"",
             "options": [
               "evaluated",
               "evaluate",
@@ -12839,7 +12839,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 1,
-            "translation": "NDAN uzmanı, necessary komitesinin anayasal neighboring politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, akademik kurulun yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12851,15 +12851,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The neighboring approved the guidelines, ___ was supported by the neither committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The heritage council approved the restoration plan, ___ was supported by the academic board.\"",
             "options": [
-              "so was supported by the neither committee",
-              "because was supported by the neither committee",
-              "although was supported by the neither committee",
-              "which was supported by the neither committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 3,
-            "translation": "NEIGHBORING uzmanı, neither komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Miras konseyi, akademik kurul tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -12871,7 +12871,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The nelimsel analyzed the next documents, ___ was crucial for the niteleyen stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The ethics panel analyzed the patient records, ___ was crucial for patient safety.\"",
             "options": [
               "which",
               "where",
@@ -12879,7 +12879,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 0,
-            "translation": "NELIMSEL uzmanı, niteleyen istikrarı için kritik olan next belgelerini analiz etti.",
+            "translation": "Etik heyet, hasta güvenliği için kritik olan hasta kayıtlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -12891,12 +12891,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the niteleyen had reviewed the niteleyici monographs, the note dispute would not have occurred.\"",
-            "sentence": "If the niteleyen had reviewed the niteleyici monographs, the note dispute would not have occurred.",
-            "englishPhrase": "If the niteleyen had reviewed the niteleyici monographs, the note dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the university senate had reviewed the evaluation files, the funding dispute would not have occurred.\"",
+            "sentence": "If the university senate had reviewed the evaluation files, the funding dispute would not have occurred.",
+            "englishPhrase": "If the university senate had reviewed the evaluation files, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer niteleyen niteleyici monografilerini inceleseydi, note anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Üniversite senatosu değerlendirme dosyalarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -12908,7 +12908,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The note insisted that the nowhere committee ___ the constitutional ntem policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The excavation team insisted that the restoration panel ___ the new conservation policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -12916,7 +12916,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "NOTE uzmanı, nowhere komitesinin anayasal ntem politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Kazı ekibi, restorasyon heyetinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -12928,8 +12928,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The ntem will analyze the observations provided that the observe reform is approved.\"",
-            "sentence": "The ntem will analyze the observations provided that the observe reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The assessment team will review the patient records provided that the consent procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -12937,8 +12937,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "NTEM uzmanı, observe reformu onaylandığı sürece observations konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Değerlendirme ekibi, onam prosedürü onaylandığı sürece hasta kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l2_q9",
@@ -12949,15 +12949,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The observe approved the guidelines, ___ was supported by the observed committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The planning office approved the revised proposal, ___ was supported by the evaluation panel.\"",
             "options": [
-              "because was supported by the observed committee",
-              "although was supported by the observed committee",
-              "which was supported by the observed committee",
-              "so was supported by the observed committee"
+              "which was supported by the evaluation panel",
+              "because was supported by the evaluation panel",
+              "so was supported by the evaluation panel",
+              "although was supported by the evaluation panel"
             ],
             "correctIndex": 2,
-            "translation": "OBSERVE uzmanı, observed komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Planlama ofisi, değerlendirme heyeti tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -13034,7 +13034,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The olumlu analyzed the olumsuz documents, ___ was crucial for the only stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research committee analyzed the evaluation files, ___ was crucial for institutional stability.\"",
             "options": [
               "that",
               "where",
@@ -13042,7 +13042,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "OLUMLU uzmanı, only istikrarı için kritik olan olumsuz belgelerini analiz etti.",
+            "translation": "Araştırma komitesi, kurumsal istikrar için kritik olan değerlendirme dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -13079,7 +13079,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The organized insisted that the original committee ___ the constitutional origins policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The clinical board insisted that the review board ___ the new screening policy.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -13087,7 +13087,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 1,
-            "translation": "ORGANIZED uzmanı, original komitesinin anayasal origins politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Klinik kurul, inceleme kurulunun yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13119,8 +13119,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The other will analyze the outcomes provided that the over reform is approved.\"",
-            "sentence": "The other will analyze the outcomes provided that the over reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The bar association will review the contract annexes provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -13128,8 +13128,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "OTHER uzmanı, over reformu onaylandığı sürece outcomes konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Baro, revize usul onaylandığı sürece sözleşme eklerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l3_q2",
@@ -13140,12 +13140,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the over had reviewed the painting monographs, the paintings dispute would not have occurred.\"",
-            "sentence": "If the over had reviewed the painting monographs, the paintings dispute would not have occurred.",
-            "englishPhrase": "If the over had reviewed the painting monographs, the paintings dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the editorial board had reviewed the evaluation files, the funding dispute would not have occurred.\"",
+            "sentence": "If the editorial board had reviewed the evaluation files, the funding dispute would not have occurred.",
+            "englishPhrase": "If the editorial board had reviewed the evaluation files, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer over painting monografilerini inceleseydi, paintings anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Yayın kurulu değerlendirme dosyalarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -13157,7 +13157,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The paintings insisted that the panel committee ___ the constitutional paragraf policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the academic board ___ the publication guideline.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -13165,7 +13165,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "PAINTINGS uzmanı, panel komitesinin anayasal paragraf politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, akademik kurulun yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13177,15 +13177,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The paragraf approved the guidelines, ___ was supported by the paragraftaki committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The legal commission approved the revised procedure, ___ was supported by the review panel.\"",
             "options": [
-              "although was supported by the paragraftaki committee",
-              "so was supported by the paragraftaki committee",
-              "which was supported by the paragraftaki committee",
-              "because was supported by the paragraftaki committee"
+              "which was supported by the review panel",
+              "because was supported by the review panel",
+              "so was supported by the review panel",
+              "although was supported by the review panel"
             ],
             "correctIndex": 2,
-            "translation": "PARAGRAF uzmanı, paragraftaki komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Hukuk komisyonu, inceleme heyeti tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -13197,7 +13197,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The paragraph analyzed the parliament documents, ___ was crucial for the participle stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The university senate analyzed the evaluation files, ___ was crucial for institutional stability.\"",
             "options": [
               "where",
               "whom",
@@ -13205,7 +13205,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "PARAGRAPH uzmanı, participle istikrarı için kritik olan parliament belgelerini analiz etti.",
+            "translation": "Üniversite senatosu, kurumsal istikrar için kritik olan değerlendirme dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -13217,12 +13217,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the participle had reviewed the passage monographs, the passive dispute would not have occurred.\"",
-            "sentence": "If the participle had reviewed the passage monographs, the passive dispute would not have occurred.",
-            "englishPhrase": "If the participle had reviewed the passage monographs, the passive dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the planning office had reviewed the evaluation files, the funding dispute would not have occurred.\"",
+            "sentence": "If the planning office had reviewed the evaluation files, the funding dispute would not have occurred.",
+            "englishPhrase": "If the planning office had reviewed the evaluation files, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer participle passage monografilerini inceleseydi, passive anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Planlama ofisi değerlendirme dosyalarını incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -13234,7 +13234,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The passive insisted that the past committee ___ the constitutional patterns policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bar association insisted that the oversight committee ___ the new disclosure policy.\"",
             "options": [
               "evaluates",
               "will evaluate",
@@ -13242,7 +13242,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "PASSIVE uzmanı, past komitesinin anayasal patterns politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Baro, denetim komitesinin yeni beyan politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13254,8 +13254,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The patterns will analyze the peace provided that the peer reform is approved.\"",
-            "sentence": "The patterns will analyze the peace provided that the peer reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The editorial board will review the evaluation files provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -13263,8 +13263,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "PATTERNS uzmanı, peer reformu onaylandığı sürece peace konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Yayın kurulu, revize öneri onaylandığı sürece değerlendirme dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l3_q9",
@@ -13275,15 +13275,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The peer approved the guidelines, ___ was supported by the perfect committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research committee approved the revised proposal, ___ was supported by the steering committee.\"",
             "options": [
-              "which was supported by the perfect committee",
-              "so was supported by the perfect committee",
-              "although was supported by the perfect committee",
-              "because was supported by the perfect committee"
+              "which was supported by the steering committee",
+              "because was supported by the steering committee",
+              "so was supported by the steering committee",
+              "although was supported by the steering committee"
             ],
             "correctIndex": 0,
-            "translation": "PEER uzmanı, perfect komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma komitesi, yürütme komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -13360,7 +13360,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The platform analyzed the plaza documents, ___ was crucial for the please stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The editorial board analyzed the evaluation files, ___ was crucial for institutional stability.\"",
             "options": [
               "whom",
               "that",
@@ -13368,7 +13368,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 2,
-            "translation": "PLATFORM uzmanı, please istikrarı için kritik olan plaza belgelerini analiz etti.",
+            "translation": "Yayın kurulu, kurumsal istikrar için kritik olan değerlendirme dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -13405,7 +13405,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The policy insisted that the political committee ___ the constitutional positive policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the academic board ___ the publication guideline.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -13413,7 +13413,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "POLICY uzmanı, political komitesinin anayasal positive politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, akademik kurulun yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13445,8 +13445,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The predicted will analyze the predicting provided that the predicts reform is approved.\"",
-            "sentence": "The predicted will analyze the predicting provided that the predicts reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The central bank will review the tariff schedules provided that the funding request is ___ .",
             "options": [
               "approved",
               "approving",
@@ -13454,8 +13454,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "PREDICTED uzmanı, predicts reformu onaylandığı sürece predicting konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Merkez bankası, fon talebi onaylandığı sürece tarife cetvellerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l4_q2",
@@ -13466,12 +13466,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the predicts had reviewed the preposition monographs, the present dispute would not have occurred.\"",
-            "sentence": "If the predicts had reviewed the preposition monographs, the present dispute would not have occurred.",
-            "englishPhrase": "If the predicts had reviewed the preposition monographs, the present dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the ethics review board had reviewed the migration statistics, the funding dispute would not have occurred.\"",
+            "sentence": "If the ethics review board had reviewed the migration statistics, the funding dispute would not have occurred.",
+            "englishPhrase": "If the ethics review board had reviewed the migration statistics, the funding dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer predicts preposition monografilerini inceleseydi, present anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik inceleme kurulu göç istatistiklerini incelemiş olsaydı, fon anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -13483,7 +13483,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The present insisted that the presenting committee ___ the constitutional preserved policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The heritage council insisted that the restoration panel ___ the new conservation policy.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -13491,7 +13491,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 0,
-            "translation": "PRESENT uzmanı, presenting komitesinin anayasal preserved politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Miras konseyi, restorasyon heyetinin yeni koruma politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13503,15 +13503,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The preserved approved the guidelines, ___ was supported by the prestige committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The audit team approved the funding request, ___ was supported by the monetary committee.\"",
             "options": [
-              "which was supported by the prestige committee",
-              "although was supported by the prestige committee",
-              "so was supported by the prestige committee",
-              "because was supported by the prestige committee"
+              "which was supported by the monetary committee",
+              "because was supported by the monetary committee",
+              "so was supported by the monetary committee",
+              "although was supported by the monetary committee"
             ],
             "correctIndex": 0,
-            "translation": "PRESERVED uzmanı, prestige komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Denetim ekibi, para politikası komitesi tarafından desteklenen fon talebini onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -13523,7 +13523,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The production analyzed the prominent documents, ___ was crucial for the protection stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research institute analyzed the migration statistics, ___ was crucial for social cohesion.\"",
             "options": [
               "that",
               "where",
@@ -13531,7 +13531,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "PRODUCTION uzmanı, protection istikrarı için kritik olan prominent belgelerini analiz etti.",
+            "translation": "Araştırma enstitüsü, toplumsal uyum için kritik olan göç istatistiklerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -13543,12 +13543,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the protection had reviewed the protest monographs, the protested dispute would not have occurred.\"",
-            "sentence": "If the protection had reviewed the protest monographs, the protested dispute would not have occurred.",
-            "englishPhrase": "If the protection had reviewed the protest monographs, the protested dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the manuscript department had reviewed the archival registers, the ownership dispute would not have occurred.\"",
+            "sentence": "If the manuscript department had reviewed the archival registers, the ownership dispute would not have occurred.",
+            "englishPhrase": "If the manuscript department had reviewed the archival registers, the ownership dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer protection protest monografilerini inceleseydi, protested anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "El yazmaları bölümü arşiv defterlerini incelemiş olsaydı, mülkiyet anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -13560,7 +13560,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İktisat"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The protested insisted that the protests committee ___ the constitutional provided policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The trade ministry insisted that the trade council ___ the new tariff policy.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -13568,7 +13568,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "PROTESTED uzmanı, protests komitesinin anayasal provided politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Ticaret bakanlığı, ticaret konseyinin yeni tarife politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13580,8 +13580,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The provided will analyze the provided that the psychological reform is approved.\"",
-            "sentence": "The provided will analyze the provided that the psychological reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The survey unit will review the interview transcripts provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -13589,8 +13589,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "PROVIDED uzmanı, psychological reformu onaylandığı sürece konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Anket birimi, revize protokol onaylandığı sürece görüşme dökümlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l4_q9",
@@ -13601,15 +13601,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The psychological approved the guidelines, ___ was supported by the psychologist committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The manuscript department approved the restoration plan, ___ was supported by the academic board.\"",
             "options": [
-              "although was supported by the psychologist committee",
-              "because was supported by the psychologist committee",
-              "which was supported by the psychologist committee",
-              "so was supported by the psychologist committee"
+              "which was supported by the academic board",
+              "because was supported by the academic board",
+              "so was supported by the academic board",
+              "although was supported by the academic board"
             ],
             "correctIndex": 2,
-            "translation": "PSYCHOLOGICAL uzmanı, psychologist komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "El yazmaları bölümü, akademik kurul tarafından desteklenen restorasyon planını onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -13686,7 +13686,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Tarih"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The published analyzed the publishes documents, ___ was crucial for the qualitative stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The manuscript department analyzed the archival registers, ___ was crucial for archival integrity.\"",
             "options": [
               "whom",
               "which",
@@ -13694,7 +13694,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 1,
-            "translation": "PUBLISHED uzmanı, qualitative istikrarı için kritik olan publishes belgelerini analiz etti.",
+            "translation": "El yazmaları bölümü, arşiv bütünlüğü için kritik olan arşiv defterlerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -13731,7 +13731,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The rapidly insisted that the rare committee ___ the constitutional rarely policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The field team insisted that the ethics committee ___ the integration programme.\"",
             "options": [
               "evaluates",
               "evaluated",
@@ -13739,7 +13739,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "RAPIDLY uzmanı, rare komitesinin anayasal rarely politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Saha ekibi, etik komitenin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13771,8 +13771,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The reached will analyze the reaches provided that the reaching reform is approved.\"",
-            "sentence": "The reached will analyze the reaches provided that the reaching reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The planning office will review the evaluation files provided that the revised proposal is ___ .",
             "options": [
               "approved",
               "approving",
@@ -13780,8 +13780,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "REACHED uzmanı, reaching reformu onaylandığı sürece reaches konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Planlama ofisi, revize öneri onaylandığı sürece değerlendirme dosyalarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l5_q2",
@@ -13792,12 +13792,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the reaching had reviewed the realize monographs, the receive dispute would not have occurred.\"",
-            "sentence": "If the reaching had reviewed the realize monographs, the receive dispute would not have occurred.",
-            "englishPhrase": "If the reaching had reviewed the realize monographs, the receive dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research committee had reviewed the project reports, the authorship conflict would not have occurred.\"",
+            "sentence": "If the research committee had reviewed the project reports, the authorship conflict would not have occurred.",
+            "englishPhrase": "If the research committee had reviewed the project reports, the authorship conflict would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer reaching realize monografilerini inceleseydi, receive anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma komitesi proje raporlarını incelemiş olsaydı, yazarlık uyuşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -13809,7 +13809,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The receive insisted that the received committee ___ the constitutional recent policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the academic board ___ the publication guideline.\"",
             "options": [
               "evaluate",
               "evaluated",
@@ -13817,7 +13817,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "RECEIVE uzmanı, received komitesinin anayasal recent politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, akademik kurulun yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13829,15 +13829,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The recent approved the guidelines, ___ was supported by the records committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The university senate approved the revised proposal, ___ was supported by the steering committee.\"",
             "options": [
-              "which was supported by the records committee",
-              "so was supported by the records committee",
-              "because was supported by the records committee",
-              "although was supported by the records committee"
+              "which was supported by the steering committee",
+              "because was supported by the steering committee",
+              "so was supported by the steering committee",
+              "although was supported by the steering committee"
             ],
             "correctIndex": 0,
-            "translation": "RECENT uzmanı, records komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Üniversite senatosu, yürütme komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -13849,7 +13849,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The referenced analyzed the reform documents, ___ was crucial for the reforms stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The planning office analyzed the evaluation files, ___ was crucial for institutional stability.\"",
             "options": [
               "where",
               "which",
@@ -13857,7 +13857,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 1,
-            "translation": "REFERENCED uzmanı, reforms istikrarı için kritik olan reform belgelerini analiz etti.",
+            "translation": "Planlama ofisi, kurumsal istikrar için kritik olan değerlendirme dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -13869,12 +13869,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the reforms had reviewed the regional monographs, the regulations dispute would not have occurred.\"",
-            "sentence": "If the reforms had reviewed the regional monographs, the regulations dispute would not have occurred.",
-            "englishPhrase": "If the reforms had reviewed the regional monographs, the regulations dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the university senate had reviewed the project reports, the authorship conflict would not have occurred.\"",
+            "sentence": "If the university senate had reviewed the project reports, the authorship conflict would not have occurred.",
+            "englishPhrase": "If the university senate had reviewed the project reports, the authorship conflict would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer reforms regional monografilerini inceleseydi, regulations anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Üniversite senatosu proje raporlarını incelemiş olsaydı, yazarlık uyuşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -13886,7 +13886,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sinema"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The regulations insisted that the reject committee ___ the constitutional rejected policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the evaluation panel ___ the publication guideline.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -13894,7 +13894,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "REGULATIONS uzmanı, reject komitesinin anayasal rejected politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, değerlendirme heyetinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -13906,8 +13906,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The rejected will analyze the remain provided that the represent reform is approved.\"",
-            "sentence": "The rejected will analyze the remain provided that the represent reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research committee will review the project reports provided that the funding application is ___ .",
             "options": [
               "approved",
               "approving",
@@ -13915,8 +13915,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "REJECTED uzmanı, represent reformu onaylandığı sürece remain konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma komitesi, fon başvurusu onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l5_q9",
@@ -13927,15 +13927,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The represent approved the guidelines, ___ was supported by the representing committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The editorial board approved the revised proposal, ___ was supported by the steering committee.\"",
             "options": [
-              "so was supported by the representing committee",
-              "because was supported by the representing committee",
-              "which was supported by the representing committee",
-              "although was supported by the representing committee"
+              "which was supported by the steering committee",
+              "because was supported by the steering committee",
+              "so was supported by the steering committee",
+              "although was supported by the steering committee"
             ],
             "correctIndex": 2,
-            "translation": "REPRESENT uzmanı, representing komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Yayın kurulu, yürütme komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14012,7 +14012,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sanat Tarihi"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The resolve analyzed the resolver documents, ___ was crucial for the respected stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research committee analyzed the project reports, ___ was crucial for academic quality.\"",
             "options": [
               "where",
               "whom",
@@ -14020,7 +14020,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 2,
-            "translation": "RESOLVE uzmanı, respected istikrarı için kritik olan resolver belgelerini analiz etti.",
+            "translation": "Araştırma komitesi, akademik kalite için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -14057,7 +14057,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "İletişim"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The review insisted that the reviewed committee ___ the constitutional revolutionary policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the evaluation panel ___ the publication guideline.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -14065,7 +14065,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "REVIEW uzmanı, reviewed komitesinin anayasal revolutionary politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, değerlendirme heyetinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14097,8 +14097,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The rleyin will analyze the room provided that the scarcely reform is approved.\"",
-            "sentence": "The rleyin will analyze the room provided that the scarcely reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The university senate will review the project reports provided that the funding application is ___ .",
             "options": [
               "approved",
               "approving",
@@ -14106,8 +14106,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "RLEYIN uzmanı, scarcely reformu onaylandığı sürece room konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Üniversite senatosu, fon başvurusu onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l6_q2",
@@ -14118,12 +14118,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the scarcely had reviewed the scholars monographs, the screening dispute would not have occurred.\"",
-            "sentence": "If the scarcely had reviewed the scholars monographs, the screening dispute would not have occurred.",
-            "englishPhrase": "If the scarcely had reviewed the scholars monographs, the screening dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the editorial board had reviewed the project reports, the authorship conflict would not have occurred.\"",
+            "sentence": "If the editorial board had reviewed the project reports, the authorship conflict would not have occurred.",
+            "englishPhrase": "If the editorial board had reviewed the project reports, the authorship conflict would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer scarcely scholars monografilerini inceleseydi, screening anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Yayın kurulu proje raporlarını incelemiş olsaydı, yazarlık uyuşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -14135,7 +14135,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The screening insisted that the scroll committee ___ the constitutional seasonal policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research unit insisted that the review board ___ the new screening policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -14143,7 +14143,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "SCREENING uzmanı, scroll komitesinin anayasal seasonal politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma birimi, inceleme kurulunun yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14155,15 +14155,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The seasonal approved the guidelines, ___ was supported by the security committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The planning office approved the revised proposal, ___ was supported by the steering committee.\"",
             "options": [
-              "so was supported by the security committee",
-              "although was supported by the security committee",
-              "because was supported by the security committee",
-              "which was supported by the security committee"
+              "which was supported by the steering committee",
+              "because was supported by the steering committee",
+              "so was supported by the steering committee",
+              "although was supported by the steering committee"
             ],
             "correctIndex": 3,
-            "translation": "SEASONAL uzmanı, security komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Planlama ofisi, yürütme komitesi tarafından desteklenen revize öneriyi onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14175,7 +14175,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The seldom analyzed the seminal documents, ___ was crucial for the sentaktik stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The university senate analyzed the project reports, ___ was crucial for academic quality.\"",
             "options": [
               "that",
               "where",
@@ -14183,7 +14183,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "SELDOM uzmanı, sentaktik istikrarı için kritik olan seminal belgelerini analiz etti.",
+            "translation": "Üniversite senatosu, akademik kalite için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -14195,12 +14195,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the sentaktik had reviewed the severe monographs, the shifted dispute would not have occurred.\"",
-            "sentence": "If the sentaktik had reviewed the severe monographs, the shifted dispute would not have occurred.",
-            "englishPhrase": "If the sentaktik had reviewed the severe monographs, the shifted dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research unit had reviewed the assessment forms, the consent dispute would not have occurred.\"",
+            "sentence": "If the research unit had reviewed the assessment forms, the consent dispute would not have occurred.",
+            "englishPhrase": "If the research unit had reviewed the assessment forms, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer sentaktik severe monografilerini inceleseydi, shifted anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma birimi değerlendirme formlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -14212,7 +14212,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Antropoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The shifted insisted that the should committee ___ the constitutional sign policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The editorial board insisted that the evaluation panel ___ the publication guideline.\"",
             "options": [
               "evaluates",
               "evaluate",
@@ -14220,7 +14220,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 1,
-            "translation": "SHIFTED uzmanı, should komitesinin anayasal sign politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Yayın kurulu, değerlendirme heyetinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14232,8 +14232,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The sign will analyze the signed provided that the significant reform is approved.\"",
-            "sentence": "The sign will analyze the signed provided that the significant reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The editorial board will review the project reports provided that the funding application is ___ .",
             "options": [
               "approved",
               "approving",
@@ -14241,8 +14241,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "SIGN uzmanı, significant reformu onaylandığı sürece signed konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Yayın kurulu, fon başvurusu onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l6_q9",
@@ -14253,15 +14253,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The significant approved the guidelines, ___ was supported by the significantly committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research unit approved the consent procedure, ___ was supported by the clinical panel.\"",
             "options": [
-              "which was supported by the significantly committee",
-              "so was supported by the significantly committee",
-              "although was supported by the significantly committee",
-              "because was supported by the significantly committee"
+              "which was supported by the clinical panel",
+              "because was supported by the clinical panel",
+              "so was supported by the clinical panel",
+              "although was supported by the clinical panel"
             ],
             "correctIndex": 0,
-            "translation": "SIGNIFICANT uzmanı, significantly komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma birimi, klinik heyet tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14338,7 +14338,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The social analyzed the sociologist documents, ___ was crucial for the sociologists stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The clinical board analyzed the assessment forms, ___ was crucial for patient safety.\"",
             "options": [
               "whom",
               "that",
@@ -14346,7 +14346,7 @@ if (typeof lessons !== 'undefined') {
               "which"
             ],
             "correctIndex": 3,
-            "translation": "SOCIAL uzmanı, sociologists istikrarı için kritik olan sociologist belgelerini analiz etti.",
+            "translation": "Klinik kurul, hasta güvenliği için kritik olan değerlendirme formlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -14383,7 +14383,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Coğrafya"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The soru insisted that the committee ___ the constitutional sovereign policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The planning office insisted that the evaluation panel ___ the publication guideline.\"",
             "options": [
               "evaluate",
               "will evaluate",
@@ -14391,7 +14391,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 0,
-            "translation": "SORU uzmanı, komitesinin anayasal sovereign politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Planlama ofisi, değerlendirme heyetinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14423,8 +14423,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The spite will analyze the spring provided that the staging reform is approved.\"",
-            "sentence": "The spite will analyze the spring provided that the staging reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The planning office will review the project reports provided that the funding application is ___ .",
             "options": [
               "approved",
               "approving",
@@ -14432,8 +14432,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "SPITE uzmanı, staging reformu onaylandığı sürece spring konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Planlama ofisi, fon başvurusu onaylandığı sürece proje raporlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q2",
@@ -14444,12 +14444,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the staging had reviewed the stand monographs, the standards dispute would not have occurred.\"",
-            "sentence": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
-            "englishPhrase": "If the staging had reviewed the stand monographs, the standards dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the research institute had reviewed the field survey records, the authorship conflict would not have occurred.\"",
+            "sentence": "If the research institute had reviewed the field survey records, the authorship conflict would not have occurred.",
+            "englishPhrase": "If the research institute had reviewed the field survey records, the authorship conflict would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer staging stand monografilerini inceleseydi, standards anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Araştırma enstitüsü saha anketi kayıtlarını incelemiş olsaydı, yazarlık uyuşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -14461,7 +14461,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The standards insisted that the standing committee ___ the constitutional stands policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The ethics board insisted that the advisory committee ___ the revised sentencing guideline.\"",
             "options": [
               "will evaluate",
               "evaluates",
@@ -14469,7 +14469,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "STANDARDS uzmanı, standing komitesinin anayasal stands politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Etik kurul, danışma komitesinin revize ceza yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14481,15 +14481,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The stands approved the guidelines, ___ was supported by the state committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The research committee approved the funding application, ___ was supported by the advisory committee.\"",
             "options": [
-              "which was supported by the state committee",
-              "although was supported by the state committee",
-              "because was supported by the state committee",
-              "so was supported by the state committee"
+              "which was supported by the advisory committee",
+              "because was supported by the advisory committee",
+              "so was supported by the advisory committee",
+              "although was supported by the advisory committee"
             ],
             "correctIndex": 0,
-            "translation": "STANDS uzmanı, state komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Araştırma komitesi, danışma komitesi tarafından desteklenen fon başvurusunu onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14501,7 +14501,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The states analyzed the statue documents, ___ was crucial for the statues stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The field team analyzed the migration statistics, ___ was crucial for social cohesion.\"",
             "options": [
               "where",
               "that",
@@ -14509,7 +14509,7 @@ if (typeof lessons !== 'undefined') {
               "whom"
             ],
             "correctIndex": 2,
-            "translation": "STATES uzmanı, statues istikrarı için kritik olan statue belgelerini analiz etti.",
+            "translation": "Saha ekibi, toplumsal uyum için kritik olan göç istatistiklerini analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -14521,12 +14521,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the statues had reviewed the stood monographs, the stop dispute would not have occurred.\"",
-            "sentence": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
-            "englishPhrase": "If the statues had reviewed the stood monographs, the stop dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Koşul Cümlecikleri (If Clauses) rules?<br><br>\"If the ethics board had reviewed the arbitration records, the licensing dispute would not have occurred.\"",
+            "sentence": "If the ethics board had reviewed the arbitration records, the licensing dispute would not have occurred.",
+            "englishPhrase": "If the ethics board had reviewed the arbitration records, the licensing dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer statues stood monografilerini inceleseydi, stop anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Etik kurul tahkim kayıtlarını incelemiş olsaydı, lisanslama anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -14538,7 +14538,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Humanities"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The stop insisted that the strict committee ___ the constitutional strong policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The research committee insisted that the steering committee ___ the publication guideline.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -14546,7 +14546,7 @@ if (typeof lessons !== 'undefined') {
               "evaluates"
             ],
             "correctIndex": 2,
-            "translation": "STOP uzmanı, strict komitesinin anayasal strong politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Araştırma komitesi, yürütme komitesinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14558,8 +14558,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The strong will analyze the structures provided that the student reform is approved.\"",
-            "sentence": "The strong will analyze the structures provided that the student reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The ethics review board will review the interview transcripts provided that the revised protocol is ___ .",
             "options": [
               "approved",
               "approving",
@@ -14567,8 +14567,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "STRONG uzmanı, student reformu onaylandığı sürece structures konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Etik inceleme kurulu, revize protokol onaylandığı sürece görüşme dökümlerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c56_l7_q9",
@@ -14579,15 +14579,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The student approved the guidelines, ___ was supported by the studies committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bar association approved the revised procedure, ___ was supported by the review panel.\"",
             "options": [
-              "which was supported by the studies committee",
-              "although was supported by the studies committee",
-              "so was supported by the studies committee",
-              "because was supported by the studies committee"
+              "which was supported by the review panel",
+              "because was supported by the review panel",
+              "so was supported by the review panel",
+              "although was supported by the review panel"
             ],
             "correctIndex": 0,
-            "translation": "STUDENT uzmanı, studies komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Baro, inceleme heyeti tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14664,7 +14664,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The sudden analyzed the suggest documents, ___ was crucial for the suggested stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The bar association analyzed the case files, ___ was crucial for judicial consistency.\"",
             "options": [
               "which",
               "that",
@@ -14672,7 +14672,7 @@ if (typeof lessons !== 'undefined') {
               "where"
             ],
             "correctIndex": 0,
-            "translation": "SUDDEN uzmanı, suggested istikrarı için kritik olan suggest belgelerini analiz etti.",
+            "translation": "Baro, yargısal tutarlılık için kritik olan dava dosyalarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -14709,7 +14709,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Sosyoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The support insisted that the supported committee ___ the constitutional survey policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The survey unit insisted that the ethics committee ___ the integration programme.\"",
             "options": [
               "evaluate",
               "evaluates",
@@ -14717,7 +14717,7 @@ if (typeof lessons !== 'undefined') {
               "evaluated"
             ],
             "correctIndex": 0,
-            "translation": "SUPPORT uzmanı, supported komitesinin anayasal survey politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Anket birimi, etik komitenin uyum programını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14749,8 +14749,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The barriers will analyze the based provided that the basit reform is approved.\"",
-            "sentence": "The barriers will analyze the based provided that the basit reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The ethics board will review the disclosure statements provided that the revised procedure is ___ .",
             "options": [
               "approved",
               "approving",
@@ -14758,8 +14758,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BARRIERS uzmanı, basit reformu onaylandığı sürece based konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Etik kurul, revize usul onaylandığı sürece beyan belgelerini inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q2",
@@ -14770,12 +14770,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.\"",
-            "sentence": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
-            "englishPhrase": "If the basit had reviewed the beautiful monographs, the because dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the planning office had reviewed the project reports, the authorship conflict would not have occurred.\"",
+            "sentence": "If the planning office had reviewed the project reports, the authorship conflict would not have occurred.",
+            "englishPhrase": "If the planning office had reviewed the project reports, the authorship conflict would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer basit beautiful monografilerini inceleseydi, because anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Planlama ofisi proje raporlarını incelemiş olsaydı, yazarlık uyuşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -14787,7 +14787,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The because insisted that the been committee ___ the constitutional before policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The assessment team insisted that the review board ___ the new screening policy.\"",
             "options": [
               "evaluated",
               "evaluates",
@@ -14795,7 +14795,7 @@ if (typeof lessons !== 'undefined') {
               "will evaluate"
             ],
             "correctIndex": 2,
-            "translation": "BECAUSE uzmanı, been komitesinin anayasal before politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Değerlendirme ekibi, inceleme kurulunun yeni tarama politikasını değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14807,15 +14807,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The before approved the guidelines, ___ was supported by the began committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The ethics board approved the revised procedure, ___ was supported by the oversight committee.\"",
             "options": [
-              "although was supported by the began committee",
-              "which was supported by the began committee",
-              "so was supported by the began committee",
-              "because was supported by the began committee"
+              "which was supported by the oversight committee",
+              "because was supported by the oversight committee",
+              "so was supported by the oversight committee",
+              "although was supported by the oversight committee"
             ],
             "correctIndex": 1,
-            "translation": "BEFORE uzmanı, began komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Etik kurul, denetim komitesi tarafından desteklenen revize usulü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14827,7 +14827,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The behavior analyzed the behavioral documents, ___ was crucial for the behind stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The editorial board analyzed the project reports, ___ was crucial for academic quality.\"",
             "options": [
               "which",
               "whom",
@@ -14835,7 +14835,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 0,
-            "translation": "BEHAVIOR uzmanı, behind istikrarı için kritik olan behavioral belgelerini analiz etti.",
+            "translation": "Yayın kurulu, akademik kalite için kritik olan proje raporlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -14847,12 +14847,12 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.\"",
-            "sentence": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
-            "englishPhrase": "If the behind had reviewed the bekleri monographs, the belirleyin dispute would not have occurred.",
+            "prompt": "Is the following sentence grammatically correct according to Modallar (Modals) rules?<br><br>\"If the assessment team had reviewed the assessment forms, the consent dispute would not have occurred.\"",
+            "sentence": "If the assessment team had reviewed the assessment forms, the consent dispute would not have occurred.",
+            "englishPhrase": "If the assessment team had reviewed the assessment forms, the consent dispute would not have occurred.",
             "isTrue": true,
             "correctAnswer": "true",
-            "translation": "Eğer behind bekleri monografilerini inceleseydi, belirleyin anlaşmazlığı ortaya çıkmazdı.",
+            "translation": "Değerlendirme ekibi değerlendirme formlarını incelemiş olsaydı, onam anlaşmazlığı yaşanmazdı.",
             "explanation": "Past Perfect (had reviewed) ve would not have V3 kullanımı Type 3 kurallarına tamamen uygundur."
           },
           {
@@ -14864,7 +14864,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Hukuk"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The belirleyin insisted that the belirte committee ___ the constitutional biases policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The appeals chamber insisted that the advisory committee ___ the revised sentencing guideline.\"",
             "options": [
               "evaluated",
               "will evaluate",
@@ -14872,7 +14872,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "BELIRLEYIN uzmanı, belirte komitesinin anayasal biases politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Temyiz dairesi, danışma komitesinin revize ceza yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -14884,8 +14884,8 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Choose the correct grammatical form to complete the sentence:<br><br>\"The biases will analyze the bildiren provided that the bilgisi reform is approved.\"",
-            "sentence": "The biases will analyze the bildiren provided that the bilgisi reform is ___ .",
+            "prompt": "Choose the correct grammatical form to complete the sentence:",
+            "sentence": "The research committee will review the laboratory records provided that the funding application is ___ .",
             "options": [
               "approved",
               "approving",
@@ -14893,8 +14893,8 @@ if (typeof lessons !== 'undefined') {
               "to approve"
             ],
             "correctIndex": 0,
-            "translation": "BIASES uzmanı, bilgisi reformu onaylandığı sürece bildiren konusunu analiz edecek.",
-            "explanation": "Provided that yapısından sonra present simple edilgen yapı (is approved) kullanımı doğrudur."
+            "translation": "Araştırma komitesi, fon başvurusu onaylandığı sürece laboratuvar kayıtlarını inceleyecek.",
+            "explanation": "'Provided that' bağlacından sonra gerçek koşul gelir: yan cümle Present Simple kalır ve pasif çatı 'is + V3' olur."
           },
           {
             "id": "c40_l3_merged_q9",
@@ -14905,15 +14905,15 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The bilgisi approved the guidelines, ___ was supported by the bilgisine committee.\"",
+            "prompt": "Select the correct clause to connect with the sentence logically:<br><br>\"The assessment team approved the consent procedure, ___ was supported by the clinical panel.\"",
             "options": [
-              "because was supported by the bilgisine committee",
-              "so was supported by the bilgisine committee",
-              "although was supported by the bilgisine committee",
-              "which was supported by the bilgisine committee"
+              "which was supported by the clinical panel",
+              "because was supported by the clinical panel",
+              "so was supported by the clinical panel",
+              "although was supported by the clinical panel"
             ],
             "correctIndex": 3,
-            "translation": "BILGISI uzmanı, bilgisine komitesi tarafından desteklenen yönergeleri onayladı.",
+            "translation": "Değerlendirme ekibi, klinik heyet tarafından desteklenen onam prosedürünü onayladı.",
             "explanation": "Cümleyi relative clause yapısıyla mantıklı bir şekilde bağlayan en uygun seçenek 'which' kullanımıdır."
           },
           {
@@ -14990,7 +14990,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Psikoloji"
             ],
-            "prompt": "Select the most suitable academic option for the context:<br><br>\"The boundary analyzed the broadcast documents, ___ was crucial for the broadcasted stability.\"",
+            "prompt": "Select the most suitable academic option for the context:<br><br>\"The research unit analyzed the assessment forms, ___ was crucial for patient safety.\"",
             "options": [
               "whom",
               "where",
@@ -14998,7 +14998,7 @@ if (typeof lessons !== 'undefined') {
               "that"
             ],
             "correctIndex": 2,
-            "translation": "BOUNDARY uzmanı, broadcasted istikrarı için kritik olan broadcast belgelerini analiz etti.",
+            "translation": "Araştırma birimi, hasta güvenliği için kritik olan değerlendirme formlarını analiz etti.",
             "explanation": "Virgülden sonra gelen tanımlayıcı olmayan relative clause yapısında 'that' yerine 'which' kullanılmalıdır."
           },
           {
@@ -15035,7 +15035,7 @@ if (typeof lessons !== 'undefined') {
               "İsim Tamlamaları",
               "Politika"
             ],
-            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The bulun insisted that the business committee ___ the constitutional calibrated policy.\"",
+            "prompt": "Select the correct choice that satisfies the syntax guidelines:<br><br>\"The university senate insisted that the steering committee ___ the publication guideline.\"",
             "options": [
               "will evaluate",
               "evaluated",
@@ -15043,7 +15043,7 @@ if (typeof lessons !== 'undefined') {
               "evaluate"
             ],
             "correctIndex": 3,
-            "translation": "BULUN uzmanı, business komitesinin anayasal calibrated politikasını değerlendirmesinde ısrar etti.",
+            "translation": "Üniversite senatosu, yürütme komitesinin yayın yönergesini değerlendirmesinde ısrar etti.",
             "explanation": "Insist that yapısı subjunctive (yalın fiil: evaluate) gerektirir."
           },
           {
@@ -17779,7 +17779,7 @@ if (typeof lessons !== 'undefined') {
           {
             "id": "c40_l3_ex2_q13",
             "type": "multiple-choice",
-            "prompt": "Without gizli koşul edatına uygun seçeneği işaretleyiniz:",
+            "prompt": "Gizli koşul (implied condition) bildiren edata uygun seçeneği işaretleyiniz:",
             "sentence": "___ international legal treaties, cross-border arbitration ___ smoothly.",
             "options": [
               "Because of / will function",
@@ -18117,7 +18117,7 @@ if (typeof lessons !== 'undefined') {
           {
             "id": "c40_l3_ex3_q13",
             "type": "multiple-choice",
-            "prompt": "Unless olumsuz şart bağlacına uygun eylem ikilisini seçiniz:",
+            "prompt": "Olumsuz şart bağlacına uygun eylem ikilisini seçiniz:",
             "sentence": "The board ___ the merger ___ shareholders approve terms unanimously.",
             "options": [
               "will not ratify / unless",
@@ -26021,7 +26021,7 @@ if (typeof lessons !== 'undefined') {
             "type": "titan-boundary-defense",
             "prompt": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
             "question": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
-            "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation validation servers deviated.",
+            "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation servers deviated.",
             "options": [
               "Hem geçmişteki beklenti olasılığını hem de o beklentiye konu olan 'şifrenin çözümlenmiş olması' eylemini katmanlı olarak geçmişe gömer; yazar sorumluluk almaz.",
               "Metinlerin şu an canlı olarak sistem yöneticileri tarafından okunduğunu kanıtlar.",
@@ -28863,7 +28863,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c41_l1_ex1",
         "createdAt": "2026-07-05T22:00:00Z",
         "title": "Alıştırma 1: Sınav Kısayolları ve Yapı Refleksleri",
-        "description": "suggest doing, insist on, it is no use gibi sınavlarda sıkça sorulan yapısal kalıpları test edin.",
+        "description": "suggest doing, insist on, it is no use kalıpları.",
         "questions": [
           {
             "id": "c41_l01_e1_q1",
@@ -29229,7 +29229,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c66_l3_ex1",
         "title": "Alıştırma 1: Zaman Soruları ve Tarih Belirteçleri",
-        "description": "Net geçmiş zaman belirteçleri ile present/past perfect zaman yapılarını ayırt etme pratiği yapın.",
+        "description": "Geçmiş zaman belirteçleriyle present/past perfect ayrımı.",
         "questions": [
           {
             "id": "c66_l3_q1",
@@ -30644,7 +30644,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "c66_l7_ex1",
         "title": "Alıştırma 1: Sıralama Sıfatları ve Kısaltma Kuralları",
-        "description": "the first, the only, the last gibi yapılardan sonra 'to' kullanımını ve kısaltma reflekslerini test edin.",
+        "description": "the first, the only, the last sonrası 'to' ve kısaltma refleksi.",
         "questions": [
           {
             "id": "c66_l7_q1",
@@ -31231,7 +31231,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c49_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 1: Uzun Yüklem Öbekleri ve Gramer Denemesi (Seviye 1)",
-        "description": "Uzun edilgen eylem zincirleri ve karma gramer sorularıyla dil bilgisi reflekslerinizi test edin.",
+        "description": "Uzun edilgen eylem zincirleri ve karma gramer refleksleri.",
         "questions": [
           {
             "id": "c49_l1_ex1_q1",
@@ -31403,7 +31403,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c49_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 2: Uzun Yüklem Öbekleri ve Gramer Denemesi (Seviye 2)",
-        "description": "İleri düzey karmaşık eylem zincirlerini ve dil bilgisi çeldiricilerini eleme pratikleri yapın.",
+        "description": "İleri düzey eylem zincirleri ve çeldirici elemesi.",
         "questions": [
           {
             "id": "c49_l1_ex2_q1",
@@ -31919,7 +31919,7 @@ if (typeof lessons !== 'undefined') {
             "type": "titan-boundary-defense",
             "prompt": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
             "question": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
-            "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation validation servers deviated.",
+            "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation servers deviated.",
             "options": [
               "Hem geçmişteki beklenti olasılığını hem de o beklentiye konu olan 'şifrenin çözümlenmiş olması' eylemini katmanlı olarak geçmişe gömer; yazar sorumluluk almaz.",
               "Metinlerin şu an canlı olarak sistem yöneticileri tarafından okunduğunu kanıtlar.",
@@ -32185,7 +32185,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c50_l1_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 1: Uzun Yüklem Analizi ve Hata Yakalama (Başlangıç)",
-        "description": "Uzun yüklem zincirlerindeki sinsi syntax hatalarını ve yapısal bozuklukları bulun.",
+        "description": "Uzun yüklem zincirlerinde syntax hataları.",
         "questions": [
           {
             "id": "c50_l1_ex1_q1",
@@ -32235,7 +32235,7 @@ if (typeof lessons !== 'undefined') {
             "type": "titan-boundary-defense",
             "prompt": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
             "question": "Bu 8 öğeli sınır yapıda, pembe ve yeşil kodlu iki büyük 'Perfect' motorun (have been expected ve to have been) arka arkaya dizilmesinin yarattığı mantık kalkanını açıklayın.",
-            "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation validation servers deviated.",
+            "sentence": "The cryptographic scripts <span style='color:#ff6b6b;font-weight:bold;'>could have been expected to have been read</span>before the validation servers deviated.",
             "options": [
               "Hem geçmişteki beklenti olasılığını hem de o beklentiye konu olan 'şifrenin çözümlenmiş olması' eylemini katmanlı olarak geçmişe gömer; yazar sorumluluk almaz.",
               "Metinlerin şu an canlı olarak sistem yöneticileri tarafından okunduğunu kanıtlar.",
@@ -32336,7 +32336,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c50_l1_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 2: Uzun Yüklem Analizi ve Hata Yakalama (İleri Düzey)",
-        "description": "En karmaşık mega eylem zincirlerinde çeldiricilerin elenmesini sağlayan sinsi hataları avlayın.",
+        "description": "Mega eylem zincirlerinde sinsi hatalar.",
         "questions": [
           {
             "id": "c50_l1_ex2_q1",
@@ -33112,7 +33112,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c49_l3_ex1",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 1: Uzun Yüklemli Cümle Çevirileri (İngilizce-Türkçe)",
-        "description": "Uzun yüklem zincirli cümleleri yüklem takibi yaparak Türkçe karşılıklarıyla eşleştirin.",
+        "description": "Uzun yüklemli cümlelerin Türkçe karşılıkları.",
         "questions": [
           {
             "id": "c49_l3_ex1_q1",
@@ -33288,7 +33288,7 @@ if (typeof lessons !== 'undefined') {
         "id": "c49_l3_ex2",
         "createdAt": "2026-07-06T20:30:00Z",
         "title": "Alıştırma 2: Paragraf Okuma ve Soru Çözümleme",
-        "description": "metinleri okuma, ana fikir çıkarma ve paragraf sorularını doğru yanıtlama pratikleri yapın.",
+        "description": "okuma, ana fikir çıkarma ve paragraf soruları.",
         "questions": [
           {
             "id": "c49_l3_ex2_q1",
@@ -34261,7 +34261,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l1_ex1",
         "title": "Alıştırma 1: Zamir ve Referans İfade Takibi (Zamir Soruları)",
-        "description": "Paragraftaki this, the former, the latter gibi zamirlerin hangi isme gönderdiğini bulun.",
+        "description": "this, the former, the latter gibi zamirlerin göndergesi.",
         "questions": [
           {
             "id": "u50_l1_q1",
@@ -34436,7 +34436,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l1_ex2",
         "title": "Alıştırma 2: Paragrafta Geçiş Bağlaçları (Cloze Test)",
-        "description": "Paragraftaki cümleler arasındaki mantıksal geçişi sağlayan en uygun bağlacı bulun.",
+        "description": "Cümleler arası mantıksal geçiş bağlacı.",
         "questions": [
           {
             "id": "u50_l1_q13",
@@ -34637,7 +34637,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l2_ex1",
         "title": "Alıştırma 1: Akışı Bozan Cümleyi Bulma (İlgisiz Cümle Soruları)",
-        "description": "Paragrafın genel anlam bütünlüğünü ve tutarlılığını bozan (akışı bozan) numaralandırılmış cümleyi tespit edin.",
+        "description": "Paragrafın anlam bütünlüğünü bozan cümle.",
         "questions": [
           {
             "id": "u50_l2_q1",
@@ -34824,7 +34824,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l2_ex2",
         "title": "Alıştırma 2: Karışık Cümleleri Sıralama (Paragraf Oluşturma)",
-        "description": "Karışık cümleleri giriş, gelişme ve sonuç akışı oluşturacak şekilde sıralayın.",
+        "description": "Karışık cümlelerden giriş-gelişme-sonuç akışı.",
         "questions": [
           {
             "id": "u50_l2_q13",
@@ -35061,7 +35061,7 @@ if (typeof lessons !== 'undefined') {
       {
         "id": "u50_l3_ex1",
         "title": "Alıştırma 1: Paragrafı Ana Fikriyle Eşleştirme (Ana Fikir Bulma)",
-        "description": "paragrafı en doğru şekilde özetleyen ana fikir/başlık cümlesiyle eşleştirerek okuduğunu anlama pratiği yapın.",
+        "description": "paragrafı özetleyen ana fikir/başlık cümlesi.",
         "questions": [
           {
             "id": "u50_l3_q1",
