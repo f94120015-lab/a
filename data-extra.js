@@ -28027,7 +28027,7 @@ if (typeof lessons !== 'undefined') {
             "type": "structure-match",
             "prompt": "Renklendirilmiş bu zirve yapının ekonomi net kronolojik edilgen karşılığı hangisidir?",
             "question": "Renklendirilmiş bu zirve yapının ekonomi net kronolojik edilgen karşılığı hangisidir?",
-            "sentence": "The ancient asset altyapısı <span style='color:#ff6b6b;font-weight:bold;'>might have been rumored to have been mutated</span>by Byzantine validation procedures.",
+            "sentence": "The ancient asset infrastructure <span style='color:#ff6b6b;font-weight:bold;'>might have been rumored to have been mutated</span> by Byzantine validation procedures.",
             "options": [
               "mutasyona uğratılmış olduğunun söylenmiş olması geçmişte bir ihtimaldi",
               "mutasyona uğratılması geçmişte planlanmıştı",
@@ -31702,7 +31702,7 @@ if (typeof lessons !== 'undefined') {
             "type": "structure-match",
             "prompt": "Renklendirilmiş bu zirve yapının ekonomi net kronolojik edilgen karşılığı hangisidir?",
             "question": "Renklendirilmiş bu zirve yapının ekonomi net kronolojik edilgen karşılığı hangisidir?",
-            "sentence": "The ancient asset altyapısı <span style='color:#ff6b6b;font-weight:bold;'>might have been rumored to have been mutated</span>by Byzantine validation procedures.",
+            "sentence": "The ancient asset infrastructure <span style='color:#ff6b6b;font-weight:bold;'>might have been rumored to have been mutated</span> by Byzantine validation procedures.",
             "options": [
               "mutasyona uğratılmış olduğunun söylenmiş olması geçmişte bir ihtimaldi",
               "mutasyona uğratılması geçmişte planlanmıştı",
