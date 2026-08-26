@@ -8950,6 +8950,191 @@ function formulaRowsHTML(raw, opts) {
     title ? `<div class="rule-formula-title">${esc(title)}</div>` : ''}${cells}</div>`;
 }
 
+// ── "Nasıl çevrilir?" kartları ──────────────────────────────────────────────
+// Ders kartı kalıpları tek satırda sıralıyor ("... that + Clause / The fact
+// that + Clause / It is + Adj + that + Clause"), örnek satırı ise bunlardan
+// yalnızca birini gösteriyordu: öğrenci kalıbı görüyor, o kalıbın Türkçeye
+// nasıl döndüğünü göremiyordu. Her yapısal öğe artık kendi kartını alıyor.
+// Kartların kaynağı önce translation-guide.js'teki elle yazılmış reçeteler,
+// yoksa dersin kendi formula/example alanlarından türetilen çiftlerdir.
+
+const RULE_PLACEHOLDER_WORDS = new Set([
+  'subject', 'verb', 'noun', 'object', 'clause', 'main', 'adjective', 'adj',
+  'adverb', 'phrase', 'sentence', 'word', 'base', 'form', 'svo', 'be', 'v1',
+  'v2', 'v3', 'ing', 'past', 'present', 'perfect', 'participle', 'gerund',
+  'infinitive', 'connector', 'transition', 'time', 'and', 'or', 'the', 'a', 'an',
+  'vs', 'veya', 'ile', 've', 'karma', 'mixed', 'syntax'
+]);
+
+function looksTurkishText(text) {
+  const s = String(text || '').trim();
+  if (!/[A-Za-zÇĞİÖŞÜçğıöşü]/.test(s)) return false;
+  if (/[çğıöşüÇĞİÖŞÜ]/.test(s)) return true;
+  // Türkçeye özgü harf taşımayan çeviriler de var ("Gecikme nedeniyle"): İngilizce
+  // işlevsel sözcüklerden hiçbiri geçmiyorsa metni Türkçe sayıyoruz.
+  return !/\b(the|a|an|is|are|was|were|be|been|of|to|in|on|for|with|by|from|that|and|or|as|it|they|we|you|he|she|has|have|had|will|would|can|could|not)\b/i.test(s);
+}
+
+// "Zaman: As soon as the build finishes (Yapı biter bitmez)" gibi satırları
+// etiket / İngilizce / Türkçe üçlüsüne ayırır.
+function parseTranslationExamples(raw) {
+  const text = String(raw || '').replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, ' ')
+    .replace(/[ \t]+/g, ' ').trim();
+  if (!text) return [];
+  return text.split(/\s*[•·]\s*|\n+|\s\|\s/).map(s => s.trim()).filter(Boolean).map(item => {
+    let label = '';
+    const head = item.match(/^([^:()]{2,44}):\s*(\S.*)$/);
+    // Baştaki etiket ancak devamında hâlâ bir örnek varsa etikettir.
+    if (head && (head[2].includes(':') || /\([^)]{3,}\)\s*$/.test(head[2]))) {
+      label = head[1].trim(); item = head[2].trim();
+    }
+    let en = item, tr = '';
+    const paren = item.match(/^(.*\S)\s*\(([^()]{3,})\)\s*$/);
+    if (paren && looksTurkishText(paren[2])) {
+      en = paren[1].trim(); tr = paren[2].trim();
+    } else {
+      const cut = item.lastIndexOf(': ');
+      if (cut > 0 && looksTurkishText(item.slice(cut + 2))) {
+        en = item.slice(0, cut).trim(); tr = item.slice(cut + 2).trim();
+      }
+    }
+    return { label, en, tr };
+  }).filter(x => x.en);
+}
+
+// Formül satırındaki kalıpları ayırır. " / " ancak iki yakası da kendi başına
+// bir kalıpsa böler; "Subject + Be + Noun / Adjective" tek kalıptır.
+function splitFormulaVariants(raw) {
+  let text = String(raw || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
+    .replace(/^\d+[.)]\s*/, '');
+  const head = text.match(/^([^:]{3,70}):\s*(\S.*)$/);
+  if (head && /[➔→|·]|VEYA/.test(head[2])) text = head[2].trim();
+  if (!text) return [];
+
+  const trySplit = (sep) => {
+    const parts = text.split(sep).map(s => s.trim()).filter(Boolean);
+    return parts.length > 1 ? parts : null;
+  };
+  let parts = trySplit(/\s*\|\s*/) || trySplit(/\s+·\s+/) || trySplit(/\s+VEYA\s+/i);
+  if (!parts) {
+    const slash = text.split(/\s+\/\s+/).map(s => s.trim()).filter(Boolean);
+    // Her parça kendi başına kalıp gibi durmuyorsa (tek sözcüklük "Adjective"
+    // gibi) bölme; o eğik çizgi kalıbın içindeki bir seçenektir.
+    if (slash.length > 1 && slash.every(p => /\+/.test(p) || p.length >= 14)) parts = slash;
+  }
+  return (parts || [text]).slice(0, 6);
+}
+
+// Kalıbın ayırt edici sözcükleri: yer tutucular ("Subject", "Clause") atılır,
+// geriye when / the fact that / despite gibi gerçek işaretler kalır.
+function formulaDetectTokens(pattern) {
+  const clean = String(pattern || '').replace(/<[^>]+>/g, ' ').replace(/[()]/g, ' ');
+  const tokens = [];
+  const fact = clean.match(/\b(the fact that|in order to|so as to|as long as|provided that|by the time|no sooner|in addition to|in spite of|rather than|in terms of|as if|as though|so that|such as|because of|due to|used to|about to|supposed to|likely to|bound to|unable to|willing to)\b/gi) || [];
+  fact.forEach(f => tokens.push(f.toLowerCase()));
+  clean.split(/[^A-Za-z'-]+/).forEach(w => {
+    const low = w.toLowerCase();
+    if (low.length < 2 || RULE_PLACEHOLDER_WORDS.has(low)) return;
+    if (/^v\d$/.test(low)) return;
+    tokens.push(low);
+  });
+  return [...new Set(tokens)];
+}
+
+// Etiketli örneklerden ("İsim Alan: Because of the latency") üretilen kartların
+// kalıp adı Türkçedir; hangi soruya uyduğunu örneğin kendisindeki bağlaç
+// işaretlerinden çıkarıyoruz.
+const RULE_MARKERS = [
+  'the fact that', 'in order to', 'so as to', 'as long as', 'provided that',
+  'by the time', 'no sooner', 'in addition to', 'in spite of', 'rather than',
+  'in terms of', 'as soon as', 'because of', 'due to', 'owing to', 'such as',
+  'for example', 'for instance', 'that is', 'as if', 'as though', 'so that',
+  'even though', 'used to', 'about to', 'supposed to', 'likely to', 'bound to',
+  'unable to', 'willing to', 'accustomed to', 'reluctant to', 'doomed to',
+  'although', 'though', 'despite', 'however', 'nevertheless', 'therefore',
+  'consequently', 'moreover', 'furthermore', 'whereas', 'while', 'unless',
+  'because', 'since', 'after', 'before', 'when', 'whether', 'whatever',
+  'whoever', 'whenever', 'wherever', 'neither', 'either', 'hardly', 'scarcely',
+  'barely', 'more than', 'as as', 'the same as'
+];
+
+function markerTokens(text) {
+  const low = String(text || '').toLowerCase();
+  return RULE_MARKERS.filter(m => low.includes(m));
+}
+
+function deriveTranslationCards(lesson) {
+  const variants = splitFormulaVariants(lesson.formula);
+  const examples = parseTranslationExamples(lesson.example);
+  if (!variants.length && !examples.length) return [];
+
+  // Örnekler kendi etiketlerini taşıyorsa ("Zaman:", "Amaç:") kalıp adı olarak
+  // onlar kullanılır; veri zaten öğeleri ayırmış demektir.
+  if (examples.length > 1 && examples.every(e => e.label)) {
+    return examples.map(e => ({ pattern: e.label, en: e.en, tr: e.tr, tip: '', detect: markerTokens(e.en) }));
+  }
+  if (variants.length <= 1) {
+    const pattern = variants[0] || '';
+    return examples.length
+      ? examples.map(e => ({ pattern: e.label || pattern, en: e.en, tr: e.tr, tip: '', detect: markerTokens(e.en) }))
+      : [];
+  }
+  if (examples.length === variants.length) {
+    return variants.map((v, i) => {
+      const detect = formulaDetectTokens(v);
+      return {
+        pattern: v, en: examples[i].en, tr: examples[i].tr, tip: '',
+        detect: detect.length ? detect : markerTokens(examples[i].en)
+      };
+    });
+  }
+  // Sayılar tutmuyorsa her örnek, işaretlerini taşıdığı kalıba iliştirilir.
+  return variants.map(v => {
+    const tokens = formulaDetectTokens(v);
+    const hit = examples.find(e => tokens.some(t => e.en.toLowerCase().includes(t)));
+    return { pattern: v, en: hit ? hit.en : '', tr: hit ? hit.tr : '', tip: '', detect: tokens };
+  });
+}
+
+function lessonTranslationCards(lesson) {
+  if (!lesson) return [];
+  const recipes = (typeof window !== 'undefined' && window.TRANSLATION_RECIPES) || {};
+  const curated = recipes[String(lesson.id)] || recipes[String(lesson.displayId)];
+  const cards = Array.isArray(curated) && curated.length
+    ? curated.map(c => ({ ...c }))
+    : deriveTranslationCards(lesson);
+  return cards.filter(c => c && (c.en || c.pattern));
+}
+
+// Sorunun İngilizce yüzü: hangi kalıbın çalıştığını buradan anlıyoruz.
+function questionEnglishText(question) {
+  if (!question) return '';
+  const parts = [question.enSentence, question.sentence, question.mainSentence,
+                 question.paragraph, question.correctSentence, question.prompt];
+  if (Array.isArray(question.sentenceTokens)) parts.push(question.sentenceTokens.join(' '));
+  if (Array.isArray(question.correctOrder)) parts.push(question.correctOrder.join(' '));
+  return parts.filter(Boolean).map(t => String(t).replace(/<[^>]+>/g, ' ')).join(' ')
+    .replace(/\s+/g, ' ').toLowerCase();
+}
+
+function matchTranslationCards(cards, question) {
+  const text = questionEnglishText(question);
+  if (!text) return [];
+  return cards.filter(c => (c.detect || []).some(tok => {
+    const t = String(tok || '').toLowerCase().trim();
+    return t.length > 1 && text.includes(t);
+  }));
+}
+
+function translationCardHTML(card, mask) {
+  const esc = s => String(s || '').replace(/[&<>]/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[ch]));
+  const pattern = card.pattern ? `<div class="tr-card-pattern">${esc(mask(card.pattern))}</div>` : '';
+  const en = card.en ? `<div class="tr-card-en">${esc(mask(card.en))}</div>` : '';
+  const tr = card.tr ? `<div class="tr-card-tr"><span aria-hidden="true">↳</span> ${esc(mask(card.tr))}</div>` : '';
+  const tip = card.tip ? `<div class="tr-card-tip">${esc(mask(card.tip))}</div>` : '';
+  return `<div class="tr-card">${pattern}${en}${tr}${tip}</div>`;
+}
+
 function renderLessonRuleHint(body, question) {
   // Tekrar ve kelime türetme oturumlarında sorular başka derslerden toplanır;
   // currentLesson o sorunun dersi olmadığı için yanlış kuralı gösterirdi.
@@ -8984,11 +9169,33 @@ function renderLessonRuleHint(body, question) {
     <div style="margin-top: 6px; font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5;">
       ${maskAnswer(content.desc)}
     </div>`);
-  if (content.example && !leaksOption(content.example)) rows.push(`
+
+  // Her yapısal öğe kendi çeviri kartını alır. Kartlar cevabı ele veriyorsa
+  // (bağlaç seçme sorularında kalıbın adı doğrudan şıkkın kendisidir) daralt
+  // ma yapılmaz: tek kart göstermek cevabı işaret etmenin bir başka yoludur.
+  const allCards = lessonTranslationCards(currentLesson);
+  const safeCards = allCards.filter(c => !leaksOption(c.pattern) && !leaksOption(c.en));
+  const narrowable = safeCards.length === allCards.length;
+  const matched = narrowable ? matchTranslationCards(safeCards, question) : [];
+  // Birden çok kalıp eşleşse bile (since hem zaman hem sebep olabilir) eşleşen
+  // alt küme tamamından darsa onu göstermek panoyu sadeleştirir.
+  const focused = matched.length && matched.length < safeCards.length ? matched : [];
+  const shown = focused.length ? focused : safeCards;
+
+  if (shown.length) rows.push(`
+    <div class="tr-cards" data-mode="${focused.length ? 'focused' : 'all'}">
+      <div class="tr-cards-head">Nasıl çevrilir?</div>
+      <div class="tr-cards-list">${shown.map(c => translationCardHTML(c, maskAnswer)).join('')}</div>
+      ${focused.length ? `
+        <button type="button" class="tr-cards-more">Diğer ${safeCards.length - focused.length} kalıbı da göster</button>` : ''}
+    </div>`);
+  else if (content.example && !leaksOption(content.example)) rows.push(`
     <div style="margin-top: 6px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; font-style: italic;">
       ${maskAnswer(content.example)}
     </div>`);
   if (!rows.length) return false;
+
+  const chipLabel = open => open ? '🔁 Çeviri ipucunu gizle' : '🔁 Nasıl çevrilir?';
 
   body.insertAdjacentHTML('afterbegin', `
     <div class="lesson-hint-wrap" style="width: 100%; margin: 0 auto 14px auto;">
@@ -8997,7 +9204,7 @@ function renderLessonRuleHint(body, question) {
                 style="font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;
                        background: rgba(139, 126, 200, 0.15); color: var(--accent-primary, #8b7ec8);
                        border: 1px solid rgba(139, 126, 200, 0.3); cursor: pointer;">
-          📐 ${lessonHintOpen ? 'Kuralı gizle' : 'Kuralı hatırlat'}
+          ${chipLabel(lessonHintOpen)}
         </button>
       </div>
       <div class="lesson-hint-panel"
@@ -9015,7 +9222,17 @@ function renderLessonRuleHint(body, question) {
     // Tercih oturum boyunca hatırlanır; öğrenci her soruda yeniden açmasın.
     lessonHintOpen = !lessonHintOpen;
     panel.style.display = lessonHintOpen ? 'block' : 'none';
-    chip.textContent = lessonHintOpen ? '📐 Kuralı gizle' : '📐 Kuralı hatırlat';
+    chip.textContent = chipLabel(lessonHintOpen);
+  };
+
+  // Soruya uyan kalıp bulunduğunda panel yalnızca onu gösterir; öğrenci isterse
+  // dersin bütün kalıplarını tek dokunuşla açabilir.
+  const more = wrap.querySelector('.tr-cards-more');
+  if (more) more.onclick = () => {
+    const list = wrap.querySelector('.tr-cards-list');
+    list.innerHTML = safeCards.map(c => translationCardHTML(c, maskAnswer)).join('');
+    wrap.querySelector('.tr-cards').dataset.mode = 'all';
+    more.remove();
   };
   return true;
 }

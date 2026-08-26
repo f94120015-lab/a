@@ -12641,6 +12641,40 @@ nDown 0.3s ease;
 }
 [data-theme="dark"] .rule-formula-row { background: rgba(139, 126, 200, 0.16); }
 
+/* ── "Nasıl çevrilir?" kartları ──────────────────────────────────────────── */
+/* Her yapısal öğe kendi kartında: kalıp, İngilizce örnek, Türkçe karşılığı ve
+   çeviri sırasında hangi ekin kullanılacağını söyleyen tek satırlık not. */
+.tr-cards { margin-top: 10px; }
+.tr-cards-head {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 6px;
+}
+.tr-cards-list { display: flex; flex-direction: column; gap: 8px; }
+.tr-card {
+  padding: 8px 10px; border-radius: var(--radius-md);
+  background: var(--bg-secondary, rgba(139, 126, 200, 0.06));
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-primary, #6366F1);
+}
+.tr-card-pattern {
+  font-size: 0.76rem; font-weight: 800; line-height: 1.4;
+  color: var(--accent-primary, #6366F1); margin-bottom: 4px; overflow-wrap: anywhere;
+}
+.tr-card-en { font-size: 0.82rem; line-height: 1.45; color: var(--text-primary); }
+.tr-card-tr { font-size: 0.82rem; line-height: 1.45; color: var(--text-secondary); margin-top: 2px; }
+.tr-card-tr span { color: var(--accent-primary, #6366F1); font-weight: 800; margin-right: 2px; }
+.tr-card-tip {
+  margin-top: 5px; padding-top: 5px; border-top: 1px dashed var(--border-color);
+  font-size: 0.74rem; line-height: 1.45; color: var(--text-muted);
+}
+.tr-cards-more {
+  margin-top: 8px; padding: 4px 10px; border-radius: 9999px; cursor: pointer;
+  font-size: 0.7rem; font-weight: 700;
+  background: transparent; color: var(--accent-primary, #8b7ec8);
+  border: 1px dashed rgba(139, 126, 200, 0.5);
+}
+[data-theme="dark"] .tr-card { background: rgba(139, 126, 200, 0.1); }
+
 /* Formül rozeti satırın solunda kalır, kalıplar sağda kendi sütununu kurar. */
 .grammar-formula { align-items: flex-start; }
 .grammar-formula .formula-badge { flex-shrink: 0; margin-top: 3px; }
