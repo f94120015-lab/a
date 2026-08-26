@@ -31082,20 +31082,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Kesin Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "yesterday analyzed data",
-                "right": "verileri analiz etti"
+                "left": "analyzed data yesterday",
+                "right": "dün verileri analiz etti"
               },
               {
-                "left": "yesterday published research",
-                "right": "araştırmayı yayımladı"
+                "left": "published research yesterday",
+                "right": "dün araştırmayı yayımladı"
               },
               {
-                "left": "yesterday examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "examined historical records yesterday",
+                "right": "dün tarihi kayıtları inceledi"
               },
               {
-                "left": "yesterday observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "observed cognitive patterns yesterday",
+                "right": "dün bilişsel kalıpları gözlemledi"
               }
             ],
             "grammarTags": [
@@ -31451,20 +31451,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "while analyzed data",
-                "right": "verileri analiz etti"
+                "left": "while analyzing data",
+                "right": "verileri analiz ederken"
               },
               {
-                "left": "while published research",
-                "right": "araştırmayı yayımladı"
+                "left": "while publishing research",
+                "right": "araştırmayı yayımlarken"
               },
               {
-                "left": "while examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "while examining historical records",
+                "right": "tarihi kayıtları incelerken"
               },
               {
-                "left": "while observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "while observing cognitive patterns",
+                "right": "bilişsel kalıpları gözlemlerken"
               }
             ],
             "grammarTags": [
@@ -31814,20 +31814,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Yakın Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "recently analyzed data",
-                "right": "verileri analiz etti"
+                "left": "has recently analyzed data",
+                "right": "son zamanlarda verileri analiz etti"
               },
               {
-                "left": "recently published research",
-                "right": "araştırmayı yayımladı"
+                "left": "has recently published research",
+                "right": "son zamanlarda araştırmayı yayımladı"
               },
               {
-                "left": "recently examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "has recently examined historical records",
+                "right": "son zamanlarda tarihi kayıtları inceledi"
               },
               {
-                "left": "recently observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "has recently observed cognitive patterns",
+                "right": "son zamanlarda bilişsel kalıpları gözlemledi"
               }
             ],
             "grammarTags": [
@@ -32177,20 +32177,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Kesintisiz Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "for 5 years analyzed data",
-                "right": "verileri analiz etti"
+                "left": "has been analyzing data for 5 years",
+                "right": "5 yıldır verileri analiz ediyor"
               },
               {
-                "left": "for 5 years published research",
-                "right": "araştırmayı yayımladı"
+                "left": "has been publishing research for 5 years",
+                "right": "5 yıldır araştırma yayımlıyor"
               },
               {
-                "left": "for 5 years examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "has been examining historical records for 5 years",
+                "right": "5 yıldır tarihi kayıtları inceliyor"
               },
               {
-                "left": "for 5 years observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "has been observing cognitive patterns for 5 years",
+                "right": "5 yıldır bilişsel kalıpları gözlemliyor"
               }
             ],
             "grammarTags": [
@@ -32544,20 +32544,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Gelecek Zaman Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "tomorrow analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will analyze data tomorrow",
+                "right": "yarın verileri analiz edecek"
               },
               {
-                "left": "tomorrow published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will publish research tomorrow",
+                "right": "yarın araştırmayı yayımlayacak"
               },
               {
-                "left": "tomorrow examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will examine historical records tomorrow",
+                "right": "yarın tarihi kayıtları inceleyecek"
               },
               {
-                "left": "tomorrow observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will observe cognitive patterns tomorrow",
+                "right": "yarın bilişsel kalıpları gözlemleyecek"
               }
             ],
             "grammarTags": [
@@ -32905,20 +32905,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Sınır Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "by 2030 analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will have analyzed the data by 2030",
+                "right": "2030'a kadar verileri analiz etmiş olacak"
               },
               {
-                "left": "by 2030 published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will have published the research by 2030",
+                "right": "2030'a kadar araştırmayı yayımlamış olacak"
               },
               {
-                "left": "by 2030 examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will have examined the historical records by 2030",
+                "right": "2030'a kadar tarihi kayıtları incelemiş olacak"
               },
               {
-                "left": "by 2030 observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will have observed the cognitive patterns by 2030",
+                "right": "2030'a kadar bilişsel kalıpları gözlemlemiş olacak"
               }
             ],
             "grammarTags": [
@@ -44293,20 +44293,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Kesin Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "yesterday analyzed data",
-                "right": "verileri analiz etti"
+                "left": "analyzed data yesterday",
+                "right": "dün verileri analiz etti"
               },
               {
-                "left": "yesterday published research",
-                "right": "araştırmayı yayımladı"
+                "left": "published research yesterday",
+                "right": "dün araştırmayı yayımladı"
               },
               {
-                "left": "yesterday examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "examined historical records yesterday",
+                "right": "dün tarihi kayıtları inceledi"
               },
               {
-                "left": "yesterday observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "observed cognitive patterns yesterday",
+                "right": "dün bilişsel kalıpları gözlemledi"
               }
             ],
             "grammarTags": [
@@ -44662,20 +44662,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "while analyzed data",
-                "right": "verileri analiz etti"
+                "left": "while analyzing data",
+                "right": "verileri analiz ederken"
               },
               {
-                "left": "while published research",
-                "right": "araştırmayı yayımladı"
+                "left": "while publishing research",
+                "right": "araştırmayı yayımlarken"
               },
               {
-                "left": "while examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "while examining historical records",
+                "right": "tarihi kayıtları incelerken"
               },
               {
-                "left": "while observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "while observing cognitive patterns",
+                "right": "bilişsel kalıpları gözlemlerken"
               }
             ],
             "grammarTags": [
@@ -45025,20 +45025,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Yakın Geçmiş Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "recently analyzed data",
-                "right": "verileri analiz etti"
+                "left": "has recently analyzed data",
+                "right": "son zamanlarda verileri analiz etti"
               },
               {
-                "left": "recently published research",
-                "right": "araştırmayı yayımladı"
+                "left": "has recently published research",
+                "right": "son zamanlarda araştırmayı yayımladı"
               },
               {
-                "left": "recently examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "has recently examined historical records",
+                "right": "son zamanlarda tarihi kayıtları inceledi"
               },
               {
-                "left": "recently observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "has recently observed cognitive patterns",
+                "right": "son zamanlarda bilişsel kalıpları gözlemledi"
               }
             ],
             "grammarTags": [
@@ -45388,20 +45388,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Kesintisiz Süreç Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "for 5 years analyzed data",
-                "right": "verileri analiz etti"
+                "left": "has been analyzing data for 5 years",
+                "right": "5 yıldır verileri analiz ediyor"
               },
               {
-                "left": "for 5 years published research",
-                "right": "araştırmayı yayımladı"
+                "left": "has been publishing research for 5 years",
+                "right": "5 yıldır araştırma yayımlıyor"
               },
               {
-                "left": "for 5 years examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "has been examining historical records for 5 years",
+                "right": "5 yıldır tarihi kayıtları inceliyor"
               },
               {
-                "left": "for 5 years observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "has been observing cognitive patterns for 5 years",
+                "right": "5 yıldır bilişsel kalıpları gözlemliyor"
               }
             ],
             "grammarTags": [
@@ -45755,20 +45755,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Gelecek Zaman Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "tomorrow analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will analyze data tomorrow",
+                "right": "yarın verileri analiz edecek"
               },
               {
-                "left": "tomorrow published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will publish research tomorrow",
+                "right": "yarın araştırmayı yayımlayacak"
               },
               {
-                "left": "tomorrow examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will examine historical records tomorrow",
+                "right": "yarın tarihi kayıtları inceleyecek"
               },
               {
-                "left": "tomorrow observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will observe cognitive patterns tomorrow",
+                "right": "yarın bilişsel kalıpları gözlemleyecek"
               }
             ],
             "grammarTags": [
@@ -46116,20 +46116,20 @@ Object.assign(unitSentencesMap, {
             "prompt": "Yönerge: Sınır Zarfları zaman zarfı öbeklerini Türkçe karşılıklarıyla eşleştiriniz.<br><br>İfadeleri eşleştirin:",
             "pairs": [
               {
-                "left": "by 2030 analyzed data",
-                "right": "verileri analiz etti"
+                "left": "will have analyzed the data by 2030",
+                "right": "2030'a kadar verileri analiz etmiş olacak"
               },
               {
-                "left": "by 2030 published research",
-                "right": "araştırmayı yayımladı"
+                "left": "will have published the research by 2030",
+                "right": "2030'a kadar araştırmayı yayımlamış olacak"
               },
               {
-                "left": "by 2030 examined historical records",
-                "right": "tarihi kayıtları inceledi"
+                "left": "will have examined the historical records by 2030",
+                "right": "2030'a kadar tarihi kayıtları incelemiş olacak"
               },
               {
-                "left": "by 2030 observed cognitive patterns",
-                "right": "bilişsel kalıpları gözlemledi"
+                "left": "will have observed the cognitive patterns by 2030",
+                "right": "2030'a kadar bilişsel kalıpları gözlemlemiş olacak"
               }
             ],
             "grammarTags": [
