@@ -8963,7 +8963,9 @@ const RULE_PLACEHOLDER_WORDS = new Set([
   'adverb', 'phrase', 'sentence', 'word', 'base', 'form', 'svo', 'be', 'v1',
   'v2', 'v3', 'ing', 'past', 'present', 'perfect', 'participle', 'gerund',
   'infinitive', 'connector', 'transition', 'time', 'and', 'or', 'the', 'a', 'an',
-  'vs', 'veya', 'ile', 've', 'karma', 'mixed', 'syntax'
+  'vs', 'veya', 'ile', 've', 'karma', 'mixed', 'syntax', 'to', 'v', 's', 'plural',
+  'people', 'person', 'place', 'thing', 'quantifier', 'superlative', 'ordinal',
+  'preposition', 'pattern', 'patterns', 'structures'
 ]);
 
 function looksTurkishText(text) {
@@ -9026,22 +9028,61 @@ function splitFormulaVariants(raw) {
     const parts = text.split(sep).map(s => s.trim()).filter(Boolean);
     return parts.length > 1 ? parts : null;
   };
-  let parts = trySplit(/\s*\|\s*/) || trySplit(/\s+·\s+/) || trySplit(/\s+VEYA\s+/i);
-  if (!parts) {
-    const slash = text.split(/\s+\/\s+/).map(s => s.trim()).filter(Boolean);
+  // "1. ... 2. ... 3. ..." biçimindeki kural metinleri de kalıp listesidir.
+  const trySplitNumbered = () => {
+    const items = text.split(/(?:^|\s)\d+\.\s+/).map(s => s.trim()).filter(Boolean);
+    return items.length > 1 ? items : null;
+  };
+  // Parantez içindeki eğik çizgi kalıbın seçeneğidir ("(will / be going to)"),
+  // ayrı bir kalıp değil: bölme yalnızca parantez dışındaki " / " için yapılır.
+  const splitTopLevelSlash = () => {
+    const out = [];
+    let depth = 0, buf = '';
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+      if (ch === '(' || ch === '[') depth++;
+      else if (ch === ')' || ch === ']') depth = Math.max(0, depth - 1);
+      if (depth === 0 && ch === '/' && text[i - 1] === ' ' && text[i + 1] === ' ') {
+        out.push(buf.trim()); buf = ''; continue;
+      }
+      buf += ch;
+    }
+    out.push(buf.trim());
+    const parts = out.filter(Boolean);
     // Her parça kendi başına kalıp gibi durmuyorsa (tek sözcüklük "Adjective"
     // gibi) bölme; o eğik çizgi kalıbın içindeki bir seçenektir.
-    if (slash.length > 1 && slash.every(p => /\+/.test(p) || p.length >= 14)) parts = slash;
-  }
+    return parts.length > 1 && parts.every(p => /\+/.test(p) || p.length >= 14) ? parts : null;
+  };
+  let parts = trySplit(/\s*\|\s*/) || trySplit(/\s+·\s+/) || trySplitNumbered()
+    || trySplit(/\s+VEYA\s+/i) || splitTopLevelSlash();
   return (parts || [text]).slice(0, 6);
 }
 
 // Kalıbın ayırt edici sözcükleri: yer tutucular ("Subject", "Clause") atılır,
 // geriye when / the fact that / despite gibi gerçek işaretler kalır.
+// "be/get used to" tek satırda iki kalıp demektir; işaret ararken eğik çizgili
+// seçenekler ayrı ayrı denenir, yoksa yalnızca genel "used to" işareti kalıyordu.
+function expandSlashAlternatives(text) {
+  let out = [String(text || '')];
+  for (let round = 0; round < 3; round++) {
+    let changed = false;
+    const next = [];
+    out.forEach(t => {
+      const m = t.match(/([A-Za-z-]+)\/([A-Za-z-]+)/);
+      if (!m) { next.push(t); return; }
+      changed = true;
+      next.push(t.replace(m[0], m[1]), t.replace(m[0], m[2]));
+    });
+    out = next;
+    if (!changed) break;
+  }
+  return out;
+}
+
 function formulaDetectTokens(pattern) {
   const clean = String(pattern || '').replace(/<[^>]+>/g, ' ').replace(/[()]/g, ' ');
   const tokens = [];
-  const fact = clean.match(/\b(the fact that|in order to|so as to|as long as|provided that|by the time|no sooner|in addition to|in spite of|rather than|in terms of|as if|as though|so that|such as|because of|due to|used to|about to|supposed to|likely to|bound to|unable to|willing to)\b/gi) || [];
+  const fact = expandSlashAlternatives(clean).flatMap(variant => variant.match(/\b(the fact that|in order to|so as to|as long as|provided that|by the time|no sooner|not only|only if|if only|in addition to|in spite of|rather than|in terms of|as soon as|as if|as though|so that|such as|because of|due to|be used to|get used to|used to|about to|supposed to|likely to|bound to|unable to|willing to|ought to|had better|have to|has to|be able to|would rather)\b/gi) || []) || [];
   fact.forEach(f => tokens.push(f.toLowerCase()));
   clean.split(/[^A-Za-z'-]+/).forEach(w => {
     const low = w.toLowerCase();
@@ -9074,9 +9115,106 @@ function markerTokens(text) {
   return RULE_MARKERS.filter(m => low.includes(m));
 }
 
-function deriveTranslationCards(lesson) {
-  const variants = splitFormulaVariants(lesson.formula);
-  const examples = parseTranslationExamples(lesson.example);
+// Bazı derslerin (data-extra.js'te tanımlananların tamamı) konu anlatımında
+// formül var, örnek yok. Örnekler aslında dersin kendi sorularının içinde:
+// eşleştirme çiftleri ve enSentence/translation ikilileri hazır İngilizce–Türkçe
+// çift taşıyor. Kartların örneklerini oradan topluyoruz. Öğrencinin o an
+// çözdüğü soru dışarıda bırakılır; yoksa kart cevabı gösterirdi.
+function harvestLessonExamples(lesson, excludeId) {
+  const out = [];
+  const seen = new Set();
+  const clean = t => String(t || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const push = (rawEn, rawTr) => {
+    const en = clean(rawEn), tr = clean(rawTr);
+    if (!en || !tr || en.length > 130) return;
+    if (/___|\.{3}/.test(en) || /___/.test(tr)) return;
+    if (!looksTurkishText(tr) || looksTurkishText(en)) return;
+    const key = en.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push({ label: '', en, tr });
+  };
+  (lesson.exercises || []).forEach(ex => (ex.questions || []).forEach(q => {
+    if (!q || (excludeId && q.id === excludeId)) return;
+    if (q.type === 'matching' && Array.isArray(q.pairs)) {
+      q.pairs.forEach(pair => push(pair.left, pair.right));
+    }
+    if (q.enSentence) {
+      push(q.enSentence, q.translation);
+      if (Array.isArray(q.correctOrder)) push(q.enSentence, q.correctOrder.join(' '));
+    }
+    // Boşluklu cümleler push() içinde eleniyor; geriye doğru/yanlış ve okuma
+    // sorularının tam cümleleri kalıyor.
+    if (q.sentence) push(q.sentence, q.translation);
+    if (q.mainSentence) push(q.mainSentence, q.translation);
+  }));
+  return out.slice(0, 60);
+}
+
+// "be used to" kalıbı metinde "is / are / was used to" diye geçer; işaretleri
+// çekimlenmiş biçimleriyle birlikte ararız.
+function expandDetectToken(token) {
+  const tok = String(token || '').toLowerCase().trim();
+  if (!tok) return [];
+  if (/^be\s/.test(tok)) {
+    const rest = tok.slice(3);
+    return [tok, 'is ' + rest, 'are ' + rest, 'am ' + rest, 'was ' + rest, 'were ' + rest,
+            'been ' + rest, 'being ' + rest, 'get ' + rest, 'gets ' + rest, 'got ' + rest];
+  }
+  return [tok];
+}
+
+// Toplanan örnekleri kalıplara dağıtır: her kalıp, kendi ayırt edici işaretini
+// taşıyan ilk boştaki örneği alır. Önce en uzun işaret (be used to) eşleşir ki
+// daha genel olan (used to) onun örneğini kapmasın.
+function assignExamplesToVariants(variants, examples) {
+  const used = new Set();
+  const result = new Array(variants.length).fill(null);
+  // Zayıf işaretler ("when", "should", "verb") rastgele bir örneği kalıba
+  // iliştiriyordu; eşleştirme yalnızca ayırt edici işaretlerle yapılır ve tek
+  // sözcükler sözcük sınırıyla aranır ("lie" artık "believe" içinde eşleşmez).
+  const WEAK = new Set(['should', 'would', 'could', 'might', 'must', 'shall', 'will',
+    'have', 'has', 'had', 'been', 'being', 'does', 'type', 'aux', 'auxiliary', 'past',
+    'present', 'future', 'stand', 'lie', 'sit', 'grup', 'group', 'form', 'forms']);
+  const strong = tokens => tokens.filter(t => t.includes(' ') || (t.length >= 5 && !WEAK.has(t)));
+  const hits = (text, tok) => tok.includes(' ')
+    ? text.includes(tok)
+    : new RegExp('\\b' + tok.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b').test(text);
+  const order = variants.map((v, i) => ({ i, tokens: strong(formulaDetectTokens(v)) }))
+    .sort((a, b) => Math.max(0, ...b.tokens.map(t => t.length)) - Math.max(0, ...a.tokens.map(t => t.length)));
+  order.forEach(({ i, tokens }) => {
+    const sorted = [...tokens].sort((a, b) => b.length - a.length);
+    for (const tok of sorted) {
+      if (tok.length < 3) continue;
+      const forms = expandDetectToken(tok);
+      const hit = examples.findIndex((e, idx) => {
+        if (used.has(idx)) return false;
+        const low = e.en.toLowerCase();
+        return forms.some(f => hits(low, f));
+      });
+      if (hit !== -1) { used.add(hit); result[i] = examples[hit]; return; }
+    }
+  });
+  return result;
+}
+
+function deriveTranslationCards(lesson, excludeId) {
+  const variants = splitFormulaVariants(lessonFormulaText(lesson));
+  let examples = parseTranslationExamples(lesson.example);
+  // Konu anlatımında örnek yoksa dersin kendi soruları örnek havuzudur.
+  if (!examples.length) {
+    const harvested = harvestLessonExamples(lesson, excludeId);
+    if (harvested.length && variants.length) {
+      return variants.map((v, i) => {
+        const pair = assignExamplesToVariants(variants, harvested)[i];
+        return {
+          pattern: v, en: pair ? pair.en : '', tr: pair ? pair.tr : '', tip: '',
+          detect: formulaDetectTokens(v)
+        };
+      });
+    }
+    examples = harvested;
+  }
   if (!variants.length && !examples.length) return [];
 
   // Örnekler kendi etiketlerini taşıyorsa ("Zaman:", "Amaç:") kalıp adı olarak
@@ -9107,13 +9245,19 @@ function deriveTranslationCards(lesson) {
   });
 }
 
-function lessonTranslationCards(lesson) {
+// Formül kimi derste lesson.formula, kimi derste konuAnlatimi.formul alanında.
+function lessonFormulaText(lesson) {
+  const ka = (lesson && lesson.konuAnlatimi) || {};
+  return lesson ? (lesson.formula || ka.formul || '') : '';
+}
+
+function lessonTranslationCards(lesson, excludeId) {
   if (!lesson) return [];
   const recipes = (typeof window !== 'undefined' && window.TRANSLATION_RECIPES) || {};
   const curated = recipes[String(lesson.id)] || recipes[String(lesson.displayId)];
   const cards = Array.isArray(curated) && curated.length
     ? curated.map(c => ({ ...c }))
-    : deriveTranslationCards(lesson);
+    : deriveTranslationCards(lesson, excludeId);
   return cards.filter(c => c && (c.en || c.pattern));
 }
 
@@ -9133,7 +9277,7 @@ function matchTranslationCards(cards, question) {
   if (!text) return [];
   return cards.filter(c => (c.detect || []).some(tok => {
     const t = String(tok || '').toLowerCase().trim();
-    return t.length > 1 && text.includes(t);
+    return t.length > 1 && expandDetectToken(t).some(f => text.includes(f));
   }));
 }
 
@@ -9186,7 +9330,8 @@ function renderLessonRuleHint(body, question) {
   // ma yapılmaz: tek kart göstermek cevabı işaret etmenin bir başka yoludur.
   // Türkçe karşılığı olmayan kart bu başlık altında öğretmiyor; verisi eksik
   // dersler eski davranışa (ders örneğinin düz satırı) geri düşer.
-  const allCards = lessonTranslationCards(currentLesson).filter(c => c.tr && c.tr.trim());
+  const allCards = lessonTranslationCards(currentLesson, question && question.id)
+    .filter(c => c.tr && c.tr.trim());
   const safeCards = allCards.filter(c => !leaksOption(c.pattern) && !leaksOption(c.en));
   const narrowable = safeCards.length === allCards.length;
   const matched = narrowable ? matchTranslationCards(safeCards, question) : [];
