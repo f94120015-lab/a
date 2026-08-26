@@ -8970,10 +8970,16 @@ function looksTurkishText(text) {
   const s = String(text || '').trim();
   if (!/[A-Za-zÇĞİÖŞÜçğıöşü]/.test(s)) return false;
   if (/[çğıöşüÇĞİÖŞÜ]/.test(s)) return true;
-  // Türkçeye özgü harf taşımayan çeviriler de var ("Gecikme nedeniyle"): İngilizce
-  // işlevsel sözcüklerden hiçbiri geçmiyorsa metni Türkçe sayıyoruz.
-  return !/\b(the|a|an|is|are|was|were|be|been|of|to|in|on|for|with|by|from|that|and|or|as|it|they|we|you|he|she|has|have|had|will|would|can|could|not)\b/i.test(s);
+  // Türkçeye özgü harf taşımayan çeviriler de var ("Gecikme nedeniyle"): tanı
+  // için önce Türkçe işlev sözcükleri, sonra "İngilizce işaret yok + Türkçe ek"
+  // birleşimi aranır. Yalnızca "İngilizce sözcük göremedim" demek yetmiyordu;
+  // "Income distribution" gibi öbekler Türkçe sanılıyordu.
+  if (/\b(ve|ile|için|gibi|kadar|daha|sonra|önce|üzere|diye|yerine|nedeniyle|sayesinde|rağmen|olarak|olan|olur|değil|bir|bu|şu|her|çok|az|yani|ancak|acaba|mi|mı|mu|mü)\b/i.test(s)) return true;
+  const english = /\b(the|a|an|is|are|was|were|be|been|being|of|to|in|on|at|for|with|by|from|into|about|that|this|these|those|and|or|as|it|its|they|their|we|you|he|she|his|her|has|have|had|will|would|can|could|should|must|not|no|who|whom|whose|which|what|when|where|why|how|than|more|most|many|much|some|all|each|both|such|there|then|after|before|during|while|because|although)\b/i;
+  if (english.test(s)) return false;
+  return /\w+(ler|lar|nin|nın|nun|nün|den|dan|ten|tan|de|da|te|ta|ye|ya|si|sı|su|sü|dir|dır|dur|dür|lik|lık|luk|lük|mek|mak|iyle|ile|imiz|ları|leri|siniz|sınız|iniz|ınız|ebilir|abilir|ecek|acak)\b/i.test(s);
 }
+
 
 // "Zaman: As soon as the build finishes (Yapı biter bitmez)" gibi satırları
 // etiket / İngilizce / Türkçe üçlüsüne ayırır.
@@ -8982,21 +8988,26 @@ function parseTranslationExamples(raw) {
     .replace(/[ \t]+/g, ' ').trim();
   if (!text) return [];
   return text.split(/\s*[•·]\s*|\n+|\s\|\s/).map(s => s.trim()).filter(Boolean).map(item => {
-    let label = '';
-    const head = item.match(/^([^:()]{2,44}):\s*(\S.*)$/);
-    // Baştaki etiket ancak devamında hâlâ bir örnek varsa etikettir.
-    if (head && (head[2].includes(':') || /\([^)]{3,}\)\s*$/.test(head[2]))) {
-      label = head[1].trim(); item = head[2].trim();
-    }
-    let en = item, tr = '';
+    // Önce İngilizce/Türkçe ayrımı yapılır: "... : çeviri" ya da "... (çeviri)".
+    // Etiket bundan sonra ayıklanır; ters sırada yapılırsa "psychologists who
+    // study behavior: davranışı inceleyen psikologlar" satırında İngilizce
+    // örneğin kendisi etiket sanılıyordu.
+    let en = item, tr = '', label = '';
     const paren = item.match(/^(.*\S)\s*\(([^()]{3,})\)\s*$/);
     if (paren && looksTurkishText(paren[2])) {
       en = paren[1].trim(); tr = paren[2].trim();
     } else {
       const cut = item.lastIndexOf(': ');
-      if (cut > 0 && looksTurkishText(item.slice(cut + 2))) {
-        en = item.slice(0, cut).trim(); tr = item.slice(cut + 2).trim();
+      const left = cut > 0 ? item.slice(0, cut).trim() : '';
+      const right = cut > 0 ? item.slice(cut + 2).trim() : '';
+      if (left && right && looksTurkishText(right) && !looksTurkishText(left)
+          && left.split(/\s+/).length >= 2) {
+        en = left; tr = right;
       }
+    }
+    const head = en.match(/^([^:()]{2,44}):\s+(\S.*)$/);
+    if (head && head[1].trim().split(/\s+/).length <= 5) {
+      label = head[1].trim(); en = head[2].trim();
     }
     return { label, en, tr };
   }).filter(x => x.en);
@@ -9173,7 +9184,9 @@ function renderLessonRuleHint(body, question) {
   // Her yapısal öğe kendi çeviri kartını alır. Kartlar cevabı ele veriyorsa
   // (bağlaç seçme sorularında kalıbın adı doğrudan şıkkın kendisidir) daralt
   // ma yapılmaz: tek kart göstermek cevabı işaret etmenin bir başka yoludur.
-  const allCards = lessonTranslationCards(currentLesson);
+  // Türkçe karşılığı olmayan kart bu başlık altında öğretmiyor; verisi eksik
+  // dersler eski davranışa (ders örneğinin düz satırı) geri düşer.
+  const allCards = lessonTranslationCards(currentLesson).filter(c => c.tr && c.tr.trim());
   const safeCards = allCards.filter(c => !leaksOption(c.pattern) && !leaksOption(c.en));
   const narrowable = safeCards.length === allCards.length;
   const matched = narrowable ? matchTranslationCards(safeCards, question) : [];

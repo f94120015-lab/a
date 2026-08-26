@@ -516,6 +516,234 @@
         "Bu, şimdiye kadar okuduğum en iyi kitap.",
         "En üstünlük + ever → perfect zaman. “ever” Türkçede “şimdiye kadar” olur.",
         ["the best", "the most", "ever "])
+    ],
+
+    /* ── Bölüm: İleri Düzey Sıfat Cümlecikleri (u37) ────────────────────── */
+    "c37_ml1": [
+      card("Noun + , + most / some of which + Clause",
+        "The historian examined twenty medieval manuscripts, most of which detailed the Silk Road.",
+        "Tarihçi yirmi ortaçağ el yazmasını inceledi; bunların çoğu İpek Yolu'nu ayrıntılarıyla anlatıyordu.",
+        "Virgülden sonrası ayrı bir cümle gibi çevrilir: “bunların çoğu ...”. Tek cümlede tutulacaksa “çoğu ... olan” sıfat öbeği kurulur.",
+        ["of which", "most of", "some of"]),
+      card("Noun + , + none / half of which + Clause",
+        "The council approved three proposals, none of which addressed the funding gap.",
+        "Konsey üç öneriyi onayladı; hiçbiri fon açığını ele almıyordu.",
+        "none of which → “hiçbiri”; olumsuzluk Türkçede yan cümlenin yüklemine taşınır.",
+        ["none of which", "half of which", "a fraction of"])
+    ],
+
+    "c37_ml2": [
+      card("Plural Noun (People) + , + many / each of whom + Clause",
+        "The empire exiled ten political dissidents, many of whom established networks abroad.",
+        "İmparatorluk on siyasi muhalifi sürgüne gönderdi; birçoğu yurt dışında ağlar kurdu.",
+        "İnsanlar için of whom kullanılır → “birçoğu / her biri”. which ya da that gelemez.",
+        ["of whom", "many of", "each of"]),
+      card("Plural Noun (People) + , + neither of whom + Clause",
+        "The board interviewed two candidates, neither of whom had field experience.",
+        "Kurul iki adayla görüştü; ikisinin de saha deneyimi yoktu.",
+        "neither of whom → “ikisi de ... değil”; olumsuzluk yükleme geçer.",
+        ["neither of whom", "the majority of whom"])
+    ],
+
+    "c37_ml3": [
+      card("Noun + , + the first / the last of which + Clause",
+        "The civilization built three grand libraries, the first of which was destroyed.",
+        "Uygarlık üç büyük kütüphane inşa etti; bunlardan ilki yıkıldı.",
+        "Sıra sıfatından önce “the” zorunludur → “bunlardan ilki / sonuncusu”.",
+        ["the first of", "the last of", "the second of"]),
+      card("Noun + , + the largest / the oldest of which + Clause",
+        "They surveyed five ruins, the largest of which dated back to 300 BC.",
+        "Beş harabeyi incelediler; en büyüğü MÖ 300'e uzanıyordu.",
+        "En üstünlük derecesi → “en ... olanı”. Grup içinden bir üyeyi seçer.",
+        ["the largest of", "the oldest of", "the most"])
+    ],
+
+    "c37_ml4": [
+      card("Noun + , + each / most of whose + Noun + Clause",
+        "The philosopher wrote a thick book, each of whose chapters redefines democracy.",
+        "Filozof, her bölümü demokrasiyi yeniden tanımlayan kalın bir kitap yazdı.",
+        "whose'dan sonra yalın isim gelir; çeviri iyelik ekiyle kurulur: “her bölümü ... olan”.",
+        ["of whose"]),
+      card("Noun + , + all of whose + Noun + Clause",
+        "They joined a network, most of whose members are volunteers.",
+        "Üyelerinin çoğu gönüllü olan bir ağa katıldılar.",
+        "Sahiplik zinciri sondan başa çözülür: “üyelerinin çoğu ... olan ağ”.",
+        ["all of whose", "most of whose", "some of whose"])
+    ],
+
+    "c37_ml5": [
+      card("Noun + , + to / with + Quantifier + of which/whom + Clause",
+        "The delegation proposed two amendments, to neither of which the parliament agreed.",
+        "Heyet iki değişiklik önerdi; parlamento ikisini de kabul etmedi.",
+        "Edat yan cümledeki fiilden gelir (agree to). Türkçede fiilin istediği hâl eki olur.",
+        ["of which", "of whom", "to neither", "with most"]),
+      card("Noun + , + Preposition + most of which + Clause",
+        "He published several theories, with most of which I agreed.",
+        "Birçoğuna katıldığım çeşitli kuramlar yayımladı.",
+        "Doğru edat için yan cümlenin fiiline bakılır: “agree with” → with.",
+        ["with most of", "in some of", "by many of"])
+    ],
+
+    "c37_ml6": [
+      card("Noun + , + under the supervision of whom + Clause",
+        "The foundation employs five junior researchers, under the supervision of whom the field study is conducted.",
+        "Vakıf beş genç araştırmacı çalıştırıyor; saha çalışması onların gözetiminde yürütülüyor.",
+        "Bu kalıpta çeviri ikiye bölünür: “... onların gözetiminde / liderliğinde”.",
+        ["of whom", "supervision of", "leadership of"]),
+      card("Noun + , + by means of which + Clause",
+        "They developed a method by means of which the data can be verified.",
+        "Verilerin doğrulanabildiği bir yöntem geliştirdiler.",
+        "by means of which → “vasıtasıyla”; sondan başa okuyarak “-dığı” ekiyle bağlanır.",
+        ["by means of", "through the analysis of", "of which"])
+    ],
+
+    "c37_ml7": [
+      card("Time Noun + , + by which time + Clause",
+        "The peace negotiations lasted for two years, by which time the economy had collapsed.",
+        "Barış görüşmeleri iki yıl sürdü; o zamana kadar ekonomi çökmüştü.",
+        "by which time → “o zamana kadar”; ana cümlede genellikle had V3 bulunur.",
+        ["by which time", "since which"]),
+      card("Event Noun + , + at which point + Clause",
+        "The reactor overheated, at which point the engineers halted the test.",
+        "Reaktör aşırı ısındı; bu noktada mühendisler testi durdurdu.",
+        "at which point → “bu noktada”, during which period → “bu süre boyunca”.",
+        ["at which point", "during which"])
+    ],
+
+    "c37_ml8": [
+      card("Noun + , + Preposition + the + Noun + of whom + Clause",
+        "The king appointed two envoys, through the diplomatic efforts of whom the war was avoided.",
+        "Kral iki elçi atadı; savaş onların diplomatik çabalarıyla önlendi.",
+        "Karma yapıda önce ana cümle çevrilir, virgülden sonrası ayrı cümle gibi bağlanır.",
+        ["of whom", "efforts of", "through the"]),
+      card("Noun + , + some of which + Clause",
+        "The archive released fifty files, some of which had been classified for decades.",
+        "Arşiv elli dosya yayımladı; bazıları onlarca yıldır gizliydi.",
+        "Miktar belirteçli yapılarda “bunlardan bazıları” demek en doğal karşılıktır.",
+        ["of which", "some of"])
+    ],
+
+    /* ── Bölüm: Cümle Bağlaçları (u22) ──────────────────────────────────── */
+    "68": [
+      card("SVO, and as a result, SVO",
+        "Configuration components experienced stress, and as a result, the network suffered a latency spike.",
+        "Yapılandırma bileşenleri zorlandı ve bunun sonucunda ağ gecikme sıçraması yaşadı.",
+        "as a result → “bunun sonucunda”. İki bağımsız cümleyi sonuç ilişkisiyle bağlar.",
+        ["as a result", "in conclusion", "on the whole"]),
+      card("SVO, so SVO",
+        "The parsing algorithm functions precisely, so even small syntax variations are flagged.",
+        "Ayrıştırma algoritması hassas çalışır, bu yüzden küçük sözdizimi farkları bile işaretlenir.",
+        "so → “bu yüzden”; therefore'un gündelik karşılığıdır ve virgülden sonra gelir.",
+        [", so ", "so even"]),
+      card("SVO; therefore / consequently, SVO",
+        "Costs rose sharply; therefore, the launch was postponed.",
+        "Maliyetler hızla arttı; bu nedenle lansman ertelendi.",
+        "Geçiş sözcüğü noktalı virgülle bağlanır: “; therefore,” → “; bu nedenle,”.",
+        ["therefore", "consequently", "thus", "hence"])
+    ],
+
+    "69": [
+      card("SVO + such as + Noun Phrase",
+        "The framework regulates volatile dimensions such as boundary parameter shifts.",
+        "Çerçeve, sınır parametresi kaymaları gibi değişken boyutları düzenler.",
+        "such as isim öbeği alır → “... gibi”. Yanına özne + fiil gelmez.",
+        ["such as", "like "]),
+      card("SVO; for example / for instance, SVO",
+        "Monographs present qualitative research; for example, modern syntax models are examined.",
+        "Monografiler nitel araştırma sunar; örneğin modern sözdizimi modelleri incelenir.",
+        "Cümle örneklendirir → “örneğin”; noktalı virgül ya da noktadan sonra gelir.",
+        ["for example", "for instance"]),
+      card("SVO; that is / namely, ...",
+        "Only one variable changed; that is, the sampling interval.",
+        "Yalnızca bir değişken değişti; yani örnekleme aralığı.",
+        "that is / namely → “yani”. Önceki ifadeyi örneklendirmez, açıklar.",
+        ["that is", "namely", "in other words"])
+    ],
+
+    "70": [
+      card("Even if + Clause, Main Clause",
+        "Even if developers optimize the builds, older devices will still lag.",
+        "Geliştiriciler yapıları en iyi hâle getirse bile eski cihazlar yine de yavaşlayacak.",
+        "even if → “-se bile”. if'ten farkı, koşul gerçekleşse de sonucun değişmemesidir.",
+        ["even if"]),
+      card("SVO; otherwise, SVO",
+        "You must run the diagnostic tools; otherwise, the database will collapse.",
+        "Tanılama araçlarını çalıştırmalısın; aksi takdirde veritabanı çöker.",
+        "otherwise → “aksi takdirde”; önündeki cümlenin gerçekleşmediği durumu anlatır.",
+        ["otherwise"]),
+      card("Main Clause + in case + Clause",
+        "Keep a backup in case the migration fails.",
+        "Geçiş başarısız olur diye bir yedek tut.",
+        "in case → “... diye / ihtimaline karşı”; “eğer” diye çevrilmez.",
+        ["in case"])
+    ],
+
+    /* ── Bölüm: Yer, Zaman ve İyelik Sıfat Cümlecikleri (u26) ───────────── */
+    "80": [
+      card("Noun (place) + where + Subject + Verb",
+        "the geographical region where the ancient tribe settled",
+        "kadim kabilenin yerleştiği coğrafi bölge",
+        "Yer bildiren isimden sonra where → “-dığı” ekiyle biten sıfat öbeği.",
+        ["where"]),
+      card("Noun (time) + when + Subject + Verb",
+        "the era when independent journalists protested",
+        "bağımsız gazetecilerin protesto ettiği dönem",
+        "Zaman ismi + when → “-dığı”; ayrıca “o zaman” eklenmez.",
+        ["when"]),
+      card("Noun + whose + Noun + Verb",
+        "the historian whose research resolved the dispute",
+        "araştırması anlaşmazlığı çözen tarihçi",
+        "whose sahiplik kurar: nitelenen ismin ardından iyelik eki (“araştırması”) gelir.",
+        ["whose"]),
+      card("Noun (person) + whom + Subject + Verb",
+        "the economists whom the commission consulted",
+        "komisyonun danıştığı iktisatçılar",
+        "whom nesne konumundadır → “-dığı” + nitelenen isim. Özne varsa who değil whom.",
+        ["whom"])
+    ],
+
+    /* ── Bölüm: Saf Zamanlar (u70) ──────────────────────────────────────── */
+    "551": [
+      card("V1 / V-es (Simple Present)",
+        "The system verifies the data.",
+        "Sistem verileri doğrular.",
+        "Geniş zaman → “-r”. Alışkanlık ve genel doğruları anlatır.",
+        []),
+      card("am / is / are + V-ing (Present Continuous)",
+        "The system is verifying the data.",
+        "Sistem verileri doğruluyor.",
+        "Şimdiki zaman → “-yor”. Konuşma anında süren eylem.",
+        ["is verifying", "are ", "am "]),
+      card("has / have + V3 (Present Perfect)",
+        "The system has verified the data.",
+        "Sistem verileri doğruladı (etkisi sürüyor).",
+        "Türkçede çoğunlukla “-di”; sonucu bugüne bağlar, zaman zarfı almaz.",
+        ["has ", "have "]),
+      card("has / have been + V-ing (Present Perfect Continuous)",
+        "The system has been verifying the data for an hour.",
+        "Sistem bir saattir verileri doğruluyor.",
+        "for / since → “-dir / -dan beri” + “-yor”. Süreyi vurgular.",
+        ["has been", "have been"]),
+      card("V2 (Simple Past)",
+        "The system verified the data.",
+        "Sistem verileri doğruladı.",
+        "Bitmiş geçmiş → “-di”. Bugünle bağı kurulmaz.",
+        []),
+      card("was / were + V-ing (Past Continuous)",
+        "The system was verifying the data.",
+        "Sistem verileri doğruluyordu.",
+        "Geçmişte süren eylem → “-yordu”; kesen eylem V2 ile gelir.",
+        ["was ", "were "]),
+      card("had + V3 (Past Perfect)",
+        "The system had verified the data.",
+        "Sistem verileri doğrulamıştı.",
+        "Geçmişin öncesi → “-mıştı”. İki geçmiş eylemden önce olanı gösterir.",
+        ["had "]),
+      card("will + V1 / will have + V3 (Future)",
+        "The system will have verified the data by noon.",
+        "Sistem öğlene kadar verileri doğrulamış olacak.",
+        "will → “-ecek”; will have V3 → “-mış olacak” (gelecekte tamamlanmış).",
+        ["will "])
     ]
   };
 
