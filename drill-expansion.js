@@ -649,6 +649,17 @@
 
   /* ── Bağlaç Kuralları · Alıştırma 6: Neden-Sonuç Yönü ───────────────────── */
   // Fiil, özneyi neden mi sonuç mu yapıyor: yön yanlışsa cümle tersine döner.
+  // Şık listelerinde Türkçe karşılık: sınanan şey yön ve edat olduğu için
+  // sözcüğün anlamını tahmin etmek soruya dahil değil.
+  const CE_GLOSS = {
+    'led to': '-e yol açtı', 'gave rise to': '-i doğurdu', 'contributed to': '-e katkıda bulundu',
+    'paved the way for': '-e zemin hazırladı', 'brought about': 'ortaya çıkardı',
+    'resulted from': '-den kaynaklandı', 'stemmed from': '-den köken aldı',
+    'arose from': '-den doğdu', 'originated in': '-de başladı',
+    'was attributed to': '-e bağlandı'
+  };
+  const ceGloss = phrase => (CE_GLOSS[phrase] ? `${phrase} (${CE_GLOSS[phrase]})` : phrase);
+
   const FORWARD_VERBS = [
     { en: 'led to', tr: 'yol açtı' }, { en: 'gave rise to', tr: 'yol açtı' },
     { en: 'contributed to', tr: 'katkıda bulundu' }, { en: 'paved the way for', tr: 'zemin hazırladı' }
@@ -684,16 +695,16 @@
       if (forward) {
         const v = FORWARD_VERBS[vIdx];
         out.push(dropdown(`cdx6_c${i}`, prompt,
-          `${p.c} ____ ${p.e}${scope.en}.`, v.en,
-          BACKWARD_VERBS.map(x => x.en).filter(x => x !== v.en).slice(0, 3).concat(['was attributed to']),
+          `${p.c} ____ ${p.e}${scope.en}.`, ceGloss(v.en),
+          BACKWARD_VERBS.map(x => x.en).filter(x => x !== v.en).slice(0, 3).concat(['was attributed to']).map(ceGloss),
           `${p.ct} ${scope.tr}${p.et} ${v.tr}.`,
           `Özne (${p.ct.toLowerCase()}) NEDEN, nesne (${p.eS.toLowerCase()}) SONUÇtur. '${v.en}' nedenden sonuca gider; 'resulted from', 'stemmed from', 'arose from' ve 'was attributed to' ise özneyi sonuç konumuna koyarak yönü tersine çevirir.`,
           ['result from / results from', 'stem from / stems from', 'arise from / out of'], i, CTAGS));
       } else {
         const v = BACKWARD_VERBS[vIdx];
         out.push(dropdown(`cdx6_c${i}`, prompt,
-          `${cap(p.e)}${scope.en} ____ ${p.c.toLowerCase()}.`, v.en,
-          FORWARD_VERBS.map(x => x.en).filter(x => x !== v.en).slice(0, 3).concat(['brought about']),
+          `${cap(p.e)}${scope.en} ____ ${p.c.toLowerCase()}.`, ceGloss(v.en),
+          FORWARD_VERBS.map(x => x.en).filter(x => x !== v.en).slice(0, 3).concat(['brought about']).map(ceGloss),
           `${scope.tr ? cap(scope.tr) : ''}${scope.tr ? p.eS.toLowerCase() : p.eS} ${p.cS} ${v.tr}.`,
           `Bu kez özne (${p.eS.toLowerCase()}) SONUÇ, nesne (${p.ct.toLowerCase()}) NEDENdir. '${v.en}' sonuçtan nedene bakar; 'led to', 'gave rise to' ve 'brought about' yönü ters çevirirdi.`,
           ['result from / results from', 'lead to / leads to', 'bring about / brings about'], i, CTAGS));

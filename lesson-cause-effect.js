@@ -34,6 +34,35 @@
     };
   };
 
+
+  // Şıkların yanında Türkçe karşılık: bu ailede sınanan şey yön ve edat
+  // olduğu için, öğrencinin anlamı tahmin etmekle uğraşması gerekmiyor.
+  const GLOSS = {
+    'led to': '-e yol açtı',
+    'gave rise to': '-i doğurdu',
+    'brought about': 'ortaya çıkardı',
+    'resulted in': 'ile sonuçlandı',
+    'contributed to': '-e katkıda bulundu',
+    'triggered': 'tetikledi',
+    'produced': 'meydana getirdi',
+    'induced': 'özendirdi / yol açtı',
+    'paved the way for': '-e zemin hazırladı',
+    'culminated in': 'ile doruğa ulaştı',
+    'was responsible for': '-den sorumluydu',
+    'resulted from': '-den kaynaklandı',
+    'stemmed from': '-den köken aldı',
+    'arose from': '-den doğdu',
+    'originated in': '-de başladı',
+    'was due to': '-den ileri geldi',
+    'was attributed to': '-e bağlandı',
+    'were attributed to': '-e bağlandı',
+    'is attributed to': '-e bağlanıyor',
+    'was ascribed to': '-e atfedildi',
+    'was caused by': '-in neden olduğu',
+    'were caused by': '-in neden olduğu'
+  };
+  const withGloss = phrase => (GLOSS[phrase] ? `${phrase} (${GLOSS[phrase]})` : phrase);
+
   /* ── Alıştırma 1: Yön (özne neden mi, sonuç mu) ─────────────────────────── */
   const DIRECTION = [
     { s: 'Prolonged drought ____ widespread crop failure across the region.', c: 'led to',
@@ -250,7 +279,8 @@
         title: 'Alıştırma 1: Yön (özne neden mi, sonuç mu)',
         description: 'Cümledeki öznenin neden mi sonuç mu olduğuna göre doğru fiili seçme.',
         questions: DIRECTION.map((row, i) =>
-          mc(`ce_d${i + 1}`, 'Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:', row.s, row.c, row.d, row.tr, row.e, i))
+          mc(`ce_d${i + 1}`, 'Cümledeki neden-sonuç yönüne uygun ifadeyi seçin:', row.s,
+             withGloss(row.c), row.d.map(withGloss), row.tr, row.e, i))
       },
       {
         id: 'ce_ex2',
