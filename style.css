@@ -12641,6 +12641,32 @@ nDown 0.3s ease;
 }
 [data-theme="dark"] .rule-formula-row { background: rgba(139, 126, 200, 0.16); }
 
+/* ── Yapı Robotu: montaj hattı yuvaları ──────────────────────────────────── */
+/* Yuvalar artık pasif bir gösterge değil, seçim yeri: bağlaç seçilince ikinci
+   yuva uyumlu zamanları, o seçilince üçüncü yuva uygun ana cümle yapılarını
+   kendi içinde listeler. */
+.srobot-slot-choices {
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center;
+}
+.srobot-slot-chip {
+  padding: 5px 10px; border-radius: 9px; border: 1px solid; font-size: 0.76rem;
+  font-weight: 700; cursor: pointer; transition: all 0.15s; line-height: 1.25;
+}
+.srobot-slot-chip:hover { transform: translateY(-1px); filter: brightness(0.97); }
+.srobot-slot-hint {
+  width: 100%; text-align: center; font-size: 0.66rem; color: var(--text-muted); font-weight: 600;
+}
+.srobot-slot-open {
+  padding: 6px 14px; border-radius: 10px; cursor: pointer; font-size: 0.8rem; font-weight: 800;
+  color: #06b6d4; background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.35);
+}
+.srobot-slot-open:hover { background: rgba(6, 182, 212, 0.2); }
+.srobot-slot-clear {
+  border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-muted);
+  border-radius: 8px; font-size: 0.66rem; padding: 1px 6px; cursor: pointer; font-weight: 800;
+}
+.srobot-slot-clear:hover { color: #ef4444; border-color: #ef444455; }
+
 /* ── Yapı Robotu: bağlaç paleti grupları ─────────────────────────────────── */
 /* 121 parça tek sırada dizilince duvar oluyordu; parçalar artık alt gruplara
    ayrılıyor, gruplar katlanabiliyor ve arama kutusuyla süzülebiliyor. */

@@ -2910,6 +2910,32 @@
   }
 
   function handlePieceClick(e) {
+    // Yuvadaki "kitaplığı aç" ve "seçimi kaldır" düğmeleri
+    const openBtn = e.target.closest("[data-slot-open]");
+    if (openBtn) {
+      focusConnectorPalette();
+      return;
+    }
+    const clearBtn = e.target.closest("[data-slot-clear]");
+    if (clearBtn) {
+      const what = clearBtn.dataset.slotClear;
+      if (what === "connector") {
+        // Bağlaç değişince zincir baştan kurulur; eski seçimler geçersizdir.
+        state.selectedConnector = null;
+        state.selectedClauseA = null;
+        state.selectedClauseB = null;
+        state.isConnectorsCollapsed = false;
+        renderPalette();
+      } else if (what === "clauseA") {
+        state.selectedClauseA = null;
+        state.selectedClauseB = null;
+      } else if (what === "clauseB") {
+        state.selectedClauseB = null;
+      }
+      updateUI();
+      return;
+    }
+
     const pieceBtn = e.target.closest(".srobot-piece-btn");
     if (!pieceBtn) return;
     if (pieceBtn.disabled || pieceBtn.classList.contains("disabled")) return;
@@ -2924,6 +2950,12 @@
       } else {
         state.selectedConnector = id;
         state.isConnectorsCollapsed = false; // Do not hide other connectors!
+        // Bağlaç aşağıdaki kitaplıktan seçildiyse sıra montaj hattına döner:
+        // ikinci yuva artık uyumlu zamanları gösteriyor.
+        if (pieceBtn.closest("#srobot-pieces-connectors")) {
+          const card = document.querySelector(".srobot-slots-card");
+          if (card) card.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
       }
       renderPalette();
     } else if (type === "clauseA") {
@@ -2995,6 +3027,121 @@
 
   // ─── 6. REAKTİF KİLİT MOTORU VE ARAYÜZ GÜNCELLEMESİ ───────────────────────
 
+
+  // ─── YUVA AKIŞI (montaj hattı) ──────────────────────────────────────────
+  // Bağlaç seçilince ikinci yuva o bağlaçla uyumlu zamanları, o da seçilince
+  // üçüncü yuva ikisiyle uyumlu ana cümle yapılarını kendi içinde listeler.
+  // Böylece öğrenci aşağıdaki büyük paleti taramadan zinciri kurabiliyor.
+  const SLOT_COLORS = { 1: '#06b6d4', 2: '#8b5cf6', 3: '#ec4899' };
+
+  function slotChipHTML(type, item, color) {
+    return `
+      <button class="srobot-piece-btn srobot-slot-chip" data-type="${type}" data-id="${item.id}"
+              style="border-color: ${color}55; background: ${color}14; color: var(--text-primary);">
+        ${item.label}
+      </button>`;
+  }
+
+  function slotFilledHTML(icon, label, color, clearType) {
+    return `
+      <span style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;">
+        <span style="color: ${color}; font-weight: 800;">${icon} ${label}</span>
+        <button type="button" class="srobot-slot-clear" data-slot-clear="${clearType}" title="Seçimi kaldır">✖</button>
+      </span>`;
+  }
+
+  function slotLockedHTML(text) {
+    return `<span style="color: var(--text-muted); font-size: 0.78rem; font-weight: 600;">🔒 ${text}</span>`;
+  }
+
+  function slotChoicesHTML(type, items, color, emptyText) {
+    if (!items.length) return `<span style="color: var(--text-muted); font-size: 0.78rem;">${emptyText}</span>`;
+    return `
+      <div class="srobot-slot-choices">
+        ${items.map(i => slotChipHTML(type, i, color)).join('')}
+        <span class="srobot-slot-hint">${items.length} uyumlu seçenek</span>
+      </div>`;
+  }
+
+  function paintSlotBox(n, mode) {
+    const box = document.getElementById(`srobot-slot-box-${n}`);
+    const target = document.getElementById(`srobot-slot-target-${n}`);
+    const color = SLOT_COLORS[n];
+    if (box) {
+      box.style.opacity = mode === 'locked' ? '0.55' : '1';
+      box.style.borderStyle = mode === 'filled' ? 'solid' : 'dashed';
+      box.style.borderColor = mode === 'locked' ? 'var(--border-color)' : `${color}66`;
+      box.style.boxShadow = mode === 'active' ? `0 0 0 3px ${color}22` : 'none';
+    }
+    if (target) {
+      target.style.borderColor = mode === 'filled' ? color : `${color}40`;
+      target.style.background = mode === 'filled' ? `${color}24` : `${color}0f`;
+      target.style.flexWrap = 'wrap';
+      target.style.gap = '6px';
+    }
+  }
+
+  function renderSlots(connObj, clauseAObj, clauseBObj, allowedA, allowedB) {
+    const t1 = document.getElementById("srobot-slot-target-1");
+    const t2 = document.getElementById("srobot-slot-target-2");
+    const t3 = document.getElementById("srobot-slot-target-3");
+
+    if (t1) {
+      if (connObj) {
+        t1.innerHTML = slotFilledHTML('🔷', connObj.label, SLOT_COLORS[1], 'connector');
+        paintSlotBox(1, 'filled');
+      } else {
+        t1.innerHTML = `
+          <button type="button" class="srobot-slot-open" data-slot-open="1">
+            Bağlaç / koşul seç ▾
+          </button>`;
+        paintSlotBox(1, 'active');
+      }
+    }
+
+    if (t2) {
+      if (!connObj) {
+        t2.innerHTML = slotLockedHTML('Önce bağlaç seçin');
+        paintSlotBox(2, 'locked');
+      } else if (clauseAObj) {
+        t2.innerHTML = slotFilledHTML('🟣', clauseAObj.label, SLOT_COLORS[2], 'clauseA');
+        paintSlotBox(2, 'filled');
+      } else {
+        const items = CLAUSE_A_TENSES.filter(x => !allowedA || allowedA.includes(x.id));
+        t2.innerHTML = slotChoicesHTML('clauseA', items, SLOT_COLORS[2], 'Bu bağlaç için tanımlı zaman yok.');
+        paintSlotBox(2, 'active');
+      }
+    }
+
+    if (t3) {
+      if (!connObj || !clauseAObj) {
+        t3.innerHTML = slotLockedHTML(connObj ? 'Önce yan cümle zamanını seçin' : 'Önce bağlaç seçin');
+        paintSlotBox(3, 'locked');
+      } else if (clauseBObj) {
+        t3.innerHTML = slotFilledHTML('🔴', clauseBObj.label, SLOT_COLORS[3], 'clauseB');
+        paintSlotBox(3, 'filled');
+      } else {
+        const items = CLAUSE_B_MODALS.filter(x => !allowedB || allowedB.includes(x.id));
+        t3.innerHTML = slotChoicesHTML('clauseB', items, SLOT_COLORS[3], 'Bu eşleşme için uygun ana cümle yapısı yok.');
+        paintSlotBox(3, 'active');
+      }
+    }
+  }
+
+  // Birinci yuva bütün bağlaç kitaplığını açar: palete kaydırıp kısa bir
+  // vurgu veriyoruz, arama kutusuna odaklanıyoruz.
+  function focusConnectorPalette() {
+    const section = document.getElementById("srobot-section-connectors");
+    if (!section) return;
+    section.scrollIntoView({ behavior: "smooth", block: "center" });
+    section.style.transition = "box-shadow 0.3s ease";
+    section.style.boxShadow = "0 0 0 3px rgba(6, 182, 212, 0.45)";
+    section.style.borderRadius = "var(--radius-md)";
+    setTimeout(() => { section.style.boxShadow = "none"; }, 1400);
+    const search = document.getElementById("srobot-connector-search");
+    if (search) setTimeout(() => search.focus({ preventScroll: true }), 350);
+  }
+
   function updateUI() {
     // 0. Dynamic Slot Titles Adaptation based on selected Connector Category
     const slotTitle1 = document.getElementById("srobot-slot-title-1");
@@ -3065,29 +3212,7 @@
       }
     }
 
-    if (slotTarget1) {
-      slotTarget1.innerHTML = connObj
-        ? `<span style="color: #06b6d4; font-weight: 800;">🔷 ${connObj.label}</span>`
-        : `<span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>`;
-      slotTarget1.style.borderColor = connObj ? "#06b6d4" : "rgba(6, 182, 212, 0.25)";
-      slotTarget1.style.background = connObj ? "rgba(6, 182, 212, 0.14)" : "rgba(6, 182, 212, 0.06)";
-    }
-
-    if (slotTarget2) {
-      slotTarget2.innerHTML = clauseAObj
-        ? `<span style="color: #8b5cf6; font-weight: 800;">🟣 ${clauseAObj.label}</span>`
-        : `<span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>`;
-      slotTarget2.style.borderColor = clauseAObj ? "#8b5cf6" : "rgba(139, 92, 246, 0.25)";
-      slotTarget2.style.background = clauseAObj ? "rgba(139, 92, 246, 0.14)" : "rgba(139, 92, 246, 0.06)";
-    }
-
-    if (slotTarget3) {
-      slotTarget3.innerHTML = clauseBObj
-        ? `<span style="color: #ec4899; font-weight: 800;">🔴 ${clauseBObj.label}</span>`
-        : `<span style="color: var(--text-secondary); font-size: 0.8rem; font-weight: 500;">Parça Seçilmedi</span>`;
-      slotTarget3.style.borderColor = clauseBObj ? "#ec4899" : "rgba(236, 72, 153, 0.25)";
-      slotTarget3.style.background = clauseBObj ? "rgba(236, 72, 153, 0.14)" : "rgba(236, 72, 153, 0.06)";
-    }
+    // Yuvalar, uyumlu parça listeleri hesaplandıktan sonra çiziliyor.
 
     // 2. Highlight Selected Buttons
     document.querySelectorAll(".srobot-piece-btn").forEach(btn => {
@@ -3207,6 +3332,10 @@
         btn.removeAttribute("title");
       }
     });
+
+    // Yuvaları çiz: sıradaki yuva, seçili bağlaçla uyumlu parçaları kendi
+    // içinde gösterir; önceki yuva boşsa sonraki kilitli kalır.
+    renderSlots(connObj, clauseAObj, clauseBObj, allowedClauseA, allowedClauseB);
 
     // Build Live English & Turkish Sentences using Dynamic Templates
     if (connObj && clauseAObj && clauseBObj) {
