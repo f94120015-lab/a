@@ -1730,8 +1730,16 @@
                 <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
                   <span style="color: #06b6d4;">🔵</span> 1. Matris Parçaları (Bağlaç & Yapı Türü)
                   <button id="srobot-toggle-connectors-btn" style="display: none; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(6, 182, 212, 0.4); background: rgba(6, 182, 212, 0.12); color: #06b6d4; cursor: pointer; transition: all 0.2s;">
-                    ✏️ Değiştir / Listeyi Aç (114)
+                    ✏️ Değiştir / Listeyi Aç
                   </button>
+                </div>
+                <!-- Arama: 121 parça tek duvar halinde geliyordu; yazarak süzmek en kısa yol. -->
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <input id="srobot-connector-search" type="search" placeholder="🔎 Bağlaç ara (when, rağmen, sonuç…)"
+                         autocomplete="off" spellcheck="false"
+                         style="padding: 5px 12px; border-radius: 12px; font-size: 0.78rem; min-width: 220px;
+                                border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">
+                  <span id="srobot-search-count" style="font-size: 0.72rem; color: var(--text-muted);"></span>
                 </div>
                 <!-- Category Filter Pills -->
                 <div id="srobot-category-filters" style="display: flex; gap: 6px; flex-wrap: wrap;">
@@ -1742,7 +1750,7 @@
                   <button class="srobot-cat-btn chip-toggle" data-cat="devrik_kısaltma">⚡ Devrik & Kısaltmalar</button>
                 </div>
               </div>
-              <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: flex; flex-wrap: wrap; gap: 8px; transition: all 0.3s ease;">
+              <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: block; transition: all 0.3s ease;">
                 <!-- JS tarafından doldurulacak -->
               </div>
             </div>

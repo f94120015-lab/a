@@ -2465,11 +2465,78 @@
     }
   ];
 
+
+  // ─── BAĞLAÇ PALETİ ALT GRUPLARI ─────────────────────────────────────────
+  // 121 parça tek sırada dizilince okunamayan bir duvar oluyordu. Parçalar
+  // burada işlevlerine göre alt gruplara ayrılıyor; palet grup grup çiziliyor,
+  // gruplar katlanabiliyor ve arama kutusu bütün kategorilerde süzüyor.
+  const CONNECTOR_GROUPS = {
+    time: [
+      { title: 'Zaman bağlaçları (cümle alır)', ids: ['when', 'while_as', 'before', 'after', 'as_soon_as', 'until_till', 'by_the_time', 'since', 'whenever', 'the_moment'] },
+      { title: 'Zaman çapaları ve zarflar', ids: ['by_time_anchor', 'so_far', 'over_past_years', 'lately_recently', 'yesterday_ago_last', 'how_long_ago', 'by_future_for', 'always_continuous', 'modal_past_adverb'] },
+      { title: 'Koşul yapıları', ids: ['if_type0_1', 'if_type2', 'if_type3', 'unless', 'provided_that', 'as_long_as', 'in_case', 'supposing_that', 'only_if', 'on_condition_that'] },
+      { title: 'Amaç bağlaçları', ids: ['so_that_purpose', 'in_order_that'] },
+      { title: 'Zaman kayması ve gerçek dışı yapılar', ids: ['reported_speech', 'noun_clause', 'wish_if_only', 'as_if_as_though', 'its_time', 'would_rather'] }
+    ],
+    transitions: [
+      { title: 'Zıtlık ve karşılaştırma', ids: ['however_nevertheless', 'in_contrast_on_the_other_hand', 'on_the_contrary', 'even_so', 'although', 'but_yet_coord', 'while_whereas', 'compared_to'] },
+      { title: 'Sonuç', ids: ['therefore_thus', 'as_a_result_transition', 'accordingly_transition', 'so_coord'] },
+      { title: 'Ekleme', ids: ['in_addition_moreover', 'besides_what_is_more', 'and_coord', 'in_addition_to_prep', 'likewise_similarly'] },
+      { title: 'Örneklendirme ve açıklama', ids: ['for_example_for_instance', 'in_other_words_that_is', 'namely', 'in_fact_indeed'] },
+      { title: 'Sıra, zaman ve özet', ids: ['first_firstly', 'meanwhile', 'subsequently', 'eventually', 'in_summary', 'all_in_all'] },
+      { title: 'Edat + isim öbeği', ids: ['despite_in_spite_of', 'regarding_as_for', 'in_terms_of_in_light_of', 'except_for_apart_from'] },
+      { title: 'Eş bağlaçlar ve koşullu geçiş', ids: ['or_coord', 'nor_coord', 'for_coord', 'otherwise'] }
+    ],
+    cause_effect: [
+      { title: 'Neden ➔ Etki (fiiller)', ids: ['lead_to_cause', 'is_responsible_for', 'produce_produces', 'induce_provoke_prompt', 'result_in', 'trigger_triggers', 'give_rise_to', 'contribute_to', 'pave_the_way_for', 'culminate_in'] },
+      { title: 'Etki ➔ Neden (fiiller)', ids: ['is_due_to', 'result_from', 'stem_from', 'originate_from', 'arise_from', 'is_attributed_to', 'is_ascribed_to', 'is_caused_by'] },
+      { title: 'Edat + isim (neden)', ids: ['because_of_due_to_owing_to', 'on_account_of_in_view_of', 'by_virtue_of', 'as_a_result_of', 'in_order_to'] },
+      { title: 'Cümle bağlayıcı (sonuç)', ids: ['therefore_thus_hence', 'consequently', 'as_a_result_that', 'accordingly', 'thereby_v_ing'] },
+      { title: 'Cümle alan neden bağlaçları', ids: ['because', 'in_that', 'inasmuch_as_seeing_that', 'owing_to_the_fact_that'] },
+      { title: 'Derece ➔ sonuç', ids: ['so_that_such_that', 'so_much_so_that'] }
+    ],
+    'devrik_kısaltma': [
+      { title: 'Kısaltmalar', ids: ['having_v3', 'upon_on', 'v3_passive_participle', 'prior_to', 'during_throughout', 'at_the_dawn'] },
+      { title: 'Devrik yapılar', ids: ['no_sooner_than', 'hardly_when', 'only_when_after_inv', 'not_only_but_also'] },
+      { title: 'İkili bağlaçlar', ids: ['both_and', 'either_or', 'neither_nor', 'whether_or', 'just_as_so'] }
+    ]
+  };
+
+  const CATEGORY_TITLES = {
+    time: '⏱️ Zaman & Tense',
+    transitions: '🔀 Cümle Bağlaçları & Geçiş',
+    cause_effect: '🎯 Neden-Etki & Fiiller',
+    'devrik_kısaltma': '⚡ Devrik & Kısaltmalar'
+  };
+
+  // Gruplanmış listeye girmemiş bir parça kalırsa kaybolmasın: kategorinin
+  // sonuna "Diğer" grubu olarak eklenir.
+  function connectorGroupsFor(category) {
+    const defined = (CONNECTOR_GROUPS[category] || []).map(g => ({
+      title: g.title,
+      items: g.ids.map(id => CONNECTORS.find(c => c.id === id)).filter(Boolean)
+    }));
+    const listed = new Set(defined.flatMap(g => g.items.map(c => c.id)));
+    const rest = CONNECTORS.filter(c => c.category === category && !listed.has(c.id));
+    if (rest.length) defined.push({ title: 'Diğer', items: rest });
+    return defined.filter(g => g.items.length);
+  }
+
+  function groupTitleOf(connectorId) {
+    for (const cat of Object.keys(CONNECTOR_GROUPS)) {
+      const hit = CONNECTOR_GROUPS[cat].find(g => g.ids.includes(connectorId));
+      if (hit) return hit.title;
+    }
+    return 'Diğer';
+  }
+
   // ─── 4. UYGULAMA DURUMU (STATE) ─────────────────────────────────────────
 
   let state = {
     mode: "sandbox", // 'sandbox' veya 'challenge'
     selectedCategory: "all", // Varsayılan olarak tüm bağlaçlar gösterilsin
+    query: "",               // Arama kutusundaki metin
+    collapsedGroups: {},     // "kategori::grup" -> true ise katlı
     selectedConnector: null,
     selectedClauseA: null,
     selectedClauseB: null,
@@ -2501,6 +2568,76 @@
     renderPalette();
     bindEvents();
     updateUI();
+  }
+
+
+  // ─── PALET ÇİZİMİ (gruplu / aramalı) ────────────────────────────────────
+  const CHIP_STYLE = "padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;";
+
+  function connectorChipHTML(c, tag) {
+    return `
+      <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" title="${(c.desc || '').replace(/"/g, '&quot;')}" style="${CHIP_STYLE}">
+        <span>🔷</span> ${c.label}${tag ? `<span class="srobot-chip-tag">${tag}</span>` : ''}
+      </button>`;
+  }
+
+  function connectorMatches(c, q) {
+    const hay = `${c.label} ${c.desc || ''} ${c.id}`.toLocaleLowerCase('tr');
+    return hay.includes(q);
+  }
+
+  function connectorPaletteHTML() {
+    const q = (state.query || '').trim().toLocaleLowerCase('tr');
+
+    // Arama açıkken kategori filtresi devre dışı: öğrenci aradığını nerede
+    // olursa olsun bulsun.
+    if (q) {
+      const hits = CONNECTORS.filter(c => connectorMatches(c, q));
+      if (!hits.length) {
+        return `<div class="srobot-empty">“${state.query}” için parça bulunamadı. Aramayı kısaltmayı deneyin.</div>`;
+      }
+      return `<div class="srobot-group-body">${hits.map(c => connectorChipHTML(c, groupTitleOf(c.id))).join('')}</div>`;
+    }
+
+    const cats = state.selectedCategory === 'all'
+      ? Object.keys(CONNECTOR_GROUPS)
+      : [state.selectedCategory];
+
+    return cats.map(cat => {
+      const groups = connectorGroupsFor(cat);
+      if (!groups.length) return '';
+      const head = state.selectedCategory === 'all'
+        ? `<div class="srobot-cat-title">${CATEGORY_TITLES[cat] || cat}</div>` : '';
+      const body = groups.map((g, gi) => {
+        const key = `${cat}::${g.title}`;
+        // "Tümü" görünümünde her kategorinin ilk grubu açık, gerisi katlı gelir:
+        // liste hem kısa kalır hem de içeriğin ne olduğu görünür.
+        const defaultCollapsed = state.selectedCategory === 'all' && gi > 0;
+        const holdsSelected = state.selectedConnector && g.items.some(c => c.id === state.selectedConnector);
+        const collapsed = holdsSelected ? false
+          : (key in state.collapsedGroups ? state.collapsedGroups[key] : defaultCollapsed);
+        return `
+          <div class="srobot-group">
+            <button type="button" class="srobot-group-head" data-group-key="${key}">
+              <span class="srobot-group-caret">${collapsed ? '▸' : '▾'}</span>
+              <span>${g.title}</span>
+              <span class="srobot-group-count">${g.items.length} parça</span>
+            </button>
+            <div class="srobot-group-body" style="display: ${collapsed ? 'none' : 'flex'};">
+              ${g.items.map(c => connectorChipHTML(c, '')).join('')}
+            </div>
+          </div>`;
+      }).join('');
+      return head + body;
+    }).join('');
+  }
+
+  function updateSearchCount() {
+    const el = document.getElementById('srobot-search-count');
+    if (!el) return;
+    const q = (state.query || '').trim().toLocaleLowerCase('tr');
+    if (!q) { el.textContent = `${CONNECTORS.length} parça`; return; }
+    el.textContent = `${CONNECTORS.filter(c => connectorMatches(c, q)).length} sonuç`;
   }
 
   function renderPalette() {
@@ -2536,11 +2673,7 @@
         toggleBtn.textContent = `✏️ Değiştir / Listeyi Aç (${CONNECTORS.length})`;
       }
     } else {
-      connectorsContainer.innerHTML = filteredConnectors.map(c => `
-        <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" style="padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;">
-          <span>🔷</span> ${c.label}
-        </button>
-      `).join("");
+      connectorsContainer.innerHTML = connectorPaletteHTML();
       if (toggleBtn) {
         if (state.selectedConnector) {
           toggleBtn.style.display = "inline-flex";
@@ -2557,6 +2690,8 @@
         <span>🟣</span> ${t.label}
       </button>
     `).join("");
+
+    updateSearchCount();
 
     // Clause B Palette
     clauseBContainer.innerHTML = CLAUSE_B_MODALS.map(m => `
@@ -2577,6 +2712,32 @@
       });
     }
 
+    // Arama kutusu: yazdıkça bütün kategorilerde süzer.
+    const searchInput = document.getElementById("srobot-connector-search");
+    if (searchInput) {
+      searchInput.value = state.query || "";
+      searchInput.oninput = function () {
+        state.query = searchInput.value;
+        renderPalette();
+        updateUI();
+      };
+    }
+
+    // Grup başlıkları: tıklayınca o grup katlanır/açılır.
+    const connectorsContainer = document.getElementById("srobot-pieces-connectors");
+    if (connectorsContainer) {
+      connectorsContainer.onclick = function (e) {
+        const head = e.target.closest(".srobot-group-head");
+        if (!head) return;
+        const key = head.dataset.groupKey;
+        const body = head.parentElement ? head.parentElement.querySelector(".srobot-group-body") : null;
+        const current = body ? body.style.display === "none" : false;
+        state.collapsedGroups[key] = !current;
+        renderPalette();
+        updateUI();
+      };
+    }
+
     // Category Filter Buttons (Delegated)
     const catContainer = document.getElementById("srobot-category-filters");
     if (catContainer) {
@@ -2586,6 +2747,10 @@
 
         state.selectedCategory = btn.dataset.cat || "all";
         state.isConnectorsCollapsed = false;
+        state.query = "";
+        state.collapsedGroups = {};
+        const searchBox = document.getElementById("srobot-connector-search");
+        if (searchBox) searchBox.value = "";
         updateCategoryButtons();
         renderPalette();
         updateUI();

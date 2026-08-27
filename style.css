@@ -12641,6 +12641,32 @@ nDown 0.3s ease;
 }
 [data-theme="dark"] .rule-formula-row { background: rgba(139, 126, 200, 0.16); }
 
+/* ── Yapı Robotu: bağlaç paleti grupları ─────────────────────────────────── */
+/* 121 parça tek sırada dizilince duvar oluyordu; parçalar artık alt gruplara
+   ayrılıyor, gruplar katlanabiliyor ve arama kutusuyla süzülebiliyor. */
+.srobot-group { margin-bottom: 10px; }
+.srobot-group-head {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 6px 10px; border-radius: var(--radius-md); cursor: pointer;
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  font-size: 0.78rem; font-weight: 800; color: var(--text-primary); text-align: left;
+}
+.srobot-group-head:hover { border-color: var(--accent-primary); }
+.srobot-group-head .srobot-group-count {
+  margin-left: auto; font-size: 0.7rem; font-weight: 700; color: var(--text-muted);
+}
+.srobot-group-head .srobot-group-caret { font-size: 0.7rem; color: var(--text-muted); }
+.srobot-group-body { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 2px 2px; }
+.srobot-cat-title {
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-muted); margin: 12px 0 6px;
+}
+.srobot-chip-tag {
+  font-size: 0.62rem; font-weight: 700; color: var(--text-muted);
+  border: 1px solid var(--border-color); border-radius: 8px; padding: 1px 6px; margin-left: 6px;
+}
+.srobot-empty { font-size: 0.8rem; color: var(--text-muted); padding: 10px 2px; }
+
 /* ── "Nasıl çevrilir?" kartları ──────────────────────────────────────────── */
 /* Her yapısal öğe kendi kartında: kalıp, İngilizce örnek, Türkçe karşılığı ve
    çeviri sırasında hangi ekin kullanılacağını söyleyen tek satırlık not. */
