@@ -13640,122 +13640,100 @@ function nextQuestion() {
 // Sorular derslerde tanımlı ama hiçbir üniteye bağlı değil; böylece Dersler
 // sekmesinde görünmez, buna karşılık yarım kalan oturum geri yüklenirken
 // lessons üzerinden id ile bulunabilir.
+// Her beceri bir soru havuzudur: elle yazılmış alıştırmalar önce gelir, açık
+// kalan yerleri exam-expansion.js'in ürettiği havuz doldurur. Havuz 10'ar
+// soruluk 10 teste bölünür; minutes bir testin (10 soru) süresidir.
+const EXAM_TEST_SIZE = 10;
+const EXAM_TEST_COUNT = 10;
+
 const EXAM_GROUPS = [
-  { id: 'reading', title: 'Okuma Parçası', icon: '📖', skill: 'Okuma Parçası',
+  { id: 'reading', title: 'Okuma Parçası', icon: '📖', skill: 'Okuma Parçası', minutes: 12,
     desc: 'Akademik metinlerde ana fikir, detay, çıkarım, kelime ve tutum',
-    tests: [
-      { id: 'reading-1', label: 'Test 1', minutes: 35,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex1' }] },
-      { id: 'reading-2', label: 'Test 2', minutes: 25,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex1' }] },
-      { id: 'reading-3', label: 'Test 3', minutes: 25,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex1' }] }
+    sources: [
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_reading' }
     ] },
-  { id: 'dialogue', title: 'Diyalog Tamamlama', icon: '💬', skill: 'Diyalog Tamamlama',
+  { id: 'dialogue', title: 'Diyalog Tamamlama', icon: '💬', skill: 'Diyalog Tamamlama', minutes: 8,
     desc: 'Konuşmadaki eksik repliği bulma',
-    tests: [
-      { id: 'dialogue-1', label: 'Test 1', minutes: 20,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex2' }] },
-      { id: 'dialogue-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex2' }] },
-      { id: 'dialogue-3', label: 'Test 3', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex2' }] }
+    sources: [
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_dialogue' }
     ] },
-  { id: 'para-comp', title: 'Paragraf Tamamlama', icon: '📄', skill: 'Paragraf Tamamlama',
+  { id: 'para-comp', title: 'Paragraf Tamamlama', icon: '📄', skill: 'Paragraf Tamamlama', minutes: 10,
     desc: 'Paragrafta boş bırakılan cümleyi bulma',
-    tests: [
-      { id: 'para-comp-1', label: 'Test 1', minutes: 25,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex3' }] },
-      { id: 'para-comp-2', label: 'Test 2', minutes: 20,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex3' }] },
-      { id: 'para-comp-3', label: 'Test 3', minutes: 20,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex3' }] }
+    sources: [
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4_ex3' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4b_ex3' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l4c_ex3' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_paracomp' }
     ] },
-  { id: 'restatement', title: 'Yakın Anlamlı Cümle', icon: '🔁', skill: 'Yakın Anlamlı Cümle',
+  { id: 'restatement', title: 'Yakın Anlamlı Cümle', icon: '🔁', skill: 'Yakın Anlamlı Cümle', minutes: 9,
     desc: 'Verilen cümleye anlamca en yakın seçeneği bulma',
-    tests: [
-      { id: 'restatement-1', label: 'Test 1', minutes: 20,
-        sources: [{ lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
-                  { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' }] },
-      { id: 'restatement-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_rs_ex' }] },
-      { id: 'restatement-3', label: 'Test 3', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_rs3_ex' }] }
+    sources: [
+      { lessonId: 'c58_l1', exerciseId: 'c59_l1_ex3' },
+      { lessonId: 'c60_l1_extra', exerciseId: 'c60_l1_ex3' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_rs_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_rs3_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_restatement' }
     ] },
-  { id: 'irrelevant', title: 'Akışı Bozan Cümle', icon: '✂️', skill: 'Akışı Bozan Cümle',
+  { id: 'irrelevant', title: 'Akışı Bozan Cümle', icon: '✂️', skill: 'Akışı Bozan Cümle', minutes: 10,
     desc: 'Paragrafın anlam bütünlüğünü bozan cümleyi bulma',
-    tests: [
-      { id: 'irrelevant-1', label: 'Test 1', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' }] },
-      { id: 'irrelevant-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2b_ex' }] },
-      { id: 'irrelevant-3', label: 'Test 3', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2d_ex' }] }
+    sources: [
+      { lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l2b_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l2d_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_irrelevant' }
     ] },
-  { id: 'ordering', title: 'Paragraf Sıralama', icon: '🔢', skill: 'Paragraf Sıralama',
+  { id: 'ordering', title: 'Paragraf Sıralama', icon: '🔢', skill: 'Paragraf Sıralama', minutes: 10,
     desc: 'Karışık cümleleri anlamlı bir paragraf olacak şekilde dizme',
-    tests: [
-      { id: 'ordering-1', label: 'Test 1', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' }] },
-      { id: 'ordering-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2c_ex' }] },
-      { id: 'ordering-3', label: 'Test 3', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l2e_ex' }] }
+    sources: [
+      { lessonId: 'c50_p_l2', exerciseId: 'u50_l2_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l2c_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l2e_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_ordering' }
     ] },
-  { id: 'reference', title: 'Zamir & Referans', icon: '🔗', skill: 'Zamir & Referans',
+  { id: 'reference', title: 'Zamir & Referans', icon: '🔗', skill: 'Zamir & Referans', minutes: 8,
     desc: 'this, the former, the latter gibi ifadelerin gönderdiği ismi bulma',
-    tests: [
-      { id: 'reference-1', label: 'Test 1', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' }] },
-      { id: 'reference-2', label: 'Test 2', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1c_ex' }] },
-      { id: 'reference-3', label: 'Test 3', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1d_ex' }] }
+    sources: [
+      { lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l1c_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l1d_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_reference' }
     ] },
-  { id: 'cloze', title: 'Cloze Test', icon: '🧩', skill: 'Cloze Test',
+  { id: 'cloze', title: 'Cloze Test', icon: '🧩', skill: 'Cloze Test', minutes: 8,
     desc: 'Paragraftaki boşluğa uygun geçiş bağlacını bulma',
-    tests: [
-      { id: 'cloze-1', label: 'Test 1', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' }] },
-      { id: 'cloze-2', label: 'Test 2', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1b_ex' }] },
-      { id: 'cloze-3', label: 'Test 3', minutes: 12,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_l1e_ex' }] }
+    sources: [
+      { lessonId: 'c50_p_l1', exerciseId: 'u50_l1_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l1b_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_l1e_ex' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_cloze' }
     ] },
-  { id: 'sent-comp', title: 'Cümle Tamamlama', icon: '🧱', skill: 'Cümle Tamamlama',
+  { id: 'sent-comp', title: 'Cümle Tamamlama', icon: '🧱', skill: 'Cümle Tamamlama', minutes: 9,
     desc: 'Cümlede eksik bırakılan yan cümleyi bulma',
-    tests: [
-      { id: 'sent-comp-1', label: 'Test 1', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex1' }] },
-      { id: 'sent-comp-2', label: 'Test 2', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex2' }] },
-      { id: 'sent-comp-3', label: 'Test 3', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex3' }] }
+    sources: [
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_sc_ex3' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_sentcomp' }
     ] },
-  { id: 'translation', title: 'Çeviri', icon: '🌐', skill: 'Çeviri',
+  { id: 'translation', title: 'Çeviri', icon: '🌐', skill: 'Çeviri', minutes: 9,
     desc: 'İngilizce–Türkçe ve Türkçe–İngilizce en uygun çeviriyi bulma',
-    tests: [
-      { id: 'translation-1', label: 'Test 1 · İng → Tür', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex1' }] },
-      { id: 'translation-2', label: 'Test 2 · Tür → İng', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex2' }] },
-      { id: 'translation-3', label: 'Test 3 · İng → Tür', minutes: 15,
-        sources: [{ lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex3' }] }
+    sources: [
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex1' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex2' },
+      { lessonId: 'c50_p_l4', exerciseId: 'u50_tr_ex3' },
+      { lessonId: 'c50_p_l4', exerciseId: 'xp_translation' }
     ] }
 ];
 
-// Testi id ile bul; grup bilgisi (başlık, beceri etiketi) oturuma taşınır.
-function findExamTest(testId) {
-  for (const g of EXAM_GROUPS) {
-    const t = (g.tests || []).find(x => x.id === testId);
-    if (t) return Object.assign({}, t, { title: `${g.title} — ${t.label}`, skill: g.skill, icon: g.icon });
-  }
-  return null;
-}
-
-function getExamQuestions(session) {
+// Grubun bütün kaynaklarındaki sorular tek havuzda toplanır.
+function examPoolQuestions(group) {
   const out = [];
-  (session.sources || []).forEach(src => {
+  (group.sources || []).forEach(src => {
     const lesson = lessons.find(l => l.id === src.lessonId);
     if (!lesson) return;
     if (src.exerciseId) {
@@ -13766,6 +13744,35 @@ function getExamQuestions(session) {
     }
   });
   return out;
+}
+
+// Havuz 10'ar soruluk testlere bölünür; eksik kalan son test listelenmez.
+function examTests(group) {
+  const pool = examPoolQuestions(group);
+  const tests = [];
+  for (let i = 0; i < EXAM_TEST_COUNT; i++) {
+    const chunk = pool.slice(i * EXAM_TEST_SIZE, (i + 1) * EXAM_TEST_SIZE);
+    if (chunk.length < EXAM_TEST_SIZE) break;
+    tests.push({
+      id: `${group.id}-${i + 1}`, label: `Test ${i + 1}`,
+      minutes: group.minutes, questions: chunk
+    });
+  }
+  return tests;
+}
+
+// Testi id ile bul; grup bilgisi (başlık, beceri etiketi) oturuma taşınır.
+function findExamTest(testId) {
+  for (const g of EXAM_GROUPS) {
+    const t = examTests(g).find(x => x.id === testId);
+    if (t) return Object.assign({}, t, { title: `${g.title} — ${t.label}`, skill: g.skill, icon: g.icon });
+  }
+  return null;
+}
+
+function getExamQuestions(session) {
+  if (Array.isArray(session.questions)) return session.questions.slice();
+  return examPoolQuestions(session);
 }
 
 // Deneme sınavı yalnızca yerel geliştirme ortamında açık; yayındaki sürümde
@@ -13847,7 +13854,7 @@ function renderExamTab() {
   }
 
   listEl.innerHTML = EXAM_GROUPS.map(g => {
-    const rows = (g.tests || []).map(t => {
+    const rows = examTests(g).map(t => {
       const n = getExamQuestions(t).length;
       return `
         <div class="flex-between-wrap-10" style="padding: 8px 0; border-top: 1px solid var(--border-color);">
