@@ -5,7 +5,7 @@
 (function () {
   // ─── 1. MATRİS VE PARÇA VERİ TABANI ──────────────────────────────────────
 
-  // 1. Matris: Tüm Bağlaçlar, Çapalar, Kısaltmalar & Edat Öbekleri
+  // 1. Matris: Tüm Bağlaçlar, Belirleyiciler, Kısaltmalar & Edat Öbekleri
   const CONNECTORS = [
     // ⏱️ Zaman & Tense Uyumları
     { id: "when", label: "WHEN", desc: "Zaman Bağlacı (-dığında / olunca)", category: "time", color: "#06b6d4" },
@@ -14,10 +14,10 @@
     { id: "after", label: "AFTER", desc: "Zaman Bağlacı (-den sonra)", category: "time", color: "#06b6d4" },
     { id: "as_soon_as", label: "AS SOON AS / ONCE", desc: "Tezlik Bağlacı (-er etmez / anında)", category: "time", color: "#06b6d4" },
     { id: "until_till", label: "UNTIL / TILL", desc: "Süreç Sınırlandırıcı (-e kadar)", category: "time", color: "#06b6d4" },
-    { id: "by_the_time", label: "BY THE TIME", desc: "Zaman Çapası Bağlacı (-dığı zamana kadar)", category: "time", color: "#06b6d4" },
-    { id: "since", label: "SINCE", desc: "Zaman Çapası (-den beri)", category: "time", color: "#06b6d4" },
-    { id: "by_time_anchor", label: "BY + Tarih (Tense Çapası)", desc: "Zaman Çapası (By 2050 / By 1900)", category: "time", color: "#06b6d4" },
-    { id: "so_far", label: "SO FAR / UP TO NOW", desc: "Zaman Çapası (Şu ana kadar / Son yıllarda)", category: "time", color: "#06b6d4" },
+    { id: "by_the_time", label: "BY THE TIME", desc: "Zaman Belirleyici Bağlaç (-dığı zamana kadar)", category: "time", color: "#06b6d4" },
+    { id: "since", label: "SINCE", desc: "Zaman Belirleyicisi (-den beri)", category: "time", color: "#06b6d4" },
+    { id: "by_time_anchor", label: "BY + Tarih (Zaman Belirleyici)", desc: "Zaman Belirleyicisi (By 2050 / By 1900)", category: "time", color: "#06b6d4" },
+    { id: "so_far", label: "SO FAR / UP TO NOW", desc: "Zaman Belirleyicisi (Şu ana kadar / Son yıllarda)", category: "time", color: "#06b6d4" },
 
     // 🔀 Cümle Bağlaçları & Geçiş İfadeleri (Tüm Kategorik Kalıplar)
     // A) Zıtlık & Karşılaştırma Geçiş İfadeleri
@@ -86,7 +86,7 @@
     { id: "having_v3", label: "HAVING + V3 / HAVING BEEN + V3", desc: "Zaman Kısaltması (-dikten sonra)", category: "devrik_kısaltma", color: "#06b6d4" },
     { id: "prior_to", label: "PRIOR TO / SUBSEQUENT TO", desc: "Akademik Edat Öbeği (-den önce / -den sonra)", category: "devrik_kısaltma", color: "#06b6d4" },
     { id: "upon_on", label: "UPON / ON (+ V-ing)", desc: "Zaman Kısaltması (-er etmez / üzerine)", category: "devrik_kısaltma", color: "#06b6d4" },
-    { id: "at_the_dawn", label: "AT THE DAWN OF / ON THE EVE OF", desc: "Çağ & Dönem Çapası (-in şafağında / arifesinde)", category: "devrik_kısaltma", color: "#06b6d4" },
+    { id: "at_the_dawn", label: "AT THE DAWN OF / ON THE EVE OF", desc: "Çağ & Dönem Belirleyicisi (-in şafağında / arifesinde)", category: "devrik_kısaltma", color: "#06b6d4" },
     { id: "no_sooner_than", label: "NO SOONER ... THAN", desc: "Devrik Yapı (Tam ... olmuştu ki ... oldu)", category: "devrik_kısaltma", color: "#06b6d4" },
     { id: "hardly_when", label: "HARDLY / BARELY ... WHEN", desc: "Devrik Yapı (Henüz ... olmuştu ki ... oldu)", category: "devrik_kısaltma", color: "#06b6d4" },
     { id: "during_throughout", label: "DURING / THROUGHOUT", desc: "Edat Öbeği (Esnasında / Boyunca + İsim)", category: "devrik_kısaltma", color: "#06b6d4" },
@@ -168,7 +168,7 @@
     { id: "v3_passive_participle", label: "V3 / BEING V3 (Passive Reduction)", desc: "Pasif Kısaltma (Görüldüğünde / -dığında)", category: "devrik_kısaltma", color: "#06b6d4" },
 
     // ⏱️ ZAMAN ZARFLARI & TENSE ZORUNLULUKLARI (TIME ADVERBS)
-    { id: "over_past_years", label: "OVER / IN / DURING THE PAST ...", desc: "Zaman Çapası (Son X yıldır/aydır ➔ Pres. Perf.)", category: "time", color: "#06b6d4" },
+    { id: "over_past_years", label: "OVER / IN / DURING THE PAST ...", desc: "Zaman Belirleyicisi (Son X yıldır/aydır ➔ Pres. Perf.)", category: "time", color: "#06b6d4" },
     { id: "lately_recently", label: "LATELY / RECENTLY", desc: "Yakın Geçmiş Zarfı (Son zamanlarda ➔ Pres. Perf.)", category: "time", color: "#06b6d4" },
     { id: "yesterday_ago_last", label: "YESTERDAY / ... AGO / LAST ...", desc: "Kesin Geçmiş Zaman Zarfı (➔ Simple Past V2)", category: "time", color: "#06b6d4" },
     { id: "how_long_ago", label: "HOW LONG AGO ... ?", desc: "Geçmiş Zaman Soru Zarfı (➔ Simple Past V2)", category: "time", color: "#06b6d4" },
@@ -214,7 +214,7 @@
         { clauseA: "v1_present", clauseB: ["will_have_v3"], trPattern: "Eve döneceğin zamana kadar tüm ev işlerini bitirmiş olacağım." },
         { clauseA: "v2_past", clauseB: ["had_v3_main"], trPattern: "İtfaiyeciler varana kadar yangın depoyu mahvetmişti." }
       ],
-      ruleText: "BY THE TIME (Zaman Çapası): By the time + V1 ➔ WILL HAVE V3 | By the time + V2 ➔ HAD V3",
+      ruleText: "BY THE TIME (Zaman Belirleyicisi): By the time + V1 ➔ WILL HAVE V3 | By the time + V2 ➔ HAD V3",
       tenseExamples: [
         { tense: "Future Perfect", en: "By the time you return home, I will have completed all chores.", tr: "Eve döneceğin zamana kadar tüm ev işlerini bitirmiş olacağım." },
         { tense: "Past Perfect", en: "By the time the firefighters arrived, the fire had destroyed the warehouse.", tr: "İtfaiyeciler varana kadar yangın depoyu mahvetmişti." },
@@ -323,7 +323,7 @@
           trPattern: "Sanayi çağının şafağında buharlı makineler ulaşımı dönüştürdü."
         }
       ],
-      ruleText: "AT THE DAWN OF / ON THE EVE OF: Dönem / Tarih ismi alarak zaman çapası kurar.",
+      ruleText: "AT THE DAWN OF / ON THE EVE OF: Dönem / Tarih ismi alarak zaman belirleyicisi kurar.",
       tenseExamples: [
         { tense: "Simple Past", en: "At the dawn of the industrial era, steam engines transformed transport.", tr: "Sanayi çağının şafağında buharlı makineler ulaşımı dönüştürdü." },
         { tense: "Past Perfect", en: "On the eve of the election, the candidates had completed their campaigns.", tr: "Seçim arifesinde adaylar kampanyalarını çoktan tamamlamıştı." },
@@ -2478,7 +2478,7 @@
     noun:   { label: 'isim öbeği', hint: 'Arkasından isim ya da V-ing gelir; özne + fiil alamaz.', color: '#f59e0b' },
     ving:   { label: 'V-ing',     hint: 'Arkasından fiilin -ing biçimi gelir.', color: '#f59e0b' },
     v1:     { label: 'V1',        hint: 'Arkasından yalın fiil gelir.', color: '#f59e0b' },
-    adv:    { label: 'zarf',      hint: 'Bağlaç değil zaman zarfıdır; cümlenin zamanını belirler, arkasına cümle almaz.', color: '#64748b' },
+    adv:    { label: 'zarf',      hint: 'Bağlaç değil: cümlenin zamanını belirleyen ifadedir (for eight years, two years ago). Arkasına cümle almaz.', color: '#64748b' },
     par:    { label: 'eş öğe',    hint: 'İki eş değerli öğeyi (isim, sıfat ya da cümle) birbirine bağlar.', color: '#10b981' },
     inv:    { label: 'devrik',    hint: 'Arkasından devrik cümle gelir: yardımcı fiil özneden önce durur.', color: '#ef4444' },
     main:   { label: 'ana cümle', hint: 'Kısaltılmış yapıdır; arkasından ana cümle gelir.', color: '#8b5cf6' }
@@ -2537,7 +2537,7 @@
   const CONNECTOR_GROUPS = {
     time: [
       { title: 'Zaman bağlaçları (cümle alır)', ids: ['when', 'while_as', 'before', 'after', 'as_soon_as', 'until_till', 'by_the_time', 'since', 'whenever', 'the_moment'] },
-      { title: 'Zaman çapaları ve zarflar', ids: ['by_time_anchor', 'so_far', 'over_past_years', 'lately_recently', 'yesterday_ago_last', 'how_long_ago', 'by_future_for', 'always_continuous', 'modal_past_adverb'] },
+      { title: 'Zaman belirleyicilerı ve zarflar', ids: ['by_time_anchor', 'so_far', 'over_past_years', 'lately_recently', 'yesterday_ago_last', 'how_long_ago', 'by_future_for', 'always_continuous', 'modal_past_adverb'] },
       { title: 'Koşul yapıları', ids: ['if_type0_1', 'if_type2', 'if_type3', 'unless', 'provided_that', 'as_long_as', 'in_case', 'supposing_that', 'only_if', 'on_condition_that'] },
       { title: 'Amaç bağlaçları', ids: ['so_that_purpose', 'in_order_that'] },
       { title: 'Zaman kayması ve gerçek dışı yapılar', ids: ['reported_speech', 'noun_clause', 'wish_if_only', 'as_if_as_though', 'its_time', 'would_rather'] }

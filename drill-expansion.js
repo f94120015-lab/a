@@ -766,8 +766,8 @@
   const doA = a => (a.plural ? 'do' : 'does');
   const v1n = a => (a.plural ? a.v.v1 : a.v.v1s);
 
-  /* ── Zaman Uyumu · Alıştırma 1: Çapa → Zaman ────────────────────────────── */
-  // Tek taraflı çapalar: çapayı gören çekimi bilir, ikinci cümleye gerek yoktur.
+  /* ── Zaman Uyumu · Alıştırma 1: Belirleyici → Zaman ────────────────────────────── */
+  // Tek taraflı belirleyicilar: belirleyiciyi gören çekimi bilir, ikinci cümleye gerek yoktur.
   const ANCHOR_RULES = [
     { key: 'since', build: (a, c) => ({
         s: `${cap(a.s)} ____ ${a.o} since 2018.`,
@@ -789,13 +789,13 @@
         d: [`${has(a)} ${a.v.v3}`, `had ${a.v.v3}`, `${be(a)} ${a.v.ing}`, `will ${a.v.v1}`],
         tr: `${cap(a.st)} iki yıl önce ${a.ot} ${a.t.past}.`,
         e: "'ago' geçmişte KAPALI bir anı işaret eder ve yalnızca Simple Past alır; Present Perfect 'ago' ile kullanılamaz.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası', 'since'] }) },
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi', 'since'] }) },
     { key: 'already', build: (a, c) => ({
         s: `${cap(a.s)} ${has(a)} already ____ ${a.o}.`,
         w: a.v.v3,
         d: [a.v.v1, a.v.ing, `to ${a.v.v1}`, `been ${a.v.v3}`],
         tr: `${cap(a.st)} ${a.ot} çoktan ${a.t.past}.`,
-        e: "'already' Present Perfect'in çapasıdır: has/have + V3. Yardımcı fiilden sonra yalın fiil ya da V-ing gelemez.",
+        e: "'already' Present Perfect'in belirleyicisidir: has/have + V3. Yardımcı fiilden sonra yalın fiil ya da V-ing gelemez.",
         t: ['so far / up to now / hitherto / in recent years'] }) },
     { key: 'so far', build: (a, c) => ({
         s: `So far ${a.s} ${has(a)} ____ ${a.o} twice.`,
@@ -810,14 +810,14 @@
         d: [`will ${a.v.v1}`, `${has(a)} ${a.v.v3}`, `had ${a.v.v3}`, `${be(a)} ${a.v.ing}`],
         tr: `${cap(a.st)} 2030'a kadar ${a.ot} ${a.t.futPerf}.`,
         e: "Gelecekteki bir sınır ('by 2030') o ana kadar tamamlanmayı ister: Future Perfect. 'will + V1' sınırı değil, tek bir anı anlatır.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { key: 'last year', build: (a, c) => ({
         s: `${cap(a.s)} ____ ${a.o} last year.`,
         w: a.v.v2,
         d: [`${has(a)} ${a.v.v3}`, `will ${a.v.v1}`, `${be(a)} ${a.v.ing}`, `had ${a.v.v3}`],
         tr: `${cap(a.st)} geçen yıl ${a.ot} ${a.t.past}.`,
-        e: "'last year' kapanmış bir dönemdir; noktasal geçmiş çapalarında Present Perfect kullanılamaz.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        e: "'last year' kapanmış bir dönemdir; noktasal geçmiş belirleyicilerinde Present Perfect kullanılamaz.",
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { key: 'currently', build: (a, c) => ({
         s: `${cap(a.s)} ${be(a)} currently ____ ${a.o}.`,
         w: a.v.ing,
@@ -831,7 +831,7 @@
         d: [`${has(a)} ${a.v.v3}`, `will have ${a.v.v3}`, a.v.v2, `${be(a)} ${a.v.ing}`],
         tr: `${cap(a.st)} geçen yılın sonuna kadar ${a.ot} ${a.t.plu}.`,
         e: "Geçmişteki bir sınır o ana kadar tamamlanmayı ister: Past Perfect. Aynı kalıp gelecekte 'will have V3' olurdu.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { key: 'every spring', build: (a, c) => ({
         s: `${cap(a.s)} ____ ${a.o} every spring.`,
         w: v1n(a),
@@ -842,7 +842,7 @@
   ];
 
   function buildAnchors(need, startIndex) {
-    const prompt = 'Zaman çapasına uygun fiil biçimini seçin:';
+    const prompt = 'Zamanı belirleyen ifadeye uygun fiil biçimini seçin:';
     const out = [];
     let i = startIndex;
     while (out.length < need) {
@@ -1044,7 +1044,7 @@
         w: `${has(a)} ${a.v.v3}`, o: ['two years', 'ago', a.o],
         tr: `${cap(a.st)} iki yıl önce ${a.ot} ${a.t.past}.`,
         e: "'ago' Present Perfect almaz; kapanmış geçmiş an yalnızca Simple Past ile kurulur.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { build: (a, c) => ({
         s: `When ${a.s} will ${a.v.v1} ${a.o}, the results will follow.`,
         w: `will ${a.v.v1}`, o: ['When', a.o, 'will follow'],
@@ -1073,8 +1073,8 @@
         s: `${cap(a.s)} ${has(a)} ${a.v.v3} ${a.o} last year.`,
         w: `${has(a)} ${a.v.v3}`, o: ['last year', a.o, cap(a.s)],
         tr: `${cap(a.st)} geçen yıl ${a.ot} ${a.t.past}.`,
-        e: "Noktasal geçmiş çapası ('last year') Present Perfect'i kesinlikle dışlar.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        e: "Noktasal geçmiş belirleyicisi ('last year') Present Perfect'i kesinlikle dışlar.",
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { build: (a, c) => ({
         s: `${cap(a.s)} ${a.v.v2} ${a.o} so far.`,
         w: a.v.v2, o: ['so far', a.o, cap(a.s)],
@@ -1110,13 +1110,13 @@
         w: `will ${a.v.v1}`, o: ['By 2030', 'completely', a.o],
         tr: `${cap(a.st)} 2030'a kadar ${a.ot} tamamen ${a.t.futPerf}.`,
         e: "'by + gelecek tarih' o ana kadar tamamlanmayı ister: will have + V3.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { build: (a, c) => ({
         s: `${cap(a.s)} ${has(a)} ${a.v.v3} ${a.o} in 1998.`,
         w: `${has(a)} ${a.v.v3}`, o: ['in 1998', a.o, cap(a.s)],
         tr: `${cap(a.st)} 1998'de ${a.ot} ${a.t.past}.`,
-        e: "Yıl bildiren çapa kapanmış bir andır; Present Perfect ile birlikte kullanılamaz.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        e: "Yıl bildiren belirleyici kapanmış bir andır; Present Perfect ile birlikte kullanılamaz.",
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { build: (a, c) => ({
         s: `After ${a.s} ${has(a)} ${a.v.v3} ${a.o}, the summary was printed.`,
         w: `${has(a)} ${a.v.v3}`, o: ['After', 'the summary', 'was printed'],
@@ -1151,8 +1151,8 @@
         s: `${cap(a.s)} had ${a.v.v3} ${a.o} two days ago.`,
         w: `had ${a.v.v3}`, o: ['two days', 'ago', a.o],
         tr: `${cap(a.st)} iki gün önce ${a.ot} ${a.t.past}.`,
-        e: "Past Perfect ikinci bir geçmiş referans ister; tek başına 'ago' çapasıyla Simple Past kullanılır.",
-        t: ['by + Gelecek / Geçmiş Zaman Çapası'] }) },
+        e: "Past Perfect ikinci bir geçmiş referans ister; tek başına 'ago' belirleyicisiyle Simple Past kullanılır.",
+        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
     { build: (a, c) => ({
         s: `Until ${a.s} will ${a.v.v1} ${a.o}, the site stays closed.`,
         w: `will ${a.v.v1}`, o: ['Until', 'the site', 'stays closed'],

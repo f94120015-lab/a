@@ -28559,7 +28559,7 @@ if (typeof lessons !== 'undefined') {
   {
     "id": "c66_l3",
     "unitId": 66,
-    "title": "Zaman Çapaları ve Tense Soruları (since + V2, for + duration, by + past/future)",
+    "title": "Zaman Belirleyicileri ve Tense Soruları (since + V2, for + duration, by + past/future)",
     "subtitle": "Recently & Lately Kuralları ve Farkındalık Fiilleri (realize, notice, discover)",
     "description": "Sınavların en çok soru gelen konusu olan Tense alanında since, for, by, recently ve lately gibi zaman belirteçlerinin stratejik tuzakları.",
     "konuAnlatimi": {
@@ -29131,8 +29131,8 @@ if (typeof lessons !== 'undefined') {
       },
       {
         "id": "c66_l5_ex1",
-        "title": "Alıştırma 3: Çapa ve Süreç İkilisi: SINCE & FOR",
-        "description": "5. Çapa ve Süreç İkilisi: SINCE & FOR Dünyası (since + V2, for + duration)",
+        "title": "Alıştırma 3: Belirleyici ve Süreç İkilisi: SINCE & FOR",
+        "description": "5. Belirleyici ve Süreç İkilisi: SINCE & FOR Dünyası (since + V2, for + duration)",
         "questions": [
           {
             "id": "c66_l5_q1",
@@ -29147,9 +29147,9 @@ if (typeof lessons !== 'undefined') {
             ],
             "correctIndex": 0,
             "translation": "Diplomatik antlaşma 1945'te imzalandığından beri barışçıl ilişkiler devam etmektedir.",
-            "explanation": "'Since' yan cümlesi geçmişteki çapa noktasıdır ve Simple Past Passive (was signed) olur; ana cümle Present Perfect'tir.",
+            "explanation": "'Since' yan cümlesi geçmişteki belirleyici noktasıdır ve Simple Past Passive (was signed) olur; ana cümle Present Perfect'tir.",
             "hint": {
-              "formula": "Since + V2 (Çapa) ➔ Present Perfect (Have V3)",
+              "formula": "Since + V2 (Belirleyici) ➔ Present Perfect (Have V3)",
               "academicNote": "Since zaman kilidi."
             }
           },
@@ -29243,7 +29243,7 @@ if (typeof lessons !== 'undefined') {
           {
             "id": "c66_l5_q7",
             "type": "fill-blank-dropdown",
-            "prompt": "Since çapa kuralını uygulayın:",
+            "prompt": "Since belirleyici kuralını uygulayın:",
             "sentence": "Cultural heritage preservation laws ___ significantly stricter since the 1990 convention ___ into effect.",
             "options": [
               "have become / took",
@@ -29343,7 +29343,7 @@ if (typeof lessons !== 'undefined') {
             ],
             "correctIndex": 0,
             "translation": "Since yan cümlesine V2 alır, ana cümleye Have V3 alır.",
-            "explanation": "Çapa kuralı.",
+            "explanation": "Belirleyici kuralı.",
             "hint": {
               "formula": "Since Rules",
               "academicNote": "Gramer kilidi."
@@ -29353,7 +29353,7 @@ if (typeof lessons !== 'undefined') {
           {
             "id": "c66_l5_q13",
             "type": "context-clue",
-            "prompt": "Paragraftaki 'Since' zaman çapasını tamamlayın:",
+            "prompt": "Paragraftaki 'Since' zaman belirleyicisinı tamamlayın:",
             "sentence": "Ever since the World Health Organization ___ the global eradication strategy, smallpox cases have dropped to zero.",
             "options": [
               "launched",
@@ -30310,7 +30310,7 @@ if (typeof lessons !== 'undefined') {
           {
             "id": "c66_l9_q3",
             "type": "fill-blank-dropdown",
-            "prompt": "[Karma Refleks 3] 'Since + V2' çapa kuralını uygulayın:",
+            "prompt": "[Karma Refleks 3] 'Since + V2' belirleyici kuralını uygulayın:",
             "sentence": "Since the new environmental regulations ___ in 2020, industrial emissions have dropped.",
             "options": [
               "were enacted",
@@ -30323,7 +30323,7 @@ if (typeof lessons !== 'undefined') {
             "explanation": "'Since' yan cümlesi V2 ('were enacted') gerektirir.",
             "hint": {
               "formula": "[KURAL 5: Since + V2 ➔ Have V3]",
-              "academicNote": "Since çapa kuralı."
+              "academicNote": "Since belirleyici kuralı."
             }
           },
           {
@@ -30519,7 +30519,7 @@ if (typeof lessons !== 'undefined') {
           {
             "id": "c66_l9_q14",
             "type": "context-clue",
-            "prompt": "Karma sınav paragrafındaki 'Since' çapasını doldurun:",
+            "prompt": "Karma sınav paragrafındaki 'Since' belirleyicisini doldurun:",
             "sentence": "Ever since the treaty was ratified, the signatory states ___ peacefully for mutual economic prosperity.",
             "options": [
               "have collaborated",
@@ -31960,11 +31960,11 @@ if (typeof lessons !== 'undefined') {
       const u66 = units.find(u => String(u.id) === '66');
       if (u66) {
         u66.lessons = ["c41_l1", "c66_l3", "c66_l7"];
-        u66.title = "YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Çapaları & Kısaltma Kilitleri";
+        u66.title = "YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Belirleyicileri & Kısaltma Kilitleri";
       }
       const t66 = rawTopics.find(t => String(t.id) === '66');
       if (t66) {
-        t66.title = "XXXIII. YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Çapaları & Kısaltma Kilitleri";
+        t66.title = "XXXIII. YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Belirleyicileri & Kısaltma Kilitleri";
         t66.desc = "Zaman kazandıran sınav kısayolları, tense-bağlaç soru taktikleri, since/for ve by kuralları ile 10 altın sınav kuralı karma testleri.";
       }
 
@@ -40017,7 +40017,7 @@ if (typeof lessons !== 'undefined') {
 // ============================================================
 // Bölüm kartı açıklamaları: kısa, tek cümlelik ve sınava hazırlanan bir
 // öğrencinin tanıdığı terimlerle. Eskiden bazıları 150 karakteri aşıyor,
-// bazıları ("mühendislik", "matris", "zirve", "çapa") ders kitabında
+// bazıları ("mühendislik", "matris", "zirve", "belirleyici") ders kitabında
 // karşılaşılmayan bir dil kullanıyordu; iki bölümün açıklaması ise boştu.
 // ============================================================
 (function rewriteUnitDescriptions() {
@@ -42517,7 +42517,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 0,
           "translation": "Vadide şimdiye kadar yeni bir tür kaydedilmedi.",
-          "explanation": "Present Perfect ile birlikte 'şimdiye kadar' anlamı veren çapa 'so far'dır; 'by then' geçmişe, 'at the dawn of' bir döneme işaret eder.",
+          "explanation": "Present Perfect ile birlikte 'şimdiye kadar' anlamı veren belirleyici 'so far'dır; 'by then' geçmişe, 'at the dawn of' bir döneme işaret eder.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ]
@@ -42536,7 +42536,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 2,
           "translation": "Restorasyon 2031'deki yüzüncü yıla kadar tamamlanmış olacak.",
-          "explanation": "Future Perfect ile birlikte bir SINIR bildiren çapa 'by'dır; 'until' süregelen bir durumu, 'since' başlangıcı işaret eder.",
+          "explanation": "Future Perfect ile birlikte bir SINIR bildiren belirleyici 'by'dır; 'until' süregelen bir durumu, 'since' başlangıcı işaret eder.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42797,7 +42797,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 1,
           "translation": "Katalog ellinci yıl dönümüne kadar üç kez yeniden basılmış olacak.",
-          "explanation": "Future Perfect ile bir SINIR bildiren çapa 'by'dır; 'until' süregelen bir durumu, 'since' başlangıcı, 'throughout' bütün bir süreyi işaret eder.",
+          "explanation": "Future Perfect ile bir SINIR bildiren belirleyici 'by'dır; 'until' süregelen bir durumu, 'since' başlangıcı, 'throughout' bütün bir süreyi işaret eder.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -42819,7 +42819,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 4,
           "translation": "1900'e gelindiğinde lonca ayrıcalıklarının çoğunu çoktan bırakmıştı.",
-          "explanation": "Past Perfect ile birlikte geçmişte bir sınır bildiren çapa 'By'dır: 'By 1900 ... had V3'.",
+          "explanation": "Past Perfect ile birlikte geçmişte bir sınır bildiren belirleyici 'By'dır: 'By 1900 ... had V3'.",
           "grammarTags": [
             "Bağlaç Yapısal Kuralları"
           ],
@@ -44888,7 +44888,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "cdrill_e37",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "Until the centenary in 2031, the restoration will have been completed.",
           "options": [
             "will have been completed",
@@ -46959,7 +46959,7 @@ if (typeof lessons !== 'undefined') {
   "id": "tdrill_l1",
   "unitId": 102,
   "title": "Zaman Uyumu Kuralları",
-  "subtitle": "Çapalar, iki cümlecik uyumu, devrik kilitler",
+  "subtitle": "Belirleyiciler, iki cümlecik uyumu, devrik kilitler",
   "konuAnlatimi": {
     "baslik": "Zaman Uyumu Kuralları",
     "teorikMantik": "Bazı zaman ifadeleri cümlenin zamanını serbest bırakmaz, hesaplanabilir kılar. 'by the time' yan cümlesi geniş zamansa ana cümle Will Have V3, geçmiş zamansa Had V3 olmak zorundadır. 'since' bir nokta, 'for' bir süre, 'ago' ise geçmişte kapalı bir andır; üçü üç ayrı zaman ister. Zaman ve koşul bağlaçlarının yan cümlesine ise hiçbir koşulda 'will' gelmez.",
@@ -46969,13 +46969,13 @@ if (typeof lessons !== 'undefined') {
   "exercises": [
     {
       "id": "tdrill_ex1",
-      "title": "Alıştırma 1: Çapa → Zaman",
-      "description": "for, ago, already, yet, just gibi çapaların dayattığı zaman.",
+      "title": "Alıştırma 1: Belirleyici → Zaman",
+      "description": "for, ago, already, yet, just gibi belirleyicilerın dayattığı zaman.",
       "questions": [
         {
           "id": "tdrill_a1",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The instrument ____ out of use for eight years.",
           "options": [
             "has been",
@@ -46997,7 +46997,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a2",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The kiln ____ nearly two centuries ago.",
           "options": [
             "was abandoned",
@@ -47019,7 +47019,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a3",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The site ____ closed to visitors since the 2019 collapse.",
           "options": [
             "had remained",
@@ -47041,7 +47041,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a4",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The committee ____ the revised budget.",
           "options": [
             "already approved",
@@ -47063,7 +47063,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a5",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The final report ____ published yet.",
           "options": [
             "was not",
@@ -47085,7 +47085,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a6",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The laboratory ____ its preliminary findings.",
           "options": [
             "just released",
@@ -47107,7 +47107,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a7",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "____ the manuscript ever been exhibited abroad?",
           "options": [
             "Had",
@@ -47129,7 +47129,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a8",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The species ____ recorded north of the river.",
           "options": [
             "is never",
@@ -47151,7 +47151,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a9",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "Attendance ____ sharply lately.",
           "options": [
             "fell",
@@ -47173,7 +47173,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a10",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "Over the past decade the glacier ____ by two kilometres.",
           "options": [
             "has retreated",
@@ -47195,7 +47195,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a11",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "How long ____ the archive been closed to the public?",
           "options": [
             "has",
@@ -47217,7 +47217,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a12",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "They ____ the first edition forty years ago.",
           "options": [
             "had published",
@@ -47240,7 +47240,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a13",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "In the last five years the collection ____ in size.",
           "options": [
             "doubles",
@@ -47262,7 +47262,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a14",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The journal ____ little on the subject lately.",
           "options": [
             "has published",
@@ -47273,7 +47273,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 0,
           "translation": "Dergi son zamanlarda konu üzerine az yayın yaptı.",
-          "explanation": "'lately' Present Perfect çapasıdır.",
+          "explanation": "'lately' Present Perfect belirleyicisidır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -47284,7 +47284,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a15",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "She had been working on the catalogue ____ a decade before it appeared.",
           "options": [
             "for",
@@ -47309,7 +47309,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a16",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The instrument has been out of use ____ 2016.",
           "options": [
             "for",
@@ -47332,7 +47332,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a17",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "No new species ____ in the valley so far.",
           "options": [
             "had been recorded",
@@ -47354,7 +47354,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a18",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "Researchers ____ the 1970s data recently.",
           "options": [
             "revisited",
@@ -47376,7 +47376,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a19",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "Two volumes ____ in translation.",
           "options": [
             "have already appeared",
@@ -47398,7 +47398,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a20",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "____ the results been verified yet?",
           "options": [
             "Are",
@@ -47420,7 +47420,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a21",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The wall collapsed only a few weeks ____.",
           "options": [
             "since",
@@ -47444,7 +47444,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a22",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The excavation ____ the lowest layer yet.",
           "options": [
             "does not reach",
@@ -47466,7 +47466,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a23",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "Over the past century the marshes ____ almost entirely.",
           "options": [
             "were disappearing",
@@ -47488,7 +47488,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a24",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "How long ____ they been excavating before the funding stopped?",
           "options": [
             "were",
@@ -47511,7 +47511,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a25",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "He ____ the original before that afternoon.",
           "options": [
             "has never seen",
@@ -47534,7 +47534,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a26",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "She ____ the transcription when the power failed.",
           "options": [
             "just finished",
@@ -47557,7 +47557,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a27",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The museum ____ a second panel.",
           "options": [
             "just acquired",
@@ -47579,7 +47579,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a28",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "By the time the grant arrived, the team ____.",
           "options": [
             "was already leaving",
@@ -47602,7 +47602,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a29",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "How long ____ you been working on the index?",
           "options": [
             "were",
@@ -47624,7 +47624,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a30",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The site has remained closed ____ three seasons.",
           "options": [
             "until",
@@ -47648,7 +47648,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a31",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The samples ____ by now; check the freezer log.",
           "options": [
             "will thaw",
@@ -47670,7 +47670,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a32",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "By now the second volume ____ in three languages.",
           "options": [
             "appeared",
@@ -47681,7 +47681,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 1,
           "translation": "İkinci cilt şimdiye kadar üç dilde yayımlandı.",
-          "explanation": "'by now' Present Perfect çapasıdır; Simple Past almaz.",
+          "explanation": "'by now' Present Perfect belirleyicisidır; Simple Past almaz.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -47692,7 +47692,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a33",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The mill closed in 1978; since then the town ____ on tourism.",
           "options": [
             "relies",
@@ -47714,7 +47714,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a34",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The wall was recorded in 1890 and ____ since then.",
           "options": [
             "has not been seen",
@@ -47736,7 +47736,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a35",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "To date no comparable object ____ in the region.",
           "options": [
             "is recovered",
@@ -47759,7 +47759,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a36",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "Only nine folios ____ to date.",
           "options": [
             "are identified",
@@ -47781,7 +47781,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a37",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The correct reading ____ in the margin all along.",
           "options": [
             "would be",
@@ -47803,7 +47803,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a38",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The two fragments ____ to the same panel all along.",
           "options": [
             "belonged",
@@ -47825,7 +47825,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a39",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The chamber ____ in forty years.",
           "options": [
             "will not be opened",
@@ -47847,7 +47847,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a40",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "No comparable find ____ in decades.",
           "options": [
             "had been reported",
@@ -47866,7 +47866,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a41",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "By now the trench ____ with water.",
           "options": [
             "had filled",
@@ -47888,7 +47888,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a42",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "By now the second volume appeared in three languages.",
           "options": [
             "By now",
@@ -47909,7 +47909,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a43",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "She left the institute in March; since then no replacement ____.",
           "options": [
             "appoints",
@@ -47931,7 +47931,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a44",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "To date the theory ____ every test.",
           "options": [
             "had withstood",
@@ -47942,7 +47942,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 3,
           "translation": "Kuram bugüne kadar her sınamaya dayandı.",
-          "explanation": "'to date' Present Perfect çapasıdır.",
+          "explanation": "'to date' Present Perfect belirleyicisidır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -47953,7 +47953,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a45",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "They ____ the attribution all along.",
           "options": [
             "suspect",
@@ -47975,7 +47975,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a46",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The society ____ in years.",
           "options": [
             "does not meet",
@@ -47994,7 +47994,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a47",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "No comparable object was recovered in the region to date.",
           "options": [
             "No comparable object",
@@ -48015,7 +48015,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a48",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The chamber was not opened in forty years.",
           "options": [
             "The chamber",
@@ -48033,7 +48033,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a49",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "Since then the town relies on tourism alone.",
           "options": [
             "on tourism",
@@ -48054,7 +48054,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_a50",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The correct reading was in the margin all along, we simply missed it.",
           "options": [
             "The correct reading",
@@ -48143,7 +48143,7 @@ if (typeof lessons !== 'undefined') {
             "Zaman Uyumu Kuralları"
           ],
           "terms": [
-            "by + Gelecek / Geçmiş Zaman Çapası"
+            "by + Gelecek / Geçmiş Zaman Belirleyicisi"
           ]
         },
         {
@@ -48862,7 +48862,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 0,
           "translation": "1990'dan beri buzul her yaz geri çekiliyor.",
-          "explanation": "'ever since + tarih' Present Perfect çapasıdır.",
+          "explanation": "'ever since + tarih' Present Perfect belirleyicisidır.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -49852,7 +49852,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f1",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The instrument has been out of use since eight years.",
           "options": [
             "since",
@@ -49873,7 +49873,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f2",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "They have published the first edition forty years ago.",
           "options": [
             "the first edition",
@@ -49931,7 +49931,7 @@ if (typeof lessons !== 'undefined') {
             "Zaman Uyumu Kuralları"
           ],
           "terms": [
-            "by + Gelecek / Geçmiş Zaman Çapası"
+            "by + Gelecek / Geçmiş Zaman Belirleyicisi"
           ]
         },
         {
@@ -50064,7 +50064,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f11",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "No new species has been recorded in the valley in 1990.",
           "options": [
             "in 1990",
@@ -50074,7 +50074,7 @@ if (typeof lessons !== 'undefined') {
           ],
           "correctIndex": 0,
           "translation": "Vadide 1990'da yeni bir tür kaydedilmedi.",
-          "explanation": "'in 1990' kapalı bir geçmiş tarihtir ve Present Perfect ile kullanılamaz; ya Simple Past ya da 'so far' gibi bir çapa gerekir.",
+          "explanation": "'in 1990' kapalı bir geçmiş tarihtir ve Present Perfect ile kullanılamaz; ya Simple Past ya da 'so far' gibi bir belirleyici gerekir.",
           "grammarTags": [
             "Zaman Uyumu Kuralları"
           ],
@@ -50085,7 +50085,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f12",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "Over the past decade the glacier retreated by two kilometres.",
           "options": [
             "retreated",
@@ -50148,7 +50148,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f15",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The committee already has approved the revised budget.",
           "options": [
             "the revised budget",
@@ -50169,7 +50169,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f16",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The final report has not yet been published yet.",
           "options": [
             "yet",
@@ -50232,7 +50232,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f19",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The building is used to house the town archive.",
           "options": [
             "is used to",
@@ -50253,7 +50253,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f20",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "As a student he would be very interested in inscriptions.",
           "options": [
             "As a student",
@@ -50274,7 +50274,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f21",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "The instrument has been out of use since eight years now.",
           "options": [
             "has been",
@@ -50295,7 +50295,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_f22",
           "type": "error-spotting",
-          "prompt": "Cümledeki zaman çapası hatasını bulunuz:",
+          "prompt": "Cümledeki zaman belirleyici hatasını bulunuz:",
           "sentence": "She had been working on the catalogue since a decade before it appeared.",
           "options": [
             "since",
@@ -51151,7 +51151,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g31",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The next time the vault ____, every seal will be photographed.",
           "options": [
             "would be opened",
@@ -51173,7 +51173,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g32",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The next time she visits, the new wing ____ open.",
           "options": [
             "would be",
@@ -51195,7 +51195,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g33",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The charter was granted in 1215; from then on the town ____ its own market.",
           "options": [
             "had held",
@@ -51217,7 +51217,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g34",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "From then on every find ____ photographically.",
           "options": [
             "was recorded",
@@ -51239,7 +51239,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g35",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "____ examined the pigment, the conservator revised her attribution.",
           "options": [
             "After",
@@ -51263,7 +51263,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g36",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "____ restored twice already, the panel could not survive a third intervention.",
           "options": [
             "Being",
@@ -51376,7 +51376,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g41",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "The next time the river ____, the barriers will be tested.",
           "options": [
             "rises",
@@ -51419,7 +51419,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g43",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "From then on she ____ every summer at the site.",
           "options": [
             "will spend",
@@ -51463,7 +51463,7 @@ if (typeof lessons !== 'undefined') {
         {
           "id": "tdrill_g45",
           "type": "fill-blank-dropdown",
-          "prompt": "Zaman çapasına uygun fiil biçimini seçin:",
+          "prompt": "Zamanı belirleyen ifadeye uygun fiil biçimini seçin:",
           "sentence": "____ been catalogued in 1890, the folios were then dispersed.",
           "options": [
             "Once",
@@ -54167,7 +54167,7 @@ if (typeof lessons !== 'undefined') {
  "amplifies": "büyütür",
  "analysing": "çözümleme",
  "anatolia": "Anadolu",
- "anchor": "çapa",
+ "anchor": "belirleyici",
  "anniversary": "yıl dönümü",
  "antarctic": "Antarktika'ya ait",
  "antibiotic": "antibiyotik",

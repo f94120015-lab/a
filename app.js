@@ -86,7 +86,7 @@ function cleanAcademicUnitTitle(title) {
     'Master Tenses, Conjunctions & Conditionals': 'Zamanlar, Bağlaçlar ve Koşul Cümleleri',
     'İhtimal Modalları, As Yapıları, Ettirgen & Subjunctive': 'Modallar, Ettirgen ve Subjunctive Yapılar',
     'Çok Öğeli Fiil Zincirleri & Cümle Analizi': 'Uzun Fiil Zincirleri ve Cümle Çözümleme',
-    'YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Çapaları & Kısaltma Kilitleri': 'YDS/YÖKDİL Sınav Taktikleri'
+    'YÖKDİL / YDS Sınav Kestirmeleri: Gerund/Infinitive, Zaman Belirleyicileri & Kısaltma Kilitleri': 'YDS/YÖKDİL Sınav Taktikleri'
   };
 
   let cleaned = t
@@ -166,7 +166,7 @@ function cleanAcademicLessonTitle(title) {
     'Esnek Zaman Alanları: Zıtlık Bağlaçları & Relative Clauses': 'Zıtlık Bağlaçları ve Sıfat Cümleciklerinde Zaman Uyumu',
     'Tarih Belirteçleri vs. Genel Betimleme Tuzağı': 'Tarih Belirteçleri ve Genel Zaman Çekimleri',
     'Sınır Çizgisi "BY" & Çift Yönlü Perfect Matrisi': '"By" Edatı ve Perfect Tense Çekimleri',
-    'Çapa ve Süreç İkilisi: SINCE & FOR Dünyası': '"Since" ve "For" Edatlarının Kullanımı',
+    'Belirleyici ve Süreç İkilisi: SINCE & FOR Dünyası': '"Since" ve "For" Edatlarının Kullanımı',
     'Farkındalık Fiilleri & Zaman Kayması': 'Farkındalık Bildiren Fiiller ve Zaman Kayması',
     'Sıralama Sıfatları & Infinitive Kısaltmaları': 'Sıralama Sıfatları ve Mastar (Infinitive) Kısaltmaları',
     'Zaman İşaretçileri: Recently & Lately Refleksleri': '"Recently" ve "Lately" Zaman Zarfları',
@@ -13480,7 +13480,7 @@ function checkAnswer() {
           } else if (sentenceLower.includes("by ") || sentenceLower.includes("by the time")) {
             reason = "[KURAL 4: BY Miladı] 'By' zaman sınırlayıcısı olan yerde Simple/Continuous zamanlar elenir; 'Past Perfect (Had V3)' veya 'Future Perfect (Will Have V3)' aranır!";
           } else if (sentenceLower.includes("since")) {
-            reason = "[KURAL 5: Since Çapası] 'Since' yan cümlesine V2 alır, ana cümleye Have/Has V3 alır; yan cümleye 'Have V3' gelemez!";
+            reason = "[KURAL 5: Since Belirleyicisi] 'Since' yan cümlesine V2 alır, ana cümleye Have/Has V3 alır; yan cümleye 'Have V3' gelemez!";
           } else if (optLower === "yet") {
             reason = "'Yet' zarfı Present Perfect ile olumsuz cümlelerde veya sorularda genellikle cümle sonunda kullanılır; olumlu cümle ortasında kullanılamaz.";
           } else if (optLower === "still") {
@@ -13962,9 +13962,9 @@ const CONNECTOR_DRILL_SECTIONS = [
         </p>
         <div style="display: flex; flex-direction: column; gap: 10px;">
           <div style="padding: 10px 14px; border-left: 3px solid #3b82f6; background: rgba(59,130,246,0.07); border-radius: 0 8px 8px 0;">
-            <strong>1. Tek taraflı çapa</strong> — for · ago · already · yet · just · so far · to date<br>
+            <strong>1. Tek taraflı belirleyici</strong> — for · ago · already · yet · just · so far · to date<br>
             Tek bir cümlenin zamanını sabitler; ikinci cümleye ihtiyaç yoktur.
-            Çapayı gördüğün an çekim bellidir.<br>
+            Belirleyiciyi gördüğün an çekim bellidir.<br>
             <code style="font-size: 0.85em;">The instrument <strong>has been</strong> out of use <strong>for eight years</strong>.</code><br>
             <code style="font-size: 0.85em;">The kiln <strong>was abandoned</strong> two centuries <strong>ago</strong>.</code>
           </div>
@@ -28450,7 +28450,7 @@ const TIME_MATRIX_DATA = {
       category: "eras",
       meaning: "-in şafağında / dönümünde / arifesinde",
       rule: "📐 FORMÜL: at the dawn of / on the eve of + Dönem/Tarih İsmi",
-      trap: "⚠️ Tarihsel ve sosyolojik metinlerde zaman çapası olarak sorulur.",
+      trap: "⚠️ Tarihsel ve sosyolojik metinlerde zaman belirleyicisi olarak sorulur.",
       examples: [
         { en: "At the dawn of the Industrial Revolution, cities expanded rapidly.", tr: "Sanayi Devrimi'nin şafağında şehirler hızla büyüdü." },
         { en: "On the eve of the discovery, scientists remained skeptical.", tr: "Buluşun arifesinde bilim insanları şüpheci kalmaya devam etti." },
@@ -28463,7 +28463,7 @@ const TIME_MATRIX_DATA = {
     {
       term: "by the time",
       category: "anchors",
-      meaning: "-dığı zamana kadar (Kritik Tense Çapası)",
+      meaning: "-dığı zamana kadar (Kritik Zaman Belirleyicisi)",
       rule: "📐 KURAL 1: By the time + V1 (Present) ➔ Ana Cümle: WILL HAVE V3\n📐 KURAL 2: By the time + V2 (Past) ➔ Ana Cümle: HAD V3",
       trap: "⚠️ Sınavın en garantili kuralıdır! By the time tarafı V1 ise ana cümle Will Have V3, V2 ise Had V3 almak zorundadır!",
       examples: [
@@ -28475,7 +28475,7 @@ const TIME_MATRIX_DATA = {
     {
       term: "since",
       category: "anchors",
-      meaning: "-den beri (Zaman Çapası & Bağlaç)",
+      meaning: "-den beri (Zaman Belirleyicisi & Bağlaç)",
       rule: "📐 KURAL: Ana Cümle (HAVE/HAS V3) + SINCE + Yan Cümle (V2 / Past Simple)",
       trap: "⚠️ SINCE yan cümlesine ASLA Have/Has V3 gelemez! Yan cümle V2, ana cümle Present Perfect olmalıdır.",
       examples: [
@@ -28485,9 +28485,9 @@ const TIME_MATRIX_DATA = {
       ]
     },
     {
-      term: "by + Gelecek / Geçmiş Zaman Çapası",
+      term: "by + Gelecek / Geçmiş Zaman Belirleyicisi",
       category: "anchors",
-      meaning: "-e kadar (Tense Çapa İşaretçisi)",
+      meaning: "-e kadar (Zaman Belirleyici İşareti)",
       rule: "📐 KURAL 1: BY + Gelecek Zaman (By 2050) ➔ WILL HAVE V3\n📐 KURAL 2: BY + Geçmiş Zaman (By 1900) ➔ HAD V3",
       trap: "⚠️ 'By 2030' gibi gelecek tarih görürseniz cevabınız Will Have V3 olmalıdır!",
       examples: [
@@ -28499,8 +28499,8 @@ const TIME_MATRIX_DATA = {
     {
       term: "so far / up to now / hitherto / in recent years",
       category: "anchors",
-      meaning: "şu ana kadar / son yıllarda (Present Perfect Çapası)",
-      rule: "📐 KURAL: Bu çapalar doğrudan PRESENT PERFECT (Have/Has V3) gerektirir.",
+      meaning: "şu ana kadar / son yıllarda (Present Perfect Belirleyicisi)",
+      rule: "📐 KURAL: Bu belirleyiciler doğrudan PRESENT PERFECT (Have/Has V3) gerektirir.",
       trap: "⚠️ 'So far' veya 'In recent years' kalıbı Past V2 veya Past Perfect almaz!",
       examples: [
         { en: "In recent years, researchers have made significant progress.", tr: "Son yıllarda araştırmacılar önemli ilerleme kaydettiler." },
@@ -30705,7 +30705,7 @@ function toggleTrmCard(idx) {
   {
     "term": "for + süre",
     "category": "perfect_anchors",
-    "meaning": "-dir, boyunca (Süre Çapası)",
+    "meaning": "-dir, boyunca (Süre Belirleyicisi)",
     "rule": "📐 KURAL: Ana Cümle HAVE/HAS V3 + for + Süre  ||  Geçmiş bağlamda: HAD V3 + for + Süre",
     "trap": "⚠️ 'since' bir NOKTA, 'for' bir SÜRE ister: since 2015 / for eight years. 'for' asla Simple Past ile 'ago' anlamı vermez.",
     "examples": [
@@ -31122,7 +31122,7 @@ function toggleTrmCard(idx) {
 //   1) Koşul kartlarının kural metnini düzeltir. 'if' kartı yalnızca yapıyı
 //      ("If + Özne + Fiil") anlatıyordu; Tip 1/2/3 zaman karşılığı hiçbir yerde
 //      yazılı değildi, oysa ölçütün en saf örneği tam budur.
-//   2) Gerçek dışı geçmiş, subjunctive, devrik olumsuz zarf ve Perfect çapası
+//   2) Gerçek dışı geçmiş, subjunctive, devrik olumsuz zarf ve Perfect belirleyicisi
 //      ailelerinden 18 kart ekler.
 // ============================================================
 (function extendTenseLocks() {
@@ -31491,7 +31491,7 @@ function toggleTrmCard(idx) {
     {
       "term": "to date",
       "category": "perfect_anchors",
-      "meaning": "bugüne kadar (Akademik Çapa)",
+      "meaning": "bugüne kadar (Akademik Belirleyici)",
       "rule": "📐 KURAL: To date → HAVE/HAS V3",
       "trap": "⚠️ 'so far'ın resmî karşılığıdır ve akademik metinlerde tercih edilir; Simple Past ile kullanılmaz.",
       "examples": [

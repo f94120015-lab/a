@@ -87228,7 +87228,7 @@ const chapter66Data = {
       "c66_l2": "2. Esnek Zaman Alanları: Zıtlık Bağlaçları & Relative Clauses (although, but, whereas)",
       "c66_l3": "3. Tarih Belirteçleri vs. Genel Betimleme Tuzağı (in 1990 vs present simple)",
       "c66_l4": "4. Sınır Çizgisi \"BY\" & Çift Yönlü Perfect Matrisi (by + past ➔ had V3, by + future ➔ will have V3)",
-      "c66_l5": "5. Çapa ve Süreç İkilisi: SINCE & FOR Dünyası (since + V2, for + duration)",
+      "c66_l5": "5. Belirleyici ve Süreç İkilisi: SINCE & FOR Dünyası (since + V2, for + duration)",
       "c66_l6": "6. Farkındalık Fiilleri & Zaman Kayması (realize, notice, discover)",
       "c66_l7": "7. Sıralama Sıfatları & Infinitive Kısaltmaları (the first, the only ➔ to + V1)",
       "c66_l8": "8. Zaman İşaretçileri: Recently & Lately Refleksleri (recently, lately ➔ present perfect)",
