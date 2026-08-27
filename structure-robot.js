@@ -2609,7 +2609,6 @@
     selectedCategory: "all", // Varsayılan olarak tüm bağlaçlar gösterilsin
     query: "",               // Arama kutusundaki metin
     onlyRules: false,        // Yalnızca ezber gerektiren parçalar
-    collapsedGroups: {},     // "kategori::grup" -> true ise katlı
     selectedConnector: null,
     selectedClauseA: null,
     selectedClauseB: null,
@@ -2700,26 +2699,19 @@
       if (!groups.length) return '';
       const head = state.selectedCategory === 'all'
         ? `<div class="srobot-cat-title">${CATEGORY_TITLES[cat] || cat}</div>` : '';
-      const body = groups.map((g, gi) => {
-        const key = `${cat}::${g.title}`;
-        // "Tümü" görünümünde her kategorinin ilk grubu açık, gerisi katlı gelir:
-        // liste hem kısa kalır hem de içeriğin ne olduğu görünür.
-        const defaultCollapsed = state.selectedCategory === 'all' && gi > 0;
-        const holdsSelected = state.selectedConnector && g.items.some(c => c.id === state.selectedConnector);
-        const collapsed = holdsSelected ? false
-          : (key in state.collapsedGroups ? state.collapsedGroups[key] : defaultCollapsed);
-        return `
+      // Gruplar katlanmıyor: başında adı, altında parçaları, aralarında ince bir
+      // çizgi. Katlama tutamağı kalkınca palet daha sakin okunuyor; listeyi
+      // kısaltma işini arama ve "yalnızca ezber gerektirenler" süzgeci görüyor.
+      const body = groups.map(g => `
           <div class="srobot-group">
-            <button type="button" class="srobot-group-head" data-group-key="${key}">
-              <span class="srobot-group-caret">${collapsed ? '▸' : '▾'}</span>
+            <div class="srobot-group-label">
               <span>${g.title}</span>
               <span class="srobot-group-count">${g.items.length} parça</span>
-            </button>
-            <div class="srobot-group-body" style="display: ${collapsed ? 'none' : 'flex'};">
+            </div>
+            <div class="srobot-group-body">
               ${g.items.map(c => connectorChipHTML(c, '')).join('')}
             </div>
-          </div>`;
-      }).join('');
+          </div>`).join('');
       return head + body;
     }).join('');
   }
@@ -2814,27 +2806,11 @@
       };
     }
 
-    // Grup başlıkları: tıklayınca o grup katlanır/açılır.
-    const connectorsContainer = document.getElementById("srobot-pieces-connectors");
-    if (connectorsContainer) {
-      connectorsContainer.onclick = function (e) {
-        const head = e.target.closest(".srobot-group-head");
-        if (!head) return;
-        const key = head.dataset.groupKey;
-        const body = head.parentElement ? head.parentElement.querySelector(".srobot-group-body") : null;
-        const current = body ? body.style.display === "none" : false;
-        state.collapsedGroups[key] = !current;
-        renderPalette();
-        updateUI();
-      };
-    }
-
     // "Yalnızca ezber gerektirenler" düğmesi
     const onlyBtn = document.getElementById("srobot-only-rules");
     if (onlyBtn) {
       onlyBtn.onclick = function () {
         state.onlyRules = !state.onlyRules;
-        state.collapsedGroups = {};
         renderPalette();
         updateUI();
       };
@@ -2850,7 +2826,6 @@
         state.selectedCategory = btn.dataset.cat || "all";
         state.isConnectorsCollapsed = false;
         state.query = "";
-        state.collapsedGroups = {};
         const searchBox = document.getElementById("srobot-connector-search");
         if (searchBox) searchBox.value = "";
         updateCategoryButtons();

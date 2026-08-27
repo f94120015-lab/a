@@ -12671,21 +12671,17 @@ nDown 0.3s ease;
 /* 121 parça tek sırada dizilince duvar oluyordu; parçalar artık alt gruplara
    ayrılıyor, gruplar katlanabiliyor ve arama kutusuyla süzülebiliyor. */
 .srobot-group { margin-bottom: 10px; }
-/* Grup başlıkları önce dolgulu birer şerit hâlindeydi; art arda gelen altı yedi
-   şerit paletin kendisinden çok yer kaplıyordu. Artık dolgu ve çerçeve yok:
-   yalnızca küçük bir üst yazı, sayısı ve katlama oku. */
-.srobot-group-head {
-  display: flex; align-items: center; gap: 6px; width: 100%;
-  padding: 2px 2px 1px; border: none; background: none; cursor: pointer;
+/* Gruplar katlanmıyor: başında adı, altında parçaları, aralarında ince bir
+   çizgi. Başlık artık bir düğme değil, yalnızca bir ad. */
+.srobot-group-label {
+  display: flex; align-items: center; gap: 8px; padding: 2px 2px 1px;
   font-size: 0.7rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
-  color: var(--text-muted); text-align: left;
+  color: var(--text-muted);
 }
-.srobot-group-head:hover { color: var(--accent-primary); }
-.srobot-group-head .srobot-group-count {
-  margin-left: auto; font-size: 0.66rem; font-weight: 700; color: var(--text-muted); opacity: 0.75;
+.srobot-group-label .srobot-group-count {
+  margin-left: auto; font-size: 0.66rem; font-weight: 700; opacity: 0.75;
   text-transform: none; letter-spacing: 0;
 }
-.srobot-group-head .srobot-group-caret { font-size: 0.62rem; color: var(--text-muted); }
 .srobot-group-body {
   display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 2px 10px;
   border-bottom: 1px solid var(--border-color);
