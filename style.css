@@ -12666,6 +12666,16 @@ nDown 0.3s ease;
   border: 1px solid var(--border-color); border-radius: 8px; padding: 1px 6px; margin-left: 6px;
 }
 .srobot-empty { font-size: 0.8rem; color: var(--text-muted); padding: 10px 2px; }
+/* Parçanın peşinden ne geldiğini söyleyen rozet: cümle mi, yan cümle mi, isim mi. */
+.srobot-takes {
+  font-size: 0.63rem; font-weight: 800; letter-spacing: 0.01em;
+  border: 1px solid; border-radius: 8px; padding: 1px 6px; margin-left: 6px; white-space: nowrap;
+}
+.srobot-legend {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  font-size: 0.7rem; color: var(--text-muted); margin: 0 0 10px;
+}
+.srobot-legend b { font-weight: 800; }
 
 /* ── "Nasıl çevrilir?" kartları ──────────────────────────────────────────── */
 /* Her yapısal öğe kendi kartında: kalıp, İngilizce örnek, Türkçe karşılığı ve

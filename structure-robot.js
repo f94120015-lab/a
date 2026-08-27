@@ -2466,6 +2466,70 @@
   ];
 
 
+
+  // ─── PARÇANIN PEŞİNDEN NE GELİR ─────────────────────────────────────────
+  // Bir bağlacı seçerken asıl soru "arkasına ne koyabilirim": tam cümle mi,
+  // özne + fiilli yan cümle mi, yoksa isim öbeği mi? Her parça bu bilgiyi
+  // rozet olarak taşıyor.
+  const TAKE_KINDS = {
+    sub:    { label: 'yan cümle', hint: 'Arkasından özne + fiil gelir; bu parça tek başına cümle olamaz.', color: '#0ea5e9' },
+    clause: { label: 'cümle',     hint: 'Bağımsız bir cümle gelir; öncesinde nokta ya da noktalı virgül bulunur.', color: '#8b5cf6' },
+    coord:  { label: 'cümle',     hint: 'İki bağımsız cümleyi birleştirir; öncesinde virgül bulunur.', color: '#8b5cf6' },
+    noun:   { label: 'isim öbeği', hint: 'Arkasından isim ya da V-ing gelir; özne + fiil alamaz.', color: '#f59e0b' },
+    ving:   { label: 'V-ing',     hint: 'Arkasından fiilin -ing biçimi gelir.', color: '#f59e0b' },
+    v1:     { label: 'V1',        hint: 'Arkasından yalın fiil gelir.', color: '#f59e0b' },
+    adv:    { label: 'zarf',      hint: 'Bağlaç değil zaman zarfıdır; cümlenin zamanını belirler, arkasına cümle almaz.', color: '#64748b' },
+    par:    { label: 'eş öğe',    hint: 'İki eş değerli öğeyi (isim, sıfat ya da cümle) birbirine bağlar.', color: '#10b981' },
+    inv:    { label: 'devrik',    hint: 'Arkasından devrik cümle gelir: yardımcı fiil özneden önce durur.', color: '#ef4444' },
+    main:   { label: 'ana cümle', hint: 'Kısaltılmış yapıdır; arkasından ana cümle gelir.', color: '#8b5cf6' }
+  };
+
+  const CONNECTOR_TAKES = {
+    // Zaman & Tense
+    when: 'sub', while_as: 'sub', before: 'sub', after: 'sub', as_soon_as: 'sub', until_till: 'sub',
+    by_the_time: 'sub', since: 'sub', whenever: 'sub', the_moment: 'sub',
+    by_time_anchor: 'adv', so_far: 'adv', over_past_years: 'adv', lately_recently: 'adv',
+    yesterday_ago_last: 'adv', how_long_ago: 'adv', by_future_for: 'adv', always_continuous: 'adv',
+    modal_past_adverb: 'adv',
+    if_type0_1: 'sub', if_type2: 'sub', if_type3: 'sub', unless: 'sub', provided_that: 'sub',
+    as_long_as: 'sub', in_case: 'sub', supposing_that: 'sub', only_if: 'sub', on_condition_that: 'sub',
+    so_that_purpose: 'sub', in_order_that: 'sub',
+    reported_speech: 'sub', noun_clause: 'sub', wish_if_only: 'sub', as_if_as_though: 'sub',
+    its_time: 'sub', would_rather: 'sub',
+    // Cümle bağlaçları & geçiş
+    however_nevertheless: 'clause', in_contrast_on_the_other_hand: 'clause', on_the_contrary: 'clause',
+    even_so: 'clause', therefore_thus: 'clause', as_a_result_transition: 'clause',
+    accordingly_transition: 'clause', in_addition_moreover: 'clause', besides_what_is_more: 'clause',
+    likewise_similarly: 'clause', for_example_for_instance: 'clause', in_other_words_that_is: 'clause',
+    otherwise: 'clause', in_fact_indeed: 'clause', first_firstly: 'clause', meanwhile: 'clause',
+    subsequently: 'clause', eventually: 'clause', in_summary: 'clause', all_in_all: 'clause',
+    and_coord: 'coord', but_yet_coord: 'coord', or_coord: 'coord', nor_coord: 'inv',
+    for_coord: 'coord', so_coord: 'coord',
+    although: 'sub', while_whereas: 'sub',
+    despite_in_spite_of: 'noun', in_addition_to_prep: 'noun', regarding_as_for: 'noun',
+    in_terms_of_in_light_of: 'noun', compared_to: 'noun', except_for_apart_from: 'noun', namely: 'noun',
+    // Neden-etki
+    lead_to_cause: 'noun', is_responsible_for: 'noun', produce_produces: 'noun',
+    induce_provoke_prompt: 'noun', result_in: 'noun', trigger_triggers: 'noun', give_rise_to: 'noun',
+    contribute_to: 'noun', pave_the_way_for: 'noun', culminate_in: 'noun',
+    is_due_to: 'noun', result_from: 'noun', stem_from: 'noun', originate_from: 'noun',
+    arise_from: 'noun', is_attributed_to: 'noun', is_ascribed_to: 'noun', is_caused_by: 'noun',
+    because_of_due_to_owing_to: 'noun', on_account_of_in_view_of: 'noun', by_virtue_of: 'noun',
+    as_a_result_of: 'noun', in_order_to: 'v1', thereby_v_ing: 'ving',
+    therefore_thus_hence: 'clause', consequently: 'clause', as_a_result_that: 'clause', accordingly: 'clause',
+    because: 'sub', in_that: 'sub', inasmuch_as_seeing_that: 'sub', owing_to_the_fact_that: 'sub',
+    so_that_such_that: 'sub', so_much_so_that: 'sub',
+    // Devrik & kısaltmalar
+    having_v3: 'main', v3_passive_participle: 'main', upon_on: 'ving', prior_to: 'noun',
+    during_throughout: 'noun', at_the_dawn: 'noun',
+    no_sooner_than: 'inv', hardly_when: 'inv', only_when_after_inv: 'inv', not_only_but_also: 'inv',
+    both_and: 'par', either_or: 'par', neither_nor: 'par', whether_or: 'par', just_as_so: 'par'
+  };
+
+  function takeKindOf(id) {
+    return TAKE_KINDS[CONNECTOR_TAKES[id]] || null;
+  }
+
   // ─── BAĞLAÇ PALETİ ALT GRUPLARI ─────────────────────────────────────────
   // 121 parça tek sırada dizilince okunamayan bir duvar oluyordu. Parçalar
   // burada işlevlerine göre alt gruplara ayrılıyor; palet grup grup çiziliyor,
@@ -2575,9 +2639,14 @@
   const CHIP_STYLE = "padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;";
 
   function connectorChipHTML(c, tag) {
+    const kind = takeKindOf(c.id);
+    const takes = kind
+      ? `<span class="srobot-takes" style="color: ${kind.color}; border-color: ${kind.color}40; background: ${kind.color}14;">+ ${kind.label}</span>`
+      : '';
+    const tip = [c.desc || '', kind ? kind.hint : ''].filter(Boolean).join(' — ').replace(/"/g, '&quot;');
     return `
-      <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" title="${(c.desc || '').replace(/"/g, '&quot;')}" style="${CHIP_STYLE}">
-        <span>🔷</span> ${c.label}${tag ? `<span class="srobot-chip-tag">${tag}</span>` : ''}
+      <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" title="${tip}" style="${CHIP_STYLE}">
+        <span>🔷</span> ${c.label}${takes}${tag ? `<span class="srobot-chip-tag">${tag}</span>` : ''}
       </button>`;
   }
 
