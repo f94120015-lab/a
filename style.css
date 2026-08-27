@@ -12676,6 +12676,15 @@ nDown 0.3s ease;
 .srobot-rule-chip.on {
   background: rgba(236, 72, 153, 0.28); border-color: #ec4899; font-weight: 800;
 }
+.srobot-rule-example {
+  display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; margin-top: 4px;
+  border-radius: var(--radius-sm); background: var(--bg-body); border: 1px solid var(--border-color);
+}
+.srobot-rule-example-label {
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+}
+.srobot-rule-example-en { font-size: 0.82rem; font-weight: 700; color: var(--text-primary); line-height: 1.45; }
+.srobot-rule-example-tr { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; }
 .srobot-rule-note {
   font-size: 0.76rem; line-height: 1.5; color: var(--text-secondary);
   border-top: 1px dashed var(--border-color); padding-top: 6px; margin-top: 2px;

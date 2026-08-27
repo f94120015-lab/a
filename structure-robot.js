@@ -3215,6 +3215,24 @@
     }).join('');
 
     const note = ruleNoteText(connObj, rule && rule.ruleText, !!rows);
+
+    // Kural tablosu "hangi çekim hangisini açar" der; örnek onu gözle görülür
+    // kılar. Seçili zamana ait örnek varsa o, yoksa ilk örnek gösterilir.
+    const examples = (rule && rule.tenseExamples) || [];
+    let sample = examples[0];
+    if (state.selectedClauseA) {
+      const want = clauseALabel(state.selectedClauseA).toLocaleLowerCase('tr');
+      const hit = examples.find(x => want.includes(String(x.tense || '').toLocaleLowerCase('tr'))
+        || String(x.tense || '').toLocaleLowerCase('tr').includes(want.split('/')[0].trim()));
+      if (hit) sample = hit;
+    }
+    const exampleHTML = sample ? `
+      <div class="srobot-rule-example">
+        <span class="srobot-rule-example-label">Örnek</span>
+        <span class="srobot-rule-example-en">${sample.en}</span>
+        <span class="srobot-rule-example-tr">↳ ${sample.tr}</span>
+      </div>` : '';
+
     return `
       <div class="srobot-rule-card">
         <div class="srobot-rule-head">
@@ -3222,6 +3240,7 @@
           <span class="srobot-rule-desc">${connObj.desc || ''}</span>
         </div>
         ${rows ? `<div class="srobot-rule-cols"><span>Yan cümle</span><span></span><span>Ana cümle</span></div>${rows}` : ''}
+        ${exampleHTML}
         ${note ? `<div class="srobot-rule-note">${note}</div>` : ''}
       </div>`;
   }
