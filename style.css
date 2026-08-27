@@ -12671,18 +12671,26 @@ nDown 0.3s ease;
 /* 121 parça tek sırada dizilince duvar oluyordu; parçalar artık alt gruplara
    ayrılıyor, gruplar katlanabiliyor ve arama kutusuyla süzülebiliyor. */
 .srobot-group { margin-bottom: 10px; }
+/* Grup başlıkları önce dolgulu birer şerit hâlindeydi; art arda gelen altı yedi
+   şerit paletin kendisinden çok yer kaplıyordu. Artık dolgu ve çerçeve yok:
+   yalnızca küçük bir üst yazı, sayısı ve katlama oku. */
 .srobot-group-head {
-  display: flex; align-items: center; gap: 8px; width: 100%;
-  padding: 6px 10px; border-radius: var(--radius-md); cursor: pointer;
-  background: var(--bg-secondary); border: 1px solid var(--border-color);
-  font-size: 0.78rem; font-weight: 800; color: var(--text-primary); text-align: left;
+  display: flex; align-items: center; gap: 6px; width: 100%;
+  padding: 2px 2px 1px; border: none; background: none; cursor: pointer;
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--text-muted); text-align: left;
 }
-.srobot-group-head:hover { border-color: var(--accent-primary); }
+.srobot-group-head:hover { color: var(--accent-primary); }
 .srobot-group-head .srobot-group-count {
-  margin-left: auto; font-size: 0.7rem; font-weight: 700; color: var(--text-muted);
+  margin-left: auto; font-size: 0.66rem; font-weight: 700; color: var(--text-muted); opacity: 0.75;
+  text-transform: none; letter-spacing: 0;
 }
-.srobot-group-head .srobot-group-caret { font-size: 0.7rem; color: var(--text-muted); }
-.srobot-group-body { display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 2px 2px; }
+.srobot-group-head .srobot-group-caret { font-size: 0.62rem; color: var(--text-muted); }
+.srobot-group-body {
+  display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 2px 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+.srobot-group:last-child .srobot-group-body { border-bottom: none; }
 .srobot-cat-title {
   font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
   color: var(--text-muted); margin: 12px 0 6px;
