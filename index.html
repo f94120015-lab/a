@@ -1748,6 +1748,11 @@
                   <button class="srobot-cat-btn chip-toggle" data-cat="transitions">🔀 Cümle Bağlaçları & Geçiş</button>
                   <button class="srobot-cat-btn chip-toggle" data-cat="cause_effect">🎯 Neden-Etki & Fiiller</button>
                   <button class="srobot-cat-btn chip-toggle" data-cat="devrik_kısaltma">⚡ Devrik & Kısaltmalar</button>
+                  <button id="srobot-only-rules" type="button" title="Kendinden sonrasını değiştiren parçalar: zaman uyumu ve devrik söz dizimi"
+                          style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; cursor: pointer;
+                                 border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary);">
+                    🎯 Yalnızca ezber gerektirenler
+                  </button>
                 </div>
               </div>
               <!-- Rozet açıklaması: parçanın arkasına ne geldiğini tek satırda özetler. -->
@@ -1759,6 +1764,14 @@
                 <span style="color:#ef4444;"><b>devrik</b> yardımcı fiil önde</span>
                 <span style="color:#10b981;"><b>eş öğe</b> ikili bağlaç</span>
                 <span style="color:#64748b;"><b>zarf</b> bağlaç değil; cümlenin zamanını belirleyen ifade</span>
+              </div>
+              <!-- Kural yükü: hangi parçanın ezberlenmesi gerektiğini söyleyen ikinci okuma anahtarı. -->
+              <div class="srobot-legend">
+                <span>Soldaki nokta parçanın kural yükünü gösterir:</span>
+                <span><span class="srobot-burden-dot" style="background:#ef4444;"></span> <b>kural</b> kendinden sonrasını belirler (ezberlenmeli)</span>
+                <span><span class="srobot-burden-dot" style="background:#f59e0b;"></span> <b>tür</b> arkasına isim mi cümle mi geldiği önemli</span>
+                <span><span class="srobot-burden-dot" style="background:#8b5cf6;"></span> <b>ortak</b> tüm geçiş ifadeleriyle aynı noktalama kuralı</span>
+                <span><span class="srobot-burden-dot" style="background:#94a3b8;"></span> <b>anlam</b> yapı dayatmaz, anlamı yeter</span>
               </div>
               <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: block; transition: all 0.3s ease;">
                 <!-- JS tarafından doldurulacak -->

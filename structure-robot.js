@@ -2467,6 +2467,47 @@
 
 
 
+
+  // ─── KURAL YÜKÜ ────────────────────────────────────────────────────────
+  // Her parça aynı ağırlıkta değil. Bir kısmı kendinden sonrasını değiştirir
+  // (when: yan cümleye will gelmez), bir kısmı yalnızca anlam taşır
+  // (is responsible for: sıradan bir yüklem). Öğrencinin ezberlemesi gereken
+  // yalnızca ilk gruptur; palet bunu göstermezse 121 parça eşit görünür.
+  const BURDEN_KINDS = {
+    rule:   { dot: '#ef4444', label: 'kural',  hint: 'Kendinden sonrasını belirler (zaman uyumu ya da devrik söz dizimi). Ezberlenmesi gereken parça budur.' },
+    type:   { dot: '#f59e0b', label: 'tür',    hint: 'Arkasına ne geleceğini belirler (isim öbeği mi, tam cümle mi). Ailede tek kural: rozete bakmak yeter.' },
+    shared: { dot: '#8b5cf6', label: 'ortak',  hint: 'Bütün geçiş ifadeleriyle ortak tek kurala tabidir: "; ifade," ya da ". İfade,". Ayrıca ezberlenecek yapı yok.' },
+    lex:    { dot: '#94a3b8', label: 'anlam',  hint: 'Yapı dayatmaz; sıradan bir yüklem/edattır. Anlamını (ve yönünü) bilmek çeviri için yeter.' }
+  };
+
+  const BURDEN_RULE = [
+    'when', 'while_as', 'before', 'after', 'as_soon_as', 'until_till', 'by_the_time', 'since',
+    'whenever', 'the_moment', 'if_type0_1', 'if_type2', 'if_type3', 'unless', 'provided_that',
+    'as_long_as', 'in_case', 'supposing_that', 'only_if', 'on_condition_that', 'so_that_purpose',
+    'in_order_that', 'reported_speech', 'noun_clause', 'wish_if_only', 'as_if_as_though', 'its_time',
+    'would_rather', 'by_time_anchor', 'so_far', 'over_past_years', 'lately_recently',
+    'yesterday_ago_last', 'how_long_ago', 'by_future_for', 'always_continuous', 'modal_past_adverb',
+    'no_sooner_than', 'hardly_when', 'only_when_after_inv', 'not_only_but_also', 'nor_coord',
+    'both_and', 'either_or', 'neither_nor', 'whether_or', 'just_as_so'
+  ];
+  const BURDEN_TYPE = [
+    'despite_in_spite_of', 'in_addition_to_prep', 'regarding_as_for', 'in_terms_of_in_light_of',
+    'compared_to', 'except_for_apart_from', 'because_of_due_to_owing_to', 'on_account_of_in_view_of',
+    'by_virtue_of', 'as_a_result_of', 'owing_to_the_fact_that', 'in_order_to', 'thereby_v_ing',
+    'during_throughout', 'prior_to', 'at_the_dawn', 'upon_on', 'having_v3', 'v3_passive_participle',
+    'although', 'while_whereas', 'because', 'in_that', 'inasmuch_as_seeing_that',
+    'so_that_such_that', 'so_much_so_that'
+  ];
+
+  function burdenOf(id) {
+    if (BURDEN_RULE.includes(id)) return BURDEN_KINDS.rule;
+    if (BURDEN_TYPE.includes(id)) return BURDEN_KINDS.type;
+    const c = CONNECTORS.find(x => x.id === id);
+    // Geriye kalanlar: geçiş ifadeleri ortak noktalama kuralına, neden-etki
+    // fiilleri ise yalnızca anlama dayanır.
+    return c && c.category === 'cause_effect' ? BURDEN_KINDS.lex : BURDEN_KINDS.shared;
+  }
+
   // ─── PARÇANIN PEŞİNDEN NE GELİR ─────────────────────────────────────────
   // Bir bağlacı seçerken asıl soru "arkasına ne koyabilirim": tam cümle mi,
   // özne + fiilli yan cümle mi, yoksa isim öbeği mi? Her parça bu bilgiyi
@@ -2578,10 +2619,10 @@
   function connectorGroupsFor(category) {
     const defined = (CONNECTOR_GROUPS[category] || []).map(g => ({
       title: g.title,
-      items: g.ids.map(id => CONNECTORS.find(c => c.id === id)).filter(Boolean)
+      items: g.ids.map(id => CONNECTORS.find(c => c.id === id)).filter(Boolean).filter(passesBurden)
     }));
     const listed = new Set(defined.flatMap(g => g.items.map(c => c.id)));
-    const rest = CONNECTORS.filter(c => c.category === category && !listed.has(c.id));
+    const rest = CONNECTORS.filter(c => c.category === category && !listed.has(c.id) && passesBurden(c));
     if (rest.length) defined.push({ title: 'Diğer', items: rest });
     return defined.filter(g => g.items.length);
   }
@@ -2600,6 +2641,7 @@
     mode: "sandbox", // 'sandbox' veya 'challenge'
     selectedCategory: "all", // Varsayılan olarak tüm bağlaçlar gösterilsin
     query: "",               // Arama kutusundaki metin
+    onlyRules: false,        // Yalnızca ezber gerektiren parçalar
     collapsedGroups: {},     // "kategori::grup" -> true ise katlı
     selectedConnector: null,
     selectedClauseA: null,
@@ -2640,13 +2682,15 @@
 
   function connectorChipHTML(c, tag) {
     const kind = takeKindOf(c.id);
+    const burden = burdenOf(c.id);
     const takes = kind
       ? `<span class="srobot-takes" style="color: ${kind.color}; border-color: ${kind.color}40; background: ${kind.color}14;">+ ${kind.label}</span>`
       : '';
-    const tip = [c.desc || '', kind ? kind.hint : ''].filter(Boolean).join(' — ').replace(/"/g, '&quot;');
+    const tip = [c.desc || '', kind ? kind.hint : '', burden ? `[${burden.label}] ${burden.hint}` : '']
+      .filter(Boolean).join(' — ').replace(/"/g, '&quot;');
     return `
       <button class="srobot-piece-btn" data-type="connector" data-id="${c.id}" title="${tip}" style="${CHIP_STYLE}">
-        <span>🔷</span> ${c.label}${takes}${tag ? `<span class="srobot-chip-tag">${tag}</span>` : ''}
+        <span class="srobot-burden-dot" style="background: ${burden.dot};"></span> ${c.label}${takes}${tag ? `<span class="srobot-chip-tag">${tag}</span>` : ''}
       </button>`;
   }
 
@@ -2655,13 +2699,19 @@
     return hay.includes(q);
   }
 
+  // "Yalnızca ezber gerektirenler" süzgeci: kendinden sonrasını değiştiren
+  // parçalar (zaman uyumu + devrik söz dizimi) dışındakileri gizler.
+  function passesBurden(c) {
+    return !state.onlyRules || burdenOf(c.id) === BURDEN_KINDS.rule;
+  }
+
   function connectorPaletteHTML() {
     const q = (state.query || '').trim().toLocaleLowerCase('tr');
 
     // Arama açıkken kategori filtresi devre dışı: öğrenci aradığını nerede
     // olursa olsun bulsun.
     if (q) {
-      const hits = CONNECTORS.filter(c => connectorMatches(c, q));
+      const hits = CONNECTORS.filter(c => connectorMatches(c, q) && passesBurden(c));
       if (!hits.length) {
         return `<div class="srobot-empty">“${state.query}” için parça bulunamadı. Aramayı kısaltmayı deneyin.</div>`;
       }
@@ -2705,8 +2755,13 @@
     const el = document.getElementById('srobot-search-count');
     if (!el) return;
     const q = (state.query || '').trim().toLocaleLowerCase('tr');
-    if (!q) { el.textContent = `${CONNECTORS.length} parça`; return; }
-    el.textContent = `${CONNECTORS.filter(c => connectorMatches(c, q)).length} sonuç`;
+    const pool = CONNECTORS.filter(passesBurden);
+    if (!q) {
+      el.textContent = state.onlyRules
+        ? `${pool.length} / ${CONNECTORS.length} parça` : `${CONNECTORS.length} parça`;
+      return;
+    }
+    el.textContent = `${pool.filter(c => connectorMatches(c, q)).length} sonuç`;
   }
 
   function renderPalette() {
@@ -2754,6 +2809,14 @@
     }
 
     updateSearchCount();
+
+    const onlyBtn = document.getElementById("srobot-only-rules");
+    if (onlyBtn) {
+      onlyBtn.classList.toggle("active", state.onlyRules);
+      onlyBtn.style.background = state.onlyRules ? "#ef4444" : "var(--bg-body)";
+      onlyBtn.style.color = state.onlyRules ? "#fff" : "var(--text-secondary)";
+      onlyBtn.style.borderColor = state.onlyRules ? "#ef4444" : "var(--border-color)";
+    }
   }
 
   function bindEvents() {
@@ -2788,6 +2851,17 @@
         const body = head.parentElement ? head.parentElement.querySelector(".srobot-group-body") : null;
         const current = body ? body.style.display === "none" : false;
         state.collapsedGroups[key] = !current;
+        renderPalette();
+        updateUI();
+      };
+    }
+
+    // "Yalnızca ezber gerektirenler" düğmesi
+    const onlyBtn = document.getElementById("srobot-only-rules");
+    if (onlyBtn) {
+      onlyBtn.onclick = function () {
+        state.onlyRules = !state.onlyRules;
+        state.collapsedGroups = {};
         renderPalette();
         updateUI();
       };
