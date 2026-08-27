@@ -2685,7 +2685,7 @@
             “${state.query}” için parça bulunamadı. Aramayı kısaltmayı deneyin.<br>
             <span style="opacity: 0.85;">Neden-etki fiilleri (lead to, result in, stem from, be responsible for…) montaj
             hattından çıkarıldı: bunlar bağlaç değil yüklem olduğu için
-            <strong>Bölüm 22 · 6. Neden-Etki Fiilleri: Yön ve Sabit Edat</strong> dersinde çalışılıyor.</span>
+            <strong>Bölüm 17 (Cümle Bağlaçları) · 6. Neden-Etki Fiilleri: Yön ve Sabit Edat</strong> dersinde çalışılıyor.</span>
           </div>`;
       }
       return `<div class="srobot-group-body">${hits.map(c => connectorChipHTML(c, groupTitleOf(c.id))).join('')}</div>`;

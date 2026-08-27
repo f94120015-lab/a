@@ -9,6 +9,8 @@
  *   1. YÖN   — özne neden mi (lead to) yoksa sonuç mu (result from)
  *   2. EDAT  — result IN ↔ result FROM, attributed TO, caused BY
  * Bu yüzden montaj hattından çıkarılıp burada ders olarak toplandılar.
+ * Ders, unitId 22'ye (ekranda Bölüm 17: Cümle Bağlaçları ve Geçiş
+ * İfadeleri) altıncı ders olarak eklenir.
  * ────────────────────────────────────────────────────────────────────────── */
 (function () {
   'use strict';
