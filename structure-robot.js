@@ -3163,15 +3163,39 @@
 
   // "IF (Type 0 / 1) Kuralı: IF Type 0 & 1 (Gerçek / Olası Koşul): ..." gibi
   // metinlerde başlık iki kez geçiyordu; nottan baştaki tekrarı ayıklıyoruz.
-  function ruleNoteText(connObj, ruleText) {
+  function ruleNoteText(connObj, ruleText, hasTable) {
     let note = String(ruleText || '').trim();
+    const bare = t => String(t).replace(/[^\wçğıöşüÇĞİÖŞÜ]/gi, '').toLocaleLowerCase('tr');
     const head = note.match(/^([^:]{3,60}):\s*(\S[\s\S]*)$/);
     if (head) {
-      const a = head[1].replace(/[^\wçğıöşüÇĞİÖŞÜ]/gi, '').toLowerCase();
-      const b = String(connObj.label).replace(/[^\wçğıöşüÇĞİÖŞÜ]/gi, '').toLowerCase();
-      if (a.startsWith(b) || b.startsWith(a)) note = head[2].trim();
+      // Başlık, parçanın adının bir varyasyonuysa ("HAVING + V3 (Zaman
+      // Kısaltması):" ↔ "HAVING + V3 / HAVING BEEN + V3") tekrar sayılır.
+      const a = bare(head[1]), b = bare(connObj.label);
+      let common = 0;
+      while (common < a.length && common < b.length && a[common] === b[common]) common++;
+      if (common >= 6) note = head[2].trim();
     }
-    return note;
+    if (!hasTable) return note;
+
+    // Tablo zaten "hangi yan cümle hangi ana cümleyi açar" sorusunu
+    // cevaplıyor; metnin aynı eşleşmeyi ikinci kez sayan cümleleri atılır.
+    // Geriye yalnızca tabloda görünmeyen uyarı ve istisnalar kalır.
+    const kept = note
+      .split(/(?<=[.!?])\s+/)
+      .map(x => x.trim())
+      .filter(Boolean)
+      .filter(x => {
+        const low = x.toLocaleLowerCase('tr');
+        if (/[➔→]|->/.test(x)) return false;
+        if (low.includes('yan cümle') && low.includes('ana cümle')) return false;
+        // "WHEN zaman uyumu gerektirir!" gibi cümleler tabloyu tekrar eder:
+        // parçanın adını anar ama hiçbir çekim bilgisi vermez.
+        const namesPiece = bare(x).includes(bare(String(connObj.label).split(/[\/(]/)[0]));
+        const hasTense = /\bV[123]\b|will|would|had|has|have|present|past|perfect|continuous|modal|-ing|ing\b/i.test(x);
+        if (namesPiece && !hasTense && x.length < 70) return false;
+        return true;
+      });
+    return kept.join(' ');
   }
 
   function ruleCardHTML(connObj, rule) {
@@ -3190,7 +3214,7 @@
         </div>`;
     }).join('');
 
-    const note = ruleNoteText(connObj, rule && rule.ruleText);
+    const note = ruleNoteText(connObj, rule && rule.ruleText, !!rows);
     return `
       <div class="srobot-rule-card">
         <div class="srobot-rule-head">
