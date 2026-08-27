@@ -28636,12 +28636,12 @@ function renderTimeMatrix() {
     const isExpanded = tmExpandedCardIndex === idx;
     const catLabelMap = {
       conjunctions: 'BAĞLAÇ',
-      anchors: 'TENSE ÇAPASI',
+      anchors: 'ZAMAN BELİRLEYİCİLERİ',
       inverted: 'DEVRİK YAPILAR',
       prepositions: 'EDAT ÖBEĞİ',
       eras: 'ÇAĞ & DÖNEM',
       reductions: 'ZAMAN KISALTMASI',
-      perfect_anchors: 'PERFECT ÇAPASI',
+      perfect_anchors: 'PERFECT BELİRLEYİCİLERİ',
       patterns: 'ZAMAN KALIBI',
       unreal_past: 'GERÇEK DIŞI GEÇMİŞ',
       subjunctive: 'SUBJUNCTIVE'

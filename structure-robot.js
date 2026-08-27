@@ -228,7 +228,7 @@
         { clauseA: "future_date", clauseB: ["will_have_v3"], trPattern: "2030 yılına kadar güneş enerjisi birçok bölgede fosil yakıtların yerini almış olacaktır." },
         { clauseA: "past_date", clauseB: ["had_v3_main"], trPattern: "1900 yılına kadar elektrik fabrika üretimini çoktan dönüştürmüştü." }
       ],
-      ruleText: "BY + TARİH ÇAPASI: By + Gelecek Tarih ➔ WILL HAVE V3 | By + Geçmiş Tarih ➔ HAD V3",
+      ruleText: "BY + TARİH BELİRLEYİCİSİ: By + Gelecek Tarih ➔ WILL HAVE V3 | By + Geçmiş Tarih ➔ HAD V3",
       tenseExamples: [
         { tense: "Future Perfect", en: "By 2030, solar energy will have replaced fossil fuels in many regions.", tr: "2030 yılına kadar güneş enerjisi birçok bölgede fosil yakıtların yerini almış olacaktır." },
         { tense: "Past Perfect", en: "By 1900, electricity had already transformed factory production.", tr: "1900 yılına kadar elektrik fabrika üretimini çoktan dönüştürmüştü." },
@@ -2711,11 +2711,11 @@
 
   function renderPalette() {
     const connectorsContainer = document.getElementById("srobot-pieces-connectors");
-    const clauseAContainer = document.getElementById("srobot-pieces-clause-a");
-    const clauseBContainer = document.getElementById("srobot-pieces-clause-b");
     const toggleBtn = document.getElementById("srobot-toggle-connectors-btn");
 
-    if (!connectorsContainer || !clauseAContainer || !clauseBContainer) return;
+    // Yan cümle ve ana cümle parçaları artık yuvaların içinde, üstelik uyumlu
+    // olanlar süzülmüş hâlde geliyor; ayrı bir kitaplık bölümü tutulmuyor.
+    if (!connectorsContainer) return;
 
     // Filter Connectors by selected category
     const filteredConnectors = CONNECTORS.filter(c => {
@@ -2753,21 +2753,7 @@
       }
     }
 
-    // Clause A Palette
-    clauseAContainer.innerHTML = CLAUSE_A_TENSES.map(t => `
-      <button class="srobot-piece-btn" data-type="clauseA" data-id="${t.id}" style="padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;">
-        <span>🟣</span> ${t.label}
-      </button>
-    `).join("");
-
     updateSearchCount();
-
-    // Clause B Palette
-    clauseBContainer.innerHTML = CLAUSE_B_MODALS.map(m => `
-      <button class="srobot-piece-btn" data-type="clauseB" data-id="${m.id}" style="padding: 8px 14px; border-radius: var(--radius-md); border: 1px solid rgba(236, 72, 153, 0.3); background: rgba(236, 72, 153, 0.08); color: var(--text-primary); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;">
-        <span>🔴</span> ${m.label}
-      </button>
-    `).join("");
   }
 
   function bindEvents() {
@@ -3158,33 +3144,27 @@
       "always_continuous", "its_time", "would_rather", "wish_if_only"
     ];
 
-    const sec2Header = document.getElementById("srobot-section2-header");
-
     if (connObj && singleTimeAdverbs.includes(connObj.id)) {
       // ⏱️ Tekli Zaman Zarfı Şablonu: Zarf ➔ Özne/İsim ➔ Zorunlu Tense (Yan cümle yok)
-      if (slotTitle1) slotTitle1.textContent = "ZAMAN ZARFI / ÇAPASI";
+      if (slotTitle1) slotTitle1.textContent = "ZAMAN ZARFI / BELİRLEYİCİ";
       if (slotTitle2) slotTitle2.textContent = "ÖZNE / İSİM (YAN CÜMLE YOK)";
       if (slotTitle3) slotTitle3.textContent = "ZORUNLU TENSE / YÜKLEM";
-      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Özne / İsim Öbeği - Yan Cümle Yok)";
     } else if (connObj && connObj.category === "cause_effect") {
       // 🎯 Neden-Etki Fiil Şablonu. Yuva sırası her şablonda aynıdır:
       // 1 = bağlaç/fiil, 2 = Cümle A zamanı, 3 = Cümle B zamanı.
       if (slotTitle1) slotTitle1.textContent = "NEDEN-ETKİ FİİLİ / EDATI";
       if (slotTitle2) slotTitle2.textContent = "NEDEN (CAUSE) ÖBEĞİ";
       if (slotTitle3) slotTitle3.textContent = "SONUÇ (EFFECT) ÖBEĞİ";
-      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Neden Öbeği Zamanları)";
     } else if (connObj && connObj.category === "transitions") {
       // 🔀 Geçiş İfadesi Şablonu: Cümle A ; geçiş ifadesi , Cümle B
       if (slotTitle1) slotTitle1.textContent = "GEÇİŞ İFADESİ";
       if (slotTitle2) slotTitle2.textContent = "BİRİNCİ YARGI (CÜMLE A)";
       if (slotTitle3) slotTitle3.textContent = "İKİNCİ YARGI (CÜMLE B)";
-      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Birinci Yargı Zamanları)";
     } else {
       // ⏱️ Standart Bağlaç Şablonu: Bağlaç ➔ Yan Cümle ➔ Ana Cümle
       if (slotTitle1) slotTitle1.textContent = "BAĞLAÇ / KOŞUL";
       if (slotTitle2) slotTitle2.textContent = "YAN CÜMLE ZAMANI (CLAUSE A)";
       if (slotTitle3) slotTitle3.textContent = "ANA CÜMLE / MODAL (CLAUSE B)";
-      if (sec2Header) sec2Header.textContent = "2. Matris Parçaları (Yan Cümle Zamanları)";
     }
 
     // 1. Update Slot Content Targets & Progress Badge
