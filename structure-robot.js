@@ -43,26 +43,8 @@
 
     // 🎯 Neden-Etki Matrisi & Neden-Sonuç Fiilleri (Görsellerdeki Tüm Kalıplar)
     // A) Neden ➔ Fiil ➔ Etki Grubu (Yol Açmak / Meydana Getirmek)
-    { id: "lead_to_cause", label: "LEAD TO / CAUSE / BRING ABOUT", desc: "Neden Olmak (NEDEN + lead to / cause / bring about + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "is_responsible_for", label: "IS / ARE RESPONSIBLE FOR", desc: "Sorumlu Olmak (NEDEN + is/are responsible for + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "produce_produces", label: "PRODUCE / PRODUCES", desc: "Meydana Getirmek (NEDEN + produce(s) + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "induce_provoke_prompt", label: "INDUCE / PROVOKE / PROMPT", desc: "Uyarmak / Teşvik Etmek (NEDEN + induce / prompt + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "result_in", label: "RESULT IN / RESULTS IN", desc: "İle Sonuçlanmak (NEDEN + result in + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "trigger_triggers", label: "TRIGGER / TRIGGERS", desc: "Tetiklemek (NEDEN + trigger(s) + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "give_rise_to", label: "GIVE RISE TO / GIVES RISE TO", desc: "Ortaya Çıkarmak (NEDEN + give(s) rise to + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "contribute_to", label: "CONTRIBUTE TO / CONTRIBUTES TO", desc: "Katkıda Bulunmak (NEDEN + contribute(s) to + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "pave_the_way_for", label: "PAVE THE WAY FOR", desc: "Zemin Hazırlamak (NEDEN + pave(s) the way for + ETKİ)", category: "cause_effect", color: "#06b6d4" },
-    { id: "culminate_in", label: "CULMINATE IN / CULMINATES IN", desc: "Zirveye Ulaşmak (NEDEN + culminate(s) in + ETKİ)", category: "cause_effect", color: "#06b6d4" },
 
     // B) Etki ➔ Fiil ➔ Neden Grubu (Kaynaklanmak / Edilgen Neden)
-    { id: "is_due_to", label: "IS / ARE DUE TO", desc: "İleri Gelmek (ETKİ + is/are due to + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "result_from", label: "RESULT FROM / RESULTS FROM", desc: "Doğmak / Kaynaklanmak (ETKİ + result(s) from + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "stem_from", label: "STEM FROM / STEMS FROM", desc: "Köken Almak (ETKİ + stem(s) from + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "originate_from", label: "ORIGINATE FROM / IN", desc: "Doğmak (ETKİ + originate(s) in/from + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "arise_from", label: "ARISE FROM / OUT OF", desc: "Meydana Gelmek (ETKİ + arise(s) from/out of + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "is_attributed_to", label: "IS / ARE ATTRIBUTED TO", desc: "Atfedilmek (ETKİ + is/are attributed to + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "is_ascribed_to", label: "IS ASCRIBED TO / ROOTED IN", desc: "Kök Salmak (ETKİ + is ascribed to / rooted in + NEDEN)", category: "cause_effect", color: "#06b6d4" },
-    { id: "is_caused_by", label: "IS / ARE CAUSED BY", desc: "Neden Olunmak (ETKİ + is/are caused by + NEDEN)", category: "cause_effect", color: "#06b6d4" },
 
     // C) Neden-Etki Edat Öbekleri (Nedeniyle / Sayesinde + İsim)
     { id: "because_of_due_to_owing_to", label: "BECAUSE OF / DUE TO / OWING TO", desc: "Yüzünden / Dolayı (ETKİ Cümlesi + edat + NEDEN İsim Öbeği)", category: "cause_effect", color: "#06b6d4" },
@@ -71,10 +53,6 @@
     { id: "as_a_result_of", label: "AS A RESULT OF / AS A CONSEQUENCE OF", desc: "Sonucu Olarak (ETKİ + as a result of + NEDEN İsim)", category: "cause_effect", color: "#06b6d4" },
 
     // D) Cümle Bağlayan Neden-Etki Bağlaçları & Kalıpları
-    { id: "therefore_thus_hence", label: "THEREFORE / THUS / HENCE", desc: "Bu Yüzden (NEDEN Cümlesi; therefore, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
-    { id: "consequently", label: "CONSEQUENTLY / AS A CONSEQUENCE", desc: "Bunun Neticesinde (NEDEN Cümlesi; consequently, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
-    { id: "as_a_result_that", label: "AS A RESULT / WITH THE RESULT THAT", desc: "Sonuç Olarak (NEDEN Cümlesi; as a result, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
-    { id: "accordingly", label: "ACCORDINGLY", desc: "Buna Bağlı Olarak (NEDEN Cümlesi; accordingly, ETKİ Cümlesi)", category: "cause_effect", color: "#06b6d4" },
     { id: "in_that", label: "IN THAT", desc: "-mesi bakımından / çünkü (ETKİ Cümlesi + in that + NEDEN Cümlesi)", category: "cause_effect", color: "#06b6d4" },
         { id: "inasmuch_as_seeing_that", label: "INASMUCH AS / SEEING THAT / GIVEN THAT", desc: "-dığına göre / göz önüne alındığında (inasmuch as NEDEN, ETKİ)", category: "cause_effect", color: "#06b6d4" },
         { id: "owing_to_the_fact_that", label: "OWING TO THE FACT THAT / DUE TO THE FACT THAT", desc: "-dığı gerçeğinden dolayı (ETKİ + owing to the fact that + NEDEN Cümlesi)", category: "cause_effect", color: "#06b6d4" },
@@ -2476,8 +2454,7 @@
   const BURDEN_KINDS = {
     rule:   { dot: '#ef4444', label: 'kural',  hint: 'Kendinden sonrasını belirler (zaman uyumu ya da devrik söz dizimi). Ezberlenmesi gereken parça budur.' },
     type:   { dot: '#f59e0b', label: 'tür',    hint: 'Arkasına ne geleceğini belirler (isim öbeği mi, tam cümle mi). Ailede tek kural: rozete bakmak yeter.' },
-    shared: { dot: '#8b5cf6', label: 'ortak',  hint: 'Bütün geçiş ifadeleriyle ortak tek kurala tabidir: "; ifade," ya da ". İfade,". Ayrıca ezberlenecek yapı yok.' },
-    lex:    { dot: '#94a3b8', label: 'anlam',  hint: 'Yapı dayatmaz; sıradan bir yüklem/edattır. Anlamını (ve yönünü) bilmek çeviri için yeter.' }
+    shared: { dot: '#8b5cf6', label: 'ortak',  hint: 'Bütün geçiş ifadeleriyle ortak tek kurala tabidir: "; ifade," ya da ". İfade,". Ayrıca ezberlenecek yapı yok.' }
   };
 
   const BURDEN_RULE = [
@@ -2502,10 +2479,8 @@
   function burdenOf(id) {
     if (BURDEN_RULE.includes(id)) return BURDEN_KINDS.rule;
     if (BURDEN_TYPE.includes(id)) return BURDEN_KINDS.type;
-    const c = CONNECTORS.find(x => x.id === id);
-    // Geriye kalanlar: geçiş ifadeleri ortak noktalama kuralına, neden-etki
-    // fiilleri ise yalnızca anlama dayanır.
-    return c && c.category === 'cause_effect' ? BURDEN_KINDS.lex : BURDEN_KINDS.shared;
+    // Geriye kalanlar geçiş ifadeleridir: hepsi aynı noktalama kuralına tabi.
+    return BURDEN_KINDS.shared;
   }
 
   // ─── PARÇANIN PEŞİNDEN NE GELİR ─────────────────────────────────────────
@@ -2550,14 +2525,8 @@
     despite_in_spite_of: 'noun', in_addition_to_prep: 'noun', regarding_as_for: 'noun',
     in_terms_of_in_light_of: 'noun', compared_to: 'noun', except_for_apart_from: 'noun', namely: 'noun',
     // Neden-etki
-    lead_to_cause: 'noun', is_responsible_for: 'noun', produce_produces: 'noun',
-    induce_provoke_prompt: 'noun', result_in: 'noun', trigger_triggers: 'noun', give_rise_to: 'noun',
-    contribute_to: 'noun', pave_the_way_for: 'noun', culminate_in: 'noun',
-    is_due_to: 'noun', result_from: 'noun', stem_from: 'noun', originate_from: 'noun',
-    arise_from: 'noun', is_attributed_to: 'noun', is_ascribed_to: 'noun', is_caused_by: 'noun',
     because_of_due_to_owing_to: 'noun', on_account_of_in_view_of: 'noun', by_virtue_of: 'noun',
     as_a_result_of: 'noun', in_order_to: 'v1', thereby_v_ing: 'ving',
-    therefore_thus_hence: 'clause', consequently: 'clause', as_a_result_that: 'clause', accordingly: 'clause',
     because: 'sub', in_that: 'sub', inasmuch_as_seeing_that: 'sub', owing_to_the_fact_that: 'sub',
     so_that_such_that: 'sub', so_much_so_that: 'sub',
     // Devrik & kısaltmalar
@@ -2593,12 +2562,10 @@
       { title: 'Eş bağlaçlar ve koşullu geçiş', ids: ['or_coord', 'nor_coord', 'for_coord', 'otherwise'] }
     ],
     cause_effect: [
-      { title: 'Neden ➔ Etki (fiiller)', ids: ['lead_to_cause', 'is_responsible_for', 'produce_produces', 'induce_provoke_prompt', 'result_in', 'trigger_triggers', 'give_rise_to', 'contribute_to', 'pave_the_way_for', 'culminate_in'] },
-      { title: 'Etki ➔ Neden (fiiller)', ids: ['is_due_to', 'result_from', 'stem_from', 'originate_from', 'arise_from', 'is_attributed_to', 'is_ascribed_to', 'is_caused_by'] },
       { title: 'Edat + isim (neden)', ids: ['because_of_due_to_owing_to', 'on_account_of_in_view_of', 'by_virtue_of', 'as_a_result_of', 'in_order_to'] },
-      { title: 'Cümle bağlayıcı (sonuç)', ids: ['therefore_thus_hence', 'consequently', 'as_a_result_that', 'accordingly', 'thereby_v_ing'] },
       { title: 'Cümle alan neden bağlaçları', ids: ['because', 'in_that', 'inasmuch_as_seeing_that', 'owing_to_the_fact_that'] },
-      { title: 'Derece ➔ sonuç', ids: ['so_that_such_that', 'so_much_so_that'] }
+      { title: 'Derece ➔ sonuç', ids: ['so_that_such_that', 'so_much_so_that'] },
+      { title: 'Sonuç kısaltması', ids: ['thereby_v_ing'] }
     ],
     'devrik_kısaltma': [
       { title: 'Kısaltmalar', ids: ['having_v3', 'upon_on', 'v3_passive_participle', 'prior_to', 'during_throughout', 'at_the_dawn'] },
@@ -2713,7 +2680,13 @@
     if (q) {
       const hits = CONNECTORS.filter(c => connectorMatches(c, q) && passesBurden(c));
       if (!hits.length) {
-        return `<div class="srobot-empty">“${state.query}” için parça bulunamadı. Aramayı kısaltmayı deneyin.</div>`;
+        return `
+          <div class="srobot-empty">
+            “${state.query}” için parça bulunamadı. Aramayı kısaltmayı deneyin.<br>
+            <span style="opacity: 0.85;">Neden-etki fiilleri (lead to, result in, stem from, be responsible for…) montaj
+            hattından çıkarıldı: bunlar bağlaç değil yüklem olduğu için
+            <strong>Bölüm 22 · 6. Neden-Etki Fiilleri: Yön ve Sabit Edat</strong> dersinde çalışılıyor.</span>
+          </div>`;
       }
       return `<div class="srobot-group-body">${hits.map(c => connectorChipHTML(c, groupTitleOf(c.id))).join('')}</div>`;
     }
