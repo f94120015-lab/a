@@ -3150,6 +3150,58 @@
     if (search) setTimeout(() => search.focus({ preventScroll: true }), 350);
   }
 
+
+  // ─── KURAL KARTI ────────────────────────────────────────────────────────
+  // Kural, düz bir paragraf olarak yazıldığında ("Yan cümle Simple Present
+  // (V1), Ana cümle Will + V1, Present Simple veya Modal (Can/May) olur")
+  // okunması gereken bir metne dönüşüyordu. Oysa kuralın kendisi zaten
+  // yapısal: hangi yan cümle zamanı hangi ana cümle biçimlerini açıyor.
+  // Bu yüzden RULE_RULES.validPairs'ten bir eşleşme tablosu çiziyoruz;
+  // düz metin altta küçük bir not olarak kalıyor.
+  const clauseALabel = id => (CLAUSE_A_TENSES.find(t => t.id === id) || {}).label || id;
+  const clauseBLabel = id => (CLAUSE_B_MODALS.find(m => m.id === id) || {}).label || id;
+
+  // "IF (Type 0 / 1) Kuralı: IF Type 0 & 1 (Gerçek / Olası Koşul): ..." gibi
+  // metinlerde başlık iki kez geçiyordu; nottan baştaki tekrarı ayıklıyoruz.
+  function ruleNoteText(connObj, ruleText) {
+    let note = String(ruleText || '').trim();
+    const head = note.match(/^([^:]{3,60}):\s*(\S[\s\S]*)$/);
+    if (head) {
+      const a = head[1].replace(/[^\wçğıöşüÇĞİÖŞÜ]/gi, '').toLowerCase();
+      const b = String(connObj.label).replace(/[^\wçğıöşüÇĞİÖŞÜ]/gi, '').toLowerCase();
+      if (a.startsWith(b) || b.startsWith(a)) note = head[2].trim();
+    }
+    return note;
+  }
+
+  function ruleCardHTML(connObj, rule) {
+    const pairs = (rule && rule.validPairs) || [];
+    const rows = pairs.map(p => {
+      const active = state.selectedClauseA === p.clauseA;
+      const bs = (p.clauseB || []).map(id => {
+        const on = active && state.selectedClauseB === id;
+        return `<span class="srobot-rule-chip${on ? ' on' : ''}">${clauseBLabel(id)}</span>`;
+      }).join('');
+      return `
+        <div class="srobot-rule-row${active ? ' active' : ''}">
+          <span class="srobot-rule-a">${clauseALabel(p.clauseA)}</span>
+          <span class="srobot-rule-arrow" aria-hidden="true">➔</span>
+          <span class="srobot-rule-b">${bs}</span>
+        </div>`;
+    }).join('');
+
+    const note = ruleNoteText(connObj, rule && rule.ruleText);
+    return `
+      <div class="srobot-rule-card">
+        <div class="srobot-rule-head">
+          <span class="srobot-rule-name">${connObj.label}</span>
+          <span class="srobot-rule-desc">${connObj.desc || ''}</span>
+        </div>
+        ${rows ? `<div class="srobot-rule-cols"><span>Yan cümle</span><span></span><span>Ana cümle</span></div>${rows}` : ''}
+        ${note ? `<div class="srobot-rule-note">${note}</div>` : ''}
+      </div>`;
+  }
+
   function updateUI() {
     // 0. Dynamic Slot Titles Adaptation based on selected Connector Category
     const slotTitle1 = document.getElementById("srobot-slot-title-1");
@@ -3259,7 +3311,7 @@
     if (state.selectedConnector) {
       const rule = RULE_RULES[state.selectedConnector];
       if (rule && rule.validPairs) {
-        ruleExplanationText = `💡 <strong>${connObj.label} Kuralı:</strong> ${rule.ruleText}`;
+        ruleExplanationText = ruleCardHTML(connObj, rule);
         const validPairs = rule.validPairs;
         allowedClauseA = validPairs.map(p => p.clauseA);
 
@@ -3294,7 +3346,14 @@
         }
       } else {
         // Fallback for any unmapped connectors so they don't hardlock
-        ruleExplanationText = `💡 <strong>${connObj.label}:</strong> Kural uyumu aktif.`;
+        ruleExplanationText = `
+          <div class="srobot-rule-card">
+            <div class="srobot-rule-head">
+              <span class="srobot-rule-name">${connObj.label}</span>
+              <span class="srobot-rule-desc">${connObj.desc || ''}</span>
+            </div>
+            <div class="srobot-rule-note">Bu parça için zaman kısıtı tanımlı değil: yan cümle ve ana cümle biçimlerini serbestçe deneyebilirsiniz.</div>
+          </div>`;
         allowedClauseA = CLAUSE_A_TENSES.map(t => t.id);
         allowedClauseB = CLAUSE_B_MODALS.map(m => m.id);
         if (state.selectedClauseA && state.selectedClauseB) {

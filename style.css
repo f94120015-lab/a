@@ -12641,6 +12641,46 @@ nDown 0.3s ease;
 }
 [data-theme="dark"] .rule-formula-row { background: rgba(139, 126, 200, 0.16); }
 
+/* ── Yapı Robotu: kural kartı ────────────────────────────────────────────── */
+/* Kural düz paragraf olarak yazıldığında ("Yan cümle Simple Present (V1), ana
+   cümle Will + V1 ... olur") okunması gereken bir metne dönüşüyordu. Kuralın
+   kendisi zaten yapısal olduğu için eşleşme tablosu hâlinde çiziliyor. */
+.srobot-rule-card { display: flex; flex-direction: column; gap: 6px; }
+.srobot-rule-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.srobot-rule-name {
+  font-family: var(--font-heading); font-size: 0.95rem; font-weight: 800; color: var(--accent-primary);
+}
+.srobot-rule-desc { font-size: 0.76rem; color: var(--text-secondary); }
+.srobot-rule-cols {
+  display: grid; grid-template-columns: minmax(120px, 0.9fr) 24px 1.6fr; gap: 6px;
+  font-size: 0.64rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--text-muted); padding: 4px 2px 0;
+}
+.srobot-rule-row {
+  display: grid; grid-template-columns: minmax(120px, 0.9fr) 24px 1.6fr; gap: 6px;
+  align-items: center; padding: 6px 8px; border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+}
+.srobot-rule-row + .srobot-rule-row { border-top: 1px solid var(--border-color); border-radius: 0; }
+.srobot-rule-row.active {
+  background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.35);
+  border-radius: var(--radius-sm);
+}
+.srobot-rule-a { font-size: 0.8rem; font-weight: 800; color: #8b5cf6; }
+.srobot-rule-arrow { text-align: center; font-weight: 800; color: var(--text-muted); }
+.srobot-rule-b { display: flex; flex-wrap: wrap; gap: 5px; }
+.srobot-rule-chip {
+  font-size: 0.74rem; font-weight: 700; padding: 2px 8px; border-radius: 8px;
+  background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.3); color: var(--text-primary);
+}
+.srobot-rule-chip.on {
+  background: rgba(236, 72, 153, 0.28); border-color: #ec4899; font-weight: 800;
+}
+.srobot-rule-note {
+  font-size: 0.76rem; line-height: 1.5; color: var(--text-secondary);
+  border-top: 1px dashed var(--border-color); padding-top: 6px; margin-top: 2px;
+}
+
 /* ── Yapı Robotu: montaj hattı yuvaları ──────────────────────────────────── */
 /* Yuvalar artık pasif bir gösterge değil, seçim yeri: bağlaç seçilince ikinci
    yuva uyumlu zamanları, o seçilince üçüncü yuva uygun ana cümle yapılarını
