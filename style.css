@@ -3544,6 +3544,18 @@ input {
     min-width: 0;
   }
 
+  /* .home-content hem max-width: 960px hem margin: 0 auto taşıdığı için 1009px'lik
+     sarmalayıcının içinde bir kez daha ortalanıyor, sağda 24.5px'lik fazladan bir
+     boşluk bırakıyordu: sidebar solda 16px içeriden başlarken sağdaki sütun 44.5px
+     içeride kalıyor, üst bar da her şeyin dışına taşmış görünüyordu. Masaüstünde
+     sarmalayıcıyı doldurup sağ boşluğu soldaki 16px ile eşitliyoruz. */
+  .home-main-wrapper .home-content {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 16px;
+  }
+
   .top-bar-center {
     display: none !important;
   }
@@ -6373,13 +6385,20 @@ input {
   color: var(--text-primary);
 }
 
-.drawer-body {
-  flex: 1;
-  overflow-y: auto;
-  padding: 18px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+/* Bu kural, yukarıdaki @media (min-width: 1024px) bloğundan SONRA geldiği ve aynı
+   özgüllükte olduğu için masaüstünde de kazanıyordu: 20px'lik yan boşluk sağ
+   sütundaki bütün kartları içeri itiyor, üst bar (16px) onların dışına taşmış
+   görünüyordu. .drawer-body yalnızca 1024px altında gerçekten bir çekmece, o
+   yüzden kuralı oraya kapatıyoruz. */
+@media (max-width: 1023px) {
+  .drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 /* Button in top-bar */
@@ -6632,9 +6651,16 @@ input {
 
 /* Masaüstü (width >= 820px) için yerleşimler */
 @media (min-width: 820px) {
+  /* Üst bar 1280px'lik kabın iki ucuna dayanıyordu, altındaki sidebar kartı ise
+     16px içeriden başlıyordu; bu yüzden çerçeve alt bölümle hizalanmıyor,
+     dışarı taşmış görünüyordu. Aynı iç boşluğa ve köşe yarıçapına çekildi. */
   .top-bar {
     height: 72px;
     box-sizing: border-box;
+    margin: 0 16px;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   }
 
   .mobile-menu-toggle {
