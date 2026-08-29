@@ -14240,6 +14240,14 @@ function renderDrillFormulaHint(body, question) {
   // çipe ya da panele yazmak, öğrenci hatırlatıcıyı açmadan bile cevabı ele
   // verir. Bu yüzden şıklarda geçen terimlerin adı maskelenir; geriye kuralın
   // yapısal bilgisi kalır (";" sonrası virgüllü boşluk hangi sınıfı ister).
+  //
+  // Bu tehlike yalnızca fill-blank-dropdown sorularında var: orada options[]
+  // doğrudan aday cevaplardır, terim adı = doğru şık. Hata avcılığı (error-
+  // spotting) sorularında options[] cümlenin PARÇALARIdır (hangi öbek yanlış);
+  // bağlacın kendisi bu parçalardan biri olsa bile adının görünmesi hangi
+  // öbeğin hatalı olduğunu ele vermez. O yüzden leaks() yalnızca dropdown
+  // sorularında çalışır; aksi halde kural metni tamamen açık kalır.
+  const isChoiceType = question.type === 'fill-blank-dropdown';
   const inOptions = new Set((question.options || []).map(o => String(o).toLowerCase().trim()));
   // Son güvenlik katmanı: kural metni ne söylerse söylesin, doğru cevabın
   // kendisi hatırlatıcıda görünmemeli. Hata avcılığı sorularında cevap hatalı
@@ -14251,6 +14259,7 @@ function renderDrillFormulaHint(body, question) {
     return String(text || '').replace(new RegExp('\\b' + esc + '\\b', 'gi'), '____');
   };
   const leaks = term => {
+    if (!isChoiceType) return false;
     const t = String(term).toLowerCase();
     return [...inOptions].some(o => o && (o === t || t.includes(o) || o.includes(t)));
   };
