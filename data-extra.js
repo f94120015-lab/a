@@ -40997,9 +40997,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "even though",
             "despite"
           ]
         },
@@ -41022,10 +41019,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "nevertheless",
-            "although",
-            "despite",
-            "in spite of"
+            "although"
           ]
         },
         {
@@ -41047,10 +41041,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "although",
-            "even though",
-            "despite",
-            "in spite of"
+            "however"
           ]
         },
         {
@@ -41072,9 +41063,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "nonetheless",
-            "although",
-            "even though",
             "in spite of"
           ]
         },
@@ -41097,10 +41085,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "whereas",
-            "despite"
+            "though"
           ]
         },
         {
@@ -41122,8 +41107,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "despite",
-            "regardless of / irrespective of",
             "in case / in the event of",
             "if"
           ]
@@ -41147,10 +41130,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "but for",
-            "unless",
-            "even if",
-            "whether or not"
+            "but for"
           ]
         },
         {
@@ -41172,10 +41152,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "despite",
-            "in spite of",
-            "regardless of / irrespective of",
-            "apart from / aside from"
+            "whereas"
           ]
         },
         {
@@ -41197,9 +41174,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "furthermore",
-            "moreover",
-            "in addition",
             "as well as"
           ]
         },
@@ -41222,8 +41196,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "furthermore",
-            "moreover",
             "in addition to"
           ]
         },
@@ -41246,9 +41218,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "instead",
-            "despite",
-            "in spite of",
             "as long as"
           ]
         },
@@ -41271,10 +41240,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "only if",
-            "provided that / providing that",
-            "unless",
-            "even if"
+            "only if"
           ]
         },
         {
@@ -41296,10 +41262,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "provided that / providing that",
-            "unless",
-            "in case / in the event of",
-            "if"
+            "whether or not"
           ]
         },
         {
@@ -41362,8 +41325,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "despite",
-            "because of / due to / owing to",
             "because / since / as",
             "now that"
           ]
@@ -41387,9 +41348,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as",
-            "inasmuch as / seeing that / given that",
-            "now that",
             "thanks to"
           ]
         },
@@ -41412,9 +41370,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "even though",
-            "whereas",
-            "except that",
+            "in terms of",
             "still"
           ]
         },
@@ -41437,10 +41393,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "instead",
-            "regardless of / irrespective of",
-            "apart from / aside from",
-            "barring / except for"
+            "except that"
           ]
         },
         {
@@ -41462,7 +41415,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "in the meantime",
+            "ever since",
             "because / since / as"
           ]
         },
@@ -41485,9 +41438,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "in spite of",
-            "regardless of / irrespective of",
-            "apart from / aside from",
             "on condition that"
           ]
         },
@@ -41510,10 +41460,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "instead",
-            "despite",
-            "supposing / assuming (that)",
-            "in terms of"
+            "supposing / assuming (that)"
           ]
         },
         {
@@ -41535,9 +41482,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "even though",
-            "unless",
-            "if",
             "were it not for / had it not been for"
           ]
         },
@@ -41560,7 +41504,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "in the meantime"
+            "whenever"
           ]
         },
         {
@@ -41582,8 +41526,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "moreover",
-            "in addition",
             "including"
           ]
         },
@@ -41606,10 +41548,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "so (bağlaç)",
-            "however",
-            "still",
-            "although"
+            "so (bağlaç)"
           ]
         },
         {
@@ -41653,10 +41592,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "although",
-            "even though",
-            "notwithstanding",
-            "whereas"
+            "notwithstanding"
           ]
         },
         {
@@ -41697,9 +41633,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "notwithstanding",
-            "apart from / aside from",
-            "in terms of",
             "considering (that)"
           ]
         },
@@ -41760,8 +41693,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because of / due to / owing to",
-            "on account of / in view of",
             "because / since / as",
             "inasmuch as / seeing that / given that"
           ]
@@ -41804,10 +41735,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "whereas",
-            "even though",
-            "in spite of",
-            "regardless of / irrespective of"
+            "while / as"
           ]
         },
         {
@@ -41848,8 +41776,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "although",
-            "whereas"
+            "after"
           ]
         },
         {
@@ -41871,9 +41798,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "such as",
-            "including",
-            "namely",
             "like"
           ]
         },
@@ -41896,9 +41820,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "such as",
-            "namely",
-            "like"
+            "such as"
           ]
         },
         {
@@ -41920,10 +41842,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "in case / in the event of",
-            "as a result / with the result that",
-            "by virtue of / on the grounds of",
-            "as a result of / as a consequence of"
+            "only then / only after / only when"
           ]
         },
         {
@@ -41945,8 +41864,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as",
-            "inasmuch as / seeing that / given that",
             "by virtue of / on the grounds of"
           ]
         },
@@ -41969,10 +41886,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "therefore",
-            "thus",
-            "consequently / as a consequence",
-            "as a result / with the result that"
+            "as a result of / as a consequence of"
           ]
         },
         {
@@ -41994,8 +41908,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because of / due to / owing to",
-            "on account of / in view of",
             "owing to the fact that"
           ]
         },
@@ -42018,7 +41930,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "so that / in order that",
             "in order to / so as to"
           ]
         },
@@ -42041,8 +41952,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "as if / as though",
-            "in that"
+            "as if / as though"
           ]
         },
         {
@@ -42064,8 +41974,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "whereas",
-            "in that",
             "as for / as regards"
           ]
         },
@@ -42088,8 +41996,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "with respect to / regarding",
-            "whereas"
+            "with respect to / regarding"
           ]
         },
         {
@@ -42130,8 +42037,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "so long as",
-            "in the meantime"
+            "as soon as / once / the moment"
           ]
         },
         {
@@ -42153,7 +42059,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "by the time"
           ]
         },
         {
@@ -42194,6 +42100,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
+            "ever since",
             "because / since / as"
           ]
         },
@@ -42235,10 +42142,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "despite",
-            "whereas"
+            "however"
           ]
         },
         {
@@ -42260,9 +42164,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "despite"
+            "Adj / Adv + as / though + S + V"
           ]
         },
         {
@@ -42284,10 +42186,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "just as ... so (too)",
-            "in contrast / by contrast",
-            "even though",
-            "despite"
+            "just as ... so (too)"
           ]
         },
         {
@@ -42309,10 +42208,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "besides",
-            "what is more",
-            "similarly",
-            "in the same way"
+            "not to mention"
           ]
         },
         {
@@ -42334,10 +42230,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "otherwise",
-            "or else",
-            "so that / in order that",
-            "even if"
+            "or else"
           ]
         },
         {
@@ -42359,10 +42252,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "so that / in order that",
-            "lest / for fear that",
-            "so long as",
-            "on condition that"
+            "in order to / so as to"
           ]
         },
         {
@@ -42384,10 +42274,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "lest / for fear that",
-            "so that / in order that",
-            "in order to / so as to",
-            "provided that / providing that"
+            "lest / for fear that"
           ]
         },
         {
@@ -42409,10 +42296,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "provided that / providing that",
-            "unless",
-            "even if",
-            "if only"
+            "were it not for / had it not been for"
           ]
         },
         {
@@ -42434,7 +42318,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however"
+            "the more ... the more"
           ]
         },
         {
@@ -42456,9 +42340,6 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "as if / as though",
-            "barring / except for",
-            "with regard to",
             "except that"
           ]
         },
@@ -42481,7 +42362,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "at the dawn of / at the turn of / on the eve of"
           ]
         },
         {
@@ -42541,7 +42422,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "by + Gelecek / Geçmiş Zaman Belirleyicisi"
           ]
         },
         {
@@ -42582,7 +42463,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "at the dawn of / at the turn of / on the eve of"
           ]
         },
         {
@@ -42604,10 +42485,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "moreover",
-            "in addition",
-            "besides",
-            "what is more"
+            "as well as"
           ]
         },
         {
@@ -42629,9 +42507,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "furthermore",
-            "besides",
-            "likewise",
+            "in addition to",
             "still"
           ]
         },
@@ -42654,10 +42530,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "unless",
-            "even if",
-            "if only",
-            "supposing / assuming (that)"
+            "were it not for / had it not been for"
           ]
         },
         {
@@ -42679,9 +42552,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "were it not for / had it not been for",
-            "unless",
-            "if"
+            "were it not for / had it not been for"
           ]
         },
         {
@@ -42703,10 +42574,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "despite",
-            "whereas"
+            "however"
           ]
         },
         {
@@ -42728,10 +42596,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "despite",
-            "whereas"
+            "Adj / Adv + as / though + S + V"
           ]
         },
         {
@@ -42753,10 +42618,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "despite",
-            "even so"
+            "however"
           ]
         },
         {
@@ -42778,9 +42640,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "however",
-            "although",
-            "whereas"
+            "however"
           ]
         },
         {
@@ -42802,7 +42662,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "by + Gelecek / Geçmiş Zaman Belirleyicisi"
           ]
         },
         {
@@ -42824,7 +42684,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "by + Gelecek / Geçmiş Zaman Belirleyicisi"
           ]
         },
         {
@@ -43028,10 +42888,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "overall / all in all",
-            "in conclusion",
-            "on the whole",
-            "ultimately"
+            "notably"
           ]
         },
         {
@@ -43477,10 +43334,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "subsequently",
-            "afterwards",
-            "previously",
-            "thereafter"
+            "meanwhile"
           ]
         },
         {
@@ -43502,10 +43356,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "meanwhile",
-            "in the meantime",
-            "previously",
-            "even so"
+            "subsequently"
           ]
         },
         {
@@ -43552,10 +43403,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "meanwhile",
-            "previously",
-            "conversely",
-            "even so"
+            "thereafter"
           ]
         },
         {
@@ -43627,10 +43475,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "even if",
-            "whether or not",
-            "if only",
-            "otherwise"
+            "so long as"
           ]
         },
         {
@@ -43702,10 +43547,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "in order to / so as to",
-            "even if",
-            "whether or not",
-            "otherwise"
+            "on condition that"
           ]
         },
         {
@@ -43902,7 +43744,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "because / since / as"
+            "until / till"
           ]
         },
         {
@@ -44049,10 +43891,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "nevertheless",
-            "conversely",
-            "otherwise",
-            "even so"
+            "consequently / as a consequence"
           ]
         },
         {
@@ -46202,10 +46041,7 @@ if (typeof lessons !== 'undefined') {
             "Neden-Sonuç Yönü"
           ],
           "terms": [
-            "lead to / leads to",
-            "bring about / brings about",
-            "trigger / triggers",
-            "give rise to / gives rise to"
+            "is due to / are due to"
           ]
         },
         {
@@ -46330,10 +46166,7 @@ if (typeof lessons !== 'undefined') {
             "Neden-Sonuç Yönü"
           ],
           "terms": [
-            "lead to / leads to",
-            "result in / results in",
-            "bring about / brings about",
-            "trigger / triggers"
+            "is attributed to / are attributed to"
           ]
         },
         {
@@ -46556,10 +46389,7 @@ if (typeof lessons !== 'undefined') {
             "Neden-Sonuç Yönü"
           ],
           "terms": [
-            "lead to / leads to",
-            "give rise to / gives rise to",
-            "culminate in / culminates in",
-            "induce / provoke / prompt"
+            "is attributed to / are attributed to"
           ]
         },
         {
