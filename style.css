@@ -5661,9 +5661,17 @@ input {
 
 .social-tabs {
   display: flex;
+  flex-wrap: nowrap;
   border-bottom: 2px solid var(--border-light);
   gap: 16px;
   margin-bottom: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.social-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .social-tab {
@@ -5676,6 +5684,8 @@ input {
   padding: 8px 4px;
   cursor: pointer;
   position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
@@ -5702,11 +5712,18 @@ input {
   display: flex;
   gap: 10px;
   width: 100%;
+  min-width: 0;
+}
+
+.social-search-wrap > .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .search-input-container {
   position: relative;
   flex: 1;
+  min-width: 0;
 }
 
 #social-search-input {
@@ -5719,6 +5736,7 @@ input {
   font-family: var(--font-body);
   font-size: 0.85rem;
   outline: none;
+  text-overflow: ellipsis;
   transition: border-color var(--transition-fast);
 }
 
@@ -5909,6 +5927,7 @@ input {
 
 .friend-details {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -5919,23 +5938,29 @@ input {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--text-primary);
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .friend-meta {
   display: flex;
   gap: 8px;
+  min-width: 0;
+  flex-wrap: wrap;
 }
 
 .friend-stat {
   font-size: 0.7rem;
   color: var(--text-secondary);
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .social-action-buttons {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .social-btn {
@@ -5950,6 +5975,7 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .social-follow-btn {
@@ -6099,7 +6125,7 @@ input {
 
 .side-stats-bar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   background: transparent;
   border: none;
@@ -6117,6 +6143,8 @@ input {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -6169,6 +6197,9 @@ input {
   letter-spacing: 0.3px;
   line-height: 1.1;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .side-stats-bar .stat-card-val {
@@ -6178,6 +6209,9 @@ input {
   color: #1e293b;
   line-height: 1.1;
   margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 [data-theme="dark"] .side-stats-bar .stat-card-val {
@@ -6429,6 +6463,11 @@ input {
   font-size: 0.98rem;
 }
 
+.lessons-side-col .side-stats-bar .stat-card-label {
+  font-size: 0.55rem;
+  letter-spacing: 0.1px;
+}
+
 .lessons-side-col .profile-social-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -6459,12 +6498,13 @@ input {
 
 .lessons-side-col .profile-social-card .social-tabs {
   margin-bottom: 0px;
-  gap: 10px;
+  gap: 4px;
 }
 
+/* 340px'lik yan sütunda üç sekme 0.8rem'de tek satıra sığmıyordu. */
 .lessons-side-col .profile-social-card .social-tab {
   padding: 2px 2px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .lessons-side-col .profile-social-card #social-search-input {
