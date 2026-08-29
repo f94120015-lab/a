@@ -1103,19 +1103,19 @@
         w: v1n(a), o: ['It is high time', a.o, cap(a.s)],
         tr: `${cap(c.subjGen)} tam zamanı.`,
         e: "'It is high time' gerçek dışı bir kaymadır: ardından V2 gelir, geniş zaman gelmez.",
-        t: ['no sooner ... than'] }) },
+        t: ['it is (high) time'] }) },
     { build: (a, c) => ({
         s: `I wish ${a.s} ${v1n(a)} ${a.o} more often.`,
         w: v1n(a), o: ['I wish', 'more often', a.o],
         tr: `Keşke ${a.st} ${a.ot} daha sık ${a.t.wish}.`,
         e: "'wish' şimdiye ait bir dilek kurarken bir zaman geriye kayar: V2 kullanılır.",
-        t: ['no sooner ... than'] }) },
+        t: ['I wish'] }) },
     { build: (a, c) => ({
         s: `The report recommends that ${a.s} ${be(a)} ${a.v.v3} annually.`,
         w: `${be(a)} ${a.v.v3}`, o: ['The report', 'recommends that', 'annually'],
         tr: `Rapor, ${c.subjAcc} her yıl öneriyor.`,
         e: "'recommend that' subjunctive tetikler: yardımcı fiil çekimlenmez, fiil yalın kalır (be + V3 değil, 'be V3' yalın biçimi).",
-        t: ['lest / for fear that'] }) },
+        t: ['suggest / recommend / insist / demand + that'] }) },
     { build: (a, c) => ({
         s: `By 2030 ${a.s} will ${a.v.v1} ${a.o} completely.`,
         w: `will ${a.v.v1}`, o: ['By 2030', 'completely', a.o],
@@ -1157,7 +1157,7 @@
         w: 'was rewritten', o: ['suggested that', 'the report', 'immediately'],
         tr: `${cap(a.st)} raporun derhal yeniden yazılmasını önerdi.`,
         e: "'suggest that' subjunctive ister; yardımcı fiil çekimlenmez, 'be rewritten' yalın kalır.",
-        t: ['lest / for fear that'] }) },
+        t: ['suggest / recommend / insist / demand + that'] }) },
     { build: (a, c) => ({
         s: `${cap(a.s)} had ${a.v.v3} ${a.o} two days ago.`,
         w: `had ${a.v.v3}`, o: ['two days', 'ago', a.o],
@@ -1273,31 +1273,31 @@
         w: a.v.v2, d: [v1n(a), `will ${a.v.v1}`, `would have ${a.v.v3}`, `${has(a)} ${a.v.v3}`],
         tr: `Keşke ${a.st} ${a.ot} daha sık ${a.t.wish}.`,
         e: "Şimdiye ait dilek bir zaman geriye kayar: 'wish + V2'. Gelecek ya da geniş zaman kullanılmaz.",
-        t: ['no sooner ... than'] }) },
+        t: ['I wish'] }) },
     { build: (a, c) => ({
         s: `I wish ${a.s} ____ ${a.o} before the deadline.`,
         w: `had ${a.v.v3}`, d: [a.v.v2, `${has(a)} ${a.v.v3}`, `would ${a.v.v1}`, `will ${a.v.v1}`],
         tr: `Keşke ${a.st} son tarihten önce ${a.ot} ${a.t.condPast}.`,
         e: "Geçmişe dönük pişmanlık 'wish + had V3' ile kurulur; bir kat daha geriye kayılır.",
-        t: ['no sooner ... than'] }) },
+        t: ['I wish'] }) },
     { build: (a, c) => ({
         s: `I wish ${a.s} ____ ${a.o} without further delay.`,
         w: `would ${a.v.v1}`, d: [`will ${a.v.v1}`, v1n(a), `had ${a.v.v3}`, `${has(a)} ${a.v.v3}`],
         tr: `Keşke ${a.st} daha fazla gecikmeden ${a.ot} ${a.t.wish}.`,
         e: "Başkasının davranışından duyulan rahatsızlık 'wish + would V1' ile anlatılır.",
-        t: ['no sooner ... than'] }) },
+        t: ['I wish'] }) },
     { build: (a, c) => ({
         s: `If only ${a.s} ____ ${a.o} in time.`,
         w: `had ${a.v.v3}`, d: [a.v.v2, `${has(a)} ${a.v.v3}`, `will ${a.v.v1}`, v1n(a)],
         tr: `Keşke ${a.st} zamanında ${a.ot} ${a.t.condPast}.`,
         e: "'If only' 'I wish'in vurgulu biçimidir; geçmişe dönük pişmanlıkta 'had V3' alır.",
-        t: ['no sooner ... than'] }) },
+        t: ['if only'] }) },
     { build: (a, c) => ({
         s: `It is high time ${a.s} ____ ${a.o}.`,
         w: a.v.v2, d: [v1n(a), `will ${a.v.v1}`, `${has(a)} ${a.v.v3}`, `to ${a.v.v1}`],
         tr: `${cap(c.subjGen)} tam zamanı.`,
         e: "'It is high time + özne' kalıbında fiil V2 olur; buradaki geçmiş biçim gerçek dışılığı gösterir.",
-        t: ['no sooner ... than'] }) },
+        t: ['it is (high) time'] }) },
     { build: (a, c) => ({
         s: `${cap(a.s)} ${be(a)} behaving as if ${a.plural ? 'they' : 'it'} ____ ${a.o} already.`,
         w: `had ${a.v.v3}`, d: [`${has(a)} ${a.v.v3}`, a.v.v2, `will ${a.v.v1}`, v1n(a)],
@@ -1343,7 +1343,7 @@
           d: [a.plural ? `${has(a)} ${a.v.v3}` : a.v.v1s, a.v.v2, `to ${a.v.v1}`, `${be(a)} ${a.v.ing}`],
           tr: `Rapor, her yıl ${c.subjAcc} ${verb.tr}.`,
           e: `'${verb.en} that' subjunctive tetikler: üçüncü tekil şahısta bile fiil yalın kalır, '-s' almaz.`,
-          t: ['lest / for fear that', 'so that / in order that'] };
+          t: ['suggest / recommend / insist / demand + that'] };
       } },
     { build: (a, c, k) => {
         const adj = SUBJ_ADJ[k % SUBJ_ADJ.length];
@@ -1353,20 +1353,20 @@
           d: [a.plural ? `${be(a)} ${a.v.ing}` : a.v.v1s, a.v.v2, `${has(a)} ${a.v.v3}`, `to ${a.v.v1}`],
           tr: `${cap(c.gen)} ${a.ot} gecikmeden ${a.t.subj} ${adj.tr}.`,
           e: `'It is ${adj.en} that' kalıbı da subjunctive ister; fiil çekimlenmez.`,
-          t: ['lest / for fear that'] };
+          t: ['it is essential / vital / imperative that'] };
       } },
     { build: (a, c) => ({
         s: `Rarely ____ ${a.s} ${a.v.v1} ${a.o} without consultation.`,
         w: doA(a), d: [has(a), be(a), 'had', 'would have'],
         tr: `${cap(a.st)} nadiren danışmadan ${a.ot} ${a.t.gen}.`,
         e: "Olumsuz zarf başa gelince ana cümle devrilir; geniş zamanda devriklik 'do/does + yalın fiil' ile kurulur.",
-        t: ['no sooner ... than'] }) },
+        t: ['seldom / rarely'] }) },
     { build: (a, c, k, aft) => ({
         s: `Not only ____ ${a.s} ${a.v.v1} ${a.o}, but it also published the minutes.`,
         w: 'did', d: [doA(a), has(a), beP(a), 'had'],
         tr: `${cap(a.st)} yalnızca ${a.ot} ${a.t.past}, üstelik tutanakları da yayımladı.`,
         e: "'Not only' başa gelince devriklik zorunludur; ikinci cümlenin geçmiş zamanı 'did + yalın fiil' ister.",
-        t: ['no sooner ... than'] }) },
+        t: ['not only ... but also'] }) },
     { build: (a, c) => ({
         s: `${cap(a.s)} sealed the store lest the samples ____ damaged during the move.`,
         w: 'be', d: ['are', 'were', 'will be', 'have been'],
