@@ -25,6 +25,8 @@
   --accent-primary-light: rgba(99, 102, 241, 0.1);
 
   /* Dinamik Tema Renkleri */
+  --theme-accent-deep: var(--accent-primary-hover);
+  --theme-accent-rgb: 99, 102, 241;
   --theme-accent: var(--accent-primary);
   --theme-accent-hover: var(--accent-primary-hover);
   --theme-accent-shadow: var(--accent-primary-shadow);
@@ -100,6 +102,8 @@
   --accent-primary-light: rgba(129, 140, 248, 0.15);
 
   /* Dinamik Tema Renkleri */
+  --theme-accent-deep: var(--accent-primary-hover);
+  --theme-accent-rgb: 129, 140, 248;
   --theme-accent: var(--accent-primary);
   --theme-accent-hover: var(--accent-primary-hover);
   --theme-accent-shadow: var(--accent-primary-shadow);
@@ -136,60 +140,80 @@
 
 /* ─── Dinamik Bölüm Temaları ────────────────────────────── */
 [data-unit-theme="1"] {
+  --theme-accent-deep: #047857;
+  --theme-accent-rgb: 16, 185, 129;
   --theme-accent: #10b981;
   --theme-accent-hover: #059669;
   --theme-accent-light: rgba(16, 185, 129, 0.12);
   --theme-accent-shadow: #047857;
 }
 [data-unit-theme="2"] {
+  --theme-accent-deep: #5b21b6;
+  --theme-accent-rgb: 139, 92, 246;
   --theme-accent: #8b5cf6;
   --theme-accent-hover: #7c3aed;
   --theme-accent-light: rgba(139, 92, 246, 0.12);
   --theme-accent-shadow: #5b21b6;
 }
 [data-unit-theme="3"] {
+  --theme-accent-deep: #9d174d;
+  --theme-accent-rgb: 236, 72, 153;
   --theme-accent: #ec4899;
   --theme-accent-hover: #db2777;
   --theme-accent-light: rgba(236, 72, 153, 0.12);
   --theme-accent-shadow: #9d174d;
 }
 [data-unit-theme="4"] {
+  --theme-accent-deep: #1e3a8a;
+  --theme-accent-rgb: 59, 130, 246;
   --theme-accent: #3b82f6;
   --theme-accent-hover: #2563eb;
   --theme-accent-light: rgba(59, 130, 246, 0.12);
   --theme-accent-shadow: #1e3a8a;
 }
 [data-unit-theme="5"] {
+  --theme-accent-deep: #155e75;
+  --theme-accent-rgb: 6, 182, 212;
   --theme-accent: #06b6d4;
   --theme-accent-hover: #0891b2;
   --theme-accent-light: rgba(6, 182, 212, 0.12);
   --theme-accent-shadow: #155e75;
 }
 [data-unit-theme="6"] {
+  --theme-accent-deep: #9a3412;
+  --theme-accent-rgb: 249, 115, 22;
   --theme-accent: #f97316;
   --theme-accent-hover: #ea580c;
   --theme-accent-light: rgba(249, 115, 22, 0.12);
   --theme-accent-shadow: #9a3412;
 }
 [data-unit-theme="7"] {
+  --theme-accent-deep: #86198f;
+  --theme-accent-rgb: 217, 70, 239;
   --theme-accent: #d946ef;
   --theme-accent-hover: #c026d3;
   --theme-accent-light: rgba(217, 70, 239, 0.12);
   --theme-accent-shadow: #86198f;
 }
 [data-unit-theme="8"] {
+  --theme-accent-deep: #854d0e;
+  --theme-accent-rgb: 234, 179, 8;
   --theme-accent: #eab308;
   --theme-accent-hover: #ca8a04;
   --theme-accent-light: rgba(234, 179, 8, 0.12);
   --theme-accent-shadow: #854d0e;
 }
 [data-unit-theme="9"] {
+  --theme-accent-deep: #3730a3;
+  --theme-accent-rgb: 99, 102, 241;
   --theme-accent: #6366f1;
   --theme-accent-hover: #4f46e5;
   --theme-accent-light: rgba(99, 102, 241, 0.12);
   --theme-accent-shadow: #3730a3;
 }
 [data-unit-theme="10"] {
+  --theme-accent-deep: #991b1b;
+  --theme-accent-rgb: 239, 68, 68;
   --theme-accent: #ef4444;
   --theme-accent-hover: #dc2626;
   --theme-accent-light: rgba(239, 68, 68, 0.12);
@@ -3379,10 +3403,10 @@ input {
     font-size: 1.12rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.3px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+    background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-hover) 100%) !important;
     color: #ffffff !important;
     border: none !important;
-    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(var(--theme-accent-rgb), 0.38), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
     width: 100% !important;
     box-sizing: border-box !important;
@@ -3406,15 +3430,15 @@ input {
   }
   .sidebar-menu .nav-tab[data-tab="lessons"]:hover {
     transform: translateY(-2px) scale(1.03) !important;
-    box-shadow: 0 12px 28px rgba(16, 185, 129, 0.48), 0 4px 10px rgba(0, 0, 0, 0.12) !important;
-    background: linear-gradient(135deg, #34d399 0%, #059669 100%) !important;
+    box-shadow: 0 12px 28px rgba(var(--theme-accent-rgb), 0.48), 0 4px 10px rgba(0, 0, 0, 0.12) !important;
+    background: linear-gradient(135deg, var(--theme-accent-hover) 0%, var(--theme-accent) 100%) !important;
     color: #ffffff !important;
   }
   .sidebar-menu .nav-tab[data-tab="lessons"].active {
-    background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
+    background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-deep) 100%) !important;
     color: #ffffff !important;
     border: none !important;
-    box-shadow: 0 10px 28px rgba(16, 185, 129, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 10px 28px rgba(var(--theme-accent-rgb), 0.5), 0 0 0 2px rgba(255, 255, 255, 0.3) !important;
   }
   .sidebar-menu .nav-tab[data-tab="lessons"].active .nav-tab-icon {
     background: rgba(255, 255, 255, 0.28) !important;
