@@ -23422,13 +23422,35 @@ function initSimulator() {
   renderActiveMission();
 }
 
-function showSimulatorReportModal() {
-  if (typeof html2canvas === 'undefined') {
-    showToast('Ekran görüntüsü kütüphanesi yükleniyor, lütfen birkaç saniye sonra tekrar deneyin.', 'error');
+// html2canvas is ~200KB and only needed for the report screenshot, so it is not
+// in index.html: pull it in the first time someone actually asks for a capture.
+let html2canvasLoader = null;
+function loadHtml2Canvas() {
+  if (typeof html2canvas !== 'undefined') return Promise.resolve();
+  if (html2canvasLoader) return html2canvasLoader;
+  html2canvasLoader = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = 'html2canvas.min.js';
+    script.onload = resolve;
+    script.onerror = () => {
+      html2canvasLoader = null;
+      reject(new Error('html2canvas yüklenemedi'));
+    };
+    document.head.appendChild(script);
+  });
+  return html2canvasLoader;
+}
+
+async function showSimulatorReportModal() {
+  showToast('Ekran görüntüsü alınıyor, lütfen bekleyin... 📸', 'info');
+
+  try {
+    await loadHtml2Canvas();
+  } catch (err) {
+    console.error(err);
+    showToast('Ekran görüntüsü kütüphanesi yüklenemedi, lütfen tekrar deneyin.', 'error');
     return;
   }
-
-  showToast('Ekran görüntüsü alınıyor, lütfen bekleyin... 📸', 'info');
   
   const targetElement = document.getElementById('simulator-main-container') || document.body;
   

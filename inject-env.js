@@ -1,9 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
+// The build runs this twice: once with --inject-only (before minification) to bake
+// the Supabase config into www/app.js, then once with --stamp-only (after minification)
+// so the ?v= cache-busting hashes describe the files actually shipped.
+const stampOnly = process.argv.includes('--stamp-only');
+const injectOnly = process.argv.includes('--inject-only');
+
 const appPath = path.join(__dirname, 'app.js');
 const targetPath = path.join(__dirname, 'www', 'app.js');
 
+if (!stampOnly) {
 if (!fs.existsSync(appPath)) {
   console.error('Source app.js not found!');
   process.exit(1);
@@ -52,6 +59,7 @@ appContent = appContent.replace(
 
 fs.writeFileSync(targetPath, appContent, 'utf8');
 console.log('Successfully wrote injected app.js to www/app.js');
+}
 
 // ── Cache-busting ────────────────────────────────────────────────────────────
 // index.html pins every asset to a hand-written "?v=3.4.0" that nobody remembers
@@ -61,7 +69,9 @@ console.log('Successfully wrote injected app.js to www/app.js');
 const crypto = require('crypto');
 const wwwIndexPath = path.join(__dirname, 'www', 'index.html');
 
-if (fs.existsSync(wwwIndexPath)) {
+if (injectOnly) {
+  // Hashes are stamped in the later --stamp-only pass.
+} else if (fs.existsSync(wwwIndexPath)) {
   let html = fs.readFileSync(wwwIndexPath, 'utf8');
   let stamped = 0;
 

@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "npx -y http-server -p 3000 -o -c-1",
-    "build": "mkdir -p www && npx terser data-stable.js -c -m -o www/data-stable.js && npx terser data.js -c -m -o www/data.js && cp index.html data-extra.js drill-expansion.js exam-expansion.js lesson-cause-effect.js rules-db.js translation-guide.js structure-robot.js ezber-robotu.js style.css canvas-confetti.min.js html2canvas.min.js www/ && cp -R assets www/ && node inject-env.js && npx terser www/app.js -c -m -o www/app.js",
+    "build": "node scripts/build.js",
     "cap:sync": "npx cap sync",
     "status": "node scripts/check-lessons.js"
   },
