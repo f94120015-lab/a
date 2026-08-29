@@ -9034,6 +9034,21 @@ span[style*="color:#f97316"] * {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Kaydırma kabı yukarıda .quiz-container'a verildi, ama o kap 640px genişliğinde
+   ve ortalanmış: kaydırma çubuğu pencerenin kenarında değil, sayfanın içinde
+   dikey bir çizgi gibi duruyordu (700px'de sağ kenardan 45px içeride). Kabı tam
+   genişliğe açıp 640px'lik ölçüyü içeriğe bırakıyoruz; çubuk beklenen yere,
+   ekranın sağ kenarına gidiyor. */
+.quiz-container {
+  max-width: none;
+}
+
+.quiz-meta-header {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #quiz-screen .quiz-body {
   min-height: 0;
   overflow-y: visible !important;
