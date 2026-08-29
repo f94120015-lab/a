@@ -8400,6 +8400,25 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
         return text;
       };
 
+      // TR→EN sorularında `sentence` alanı Türkçe metni tutar. Köprü sorusunun
+      // kaynağı İngilizce olmalı; aksi halde çevrilecek cümle ile beklenen cevap
+      // aynı şey olur ve soru kendini ele verir.
+      const getSourceSentence = (question) => {
+        if (question.isEngToTr === false) {
+          const en = question.enSentence
+            || (question.options && typeof question.correctIndex === 'number'
+                ? question.options[question.correctIndex]
+                : '');
+          if (en) return en;
+        }
+        return getCompleteSentence(question);
+      };
+
+      // Noktalama ve büyük/küçük harf farkı köprüyü anlamlı kılmaz.
+      const sameText = (a, b) =>
+        (a || '').toLocaleLowerCase('tr').replace(/[\s.,;:!?"'()]/g, '') ===
+        (b || '').toLocaleLowerCase('tr').replace(/[\s.,;:!?"'()]/g, '');
+
       if (hasSentence && q.bridgeTranslation) {
         // Create a dynamic word-bank bridge question
         const bridgeQ = {
@@ -8415,9 +8434,9 @@ function startLesson(lessonId, exerciseId = null, isRestore = false) {
         };
         expandedQuestions.push(bridgeQ);
       } else if (hasSentence && q.type !== 'word-bank' && q.type !== 'fill-blank-dropdown' && q.type !== 'fill-blank' && q.type !== 'matching' && q.type !== 'collocation-matching' && (q.translation || q.enSentence)) {
-        let targetSentence = getCompleteSentence(q);
+        let targetSentence = getSourceSentence(q);
         let targetTr = typeof q.translation === 'string' ? q.translation : (Array.isArray(q.translation) ? q.translation.join(' ') : '');
-        if (targetTr && targetTr.length > 0) {
+        if (targetTr && targetTr.length > 0 && !sameText(targetSentence, targetTr)) {
           let chunks = segmentSentence(targetTr, true);
           if (chunks.length > 1) {
             const bridgeQ = {
@@ -14950,9 +14969,12 @@ function switchTab(tabId) {
   } else if (tabId === 'connector-drill') {
     renderConnectorDrillTab();
   } else if (tabId === 'structure-robot') {
-    if (typeof initStructureRobot === 'function') {
-      initStructureRobot();
-    }
+    loadScriptOnce('structure-robot.js').then(() => {
+      if (typeof initStructureRobot === 'function') initStructureRobot();
+    }).catch(err => {
+      console.error(err);
+      showToast('Yapı Robotu yüklenemedi, lütfen tekrar deneyin.', 'error');
+    });
   }
 }
 
@@ -23422,23 +23444,39 @@ function initSimulator() {
   renderActiveMission();
 }
 
-// html2canvas is ~200KB and only needed for the report screenshot, so it is not
-// in index.html: pull it in the first time someone actually asks for a capture.
-let html2canvasLoader = null;
-function loadHtml2Canvas() {
-  if (typeof html2canvas !== 'undefined') return Promise.resolve();
-  if (html2canvasLoader) return html2canvasLoader;
-  html2canvasLoader = new Promise((resolve, reject) => {
+// ── Talep üzerine modül yükleme ──────────────────────────────────────────────
+// index.html'deki her <script> ilk boyamadan önce indirilip parse edilmek
+// zorunda. Yalnız belirli bir sekmede ya da eylemde gereken modülleri oradan
+// çıkarıp buradan çekiyoruz. Aynı src iki kez istenirse tek bir promise döner.
+const lazyScriptLoaders = new Map();
+function loadScriptOnce(src) {
+  const cached = lazyScriptLoaders.get(src);
+  if (cached) return cached;
+  const loader = new Promise((resolve, reject) => {
     const script = document.createElement('script');
-    script.src = 'html2canvas.min.js';
+    // js/css immutable olarak sunuluyor, o yüzden istek mutlaka içerik hash'ini
+    // taşımalı; aksi halde deploy sonrası eski dosya sonsuza dek önbellekte kalır.
+    // Haritayı build sırasında inject-env.js index.html'e yazıyor.
+    const version = (window.__ASSET_V || {})[src];
+    script.src = version ? `${src}?v=${version}` : src;
     script.onload = resolve;
     script.onerror = () => {
-      html2canvasLoader = null;
-      reject(new Error('html2canvas yüklenemedi'));
+      lazyScriptLoaders.delete(src);
+      reject(new Error(src + ' yüklenemedi'));
     };
     document.head.appendChild(script);
   });
-  return html2canvasLoader;
+  lazyScriptLoaders.set(src, loader);
+  return loader;
+}
+
+// rules-db.js ve translation-guide.js bilerek index.html'de kaldı: ACADEMIC_RULES
+// ve TRANSLATION_RECIPES eksik olduğunda kural kartı ile çeviri reçetesi hata
+// vermeden boş döner. Toplam 45K gzip için sessiz içerik kaybı riski alınmıyor.
+
+function loadHtml2Canvas() {
+  if (typeof html2canvas !== 'undefined') return Promise.resolve();
+  return loadScriptOnce('html2canvas.min.js');
 }
 
 async function showSimulatorReportModal() {
@@ -29459,7 +29497,12 @@ function initTransitionsMatrixTab() {
       if (searchWrap) searchWrap.style.display = isDrill ? 'none' : '';
       if (drillPanel) drillPanel.style.display = isDrill ? 'block' : 'none';
       if (isDrill) {
-        if (typeof initEzberRobotu === 'function') initEzberRobotu();
+        loadScriptOnce('ezber-robotu.js').then(() => {
+          if (typeof initEzberRobotu === 'function') initEzberRobotu();
+        }).catch(err => {
+          console.error(err);
+          showToast('Ezber Robotu yüklenemedi, lütfen tekrar deneyin.', 'error');
+        });
         return;
       }
 

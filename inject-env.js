@@ -87,8 +87,38 @@ if (injectOnly) {
     return `${attr}="${file}?v=${hash}"`;
   });
 
+  // Talep üzerine yüklenen modüllerin <script> etiketi yok; hash'lerini
+  // window.__ASSET_V haritasına yaz ki loadScriptOnce onları da bustlayabilsin.
+  const lazyAssets = [
+    'structure-robot.js',
+    'ezber-robotu.js',
+    'html2canvas.min.js',
+  ];
+  const versions = {};
+  for (const file of lazyAssets) {
+    const assetPath = path.join(__dirname, 'www', file);
+    if (!fs.existsSync(assetPath)) {
+      console.warn(`Lazy asset missing, not versioned: ${file}`);
+      continue;
+    }
+    versions[file] = crypto
+      .createHash('md5')
+      .update(fs.readFileSync(assetPath))
+      .digest('hex')
+      .slice(0, 8);
+  }
+
+  const mapBefore = html;
+  html = html.replace(
+    /(<script id="asset-versions">)[\s\S]*?(<\/script>)/,
+    `$1window.__ASSET_V = ${JSON.stringify(versions)};$2`
+  );
+  if (html === mapBefore) {
+    console.warn('asset-versions script tag not found — lazy modules will load unversioned.');
+  }
+
   fs.writeFileSync(wwwIndexPath, html, 'utf8');
-  console.log(`Cache-busted ${stamped} asset reference(s) in www/index.html`);
+  console.log(`Cache-busted ${stamped} asset reference(s) + ${Object.keys(versions).length} lazy asset(s) in www/index.html`);
 } else {
   console.warn('www/index.html not found — skipped cache-busting.');
 }

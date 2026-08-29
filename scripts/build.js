@@ -55,5 +55,9 @@ for (const f of MINIFY) {
 }
 console.log(`JS: ${(before / 1048576).toFixed(2)}MB -> ${(after / 1048576).toFixed(2)}MB`);
 
+// Büyük veri literal'lerini JSON.parse'a çevirir: raw boyut biraz artar, buna
+// karşılık V8 ayrıştırma süresi düşer. Minify'dan sonra çalışmalı.
+run('node', ['scripts/jsonify.js', ...MINIFY.map((f) => path.join(www, f))]);
+
 // Hashes now describe the minified files that actually ship.
 run('node', ['inject-env.js', '--stamp-only']);

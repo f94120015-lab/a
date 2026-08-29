@@ -2300,6 +2300,10 @@
 
   <div class="toast-container" id="toast-container"></div>
 
+  <!-- Talep üzerine yüklenen modüller (app.js -> loadScriptOnce) için içerik
+       hash'leri. immutable önbellek başlıkları hash'siz istekleri bayatlatır.
+       Haritayı build sırasında inject-env.js dolduruyor. -->
+  <script id="asset-versions">window.__ASSET_V = {};</script>
   <script src="data-stable.js?v=3.4.0" defer></script>
   <script src="data.js?v=3.4.0" defer></script>
   <script src="data-extra.js?v=3.4.0" defer></script>
@@ -2309,8 +2313,6 @@
   <script src="rules-db.js?v=3.4.0" defer></script>
   <script src="translation-guide.js?v=3.4.0" defer></script>
   <script src="app.js?v=3.4.0" defer></script>
-  <script src="structure-robot.js?v=7.0.0" defer></script>
-  <script src="ezber-robotu.js?v=3.4.0" defer></script>
   
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top-btn" class="scroll-to-top-btn" aria-label="Yukarı Git">
