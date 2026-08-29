@@ -793,21 +793,21 @@
         d: [a.v.v2, `${be(a)} ${a.v.ing}`, `had ${a.v.v3}`, `will ${a.v.v1}`],
         tr: `${cap(a.st)} altı yıldır ${a.ot} ${a.t.sim}.`,
         e: "'for + süre' şu ana uzanan bir süreyi bildirir ve Present Perfect ister; Simple Past süreci bugünden koparır.",
-        t: ['since', 'so far / up to now / hitherto / in recent years'] }) },
+        t: ['for + süre', 'since'] }) },
     { key: 'ago', build: (a, c) => ({
         s: `${cap(a.s)} ____ ${a.o} two years ago.`,
         w: a.v.v2,
         d: [`${has(a)} ${a.v.v3}`, `had ${a.v.v3}`, `${be(a)} ${a.v.ing}`, `will ${a.v.v1}`],
         tr: `${cap(a.st)} iki yıl önce ${a.ot} ${a.t.past}.`,
         e: "'ago' geçmişte KAPALI bir anı işaret eder ve yalnızca Simple Past alır; Present Perfect 'ago' ile kullanılamaz.",
-        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi', 'since'] }) },
+        t: ['ago', 'since'] }) },
     { key: 'already', build: (a, c) => ({
         s: `${cap(a.s)} ${has(a)} already ____ ${a.o}.`,
         w: a.v.v3,
         d: [a.v.v1, a.v.ing, `to ${a.v.v1}`, `been ${a.v.v3}`],
         tr: `${cap(a.st)} ${a.ot} çoktan ${a.t.past}.`,
         e: "'already' Present Perfect'in belirleyicisidir: has/have + V3. Yardımcı fiilden sonra yalın fiil ya da V-ing gelemez.",
-        t: ['so far / up to now / hitherto / in recent years'] }) },
+        t: ['already'] }) },
     { key: 'so far', build: (a, c) => ({
         s: `So far ${a.s} ${has(a)} ____ ${a.o} twice.`,
         w: a.v.v3,
@@ -828,14 +828,17 @@
         d: [`${has(a)} ${a.v.v3}`, `will ${a.v.v1}`, `${be(a)} ${a.v.ing}`, `had ${a.v.v3}`],
         tr: `${cap(a.st)} geçen yıl ${a.ot} ${a.t.past}.`,
         e: "'last year' kapanmış bir dönemdir; noktasal geçmiş belirleyicilerinde Present Perfect kullanılamaz.",
-        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
+        t: ['ago'] }) },
     { key: 'currently', build: (a, c) => ({
         s: `${cap(a.s)} ${be(a)} currently ____ ${a.o}.`,
         w: a.v.ing,
         d: [a.v.v1, a.v.v3, `to ${a.v.v1}`, `been ${a.v.ing}`],
         tr: `${cap(a.st)} şu anda ${a.ot} ${a.t.sim}.`,
         e: "'currently' konuşma anını gösterir: am/is/are + V-ing. Yardımcı fiilden sonra yalın fiil gelemez.",
-        t: ['so far / up to now / hitherto / in recent years'] }) },
+        // 'so far / up to now' Present Perfect ister; bu soru Present Continuous
+        // soruyor. Veritabanında 'currently' için ayrı bir kart yok, bu yüzden
+        // yanlış kategoriden kart göstermek yerine hatırlatıcı gösterilmiyor.
+        t: [] }) },
     { key: 'by the end of last year', build: (a, c) => ({
         s: `By the end of last year ${a.s} ____ ${a.o}.`,
         w: `had ${a.v.v3}`,
@@ -849,7 +852,10 @@
         d: [`${be(a)} ${a.v.ing}`, `${has(a)} ${a.v.v3}`, `will ${a.v.v1}`, `had ${a.v.v3}`],
         tr: `${cap(a.st)} her ilkbahar ${a.ot} ${a.t.gen}.`,
         e: "Tekrarlanan rutin geniş zaman ister; süreklilik çekimi tek seferlik bir anı anlatırdı.",
-        t: ['so far / up to now / hitherto / in recent years'] }) }
+        // Aynı sebep: bu soru Present Simple/rutin soruyor, 'so far/up to now'
+        // ise Present Perfect gerektirir; yanlış kategori kartı göstermemek
+        // için hatırlatıcı boş bırakıldı.
+        t: [] }) }
   ];
 
   function buildAnchors(need, startIndex) {
@@ -1055,7 +1061,7 @@
         w: `${has(a)} ${a.v.v3}`, o: ['two years', 'ago', a.o],
         tr: `${cap(a.st)} iki yıl önce ${a.ot} ${a.t.past}.`,
         e: "'ago' Present Perfect almaz; kapanmış geçmiş an yalnızca Simple Past ile kurulur.",
-        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
+        t: ['ago'] }) },
     { build: (a, c) => ({
         s: `When ${a.s} will ${a.v.v1} ${a.o}, the results will follow.`,
         w: `will ${a.v.v1}`, o: ['When', a.o, 'will follow'],
@@ -1085,7 +1091,7 @@
         w: `${has(a)} ${a.v.v3}`, o: ['last year', a.o, cap(a.s)],
         tr: `${cap(a.st)} geçen yıl ${a.ot} ${a.t.past}.`,
         e: "Noktasal geçmiş belirleyicisi ('last year') Present Perfect'i kesinlikle dışlar.",
-        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
+        t: ['ago'] }) },
     { build: (a, c) => ({
         s: `${cap(a.s)} ${a.v.v2} ${a.o} so far.`,
         w: a.v.v2, o: ['so far', a.o, cap(a.s)],
@@ -1127,7 +1133,7 @@
         w: `${has(a)} ${a.v.v3}`, o: ['in 1998', a.o, cap(a.s)],
         tr: `${cap(a.st)} 1998'de ${a.ot} ${a.t.past}.`,
         e: "Yıl bildiren belirleyici kapanmış bir andır; Present Perfect ile birlikte kullanılamaz.",
-        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
+        t: ['ago'] }) },
     { build: (a, c) => ({
         s: `After ${a.s} ${has(a)} ${a.v.v3} ${a.o}, the summary was printed.`,
         w: `${has(a)} ${a.v.v3}`, o: ['After', 'the summary', 'was printed'],
@@ -1163,7 +1169,7 @@
         w: `had ${a.v.v3}`, o: ['two days', 'ago', a.o],
         tr: `${cap(a.st)} iki gün önce ${a.ot} ${a.t.past}.`,
         e: "Past Perfect ikinci bir geçmiş referans ister; tek başına 'ago' belirleyicisiyle Simple Past kullanılır.",
-        t: ['by + Gelecek / Geçmiş Zaman Belirleyicisi'] }) },
+        t: ['ago'] }) },
     { build: (a, c) => ({
         s: `Until ${a.s} will ${a.v.v1} ${a.o}, the site stays closed.`,
         w: `will ${a.v.v1}`, o: ['Until', 'the site', 'stays closed'],
