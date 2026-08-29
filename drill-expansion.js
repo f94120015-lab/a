@@ -1035,7 +1035,7 @@
         `${rule.note} Boşluğa geniş zaman gelir; 'will' ya da 'would' yan cümlede yer alamaz.`,
         [rule.conj === 'as soon as' ? 'as soon as / once / the moment'
           : rule.conj === 'until' ? 'until / till'
-          : rule.conj === 'if' ? 'unless' : rule.conj],
+          : rule.conj],
         i, TTAGS));
       i++;
     }
@@ -1097,7 +1097,7 @@
         w: `will ${a.v.v1}`, o: ['If', 'will begin', 'in April'],
         tr: `${cap(c.cond)} çalışma nisanda başlayacak.`,
         e: "Koşul yan cümlesine 'will' gelmez; Tip 1'de yan cümle geniş zaman, ana cümle 'will' alır.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `It is high time ${a.s} ${v1n(a)} ${a.o}.`,
         w: v1n(a), o: ['It is high time', a.o, cap(a.s)],
@@ -1181,7 +1181,7 @@
         w: `would ${a.v.v1}`, o: ['If', 'the work', 'would begin'],
         tr: `${cap(c.if2)} çalışma başlardı.`,
         e: "Koşul yan cümlesinde 'would' bulunmaz; Tip 2'de yan cümle V2, ana cümle 'would V1' alır.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `Scarcely ${a.s} had ${a.v.v3} ${a.o} when the alarm sounded.`,
         w: `${a.s} had`, o: ['Scarcely', a.o, 'the alarm sounded'],
@@ -1218,37 +1218,37 @@
         w: 'records', d: ['will record', 'would record', 'recorded', 'would have recorded'],
         tr: `${cap(c.cond)} kayıt sistemi değişikliği otomatik olarak kaydeder.`,
         e: "Tip 0: değişmez bir düzen anlatılıyor. İki taraf da geniş zaman alır.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `If ${a.s} ${v1n(a)} ${a.o}, work ____ in April.`,
         w: 'will begin', d: ['begins', 'would begin', 'began', 'would have begun'],
         tr: `${cap(c.cond)} çalışma nisanda başlayacak.`,
         e: "Tip 1: gerçekleşebilir koşul. Yan cümle geniş zaman, ana cümle 'will + V1' alır.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `If ${a.s} ${a.v.v2} ${a.o}, work ____ in April.`,
         w: 'would begin', d: ['will begin', 'begins', 'had begun', 'would have begun'],
         tr: `${cap(c.if2)} çalışma nisanda başlardı.`,
         e: "Tip 2: yan cümledeki V2 geçmişi değil, bugünün gerçek dışılığını gösterir; ana cümle 'would + V1' olur.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `If ${a.s} had ${a.v.v3} ${a.o}, work ____ in April.`,
         w: 'would have begun', d: ['would begin', 'will begin', 'had begun', 'begins'],
         tr: `${cap(c.if3)} çalışma nisanda başlayacaktı.`,
         e: "Tip 3: geçmişte gerçekleşmemiş koşul; ana cümle 'would have + V3' alır.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `If ${a.s} had ${a.v.v3} ${a.o}, the site ____ open today.`,
         w: 'would be', d: ['would have been', 'will be', 'is', 'had been'],
         tr: `${cap(c.if3)} alan bugün açık olurdu.`,
         e: "Karma tip: koşul geçmişte, sonuç bugündedir. Yan cümle 'had V3', ana cümle 'would + V1' olur.",
-        t: ['unless'] }) },
+        t: ['if'] }) },
     { build: (a, c) => ({
         s: `____ ${a.s} ${a.v.v3} ${a.o}, work would have begun in April.`,
         w: 'Had', d: ['If', 'Should', 'Were', 'Did'],
         tr: `${cap(c.if3)} çalışma nisanda başlayacaktı.`,
         e: "Devrik koşulda 'if' düşer ve yardımcı fiil öne gelir: Had + özne + V3.",
-        t: ['unless'] }) }
+        t: ['if'] }) }
   ];
 
   function buildConditionals(need, startIndex) {

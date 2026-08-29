@@ -41340,7 +41340,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "also"
+            "not only ... but also"
           ]
         },
         {
@@ -44301,7 +44301,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "also"
+            "not only ... but also"
           ]
         },
         {
@@ -44966,7 +44966,7 @@ if (typeof lessons !== 'undefined') {
             "Bağlaç Yapısal Kuralları"
           ],
           "terms": [
-            "also"
+            "not only ... but also"
           ]
         }
       ]
@@ -49003,6 +49003,7 @@ if (typeof lessons !== 'undefined') {
             "Zaman Uyumu Kuralları"
           ],
           "terms": [
+            "no sooner ... than",
             "hardly / barely / scarcely ... when"
           ]
         },
@@ -49049,7 +49050,7 @@ if (typeof lessons !== 'undefined') {
             "Zaman Uyumu Kuralları"
           ],
           "terms": [
-            "when"
+            "hardly / barely / scarcely ... when"
           ]
         },
         {
@@ -49291,7 +49292,7 @@ if (typeof lessons !== 'undefined') {
             "Zaman Uyumu Kuralları"
           ],
           "terms": [
-            "the first / last time"
+            "no sooner ... than"
           ]
         },
         {
