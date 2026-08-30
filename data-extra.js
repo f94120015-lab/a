@@ -40088,7 +40088,7 @@ if (typeof lessons !== 'undefined') {
   "exercises": [
     {
       "id": "cdrill_ex1",
-      "title": "Alıştırma 1: Noktalamaya Göre Bağlaç",
+      "title": "Alıştırma 1: Bağlaç Türleri ve Noktalama (And/But / However / Because)",
       "description": "Noktalama verilir, boşluğa gelecek bağlaç sorulur — sınavdaki biçim.",
       "questions": [
         {
@@ -40975,7 +40975,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex2",
-      "title": "Alıştırma 2: Bağlaçtan Sonra Ne Gelir",
+      "title": "Alıştırma 2: Bağlaç Sonrası Yapı (Cümle / İsim Öbeği / -ing)",
       "description": "Tam cümle mi, isim öbeği mi, V-ing mi ayrımı.",
       "questions": [
         {
@@ -42716,7 +42716,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex6",
-      "title": "Alıştırma 3: Anlam Ayrımı",
+      "title": "Alıştırma 3: Anlamdaş Bağlaç Ayrımı (Although / Despite / Because)",
       "description": "Aynı aileden bağlaçlar arasında bağlama göre doğru olanı seçme.",
       "questions": [
         {
@@ -43948,7 +43948,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex3",
-      "title": "Alıştırma 4: Kural İhlali Avcılığı",
+      "title": "Alıştırma 4: Hata Bulma (Error Identification)",
       "description": "Matristeki tuzaklardan üretilen hatalı cümleler.",
       "questions": [
         {
@@ -44812,7 +44812,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex4",
-      "title": "Alıştırma 5: Yapı Eşleştirme",
+      "title": "Alıştırma 5: Bağlaç Eşleştirme (Matching)",
       "description": "Bağlacı, kendisinden sonra gelen yapıyla veya anlamıyla eşleştir.",
       "questions": [
         {
@@ -45767,7 +45767,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "cdrill_ex5",
-      "title": "Alıştırma 6: Neden-Sonuç Yönü",
+      "title": "Alıştırma 6: Neden-Sonuç Yönü (Result in / Result from)",
       "description": "Fiilin özneyi neden mi sonuç mu yaptığını ayırt etme.",
       "questions": [
         {
@@ -46799,7 +46799,7 @@ if (typeof lessons !== 'undefined') {
   "exercises": [
     {
       "id": "tdrill_ex1",
-      "title": "Alıştırma 1: Belirleyici → Zaman",
+      "title": "Alıştırma 1: Zaman Belirteçleri (Ago / Already / Yet / For / Since)",
       "description": "for, ago, already, yet, just gibi belirleyicilerın dayattığı zaman.",
       "questions": [
         {
@@ -47906,7 +47906,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex2",
-      "title": "Alıştırma 2: İki Cümlecik Uyumu",
+      "title": "Alıştırma 2: Zaman Uyumu (Sequence of Tenses: Once / After / While)",
       "description": "Yan cümlenin zamanı ana cümlenin zamanını nasıl belirler.",
       "questions": [
         {
@@ -48792,7 +48792,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex3",
-      "title": "Alıştırma 3: Devrik Zaman Kilitleri",
+      "title": "Alıştırma 3: Devrik Yapılar (No Sooner / Hardly / Not Until)",
       "description": "no sooner ... than, hardly ... when, it was not until ... that.",
       "questions": [
         {
@@ -49230,7 +49230,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex4",
-      "title": "Alıştırma 4: Yan Cümlede Will Yasağı",
+      "title": "Alıştırma 4: Zaman/Şart Cümleciklerinde Will Yasağı (If / When / As Soon As)",
       "description": "Zaman ve koşul bağlaçlarının gelecek zamanı reddetmesi.",
       "questions": [
         {
@@ -49677,7 +49677,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex5",
-      "title": "Alıştırma 5: Kural İhlali Avcılığı",
+      "title": "Alıştırma 5: Hata Bulma (Error Identification — Zaman Uyumu)",
       "description": "Zaman uyumu kurallarını çiğneyen cümleleri bulma.",
       "questions": [
         {
@@ -50314,7 +50314,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex6",
-      "title": "Alıştırma 6: Koşul Zaman Uyumu",
+      "title": "Alıştırma 6: Koşul Cümlecikleri (Conditionals — Type 0/1/2/3)",
       "description": "Tip 0-1-2-3, karma tipler ve devrik koşullarda iki tarafın çekimi.",
       "questions": [
         {
@@ -51430,7 +51430,7 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex7",
-      "title": "Alıştırma 7: Gerçek Dışı Geçmiş",
+      "title": "Alıştırma 7: Gerçek Dışı Geçmiş (Wish / If Only / It's Time / As If)",
       "description": "wish, would rather, it is time, as if — bir zaman geriye kayma.",
       "questions": [
         {
@@ -51881,8 +51881,8 @@ if (typeof lessons !== 'undefined') {
     },
     {
       "id": "tdrill_ex8",
-      "title": "Alıştırma 8: Subjunctive ve Devrik Kilitler",
-      "description": "suggest/essential + V1 ve olumsuz zarfların dayattığı devriklik.",
+      "title": "Alıştırma 8: Subjunctive (Dilek Kipi) ve Devrik Yapılar (Rarely / Not Only)",
+      "description": "suggest/recommend/insist/demand + that, it is essential/vital that (subjunctive); rarely, not only ... but also (devrik yapı).",
       "questions": [
         {
           "id": "tdrill_i1",

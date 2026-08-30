@@ -223,7 +223,7 @@
     CONTRAST_PAIRS, CAUSE_PAIRS, ADD_PAIRS, NOUN_PHRASES, CE_PAIRS, ACTORS, AFTERMATH
   };
 
-  /* ── Bağlaç Kuralları · Alıştırma 1: Noktalamaya Göre Bağlaç ────────────── */
+  /* ── Bağlaç Kuralları · Alıştırma 1: Bağlaç Türleri ve Noktalama (And/But / However / Because) ────────────── */
   // Kural noktalamadadır: noktalı virgül ve nokta yalnızca geçiş zarfı taşır,
   // virgül bağlaç ister, başa gelen yan cümle bağlacı virgülle ayrılır.
   const REL = {
@@ -300,7 +300,7 @@
     return out;
   }
 
-  /* ── Bağlaç Kuralları · Alıştırma 3: Anlam Ayrımı ───────────────────────── */
+  /* ── Bağlaç Kuralları · Alıştırma 3: Anlamdaş Bağlaç Ayrımı (Although / Despite / Because) ───────────────────────── */
   // Aynı aileden ifadeler arasında bağlamın hangisini istediğini ayırt etme.
   // Bu alıştırma bağlam gerektirdiği için satırlar elle yazılır.
   const MEANING_ROWS = [
@@ -468,7 +468,7 @@
     return out;
   }
 
-  /* ── Bağlaç Kuralları · Alıştırma 4: Kural İhlali Avcılığı ──────────────── */
+  /* ── Bağlaç Kuralları · Alıştırma 4: Hata Bulma (Error Identification) ──────────────── */
   // Her satır bilinen bir kural ihlalini kurar; şıklar cümlenin parçalarıdır.
   const head2 = s => s.split(' ').slice(0, 2).join(' ');
   const tail2 = s => s.split(' ').slice(-2).join(' ');
@@ -591,7 +591,7 @@
     return out;
   }
 
-  /* ── Bağlaç Kuralları · Alıştırma 5: Yapı Eşleştirme ────────────────────── */
+  /* ── Bağlaç Kuralları · Alıştırma 5: Bağlaç Eşleştirme (Matching) ────────────────────── */
   // Dört sınıf birbirine karışmasın diye her sette her sınıftan bir terim var.
   const SLOT_NOUN = 'Arkasından isim öbeği gelir';
   const SLOT_CLAUSE = 'Arkasından tam cümle (özne + fiil) gelir';
@@ -647,7 +647,7 @@
     return out;
   }
 
-  /* ── Bağlaç Kuralları · Alıştırma 6: Neden-Sonuç Yönü ───────────────────── */
+  /* ── Bağlaç Kuralları · Alıştırma 6: Neden-Sonuç Yönü (Result in / Result from) ───────────────────── */
   // Fiil, özneyi neden mi sonuç mu yapıyor: yön yanlışsa cümle tersine döner.
   // Şık listelerinde Türkçe karşılık: sınanan şey yön ve edat olduğu için
   // sözcüğün anlamını tahmin etmek soruya dahil değil.
@@ -777,7 +777,7 @@
   const doA = a => (a.plural ? 'do' : 'does');
   const v1n = a => (a.plural ? a.v.v1 : a.v.v1s);
 
-  /* ── Zaman Uyumu · Alıştırma 1: Belirleyici → Zaman ────────────────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 1: Zaman Belirteçleri (Ago / Already / Yet / For / Since) ────────────────────────────── */
   // Tek taraflı belirleyicilar: belirleyiciyi gören çekimi bilir, ikinci cümleye gerek yoktur.
   const ANCHOR_RULES = [
     { key: 'since', build: (a, c) => ({
@@ -873,7 +873,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 2: İki Cümlecik Uyumu ──────────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 2: Zaman Uyumu (Sequence of Tenses: Once / After / While) ──────────────────────── */
   const HARMONY_RULES = [
     { build: (a, c) => ({
         s: `By the time the inspectors arrive, ${a.s} ____ ${a.o}.`,
@@ -902,21 +902,21 @@
         d: [`${has(a)} ${a.v.v3}`, v1n(a), `will ${a.v.v1}`, `${be(a)} ${a.v.ing}`],
         tr: `${cap(c.after)} bulgular açıklandı.`,
         e: "Geçmişte iki eylem varsa önce olan 'had V3' ile kurulur; 'after' o önceliği zaten söylediği için ana cümle Simple Past kalır.",
-        t: ['after', 'before'] }) },
+        t: ['after'] }) },
     { build: (a, c) => ({
         s: `Before the funding was withdrawn, ${a.s} ____ ${a.o}.`,
         w: `had ${a.v.v3}`,
         d: [a.v.v2, `${has(a)} ${a.v.v3}`, `will have ${a.v.v3}`, `${be(a)} ${a.v.ing}`],
         tr: `Fon geri çekilmeden önce ${a.st} ${a.ot} ${a.t.plu}.`,
         e: "'before' cümlesinde öncelik ana cümledeyse ana cümle Past Perfect alır.",
-        t: ['before', 'after'] }) },
+        t: ['before'] }) },
     { build: (a, c) => ({
         s: `While the power was failing, ${a.s} ____ ${a.o}.`,
         w: `${beP(a)} ${a.v.ing}`,
         d: [`${has(a)} ${a.v.v3}`, `had ${a.v.v3}`, `will be ${a.v.ing}`, v1n(a)],
         tr: `Elektrik kesilirken ${a.st} ${a.ot} ${a.t.pastCont}.`,
         e: "'while' eşzamanlılık kurar: her iki taraf da sürerlik çekimi ister (was/were + V-ing).",
-        t: ['while / as', 'during / throughout'] }) },
+        t: ['while / as'] }) },
     { build: (a, c) => ({
         s: `As soon as ${a.s} ${v1n(a)} ${a.o}, the results ____ published.`,
         w: 'will be',
@@ -930,7 +930,7 @@
         d: ['will issue', 'has issued', 'had issued', 'is issuing'],
         tr: `${cap(c.after)} bölüm özeti yayımladı.`,
         e: "Yan cümle Past Perfect ise ana cümle Simple Past olur; iki tarafta birden 'had V3' kullanılmaz.",
-        t: ['as soon as / once / the moment', 'after'] }) }
+        t: ['as soon as / once / the moment'] }) }
   ];
 
   function buildHarmony(need, startIndex) {
@@ -948,7 +948,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 3: Devrik Zaman Kilitleri ──────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 3: Devrik Yapılar (No Sooner / Hardly / Not Until) ── */
   const INVERSION_RULES = [
     { build: (a, c, aft) => ({
         s: `No sooner ____ ${a.s} ${a.v.v3} ${a.o} than ${aft.en}.`,
@@ -1003,7 +1003,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 4: Yan Cümlede Will Yasağı ─────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 4: Zaman/Şart Cümleciklerinde Will Yasağı (If / When / As Soon As) ─────────────────── */
   const MAIN_FUTURE = [
     { en: 'the results will be released', tr: 'sonuçlar açıklanacak' },
     { en: 'the site will reopen', tr: 'alan yeniden açılacak' },
@@ -1048,7 +1048,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 5: Kural İhlali Avcılığı ───────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 5: Hata Bulma (Error Identification — Zaman Uyumu) ───────────────────── */
   const TIME_ERRORS = [
     { build: (a, c) => ({
         s: `${cap(a.s)} ${has(a)} ${a.v.v3} ${a.o} since eight years.`,
@@ -1217,7 +1217,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 6: Koşul Zaman Uyumu ───────────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 6: Koşul Cümlecikleri (Conditionals — Type 0/1/2/3) ───────────────────────── */
   const CONDITIONAL_RULES = [
     { build: (a, c) => ({
         s: `If ${a.s} ${v1n(a)} ${a.o}, the registry ____ the change automatically.`,
@@ -1272,7 +1272,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 7: Gerçek Dışı Geçmiş ──────────────────────── */
+  /* ── Zaman Uyumu · Alıştırma 7: Gerçek Dışı Geçmiş (Wish / If Only / It's Time / As If) ──────────────────────── */
   const UNREAL_RULES = [
     { build: (a, c) => ({
         s: `I wish ${a.s} ____ ${a.o} more often.`,
@@ -1327,7 +1327,7 @@
     return out;
   }
 
-  /* ── Zaman Uyumu · Alıştırma 8: Subjunctive ve Devrik Kilitler ──────────── */
+  /* ── Zaman Uyumu · Alıştırma 8: Subjunctive (Dilek Kipi) ve Devrik Yapılar (Rarely / Not Only) ── */
   const SUBJ_VERBS = [
     { en: 'recommends', tr: 'öneriyor' }, { en: 'suggests', tr: 'öneriyor' },
     { en: 'insists', tr: 'ısrar ediyor' }, { en: 'demands', tr: 'talep ediyor' },
