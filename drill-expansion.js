@@ -961,13 +961,13 @@
         w: 'than', d: ['when', 'that', 'then', 'as'],
         tr: `${cap(c.asap)} ${aft.tr}.`,
         e: "'No sooner' daima 'than' ile eşleşir; 'when' yalnızca hardly / barely / scarcely ile kullanılır.",
-        t: ['no sooner ... than', 'hardly / barely / scarcely ... when'] }) },
+        t: ['no sooner ... than'] }) },
     { build: (a, c, aft) => ({
         s: `Hardly had ${a.s} ${a.v.v3} ${a.o} ____ ${aft.en}.`,
         w: 'when', d: ['than', 'that', 'then', 'as'],
         tr: `${cap(c.asap)} ${aft.tr}.`,
         e: "'Hardly / barely / scarcely' eşi 'when'dir; 'than' yalnızca 'no sooner' ile gelir.",
-        t: ['hardly / barely / scarcely ... when', 'no sooner ... than'] }) },
+        t: ['hardly / barely / scarcely ... when'] }) },
     { build: (a, c, aft) => ({
         s: `Scarcely ____ ${a.s} ${a.v.v3} ${a.o} when ${aft.en}.`,
         w: 'had', d: ['did', 'has', 'have', 'was'],
@@ -979,7 +979,7 @@
         w: 'did', d: ['had', 'has', 'was', 'would'],
         tr: `${cap(a.st)} ancak denetim bittiğinde ${a.ot} ${a.t.past}.`,
         e: "Olumsuz zarf öbeği başa gelince ana cümle devrilir; Simple Past'ta devriklik 'did + yalın fiil' ile kurulur.",
-        t: ['until / till', 'no sooner ... than'] }) },
+        t: ['until / till'] }) },
     { build: (a, c, aft) => ({
         s: `It was not until the audit ended ____ ${a.s} ${a.v.v2} ${a.o}.`,
         w: 'that', d: ['when', 'than', 'which', 'then'],
