@@ -5176,6 +5176,50 @@ function looksLikeFakeEmail(email) {
   return null;
 }
 
+// Parola sıfırlama linkine tıklandığında (PASSWORD_RECOVERY) yeni parola belirleme.
+function showSetNewPasswordModal() {
+  if (document.getElementById('new-pass-modal')) return;
+  const modal = document.createElement('div');
+  modal.className = 'custom-modal-overlay';
+  modal.id = 'new-pass-modal';
+  const inp = 'width:100%;padding:11px 13px;border-radius:var(--radius-md);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);font-size:0.92rem;box-sizing:border-box;outline:none;';
+  modal.innerHTML = `
+    <div class="custom-modal" style="max-width:360px;width:90%;">
+      <div class="custom-modal-body" style="display:flex;flex-direction:column;gap:12px;">
+        <h3 style="font-family:var(--font-heading);font-size:1.1rem;margin:0;color:var(--text-primary);">Yeni Parola Belirle</h3>
+        <input type="password" id="np-1" autocomplete="new-password" placeholder="Yeni parola (min 6)" style="${inp}">
+        <input type="password" id="np-2" autocomplete="new-password" placeholder="Yeni parola (tekrar)" style="${inp}">
+        <button class="btn btn-primary" id="np-save" style="padding:11px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;">Kaydet</button>
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+  const save = async () => {
+    const p1 = modal.querySelector('#np-1').value || '';
+    const p2 = modal.querySelector('#np-2').value || '';
+    if (p1.length < 6) { showToast('Parola en az 6 karakter olmalı.', 'error'); return; }
+    if (p1 !== p2) { showToast('Parolalar eşleşmiyor.', 'error'); return; }
+    const btn = modal.querySelector('#np-save');
+    btn.disabled = true; btn.textContent = 'Kaydediliyor...';
+    try {
+      const { error } = await supabaseClient.auth.updateUser({ password: p1 });
+      if (error) { showToast('Hata: ' + error.message, 'error', 7000); btn.disabled = false; btn.textContent = 'Kaydet'; return; }
+      modal.remove();
+      showToast('Parolan güncellendi! 🎉', 'success');
+      const { data } = await supabaseClient.auth.getSession();
+      if (data && data.session) {
+        await mvOnAuthenticated(data.session, null);
+        if (typeof enterApp === 'function') enterApp();
+      }
+    } catch (e) {
+      showToast('Bir hata oluştu.', 'error');
+      btn.disabled = false; btn.textContent = 'Kaydet';
+    }
+  };
+  modal.querySelector('#np-save').onclick = save;
+  modal.querySelectorAll('input').forEach(i => i.addEventListener('keydown', e => { if (e.key === 'Enter') save(); }));
+}
+window.showSetNewPasswordModal = showSetNewPasswordModal;
+
 function initAuth() {
   const handlePhoneLogin = () => {
     // No saved account continuation - always show the fresh form
@@ -5958,6 +6002,10 @@ function initAuth() {
             <button class="btn btn-primary" id="auth-submit" style="padding:11px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;margin-top:4px;">
               ${isSignup ? 'Kayıt Ol' : 'Giriş Yap'}
             </button>
+            ${isSignup ? '' : `
+            <div style="text-align:center;font-size:0.8rem;">
+              <span id="auth-forgot" style="color:var(--text-secondary);cursor:pointer;text-decoration:underline;">Şifremi unuttum</span>
+            </div>`}
             <div style="text-align:center;font-size:0.83rem;color:var(--text-secondary);">
               ${isSignup ? 'Zaten hesabın var mı?' : 'Hesabın yok mu?'}
               <span id="auth-toggle" style="color:var(--accent-primary);cursor:pointer;font-weight:700;text-decoration:underline;">
@@ -5969,6 +6017,25 @@ function initAuth() {
 
       modal.querySelector('#auth-close').onclick = () => modal.remove();
       modal.querySelector('#auth-toggle').onclick = () => { mode = isSignup ? 'login' : 'signup'; render(); };
+
+      const forgotEl = modal.querySelector('#auth-forgot');
+      if (forgotEl) {
+        forgotEl.onclick = async () => {
+          const email = (modal.querySelector('#auth-email').value || '').trim();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showToast('Önce e-posta adresinizi yazın.', 'error'); return;
+          }
+          forgotEl.textContent = 'Gönderiliyor...';
+          try {
+            const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin });
+            if (error) showToast('Gönderilemedi: ' + error.message, 'error', 7000);
+            else showToast('Parola sıfırlama bağlantısı e-postana gönderildi. (Gelmezse birkaç dk bekleyip spam\'e bak.)', 'success', 9000);
+          } catch (e) {
+            showToast('Bir hata oluştu.', 'error');
+          }
+          forgotEl.textContent = 'Şifremi unuttum';
+        };
+      }
 
       const submitBtn = modal.querySelector('#auth-submit');
       const doSubmit = async () => {
@@ -21544,7 +21611,9 @@ return `
   // ÜYELİK v2: e-posta linkiyle geri dönüşte / başka sekmede giriş olunca yakala.
   if (supabaseClient) {
     supabaseClient.auth.onAuthStateChange((event, session) => {
-      if (event === 'SIGNED_IN' && session && state.authId !== session.user.id) {
+      if (event === 'PASSWORD_RECOVERY') {
+        if (typeof showSetNewPasswordModal === 'function') showSetNewPasswordModal();
+      } else if (event === 'SIGNED_IN' && session && state.authId !== session.user.id) {
         mvOnAuthenticated(session, state.displayName).then(() => {
           if (typeof enterApp === 'function') enterApp();
         });
