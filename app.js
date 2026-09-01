@@ -1350,8 +1350,114 @@ if (typeof supabase !== 'undefined' && supabaseConfig.url && supabaseConfig.key)
   }
 }
 
+// ============================================================
+// ÜYELİK v2 — Supabase Auth oturumu (auth.uid()) tabanlı
+// ------------------------------------------------------------
+// Eski sistem kimliği istemciden 'username' ile alıyordu, sunucu yetkisi yoktu.
+// Yeni sistem: gerçek Supabase oturumu → app_users tablosu → RLS (auth.uid() = id).
+// ============================================================
+function mvSlugify(s) {
+  return String(s || 'user').toLowerCase()
+    .replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u')
+    .replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c')
+    .replace(/[^a-z0-9]/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '') || 'user';
+}
+
+function mvRowToState(row) {
+  if (!row) return;
+  state.authId = row.id;
+  if (row.username) state.username = row.username;
+  if (row.display_name) state.displayName = row.display_name;
+  if (row.avatar_color) state.avatarColor = row.avatar_color;
+  if (row.profile_photo) state.profilePhoto = row.profile_photo;
+  state.xp = row.xp || 0;
+  state.streak = row.streak || 0;
+  state.hearts = (row.hearts == null ? MAX_HEARTS : row.hearts);
+  state.completedLessons = row.completed_lessons || [];
+  state.unlockedAchievements = row.unlocked_achievements || state.unlockedAchievements || [];
+  if (typeof row.coins === 'number') state.coins = row.coins;
+  state.licenceKey = row.licence_key || state.licenceKey || null;
+  state.isGuest = false;
+}
+
+function mvStateToRow() {
+  const full = `${state.firstName || ''} ${state.lastName || ''}`.trim();
+  return {
+    id: state.authId,
+    username: state.username || null,
+    display_name: state.displayName || full || state.username || null,
+    avatar_color: state.avatarColor || '#8B7EC8',
+    profile_photo: state.profilePhoto || null,
+    xp: state.xp || 0,
+    streak: state.streak || 0,
+    hearts: state.hearts || 0,
+    completed_lessons: state.completedLessons || [],
+    unlocked_achievements: state.unlockedAchievements || [],
+    coins: state.coins || 0,
+    licence_key: state.licenceKey || null,
+    last_seen_at: new Date().toISOString()
+  };
+}
+
+function mvSyncUp() {
+  if (!supabaseClient || !state.authId) return Promise.resolve();
+  return supabaseClient.from('app_users')
+    .upsert(mvStateToRow(), { onConflict: 'id' })
+    .then(({ error }) => { if (error) console.error('mvSyncUp error:', error); });
+}
+
+async function mvOnAuthenticated(session, fullName) {
+  if (!session || !supabaseClient) return false;
+  const uid = session.user.id;
+  state.authId = uid;
+  state.email = session.user.email || state.email;
+  state.isGuest = false;
+
+  let row = null;
+  try {
+    const res = await supabaseClient.from('app_users').select('*').eq('id', uid).maybeSingle();
+    row = res.data;
+  } catch (e) { console.error('mvOnAuthenticated load error:', e); }
+
+  if (!row) {
+    const base = mvSlugify(fullName || (session.user.email || 'user').split('@')[0]);
+    const colors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    let uname = base;
+    for (let i = 0; i < 5 && !row; i++) {
+      const ins = await supabaseClient.from('app_users').insert({
+        id: uid, username: uname, display_name: fullName || uname,
+        avatar_color: color, xp: 0, streak: 0, hearts: MAX_HEARTS,
+        completed_lessons: [], unlocked_achievements: [], coins: 0
+      }).select().maybeSingle();
+      if (ins.error) {
+        if (ins.error.code === '23505') { uname = `${base}${Math.floor(Math.random() * 9999)}`; continue; }
+        console.error('mvOnAuthenticated insert error:', ins.error);
+        break;
+      }
+      row = ins.data;
+    }
+  }
+  mvRowToState(row);
+  try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
+  return true;
+}
+
+async function mvRestoreSession() {
+  if (!supabaseClient) return false;
+  try {
+    const { data } = await supabaseClient.auth.getSession();
+    if (data && data.session) {
+      await mvOnAuthenticated(data.session, state.displayName);
+      return true;
+    }
+  } catch (e) { console.error('mvRestoreSession error:', e); }
+  return false;
+}
+
 let state = {
   username: null,
+  authId: null,
   firstName: null,
   lastName: null,
   displayName: null,
@@ -3947,6 +4053,15 @@ function saveState(immediate = false) {
     }
   }
   localStorage.setItem(STATE_KEY, JSON.stringify(state));
+
+  // ÜYELİK v2: gerçek oturum varsa app_users tablosuna yaz (RLS: auth.uid() = id).
+  if (state.authId && supabaseClient && !state.isGuest) {
+    if (saveStateDebounceTimeout) { clearTimeout(saveStateDebounceTimeout); saveStateDebounceTimeout = null; }
+    if (immediate) { mvSyncUp(); }
+    else { saveStateDebounceTimeout = setTimeout(mvSyncUp, 3000); }
+    return;
+  }
+
   if (state.username && !state.isGuest) {
     if (supabaseClient) {
       const performSync = () => {
@@ -4952,7 +5067,7 @@ function initAuth() {
           <!-- Screen 1: Giriş Bilgileri -->
           <div id="social-modal-screen-1" class="custom-modal-body" style="display: flex; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Lütfen adınızı, soyadınızı, e-posta adresinizi ve telefon numaranızı girerek giriş davetiyesi isteyin:
+              Adınızı ve e-posta adresinizi girin — e-postanıza 6 haneli bir giriş kodu göndereceğiz.
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
               <label for="social-fullname" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Adınız ve Soyadınız</label>
@@ -4965,7 +5080,7 @@ function initAuth() {
             </div>
             
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
-              <label for="social-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız</label>
+              <label for="social-phone" style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);">Telefon Numaranız <span style="font-weight:400; color: var(--text-muted);">(isteğe bağlı)</span></label>
               <div class="report-select" style="display: flex; align-items: center; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-card); padding: 0 12px; transition: border-color var(--transition-fast); box-sizing: border-box; width: 100%;">
                 <span style="color: var(--text-primary); font-size: 0.9rem; font-family: var(--font-body); font-weight: 700; padding-right: 8px; border-right: 1px solid var(--border-color); margin-right: 8px; user-select: none;">+90</span>
                 <input type="tel" id="social-phone" placeholder="5051234567" style="flex: 1; border: none; background: transparent; padding: 10px 0; outline: none; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; box-sizing: border-box; width: 100%;" required>
@@ -4974,7 +5089,7 @@ function initAuth() {
             
             <div class="custom-modal-footer" style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 12px; border-top: 1px solid var(--border-color); padding-top: 16px; width: 100%;">
               <button class="btn btn-secondary" id="btn-cancel-social" style="padding: 10px 16px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast);">İptal</button>
-              <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Davetiye İste / Giriş Yap</button>
+              <button class="btn btn-primary" id="btn-submit-social-next" style="padding: 10px 20px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; transition: all var(--transition-fast); background: var(--accent-primary);">Giriş Kodu Gönder</button>
             </div>
           </div>
           
@@ -5051,79 +5166,30 @@ function initAuth() {
         }, 1000);
       };
 
+      // ÜYELİK v2: yalnızca e-posta OTP. SMS / whitelist / master-OTP kaldırıldı.
       const triggerOtp = async (target, email) => {
         startCooldown();
-        const isLocal = checkIsLocal();
-        const isWhitelisted = isUserWhitelisted(target, email);
+        currentLocalOtp = null;
 
-        // Güvenlik: Sabit bir "master OTP" (ör. 571461) yayında herkese görünür ve
-        // kalıcı bir kimlik doğrulama atlatması olur. Bunun yerine yerel test veya
-        // whitelist'e elle eklenmiş test kullanıcıları için oturuma özel, rastgele
-        // bir kod üretilir ve yalnızca cihazda ekrana gösterilir.
-        if (isLocal || isWhitelisted) {
-          currentLocalOtp = Math.floor(100000 + Math.random() * 900000).toString();
-          console.log("Generated test-mode OTP code:", currentLocalOtp);
-        } else {
-          currentLocalOtp = null;
+        if (!supabaseClient) {
+          showToast('Sunucu bağlantısı yok, giriş yapılamıyor.', 'error');
+          return;
         }
-
-        if (isWhitelisted && !isLocal) {
-          showToast(`Test kullanıcısı algılandı. TEST MODU kodunuz: ${currentLocalOtp}`, 'success', 20000);
-        }
-
-        if (supabaseClient) {
-          if (!isWhitelisted) {
-            showToast('Doğrulama kodları gönderiliyor...', 'info');
+        showToast('Giriş kodu gönderiliyor...', 'info');
+        try {
+          const { error } = await supabaseClient.auth.signInWithOtp({
+            email: email,
+            options: { emailRedirectTo: window.location.origin }
+          });
+          if (error) {
+            console.error('Email OTP error:', error);
+            showToast('Kod gönderilemedi: ' + (error.message || 'bilinmeyen hata'), 'error', 8000);
+          } else {
+            showToast('Giriş kodu e-postanıza gönderildi! 📧', 'success');
           }
-          
-          let phoneSuccess = false;
-          let emailSuccess = false;
-
-          try {
-            const { error } = await supabaseClient.auth.signInWithOtp({ phone: target });
-            if (error) {
-              console.error('Supabase Phone OTP error:', error);
-            } else {
-              phoneSuccess = true;
-            }
-          } catch (e) {
-            console.error('Supabase Phone OTP exception:', e);
-          }
-
-          try {
-            const { error } = await supabaseClient.auth.signInWithOtp({ email: email });
-            if (error) {
-              console.error('Supabase Email OTP error:', error);
-            } else {
-              emailSuccess = true;
-            }
-          } catch (e) {
-            console.error('Supabase Email OTP exception:', e);
-          }
-
-          if (!isWhitelisted) {
-            if (phoneSuccess && emailSuccess) {
-              showToast('Doğrulama kodu hem telefonunuza hem de e-postanıza gönderildi!', 'success');
-            } else if (phoneSuccess) {
-              showToast('Doğrulama kodu telefonunuza gönderildi (E-posta başarısız)!', 'warning');
-            } else if (emailSuccess) {
-              showToast('Doğrulama kodu e-postanıza gönderildi (SMS başarısız)!', 'warning');
-            } else {
-              if (isLocal) {
-                showToast(`⚠️ Gerçek kod gönderilemedi (SMS/SMTP). TEST MODU: Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
-              } else {
-                showToast('Doğrulama kodu gönderilemedi! Lütfen bilgilerinizi kontrol edip tekrar deneyin.', 'error');
-              }
-            }
-          }
-        } else {
-          if (!isWhitelisted) {
-            if (isLocal) {
-              showToast(`⚠️ Supabase yapılandırılmamış. TEST MODU aktif! Kodunuz: ${currentLocalOtp}`, 'warning', 15000);
-            } else {
-              showToast(`Supabase bağlantısı yapılandırılmamış. Kod gönderilemiyor!`, 'error');
-            }
-          }
+        } catch (e) {
+          console.error('Email OTP exception:', e);
+          showToast('Kod gönderilirken bir hata oluştu.', 'error');
         }
       };
 
@@ -5202,19 +5268,9 @@ function initAuth() {
             return;
           }
 
-          if (!/^[5]\d{9}$/.test(cleanPhone)) {
-            showToast('Lütfen geçerli bir telefon numarası giriniz (örn: 5551234567)! Numaralar 10 haneli olmalı ve 5 ile başlamalıdır.', 'error');
-            return;
-          }
-
-          const digitsOnly = cleanPhone;
-          if (/^(\d)\1+$/.test(digitsOnly)) {
-            showToast('Lütfen geçerli bir telefon numarası giriniz!', 'error');
-            return;
-          }
-          
-          if (digitsOnly.includes('12345') || digitsOnly.includes('54321') || digitsOnly.includes('23456') || digitsOnly.includes('65432') || digitsOnly.includes('34567') || digitsOnly.includes('76543')) {
-            showToast('Sallama/geçersiz bir telefon numarası girdiniz! Lütfen gerçek numaranızı girin.', 'error');
+          // ÜYELİK v2: telefon artık isteğe bağlı (giriş e-posta koduyla yapılır).
+          if (cleanPhone && !/^[5]\d{9}$/.test(cleanPhone)) {
+            showToast('Telefon girecekseniz 10 haneli olmalı ve 5 ile başlamalıdır (boş bırakabilirsiniz).', 'error');
             return;
           }
         } else {
@@ -5233,9 +5289,9 @@ function initAuth() {
           }
         }
         
-        activeTarget = '+90' + cleanPhone;
+        activeTarget = cleanPhone ? '+90' + cleanPhone : '';
         activeEmail = emailVal;
-        activeMode = 'phone';
+        activeMode = 'email';
 
         // 1. Save request to local storage amok_licence_requests so it is immediately visible in local Admin panel
         try {
@@ -5256,12 +5312,7 @@ function initAuth() {
           console.error("Error saving request locally:", localSaveErr);
         }
 
-        // 2. Trigger email notification to admin & copy to user
-        try {
-          sendLicenceRequestEmail(emailVal.split('@')[0], fullName, emailVal, activeTarget);
-        } catch (emailErr) {
-          console.error("Error triggering license request email:", emailErr);
-        }
+        // ÜYELİK v2: "davetiye talebi" e-postası kaldırıldı — herkes doğrudan giriş yapar.
         
         // 3. Try auto pre-register/update in database with 'REQUESTED' license state
         try {
@@ -5420,8 +5471,9 @@ function initAuth() {
           console.warn("Database pre-registration skipped or failed:", e);
         }
 
-        if (isWhitelisted) {
-          otpTargetLabel.textContent = activeTarget;
+        if (true) {
+          // ÜYELİK v2: herkes e-posta kodu ekranına geçer (davetiye/onay kalktı).
+          otpTargetLabel.textContent = activeEmail;
           screen1.style.display = 'none';
           screen2.style.display = 'flex';
           triggerOtp(activeTarget, activeEmail);
@@ -5461,10 +5513,22 @@ function initAuth() {
         verifyBtn.disabled = true;
         verifyBtn.textContent = 'Doğrulanıyor...';
 
-        const proceed = () => {
+        const proceed = async () => {
           if (resendTimer) clearInterval(resendTimer);
           modal.remove();
-          proceedWithLogin(fullName, activeEmail, activeTarget);
+          // ÜYELİK v2: OTP doğrulaması başarılıysa gerçek bir Supabase oturumu vardır.
+          let session = null;
+          if (supabaseClient) {
+            try { session = (await supabaseClient.auth.getSession()).data.session; } catch (e) {}
+          }
+          if (session) {
+            await mvOnAuthenticated(session, fullName);
+            if (typeof enterApp === 'function') enterApp();
+            showToast('Giriş başarılı! 🎉', 'success');
+          } else {
+            // Oturum yok (test modu / yapılandırılmamış) → eski yerel akış
+            proceedWithLogin(fullName, activeEmail, activeTarget);
+          }
         };
 
         // Test modu: yalnızca bu oturumda üretilmiş rastgele koda karşı doğrula.
@@ -5479,42 +5543,19 @@ function initAuth() {
         }
 
         if (supabaseClient) {
-          const verifySms = () => {
-            return supabaseClient.auth.verifyOtp({
-              token: otpInput,
-              type: 'sms',
-              phone: activeTarget
-            });
-          };
-
-          const verifyEmail = () => {
-            return supabaseClient.auth.verifyOtp({
-              token: otpInput,
-              type: 'email',
-              email: activeEmail
-            });
-          };
-
-          verifySms().then(({ data, error }) => {
-            if (!error) {
-              showToast('Telefon doğrulaması başarılı!', 'success');
+          // ÜYELİK v2: yalnızca e-posta OTP doğrulaması.
+          supabaseClient.auth.verifyOtp({
+            token: otpInput,
+            type: 'email',
+            email: activeEmail
+          }).then(({ error: emailErr }) => {
+            if (!emailErr) {
               proceed();
             } else {
-              verifyEmail().then(({ data: emailData, error: emailErr }) => {
-                if (!emailErr) {
-                  showToast('E-posta doğrulaması başarılı!', 'success');
-                  proceed();
-                } else {
-                  console.error('OTP verification failed for both SMS and Email:', { smsErr: error, emailErr });
-                  showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
-                  verifyBtn.disabled = false;
-                  verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
-                }
-              }).catch(err => {
-                showToast('Doğrulama sırasında bir hata oluştu!', 'error');
-                verifyBtn.disabled = false;
-                verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
-              });
+              console.error('OTP verification failed:', emailErr);
+              showToast('Hatalı veya süresi dolmuş doğrulama kodu!', 'error');
+              verifyBtn.disabled = false;
+              verifyBtn.textContent = 'Kodu Doğrula ve Giriş Yap';
             }
           }).catch(err => {
             showToast('Doğrulama sırasında bir hata oluştu!', 'error');
@@ -6193,6 +6234,11 @@ function logout() {
     saveState(true);
     localStorage.setItem(`amok_state_${state.username}`, JSON.stringify(state));
   }
+  // ÜYELİK v2: Supabase oturumunu kapat
+  if (supabaseClient) {
+    try { supabaseClient.auth.signOut(); } catch (e) {}
+  }
+  state.authId = null;
   localStorage.removeItem(STATE_KEY);
   localStorage.removeItem('amok_last_scroll_y');
   clearActiveQuizState();
@@ -6204,6 +6250,7 @@ function logout() {
   
   state = {
     username: null,
+    authId: null,
     isGuest: false,
     streak: 0,
     xp: 0,
@@ -16160,45 +16207,29 @@ async function renderSocialList() {
   if (supabaseClient) {
     try {
       const { data, error } = await supabaseClient
-        .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, display_name, profile_photo, last_seen_at)')
+        .from('leaderboard')
+        .select('username, display_name, avatar_color, profile_photo, xp, streak, completed_lessons')
         .order('xp', { ascending: false })
         .limit(50);
 
       if (!error && data && data.length > 0) {
-        const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000);
         competitors = data.map(item => {
           const isUser = item.username === state.username;
-          let displayName = item.username;
-          let email = '';
-          let phone = '';
-          let profilePhoto = '';
-          let lastSeenAt = null;
-          if (item.profiles) {
-            const fName = item.profiles.first_name || '';
-            const lName = item.profiles.last_name || '';
-            const full = `${fName} ${lName}`.trim();
-            displayName = item.profiles.display_name || full || item.username;
-            email = item.profiles.email || '';
-            phone = item.profiles.phone || '';
-            profilePhoto = item.profiles.profile_photo || '';
-            lastSeenAt = item.profiles.last_seen_at || null;
-          }
+          let displayName = item.display_name || item.username;
           if (isUser) {
             const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
             displayName = state.displayName || localFull || state.username;
           }
-          const isOnline = isUser || (lastSeenAt ? new Date(lastSeenAt) >= fiveMinutesAgo : false);
           return {
             username: item.username,
             displayName: displayName,
             xp: item.xp,
             avatarColor: isUser ? (state.avatarColor || item.avatar_color || '#B4A7D6') : (item.avatar_color || '#B4A7D6'),
-            streak: isUser ? state.streak : 0,
-            email: email,
-            phone: phone,
-            profilePhoto: profilePhoto,
-            isOnline: isOnline
+            streak: isUser ? state.streak : (item.streak || 0),
+            email: '',
+            phone: '',
+            profilePhoto: item.profile_photo || '',
+            isOnline: isUser
           };
         });
       }
@@ -16622,8 +16653,8 @@ async function renderLeaderboard() {
   if (supabaseClient) {
     try {
       const { data, error } = await supabaseClient
-        .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, display_name, profile_photo)')
+        .from('leaderboard')
+        .select('username, display_name, avatar_color, profile_photo, xp, completed_lessons')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -16632,20 +16663,11 @@ async function renderLeaderboard() {
         competitors = data.map(item => {
           const isUser = item.username === state.username;
           if (isUser) userFound = true;
-          
-          let displayName = item.username;
+
+          let displayName = item.display_name || item.username;
           let email = '';
           let phone = '';
-          let profilePhoto = '';
-          if (item.profiles) {
-            const fName = item.profiles.first_name || '';
-            const lName = item.profiles.last_name || '';
-            const full = `${fName} ${lName}`.trim();
-            displayName = item.profiles.display_name || full || item.username;
-            email = item.profiles.email || '';
-            phone = item.profiles.phone || '';
-            profilePhoto = item.profiles.profile_photo || '';
-          }
+          let profilePhoto = item.profile_photo || '';
 
           if (isUser) {
             const localFull = `${state.firstName || ''} ${state.lastName || ''}`.trim();
@@ -21309,23 +21331,45 @@ return `
   initAuth();
   initEventListeners();
 
-  if (!state.username || state.username === 'Misafir') {
-    const isLocal = checkIsLocal();
-    if (isLocal) {
-      state.username = 'Admin';
-      state.isGuest = false;
-      saveState();
-    } else if (!state.username) {
-      state.username = 'Misafir';
-      state.isGuest = true;
-      saveState();
+  const mvAfterAuth = () => {
+    if (!state.username || state.username === 'Misafir') {
+      const isLocal = checkIsLocal();
+      if (isLocal) {
+        state.username = 'Admin';
+        state.isGuest = false;
+        saveState();
+      } else if (!state.username) {
+        state.username = 'Misafir';
+        state.isGuest = true;
+        saveState();
+      }
     }
+    initSocialSystem();
+    enterApp();
+    renderRecentChanges();
+    initNotifications();
+    initSimulator();
+  };
+
+  // ÜYELİK v2: e-posta linkiyle geri dönüşte / başka sekmede giriş olunca yakala.
+  if (supabaseClient) {
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      if (event === 'SIGNED_IN' && session && state.authId !== session.user.id) {
+        mvOnAuthenticated(session, state.displayName).then(() => {
+          if (typeof enterApp === 'function') enterApp();
+        });
+      } else if (event === 'SIGNED_OUT') {
+        state.authId = null;
+      }
+    });
   }
-  initSocialSystem();
-  enterApp();
-  renderRecentChanges();
-  initNotifications();
-  initSimulator();
+
+  // ÜYELİK v2: önce Supabase oturumunu geri yükle (varsa), sonra uygulamayı aç.
+  if (supabaseClient) {
+    mvRestoreSession().then(mvAfterAuth).catch(mvAfterAuth);
+  } else {
+    mvAfterAuth();
+  }
 
   const initWhitelistAdmin = () => {
     const listBody = document.getElementById('admin-whitelist-table-body');
