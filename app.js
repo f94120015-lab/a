@@ -15237,9 +15237,10 @@ function switchTab(tabId) {
   const subtabsMenu = document.getElementById('admin-subtabs-menu');
   if (subtabsMenu) {
     if (tabId === 'admin') {
-      subtabsMenu.style.display = 'flex';
+      subtabsMenu.style.setProperty('display', 'flex', 'important');
+      subtabsMenu.classList.remove('u-hidden');
     } else {
-      subtabsMenu.style.display = 'none';
+      subtabsMenu.style.setProperty('display', 'none', 'important');
     }
   }
   if (typeof updateAdminBadgeCount === 'function') {
@@ -18930,9 +18931,8 @@ function checkIsLocal() {
 }
 
 function isLocalDevDesktop() {
-  const isLocalHost = checkIsLocal();
-  const isDesktopWidth = window.innerWidth >= 1024;
-  return isLocalHost && isDesktopWidth;
+  // Localhost'ta admin panelini her pencere boyutunda göster (eski davranış).
+  return checkIsLocal();
 }
 
 function updateAdminTabVisibility() {
