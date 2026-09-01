@@ -11461,6 +11461,10 @@ function getConnectorMeaning(opt) {
 }
 
 
+// Açılır kutunun "dışarı tıklayınca kapan" dinleyicisi. Her soru render'ında
+// yenisi eklendiği için öncekini kaldırmak üzere referansı saklıyoruz.
+let fbDropdownOutsideHandler = null;
+
 function renderFillBlankDropdown(container, question) {
   // Normalize arguments in case it is called as renderFillBlankDropdown(question)
   if (!question && container && !container.nodeType) {
@@ -11580,11 +11584,18 @@ function renderFillBlankDropdown(container, question) {
       });
     });
 
-    document.addEventListener('click', function closeMenuOnOutside(e) {
-      if (!container.contains(e.target)) {
-        toggleMenu(false);
-      }
-    });
+    // Menü açıkken, açılır kutunun kendisi dışında herhangi bir yere (cümle
+    // metni, boşluk, sayfa boşluğu vb.) tıklanınca menü kapanmalı.
+    const dropdownWrapper = container.querySelector('.custom-dropdown-wrapper');
+    if (fbDropdownOutsideHandler) {
+      document.removeEventListener('click', fbDropdownOutsideHandler);
+    }
+    fbDropdownOutsideHandler = function(e) {
+      if (menuEl.style.display === 'none') return;
+      if (dropdownWrapper && dropdownWrapper.contains(e.target)) return;
+      toggleMenu(false);
+    };
+    document.addEventListener('click', fbDropdownOutsideHandler);
   }
 }
 
@@ -17304,6 +17315,11 @@ function initEventListeners() {
   document.getElementById('quiz-report').addEventListener('click', () => {
     showReportModal();
   });
+  // html2canvas (~200KB) betiğini boşta önden yükle ki hata bildir modalı
+  // açıldığında ekran görüntüsü ağ beklemeden hazırlanabilsin.
+  const preloadShot = () => loadHtml2Canvas().catch(() => {});
+  if ('requestIdleCallback' in window) requestIdleCallback(preloadShot, { timeout: 8000 });
+  else setTimeout(preloadShot, 4000);
 
   // Kontrol Et / Devam Et butonu
   document.getElementById('btn-check').addEventListener('click', () => {
@@ -18339,10 +18355,15 @@ function showReportModal() {
 
   // Ekran görüntüsünü modal açılır açılmaz arka planda al. Modal, #quiz-screen'in
   // kardeşi olduğu için yakalamaya dahil olmaz.
+  //
+  // html2canvas hem ilk sefer ~200KB betik indirir hem de DOM'u tararken ana
+  // iş parçacığını saniyelerce bloklar. Bunu doğrudan çağırırsak tarayıcı modalı
+  // boyamadan donuyor ("bildirim sayfası 5-6 sn geç açılıyor"). İki kare
+  // bekleyip modalın boyanmasını garanti ettikten sonra yakalamayı başlat.
   let capturedScreenshot = null;
   const previewEl = document.getElementById('report-screenshot-preview');
   const chkEl = document.getElementById('report-include-screenshot');
-  capturePageScreenshot(document.getElementById('quiz-screen'))
+  const runCapture = () => capturePageScreenshot(document.getElementById('quiz-screen'))
     .then(dataUrl => {
       capturedScreenshot = dataUrl;
       if (previewEl) {
@@ -18354,6 +18375,7 @@ function showReportModal() {
       if (previewEl) previewEl.textContent = 'Ekran görüntüsü alınamadı (bildirim yine de gönderilebilir).';
       if (chkEl) { chkEl.checked = false; chkEl.disabled = true; }
     });
+  requestAnimationFrame(() => requestAnimationFrame(runCapture));
 
   document.getElementById('btn-close-report-modal').addEventListener('click', () => modal.remove());
   document.getElementById('btn-cancel-report').addEventListener('click', () => modal.remove());

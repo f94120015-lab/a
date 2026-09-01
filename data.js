@@ -35455,12 +35455,12 @@ Object.assign(unitSentencesMap, {
               "enSentence": "The primary source documents from the Ottoman era are in the national archive.",
               "isEngToTr": true,
               "options": [
-                "Osmanlı döneminin birincil kaynak belgeleri ulusal arşivdedir.",
                 "Osmanlı döneminden kalma birincil kaynak belgeler ulusal arşivdedir.",
+                "Osmanlı döneminden kalma birincil kaynak belgeler ulusal müzededir.",
                 "Osmanlı döneminden kalma belgeler ulusal arşivdedir.",
                 "Osmanlı döneminden kalma birincil kaynak belgeler kütüphanededir."
               ],
-              "correctIndex": 1
+              "correctIndex": 0
             },
             {
               "id": "u1l2ex2_q2",
@@ -35580,15 +35580,15 @@ Object.assign(unitSentencesMap, {
                 "İsim ve Edat Yapıları"
               ],
               "prompt": "Boşluğa gelecek en uygun kelimeyi seçin:",
-              "sentence": "The community leaders ___ the local regions are under high pressure.",
+              "sentence": "The community leaders ___ the advisory board are under high pressure.",
               "options": [
-                "in",
                 "on",
+                "in",
                 "at",
-                "with"
+                "of"
               ],
               "correctIndex": 0,
-              "translation": "Yerel bölgelerdeki topluluk liderleri yüksek baskı altındadır."
+              "translation": "Danışma kurulundaki topluluk liderleri yüksek baskı altındadır."
             },
             {
               "id": "u1l2ex2_q7",
