@@ -19710,31 +19710,48 @@ function init() {
         let profiles = [];
         let statesMap = {};
 
-        if (supabaseClient) {
+        if (supabaseClient && state.authId) {
           try {
-            // Fetch profiles
-            const { data: dbProfiles, error: profilesError } = await supabaseClient
-              .from('profiles')
-              .select('username, email, phone, first_name, last_name, created_at, last_seen_at, display_name, profile_photo')
-              .order('created_at', { ascending: false });
-
-            if (!profilesError && dbProfiles) {
-              profiles = dbProfiles;
-            }
-
-            // Fetch user_states
-            const { data: dbStates, error: statesError } = await supabaseClient
-              .from('user_states')
-              .select('username, xp, streak, hearts, completed_lessons, avatar_color, licence_key, licence_devices');
-
-            if (!statesError && dbStates) {
-              dbStates.forEach(s => {
-                statesMap[s.username] = s;
+            // ÜYELİK v2: app_users tablosu, admin_users RPC (is_admin gerekli).
+            const { data, error } = await supabaseClient.rpc('admin_users');
+            if (error) {
+              console.error('admin_users rpc error:', error);
+            } else if (data) {
+              profiles = data.map(u => ({
+                username: u.username,
+                email: u.email || '',
+                phone: '',
+                first_name: '',
+                last_name: '',
+                created_at: u.created_at,
+                last_seen_at: u.last_seen_at,
+                display_name: u.display_name,
+                profile_photo: u.profile_photo
+              }));
+              data.forEach(u => {
+                statesMap[u.username] = {
+                  username: u.username,
+                  xp: u.xp || 0,
+                  streak: u.streak || 0,
+                  hearts: u.hearts || 0,
+                  completed_lessons: u.completed_lessons || [],
+                  avatar_color: u.avatar_color || '#B4A7D6',
+                  licence_key: u.licence_key || '',
+                  licence_devices: ''
+                };
               });
             }
           } catch (dbErr) {
             console.error('Supabase query error in loadAdminUsers:', dbErr);
           }
+        } else if (supabaseClient && !state.authId) {
+          listEl.innerHTML = `
+            <div style="text-align: center; padding: 40px 20px; color: var(--text-secondary);">
+              <span style="font-size: 2rem; display: block; margin-bottom: 8px;">🔒</span>
+              <p style="margin: 0; font-weight: 700;">Kullanıcı listesi için giriş yapın</p>
+              <p style="margin: 4px 0 0; font-size: 0.82rem;">Admin hesabınızla giriş yaptığınızda kullanıcılar burada listelenir.</p>
+            </div>`;
+          return;
         }
 
         // Load local profiles and states
@@ -27230,6 +27247,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
             if (data) {
               reportsCount = data.reports || 0;
               feedbackCount = data.feedback || 0;
+              licenceCount = data.requests || 0;
             }
           } else {
             const r = await supabaseClient.from('question_reports').select('id', { count: 'exact', head: true });
