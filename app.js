@@ -16693,48 +16693,80 @@ async function renderLeaderboard() {
   competitors = finalCompetitors;
 
   competitors.sort((a, b) => b.xp - a.xp);
-  competitors = competitors.slice(0, 10);
 
-  list.innerHTML = competitors.map((c, index) => {
-    const rank = index + 1;
-    let rankClass = `rank-${rank}`;
-    if (rank > 3) rankClass = 'rank-other';
+  const podiumEl = document.getElementById('leaderboard-podium');
+  const userRankIndex = competitors.findIndex(c => c.isUser);
+  const top = competitors.slice(0, 10);
+  const top3 = top.slice(0, 3);
+  const rest = top.slice(3);
 
-    let avatarContent = (c.name || 'U').replace(' (Sen)', '').charAt(0).toUpperCase();
-    let avatarStyle = `width: 24px; height: 24px; border-radius: 50%; background: ${c.avatarColor || '#B4A7D6'}; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 10px; overflow: hidden;`;
-    
+  // Yarışmacının avatarını (foto / emoji / baş harf) verilen boyutta üretir.
+  const buildAvatar = (c, size) => {
+    const initial = (c.name || 'U').replace(' (Sen)', '').charAt(0).toUpperCase();
     const photo = c.isUser ? state.profilePhoto : c.profilePhoto;
-    const color = c.isUser ? (state.avatarColor || '#5856D6') : (c.avatarColor || '#B4A7D6');
-    if (photo) {
-      if (photo.startsWith('avatar:')) {
-        avatarContent = photo.split(':')[1];
-        avatarStyle = `width: 24px; height: 24px; border-radius: 50%; background: ${color}; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px;`;
-      } else {
-        avatarContent = `<img src="${photo}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
-        avatarStyle = `width: 24px; height: 24px; border-radius: 50%; background: transparent; display: flex; align-items: center; justify-content: center;`;
-      }
+    const color = c.isUser ? (state.avatarColor || '#6366F1') : (c.avatarColor || '#B4A7D6');
+    const base = `width:${size}px;height:${size}px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;`;
+    if (photo && photo.startsWith('avatar:')) {
+      return `<div class="lb-avatar" style="${base}background:${color};font-size:${Math.round(size * 0.55)}px;">${photo.split(':')[1]}</div>`;
     }
+    if (photo) {
+      return `<div class="lb-avatar" style="${base}background:transparent;"><img src="${escapeHtml(photo)}" style="width:100%;height:100%;object-fit:cover;display:block;"></div>`;
+    }
+    return `<div class="lb-avatar" style="${base}background:${color};color:#fff;font-weight:700;font-size:${Math.round(size * 0.4)}px;">${initial}</div>`;
+  };
 
+  const nameWithTitle = (c) => `${escapeHtml(c.name)}${c.isUser && state.equippedTitle ? ` <span class="lb-title-badge">${equippedTitleLabel()}</span>` : ''}`;
+
+  // ── İlk 3: podyum (görsel sıra 2 - 1 - 3) ──
+  const medals = ['🥇', '🥈', '🥉'];
+  if (podiumEl) {
+    podiumEl.innerHTML = [1, 0, 2].map(i => {
+      const c = top3[i];
+      if (!c) return `<div class="lb-podium-slot lb-podium-empty"></div>`;
+      const rank = i + 1;
+      return `
+        <div class="lb-podium-slot lb-podium-${rank} ${c.isUser ? 'is-user' : ''}">
+          <div class="lb-podium-medal">${medals[i]}</div>
+          ${buildAvatar(c, rank === 1 ? 64 : 52)}
+          <div class="lb-podium-name">${nameWithTitle(c)}</div>
+          <div class="lb-podium-sub">📍 ${escapeHtml(getUserCurrentProgress(c.completedLessons))}</div>
+          <div class="lb-podium-xp">${c.xp} <span>Puan</span></div>
+          <div class="lb-podium-bar">${rank}</div>
+        </div>`;
+    }).join('');
+  }
+
+  // ── 4. sıradan itibaren: liste ──
+  let rowsHtml = rest.map((c, idx) => {
+    const rank = idx + 4;
     return `
-      <tr class="leaderboard-row ${c.isUser ? 'user-row' : ''} ${rankClass}">
-        <td><span class="rank-badge">${rank}</span></td>
-        <td>
-          <div style="display: flex; align-items: center; gap: 8px;">
-            <div style="${avatarStyle}">
-              ${avatarContent}
-            </div>
-            <div style="display: flex; flex-direction: column;">
-              <span style="font-weight: 600;">${escapeHtml(c.name)}${c.isUser && state.equippedTitle ? ` <span class="lb-title-badge">${equippedTitleLabel()}</span>` : ''}</span>
-              <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">
-                📍 ${escapeHtml(getUserCurrentProgress(c.completedLessons))}
-              </span>
-            </div>
-          </div>
-        </td>
-        <td>${c.xp} Puan</td>
-      </tr>
-    `;
+      <div class="lb-row ${c.isUser ? 'is-user' : ''}">
+        <span class="lb-rank">${rank}</span>
+        ${buildAvatar(c, 40)}
+        <div class="lb-row-info">
+          <span class="lb-row-name">${nameWithTitle(c)}</span>
+          <span class="lb-row-sub">📍 ${escapeHtml(getUserCurrentProgress(c.completedLessons))}</span>
+        </div>
+        <span class="lb-row-xp">${c.xp}<small>Puan</small></span>
+      </div>`;
   }).join('');
+
+  // Kullanıcı ilk 10'un dışındaysa kendi sırasını en alta sabitle.
+  if (userRankIndex >= 10) {
+    const c = competitors[userRankIndex];
+    rowsHtml += `
+      <div class="lb-row is-user lb-row-pinned">
+        <span class="lb-rank">${userRankIndex + 1}</span>
+        ${buildAvatar(c, 40)}
+        <div class="lb-row-info">
+          <span class="lb-row-name">${nameWithTitle(c)}</span>
+          <span class="lb-row-sub">📍 ${escapeHtml(getUserCurrentProgress(c.completedLessons))}</span>
+        </div>
+        <span class="lb-row-xp">${c.xp}<small>Puan</small></span>
+      </div>`;
+  }
+
+  list.innerHTML = rowsHtml;
 }
 
 // ============================================================

@@ -4503,62 +4503,169 @@ input {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 24px;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
 .league-badge {
   font-family: var(--font-heading);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-xp);
-  background: rgba(212, 168, 67, 0.1);
-  padding: 8px 20px;
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.16), rgba(234, 179, 8, 0.05));
+  padding: 8px 22px;
   border-radius: 100px;
-  border: 1px solid rgba(212, 168, 67, 0.3);
-  margin-bottom: 8px;
+  border: 1px solid rgba(234, 179, 8, 0.32);
+  box-shadow: 0 6px 18px rgba(234, 179, 8, 0.12);
+}
+
+.league-countdown {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  padding: 4px 14px;
+  border-radius: 100px;
 }
 
 .league-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
+  max-width: 42ch;
 }
 
-.leaderboard-table {
-  width: 100%;
-  border-collapse: collapse;
+/* ── Podyum (ilk 3) ── */
+.leaderboard-podium {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: end;
+  margin: 24px 0 4px;
 }
 
-.leaderboard-table th,
-.leaderboard-table td {
-  padding: 14px 16px;
-  text-align: left;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.leaderboard-table th {
-  font-family: var(--font-heading);
-  color: var(--text-secondary);
-  font-weight: 700;
-}
-
-.leaderboard-row.user-row {
-  background: var(--accent-primary-light);
-  font-weight: 700;
-}
-
-.rank-badge {
-  display: inline-flex;
+.lb-podium-slot {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-full);
-  font-weight: 700;
+  gap: 5px;
+  padding: 8px 4px 0;
+  min-width: 0;
 }
 
-.rank-1 .rank-badge { background: #d4a843; color: #fff; }
-.rank-2 .rank-badge { background: #a8a8a8; color: #fff; }
-.rank-3 .rank-badge { background: #c98a5e; color: #fff; }
+.lb-podium-slot.lb-podium-empty { visibility: hidden; }
+
+.lb-podium-medal { font-size: 1.4rem; line-height: 1; }
+
+.lb-podium-slot .lb-avatar { box-shadow: 0 0 0 3px var(--border-color); }
+.lb-podium-1 .lb-avatar { box-shadow: 0 0 0 3px #EAB308, 0 8px 22px rgba(234, 179, 8, 0.35); }
+.lb-podium-2 .lb-avatar { box-shadow: 0 0 0 3px #A8A8A8; }
+.lb-podium-3 .lb-avatar { box-shadow: 0 0 0 3px #C98A5E; }
+
+.lb-podium-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.84rem;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.2;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lb-podium-sub { font-size: 0.66rem; color: var(--text-muted); text-align: center; }
+
+.lb-podium-xp {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--color-xp);
+}
+.lb-podium-xp span { font-size: 0.66rem; font-weight: 600; color: var(--text-muted); }
+
+.lb-podium-bar {
+  width: 100%;
+  margin-top: 6px;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff;
+}
+.lb-podium-1 .lb-podium-bar { height: 64px; background: linear-gradient(180deg, #F5CE5B, #E0A93B); }
+.lb-podium-2 .lb-podium-bar { height: 48px; background: linear-gradient(180deg, #C6C6C6, #A2A2A2); }
+.lb-podium-3 .lb-podium-bar { height: 36px; background: linear-gradient(180deg, #D8A277, #BE7C50); }
+
+.lb-podium-slot.is-user .lb-podium-name { color: var(--accent-primary); }
+
+/* ── Liste (4. sıradan itibaren) ── */
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 14px;
+}
+
+.lb-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  transition: background 0.15s ease;
+}
+.lb-row:hover { background: var(--bg-secondary); }
+
+.lb-rank {
+  width: 24px;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.lb-row-info { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+
+.lb-row-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lb-row-sub { font-size: 0.7rem; color: var(--text-muted); }
+
+.lb-row-xp {
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+.lb-row-xp small { font-size: 0.64rem; font-weight: 600; color: var(--text-muted); }
+
+.lb-row.is-user {
+  background: var(--accent-primary-light);
+  box-shadow: inset 3px 0 0 var(--accent-primary);
+}
+
+.lb-row-pinned {
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-color);
+}
 
 /* ─── Sanal Mağaza (Store) ───────────────────────────────── */
 .store-container {
