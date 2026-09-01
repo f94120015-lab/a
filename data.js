@@ -35045,9 +35045,9 @@ Object.assign(unitSentencesMap, {
               "prompt": "Boşluğu doldur:",
               "sentence": "The rigid organization ___ the social community is a barrier.",
               "options": [
-                "in",
+                "to",
                 "of",
-                "from",
+                "for",
                 "with"
               ],
               "correctIndex": 1,
@@ -35108,6 +35108,7 @@ Object.assign(unitSentencesMap, {
                 "False"
               ],
               "correctIndex": 1,
+              "explanation": "Cümle YANLIŞ. Öznenin çekirdeği <strong>\"broadcasts\"</strong> (çoğul); \"of the national network\" yalnızca bir edat öbeğidir ve yükleme etki etmez. Çoğul özneyle yüklem <strong>\"is\" değil \"are\"</strong> olmalıdır. Ayrıca \"public resources\" çoğul olduğundan tekil \"is\" ile uyumsuzdur. Doğrusu: \"The daily broadcasts of the national network <strong>are</strong> public resources.\"",
               "translation": "Ulusal ağın günlük yayınları kamusal kaynaklardır."
             },
             {
@@ -35269,8 +35270,8 @@ Object.assign(unitSentencesMap, {
               "sentence": "The document ___ the Ottoman archives is a primary source.",
               "options": [
                 "from",
-                "in",
-                "of",
+                "to",
+                "for",
                 "with"
               ],
               "correctIndex": 0,
@@ -35381,7 +35382,7 @@ Object.assign(unitSentencesMap, {
               "enSentence": "The paintings in the museum are famous.",
               "isEngToTr": true,
               "options": [
-                "Müzedeki tablolar ünlüdür.",
+                "Müzedeki heykeller ünlüdür.",
                 "Müzedeki tablo ünlüdür.",
                 "Müzedeki tablolar ünlüdür.",
                 "Müzedeki tablolar önemlidir."

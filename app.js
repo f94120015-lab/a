@@ -967,8 +967,26 @@ function sanitizeQuestions(questions) {
           } else {
             distractors = ["although", "because", "before", "after", "however", "and", "or", "while"];
           }
-          
-          const uniqueDistractors = distractors.filter(d => !q.correctOrder.includes(d)).slice(0, 3);
+
+          // Özne–yüklem uyumu çeldiricisi: doğru blokta geçen kopula/yardımcı
+          // fiilin karşıt sayı biçimini üret (ör. "are important." -> "is important.").
+          // Böylece uyum seçimi anlamlı olur, tek geçerli fiil hazır durmaz.
+          const agreementSwap = { is: "are", are: "is", was: "were", were: "was", has: "have", have: "has" };
+          const agreementDistractors = [];
+          q.correctOrder.forEach(chunk => {
+            const m = chunk.match(/\b(is|are|was|were|has|have)\b/i);
+            if (!m) return;
+            const swapped = agreementSwap[m[1].toLowerCase()];
+            const variant = chunk.replace(m[0], m[0][0] === m[0][0].toUpperCase()
+              ? swapped.charAt(0).toUpperCase() + swapped.slice(1)
+              : swapped);
+            if (!q.correctOrder.includes(variant) && !agreementDistractors.includes(variant)) {
+              agreementDistractors.push(variant);
+            }
+          });
+
+          const baseDistractors = distractors.filter(d => !q.correctOrder.includes(d));
+          const uniqueDistractors = [...agreementDistractors, ...baseDistractors].slice(0, 3);
           q.words = [...q.correctOrder, ...uniqueDistractors];
         }
       }
@@ -9323,9 +9341,17 @@ function renderLessonRuleHint(body, question) {
   const options = (question.options || []).map(o => String(o).trim()).filter(Boolean);
   const answer = String(options[question.correctIndex] || '').trim();
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // Cevap "of / in / to / the" gibi kısa bir işlev sözcüğüyse, kural metnindeki
+  // her geçtiği yeri "____" ile değiştirmek (özellikle konusu o edat olan
+  // derslerde) metni okunmaz hale getiriyordu. Bu sözcükler zaten şıklarda ve
+  // çoğu kez ders başlığında görünür; maskelemeye gerek yok.
+  const FUNCTION_WORD_ANSWERS = new Set([
+    'of', 'in', 'on', 'to', 'at', 'by', 'for', 'as', 'or', 'and', 'the', 'a', 'an',
+    'with', 'from', 'into', 'onto', 'off', 'up', 'out', 'is', 'are', 'was', 'were'
+  ]);
   const maskAnswer = text => {
     const out = String(text || '');
-    if (answer.length < 2) return out;
+    if (answer.length < 2 || FUNCTION_WORD_ANSWERS.has(answer.toLowerCase())) return out;
     return out.replace(new RegExp('\\b' + esc(answer) + '\\b', 'gi'), '____');
   };
   const leaksOption = text => {
@@ -11030,7 +11056,21 @@ function renderMatching(container, question) {
     .map(p => (Array.isArray(p) ? { left: p[0], right: p[1] } : p))
     .filter(p => p && p.left !== undefined && p.right !== undefined);
   question.pairs = pairs;
-  const shuffledRight = [...pairs].sort(() => Math.random() - 0.5);
+  // Sağ sütunu Fisher–Yates ile karıştır; `sort(() => Math.random()-0.5)` 4
+  // öğede sık sık diziyi hiç değiştirmiyor ve şıklar sol sütunla birebir
+  // karşı karşıya kalıyordu. Kimlik sıralaması çıkarsa yeniden karıştır.
+  const shuffledRight = (() => {
+    const arr = [...pairs];
+    if (arr.length < 2) return arr;
+    for (let attempt = 0; attempt < 20; attempt++) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      if (arr.some((p, i) => p.right !== pairs[i].right)) break;
+    }
+    return arr;
+  })();
 
   const isLeftEnglish = pairs.length > 0 && /^[a-zA-Z]/.test(pairs[0].left);
   const leftHeader = question.leftHeader || (isLeftEnglish ? "İngilizce İfade" : "Türkçe Karşılık");
@@ -13210,7 +13250,11 @@ function checkAnswer() {
   // Intercept if translation exists, primary is correct, type is not formula matching, and translation gate hasn't been triggered yet
   const isFormulaQuestion = question.type === 'structure-match' || (question.sentence && (question.sentence.includes('➔') || question.sentence.includes('[Ana Cümle]') || question.sentence.includes('[Yan Cümle]')));
 
-  if (question && question.translation && isCorrect && !isFormulaQuestion && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'spotlight' || activeType === 'error-finder' || activeType === 'true-false' || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet' || activeType === 'double-preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
+  // true-false'ta çevrilecek kaynak cümle prompt içine gömülü olduğundan
+  // question.sentence/enSentence boş kalıyor; kaynak yoksa çeviri geçidi
+  // "boş cümleyi çevir" ekranı üretiyordu — bu durumda geçidi atla.
+  const tfHasSource = activeType === 'true-false' && (question.sentence || question.enSentence || question.en);
+  if (question && question.translation && isCorrect && !isFormulaQuestion && (activeType === 'fill-blank-dropdown' || activeType === 'fill-blank' || activeType === 'spotlight' || activeType === 'error-finder' || tfHasSource || activeType === 'multiple-fill-blank' || activeType === 'preposition-magnet' || activeType === 'double-preposition-magnet') && !isTranslationGateTriggered && !isTranslationGateActive) {
     isTranslationGateTriggered = true;
     startTranslationGate(document.getElementById('quiz-body'), question);
     return;
@@ -13443,11 +13487,11 @@ function checkAnswer() {
     }
 
     if (question.type === 'true-false') {
-      if (selectedAnswer === null) {
-        feedbackText.textContent = `Süre Doldu! Doğru cevap: ${correctAnswerText}`;
-      } else {
-        feedbackText.textContent = `Yanlış! Doğru cevap: ${correctAnswerText}`;
-      }
+      const tfLead = selectedAnswer === null
+        ? `Süre Doldu! Doğru cevap: ${correctAnswerText}`
+        : `Yanlış! Doğru cevap: ${correctAnswerText}`;
+      feedbackText.innerHTML = `<div>${tfLead}</div>` +
+        (question.explanation ? `<div class="explanation-box" style="font-size: 0.9rem; margin-top: 8px; text-align: left; background: rgba(0,0,0,0.06); padding: 10px 14px; border-radius: 8px; line-height: 1.5; color: inherit;">${question.explanation}</div>` : '');
     } else if (isTargetUnit && question.translation && !wasTranslationCorrect) {
       feedbackText.innerHTML = `<strong>Yanlış çeviri!</strong> Doğrusu:<br><span style="color: var(--color-correct); font-weight: 600;">${question.translation}</span>`;
     } else {
@@ -13468,24 +13512,56 @@ function checkAnswer() {
       }
     }
 
-    // Render Hızlı Eleme Refleksi & Şık Analizi if options exist
+    // Render Hızlı Eleme Refleksi & Şık Analizi if options exist.
+    // true-false'ta seçenekler yalnızca "True/False" olduğundan şık-şık analizi
+    // anlamsız; açıklama zaten geri bildirim kutusunda gösteriliyor.
     const optionAnalysisEl = document.getElementById('feedback-option-analysis');
-    if (optionAnalysisEl && question && question.options && typeof question.correctIndex === 'number') {
+    if (optionAnalysisEl && question && question.type !== 'true-false' && question.options && typeof question.correctIndex === 'number') {
       const correctOpt = question.options[question.correctIndex];
+      // Çeviri ve öge-analizi (spotlight) sorularında zaman-uyumu odaklı jenerik
+      // açıklamalar konuyla alakasız kalıyor; bu sorulara özel analiz üretilir.
+      const isTranslationQ = question.type === 'multiple-choice' &&
+        ((question.isEngToTr !== undefined) || !!question.enSentence ||
+         /Türkçe karşıl|İngilizce karşıl|çevir/i.test(question.prompt || ""));
+      const isSpotlightQ = question.type === 'spotlight';
+      const useTopicAnalysis = isTranslationQ || isSpotlightQ;
+      const correctCleanText = (correctOpt || "").split(/\s*\/\s*/)[0].replace(/<[^>]+>/g, "").trim();
       let analysisHtml = `<div style="font-weight: 800; margin-bottom: 4px; color: var(--text-primary); font-size: 0.8rem;">🔍 Hızlı Eleme Refleksi & Şık Analizi:</div>`;
-      
+
       question.options.forEach((opt, idx) => {
         const cleanOptText = (opt || "").split(/\s*\/\s*/)[0].replace(/<[^>]+>/g, "").trim();
-        const groupInfo = getConjunctionGroupInfo(cleanOptText);
+        const groupInfo = useTopicAnalysis ? null : getConjunctionGroupInfo(cleanOptText);
         let groupTag = '';
         if (groupInfo) {
           groupTag = ` <span style="background: rgba(255,255,255,0.06); border: 1px solid ${groupInfo.color}; color: ${groupInfo.color}; padding: 1px 7px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; margin-left: 4px;">${groupInfo.badge} ${groupInfo.name}</span>`;
         }
 
         if (idx === question.correctIndex) {
+          if (useTopicAnalysis) {
+            const okReason = isSpotlightQ
+              ? "Altı çizili öbeğin cümledeki dil bilgisi işlevini doğru tanımlar."
+              : "Kaynak cümledeki tüm ögeleri (isim + edat öbeği, sayı ve yer/nesne bildirimi) eksiksiz ve doğru karşılar.";
+            analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 4px; line-height: 1.4;">🟢 <strong>${cleanOptText}</strong> (DOĞRU): ${okReason}</div>`;
+            return;
+          }
           const detail = groupInfo ? ` [Grup Sentakslı Doğru Yapı]` : '';
           analysisHtml += `<div style="color: var(--color-correct); font-weight: 700; margin-top: 4px; line-height: 1.4;">🟢 <strong>${cleanOptText}</strong>${groupTag}${detail} (DOĞRU): Cümle yapısıyla ve sentaks kuralıyla tam uyumludur.</div>`;
         } else {
+          if (useTopicAnalysis) {
+            let tReason;
+            if (isSpotlightQ) {
+              tReason = "Altı çizili öbeğin işlevi bu değildir; öbek cümlede farklı bir dil bilgisi görevi üstlenir.";
+            } else {
+              const cw = cleanOptText.toLowerCase().split(/[\s.,;]+/).filter(Boolean);
+              const rw = correctCleanText.toLowerCase().split(/[\s.,;]+/).filter(Boolean);
+              const extra = cw.filter(w => !rw.includes(w));
+              tReason = extra.length
+                ? `Kaynak cümlenin birebir karşılığı değil: "${extra.join(', ')}" kısmı kaynakla örtüşmüyor (sözcük seçimi, sayı ya da yer/nesne ayrıntısı farkı).`
+                : "Kaynak cümlenin anlamını tam karşılamıyor (sözcük seçimi, tekil/çoğul ya da yer/nesne ayrıntısı farkı).";
+            }
+            analysisHtml += `<div style="color: var(--text-secondary); opacity: 0.9; margin-top: 4px; line-height: 1.4;">❌ <strong>${cleanOptText}</strong> (ELENDİ): ${tReason}</div>`;
+            return;
+          }
           let reason = groupInfo ? `${groupInfo.name} yapısıdır. Soru kurgusundaki sentaks beklentisine uymadığı için elenir.` : "Zaman, bağlaç veya söz dizimi uyumsuzluğu sebebiyle elenir.";
           const optLower = (opt || "").toLowerCase();
           const sentenceLower = (question.sentence || "").toLowerCase();
@@ -18147,6 +18223,16 @@ function showReportModal() {
           <label for="report-comment">Açıklamanız (Muhtemel düzeltme vb.)</label>
           <textarea id="report-comment" placeholder="Lütfen hatayı detaylandırın..." class="report-textarea"></textarea>
         </div>
+
+        <div class="form-group" style="margin-top: 15px;">
+          <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600;">
+            <input type="checkbox" id="report-include-screenshot" checked style="margin: 0; cursor: pointer;" />
+            📷 Sayfanın ekran görüntüsünü ekle (önerilir)
+          </label>
+          <div id="report-screenshot-preview" style="margin-top: 8px; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; max-height: 160px; background: var(--bg-card); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; color: var(--text-muted); min-height: 60px;">
+            Ekran görüntüsü hazırlanıyor…
+          </div>
+        </div>
       </div>
       <div class="custom-modal-footer">
         <button class="btn btn-secondary" id="btn-cancel-report">İptal</button>
@@ -18157,18 +18243,37 @@ function showReportModal() {
 
   document.body.appendChild(modal);
 
+  // Ekran görüntüsünü modal açılır açılmaz arka planda al. Modal, #quiz-screen'in
+  // kardeşi olduğu için yakalamaya dahil olmaz.
+  let capturedScreenshot = null;
+  const previewEl = document.getElementById('report-screenshot-preview');
+  const chkEl = document.getElementById('report-include-screenshot');
+  capturePageScreenshot(document.getElementById('quiz-screen'))
+    .then(dataUrl => {
+      capturedScreenshot = dataUrl;
+      if (previewEl) {
+        previewEl.innerHTML = `<img src="${dataUrl}" style="max-width: 100%; max-height: 160px; object-fit: contain; display: block;" />`;
+      }
+    })
+    .catch(err => {
+      console.error('Rapor ekran görüntüsü alınamadı:', err);
+      if (previewEl) previewEl.textContent = 'Ekran görüntüsü alınamadı (bildirim yine de gönderilebilir).';
+      if (chkEl) { chkEl.checked = false; chkEl.disabled = true; }
+    });
+
   document.getElementById('btn-close-report-modal').addEventListener('click', () => modal.remove());
   document.getElementById('btn-cancel-report').addEventListener('click', () => modal.remove());
   document.getElementById('btn-submit-report').addEventListener('click', () => {
     const errorType = document.getElementById('report-error-type').value;
     const comment = document.getElementById('report-comment').value.trim();
-    
+
     if (!comment) {
       showToast('Lütfen bir açıklama yazın.', 'error');
       return;
     }
 
-    submitReport(question, errorType, comment);
+    const screenshot = (chkEl && chkEl.checked) ? capturedScreenshot : null;
+    submitReport(question, errorType, comment, screenshot);
     modal.remove();
   });
 }
@@ -18188,7 +18293,7 @@ function getLessonQuestions(l) {
   return list;
 }
 
-function submitReport(question, errorType, comment) {
+function submitReport(question, errorType, comment, screenshot) {
   let reports;
   try {
     reports = JSON.parse(localStorage.getItem('amok_question_reports') || '[]');
@@ -18212,28 +18317,51 @@ function submitReport(question, errorType, comment) {
     questionType: question.type,
     errorType: errorType,
     userComment: comment,
-    username: state.username || 'Misafir'
+    username: state.username || 'Misafir',
+    screenshot: screenshot || null
   };
 
   reports.push(newReport);
-  localStorage.setItem('amok_question_reports', JSON.stringify(reports));
+  // Ekran görüntüleri base64 olarak yer kapladığından localStorage kotası
+  // dolabilir; dolarsa eski raporların görüntülerini düşürüp yeniden dene.
+  try {
+    localStorage.setItem('amok_question_reports', JSON.stringify(reports));
+  } catch (quotaErr) {
+    console.warn('Rapor kaydı kota aşımı, eski ekran görüntüleri temizleniyor:', quotaErr);
+    for (let i = 0; i < reports.length - 1; i++) reports[i].screenshot = null;
+    try {
+      localStorage.setItem('amok_question_reports', JSON.stringify(reports));
+    } catch (quotaErr2) {
+      newReport.screenshot = null;
+      localStorage.setItem('amok_question_reports', JSON.stringify(reports));
+    }
+  }
 
   if (supabaseClient) {
+    const baseRow = {
+      username: newReport.username,
+      lesson_id: newReport.lessonId,
+      lesson_title: newReport.lessonTitle,
+      question_id: newReport.questionId,
+      question_prompt: newReport.questionPrompt,
+      question_type: newReport.questionType,
+      error_type: newReport.errorType,
+      user_comment: newReport.userComment
+    };
     try {
       supabaseClient
         .from('question_reports')
-        .insert([{
-          username: newReport.username,
-          lesson_id: newReport.lessonId,
-          lesson_title: newReport.lessonTitle,
-          question_id: newReport.questionId,
-          question_prompt: newReport.questionPrompt,
-          question_type: newReport.questionType,
-          error_type: newReport.errorType,
-          user_comment: newReport.userComment
-        }])
+        .insert([newReport.screenshot ? { ...baseRow, screenshot: newReport.screenshot } : baseRow])
         .then(({ error }) => {
+          if (error && newReport.screenshot) {
+            // `screenshot` kolonu yoksa satırı görüntüsüz tekrar dene.
+            console.warn('Supabase rapor kaydı (ekran görüntülü) başarısız, görüntüsüz deneniyor:', error);
+            return supabaseClient.from('question_reports').insert([baseRow]);
+          }
           if (error) console.error('Supabase error saving report:', error);
+        })
+        .then(res => {
+          if (res && res.error) console.error('Supabase error saving report (fallback):', res.error);
         })
         .catch(err => {
           console.error('Supabase insert promise rejection in submitReport:', err);
@@ -18288,6 +18416,7 @@ Yapılması Gerekenler:
       "Soru Metni": report.questionPrompt,
       "Hata Türü": translateErrorType(report.errorType),
       "Kullanıcı Açıklaması": report.userComment,
+      "Ekran Görüntüsü": report.screenshot ? 'Var (admin panelinde görüntülenebilir)' : 'Yok',
       "Yapay Zeka Hazır Promptu (AI Ready Prompt)": aiPrompt,
       "Bildiren Kullanıcı": report.username,
       "Bildirim Zamanı": report.timestamp
@@ -18382,6 +18511,7 @@ function getReportsHTML() {
               <div style="background: var(--bg-card); border-left: 3px solid var(--color-wrong, #ff3b30); padding: 6px 10px; border-radius: 2px 4px 4px 2px; margin-top: 6px; color: var(--text-primary);">
                 <strong>Kullanıcı Yorumu (${escapeHtml(rep.username)}):</strong> ${escapeHtml(rep.userComment)}
               </div>
+              ${rep.screenshot ? `<div style="margin-top: 8px;"><a href="${rep.screenshot}" target="_blank" rel="noopener" title="Büyütmek için tıklayın"><img src="${rep.screenshot}" style="max-width: 100%; max-height: 140px; border: 1px solid var(--border-color); border-radius: 6px; display: block;" /></a></div>` : ''}
             </div>
           `).join('')}
         </div>
@@ -20615,6 +20745,7 @@ return `
               questionType: row.question_type,
               errorType: row.error_type,
               userComment: row.user_comment,
+              screenshot: row.screenshot || null,
               timestamp: new Date(row.created_at).toLocaleString('tr-TR'),
               createdAt: row.created_at
             }));
@@ -20704,6 +20835,7 @@ return `
             </div>
             "${escapeHtml(rep.userComment || 'Açıklama belirtilmedi.')}"
           </div>
+          ${rep.screenshot ? `<div style="margin-top: 10px;"><span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-secondary); display: block; margin-bottom: 4px;">📷 Ekran Görüntüsü</span><a href="${rep.screenshot}" target="_blank" rel="noopener" title="Yeni sekmede büyüt"><img src="${rep.screenshot}" style="max-width: 100%; max-height: 220px; border: 1px solid var(--border-color); border-radius: 6px; display: block;" /></a></div>` : ''}
         </div>
       `;
       }).join('');
@@ -20751,7 +20883,10 @@ return `
     const btnAdminExport = document.getElementById('btn-admin-export-reports');
     if (btnAdminExport) {
       btnAdminExport.onclick = () => {
-        const reportsData = adminReportsCache.length > 0 ? JSON.stringify(adminReportsCache, null, 2) : (localStorage.getItem('amok_question_reports') || '[]');
+        const stripShots = arr => arr.map(r => { const c = { ...r }; if (c.screenshot) c.screenshot = '[ekran görüntüsü çıkarıldı]'; return c; });
+        const reportsData = adminReportsCache.length > 0
+          ? JSON.stringify(stripShots(adminReportsCache), null, 2)
+          : JSON.stringify(stripShots(JSON.parse(localStorage.getItem('amok_question_reports') || '[]')), null, 2);
         const blob = new Blob([reportsData], { type: 'application/json' });
         const a = document.createElement('a');
         a.href = URL.createObjectURL(blob);
@@ -23486,6 +23621,26 @@ function loadScriptOnce(src) {
 function loadHtml2Canvas() {
   if (typeof html2canvas !== 'undefined') return Promise.resolve();
   return loadScriptOnce('html2canvas.min.js');
+}
+
+// Aktif ekranın sıkıştırılmış bir JPEG anlık görüntüsünü (data URL) üretir.
+// Hata bildirimlerine sayfa görüntüsü eklemek için kullanılır. Genişlik
+// `maxWidth` ile sınırlanır, kalite düşürülür ki localStorage/Supabase'e sığsın.
+async function capturePageScreenshot(targetEl, maxWidth = 1080, quality = 0.6) {
+  await loadHtml2Canvas();
+  const source = targetEl || document.getElementById('quiz-screen') || document.body;
+  const bg = getComputedStyle(document.body).getPropertyValue('--bg-body').trim() || '#ffffff';
+  const canvas = await html2canvas(source, { useCORS: true, scale: 1, logging: false, backgroundColor: bg });
+  let out = canvas;
+  if (canvas.width > maxWidth) {
+    const ratio = maxWidth / canvas.width;
+    const scaled = document.createElement('canvas');
+    scaled.width = maxWidth;
+    scaled.height = Math.round(canvas.height * ratio);
+    scaled.getContext('2d').drawImage(canvas, 0, 0, scaled.width, scaled.height);
+    out = scaled;
+  }
+  return out.toDataURL('image/jpeg', quality);
 }
 
 async function showSimulatorReportModal() {
