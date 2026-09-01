@@ -1451,11 +1451,48 @@ async function mvOnAuthenticated(session, fullName) {
       }
     }
     mvRowToState(row);
+    await mvRefreshLicence();
+    try { if (typeof updateLicenceUI === 'function') updateLicenceUI(); } catch (e) {}
     try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
     return true;
   })();
   try { return await mvAuthPromise; }
   finally { setTimeout(() => { mvAuthPromise = null; }, 2000); }
+}
+
+// Lisans kodunu sunucuda kullan (redeem_licence RPC). İmza/sır yok, DB doğrular.
+async function mvRedeemLicence(code) {
+  const clean = String(code || '').trim().toUpperCase();
+  if (!supabaseClient) return { ok: false, error: 'Sunucu bağlantısı yok.' };
+  if (!state.authId) return { ok: false, error: 'Önce e-posta ile giriş yapın.' };
+  try {
+    const { data, error } = await supabaseClient.rpc('redeem_licence', { p_code: clean });
+    if (error) return { ok: false, error: error.message || 'Sunucu hatası.' };
+    if (data && data.ok) {
+      state.licenceKey = clean;
+      state.licenceValidUntil = data.expires_at || null;
+      return { ok: true, expires_at: data.expires_at };
+    }
+    return { ok: false, error: (data && data.error) || 'Lisans kullanılamadı.' };
+  } catch (e) {
+    console.error('mvRedeemLicence', e);
+    return { ok: false, error: 'Beklenmeyen hata.' };
+  }
+}
+
+// Girişte / periyodik: app_users.licence_key hâlâ geçerli mi? (my_licence_status RPC)
+async function mvRefreshLicence() {
+  if (!supabaseClient || !state.authId) return;
+  try {
+    const { data, error } = await supabaseClient.rpc('my_licence_status');
+    if (error) { console.error('mvRefreshLicence', error); return; }
+    if (data && data.premium) {
+      state.licenceValidUntil = data.expires_at || null;
+    } else {
+      state.licenceKey = null;
+      state.licenceValidUntil = null;
+    }
+  } catch (e) { console.error('mvRefreshLicence', e); }
 }
 
 async function mvRestoreSession() {
@@ -1473,6 +1510,7 @@ async function mvRestoreSession() {
 let state = {
   username: null,
   authId: null,
+  licenceValidUntil: null,
   firstName: null,
   lastName: null,
   displayName: null,
@@ -5814,6 +5852,11 @@ function initAuth() {
     const btnActivateLicenceLoginEl = document.getElementById('btn-activate-licence-login');
   if (btnActivateLicenceLoginEl) {
     btnActivateLicenceLoginEl.addEventListener('click', () => {
+    // ÜYELİK v2: lisans anahtarı yalnızca girişten sonra Profil sayfasından girilir.
+    showToast('Önce e-posta ile giriş yapın; lisans anahtarınızı sonra Profil sayfasından ekleyebilirsiniz.', 'info', 7000);
+    handlePhoneLogin();
+    return;
+    // eslint-disable-next-line no-unreachable
     const modal = document.createElement('div');
     modal.className = 'custom-modal-overlay';
     modal.id = 'licence-login-modal';
@@ -6266,6 +6309,7 @@ function logout() {
   state = {
     username: null,
     authId: null,
+  licenceValidUntil: null,
     isGuest: false,
     streak: 0,
     xp: 0,
@@ -15495,31 +15539,20 @@ function updateLicenceUI() {
         sBadge.style.borderColor = "rgba(255,59,48,0.25)";
       }
     } else {
-      const check = verifyLicenceKey(key);
-      if (check.valid) {
-        const now = new Date();
-        if (now > check.expiryDate) {
-          if (sText) sText.textContent = `Durum: Süresi Dolan Lisans (${check.owner})`;
-          if (eText) eText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
-          if (sBadge) {
-            sBadge.textContent = "SÜRESİ DOLDU";
-            sBadge.style.background = "rgba(245,158,11,0.1)";
-            sBadge.style.color = "#f59e0b";
-            sBadge.style.borderColor = "rgba(245,158,11,0.25)";
-          }
-        } else {
-          if (sText) sText.textContent = `Durum: Premium Aktif (${check.owner})`;
-          if (eText) eText.textContent = `Sona Erme: ${check.expiryDate.toLocaleDateString('tr-TR')}`;
-          if (sBadge) {
-            sBadge.textContent = "PREMIUM AKTİF";
-            sBadge.style.background = "rgba(34,197,94,0.1)";
-            sBadge.style.color = "#22c55e";
-            sBadge.style.borderColor = "rgba(34,197,94,0.25)";
-          }
+      const until = state.licenceValidUntil ? new Date(state.licenceValidUntil + 'T23:59:59') : null;
+      const active = until && !isNaN(until.getTime()) && new Date() <= until;
+      if (active) {
+        if (sText) sText.textContent = 'Durum: Premium Aktif';
+        if (eText) eText.textContent = `Sona Erme: ${until.toLocaleDateString('tr-TR')}`;
+        if (sBadge) {
+          sBadge.textContent = "PREMIUM AKTİF";
+          sBadge.style.background = "rgba(34,197,94,0.1)";
+          sBadge.style.color = "#22c55e";
+          sBadge.style.borderColor = "rgba(34,197,94,0.25)";
         }
       } else {
-        if (sText) sText.textContent = "Durum: Geçersiz Lisans";
-        if (eText) eText.textContent = check.message || "Lütfen geçerli bir kod girin.";
+        if (sText) sText.textContent = "Durum: Lisans Doğrulanamadı";
+        if (eText) eText.textContent = "Kod geçersiz veya süresi dolmuş olabilir.";
         if (sBadge) {
           sBadge.textContent = "GEÇERSİZ";
           sBadge.style.background = "rgba(255,59,48,0.1)";
@@ -15545,9 +15578,8 @@ function updateLicenceUI() {
   if (profileEmailInput) profileEmailInput.value = state.email || '';
   if (profilePhoneInput) profilePhoneInput.value = state.phone || '';
   
-  const check = verifyLicenceKey(key);
-  const isExpired = check.valid && (new Date() > check.expiryDate);
-  const isPremiumActive = check.valid && (new Date() <= check.expiryDate);
+  const isPremiumActive = checkLicence();
+  const isExpired = !!key && key !== 'REQUESTED' && !isPremiumActive;
 
   const activateBtns = [
     document.getElementById('btn-store-activate-licence'),
@@ -15610,74 +15642,52 @@ async function activateLicence(inputVal) {
     showToast("Lütfen lisans anahtarınızı girin!", "error");
     return false;
   }
-  const check = verifyLicenceKey(inputVal);
-  if (check.valid) {
-    const now = new Date();
-    if (now > check.expiryDate) {
-      showToast(`Bu lisansın süresi ${check.expiryDate.toLocaleDateString('tr-TR')} tarihinde dolmuştur!`, "error");
-      return false;
-    }
-    
-    state.licenceKey = inputVal;
-    const deviceOk = await validateLicenseDevices();
-    if (!deviceOk) {
-      return false;
-    }
-    saveState();
-    showToast(`Tebrikler! Premium Lisans Aktifleştirildi (Sahibi: ${check.owner}) 🎉`, "success");
-    updateLicenceUI();
-    
-    const licenceInput = document.getElementById('profile-licence-input');
-    const storeLicenceInput = document.getElementById('store-licence-input');
-    if (licenceInput) licenceInput.value = '';
-    if (storeLicenceInput) storeLicenceInput.value = '';
-    
-    // Supabase varsa oraya da kaydet
-    if (supabaseClient && state.username && !state.isGuest) {
-      try {
-        await supabaseClient
-          .from('user_states')
-          .update({ licence_key: inputVal })
-          .eq('username', state.username);
-      } catch(e) {
-        console.error('Licence sync error:', e);
-      }
-    }
-    
-    // Ekrana yansıması için yeniden oluştur/yenile
-    setTimeout(() => {
-      const activeTab = document.querySelector('.tab-button.active')?.getAttribute('data-tab') || 'profile';
-      enterApp();
-      switchTab(activeTab);
-    }, 1500);
-    return true;
-  } else {
-    showToast(`Aktivasyon Hatası: ${check.message}`, "error");
+  if (!state.authId) {
+    showToast("Lisans aktifleştirmek için önce e-posta ile giriş yapın.", "error");
     return false;
   }
+  showToast("Lisans kontrol ediliyor...", "info");
+  const res = await mvRedeemLicence(inputVal);
+  if (!res.ok) {
+    showToast(`Aktivasyon Hatası: ${res.error}`, "error");
+    return false;
+  }
+
+  saveState();
+  updateLicenceUI();
+  const untilStr = res.expires_at ? new Date(res.expires_at + 'T00:00:00').toLocaleDateString('tr-TR') : '';
+  showToast(`Tebrikler! Premium aktifleştirildi 🎉${untilStr ? ' (Bitiş: ' + untilStr + ')' : ''}`, "success");
+
+  const licenceInput = document.getElementById('profile-licence-input');
+  const storeLicenceInput = document.getElementById('store-licence-input');
+  if (licenceInput) licenceInput.value = '';
+  if (storeLicenceInput) storeLicenceInput.value = '';
+
+  setTimeout(() => {
+    const activeTab = document.querySelector('.tab-button.active')?.getAttribute('data-tab') || 'profile';
+    enterApp();
+    switchTab(activeTab);
+  }, 1500);
+  return true;
 }
 
 async function requestLicence() {
-  if (!state.username || state.isGuest) {
-    showToast("Lisans talebinde bulunabilmek için üye girişi yapmalısınız!", "error");
+  if (!state.authId) {
+    showToast("Lisans talebi için önce e-posta ile giriş yapın!", "error");
     return false;
   }
   if (state.licenceKey === 'REQUESTED') {
     showToast("Zaten bekleyen bir lisans talebiniz bulunmaktadır.", "info");
     return false;
   }
-  
+
   let isExtension = false;
-  if (state.licenceKey) {
-    const check = verifyLicenceKey(state.licenceKey);
-    if (check.valid) {
-      if (new Date() <= check.expiryDate) {
-        showToast("Zaten aktif bir premium lisansınız var!", "info");
-        return false;
-      } else {
-        isExtension = true;
-      }
+  if (state.licenceKey && state.licenceKey !== 'REQUESTED') {
+    if (checkLicence()) {
+      showToast("Zaten aktif bir premium lisansınız var!", "info");
+      return false;
     }
+    isExtension = true;
   }
   
   state.licenceKey = 'REQUESTED';
@@ -26459,35 +26469,19 @@ function syncModalMatrixHighlight() {
  * ve geçerliyse true döner. Aksi halde false döner.
  */
 function checkLicence() {
-  if (!state.licenceKey) {
-    return false;
-  }
-  // Eğer email ve telefon varsa (Supabase veya profil state'inden alınabiliyorsa) doğrulamaya gönder
-  const email = state.email || (supabaseClient && supabaseClient.auth ? (supabaseClient.auth.user && supabaseClient.auth.user())?.email : '') || '';
-  const phone = state.phone || '';
-  const check = verifyLicenceKey(state.licenceKey, email, phone);
-  if (!check.valid) {
-    return false;
-  }
-  const now = new Date();
-  if (now > check.expiryDate) {
-    return false;
-  }
-  return true;
+  // Premium kararı sunucudan gelir (redeem_licence / my_licence_status RPC).
+  // Burada yalnızca son geçerli tarihe bakarız.
+  if (!state.licenceKey || !state.licenceValidUntil) return false;
+  const until = new Date(state.licenceValidUntil + 'T23:59:59');
+  return !isNaN(until.getTime()) && new Date() <= until;
 }
 
 async function validateLicenseDevices() {
-  if (!state.licenceKey || state.isGuest) return true;
+  // ÜYELİK v2: cihaz limiti artık lisans doğrulaması sunucuda (redeem_licence RPC)
+  // yapıldığı için burada devre dışı. Gerekirse RPC'ye taşınır.
+  return true;
 
-  const email = state.email || (supabaseClient ? (supabaseClient.auth.user && supabaseClient.auth.user())?.email : '') || '';
-  const phone = state.phone || '';
-  const check = verifyLicenceKey(state.licenceKey, email, phone);
-  if (!check.valid) {
-    state.licenceKey = '';
-    saveState();
-    return false;
-  }
-
+  // eslint-disable-next-line no-unreachable
   const devId = getOrCreateDeviceId();
   const currentDeviceType = getDeviceType();
 
