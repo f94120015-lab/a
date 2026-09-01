@@ -1452,7 +1452,13 @@ async function mvOnAuthenticated(session, fullName) {
     }
     mvRowToState(row);
     await mvRefreshLicence();
+    // Admin mi? (admin_uids tablosu → is_admin RPC)
+    try {
+      const { data: adm } = await supabaseClient.rpc('is_admin');
+      state.isAdmin = adm === true;
+    } catch (e) { state.isAdmin = false; }
     try { if (typeof updateLicenceUI === 'function') updateLicenceUI(); } catch (e) {}
+    try { if (typeof updateAdminTabVisibility === 'function') updateAdminTabVisibility(); } catch (e) {}
     try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
     return true;
   })();
@@ -1511,6 +1517,7 @@ let state = {
   username: null,
   authId: null,
   licenceValidUntil: null,
+  isAdmin: false,
   firstName: null,
   lastName: null,
   displayName: null,
@@ -6310,6 +6317,7 @@ function logout() {
     username: null,
     authId: null,
   licenceValidUntil: null,
+  isAdmin: false,
     isGuest: false,
     streak: 0,
     xp: 0,
@@ -18927,7 +18935,8 @@ function isLocalDevDesktop() {
 function updateAdminTabVisibility() {
   const adminTab = document.getElementById('btn-admin');
   const adminSubtabs = document.getElementById('admin-subtabs-menu');
-  if (isLocalDevDesktop()) {
+  // Admin paneli: localhost'ta VEYA admin hesabıyla giriş yapılmışsa görünür.
+  if (isLocalDevDesktop() || state.isAdmin) {
     if (adminTab) adminTab.style.setProperty('display', 'flex', 'important');
   } else {
     if (adminTab) adminTab.style.setProperty('display', 'none', 'important');
