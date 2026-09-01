@@ -262,10 +262,6 @@
               <span class="admin-icon-badge">🔑</span>
               <span class="admin-label">Lisanslar</span>
             </button>
-            <button class="admin-nav-item" data-admin-section="supabase">
-              <span class="admin-icon-badge">⚡</span>
-              <span class="admin-label">Supabase</span>
-            </button>
             <button class="admin-nav-item" data-admin-section="reports">
               <span class="admin-icon-badge">⚠️</span>
               <span class="admin-label">Soru Hata Bildirimleri</span>
@@ -273,10 +269,6 @@
             <button class="admin-nav-item" data-admin-section="general-feedback">
               <span class="admin-icon-badge">💬</span>
               <span class="admin-label">Genel Geri Bildirimler</span>
-            </button>
-            <button class="admin-nav-item" data-admin-section="whitelist">
-              <span class="admin-icon-badge">🛡️</span>
-              <span class="admin-label">Test Beyaz Listesi</span>
             </button>
           </div>
           
@@ -1226,46 +1218,6 @@
 
 
 
-              <!-- Panel 3: Supabase Entegrasyonu -->
-              <div class="admin-panel flex-col-20-hidden" id="admin-panel-supabase">
-                <div class="admin-card-glass card-panel">
-                  <div class="header-row">
-                    <div class="flex-center-12">
-                      <span class="icon-lg">⚡</span>
-                      <div class="text-left">
-                        <h3 class="section-title-sm">Supabase Bulut Veritabanı</h3>
-                        <p class="subtext">Kullanıcıları, durumları ve çevrimiçi kişileri ortak bir veritabanında senkronize edin.</p>
-                      </div>
-                    </div>
-                    <div style="background: rgba(62, 207, 142, 0.1); color: #3ecf8e; font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(62, 207, 142, 0.25);">
-                      SUPABASE
-                    </div>
-                  </div>
-                  <div style="display: flex; flex-direction: column; gap: 16px;">
-                    <div style="width: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="admin-supabase-url" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
-                        Supabase URL
-                      </label>
-                      <input type="text" id="admin-supabase-url" placeholder="örn: https://xxxxxxxxxxxxxx.supabase.co" style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-family: monospace; font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s;">
-                    </div>
-                    <div style="width: 100%; display: flex; flex-direction: column; gap: 6px; text-align: left;">
-                      <label for="admin-supabase-anon-key" style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 6px;">
-                        Supabase Anon Key
-                      </label>
-                      <input type="text" id="admin-supabase-anon-key" placeholder="örn: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); box-sizing: border-box; font-family: monospace; font-size: 0.9rem; transition: border-color 0.2s, box-shadow 0.2s;">
-                    </div>
-                  </div>
-                  <div style="display: flex; gap: 12px; width: 100%; margin-top: 6px; flex-wrap: wrap;">
-                    <button id="btn-admin-save-supabase" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
-                      <span>💾</span> Ayarları Kaydet
-                    </button>
-                    <button id="btn-admin-test-supabase" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary);">
-                      <span>⚡</span> Test Bağlantısı Yap
-                    </button>
-                  </div>
-                </div>
-              </div>
-
               <!-- Panel 4: Kullanıcı Yönetimi -->
               <div class="admin-panel active" id="admin-panel-users" style="display: flex; flex-direction: column; gap: 20px;">
                 <div class="admin-card-glass card-panel">
@@ -1370,55 +1322,6 @@
                 </div>
               </div>
 
-              <!-- Panel 5: Test Beyaz Listesi Yönetimi -->
-              <div class="admin-panel flex-col-20-hidden" id="admin-panel-whitelist">
-                <div class="admin-card-glass card-panel">
-                  <div class="header-row">
-                    <div class="flex-center-12">
-                      <span class="icon-lg">🛡️</span>
-                      <div class="text-left">
-                        <h3 class="section-title-sm">Test Beyaz Listesi (Whitelist)</h3>
-                        <p class="subtext">Supabase SMS/OTP hatası olsa dahi Master OTP (571461) ile giriş yapabilecek test kullanıcılarını yönetin.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Add to Whitelist Form -->
-                  <div style="display: flex; gap: 12px; align-items: flex-end; background: var(--bg-body); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="admin-whitelist-name-input" class="text-label-muted">Ad Soyad</label>
-                      <input type="text" id="admin-whitelist-name-input" placeholder="örn: Ahmet Yılmaz" class="input-field-md">
-                    </div>
-                    <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="admin-whitelist-phone-input" class="text-label-muted">Telefon</label>
-                      <input type="text" id="admin-whitelist-phone-input" placeholder="örn: 5551234567" class="input-field-md">
-                    </div>
-                    <div style="flex: 1; min-width: 180px; display: flex; flex-direction: column; gap: 6px;">
-                      <label for="admin-whitelist-email-input" class="text-label-muted">E-posta</label>
-                      <input type="text" id="admin-whitelist-email-input" placeholder="örn: ahmet@gmail.com" class="input-field-md">
-                    </div>
-                    <button id="btn-admin-add-whitelist" class="btn btn-primary" style="padding: 10px 20px; font-weight: 700; border-radius: var(--radius-md); height: 38px; display: inline-flex; align-items: center; justify-content: center; background: var(--accent-primary); border: none; cursor: pointer; color: white;">Ekle</button>
-                  </div>
-
-                  <!-- Whitelist List -->
-                  <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden;">
-                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
-                      <thead>
-                        <tr style="background: rgba(0, 0, 0, 0.02); border-bottom: 1px solid var(--border-color);">
-                          <th class="padded-label">Ad Soyad</th>
-                          <th class="padded-label">Telefon</th>
-                          <th class="padded-label">E-posta</th>
-                          <th style="padding: 12px 16px; color: var(--text-secondary); font-weight: 600; text-align: right; width: 100px;">İşlemler</th>
-                        </tr>
-                      </thead>
-                      <tbody id="admin-whitelist-table-body">
-                        <!-- Dynamic whitelist items will be rendered here -->
-                      </tbody>
-                    </table>
-                  </div>
-
-                </div>
-              </div>
 
             </div><!-- .admin-main-content -->
           </div><!-- .admin-layout -->
