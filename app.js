@@ -5846,10 +5846,131 @@ function initAuth() {
 
 ;
 
+  // ============================================================
+  // ÜYELİK v2 — E-posta + Parola girişi (kod/link yok)
+  // ============================================================
+  const handleEmailPasswordAuth = (startMode) => {
+    if (!supabaseClient) {
+      showToast('Sunucu bağlantısı yok, giriş yapılamıyor.', 'error');
+      return;
+    }
+    let mode = startMode === 'signup' ? 'signup' : 'login';
+
+    const modal = document.createElement('div');
+    modal.className = 'custom-modal-overlay';
+    modal.id = 'auth-modal';
+
+    const inputStyle = 'width:100%;padding:11px 13px;border-radius:var(--radius-md);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);font-family:var(--font-body);font-size:0.92rem;box-sizing:border-box;outline:none;';
+    const labelStyle = 'font-size:0.82rem;font-weight:600;color:var(--text-secondary);';
+
+    const render = () => {
+      const isSignup = mode === 'signup';
+      modal.innerHTML = `
+        <div class="custom-modal" style="animation: popoverFadeIn 0.25s cubic-bezier(0.34,1.56,0.64,1); max-width: 380px; width: 90%;">
+          <div style="display:flex;justify-content:flex-end;">
+            <button id="auth-close" style="background:transparent;border:none;color:var(--text-muted);font-size:1.4rem;cursor:pointer;line-height:1;">&times;</button>
+          </div>
+          <div class="custom-modal-body" style="display:flex;flex-direction:column;gap:14px;">
+            <h3 style="font-family:var(--font-heading);font-size:1.15rem;margin:0 0 2px;color:var(--text-primary);">
+              ${isSignup ? 'Hesap Oluştur' : 'Giriş Yap'}
+            </h3>
+            ${isSignup ? `
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <label for="auth-name" style="${labelStyle}">Adınız</label>
+              <input type="text" id="auth-name" placeholder="Örn: Ahmet Yılmaz" style="${inputStyle}">
+            </div>` : ''}
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <label for="auth-email" style="${labelStyle}">E-posta</label>
+              <input type="email" id="auth-email" autocomplete="username" placeholder="ornek@gmail.com" style="${inputStyle}">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <label for="auth-pass" style="${labelStyle}">Parola${isSignup ? ' (en az 6 karakter)' : ''}</label>
+              <input type="password" id="auth-pass" autocomplete="${isSignup ? 'new-password' : 'current-password'}" placeholder="••••••••" style="${inputStyle}">
+            </div>
+            <button class="btn btn-primary" id="auth-submit" style="padding:11px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;margin-top:4px;">
+              ${isSignup ? 'Kayıt Ol' : 'Giriş Yap'}
+            </button>
+            <div style="text-align:center;font-size:0.83rem;color:var(--text-secondary);">
+              ${isSignup ? 'Zaten hesabın var mı?' : 'Hesabın yok mu?'}
+              <span id="auth-toggle" style="color:var(--accent-primary);cursor:pointer;font-weight:700;text-decoration:underline;">
+                ${isSignup ? 'Giriş yap' : 'Kayıt ol'}
+              </span>
+            </div>
+          </div>
+        </div>`;
+
+      modal.querySelector('#auth-close').onclick = () => modal.remove();
+      modal.querySelector('#auth-toggle').onclick = () => { mode = isSignup ? 'login' : 'signup'; render(); };
+
+      const submitBtn = modal.querySelector('#auth-submit');
+      const doSubmit = async () => {
+        const email = (modal.querySelector('#auth-email').value || '').trim();
+        const pass = modal.querySelector('#auth-pass').value || '';
+        const nameEl = modal.querySelector('#auth-name');
+        const fullName = nameEl ? (nameEl.value || '').trim() : '';
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          showToast('Geçerli bir e-posta adresi girin.', 'error'); return;
+        }
+        if (pass.length < 6) {
+          showToast('Parola en az 6 karakter olmalı.', 'error'); return;
+        }
+        if (isSignup && !fullName) {
+          showToast('Lütfen adınızı girin.', 'error'); return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = isSignup ? 'Kaydediliyor...' : 'Giriş yapılıyor...';
+        try {
+          const res = isSignup
+            ? await supabaseClient.auth.signUp({ email, password: pass, options: { data: { full_name: fullName } } })
+            : await supabaseClient.auth.signInWithPassword({ email, password: pass });
+
+          if (res.error) {
+            const m = (res.error.message || '').toLowerCase();
+            let msg = res.error.message;
+            if (m.includes('invalid login')) msg = 'E-posta veya parola hatalı.';
+            else if (m.includes('already registered') || m.includes('already been registered')) msg = 'Bu e-posta zaten kayıtlı. "Giriş yap"ı kullanın.';
+            else if (m.includes('confirm')) msg = 'E-posta doğrulaması bekleniyor. (Supabase → Email → "Confirm email" kapatılabilir.)';
+            showToast(msg, 'error', 7000);
+            submitBtn.disabled = false;
+            submitBtn.textContent = isSignup ? 'Kayıt Ol' : 'Giriş Yap';
+            return;
+          }
+
+          const session = res.data && res.data.session;
+          if (!session) {
+            showToast('Hesap oluşturuldu. E-posta doğrulaması gerekiyor olabilir.', 'warning', 8000);
+            submitBtn.disabled = false;
+            submitBtn.textContent = isSignup ? 'Kayıt Ol' : 'Giriş Yap';
+            return;
+          }
+
+          modal.remove();
+          await mvOnAuthenticated(session, fullName || null);
+          if (typeof enterApp === 'function') enterApp();
+          showToast(isSignup ? 'Hoş geldin! 🎉' : 'Giriş başarılı! 🎉', 'success');
+        } catch (e) {
+          console.error('auth error', e);
+          showToast('Beklenmeyen bir hata oluştu.', 'error');
+          submitBtn.disabled = false;
+          submitBtn.textContent = isSignup ? 'Kayıt Ol' : 'Giriş Yap';
+        }
+      };
+
+      submitBtn.onclick = doSubmit;
+      modal.querySelector('#auth-pass').addEventListener('keydown', e => { if (e.key === 'Enter') doSubmit(); });
+    };
+
+    render();
+    document.body.appendChild(modal);
+  };
+  window.handleEmailPasswordAuth = handleEmailPasswordAuth;
+
   const btnPhoneLoginEl = document.getElementById('btn-phone-login');
   if (btnPhoneLoginEl) {
     btnPhoneLoginEl.addEventListener('click', () => {
-      handlePhoneLogin();
+      handleEmailPasswordAuth('login');
     });
   }
 
@@ -5862,9 +5983,8 @@ function initAuth() {
     const btnActivateLicenceLoginEl = document.getElementById('btn-activate-licence-login');
   if (btnActivateLicenceLoginEl) {
     btnActivateLicenceLoginEl.addEventListener('click', () => {
-    // ÜYELİK v2: lisans anahtarı yalnızca girişten sonra Profil sayfasından girilir.
-    showToast('Önce e-posta ile giriş yapın; lisans anahtarınızı sonra Profil sayfasından ekleyebilirsiniz.', 'info', 7000);
-    handlePhoneLogin();
+    // ÜYELİK v2: bu buton artık "Hesap Oluştur" akışını açıyor.
+    handleEmailPasswordAuth('signup');
     return;
     // eslint-disable-next-line no-unreachable
     const modal = document.createElement('div');
@@ -17195,18 +17315,14 @@ function initEventListeners() {
   if (guestBlockLoginBtn) {
     guestBlockLoginBtn.addEventListener('click', () => {
       hideGuestBlockModal();
-      logout();
-      const tabLogin = document.getElementById('tab-login');
-      if (tabLogin) tabLogin.click();
+      if (typeof handleEmailPasswordAuth === 'function') handleEmailPasswordAuth('login');
     });
   }
 
   if (guestBlockRegisterBtn) {
     guestBlockRegisterBtn.addEventListener('click', () => {
       hideGuestBlockModal();
-      logout();
-      const tabRegister = document.getElementById('tab-register');
-      if (tabRegister) tabRegister.click();
+      if (typeof handleEmailPasswordAuth === 'function') handleEmailPasswordAuth('signup');
     });
   }
 
