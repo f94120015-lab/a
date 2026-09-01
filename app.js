@@ -27058,19 +27058,20 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       let reportsCount = 0;
       let feedbackCount = 0;
 
-      // Rapor + geri bildirim sayıları (admin_counts RPC; oturumsuz → doğrudan sayım)
+      // Rapor + geri bildirim sayıları: girişli admin → RPC, oturumsuz (localhost) → doğrudan sayım
       if (supabaseClient) {
         try {
-          let { data, error } = await supabaseClient.rpc('admin_counts');
-          if (error || !data) {
+          if (state.authId) {
+            const { data } = await supabaseClient.rpc('admin_counts');
+            if (data) {
+              reportsCount = data.reports || 0;
+              feedbackCount = data.feedback || 0;
+            }
+          } else {
             const r = await supabaseClient.from('question_reports').select('id', { count: 'exact', head: true });
             const f = await supabaseClient.from('general_feedback').select('id', { count: 'exact', head: true });
-            data = { reports: r.count || 0, feedback: f.count || 0 };
-            error = null;
-          }
-          if (!error && data) {
-            reportsCount = data.reports || 0;
-            feedbackCount = data.feedback || 0;
+            reportsCount = r.count || 0;
+            feedbackCount = f.count || 0;
           }
         } catch (e) {
           console.error('Error counting reports/feedback for badge:', e);
