@@ -20921,11 +20921,8 @@ return `
 
       if (supabaseClient) {
         try {
-          const { data, error } = await supabaseClient
-            .from('question_reports')
-            .select('*')
-            .order('created_at', { ascending: false });
-          
+          const { data, error } = await supabaseClient.rpc('admin_reports');
+
           if (!error && data) {
             const dbReports = data.map(row => ({
               id: row.id,
@@ -21052,7 +21049,7 @@ return `
 
             if (supabaseClient && !reportId.toString().startsWith('rep_')) {
               try {
-                const { error } = await supabaseClient.from('question_reports').delete().eq('id', reportId);
+                const { error } = await supabaseClient.rpc('admin_delete_report', { p_id: String(reportId) });
                 if (error) throw error;
                 showToast('Hata bildirimi veritabanından ve yerel hafızadan silindi.', 'success');
               } catch (e) {
@@ -21151,7 +21148,7 @@ return `
 
           if (supabaseClient) {
             try {
-              const { error } = await supabaseClient.from('question_reports').delete().gt('created_at', '1970-01-01T00:00:00Z');
+              const { error } = await supabaseClient.rpc('admin_clear_reports');
               if (error) throw error;
               showToast('Tüm hata bildirimleri temizlendi. 🗑️', 'success');
             } catch (e) {
@@ -26815,10 +26812,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
 
       if (supabaseClient) {
         try {
-          const { data, error } = await supabaseClient
-            .from('general_feedback')
-            .select('*')
-            .order('created_at', { ascending: false });
+          const { data, error } = await supabaseClient.rpc('admin_feedback');
 
           if (!error && data) {
             dbFeedback = data;
@@ -26947,10 +26941,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
     async function deleteAdminFeedbackItem(feedback) {
       if (supabaseClient && feedback.id) {
         try {
-          await supabaseClient
-            .from('general_feedback')
-            .delete()
-            .eq('id', feedback.id);
+          await supabaseClient.rpc('admin_delete_feedback', { p_id: String(feedback.id) });
         } catch (dbErr) {
           console.error('Database connection error in feedback delete:', dbErr);
         }
@@ -27011,10 +27002,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
           if (confirm('Tüm geri bildirim kayıtlarını silmek istediğinize emin misiniz? Bu işlem geri alınamaz.')) {
             if (supabaseClient) {
               try {
-                const { error } = await supabaseClient
-                  .from('general_feedback')
-                  .delete()
-                  .neq('id', '00000000-0000-0000-0000-000000000000');
+                const { error } = await supabaseClient.rpc('admin_clear_feedback');
 
                 if (!error) {
                   showToast('Tüm geri bildirimler veritabanından temizlendi! 🗑️', 'success');
@@ -27051,47 +27039,16 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       let reportsCount = 0;
       let feedbackCount = 0;
 
-      // 1. Lisans Taleplerini Say (Supabase varsa canlı, yoksa 0)
+      // Rapor + geri bildirim sayıları (admin_counts RPC; is_admin şart)
       if (supabaseClient) {
         try {
-          const { data: reqs, error: reqsErr } = await supabaseClient
-            .from('user_states')
-            .select('username')
-            .eq('licence_key', 'REQUESTED');
-          if (!reqsErr && reqs) {
-            licenceCount = reqs.length;
+          const { data, error } = await supabaseClient.rpc('admin_counts');
+          if (!error && data) {
+            reportsCount = data.reports || 0;
+            feedbackCount = data.feedback || 0;
           }
         } catch (e) {
-          console.error('Error counting licence requests for badge:', e);
-        }
-
-        // 2. Soru Hata Bildirimlerini Say
-        try {
-          const { data: reps, error: repsErr } = await supabaseClient
-            .from('question_reports')
-            .select('id');
-          if (!repsErr && reps) {
-            reportsCount = reps.length;
-          }
-        } catch (e) {
-          console.error('Error counting reports for badge:', e);
-        }
-
-        // 3. Genel Geri Bildirim Raporlarını Say
-        try {
-          const { data: fbs, error: fbsErr } = await supabaseClient
-            .from('general_feedback')
-            .select('id');
-          if (!fbsErr && fbs) {
-            let deletedIds = [];
-            try {
-              deletedIds = JSON.parse(localStorage.getItem('amok_deleted_feedback_ids') || '[]');
-            } catch (e) {}
-            const activeFbs = fbs.filter(fb => fb.id && !deletedIds.includes(fb.id.toString()));
-            feedbackCount = activeFbs.length;
-          }
-        } catch (e) {
-          console.error('Error counting feedback for badge:', e);
+          console.error('Error counting reports/feedback for badge:', e);
         }
       } else {
         // Çevrimdışı/Yerel Modda LocalStorage Rapor Sayıları
