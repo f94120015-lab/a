@@ -5887,6 +5887,11 @@ function initAuth() {
               <label for="auth-pass" style="${labelStyle}">Parola${isSignup ? ' (en az 6 karakter)' : ''}</label>
               <input type="password" id="auth-pass" autocomplete="${isSignup ? 'new-password' : 'current-password'}" placeholder="••••••••" style="${inputStyle}">
             </div>
+            ${isSignup ? `
+            <div style="display:flex;flex-direction:column;gap:5px;">
+              <label for="auth-pass2" style="${labelStyle}">Parola (tekrar)</label>
+              <input type="password" id="auth-pass2" autocomplete="new-password" placeholder="••••••••" style="${inputStyle}">
+            </div>` : ''}
             <button class="btn btn-primary" id="auth-submit" style="padding:11px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;margin-top:4px;">
               ${isSignup ? 'Kayıt Ol' : 'Giriş Yap'}
             </button>
@@ -5906,6 +5911,8 @@ function initAuth() {
       const doSubmit = async () => {
         const email = (modal.querySelector('#auth-email').value || '').trim();
         const pass = modal.querySelector('#auth-pass').value || '';
+        const pass2El = modal.querySelector('#auth-pass2');
+        const pass2 = pass2El ? (pass2El.value || '') : '';
         const nameEl = modal.querySelector('#auth-name');
         const fullName = nameEl ? (nameEl.value || '').trim() : '';
 
@@ -5914,6 +5921,9 @@ function initAuth() {
         }
         if (pass.length < 6) {
           showToast('Parola en az 6 karakter olmalı.', 'error'); return;
+        }
+        if (isSignup && pass !== pass2) {
+          showToast('Parolalar eşleşmiyor.', 'error'); return;
         }
         if (isSignup && !fullName) {
           showToast('Lütfen adınızı girin.', 'error'); return;
@@ -5959,7 +5969,9 @@ function initAuth() {
       };
 
       submitBtn.onclick = doSubmit;
-      modal.querySelector('#auth-pass').addEventListener('keydown', e => { if (e.key === 'Enter') doSubmit(); });
+      modal.querySelectorAll('input').forEach(inp => {
+        inp.addEventListener('keydown', e => { if (e.key === 'Enter') doSubmit(); });
+      });
     };
 
     render();
