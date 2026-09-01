@@ -1410,10 +1410,14 @@ function mvSyncUp() {
 }
 
 let mvAuthPromise = null;
+let mvPendingName = null; // kayıt/giriş sırasında formda girilen ad (yarışa karşı)
 async function mvOnAuthenticated(session, fullName) {
   if (!session || !supabaseClient) return false;
-  // İki kaynak (proceed + onAuthStateChange) aynı anda çağırabilir — tek çalıştır.
+  // İki kaynak (doSubmit + onAuthStateChange) aynı anda çağırabilir — tek çalıştır.
   if (mvAuthPromise) return mvAuthPromise;
+  // Ad: parametre > form beklemedeki ad > Supabase metadata
+  fullName = fullName || mvPendingName ||
+    (session.user.user_metadata && (session.user.user_metadata.full_name || session.user.user_metadata.name)) || null;
   mvAuthPromise = (async () => {
     const uid = session.user.id;
     // ÖNEMLİ: state.authId'yi satırı yükleMEDEN set etmiyoruz. Aksi halde bu await
@@ -1454,6 +1458,33 @@ async function mvOnAuthenticated(session, fullName) {
     state.isGuest = false;
     mvRowToState(row);
     state.authId = uid;
+
+    // Ad düzeltmesi: satırın display_name'i boşsa / e-posta ön ekiyse ve elimizde
+    // gerçek ad varsa güncelle (kayıt yarışında kaybolmuş olabilir).
+    const emailPrefix = (session.user.email || '').split('@')[0];
+    if (fullName && fullName.trim()) {
+      const cur = (state.displayName || '').trim();
+      if (!cur || cur.toLowerCase() === emailPrefix.toLowerCase() || cur === state.username) {
+        state.displayName = fullName.trim();
+        const wantSlug = mvSlugify(fullName);
+        const tryUsername = (state.username === emailPrefix || !state.username);
+        try {
+          if (tryUsername) {
+            const r = await supabaseClient.from('app_users')
+              .update({ display_name: state.displayName, username: wantSlug }).eq('id', uid);
+            if (r.error) {
+              // username çakıştı → sadece display_name
+              await supabaseClient.from('app_users').update({ display_name: state.displayName }).eq('id', uid);
+            } else {
+              state.username = wantSlug;
+            }
+          } else {
+            await supabaseClient.from('app_users').update({ display_name: state.displayName }).eq('id', uid);
+          }
+        } catch (e) { console.error('name fix', e); }
+      }
+    }
+
     await mvRefreshLicence();
     // Admin mi? (admin_uids tablosu → is_admin RPC)
     try {
@@ -5967,6 +5998,7 @@ function initAuth() {
 
         submitBtn.disabled = true;
         submitBtn.textContent = isSignup ? 'Kaydediliyor...' : 'Giriş yapılıyor...';
+        if (isSignup && fullName) mvPendingName = fullName; // onAuthStateChange yarışına karşı
         try {
           const res = isSignup
             ? await supabaseClient.auth.signUp({ email, password: pass, options: { data: { full_name: fullName } } })
@@ -5994,10 +6026,12 @@ function initAuth() {
 
           modal.remove();
           await mvOnAuthenticated(session, fullName || null);
+          mvPendingName = null;
           if (typeof enterApp === 'function') enterApp();
           showToast(isSignup ? 'Hoş geldin! 🎉' : 'Giriş başarılı! 🎉', 'success');
         } catch (e) {
           console.error('auth error', e);
+          mvPendingName = null;
           showToast('Beklenmeyen bir hata oluştu.', 'error');
           submitBtn.disabled = false;
           submitBtn.textContent = isSignup ? 'Kayıt Ol' : 'Giriş Yap';
