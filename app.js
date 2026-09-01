@@ -1378,6 +1378,9 @@ function mvRowToState(row) {
   if (typeof row.coins === 'number') state.coins = row.coins;
   state.licenceKey = row.licence_key || state.licenceKey || null;
   state.isGuest = false;
+  // Oturum verisi geldikten sonra bağımlı arayüzleri tazele.
+  try { if (typeof updateLicenceUI === 'function') updateLicenceUI(); } catch (e) {}
+  try { if (typeof updateTopBar === 'function') updateTopBar(); } catch (e) {}
 }
 
 function mvStateToRow() {
@@ -15783,19 +15786,15 @@ function renderProfile() {
         ` : ''}
 
         <div class="profile-actions-card" style="margin-top: 0;">
-          <h3 class="profile-section-title" style="margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">📝 Kayıt Bilgileri (Değiştirilemez)</h3>
+          <h3 class="profile-section-title" style="margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">📝 Hesap Bilgileri</h3>
           <div class="profile-info-list">
             <div class="profile-info-row">
-              <span class="info-label">Ad Soyad:</span>
-              <span class="info-value">${escapeHtml(((state.firstName || '') + ' ' + (state.lastName || '')).trim() || '—')}</span>
+              <span class="info-label">Ad:</span>
+              <span class="info-value">${escapeHtml(state.displayName || ((state.firstName || '') + ' ' + (state.lastName || '')).trim() || state.username || '—')}</span>
             </div>
             <div class="profile-info-row">
               <span class="info-label">E-Posta:</span>
               <span class="info-value">${escapeHtml(state.email || '—')}</span>
-            </div>
-            <div class="profile-info-row">
-              <span class="info-label">Telefon:</span>
-              <span class="info-value">${escapeHtml(state.phone || '—')}</span>
             </div>
           </div>
         </div>
@@ -15812,16 +15811,6 @@ function renderProfile() {
           </div>
           
           <div class="profile-licence-form">
-            <div class="licence-form-grid">
-              <div class="form-group">
-                <label for="profile-licence-email">E-Posta</label>
-                <input type="email" id="profile-licence-email" placeholder="örn: ahmet@gmail.com" class="profile-input">
-              </div>
-              <div class="form-group">
-                <label for="profile-licence-phone">Telefon</label>
-                <input type="tel" id="profile-licence-phone" placeholder="örn: 5551234567" class="profile-input">
-              </div>
-            </div>
             <div class="form-group">
               <label for="profile-licence-input">Lisans Anahtarı</label>
               <input type="text" id="profile-licence-input" placeholder="örn: AMOK-A3F9-D982-12BC" class="profile-input profile-input-code">
