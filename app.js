@@ -5113,6 +5113,38 @@ function checkAchievements() {
 // ============================================================
 // AUTH SİSTEMİ
 // ============================================================
+// Kayıt sırasında açıkça sahte/atılabilir e-posta kalıplarını yakalar.
+// Botları tam durdurmaz; kazara/tembel çöpü azaltır. Sorun yoksa null döner.
+function looksLikeFakeEmail(email) {
+  const e = String(email || '').trim().toLowerCase();
+  const m = e.match(/^([^@]+)@([^@]+)$/);
+  if (!m) return 'Geçerli bir e-posta adresi girin.';
+  const local = m[1], domain = m[2];
+  const domainParts = domain.split('.');
+  const tld = domainParts[domainParts.length - 1] || '';
+  const sld = domainParts.length >= 2 ? domainParts[domainParts.length - 2] : '';
+
+  if (tld.length < 2) return 'E-posta uzantısı geçersiz görünüyor.';
+  if (domainParts.length < 2) return 'E-posta alan adı geçersiz görünüyor.';
+  // aaa@..., a@..., 111@...
+  if (local.length < 2 || /^(.)\1+$/.test(local)) return 'Lütfen gerçek e-posta adresinizi girin.';
+  // test@test.com, abc@abc.net (yerel kısım = alan adının ana parçası)
+  if (local === sld) return 'Lütfen gerçek e-posta adresinizi girin.';
+  // aaa.com, test.test gibi alan adları
+  if (/^(.)\1+$/.test(sld) || sld === tld) return 'Lütfen gerçek e-posta adresinizi girin.';
+
+  const junkDomains = [
+    'test.com', 'test.net', 'test.org', 'example.com', 'example.org', 'example.net',
+    'asdf.com', 'aaa.com', 'abc.com', 'email.com', 'domain.com', 'sample.com',
+    'mailinator.com', 'yopmail.com', 'guerrillamail.com', 'sharklasers.com',
+    'tempmail.com', 'temp-mail.org', '10minutemail.com', 'throwaway.email',
+    'trashmail.com', 'getnada.com', 'dispostable.com', 'fakeinbox.com'
+  ];
+  if (junkDomains.includes(domain)) return 'Geçici / sahte e-posta adresleri kabul edilmez.';
+
+  return null;
+}
+
 function initAuth() {
   const handlePhoneLogin = () => {
     // No saved account continuation - always show the fresh form
@@ -5918,6 +5950,10 @@ function initAuth() {
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           showToast('Geçerli bir e-posta adresi girin.', 'error'); return;
+        }
+        if (isSignup) {
+          const fakeReason = looksLikeFakeEmail(email);
+          if (fakeReason) { showToast(fakeReason, 'error', 7000); return; }
         }
         if (pass.length < 6) {
           showToast('Parola en az 6 karakter olmalı.', 'error'); return;
