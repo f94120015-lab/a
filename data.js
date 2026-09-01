@@ -35553,20 +35553,20 @@ Object.assign(unitSentencesMap, {
               "prompt": "İfadeleri Türkçe karşılıklarıyla eşleştirin.",
               "pairs": [
                 {
-                  "left": "platformdaki kamuoyu araştırması",
-                  "right": "the public opinion survey on the platform"
+                  "left": "the public opinion survey on the platform",
+                  "right": "platformdaki kamuoyu araştırması"
                 },
                 {
-                  "left": "sergideki tarihi tablolar",
-                  "right": "the historic paintings in the exhibition"
+                  "left": "the historic paintings in the exhibition",
+                  "right": "sergideki tarihi tablolar"
                 },
                 {
-                  "left": "modern şehirlerdeki kültürel akrabalık kalıpları",
-                  "right": "the cultural kinship patterns in modern cities"
+                  "left": "the cultural kinship patterns in modern cities",
+                  "right": "modern şehirlerdeki kültürel akrabalık kalıpları"
                 },
                 {
-                  "left": "bölgenin ekonomik göstergeleri",
-                  "right": "the economic indicators of the region"
+                  "left": "the economic indicators of the region",
+                  "right": "bölgenin ekonomik göstergeleri"
                 }
               ]
             },
@@ -35603,7 +35603,7 @@ Object.assign(unitSentencesMap, {
               "enSentence": "The constitutional rights of the citizens are in the parliamentary records.",
               "isEngToTr": true,
               "options": [
-                "Vatandaşların anayasal hakları parlamento kayıtlarındadır.",
+                "Vatandaşların anayasal hakları parlamento kayıtlarına geçirildi.",
                 "Vatandaşların anayasal hakları parlamento kayıtlarındadır.",
                 "Vatandaşların anayasal hakları parlamento kaydındadır.",
                 "Vatandaşların anayasal hakları meclis kayıtlarındadır."

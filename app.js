@@ -260,19 +260,25 @@ const MAX_LICENCE_DEVICES = 2;
 // ============================================================
 // BEYAZ LİSTE (WHITELIST) YAPILANDIRMASI
 // ============================================================
-let APPROVED_USERS_WHITELIST = [
-  { name: "Test Kullanıcısı", phone: "5551234567", email: "test@gmail.com" },
-  { name: "Admin Test", phone: "5559876543", email: "admin@gmail.com" }
-];
+// Güvenlik: Yayına gömülü, tahmin edilebilir e-posta/telefonlar (test@gmail.com,
+// admin@gmail.com …) içeren varsayılan bir whitelist, o kimlikleri isteyen herkese
+// test-modu girişi açıyordu. Varsayılan artık boş; test kullanıcıları yalnızca
+// Admin Panelinden elle eklenir (yerelde localStorage'a yazılır).
+let APPROVED_USERS_WHITELIST = [];
 try {
   const savedWhitelist = localStorage.getItem('amok_approved_users_whitelist');
   if (savedWhitelist) {
     APPROVED_USERS_WHITELIST = JSON.parse(savedWhitelist);
-  } else {
-    localStorage.setItem('amok_approved_users_whitelist', JSON.stringify(APPROVED_USERS_WHITELIST));
   }
+  // Eski sürümlerden kalan tahmin edilebilir varsayılan kayıtları temizle.
+  APPROVED_USERS_WHITELIST = (APPROVED_USERS_WHITELIST || []).filter(item => {
+    const e = String(item && item.email || '').toLowerCase();
+    const p = String(item && item.phone || '').replace(/\D/g, '');
+    return !(e === 'test@gmail.com' || e === 'admin@gmail.com' || p === '5551234567' || p === '5559876543');
+  });
 } catch (e) {
   console.error('Failed to load whitelist from localStorage:', e);
+  APPROVED_USERS_WHITELIST = [];
 }
 
 const isUserWhitelisted = (phone, email) => {
@@ -3890,6 +3896,21 @@ function escapeAttr(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// Güvenlik: "avatar:<emoji>" biçimindeki profil fotoğrafı değerinden yalnızca
+// emoji kısmını, HTML-escape edilmiş olarak döndürür. Sunucudaki profil satırı
+// başka bir kullanıcı tarafından değiştirilebildiği için (RLS gevşekse) bu değer
+// innerHTML'e ham gömülürse depolanan XSS'e yol açar.
+function safeAvatarEmoji(photo) {
+  const raw = String(photo || '').split(':').slice(1).join(':');
+  return escapeHtml(raw);
+}
+
+// Güvenlik: profil fotoğrafı bir <img src="..."> içine gömülecekse, DB'den gelen
+// değeri öznitelik bağlamında güvenli hale getirir.
+function safeAvatarSrc(photo) {
+  return escapeAttr(String(photo || ''));
+}
+
 // Güvenlik: Şifre hash'leme (SHA-256)
 async function hashPassword(password) {
   const encoder = new TextEncoder();
@@ -5030,25 +5051,24 @@ function initAuth() {
         }, 1000);
       };
 
-      const PRODUCTION_TESTERS_MASTER_OTP = "571461"; // Test kullanıcılarının gireceği ortak şifre (Master OTP)
-
       const triggerOtp = async (target, email) => {
         startCooldown();
         const isLocal = checkIsLocal();
         const isWhitelisted = isUserWhitelisted(target, email);
 
-        if (isLocal) {
+        // Güvenlik: Sabit bir "master OTP" (ör. 571461) yayında herkese görünür ve
+        // kalıcı bir kimlik doğrulama atlatması olur. Bunun yerine yerel test veya
+        // whitelist'e elle eklenmiş test kullanıcıları için oturuma özel, rastgele
+        // bir kod üretilir ve yalnızca cihazda ekrana gösterilir.
+        if (isLocal || isWhitelisted) {
           currentLocalOtp = Math.floor(100000 + Math.random() * 900000).toString();
-          console.log("Generated local fallback OTP code:", currentLocalOtp);
-        } else if (isWhitelisted) {
-          currentLocalOtp = PRODUCTION_TESTERS_MASTER_OTP;
-          console.log("Whitelisted tester. Master OTP active:", currentLocalOtp);
+          console.log("Generated test-mode OTP code:", currentLocalOtp);
         } else {
           currentLocalOtp = null;
         }
 
-        if (isWhitelisted) {
-          showToast('Test kullanıcısı algılandı. Master OTP (571461) ile giriş yapabilirsiniz.', 'success', 15000);
+        if (isWhitelisted && !isLocal) {
+          showToast(`Test kullanıcısı algılandı. TEST MODU kodunuz: ${currentLocalOtp}`, 'success', 20000);
         }
 
         if (supabaseClient) {
@@ -5447,17 +5467,12 @@ function initAuth() {
           proceedWithLogin(fullName, activeEmail, activeTarget);
         };
 
-        // Eğer girilen kod local test veya master test koduysa doğrudan kabul et
+        // Test modu: yalnızca bu oturumda üretilmiş rastgele koda karşı doğrula.
+        // (Sabit "master" kod kaldırıldı — yayında kalıcı atlatma oluşturuyordu.)
         const isLocal = checkIsLocal();
         const isWhitelisted = isUserWhitelisted(activeTarget, activeEmail);
-        
-        if (isWhitelisted && otpInput === "571461") {
-          showToast('Test kullanıcısı doğrulaması başarılı! 🎉', 'success');
-          proceed();
-          return;
-        }
 
-        if (isLocal && currentLocalOtp && otpInput === currentLocalOtp) {
+        if ((isLocal || isWhitelisted) && currentLocalOtp && otpInput === currentLocalOtp) {
           showToast('Test modunda doğrulama başarılı! 🎉', 'success');
           proceed();
           return;
@@ -5861,12 +5876,22 @@ function initAuth() {
 
           if (supabaseClient) {
             try {
-              // E-posta veya telefon ile eşleşen profil olup olmadığını kontrol et
-              const { data: profile, error: profileErr } = await supabaseClient
-                .from('profiles')
-                .select('username, phone, first_name, last_name, display_name, email')
-                .or(`email.eq.${email},phone.eq.${phone}`)
-                .maybeSingle();
+              // E-posta veya telefon ile eşleşen profil olup olmadığını kontrol et.
+              // Not: PostgREST .or() filtresi değerleri parametrelenmez; kullanıcı
+              // girdisini ham gömmek filtre enjeksiyonuna açıktır. Bu yüzden ayrı
+              // .eq() sorguları kullanıyoruz.
+              const profileCols = 'username, phone, first_name, last_name, display_name, email';
+              let profile = null;
+              if (email) {
+                const { data } = await supabaseClient
+                  .from('profiles').select(profileCols).eq('email', email).maybeSingle();
+                profile = data || null;
+              }
+              if (!profile && phone) {
+                const { data } = await supabaseClient
+                  .from('profiles').select(profileCols).eq('phone', phone).maybeSingle();
+                profile = data || null;
+              }
 
               if (profile) {
                 resolvedUsername = profile.username;
@@ -6268,11 +6293,11 @@ function updateTopBar() {
     if (topbarAvatarWrap) {
       topbarAvatarWrap.style.color = 'white';
       if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
-        const emoji = state.profilePhoto.split(':')[1];
+        const emoji = safeAvatarEmoji(state.profilePhoto);
         topbarAvatarWrap.innerHTML = `<span style="font-size: 1.15rem; display: flex; align-items: center; justify-content: center;">${emoji}</span>`;
         topbarAvatarWrap.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
       } else if (state.profilePhoto) {
-        topbarAvatarWrap.innerHTML = `<img src="${state.profilePhoto}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+        topbarAvatarWrap.innerHTML = `<img src="${safeAvatarSrc(state.profilePhoto)}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
         topbarAvatarWrap.style.backgroundColor = 'transparent';
       } else {
         const firstLetter = (displayName || 'K').charAt(0).toUpperCase();
@@ -6285,7 +6310,7 @@ function updateTopBar() {
   const profileTabIcon = document.getElementById('profile-tab-icon');
   if (profileTabIcon) {
     if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
-      const emoji = state.profilePhoto.split(':')[1];
+      const emoji = safeAvatarEmoji(state.profilePhoto);
       profileTabIcon.innerHTML = `<span style="font-size: 1.1rem; display: flex; align-items: center; justify-content: center;">${emoji}</span>`;
       profileTabIcon.style.backgroundColor = state.avatarColor || 'var(--accent-primary)';
       profileTabIcon.style.display = 'inline-flex';
@@ -6297,7 +6322,7 @@ function updateTopBar() {
       profileTabIcon.style.minWidth = '30px';
       profileTabIcon.style.minHeight = '30px';
     } else if (state.profilePhoto) {
-      profileTabIcon.innerHTML = `<img src="${state.profilePhoto}" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; display: block;">`;
+      profileTabIcon.innerHTML = `<img src="${safeAvatarSrc(state.profilePhoto)}" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; display: block;">`;
       profileTabIcon.style.backgroundColor = 'transparent';
       profileTabIcon.style.display = 'inline-flex';
       profileTabIcon.style.alignItems = 'center';
@@ -15243,8 +15268,8 @@ function showAvatarSelectorModal() {
     { value: '#4A5568', name: 'Kömür' }
   ];
 
-  let selectedAvatar = state.profilePhoto && state.profilePhoto.startsWith('avatar:') 
-    ? state.profilePhoto.split(':')[1] 
+  let selectedAvatar = state.profilePhoto && state.profilePhoto.startsWith('avatar:')
+    ? safeAvatarEmoji(state.profilePhoto)
     : '🦉';
   let selectedColor = state.avatarColor || '#E88A9A';
 
@@ -15637,10 +15662,10 @@ function renderProfile() {
 
   let avatarContent;
   if (state.profilePhoto && state.profilePhoto.startsWith('avatar:')) {
-    const avatarEmoji = state.profilePhoto.split(':')[1];
+    const avatarEmoji = safeAvatarEmoji(state.profilePhoto);
     avatarContent = `<div class="avatar-emoji-display" style="background: ${state.avatarColor || 'var(--accent-primary)'}; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; border-radius: 50%; color: white;">${avatarEmoji}</div>`;
   } else if (state.profilePhoto) {
-    avatarContent = `<img src="${state.profilePhoto}" alt="Profil Fotoğrafı" class="profile-avatar-img">`;
+    avatarContent = `<img src="${safeAvatarSrc(state.profilePhoto)}" alt="Profil Fotoğrafı" class="profile-avatar-img">`;
   } else {
     avatarContent = `<div class="avatar-emoji-display" style="background: ${state.avatarColor || 'var(--accent-primary)'}; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 2rem; border-radius: 50%; color: white; font-weight: bold;">${escapeHtml(firstLetter)}</div>`;
   }
@@ -15885,9 +15910,12 @@ function renderProfile() {
       if (supabaseClient && !state.isGuest && state.username !== 'Misafir' && state.username) {
         try {
           const userIdent = state.username;
-          // Delete friends mapping if exists
+          // Delete friends mapping if exists.
+          // .or() ham string interpolasyonu PostgREST filtre enjeksiyonuna açık;
+          // iki ayrı .eq() silme kullanıyoruz.
           try {
-            await supabaseClient.from('friends').delete().or(`username.eq.${userIdent},friend_username.eq.${userIdent}`);
+            await supabaseClient.from('friends').delete().eq('username', userIdent);
+            await supabaseClient.from('friends').delete().eq('friend_username', userIdent);
           } catch(e) {}
           
           // Delete from user_states
@@ -16118,7 +16146,7 @@ async function renderSocialList() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name, profile_photo, last_seen_at)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, display_name, profile_photo, last_seen_at)')
         .order('xp', { ascending: false })
         .limit(50);
 
@@ -16293,10 +16321,10 @@ async function renderSocialList() {
     const color = user.isSelf ? (state.avatarColor || '#5856D6') : (user.avatarColor || '#7EC8C8');
     if (photo) {
       if (photo.startsWith('avatar:')) {
-        avatarContent = photo.split(':')[1];
+        avatarContent = safeAvatarEmoji(photo);
         avatarStyle = `background-color: ${escapeHtml(color)}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; position: relative; width: 44px; height: 44px; border-radius: 50%; color: white;`;
       } else {
-        avatarContent = `<img src="${photo}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+        avatarContent = `<img src="${safeAvatarSrc(photo)}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
         avatarStyle = `background-color: transparent; display: flex; align-items: center; justify-content: center; position: relative; width: 44px; height: 44px; border-radius: 50%;`;
       }
     }
@@ -16580,7 +16608,7 @@ async function renderLeaderboard() {
     try {
       const { data, error } = await supabaseClient
         .from('user_states')
-        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, email, phone, display_name, profile_photo)')
+        .select('username, xp, avatar_color, completed_lessons, profiles (first_name, last_name, display_name, profile_photo)')
         .order('xp', { ascending: false })
         .limit(100);
 
@@ -16707,7 +16735,7 @@ async function renderLeaderboard() {
     const color = c.isUser ? (state.avatarColor || '#6366F1') : (c.avatarColor || '#B4A7D6');
     const base = `width:${size}px;height:${size}px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;`;
     if (photo && photo.startsWith('avatar:')) {
-      return `<div class="lb-avatar" style="${base}background:${color};font-size:${Math.round(size * 0.55)}px;">${photo.split(':')[1]}</div>`;
+      return `<div class="lb-avatar" style="${base}background:${color};font-size:${Math.round(size * 0.55)}px;">${safeAvatarEmoji(photo)}</div>`;
     }
     if (photo) {
       return `<div class="lb-avatar" style="${base}background:transparent;"><img src="${escapeHtml(photo)}" style="width:100%;height:100%;object-fit:cover;display:block;"></div>`;
@@ -17347,11 +17375,8 @@ function initEventListeners() {
   document.getElementById('quiz-report').addEventListener('click', () => {
     showReportModal();
   });
-  // html2canvas (~200KB) betiğini boşta önden yükle ki hata bildir modalı
-  // açıldığında ekran görüntüsü ağ beklemeden hazırlanabilsin.
-  const preloadShot = () => loadHtml2Canvas().catch(() => {});
-  if ('requestIdleCallback' in window) requestIdleCallback(preloadShot, { timeout: 8000 });
-  else setTimeout(preloadShot, 4000);
+  // html2canvas (~200KB) artık önden yüklenmiyor; ekran görüntüsü isteğe bağlı
+  // olduğu için betik yalnızca kullanıcı kutucuğu işaretlediğinde indiriliyor.
 
   // Kontrol Et / Devam Et butonu
   document.getElementById('btn-check').addEventListener('click', () => {
@@ -18368,11 +18393,11 @@ function showReportModal() {
 
         <div class="form-group" style="margin-top: 15px;">
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600;">
-            <input type="checkbox" id="report-include-screenshot" checked style="margin: 0; cursor: pointer;" />
-            📷 Sayfanın ekran görüntüsünü ekle (önerilir)
+            <input type="checkbox" id="report-include-screenshot" style="margin: 0; cursor: pointer;" />
+            📷 Sayfanın ekran görüntüsünü ekle (isteğe bağlı)
           </label>
-          <div id="report-screenshot-preview" style="margin-top: 8px; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; max-height: 160px; background: var(--bg-card); display: flex; align-items: center; justify-content: center; font-size: 0.78rem; color: var(--text-muted); min-height: 60px;">
-            Ekran görüntüsü hazırlanıyor…
+          <div id="report-screenshot-preview" style="margin-top: 8px; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; max-height: 160px; background: var(--bg-card); display: none; align-items: center; justify-content: center; font-size: 0.78rem; color: var(--text-muted); min-height: 60px;">
+            Kutucuğu işaretleyin; ekran görüntüsü o an alınır.
           </div>
         </div>
       </div>
@@ -18392,26 +18417,44 @@ function showReportModal() {
   // iş parçacığını saniyelerce bloklar. Bunu doğrudan çağırırsak tarayıcı modalı
   // boyamadan donuyor ("bildirim sayfası 5-6 sn geç açılıyor"). İki kare
   // bekleyip modalın boyanmasını garanti ettikten sonra yakalamayı başlat.
+  // Ekran görüntüsü artık yalnızca kullanıcı kutucuğu işaretlerse alınır.
+  // Mobilde html2canvas ana iş parçacığını saniyelerce bloklayıp bildirimi
+  // yavaşlattığı için otomatik yakalama kaldırıldı.
   let capturedScreenshot = null;
+  let captureInFlight = null;
   const previewEl = document.getElementById('report-screenshot-preview');
   const chkEl = document.getElementById('report-include-screenshot');
-  const runCapture = () => capturePageScreenshot(document.getElementById('quiz-screen'))
-    .then(dataUrl => {
-      capturedScreenshot = dataUrl;
-      if (previewEl) {
-        previewEl.innerHTML = `<img src="${dataUrl}" style="max-width: 100%; max-height: 160px; object-fit: contain; display: block;" />`;
+  const runCapture = () => {
+    if (capturedScreenshot || captureInFlight) return captureInFlight || Promise.resolve();
+    if (previewEl) { previewEl.style.display = 'flex'; previewEl.textContent = 'Ekran görüntüsü hazırlanıyor…'; }
+    captureInFlight = capturePageScreenshot(document.getElementById('quiz-screen'))
+      .then(dataUrl => {
+        capturedScreenshot = dataUrl;
+        if (previewEl) {
+          previewEl.innerHTML = `<img src="${dataUrl}" style="max-width: 100%; max-height: 160px; object-fit: contain; display: block;" />`;
+        }
+      })
+      .catch(err => {
+        console.error('Rapor ekran görüntüsü alınamadı:', err);
+        if (previewEl) previewEl.textContent = 'Ekran görüntüsü alınamadı (bildirim yine de gönderilebilir).';
+        if (chkEl) { chkEl.checked = false; }
+      })
+      .finally(() => { captureInFlight = null; });
+    return captureInFlight;
+  };
+  if (chkEl) {
+    chkEl.addEventListener('change', () => {
+      if (chkEl.checked) {
+        runCapture();
+      } else if (previewEl) {
+        previewEl.style.display = 'none';
       }
-    })
-    .catch(err => {
-      console.error('Rapor ekran görüntüsü alınamadı:', err);
-      if (previewEl) previewEl.textContent = 'Ekran görüntüsü alınamadı (bildirim yine de gönderilebilir).';
-      if (chkEl) { chkEl.checked = false; chkEl.disabled = true; }
     });
-  requestAnimationFrame(() => requestAnimationFrame(runCapture));
+  }
 
   document.getElementById('btn-close-report-modal').addEventListener('click', () => modal.remove());
   document.getElementById('btn-cancel-report').addEventListener('click', () => modal.remove());
-  document.getElementById('btn-submit-report').addEventListener('click', () => {
+  document.getElementById('btn-submit-report').addEventListener('click', async () => {
     const errorType = document.getElementById('report-error-type').value;
     const comment = document.getElementById('report-comment').value.trim();
 
@@ -18420,6 +18463,10 @@ function showReportModal() {
       return;
     }
 
+    // Kullanıcı ekran görüntüsü istediyse ama yakalama henüz bitmediyse bekle.
+    if (chkEl && chkEl.checked && !capturedScreenshot && captureInFlight) {
+      await captureInFlight;
+    }
     const screenshot = (chkEl && chkEl.checked) ? capturedScreenshot : null;
     submitReport(question, errorType, comment, screenshot);
     modal.remove();
@@ -19683,11 +19730,10 @@ function init() {
 
         if (user.profilePhoto) {
           if (user.profilePhoto.startsWith('avatar:')) {
-            const emoji = user.profilePhoto.split(':')[1];
-            avatarContent = emoji;
+            avatarContent = safeAvatarEmoji(user.profilePhoto);
             avatarStyle = `background: ${user.avatarColor}; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #fff;`;
           } else {
-            avatarContent = `<img src="${user.profilePhoto}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
+            avatarContent = `<img src="${safeAvatarSrc(user.profilePhoto)}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block;">`;
             avatarStyle = `background: transparent; display: flex; align-items: center; justify-content: center;`;
           }
         }
