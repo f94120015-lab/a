@@ -1416,10 +1416,9 @@ async function mvOnAuthenticated(session, fullName) {
   if (mvAuthPromise) return mvAuthPromise;
   mvAuthPromise = (async () => {
     const uid = session.user.id;
-    state.authId = uid;
-    state.email = session.user.email || state.email;
-    state.isGuest = false;
-
+    // ÖNEMLİ: state.authId'yi satırı yükleMEDEN set etmiyoruz. Aksi halde bu await
+    // sırasında araya giren bir saveState(), yerel (misafir) değerleri DB'ye yazıp
+    // gerçek ilerlemeyi (XP vb.) sıfırlayabilir.
     let row = null;
     try {
       const res = await supabaseClient.from('app_users').select('*').eq('id', uid).maybeSingle();
@@ -1450,7 +1449,11 @@ async function mvOnAuthenticated(session, fullName) {
         row = up.data || payload;
       }
     }
+    // Artık satır elimizde — state'i tek seferde kur.
+    state.email = session.user.email || state.email;
+    state.isGuest = false;
     mvRowToState(row);
+    state.authId = uid;
     await mvRefreshLicence();
     // Admin mi? (admin_uids tablosu → is_admin RPC)
     try {
