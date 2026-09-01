@@ -1406,41 +1406,53 @@ function mvSyncUp() {
     .then(({ error }) => { if (error) console.error('mvSyncUp error:', error); });
 }
 
+let mvAuthPromise = null;
 async function mvOnAuthenticated(session, fullName) {
   if (!session || !supabaseClient) return false;
-  const uid = session.user.id;
-  state.authId = uid;
-  state.email = session.user.email || state.email;
-  state.isGuest = false;
+  // İki kaynak (proceed + onAuthStateChange) aynı anda çağırabilir — tek çalıştır.
+  if (mvAuthPromise) return mvAuthPromise;
+  mvAuthPromise = (async () => {
+    const uid = session.user.id;
+    state.authId = uid;
+    state.email = session.user.email || state.email;
+    state.isGuest = false;
 
-  let row = null;
-  try {
-    const res = await supabaseClient.from('app_users').select('*').eq('id', uid).maybeSingle();
-    row = res.data;
-  } catch (e) { console.error('mvOnAuthenticated load error:', e); }
+    let row = null;
+    try {
+      const res = await supabaseClient.from('app_users').select('*').eq('id', uid).maybeSingle();
+      row = res.data;
+    } catch (e) { console.error('mvOnAuthenticated load error:', e); }
 
-  if (!row) {
-    const base = mvSlugify(fullName || (session.user.email || 'user').split('@')[0]);
-    const colors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    let uname = base;
-    for (let i = 0; i < 5 && !row; i++) {
-      const ins = await supabaseClient.from('app_users').insert({
-        id: uid, username: uname, display_name: fullName || uname,
-        avatar_color: color, xp: 0, streak: 0, hearts: MAX_HEARTS,
-        completed_lessons: [], unlocked_achievements: [], coins: 0
-      }).select().maybeSingle();
-      if (ins.error) {
-        if (ins.error.code === '23505') { uname = `${base}${Math.floor(Math.random() * 9999)}`; continue; }
-        console.error('mvOnAuthenticated insert error:', ins.error);
-        break;
+    if (!row) {
+      const base = mvSlugify(fullName || (session.user.email || 'user').split('@')[0]);
+      const colors = ['#E88A9A', '#B4A7D6', '#8BC6A0', '#E8CB6E', '#8B7EC8', '#7EC8C8'];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      let uname = base;
+      for (let i = 0; i < 3 && !row; i++) {
+        const payload = {
+          id: uid, username: uname, display_name: fullName || uname, avatar_color: color,
+          xp: state.xp || 0, streak: state.streak || 0, hearts: state.hearts || MAX_HEARTS,
+          completed_lessons: state.completedLessons || [],
+          unlocked_achievements: state.unlockedAchievements || [], coins: state.coins || 0
+        };
+        // insert yerine upsert: eşzamanlı çağrı satırı önce oluşturduysa hata vermez.
+        const up = await supabaseClient.from('app_users')
+          .upsert(payload, { onConflict: 'id' }).select().maybeSingle();
+        if (up.error) {
+          if (up.error.code === '23505') { uname = `${base}${Math.floor(Math.random() * 9999)}`; continue; }
+          console.error('mvOnAuthenticated upsert error:', up.error);
+          row = payload; // en kötü ihtimalle yerel değerlerle devam et; saveState sonra senkron eder
+          break;
+        }
+        row = up.data || payload;
       }
-      row = ins.data;
     }
-  }
-  mvRowToState(row);
-  try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
-  return true;
+    mvRowToState(row);
+    try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
+    return true;
+  })();
+  try { return await mvAuthPromise; }
+  finally { setTimeout(() => { mvAuthPromise = null; }, 2000); }
 }
 
 async function mvRestoreSession() {
@@ -5096,7 +5108,7 @@ function initAuth() {
           <!-- Screen 2: OTP Doğrulama -->
           <div id="social-modal-screen-2" class="custom-modal-body" style="display: none; flex-direction: column; gap: 16px;">
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-              Güvenliğiniz için <strong><span id="otp-target-label"></span></strong> adresine 6 haneli bir davetiye doğrulama kodu gönderildi. Lütfen kodu girin:
+              <strong><span id="otp-target-label"></span></strong> adresine 6 haneli bir giriş kodu gönderdik. Lütfen kodu girin:
             </p>
             <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; text-align: center;">
               <input type="text" id="social-otp-code" maxlength="6" placeholder="000000" style="width: 150px; margin: 10px auto; padding: 12px; border-radius: var(--radius-md); border: 2px solid var(--accent-primary); background: var(--bg-card); color: var(--text-primary); font-family: monospace; font-size: 1.4rem; text-align: center; letter-spacing: 4px; outline: none;" required>
