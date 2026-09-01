@@ -20933,7 +20933,11 @@ return `
 
       if (supabaseClient) {
         try {
-          const { data, error } = await supabaseClient.rpc('admin_reports');
+          // Girişli admin → RPC (her yerde çalışır). Oturumsuz (localhost) → doğrudan select (anon read istisnası).
+          let { data, error } = await supabaseClient.rpc('admin_reports');
+          if (error || !data) {
+            ({ data, error } = await supabaseClient.from('question_reports').select('*').order('created_at', { ascending: false }));
+          }
 
           if (!error && data) {
             const dbReports = data.map(row => ({
@@ -26824,7 +26828,10 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
 
       if (supabaseClient) {
         try {
-          const { data, error } = await supabaseClient.rpc('admin_feedback');
+          let { data, error } = await supabaseClient.rpc('admin_feedback');
+          if (error || !data) {
+            ({ data, error } = await supabaseClient.from('general_feedback').select('*').order('created_at', { ascending: false }));
+          }
 
           if (!error && data) {
             dbFeedback = data;
@@ -27051,10 +27058,16 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       let reportsCount = 0;
       let feedbackCount = 0;
 
-      // Rapor + geri bildirim sayıları (admin_counts RPC; is_admin şart)
+      // Rapor + geri bildirim sayıları (admin_counts RPC; oturumsuz → doğrudan sayım)
       if (supabaseClient) {
         try {
-          const { data, error } = await supabaseClient.rpc('admin_counts');
+          let { data, error } = await supabaseClient.rpc('admin_counts');
+          if (error || !data) {
+            const r = await supabaseClient.from('question_reports').select('id', { count: 'exact', head: true });
+            const f = await supabaseClient.from('general_feedback').select('id', { count: 'exact', head: true });
+            data = { reports: r.count || 0, feedback: f.count || 0 };
+            error = null;
+          }
           if (!error && data) {
             reportsCount = data.reports || 0;
             feedbackCount = data.feedback || 0;
