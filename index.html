@@ -119,8 +119,8 @@
     <div class="home-body-layout">
       <!-- Sol Sidebar (Masaüstü için Dikey Menü, Mobil için Alt Bar) -->
       <aside class="sidebar-nav">
-        <!-- Dersler Sekmesi Üstündeki Marka Logosu -->
-        <div class="sidebar-brand-header">
+        <!-- Dersler Sekmesi Üstündeki Marka Logosu (tıklanınca ana sayfa / Dersler) -->
+        <div class="sidebar-brand-header" id="sidebar-brand-home" role="button" tabindex="0" title="Ana sayfaya dön (Dersler)">
           <div class="sidebar-brand-logo-wrap">
             <img src="assets/logo.png" alt="academic Reader" class="sidebar-brand-logo">
           </div>
@@ -921,7 +921,8 @@
           <div id="profile-hub-store" class="profile-hub-content">
             <div class="store-container">
               <h2 class="store-title">🛍️ amok Sanal Mağazası</h2>
-              <p class="store-subtitle">Deneyim puanlarını kullanarak serini dondur, canlarını doldur veya altın temayı aç!</p>
+              <p class="store-subtitle">Jetonlarını kullanarak güçlendiriciler, temalar ve kozmetik eşyalar aç. (XP sıralamada kalır, jeton harcanır.)</p>
+              <div class="store-coin-balance">🪙 <strong id="store-coin-count">0</strong> Jeton</div>
 
               <!-- Üyelik & Lisans Bölümü -->
               <div class="profile-actions-card" id="store-licence-card" style="margin-top: 0; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);">
@@ -975,77 +976,8 @@
                 </div>
               </div>
               
-              <div class="store-grid">
-                <div class="store-card" id="store-card-hearts">
-                  <span class="store-card-icon">❤️</span>
-                  <h3>Can Yenile</h3>
-                  <p>Canını tamamen doldur (5 Can). Canın azaldığında alabilirsin.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="hearts" data-price="50" id="buy-hearts-btn">50 Puan</button>
-                </div>
-                
-                <div class="store-card" id="store-card-streak-freeze">
-                  <span class="store-card-icon">❄️</span>
-                  <h3>Seri Dondurucu</h3>
-                  <p>Bir gün girmeyi unutsan bile serini koruyan kalkan.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="streak-freeze" data-price="100" id="buy-streak-freeze-btn">100 Puan</button>
-                </div>
-                
-                <div class="store-card" id="store-card-gold-theme">
-                  <span class="store-card-icon">👑</span>
-                  <h3>Özel Altın Tema</h3>
-                  <p>Tüm uygulamaya özel, asil altın renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="gold-theme" data-price="200" id="buy-gold-theme-btn">200 Puan</button>
-                </div>
-                
-                <div class="store-card" id="store-card-canva-theme">
-                  <span class="store-card-icon">🎨</span>
-                  <h3>Özel Canva Teması</h3>
-                  <p>Canva'nın turkuaz, mavi ve mor gradyan renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="canva-theme" data-price="150" id="buy-canva-theme-btn">150 Puan</button>
-                </div>
-
-                <div class="store-card" id="store-card-mint-theme">
-                  <span class="store-card-icon">🌿</span>
-                  <h3>Pastel Mint Teması</h3>
-                  <p>Yatıştırıcı pastel nane yeşili ve adaçayı renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="mint-theme" data-price="100" id="buy-mint-theme-btn">100 Puan</button>
-                </div>
-
-                <div class="store-card" id="store-card-sakura-theme">
-                  <span class="store-card-icon">🌸</span>
-                  <h3>Pastel Sakura Teması</h3>
-                  <p>Zarif pastel kiraz çiçeği pembesi ve lavanta renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="sakura-theme" data-price="120" id="buy-sakura-theme-btn">120 Puan</button>
-                </div>
-
-                <div class="store-card" id="store-card-sunset-theme">
-                  <span class="store-card-icon">🌅</span>
-                  <h3>Pastel Sunset Teması</h3>
-                  <p>Sıcak pastel şeftali, mercan ve gün batımı renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="sunset-theme" data-price="130" id="buy-sunset-theme-btn">130 Puan</button>
-                </div>
-
-                <div class="store-card" id="store-card-kutup-theme">
-                  <span class="store-card-icon">❄️</span>
-                  <h3>Nordic Frost Teması</h3>
-                  <p>Minimalist ve ferahlatıcı buz mavisi renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="kutup-theme" data-price="140" id="buy-kutup-theme-btn">140 Puan</button>
-                </div>
-
-                <div class="store-card" id="store-card-siber-theme">
-                  <span class="store-card-icon">🌌</span>
-                  <h3>Cyberpunk Neon Teması</h3>
-                  <p>Obsidyen siyahı ve elektrik siyanı renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="siber-theme" data-price="180" id="buy-siber-theme-btn">180 Puan</button>
-                </div>
-
-                <div class="store-card" id="store-card-orman-theme">
-                  <span class="store-card-icon">🍂</span>
-                  <h3>Forest Zen Teması</h3>
-                  <p>Dinlendirici çam yeşili ve krem toprak renk paletini uygular.</p>
-                  <button class="btn btn-primary store-buy-btn" data-item="orman-theme" data-price="120" id="buy-orman-theme-btn">120 Puan</button>
-                </div>
-              </div>
+              <div class="store-cat-tabs" id="store-cat-tabs"><!-- kategori sekmeleri app.js tarafından --></div>
+              <div class="store-grid" id="store-grid"><!-- katalog app.js tarafından --></div>
             </div>
           </div>
 

@@ -1366,6 +1366,16 @@ let state = {
   streakFreezeBought: false,
   activeTheme: 'canva',
   profilePhoto: null,
+  // ── Mağaza ekonomisi ──────────────────────────────────────
+  coins: 0,                 // harcanabilir para birimi (XP sıralamada kalır)
+  coinsMigrated: false,
+  purchasedThemes: [],      // sahip olunan tema id'leri (canva & light daima ücretsiz)
+  purchasedCosmetics: [],   // sahip olunan unvan / çerçeve id'leri
+  equippedTitle: null,
+  equippedFrame: null,
+  inventory: { streak_freeze: 0 },
+  boosts: { xpBoosterQ: 0, heartShieldQ: 0 },
+  lastCoinBonusDate: null,
   dailyTasks: {
     lastResetDate: null,
     tasks: []
@@ -4153,6 +4163,8 @@ function loadState() {
     state.activeTheme = 'canva';
     saveState();
   }
+
+  migrateStoreEconomy();
 }
 
 function getUsers() {
@@ -4708,11 +4720,11 @@ window.startLessonAtQuestion = function(lessonId, exerciseId, questionId) {
 // ============================================================
 function getInitialDailyTasks() {
   return [
-    { id: 'lessons', text: 'Bugün 2 ders tamamla', target: 2, current: 0, xpReward: 20, completed: false, claimed: false },
-    { id: 'xp', text: 'Bugün 50 Puan kazan', target: 50, current: 0, xpReward: 15, completed: false, claimed: false },
-    { id: 'perfect', text: '1 dersi hatasız tamamla', target: 1, current: 0, xpReward: 25, completed: false, claimed: false },
-    { id: 'review', text: '1 Hızlı Tekrar testi çöz', target: 1, current: 0, xpReward: 15, completed: false, claimed: false },
-    { id: 'shop', text: 'Mağazadan bir ürün satın al', target: 1, current: 0, xpReward: 10, completed: false, claimed: false }
+    { id: 'lessons', text: 'Bugün 2 ders tamamla', target: 2, current: 0, xpReward: 20, coinReward: 25, completed: false, claimed: false },
+    { id: 'xp', text: 'Bugün 50 Puan kazan', target: 50, current: 0, xpReward: 15, coinReward: 20, completed: false, claimed: false },
+    { id: 'perfect', text: '1 dersi hatasız tamamla', target: 1, current: 0, xpReward: 25, coinReward: 30, completed: false, claimed: false },
+    { id: 'review', text: '1 Hızlı Tekrar testi çöz', target: 1, current: 0, xpReward: 15, coinReward: 20, completed: false, claimed: false },
+    { id: 'shop', text: 'Mağazadan bir ürün satın al', target: 1, current: 0, xpReward: 10, coinReward: 10, completed: false, claimed: false }
   ];
 }
 
@@ -4747,9 +4759,11 @@ function claimDailyTaskReward(task) {
   if (task.claimed) return;
   task.claimed = true;
   state.xp += task.xpReward;
+  const coinR = task.coinReward || 0;
+  if (coinR) addCoins(coinR);
   saveState();
   updateTopBar();
-  showToast(`Görev tamamlandı: ${task.text}! +${task.xpReward} Puan kazandın! 🎉`, 'success');
+  showToast(`Görev tamamlandı: ${task.text}! +${task.xpReward} Puan${coinR ? ` · +${coinR} 🪙` : ''} 🎉`, 'success');
   if (typeof confetti === 'function') {
     confetti({
       particleCount: 50,
@@ -4773,23 +4787,25 @@ function renderDailyTasks() {
   checkAndResetDailyTasks();
 
   list.innerHTML = state.dailyTasks.tasks.map(task => {
-    const progressPercent = Math.round((task.current / task.target) * 100);
+    const progressPercent = Math.min(100, Math.round((task.current / task.target) * 100));
     const isCompleted = task.completed;
-    
+
     return `
       <div class="daily-task-card ${isCompleted ? 'completed' : ''}" id="task-card-${task.id}">
         <div class="task-card-main">
           <div class="task-checkbox-wrap">
-            <div class="task-checkbox">
-              ${isCompleted ? '✓' : ''}
-            </div>
+            <div class="task-checkbox">${isCompleted ? '✓' : ''}</div>
           </div>
           <div class="task-details">
             <span class="task-text">${task.text}</span>
             <div class="task-meta">
               <span class="task-progress-text">${task.current}/${task.target}</span>
-          <div class="task-progress-bar-wrap">
-          <div class="task-progress-bar" style="width: ${progressPercent}%"></div>
+              ${task.xpReward ? `<span class="task-reward">+${task.xpReward} XP</span>` : ''}
+            </div>
+            <div class="task-progress-bar-wrap">
+              <div class="task-progress-bar" style="width: ${progressPercent}%"></div>
+            </div>
+          </div>
         </div>
       </div>
     `;
@@ -4844,10 +4860,31 @@ function updateStreak() {
   if (state.lastActiveDate === yesterday.toDateString()) {
     state.streak += 1;
   } else if (state.lastActiveDate !== today) {
-    state.streak = 1; // Seri kırıldı, yeniden başla
+    // Seri kırılacak — envanterde Seri Dondurucu varsa birini harcayıp seriyi koru
+    const freezes = (state.inventory && state.inventory.streak_freeze) || 0;
+    if (state.streak > 0 && freezes > 0) {
+      state.inventory.streak_freeze = freezes - 1;
+      if (state.inventory.streak_freeze <= 0) state.streakFreezeBought = false;
+      state.streak += 1;
+      if (typeof showToast === 'function') {
+        showToast(`❄️ Seri Dondurucu kullanıldı! Serin korundu (${state.streak} gün). Kalan: ${state.inventory.streak_freeze}`, 'info');
+      }
+    } else {
+      state.streak = 1; // Seri kırıldı, yeniden başla
+    }
   }
 
   state.lastActiveDate = today;
+
+  // Günlük giriş jeton ödülü — seri uzadıkça artar (maks. +40)
+  if (state.lastCoinBonusDate !== today) {
+    state.lastCoinBonusDate = today;
+    const bonus = 15 + Math.min(25, (state.streak || 1) * 3);
+    addCoins(bonus);
+    if (typeof showToast === 'function') showToast(`Günlük giriş ödülü: +${bonus} 🪙`, 'success');
+    if (typeof updateTopBar === 'function') updateTopBar();
+  }
+
   saveState();
 }
 
@@ -5672,8 +5709,9 @@ function initAuth() {
       }
 
       state = { ...state, ...finalState };
+      migrateStoreEconomy();
       localStorage.setItem('amok_phone_login', JSON.stringify({ fullName: state.username, email }));
-      
+
       saveState(true);
       
       try {
@@ -6156,6 +6194,15 @@ function logout() {
     streakFreezeBought: false,
     activeTheme: 'canva',
     activePassiveMode: 'active',
+    coins: 0,
+    coinsMigrated: false,
+    purchasedThemes: [],
+    purchasedCosmetics: [],
+    equippedTitle: null,
+    equippedFrame: null,
+    inventory: { streak_freeze: 0 },
+    boosts: { xpBoosterQ: 0, heartShieldQ: 0 },
+    lastCoinBonusDate: null,
     dailyTasks: {
       lastResetDate: null,
       tasks: []
@@ -13416,9 +13463,15 @@ function checkAnswer() {
       : 'Harika! Doğru cevap! 🎉';
     correctCount++;
     saveActiveQuizState();
-    state.xp += XP_PER_CORRECT;
+    // ⚡ XP Katlayıcı aktifse bu doğru cevap 2× puan getirir
+    const xpMult = (state.boosts && state.boosts.xpBoosterQ > 0) ? 2 : 1;
+    if (xpMult === 2) {
+      state.boosts.xpBoosterQ--;
+      showToast(`⚡ XP Katlayıcı: +${XP_PER_CORRECT * 2} puan! (${state.boosts.xpBoosterQ} hak kaldı)`, 'success');
+    }
+    state.xp += XP_PER_CORRECT * xpMult;
     animateStat('stat-xp', 'xp-gain');
-    updateDailyTaskProgress('xp', XP_PER_CORRECT);
+    updateDailyTaskProgress('xp', XP_PER_CORRECT * xpMult);
 
     // Sorular doğru cevaplandığında sayfanın sağında ve solunda küçük havai fişek patlamaları oluşsun
     if (typeof confetti === 'function') {
@@ -13502,10 +13555,16 @@ function checkAnswer() {
     saveActiveQuizState();
     
     if (!isReviewMode && !isFormationMode) {
-      state.hearts = Math.max(0, state.hearts - 1);
-      animateStat('stat-hearts', 'heart-lose');
+      // 🛡️ Can Kalkanı aktifse bu yanlış can götürmez
+      if (state.boosts && state.boosts.heartShieldQ > 0) {
+        state.boosts.heartShieldQ--;
+        showToast(`🛡️ Can Kalkanı korudu! (${state.boosts.heartShieldQ} hak kaldı)`, 'info');
+      } else {
+        state.hearts = Math.max(0, state.hearts - 1);
+        animateStat('stat-hearts', 'heart-lose');
+      }
       updateTopBar();
-      
+
       // Add to wrongQuestions for spaced repetition
       if (!state.wrongQuestions.includes(question.id)) {
         state.wrongQuestions.push(question.id);
@@ -14818,9 +14877,11 @@ function completeLesson() {
     if (wrongCount === 0) {
       state.perfectLessonTriggered = true;
       updateDailyTaskProgress('perfect', 1);
+      addCoins(6); // hatasız bitirme bonusu
     }
 
     updateDailyTaskProgress('lessons', 1);
+    addCoins(8); // alıştırma tamamlama jeton ödülü
     saveState(true);
     if (typeof addRecentChange === 'function') {
       addRecentChange(`Ders Tamamlandı: ${currentLesson.title}`, `Kazanılan XP: +${earnedXP}`, 'lesson', currentLesson.id);
@@ -15579,7 +15640,7 @@ function renderProfile() {
       <div class="profile-col-left">
         <div class="profile-header-card">
           <div class="profile-avatar-wrap">
-            <div class="profile-avatar" id="profile-avatar-trigger" title="Profil fotoğrafını değiştir">
+            <div class="profile-avatar${state.equippedFrame ? ' avatar-frame ' + state.equippedFrame : ''}" id="profile-avatar-trigger" title="Profil fotoğrafını değiştir">
               ${avatarContent}
               <div class="avatar-edit-overlay">
                 <span>📷 Düzenle</span>
@@ -15593,6 +15654,7 @@ function renderProfile() {
               <button id="btn-profile-edit-name" style="background: transparent; border: none; cursor: pointer; font-size: 0.9rem; padding: 2px 4px; display: inline-flex; align-items: center; justify-content: center; opacity: 0.65; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'" title="İsmini Düzenle">✏️</button>
               ${checkLicence() ? '<span style="font-size: 1.1rem; color: #f59e0b; cursor: help;" title="Premium Üye">👑</span>' : ''}
             </h2>
+            ${state.equippedTitle ? `<div class="profile-title-badge">${equippedTitleLabel()}</div>` : ''}
             ${checkLicence() ? `<div style="display: inline-flex; align-items: center; gap: 6px; margin: 4px 0 8px 0; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; font-weight: 700; font-size: 0.72rem; padding: 3px 8px; border-radius: 6px; box-shadow: var(--shadow-sm);"><span style="font-size: 0.85rem;">🛡️</span> Premium Üye</div>` : ''}
             ${state.email ? `<span class="profile-email" style="font-size: 0.85rem; color: var(--text-secondary); display: block; margin-top: 4px; margin-bottom: 6px; font-weight: 500;">✉️ ${escapeHtml(state.email)}</span>` : ''}
             <span class="profile-role-badge">${isGuest ? 'Misafir Hesap' : 'Kayıtlı Üye'}</span>
@@ -15691,18 +15753,25 @@ function renderProfile() {
                 <span class="stat-box-label">Toplam Puan</span>
               </div>
             </div>
-            <div class="profile-stat-box" style="grid-column: span 2;">
+            <div class="profile-stat-box">
+              <span class="stat-box-icon">🪙</span>
+              <div class="stat-box-values">
+                <span class="stat-box-num">${coinBalance()}</span>
+                <span class="stat-box-label">Jeton (Mağaza)</span>
+              </div>
+            </div>
+            <div class="profile-stat-box">
               <span class="stat-box-icon">📚</span>
               <div class="stat-box-values">
                 <span class="stat-box-num">${completedCount}/${totalLessons}</span>
-                <span class="stat-box-label">Ders İlerlemesi (${progressPercent}%)</span>
+                <span class="stat-box-label">Ders (${progressPercent}%)</span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="daily-tasks-section" id="daily-tasks-section" style="margin-top: 0;">
-          <div class="daily-tasks-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 16px;">
+          <div class="daily-tasks-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 12px;">
             <h3 class="profile-section-title" style="margin: 0; display: flex; align-items: center; gap: 8px;">📅 Günlük Görevler</h3>
             <span class="tasks-reset-timer" id="tasks-reset-timer" title="Yenilenmesine kalan süre">Sıfırlanma: --:--:--</span>
           </div>
@@ -15882,6 +15951,18 @@ function renderProfile() {
       state.wrongQuestions = [];
       state.streakFreezeBought = false;
       state.profilePhoto = null;
+      // Mağaza ekonomisini de sıfırla
+      state.coins = 0;
+      state.coinsMigrated = true;
+      state.purchasedThemes = [];
+      state.purchasedCosmetics = [];
+      state.equippedTitle = null;
+      state.equippedFrame = null;
+      state.inventory = { streak_freeze: 0 };
+      state.boosts = { xpBoosterQ: 0, heartShieldQ: 0 };
+      state.lastCoinBonusDate = null;
+      state.activeTheme = 'canva';
+      applyThemeAttr('canva');
       state.dailyTasks = {
         lastResetDate: new Date().toDateString(),
         tasks: getInitialDailyTasks()
@@ -16632,7 +16713,7 @@ async function renderLeaderboard() {
               ${avatarContent}
             </div>
             <div style="display: flex; flex-direction: column;">
-              <span style="font-weight: 600;">${escapeHtml(c.name)}</span>
+              <span style="font-weight: 600;">${escapeHtml(c.name)}${c.isUser && state.equippedTitle ? ` <span class="lb-title-badge">${equippedTitleLabel()}</span>` : ''}</span>
               <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">
                 📍 ${escapeHtml(getUserCurrentProgress(c.completedLessons))}
               </span>
@@ -16648,124 +16729,154 @@ async function renderLeaderboard() {
 // ============================================================
 // SANAL MAĞAZA İŞLEMLERİ
 // ============================================================
-function buyStoreItem(item, price) {
-  if (isLocalEnvironment()) {
-    price = 0;
-  }
-  const xpBefore = state.xp;
-  if (state.xp < price) {
-    showToast('Yeterli puan yok!', 'error');
-    return;
-  }
+// ── Data-driven mağaza kataloğu ─────────────────────────────
+// Yeni ürün eklemek için tek yapılacak: bu diziye bir satır eklemek.
+const STORE_CATALOG = [
+  // Güçlendiriciler / yardımcılar
+  { id: 'hearts',        cat: 'boost', type: 'instant',    icon: '❤️', title: 'Can Yenile',       cost: 60,  desc: 'Canını anında 5/5 doldurur. Canın azaldığında al.' },
+  { id: 'streak_freeze', cat: 'boost', type: 'consumable', icon: '❄️', title: 'Seri Dondurucu',   cost: 120, max: 3, desc: 'Bir gün giremesen bile serini korur. En fazla 3 tane taşırsın.' },
+  { id: 'xp_booster',    cat: 'boost', type: 'boost',      icon: '⚡', title: 'XP Katlayıcı',     cost: 150, desc: 'Sonraki 20 doğru cevapta 2× puan kazanırsın.' },
+  { id: 'heart_shield',  cat: 'boost', type: 'boost',      icon: '🛡️', title: 'Can Kalkanı',      cost: 130, desc: 'Sonraki 3 yanlış cevap can götürmez.' },
+  // Temalar
+  { id: 'canva',  cat: 'theme', type: 'theme', icon: '🎨', title: 'Canva Teması',        cost: 0,   desc: 'Turkuaz, mavi ve mor gradyan renk paleti (varsayılan).' },
+  { id: 'gold',   cat: 'theme', type: 'theme', icon: '👑', title: 'Özel Altın Tema',     cost: 220, desc: 'Tüm uygulamaya özel, asil altın renk paleti.' },
+  { id: 'mint',   cat: 'theme', type: 'theme', icon: '🌿', title: 'Pastel Mint Teması',  cost: 120, desc: 'Yatıştırıcı pastel nane yeşili ve adaçayı paleti.' },
+  { id: 'sakura', cat: 'theme', type: 'theme', icon: '🌸', title: 'Pastel Sakura Teması', cost: 140, desc: 'Zarif kiraz çiçeği pembesi ve lavanta paleti.' },
+  { id: 'sunset', cat: 'theme', type: 'theme', icon: '🌅', title: 'Pastel Sunset Teması', cost: 150, desc: 'Sıcak şeftali, mercan ve gün batımı paleti.' },
+  { id: 'kutup',  cat: 'theme', type: 'theme', icon: '❄️', title: 'Nordic Frost Teması',  cost: 150, desc: 'Minimalist ve ferahlatıcı buz mavisi paleti.' },
+  { id: 'siber',  cat: 'theme', type: 'theme', icon: '🌌', title: 'Cyberpunk Neon Teması', cost: 200, desc: 'Obsidyen siyahı ve elektrik siyanı paleti.' },
+  { id: 'orman',  cat: 'theme', type: 'theme', icon: '🍂', title: 'Forest Zen Teması',    cost: 140, desc: 'Dinlendirici çam yeşili ve krem toprak paleti.' },
+  // Kozmetik: unvanlar (isminin yanında rozet)
+  { id: 'title_kelime_avcisi',    cat: 'cosmetic', type: 'title', icon: '🏹', title: 'Unvan: Kelime Avcısı',     cost: 180, label: 'Kelime Avcısı',     desc: 'İsminin yanında "🏹 Kelime Avcısı" rozeti görünür.' },
+  { id: 'title_gramer_ustasi',    cat: 'cosmetic', type: 'title', icon: '📐', title: 'Unvan: Gramer Ustası',     cost: 200, label: 'Gramer Ustası',     desc: 'İsminin yanında "📐 Gramer Ustası" rozeti görünür.' },
+  { id: 'title_edat_terminatoru', cat: 'cosmetic', type: 'title', icon: '⚙️', title: 'Unvan: Edat Terminatörü',  cost: 220, label: 'Edat Terminatörü',  desc: 'İsminin yanında "⚙️ Edat Terminatörü" rozeti görünür.' },
+  { id: 'title_seri_krali',       cat: 'cosmetic', type: 'title', icon: '🔥', title: 'Unvan: Seri Kralı',        cost: 250, label: 'Seri Kralı',        desc: 'İsminin yanında "🔥 Seri Kralı" rozeti görünür.' },
+  // Kozmetik: avatar çerçeveleri
+  { id: 'frame_gold', cat: 'cosmetic', type: 'frame', icon: '🟡', title: 'Çerçeve: Altın Halka', cost: 160, desc: 'Avatarına parlak altın bir halka ekler.' },
+  { id: 'frame_neon', cat: 'cosmetic', type: 'frame', icon: '🟣', title: 'Çerçeve: Neon Halka',  cost: 180, desc: 'Avatarına mor-mavi neon parıltı ekler.' },
+  { id: 'frame_leaf', cat: 'cosmetic', type: 'frame', icon: '🟢', title: 'Çerçeve: Yaprak Çelenk', cost: 150, desc: 'Avatarına yeşil bir çelenk çerçeve ekler.' }
+];
 
-  if (item === 'hearts') {
-    if (state.hearts >= MAX_HEARTS) {
-      showToast('Canların zaten dolu!', 'warning');
-      return;
+const STORE_CATEGORIES = [
+  { id: 'boost',    label: '⚡ Güçlendiriciler' },
+  { id: 'theme',    label: '🎨 Temalar' },
+  { id: 'cosmetic', label: '✨ Kozmetik' }
+];
+
+const FREE_THEMES = ['light', 'canva'];
+const THEME_IDS = STORE_CATALOG.filter(i => i.cat === 'theme').map(i => i.id);
+let storeActiveCat = 'boost';
+
+function catalogItem(id) { return STORE_CATALOG.find(i => i.id === id); }
+function coinBalance() { return state.coins || 0; }
+function addCoins(n) { state.coins = Math.max(0, Math.round((state.coins || 0) + n)); }
+function themeOwned(id) { return FREE_THEMES.includes(id) || (state.purchasedThemes || []).includes(id); }
+function cosmeticOwned(id) { return (state.purchasedCosmetics || []).includes(id); }
+function equippedTitleLabel() {
+  const it = catalogItem(state.equippedTitle);
+  return it ? `${it.icon} ${it.label}` : '';
+}
+function applyThemeAttr(id) {
+  if (id && id !== 'light') document.documentElement.setAttribute('data-theme', id);
+  else document.documentElement.removeAttribute('data-theme');
+}
+
+// Geriye dönük durum göçü — eski hesaplar yeni ekonomiyle uyumlansın.
+function migrateStoreEconomy() {
+  if (!state.inventory || typeof state.inventory !== 'object') state.inventory = { streak_freeze: 0 };
+  if (state.inventory.streak_freeze == null) state.inventory.streak_freeze = 0;
+  if (!state.boosts || typeof state.boosts !== 'object') state.boosts = { xpBoosterQ: 0, heartShieldQ: 0 };
+  if (state.boosts.xpBoosterQ == null) state.boosts.xpBoosterQ = 0;
+  if (state.boosts.heartShieldQ == null) state.boosts.heartShieldQ = 0;
+  if (!Array.isArray(state.purchasedThemes)) state.purchasedThemes = [];
+  if (!Array.isArray(state.purchasedCosmetics)) state.purchasedCosmetics = [];
+
+  // Eski tek seferlik "streakFreezeBought" bayrağı -> stoklanabilir envanter
+  if (state.streakFreezeBought && state.inventory.streak_freeze < 1) {
+    state.inventory.streak_freeze = 1;
+  }
+  // Daha önce etkinleştirilmiş ücretli tema -> kalıcı sahiplik
+  if (state.activeTheme && !FREE_THEMES.includes(state.activeTheme) &&
+      THEME_IDS.includes(state.activeTheme) && !state.purchasedThemes.includes(state.activeTheme)) {
+    state.purchasedThemes.push(state.activeTheme);
+  }
+  // Tek seferlik jeton göçü: XP sıralamada kalır, jeton harcama birimidir.
+  if (!state.coinsMigrated) {
+    state.coins = (state.coins || 0) + 150 + Math.round((state.xp || 0) * 0.35);
+    state.coinsMigrated = true;
+  }
+}
+
+function buyStoreItem(id) {
+  const it = catalogItem(id);
+  if (!it) return;
+  const cost = isLocalEnvironment() ? 0 : (it.cost || 0);
+  const afford = () => {
+    if (coinBalance() < cost) { showToast(`Yeterli jeton yok! (Gereken: ${cost} 🪙)`, 'error'); return false; }
+    return true;
+  };
+
+  if (it.type === 'theme') {
+    if (!themeOwned(id)) {
+      if (!afford()) return;
+      addCoins(-cost);
+      state.purchasedThemes.push(id);
+      state.activeTheme = id;
+      applyThemeAttr(id);
+      updateDailyTaskProgress('shop', 1);
+      showToast(`${it.title} satın alındı ve etkinleştirildi! ${it.icon}`, 'success');
+    } else if (state.activeTheme === id) {
+      state.activeTheme = 'light';
+      applyThemeAttr('light');
+      showToast(`${it.title} kapatıldı.`, 'info');
+    } else {
+      state.activeTheme = id;
+      applyThemeAttr(id);
+      showToast(`${it.title} etkinleştirildi. ${it.icon}`, 'success');
     }
+  } else if (it.type === 'instant' && id === 'hearts') {
+    if (state.hearts >= MAX_HEARTS) { showToast('Canların zaten dolu!', 'warning'); return; }
+    if (!afford()) return;
+    addCoins(-cost);
     state.hearts = MAX_HEARTS;
-    state.xp -= price;
-    showToast('Canların yenilendi! ❤️', 'success');
-  } else if (item === 'streak-freeze') {
-    if (state.streakFreezeBought) {
-      showToast('Zaten bir adet Seri Dondurucun var!', 'warning');
-      return;
-    }
-    state.streakFreezeBought = true;
-    state.xp -= price;
-    showToast('Seri Dondurucu satın alındı! ❄️', 'success');
-  } else if (item === 'gold-theme') {
-    if (state.activeTheme === 'gold') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Altın tema kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'gold';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'gold');
-      showToast('Altın tema aktif edildi! 👑', 'success');
-    }
-  } else if (item === 'canva-theme') {
-    if (state.activeTheme === 'canva') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Canva teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'canva';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'canva');
-      showToast('Canva teması aktif edildi! 🎨', 'success');
-    }
-  } else if (item === 'mint-theme') {
-    if (state.activeTheme === 'mint') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Pastel Mint teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'mint';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'mint');
-      showToast('Pastel Mint teması aktif edildi! 🌿', 'success');
-    }
-  } else if (item === 'sakura-theme') {
-    if (state.activeTheme === 'sakura') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Pastel Sakura teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'sakura';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'sakura');
-      showToast('Pastel Sakura teması aktif edildi! 🌸', 'success');
-    }
-  } else if (item === 'sunset-theme') {
-    if (state.activeTheme === 'sunset') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Pastel Sunset teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'sunset';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'sunset');
-      showToast('Pastel Sunset teması aktif edildi! 🌅', 'success');
-    }
-  } else if (item === 'kutup-theme') {
-    if (state.activeTheme === 'kutup') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Nordic Frost teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'kutup';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'kutup');
-      showToast('Nordic Frost teması aktif edildi! ❄️', 'success');
-    }
-  } else if (item === 'siber-theme') {
-    if (state.activeTheme === 'siber') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Cyberpunk Neon teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'siber';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'siber');
-      showToast('Cyberpunk Neon teması aktif edildi! 🌌', 'success');
-    }
-  } else if (item === 'orman-theme') {
-    if (state.activeTheme === 'orman') {
-      state.activeTheme = 'light';
-      document.documentElement.removeAttribute('data-theme');
-      showToast('Forest Zen teması kapatıldı.', 'info');
-    } else {
-      state.activeTheme = 'orman';
-      state.xp -= price;
-      document.documentElement.setAttribute('data-theme', 'orman');
-      showToast('Forest Zen teması aktif edildi! 🍂', 'success');
-    }
-  }
-
-  if (state.xp < xpBefore) {
     updateDailyTaskProgress('shop', 1);
+    showToast('Canların yenilendi! ❤️', 'success');
+  } else if (it.type === 'consumable' && id === 'streak_freeze') {
+    const have = state.inventory.streak_freeze || 0;
+    if (have >= (it.max || 3)) { showToast(`En fazla ${it.max} Seri Dondurucu taşıyabilirsin.`, 'warning'); return; }
+    if (!afford()) return;
+    addCoins(-cost);
+    state.inventory.streak_freeze = have + 1;
+    state.streakFreezeBought = true;
+    updateDailyTaskProgress('shop', 1);
+    showToast('Seri Dondurucu envanterine eklendi! ❄️', 'success');
+  } else if (it.type === 'boost') {
+    if (!afford()) return;
+    addCoins(-cost);
+    if (id === 'xp_booster') {
+      state.boosts.xpBoosterQ = (state.boosts.xpBoosterQ || 0) + 20;
+      showToast('⚡ XP Katlayıcı etkin! Sonraki 20 doğru cevap 2× puan.', 'success');
+    } else if (id === 'heart_shield') {
+      state.boosts.heartShieldQ = (state.boosts.heartShieldQ || 0) + 3;
+      showToast('🛡️ Can Kalkanı etkin! Sonraki 3 yanlış can götürmez.', 'success');
+    }
+    updateDailyTaskProgress('shop', 1);
+  } else if (it.type === 'title' || it.type === 'frame') {
+    const slot = it.type === 'title' ? 'equippedTitle' : 'equippedFrame';
+    if (!cosmeticOwned(id)) {
+      if (!afford()) return;
+      addCoins(-cost);
+      state.purchasedCosmetics.push(id);
+      state[slot] = id;
+      updateDailyTaskProgress('shop', 1);
+      showToast(`${it.title} alındı ve kuşanıldı! ${it.icon}`, 'success');
+    } else if (state[slot] === id) {
+      state[slot] = null;
+      showToast(`${it.title} çıkarıldı.`, 'info');
+    } else {
+      state[slot] = id;
+      showToast(`${it.title} kuşanıldı. ${it.icon}`, 'success');
+    }
   }
 
   saveState();
@@ -16773,122 +16884,81 @@ function buyStoreItem(item, price) {
   renderStore();
 }
 
+function storeCardHTML(it) {
+  const esc = s => String(s || '').replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  const cost = isLocalEnvironment() ? 0 : (it.cost || 0);
+  const priceLabel = cost === 0 ? 'Ücretsiz' : `${cost} 🪙`;
+  let btnLabel = priceLabel;
+  let btnClass = 'btn-primary';
+  let disabled = false;
+  let status = '';
+
+  if (it.type === 'theme') {
+    if (!themeOwned(it.id)) {
+      btnLabel = priceLabel; btnClass = 'btn-primary';
+    } else if (state.activeTheme === it.id) {
+      btnLabel = 'Aktif (Kapat)'; btnClass = 'btn-secondary';
+      status = '<span class="store-card-status owned">✓ Sahipsin</span>';
+    } else {
+      btnLabel = 'Etkinleştir'; btnClass = 'btn-secondary-outline';
+      status = '<span class="store-card-status owned">✓ Sahipsin</span>';
+    }
+  } else if (it.type === 'instant' && it.id === 'hearts') {
+    if (state.hearts >= MAX_HEARTS) { disabled = true; btnLabel = 'Canların Dolu'; btnClass = 'btn-secondary'; }
+  } else if (it.type === 'consumable' && it.id === 'streak_freeze') {
+    const have = state.inventory.streak_freeze || 0;
+    status = `<span class="store-card-status">Envanter: ${have}/${it.max}</span>`;
+    if (have >= it.max) { disabled = true; btnLabel = 'Dolu (Maks.)'; btnClass = 'btn-secondary'; }
+  } else if (it.type === 'boost') {
+    const q = it.id === 'xp_booster' ? (state.boosts.xpBoosterQ || 0) : (state.boosts.heartShieldQ || 0);
+    const unit = it.id === 'xp_booster' ? 'doğru' : 'yanlış';
+    if (q > 0) status = `<span class="store-card-status active">⏳ Aktif: ${q} ${unit}</span>`;
+  } else if (it.type === 'title' || it.type === 'frame') {
+    const slot = it.type === 'title' ? 'equippedTitle' : 'equippedFrame';
+    if (!cosmeticOwned(it.id)) {
+      btnLabel = priceLabel; btnClass = 'btn-primary';
+    } else if (state[slot] === it.id) {
+      btnLabel = 'Kuşanıldı (Çıkar)'; btnClass = 'btn-secondary';
+      status = '<span class="store-card-status owned">✓ Sahipsin</span>';
+    } else {
+      btnLabel = 'Kuşan'; btnClass = 'btn-secondary-outline';
+      status = '<span class="store-card-status owned">✓ Sahipsin</span>';
+    }
+  }
+
+  return `
+    <div class="store-card${status.includes('owned') ? ' bought' : ''}">
+      <span class="store-card-icon">${it.icon}</span>
+      <h3>${esc(it.title)}</h3>
+      <p>${esc(it.desc)}</p>
+      ${status}
+      <button class="btn ${btnClass} store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''}>${btnLabel}</button>
+    </div>`;
+}
+
 function renderStore() {
-  const goldThemeBtn = document.getElementById('buy-gold-theme-btn');
-  if (goldThemeBtn) {
-    if (state.activeTheme === 'gold') {
-      goldThemeBtn.textContent = 'Aktif (Kapat)';
-      goldThemeBtn.classList.remove('btn-primary');
-      goldThemeBtn.classList.add('btn-secondary');
-    } else {
-      goldThemeBtn.textContent = '200 Puan';
-      goldThemeBtn.classList.add('btn-primary');
-      goldThemeBtn.classList.remove('btn-secondary');
-    }
+  const container = document.querySelector('.store-container');
+  if (!container) return;
+
+  // Jeton bakiyesi
+  const coinEl = document.getElementById('store-coin-count');
+  if (coinEl) coinEl.textContent = coinBalance();
+
+  // Kategori sekmeleri
+  const tabsEl = document.getElementById('store-cat-tabs');
+  if (tabsEl) {
+    tabsEl.innerHTML = STORE_CATEGORIES.map(c =>
+      `<button class="store-cat-tab${c.id === storeActiveCat ? ' active' : ''}" data-cat="${c.id}">${c.label}</button>`
+    ).join('');
   }
 
-  const canvaThemeBtn = document.getElementById('buy-canva-theme-btn');
-  if (canvaThemeBtn) {
-    if (state.activeTheme === 'canva') {
-      canvaThemeBtn.textContent = 'Aktif (Kapat)';
-      canvaThemeBtn.classList.remove('btn-primary');
-      canvaThemeBtn.classList.add('btn-secondary');
-    } else {
-      canvaThemeBtn.textContent = '150 Puan';
-      canvaThemeBtn.classList.add('btn-primary');
-      canvaThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const mintThemeBtn = document.getElementById('buy-mint-theme-btn');
-  if (mintThemeBtn) {
-    if (state.activeTheme === 'mint') {
-      mintThemeBtn.textContent = 'Aktif (Kapat)';
-      mintThemeBtn.classList.remove('btn-primary');
-      mintThemeBtn.classList.add('btn-secondary');
-    } else {
-      mintThemeBtn.textContent = '100 Puan';
-      mintThemeBtn.classList.add('btn-primary');
-      mintThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const sakuraThemeBtn = document.getElementById('buy-sakura-theme-btn');
-  if (sakuraThemeBtn) {
-    if (state.activeTheme === 'sakura') {
-      sakuraThemeBtn.textContent = 'Aktif (Kapat)';
-      sakuraThemeBtn.classList.remove('btn-primary');
-      sakuraThemeBtn.classList.add('btn-secondary');
-    } else {
-      sakuraThemeBtn.textContent = '120 Puan';
-      sakuraThemeBtn.classList.add('btn-primary');
-      sakuraThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const sunsetThemeBtn = document.getElementById('buy-sunset-theme-btn');
-  if (sunsetThemeBtn) {
-    if (state.activeTheme === 'sunset') {
-      sunsetThemeBtn.textContent = 'Aktif (Kapat)';
-      sunsetThemeBtn.classList.remove('btn-primary');
-      sunsetThemeBtn.classList.add('btn-secondary');
-    } else {
-      sunsetThemeBtn.textContent = '130 Puan';
-      sunsetThemeBtn.classList.add('btn-primary');
-      sunsetThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const kutupThemeBtn = document.getElementById('buy-kutup-theme-btn');
-  if (kutupThemeBtn) {
-    if (state.activeTheme === 'kutup') {
-      kutupThemeBtn.textContent = 'Aktif (Kapat)';
-      kutupThemeBtn.classList.remove('btn-primary');
-      kutupThemeBtn.classList.add('btn-secondary');
-    } else {
-      kutupThemeBtn.textContent = '140 Puan';
-      kutupThemeBtn.classList.add('btn-primary');
-      kutupThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const siberThemeBtn = document.getElementById('buy-siber-theme-btn');
-  if (siberThemeBtn) {
-    if (state.activeTheme === 'siber') {
-      siberThemeBtn.textContent = 'Aktif (Kapat)';
-      siberThemeBtn.classList.remove('btn-primary');
-      siberThemeBtn.classList.add('btn-secondary');
-    } else {
-      siberThemeBtn.textContent = '180 Puan';
-      siberThemeBtn.classList.add('btn-primary');
-      siberThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const ormanThemeBtn = document.getElementById('buy-orman-theme-btn');
-  if (ormanThemeBtn) {
-    if (state.activeTheme === 'orman') {
-      ormanThemeBtn.textContent = 'Aktif (Kapat)';
-      ormanThemeBtn.classList.remove('btn-primary');
-      ormanThemeBtn.classList.add('btn-secondary');
-    } else {
-      ormanThemeBtn.textContent = '120 Puan';
-      ormanThemeBtn.classList.add('btn-primary');
-      ormanThemeBtn.classList.remove('btn-secondary');
-    }
-  }
-
-  const freezeBtn = document.getElementById('buy-streak-freeze-btn');
-  if (freezeBtn) {
-    if (state.streakFreezeBought) {
-      freezeBtn.textContent = 'Satın Alındı';
-      freezeBtn.disabled = true;
-      freezeBtn.style.opacity = '0.5';
-    } else {
-      freezeBtn.textContent = '100 Puan';
-      freezeBtn.disabled = false;
-      freezeBtn.style.opacity = '1';
-    }
+  // Kart ızgarası
+  const grid = document.getElementById('store-grid');
+  if (grid) {
+    grid.innerHTML = STORE_CATALOG
+      .filter(it => it.cat === storeActiveCat)
+      .map(storeCardHTML)
+      .join('');
   }
 }
 
@@ -17408,6 +17478,25 @@ function initEventListeners() {
     });
   });
 
+  // Marka logosu: tıklanınca ana sayfaya (Dersler sekmesi) dön.
+  const brandHome = document.getElementById('sidebar-brand-home');
+  if (brandHome) {
+    const goHomeFromBrand = () => {
+      const inQuiz = document.getElementById('quiz-screen')?.classList.contains('active');
+      if (inQuiz && !confirm('Dersten çıkmak istediğine emin misin? İlerleme kaybedilecek.')) return;
+      isReviewMode = false;
+      activeDrillSession = false;
+      switchTab('lessons');
+      updateTopBar();
+      renderLessonTree();
+      showScreen('home-screen');
+    };
+    brandHome.addEventListener('click', goHomeFromBrand);
+    brandHome.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); goHomeFromBrand(); }
+    });
+  }
+
   // Profil Hub Alt Sekmeleri (Profilim / Puan Tablosu / Mağaza)
   document.querySelectorAll('.profile-hub-tab').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -17425,17 +17514,22 @@ function initEventListeners() {
     });
   }
 
-  // Mağaza Satın Alma Butonları
-  document.getElementById('buy-hearts-btn').addEventListener('click', () => buyStoreItem('hearts', 50));
-  document.getElementById('buy-streak-freeze-btn').addEventListener('click', () => buyStoreItem('streak-freeze', 100));
-  document.getElementById('buy-gold-theme-btn').addEventListener('click', () => buyStoreItem('gold-theme', 200));
-  document.getElementById('buy-canva-theme-btn').addEventListener('click', () => buyStoreItem('canva-theme', 150));
-  document.getElementById('buy-mint-theme-btn').addEventListener('click', () => buyStoreItem('mint-theme', 100));
-  document.getElementById('buy-sakura-theme-btn').addEventListener('click', () => buyStoreItem('sakura-theme', 120));
-  document.getElementById('buy-sunset-theme-btn').addEventListener('click', () => buyStoreItem('sunset-theme', 130));
-  document.getElementById('buy-kutup-theme-btn').addEventListener('click', () => buyStoreItem('kutup-theme', 140));
-  document.getElementById('buy-siber-theme-btn').addEventListener('click', () => buyStoreItem('siber-theme', 180));
-  document.getElementById('buy-orman-theme-btn').addEventListener('click', () => buyStoreItem('orman-theme', 120));
+  // Mağaza: kategori sekmeleri ve satın alma (olay delegasyonu — katalog dinamik)
+  const storeContainer = document.querySelector('.store-container');
+  if (storeContainer) {
+    storeContainer.addEventListener('click', (e) => {
+      const catTab = e.target.closest('.store-cat-tab');
+      if (catTab && catTab.dataset.cat) {
+        storeActiveCat = catTab.dataset.cat;
+        renderStore();
+        return;
+      }
+      const buyBtn = e.target.closest('.store-buy-btn');
+      if (buyBtn && buyBtn.dataset.item && !buyBtn.disabled) {
+        buyStoreItem(buyBtn.dataset.item);
+      }
+    });
+  }
 
   // Collapsible Üyelik & Lisans Kartı
   const licenceHeader = document.getElementById('store-licence-header');
