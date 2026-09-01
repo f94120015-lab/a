@@ -11144,7 +11144,22 @@ function renderMatching(container, question) {
     return arr;
   })();
 
-  const isLeftEnglish = pairs.length > 0 && /^[a-zA-Z]/.test(pairs[0].left);
+  // `/^[a-zA-Z]/` yetersizdi: "Belge", "Fiyat" gibi Türkçe sözcükler de ASCII
+  // harfle başladığından sol sütun yanlışlıkla İngilizce sanılıp başlıklar ters
+  // yazılıyordu. Onun yerine iki sütunu dil işaretlerine göre puanlayıp
+  // karşılaştırıyoruz (eşleştirme her zaman bir İngilizce + bir Türkçe taraf).
+  const englishScore = (text) => {
+    const t = String(text || '').toLowerCase().replace(/<[^>]+>/g, ' ');
+    let score = 0;
+    if (/[çşğıöü]/i.test(t)) score -= 3;
+    const trMarkers = t.match(/\b\w*(?:midir|mıdır|mudur|müdür|mıydı|miydi|muydu|müydü|değil|için|ması|mesi)\b|\b(?:mi|mı|mu|mü|ve|bir|bu|şu|da|de|ile)\b|\w+(?:dır|dir|dur|dür|dığı|diği|lar|ler)\b/g) || [];
+    score -= trMarkers.length * 2;
+    const enWords = t.match(/\b(?:the|is|are|was|were|a|an|do|does|did|why|what|how|of|to|and|in|on|for|with|by|has|have|will|would|should|can|could|not|this|that|it|be)\b/g) || [];
+    score += enWords.length * 2;
+    return score;
+  };
+  const isLeftEnglish = pairs.length > 0 &&
+    englishScore(pairs[0].left) > englishScore(pairs[0].right);
   const leftHeader = question.leftHeader || (isLeftEnglish ? "İngilizce İfade" : "Türkçe Karşılık");
   const rightHeader = question.rightHeader || (isLeftEnglish ? "Türkçe Karşılık" : "İngilizce İfade");
 
