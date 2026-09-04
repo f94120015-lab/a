@@ -160,7 +160,7 @@ rawTopics.push(
     },
     {
       "formula": "Konuşma Anı / Güncel Zarflar (now, currently, nowadays...) ➔ Present Continuous (am/is/are + V-ing)",
-      "example": "At present, the research team <span style=\"color: #8b5cf6; font-weight: bold;\">is examining</span> historical manuscripts: Şu anda araştırma ekibi tarihi el yazmalarını inceliyor.",
+      "example": "At present, the research team <span style=\"color: #0d9488; font-weight: bold;\">is examining</span> historical manuscripts: Şu anda araştırma ekibi tarihi el yazmalarını inceliyor.",
       "description": "Şu anda veya bu dönemde devam eden geçici süreçler."
     },
     {
@@ -190,12 +190,12 @@ rawTopics.push(
     },
     {
       "formula": "Gelecekte Sınır / Öncelik Zarfları (by 2030, by the time...) ➔ Future Perfect / Past Perfect",
-      "example": "By 2030, the government <span style=\"color: #8b5cf6; font-weight: bold;\">will have completed</span> the reform: 2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
+      "example": "By 2030, the government <span style=\"color: #0d9488; font-weight: bold;\">will have completed</span> the reform: 2030 yılına kadar hükümet reformu tamamlamış olacaktır.",
       "description": "Gelecekteki ya da geçmişteki belirli bir sınırdan önce tamamlanmış olan eylemler."
     },
     {
       "formula": "Akademik Eleme Algoritması: Zarf/Bağlaç Tespiti ➔ Past-Present Uyumsuzu Ele ➔ Voice (Aktif/Pasif) Çekimi Yap",
-      "example": "By the time the report <span style=\"color: #ef4444; font-weight: bold;\">was released</span>, researchers <span style=\"color: #8b5cf6; font-weight: bold;\">had already verified</span> the data: Rapor yayımlandığında araştırmacılar verileri çoktan doğrulamıştı.",
+      "example": "By the time the report <span style=\"color: #ef4444; font-weight: bold;\">was released</span>, researchers <span style=\"color: #0d9488; font-weight: bold;\">had already verified</span> the data: Rapor yayımlandığında araştırmacılar verileri çoktan doğrulamıştı.",
       "description": "Metnin tamamını çevirmeden zaman zarfı, zaman bağlacı (will/would yasağı) ve past-present paralelliği ile doğru seçeneğe ulaşma stratejisi."
     }
   ],
@@ -217,7 +217,7 @@ rawTopics.push(
   "startLessonId": 103,
   "originalIndex": 31,
   "title": "Zaman Uyumu: By the time, Since, It is time",
-  "desc": "<span style='color: #10b981; font-weight: bold;'>'Since'</span>, <span style='color: #06b6d4; font-weight: bold;'>'By the time'</span>, <span style='color: #3b82f6; font-weight: bold;'>'Before'</span>/<span style='color: #8b5cf6; font-weight: bold;'>'After'</span>/<span style='color: #ec4899; font-weight: bold;'>'While'</span>, <span style='color: #f59e0b; font-weight: bold;'>'No sooner... than'</span>, <span style='color: #6366f1; font-weight: bold;'>'It is time'</span> ve <span style='color: #10b981; font-weight: bold;'>süperlatif kilitleri</span>.",
+  "desc": "<span style='color: #10b981; font-weight: bold;'>'Since'</span>, <span style='color: #06b6d4; font-weight: bold;'>'By the time'</span>, <span style='color: #3b82f6; font-weight: bold;'>'Before'</span>/<span style='color: #0d9488; font-weight: bold;'>'After'</span>/<span style='color: #ec4899; font-weight: bold;'>'While'</span>, <span style='color: #f59e0b; font-weight: bold;'>'No sooner... than'</span>, <span style='color: #0d9488; font-weight: bold;'>'It is time'</span> ve <span style='color: #10b981; font-weight: bold;'>süperlatif kilitleri</span>.",
   "icon": "🧪",
   "numLessons": 4,
   "formulas": [
@@ -244,9 +244,9 @@ rawTopics.push(
   ],
   "subtitles": [
     "1. <span style=\"color: #10b981; font-weight: bold;\">\"Since\"</span> ve <span style=\"color: #06b6d4; font-weight: bold;\">\"By the Time\"</span> Zaman Sınırları (<span style=\"color: #10b981; font-weight: bold;\">Süreç</span> ve <span style=\"color: #06b6d4; font-weight: bold;\">Sınır Kilitleri</span>)",
-    "2. Kronolojik Öncelik & Eşzamanlılık (<span style=\"color: #3b82f6; font-weight: bold;\">Before</span>, <span style=\"color: #8b5cf6; font-weight: bold;\">After</span>, <span style=\"color: #ec4899; font-weight: bold;\">While</span>)",
+    "2. Kronolojik Öncelik & Eşzamanlılık (<span style=\"color: #3b82f6; font-weight: bold;\">Before</span>, <span style=\"color: #0d9488; font-weight: bold;\">After</span>, <span style=\"color: #ec4899; font-weight: bold;\">While</span>)",
     "3. Devrik Anlık Zaman Kırılmaları (<span style=\"color: #f59e0b; font-weight: bold;\">No sooner</span> / <span style=\"color: #ef4444; font-weight: bold;\">Hardly</span>)",
-    "4. Varsayımsal Zaman Kaymaları (<span style=\"color: #6366f1; font-weight: bold;\">It's time</span>) ve <span style=\"color: #10b981; font-weight: bold;\">Süperlatif Mühürleri</span>"
+    "4. Varsayımsal Zaman Kaymaları (<span style=\"color: #0d9488; font-weight: bold;\">It's time</span>) ve <span style=\"color: #10b981; font-weight: bold;\">Süperlatif Mühürleri</span>"
 ]
 },
 {

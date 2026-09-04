@@ -157,16 +157,16 @@
 
   // 2. Matris: Yan Cümle Zamanları (Clause A)
   const CLAUSE_A_TENSES = [
-    { id: "v1_present", label: "V1 / Present Simple", sample: "she studies hard", sampleTR: "sıkı çalışır", tenseGroup: "present", color: "#8b5cf6" },
-    { id: "v2_past", label: "V2 / Past Simple", sample: "she studied hard", sampleTR: "sıkı çalıştı", tenseGroup: "past", color: "#8b5cf6" },
-    { id: "was_were_ving", label: "Was/Were + V-ing", sample: "she was studying late", sampleTR: "geç saatlere kadar çalışıyordu", tenseGroup: "past_cont", color: "#8b5cf6" },
-    { id: "had_v3", label: "Had + V3 (Past Perfect)", sample: "she had studied hard", sampleTR: "sıkı çalışmıştı", tenseGroup: "past_perfect", color: "#8b5cf6" },
-    { id: "has_v3", label: "Has/Have + V3 / Present Perfect", sample: "she has lived here", sampleTR: "burada yaşadı", tenseGroup: "present_perfect", color: "#8b5cf6" },
-    { id: "is_ving", label: "Am/Is/Are + V-ing", sample: "it is raining outside", sampleTR: "dışarıda yağmur yağıyor", tenseGroup: "present_cont", color: "#8b5cf6" },
-    { id: "future_date", label: "[Gelecek Tarih / By 2050]", sample: "By 2050", sampleTR: "2050 yılına kadar", tenseGroup: "future_date", color: "#8b5cf6" },
-    { id: "past_date", label: "[Geçmiş Tarih / By 1900]", sample: "By 1900", sampleTR: "1900 yılına kadar", tenseGroup: "past_date", color: "#8b5cf6" },
-    { id: "v_ing_obj", label: "[V-ing + Nesne]", sample: "completing the report", sampleTR: "raporu tamamlamak", tenseGroup: "ving", color: "#8b5cf6" },
-    { id: "noun_phrase", label: "[Noun / İsim / Dönem İskeleti]", sample: "the economic crisis", sampleTR: "ekonomik kriz", tenseGroup: "noun", color: "#8b5cf6" }
+    { id: "v1_present", label: "V1 / Present Simple", sample: "she studies hard", sampleTR: "sıkı çalışır", tenseGroup: "present", color: "#0d9488" },
+    { id: "v2_past", label: "V2 / Past Simple", sample: "she studied hard", sampleTR: "sıkı çalıştı", tenseGroup: "past", color: "#0d9488" },
+    { id: "was_were_ving", label: "Was/Were + V-ing", sample: "she was studying late", sampleTR: "geç saatlere kadar çalışıyordu", tenseGroup: "past_cont", color: "#0d9488" },
+    { id: "had_v3", label: "Had + V3 (Past Perfect)", sample: "she had studied hard", sampleTR: "sıkı çalışmıştı", tenseGroup: "past_perfect", color: "#0d9488" },
+    { id: "has_v3", label: "Has/Have + V3 / Present Perfect", sample: "she has lived here", sampleTR: "burada yaşadı", tenseGroup: "present_perfect", color: "#0d9488" },
+    { id: "is_ving", label: "Am/Is/Are + V-ing", sample: "it is raining outside", sampleTR: "dışarıda yağmur yağıyor", tenseGroup: "present_cont", color: "#0d9488" },
+    { id: "future_date", label: "[Gelecek Tarih / By 2050]", sample: "By 2050", sampleTR: "2050 yılına kadar", tenseGroup: "future_date", color: "#0d9488" },
+    { id: "past_date", label: "[Geçmiş Tarih / By 1900]", sample: "By 1900", sampleTR: "1900 yılına kadar", tenseGroup: "past_date", color: "#0d9488" },
+    { id: "v_ing_obj", label: "[V-ing + Nesne]", sample: "completing the report", sampleTR: "raporu tamamlamak", tenseGroup: "ving", color: "#0d9488" },
+    { id: "noun_phrase", label: "[Noun / İsim / Dönem İskeleti]", sample: "the economic crisis", sampleTR: "ekonomik kriz", tenseGroup: "noun", color: "#0d9488" }
   ];
 
   // 3. Matris: Ana Cümle / Modal Yapıları (Clause B)
@@ -2454,7 +2454,7 @@
   const BURDEN_KINDS = {
     rule:   { dot: '#ef4444', label: 'kural',  hint: 'Kendinden sonrasını belirler (zaman uyumu ya da devrik söz dizimi). Ezberlenmesi gereken parça budur.' },
     type:   { dot: '#f59e0b', label: 'tür',    hint: 'Arkasına ne geleceğini belirler (isim öbeği mi, tam cümle mi). Ailede tek kural: rozete bakmak yeter.' },
-    shared: { dot: '#8b5cf6', label: 'ortak',  hint: 'Bütün geçiş ifadeleriyle ortak tek kurala tabidir: "; ifade," ya da ". İfade,". Ayrıca ezberlenecek yapı yok.' }
+    shared: { dot: '#0d9488', label: 'ortak',  hint: 'Bütün geçiş ifadeleriyle ortak tek kurala tabidir: "; ifade," ya da ". İfade,". Ayrıca ezberlenecek yapı yok.' }
   };
 
   const BURDEN_RULE = [
@@ -2489,15 +2489,15 @@
   // rozet olarak taşıyor.
   const TAKE_KINDS = {
     sub:    { label: 'yan cümle', hint: 'Arkasından özne + fiil gelir; bu parça tek başına cümle olamaz.', color: '#0ea5e9' },
-    clause: { label: 'cümle',     hint: 'Bağımsız bir cümle gelir; öncesinde nokta ya da noktalı virgül bulunur.', color: '#8b5cf6' },
-    coord:  { label: 'cümle',     hint: 'İki bağımsız cümleyi birleştirir; öncesinde virgül bulunur.', color: '#8b5cf6' },
+    clause: { label: 'cümle',     hint: 'Bağımsız bir cümle gelir; öncesinde nokta ya da noktalı virgül bulunur.', color: '#0d9488' },
+    coord:  { label: 'cümle',     hint: 'İki bağımsız cümleyi birleştirir; öncesinde virgül bulunur.', color: '#0d9488' },
     noun:   { label: 'isim öbeği', hint: 'Arkasından isim ya da V-ing gelir; özne + fiil alamaz.', color: '#f59e0b' },
     ving:   { label: 'V-ing',     hint: 'Arkasından fiilin -ing biçimi gelir.', color: '#f59e0b' },
     v1:     { label: 'V1',        hint: 'Arkasından yalın fiil gelir.', color: '#f59e0b' },
     adv:    { label: 'zarf',      hint: 'Bağlaç değil: cümlenin zamanını belirleyen ifadedir (for eight years, two years ago). Arkasına cümle almaz.', color: '#64748b' },
     par:    { label: 'eş öğe',    hint: 'İki eş değerli öğeyi (isim, sıfat ya da cümle) birbirine bağlar.', color: '#10b981' },
     inv:    { label: 'devrik',    hint: 'Arkasından devrik cümle gelir: yardımcı fiil özneden önce durur.', color: '#ef4444' },
-    main:   { label: 'ana cümle', hint: 'Kısaltılmış yapıdır; arkasından ana cümle gelir.', color: '#8b5cf6' }
+    main:   { label: 'ana cümle', hint: 'Kısaltılmış yapıdır; arkasından ana cümle gelir.', color: '#0d9488' }
   };
 
   const CONNECTOR_TAKES = {
@@ -3040,7 +3040,7 @@
   // Bağlaç seçilince ikinci yuva o bağlaçla uyumlu zamanları, o da seçilince
   // üçüncü yuva ikisiyle uyumlu ana cümle yapılarını kendi içinde listeler.
   // Böylece öğrenci aşağıdaki büyük paleti taramadan zinciri kurabiliyor.
-  const SLOT_COLORS = { 1: '#06b6d4', 2: '#8b5cf6', 3: '#ec4899' };
+  const SLOT_COLORS = { 1: '#06b6d4', 2: '#0d9488', 3: '#ec4899' };
 
   function slotChipHTML(type, item, color) {
     return `
@@ -3510,9 +3510,9 @@
           if (state.selectedConnector === "since") {
             badgeEl.textContent = "⚡ ZAMAN UYUMSUZLUĞU İSTİSNASI (ÖZEL KURAL)";
             badgeEl.style.background = "rgba(139, 92, 246, 0.25)";
-            badgeEl.style.color = "#8b5cf6";
-            eyeStatusEl.style.background = "#8b5cf6";
-            eyeStatusEl.style.boxShadow = "0 0 10px #8b5cf6";
+            badgeEl.style.color = "#0d9488";
+            eyeStatusEl.style.background = "#0d9488";
+            eyeStatusEl.style.boxShadow = "0 0 10px #0d9488";
           } else {
             badgeEl.textContent = "🟢 %100 UYUMLU GÜÇLÜ YAPI";
             badgeEl.style.background = "rgba(16, 185, 129, 0.2)";
