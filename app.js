@@ -6516,7 +6516,9 @@ async function enterApp() {
   // kalmış bir kullanıcı var olmayan bir içeriğe dönüp boş ekran görür.
   const RETIRED_TABS = {
     'ezber-robotu': 'transitions-matrix',
-    'cause-effect': 'structure-robot'
+    'cause-effect': 'lessons',
+    'simulator': 'lessons',
+    'structure-robot': 'lessons'
   };
   let lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
   if (RETIRED_TABS[lastTab]) {
@@ -7999,7 +8001,13 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const previewBox = (formulaSrc, descSrc, exampleSrc, exampleTrSrc) => {
     const rows = [];
     if (looksLikeRealFormula(formulaSrc)) {
-      rows.push(`<div class="grammar-formula"><span class="formula-badge">Formül</span>${formulaRowsHTML(formulaSrc, { hideTitleLike: lesson.title })}</div>`);
+      // DEV NOTE: Burada kasıtlı olarak formulaRowsHTML yerine plainFormulaHTML
+      // kullanılıyor: o fonksiyon ok (→) içeren formülleri renkli parçalara ve
+      // ayrı bir etiket kutucuğuna bölüyor, bu da aynı popover'ın derse göre iki
+      // farklı görünmesine yol açıyordu (kullanıcı geri bildirimi). Matris ve
+      // Yapı Robotu gibi diğer ekranlarda o zenginleştirilmiş görünüm kasıtlı
+      // olarak korunuyor; burada tüm formüller tek, düz bir satır olarak akar.
+      rows.push(`<div class="grammar-formula"><span class="formula-badge">Formül</span>${plainFormulaHTML(formulaSrc, { hideTitleLike: lesson.title })}</div>`);
     }
     if (descSrc && !isGenericDescription(descSrc)) {
       rows.push(`<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${rows.length ? 'margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border-color);' : ''} line-height: 1.4;">${descSrc}</div>`);
@@ -8053,8 +8061,10 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const isUnlocked = isLessonUnlocked(lessonId);
 
   // Altyazı bazı derslerde başlığın kopyası; aynı satırı iki kez yazmayız.
-  const rawSubtitle = String(lesson.subtitle || '').trim();
-  const popoverSubtitleHTML = (!rawSubtitle || isRedundantText(rawSubtitle, lesson.title)) ? '' : rawSubtitle;
+  // DEV NOTE: Alt-başlık satırı yalnızca bazı derslerde dolu olduğundan aynı
+  // popover'ın ders ders farklı görünmesine yol açıyordu; kullanıcı isteğiyle
+  // görünümden kaldırıldı. Veri (lesson.subtitle) olduğu gibi duruyor.
+  const popoverSubtitleHTML = '';
   /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
   if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
     popoverSubtitleHTML += `<br><span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 4px; font-weight: normal;">Eski Sırası: ${lesson.originalLessonId}. Ders</span>`;
@@ -8169,11 +8179,13 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
     const uIdx = units.findIndex(u => u.id === unitId);
     const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
-    // Başlıktaki sondaki parantez konunun ikinci bir adı; başlığı iki satıra
-    // şişirmek yerine altına soluk bir not olarak iner.
-    const titleParts = String(lesson.title || '').match(/^([\s\S]*?)\s*\(([^()]*)\)\s*$/);
-    const titleMain = titleParts ? titleParts[1] : String(lesson.title || '');
-    const titleNote = titleParts && !isRedundantText(titleParts[2], titleParts[1]) ? titleParts[2] : '';
+    // DEV NOTE: Başlıktaki sondaki parantez daha önce ayrı bir "not" satırına
+    // bölünüyordu; ama bu parantez yalnızca bazı ders başlıklarında bulunduğu
+    // için aynı popover ders ders farklı görünüyordu (kullanıcı geri bildirimi).
+    // Artık başlık tek parça olarak yazılıyor, parantez varsa başlığın içinde
+    // kalıyor; veri (lesson.title) değişmedi.
+    const titleMain = String(lesson.title || '');
+    const titleNote = '';
     popover.innerHTML = `
     <div class="popover-arrow"></div>
     <div class="popover-header">
@@ -9392,6 +9404,32 @@ function formulaRowsHTML(raw, opts) {
   if (title && opts && opts.hideTitleLike && isRedundantText(title, opts.hideTitleLike)) title = '';
   return `<div class="rule-formula">${
     title ? `<div class="rule-formula-title">${esc(title)}</div>` : ''}${cells}</div>`;
+}
+
+// Ders önizleme popover'ı için formulaRowsHTML'in sadeleştirilmiş hâli: ok (→)
+// içeren ve içermeyen formüller aynı popover'da iki farklı kart gibi
+// görünmesin diye, hepsi renkli parçalara/ayrı etiketlere bölünmeden tek düz
+// satır olarak akar. Diğer ekranlardaki (matris, Yapı Robotu, review HUD)
+// zenginleştirilmiş kart görünümü formulaRowsHTML üzerinden değişmeden kalır.
+function plainFormulaHTML(raw, opts) {
+  const markup = /<[a-z][^>]*>/i.test(String(raw || ''));
+  const esc = s => markup ? String(s)
+    : String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+  let text = String(raw || '').replace(/->/g, '➔').trim().replace(/^\d+[.)]\s*/, '');
+  if (!text) return '';
+
+  let title = '';
+  const head = text.match(/^([^:]{3,70}):\s*(\S.*)$/);
+  if (head && (/[➔→]/.test(head[2]) || text.includes('|'))) {
+    title = head[1].trim(); text = head[2].trim();
+  }
+
+  const parts = text.split(/\s*\|\s*|\n+/).map(s => s.trim()).filter(Boolean);
+  const line = parts.map(esc).join(' / ');
+
+  if (title && opts && opts.hideTitleLike && isRedundantText(title, opts.hideTitleLike)) title = '';
+  return `<div class="rule-formula">${
+    title ? `<div class="rule-formula-title">${esc(title)}</div>` : ''}<div class="rule-formula-plain">${line}</div></div>`;
 }
 
 // ── "Nasıl çevrilir?" kartları ──────────────────────────────────────────────
@@ -14665,6 +14703,13 @@ function renderConnectorDrillTab() {
 
   const sec = CONNECTOR_DRILL_SECTIONS.find(x => x.lessonId === drillActiveSection)
            || CONNECTOR_DRILL_SECTIONS[0];
+
+  // Başlık, seçili alt sekmenin adını taşır; hangi bölümde olunduğu sekmeler
+  // sol menüye taşındıktan sonra içerik alanından okunamıyordu. Baştaki emoji
+  // atılıyor, başlıkta zaten bir ikon var.
+  const titleEl = document.getElementById('connector-drill-title-text');
+  if (titleEl) titleEl.textContent = sec.title.replace(/^[^\p{L}]+/u, '').trim();
+
   const lesson = lessons.find(l => l.id === sec.lessonId);
   const exercises = (lesson && lesson.exercises) || [];
   if (!exercises.length) {
@@ -15511,6 +15556,16 @@ function switchTab(tabId) {
       subtabsMenu.classList.remove('u-hidden');
     } else {
       subtabsMenu.style.setProperty('display', 'none', 'important');
+    }
+  }
+
+  const drillSubtabsMenu = document.getElementById('connector-drill-subtabs-menu');
+  if (drillSubtabsMenu) {
+    if (tabId === 'connector-drill') {
+      drillSubtabsMenu.style.setProperty('display', 'flex', 'important');
+      drillSubtabsMenu.classList.remove('u-hidden');
+    } else {
+      drillSubtabsMenu.style.setProperty('display', 'none', 'important');
     }
   }
   if (typeof updateAdminBadgeCount === 'function') {
@@ -16631,7 +16686,7 @@ async function renderSocialList() {
       : activeSocialSubTab === 'following'
       ? 'Henüz kimseyi takip etmiyorsunuz.'
       : 'Kullanıcı bulunamadı.';
-    contentEl.innerHTML = `<div style="text-align: center; padding: 24px 12px; color: var(--text-secondary); font-size: 0.88rem;">${emptyMsg}</div>`;
+    contentEl.innerHTML = `<div style="text-align: center; padding: 24px 12px; color: var(--text-secondary); font-size: 1.01rem;">${emptyMsg}</div>`;
     return;
   }
 
@@ -16647,10 +16702,10 @@ async function renderSocialList() {
     } else {
       actionBtn = isFollowing 
         ? `<div class="social-action-buttons" style="display: flex; gap: 4px; align-items: center;">
-             <button class="social-btn social-kudos-btn" data-action="kudos" data-username="${escapeHtml(user.username)}" title="Tebrik Et" style="font-size: 1.05rem; padding: 4px 6px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card); cursor: pointer; height: 32px; display: flex; align-items: center; justify-content: center;">👏</button>
-             <button class="social-btn social-unfollow-btn" data-action="unfollow" data-username="${escapeHtml(user.username)}" style="font-size: 0.75rem; padding: 6px 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: rgba(13, 148, 136, 0.08); cursor: pointer; color: var(--accent-primary); font-weight: 700; height: 32px; display: flex; align-items: center;">Takipte</button>
+             <button class="social-btn social-kudos-btn" data-action="kudos" data-username="${escapeHtml(user.username)}" title="Tebrik Et" style="font-size: 1.21rem; padding: 4px 6px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card); cursor: pointer; height: 32px; display: flex; align-items: center; justify-content: center;">👏</button>
+             <button class="social-btn social-unfollow-btn" data-action="unfollow" data-username="${escapeHtml(user.username)}" style="font-size: 0.86rem; padding: 6px 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: rgba(13, 148, 136, 0.08); cursor: pointer; color: var(--accent-primary); font-weight: 700; height: 32px; display: flex; align-items: center;">Takipte</button>
            </div>`
-        : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}" style="font-size: 0.75rem; padding: 6px 10px; border-radius: var(--radius-md); border: none; background: var(--accent-primary); color: white; cursor: pointer; font-weight: 700; height: 32px; display: flex; align-items: center;">Takip Et</button>`;
+        : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}" style="font-size: 0.86rem; padding: 6px 10px; border-radius: var(--radius-md); border: none; background: var(--accent-primary); color: white; cursor: pointer; font-weight: 700; height: 32px; display: flex; align-items: center;">Takip Et</button>`;
     }
 
     let avatarContent = escapeHtml(letter);
@@ -16798,7 +16853,7 @@ async function searchSocialUsers() {
         
         const btnText = isFollowing ? 'Takipten Çık' : 'Takip Et';
         const btnClass = isFollowing ? 'social-unfollow-btn' : 'social-follow-btn';
-        const emailSubtext = user.email ? `<span style="font-size: 0.72rem; color: var(--text-secondary); display: block; margin-top: 1px;">✉️ ${escapeHtml(user.email)}</span>` : '';
+        const emailSubtext = user.email ? `<span style="font-size: 0.83rem; color: var(--text-secondary); display: block; margin-top: 1px;">✉️ ${escapeHtml(user.email)}</span>` : '';
         
         return `
           <div class="search-result-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--border-color);">
@@ -16807,10 +16862,10 @@ async function searchSocialUsers() {
               <div class="search-result-details" style="display: flex; flex-direction: column; min-width: 0; flex: 1;">
                 <span class="search-result-name" style="font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${escapeHtml(user.username)}</span>
                 ${emailSubtext}
-                <span class="search-result-xp" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 1px;">⚡ ${user.xp} Puan</span>
+                <span class="search-result-xp" style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 1px;">⚡ ${user.xp} Puan</span>
               </div>
             </div>
-            <button class="social-btn ${btnClass}" data-action="toggle-follow" data-username="${escapeHtml(user.username)}" data-follow="${!isFollowing}" style="flex-shrink: 0; font-size: 0.78rem; padding: 6px 12px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; border: ${isFollowing ? '1px solid var(--border-color)' : 'none'}; background: ${isFollowing ? 'var(--bg-card)' : 'var(--accent-primary)'}; color: ${isFollowing ? 'var(--text-secondary)' : 'white'};">${btnText}</button>
+            <button class="social-btn ${btnClass}" data-action="toggle-follow" data-username="${escapeHtml(user.username)}" data-follow="${!isFollowing}" style="flex-shrink: 0; font-size: 0.9rem; padding: 6px 12px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; border: ${isFollowing ? '1px solid var(--border-color)' : 'none'}; background: ${isFollowing ? 'var(--bg-card)' : 'var(--accent-primary)'}; color: ${isFollowing ? 'var(--text-secondary)' : 'white'};">${btnText}</button>
           </div>
         `;
       }).join('')}
@@ -17168,6 +17223,22 @@ const FREE_THEMES = ['light', 'canva'];
 const THEME_IDS = STORE_CATALOG.filter(i => i.cat === 'theme').map(i => i.id);
 let storeActiveCat = 'boost';
 
+// Mağazadaki tema kartları, o temanın style.css'teki [data-theme="X"] bloğundaki
+// gerçek renkleriyle önizleniyor (bkz. themeCardHTML) — kartın kendisi küçük bir
+// "boya kartelası" gibi davranıp, seçildiğinde uygulamanın alacağı gerçek
+// görünümü gösteriyor. Bu tablo o renklerin bire bir kopyası; biri değişirse
+// öteki de güncellenmeli.
+const THEME_SWATCHES = {
+  canva:  { bg1: '#F1F7F4', bg2: '#E2EEE6', accent: '#5AB07F', hover: '#439A68', shadow: '#327E51', text: '#1D2D24', dots: ['#F2A871', '#E8CB6E', '#E88A9A'] },
+  gold:   { bg1: '#fbf9f4', bg2: '#f6efe1', accent: '#d4a843', hover: '#c59733', shadow: '#b28522', text: '#3c2c10', dots: ['#FF9600', '#FFC107', '#EF4444'] },
+  mint:   { bg1: '#f2f8f4', bg2: '#e4f0e8', accent: '#8CC5A0', hover: '#72B58C', shadow: '#5FA378', text: '#1c2e24', dots: ['#6BBFB0', '#8CC5A0', '#E8919A'] },
+  sakura: { bg1: '#fdf4f5', bg2: '#f8e5e8', accent: '#E8A0AC', hover: '#D88898', shadow: '#C57080', text: '#30181c', dots: ['#C8A0E0', '#E8A0AC', '#E87888'] },
+  sunset: { bg1: '#fcf4ee', bg2: '#f6e8dc', accent: '#E8B080', hover: '#D89868', shadow: '#C88058', text: '#2e1e14', dots: ['#F0C870', '#E8A070', '#E88078'] },
+  kutup:  { bg1: '#f0f4f8', bg2: '#e1e8f0', accent: '#3b82f6', hover: '#2563eb', shadow: '#1d4ed8', text: '#1b2735', dots: ['#60a5fa', '#fbbf24', '#ef4444'] },
+  siber:  { bg1: '#0a0e17', bg2: '#121824', accent: '#06b6d4', hover: '#0891b2', shadow: '#0e7490', text: '#e2e8f0', dots: ['#f43f5e', '#0d9488', '#ec4899'] },
+  orman:  { bg1: '#f4f6f4', bg2: '#e6eae6', accent: '#4e7f4e', hover: '#3b6b3b', shadow: '#284b28', text: '#222d22', dots: ['#d97706', '#eab308', '#ef4444'] }
+};
+
 function catalogItem(id) { return STORE_CATALOG.find(i => i.id === id); }
 function coinBalance() { return state.coins || 0; }
 function addCoins(n) { state.coins = Math.max(0, Math.round((state.coins || 0) + n)); }
@@ -17327,6 +17398,10 @@ function storeCardHTML(it) {
     }
   }
 
+  if (it.cat === 'theme') {
+    return themeCardHTML(it, { esc, btnLabel, btnClass, disabled, isActive: state.activeTheme === it.id, isOwned: themeOwned(it.id) });
+  }
+
   return `
     <div class="store-card${status.includes('owned') ? ' bought' : ''}">
       <span class="store-card-icon">${it.icon}</span>
@@ -17334,6 +17409,44 @@ function storeCardHTML(it) {
       <p>${esc(it.desc)}</p>
       ${status}
       <button class="btn ${btnClass} store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''}>${btnLabel}</button>
+    </div>`;
+}
+
+// Tema kartı: her tema kendi gerçek renkleriyle küçük bir "boya kartelası" gibi
+// önizleniyor (bkz. THEME_SWATCHES) — kart, uygulamanın o tema seçildiğinde
+// alacağı gerçek görünümü taşıyor; jenerik "hepsi aynı yeşil kart" görünümü
+// yerine temaların kendi çeşitliliği kartın kendisinde görünüyor.
+function themeCardHTML(it, { esc, btnLabel, disabled, isActive, isOwned }) {
+  const sw = THEME_SWATCHES[it.id] || THEME_SWATCHES.canva;
+  const dotsHTML = sw.dots.map(c => `<span class="theme-swatch-dot" style="background:${c}"></span>`).join('');
+  const locked = !isOwned;
+
+  // Buton, .btn-primary/.btn-secondary'nin CSS'ini kopyalamak yerine, o temanın
+  // kendi renklerini doğrudan satır içi stil olarak taşıyor — böylece "Etkin"
+  // ve "Etkinleştir" butonu da tıpkı kartın kendisi gibi hangi temaya ait
+  // olduğunu renkleriyle anlatır.
+  let btnStyle;
+  if (!isOwned) {
+    btnStyle = `background:${sw.accent}; color:#fff; box-shadow:0 4px 0 ${sw.shadow};`;
+  } else if (isActive) {
+    btnStyle = `background:transparent; color:${sw.accent}; border:2px solid ${sw.accent}; box-shadow:none;`;
+  } else {
+    btnStyle = `background:transparent; color:${sw.accent}; border:1.5px solid ${sw.accent}; box-shadow:none;`;
+  }
+
+  return `
+    <div class="theme-card${isActive ? ' active' : ''}${locked ? ' locked' : ''}" style="--tc-bg1:${sw.bg1}; --tc-bg2:${sw.bg2}; --tc-accent:${sw.accent}; --tc-text:${sw.text};">
+      <div class="theme-card-swatch">
+        <div class="theme-swatch-dots">${dotsHTML}</div>
+        <span class="theme-card-icon">${it.icon}</span>
+        <h3 class="theme-card-name">${esc(it.title)}</h3>
+        ${isActive ? `<span class="theme-card-active-badge" title="Etkin">✓</span>` : ''}
+      </div>
+      <div class="theme-card-body">
+        <p class="theme-card-desc">${esc(it.desc)}</p>
+        ${isOwned ? `<span class="theme-card-owned">✓ Sahipsin</span>` : ''}
+        <button class="btn store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''} style="${btnStyle}">${btnLabel}</button>
+      </div>
     </div>`;
 }
 

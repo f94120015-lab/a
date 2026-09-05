@@ -162,34 +162,11 @@
             <span class="nav-tab-label">Bağlaçlar & Geçişler</span>
           </button>
 
-          <div class="sidebar-section-label">Robotlar</div>
-          <button class="nav-tab" data-tab="simulator">
-            <span class="nav-tab-icon nav-anim-simulator">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <rect x="6" y="12" width="20" height="12" rx="3" fill="#0d9488" opacity="0.85" stroke="#0b7a70" stroke-width="2"/>
-                <rect x="20" y="7" width="5" height="5" fill="#f59e0b" rx="1"/>
-                <circle cx="10" cy="24" r="3" fill="#ffffff" stroke="#0d9488" stroke-width="2" class="sidebar-anim-spin"/>
-                <circle cx="22" cy="24" r="3" fill="#ffffff" stroke="#0d9488" stroke-width="2" class="sidebar-anim-spin"/>
-                <circle cx="8" cy="6" r="2" fill="#94a3b8" opacity="0.6" class="sidebar-anim-steam"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Yüklem Robotu</span>
-          </button>
-          <button class="nav-tab" data-tab="structure-robot">
-            <span class="nav-tab-icon nav-anim-robot">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <rect x="6" y="8" width="20" height="16" rx="4" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="2"/>
-                <circle cx="11" cy="14" r="2.5" fill="#ffffff"/>
-                <circle cx="21" cy="14" r="2.5" fill="#ffffff"/>
-                <circle cx="11" cy="14" r="1" fill="#0f172a"/>
-                <circle cx="21" cy="14" r="1" fill="#0f172a"/>
-                <path d="M12 19C14 21 18 21 20 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-                <path d="M16 3V8" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="16" cy="3" r="2" fill="#eab308"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Yapı Robotu</span>
-          </button>
+          <!-- Yüklem Robotu (simulator) ve Yapı Robotu (structure-robot) sekmeleri
+               arayüzden kaldırıldı; veriler ve tab-content bölümleri korunuyor,
+               ileride geri eklenebilir. Bölüm etiketi "Robotlar" bu ikisi için
+               vardı, kalan sekmelerle uyuşmadığından kaldırıldı. -->
+          <div class="sidebar-section-label">Sınav & Alıştırma</div>
           <button class="nav-tab" data-tab="exam">
             <span class="nav-tab-icon">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -210,6 +187,18 @@
             </span>
             <span class="nav-tab-label">Yapısal Kurallar</span>
           </button>
+
+          <!-- Yapısal Kurallar Alt Sekmeleri -->
+          <div id="connector-drill-subtabs-menu" class="drill-subtabs-container u-hidden">
+            <button class="drill-tab" data-drill-section="cdrill_l1">
+              <span class="drill-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg></span>
+              <span class="drill-nav-label">Bağlaç Kuralları</span>
+            </button>
+            <button class="drill-tab" data-drill-section="tdrill_l1">
+              <span class="drill-nav-icon">⏳</span>
+              <span class="drill-nav-label">Zaman Uyumu Kuralları</span>
+            </button>
+          </div>
 
           <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
@@ -249,7 +238,7 @@
               </svg>
             </span>
             <span class="nav-tab-label">Admin</span>
-            <span class="nav-tab-badge" id="admin-nav-badge" style="display: none; position: absolute; top: 4px; right: 8px; background: #ff3b30; color: white; border-radius: 50%; min-width: 18px; height: 18px; font-size: 0.7rem; font-weight: bold; align-items: center; justify-content: center; padding: 2px; box-sizing: border-box; border: 1.5px solid var(--bg-body);">0</span>
+            <span class="nav-tab-badge" id="admin-nav-badge" style="display: none; position: absolute; top: 4px; right: 8px; background: #ff3b30; color: white; border-radius: 50%; min-width: 18px; height: 18px; font-size: 0.8rem; font-weight: bold; align-items: center; justify-content: center; padding: 2px; box-sizing: border-box; border: 1.5px solid var(--bg-body);">0</span>
           </button>
           
           <!-- Admin Sub-tabs Menu -->
@@ -388,7 +377,7 @@
                     <!-- Spaced Repetition (Review) Banner -->
                     <div class="review-banner" id="review-banner">
                       <div class="review-banner-left">
-                        <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800; margin-bottom: 6px;">
+                        <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.24rem; font-weight: 800; margin-bottom: 6px;">
                           <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></span>
                           <span class="title-shadow" style="color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Akıllı Tekrar Zamanı!</span>
                         </h3>
@@ -402,13 +391,13 @@
                       <div class="paragraph-analysis-banner-content">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                           <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(13, 148, 136, 0.12); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg></span>
-                          <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800;">
-                            <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.68rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
+                          <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.24rem; font-weight: 800;">
+                            <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.78rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
                           </h3>
                         </div>
-                        <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
+                        <p style="margin: 0 0 14px 0; font-size: 1.01rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
                       </div>
-                      <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #0d9488, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(13, 148, 136, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
+                      <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 1.06rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #0d9488, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(13, 148, 136, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
                         <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14z"/></svg> Analize Başla (10. Ders Sonu)
                       </button>
                     </div>
@@ -1355,17 +1344,13 @@
 
       <div id="tab-content-connector-drill" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
         <div class="card-panel" style="margin-bottom: 18px;">
-          <h2 class="section-title" style="margin: 0 0 8px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 17 17 3l4 4L7 21z"/><path d="M14 6l2 2"/><path d="M10 10l2 2"/><path d="M6 14l2 2"/></svg> Yapısal Kurallar</h2>
+          <h2 class="section-title" style="margin: 0 0 8px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 17 17 3l4 4L7 21z"/><path d="M14 6l2 2"/><path d="M10 10l2 2"/><path d="M6 14l2 2"/></svg> <span id="connector-drill-title-text">Yapısal Kurallar</span></h2>
           <p class="desc-text" style="margin: 0;">
             Buradaki alıştırmalar anlamı değil mekanik kuralı ölçer. Bağlaçlarda kural
             noktalama ve tamamlayıcı tipidir; zaman ifadelerinde ise kural, terimin
             cümlenin iki tarafına dayattığı çekimdir. Her alıştırma 10'ar soruluk
-            testlere bölünmüştür.
+            testlere bölünmüştür. Soldaki "Yapısal Kurallar" alt sekmelerinden bölüm seç.
           </p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-            <button type="button" class="drill-tab active" data-drill-section="cdrill_l1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg> Bağlaç Kuralları</button>
-            <button type="button" class="drill-tab pill-toggle" data-drill-section="tdrill_l1">⏳ Zaman Uyumu Kuralları</button>
-          </div>
         </div>
         <div id="connector-drill-list" class="grid-300"></div>
       </div>
