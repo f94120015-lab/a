@@ -17167,6 +17167,22 @@ const FREE_THEMES = ['light', 'canva'];
 const THEME_IDS = STORE_CATALOG.filter(i => i.cat === 'theme').map(i => i.id);
 let storeActiveCat = 'boost';
 
+// Mağazadaki tema kartları, o temanın style.css'teki [data-theme="X"] bloğundaki
+// gerçek renkleriyle önizleniyor (bkz. themeCardHTML) — kartın kendisi küçük bir
+// "boya kartelası" gibi davranıp, seçildiğinde uygulamanın alacağı gerçek
+// görünümü gösteriyor. Bu tablo o renklerin bire bir kopyası; biri değişirse
+// öteki de güncellenmeli.
+const THEME_SWATCHES = {
+  canva:  { bg1: '#F1F7F4', bg2: '#E2EEE6', accent: '#5AB07F', hover: '#439A68', shadow: '#327E51', text: '#1D2D24', dots: ['#F2A871', '#E8CB6E', '#E88A9A'] },
+  gold:   { bg1: '#fbf9f4', bg2: '#f6efe1', accent: '#d4a843', hover: '#c59733', shadow: '#b28522', text: '#3c2c10', dots: ['#FF9600', '#FFC107', '#EF4444'] },
+  mint:   { bg1: '#f2f8f4', bg2: '#e4f0e8', accent: '#8CC5A0', hover: '#72B58C', shadow: '#5FA378', text: '#1c2e24', dots: ['#6BBFB0', '#8CC5A0', '#E8919A'] },
+  sakura: { bg1: '#fdf4f5', bg2: '#f8e5e8', accent: '#E8A0AC', hover: '#D88898', shadow: '#C57080', text: '#30181c', dots: ['#C8A0E0', '#E8A0AC', '#E87888'] },
+  sunset: { bg1: '#fcf4ee', bg2: '#f6e8dc', accent: '#E8B080', hover: '#D89868', shadow: '#C88058', text: '#2e1e14', dots: ['#F0C870', '#E8A070', '#E88078'] },
+  kutup:  { bg1: '#f0f4f8', bg2: '#e1e8f0', accent: '#3b82f6', hover: '#2563eb', shadow: '#1d4ed8', text: '#1b2735', dots: ['#60a5fa', '#fbbf24', '#ef4444'] },
+  siber:  { bg1: '#0a0e17', bg2: '#121824', accent: '#06b6d4', hover: '#0891b2', shadow: '#0e7490', text: '#e2e8f0', dots: ['#f43f5e', '#0d9488', '#ec4899'] },
+  orman:  { bg1: '#f4f6f4', bg2: '#e6eae6', accent: '#4e7f4e', hover: '#3b6b3b', shadow: '#284b28', text: '#222d22', dots: ['#d97706', '#eab308', '#ef4444'] }
+};
+
 function catalogItem(id) { return STORE_CATALOG.find(i => i.id === id); }
 function coinBalance() { return state.coins || 0; }
 function addCoins(n) { state.coins = Math.max(0, Math.round((state.coins || 0) + n)); }
@@ -17326,6 +17342,10 @@ function storeCardHTML(it) {
     }
   }
 
+  if (it.cat === 'theme') {
+    return themeCardHTML(it, { esc, btnLabel, btnClass, disabled, isActive: state.activeTheme === it.id, isOwned: themeOwned(it.id) });
+  }
+
   return `
     <div class="store-card${status.includes('owned') ? ' bought' : ''}">
       <span class="store-card-icon">${it.icon}</span>
@@ -17333,6 +17353,44 @@ function storeCardHTML(it) {
       <p>${esc(it.desc)}</p>
       ${status}
       <button class="btn ${btnClass} store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''}>${btnLabel}</button>
+    </div>`;
+}
+
+// Tema kartı: her tema kendi gerçek renkleriyle küçük bir "boya kartelası" gibi
+// önizleniyor (bkz. THEME_SWATCHES) — kart, uygulamanın o tema seçildiğinde
+// alacağı gerçek görünümü taşıyor; jenerik "hepsi aynı yeşil kart" görünümü
+// yerine temaların kendi çeşitliliği kartın kendisinde görünüyor.
+function themeCardHTML(it, { esc, btnLabel, disabled, isActive, isOwned }) {
+  const sw = THEME_SWATCHES[it.id] || THEME_SWATCHES.canva;
+  const dotsHTML = sw.dots.map(c => `<span class="theme-swatch-dot" style="background:${c}"></span>`).join('');
+  const locked = !isOwned;
+
+  // Buton, .btn-primary/.btn-secondary'nin CSS'ini kopyalamak yerine, o temanın
+  // kendi renklerini doğrudan satır içi stil olarak taşıyor — böylece "Etkin"
+  // ve "Etkinleştir" butonu da tıpkı kartın kendisi gibi hangi temaya ait
+  // olduğunu renkleriyle anlatır.
+  let btnStyle;
+  if (!isOwned) {
+    btnStyle = `background:${sw.accent}; color:#fff; box-shadow:0 4px 0 ${sw.shadow};`;
+  } else if (isActive) {
+    btnStyle = `background:transparent; color:${sw.accent}; border:2px solid ${sw.accent}; box-shadow:none;`;
+  } else {
+    btnStyle = `background:transparent; color:${sw.accent}; border:1.5px solid ${sw.accent}; box-shadow:none;`;
+  }
+
+  return `
+    <div class="theme-card${isActive ? ' active' : ''}${locked ? ' locked' : ''}" style="--tc-bg1:${sw.bg1}; --tc-bg2:${sw.bg2}; --tc-accent:${sw.accent}; --tc-text:${sw.text};">
+      <div class="theme-card-swatch">
+        <div class="theme-swatch-dots">${dotsHTML}</div>
+        <span class="theme-card-icon">${it.icon}</span>
+        <h3 class="theme-card-name">${esc(it.title)}</h3>
+        ${isActive ? `<span class="theme-card-active-badge" title="Etkin">✓</span>` : ''}
+      </div>
+      <div class="theme-card-body">
+        <p class="theme-card-desc">${esc(it.desc)}</p>
+        ${isOwned ? `<span class="theme-card-owned">✓ Sahipsin</span>` : ''}
+        <button class="btn store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''} style="${btnStyle}">${btnLabel}</button>
+      </div>
     </div>`;
 }
 

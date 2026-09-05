@@ -3339,7 +3339,7 @@ input {
   }
 
   .sidebar-section-label {
-    font-size: 0.75rem;
+    font-size: 0.86rem;
     font-weight: 800;
     letter-spacing: 1px;
     color: var(--text-muted);
@@ -3368,7 +3368,7 @@ input {
     width: calc(100% - 8px);
     margin: 1px 4px;
     padding: 6px 10px;
-    font-size: 0.96rem;
+    font-size: 1.1rem;
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--text-secondary);
@@ -3420,7 +3420,7 @@ input {
     padding: 12px 14px !important;
     margin: 6px 0 16px 0 !important;
     border-radius: 16px !important;
-    font-size: 1.12rem !important;
+    font-size: 1.29rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.3px;
     background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-hover) 100%) !important;
@@ -3444,7 +3444,7 @@ input {
     height: 22px !important;
   }
   .sidebar-menu .nav-tab[data-tab="lessons"] .nav-tab-label {
-    font-size: 1.12rem !important;
+    font-size: 1.29rem !important;
     font-weight: 800 !important;
     color: #ffffff !important;
   }
@@ -3670,7 +3670,7 @@ input {
   
   .sidebar-section-label {
     display: flex !important;
-    font-size: 0.75rem;
+    font-size: 0.86rem;
     font-weight: 800;
     letter-spacing: 1px;
     color: var(--text-muted);
@@ -3697,7 +3697,7 @@ input {
     width: 100%;
     height: auto;
     padding: 10px 12px;
-    font-size: 0.95rem;
+    font-size: 1.09rem;
     font-weight: 700;
     color: var(--text-secondary);
     background: none;
@@ -3724,7 +3724,7 @@ input {
   }
 
   .sidebar-menu .nav-tab .nav-tab-label {
-    font-size: 0.9rem !important;
+    font-size: 1.04rem !important;
     font-family: var(--font-heading);
     white-space: nowrap;
     overflow: hidden;
@@ -4745,6 +4745,129 @@ input {
 .store-card.bought {
   border-color: var(--color-completed);
   background: var(--color-completed-bg);
+}
+
+/* ── Tema kartları: her tema kendi gerçek paletiyle önizleniyor (bkz. THEME_SWATCHES) ── */
+.theme-card {
+  border: 2px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.theme-card.active {
+  border-color: var(--tc-accent);
+}
+
+.theme-card-swatch {
+  position: relative;
+  min-height: 94px;
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(135deg, var(--tc-bg1), var(--tc-bg2));
+}
+
+.theme-card-swatch::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 5px;
+  background: var(--tc-accent);
+}
+
+/* Kilitli (satın alınmamış) temalar soluk görünür; üzerine gelince gerçek
+   renklerini gösterir — mağazanın kendi konseptiyle (renk satışı) uyumlu
+   tek, anlamlı bir hover anı. */
+.theme-card.locked .theme-card-swatch {
+  filter: saturate(0.4) brightness(0.98);
+  transition: filter 0.25s ease;
+}
+
+.theme-card.locked:hover .theme-card-swatch {
+  filter: none;
+}
+
+.theme-swatch-dots {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  display: flex;
+  gap: 5px;
+}
+
+.theme-swatch-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+.theme-card-active-badge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--tc-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 900;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.theme-card-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.theme-card-name {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--tc-text);
+  margin: 0;
+  line-height: 1.25;
+  padding-right: 22px;
+}
+
+.theme-card-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  text-align: left;
+}
+
+.theme-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin: 0;
+  flex: 1;
+}
+
+.theme-card-owned {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--tc-accent);
 }
 
 /* ── Jeton bakiyesi ── */
@@ -6036,7 +6159,7 @@ input {
 }
 
 .search-results-header {
-  font-size: 0.7rem;
+  font-size: 0.81rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -6069,18 +6192,18 @@ input {
 }
 
 .search-result-name {
-  font-size: 0.85rem;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .search-result-xp {
-  font-size: 0.7rem;
+  font-size: 0.81rem;
   color: var(--text-secondary);
 }
 
 .search-no-results {
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   color: var(--text-secondary);
   text-align: center;
   padding: 8px 0;
@@ -6211,7 +6334,7 @@ input {
 }
 
 .friend-stat {
-  font-size: 0.7rem;
+  font-size: 0.81rem;
   color: var(--text-secondary);
   font-weight: 600;
   white-space: nowrap;
@@ -6284,7 +6407,7 @@ input {
 }
 
 .social-status-text {
-  font-size: 0.75rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   font-weight: 600;
 }
@@ -6581,7 +6704,7 @@ input {
   align-items: center;
   gap: 10px;
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.27rem;
   font-weight: 800;
   color: var(--text-primary);
 }
@@ -6671,7 +6794,7 @@ input {
   align-items: center;
   user-select: none;
   transition: opacity 0.2s;
-  font-size: 0.7rem;
+  font-size: 0.81rem;
 }
 
 .lessons-side-col .sidebar-section-label:hover {
@@ -6680,7 +6803,7 @@ input {
 }
 
 .lessons-side-col .collapsible-icon {
-  font-size: 0.6rem;
+  font-size: 0.69rem;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
 }
@@ -6728,11 +6851,11 @@ input {
 }
 
 .lessons-side-col .side-stats-bar .stat-card-val {
-  font-size: 0.98rem;
+  font-size: 1.13rem;
 }
 
 .lessons-side-col .side-stats-bar .stat-card-label {
-  font-size: 0.55rem;
+  font-size: 0.63rem;
   letter-spacing: 0.1px;
 }
 
@@ -6753,7 +6876,7 @@ input {
 }
 
 .lessons-side-col .profile-social-card .profile-section-title {
-  font-size: 1rem !important;
+  font-size: 1.15rem !important;
 }
 
 .lessons-side-col .profile-social-card .profile-section-title span:first-child {
@@ -6772,18 +6895,18 @@ input {
 /* 340px'lik yan sütunda üç sekme 0.8rem'de tek satıra sığmıyordu. */
 .lessons-side-col .profile-social-card .social-tab {
   padding: 2px 2px;
-  font-size: 0.7rem;
+  font-size: 0.81rem;
 }
 
 .lessons-side-col .profile-social-card #social-search-input {
   padding: 6px 30px 6px 10px;
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   border-radius: 10px;
 }
 
 .lessons-side-col .profile-social-card #btn-social-search {
   padding: 6px 14px !important;
-  font-size: 0.78rem !important;
+  font-size: 0.9rem !important;
 }
 
 .lessons-side-col .profile-social-card .friend-card {
@@ -6794,15 +6917,15 @@ input {
 .lessons-side-col .profile-social-card .friend-avatar {
   width: 32px !important;
   height: 32px !important;
-  font-size: 0.9rem !important;
+  font-size: 1.04rem !important;
 }
 
 .lessons-side-col .profile-social-card .friend-name {
-  font-size: 0.85rem !important;
+  font-size: 0.98rem !important;
 }
 
 .lessons-side-col .profile-social-card .friend-meta {
-  font-size: 0.7rem !important;
+  font-size: 0.81rem !important;
 }
 
 .lessons-side-col .profile-social-card .social-search-wrap {
@@ -6834,7 +6957,7 @@ input {
 
 .lessons-side-col .review-banner p {
   color: var(--text-secondary);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   line-height: 1.3;
   margin-bottom: 6px;
 }
@@ -6843,7 +6966,7 @@ input {
   width: 100%;
   padding: 7px 10px;
   border-radius: 8px !important;
-  font-size: 0.8rem !important;
+  font-size: 0.92rem !important;
   font-weight: 700 !important;
   background: #10b981 !important;
   color: #ffffff !important;
@@ -10817,7 +10940,7 @@ input:checked + .slider:before {
   gap: 10px;
   width: 100%;
   padding: 6px 8px;
-  font-size: 0.82rem;
+  font-size: 0.94rem;
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--text-secondary);
@@ -12834,13 +12957,13 @@ nDown 0.3s ease;
   display: block;
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: var(--text-primary);
   letter-spacing: -0.01em;
 }
 .sidebar-brand-wordmark span {
   display: block;
-  font-size: 0.62rem;
+  font-size: 0.71rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
