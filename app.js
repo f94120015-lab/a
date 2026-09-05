@@ -6517,7 +6517,12 @@ async function enterApp() {
   // kalmış bir kullanıcı var olmayan bir içeriğe dönüp boş ekran görür.
   const RETIRED_TABS = {
     'ezber-robotu': 'transitions-matrix',
-    'cause-effect': 'structure-robot'
+    // 2026-09-05: "Yüklem Robotu" (simulator) ve "Yapı Robotu" (structure-robot)
+    // arayüzden gizlendi. İçerik/kod duruyor; geri getirmek için bu üç satırı
+    // sil ve index.html'deki iki <button> yorumunu aç.
+    'cause-effect': 'lessons',
+    'simulator': 'lessons',
+    'structure-robot': 'lessons'
   };
   let lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
   if (RETIRED_TABS[lastTab]) {
@@ -14476,7 +14481,17 @@ function renderExamTab() {
 // Deneme sınavından farklı olarak süresiz ve kilitsizdir; geri bildirim her
 // sorudan sonra anında gelir. Tekrar modu altyapısını kullandığı için can
 // kaybı yoktur.
-let drillActiveSection = 'cdrill_l1';
+// Aktif alt sekme ('cdrill_l1' = Bağlaç, 'tdrill_l1' = Zaman Uyumu). Sol menüdeki
+// alt sekmelerden seçilir; kullanıcı en son kaldığı bölümde dönmek istesin diye
+// tercih localStorage'da tutulur.
+const DRILL_SECTION_IDS = ['cdrill_l1', 'tdrill_l1'];
+let drillActiveSection = (() => {
+  try {
+    const saved = localStorage.getItem('amok_drill_section');
+    if (DRILL_SECTION_IDS.includes(saved)) return saved;
+  } catch (e) {}
+  return 'cdrill_l1';
+})();
 // Alıştırma, tekrar modunun altyapısını ödünç alıyor; oturum bitince tekrar
 // ekranı 'Dersler'e dönüyordu. Bu işaret, bitişte hangi sekmeye dönüleceğini
 // ve hangi mesajın verileceğini ayırt eder.
@@ -14704,13 +14719,16 @@ function renderConnectorDrillTab() {
   const listEl = document.getElementById('connector-drill-list');
   if (!listEl) return;
 
-  document.querySelectorAll('.drill-tab').forEach(btn => {
-    const on = btn.dataset.drillSection === drillActiveSection;
-    btn.classList.toggle('active', on);
-    btn.classList.toggle('pill-toggle', !on);
+  // Alt sekmeler artık sol menüde (#connector-drill-subtabs); aktif olanı işaretle
+  // ve tıklamayı bağla.
+  document.querySelectorAll('.nav-subtab[data-drill-section]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.drillSection === drillActiveSection);
     btn.onclick = () => {
+      if (drillActiveSection === btn.dataset.drillSection) return;
       drillActiveSection = btn.dataset.drillSection;
+      try { localStorage.setItem('amok_drill_section', drillActiveSection); } catch (e) {}
       renderConnectorDrillTab();
+      closeMobileSidebar();
     };
   });
 
@@ -14738,10 +14756,11 @@ function renderConnectorDrillTab() {
         ${sec.intro.html}
       </div>
     </div>` : '';
-  const head = intro + `
-    <div style="grid-column: 1 / -1; margin: 2px 0;">
+  const head = `
+    <div style="grid-column: 1 / -1; margin: 0 0 2px;">
+      <h3 class="section-title-sm" style="margin: 0 0 4px;">${sec.title}</h3>
       <p class="text-sm-muted" style="margin: 0;">${sec.desc} · ${exercises.length} alıştırma, ${total} soru</p>
-    </div>`;
+    </div>` + intro;
 
   const cards = exercises.map(ex => {
     const tests = connectorDrillTests(ex);
@@ -15511,6 +15530,12 @@ function switchTab(tabId) {
     } else {
       subtabsMenu.style.setProperty('display', 'none', 'important');
     }
+  }
+
+  // "Yapısal Kurallar" alt sekmeleri yalnızca o sekme aktifken sol menüde açılır.
+  const drillSubtabs = document.getElementById('connector-drill-subtabs');
+  if (drillSubtabs) {
+    drillSubtabs.classList.toggle('open', tabId === 'connector-drill');
   }
   if (typeof updateAdminBadgeCount === 'function') {
     updateAdminBadgeCount();
@@ -19314,6 +19339,17 @@ function stopHeartbeat() {
 // ============================================================
 // BAŞLATMA
 // ============================================================
+// Mobil kenar menüsünü kapatır. initMobileMenu() dışından da çağrılabilsin diye
+// (ör. sol menüdeki alt sekme tıklaması) modül seviyesinde duruyor.
+function closeMobileSidebar() {
+  const sidebarNav = document.querySelector('.sidebar-nav');
+  if (!sidebarNav || !sidebarNav.classList.contains('mobile-open')) return;
+  sidebarNav.classList.remove('mobile-open');
+  const overlay = document.getElementById('sidebar-overlay');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
 function initMobileMenu() {
   const toggleBtn = document.getElementById('btn-mobile-menu');
   const sidebarNav = document.querySelector('.sidebar-nav');
@@ -19326,11 +19362,7 @@ function initMobileMenu() {
       document.body.style.overflow = 'hidden';
     };
 
-    const closeMenu = () => {
-      sidebarNav.classList.remove('mobile-open');
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    };
+    const closeMenu = closeMobileSidebar;
 
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();

@@ -13067,9 +13067,50 @@ nDown 0.3s ease;
 /* ── Extracted utility classes (from repeated inline styles) ── */
 .u-hidden { display: none; }
 .pill-toggle { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer; }
-.drill-tab { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; }
-.drill-tab:hover { border-color: var(--accent-primary); }
-.drill-tab.active { background: var(--accent-primary); border-color: var(--accent-primary); color: #fff; font-weight: 700; }
+/* Sol menüde "Yapısal Kurallar" altında açılan alt sekmeler.
+   Varsayılan gizli; switchTab() sekme aktifken .open ekler. */
+.nav-subtabs { display: none; }
+.nav-subtabs.open {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 3px 4px 8px 16px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border-color);
+  animation: navSubtabsIn 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes navSubtabsIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.nav-subtab {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+.nav-subtab:hover {
+  background: rgba(6, 182, 212, 0.09);
+  color: var(--text-primary);
+  transform: translateX(2px);
+}
+.nav-subtab.active {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.16), rgba(139, 92, 246, 0.14));
+  color: var(--text-primary);
+}
+.nav-subtab-icon { font-size: 1rem; line-height: 1; min-width: 18px; text-align: center; }
+.nav-subtab-label { letter-spacing: 0.01em; }
 .text-label-xs { font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); }
 .flex-col-4 { display: flex; flex-direction: column; gap: 4px; }
 .text-label { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); }

@@ -163,6 +163,11 @@
           </button>
 
           <div class="sidebar-section-label">Robotlar</div>
+          <!-- GİZLENDİ (2026-09-05): "Yüklem Robotu" ve "Yapı Robotu" sekmeleri
+               kullanıcı isteğiyle arayüzden kaldırıldı. Kod/içerik silinmedi;
+               geri getirmek için aşağıdaki iki <button> bloğunun yorumunu kaldır
+               ve app.js içindeki RETIRED_TABS'ten 'simulator' + 'structure-robot'
+               satırlarını çıkar.
           <button class="nav-tab" data-tab="simulator">
             <span class="nav-tab-icon nav-anim-simulator">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -190,6 +195,7 @@
             </span>
             <span class="nav-tab-label">Yapı Robotu</span>
           </button>
+          -->
           <button class="nav-tab" data-tab="exam">
             <span class="nav-tab-icon">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -210,6 +216,18 @@
             </span>
             <span class="nav-tab-label">Yapısal Kurallar</span>
           </button>
+          <!-- "Yapısal Kurallar"a tıklanınca açılan iki alt sekme. Görünürlüğü
+               switchTab() içinde .open sınıfıyla kontrol edilir. -->
+          <div class="nav-subtabs" id="connector-drill-subtabs">
+            <button type="button" class="nav-subtab active" data-drill-section="cdrill_l1">
+              <span class="nav-subtab-icon">🔗</span>
+              <span class="nav-subtab-label">Bağlaç Kuralları</span>
+            </button>
+            <button type="button" class="nav-subtab" data-drill-section="tdrill_l1">
+              <span class="nav-subtab-icon">⏳</span>
+              <span class="nav-subtab-label">Zaman Uyumu Kuralları</span>
+            </button>
+          </div>
 
           <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
@@ -1354,19 +1372,6 @@
       </div>
 
       <div id="tab-content-connector-drill" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
-        <div class="card-panel" style="margin-bottom: 18px;">
-          <h2 class="section-title" style="margin: 0 0 8px;">📏 Yapısal Kurallar</h2>
-          <p class="desc-text" style="margin: 0;">
-            Buradaki alıştırmalar anlamı değil mekanik kuralı ölçer. Bağlaçlarda kural
-            noktalama ve tamamlayıcı tipidir; zaman ifadelerinde ise kural, terimin
-            cümlenin iki tarafına dayattığı çekimdir. Her alıştırma 10'ar soruluk
-            testlere bölünmüştür.
-          </p>
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
-            <button type="button" class="drill-tab active" data-drill-section="cdrill_l1">🔗 Bağlaç Kuralları</button>
-            <button type="button" class="drill-tab pill-toggle" data-drill-section="tdrill_l1">⏳ Zaman Uyumu Kuralları</button>
-          </div>
-        </div>
         <div id="connector-drill-list" class="grid-300"></div>
       </div>
 
