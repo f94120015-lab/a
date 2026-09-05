@@ -8239,6 +8239,31 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const pathContainer = button.closest('.unit-path-container');
   if (pathContainer) {
     pathContainer.appendChild(popover);
+
+    // Arkadaki her şeyi bulanıklaştıran örtü. Dersler sekmesinin köküne eklenir:
+    // popover'ın kendi `transform`'u fixed çocukları kırardı, <body> ise başka
+    // sekmeye geçilince açık kalırdı — bu kap sekme kapanınca display:none olur.
+    // Atalarında transform/filter yok (tarayıcıda doğrulandı) → position:fixed
+    // tüm ekranı kaplar. Popover z 1501 ile hemen üstte; modallar (z≥2000) yine
+    // en üstte, böylece "Önizle" / lisans modalı bozulmaz.
+    const backdropHost = document.getElementById('tab-content-lessons') || document.body;
+    const backdrop = document.createElement('div');
+    backdrop.className = 'lesson-popover-backdrop';
+    backdrop.addEventListener('click', () => { popover.remove(); });
+    backdropHost.appendChild(backdrop);
+    popover.style.zIndex = '1501';
+
+    // Popover hangi yolla kaldırılırsa kaldırılsın (remove / removeChild /
+    // innerHTML sıfırlama) örtü de gitsin diye tek noktadan temizlik.
+    const backdropObserver = new MutationObserver(() => {
+      if (!document.body.contains(popover)) {
+        backdrop.remove();
+        backdropObserver.disconnect();
+        updateBodyScrollLock();
+      }
+    });
+    backdropObserver.observe(pathContainer, { childList: true });
+
     updateBodyScrollLock();
 
     // Yatay hizalama ve aşağıdaki scrollIntoView bu ölçüye dayanıyor; tanımı

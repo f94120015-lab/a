@@ -1782,6 +1782,25 @@ input {
   z-index: -1;
 }
 
+/* Ders penceresi açıkken arkadaki her şeyi hafifçe bulanıklaştıran örtü.
+   #tab-content-lessons'a eklenir (popover'ın kendi transform'u fixed çocukları
+   kırardı; sekme değişince bu kap display:none olur). Kapanış temizliğini
+   togglePopover içindeki MutationObserver yapar.
+   z-index 1500: üst bar / sol menü / sağ sütunun (hepsi ≤1000) üstünde;
+   popover 1501 ile hemen üstünde; modallar (≥2000) yine en üstte kalır. */
+.lesson-popover-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  background: rgba(15, 23, 42, 0.16);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  animation: lessonBackdropIn 0.18s ease;
+  cursor: default;
+}
+@keyframes lessonBackdropIn { from { opacity: 0; } to { opacity: 1; } }
+[data-theme="dark"] .lesson-popover-backdrop { background: rgba(0, 0, 0, 0.42); }
+
 .popover-header {
   display: flex;
   flex-direction: column;
