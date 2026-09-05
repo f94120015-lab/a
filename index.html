@@ -7,10 +7,10 @@
   <meta name="description" content="Türkçe konuşanlar için oyunlaştırılmış ve etkileşimli İngilizce öğrenme platformu.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://formsubmit.co; img-src 'self' data:;">
 
-  <!-- Google Fonts: Nunito & Baloo 2 -->
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Canvas Confetti -->
   <script src="canvas-confetti.min.js" defer></script>
@@ -67,7 +67,7 @@
     <header class="top-bar">
       <div class="top-bar-left">
         <!-- Mobil Menü Açma Butonu (Masaüstünde gizli) -->
-        <button class="btn-icon mobile-menu-toggle" id="btn-mobile-menu" title="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+        <button class="btn-icon mobile-menu-toggle" id="btn-mobile-menu" title="Menü">☰</button>
 
         <!-- Masaüstü için Başlık Yazısı (Masaüstünde gösterilecek, mobilde gizlenecek) -->
         <div class="top-bar-title-wrap">
@@ -77,15 +77,15 @@
         
         <!-- Mobil için Stats (Masaüstünde Gizlenecek) -->
         <div class="stat-pill" id="stat-streak" title="Günlük seri">
-          <span class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.98 2.11c.53 2.36-.4 3.79-1.62 5.32C10.1 8.98 8.7 10.6 8.7 13a4.3 4.3 0 0 0 8.6 0c0-1.42-.55-2.4-1.16-3.16.24 1.44-.22 2.4-.98 2.98.32-1.83-.53-2.95-.24-4.9.18-1.2.3-2.9-.94-5.81zM8.2 12.2C7.1 13.6 6.3 15 6.3 16.8A5.7 5.7 0 0 0 12 22.5a5.7 5.7 0 0 0 5.7-5.7c0-.5-.06-.97-.16-1.42a6.28 6.28 0 0 1-11.34-3.18z"/></svg></span>
+          <span class="stat-icon">🔥</span>
           <span class="stat-value" id="streak-count">0</span>
         </div>
         <div class="stat-pill" id="stat-xp" title="Deneyim puanı">
-          <span class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+          <span class="stat-icon">⚡</span>
           <span class="stat-value" id="xp-count">0</span>
         </div>
         <div class="stat-pill hearts" id="stat-hearts" title="Can">
-          <span class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10.2-9.3C.3 8.9 1.4 5.4 4.7 4.4c2-.6 4 .2 5.3 2 .3.4.9.4 1.2 0 1.3-1.8 3.3-2.6 5.3-2 3.3 1 4.4 4.5 2.9 7.3C19.5 16.4 12 21 12 21z"/></svg></span>
+          <span class="stat-icon">❤️</span>
           <span class="stat-value" id="hearts-count">5</span>
         </div>
       </div>
@@ -94,18 +94,18 @@
 
       <div class="top-bar-right">
         <button class="btn btn-social-drawer-toggle" id="btn-toggle-social-drawer" title="Sosyal & Araçlar" onclick="if(window.openRightDrawer) window.openRightDrawer();">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> <span class="social-drawer-btn-label">Sosyal & Araçlar</span>
+          👥 <span class="social-drawer-btn-label">Sosyal & Araçlar</span>
         </button>
-        <button class="btn-icon" id="btn-theme" title="Tema değiştir"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.5 14.5a8.5 8.5 0 0 1-11-11 8.5 8.5 0 1 0 11 11z"/></svg></button>
+        <button class="btn-icon" id="btn-theme" title="Tema değiştir">🌙</button>
         <div class="user-menu" id="topbar-user-menu">
           <button class="topbar-user-pill" id="btn-user-menu" title="Profil / Giriş Yap">
-            <span class="topbar-avatar-wrap" id="topbar-avatar-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7.5" r="4.5"/></svg></span>
+            <span class="topbar-avatar-wrap" id="topbar-avatar-wrap">👤</span>
             <span class="topbar-user-name" id="topbar-user-name">Giriş Yap</span>
           </button>
           <div class="user-dropdown" id="user-dropdown">
             <span class="dropdown-name" id="dropdown-name">Kullanıcı</span>
             <hr>
-            <button id="btn-goto-profile-dropdown" style="color: var(--accent-primary); font-weight: 700; display: flex; align-items: center; gap: 6px; margin-bottom: 6px; background: none; border: none; cursor: pointer; width: 100%;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7.5" r="4.5"/></svg> Profil Sayfası</button>
+            <button id="btn-goto-profile-dropdown" style="color: var(--accent-primary); font-weight: 700; display: flex; align-items: center; gap: 6px; margin-bottom: 6px; background: none; border: none; cursor: pointer; width: 100%;">👤 Profil Sayfası</button>
             <button id="btn-logout">Çıkış Yap</button>
           </div>
         </div>
@@ -145,8 +145,8 @@
           <button class="nav-tab" data-tab="time-matrix">
             <span class="nav-tab-icon nav-anim-time-matrix">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <circle cx="16" cy="16" r="10" stroke="#0d9488" stroke-width="2.5"/>
-                <path d="M16 10V16L20 18" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="16" cy="16" r="10" stroke="#8b5cf6" stroke-width="2.5"/>
+                <path d="M16 10V16L20 18" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round"/>
                 <path d="M11 6L8 3M21 6L24 3" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </span>
@@ -162,11 +162,34 @@
             <span class="nav-tab-label">Bağlaçlar & Geçişler</span>
           </button>
 
-          <!-- Yüklem Robotu (simulator) ve Yapı Robotu (structure-robot) sekmeleri
-               arayüzden kaldırıldı; veriler ve tab-content bölümleri korunuyor,
-               ileride geri eklenebilir. Bölüm etiketi "Robotlar" bu ikisi için
-               vardı, kalan sekmelerle uyuşmadığından kaldırıldı. -->
-          <div class="sidebar-section-label">Sınav & Alıştırma</div>
+          <div class="sidebar-section-label">Robotlar</div>
+          <button class="nav-tab" data-tab="simulator">
+            <span class="nav-tab-icon nav-anim-simulator">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="6" y="12" width="20" height="12" rx="3" fill="#8b5cf6" opacity="0.85" stroke="#c084fc" stroke-width="2"/>
+                <rect x="20" y="7" width="5" height="5" fill="#f59e0b" rx="1"/>
+                <circle cx="10" cy="24" r="3" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" class="sidebar-anim-spin"/>
+                <circle cx="22" cy="24" r="3" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" class="sidebar-anim-spin"/>
+                <circle cx="8" cy="6" r="2" fill="#94a3b8" opacity="0.6" class="sidebar-anim-steam"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Yüklem Robotu</span>
+          </button>
+          <button class="nav-tab" data-tab="structure-robot">
+            <span class="nav-tab-icon nav-anim-robot">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="6" y="8" width="20" height="16" rx="4" fill="#06b6d4" opacity="0.85" stroke="#22d3ee" stroke-width="2"/>
+                <circle cx="11" cy="14" r="2.5" fill="#ffffff"/>
+                <circle cx="21" cy="14" r="2.5" fill="#ffffff"/>
+                <circle cx="11" cy="14" r="1" fill="#0f172a"/>
+                <circle cx="21" cy="14" r="1" fill="#0f172a"/>
+                <path d="M12 19C14 21 18 21 20 19" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 3V8" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="16" cy="3" r="2" fill="#eab308"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Yapı Robotu</span>
+          </button>
           <button class="nav-tab" data-tab="exam">
             <span class="nav-tab-icon">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -180,25 +203,13 @@
             <span class="nav-tab-icon">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
                 <rect x="4" y="7" width="10" height="8" rx="2" fill="#f59e0b" opacity="0.85" stroke="#fbbf24" stroke-width="2"/>
-                <rect x="18" y="17" width="10" height="8" rx="2" fill="#0d9488" opacity="0.85" stroke="#a78bfa" stroke-width="2"/>
+                <rect x="18" y="17" width="10" height="8" rx="2" fill="#8b5cf6" opacity="0.85" stroke="#a78bfa" stroke-width="2"/>
                 <path d="M14 11H18C19.1 11 20 11.9 20 13V17" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
                 <circle cx="24" cy="11" r="1.6" fill="#22d3ee"/>
               </svg>
             </span>
             <span class="nav-tab-label">Yapısal Kurallar</span>
           </button>
-
-          <!-- Yapısal Kurallar Alt Sekmeleri -->
-          <div id="connector-drill-subtabs-menu" class="drill-subtabs-container u-hidden">
-            <button class="drill-tab" data-drill-section="cdrill_l1">
-              <span class="drill-nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg></span>
-              <span class="drill-nav-label">Bağlaç Kuralları</span>
-            </button>
-            <button class="drill-tab" data-drill-section="tdrill_l1">
-              <span class="drill-nav-icon">⏳</span>
-              <span class="drill-nav-label">Zaman Uyumu Kuralları</span>
-            </button>
-          </div>
 
           <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
@@ -238,25 +249,25 @@
               </svg>
             </span>
             <span class="nav-tab-label">Admin</span>
-            <span class="nav-tab-badge" id="admin-nav-badge" style="display: none; position: absolute; top: 4px; right: 8px; background: #ff3b30; color: white; border-radius: 50%; min-width: 18px; height: 18px; font-size: 0.8rem; font-weight: bold; align-items: center; justify-content: center; padding: 2px; box-sizing: border-box; border: 1.5px solid var(--bg-body);">0</span>
+            <span class="nav-tab-badge" id="admin-nav-badge" style="display: none; position: absolute; top: 4px; right: 8px; background: #ff3b30; color: white; border-radius: 50%; min-width: 18px; height: 18px; font-size: 0.7rem; font-weight: bold; align-items: center; justify-content: center; padding: 2px; box-sizing: border-box; border: 1.5px solid var(--bg-body);">0</span>
           </button>
           
           <!-- Admin Sub-tabs Menu -->
           <div id="admin-subtabs-menu" class="dev-only-tab admin-subtabs-container u-hidden">
             <button class="admin-nav-item active" data-admin-section="users">
-              <span class="admin-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <span class="admin-icon-badge">👥</span>
               <span class="admin-label">Kullanıcılar</span>
             </button>
             <button class="admin-nav-item" data-admin-section="licensing">
-              <span class="admin-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="8" cy="15" r="4"/><path d="M10.5 12.5 20 3"/><path d="M17 6l3 3"/><path d="M14 9l2.5 2.5"/></svg></span>
+              <span class="admin-icon-badge">🔑</span>
               <span class="admin-label">Lisanslar</span>
             </button>
             <button class="admin-nav-item" data-admin-section="reports">
-              <span class="admin-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg></span>
+              <span class="admin-icon-badge">⚠️</span>
               <span class="admin-label">Soru Hata Bildirimleri</span>
             </button>
             <button class="admin-nav-item" data-admin-section="general-feedback">
-              <span class="admin-icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 5h16v11H9l-4 4V5z"/></svg></span>
+              <span class="admin-icon-badge">💬</span>
               <span class="admin-label">Genel Geri Bildirimler</span>
             </button>
           </div>
@@ -289,10 +300,10 @@
               <aside class="lessons-side-col right-side-drawer" id="right-side-drawer">
                 <div class="drawer-header">
                   <div class="drawer-header-title">
-                    <span class="drawer-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                    <span class="drawer-icon">👥</span>
                     <span>Sosyal & Araç Paneli</span>
                   </div>
-                  <button class="drawer-close-btn" id="btn-close-side-drawer" title="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M5 5l14 14"/><path d="M19 5L5 19"/></svg></button>
+                  <button class="drawer-close-btn" id="btn-close-side-drawer" title="Kapat">✕</button>
                 </div>
                 <div class="drawer-body">
                   <!-- Section Label 1: DURUM & İLERLEME -->
@@ -305,7 +316,7 @@
                   <div class="side-stats-bar collapsible-content id-collapsible-stats">
                     <div class="stat-card-box" id="stat-streak-side" title="Günlük seri">
                       <div class="stat-card-icon-wrap streak-wrap">
-                        <span class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.98 2.11c.53 2.36-.4 3.79-1.62 5.32C10.1 8.98 8.7 10.6 8.7 13a4.3 4.3 0 0 0 8.6 0c0-1.42-.55-2.4-1.16-3.16.24 1.44-.22 2.4-.98 2.98.32-1.83-.53-2.95-.24-4.9.18-1.2.3-2.9-.94-5.81zM8.2 12.2C7.1 13.6 6.3 15 6.3 16.8A5.7 5.7 0 0 0 12 22.5a5.7 5.7 0 0 0 5.7-5.7c0-.5-.06-.97-.16-1.42a6.28 6.28 0 0 1-11.34-3.18z"/></svg></span>
+                        <span class="stat-icon">🔥</span>
                       </div>
                       <div class="stat-card-content">
                         <span class="stat-card-label">SERİ</span>
@@ -315,7 +326,7 @@
 
                     <div class="stat-card-box" id="stat-xp-side" title="Deneyim puanı">
                       <div class="stat-card-icon-wrap xp-wrap">
-                        <span class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+                        <span class="stat-icon">⚡</span>
                       </div>
                       <div class="stat-card-content">
                         <span class="stat-card-label">XP PUANI</span>
@@ -325,7 +336,7 @@
 
                     <div class="stat-card-box" id="stat-hearts-side" title="Can">
                       <div class="stat-card-icon-wrap hearts-wrap">
-                        <span class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10.2-9.3C.3 8.9 1.4 5.4 4.7 4.4c2-.6 4 .2 5.3 2 .3.4.9.4 1.2 0 1.3-1.8 3.3-2.6 5.3-2 3.3 1 4.4 4.5 2.9 7.3C19.5 16.4 12 21 12 21z"/></svg></span>
+                        <span class="stat-icon">❤️</span>
                       </div>
                       <div class="stat-card-content">
                         <span class="stat-card-label">KALAN CAN</span>
@@ -343,20 +354,20 @@
                   <!-- Sosyal Takip Modülü (Kullanıcılar) -->
                   <div class="profile-social-card collapsible-content id-collapsible-social" id="lessons-social-card">
                     <h3 class="profile-section-title title-shadow" style="margin-top: 0; display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800;">
-                      <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(13, 148, 136, 0.08); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                      <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.08); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">👥</span>
                       <span class="title-shadow">Kullanıcılar</span>
                     </h3>
                     
                     <div class="social-tabs">
                       <button class="social-tab active" data-subtab="all-users" id="subtab-all-users">Tüm Kullanıcılar</button>
-                      <button class="social-tab" data-subtab="online" id="subtab-online"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em;color:#22c55e"><circle cx="12" cy="12" r="8"/></svg> Çevrimiçi</button>
+                      <button class="social-tab" data-subtab="online" id="subtab-online">🟢 Çevrimiçi</button>
                       <button class="social-tab" data-subtab="following" id="subtab-following">Takip Ettiklerim</button>
                     </div>
                     
                     <div class="social-search-wrap">
                       <div class="search-input-container">
                         <input type="text" id="social-search-input" placeholder="Kullanıcı ara…" autocomplete="off">
-                        <button class="search-clear-btn u-hidden" id="social-search-clear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M5 5l14 14"/><path d="M19 5L5 19"/></svg></button>
+                        <button class="search-clear-btn u-hidden" id="social-search-clear">✕</button>
                       </div>
                       <button class="btn btn-primary" id="btn-social-search" style="padding: 10px 20px; border-radius: 9999px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4); border: none; font-weight: 800; cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);">Ara</button>
                     </div>
@@ -377,8 +388,8 @@
                     <!-- Spaced Repetition (Review) Banner -->
                     <div class="review-banner" id="review-banner">
                       <div class="review-banner-left">
-                        <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.24rem; font-weight: 800; margin-bottom: 6px;">
-                          <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></span>
+                        <h3 style="display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800; margin-bottom: 6px;">
+                          <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(255, 255, 255, 0.2); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">🔄</span>
                           <span class="title-shadow" style="color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Akıllı Tekrar Zamanı!</span>
                         </h3>
                         <p>Hata yaptığın sorulardan oluşan özel tekrar testini çöz, bilgilerini pekiştir.</p>
@@ -390,15 +401,15 @@
                     <div class="paragraph-analysis-banner" id="paragraph-analysis-banner">
                       <div class="paragraph-analysis-banner-content">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                          <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(13, 148, 136, 0.12); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg></span>
-                          <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.24rem; font-weight: 800;">
-                            <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.78rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
+                          <span style="width: 36px; height: 36px; min-width: 36px; border-radius: 10px; background: rgba(139, 92, 246, 0.12); display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem;">📖</span>
+                          <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.08rem; font-weight: 800;">
+                            <span class="title-shadow" style="color: var(--accent-primary);">Paragraf Çözümleme</span> <span style="font-size: 0.68rem; font-weight: 800; background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.5px;">DENEME</span>
                           </h3>
                         </div>
-                        <p style="margin: 0 0 14px 0; font-size: 1.01rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
+                        <p style="margin: 0 0 14px 0; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">İlk 10 derste öğrendiğin gramer ve kelimelerden oluşan akademik paragrafı adım adım tahlil et.</p>
                       </div>
-                      <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 1.06rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #0d9488, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(13, 148, 136, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
-                        <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14z"/></svg> Analize Başla (10. Ders Sonu)
+                      <button class="btn btn-primary" id="btn-start-paragraph-analysis" style="width: 100%; padding: 12px; font-weight: 700; border-radius: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; cursor: pointer; color: white; box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25); transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">
+                        ✨ Analize Başla (10. Ders Sonu)
                       </button>
                     </div>
                   </div>
@@ -414,10 +425,10 @@
           <div class="time-matrix-container page-container">
             
             <!-- Header Banner -->
-            <div class="tm-header-card" style="background: linear-gradient(135deg, rgba(13, 148, 136, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(13, 148, 136, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+            <div class="tm-header-card" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(139, 92, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
               <div class="flex-between-wrap-10">
-                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #0d9488; margin: 0; display: flex; align-items: center; gap: 8px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Zaman & Tense Uyumu Matrisi <span style="font-size: 0.7rem; background: #0d9488; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER ZAMAN KILAVUZU</span>
+                <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #8b5cf6; margin: 0; display: flex; align-items: center; gap: 8px;">
+                  ⏱️ Zaman & Tense Uyumu Matrisi <span style="font-size: 0.7rem; background: #8b5cf6; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER ZAMAN KILAVUZU</span>
                 </h2>
 
                 <!-- Arama Kutusu -->
@@ -432,28 +443,28 @@
 
               <!-- Yön / Mod Değiştirme Butonları -->
               <div class="tm-direction-toggle-wrap flex-gap-8">
-                <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #0d9488; background: rgba(13, 148, 136, 0.15); color: #0d9488; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers)
+                <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #8b5cf6; background: rgba(139, 92, 246, 0.15); color: #8b5cf6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
+                  ⏱️ ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers)
                 </button>
                 <button type="button" class="tm-dir-btn segmented-btn" data-mode="tense_harmony" id="tm-mode-harmony">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 17 17 3l4 4L7 21z"/><path d="M14 6l2 2"/><path d="M10 10l2 2"/><path d="M6 14l2 2"/></svg> TENSE UYUM KURALLARI & ZAMAN BELİRLEYİCİLERİ (Tense Rules)
+                  📐 TENSE UYUM KURALLARI & ZAMAN BELİRLEYİCİLERİ (Tense Rules)
                 </button>
               </div>
             </div>
 
             <!-- Filtreleme Çipleri -->
             <div class="tm-filter-chips flex-gap-8-wrap-mb20">
-              <button type="button" class="tm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #0d9488; background: #0d9488; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M9 2v6.5L4.5 18a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M8.5 2h7"/><path d="M6.5 15h11"/></svg> Tümü (All)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="conjunctions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Zaman Bağlaçları (when, while, as soon as...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="anchors"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><circle cx="12" cy="5" r="3"/><path d="M12 8v14"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg> Zaman Belirleyicileri (by the time, since...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="inverted"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Devrik Yapılar (no sooner... than)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="prepositions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg> Zaman Edatları (during, prior to...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="eras"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 21h18"/><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6"/></svg> Çağ & Dönem (at the dawn of...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="reductions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8 19 19"/><path d="M8.5 16 19 5"/></svg> Zaman Kısaltmaları (upon V-ing, having V3...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="perfect_anchors"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em;color:#3b82f6"><circle cx="12" cy="12" r="8"/></svg> Perfect Belirleyicileri (for, already, yet, just...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="patterns"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Zaman Kalıpları (ago, this is the first time...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="unreal_past"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 5h16v11H9l-4 4V5z"/></svg> Gerçek Dışı Geçmiş (I wish, it is time...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="subjunctive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Subjunctive (suggest that, it is essential that)</button>
+              <button type="button" class="tm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #8b5cf6; background: #8b5cf6; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="conjunctions">⏱️ Zaman Bağlaçları (when, while, as soon as...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="anchors">⚓ Zaman Belirleyicileri (by the time, since...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="inverted">⚡ Devrik Yapılar (no sooner... than)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="prepositions">🔗 Zaman Edatları (during, prior to...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="eras">🏛️ Çağ & Dönem (at the dawn of...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="reductions">✂️ Zaman Kısaltmaları (upon V-ing, having V3...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="perfect_anchors">🔵 Perfect Belirleyicileri (for, already, yet, just...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="patterns">🔒 Zaman Kalıpları (ago, this is the first time...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="unreal_past">💭 Gerçek Dışı Geçmiş (I wish, it is time...)</button>
+              <button type="button" class="tm-chip pill-toggle" data-category="subjunctive">📜 Subjunctive (suggest that, it is essential that)</button>
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
@@ -472,7 +483,7 @@
             <div class="trm-header-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
               <div class="flex-between-wrap-10">
                 <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: #10b981; margin: 0; display: flex; align-items: center; gap: 8px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M2 18h20"/><path d="M4 18v-4a2 2 0 0 1 2-2h1"/><path d="M20 18v-4a2 2 0 0 0-2-2h-1"/><path d="M8 12V7"/><path d="M16 12V7"/><path d="M4 7h16"/></svg> Cümle Bağlaçları & Geçiş İfadeleri <span style="font-size: 0.7rem; background: #10b981; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER BAĞLAÇ KILAVUZU</span>
+                  🌉 Cümle Bağlaçları & Geçiş İfadeleri <span style="font-size: 0.7rem; background: #10b981; color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">MASTER BAĞLAÇ KILAVUZU</span>
                 </h2>
 
                 <!-- Arama Kutusu -->
@@ -488,28 +499,28 @@
               <!-- Yön / Mod Değiştirme Butonları -->
               <div class="trm-direction-toggle-wrap flex-gap-8">
                 <button type="button" class="trm-dir-btn active" data-mode="sentence_connectors" id="trm-mode-connectors" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
-                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> CÜMLE GEÇİŞ ZARFLARI (however, furthermore...)
+                  ⚡ CÜMLE GEÇİŞ ZARFLARI (however, furthermore...)
                 </button>
                 <button type="button" class="trm-dir-btn segmented-btn" data-mode="subordinate_preps" id="trm-mode-subordinates">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 17 17 3l4 4L7 21z"/><path d="M14 6l2 2"/><path d="M10 10l2 2"/><path d="M6 14l2 2"/></svg> YAN CÜMLE & EDAT BAĞLAÇLARI (although, despite...)
+                  📐 YAN CÜMLE & EDAT BAĞLAÇLARI (although, despite...)
                 </button>
                 <button type="button" class="trm-dir-btn segmented-btn" data-mode="drill" id="trm-mode-drill">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg> ALIŞTIRMA (G1-G4 Refleks Oyunu)
+                  🎯 ALIŞTIRMA (G1-G4 Refleks Oyunu)
                 </button>
               </div>
             </div>
 
             <!-- Filtreleme Çipleri -->
             <div class="trm-filter-chips flex-gap-8-wrap-mb20" id="trm-filter-chips">
-              <button type="button" class="trm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #10b981; background: #10b981; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M9 2v6.5L4.5 18a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M8.5 2h7"/><path d="M6.5 15h11"/></svg> Tümü (All)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="contrast"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Zıtlık & Çelişki (however, although...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="addition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 5v14"/><path d="M5 12h14"/></svg> Ekleme & Paralellik (furthermore, likewise...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="exemplification"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg> Örnekleme & Açıklama (for instance, namely...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="purpose_condition"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg> Amaç & Şart (so that, provided that...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="summary_emphasis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Özet & Vurgu (in brief, indeed...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="focus_exception"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg> Odaklanma & İstisna (as for, apart from...)</button>
+              <button type="button" class="trm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #10b981; background: #10b981; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="contrast">⚡ Zıtlık & Çelişki (however, although...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="addition">➕ Ekleme & Paralellik (furthermore, likewise...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="exemplification">💡 Örnekleme & Açıklama (for instance, namely...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="purpose_condition">🎯 Amaç & Şart (so that, provided that...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="summary_emphasis">📌 Özet & Vurgu (in brief, indeed...)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="focus_exception">🔍 Odaklanma & İstisna (as for, apart from...)</button>
               <button type="button" class="trm-chip pill-toggle" data-category="time_transition">⏳ Zaman Geçişleri (meanwhile, subsequently...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="correlative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg> İkiz Bağlaçlar (not only... but also, either... or)</button>
+              <button type="button" class="trm-chip pill-toggle" data-category="correlative">🔗 İkiz Bağlaçlar (not only... but also, either... or)</button>
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
@@ -528,17 +539,17 @@
         <!-- Lisanssız/Misafir Kullanıcı Kilidi -->
         <div id="simulator-lock-overlay" style="display: none; width: 100%; min-height: 480px; padding: 40px 16px; box-sizing: border-box; justify-content: center; align-items: center; border-radius: var(--radius-xl);">
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 40px 24px; max-width: 480px; width: 100%; text-align: center; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; align-items: center; gap: 20px; box-sizing: border-box;">
-            <div style="font-size: 4.5rem; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15)); line-height: 1; animation: pulse 2s infinite;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;color:var(--accent-primary)"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <div style="font-size: 4.5rem; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15)); line-height: 1; animation: pulse 2s infinite;">🔒</div>
             <h3 style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--accent-primary); margin: 0;">Simülatör Kilitli</h3>
             <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
               Cümle vagonu simülatörünü kullanabilmek için geçerli bir lisans anahtarı edinmiş ve sisteme kayıtlı bir kullanıcı olmanız gerekmektedir.
             </p>
             <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; margin-top: 10px; box-sizing: border-box;">
               <button id="btn-simulator-unlock-login" class="btn btn-primary" style="width: 100%; padding: 14px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.95rem; margin-bottom: 0; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="8" cy="15" r="4"/><path d="M10.5 12.5 20 3"/><path d="M17 6l3 3"/><path d="M14 9l2.5 2.5"/></svg> Lisans Aktifleştir ve Giriş Yap
+                🔑 Lisans Aktifleştir ve Giriş Yap
               </button>
               <button id="btn-simulator-goto-profile" class="btn btn-secondary" style="width: 100%; padding: 12px; font-weight: 600; border-radius: var(--radius-md); font-size: 0.85rem; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); margin-bottom: 0; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7.5" r="4.5"/></svg> Profilime Git
+                👤 Profilime Git
               </button>
             </div>
           </div>
@@ -787,7 +798,7 @@
             <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
               <span class="levels-label" style="margin: 0;">Yüklem öbeği sayısı:</span>
               <button class="btn" id="btn-simulator-report-bug" style="padding: 6px 12px; font-size: 0.8rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; font-weight: 700; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s; font-family: var(--font-heading);" onmouseover="this.style.background='rgba(239, 68, 68, 0.2)'" onmouseout="this.style.background='rgba(239, 68, 68, 0.1)'">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg> Hata Bildir
+                ⚠️ Hata Bildir
               </button>
             </div>
             <div class="simulator-level-buttons" id="simulator-level-buttons">
@@ -801,10 +812,10 @@
             <!-- Glitch Ekranı (Görev 3 için) -->
             <div class="glitch-overlay" id="glitch-overlay">
               <div class="glitch-content">
-                <span class="glitch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg></span>
+                <span class="glitch-icon">⚠️</span>
                 <h3 class="glitch-title">PROCESSOR OVERLOAD DEFENSE</h3>
                 <p class="glitch-msg">Sistem Limit Aşımı: Eylemin tüm yuvaları dolu. 9. vagonun eklenmesi mantıksal paradoksa yol açtığı için engellendi.</p>
-                <button class="btn btn-secondary" id="btn-glitch-dismiss" style="margin-top: 16px; padding: 8px 16px; background: rgba(255,255,255,0.2); border-color: #fff; color: #fff;">Hatayı Kapat</button>
+                <button class="btn btn-secondary" id="btn-glitch-dismiss" style="margin-top: 15px; padding: 8px 16px; background: rgba(255,255,255,0.2); border-color: #fff; color: #fff;">Hatayı Kapat</button>
               </div>
             </div>
             <!-- Tren Vagonları Zinciri -->
@@ -836,7 +847,7 @@
                 </div>
 
                 <div class="info-card note-card">
-                  <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z"/></svg></div>
+                  <div class="card-icon">🔧</div>
                   <div class="card-details">
                     <span class="card-label">Notlar</span>
                     <p class="card-value" id="simulator-mechanic-note">-</p>
@@ -855,15 +866,15 @@
           <!-- Premium Alt Navigasyon Barı -->
           <div class="profile-hub-nav" id="profile-hub-nav">
             <button class="profile-hub-tab active" data-hub="info" id="hub-tab-info">
-              <span class="profile-hub-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7.5" r="4.5"/></svg></span>
+              <span class="profile-hub-tab-icon">👤</span>
               <span class="profile-hub-tab-label">Profilim</span>
             </button>
             <button class="profile-hub-tab" data-hub="leaderboard" id="hub-tab-leaderboard">
-              <span class="profile-hub-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 5"/><path d="M17 5h3a3 3 0 0 1-3 5"/><path d="M12 13v4"/><path d="M8 21h8"/><path d="M9 21v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2"/></svg></span>
+              <span class="profile-hub-tab-icon">🏆</span>
               <span class="profile-hub-tab-label">Puan Tablosu</span>
             </button>
             <button class="profile-hub-tab" data-hub="store" id="hub-tab-store">
-              <span class="profile-hub-tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+              <span class="profile-hub-tab-icon">🛍️</span>
               <span class="profile-hub-tab-label">Mağaza</span>
             </button>
             <div class="profile-hub-indicator" id="profile-hub-indicator" data-pos="0"></div>
@@ -880,7 +891,7 @@
           <div id="profile-hub-leaderboard" class="profile-hub-content">
             <div class="leaderboard-container">
               <div class="leaderboard-header">
-                <div class="league-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 5"/><path d="M17 5h3a3 3 0 0 1-3 5"/><path d="M12 13v4"/><path d="M8 21h8"/><path d="M9 21v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2"/></svg> Altın Lig</div>
+                <div class="league-badge">🏆 Altın Lig</div>
                 <div class="league-countdown">⏳ Lig bitişine 2 gün</div>
                 <p class="league-desc">Ligde kalıp puan kazanmak için dersleri tamamla.</p>
               </div>
@@ -896,16 +907,16 @@
           <!-- C) MAĞAZA -->
           <div id="profile-hub-store" class="profile-hub-content">
             <div class="store-container">
-              <h2 class="store-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M6 8h12l1 12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> amok Sanal Mağazası</h2>
+              <h2 class="store-title">🛍️ amok Sanal Mağazası</h2>
               <p class="store-subtitle">Jetonlarını kullanarak güçlendiriciler, temalar ve kozmetik eşyalar aç. (XP sıralamada kalır, jeton harcanır.)</p>
-              <div class="store-coin-balance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><path d="M9 12h6"/><path d="M12 8v8"/></svg> <strong id="store-coin-count">0</strong> Jeton</div>
+              <div class="store-coin-balance">🪙 <strong id="store-coin-count">0</strong> Jeton</div>
 
               <!-- Üyelik & Lisans Bölümü -->
               <div class="profile-actions-card" id="store-licence-card" style="margin-top: 0; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);">
                 <!-- Kart Başlığı (Tıklanabilir Alan) -->
                 <div id="store-licence-header" style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; user-select: none; background: rgba(0, 0, 0, 0.01); transition: background-color 0.2s;">
                   <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.15rem;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="8" cy="15" r="4"/><path d="M10.5 12.5 20 3"/><path d="M17 6l3 3"/><path d="M14 9l2.5 2.5"/></svg></span>
+                    <span style="font-size: 1.15rem;">🔑</span>
                     <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: var(--text-primary);">Üyelik & Lisans</span>
                   </div>
                   <div class="flex-center-12">
@@ -991,7 +1002,7 @@
         <div class="feedback-container" style="max-width: 600px; margin: 0 auto; padding: 24px 16px;">
           <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 28px; box-shadow: var(--shadow-md); display: flex; flex-direction: column; gap: 20px; text-align: left;">
             <div>
-              <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-primary); margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 5h16v11H9l-4 4V5z"/></svg> Geri Bildirim & Destek</h2>
+              <h2 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; color: var(--accent-primary); margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;">💬 Geri Bildirim & Destek</h2>
               <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.5;">Uygulamayla ilgili karşılaştığınız hataları (Mağaza açılmıyor, Tema değişmiyor vb.) veya geliştirilmesini istediğiniz önerileri ekran görüntüsü ekleyerek bize iletebilirsiniz.</p>
             </div>
 
@@ -1018,17 +1029,17 @@
               <label class="text-label">Ekran Görüntüsü (Opsiyonel)</label>
               <div style="border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 20px; text-align: center; cursor: pointer; transition: all 0.2s; position: relative;" id="feedback-screenshot-dropzone">
                 <input type="file" id="feedback-screenshot-input" accept="image/*" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
-                <span style="font-size: 2rem; display: block; margin-bottom: 6px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg></span>
+                <span style="font-size: 2rem; display: block; margin-bottom: 6px;">📸</span>
                 <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 600;" id="feedback-screenshot-label">Ekran görüntüsü yüklemek için tıklayın veya dosyayı sürükleyin</span>
               </div>
               <div id="feedback-screenshot-preview-container" style="display: none; margin-top: 10px; position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color);">
                 <img id="feedback-screenshot-preview" src="" alt="Önizleme" style="width: 100%; display: block; max-height: 250px; object-fit: contain; background: rgba(0,0,0,0.03);">
-                <button id="btn-feedback-clear-screenshot" style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 0.9rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M5 5l14 14"/><path d="M19 5L5 19"/></svg></button>
+                <button id="btn-feedback-clear-screenshot" style="position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.6); color: white; border: none; border-radius: 50%; width: 28px; height: 28px; font-size: 0.9rem; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">✕</button>
               </div>
             </div>
 
             <button id="btn-feedback-submit" class="btn btn-primary" style="padding: 14px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.95rem; width: 100%; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 3-3-3c-1-1-2-3-2-5 0-4 2-8 5-10z"/><path d="M9 15l-3 3 1 3 3-1"/><circle cx="12" cy="9" r="1.5" fill="currentColor" stroke="none"/></svg> Bildirimi Gönder
+              🚀 Bildirimi Gönder
             </button>
           </div>
         </div>
@@ -1041,7 +1052,7 @@
           <div class="admin-header-card" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px;">
             <div>
               <h2 style="font-family: var(--font-heading); color: var(--accent-primary); font-weight: 800; font-size: 2.2rem; margin: 0; display: flex; align-items: center; gap: 12px;">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z"/></svg></span> Yönetim Paneli
+                <span>🛠️</span> Yönetim Paneli
               </h2>
               <p style="color: var(--text-secondary); margin: 6px 0 0 0; font-size: 1rem; font-weight: 500;">
                 Yerel geliştirme araçları ve sistem entegrasyonu yönetim alanı.
@@ -1065,7 +1076,7 @@
                 <div class="admin-card-glass card-panel">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
                     <div class="flex-center-12">
-                      <span class="icon-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg></span>
+                      <span class="icon-lg">⚠️</span>
                       <div class="text-left">
                         <h3 class="section-title-sm">Soru Hata Bildirimleri</h3>
                         <p class="subtext">Kullanıcıların alıştırma esnasında bildirdiği hataları inceleyin ve yönetin.</p>
@@ -1089,7 +1100,7 @@
                 <div class="admin-card-glass card-panel">
                   <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 14px; flex-wrap: wrap; gap: 12px;">
                     <div class="flex-center-12">
-                      <span class="icon-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 5h16v11H9l-4 4V5z"/></svg></span>
+                      <span class="icon-lg">💬</span>
                       <div class="text-left">
                         <h3 class="section-title-sm">Genel Geri Bildirimler</h3>
                         <p class="subtext">Kullanıcıların genel hata bildirimlerini ve geliştirme önerilerini inceleyin.</p>
@@ -1114,7 +1125,7 @@
                 <div class="admin-card-glass card-panel">
                   <div class="header-row">
                     <div class="flex-center-12">
-                      <span class="icon-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="8" cy="15" r="4"/><path d="M10.5 12.5 20 3"/><path d="M17 6l3 3"/><path d="M14 9l2.5 2.5"/></svg></span>
+                      <span class="icon-lg">🔑</span>
                       <div class="text-left">
                         <h3 class="section-title-sm">Lisans Anahtarı Oluşturucu</h3>
                         <p class="subtext">Kullanıcılarınız için şifreli, süreli ve güvenli çevrimdışı lisans kodları üretin.</p>
@@ -1152,7 +1163,7 @@
                       </select>
                     </div>
                     <button id="btn-admin-generate-key" class="btn btn-primary" style="padding: 12px 24px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; gap: 8px; height: 46px;">
-                      <span><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span> Lisans Üret
+                      <span>⚡</span> Lisans Üret
                     </button>
                   </div>
                   
@@ -1181,7 +1192,7 @@
                   <!-- Gelen Lisans ve Davetiye Talepleri -->
                   <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px; text-align: left; border-top: 1px solid var(--border-color); padding-top: 20px;">
                     <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
-                      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span> Gelen Lisans ve Davetiye Talepleri
+                      <span>📩</span> Gelen Lisans ve Davetiye Talepleri
                     </h4>
                     <div style="overflow-x: auto; background: var(--bg-body); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                       <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
@@ -1212,7 +1223,7 @@
                 <div class="admin-card-glass card-panel">
                   <div class="header-row">
                     <div class="flex-center-12">
-                      <span class="icon-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+                      <span class="icon-lg">👥</span>
                       <div class="text-left">
                         <h3 class="section-title-sm">Kullanıcı Yönetimi</h3>
                         <p class="subtext">Kayıtlı kullanıcıları, yeni üyeleri ve çevrimiçi kullanıcıları görüntüleyin.</p>
@@ -1237,8 +1248,8 @@
                       <div style="font-size: 1.8rem; font-weight: 800; color: #f59e0b; line-height: 1;" id="admin-stat-online-count">—</div>
                       <div class="eyebrow-label">Çevrimiçi</div>
                     </div>
-                    <div id="admin-stat-active" style="background: linear-gradient(135deg, rgba(13, 148, 136, 0.08), rgba(13, 148, 136, 0.02)); border: 1px solid rgba(13, 148, 136, 0.15); border-radius: var(--radius-md); padding: 16px; text-align: center;">
-                      <div style="font-size: 1.8rem; font-weight: 800; color: #0d9488; line-height: 1;" id="admin-stat-active-count">—</div>
+                    <div id="admin-stat-active" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(168, 85, 247, 0.02)); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: var(--radius-md); padding: 16px; text-align: center;">
+                      <div style="font-size: 1.8rem; font-weight: 800; color: #a855f7; line-height: 1;" id="admin-stat-active-count">—</div>
                       <div class="eyebrow-label">Aktif (24 Saat)</div>
                     </div>
                   </div>
@@ -1246,7 +1257,7 @@
                   <!-- Manual User Addition Form (Collapsible) -->
                   <div id="admin-add-user-form-container" style="display: none; background: var(--bg-body); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; text-align: left; flex-direction: column; gap: 14px;">
                     <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
-                      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7.5" r="4.5"/></svg></span> Yeni Kullanıcı Oluştur
+                      <span>👤</span> Yeni Kullanıcı Oluştur
                     </h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
                       <div class="flex-col-4">
@@ -1275,28 +1286,28 @@
                   <!-- Sub-tabs -->
                   <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                     <button class="admin-users-tab active" data-admin-tab="all" style="padding: 8px 16px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; border: 1px solid var(--accent-primary); background: rgba(139, 126, 200, 0.12); color: var(--accent-primary);">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 11h6"/><path d="M9 15h6"/></svg> Tüm Kullanıcılar
+                      📋 Tüm Kullanıcılar
                     </button>
                     <button class="admin-users-tab" data-admin-tab="new" style="padding: 8px 16px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary);">
                       🆕 Yeni Üyeler
                     </button>
                     <button class="admin-users-tab" data-admin-tab="online" style="padding: 8px 16px; border-radius: var(--radius-md); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary);">
-                      <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em;color:#22c55e"><circle cx="12" cy="12" r="8"/></svg> Çevrimiçi
+                      🟢 Çevrimiçi
                     </button>
                   </div>
 
                   <!-- Arama Modülü -->
-                  <div style="display: flex; width: 100%; margin-top: 10px; margin-bottom: 6px;">
+                  <div style="display: flex; width: 100%; margin-top: 10px; margin-bottom: 5px;">
                     <input type="text" id="admin-users-search-input" placeholder="🔍 İsim, e-posta veya telefon ile kullanıcı ara..." style="width: 100%; padding: 12px 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary); font-size: 0.9rem; box-sizing: border-box; outline: none; transition: border-color 0.2s;">
                   </div>
 
                   <!-- Refresh Button & Add User Button -->
                   <div style="display: flex; gap: 12px; width: 100%; margin-top: 10px; margin-bottom: 10px; flex-wrap: wrap;">
                     <button id="btn-admin-refresh-users" class="btn btn-secondary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary);">
-                      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></span> Kullanıcıları Yenile
+                      <span>🔄</span> Kullanıcıları Yenile
                     </button>
                     <button id="btn-admin-add-user-toggle" class="btn btn-primary" style="flex: 1; min-width: 150px; padding: 12px 20px; font-weight: 700; border-radius: var(--radius-md); display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
-                      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 5v14"/><path d="M5 12h14"/></svg></span> Kullanıcı Ekle
+                      <span>➕</span> Kullanıcı Ekle
                     </button>
                   </div>
 
@@ -1329,7 +1340,7 @@
         <div class="page-container">
           <div style="background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(59,130,246,0.10)); border: 1.5px solid rgba(16,185,129,0.28); border-radius: var(--radius-lg); padding: 20px 22px; margin-bottom: 18px;">
             <h2 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; margin: 0 0 6px 0; color: var(--text-primary);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> Okuma Parçası Denemesi
+              📝 Okuma Parçası Denemesi
             </h2>
             <p class="desc-text" style="margin: 0;">
               YÖKDİL / YDS soru tiplerinin her biri ayrı bir deneme olarak aşağıda listelenir.
@@ -1344,13 +1355,17 @@
 
       <div id="tab-content-connector-drill" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
         <div class="card-panel" style="margin-bottom: 18px;">
-          <h2 class="section-title" style="margin: 0 0 8px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 17 17 3l4 4L7 21z"/><path d="M14 6l2 2"/><path d="M10 10l2 2"/><path d="M6 14l2 2"/></svg> <span id="connector-drill-title-text">Yapısal Kurallar</span></h2>
+          <h2 class="section-title" style="margin: 0 0 8px;">📏 Yapısal Kurallar</h2>
           <p class="desc-text" style="margin: 0;">
             Buradaki alıştırmalar anlamı değil mekanik kuralı ölçer. Bağlaçlarda kural
             noktalama ve tamamlayıcı tipidir; zaman ifadelerinde ise kural, terimin
             cümlenin iki tarafına dayattığı çekimdir. Her alıştırma 10'ar soruluk
-            testlere bölünmüştür. Soldaki "Yapısal Kurallar" alt sekmelerinden bölüm seç.
+            testlere bölünmüştür.
           </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px;">
+            <button type="button" class="drill-tab active" data-drill-section="cdrill_l1">🔗 Bağlaç Kuralları</button>
+            <button type="button" class="drill-tab pill-toggle" data-drill-section="tdrill_l1">⏳ Zaman Uyumu Kuralları</button>
+          </div>
         </div>
         <div id="connector-drill-list" class="grid-300"></div>
       </div>
@@ -1358,10 +1373,10 @@
       <div id="tab-content-structure-robot" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
         
         <!-- Header & Mode Switcher (Compact & Sleek Glassmorphism) -->
-        <div class="srobot-header-card" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(13, 148, 136, 0.08)); border: 1px solid rgba(34, 211, 238, 0.3); border-radius: var(--radius-lg); padding: 14px 20px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; backdrop-filter: blur(8px);">
+        <div class="srobot-header-card" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.08)); border: 1px solid rgba(34, 211, 238, 0.3); border-radius: var(--radius-lg); padding: 14px 20px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; backdrop-filter: blur(8px);">
           <div class="flex-center-12">
-            <div class="srobot-avatar" style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #06b6d4, #0d9488); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); position: relative;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;color:#fff"><rect x="5" y="9" width="14" height="10" rx="2"/><path d="M12 9V5"/><circle cx="12" cy="3.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="9" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r="1.2" fill="currentColor" stroke="none"/><path d="M9 17h6"/></svg>
+            <div class="srobot-avatar" style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3); position: relative;">
+              🤖
               <span id="srobot-eye-status" style="position: absolute; top: 2px; right: 2px; width: 8px; height: 8px; border-radius: 50%; background: #10b981; border: 2px solid #fff; box-shadow: 0 0 6px #10b981;"></span>
             </div>
             <div>
@@ -1369,7 +1384,7 @@
                 <h2 style="margin: 0; font-size: 1.25rem; font-weight: 800; color: var(--text-primary); font-family: var(--font-heading);">
                   Yapı Robotu
                 </h2>
-                <span style="font-size: 0.7rem; background: linear-gradient(135deg, #06b6d4, #0d9488); color: #fff; padding: 2px 8px; border-radius: 8px; font-weight: 700; letter-spacing: 0.5px;">MATRİS LAB (114 Yapı)</span>
+                <span style="font-size: 0.7rem; background: linear-gradient(135deg, #06b6d4, #8b5cf6); color: #fff; padding: 2px 8px; border-radius: 8px; font-weight: 700; letter-spacing: 0.5px;">MATRİS LAB (114 Yapı)</span>
               </div>
               <p style="margin: 2px 0 0 0; font-size: 0.8rem; color: var(--text-secondary);" id="srobot-status-text">
                 Bağlaç, Zaman ve Modal parçalarını birleştirerek hatasız cümleler inşa et!
@@ -1380,22 +1395,22 @@
           <!-- Mode Buttons -->
           <div style="display: flex; gap: 4px; background: var(--bg-body); padding: 3px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
             <button id="srobot-mode-sandbox" class="srobot-mode-btn active" style="padding: 6px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: var(--accent-primary); color: #fff;">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M9 2v6.5L4.5 18a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M8.5 2h7"/><path d="M6.5 15h11"/></svg> Serbest Mod (Sandbox)
+              🧪 Serbest Mod (Sandbox)
             </button>
             <button id="srobot-mode-challenge" class="srobot-mode-btn" style="padding: 6px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg> Görev Modu (Puzzle)
+              🎯 Görev Modu (Puzzle)
             </button>
             <button id="srobot-mode-guide" class="srobot-mode-btn" style="padding: 6px 14px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Neden-Etki Kılavuzu
+              ⚡ Neden-Etki Kılavuzu
             </button>
           </div>
         </div>
 
         <!-- Challenge Banner (hidden in sandbox) -->
-        <div id="srobot-challenge-card" style="display: none; background: rgba(13, 148, 136, 0.12); border: 1px solid rgba(13, 148, 136, 0.3); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 16px;">
+        <div id="srobot-challenge-card" style="display: none; background: rgba(139, 92, 246, 0.12); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 16px;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-            <span style="font-weight: 800; font-size: 0.8rem; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
-              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg></span> GÖREV HEDEFİ (<span id="srobot-challenge-index">1</span>/<span id="srobot-challenge-total">5</span>)
+            <span style="font-weight: 800; font-size: 0.8rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
+              <span>🎯</span> GÖREV HEDEFİ (<span id="srobot-challenge-index">1</span>/<span id="srobot-challenge-total">5</span>)
             </span>
             <span style="font-weight: 700; font-size: 0.75rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 2px 8px; border-radius: 8px;" id="srobot-challenge-reward">+25 XP</span>
           </div>
@@ -1414,14 +1429,14 @@
           <div class="srobot-slots-card" style="border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 16px 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 14px;">
             <div class="srobot-slots-header">
               <h3 style="margin: 0; font-size: 0.92rem; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 8px; letter-spacing: 0.5px;">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></span> MONTAJ HATTI (SLOTS)
+                <span>⚙️</span> MONTAJ HATTI (SLOTS)
               </h3>
               <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
                 <span id="srobot-slots-progress-badge" style="font-size: 0.75rem; font-weight: 700; background: rgba(6, 182, 212, 0.12); color: #06b6d4; padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(6, 182, 212, 0.25);">
                   0/3 Parça Takıldı
                 </span>
                 <button id="srobot-btn-reset" class="btn btn-secondary" style="padding: 4px 12px; font-size: 0.78rem; border-radius: var(--radius-md); font-weight: 600;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg> Sıfırla
+                  🔄 Sıfırla
                 </button>
               </div>
             </div>
@@ -1443,17 +1458,17 @@
               <div class="srobot-pipeline-arrow" style="color: rgba(6, 182, 212, 0.6);">➜</div>
 
               <!-- Slot 2: Clause A Tense Matrix -->
-              <div class="srobot-slot-box" id="srobot-slot-box-2" style="background: var(--bg-body); border: 1.5px dashed rgba(13, 148, 136, 0.4); border-radius: var(--radius-md); padding: 10px 12px; text-align: center; transition: all 0.2s;">
-                <div id="srobot-slot-title-2" style="font-size: 0.72rem; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">
+              <div class="srobot-slot-box" id="srobot-slot-box-2" style="background: var(--bg-body); border: 1.5px dashed rgba(139, 92, 246, 0.4); border-radius: var(--radius-md); padding: 10px 12px; text-align: center; transition: all 0.2s;">
+                <div id="srobot-slot-title-2" style="font-size: 0.72rem; font-weight: 800; color: #8b5cf6; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;">
                   YAN CÜMLE ZAMANI (CLAUSE A)
                 </div>
-                <div id="srobot-slot-target-2" class="srobot-slot-target" style="min-height: 38px; border-radius: var(--radius-sm); background: rgba(13, 148, 136, 0.06); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.88rem; color: var(--text-primary); border: 1px solid rgba(13, 148, 136, 0.25); padding: 4px 8px;">
+                <div id="srobot-slot-target-2" class="srobot-slot-target" style="min-height: 38px; border-radius: var(--radius-sm); background: rgba(139, 92, 246, 0.06); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.88rem; color: var(--text-primary); border: 1px solid rgba(139, 92, 246, 0.25); padding: 4px 8px;">
                   <span class="text-sm-muted">Parça Seçilmedi</span>
                 </div>
               </div>
 
               <!-- Pipeline Arrow 2 -->
-              <div class="srobot-pipeline-arrow" style="color: rgba(13, 148, 136, 0.6);">➜</div>
+              <div class="srobot-pipeline-arrow" style="color: rgba(139, 92, 246, 0.6);">➜</div>
 
               <!-- Slot 3: Clause B Modal/Tense Matrix -->
               <div class="srobot-slot-box" id="srobot-slot-box-3" style="background: var(--bg-body); border: 1.5px dashed rgba(236, 72, 153, 0.4); border-radius: var(--radius-md); padding: 10px 12px; text-align: center; transition: all 0.2s;">
@@ -1482,7 +1497,7 @@
                 Lütfen yuvaları doldurun.
               </div>
               <div id="srobot-rule-explanation" style="font-size: 0.82rem; color: var(--text-primary); background: var(--bg-body); padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-top: 4px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg> <strong>Kural Mantığı:</strong> Parçaları seçtikçe kural uyumu otomatik hesaplanır. Uyumsuz parçalar kilitlenir.
+                💡 <strong>Kural Mantığı:</strong> Parçaları seçtikçe kural uyumu otomatik hesaplanır. Uyumsuz parçalar kilitlenir.
               </div>
 
 
@@ -1490,7 +1505,7 @@
 
             <!-- Challenge Submit Button -->
             <button id="srobot-btn-check-challenge" class="btn btn-primary" style="display: none; width: 100%; padding: 14px; font-weight: 800; font-size: 1rem; border-radius: var(--radius-md); background: linear-gradient(135deg, #10b981, #059669); border: none;">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14z"/></svg> GÖREVİ KONTROL ET & ONAYLA
+              ✨ GÖREVİ KONTROL ET & ONAYLA
             </button>
           </div>
 
@@ -1501,7 +1516,7 @@
             <div class="ce-header-card" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(236, 72, 153, 0.12)); border: 1.5px solid rgba(59, 130, 246, 0.25); border-radius: var(--radius-lg); padding: 14px 18px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
               <div class="flex-between-wrap-10">
                 <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin: 0; display: flex; align-items: center; gap: 8px;">
-                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Neden-Etki Matrisi <span style="font-size: 0.7rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">CETVEL I & II</span>
+                  ⚡ Neden-Etki Matrisi <span style="font-size: 0.7rem; background: var(--accent-primary); color: white; padding: 2px 8px; border-radius: 10px; font-weight: 700;">CETVEL I & II</span>
                 </h2>
 
                 <!-- Arama Kutusu -->
@@ -1517,21 +1532,21 @@
               <!-- Yön Değiştirme Butonları (Cetvel I vs Cetvel II) -->
               <div class="ce-direction-toggle-wrap flex-gap-8">
                 <button type="button" class="ce-dir-btn active" data-direction="cause_to_effect" id="ce-dir-cause-to-effect" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #3b82f6; background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
-                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em;color:#ef4444"><circle cx="12" cy="12" r="8"/></svg> CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
+                  🔴 CETVEL I: NEDEN ➔ ETKİ (Sebep Olur / Yol Açar)
                 </button>
                 <button type="button" class="ce-dir-btn segmented-btn" data-direction="effect_to_cause" id="ce-dir-effect-to-cause">
-                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em;color:#3b82f6"><circle cx="12" cy="12" r="8"/></svg> CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
+                  🔵 CETVEL II: ETKİ ➔ NEDEN (Kaynaklanır / İleri Gelir)
                 </button>
               </div>
             </div>
 
             <!-- Filtreleme Çipleri -->
             <div class="ce-filter-chips flex-gap-8-wrap-mb20">
-              <button type="button" class="ce-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M9 2v6.5L4.5 18a2 2 0 0 0 1.8 3h11.4a2 2 0 0 0 1.8-3L15 8.5V2"/><path d="M8.5 2h7"/><path d="M6.5 15h11"/></svg> Tümü (All)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="verbs"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Fiil Yapıları (causes, leads to...)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="prepositions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg> Edat Öbekleri (due to, owing to...)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="conjunctions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M2 18h20"/><path d="M4 18v-4a2 2 0 0 1 2-2h1"/><path d="M20 18v-4a2 2 0 0 0-2-2h-1"/><path d="M8 12V7"/><path d="M16 12V7"/><path d="M4 7h16"/></svg> Cümle Bağlaçları (therefore, because...)</button>
-              <button type="button" class="ce-chip pill-toggle" data-category="patterns"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8 19 19"/><path d="M8.5 16 19 5"/></svg> Kısaltma & Kalıplar (thereby V-ing, in that...)</button>
+              <button type="button" class="ce-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="verbs">⚡ Fiil Yapıları (causes, leads to...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="prepositions">🔗 Edat Öbekleri (due to, owing to...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="conjunctions">🌉 Cümle Bağlaçları (therefore, because...)</button>
+              <button type="button" class="ce-chip pill-toggle" data-category="patterns">✂️ Kısaltma & Kalıplar (thereby V-ing, in that...)</button>
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
@@ -1550,30 +1565,30 @@
             <div id="srobot-section-connectors" class="srobot-piece-section">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
                 <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                  <span style="color: #06b6d4;"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="8"/></svg></span> Bağlaç Kitaplığı (Matris Parçaları)
+                  <span style="color: #06b6d4;">🔵</span> Bağlaç Kitaplığı (Matris Parçaları)
                   <button id="srobot-toggle-connectors-btn" style="display: none; padding: 3px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid rgba(6, 182, 212, 0.4); background: rgba(6, 182, 212, 0.12); color: #06b6d4; cursor: pointer; transition: all 0.2s;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg> Değiştir / Listeyi Aç
+                    ✏️ Değiştir / Listeyi Aç
                   </button>
                 </div>
                 <!-- Arama: 121 parça tek duvar halinde geliyordu; yazarak süzmek en kısa yol. -->
                 <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                   <input id="srobot-connector-search" type="search" placeholder="🔎 Bağlaç ara (when, rağmen, sonuç…)"
                          autocomplete="off" spellcheck="false"
-                         style="padding: 6px 12px; border-radius: 12px; font-size: 0.78rem; min-width: 220px;
+                         style="padding: 5px 12px; border-radius: 12px; font-size: 0.78rem; min-width: 220px;
                                 border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-primary);">
                   <span id="srobot-search-count" style="font-size: 0.72rem; color: var(--text-muted);"></span>
                 </div>
                 <!-- Category Filter Pills -->
                 <div id="srobot-category-filters" style="display: flex; gap: 6px; flex-wrap: wrap;">
                   <button class="srobot-cat-btn active" data-cat="all" style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--accent-primary); background: var(--accent-primary); color: #fff; cursor: pointer;">Tümü</button>
-                  <button class="srobot-cat-btn chip-toggle" data-cat="time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Zaman & Tense</button>
-                  <button class="srobot-cat-btn chip-toggle" data-cat="transitions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 6h4l7 12h4"/><path d="M14 6h4l3 5"/><path d="M3 18h4l3-5"/><path d="M17 4l3 2-3 2"/><path d="M17 16l3 2-3 2"/></svg> Cümle Bağlaçları & Geçiş</button>
-                  <button class="srobot-cat-btn chip-toggle" data-cat="cause_effect"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg> Neden-Etki Bağlaçları</button>
-                  <button class="srobot-cat-btn chip-toggle" data-cat="devrik_kısaltma"><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Devrik & Kısaltmalar</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="time">⏱️ Zaman & Tense</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="transitions">🔀 Cümle Bağlaçları & Geçiş</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="cause_effect">🎯 Neden-Etki Bağlaçları</button>
+                  <button class="srobot-cat-btn chip-toggle" data-cat="devrik_kısaltma">⚡ Devrik & Kısaltmalar</button>
                   <button id="srobot-only-rules" type="button" title="Kendinden sonrasını değiştiren parçalar: zaman uyumu ve devrik söz dizimi"
                           style="padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; cursor: pointer;
                                  border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-secondary);">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg> Yalnızca ezber gerektirenler
+                    🎯 Yalnızca ezber gerektirenler
                   </button>
                 </div>
               </div>
@@ -1581,7 +1596,7 @@
               <div class="srobot-legend">
                 <span>Rozetler parçanın peşinden ne geldiğini gösterir:</span>
                 <span style="color:#0ea5e9;"><b>+ yan cümle</b> özne + fiil</span>
-                <span style="color:#0d9488;"><b>+ cümle</b> bağımsız cümle</span>
+                <span style="color:#8b5cf6;"><b>+ cümle</b> bağımsız cümle</span>
                 <span style="color:#f59e0b;"><b>+ isim öbeği / V-ing / V1</b></span>
                 <span style="color:#ef4444;"><b>devrik</b> yardımcı fiil önde</span>
                 <span style="color:#10b981;"><b>eş öğe</b> ikili bağlaç</span>
@@ -1592,7 +1607,7 @@
                 <span>Soldaki nokta parçanın kural yükünü gösterir:</span>
                 <span><span class="srobot-burden-dot" style="background:#ef4444;"></span> <b>kural</b> kendinden sonrasını belirler (ezberlenmeli)</span>
                 <span><span class="srobot-burden-dot" style="background:#f59e0b;"></span> <b>tür</b> arkasına isim mi cümle mi geldiği önemli</span>
-                <span><span class="srobot-burden-dot" style="background:#0d9488;"></span> <b>ortak</b> tüm geçiş ifadeleriyle aynı noktalama kuralı</span>
+                <span><span class="srobot-burden-dot" style="background:#8b5cf6;"></span> <b>ortak</b> tüm geçiş ifadeleriyle aynı noktalama kuralı</span>
               </div>
               <div class="srobot-pieces-grid" id="srobot-pieces-connectors" style="display: block; transition: all 0.3s ease;">
                 <!-- JS tarafından doldurulacak -->
@@ -1615,12 +1630,12 @@
        ════════════════════════════════════════════════════════ -->
   <section id="quiz-screen" class="app-screen">
     <div class="quiz-header">
-      <button class="btn-icon quiz-close" id="quiz-close" title="Çık"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M5 5l14 14"/><path d="M19 5L5 19"/></svg></button>
+      <button class="btn-icon quiz-close" id="quiz-close" title="Çık">✕</button>
       <div class="progress-bar-wrap">
         <div class="progress-bar" id="quiz-progress"></div>
       </div>
       <div class="quiz-hearts" id="quiz-hearts">
-        <span><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 21s-7.5-4.6-10.2-9.3C.3 8.9 1.4 5.4 4.7 4.4c2-.6 4 .2 5.3 2 .3.4.9.4 1.2 0 1.3-1.8 3.3-2.6 5.3-2 3.3 1 4.4 4.5 2.9 7.3C19.5 16.4 12 21 12 21z"/></svg></span>
+        <span>❤️</span>
         <span id="quiz-hearts-count">5</span>
       </div>
     </div>
@@ -1629,7 +1644,7 @@
       <div class="quiz-meta-header">
         <div class="quiz-metadata" id="quiz-metadata"></div>
         <button class="quiz-report-btn" id="quiz-report" title="Soru Hatası Bildir">
-          <span class="report-btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg></span> Soruda Hata Bildir
+          <span class="report-btn-icon">⚠️</span> Soruda Hata Bildir
         </button>
       </div>
       <div class="quiz-body" id="quiz-body">
@@ -1655,7 +1670,7 @@
        ════════════════════════════════════════════════════════ -->
   <section id="summary-screen" class="app-screen">
     <div class="summary-container">
-      <div class="summary-trophy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M7 4h10v4a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 5"/><path d="M17 5h3a3 3 0 0 1-3 5"/><path d="M12 13v4"/><path d="M8 21h8"/><path d="M9 21v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2"/></svg></div>
+      <div class="summary-trophy">🏆</div>
       <h2 class="summary-title">Tebrikler!</h2>
       <p class="summary-subtitle" id="summary-lesson-name">Dersi tamamladın</p>
 
@@ -1679,17 +1694,17 @@
        ════════════════════════════════════════════════════════ -->
   <section id="gameover-screen" class="app-screen">
     <div class="gameover-container">
-      <div class="gameover-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M12 21s-7.5-4.6-10.2-9.3C.3 8.9 1.4 5.4 4.7 4.4c2-.6 4 .2 5.3 2l1 1.5-1.5 2 2 2.5-1.5 2.5 2 3.6z"/><path d="M12 21s7.5-4.6 10.2-9.3c1.5-2.8.4-6.3-2.9-7.3-2-.6-4 .2-5.3 2"/></svg></div>
+      <div class="gameover-icon">💔</div>
       <h2 class="gameover-title">Canların Bitti!</h2>
       <p class="gameover-subtitle">Ama endişelenme, devam edebilirsin.</p>
 
       <div class="gameover-actions">
         <button class="btn btn-primary btn-full" id="btn-refill-hearts">
-          <span><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> Puan ile Can Doldur</span>
+          <span>⚡ Puan ile Can Doldur</span>
           <span class="refill-cost" id="refill-cost">(50 Puan)</span>
         </button>
-        <button class="btn btn-secondary btn-full" id="btn-restart-lesson"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg> Dersi Yeniden Başlat</button>
-        <button class="btn btn-ghost btn-full" id="btn-go-home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg> Ana Sayfaya Dön</button>
+        <button class="btn btn-secondary btn-full" id="btn-restart-lesson">🔄 Dersi Yeniden Başlat</button>
+        <button class="btn btn-ghost btn-full" id="btn-go-home">🏠 Ana Sayfaya Dön</button>
       </div>
     </div>
   </section>
@@ -1699,11 +1714,11 @@
        ════════════════════════════════════════════════════════ -->
   <section id="placement-screen" class="app-screen">
     <div class="quiz-header">
-      <button class="btn-icon quiz-close" id="placement-close" title="Çık"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M5 5l14 14"/><path d="M19 5L5 19"/></svg></button>
+      <button class="btn-icon quiz-close" id="placement-close" title="Çık">✕</button>
       <div class="progress-bar-wrap">
         <div class="progress-bar" id="placement-progress"></div>
       </div>
-      <div class="placement-title-text" style="font-weight: 700; font-family: var(--font-heading); margin-right: 16px; color: var(--text-secondary);">Seviye Sınavı</div>
+      <div class="placement-title-text" style="font-weight: 700; font-family: var(--font-heading); margin-right: 15px; color: var(--text-secondary);">Seviye Sınavı</div>
     </div>
 
     <div class="quiz-body" id="placement-body">
@@ -1728,7 +1743,7 @@
   <div class="grammar-modal-overlay" id="grammar-modal">
     <div class="grammar-modal">
       <div class="grammar-modal-header">
-        <span class="grammar-modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg></span>
+        <span class="grammar-modal-icon">💡</span>
         <h3>Dilbilgisi Kılavuzu</h3>
         <button class="grammar-modal-close" id="grammar-modal-close-btn">&times;</button>
       </div>
@@ -1747,7 +1762,7 @@
   <div class="grammar-modal-overlay" id="review-prompt-modal">
     <div class="grammar-modal" style="max-width: 440px;">
       <div class="grammar-modal-header" style="background: linear-gradient(135deg, var(--accent-secondary, #10b981), #059669);">
-        <span class="grammar-modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></span>
+        <span class="grammar-modal-icon">🔄</span>
         <h3>Akıllı Tekrar Zamanı!</h3>
         <button class="grammar-modal-close" id="review-prompt-close-btn">&times;</button>
       </div>
@@ -1766,7 +1781,7 @@
   <div class="grammar-modal-overlay" id="guest-block-modal">
     <div class="grammar-modal" style="max-width: 440px;">
       <div class="grammar-modal-header accent-gradient-bg">
-        <span class="grammar-modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+        <span class="grammar-modal-icon">🔒</span>
         <h3>Bölüm Kilitli</h3>
         <button class="grammar-modal-close" id="guest-block-close-btn">&times;</button>
       </div>
@@ -1789,7 +1804,7 @@
   <div class="grammar-modal-overlay" id="guest-licence-request-modal">
     <div class="grammar-modal" style="max-width: 450px;">
       <div class="grammar-modal-header accent-gradient-bg">
-        <span class="grammar-modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span class="grammar-modal-icon">📩</span>
         <h3>Lisans Anahtarı Talep Et</h3>
         <button class="grammar-modal-close" id="guest-licence-request-close-btn">&times;</button>
       </div>
@@ -1825,7 +1840,7 @@
   <div class="grammar-modal-overlay" id="admin-user-licence-modal">
     <div class="grammar-modal" style="max-width: 500px;">
       <div class="grammar-modal-header accent-gradient-bg">
-        <span class="grammar-modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="8" cy="15" r="4"/><path d="M10.5 12.5 20 3"/><path d="M17 6l3 3"/><path d="M14 9l2.5 2.5"/></svg></span>
+        <span class="grammar-modal-icon">🔑</span>
         <h3 id="admin-licence-modal-title">Kullanıcı Yönetimi & Lisans</h3>
         <button class="grammar-modal-close" id="admin-licence-modal-close-btn">&times;</button>
       </div>
@@ -1872,7 +1887,7 @@
               </select>
             </div>
             <button id="btn-admin-licence-generate" class="btn btn-secondary" style="flex: 1; padding: 0 10px; font-size: 0.8rem; font-weight: 700; border-radius: var(--radius-md); height: 36px; margin-bottom: 0; background: var(--bg-body); border-color: var(--border-color); color: var(--text-primary); display: flex; align-items: center; justify-content: center; gap: 4px; cursor: pointer;">
-              <span><svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span> Üret
+              <span>⚡</span> Üret
             </button>
           </div>
           <div class="flex-col-4">
@@ -1884,7 +1899,7 @@
       </div>
       <div class="grammar-modal-footer" style="display: flex; gap: 12px; justify-content: flex-end; padding: 16px 20px; background: var(--bg-secondary);">
         <button class="btn btn-secondary btn-pill-solid" id="admin-licence-modal-cancel-btn">İptal</button>
-        <button class="btn btn-secondary" id="btn-admin-licence-send-email" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; background: #2563eb; color: #fff; border-color: #2563eb; display: flex; align-items: center; gap: 6px;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> E-posta Gönder</button>
+        <button class="btn btn-secondary" id="btn-admin-licence-send-email" style="padding: 10px 18px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-md); margin-bottom: 0; cursor: pointer; background: #2563eb; color: #fff; border-color: #2563eb; display: flex; align-items: center; gap: 6px;" onmouseover="this.style.background='#1d4ed8'" onmouseout="this.style.background='#2563eb'">✉️ E-posta Gönder</button>
         <button class="btn btn-primary btn-pill-solid" id="admin-licence-modal-save-btn">Kaydet</button>
       </div>
     </div>
@@ -1892,12 +1907,12 @@
 
   <!-- Paragraf Çözümleme Modal Overlay -->
   <div class="grammar-modal-overlay" id="paragraph-analysis-modal" style="z-index: 2100;">
-    <div class="grammar-modal" style="max-width: 900px; width: 95%; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius-xl); border: 1.5px solid rgba(13, 148, 136, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+    <div class="grammar-modal" style="max-width: 900px; width: 95%; max-height: 92vh; display: flex; flex-direction: column; overflow: hidden; border-radius: var(--radius-xl); border: 1.5px solid rgba(139, 92, 246, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
       
       <!-- Modal Header -->
-      <div class="grammar-modal-header" style="background: linear-gradient(135deg, #0b7a70, #2563eb); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between;">
+      <div class="grammar-modal-header" style="background: linear-gradient(135deg, #7c3aed, #2563eb); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between;">
         <div style="display: flex; align-items: center; gap: 10px;">
-          <span style="font-size: 1.6rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></svg></span>
+          <span style="font-size: 1.6rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));">📖</span>
           <div>
             <h3 style="margin: 0; color: white; font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">Akademik Metni Anlama & Çıkarım Yapma</h3>
             <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85); font-weight: 500;">Milestone 1 — İlk 10 Ders Dil Bilgisi Tahlili</span>
@@ -1918,11 +1933,11 @@
             <!-- Üst Bilgi Kartı & Legend (Kalıcı ve Görünür) -->
             <div id="paragraph-legend-container" style="display: flex; background: var(--bg-secondary); border-radius: var(--radius-lg); padding: 12px 16px; border: 1px solid var(--border-color); flex-direction: column; gap: 8px;">
               <div style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 600;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg> Metindeki renkli ifadelerin üzerine gelerek veya tıklayarak dil bilgisi tahlilini ve Türkçe anlamını inceleyin:
+                💡 Metindeki renkli ifadelerin üzerine gelerek veya tıklayarak dil bilgisi tahlilini ve Türkçe anlamını inceleyin:
               </div>
               <div style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.72rem; font-weight: 700;">
                 <span class="syntax-badge noun-phrase" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); padding: 2px 6px; border-radius: 4px;">Noun + of + Noun</span>
-                <span class="syntax-badge verb-phrase" style="background: rgba(13, 148, 136, 0.1); color: #0d9488; border: 1px solid rgba(13, 148, 136, 0.2); padding: 2px 6px; border-radius: 4px;">Modals (Kip Ekleri)</span>
+                <span class="syntax-badge verb-phrase" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.2); padding: 2px 6px; border-radius: 4px;">Modals (Kip Ekleri)</span>
                 <span class="syntax-badge result-phrase" style="background: rgba(245, 158, 11, 0.1); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.2); padding: 2px 6px; border-radius: 4px;">Participle Reduction</span>
                 <span class="syntax-badge location-phrase" style="background: rgba(244, 63, 94, 0.1); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.2); padding: 2px 6px; border-radius: 4px;">Var/Yok (There is/are)</span>
                 <span class="syntax-badge summary-phrase" style="background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); padding: 2px 6px; border-radius: 4px;">Tense & Tense Agreement</span>
@@ -1932,7 +1947,7 @@
             <!-- Paragraf Okuma Kartı -->
             <div class="paragraph-reader-card" style="background: var(--bg-body); border: 1.5px solid var(--border-color); border-radius: var(--radius-xl); padding: 22px; box-shadow: var(--shadow-sm); position: relative;">
               <div style="font-size: 0.75rem; font-weight: 800; color: var(--accent-primary); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> OKUMA PARAGRAFI
+                📄 OKUMA PARAGRAFI
               </div>
               <div id="paragraph-reader-text" class="analyze-mode" style="font-family: var(--font-heading); font-size: 1.05rem; line-height: 1.85; color: var(--text-primary); transition: all 0.3s;">
                 <!-- Dynamic JS injected HTML -->
@@ -1942,12 +1957,12 @@
             <!-- Dil Bilgisi Çözümleme Kartı -->
             <div class="paragraph-breakdown-card" id="paragraph-breakdown-card" style="background: var(--bg-secondary); border: 1.5px dashed var(--border-color); border-radius: var(--radius-xl); padding: 20px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm); transition: all 0.25s ease; min-height: 140px; justify-content: center; box-sizing: border-box;">
               <div id="paragraph-breakdown-placeholder" style="text-align: center; color: var(--text-muted); font-size: 0.88rem; font-style: italic;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a6 6 0 0 0-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg> Dil Bilgisi Haritası modundayken metindeki renkli ifadelerin üzerine gelerek veya tıklayarak detaylı analizini inceleyebilirsiniz.
+                💡 Dil Bilgisi Haritası modundayken metindeki renkli ifadelerin üzerine gelerek veya tıklayarak detaylı analizini inceleyebilirsiniz.
               </div>
               <div id="paragraph-breakdown-content" style="display: none; flex-direction: column; gap: 8px; text-align: left;">
                 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 4px;">
                   <span id="breakdown-grammar-topic" style="font-size: 0.78rem; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Noun + of + Noun</span>
-                  <span id="breakdown-lesson-no" style="font-size: 0.78rem; color: var(--accent-primary); font-weight: 700; background: rgba(13, 148, 136, 0.1); padding: 2px 8px; border-radius: 10px;">Ders 1-3</span>
+                  <span id="breakdown-lesson-no" style="font-size: 0.78rem; color: var(--accent-primary); font-weight: 700; background: rgba(139, 92, 246, 0.1); padding: 2px 8px; border-radius: 10px;">Ders 1-3</span>
                 </div>
                 <div style="font-size: 1.02rem; font-weight: 700; color: var(--text-primary); line-height: 1.4;" id="breakdown-sentence-en">The development of modern technology...</div>
                 <div style="font-size: 0.92rem; font-weight: 700; color: var(--color-correct, #10b981); display: flex; gap: 6px; align-items: center;" id="breakdown-sentence-tr-wrapper">
@@ -1975,8 +1990,8 @@
 
               <!-- Mode Switcher (Klavyeyle Yaz / Ögeleri Sırala) -->
               <div class="translation-mode-tabs" style="display: flex; gap: 6px; background: var(--bg-secondary); padding: 3px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 2px;">
-                <button type="button" class="translation-mode-tab active" id="btn-trans-mode-write" style="flex: 1; padding: 8px 10px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: var(--bg-card); color: var(--text-primary); box-shadow: var(--shadow-xs);">⌨️ Klavyeyle Yaz</button>
-                <button type="button" class="translation-mode-tab" id="btn-trans-mode-scramble" style="flex: 1; padding: 8px 10px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M4 8h3a2 2 0 1 1 0-4v4H4v4a2 2 0 1 0 0 4v4h4a2 2 0 1 1 4 0h4v-4a2 2 0 1 1 0-4h-4a2 2 0 0 1-2-2V8H4z"/></svg> Ögeleri Sırala</button>
+                <button type="button" class="translation-mode-tab active" id="btn-trans-mode-write" style="flex: 1; padding: 7px 10px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: var(--bg-card); color: var(--text-primary); box-shadow: var(--shadow-xs);">⌨️ Klavyeyle Yaz</button>
+                <button type="button" class="translation-mode-tab" id="btn-trans-mode-scramble" style="flex: 1; padding: 7px 10px; border-radius: var(--radius-sm); border: none; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">🧩 Ögeleri Sırala</button>
               </div>
 
               <!-- Aktif Cümle -->
@@ -1997,7 +2012,7 @@
               <div id="trans-scramble-area" style="display: none; flex-direction: column; gap: 8px; text-align: left; box-sizing: border-box; width: 100%;">
                 <div style="font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; display: flex; justify-content: space-between; align-items: center;">
                   <span>Sıralanan Çeviri:</span>
-                  <button type="button" id="btn-scramble-clear" style="background: none; border: none; color: var(--accent-primary); font-size: 0.75rem; font-weight: 800; cursor: pointer; padding: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg> Temizle</button>
+                  <button type="button" id="btn-scramble-clear" style="background: none; border: none; color: var(--accent-primary); font-size: 0.75rem; font-weight: 800; cursor: pointer; padding: 0;">🗑️ Temizle</button>
                 </div>
                 
                 <!-- Active Translation Container -->
@@ -2013,9 +2028,9 @@
               </div>
 
               <!-- Kelime İpuçları Panel -->
-              <div id="paragraph-vocab-hints" style="background: rgba(13, 148, 136, 0.05); border: 1px solid rgba(13, 148, 136, 0.15); border-radius: var(--radius-lg); padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; text-align: left;">
+              <div id="paragraph-vocab-hints" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.15); border-radius: var(--radius-lg); padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; text-align: left;">
                 <div style="font-size: 0.75rem; font-weight: 800; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
-                  <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="8" cy="15" r="4"/><path d="M10.5 12.5 20 3"/><path d="M17 6l3 3"/><path d="M14 9l2.5 2.5"/></svg></span> Kelime & Öbek İpuçları:
+                  <span>🔑</span> Kelime & Öbek İpuçları:
                 </div>
                 <div id="vocab-hints-list" class="flex-wrap-8">
                   <!-- Dynamic vocab list -->
@@ -2024,7 +2039,7 @@
 
               <!-- Karşılaştırma Bölümü (Başlangıçta gizli) -->
               <div id="paragraph-comparison-box" style="display: none; flex-direction: column; gap: 10px; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: var(--radius-lg); padding: 14px; text-align: left; box-sizing: border-box;">
-                <div style="font-size: 0.75rem; font-weight: 800; color: #059669; text-transform: uppercase; letter-spacing: 0.5px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M5 12l5 5L19 7"/></svg> Resmi Türkçe Çeviri:</div>
+                <div style="font-size: 0.75rem; font-weight: 800; color: #059669; text-transform: uppercase; letter-spacing: 0.5px;">✓ Resmi Türkçe Çeviri:</div>
                 <div id="paragraph-official-translation" style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); line-height: 1.45;">
                   <!-- Official Translation -->
                 </div>
@@ -2033,17 +2048,17 @@
 
             <!-- Sonuç Karnesi (Gizli başlar) -->
             <div id="paragraph-summary-card" style="display: none; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1)); border: 1.5px solid #10b981; border-radius: var(--radius-xl); padding: 20px; text-align: center; flex-direction: column; align-items: center; gap: 14px; box-sizing: border-box;">
-              <div style="font-size: 3rem; line-height: 1;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><path d="M3 21l4-1 11-11-3-3L4 17l-1 4z"/><path d="M17 3l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></svg></div>
+              <div style="font-size: 3rem; line-height: 1;">🎉</div>
               <h3 style="margin: 0; font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; color: var(--text-primary);">Tebrikler! Okuma Anlama Analizi Tamamlandı</h3>
               <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.45;">
                 Metindeki ana fikri, araştırma amacını ve dil bilgisi haritasını başarıyla tahlil ettiniz.
               </p>
               <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 4px 0;">
                 <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: var(--radius-lg); font-weight: 800; color: var(--accent-primary); font-size: 0.88rem; box-shadow: var(--shadow-xs);">
-                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg> +50 XP
+                  ⚡ +50 XP
                 </div>
                 <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: var(--radius-lg); font-weight: 800; color: #10b981; font-size: 0.88rem; box-shadow: var(--shadow-xs);">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><circle cx="12" cy="15" r="6"/><path d="M9 10 6 2h3l3 6"/><path d="M15 10 18 2h-3l-3 6"/></svg> Metin Analisti Başarımı
+                  🏅 Metin Analisti Başarımı
                 </div>
               </div>
               
@@ -2064,7 +2079,7 @@
       <!-- Modal Footer -->
       <div class="grammar-modal-footer" style="padding: 16px 24px; background: var(--bg-secondary); border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
         <button class="btn btn-secondary" id="paragraph-analysis-cancel-btn" style="padding: 10px 18px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.85rem; margin: 0;">Kapat</button>
-        <button class="btn btn-primary" id="paragraph-analysis-next-btn" style="padding: 10px 22px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.88rem; margin: 0; background: linear-gradient(135deg, #0b7a70, #2563eb); border: none; color: white;">Sonraki Soru →</button>
+        <button class="btn btn-primary" id="paragraph-analysis-next-btn" style="padding: 10px 22px; font-weight: 700; border-radius: var(--radius-md); font-size: 0.88rem; margin: 0; background: linear-gradient(135deg, #7c3aed, #2563eb); border: none; color: white;">Sonraki Soru →</button>
       </div>
 
     </div>
@@ -2074,7 +2089,7 @@
   <div class="grammar-modal-overlay" id="admin-email-draft-modal" style="z-index: 2000;">
     <div class="grammar-modal" style="max-width: 550px;">
       <div class="grammar-modal-header" style="background: linear-gradient(135deg, #2563eb, #1d4ed8);">
-        <span class="grammar-modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span class="grammar-modal-icon">✉️</span>
         <h3 style="margin: 0; color: white;">E-posta Taslağı Hazır</h3>
         <button class="grammar-modal-close" id="admin-email-draft-close-btn">&times;</button>
       </div>
@@ -2102,16 +2117,16 @@
         <div class="flex-col-4">
           <label class="text-label-xs">E-posta İçeriği</label>
           <textarea id="email-draft-body" readonly rows="8" style="width: 100%; padding: 10px 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-primary); font-size: 0.85rem; font-family: sans-serif; resize: none; box-sizing: border-box;"></textarea>
-          <button id="btn-copy-draft-body" class="btn btn-primary" style="width: 100%; padding: 10px 0; margin-top: 4px; font-weight: 700; cursor: pointer;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 11h6"/><path d="M9 15h6"/></svg> Tüm İçeriği Kopyala</button>
+          <button id="btn-copy-draft-body" class="btn btn-primary" style="width: 100%; padding: 10px 0; margin-top: 4px; font-weight: 700; cursor: pointer;">📋 Tüm İçeriği Kopyala</button>
         </div>
 
         <!-- Direct links for webmails -->
         <div style="display: flex; gap: 10px; justify-content: center; margin-top: 8px; flex-wrap: wrap;">
           <a id="link-open-gmail" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 0.8rem; height: 36px; padding: 0 14px; background: rgba(234, 67, 53, 0.1); border-color: rgba(234, 67, 53, 0.3); color: #ea4335; border-radius: var(--radius-md); cursor: pointer;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Gmail ile Gönder
+            ✉️ Gmail ile Gönder
           </a>
           <a id="link-open-outlook" target="_blank" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 0.8rem; height: 36px; padding: 0 14px; background: rgba(0, 120, 215, 0.1); border-color: rgba(0, 120, 215, 0.3); color: #0078d7; border-radius: var(--radius-md); cursor: pointer;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Outlook.com ile Gönder
+            ✉️ Outlook.com ile Gönder
           </a>
         </div>
       </div>

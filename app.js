@@ -321,7 +321,7 @@ function formatGrammarFormula(formulaHtml) {
       // Highlight question mark (?) inside blocks as dotted lines
       innerText = innerText.replace(/\?/g, '<span class="formula-inner-var">.......</span>');
       // Highlight V1, V2, V3 etc.
-      innerText = innerText.replace(/\b(V\d|V_)\b/g, '<span style="color: var(--accent-primary, #0d9488); font-weight: 800;">$1</span>');
+      innerText = innerText.replace(/\b(V\d|V_)\b/g, '<span style="color: var(--accent-primary, #6366f1); font-weight: 800;">$1</span>');
       return `<div class="formula-block">${innerText}</div>`;
     } else if (trimmed === '+') {
       return `<div class="formula-connector">+</div>`;
@@ -372,7 +372,7 @@ function formatPromptWithTags(promptText) {
   if (matches.length === 0) return cleanPrompt;
   
   const badgesHtml = matches.map(match => {
-    return `<span class="prompt-tag-badge" style="display: inline-block; background: linear-gradient(135deg, var(--accent-primary, #0d9488) 0%, var(--accent-primary-hover, #0b7a70) 100%); color: #ffffff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; margin: 2px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 2px 6px rgba(13, 148, 136, 0.2); vertical-align: middle;">🏷️ ${match[1]}</span>`;
+    return `<span class="prompt-tag-badge" style="display: inline-block; background: linear-gradient(135deg, var(--accent-primary, #6366f1) 0%, var(--accent-primary-hover, #4f46e5) 100%); color: #ffffff; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; margin: 2px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 2px 6px rgba(99, 102, 241, 0.2); vertical-align: middle;">🏷️ ${match[1]}</span>`;
   }).join('');
   
   matches.forEach(match => {
@@ -3956,21 +3956,21 @@ function highlightGrammarPatterns(text) {
   // 0. Mastar Yapıları (Infinitive Patterns) - Unit 14 / Unit 23 (ÖNCELİKLİ VURGULAMA)
   // a) Wh- soru kelimeli isim öbeği mastarları (which...to V1)
   res = res.replace(/\b(which(?:\s+[a-zA-Z]+){1,4}\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
-    `<span class="gpattern-infinitive" style="color: #0b7a70; font-weight: 700;">${p1} ${p2}</span>`);
+    `<span class="gpattern-infinitive" style="color: #9333ea; font-weight: 700;">${p1} ${p2}</span>`);
 
   // b) Soru kelimeli ve Amaç mastarları (how to, where to, when to, what to, in order to, so as to + V1)
   res = res.replace(/\b(in order to|so as to|how to|where to|when to|what to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
-    `<span class="gpattern-infinitive" style="color: #0b7a70; font-weight: 700;">${p1} ${p2}</span>`);
+    `<span class="gpattern-infinitive" style="color: #9333ea; font-weight: 700;">${p1} ${p2}</span>`);
 
   // c) Yapısal Özne Mastarları (for + noun phrase + to V1)
   res = res.replace(/\b(for\s+[a-zA-Z\s]{2,35}?\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
-    `<span class="gpattern-infinitive" style="color: #0b7a70; font-weight: 700;">${p1} ${p2}</span>`);
+    `<span class="gpattern-infinitive" style="color: #9333ea; font-weight: 700;">${p1} ${p2}</span>`);
 
   // d) Tekil mastarlar (to + V1)
   res = res.replace(/(?<!<span[^>]*>)\bto\s+([a-zA-Z]+)\b(?!<\/span>)/gi, (match, p1) => {
     const verb = p1.toLowerCase();
     if (['today', 'tomorrow', 'local', 'the', 'a', 'an', 'this', 'that', 'my', 'your', 'our', 'their', 'his', 'her'].includes(verb)) return match;
-    return `<span class="gpattern-infinitive" style="color: #0b7a70; font-weight: 700;">to ${p1}</span>`;
+    return `<span class="gpattern-infinitive" style="color: #9333ea; font-weight: 700;">to ${p1}</span>`;
   });
 
   // 1. Zarf + past participle + isim
@@ -4421,7 +4421,7 @@ let _scrollLockY = 0;
 function updateBodyScrollLock() {
   const homeScreen = document.getElementById('home-screen');
   const homeScreenActive = homeScreen && homeScreen.classList.contains('active');
-  const hasModal = document.querySelector('.qp-modal-overlay') !== null || document.querySelector('.lesson-popover') !== null;
+  const hasModal = document.querySelector('.qp-modal-overlay') !== null;
   const quizScreen = document.getElementById('quiz-screen');
   const quizActive = quizScreen && quizScreen.classList.contains('active');
   const placementScreen = document.getElementById('placement-screen');
@@ -4919,8 +4919,9 @@ Yapılması Gerekenler:
 
 window.startLessonAtQuestion = function(lessonId, exerciseId, questionId) {
   // Close any popovers
-  closeLessonPopover();
-
+  const popover = document.querySelector('.lesson-popover');
+  if (popover) popover.remove();
+  
   // Close the preview modal
   const qpModal = document.querySelector('.qp-modal-overlay');
   if (qpModal) qpModal.remove();
@@ -5181,14 +5182,14 @@ function showSetNewPasswordModal() {
   const modal = document.createElement('div');
   modal.className = 'custom-modal-overlay';
   modal.id = 'new-pass-modal';
-  const inp = 'width:100%;padding:10px 12px;border-radius:var(--radius-md);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);font-size:0.92rem;box-sizing:border-box;outline:none;';
+  const inp = 'width:100%;padding:11px 13px;border-radius:var(--radius-md);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);font-size:0.92rem;box-sizing:border-box;outline:none;';
   modal.innerHTML = `
     <div class="custom-modal" style="max-width:360px;width:90%;">
       <div class="custom-modal-body" style="display:flex;flex-direction:column;gap:12px;">
         <h3 style="font-family:var(--font-heading);font-size:1.1rem;margin:0;color:var(--text-primary);">Yeni Parola Belirle</h3>
         <input type="password" id="np-1" autocomplete="new-password" placeholder="Yeni parola (min 6)" style="${inp}">
         <input type="password" id="np-2" autocomplete="new-password" placeholder="Yeni parola (tekrar)" style="${inp}">
-        <button class="btn btn-primary" id="np-save" style="padding:10px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;">Kaydet</button>
+        <button class="btn btn-primary" id="np-save" style="padding:11px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;">Kaydet</button>
       </div>
     </div>`;
   document.body.appendChild(modal);
@@ -5966,7 +5967,7 @@ function initAuth() {
     modal.className = 'custom-modal-overlay';
     modal.id = 'auth-modal';
 
-    const inputStyle = 'width:100%;padding:10px 12px;border-radius:var(--radius-md);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);font-family:var(--font-body);font-size:0.92rem;box-sizing:border-box;outline:none;';
+    const inputStyle = 'width:100%;padding:11px 13px;border-radius:var(--radius-md);border:1px solid var(--border-color);background:var(--bg-card);color:var(--text-primary);font-family:var(--font-body);font-size:0.92rem;box-sizing:border-box;outline:none;';
     const labelStyle = 'font-size:0.82rem;font-weight:600;color:var(--text-secondary);';
 
     const render = () => {
@@ -5981,24 +5982,24 @@ function initAuth() {
               ${isSignup ? 'Hesap Oluştur' : 'Giriş Yap'}
             </h3>
             ${isSignup ? `
-            <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;flex-direction:column;gap:5px;">
               <label for="auth-name" style="${labelStyle}">Adınız</label>
               <input type="text" id="auth-name" placeholder="Örn: Ahmet Yılmaz" style="${inputStyle}">
             </div>` : ''}
-            <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;flex-direction:column;gap:5px;">
               <label for="auth-email" style="${labelStyle}">E-posta</label>
               <input type="email" id="auth-email" autocomplete="username" placeholder="ornek@gmail.com" style="${inputStyle}">
             </div>
-            <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;flex-direction:column;gap:5px;">
               <label for="auth-pass" style="${labelStyle}">Parola${isSignup ? ' (en az 6 karakter)' : ''}</label>
               <input type="password" id="auth-pass" autocomplete="${isSignup ? 'new-password' : 'current-password'}" placeholder="••••••••" style="${inputStyle}">
             </div>
             ${isSignup ? `
-            <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;flex-direction:column;gap:5px;">
               <label for="auth-pass2" style="${labelStyle}">Parola (tekrar)</label>
               <input type="password" id="auth-pass2" autocomplete="new-password" placeholder="••••••••" style="${inputStyle}">
             </div>` : ''}
-            <button class="btn btn-primary" id="auth-submit" style="padding:10px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;margin-top:4px;">
+            <button class="btn btn-primary" id="auth-submit" style="padding:11px;border-radius:var(--radius-md);font-weight:700;cursor:pointer;background:var(--accent-primary);border:none;color:#fff;width:100%;margin-top:4px;">
               ${isSignup ? 'Kayıt Ol' : 'Giriş Yap'}
             </button>
             ${isSignup ? '' : `
@@ -6516,9 +6517,7 @@ async function enterApp() {
   // kalmış bir kullanıcı var olmayan bir içeriğe dönüp boş ekran görür.
   const RETIRED_TABS = {
     'ezber-robotu': 'transitions-matrix',
-    'cause-effect': 'lessons',
-    'simulator': 'lessons',
-    'structure-robot': 'lessons'
+    'cause-effect': 'structure-robot'
   };
   let lastTab = localStorage.getItem('amok_last_tab') || 'lessons';
   if (RETIRED_TABS[lastTab]) {
@@ -6671,7 +6670,7 @@ function updateTopBar() {
   if (isGuestUser) {
     if (topbarUserName) topbarUserName.textContent = 'Giriş Yap';
     if (topbarAvatarWrap) {
-      topbarAvatarWrap.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.15em"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7.5" r="4.5"/></svg>';
+      topbarAvatarWrap.innerHTML = '👤';
       topbarAvatarWrap.style.backgroundColor = 'var(--bg-secondary)';
       topbarAvatarWrap.style.color = 'var(--text-secondary)';
     }
@@ -6877,8 +6876,8 @@ function getLessonIllustration(lessonId, unitId) {
             .vector-gear-2 { animation: vectorGearRev 6s linear infinite; transform-origin: 40px 38px; }
           </style>
           <g class="vector-gear-1">
-            <circle cx="24" cy="28" r="12" fill="#0d9488" opacity="0.8" />
-            <path d="M24 12V16M24 40V44M8 28H12M36 28H40M13 17L16 20M32 36L35 39M13 39L16 36M32 20L35 17" stroke="#0b7a70" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="24" cy="28" r="12" fill="#8b5cf6" opacity="0.8" />
+            <path d="M24 12V16M24 40V44M8 28H12M36 28H40M13 17L16 20M32 36L35 39M13 39L16 36M32 20L35 17" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
             <circle cx="24" cy="28" r="4" fill="#ffffff" />
           </g>
           <g class="vector-gear-2">
@@ -7370,7 +7369,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
         <div class="pin-inner">
           ${illustrationContent}
         </div>
-        ${isLocked ? '<div class="pin-lock-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>' : ''}
+        ${isLocked ? '<div class="pin-lock-badge">🔒</div>' : ''}
         ${progressBadgeContent}
       </button>
       <div class="lesson-node-label ${labelPosClass} ${isLocked ? 'label-blur-mask' : ''}">
@@ -7969,19 +7968,12 @@ function isGenericDescription(desc) {
   return keywords.some(k => clean.includes(k));
 }
 
-function closeLessonPopover() {
-  const popover = document.querySelector('.lesson-popover');
-  if (popover) popover.remove();
-  const backdrop = document.querySelector('.lesson-popover-backdrop');
-  if (backdrop) backdrop.remove();
-}
-
 function togglePopover(button, lessonId, unitId, pctX, pxY) {
   // Remove existing popover if any
   const existingPopover = document.querySelector('.lesson-popover');
   if (existingPopover) {
     const isSame = existingPopover.dataset.lessonId == lessonId;
-    closeLessonPopover();
+    existingPopover.remove();
     updateBodyScrollLock();
     if (isSame) return;
   }
@@ -8001,13 +7993,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   const previewBox = (formulaSrc, descSrc, exampleSrc, exampleTrSrc) => {
     const rows = [];
     if (looksLikeRealFormula(formulaSrc)) {
-      // DEV NOTE: Burada kasıtlı olarak formulaRowsHTML yerine plainFormulaHTML
-      // kullanılıyor: o fonksiyon ok (→) içeren formülleri renkli parçalara ve
-      // ayrı bir etiket kutucuğuna bölüyor, bu da aynı popover'ın derse göre iki
-      // farklı görünmesine yol açıyordu (kullanıcı geri bildirimi). Matris ve
-      // Yapı Robotu gibi diğer ekranlarda o zenginleştirilmiş görünüm kasıtlı
-      // olarak korunuyor; burada tüm formüller tek, düz bir satır olarak akar.
-      rows.push(`<div class="grammar-formula"><span class="formula-badge">Formül</span>${plainFormulaHTML(formulaSrc, { hideTitleLike: lesson.title })}</div>`);
+      rows.push(`<div class="grammar-formula"><span class="formula-badge">Formül</span>${formulaRowsHTML(formulaSrc, { hideTitleLike: lesson.title })}</div>`);
     }
     if (descSrc && !isGenericDescription(descSrc)) {
       rows.push(`<div class="grammar-description" style="font-size: 0.8rem; color: var(--text-secondary); ${rows.length ? 'margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border-color);' : ''} line-height: 1.4;">${descSrc}</div>`);
@@ -8053,18 +8039,21 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
 
 
-  // Create popover element (rendered as a fixed, viewport-centered modal via CSS)
+  // Create popover element
   const popover = document.createElement('div');
   popover.className = 'lesson-popover';
   popover.dataset.lessonId = lessonId;
+  // Positioned directly below the scaled-up labels (pxY + 65px) to prevent overlap with the smaller pins/labels
+  popover.style.top = `${pxY + 65}px`;
+  
+  popover.style.left = `50%`;
+  popover.style.setProperty('--arrow-left', `${pctX}%`);
 
   const isUnlocked = isLessonUnlocked(lessonId);
 
   // Altyazı bazı derslerde başlığın kopyası; aynı satırı iki kez yazmayız.
-  // DEV NOTE: Alt-başlık satırı yalnızca bazı derslerde dolu olduğundan aynı
-  // popover'ın ders ders farklı görünmesine yol açıyordu; kullanıcı isteğiyle
-  // görünümden kaldırıldı. Veri (lesson.subtitle) olduğu gibi duruyor.
-  const popoverSubtitleHTML = '';
+  const rawSubtitle = String(lesson.subtitle || '').trim();
+  const popoverSubtitleHTML = (!rawSubtitle || isRedundantText(rawSubtitle, lesson.title)) ? '' : rawSubtitle;
   /* DEV NOTE: Disabled from visuals per user request, preserved in archive/database
   if (lesson.originalLessonId && lesson.originalLessonId <= 122 && lesson.originalLessonId !== lesson.displayId) {
     popoverSubtitleHTML += `<br><span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 4px; font-weight: normal;">Eski Sırası: ${lesson.originalLessonId}. Ders</span>`;
@@ -8179,13 +8168,11 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
     const uIdx = units.findIndex(u => u.id === unitId);
     const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
-    // DEV NOTE: Başlıktaki sondaki parantez daha önce ayrı bir "not" satırına
-    // bölünüyordu; ama bu parantez yalnızca bazı ders başlıklarında bulunduğu
-    // için aynı popover ders ders farklı görünüyordu (kullanıcı geri bildirimi).
-    // Artık başlık tek parça olarak yazılıyor, parantez varsa başlığın içinde
-    // kalıyor; veri (lesson.title) değişmedi.
-    const titleMain = String(lesson.title || '');
-    const titleNote = '';
+    // Başlıktaki sondaki parantez konunun ikinci bir adı; başlığı iki satıra
+    // şişirmek yerine altına soluk bir not olarak iner.
+    const titleParts = String(lesson.title || '').match(/^([\s\S]*?)\s*\(([^()]*)\)\s*$/);
+    const titleMain = titleParts ? titleParts[1] : String(lesson.title || '');
+    const titleNote = titleParts && !isRedundantText(titleParts[2], titleParts[1]) ? titleParts[2] : '';
     popover.innerHTML = `
     <div class="popover-arrow"></div>
     <div class="popover-header">
@@ -8203,18 +8190,18 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
         const exerciseId = btn.dataset.exerciseId;
         const isLocked = btn.dataset.locked === 'true';
         if (isLocked) {
-          closeLessonPopover();
+          popover.remove();
           showGuestBlockModal();
           return;
         }
-        closeLessonPopover();
+        popover.remove();
         startLesson(lessonId, exerciseId);
       });
     });
     const popoverActivateBtn = popover.querySelector('#popover-activate-licence-btn');
     if (popoverActivateBtn) {
       popoverActivateBtn.addEventListener('click', () => {
-        closeLessonPopover();
+        popover.remove();
         showGuestBlockModal();
       });
     }
@@ -8230,7 +8217,7 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
     });
   } else if (isUnlocked) {
     popover.querySelector('.popover-start-btn').addEventListener('click', () => {
-      closeLessonPopover();
+      popover.remove();
       startLesson(lessonId);
     });
     const prevBtn = popover.querySelector('.popover-preview-btn');
@@ -8244,20 +8231,72 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
 
   popover.addEventListener('click', (e) => e.stopPropagation());
 
-  // Rendered as a fixed, viewport-centered modal (see .lesson-popover CSS),
-  // so it always stays fully on-screen regardless of the clicked pin's position or page scroll.
-  const backdrop = document.createElement('div');
-  backdrop.className = 'lesson-popover-backdrop';
-  document.body.appendChild(backdrop);
-  document.body.appendChild(popover);
-  updateBodyScrollLock();
+  const pathContainer = button.closest('.unit-path-container');
+  if (pathContainer) {
+    pathContainer.appendChild(popover);
+    updateBodyScrollLock();
+    
+    // Dynamically adjust popover position to fit within the visible viewport bounds
+    requestAnimationFrame(() => {
+      const popoverRect = popover.getBoundingClientRect();
+      const sidebar = document.querySelector('.sidebar-nav');
+      
+      const isSidebarLeft = sidebar && window.innerWidth >= 820 && window.getComputedStyle(sidebar).display !== 'none';
+      const leftMargin = 16;
+      const leftBound = (isSidebarLeft ? sidebar.getBoundingClientRect().right : 0) + leftMargin;
+      const rightBound = window.innerWidth - leftMargin;
+      
+      const W_p = popoverRect.width || 450;
+      const W_container = containerRect.width || 440;
+      
+      const X_btn = (pctX / 100) * W_container;
+      let X_p = X_btn; // center of popover relative to container
+      
+      // Calculate current screen bounds of the popover
+      let popLeftScreen = containerRect.left + X_p - W_p / 2;
+      let popRightScreen = containerRect.left + X_p + W_p / 2;
+      
+      // Adjust for left boundary overflow
+      if (popLeftScreen < leftBound) {
+        const overflowL = leftBound - popLeftScreen;
+        X_p += overflowL;
+      }
+      // Adjust for right boundary overflow
+      else if (popRightScreen > rightBound) {
+        const overflowR = popRightScreen - rightBound;
+        X_p -= overflowR;
+      }
+      
+      // Double check new bounds to make sure we didn't push it off the other side on very small screens
+      popLeftScreen = containerRect.left + X_p - W_p / 2;
+      if (popLeftScreen < leftBound) {
+        X_p = leftBound - containerRect.left + W_p / 2;
+      }
+      
+      // Apply the adjusted position
+      popover.style.left = `${X_p}px`;
+      
+      // Calculate where the arrow should point (aligned with X_btn) relative to the popover's left edge
+      const X_btn_rel_pop = X_btn - (X_p - W_p / 2);
+      const arrowPct = Math.max(5, Math.min(95, (X_btn_rel_pop / W_p) * 100)); // Clamp between 5% and 95% to keep arrow within popover bounds
+      popover.style.setProperty('--arrow-left', `${arrowPct}%`);
+
+      // Auto-scroll to show the popover
+      const rect = popover.getBoundingClientRect();
+      if (rect.height > window.innerHeight) {
+        popover.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        popover.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  }
 }
 
 // Global listener to close popover on outside click
 document.addEventListener('click', () => {
   const popover = document.querySelector('.lesson-popover');
   if (popover) {
-    closeLessonPopover();
+    popover.remove();
     updateBodyScrollLock();
   }
 });
@@ -9025,7 +9064,7 @@ function showKonuAnlatimi(konu, callback) {
       </div>
 
       <!-- Action Button -->
-      <button id="btn-konu-anlatimi-tamam" class="btn btn-primary btn-full" style="padding: 12px; font-size: 0.95rem; border-radius: 14px; margin-top: 4px;">
+      <button id="btn-konu-anlatimi-tamam" class="btn btn-primary btn-full" style="padding: 13px; font-size: 0.95rem; border-radius: 14px; margin-top: 4px;">
         <span>ANLADIM, BAŞLA</span>
         <span>🚀</span>
       </button>
@@ -9404,32 +9443,6 @@ function formulaRowsHTML(raw, opts) {
   if (title && opts && opts.hideTitleLike && isRedundantText(title, opts.hideTitleLike)) title = '';
   return `<div class="rule-formula">${
     title ? `<div class="rule-formula-title">${esc(title)}</div>` : ''}${cells}</div>`;
-}
-
-// Ders önizleme popover'ı için formulaRowsHTML'in sadeleştirilmiş hâli: ok (→)
-// içeren ve içermeyen formüller aynı popover'da iki farklı kart gibi
-// görünmesin diye, hepsi renkli parçalara/ayrı etiketlere bölünmeden tek düz
-// satır olarak akar. Diğer ekranlardaki (matris, Yapı Robotu, review HUD)
-// zenginleştirilmiş kart görünümü formulaRowsHTML üzerinden değişmeden kalır.
-function plainFormulaHTML(raw, opts) {
-  const markup = /<[a-z][^>]*>/i.test(String(raw || ''));
-  const esc = s => markup ? String(s)
-    : String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
-  let text = String(raw || '').replace(/->/g, '➔').trim().replace(/^\d+[.)]\s*/, '');
-  if (!text) return '';
-
-  let title = '';
-  const head = text.match(/^([^:]{3,70}):\s*(\S.*)$/);
-  if (head && (/[➔→]/.test(head[2]) || text.includes('|'))) {
-    title = head[1].trim(); text = head[2].trim();
-  }
-
-  const parts = text.split(/\s*\|\s*|\n+/).map(s => s.trim()).filter(Boolean);
-  const line = parts.map(esc).join(' / ');
-
-  if (title && opts && opts.hideTitleLike && isRedundantText(title, opts.hideTitleLike)) title = '';
-  return `<div class="rule-formula">${
-    title ? `<div class="rule-formula-title">${esc(title)}</div>` : ''}<div class="rule-formula-plain">${line}</div></div>`;
 }
 
 // ── "Nasıl çevrilir?" kartları ──────────────────────────────────────────────
@@ -10108,10 +10121,10 @@ function renderQuestion() {
     const timeStructures = [
       { regex: /\b(by the time)\b/gi, color: '#06b6d4' },
       { regex: /\b(as soon as|immediately after)\b/gi, color: '#10b981' },
-      { regex: /\b(it is (?:high |about )?time|it's (?:high |about )?time)\b/gi, color: '#0d9488' },
+      { regex: /\b(it is (?:high |about )?time|it's (?:high |about )?time)\b/gi, color: '#6366f1' },
       { regex: /\b(since)\b/gi, color: '#10b981' },
       { regex: /\b(before)\b/gi, color: '#3b82f6' },
-      { regex: /\b(after)\b/gi, color: '#0d9488' },
+      { regex: /\b(after)\b/gi, color: '#8b5cf6' },
       { regex: /\b(while|as)\b/gi, color: '#ec4899' },
       { regex: /\b(until|till)\b/gi, color: '#10b981' }
     ];
@@ -10433,12 +10446,12 @@ function renderQuestion() {
     console.error("Soru render edilirken hata oluştu:", error);
     body.innerHTML = `
       <div style="padding: 40px 20px; text-align: center; color: var(--text-primary);">
-        <div style="font-size: 3rem; margin-bottom: 16px;">⚠️</div>
+        <div style="font-size: 3rem; margin-bottom: 15px;">⚠️</div>
         <h3 style="margin: 0 0 10px 0; font-family: 'Outfit', sans-serif; color: #ff6b6b;">Soru Yüklenemedi</h3>
         <p style="margin: 0 0 20px 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.5;">Bu sorunun veri şemasında eksik alanlar bulunmaktadır.</p>
-        <div style="background: rgba(255,0,0,0.1); border: 1px solid #ff6b6b; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; color: #ff6b6b; max-height: 150px; overflow-y: auto; text-align: left; margin-bottom: 16px;">
+        <div style="background: rgba(255,0,0,0.1); border: 1px solid #ff6b6b; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 0.8rem; color: #ff6b6b; max-height: 150px; overflow-y: auto; text-align: left; margin-bottom: 15px;">
           <strong>Hata Mesajı:</strong> ${error.message}<br>
-          <strong>Hata Yeri:</strong> <pre style="margin: 6px 0 0 0; white-space: pre-wrap; font-size: 0.75rem;">${error.stack}</pre>
+          <strong>Hata Yeri:</strong> <pre style="margin: 5px 0 0 0; white-space: pre-wrap; font-size: 0.75rem;">${error.stack}</pre>
         </div>
         <button id="btn-fallback-skip" style="background: rgba(255,255,255,0.08); border: 1px solid var(--border-color); color: var(--text-primary); padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: background 0.2s;">Soruyu Atla ➔</button>
       </div>
@@ -10633,7 +10646,7 @@ function renderMultipleChoice(container, question) {
 
     if (tipText) {
       tipsHtml = `
-        <div class="tips-reminder-card" style="padding: 10px 14px; margin-bottom: 16px;">
+        <div class="tips-reminder-card" style="padding: 10px 14px; margin-bottom: 15px;">
           <div class="tips-reminder-text" style="font-size: 0.9rem; line-height: 1.5;"><strong>Tips:</strong> ${tipText}</div>
         </div>
       `;
@@ -10643,7 +10656,7 @@ function renderMultipleChoice(container, question) {
   container.innerHTML = `
     ${tipsHtml}
     <p class="quiz-prompt">${promptHtml}</p>
-    <div class="quiz-sentence-container" style="text-align: center; margin-bottom: 24px; font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; ${sentenceHtml ? '' : 'display: none;'}">
+    <div class="quiz-sentence-container" style="text-align: center; margin-bottom: 25px; font-size: 1.25rem; font-weight: 500; color: var(--text-primary); line-height: 1.6; ${sentenceHtml ? '' : 'display: none;'}">
       ${sentenceHtml}
     </div>
     <div class="mc-options">
@@ -10679,7 +10692,7 @@ function renderErrorFinder(container, question) {
 
   container.innerHTML = `
     <p class="quiz-prompt">${promptHtml}</p>
-    <div class="error-finder-tokens-container" style="display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 24px 0; max-width: 100%; box-sizing: border-box; line-height: 2;">
+    <div class="error-finder-tokens-container" style="display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 25px 0; max-width: 100%; box-sizing: border-box; line-height: 2;">
       ${tokensHtml}
     </div>
   `;
@@ -10933,7 +10946,7 @@ function renderVectorAssembly(container, question) {
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || "Öğeleri doğru sırayla birleştirerek eylemi inşa edin:"}</p>
     
-    <div class="vector-build-zone" id="vector-build-zone" style="min-height: 50px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 16px; background: var(--bg-secondary); margin-bottom: 20px;">
+    <div class="vector-build-zone" id="vector-build-zone" style="min-height: 50px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 15px; background: var(--bg-secondary); margin-bottom: 20px;">
       <span class="build-placeholder" style="color: var(--text-muted); font-size: 0.95rem;">Öğeleri sırasıyla seçerek eylemi oluşturun...</span>
     </div>
     
@@ -11481,15 +11494,15 @@ function formatEnglishInfinitiveHighlight(text) {
   if (!text) return '';
   let res = text;
   res = res.replace(/\b(which(?:\s+[a-zA-Z]+){1,4}\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
-    `<span style="color: #0b7a70; font-weight: 700;">${p1} ${p2}</span>`);
+    `<span style="color: #9333ea; font-weight: 700;">${p1} ${p2}</span>`);
   res = res.replace(/\b(in order to|so as to|how to|where to|when to|what to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
-    `<span style="color: #0b7a70; font-weight: 700;">${p1} ${p2}</span>`);
+    `<span style="color: #9333ea; font-weight: 700;">${p1} ${p2}</span>`);
   res = res.replace(/\b(for\s+[a-zA-Z\s]{2,35}?\s+to)\s+([a-zA-Z]+)\b/gi, (match, p1, p2) =>
-    `<span style="color: #0b7a70; font-weight: 700;">${p1} ${p2}</span>`);
+    `<span style="color: #9333ea; font-weight: 700;">${p1} ${p2}</span>`);
   res = res.replace(/(?<!<span[^>]*>)\bto\s+([a-zA-Z]+)\b(?!<\/span>)/gi, (match, p1) => {
     const verb = p1.toLowerCase();
     if (['today', 'tomorrow', 'local', 'the', 'a', 'an', 'this', 'that', 'my', 'your', 'our', 'their', 'his', 'her'].includes(verb)) return match;
-    return `<span style="color: #0b7a70; font-weight: 700;">to ${p1}</span>`;
+    return `<span style="color: #9333ea; font-weight: 700;">to ${p1}</span>`;
   });
   return res;
 }
@@ -12462,7 +12475,7 @@ function renderTrueFalse(container, question) {
   const cardHtml = hasPhrases ? `
     <div class="blitz-card" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 30px; box-shadow: var(--shadow-sm);">
       ${question.englishPhrase ? `
-      <div class="blitz-english" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-color, #0d9488); margin-bottom: 16px; line-height: 1.4;">
+      <div class="blitz-english" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-color, #a855f7); margin-bottom: 15px; line-height: 1.4;">
         ${question.englishPhrase}
       </div>` : ''}
       ${question.turkishTranslation ? `
@@ -12475,7 +12488,7 @@ function renderTrueFalse(container, question) {
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || 'Hız Tüneli: Hızlıca karar ver!'}</p>
     <div class="blitz-timer-container" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; margin-bottom: 20px;">
-      <div id="blitz-timer-bar" style="width: 100%; height: 100%; background: var(--accent-color, #0d9488); transition: width 50ms linear;"></div>
+      <div id="blitz-timer-bar" style="width: 100%; height: 100%; background: var(--accent-color, #a855f7); transition: width 50ms linear;"></div>
     </div>
     
     ${cardHtml}
@@ -12649,7 +12662,7 @@ function renderSpotlight(container, question) {
   container.innerHTML = `
     <p class="quiz-prompt">${question.prompt || 'Projektör Modu: Parlayan öbeğin Türkçe anlamını seçin!'}</p>
     
-    <div class="spotlight-paragraph-container" style="text-align: left; position: relative; margin-bottom: 24px;">
+    <div class="spotlight-paragraph-container" style="text-align: left; position: relative; margin-bottom: 25px;">
       ${displayHtml}
     </div>
     
@@ -13040,7 +13053,7 @@ function renderDoublePrepositionMagnet(container, question) {
     <div class="magnet-bank-container" id="magnet-double-bank" style="margin-top: 30px;">
       ${optionsHtml}
     </div>
-    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 16px; text-align: center; opacity: 0.8;">* Sürüklediğiniz kelimeyi geri almak veya değiştirmek için boşluğun üzerine tıklayabilirsiniz.</div>
+    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 15px; text-align: center; opacity: 0.8;">* Sürüklediğiniz kelimeyi geri almak veya değiştirmek için boşluğun üzerine tıklayabilirsiniz.</div>
   `;
 
   const draggables = container.querySelectorAll('.magnet-draggable');
@@ -14016,7 +14029,7 @@ function checkAnswer() {
         const groupInfo = useTopicAnalysis ? null : getConjunctionGroupInfo(cleanOptText);
         let groupTag = '';
         if (groupInfo) {
-          groupTag = ` <span style="background: rgba(255,255,255,0.06); border: 1px solid ${groupInfo.color}; color: ${groupInfo.color}; padding: 1px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; margin-left: 4px;">${groupInfo.badge} ${groupInfo.name}</span>`;
+          groupTag = ` <span style="background: rgba(255,255,255,0.06); border: 1px solid ${groupInfo.color}; color: ${groupInfo.color}; padding: 1px 7px; border-radius: 6px; font-size: 0.72rem; font-weight: 700; margin-left: 4px;">${groupInfo.badge} ${groupInfo.name}</span>`;
         }
 
         if (idx === question.correctIndex) {
@@ -14489,7 +14502,7 @@ const CONNECTOR_DRILL_SECTIONS = [
             İki bağımsız cümleyi <strong>gerçekten birleştirir</strong>. Virgül alır.<br>
             <code style="font-size: 0.85em;">The plan is risky<strong>, but</strong> it offers rewards.</code>
           </div>
-          <div style="padding: 10px 14px; border-left: 3px solid #0d9488; background: rgba(13, 148, 136,0.07); border-radius: 0 8px 8px 0;">
+          <div style="padding: 10px 14px; border-left: 3px solid #8b5cf6; background: rgba(139,92,246,0.07); border-radius: 0 8px 8px 0;">
             <strong>2. Geçiş zarfı</strong> — however · therefore · moreover · nevertheless · thus · besides<br>
             Aslında bağlaç <strong>değil, zarftır</strong>. Hiçbir şeyi birleştirmez, yalnızca ilişkiyi
             işaret eder. Cümleler ayrı kaldığı için araya <strong>noktalı virgül ya da nokta</strong> girer.<br>
@@ -14546,7 +14559,7 @@ const CONNECTOR_DRILL_SECTIONS = [
             <code style="font-size: 0.85em;">The instrument <strong>has been</strong> out of use <strong>for eight years</strong>.</code><br>
             <code style="font-size: 0.85em;">The kiln <strong>was abandoned</strong> two centuries <strong>ago</strong>.</code>
           </div>
-          <div style="padding: 10px 14px; border-left: 3px solid #0d9488; background: rgba(13, 148, 136,0.07); border-radius: 0 8px 8px 0;">
+          <div style="padding: 10px 14px; border-left: 3px solid #8b5cf6; background: rgba(139,92,246,0.07); border-radius: 0 8px 8px 0;">
             <strong>2. İki cümlecik kuralı</strong> — by the time · since · after · before · when<br>
             <strong>Bir tarafın zamanı diğerini belirler.</strong> Yan cümleye bakıp ana cümleyi
             hesaplarsın; sınavda en çok bu sorulur.<br>
@@ -14703,13 +14716,6 @@ function renderConnectorDrillTab() {
 
   const sec = CONNECTOR_DRILL_SECTIONS.find(x => x.lessonId === drillActiveSection)
            || CONNECTOR_DRILL_SECTIONS[0];
-
-  // Başlık, seçili alt sekmenin adını taşır; hangi bölümde olunduğu sekmeler
-  // sol menüye taşındıktan sonra içerik alanından okunamıyordu. Baştaki emoji
-  // atılıyor, başlıkta zaten bir ikon var.
-  const titleEl = document.getElementById('connector-drill-title-text');
-  if (titleEl) titleEl.textContent = sec.title.replace(/^[^\p{L}]+/u, '').trim();
-
   const lesson = lessons.find(l => l.id === sec.lessonId);
   const exercises = (lesson && lesson.exercises) || [];
   if (!exercises.length) {
@@ -14829,85 +14835,36 @@ function renderDrillFormulaHint(body, question) {
     const t = String(term).toLowerCase();
     return [...inOptions].some(o => o && (o === t || t.includes(o) || o.includes(t)));
   };
-  // Etiketlenen terimlerin bir kısmı DOĞRU cevabın kartı, bir kısmı bilerek
-  // eklenen çeldiricidir (drill-expansion.js: terms: [term, subTerm]). İkisi de
-  // maskelenince "Bu boşluğun kuralı" başlığıyla çıkıyordu; öğrenci tuzağı
-  // ayırt edemiyordu. Terimin adı doğru cevapla eşleşiyorsa "kural", eşleşmiyorsa
-  // "bu boşluğa uymaz" olarak işaretlenir.
-  const answerLc = answer.toLowerCase();
-  const isAnswerCard = term => {
-    if (!answerLc || answerLc.length < 2) return true; // ayırt edilemiyorsa kural say
-    return String(term).split(/[\/|]/).some(part => {
-      const p = part.replace(/\([^)]*\)/g, '').trim().toLowerCase();
-      return p.length >= 2 && (p === answerLc || p.includes(answerLc) || answerLc.includes(p));
-    });
-  };
-  // Terimi düz "____" ile maskeleyince kural, sorunun yapısını tekrar etmekten
-  // öteye geçmiyordu: "Cümle 1; ____, Cümle 2" cümlenin kendisiyle birebir aynı.
-  // Onun yerine terimi DİLBİLGİSİ SINIFIYLA maskeleriz -- öğrenci "bu boşluk
-  // geçiş zarfı ister" bilgisini alır, hangi zarf olduğunu şıklardan bulur.
-  // Sınıf, kuraldaki NOKTALAMA desenine bakılarak bulunur; "NOKTALAMA:" ifadesi
-  // tek başına yetmez çünkü hem geçiş zarfı hem bağlaç kartları onu taşır. Ayırt
-  // eden şey terimin ETRAFINDAKİ işaretlerdir:
-  //   ";"/"." + terim + ","  → geçiş zarfı (however; nevertheless; therefore)
-  //   tek "," + terim (sonrasında virgül YOK) → bağlaç (and / but / or / so / or else)
-  //   terim + "+ Özne + Fiil"  → yan cümle bağlacı (although / because)
-  //   terim + "+ İsim / V-ing" → isim öbeği alan edat (despite / due to)
-  const wordClass = card => {
-    const r = String(card.rule || card.formula || '');
-    const paren = (String(card.meaning || '').match(/\(([^)]+)\)/) || [])[1] || '';
-    const t = String(card.term).split(/[\/|]/)[0].replace(/\([^)]*\)/g, '').trim();
-    const esc = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    if (!esc) return null;
-    if (/geçiş zarfı/i.test(paren) || new RegExp('[;.]\\s*' + esc + '\\s*,', 'i').test(r)) return 'geçiş zarfı';
-    if (new RegExp(',\\s*' + esc + '\\s+(?:Cümle|Özne)', 'i').test(r)) return 'bağlaç';
-    if (/yan cümle/i.test(paren) || new RegExp(esc + '\\s*\\+\\s*(?:Özne|Olumlu)', 'i').test(r)) return 'yan cümle bağlacı';
-    if (/edat/i.test(paren) || new RegExp(esc + '\\s*\\+\\s*(?:İsim|V-ing)', 'i').test(r)) return 'isim öbeği alan edat';
-    return null;
-  };
-  const mask = (text, term, repl) => {
-    const r = repl || '____';
+  const mask = (text, term) => {
     let out = String(text || '');
     String(term).split(/[\/|]/).forEach(part => {
       const p = part.replace(/\([^)]*\)/g, '').trim();
       if (p.length < 2) return;
       const esc = p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      out = out.replace(new RegExp('\\b' + esc + '\\b', 'gi'), () => r);
+      out = out.replace(new RegExp('\\b' + esc + '\\b', 'gi'), '____');
     });
     return out;
   };
 
   const panels = cards.map((c, i) => {
     const hide = leaks(c.term);
-    // Çeldirici kartı: adı şıklarda geçiyor ama doğru cevap değil. Adını açıkça
-    // gösteririz (yanlış seçenek olduğu için cevabı ele vermez) ve yapısını
-    // maskelemeden veririz -- amaç doğru kalıpla arasındaki farkı göstermek.
-    const distractor = hide && !isAnswerCard(c.term);
-    const maskRule = hide && !distractor;
-    const cls = maskRule ? wordClass(c) : null;
-    const repl = cls ? `[${cls}]` : '____';
-    const head = distractor
-      ? `<span style="font-weight: 800; color: #ef4444;">⚠️ “${c.term}” — bu boşluğa uymaz</span>
-         <span style="font-size: 0.78rem; color: var(--text-secondary);">${c.meaning || ''}</span>`
-      : maskRule
-        ? `<span style="font-weight: 800;">${cls
-            ? `Bu boşluk bir <span style="color: var(--accent-primary);">${cls}</span> ister${cls === 'bağlaç' ? ' (and / but / or / so — geçiş zarfı değil)' : ''}`
-            : 'Bu boşluğun kuralı'}</span>`
-        : `<span style="font-weight: 800;">${maskAnswer(c.term)}</span>
-           <span style="font-size: 0.78rem; color: var(--text-secondary);">${maskAnswer(c.meaning || '')}</span>`;
+    const head = hide
+      ? '<span style="font-weight: 800;">Bu boşluğun kuralı</span>'
+      : `<span style="font-weight: 800;">${maskAnswer(c.term)}</span>
+         <span style="font-size: 0.78rem; color: var(--text-secondary);">${maskAnswer(c.meaning || '')}</span>`;
     const rule = String(c.rule || c.formula || '');
     const trap = String(c.trap || '');
     return `
       <div class="drill-hint-panel" data-hint-panel="${i}"
            style="display: ${drillHintOpen ? 'block' : 'none'}; text-align: left; margin: 0 auto 8px auto;
                   max-width: 640px; padding: 10px 14px; border-radius: var(--radius-md);
-                  border: 1px solid ${distractor ? 'rgba(239, 68, 68, 0.4)' : 'var(--border-color)'}; background: var(--bg-card);">
+                  border: 1px solid var(--border-color); background: var(--bg-card);">
         <div style="display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px;">${head}</div>
         ${(txt => looksLikeFormula(txt)
              ? formulaRowsHTML(txt)
              : `<div style="font-size: 0.82rem; font-weight: 700; color: var(--accent-primary); line-height: 1.5;">${txt.replace(/\n/g, '<br>')}</div>`
-          )(maskAnswer(maskRule ? mask(rule, c.term, repl) : rule))}
-        ${trap ? `<div style="margin-top: 6px; font-size: 0.78rem; color: #ef4444; line-height: 1.5;">${maskAnswer(maskRule ? mask(trap, c.term, repl) : trap)}</div>` : ''}
+          )(maskAnswer(hide ? mask(rule, c.term) : rule))}
+        ${trap ? `<div style="margin-top: 5px; font-size: 0.78rem; color: #ef4444; line-height: 1.5;">${maskAnswer(hide ? mask(trap, c.term) : trap)}</div>` : ''}
       </div>`;
   }).join('');
 
@@ -15452,16 +15409,13 @@ function showGameOver() {
 // ============================================================
 // TEMA DEĞİŞTİRME
 // ============================================================
-const ICON_MOON_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.5 14.5a8.5 8.5 0 0 1-11-11 8.5 8.5 0 1 0 11 11z"/></svg>';
-const ICON_SUN_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><circle cx="12" cy="12" r="4" fill="currentColor" stroke="none"/><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>';
-
 function initTheme() {
   const saved = localStorage.getItem('amok_theme');
   if (['gold', 'canva', 'mint', 'sakura', 'sunset', 'kutup', 'siber', 'orman'].includes(state.activeTheme)) {
     document.documentElement.setAttribute('data-theme', state.activeTheme);
   } else if (saved === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    document.getElementById('btn-theme').innerHTML = ICON_SUN_SVG;
+    document.getElementById('btn-theme').textContent = '☀️';
   }
 }
 
@@ -15474,11 +15428,11 @@ function toggleTheme() {
   if (isDark) {
     document.documentElement.removeAttribute('data-theme');
     localStorage.setItem('amok_theme', 'light');
-    document.getElementById('btn-theme').innerHTML = ICON_MOON_SVG;
+    document.getElementById('btn-theme').textContent = '🌙';
   } else {
     document.documentElement.setAttribute('data-theme', 'dark');
     localStorage.setItem('amok_theme', 'dark');
-    document.getElementById('btn-theme').innerHTML = ICON_SUN_SVG;
+    document.getElementById('btn-theme').textContent = '☀️';
   }
   renderStore();
 }
@@ -15556,16 +15510,6 @@ function switchTab(tabId) {
       subtabsMenu.classList.remove('u-hidden');
     } else {
       subtabsMenu.style.setProperty('display', 'none', 'important');
-    }
-  }
-
-  const drillSubtabsMenu = document.getElementById('connector-drill-subtabs-menu');
-  if (drillSubtabsMenu) {
-    if (tabId === 'connector-drill') {
-      drillSubtabsMenu.style.setProperty('display', 'flex', 'important');
-      drillSubtabsMenu.classList.remove('u-hidden');
-    } else {
-      drillSubtabsMenu.style.setProperty('display', 'none', 'important');
     }
   }
   if (typeof updateAdminBadgeCount === 'function') {
@@ -16186,28 +16130,28 @@ function renderProfile() {
           <h3 class="profile-section-title" style="margin-top: 0; margin-bottom: 16px;">📊 İstatistiklerin</h3>
           <div class="profile-stats-grid">
             <div class="profile-stat-box">
-              <span class="stat-box-icon icon-streak"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.98 2.11c.53 2.36-.4 3.79-1.62 5.32C10.1 8.98 8.7 10.6 8.7 13a4.3 4.3 0 0 0 8.6 0c0-1.42-.55-2.4-1.16-3.16.24 1.44-.22 2.4-.98 2.98.32-1.83-.53-2.95-.24-4.9.18-1.2.3-2.9-.94-5.81zM8.2 12.2C7.1 13.6 6.3 15 6.3 16.8A5.7 5.7 0 0 0 12 22.5a5.7 5.7 0 0 0 5.7-5.7c0-.5-.06-.97-.16-1.42a6.28 6.28 0 0 1-11.34-3.18z"/></svg></span>
+              <span class="stat-box-icon">🔥</span>
               <div class="stat-box-values">
                 <span class="stat-box-num">${state.streak}</span>
                 <span class="stat-box-label">Günlük Seri</span>
               </div>
             </div>
             <div class="profile-stat-box">
-              <span class="stat-box-icon icon-xp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+              <span class="stat-box-icon">⚡</span>
               <div class="stat-box-values">
                 <span class="stat-box-num">${state.xp}</span>
                 <span class="stat-box-label">Toplam Puan</span>
               </div>
             </div>
             <div class="profile-stat-box">
-              <span class="stat-box-icon icon-coin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><path d="M12 8.3v7.4M10 9.7h2.6a1.4 1.4 0 0 1 0 2.8h-1.2a1.4 1.4 0 0 0 0 2.8H14" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="stat-box-icon">🪙</span>
               <div class="stat-box-values">
                 <span class="stat-box-num">${coinBalance()}</span>
                 <span class="stat-box-label">Jeton (Mağaza)</span>
               </div>
             </div>
             <div class="profile-stat-box">
-              <span class="stat-box-icon icon-book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v18H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M12 3h5.5A2.5 2.5 0 0 1 20 5.5v13a2.5 2.5 0 0 1-2.5 2.5H12"/></svg></span>
+              <span class="stat-box-icon">📚</span>
               <div class="stat-box-values">
                 <span class="stat-box-num">${completedCount}/${totalLessons}</span>
                 <span class="stat-box-label">Ders (${progressPercent}%)</span>
@@ -16686,7 +16630,7 @@ async function renderSocialList() {
       : activeSocialSubTab === 'following'
       ? 'Henüz kimseyi takip etmiyorsunuz.'
       : 'Kullanıcı bulunamadı.';
-    contentEl.innerHTML = `<div style="text-align: center; padding: 24px 12px; color: var(--text-secondary); font-size: 1.01rem;">${emptyMsg}</div>`;
+    contentEl.innerHTML = `<div style="text-align: center; padding: 24px 12px; color: var(--text-secondary); font-size: 0.88rem;">${emptyMsg}</div>`;
     return;
   }
 
@@ -16702,10 +16646,10 @@ async function renderSocialList() {
     } else {
       actionBtn = isFollowing 
         ? `<div class="social-action-buttons" style="display: flex; gap: 4px; align-items: center;">
-             <button class="social-btn social-kudos-btn" data-action="kudos" data-username="${escapeHtml(user.username)}" title="Tebrik Et" style="font-size: 1.21rem; padding: 4px 6px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card); cursor: pointer; height: 32px; display: flex; align-items: center; justify-content: center;">👏</button>
-             <button class="social-btn social-unfollow-btn" data-action="unfollow" data-username="${escapeHtml(user.username)}" style="font-size: 0.86rem; padding: 6px 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: rgba(13, 148, 136, 0.08); cursor: pointer; color: var(--accent-primary); font-weight: 700; height: 32px; display: flex; align-items: center;">Takipte</button>
+             <button class="social-btn social-kudos-btn" data-action="kudos" data-username="${escapeHtml(user.username)}" title="Tebrik Et" style="font-size: 1.05rem; padding: 4px 6px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card); cursor: pointer; height: 32px; display: flex; align-items: center; justify-content: center;">👏</button>
+             <button class="social-btn social-unfollow-btn" data-action="unfollow" data-username="${escapeHtml(user.username)}" style="font-size: 0.75rem; padding: 6px 10px; border-radius: var(--radius-md); border: 1px solid var(--border-color); background: rgba(99, 102, 241, 0.08); cursor: pointer; color: var(--accent-primary); font-weight: 700; height: 32px; display: flex; align-items: center;">Takipte</button>
            </div>`
-        : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}" style="font-size: 0.86rem; padding: 6px 10px; border-radius: var(--radius-md); border: none; background: var(--accent-primary); color: white; cursor: pointer; font-weight: 700; height: 32px; display: flex; align-items: center;">Takip Et</button>`;
+        : `<button class="social-btn social-follow-btn" data-action="follow" data-username="${escapeHtml(user.username)}" style="font-size: 0.75rem; padding: 6px 10px; border-radius: var(--radius-md); border: none; background: var(--accent-primary); color: white; cursor: pointer; font-weight: 700; height: 32px; display: flex; align-items: center;">Takip Et</button>`;
     }
 
     let avatarContent = escapeHtml(letter);
@@ -16853,7 +16797,7 @@ async function searchSocialUsers() {
         
         const btnText = isFollowing ? 'Takipten Çık' : 'Takip Et';
         const btnClass = isFollowing ? 'social-unfollow-btn' : 'social-follow-btn';
-        const emailSubtext = user.email ? `<span style="font-size: 0.83rem; color: var(--text-secondary); display: block; margin-top: 1px;">✉️ ${escapeHtml(user.email)}</span>` : '';
+        const emailSubtext = user.email ? `<span style="font-size: 0.72rem; color: var(--text-secondary); display: block; margin-top: 1px;">✉️ ${escapeHtml(user.email)}</span>` : '';
         
         return `
           <div class="search-result-card" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--border-color);">
@@ -16862,10 +16806,10 @@ async function searchSocialUsers() {
               <div class="search-result-details" style="display: flex; flex-direction: column; min-width: 0; flex: 1;">
                 <span class="search-result-name" style="font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${escapeHtml(user.username)}</span>
                 ${emailSubtext}
-                <span class="search-result-xp" style="font-size: 0.86rem; color: var(--text-secondary); margin-top: 1px;">⚡ ${user.xp} Puan</span>
+                <span class="search-result-xp" style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 1px;">⚡ ${user.xp} Puan</span>
               </div>
             </div>
-            <button class="social-btn ${btnClass}" data-action="toggle-follow" data-username="${escapeHtml(user.username)}" data-follow="${!isFollowing}" style="flex-shrink: 0; font-size: 0.9rem; padding: 6px 12px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; border: ${isFollowing ? '1px solid var(--border-color)' : 'none'}; background: ${isFollowing ? 'var(--bg-card)' : 'var(--accent-primary)'}; color: ${isFollowing ? 'var(--text-secondary)' : 'white'};">${btnText}</button>
+            <button class="social-btn ${btnClass}" data-action="toggle-follow" data-username="${escapeHtml(user.username)}" data-follow="${!isFollowing}" style="flex-shrink: 0; font-size: 0.78rem; padding: 6px 12px; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; border: ${isFollowing ? '1px solid var(--border-color)' : 'none'}; background: ${isFollowing ? 'var(--bg-card)' : 'var(--accent-primary)'}; color: ${isFollowing ? 'var(--text-secondary)' : 'white'};">${btnText}</button>
           </div>
         `;
       }).join('')}
@@ -17117,7 +17061,7 @@ async function renderLeaderboard() {
   const buildAvatar = (c, size) => {
     const initial = (c.name || 'U').replace(' (Sen)', '').charAt(0).toUpperCase();
     const photo = c.isUser ? state.profilePhoto : c.profilePhoto;
-    const color = c.isUser ? (state.avatarColor || '#0D9488') : (c.avatarColor || '#B4A7D6');
+    const color = c.isUser ? (state.avatarColor || '#6366F1') : (c.avatarColor || '#B4A7D6');
     const base = `width:${size}px;height:${size}px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;`;
     if (photo && photo.startsWith('avatar:')) {
       return `<div class="lb-avatar" style="${base}background:${color};font-size:${Math.round(size * 0.55)}px;">${safeAvatarEmoji(photo)}</div>`;
@@ -17222,22 +17166,6 @@ const STORE_CATEGORIES = [
 const FREE_THEMES = ['light', 'canva'];
 const THEME_IDS = STORE_CATALOG.filter(i => i.cat === 'theme').map(i => i.id);
 let storeActiveCat = 'boost';
-
-// Mağazadaki tema kartları, o temanın style.css'teki [data-theme="X"] bloğundaki
-// gerçek renkleriyle önizleniyor (bkz. themeCardHTML) — kartın kendisi küçük bir
-// "boya kartelası" gibi davranıp, seçildiğinde uygulamanın alacağı gerçek
-// görünümü gösteriyor. Bu tablo o renklerin bire bir kopyası; biri değişirse
-// öteki de güncellenmeli.
-const THEME_SWATCHES = {
-  canva:  { bg1: '#F1F7F4', bg2: '#E2EEE6', accent: '#5AB07F', hover: '#439A68', shadow: '#327E51', text: '#1D2D24', dots: ['#F2A871', '#E8CB6E', '#E88A9A'] },
-  gold:   { bg1: '#fbf9f4', bg2: '#f6efe1', accent: '#d4a843', hover: '#c59733', shadow: '#b28522', text: '#3c2c10', dots: ['#FF9600', '#FFC107', '#EF4444'] },
-  mint:   { bg1: '#f2f8f4', bg2: '#e4f0e8', accent: '#8CC5A0', hover: '#72B58C', shadow: '#5FA378', text: '#1c2e24', dots: ['#6BBFB0', '#8CC5A0', '#E8919A'] },
-  sakura: { bg1: '#fdf4f5', bg2: '#f8e5e8', accent: '#E8A0AC', hover: '#D88898', shadow: '#C57080', text: '#30181c', dots: ['#C8A0E0', '#E8A0AC', '#E87888'] },
-  sunset: { bg1: '#fcf4ee', bg2: '#f6e8dc', accent: '#E8B080', hover: '#D89868', shadow: '#C88058', text: '#2e1e14', dots: ['#F0C870', '#E8A070', '#E88078'] },
-  kutup:  { bg1: '#f0f4f8', bg2: '#e1e8f0', accent: '#3b82f6', hover: '#2563eb', shadow: '#1d4ed8', text: '#1b2735', dots: ['#60a5fa', '#fbbf24', '#ef4444'] },
-  siber:  { bg1: '#0a0e17', bg2: '#121824', accent: '#06b6d4', hover: '#0891b2', shadow: '#0e7490', text: '#e2e8f0', dots: ['#f43f5e', '#0d9488', '#ec4899'] },
-  orman:  { bg1: '#f4f6f4', bg2: '#e6eae6', accent: '#4e7f4e', hover: '#3b6b3b', shadow: '#284b28', text: '#222d22', dots: ['#d97706', '#eab308', '#ef4444'] }
-};
 
 function catalogItem(id) { return STORE_CATALOG.find(i => i.id === id); }
 function coinBalance() { return state.coins || 0; }
@@ -17398,10 +17326,6 @@ function storeCardHTML(it) {
     }
   }
 
-  if (it.cat === 'theme') {
-    return themeCardHTML(it, { esc, btnLabel, btnClass, disabled, isActive: state.activeTheme === it.id, isOwned: themeOwned(it.id) });
-  }
-
   return `
     <div class="store-card${status.includes('owned') ? ' bought' : ''}">
       <span class="store-card-icon">${it.icon}</span>
@@ -17409,44 +17333,6 @@ function storeCardHTML(it) {
       <p>${esc(it.desc)}</p>
       ${status}
       <button class="btn ${btnClass} store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''}>${btnLabel}</button>
-    </div>`;
-}
-
-// Tema kartı: her tema kendi gerçek renkleriyle küçük bir "boya kartelası" gibi
-// önizleniyor (bkz. THEME_SWATCHES) — kart, uygulamanın o tema seçildiğinde
-// alacağı gerçek görünümü taşıyor; jenerik "hepsi aynı yeşil kart" görünümü
-// yerine temaların kendi çeşitliliği kartın kendisinde görünüyor.
-function themeCardHTML(it, { esc, btnLabel, disabled, isActive, isOwned }) {
-  const sw = THEME_SWATCHES[it.id] || THEME_SWATCHES.canva;
-  const dotsHTML = sw.dots.map(c => `<span class="theme-swatch-dot" style="background:${c}"></span>`).join('');
-  const locked = !isOwned;
-
-  // Buton, .btn-primary/.btn-secondary'nin CSS'ini kopyalamak yerine, o temanın
-  // kendi renklerini doğrudan satır içi stil olarak taşıyor — böylece "Etkin"
-  // ve "Etkinleştir" butonu da tıpkı kartın kendisi gibi hangi temaya ait
-  // olduğunu renkleriyle anlatır.
-  let btnStyle;
-  if (!isOwned) {
-    btnStyle = `background:${sw.accent}; color:#fff; box-shadow:0 4px 0 ${sw.shadow};`;
-  } else if (isActive) {
-    btnStyle = `background:transparent; color:${sw.accent}; border:2px solid ${sw.accent}; box-shadow:none;`;
-  } else {
-    btnStyle = `background:transparent; color:${sw.accent}; border:1.5px solid ${sw.accent}; box-shadow:none;`;
-  }
-
-  return `
-    <div class="theme-card${isActive ? ' active' : ''}${locked ? ' locked' : ''}" style="--tc-bg1:${sw.bg1}; --tc-bg2:${sw.bg2}; --tc-accent:${sw.accent}; --tc-text:${sw.text};">
-      <div class="theme-card-swatch">
-        <div class="theme-swatch-dots">${dotsHTML}</div>
-        <span class="theme-card-icon">${it.icon}</span>
-        <h3 class="theme-card-name">${esc(it.title)}</h3>
-        ${isActive ? `<span class="theme-card-active-badge" title="Etkin">✓</span>` : ''}
-      </div>
-      <div class="theme-card-body">
-        <p class="theme-card-desc">${esc(it.desc)}</p>
-        ${isOwned ? `<span class="theme-card-owned">✓ Sahipsin</span>` : ''}
-        <button class="btn store-buy-btn" data-item="${it.id}"${disabled ? ' disabled' : ''} style="${btnStyle}">${btnLabel}</button>
-      </div>
     </div>`;
 }
 
@@ -17554,7 +17440,7 @@ function initEventListeners() {
       } else {
         btn.textContent = "Turu Başlat (Keşfet)";
         btn.className = "btn btn-primary";
-        btn.style.cssText = "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; background: linear-gradient(135deg, #0d9488 0%, #db2777 100%); border: none; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(13, 148, 136, 0.4); cursor: pointer;";
+        btn.style.cssText = "padding: 12px 24px; font-size: 0.95rem; font-weight: 800; background: linear-gradient(135deg, #a855f7 0%, #db2777 100%); border: none; border-radius: var(--radius-md); box-shadow: 0 4px 14px rgba(168, 85, 247, 0.4); cursor: pointer;";
       }
     }
   }
@@ -19134,7 +19020,7 @@ function getReportsHTML() {
                   <button onclick="window.previewQuestionById('${escapeHtml(rep.lessonId)}', '${escapeHtml(rep.questionId)}')" class="btn btn-secondary-outline" style="font-size: 0.7rem; padding: 2px 6px; font-weight: bold; border-radius: 4px; border: 1px solid var(--accent-primary); color: var(--accent-primary); cursor: pointer; background: transparent;">
                     👁️ Önizle
                   </button>
-                  <button onclick="window.copyReportAiPrompt('${escapeHtml(rep.questionId)}', '${escapeHtml((rep.lessonTitle || '').replace(/'/g, "\\'"))}', '${escapeHtml(rep.errorType)}', '${escapeHtml((rep.userComment || '').replace(/'/g, "\\'").replace(/\n/g, ' '))}')" class="btn btn-secondary-outline" style="font-size: 0.7rem; padding: 2px 6px; font-weight: bold; border-radius: 4px; border: 1px solid #0d9488; color: #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.08); display: inline-flex; align-items: center; gap: 4px;" title="Antigravity IDE için düzeltme promptu kopyala">
+                  <button onclick="window.copyReportAiPrompt('${escapeHtml(rep.questionId)}', '${escapeHtml((rep.lessonTitle || '').replace(/'/g, "\\'"))}', '${escapeHtml(rep.errorType)}', '${escapeHtml((rep.userComment || '').replace(/'/g, "\\'").replace(/\n/g, ' '))}')" class="btn btn-secondary-outline" style="font-size: 0.7rem; padding: 2px 6px; font-weight: bold; border-radius: 4px; border: 1px solid #6366f1; color: #6366f1; cursor: pointer; background: rgba(99, 102, 241, 0.08); display: inline-flex; align-items: center; gap: 4px;" title="Antigravity IDE için düzeltme promptu kopyala">
                     📋 AI Prompt Kopyala
                   </button>
                   <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">${escapeHtml(rep.timestamp)}</span>
@@ -21415,7 +21301,7 @@ return `
               <button onclick="window.previewQuestionById('${escapeHtml(rep.lessonId)}', '${escapeHtml(rep.questionId)}')" class="btn btn-secondary-outline" style="font-size: 0.72rem; padding: 2px 8px; font-weight: bold; border-radius: 4px; border: 1px solid var(--accent-primary); color: var(--accent-primary); cursor: pointer; background: transparent; display: inline-flex; align-items: center;">
                 👁️ Soruyu Önizle
               </button>
-              <button onclick="window.copyReportAiPrompt('${escapeHtml(rep.questionId)}', '${escapeHtml((rep.lessonTitle || '').replace(/'/g, "\\'"))}', '${escapeHtml(rep.errorType)}', '${escapeHtml((rep.userComment || '').replace(/'/g, "\\'").replace(/\n/g, ' '))}')" class="btn btn-secondary-outline" style="font-size: 0.72rem; padding: 2px 8px; font-weight: bold; border-radius: 4px; border: 1px solid #0d9488; color: #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.08); display: inline-flex; align-items: center; gap: 4px;" title="Antigravity IDE sohbetine yapıştırmak için AI Prompt kopyala">
+              <button onclick="window.copyReportAiPrompt('${escapeHtml(rep.questionId)}', '${escapeHtml((rep.lessonTitle || '').replace(/'/g, "\\'"))}', '${escapeHtml(rep.errorType)}', '${escapeHtml((rep.userComment || '').replace(/'/g, "\\'").replace(/\n/g, ' '))}')" class="btn btn-secondary-outline" style="font-size: 0.72rem; padding: 2px 8px; font-weight: bold; border-radius: 4px; border: 1px solid #6366f1; color: #6366f1; cursor: pointer; background: rgba(99, 102, 241, 0.08); display: inline-flex; align-items: center; gap: 4px;" title="Antigravity IDE sohbetine yapıştırmak için AI Prompt kopyala">
                 📋 AI Prompt Kopyala
               </button>
             </span>
@@ -22967,7 +22853,7 @@ function getConditionalSimulatorData(condType) {
   const colorNegation = "#ef4444";
   const colorAux = "#3b82f6";
   const colorVerb = "#f59e0b";
-  const colorIf = "#0d9488";
+  const colorIf = "#8b5cf6";
   const colorComma = "#6b7280";
   const colorPerfect = "#10b981";
 
@@ -23891,7 +23777,7 @@ function initSimulator() {
 
   const tabs = [
     { btn: btnTabPure, content: tabPureContent, color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.08)', shadow: 'rgba(59, 130, 246, 0.25)', border: '#3b82f6' },
-    { btn: btnTabCore, content: tabCoreContent, color: '#0d9488', bg: 'rgba(13, 148, 136, 0.08)', shadow: 'rgba(13, 148, 136, 0.25)', border: '#0d9488' },
+    { btn: btnTabCore, content: tabCoreContent, color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.08)', shadow: 'rgba(139, 92, 246, 0.25)', border: '#8b5cf6' },
     { btn: btnTabSemi, content: tabSemiContent, color: '#ec4899', bg: 'rgba(236, 72, 153, 0.08)', shadow: 'rgba(236, 72, 153, 0.25)', border: '#ec4899' },
     { btn: btnTabPref, content: tabPrefContent, color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.08)', shadow: 'rgba(245, 158, 11, 0.25)', border: '#f59e0b' },
     { btn: btnTabPerfect, content: tabPerfectContent, color: '#ef4444', bg: 'rgba(239, 68, 68, 0.08)', shadow: 'rgba(239, 68, 68, 0.25)', border: '#ef4444' },
@@ -26997,7 +26883,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
         const dragOverHandler = (e) => {
           e.preventDefault();
           dropzone.style.borderColor = 'var(--accent-primary)';
-          dropzone.style.background = 'rgba(13, 148, 136, 0.04)';
+          dropzone.style.background = 'rgba(99, 102, 241, 0.04)';
         };
         const dragLeaveHandler = () => {
           dropzone.style.borderColor = 'var(--border-color)';
@@ -27277,7 +27163,7 @@ window.handleFeedbackSubmit = handleFeedbackSubmit;
       container.innerHTML = merged.map((fb, idx) => {
         const dateStr = new Date(fb.created_at).toLocaleString('tr-TR');
         const categoryLabel = fb.category === 'bug' ? 'Hata Bildirimi ⚠️' : (fb.category === 'feature' ? 'Öneri/İstek 💡' : 'Diğer 💬');
-        const categoryColor = fb.category === 'bug' ? '#ef4444' : (fb.category === 'feature' ? '#3b82f6' : '#0d9488');
+        const categoryColor = fb.category === 'bug' ? '#ef4444' : (fb.category === 'feature' ? '#3b82f6' : '#a855f7');
         const screenshotBtn = fb.screenshot 
           ? `<button class="btn-admin-view-screenshot" data-index="${idx}" style="padding: 6px 12px; font-size: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--accent-primary); background: transparent; color: var(--accent-primary); font-weight: 700; cursor: pointer; transition: all 0.2s;">📸 Görseli Aç</button>`
           : '<span style="font-size: 0.75rem; color: var(--text-secondary);">Ekran Görüntüsü Yok</span>';
@@ -27636,7 +27522,7 @@ const prototypeParagraphData = {
   title: 'Milestone 1: Modern Bilim ve Teknoloji',
   passagePlain: `The development of modern technology has changed our daily lives in many ways. Today, researchers in various universities can study complex data processed by these machines because there are advanced computer systems in their laboratories. How do computers process this information so fast? When scientists analyzed the initial results of the project last year, they realized that a clear tense agreement was necessary in the final reports. Although many questions remain unanswered, students studying computer science should learn these core concepts to solve real-world problems, mustering all their skills to find key solutions.`,
   passageHtml: `
-    <span class="syntax-hl noun-phrase" data-id="1" style="border-bottom: 2px solid #3b82f6; cursor: pointer; background: rgba(59, 130, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">The development of modern technology</span> has changed our daily lives in many ways. Today, researchers in various universities <span class="syntax-hl verb-phrase" data-id="2" style="border-bottom: 2px solid #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">can study</span> complex <span class="syntax-hl result-phrase" data-id="3" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">data processed by these machines</span> because <span class="syntax-hl location-phrase" data-id="4" style="border-bottom: 2px solid #f43f5e; cursor: pointer; background: rgba(244, 63, 94, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">there are</span> advanced computer systems <span class="syntax-hl location-phrase" data-id="5" style="border-bottom: 2px solid #f43f5e; cursor: pointer; background: rgba(244, 63, 94, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">in their laboratories</span>. <span class="syntax-hl summary-phrase" data-id="6" style="border-bottom: 2px solid #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">How do computers process this information so fast?</span> When scientists <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">analyzed</span> the initial results of the project <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">last year</span>, they <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">realized</span> that a clear tense agreement <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">was</span> necessary in the final reports. Although many questions remain unanswered, <span class="syntax-hl result-phrase" data-id="8" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">students studying computer science</span> <span class="syntax-hl verb-phrase" data-id="9" style="border-bottom: 2px solid #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">should learn</span> these core concepts to solve real-world problems, <span class="syntax-hl result-phrase" data-id="10" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">mustering all their skills</span> to find key solutions.
+    <span class="syntax-hl noun-phrase" data-id="1" style="border-bottom: 2px solid #3b82f6; cursor: pointer; background: rgba(59, 130, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">The development of modern technology</span> has changed our daily lives in many ways. Today, researchers in various universities <span class="syntax-hl verb-phrase" data-id="2" style="border-bottom: 2px solid #8b5cf6; cursor: pointer; background: rgba(139, 92, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">can study</span> complex <span class="syntax-hl result-phrase" data-id="3" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">data processed by these machines</span> because <span class="syntax-hl location-phrase" data-id="4" style="border-bottom: 2px solid #f43f5e; cursor: pointer; background: rgba(244, 63, 94, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">there are</span> advanced computer systems <span class="syntax-hl location-phrase" data-id="5" style="border-bottom: 2px solid #f43f5e; cursor: pointer; background: rgba(244, 63, 94, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">in their laboratories</span>. <span class="syntax-hl summary-phrase" data-id="6" style="border-bottom: 2px solid #0d9488; cursor: pointer; background: rgba(13, 148, 136, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">How do computers process this information so fast?</span> When scientists <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">analyzed</span> the initial results of the project <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">last year</span>, they <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">realized</span> that a clear tense agreement <span class="syntax-hl summary-phrase" data-id="7" style="border-bottom: 2px solid #10b981; cursor: pointer; background: rgba(16, 185, 129, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">was</span> necessary in the final reports. Although many questions remain unanswered, <span class="syntax-hl result-phrase" data-id="8" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">students studying computer science</span> <span class="syntax-hl verb-phrase" data-id="9" style="border-bottom: 2px solid #8b5cf6; cursor: pointer; background: rgba(139, 92, 246, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">should learn</span> these core concepts to solve real-world problems, <span class="syntax-hl result-phrase" data-id="10" style="border-bottom: 2px solid #d97706; cursor: pointer; background: rgba(245, 158, 11, 0.06); transition: all 0.2s; padding: 1px 3px; border-radius: 4px;" title="Tıklayarak incele">mustering all their skills</span> to find key solutions.
   `,
   analysisDetails: {
     '1': {
@@ -27947,8 +27833,8 @@ function initParagraphAnalysisModule() {
               breakdownTopic.style.background = 'rgba(59, 130, 246, 0.15)';
               breakdownTopic.style.color = '#3b82f6';
             } else if (el.classList.contains('verb-phrase')) {
-              breakdownTopic.style.background = 'rgba(13, 148, 136, 0.15)';
-              breakdownTopic.style.color = '#0d9488';
+              breakdownTopic.style.background = 'rgba(139, 92, 246, 0.15)';
+              breakdownTopic.style.color = '#8b5cf6';
             } else if (el.classList.contains('result-phrase')) {
               breakdownTopic.style.background = 'rgba(245, 158, 11, 0.15)';
               breakdownTopic.style.color = '#d97706';
@@ -27975,11 +27861,11 @@ function initParagraphAnalysisModule() {
 
           // Highlight the active text span
           highlights.forEach(h => {
-            h.style.background = 'rgba(13, 148, 136, 0.04)';
+            h.style.background = 'rgba(139, 92, 246, 0.04)';
             h.style.boxShadow = 'none';
           });
-          el.style.background = 'rgba(13, 148, 136, 0.16)';
-          el.style.boxShadow = '0 0 8px rgba(13, 148, 136, 0.2)';
+          el.style.background = 'rgba(139, 92, 246, 0.16)';
+          el.style.boxShadow = '0 0 8px rgba(139, 92, 246, 0.2)';
         }
       };
 
@@ -28013,7 +27899,7 @@ function initParagraphAnalysisModule() {
       const hints = prototypeParagraphData.vocabHints[currentStep] || [];
       vocabHintsListEl.innerHTML = hints.map(hint => {
         return `
-          <span class="syntax-badge" style="background: rgba(13, 148, 136, 0.08); color: var(--accent-primary); border: 1px solid rgba(13, 148, 136, 0.2); padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 4px;">
+          <span class="syntax-badge" style="background: rgba(139, 92, 246, 0.08); color: var(--accent-primary); border: 1px solid rgba(139, 92, 246, 0.2); padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 4px;">
             <strong>${hint.en}:</strong> ${hint.tr}
           </span>
         `;
@@ -29238,9 +29124,9 @@ function initTimeMatrixTab() {
         b.style.color = 'var(--text-secondary)';
       });
       btn.classList.add('active');
-      btn.style.borderColor = '#0d9488';
-      btn.style.background = 'rgba(13, 148, 136, 0.15)';
-      btn.style.color = '#0d9488';
+      btn.style.borderColor = '#8b5cf6';
+      btn.style.background = 'rgba(139, 92, 246, 0.15)';
+      btn.style.color = '#8b5cf6';
 
       tmActiveMode = btn.dataset.mode;
       tmExpandedCardIndex = null;
@@ -29258,9 +29144,9 @@ function initTimeMatrixTab() {
         c.style.borderColor = 'var(--border-color)';
       });
       chip.classList.add('active');
-      chip.style.background = '#0d9488';
+      chip.style.background = '#8b5cf6';
       chip.style.color = 'white';
-      chip.style.borderColor = '#0d9488';
+      chip.style.borderColor = '#8b5cf6';
 
       tmActiveCategory = chip.dataset.category;
       tmExpandedCardIndex = null;
@@ -29305,7 +29191,7 @@ function renderTimeMatrix() {
 
   const rawList = TIME_MATRIX_DATA[tmActiveMode] || [];
   tmActiveCategory = syncMatrixChips('.tm-chip', rawList, (item, cat) =>
-    item.category === cat || (cat === 'conjunctions' && item.category === 'inverted'), tmActiveCategory, '#0d9488');
+    item.category === cat || (cat === 'conjunctions' && item.category === 'inverted'), tmActiveCategory, '#8b5cf6');
   const filtered = rawList.filter(item => {
     const matchCategory = tmActiveCategory === 'all' ||
       item.category === tmActiveCategory ||
@@ -29361,7 +29247,7 @@ function renderTimeMatrix() {
         <div class="tm-rule-box">${item.rule.replace(/\n/g, '<br>')}</div>
         ${item.trap ? `<div class="tm-trap-box">${item.trap}</div>` : ''}
 
-        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #0d9488; font-weight: 700; margin-top: 4px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #8b5cf6; font-weight: 700; margin-top: 4px;">
           <span>${examplesToRender.length} Örnek Cümle</span>
           <span>${isExpanded ? '▲ Kapat' : '▼ Örnekleri İncele'}</span>
         </div>
@@ -29370,7 +29256,7 @@ function renderTimeMatrix() {
           <div class="tm-examples-accordion" style="display: flex; flex-direction: column; gap: 6px; margin-top: 10px;">
             ${examplesToRender.map(ex => `
               <div class="tm-example-item" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card);">
-                ${ex.tense ? `<div style="font-size: 0.72rem; font-weight: 800; color: #0d9488; background: rgba(13, 148, 136, 0.1); padding: 2px 8px; border-radius: 6px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(13, 148, 136, 0.3);">🔹 ${ex.tense}</div>` : ''}
+                ${ex.tense ? `<div style="font-size: 0.72rem; font-weight: 800; color: #8b5cf6; background: rgba(139, 92, 246, 0.1); padding: 2px 8px; border-radius: 6px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(139, 92, 246, 0.3);">🔹 ${ex.tense}</div>` : ''}
                 <div class="tm-example-en" style="font-weight: 700; color: var(--text-primary); font-size: 0.88rem;">🇬🇧 ${highlightTmText(ex.en, item.category)}</div>
                 <div class="tm-example-tr" style="font-size: 0.82rem; color: var(--text-secondary); font-style: italic;">🇹🇷 ${highlightTmText(ex.tr, item.category)}</div>
               </div>
