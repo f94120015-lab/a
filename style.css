@@ -322,10 +322,21 @@ body {
   }
 }
 
-html.no-scroll,
-body.no-scroll {
+html.no-scroll {
   overflow: hidden !important;
   height: 100% !important;
+  touch-action: none !important;
+}
+
+/* DEV NOTE: body.no-scroll'da height:100% YOK. updateBodyScrollLock() gövdeyi
+   position:fixed + top:-<scrollY>px'e alıyor; buna height:100% eklenince gövde
+   kutusu tek ekran boyuna kilitleniyor ve negatif top ile birlikte tüm sayfa
+   içeriği görüş alanının dışına taşıyordu. Sonuç: aşağı kaydırılmış konumdan
+   açılan ders popover'ının / soru önizleme modalının arkasında bulanıklaştırılacak
+   içerik kalmıyor, düz gri bir zemin görünüyordu (kullanıcı geri bildirimi).
+   overflow:hidden + JS'in fixed konumu kaydırmayı kilitlemeye yetiyor. */
+body.no-scroll {
+  overflow: hidden !important;
   touch-action: none !important;
 }
 
@@ -1748,7 +1759,7 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 500;
+  z-index: 1002;
   width: 95%;
   max-width: 440px;
   max-height: 85vh;
@@ -1783,10 +1794,17 @@ input {
 .lesson-popover-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  z-index: 499;
+  /* DEV NOTE: Örtü rgba(0,0,0,0.55) iken blur'un bir anlamı kalmıyor, arka
+     plan düz griye dönüyor ve popover boşlukta duruyormuş gibi görünüyordu.
+     Ders akışı arkada seçilebilir kalsın diye tint çok hafif; okunabilirliği
+     bulanıklık sağlıyor, karartma değil (kullanıcı geri bildirimi). */
+  background: rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(7px) saturate(0.95);
+  -webkit-backdrop-filter: blur(7px) saturate(0.95);
+  /* Sol menü ve üst bar z-index:1000 taşıyor; örtü 499'dayken hem bulanıklığın
+     dışında kalıyor hem de dar ekranlarda (~900px) menü popover'ın üstüne
+     binip başlığı kesiyordu. Mobil sınav ekranı (1200) üstte kalmalı. */
+  z-index: 1001;
   animation: fadeIn 0.2s ease;
 }
 
@@ -8076,13 +8094,12 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  /* DEV NOTE: Daha önce rgba(15,23,42,0.4) — ders popover'ının arkasındaki
-     .lesson-popover-backdrop'tan (rgba(0,0,0,0.55)) belirgin biçimde daha
-     soluktu. Lisans/deneme sınırını aşan bir derse tıklanınca açılan bu
-     modal (showGuestBlockModal) arkasında uygulama neredeyse hiç
-     kararmıyormuş gibi görünüyordu. Artık aynı koyulukta (kullanıcı
-     geri bildirimi). */
-  background: rgba(0, 0, 0, 0.55);
+  /* DEV NOTE: .lesson-popover-backdrop ile aynı reçete — karartma yerine
+     bulanıklık. Arkadaki içerik seçilebilir kalmalı; koyu örtü pencereyi
+     boşlukta duruyormuş gibi gösteriyordu (kullanıcı geri bildirimi). */
+  background: rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(7px) saturate(0.95);
+  -webkit-backdrop-filter: blur(7px) saturate(0.95);
   display: flex;
   align-items: center;
   justify-content: center;

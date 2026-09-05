@@ -4417,6 +4417,7 @@ async function saveUser(username, password) {
 }
 
 let _scrollLockY = 0;
+let _scrollLockKind = null; // 'modal' (mevcut kaydırma konumunda donar) | 'screen' (her zaman en üstten başlar)
 
 function updateBodyScrollLock() {
   const homeScreen = document.getElementById('home-screen');
@@ -4429,10 +4430,19 @@ function updateBodyScrollLock() {
 
   const shouldLock = (homeScreenActive && hasModal) || quizActive || placementActive;
   const isLocked = document.body.classList.contains('no-scroll');
+  // Ders popover'ı derste kalındığı yerde donmalı, ama quiz/placement ekranı
+  // her zaman en üstten başlar (showScreen zaten oraya kaydırmaya çalışır).
+  // İkisi de "kilitli" sayıldığından popover'dan quiz'e geçerken kilit hiç
+  // açılmıyordu; popover'ın dondurduğu eski (derin) kaydırma konumu quiz
+  // ekranına da yapışık kalıp sayfayı görünmez kılıyordu (kullanıcı geri
+  // bildirimi: bir alıştırmaya tıklayınca bembeyaz sayfa açılıyordu).
+  const kind = quizActive || placementActive ? 'screen' : (shouldLock ? 'modal' : null);
+  const kindChangedToScreen = kind === 'screen' && _scrollLockKind !== 'screen';
 
-  if (shouldLock && !isLocked) {
+  if (shouldLock && (!isLocked || kindChangedToScreen)) {
     // Save current scroll position before locking
-    _scrollLockY = window.scrollY;
+    _scrollLockY = kind === 'screen' ? 0 : window.scrollY;
+    _scrollLockKind = kind;
     document.body.classList.add('no-scroll');
     document.documentElement.classList.add('no-scroll');
     // Pin body in place with negative top to prevent iOS bounce
@@ -4441,6 +4451,7 @@ function updateBodyScrollLock() {
     document.body.style.width = '100%';
     document.body.style.left = '0';
   } else if (!shouldLock && isLocked) {
+    _scrollLockKind = null;
     document.body.classList.remove('no-scroll');
     document.documentElement.classList.remove('no-scroll');
     document.body.style.position = '';
@@ -4452,6 +4463,20 @@ function updateBodyScrollLock() {
   }
 }
 
+// Bir ders popover'ı açıkken body zaten position:fixed'e alınmış oluyor
+// (bkz. updateBodyScrollLock); bu durumda window.scrollY hep ~0 döner,
+// gerçek konum body.style.top'ta donmuş haldedir. Popover üstünden bir
+// alıştırma başlatılınca showScreen bu yanlış 0 değerini "eve dönüş
+// konumu" diye kaydediyor, quiz'den çıkınca kullanıcı listenin başına
+// atılıyordu (kullanıcı geri bildirimindeki asıl hatayla aynı kök neden).
+function getEffectiveScrollY() {
+  if (document.body.style.position === 'fixed') {
+    const top = parseFloat(document.body.style.top || '0');
+    return Math.abs(top) || 0;
+  }
+  return window.scrollY;
+}
+
 function showScreen(screenId) {
   if (autoAdvanceTimeout) {
     clearTimeout(autoAdvanceTimeout);
@@ -4461,8 +4486,8 @@ function showScreen(screenId) {
   // If leaving home-screen, save scroll position
   const activeScreen = document.querySelector('.app-screen.active');
   if (activeScreen && activeScreen.id === 'home-screen' && activeScreen.id !== screenId) {
-    homeScreenScrollY = window.scrollY;
-    localStorage.setItem('amok_last_scroll_y', window.scrollY);
+    homeScreenScrollY = getEffectiveScrollY();
+    localStorage.setItem('amok_last_scroll_y', homeScreenScrollY);
   }
 
   localStorage.setItem('amok_last_screen', screenId);
