@@ -14770,6 +14770,7 @@ function renderConnectorDrillTab() {
       drillActiveSection = btn.dataset.drillSection;
       try { localStorage.setItem('amok_drill_section', drillActiveSection); } catch (e) {}
       renderConnectorDrillTab();
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       closeMobileSidebar();
     };
   });
@@ -15597,6 +15598,13 @@ function switchTab(tabId) {
   document.querySelectorAll('.tab-content').forEach(content => {
     content.classList.toggle('active', content.id === `tab-content-${tabId}`);
   });
+
+  // Hangi sekmeye geçilirse geçilsin sayfa baştan başlasın — önceki sekmenin
+  // kaydırma konumuyla "ortada" açılmasın. behavior:'instant' çünkü
+  // html{scroll-behavior:smooth} yüzünden düz scrollTo yumuşak kayardı ve
+  // aradaki içerik göz önünden geçerdi. (Açılıştaki konum geri yükleme
+  // showScreen() içinde bundan sonra çalıştığı için etkilenmez.)
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 
   // Kilitli sekmede init çalıştırılmaz; kilit kartı içeriğin yerini alır.
   if (applyTabLock(tabId)) return;
@@ -17755,12 +17763,14 @@ function initEventListeners() {
   // Tema
   document.getElementById('btn-theme').addEventListener('click', toggleTheme);
 
-  // Kullanıcı menüsü / Profil Butonu (Sağ üst avatar)
+  // Kullanıcı menüsü / Profil Butonu (Sağ üst avatar). En son hangi alt sekmede
+  // kalındığından bağımsız olarak her zaman "Profilim" (info) ile açılır.
   const userMenuBtn = document.getElementById('btn-user-menu');
   if (userMenuBtn) {
     userMenuBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       switchTab('profile');
+      switchProfileHub('info');
     });
   }
 
@@ -17771,6 +17781,7 @@ function initEventListeners() {
       const userDropdown = document.getElementById('user-dropdown');
       if (userDropdown) userDropdown.classList.remove('open');
       switchTab('profile');
+      switchProfileHub('info');
     });
   }
 
