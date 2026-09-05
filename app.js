@@ -8240,7 +8240,13 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
   if (pathContainer) {
     pathContainer.appendChild(popover);
     updateBodyScrollLock();
-    
+
+    // Yatay hizalama ve aşağıdaki scrollIntoView bu ölçüye dayanıyor; tanımı
+    // düşmüştü (revert 59047ed) ve rAF geri çağrısı "containerRect is not defined"
+    // ile çöküyordu — bu yüzden ekran altında kalan ders popover'ı görünür yere
+    // kaydırılamıyordu.
+    const containerRect = pathContainer.getBoundingClientRect();
+
     // Dynamically adjust popover position to fit within the visible viewport bounds
     requestAnimationFrame(() => {
       const popoverRect = popover.getBoundingClientRect();
@@ -8286,13 +8292,24 @@ function togglePopover(button, lessonId, unitId, pctX, pxY) {
       const arrowPct = Math.max(5, Math.min(95, (X_btn_rel_pop / W_p) * 100)); // Clamp between 5% and 95% to keep arrow within popover bounds
       popover.style.setProperty('--arrow-left', `${arrowPct}%`);
 
-      // Auto-scroll to show the popover
-      const rect = popover.getBoundingClientRect();
-      if (rect.height > window.innerHeight) {
-        popover.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        popover.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      // Ders penceresini görünür alana getir. Bir kare daha bekleriz: mobilde
+      // `width: calc(100vw - 32px)` yeniden akışı popover yüksekliğini büyütüyor,
+      // ölçüyü ondan sonra almak gerekiyor. scrollIntoView() yerine hedef scroll
+      // konumu elle hesaplanıyor — iç içe/absolute öğede scrollIntoView bazen
+      // ters yöne kayıyordu.
+      requestAnimationFrame(() => {
+        const rect = popover.getBoundingClientRect();
+        const margin = 12;
+        const fitsFully = rect.top >= margin && rect.bottom <= window.innerHeight - margin;
+        if (fitsFully) return;
+        let targetTop;
+        if (rect.height > window.innerHeight - 2 * margin) {
+          targetTop = window.scrollY + rect.top - margin;                       // üstten hizala
+        } else {
+          targetTop = window.scrollY + rect.top - (window.innerHeight - rect.height) / 2; // ortala
+        }
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+      });
     });
   }
 }
