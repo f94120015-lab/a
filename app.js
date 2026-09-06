@@ -29387,6 +29387,121 @@ function highlightTmText(text, category) {
   return highlighted;
 }
 
+// ── Zaman Matrisi kural kutusu ──────────────────────────────────────────────
+// item.rule birkaç ayrı biçimde gelir:
+//   "📐 KURAL 1: conn + V1 (Present) ➔ Ana Cümle: WILL HAVE V3"  (koşullu, iki yol)
+//   "📐 UYUM: conn + V1, Will V1 || conn + V2, V2"               (koşullu, virgüllü)
+//   "📐 FORMÜL: A + B + C (not)"                                  (yapı şablonu)
+//   "📐 KURAL: Bu belirleyiciler ... gerektirir."                (düz cümle)
+// Eski kutu hepsini <br>'li tek blok basıyordu: yan cümle ile ana cümle sınırı
+// okunmuyordu. Yeni kutu koşullu satırları "gördüğün ➔ yazacağın" şeridine,
+// yapı şablonlarını jetonlu tek satıra, düz cümleleri kenar çizgili nota çevirir.
+function tmRuleTrack(s) {
+  if (/\(\s*present\s*\)|\bGelecek\b/i.test(s)) return 'present';
+  if (/\(\s*past\s*\)|\bGeçmiş\b/i.test(s)) return 'past';
+  if (/\+\s*V1\b/i.test(s)) return 'present';
+  if (/\+\s*V2\b|\bHad\s+V3\b/i.test(s)) return 'past';
+  return '';
+}
+
+function tmTopLevelCommaIndex(s) {
+  let depth = 0;
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i];
+    if (c === '(' || c === '[') depth++;
+    else if (c === ')' || c === ']') depth = Math.max(0, depth - 1);
+    else if (c === ',' && depth === 0) return i;
+  }
+  return -1;
+}
+
+function tmEsc(s) {
+  return String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+}
+
+// "A + B + C (NOT)" -> jetonlar (+ isteğe bağlı kuyruk notu)
+function tmFormulaHTML(s) {
+  let note = '';
+  const tail = s.match(/^(.*\S)\s+\(([^()]{2,44})\)\s*$/);
+  if (tail && /\s/.test(tail[2]) && /^[A-ZÇĞİÖŞÜ0-9\s/'.\-]+$/.test(tail[2])) {
+    s = tail[1].trim(); note = tail[2].trim();
+  }
+  const toks = s.split(/\s*\+\s*/).filter(Boolean).map(t => {
+    let cls = 'tmr-tok';
+    if (/^Ana C[üu]mle/i.test(t)) cls += ' tmr-tok--main';
+    else if (/^Yan C[üu]mle/i.test(t)) cls += ' tmr-tok--sub';
+    return `<span class="${cls}">${tmEsc(t)}</span>`;
+  }).join('<span class="tmr-plus">+</span>');
+  return `<div class="tmr-formula">${toks}${note ? `<span class="tmr-note">${tmEsc(note)}</span>` : ''}</div>`;
+}
+
+function tmParseRuleRow(s) {
+  s = s.replace(/^📐\s*/, '')
+       .replace(/^(KURAL(\s*\d+)?|UYUM|DEVR[İI]K\s+KURAL|FORM[ÜU]L|NOKTALAMA)\s*:?\s*/i, '')
+       .trim();
+  if (!s) return null;
+  const proseLike = t => /kısalt|demektir|gerekir|\balır\b|\bolur\b|belirleyici/i.test(t) ||
+    t.split(/\s+/).length > 6;
+
+  // Ok biçimi: "sol ➔ sağ"
+  let m = s.match(/^(.+?)\s*➔\s*(.+)$/);
+  if (m) {
+    let left = m[1].trim();
+    let right = m[2].trim().replace(/^Ana C[üu]mle\s*:?\s*/i, '').replace(/^\((.+)\)$/, '$1').trim();
+    if (proseLike(right)) return { kind: 'prose', text: s };
+    const track = tmRuleTrack(left) || tmRuleTrack(s);
+    left = left.replace(/\s*\(\s*(present|past)\s*\)\s*$/i, '').trim();
+    return { kind: 'ray', given: left, answer: right, track };
+  }
+
+  // Virgüllü koşul: "conn + Vx (...), sonuç"
+  const ci = tmTopLevelCommaIndex(s);
+  if (ci > 0) {
+    const left0 = s.slice(0, ci).trim();
+    let right = s.slice(ci + 1).trim()
+      .replace(/^Ana C[üu]mle\s*:?\s*/i, '').replace(/^\((.+)\)$/, '$1').trim();
+    const leftHasVerb = /\+\s*(V1|V2|V3|Had|Have|Has|Continuous|V-ing)\b/i.test(left0) ||
+      /\((present|past)\)/i.test(left0);
+    const rightIsAns = right.split(/\s+/).length <= 6 &&
+      /^(Will|Would|Had|Have|Has|V1|V2|V3|Was|Were|Present|Past|am\/is\/are|is\/are)\b/i.test(right);
+    if (leftHasVerb && rightIsAns) {
+      const left = left0.replace(/\s*\(\s*(present|past)\s*\)\s*$/i, '').trim();
+      return { kind: 'ray', given: left, answer: right, track: tmRuleTrack(left0) };
+    }
+    return { kind: 'formula', html: tmFormulaHTML(s) };
+  }
+
+  // Düz cümle
+  if (!/\+/.test(s) && /\s/.test(s) && /[a-zçğıöşü]/.test(s)) return { kind: 'prose', text: s };
+  return { kind: 'formula', html: tmFormulaHTML(s) };
+}
+
+function renderTmRuleBox(rule) {
+  const raw = String(rule || '').replace(/->/g, '➔').trim();
+  if (!raw) return '';
+  const rows = raw.split(/\n+|\s*\|\|\s*/).map(x => x.trim()).filter(Boolean)
+    .map(tmParseRuleRow).filter(Boolean);
+  if (!rows.length) return `<div class="tmr"><div class="tmr-prose">${tmEsc(raw)}</div></div>`;
+
+  const parts = [];
+  rows.forEach(r => {
+    if (r.kind === 'ray') {
+      parts.push(
+        `<div class="tmr-row">${
+          r.track ? `<span class="tmr-track ${r.track}">${r.track}</span>` : ''
+        }<span class="tmr-given">${tmEsc(r.given)}</span>` +
+        `<span class="tmr-pair"><span class="tmr-arrow" aria-hidden="true">→</span>` +
+        `<span class="tmr-ans">${tmEsc(r.answer)}</span></span></div>`
+      );
+    } else if (r.kind === 'prose') {
+      parts.push(`<div class="tmr-prose">${tmEsc(r.text)}</div>`);
+    } else {
+      parts.push(r.html);
+    }
+  });
+  return `<div class="tmr">${parts.join('')}</div>`;
+}
+
 function renderTimeMatrix() {
   const gridEl = document.getElementById('tm-matrix-grid');
   if (!gridEl) return;
@@ -29446,7 +29561,7 @@ function renderTimeMatrix() {
         </div>
 
         <p class="tm-meaning-text">👉 ${hlMeaning}</p>
-        <div class="tm-rule-box">${item.rule.replace(/\n/g, '<br>')}</div>
+        <div class="tm-rule-box">${renderTmRuleBox(item.rule)}</div>
         ${item.trap ? `<div class="tm-trap-box">${item.trap}</div>` : ''}
 
         <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #8b5cf6; font-weight: 700; margin-top: 4px;">
