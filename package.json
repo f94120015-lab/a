@@ -16,7 +16,9 @@
   },
   "devDependencies": {
     "@capacitor/cli": "^6.0.0",
-    "terser": "^5.31.0"
+    "terser": "^5.31.0",
+    "typescript": "^7.0.2",
+    "typescript-language-server": "^6.0.0"
   },
   "keywords": [
     "english",
