@@ -152,6 +152,18 @@
             </span>
             <span class="nav-tab-label">Zaman & Tense</span>
           </button>
+          <!-- "Zaman & Tense" mod alt sekmeleri; sol menüde her zaman görünür.
+               Tıklama initSidebarSubtabs()'te bağlanır (app.js). -->
+          <div class="nav-subtabs" id="time-matrix-subtabs">
+            <button type="button" class="nav-subtab active" data-tm-mode="time_markers">
+              <span class="nav-subtab-icon">⏱️</span>
+              <span class="nav-subtab-label">Zaman Bağlaçları & Edatları</span>
+            </button>
+            <button type="button" class="nav-subtab" data-tm-mode="tense_harmony">
+              <span class="nav-subtab-icon">📐</span>
+              <span class="nav-subtab-label">Tense Uyum Kuralları</span>
+            </button>
+          </div>
           <button class="nav-tab" data-tab="transitions-matrix">
             <span class="nav-tab-icon nav-anim-transitions-matrix">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -161,6 +173,23 @@
             </span>
             <span class="nav-tab-label">Bağlaçlar & Geçişler</span>
           </button>
+          <!-- "Bağlaçlar & Geçişler" mod alt sekmeleri; sol menüde her zaman
+               görünür. Tıklama initSidebarSubtabs()'te bağlanır (app.js).
+               "Alıştırma" alt sekmesi Bağlaç Robotu drill'ini açar. -->
+          <div class="nav-subtabs" id="transitions-matrix-subtabs">
+            <button type="button" class="nav-subtab active" data-trm-mode="sentence_connectors">
+              <span class="nav-subtab-icon">⚡</span>
+              <span class="nav-subtab-label">Cümle Geçiş Zarfları</span>
+            </button>
+            <button type="button" class="nav-subtab" data-trm-mode="subordinate_preps">
+              <span class="nav-subtab-icon">📐</span>
+              <span class="nav-subtab-label">Yan Cümle & Edat Bağlaçları</span>
+            </button>
+            <button type="button" class="nav-subtab" data-trm-mode="drill">
+              <span class="nav-subtab-icon">🎯</span>
+              <span class="nav-subtab-label">Alıştırma (Refleks Oyunu)</span>
+            </button>
+          </div>
 
           <div class="sidebar-section-label">Robotlar</div>
           <!-- GİZLENDİ (2026-09-05): "Yüklem Robotu" ve "Yapı Robotu" sekmeleri
@@ -196,15 +225,6 @@
             <span class="nav-tab-label">Yapı Robotu</span>
           </button>
           -->
-          <button class="nav-tab" data-tab="exam">
-            <span class="nav-tab-icon">
-              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
-                <rect x="6" y="4" width="20" height="24" rx="3" fill="#10b981" opacity="0.85" stroke="#34d399" stroke-width="2"/>
-                <path d="M11 11H21M11 16H21M11 21H17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </span>
-            <span class="nav-tab-label">Deneme Sınavı</span>
-          </button>
           <button class="nav-tab" data-tab="connector-drill">
             <span class="nav-tab-icon">
               <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
@@ -216,8 +236,8 @@
             </span>
             <span class="nav-tab-label">Yapısal Kurallar</span>
           </button>
-          <!-- "Yapısal Kurallar"a tıklanınca açılan iki alt sekme. Görünürlüğü
-               switchTab() içinde .open sınıfıyla kontrol edilir. -->
+          <!-- "Yapısal Kurallar" bölüm alt sekmeleri; sol menüde her zaman
+               görünür. Tıklama initSidebarSubtabs()'te bağlanır (app.js). -->
           <div class="nav-subtabs" id="connector-drill-subtabs">
             <button type="button" class="nav-subtab active" data-drill-section="cdrill_l1">
               <span class="nav-subtab-icon">🔗</span>
@@ -228,6 +248,16 @@
               <span class="nav-subtab-label">Zaman Uyumu Kuralları</span>
             </button>
           </div>
+
+          <button class="nav-tab" data-tab="exam">
+            <span class="nav-tab-icon">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <rect x="6" y="4" width="20" height="24" rx="3" fill="#10b981" opacity="0.85" stroke="#34d399" stroke-width="2"/>
+                <path d="M11 11H21M11 16H21M11 21H17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Deneme Sınavı</span>
+          </button>
 
           <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
@@ -458,31 +488,8 @@
               <p class="desc-text">
                 Akademik İngilizcedeki zaman bağlaçları, tense uyum belirleyicileri, devrik kalıplar ve zaman kısaltmalarının canlı rehberi.
               </p>
-
-              <!-- Yön / Mod Değiştirme Butonları -->
-              <div class="tm-direction-toggle-wrap flex-gap-8">
-                <button type="button" class="tm-dir-btn active" data-mode="time_markers" id="tm-mode-markers" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #8b5cf6; background: rgba(139, 92, 246, 0.15); color: #8b5cf6; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
-                  ⏱️ ZAMAN BAĞLAÇLARI & EDATLARI (Time Markers)
-                </button>
-                <button type="button" class="tm-dir-btn segmented-btn" data-mode="tense_harmony" id="tm-mode-harmony">
-                  📐 TENSE UYUM KURALLARI & ZAMAN BELİRLEYİCİLERİ (Tense Rules)
-                </button>
-              </div>
-            </div>
-
-            <!-- Filtreleme Çipleri -->
-            <div class="tm-filter-chips flex-gap-8-wrap-mb20">
-              <button type="button" class="tm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #8b5cf6; background: #8b5cf6; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="conjunctions">⏱️ Zaman Bağlaçları (when, while, as soon as...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="anchors">⚓ Zaman Belirleyicileri (by the time, since...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="inverted">⚡ Devrik Yapılar (no sooner... than)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="prepositions">🔗 Zaman Edatları (during, prior to...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="eras">🏛️ Çağ & Dönem (at the dawn of...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="reductions">✂️ Zaman Kısaltmaları (upon V-ing, having V3...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="perfect_anchors">🔵 Perfect Belirleyicileri (for, already, yet, just...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="patterns">🔒 Zaman Kalıpları (ago, this is the first time...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="unreal_past">💭 Gerçek Dışı Geçmiş (I wish, it is time...)</button>
-              <button type="button" class="tm-chip pill-toggle" data-category="subjunctive">📜 Subjunctive (suggest that, it is essential that)</button>
+              <!-- Mod seçimi sol menüye taşındı: #time-matrix-subtabs
+                   (data-tm-mode="time_markers" / "tense_harmony"). -->
             </div>
 
             <!-- Matris Kartları Grid Alanı -->
@@ -513,32 +520,9 @@
               <p class="desc-text">
                 Akademik İngilizcedeki zıtlık, ekleme, örnekleme, amaç, şart, özet ve odaklanma bağlaçlarının eksiksiz canlı kütüphanesi.
               </p>
-
-              <!-- Yön / Mod Değiştirme Butonları -->
-              <div class="trm-direction-toggle-wrap flex-gap-8">
-                <button type="button" class="trm-dir-btn active" data-mode="sentence_connectors" id="trm-mode-connectors" style="flex: 1; padding: 8px 12px; border-radius: var(--radius-md); border: 1.5px solid #10b981; background: rgba(16, 185, 129, 0.15); color: #10b981; font-weight: 800; font-family: var(--font-heading); font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.2s;">
-                  ⚡ CÜMLE GEÇİŞ ZARFLARI (however, furthermore...)
-                </button>
-                <button type="button" class="trm-dir-btn segmented-btn" data-mode="subordinate_preps" id="trm-mode-subordinates">
-                  📐 YAN CÜMLE & EDAT BAĞLAÇLARI (although, despite...)
-                </button>
-                <button type="button" class="trm-dir-btn segmented-btn" data-mode="drill" id="trm-mode-drill">
-                  🎯 ALIŞTIRMA (G1-G4 Refleks Oyunu)
-                </button>
-              </div>
-            </div>
-
-            <!-- Filtreleme Çipleri -->
-            <div class="trm-filter-chips flex-gap-8-wrap-mb20" id="trm-filter-chips">
-              <button type="button" class="trm-chip active" data-category="all" style="padding: 8px 16px; border-radius: 20px; border: 1px solid #10b981; background: #10b981; color: white; font-weight: 700; font-size: 0.85rem; cursor: pointer;">🧪 Tümü (All)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="contrast">⚡ Zıtlık & Çelişki (however, although...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="addition">➕ Ekleme & Paralellik (furthermore, likewise...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="exemplification">💡 Örnekleme & Açıklama (for instance, namely...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="purpose_condition">🎯 Amaç & Şart (so that, provided that...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="summary_emphasis">📌 Özet & Vurgu (in brief, indeed...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="focus_exception">🔍 Odaklanma & İstisna (as for, apart from...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="time_transition">⏳ Zaman Geçişleri (meanwhile, subsequently...)</button>
-              <button type="button" class="trm-chip pill-toggle" data-category="correlative">🔗 İkiz Bağlaçlar (not only... but also, either... or)</button>
+              <!-- Mod seçimi sol menüye taşındı: #transitions-matrix-subtabs
+                   (data-trm-mode="sentence_connectors" / "subordinate_preps" /
+                   "drill"). "drill" alt sekmesi Bağlaç Robotu alıştırmasını açar. -->
             </div>
 
             <!-- Matris Kartları Grid Alanı -->

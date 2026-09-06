@@ -13086,50 +13086,86 @@ nDown 0.3s ease;
 /* ── Extracted utility classes (from repeated inline styles) ── */
 .u-hidden { display: none; }
 .pill-toggle { padding: 8px 16px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--bg-card); color: var(--text-primary); font-weight: 600; font-size: 0.85rem; cursor: pointer; }
-/* Sol menüde "Yapısal Kurallar" altında açılan alt sekmeler.
-   Varsayılan gizli; switchTab() sekme aktifken .open ekler. */
-.nav-subtabs { display: none; }
-.nav-subtabs.open {
+/* Sol menüde ana sekmelerin ("Zaman & Tense", "Bağlaçlar & Geçişler",
+   "Yapısal Kurallar") altındaki alt sekmeler her zaman açık durur.
+   Ağaç görünümü: solda dikey gövde çizgisi + her maddeye yatay bağlantı;
+   küçük punto, ince font ve dolgusuz aktif durumu alt sekmeleri ana
+   sekmelerden görsel olarak ayırır (aksi halde ayrı başlık gibi okunuyor). */
+.nav-subtabs {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin: 3px 4px 8px 16px;
-  padding-left: 10px;
-  border-left: 2px solid var(--border-color);
-  animation: navSubtabsIn 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-}
-@keyframes navSubtabsIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
+  gap: 0;
+  margin: 1px 6px 10px 29px;
+  position: relative;
 }
 .nav-subtab {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 7px;
   width: 100%;
-  padding: 8px 12px;
+  padding: 5px 9px 5px 12px;
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--text-muted);
   background: none;
   border: none;
-  border-radius: 9px;
+  border-radius: 0 7px 7px 0;
   cursor: pointer;
   text-align: left;
-  transition: background 0.18s, color 0.18s, transform 0.18s;
+  transition: background 0.16s, color 0.16s, box-shadow 0.16s;
+}
+/* Ağaç çizgisi: her madde kendi dikey bölümünü çizer, son madde yalnızca
+   merkezine kadar — satır kaydıran uzun etiketlerde bile çizgi son bağlantı
+   noktasında düzgün biter. */
+.nav-subtab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 1.5px;
+  background: var(--border-color);
+}
+.nav-subtab:last-child::before { height: 50%; }
+.nav-subtab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 1.5px;
+  background: var(--border-color);
 }
 .nav-subtab:hover {
-  background: rgba(6, 182, 212, 0.09);
-  color: var(--text-primary);
-  transform: translateX(2px);
+  color: var(--text-secondary);
+  background: rgba(128, 128, 140, 0.10);
 }
 .nav-subtab.active {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.16), rgba(139, 92, 246, 0.14));
   color: var(--text-primary);
+  font-weight: 700;
 }
-.nav-subtab-icon { font-size: 1rem; line-height: 1; min-width: 18px; text-align: center; }
-.nav-subtab-label { letter-spacing: 0.01em; }
+.nav-subtab-icon {
+  font-size: 0.72rem;
+  line-height: 1;
+  min-width: 13px;
+  text-align: center;
+  opacity: 0.5;
+  filter: grayscale(0.3);
+}
+.nav-subtab.active .nav-subtab-icon { opacity: 0.85; filter: none; }
+.nav-subtab-label { letter-spacing: 0; }
+/* Aktif alt sekme, ait olduğu grubun rengiyle ince bir sol çubuk alır; hover
+   yine grup renginin çok açık tonu. (Dolgulu "pill" YOK — ana sekme gibi
+   görünmesin.) */
+#time-matrix-subtabs .nav-subtab:hover { background: rgba(139, 92, 246, 0.10); }
+#time-matrix-subtabs .nav-subtab.active { box-shadow: inset 2.5px 0 0 #8b5cf6; }
+#transitions-matrix-subtabs .nav-subtab:hover { background: rgba(16, 185, 129, 0.10); }
+#transitions-matrix-subtabs .nav-subtab.active { box-shadow: inset 2.5px 0 0 #10b981; }
+#connector-drill-subtabs .nav-subtab:hover { background: rgba(6, 182, 212, 0.10); }
+#connector-drill-subtabs .nav-subtab.active { box-shadow: inset 2.5px 0 0 #06b6d4; }
 .text-label-xs { font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); }
 .flex-col-4 { display: flex; flex-direction: column; gap: 4px; }
 .text-label { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); }

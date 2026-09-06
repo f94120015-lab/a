@@ -14761,18 +14761,10 @@ function renderConnectorDrillTab() {
   const listEl = document.getElementById('connector-drill-list');
   if (!listEl) return;
 
-  // Alt sekmeler artık sol menüde (#connector-drill-subtabs); aktif olanı işaretle
-  // ve tıklamayı bağla.
-  document.querySelectorAll('.nav-subtab[data-drill-section]').forEach(btn => {
+  // Alt sekmeler sol menüde (#connector-drill-subtabs) her zaman görünür; tıklama
+  // initSidebarSubtabs()'te bağlanır. Burada yalnızca aktif olanı işaretliyoruz.
+  document.querySelectorAll('#connector-drill-subtabs .nav-subtab[data-drill-section]').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.drillSection === drillActiveSection);
-    btn.onclick = () => {
-      if (drillActiveSection === btn.dataset.drillSection) return;
-      drillActiveSection = btn.dataset.drillSection;
-      try { localStorage.setItem('amok_drill_section', drillActiveSection); } catch (e) {}
-      renderConnectorDrillTab();
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      closeMobileSidebar();
-    };
   });
 
   const sec = CONNECTOR_DRILL_SECTIONS.find(x => x.lessonId === drillActiveSection)
@@ -15544,9 +15536,67 @@ function switchProfileHub(hubId) {
   }
 }
 
+// Sol menüde ana sekmelerin altındaki alt sekmeler her zaman görünür. Tıklama
+// burada bir kez bağlanır: gerekirse önce ilgili ana sekmeye geçilir, sonra
+// seçilen mod/bölüm uygulanır. (Aktif işareti ilgili sekmenin render'ında.)
+function initSidebarSubtabs() {
+  // "Zaman & Tense" — matris modu alt sekmeleri
+  document.querySelectorAll('#time-matrix-subtabs .nav-subtab[data-tm-mode]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.dataset.tmMode;
+      const onTab = document.getElementById('tab-content-time-matrix')?.classList.contains('active');
+      if (!(onTab && tmActiveMode === mode)) {
+        tmActiveMode = mode;
+        tmExpandedCardIndex = null;
+        switchTab('time-matrix');
+      }
+      closeMobileSidebar();
+    });
+  });
+
+  // "Bağlaçlar & Geçişler" — matris modları + "Alıştırma" (Bağlaç Robotu)
+  document.querySelectorAll('#transitions-matrix-subtabs .nav-subtab[data-trm-mode]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mode = btn.dataset.trmMode;
+      const onTab = document.getElementById('tab-content-transitions-matrix')?.classList.contains('active');
+      const drillShowing = document.getElementById('tab-content-ezber-robotu')?.style.display === 'block';
+      const sameView = onTab && (mode === 'drill' ? drillShowing
+        : (!drillShowing && trmActiveMode === mode));
+      if (!sameView) {
+        trmPendingMode = mode;
+        if (onTab) {
+          initTransitionsMatrixTab();
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        } else {
+          switchTab('transitions-matrix');
+        }
+      }
+      closeMobileSidebar();
+    });
+  });
+
+  // "Yapısal Kurallar" — bağlaç / zaman uyumu bölüm alt sekmeleri
+  document.querySelectorAll('#connector-drill-subtabs .nav-subtab[data-drill-section]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const section = btn.dataset.drillSection;
+      const onTab = document.getElementById('tab-content-connector-drill')?.classList.contains('active');
+      if (onTab && drillActiveSection === section) { closeMobileSidebar(); return; }
+      drillActiveSection = section;
+      try { localStorage.setItem('amok_drill_section', drillActiveSection); } catch (e) {}
+      if (onTab) {
+        renderConnectorDrillTab();
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      } else {
+        switchTab('connector-drill');
+      }
+      closeMobileSidebar();
+    });
+  });
+}
+
 function switchTab(tabId) {
   if (!tabId) return;
-  
+
   // Redirect leaderboard/store to profile hub
   if (tabId === 'leaderboard') {
     switchTab('profile');
@@ -15575,11 +15625,9 @@ function switchTab(tabId) {
     }
   }
 
-  // "Yapısal Kurallar" alt sekmeleri yalnızca o sekme aktifken sol menüde açılır.
-  const drillSubtabs = document.getElementById('connector-drill-subtabs');
-  if (drillSubtabs) {
-    drillSubtabs.classList.toggle('open', tabId === 'connector-drill');
-  }
+  // "Zaman & Tense", "Bağlaçlar & Geçişler" ve "Yapısal Kurallar" alt sekmeleri
+  // sol menüde her zaman görünür (initSidebarSubtabs). Aktif alt sekme işareti
+  // ilgili sekmenin init/render fonksiyonunda güncellenir.
   if (typeof updateAdminBadgeCount === 'function') {
     updateAdminBadgeCount();
   }
@@ -18033,6 +18081,8 @@ function initEventListeners() {
       }
     });
   });
+
+  initSidebarSubtabs();
 
   // Marka logosu: tıklanınca ana sayfaya (Dersler sekmesi) dön.
   const brandHome = document.getElementById('sidebar-brand-home');
@@ -29279,24 +29329,11 @@ let tmSearchQuery = '';
 let tmExpandedCardIndex = null;
 
 function initTimeMatrixTab() {
-  const modeBtns = document.querySelectorAll('.tm-dir-btn');
-  modeBtns.forEach(btn => {
-    btn.onclick = () => {
-      modeBtns.forEach(b => {
-        b.classList.remove('active');
-        b.style.borderColor = 'var(--border-color)';
-        b.style.background = 'var(--bg-card)';
-        b.style.color = 'var(--text-secondary)';
-      });
-      btn.classList.add('active');
-      btn.style.borderColor = '#8b5cf6';
-      btn.style.background = 'rgba(139, 92, 246, 0.15)';
-      btn.style.color = '#8b5cf6';
-
-      tmActiveMode = btn.dataset.mode;
-      tmExpandedCardIndex = null;
-      renderTimeMatrix();
-    };
+  // Mod seçimi sol menüde "Zaman & Tense" altındaki alt sekmelerde
+  // (#time-matrix-subtabs); tıklama initSidebarSubtabs()'te bağlanır. Burada
+  // yalnızca geçerli moda göre aktif alt sekmeyi işaretliyoruz.
+  document.querySelectorAll('#time-matrix-subtabs .nav-subtab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tmMode === tmActiveMode);
   });
 
   const filterChips = document.querySelectorAll('.tm-chip');
@@ -30111,6 +30148,9 @@ let trmActiveMode = 'sentence_connectors';
 let trmActiveCategory = 'all';
 let trmSearchQuery = '';
 let trmExpandedCardIndex = null;
+// Bir alt sekmeden "Bağlaçlar & Geçişler" sekmesine geçilirken hedef mod burada
+// taşınır; initTransitionsMatrixTab() okuyup temizler. ('drill' dahil.)
+let trmPendingMode = null;
 
 function updateTrmChipSubtitles(mode) {
   const chipLabelsMap = {
@@ -30148,77 +30188,52 @@ function updateTrmChipSubtitles(mode) {
   });
 }
 
+// "Bağlaçlar & Geçişler" alt sekmelerinden biri uygulanır. Matris modları
+// (sentence_connectors / subordinate_preps) trmActiveMode'u günceller; "drill"
+// geçici bir görünümdür (Bağlaç Robotu) ve trmActiveMode'u değiştirmez.
+function applyTransitionsMode(mode) {
+  const isDrill = mode === 'drill';
+  // Inline display kullanılıyor: .u-hidden, .grid-300 / .flex-* gibi aynı
+  // özgüllükte ve stylesheet'te daha sonra gelen kurallara karşı kaybeder.
+  const drillPanel = document.getElementById('tab-content-ezber-robotu');
+  const matrixGrid = document.getElementById('trm-matrix-grid');
+  const chipRow = document.getElementById('trm-filter-chips');
+  const searchWrap = document.querySelector('.trm-search-wrap');
+  if (matrixGrid) matrixGrid.style.display = isDrill ? 'none' : '';
+  if (chipRow) chipRow.style.display = isDrill ? 'none' : '';
+  if (searchWrap) searchWrap.style.display = isDrill ? 'none' : '';
+  if (drillPanel) drillPanel.style.display = isDrill ? 'block' : 'none';
+
+  document.querySelectorAll('#transitions-matrix-subtabs .nav-subtab').forEach(b =>
+    b.classList.toggle('active', b.dataset.trmMode === mode));
+
+  if (isDrill) {
+    loadScriptOnce('ezber-robotu.js').then(() => {
+      if (typeof initEzberRobotu === 'function') initEzberRobotu();
+    }).catch(err => {
+      console.error(err);
+      showToast('Ezber Robotu yüklenemedi, lütfen tekrar deneyin.', 'error');
+    });
+    return;
+  }
+
+  trmActiveMode = mode;
+  trmActiveCategory = 'all';
+  document.querySelectorAll('.trm-chip').forEach(c => {
+    const on = c.dataset.category === 'all';
+    c.classList.toggle('active', on);
+    c.style.background = on ? '#10b981' : 'var(--bg-card)';
+    c.style.color = on ? 'white' : 'var(--text-primary)';
+    c.style.borderColor = on ? '#10b981' : 'var(--border-color)';
+  });
+  updateTrmChipSubtitles(trmActiveMode);
+  trmExpandedCardIndex = null;
+  renderTransitionsMatrix();
+}
+
 function initTransitionsMatrixTab() {
-  // Sekmeye her girişte kılavuz moduna dön: kullanıcı alıştırma modunda
-  // ayrılmışsa panel açık, matris gizli kalmasın.
-  const drillPanelInit = document.getElementById('tab-content-ezber-robotu');
-  if (drillPanelInit) drillPanelInit.style.display = 'none';
-  ['trm-matrix-grid', 'trm-filter-chips'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = '';
-  });
-  const searchWrapInit = document.querySelector('.trm-search-wrap');
-  if (searchWrapInit) searchWrapInit.style.display = '';
-
-  const modeBtns = document.querySelectorAll('.trm-dir-btn');
-  modeBtns.forEach(btn => {
-    btn.onclick = () => {
-      modeBtns.forEach(b => {
-        b.classList.remove('active');
-        b.style.borderColor = 'var(--border-color)';
-        b.style.background = 'var(--bg-card)';
-        b.style.color = 'var(--text-secondary)';
-      });
-      btn.classList.add('active');
-      btn.style.borderColor = '#10b981';
-      btn.style.background = 'rgba(16, 185, 129, 0.15)';
-      btn.style.color = '#10b981';
-
-      // "Alıştırma" modu matris değil, Bağlaç Robotu drill'ini gösterir.
-      // Inline display kullanılıyor: .u-hidden, .grid-300 / .flex-* gibi aynı
-      // özgüllükte ve stylesheet'te daha sonra gelen kurallara karşı kaybeder.
-      const isDrill = btn.dataset.mode === 'drill';
-      const drillPanel = document.getElementById('tab-content-ezber-robotu');
-      const matrixGrid = document.getElementById('trm-matrix-grid');
-      const chipRow = document.getElementById('trm-filter-chips');
-      const searchWrap = document.querySelector('.trm-search-wrap');
-      if (matrixGrid) matrixGrid.style.display = isDrill ? 'none' : '';
-      if (chipRow) chipRow.style.display = isDrill ? 'none' : '';
-      if (searchWrap) searchWrap.style.display = isDrill ? 'none' : '';
-      if (drillPanel) drillPanel.style.display = isDrill ? 'block' : 'none';
-      if (isDrill) {
-        loadScriptOnce('ezber-robotu.js').then(() => {
-          if (typeof initEzberRobotu === 'function') initEzberRobotu();
-        }).catch(err => {
-          console.error(err);
-          showToast('Ezber Robotu yüklenemedi, lütfen tekrar deneyin.', 'error');
-        });
-        return;
-      }
-
-      trmActiveMode = btn.dataset.mode;
-      trmActiveCategory = 'all';
-
-      const filterChips = document.querySelectorAll('.trm-chip');
-      filterChips.forEach(c => {
-        if (c.dataset.category === 'all') {
-          c.classList.add('active');
-          c.style.background = '#10b981';
-          c.style.color = 'white';
-          c.style.borderColor = '#10b981';
-        } else {
-          c.classList.remove('active');
-          c.style.background = 'var(--bg-card)';
-          c.style.color = 'var(--text-primary)';
-          c.style.borderColor = 'var(--border-color)';
-        }
-      });
-
-      updateTrmChipSubtitles(trmActiveMode);
-      trmExpandedCardIndex = null;
-      renderTransitionsMatrix();
-    };
-  });
+  // Mod seçimi sol menüde "Bağlaçlar & Geçişler" altındaki alt sekmelerde
+  // (#transitions-matrix-subtabs); tıklama initSidebarSubtabs()'te bağlanır.
 
   const filterChips = document.querySelectorAll('.trm-chip');
   filterChips.forEach(chip => {
@@ -30248,8 +30263,11 @@ function initTransitionsMatrixTab() {
     };
   }
 
-  updateTrmChipSubtitles(trmActiveMode);
-  renderTransitionsMatrix();
+  // Bir alt sekmeden gelindiyse o mod; yoksa son matris modu (kılavuz görünümü —
+  // kullanıcı "Alıştırma"da bırakılmışsa bile matrise döner).
+  const startMode = trmPendingMode || trmActiveMode;
+  trmPendingMode = null;
+  applyTransitionsMode(startMode);
 }
 
 function highlightTrmText(text, category) {
