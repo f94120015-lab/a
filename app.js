@@ -15734,6 +15734,16 @@ function showAvatarSelectorModal() {
   modal.id = 'avatar-selector-modal';
   
   const avatars = ['🦉', '🦊', '🦁', '🐨', '🦄', '🐼', '🦖', '🐝', '🚀', '🎓', '🧠', '👾', '🎨', '⚽', '🎸', '🎮'];
+  // Takım rozetleri: emoji değil, kendi çizdiğimiz sade renk rozetleri (resmi arma
+  // değil). Seçilince state.profilePhoto düz bir görsel yoluna set edilir ve tüm
+  // avatar render noktaları bunu zaten <img> olarak gösterir.
+  const crests = [
+    { src: 'assets/crests/trabzonspor.svg', name: 'Trabzonspor' },
+    { src: 'assets/crests/fenerbahce.svg',  name: 'Fenerbahçe' },
+    { src: 'assets/crests/besiktas.svg',    name: 'Beşiktaş' },
+    { src: 'assets/crests/galatasaray.svg', name: 'Galatasaray' }
+  ];
+  const crestSrcSet = new Set(crests.map(c => c.src));
   const colors = [
     { value: '#E88A9A', name: 'Gül Kurusu' },
     { value: '#B4A7D6', name: 'Lavanta' },
@@ -15745,12 +15755,16 @@ function showAvatarSelectorModal() {
     { value: '#4A5568', name: 'Kömür' }
   ];
 
+  // selectedAvatar: ya bir emoji ya da "crest:<yol>" işaretçisi.
   let selectedAvatar = state.profilePhoto && state.profilePhoto.startsWith('avatar:')
     ? safeAvatarEmoji(state.profilePhoto)
-    : '🦉';
+    : (crestSrcSet.has(state.profilePhoto) ? `crest:${state.profilePhoto}` : '🦉');
   let selectedColor = state.avatarColor || '#E88A9A';
 
   const getPreviewHTML = () => {
+    if (selectedAvatar.startsWith('crest:')) {
+      return `<div style="width: 90px; height: 90px; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow-md); border: 3px solid var(--border-color); transition: all var(--transition-normal);"><img src="${selectedAvatar.slice(6)}" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>`;
+    }
     return `<div style="background: ${selectedColor}; width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: var(--shadow-md); border: 3px solid var(--border-color); transition: all var(--transition-normal);">${selectedAvatar}</div>`;
   };
 
@@ -15774,6 +15788,11 @@ function showAvatarSelectorModal() {
             ${avatars.map(av => `
               <button class="avatar-option-btn" data-avatar="${av}" style="font-size: 1.8rem; background: var(--bg-card); border: 2px solid ${av === selectedAvatar ? 'var(--accent-primary)' : 'var(--border-color)'}; border-radius: var(--radius-md); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition-fast); outline: none;">
                 ${av}
+              </button>
+            `).join('')}
+            ${crests.map(cr => `
+              <button class="avatar-option-btn" data-avatar="crest:${cr.src}" title="${cr.name}" style="padding: 4px; background: var(--bg-card); border: 2px solid ${('crest:' + cr.src) === selectedAvatar ? 'var(--accent-primary)' : 'var(--border-color)'}; border-radius: var(--radius-md); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition-fast); outline: none; overflow: hidden;">
+                <img src="${cr.src}" alt="${cr.name}" style="width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none;">
               </button>
             `).join('')}
           </div>
@@ -15848,7 +15867,10 @@ function showAvatarSelectorModal() {
   });
 
   document.getElementById('btn-save-avatar').addEventListener('click', () => {
-    state.profilePhoto = `avatar:${selectedAvatar}`;
+    // Rozet seçildiyse düz görsel yolu (avatar: öneki yok) → her yerde <img>.
+    state.profilePhoto = selectedAvatar.startsWith('crest:')
+      ? selectedAvatar.slice(6)
+      : `avatar:${selectedAvatar}`;
     state.avatarColor = selectedColor;
     saveState(true);
     
