@@ -29269,7 +29269,7 @@ const TIME_MATRIX_DATA = {
       examples: [
         { en: "By the time rescuers arrived, the snow had covered the path.", tr: "Kurtarma ekipleri ulaşana kadar kar yolu kapatmıştı." },
         { en: "By the time the project finishes, we will have spent millions.", tr: "Proje bitene kadar milyonlarca harcamış olacağız." },
-        { en: "By the time doctor arrived, the patient had recovered.", tr: "Doktor ulaşana kadar hasta iyileşmişti." }
+        { en: "By the time the doctor arrived, the patient had recovered.", tr: "Doktor ulaşana kadar hasta iyileşmişti." }
       ]
     },
     {
@@ -29387,6 +29387,65 @@ function highlightTmText(text, category) {
   return highlighted;
 }
 
+// ── Örnek cümlede kuralı "kodla" ────────────────────────────────────────────
+// Kural kutusundaki "yazacağın" taraf (WILL HAVE V3 / HAD V3 / WOULD V1 …) örnek
+// cümlede de aynı renkle işaretlenir ki öğrenci kuralı cümlede anında görsün.
+// Kalıp kartın kendi `rule` metninden çıkarılır; yalnızca yüksek güvenli
+// (yardımcı fiil + V3 / V-ing) eşleşmeler boyanır — yan cümlenin yalın fiiline
+// dokunulmaz, çünkü onu güvenilir biçimde ayıklamak mümkün değil.
+const TM_IRREGULAR_V3 = new Set(('been made done said gone taken given come become run put set read let cut hit lost won met paid held told found sent kept left built spent cost sold known grown shown thrown drawn flown blown worn torn borne chosen frozen spoken broken stolen woken written driven ridden risen fallen eaten beaten hidden bitten forbidden forgotten mistaken overtaken undertaken withdrawn understood stood withstood got gotten sat begun drunk sung swum rung sprung brought bought caught taught fought sought thought dealt meant felt dreamt learnt burnt spelt spoilt knelt leant wept swept crept slept bred fed fled led sped shed bled wed rid wound bound ground stuck struck dug hung swung clung flung slung spun sworn overcome undergone laid mislaid burst thrust split spread cast broadcast forecast lit shone awoken arisen').split(/\s+/));
+
+function tmLooksLikeV3(w) {
+  w = (w || '').toLowerCase();
+  if (TM_IRREGULAR_V3.has(w)) return true;
+  return w.length > 3 && /(?:ed|en|wn|ne|ung|unk|ought|aught|elt|ilt|ost|ent|ept|un|it)$/.test(w);
+}
+
+function tmMarkAnswerVerbs(text, rule) {
+  if (!text || !rule) return text || '';
+  const R = ' ' + String(rule).toUpperCase().replace(/[–—]/g, '-').replace(/V-ING/g, 'VING') + ' ';
+  const has = s => R.indexOf(s) !== -1;
+  const perfect = has('HAVE/HAS') || has('PRESENT PERFECT') || /\b(?:HAVE|HAS)\b[^|]{0,24}\bV3\b/.test(R);
+  const adv = '(?:already|just|recently|only|even|never|not|almost|nearly|long|finally|also|gradually|steadily|greatly|largely|now|barely|hardly|consistently|repeatedly|significantly|substantially|sharply|slightly|widely)';
+  const tail = '(?:not |never )?(?:been )?(?:' + adv + ' )?(?:been )?[a-z]+';
+  const spans = [];
+  const scan = (pattern, checkV3) => {
+    const re = new RegExp('\\b' + pattern + '\\b', 'gi');
+    let m;
+    while ((m = re.exec(text))) {
+      if (checkV3 && !tmLooksLikeV3(m[0].split(/\s+/).pop())) continue;
+      if (/^(?:have|has)\b/i.test(m[0]) &&
+          /\b(?:will|would|could|should|might|must|may|shall)\s$/i.test(text.slice(Math.max(0, m.index - 8), m.index))) continue;
+      spans.push([m.index, m.index + m[0].length]);
+    }
+  };
+  if (has('WILL HAVE V3') || has('WILL HAVE VING')) scan('will have ' + tail, true);
+  if (has('WOULD HAVE V3')) scan('would have ' + tail, true);
+  if (has('HAD BEEN VING')) scan('had been (?:[a-z]+ly )?[a-z]+ing', false);
+  if (has('HAD V3') || perfect) scan('had ' + tail, true);
+  if (perfect) scan('(?:have|has) ' + tail, true);
+  if (has('WILL BE VING')) scan('will be (?:[a-z]+ly )?[a-z]+ing', false);
+  if (has('WILL V1') || has('WILL + V1'))
+    scan('will (?:soon |then |also |now |only |likely |probably |eventually |certainly |never )?(?!have |be |not )[a-z]+', false);
+  if (has('WOULD V1') || has('WOULD + V1'))
+    scan('would (?:soon |then |also |now |only |often |always |usually |regularly |never )?(?!have |be |not |rather )[a-z]+', false);
+  if (has('USED TO')) scan('used to (?:not |once )?[a-z]+', false);
+  if (has('WAS-WERE VING') || has('WAS/WERE VING') || has('CONTINUOUS')) scan('(?:was|were) (?:not |still |already )?[a-z]+ing', false);
+  if (has('IS/ARE VING')) scan('(?:is|are) (?:not |still |already )?[a-z]+ing', false);
+
+  if (!spans.length) return text;
+  spans.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
+  const kept = [];
+  let end = -1;
+  for (const s of spans) if (s[0] >= end) { kept.push(s); end = s[1]; }
+  let out = '', i = 0;
+  for (const [a, b] of kept) {
+    out += text.slice(i, a) + '<span class="tm-hl-verb">' + text.slice(a, b) + '</span>';
+    i = b;
+  }
+  return out + text.slice(i);
+}
+
 // ── Zaman Matrisi kural kutusu ──────────────────────────────────────────────
 // item.rule birkaç ayrı biçimde gelir:
 //   "📐 KURAL 1: conn + V1 (Present) ➔ Ana Cümle: WILL HAVE V3"  (koşullu, iki yol)
@@ -29419,23 +29478,30 @@ function tmEsc(s) {
   return String(s).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 }
 
-// "A + B + C (NOT)" -> jetonlar (+ isteğe bağlı kuyruk notu)
-function tmFormulaHTML(s) {
+// "A + B + C (not)" -> jeton şeridi (+ isteğe bağlı kuyruk notu, + vurgulu anahtar jeton)
+function tmFormulaHTML(s, term) {
   let note = '';
   const tail = s.match(/^(.*\S)\s+\(([^()]{2,44})\)\s*$/);
-  if (tail && /\s/.test(tail[2]) && /^[A-ZÇĞİÖŞÜ0-9\s/'.\-]+$/.test(tail[2])) {
+  if (tail && /\s/.test(tail[2]) && /^[\p{L}0-9\s/'.\-]+$/u.test(tail[2])) {
     s = tail[1].trim(); note = tail[2].trim();
   }
-  const toks = s.split(/\s*\+\s*/).filter(Boolean).map(t => {
+  // "yet (Perfect zarfı)" / "lately / recently" -> "yet" / "lately"
+  const key = String(term || '').toLowerCase().replace(/\s*[(/].*$/, '').trim();
+  const keyRe = key.length >= 2
+    ? new RegExp(`(^|[\\s/])${key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?=$|[\\s/?.,!])`, 'i')
+    : null;
+  const toks = s.split(/\s*\+\s*/).map(t => t.trim()).filter(Boolean).map(t => {
     let cls = 'tmr-tok';
     if (/^Ana C[üu]mle/i.test(t)) cls += ' tmr-tok--main';
     else if (/^Yan C[üu]mle/i.test(t)) cls += ' tmr-tok--sub';
+    else if (/^[ÖO]zne$/i.test(t)) cls += ' tmr-tok--subj';
+    else if (keyRe && keyRe.test(t)) cls += ' tmr-tok--key';
     return `<span class="${cls}">${tmEsc(t)}</span>`;
   }).join('<span class="tmr-plus">+</span>');
   return `<div class="tmr-formula">${toks}${note ? `<span class="tmr-note">${tmEsc(note)}</span>` : ''}</div>`;
 }
 
-function tmParseRuleRow(s) {
+function tmParseRuleRow(s, term) {
   s = s.replace(/^📐\s*/, '')
        .replace(/^(KURAL(\s*\d+)?|UYUM|DEVR[İI]K\s+KURAL|FORM[ÜU]L|NOKTALAMA)\s*:?\s*/i, '')
        .trim();
@@ -29468,19 +29534,19 @@ function tmParseRuleRow(s) {
       const left = left0.replace(/\s*\(\s*(present|past)\s*\)\s*$/i, '').trim();
       return { kind: 'ray', given: left, answer: right, track: tmRuleTrack(left0) };
     }
-    return { kind: 'formula', html: tmFormulaHTML(s) };
+    return { kind: 'formula', html: tmFormulaHTML(s, term) };
   }
 
   // Düz cümle
   if (!/\+/.test(s) && /\s/.test(s) && /[a-zçğıöşü]/.test(s)) return { kind: 'prose', text: s };
-  return { kind: 'formula', html: tmFormulaHTML(s) };
+  return { kind: 'formula', html: tmFormulaHTML(s, term) };
 }
 
-function renderTmRuleBox(rule) {
+function renderTmRuleBox(rule, term) {
   const raw = String(rule || '').replace(/->/g, '➔').trim();
   if (!raw) return '';
   const rows = raw.split(/\n+|\s*\|\|\s*/).map(x => x.trim()).filter(Boolean)
-    .map(tmParseRuleRow).filter(Boolean);
+    .map(x => tmParseRuleRow(x, term)).filter(Boolean);
   if (!rows.length) return `<div class="tmr"><div class="tmr-prose">${tmEsc(raw)}</div></div>`;
 
   const parts = [];
@@ -29561,10 +29627,10 @@ function renderTimeMatrix() {
         </div>
 
         <p class="tm-meaning-text">👉 ${hlMeaning}</p>
-        <div class="tm-rule-box">${renderTmRuleBox(item.rule)}</div>
+        <div class="tm-rule-box">${renderTmRuleBox(item.rule, item.term)}</div>
         ${item.trap ? `<div class="tm-trap-box">${item.trap}</div>` : ''}
 
-        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #8b5cf6; font-weight: 700; margin-top: 4px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: var(--text-secondary); font-weight: 700; margin-top: 4px;">
           <span>${examplesToRender.length} Örnek Cümle</span>
           <span>${isExpanded ? '▲ Kapat' : '▼ Örnekleri İncele'}</span>
         </div>
@@ -29573,8 +29639,8 @@ function renderTimeMatrix() {
           <div class="tm-examples-accordion" style="display: flex; flex-direction: column; gap: 6px; margin-top: 10px;">
             ${examplesToRender.map(ex => `
               <div class="tm-example-item" style="display: flex; flex-direction: column; gap: 4px; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-card);">
-                ${ex.tense ? `<div style="font-size: 0.72rem; font-weight: 800; color: #8b5cf6; background: rgba(139, 92, 246, 0.1); padding: 2px 8px; border-radius: 6px; width: fit-content; text-transform: uppercase; border: 1px solid rgba(139, 92, 246, 0.3);">🔹 ${ex.tense}</div>` : ''}
-                <div class="tm-example-en" style="font-weight: 700; color: var(--text-primary); font-size: 0.88rem;">🇬🇧 ${highlightTmText(ex.en, item.category)}</div>
+                ${ex.tense ? `<div style="font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); background: transparent; padding: 2px 8px 2px 0; border-radius: 6px; width: fit-content; text-transform: uppercase;">🔹 ${ex.tense}</div>` : ''}
+                <div class="tm-example-en" style="font-weight: 700; color: var(--text-primary); font-size: 0.88rem;">🇬🇧 ${highlightTmText(tmMarkAnswerVerbs(ex.en, item.rule), item.category)}</div>
                 <div class="tm-example-tr" style="font-size: 0.82rem; color: var(--text-secondary); font-style: italic;">🇹🇷 ${highlightTmText(ex.tr, item.category)}</div>
               </div>
             `).join('')}
@@ -32459,18 +32525,18 @@ function toggleTrmCard(idx) {
       "examples": [
         {
           "en": "The next time the vault is opened, every seal will be photographed.",
-          "tr": "Kasa bir dahaki açıldığında her mühür fotoğraflanacak.",
-          "tense": "Simple Present"
+          "tr": "Kasa bir sonraki açılışında her mühür fotoğraflanacak.",
+          "tense": "Future Passive"
         },
         {
-          "en": "The next time she visits, the new wing will be open.",
-          "tr": "Bir dahaki gelişinde yeni kanat açık olacak.",
-          "tense": "Simple Present"
+          "en": "The next time she visits, she will see the new wing.",
+          "tr": "Bir dahaki gelişinde yeni kanadı görecek.",
+          "tense": "Simple Future"
         },
         {
           "en": "The next time the river rises, the barriers will be tested.",
           "tr": "Nehir bir dahaki yükselişinde bariyerler sınanacak.",
-          "tense": "Simple Present"
+          "tense": "Future Passive"
         }
       ]
     },

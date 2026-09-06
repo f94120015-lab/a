@@ -5197,13 +5197,13 @@ input {
 
 .tm-card:hover {
   transform: translateY(-3px);
-  border-color: #8b5cf6;
+  border-color: rgba(139, 92, 246, 0.45);
   box-shadow: var(--shadow-md);
 }
 
 .tm-card.active-expanded {
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.14);
 }
 
 .tm-card-header {
@@ -5294,54 +5294,88 @@ input {
   padding: 4px 10px;
   font-size: 0.8rem;
   font-weight: 800;
-  background: #8b5cf6;
-  color: #fff;
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.28);
 }
+/* Yapı şablonu: jeton şeridi — her parça bir "yapı taşı", + bağlaçları belirgin */
 .tmr-formula {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5px;
-  background: var(--bg-body);
-  border: 1px dashed var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 7px 11px;
+  gap: 5px 4px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 8px 9px;
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--text-primary);
+  line-height: 1.3;
 }
-.tmr-plus { color: var(--text-secondary); font-weight: 800; opacity: 0.6; }
-.tmr-tok--main { color: #8b5cf6; font-weight: 800; }
-.tmr-tok--sub { color: var(--text-secondary); font-weight: 800; }
+.tmr-tok {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  box-shadow: 0 1px 1px rgba(20, 16, 30, 0.04);
+}
+.tmr-plus {
+  color: rgba(139, 92, 246, 0.8);
+  font-weight: 800;
+  font-size: 0.76rem;
+  opacity: 1;
+  margin: 0 1px;
+}
+.tmr-tok--subj {
+  background: var(--bg-card-hover);
+  font-weight: 800;
+}
+.tmr-tok--main,
+.tmr-tok--key {
+  background: rgba(139, 92, 246, 0.12);
+  border-color: rgba(139, 92, 246, 0.32);
+  color: #7c3aed;
+  font-weight: 800;
+}
+.tmr-tok--sub { color: var(--text-secondary); font-weight: 700; }
 .tmr-note {
   font-family: var(--font-body);
   font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--text-secondary);
-  border: 1px solid var(--border-color);
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px dashed var(--border-color);
   border-radius: 6px;
-  padding: 1px 6px;
+  padding: 2px 7px;
+  margin-left: 2px;
 }
 .tmr-prose {
-  border-left: 2.5px solid rgba(139, 92, 246, 0.35);
+  border-left: 2px solid var(--border-color);
   padding: 2px 0 2px 10px;
   font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.5;
   color: var(--text-primary);
 }
-[data-theme="dark"] .tmr-ans { background: #a78bfa; color: #17121f; }
-[data-theme="dark"] .tmr-tok--main { color: #c4b5fd; }
+[data-theme="dark"] .tmr-ans,
+[data-theme="dark"] .tmr-tok--main,
+[data-theme="dark"] .tmr-tok--key {
+  background: rgba(167, 139, 250, 0.16);
+  color: #c4b5fd;
+  border-color: rgba(167, 139, 250, 0.34);
+}
 
 .tm-trap-box {
-  background: rgba(239, 68, 68, 0.08);
-  border-left: 3px solid #ef4444;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: 6px 10px;
+  background: transparent;
+  border-left: 2px solid rgba(239, 68, 68, 0.5);
+  border-radius: 0;
+  padding: 4px 0 4px 10px;
   font-size: 0.78rem;
-  color: #ef4444;
-  font-weight: 700;
+  color: var(--text-secondary);
+  font-weight: 600;
 }
 
 .tm-examples-accordion {
@@ -5355,9 +5389,9 @@ input {
 }
 
 .tm-example-item {
-  background: rgba(139, 92, 246, 0.05);
-  border-left: 3px solid #8b5cf6;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: transparent;
+  border-left: 2px solid var(--border-color);
+  border-radius: 0;
   padding: 8px 12px;
   font-size: 0.85rem;
 }
@@ -5379,20 +5413,28 @@ input {
   color: inherit !important;
   border: 0 !important;
   padding: 0 !important;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: rgba(139, 92, 246, 0.55);
-  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(139, 92, 246, 0.3);
+  text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
 }
 
+/* Örnek cümledeki ana-cümle zaman kalıbı — kural kutusundaki .tmr-ans ile aynı
+   mor rozet: öğrenci "kutudaki kalıp = cümledeki kalıp" bağını anında kursun. */
 .tm-hl-verb {
-  background: rgba(59, 130, 246, 0.2) !important;
-  color: #3b82f6 !important;
-  border: 1px solid rgba(59, 130, 246, 0.4) !important;
+  background: rgba(139, 92, 246, 0.12) !important;
+  color: #7c3aed !important;
+  border: 1px solid rgba(139, 92, 246, 0.28) !important;
   font-weight: 800;
-  padding: 1px 5px;
-  border-radius: 4px;
+  padding: 0 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+[data-theme="dark"] .tm-hl-verb {
+  background: rgba(167, 139, 250, 0.16) !important;
+  color: #c4b5fd !important;
+  border-color: rgba(167, 139, 250, 0.34) !important;
 }
 
 /* ─── Etkileşimli Cümle Bağlaçları & Geçiş İfadeleri Matrisi Stilleri ─── */
