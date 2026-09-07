@@ -15685,6 +15685,8 @@ function switchTab(tabId) {
     renderExamTab();
   } else if (tabId === 'connector-drill') {
     renderConnectorDrillTab();
+  } else if (tabId === 'deneme-lab') {
+    if (typeof renderDenemeLab === 'function') renderDenemeLab();
   } else if (tabId === 'structure-robot') {
     loadScriptOnce('structure-robot.js').then(() => {
       if (typeof initStructureRobot === 'function') initStructureRobot();
@@ -32712,4 +32714,329 @@ function toggleTrmCard(idx) {
   push(TIME_MATRIX_DATA.tense_harmony, NEW.perfect_anchors);
   push(TIME_MATRIX_DATA.tense_harmony, NEW.patterns);
   push(TIME_MATRIX_DATA.time_markers,  NEW.inverted);
+})();
+
+// ============================================================
+// DENEME LAB — bağlaç sınıflandırma prototipi (2026-09-07)
+// ------------------------------------------------------------
+// Kendi kendine yeten deneme sekmesi. İki mod:
+//   1) Kutu Tasnifi       — kelime → 3 kutudan biri (refleks)
+//   2) Aynı Anlam Tuzağı  — boşluk doldurma; şıklar aynı anlamda,
+//                           sadece biri yapıya uyar
+// Bağımlılık yok (yalnızca showToast opsiyonel). Kaldırmak için:
+// bu blok + switchTab'daki 'deneme-lab' satırı + index.html'deki
+// <button data-tab="deneme-lab"> ve #tab-content-deneme-lab silinir.
+// ============================================================
+(function () {
+  const CATS = {
+    clause: { label: 'Cümle bağlar', hint: '+ özne + fiil', color: '#10b981' },
+    noun:   { label: 'İsim / -ing bağlar', hint: '+ isim / -ing', color: '#8b5cf6' },
+    adverb: { label: 'Zarf (geçiş zarfı)', hint: 'tek başına durur · «;» veya «.»', color: '#f59e0b' }
+  };
+
+  const SORT_EXAMPLES = {
+    clause: '<b>Although</b> the plan is risky, it offers rewards.',
+    noun:   '<b>Despite</b> the risk, the plan offers rewards.',
+    adverb: 'The plan is risky<b>;</b> <b>however,</b> it offers rewards.'
+  };
+
+  const SORT_ITEMS = [
+    { w: 'although',          cat: 'clause', tr: 'her ne kadar / -sa da' },
+    { w: 'even though',       cat: 'clause', tr: 'olmasına rağmen' },
+    { w: 'because',           cat: 'clause', tr: 'çünkü' },
+    { w: 'since',             cat: 'clause', tr: 'madem / -diğinden' },
+    { w: 'while',             cat: 'clause', tr: 'iken / oysa' },
+    { w: 'whereas',           cat: 'clause', tr: 'oysa / halbuki' },
+    { w: 'when',              cat: 'clause', tr: '-diğinde' },
+    { w: 'if',                cat: 'clause', tr: 'eğer' },
+    { w: 'unless',            cat: 'clause', tr: '-medikçe' },
+    { w: 'so that',           cat: 'clause', tr: '-mesi için' },
+    { w: 'in case',           cat: 'clause', tr: 'ihtimaline karşı' },
+    { w: 'as long as',        cat: 'clause', tr: '-mesi şartıyla' },
+    { w: 'despite',           cat: 'noun',   tr: '-e rağmen' },
+    { w: 'in spite of',       cat: 'noun',   tr: '-e rağmen' },
+    { w: 'because of',        cat: 'noun',   tr: '-den dolayı' },
+    { w: 'due to',            cat: 'noun',   tr: '-e bağlı olarak' },
+    { w: 'owing to',          cat: 'noun',   tr: '-den dolayı' },
+    { w: 'thanks to',         cat: 'noun',   tr: 'sayesinde' },
+    { w: 'regardless of',     cat: 'noun',   tr: '-e bakmaksızın' },
+    { w: 'on account of',     cat: 'noun',   tr: '-den dolayı' },
+    { w: 'however',           cat: 'adverb', tr: 'ancak / yine de' },
+    { w: 'nevertheless',      cat: 'adverb', tr: 'yine de' },
+    { w: 'nonetheless',       cat: 'adverb', tr: 'yine de' },
+    { w: 'therefore',         cat: 'adverb', tr: 'bu yüzden' },
+    { w: 'thus',              cat: 'adverb', tr: 'böylece' },
+    { w: 'hence',             cat: 'adverb', tr: 'bu nedenle' },
+    { w: 'consequently',      cat: 'adverb', tr: 'sonuç olarak' },
+    { w: 'moreover',          cat: 'adverb', tr: 'dahası' },
+    { w: 'furthermore',       cat: 'adverb', tr: 'ayrıca' },
+    { w: 'meanwhile',         cat: 'adverb', tr: 'bu arada' },
+    { w: 'otherwise',         cat: 'adverb', tr: 'aksi takdirde' },
+    { w: 'on the other hand', cat: 'adverb', tr: 'diğer yandan' },
+    { w: 'in contrast',       cat: 'adverb', tr: 'buna karşın' },
+    { w: 'for example',       cat: 'adverb', tr: 'örneğin' },
+    { w: 'as a result',       cat: 'adverb', tr: 'sonuç olarak' }
+  ];
+
+  const TRAP_QS = [
+    {
+      sentence: '______ its high price, the software has become the industry standard.',
+      options: ['Although', 'Even though', 'Despite', 'However'],
+      correct: 2,
+      why: {
+        0: '«Although» bir cümle ister (özne + fiil). «its high price» bir isim öbeği.',
+        1: '«Even though» de cümle ister; «its high price» cümle değil.',
+        2: 'Doğru. «Despite» + isim öbeği alır, anlam da zıtlık — tam oturuyor.',
+        3: '«However» geçiş zarfı: cümle başında «;» veya «.» ister, virgülle bağlanmaz.'
+      }
+    },
+    {
+      sentence: 'The match was postponed ______ the heavy rain that hit the city.',
+      options: ['because', 'because of', 'since', 'as'],
+      correct: 1,
+      why: {
+        0: '«because» + cümle (özne + fiil). Buradaki «the heavy rain...» isim öbeği.',
+        1: 'Doğru. «because of» + isim öbeği; sebep anlamı da uyuyor.',
+        2: '«since» sebep anlamında da cümle ister.',
+        3: '«as» sebep anlamında yine cümle ister.'
+      }
+    },
+    {
+      sentence: '______ the results were disappointing, the team refused to give up.',
+      options: ['Despite', 'In spite of', 'Although', 'Because of'],
+      correct: 2,
+      why: {
+        0: '«Despite» + isim/-ing ister. «the results were disappointing» tam bir cümle.',
+        1: '«In spite of» de isim/-ing ister, cümle değil.',
+        2: 'Doğru. «Although» + cümle; anlam da zıtlık.',
+        3: '«Because of» hem isim ister hem sebep bildirir — iki yönden yanlış.'
+      }
+    },
+    {
+      sentence: 'The first two trials failed; ______, the team eventually succeeded.',
+      options: ['but', 'although', 'however', 'despite'],
+      correct: 2,
+      why: {
+        0: '«but» eş görevli bağlaç: noktalı virgülden sonra cümle başında gelmez.',
+        1: '«although» yan cümle bağlacı: yeni bağımsız cümlenin başına böyle konmaz.',
+        2: 'Doğru. «however» geçiş zarfı: «;» + «however,» kalıbı tam bu yapı.',
+        3: '«despite» isim ister; arkasından tam cümle («the team...») gelemez.'
+      }
+    },
+    {
+      sentence: 'She repeated the instructions slowly ______ everyone could follow them.',
+      options: ['so', 'so that', 'in order', 'for'],
+      correct: 1,
+      why: {
+        0: '«so» (bu yüzden) sonuç bağlar, önüne virgül ister; amaç anlamı vermez.',
+        1: 'Doğru. «so that» + cümle = amaç («... -mesi için»).',
+        2: '«in order» tek başına olmaz; «in order to» + fiil ya da «in order that» + cümle.',
+        3: '«for» burada amaç cümlesi kuramaz.'
+      }
+    },
+    {
+      sentence: '______ working overtime for weeks, he could not meet the deadline.',
+      options: ['Although', 'Even though', 'Despite', 'Because'],
+      correct: 2,
+      why: {
+        0: '«Although» + cümle ister; «working overtime...» bir -ing öbeği.',
+        1: '«Even though» de cümle ister.',
+        2: 'Doğru. «Despite» + -ing alır; anlam da zıtlık.',
+        3: '«Because» hem cümle ister hem sebep bildirir — anlam ters.'
+      }
+    },
+    {
+      sentence: 'Traditional stores are struggling; online retailers, ______, are thriving.',
+      options: ['despite', 'whereas', 'by contrast', 'although'],
+      correct: 2,
+      why: {
+        0: '«despite» isim ister ve cümle ortasında iki virgül arasına girmez.',
+        1: '«whereas» yan cümle bağlacıdır, cümlenin başında durur; araya sıkışmaz.',
+        2: 'Doğru. «by contrast» geçiş zarfı — cümle ortasında iki virgül arasında kullanılır.',
+        3: '«although» da başa gelir, bu konuma uymaz.'
+      }
+    },
+    {
+      sentence: 'The company cut prices sharply; ______, its market share grew within months.',
+      options: ['so', 'because', 'as a result', 'due to'],
+      correct: 2,
+      why: {
+        0: '«so» noktalı virgülden sonra cümle başında kullanılmaz.',
+        1: '«because» + cümle sebep verir ama yön ters: burada sonuç anlatılıyor.',
+        2: 'Doğru. «as a result» geçiş zarfı: «;» + «as a result,» sonucu bağlar.',
+        3: '«due to» isim ister; arkasından tam cümle gelemez.'
+      }
+    }
+  ];
+
+  const SORT_ROUND = 12;
+  const st = { mode: 'sort', sort: null, trap: null };
+
+  function shuffle(a) {
+    a = a.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+  function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+  function panel() { return document.getElementById('dl-panel'); }
+
+  window.renderDenemeLab = function () {
+    const el = document.getElementById('deneme-lab-root');
+    if (!el) return;
+    el.innerHTML = `
+      <div style="margin-bottom:16px;">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <h2 style="font-family:var(--font-heading);font-size:1.35rem;font-weight:800;margin:0;color:var(--text-primary);">🧪 Deneme Lab</h2>
+          <span style="font-size:0.66rem;background:linear-gradient(135deg,#10b981,#8b5cf6);color:#fff;padding:2px 8px;border-radius:8px;font-weight:700;letter-spacing:0.5px;">PROTOTİP</span>
+        </div>
+        <p class="text-sm-muted" style="margin:6px 0 0;line-height:1.55;">
+          Bağlacı türüne göre tanı: <b>cümle mi</b>, <b>isim mi</b> istiyor, yoksa <b>zarf</b> mı.
+          Bütün noktalama kuralları bu ayrımdan çıkar.
+        </p>
+      </div>
+      <div id="dl-modes" style="display:flex;gap:8px;margin-bottom:18px;">
+        <button type="button" class="dl-mode-btn" data-mode="sort">📦 Kutu Tasnifi</button>
+        <button type="button" class="dl-mode-btn" data-mode="trap">🎯 Aynı Anlam Tuzağı</button>
+      </div>
+      <div id="dl-panel"></div>
+    `;
+    el.querySelectorAll('.dl-mode-btn').forEach(b => {
+      const active = b.dataset.mode === st.mode;
+      b.style.cssText = 'flex:1;padding:10px 12px;border-radius:12px;font-weight:700;font-size:0.9rem;cursor:pointer;border:1.5px solid ' +
+        (active ? '#8b5cf6' : 'var(--border-color)') + ';background:' +
+        (active ? 'rgba(139,92,246,0.12)' : 'var(--bg-body)') + ';color:var(--text-primary);';
+      b.onclick = () => { st.mode = b.dataset.mode; window.renderDenemeLab(); };
+    });
+    if (st.mode === 'trap') startTrap();
+    else startSort();
+  };
+
+  // ---------- MOD 1: KUTU TASNİFİ ----------
+  function startSort() {
+    st.sort = { queue: shuffle(SORT_ITEMS).slice(0, SORT_ROUND), i: 0, score: 0, streak: 0, best: 0, wrong: [] };
+    renderSort();
+  }
+  function renderSort() {
+    const s = st.sort, p = panel();
+    if (!p) return;
+    if (s.i >= s.queue.length) return renderSortResult();
+    const item = s.queue[s.i];
+    p.innerHTML = `
+      <div style="display:flex;gap:12px;justify-content:space-between;margin-bottom:14px;font-size:0.82rem;color:var(--text-secondary);">
+        <span>Skor <b style="color:var(--text-primary);">${s.score}</b></span>
+        <span>Seri <b style="color:${s.streak >= 3 ? '#10b981' : 'var(--text-primary)'};">${s.streak}</b></span>
+        <span>Kalan <b style="color:var(--text-primary);">${s.queue.length - s.i}</b></span>
+      </div>
+      <div style="background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;padding:32px 20px;text-align:center;margin-bottom:16px;">
+        <div style="font-family:var(--font-heading);font-size:1.85rem;font-weight:800;color:var(--text-primary);">${esc(item.w)}</div>
+        <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:6px;">Bu bağlaç arkasından ne ister?</div>
+      </div>
+      <div id="dl-sort-btns" style="display:grid;grid-template-columns:1fr;gap:10px;">
+        ${Object.entries(CATS).map(([k, c]) => `
+          <button type="button" data-cat="${k}" style="padding:13px 16px;border-radius:12px;border:1.5px solid var(--border-color);background:var(--bg-body);color:var(--text-primary);cursor:pointer;text-align:left;">
+            <div style="font-weight:700;font-size:0.95rem;">${c.label}</div>
+            <div style="font-size:0.78rem;color:var(--text-secondary);margin-top:2px;">${c.hint}</div>
+          </button>`).join('')}
+      </div>
+      <div id="dl-sort-fb"></div>
+    `;
+    p.querySelectorAll('#dl-sort-btns button').forEach(b => { b.onclick = () => answerSort(b.dataset.cat); });
+  }
+  function answerSort(pick) {
+    const s = st.sort, item = s.queue[s.i], ok = pick === item.cat;
+    if (ok) { s.score++; s.streak++; s.best = Math.max(s.best, s.streak); }
+    else { s.streak = 0; s.wrong.push(item); }
+    const p = panel();
+    p.querySelectorAll('#dl-sort-btns button').forEach(b => {
+      b.style.pointerEvents = 'none';
+      if (b.dataset.cat === item.cat) { b.style.borderColor = '#10b981'; b.style.background = 'rgba(16,185,129,0.14)'; }
+      else if (b.dataset.cat === pick) { b.style.borderColor = '#ef4444'; b.style.background = 'rgba(239,68,68,0.12)'; }
+    });
+    const c = CATS[item.cat], last = s.i + 1 >= s.queue.length;
+    p.querySelector('#dl-sort-fb').innerHTML = `
+      <div style="margin-top:14px;padding:13px 16px;border-radius:12px;border-left:3px solid ${c.color};background:${c.color}1a;">
+        <div style="font-weight:700;color:var(--text-primary);">${ok ? '✓ Doğru' : '✗ Yanlış'} — <b>${esc(item.w)}</b> → ${c.label}
+          <span style="font-weight:400;color:var(--text-secondary);">(${esc(item.tr)})</span></div>
+        <div style="font-size:0.86rem;color:var(--text-primary);margin-top:6px;font-family:ui-monospace,monospace;">${SORT_EXAMPLES[item.cat]}</div>
+      </div>
+      <button type="button" id="dl-sort-next" class="btn btn-secondary" style="margin-top:12px;width:100%;padding:12px;">${last ? 'Sonuç' : 'Devam →'}</button>
+    `;
+    p.querySelector('#dl-sort-next').onclick = () => { s.i++; renderSort(); };
+  }
+  function renderSortResult() {
+    const s = st.sort, p = panel();
+    const pct = Math.round(s.score / s.queue.length * 100);
+    p.innerHTML = `
+      <div style="text-align:center;padding:24px 16px;background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;">
+        <div style="font-size:2rem;font-weight:800;color:var(--text-primary);">${s.score} / ${s.queue.length}</div>
+        <div class="text-sm-muted" style="margin-top:4px;">%${pct} · en uzun seri ${s.best}</div>
+      </div>
+      ${s.wrong.length ? `
+        <div style="margin-top:16px;">
+          <div class="section-title-sm" style="margin-bottom:6px;">Tekrar bak</div>
+          ${s.wrong.map(w => `<div style="padding:8px 12px;border-top:1px solid var(--border-color);font-size:0.87rem;color:var(--text-primary);"><b>${esc(w.w)}</b> → ${CATS[w.cat].label} <span style="color:var(--text-secondary);">(${esc(w.tr)})</span></div>`).join('')}
+        </div>` : '<div class="text-sm-muted" style="margin-top:14px;text-align:center;">Hepsi doğru 🎯</div>'}
+      <button type="button" id="dl-sort-again" class="btn btn-secondary" style="margin-top:16px;width:100%;padding:12px;">Yeni tur</button>
+    `;
+    p.querySelector('#dl-sort-again').onclick = startSort;
+  }
+
+  // ---------- MOD 2: AYNI ANLAM TUZAĞI ----------
+  function startTrap() {
+    st.trap = { queue: shuffle(TRAP_QS), i: 0, score: 0 };
+    renderTrap();
+  }
+  function renderTrap() {
+    const t = st.trap, p = panel();
+    if (!p) return;
+    if (t.i >= t.queue.length) return renderTrapResult();
+    const q = t.queue[t.i];
+    p.innerHTML = `
+      <div style="display:flex;justify-content:space-between;margin-bottom:14px;font-size:0.82rem;color:var(--text-secondary);">
+        <span>Soru ${t.i + 1} / ${t.queue.length}</span>
+        <span>Skor <b style="color:var(--text-primary);">${t.score}</b></span>
+      </div>
+      <div style="background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:14px;padding:20px;margin-bottom:14px;font-size:1.02rem;line-height:1.65;color:var(--text-primary);">
+        ${esc(q.sentence).replace('______', '<span style="color:#8b5cf6;font-weight:800;letter-spacing:1px;">______</span>')}
+      </div>
+      <div id="dl-trap-opts" style="display:grid;gap:9px;">
+        ${q.options.map((o, i) => `<button type="button" data-i="${i}" style="padding:12px 15px;border-radius:11px;border:1.5px solid var(--border-color);background:var(--bg-body);color:var(--text-primary);cursor:pointer;text-align:left;font-size:0.95rem;">${String.fromCharCode(65 + i)}) ${esc(o)}</button>`).join('')}
+      </div>
+      <div id="dl-trap-fb"></div>
+    `;
+    p.querySelectorAll('#dl-trap-opts button').forEach(b => { b.onclick = () => answerTrap(parseInt(b.dataset.i, 10)); });
+  }
+  function answerTrap(pick) {
+    const t = st.trap, q = t.queue[t.i], ok = pick === q.correct;
+    if (ok) t.score++;
+    const p = panel();
+    p.querySelectorAll('#dl-trap-opts button').forEach(b => {
+      const i = parseInt(b.dataset.i, 10);
+      b.style.pointerEvents = 'none';
+      if (i === q.correct) { b.style.borderColor = '#10b981'; b.style.background = 'rgba(16,185,129,0.14)'; }
+      else if (i === pick) { b.style.borderColor = '#ef4444'; b.style.background = 'rgba(239,68,68,0.12)'; }
+    });
+    const last = t.i + 1 >= t.queue.length;
+    p.querySelector('#dl-trap-fb').innerHTML = `
+      <div style="margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--bg-body);border:1px solid var(--border-color);">
+        ${q.options.map((o, i) => `<div style="font-size:0.85rem;line-height:1.5;margin:5px 0;color:${i === q.correct ? '#10b981' : 'var(--text-secondary)'};"><b>${String.fromCharCode(65 + i)})</b> ${esc(q.why[i] || '')}</div>`).join('')}
+      </div>
+      <button type="button" id="dl-trap-next" class="btn btn-secondary" style="margin-top:12px;width:100%;padding:12px;">${last ? 'Sonuç' : 'Sonraki →'}</button>
+    `;
+    p.querySelector('#dl-trap-next').onclick = () => { t.i++; renderTrap(); };
+  }
+  function renderTrapResult() {
+    const t = st.trap, p = panel();
+    p.innerHTML = `
+      <div style="text-align:center;padding:24px 16px;background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;">
+        <div style="font-size:2rem;font-weight:800;color:var(--text-primary);">${t.score} / ${t.queue.length}</div>
+        <div class="text-sm-muted" style="margin-top:4px;">%${Math.round(t.score / t.queue.length * 100)}</div>
+      </div>
+      <button type="button" id="dl-trap-again" class="btn btn-secondary" style="margin-top:16px;width:100%;padding:12px;">Tekrar</button>
+    `;
+    p.querySelector('#dl-trap-again').onclick = startTrap;
+  }
 })();

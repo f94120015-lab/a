@@ -259,6 +259,23 @@
             <span class="nav-tab-label">Deneme Sınavı</span>
           </button>
 
+          <!-- DENEME LAB (2026-09-07): bağlaç sınıflandırma prototipi. Ayrı ve
+               kendi kendine yeten; kaldırmak için bu <button>, index.html'deki
+               #tab-content-deneme-lab bloğu, app.js sonundaki "DENEME LAB" IIFE
+               ve switchTab'daki 'deneme-lab' satırı silinir. -->
+          <div class="sidebar-section-label">Deneme Lab</div>
+          <button class="nav-tab" data-tab="deneme-lab">
+            <span class="nav-tab-icon">
+              <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+                <path d="M13 4h6M14 4v8l-6.4 11.2A2 2 0 0 0 9.3 26h13.4a2 2 0 0 0 1.7-2.8L18 12V4" fill="#10b981" fill-opacity="0.18" stroke="#34d399" stroke-width="2" stroke-linejoin="round"/>
+                <circle cx="14" cy="20" r="1.5" fill="#f59e0b"/>
+                <circle cx="18.5" cy="23.5" r="1.5" fill="#8b5cf6"/>
+                <path d="M11 16h10" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="nav-tab-label">Deneme Lab</span>
+          </button>
+
           <div class="sidebar-section-label">Bilgi & Destek</div>
           <button class="nav-tab" data-tab="about">
             <span class="nav-tab-icon nav-anim-about">
@@ -1357,6 +1374,11 @@
 
       <div id="tab-content-connector-drill" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
         <div id="connector-drill-list" class="grid-300"></div>
+      </div>
+
+      <!-- DENEME LAB — bağlaç sınıflandırma prototipi (app.js sonundaki IIFE doldurur) -->
+      <div id="tab-content-deneme-lab" class="tab-content" style="padding: 24px; max-width: 880px; margin: 0 auto;">
+        <div id="deneme-lab-root"></div>
       </div>
 
       <div id="tab-content-structure-robot" class="tab-content" style="padding: 24px; max-width: 1080px; margin: 0 auto;">
