@@ -32717,15 +32717,17 @@ function toggleTrmCard(idx) {
 })();
 
 // ============================================================
-// DENEME LAB — bağlaç sınıflandırma prototipi (2026-09-07)
+// DENEME LAB — bağlaç çalışma sekmesi (2026-09-07, genişletildi 2026-09-08)
 // ------------------------------------------------------------
-// Kendi kendine yeten deneme sekmesi. İki mod:
-//   1) Kutu Tasnifi       — kelime → 3 kutudan biri (refleks)
-//   2) Aynı Anlam Tuzağı  — boşluk doldurma; şıklar aynı anlamda,
-//                           sadece biri yapıya uyar
-// Bağımlılık yok (yalnızca showToast opsiyonel). Kaldırmak için:
-// bu blok + switchTab'daki 'deneme-lab' satırı + index.html'deki
-// <button data-tab="deneme-lab"> ve #tab-content-deneme-lab silinir.
+// Kendi kendine yeten deneme sekmesi. Beş mod:
+//   1) Kutu Tasnifi   — kelime → 3 kutudan biri (refleks)
+//   2) Aynı Anlam Tuzağı — boşluk doldurma; şıklar aynı anlamda, biri yapıya uyar
+//   3) Noktalama      — birleşme yerine hangi işaret/bağlaç girer
+//   4) Hata Avı       — bozuk cümlenin doğru düzeltmesini seç
+//   5) Cümle Kur      — karışık parçaları doğru sıraya diz (word bank)
+// Bağımlılık yok. Kaldırmak için: bu blok + switchTab'daki 'deneme-lab'
+// satırı + index.html'deki <button data-tab="deneme-lab"> ve
+// #tab-content-deneme-lab silinir.
 // ============================================================
 (function () {
   const CATS = {
@@ -32869,8 +32871,153 @@ function toggleTrmCard(idx) {
     }
   ];
 
+  // MOD 3 — birleşme yerine ne girer. before + [seçim] + after
+  const PUNC_QS = [
+    {
+      before: 'The proposal was risky', after: 'the board approved it without hesitation.',
+      options: [', however ', '; however, ', ' however '],
+      correct: 1,
+      note: '«however» geçiş zarfıdır; iki bağımsız cümleyi tek başına birleştiremez. Araya «;» girer, kendisinden sonra virgül gelir.'
+    },
+    {
+      before: 'It was raining heavily', after: 'we decided to postpone the trip.',
+      options: [', therefore ', '; therefore, ', ' therefore, '],
+      correct: 1,
+      note: '«therefore» de geçiş zarfı: «Cümle 1; therefore, Cümle 2.» Yalnız virgülle bağlamak comma splice olur.'
+    },
+    {
+      before: 'The novel is long', after: 'it never feels slow.',
+      options: [', but ', '; but ', ' but, '],
+      correct: 0,
+      note: '«but» eş görevli bağlaç: iki cümleyi gerçekten birleştirir, önüne virgül konur, arkasına konmaz.'
+    },
+    {
+      before: 'The early data looked promising', after: 'later tests contradicted it.',
+      options: [', yet ', '; yet, ', ', yet, '],
+      correct: 0,
+      note: '«yet» burada «but» gibi eş görevli bağlaç: «Cümle 1, yet Cümle 2.» Arkasına virgül gelmez.'
+    },
+    {
+      before: 'Although the interface looks simple', after: 'the system behind it is complex.',
+      options: [' ', ', ', '; '],
+      correct: 1,
+      note: 'Yan cümle («Although...») başta olduğunda ana cümleden virgülle ayrılır. Sonda olsaydı virgül olmazdı.'
+    },
+    {
+      before: 'Several problems slowed the project', after: 'for example, repeated supplier delays.',
+      options: [', ', '; ', ' '],
+      correct: 1,
+      note: '«for example ...» burada ayrı bir bağımsız cümle başlatıyor; öncesinde «;» ya da «.» olur, virgül yetmez.'
+    },
+    {
+      before: 'She had only one goal', after: 'to finish the marathon.',
+      options: [', ', ': ', '; '],
+      correct: 1,
+      note: 'İkinci parça birinciyi açıklıyor ve tek başına tam cümle değil → iki nokta «:».'
+    }
+  ];
+
+  // MOD 4 — bozuk cümle + doğru düzeltmeyi seç
+  const ERROR_QS = [
+    {
+      bad: 'Despite it was raining, we went out.',
+      flaw: '«Despite» + tam cümle olmaz; isim ya da -ing ister.',
+      options: [
+        'Although it was raining, we went out.',
+        'Despite of it was raining, we went out.',
+        'Despite it was raining, but we went out.'
+      ],
+      correct: 0,
+      fixes: ['«Despite» → «Although» (bağlaç + cümle)', '«Despite the rain, we went out.» (edat + isim)']
+    },
+    {
+      bad: 'Although he was exhausted, but he kept walking.',
+      flaw: 'Bir cümlede hem «although» hem «but» olmaz — çift bağlaç.',
+      options: [
+        'Although he was exhausted, he kept walking.',
+        'Although he was exhausted, so he kept walking.',
+        'Despite he was exhausted, he kept walking.'
+      ],
+      correct: 0,
+      fixes: ['«but»u sil: «Although he was exhausted, he kept walking.»', 'ya da «although»u sil: «He was exhausted, but he kept walking.»']
+    },
+    {
+      bad: 'The plan is risky, however it offers major rewards.',
+      flaw: 'Virgülle bağlanmış iki bağımsız cümle (comma splice); «however» virgülle bağlamaz.',
+      options: [
+        'The plan is risky; however, it offers major rewards.',
+        'The plan is risky however, it offers major rewards.',
+        'The plan is risky, however, it offers major rewards.'
+      ],
+      correct: 0,
+      fixes: ['«; however,» kullan', 'ya da nokta: «The plan is risky. However, it offers major rewards.»']
+    },
+    {
+      bad: 'Because of the traffic was heavy, we missed the flight.',
+      flaw: '«Because of» + isim ister; «the traffic was heavy» bir cümle.',
+      options: [
+        'Because the traffic was heavy, we missed the flight.',
+        'Because of the traffic was being heavy, we missed the flight.',
+        'Because of that the traffic was heavy, we missed the flight.'
+      ],
+      correct: 0,
+      fixes: ['«Because» + cümle: «Because the traffic was heavy, ...»', 'ya da «Because of the heavy traffic, ...» (edat + isim)']
+    },
+    {
+      bad: 'She was very tired, therefore she went to bed early.',
+      flaw: '«therefore» geçiş zarfı; virgülle iki cümleyi bağlayamaz (comma splice).',
+      options: [
+        'She was very tired; therefore, she went to bed early.',
+        'She was very tired, therefore, she went to bed early.',
+        'She was very tired therefore she went to bed early.'
+      ],
+      correct: 0,
+      fixes: ['«; therefore,» kullan', 'ya da «... tired. Therefore, she ...»']
+    },
+    {
+      bad: 'When the results will come, we will decide.',
+      flaw: 'Zaman yan cümlesinde «will» kullanılmaz; gelecek anlamı geniş zamanla verilir.',
+      options: [
+        'When the results come, we will decide.',
+        'When the results are coming, we will decide.',
+        'When the results will have come, we will decide.'
+      ],
+      correct: 0,
+      fixes: ['Yan cümlede geniş zaman: «When the results come, ...»', '«will» ana cümlede kalır: «..., we will decide.»']
+    }
+  ];
+
+  // MOD 5 — tokens dizisi zaten doğru sıra; ekranda karıştırılır
+  const BANK_QS = [
+    { tokens: ['Although', 'the plan is risky', ',', 'it offers rewards'],
+      tr: 'Plan riskli olsa da ödülleri var.',
+      note: 'Yan cümle («Although...») başta → virgülle ana cümleye bağlanır.' },
+    { tokens: ['The plan is risky', ';', 'however', ',', 'it offers rewards'],
+      tr: 'Plan riskli; ancak ödülleri var.',
+      note: '«however» geçiş zarfı: «Cümle 1 ; however , Cümle 2».' },
+    { tokens: ['We stayed indoors', 'because', 'it was raining'],
+      tr: 'İçeride kaldık çünkü yağmur yağıyordu.',
+      note: 'Yan cümle sonda → araya virgül girmez.' },
+    { tokens: ['Despite', 'the heavy rain', ',', 'the match continued'],
+      tr: 'Şiddetli yağmura rağmen maç devam etti.',
+      note: '«Despite» + isim öbeği; öbek başta olduğu için virgül var.' },
+    { tokens: ['The first attempt failed', ';', 'as a result', ',', 'they revised the design'],
+      tr: 'İlk deneme başarısız oldu; sonuç olarak tasarımı gözden geçirdiler.',
+      note: '«as a result» geçiş zarfı: «;» ... «,».' },
+    { tokens: ['He will call you', 'when', 'he arrives'],
+      tr: 'Vardığında seni arayacak.',
+      note: 'Zaman yan cümlesinde «will» yok; yan cümle sonda → virgül yok.' }
+  ];
+
   const SORT_ROUND = 12;
-  const st = { mode: 'sort', sort: null, trap: null };
+  const MODES = [
+    { id: 'sort',  label: '📦 Tasnif' },
+    { id: 'trap',  label: '🎯 Tuzak' },
+    { id: 'punc',  label: '✒️ Noktalama' },
+    { id: 'error', label: '🔍 Hata Avı' },
+    { id: 'bank',  label: '🧩 Cümle Kur' }
+  ];
+  const st = { mode: 'sort' };
 
   function shuffle(a) {
     a = a.slice();
@@ -32883,35 +33030,71 @@ function toggleTrmCard(idx) {
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
   function panel() { return document.getElementById('dl-panel'); }
 
+  // ---- ortak parçalar ----
+  function statsRow(left, right) {
+    return `<div style="display:flex;justify-content:space-between;gap:12px;margin-bottom:14px;font-size:0.82rem;color:var(--text-secondary);"><span>${left}</span><span>${right}</span></div>`;
+  }
+  function qbox(html) {
+    return `<div style="background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:14px;padding:18px 20px;margin-bottom:14px;font-size:1.02rem;line-height:1.65;color:var(--text-primary);">${html}</div>`;
+  }
+  function nextBtn(id, label) {
+    return `<button type="button" id="${id}" class="btn btn-secondary" style="margin-top:12px;width:100%;padding:12px;">${label}</button>`;
+  }
+  function resultCard(score, total, sub) {
+    const pct = total ? Math.round(score / total * 100) : 0;
+    return `<div style="text-align:center;padding:24px 16px;background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;">
+        <div style="font-size:2rem;font-weight:800;color:var(--text-primary);">${score} / ${total}</div>
+        <div class="text-sm-muted" style="margin-top:4px;">%${pct}${sub ? ' · ' + sub : ''}</div>
+      </div>`;
+  }
+  function optionButtons(containerId, options, render) {
+    return `<div id="${containerId}" style="display:grid;gap:9px;">${options.map((o, i) =>
+      `<button type="button" data-i="${i}" style="padding:12px 15px;border-radius:11px;border:1.5px solid var(--border-color);background:var(--bg-body);color:var(--text-primary);cursor:pointer;text-align:left;font-size:0.95rem;">${render(o, i)}</button>`
+    ).join('')}</div>`;
+  }
+  function markChoice(container, correct, pick) {
+    container.querySelectorAll('button').forEach(b => {
+      const i = parseInt(b.dataset.i, 10);
+      b.style.pointerEvents = 'none';
+      if (i === correct) { b.style.borderColor = '#10b981'; b.style.background = 'rgba(16,185,129,0.14)'; }
+      else if (i === pick) { b.style.borderColor = '#ef4444'; b.style.background = 'rgba(239,68,68,0.12)'; }
+    });
+  }
+  function noteCard(html, accent) {
+    const a = accent || '#8b5cf6';
+    return `<div style="margin-top:14px;padding:13px 16px;border-radius:12px;border-left:3px solid ${a};background:${a}1a;font-size:0.88rem;line-height:1.55;color:var(--text-primary);">${html}</div>`;
+  }
+  function joinTokens(arr) {
+    return arr.join(' ').replace(/\s+([,;:.])/g, '$1');
+  }
+
   window.renderDenemeLab = function () {
     const el = document.getElementById('deneme-lab-root');
     if (!el) return;
     el.innerHTML = `
-      <div style="margin-bottom:16px;">
+      <div style="margin-bottom:14px;">
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
           <h2 style="font-family:var(--font-heading);font-size:1.35rem;font-weight:800;margin:0;color:var(--text-primary);">🧪 Deneme Lab</h2>
           <span style="font-size:0.66rem;background:linear-gradient(135deg,#10b981,#8b5cf6);color:#fff;padding:2px 8px;border-radius:8px;font-weight:700;letter-spacing:0.5px;">PROTOTİP</span>
         </div>
         <p class="text-sm-muted" style="margin:6px 0 0;line-height:1.55;">
-          Bağlacı türüne göre tanı: <b>cümle mi</b>, <b>isim mi</b> istiyor, yoksa <b>zarf</b> mı.
-          Bütün noktalama kuralları bu ayrımdan çıkar.
+          Bağlacın türü (<b>cümle</b> / <b>isim</b> / <b>zarf</b>) noktalamayı belirler.
+          Aynı ayrımı beş farklı açıdan çalış.
         </p>
       </div>
-      <div id="dl-modes" style="display:flex;gap:8px;margin-bottom:18px;">
-        <button type="button" class="dl-mode-btn" data-mode="sort">📦 Kutu Tasnifi</button>
-        <button type="button" class="dl-mode-btn" data-mode="trap">🎯 Aynı Anlam Tuzağı</button>
+      <div id="dl-modes" style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;">
+        ${MODES.map(m => `<button type="button" class="dl-mode-btn" data-mode="${m.id}">${m.label}</button>`).join('')}
       </div>
       <div id="dl-panel"></div>
     `;
     el.querySelectorAll('.dl-mode-btn').forEach(b => {
       const active = b.dataset.mode === st.mode;
-      b.style.cssText = 'flex:1;padding:10px 12px;border-radius:12px;font-weight:700;font-size:0.9rem;cursor:pointer;border:1.5px solid ' +
+      b.style.cssText = 'flex:1 1 auto;min-width:88px;padding:9px 10px;border-radius:11px;font-weight:700;font-size:0.82rem;cursor:pointer;border:1.5px solid ' +
         (active ? '#8b5cf6' : 'var(--border-color)') + ';background:' +
-        (active ? 'rgba(139,92,246,0.12)' : 'var(--bg-body)') + ';color:var(--text-primary);';
+        (active ? 'rgba(139,92,246,0.14)' : 'var(--bg-body)') + ';color:var(--text-primary);';
       b.onclick = () => { st.mode = b.dataset.mode; window.renderDenemeLab(); };
     });
-    if (st.mode === 'trap') startTrap();
-    else startSort();
+    ({ sort: startSort, trap: startTrap, punc: startPunc, error: startError, bank: startBank }[st.mode] || startSort)();
   };
 
   // ---------- MOD 1: KUTU TASNİFİ ----------
@@ -32924,14 +33107,13 @@ function toggleTrmCard(idx) {
     if (!p) return;
     if (s.i >= s.queue.length) return renderSortResult();
     const item = s.queue[s.i];
-    p.innerHTML = `
-      <div style="display:flex;gap:12px;justify-content:space-between;margin-bottom:14px;font-size:0.82rem;color:var(--text-secondary);">
-        <span>Skor <b style="color:var(--text-primary);">${s.score}</b></span>
-        <span>Seri <b style="color:${s.streak >= 3 ? '#10b981' : 'var(--text-primary)'};">${s.streak}</b></span>
-        <span>Kalan <b style="color:var(--text-primary);">${s.queue.length - s.i}</b></span>
-      </div>
-      <div style="background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;padding:32px 20px;text-align:center;margin-bottom:16px;">
-        <div style="font-family:var(--font-heading);font-size:1.85rem;font-weight:800;color:var(--text-primary);">${esc(item.w)}</div>
+    p.innerHTML =
+      statsRow(
+        `Skor <b style="color:var(--text-primary);">${s.score}</b>`,
+        `Seri <b style="color:${s.streak >= 3 ? '#10b981' : 'var(--text-primary)'};">${s.streak}</b>&nbsp;&nbsp;Kalan <b style="color:var(--text-primary);">${s.queue.length - s.i}</b>`
+      ) +
+      `<div style="background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;padding:30px 20px;text-align:center;margin-bottom:16px;">
+        <div style="font-family:var(--font-heading);font-size:1.8rem;font-weight:800;color:var(--text-primary);">${esc(item.w)}</div>
         <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:6px;">Bu bağlaç arkasından ne ister?</div>
       </div>
       <div id="dl-sort-btns" style="display:grid;grid-template-columns:1fr;gap:10px;">
@@ -32941,8 +33123,7 @@ function toggleTrmCard(idx) {
             <div style="font-size:0.78rem;color:var(--text-secondary);margin-top:2px;">${c.hint}</div>
           </button>`).join('')}
       </div>
-      <div id="dl-sort-fb"></div>
-    `;
+      <div id="dl-sort-fb"></div>`;
     p.querySelectorAll('#dl-sort-btns button').forEach(b => { b.onclick = () => answerSort(b.dataset.cat); });
   }
   function answerSort(pick) {
@@ -32956,31 +33137,26 @@ function toggleTrmCard(idx) {
       else if (b.dataset.cat === pick) { b.style.borderColor = '#ef4444'; b.style.background = 'rgba(239,68,68,0.12)'; }
     });
     const c = CATS[item.cat], last = s.i + 1 >= s.queue.length;
-    p.querySelector('#dl-sort-fb').innerHTML = `
-      <div style="margin-top:14px;padding:13px 16px;border-radius:12px;border-left:3px solid ${c.color};background:${c.color}1a;">
-        <div style="font-weight:700;color:var(--text-primary);">${ok ? '✓ Doğru' : '✗ Yanlış'} — <b>${esc(item.w)}</b> → ${c.label}
+    p.querySelector('#dl-sort-fb').innerHTML =
+      noteCard(
+        `<div style="font-weight:700;">${ok ? '✓ Doğru' : '✗ Yanlış'} — <b>${esc(item.w)}</b> → ${c.label}
           <span style="font-weight:400;color:var(--text-secondary);">(${esc(item.tr)})</span></div>
-        <div style="font-size:0.86rem;color:var(--text-primary);margin-top:6px;font-family:ui-monospace,monospace;">${SORT_EXAMPLES[item.cat]}</div>
-      </div>
-      <button type="button" id="dl-sort-next" class="btn btn-secondary" style="margin-top:12px;width:100%;padding:12px;">${last ? 'Sonuç' : 'Devam →'}</button>
-    `;
+        <div style="margin-top:6px;font-family:ui-monospace,monospace;font-size:0.85rem;">${SORT_EXAMPLES[item.cat]}</div>`,
+        c.color
+      ) +
+      nextBtn('dl-sort-next', last ? 'Sonuç' : 'Devam →');
     p.querySelector('#dl-sort-next').onclick = () => { s.i++; renderSort(); };
   }
   function renderSortResult() {
     const s = st.sort, p = panel();
-    const pct = Math.round(s.score / s.queue.length * 100);
-    p.innerHTML = `
-      <div style="text-align:center;padding:24px 16px;background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;">
-        <div style="font-size:2rem;font-weight:800;color:var(--text-primary);">${s.score} / ${s.queue.length}</div>
-        <div class="text-sm-muted" style="margin-top:4px;">%${pct} · en uzun seri ${s.best}</div>
-      </div>
-      ${s.wrong.length ? `
+    p.innerHTML =
+      resultCard(s.score, s.queue.length, 'en uzun seri ' + s.best) +
+      (s.wrong.length ? `
         <div style="margin-top:16px;">
           <div class="section-title-sm" style="margin-bottom:6px;">Tekrar bak</div>
           ${s.wrong.map(w => `<div style="padding:8px 12px;border-top:1px solid var(--border-color);font-size:0.87rem;color:var(--text-primary);"><b>${esc(w.w)}</b> → ${CATS[w.cat].label} <span style="color:var(--text-secondary);">(${esc(w.tr)})</span></div>`).join('')}
-        </div>` : '<div class="text-sm-muted" style="margin-top:14px;text-align:center;">Hepsi doğru 🎯</div>'}
-      <button type="button" id="dl-sort-again" class="btn btn-secondary" style="margin-top:16px;width:100%;padding:12px;">Yeni tur</button>
-    `;
+        </div>` : '<div class="text-sm-muted" style="margin-top:14px;text-align:center;">Hepsi doğru 🎯</div>') +
+      nextBtn('dl-sort-again', 'Yeni tur');
     p.querySelector('#dl-sort-again').onclick = startSort;
   }
 
@@ -32994,49 +33170,199 @@ function toggleTrmCard(idx) {
     if (!p) return;
     if (t.i >= t.queue.length) return renderTrapResult();
     const q = t.queue[t.i];
-    p.innerHTML = `
-      <div style="display:flex;justify-content:space-between;margin-bottom:14px;font-size:0.82rem;color:var(--text-secondary);">
-        <span>Soru ${t.i + 1} / ${t.queue.length}</span>
-        <span>Skor <b style="color:var(--text-primary);">${t.score}</b></span>
-      </div>
-      <div style="background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:14px;padding:20px;margin-bottom:14px;font-size:1.02rem;line-height:1.65;color:var(--text-primary);">
-        ${esc(q.sentence).replace('______', '<span style="color:#8b5cf6;font-weight:800;letter-spacing:1px;">______</span>')}
-      </div>
-      <div id="dl-trap-opts" style="display:grid;gap:9px;">
-        ${q.options.map((o, i) => `<button type="button" data-i="${i}" style="padding:12px 15px;border-radius:11px;border:1.5px solid var(--border-color);background:var(--bg-body);color:var(--text-primary);cursor:pointer;text-align:left;font-size:0.95rem;">${String.fromCharCode(65 + i)}) ${esc(o)}</button>`).join('')}
-      </div>
-      <div id="dl-trap-fb"></div>
-    `;
+    p.innerHTML =
+      statsRow(`Soru ${t.i + 1} / ${t.queue.length}`, `Skor <b style="color:var(--text-primary);">${t.score}</b>`) +
+      qbox(esc(q.sentence).replace('______', '<span style="color:#8b5cf6;font-weight:800;letter-spacing:1px;">______</span>')) +
+      optionButtons('dl-trap-opts', q.options, (o, i) => `${String.fromCharCode(65 + i)}) ${esc(o)}`) +
+      '<div id="dl-trap-fb"></div>';
     p.querySelectorAll('#dl-trap-opts button').forEach(b => { b.onclick = () => answerTrap(parseInt(b.dataset.i, 10)); });
   }
   function answerTrap(pick) {
     const t = st.trap, q = t.queue[t.i], ok = pick === q.correct;
     if (ok) t.score++;
     const p = panel();
-    p.querySelectorAll('#dl-trap-opts button').forEach(b => {
-      const i = parseInt(b.dataset.i, 10);
-      b.style.pointerEvents = 'none';
-      if (i === q.correct) { b.style.borderColor = '#10b981'; b.style.background = 'rgba(16,185,129,0.14)'; }
-      else if (i === pick) { b.style.borderColor = '#ef4444'; b.style.background = 'rgba(239,68,68,0.12)'; }
-    });
+    markChoice(p.querySelector('#dl-trap-opts'), q.correct, pick);
     const last = t.i + 1 >= t.queue.length;
-    p.querySelector('#dl-trap-fb').innerHTML = `
-      <div style="margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--bg-body);border:1px solid var(--border-color);">
+    p.querySelector('#dl-trap-fb').innerHTML =
+      `<div style="margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--bg-body);border:1px solid var(--border-color);">
         ${q.options.map((o, i) => `<div style="font-size:0.85rem;line-height:1.5;margin:5px 0;color:${i === q.correct ? '#10b981' : 'var(--text-secondary)'};"><b>${String.fromCharCode(65 + i)})</b> ${esc(q.why[i] || '')}</div>`).join('')}
-      </div>
-      <button type="button" id="dl-trap-next" class="btn btn-secondary" style="margin-top:12px;width:100%;padding:12px;">${last ? 'Sonuç' : 'Sonraki →'}</button>
-    `;
+      </div>` +
+      nextBtn('dl-trap-next', last ? 'Sonuç' : 'Sonraki →');
     p.querySelector('#dl-trap-next').onclick = () => { t.i++; renderTrap(); };
   }
   function renderTrapResult() {
     const t = st.trap, p = panel();
-    p.innerHTML = `
-      <div style="text-align:center;padding:24px 16px;background:var(--bg-body);border:1.5px solid var(--border-color);border-radius:16px;">
-        <div style="font-size:2rem;font-weight:800;color:var(--text-primary);">${t.score} / ${t.queue.length}</div>
-        <div class="text-sm-muted" style="margin-top:4px;">%${Math.round(t.score / t.queue.length * 100)}</div>
-      </div>
-      <button type="button" id="dl-trap-again" class="btn btn-secondary" style="margin-top:16px;width:100%;padding:12px;">Tekrar</button>
-    `;
+    p.innerHTML = resultCard(t.score, t.queue.length) + nextBtn('dl-trap-again', 'Tekrar');
     p.querySelector('#dl-trap-again').onclick = startTrap;
+  }
+
+  // ---------- MOD 3: NOKTALAMA ----------
+  function puncLabel(o) { const t = o.trim(); return t === '' ? '(işaret yok)' : t; }
+  function startPunc() {
+    st.punc = { queue: shuffle(PUNC_QS), i: 0, score: 0 };
+    renderPunc();
+  }
+  function renderPunc() {
+    const s = st.punc, p = panel();
+    if (!p) return;
+    if (s.i >= s.queue.length) return renderPuncResult();
+    const q = s.queue[s.i];
+    p.innerHTML =
+      statsRow(`Soru ${s.i + 1} / ${s.queue.length}`, `Skor <b style="color:var(--text-primary);">${s.score}</b>`) +
+      qbox(`${esc(q.before)} <span style="color:#8b5cf6;font-weight:800;">▯</span> ${esc(q.after)}`) +
+      `<div style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:8px;">Birleşme yerine ne girer?</div>` +
+      optionButtons('dl-punc-opts', q.options, o => `<span style="font-family:ui-monospace,monospace;">${esc(puncLabel(o))}</span>`) +
+      '<div id="dl-punc-fb"></div>';
+    p.querySelectorAll('#dl-punc-opts button').forEach(b => { b.onclick = () => answerPunc(parseInt(b.dataset.i, 10)); });
+  }
+  function answerPunc(pick) {
+    const s = st.punc, q = s.queue[s.i], ok = pick === q.correct;
+    if (ok) s.score++;
+    const p = panel();
+    markChoice(p.querySelector('#dl-punc-opts'), q.correct, pick);
+    const full = (q.before + q.options[q.correct] + q.after).replace(/\s+/g, ' ').replace(/\s+([,;:.])/g, '$1').trim();
+    const last = s.i + 1 >= s.queue.length;
+    p.querySelector('#dl-punc-fb').innerHTML =
+      noteCard(
+        `<div style="font-family:ui-monospace,monospace;font-size:0.88rem;color:var(--text-primary);">${esc(full)}</div>
+         <div style="margin-top:7px;">${esc(q.note)}</div>`,
+        ok ? '#10b981' : '#ef4444'
+      ) +
+      nextBtn('dl-punc-next', last ? 'Sonuç' : 'Sonraki →');
+    p.querySelector('#dl-punc-next').onclick = () => { s.i++; renderPunc(); };
+  }
+  function renderPuncResult() {
+    const s = st.punc, p = panel();
+    p.innerHTML = resultCard(s.score, s.queue.length) + nextBtn('dl-punc-again', 'Tekrar');
+    p.querySelector('#dl-punc-again').onclick = startPunc;
+  }
+
+  // ---------- MOD 4: HATA AVI ----------
+  function startError() {
+    st.error = { queue: shuffle(ERROR_QS), i: 0, score: 0 };
+    renderError();
+  }
+  function renderError() {
+    const e = st.error, p = panel();
+    if (!p) return;
+    if (e.i >= e.queue.length) return renderErrorResult();
+    const q = e.queue[e.i];
+    p.innerHTML =
+      statsRow(`Soru ${e.i + 1} / ${e.queue.length}`, `Skor <b style="color:var(--text-primary);">${e.score}</b>`) +
+      `<div style="background:rgba(239,68,68,0.08);border:1.5px solid rgba(239,68,68,0.30);border-radius:14px;padding:16px 18px;margin-bottom:12px;">
+        <div style="font-size:0.72rem;font-weight:800;letter-spacing:0.06em;color:#ef4444;text-transform:uppercase;margin-bottom:5px;">⚠ Bozuk cümle</div>
+        <div style="font-size:1rem;line-height:1.6;color:var(--text-primary);">${esc(q.bad)}</div>
+      </div>
+      <div style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:8px;">Hangisi bunu doğru düzeltiyor?</div>` +
+      optionButtons('dl-error-opts', q.options, (o, i) => `${String.fromCharCode(65 + i)}) ${esc(o)}`) +
+      '<div id="dl-error-fb"></div>';
+    p.querySelectorAll('#dl-error-opts button').forEach(b => { b.onclick = () => answerError(parseInt(b.dataset.i, 10)); });
+  }
+  function answerError(pick) {
+    const e = st.error, q = e.queue[e.i], ok = pick === q.correct;
+    if (ok) e.score++;
+    const p = panel();
+    markChoice(p.querySelector('#dl-error-opts'), q.correct, pick);
+    const last = e.i + 1 >= e.queue.length;
+    p.querySelector('#dl-error-fb').innerHTML =
+      noteCard(
+        `<div><b>Hata:</b> ${esc(q.flaw)}</div>
+         <div style="margin-top:7px;"><b>İki yolla düzeltilir:</b></div>
+         <ul style="margin:4px 0 0;padding-left:18px;">${q.fixes.map(f => `<li style="margin:3px 0;">${esc(f)}</li>`).join('')}</ul>`,
+        ok ? '#10b981' : '#ef4444'
+      ) +
+      nextBtn('dl-error-next', last ? 'Sonuç' : 'Sonraki →');
+    p.querySelector('#dl-error-next').onclick = () => { e.i++; renderError(); };
+  }
+  function renderErrorResult() {
+    const e = st.error, p = panel();
+    p.innerHTML = resultCard(e.score, e.queue.length) + nextBtn('dl-error-again', 'Tekrar');
+    p.querySelector('#dl-error-again').onclick = startError;
+  }
+
+  // ---------- MOD 5: CÜMLE KUR ----------
+  function startBank() {
+    st.bank = { queue: shuffle(BANK_QS), i: 0, score: 0 };
+    loadBankItem();
+  }
+  function loadBankItem() {
+    const b = st.bank;
+    if (b.i >= b.queue.length) return renderBankResult();
+    const q = b.queue[b.i];
+    b.placed = [];
+    b.pool = shuffle(q.tokens.map((t, idx) => ({ t, idx })));
+    b.done = false;
+    renderBank();
+  }
+  function renderBank() {
+    const b = st.bank, p = panel();
+    if (!p) return;
+    p.innerHTML =
+      statsRow(`Soru ${b.i + 1} / ${b.queue.length}`, `Skor <b style="color:var(--text-primary);">${b.score}</b>`) +
+      `<div style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:9px;">Parçaları doğru sıraya diz. Büyük harf = cümle başı. Yerleştirdiğine dokunursan geri alır.</div>
+       <div id="dl-bank-answer" style="min-height:50px;border:1.5px dashed var(--border-color);border-radius:12px;padding:9px;margin-bottom:11px;display:flex;flex-wrap:wrap;gap:7px;align-items:center;"></div>
+       <div id="dl-bank-pool" style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px;min-height:38px;"></div>
+       <div id="dl-bank-fb"></div>`;
+    paintBank();
+  }
+  function tokBtn(tok, where, k) {
+    const punc = /^[,;:.]$/.test(tok.t);
+    const bg = punc ? 'rgba(139,92,246,0.16)' : 'var(--bg-body)';
+    const bd = punc ? '#8b5cf6' : 'var(--border-color)';
+    return `<button type="button" data-where="${where}" data-k="${k}" style="padding:${punc ? '7px 11px' : '7px 12px'};border-radius:9px;border:1.5px solid ${bd};background:${bg};color:var(--text-primary);cursor:pointer;font-size:0.9rem;font-weight:${punc ? '800' : '500'};">${esc(tok.t)}</button>`;
+  }
+  function paintBank() {
+    const b = st.bank, p = panel();
+    const ans = p.querySelector('#dl-bank-answer');
+    const pool = p.querySelector('#dl-bank-pool');
+    if (!ans || !pool) return;
+    ans.innerHTML = b.placed.length
+      ? b.placed.map((t, k) => tokBtn(t, 'ans', k)).join('')
+      : '<span style="color:var(--text-secondary);font-size:0.85rem;opacity:0.7;">buraya diz…</span>';
+    pool.innerHTML = b.pool.length
+      ? b.pool.map((t, k) => tokBtn(t, 'pool', k)).join('')
+      : '<span style="color:var(--text-secondary);font-size:0.85rem;opacity:0.7;">—</span>';
+    if (!b.done) {
+      ans.querySelectorAll('button').forEach(btn => btn.onclick = () => {
+        b.pool.push(b.placed.splice(parseInt(btn.dataset.k, 10), 1)[0]);
+        paintBank();
+      });
+      pool.querySelectorAll('button').forEach(btn => btn.onclick = () => {
+        b.placed.push(b.pool.splice(parseInt(btn.dataset.k, 10), 1)[0]);
+        paintBank();
+      });
+    }
+    const fb = p.querySelector('#dl-bank-fb');
+    if (b.done) return;
+    const ready = b.pool.length === 0;
+    fb.innerHTML = nextBtn('dl-bank-check', ready ? 'Kontrol et' : `Kontrol et (${b.placed.length}/${b.placed.length + b.pool.length})`);
+    const btn = fb.querySelector('#dl-bank-check');
+    btn.disabled = !ready;
+    btn.style.opacity = ready ? '1' : '0.5';
+    btn.onclick = () => checkBank();
+  }
+  function checkBank() {
+    const b = st.bank, q = b.queue[b.i], p = panel();
+    const got = b.placed.map(x => x.t);
+    const ok = got.length === q.tokens.length && got.every((t, i) => t === q.tokens[i]);
+    if (ok) b.score++;
+    b.done = true;
+    paintBank();
+    const last = b.i + 1 >= b.queue.length;
+    p.querySelector('#dl-bank-fb').innerHTML =
+      noteCard(
+        `<div style="font-weight:700;">${ok ? '✓ Doğru' : '✗ Sıra yanlış'}</div>
+         <div style="margin-top:6px;font-family:ui-monospace,monospace;font-size:0.88rem;color:var(--text-primary);">${esc(joinTokens(q.tokens))}</div>
+         <div style="margin-top:4px;font-style:italic;color:var(--text-secondary);">${esc(q.tr)}</div>
+         <div style="margin-top:7px;">${esc(q.note)}</div>`,
+        ok ? '#10b981' : '#ef4444'
+      ) +
+      nextBtn('dl-bank-next', last ? 'Sonuç' : 'Sonraki →');
+    p.querySelector('#dl-bank-next').onclick = () => { b.i++; loadBankItem(); };
+  }
+  function renderBankResult() {
+    const b = st.bank, p = panel();
+    p.innerHTML = resultCard(b.score, b.queue.length) + nextBtn('dl-bank-again', 'Tekrar');
+    p.querySelector('#dl-bank-again').onclick = startBank;
   }
 })();
