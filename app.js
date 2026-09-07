@@ -14636,7 +14636,8 @@ const CONNECTOR_DRILL_SECTIONS = [
             <code style="font-size: 0.85em;">No sooner <strong>had</strong> the treaty <strong>been signed than</strong> hostilities <strong>resumed</strong>.</code>
           </div>
         </div>
-        <p style="margin: 14px 0 6px; font-weight: 800;">Zamanı ilk yardımcı fiil taşır</p>
+        <div style="margin: 14px 0 0; padding: 12px 16px; border-left: 3px solid #ef4444; background: rgba(239,68,68,0.07); border-radius: 0 8px 8px 0;">
+        <p style="margin: 0 0 6px; font-weight: 800; color: #ef4444;">Zamanı ilk yardımcı fiil taşır</p>
         <p style="margin: 0 0 8px; line-height: 1.65;">
           Yukarıdaki kuralların hiçbiri <strong>çatıya</strong> (etken/edilgen) ya da
           <strong>görünüşe</strong> (basit/sürerlik) bakmaz. Bunlar zamandan bağımsız
@@ -14664,7 +14665,7 @@ const CONNECTOR_DRILL_SECTIONS = [
         <p style="margin: 10px 0 8px; line-height: 1.65;">
           Dördü de <strong>Geçmiş Zaman</strong>dır. Buradan çıkan tek kural şudur:
         </p>
-        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 8px 12px; border-radius: 6px; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.22);">
           <strong>approved</strong> &nbsp;→&nbsp; zaman fiilin kendisinde<br>
           <strong>was</strong> approving &nbsp;→&nbsp; zaman <em>was</em>'ta<br>
           <strong>was</strong> approved &nbsp;→&nbsp; zaman <em>was</em>'ta<br>
@@ -14677,30 +14678,34 @@ const CONNECTOR_DRILL_SECTIONS = [
           <strong>zaman baştaki ilk yardımcı fiildedir</strong>; gerisi çatı ve görünüş bilgisidir.
           Bu yüzden uzun bir yüklem zinciri görünce paniklemeye gerek yok:
         </p>
-        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 8px 12px; border-radius: 6px; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.22);">
           By the time the report <strong>was</strong> being reviewed, the team <strong>had left</strong>. &nbsp;✓<br>
           <span style="opacity:.8">ilk yardımcı <strong>was</strong> → Geçmiş Zaman → ana cümle <strong>had V3</strong></span>
         </div>
+        </div>
 
-        <p style="margin: 14px 0 6px; font-weight: 800;">Altın kural: yan cümlede <em>will</em> yok</p>
+        <div style="margin: 14px 0 0; padding: 12px 16px; border-left: 3px solid #f59e0b; background: rgba(245,158,11,0.07); border-radius: 0 8px 8px 0;">
+        <p style="margin: 0 0 6px; font-weight: 800; color: #f59e0b;">Altın kural: yan cümlede <em>will</em> yok</p>
         <p style="margin: 0 0 8px; line-height: 1.65;">
           Zaman ve koşul yan cümlelerinde gelecek zaman kullanılmaz; gelecek anlamı
           geniş zamanla verilir ve <em>will</em> ana cümleye kalır. Bu tek kural
           <strong>when · until · as soon as · before · after · once · whenever · if · unless ·
           as long as · in case · provided that</strong> için birden geçerlidir.
         </p>
-        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 8px 12px; border-radius: 6px; background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.22);">
           The alarm will sound as soon as the temperature <strong>exceeds</strong> four degrees. &nbsp;✓<br>
           <span style="color:#ef4444;">The alarm will sound as soon as the temperature <strong>will exceed</strong> four degrees. &nbsp;✗</span>
         </div>
+        </div>
 
-        <p style="margin: 12px 0 6px; font-weight: 700;">Yan cümleyi nasıl tanırsın</p>
+        <div style="margin: 12px 0 0; padding: 12px 16px; border-left: 3px solid #3b82f6; background: rgba(59,130,246,0.07); border-radius: 0 8px 8px 0;">
+        <p style="margin: 0 0 6px; font-weight: 800; color: #3b82f6;">Yan cümleyi nasıl tanırsın</p>
         <p style="margin: 0 0 8px; line-height: 1.65;">
           Öznesi ve fiili olan, ama <strong>tek başına cümle olamayan</strong> parçadır; onu
           bağımlı kılan şey başındaki bağlaçtır. En kesin test: <strong>bağlacı sil, tek
           başına oku.</strong> Geriye tam bir cümle kalıyorsa, o parça yan cümledir.
         </p>
-        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 8px 12px; border-radius: 6px; background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.22);">
           <strong>When</strong> the rain stops &nbsp;→&nbsp; tek başına eksik &nbsp;→&nbsp; yan cümle<br>
           the rain stops &nbsp;→&nbsp; bağlaç silinince tam cümle
         </div>
@@ -14708,13 +14713,15 @@ const CONNECTOR_DRILL_SECTIONS = [
           İkinci ipucu virgüldür: yan cümle başta ise virgülle ayrılır, sonda ise ayrılmaz —
           <em>When the rain stops<strong>,</strong> we will leave</em> / <em>We will leave when the rain stops</em>.
         </p>
+        </div>
 
-        <p style="margin: 12px 0 6px; font-weight: 700; color: #ef4444;">Dikkat: kural her yan cümlede geçerli değil</p>
+        <div style="margin: 12px 0 0; padding: 12px 16px; border-left: 3px solid #ec4899; background: rgba(236,72,153,0.07); border-radius: 0 8px 8px 0;">
+        <p style="margin: 0 0 6px; font-weight: 800; color: #ec4899;">Dikkat: kural her yan cümlede geçerli değil</p>
         <p style="margin: 0 0 8px; line-height: 1.65;">
           Yasak yalnızca <strong>zaman ve koşul</strong> yan cümleleri içindir. Aynı kelime
           <strong>isim cümleciği</strong> kurduğunda <em>will</em> serbesttir:
         </p>
-        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; padding: 8px 12px; border-radius: 6px; background: rgba(236,72,153,0.06); border: 1px solid rgba(236,72,153,0.22);">
           We will leave <strong>when he arrives</strong>. &nbsp;✓ &nbsp;<span style="opacity:.75">zaman → will yok</span><br>
           I don't know <strong>when he will arrive</strong>. &nbsp;✓ &nbsp;<span style="opacity:.75">isim cümleciği → will serbest</span><br>
           <strong>If it rains</strong>, we will cancel. &nbsp;✓ &nbsp;<span style="opacity:.75">koşul → will yok</span><br>
@@ -14727,16 +14734,19 @@ const CONNECTOR_DRILL_SECTIONS = [
           İsim cümleciği fiilin nesnesidir; zaman yan cümlesi ise ana eylemin ne zaman
           olduğunu söyler.
         </p>
-        <p style="margin: 14px 0 6px; font-weight: 800;">En sık karışan üçlü: since · for · ago</p>
+        </div>
+        <div style="margin: 14px 0 0; padding: 12px 16px; border-left: 3px solid #10b981; background: rgba(16,185,129,0.07); border-radius: 0 8px 8px 0;">
+        <p style="margin: 0 0 6px; font-weight: 800; color: #10b981;">En sık karışan üçlü: since · for · ago</p>
         <p style="margin: 0; line-height: 1.65;">
           Üçü de Türkçede birbirine yakın çevrilir, ama üçü üç ayrı şey ister:
         </p>
-        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 10px 14px; border-radius: 8px; background: var(--bg-body); border: 1px solid var(--border-color);">
+        <div style="font-family: ui-monospace, monospace; font-size: 0.82rem; line-height: 1.9; margin-top: 8px; padding: 8px 12px; border-radius: 6px; background: rgba(16,185,129,0.06); border: 1px solid rgba(16,185,129,0.22);">
           <strong>since</strong> + başlangıç NOKTASI &nbsp;→&nbsp; has been out of use <strong>since 2016</strong><br>
           <strong>for</strong> + SÜRE &nbsp;→&nbsp; has been out of use <strong>for eight years</strong><br>
           <strong>ago</strong> + geçmişte KAPALI an &nbsp;→&nbsp; <strong>was abandoned</strong> two centuries ago<br>
           <span style="color:#ef4444;">has been out of use <strong>since eight years</strong> &nbsp;✗ &nbsp;(süre 'for' ister)</span><br>
           <span style="color:#ef4444;"><strong>has published</strong> it forty years ago &nbsp;✗ &nbsp;('ago' Perfect almaz)</span>
+        </div>
         </div>`
     },
     icons: { tdrill_ex1: '⚓', tdrill_ex2: '🔀', tdrill_ex3: '⚡',
@@ -29393,12 +29403,20 @@ function highlightTmText(text, category) {
 // Kalıp kartın kendi `rule` metninden çıkarılır; yalnızca yüksek güvenli
 // (yardımcı fiil + V3 / V-ing) eşleşmeler boyanır — yan cümlenin yalın fiiline
 // dokunulmaz, çünkü onu güvenilir biçimde ayıklamak mümkün değil.
-const TM_IRREGULAR_V3 = new Set(('been made done said gone taken given come become run put set read let cut hit lost won met paid held told found sent kept left built spent cost sold known grown shown thrown drawn flown blown worn torn borne chosen frozen spoken broken stolen woken written driven ridden risen fallen eaten beaten hidden bitten forbidden forgotten mistaken overtaken undertaken withdrawn understood stood withstood got gotten sat begun drunk sung swum rung sprung brought bought caught taught fought sought thought dealt meant felt dreamt learnt burnt spelt spoilt knelt leant wept swept crept slept bred fed fled led sped shed bled wed rid wound bound ground stuck struck dug hung swung clung flung slung spun sworn overcome undergone laid mislaid burst thrust split spread cast broadcast forecast lit shone awoken arisen').split(/\s+/));
+const TM_V3 = new Set(('been seen made done said gone taken given come become run put set read let cut hit lost won met paid held told found sent kept left built spent cost sold known grown shown thrown drawn flown blown worn torn borne chosen frozen spoken broken stolen woken written driven ridden risen fallen eaten beaten hidden bitten forbidden forgotten mistaken overtaken undertaken withdrawn understood stood withstood got gotten sat begun drunk sung swum rung sprung brought bought caught taught fought sought thought dealt meant felt dreamt learnt burnt spelt spoilt knelt leant wept swept crept slept bred fed fled led sped shed bled wed rid wound bound ground stuck struck dug hung swung clung flung slung spun sworn overcome undergone laid mislaid burst thrust split spread cast broadcast forecast lit shone awoken arisen').split(/\s+/));
+const TM_V2 = new Set('went came saw took gave wrote rode drove began brought bought caught taught fought sought thought built kept left sent spent held told sold found stood became spoke broke chose froze paid laid struck met knew grew flew blew fell ate rose drank sang swam rang'.split(/\s+/));
+const TM_ADJ_ED = new Set('unpublished unexpected unprecedented undetected unresolved unchanged untouched sophisticated renowned aged learned beloved so-called would-be'.split(/\s+/));
+const TM_VERB_SKIP = new Set('the a an its their his her our your my this that these those no any some each every to been be being have has had will would could should might must may shall do does not so very too quite rather most more less well highly widely fairly is are am was were and or but nor for yet when than which who whose where because if unless whether though although while whereas as also then still just already only even'.split(/\s+/));
 
 function tmLooksLikeV3(w) {
   w = (w || '').toLowerCase();
-  if (TM_IRREGULAR_V3.has(w)) return true;
-  return w.length > 3 && /(?:ed|en|wn|ne|ung|unk|ought|aught|elt|ilt|ost|ent|ept|un|it)$/.test(w);
+  if (TM_ADJ_ED.has(w)) return false;
+  return TM_V3.has(w) || (w.length > 3 && /ed$/.test(w));
+}
+function tmLooksLikeV2(w) {
+  w = (w || '').toLowerCase();
+  if (TM_ADJ_ED.has(w)) return false;
+  return TM_V2.has(w) || (w.length > 3 && /(?:ied|[b-df-hj-np-tv-z]ed)$/.test(w));
 }
 
 function tmMarkAnswerVerbs(text, rule) {
@@ -29406,6 +29424,10 @@ function tmMarkAnswerVerbs(text, rule) {
   const R = ' ' + String(rule).toUpperCase().replace(/[–—]/g, '-').replace(/V-ING/g, 'VING') + ' ';
   const has = s => R.indexOf(s) !== -1;
   const perfect = has('HAVE/HAS') || has('PRESENT PERFECT') || /\b(?:HAVE|HAS)\b[^|]{0,24}\bV3\b/.test(R);
+  const pastRule = has('V2') || has(' PAST ') || has('PAST PASSIVE') || has('PAST SIMPLE') || has('SIMPLE PAST');
+  const invertedOnly = has('NO SOONER') || has('HARDLY') || has('SCARCELY HAD') || has('BARELY HAD') ||
+    has('SELDOM') || has('RARELY') || has('NEVER BEFORE') || has('ONLY THEN') || has('ONLY AFTER') ||
+    has('UNDER NO CIRCUMSTANCES') || has('AT NO TIME') || has('NOT ONCE') || has('LITTLE + DID');
   const adv = '(?:already|just|recently|only|even|never|not|almost|nearly|long|finally|also|gradually|steadily|greatly|largely|now|barely|hardly|consistently|repeatedly|significantly|substantially|sharply|slightly|widely)';
   const tail = '(?:not |never )?(?:been )?(?:' + adv + ' )?(?:been )?[a-z]+';
   const spans = [];
@@ -29414,8 +29436,6 @@ function tmMarkAnswerVerbs(text, rule) {
     let m;
     while ((m = re.exec(text))) {
       if (checkV3 && !tmLooksLikeV3(m[0].split(/\s+/).pop())) continue;
-      if (/^(?:have|has)\b/i.test(m[0]) &&
-          /\b(?:will|would|could|should|might|must|may|shall)\s$/i.test(text.slice(Math.max(0, m.index - 8), m.index))) continue;
       spans.push([m.index, m.index + m[0].length]);
     }
   };
@@ -29430,14 +29450,31 @@ function tmMarkAnswerVerbs(text, rule) {
   if (has('WOULD V1') || has('WOULD + V1'))
     scan('would (?:soon |then |also |now |only |often |always |usually |regularly |never )?(?!have |be |not |rather )[a-z]+', false);
   if (has('USED TO')) scan('used to (?:not |once )?[a-z]+', false);
+  if (has('HAVING ')) scan('having (?:been )?(?:[a-z]+ly )?[a-z]+', true);
   if (has('WAS-WERE VING') || has('WAS/WERE VING') || has('CONTINUOUS')) scan('(?:was|were) (?:not |still |already )?[a-z]+ing', false);
   if (has('IS/ARE VING')) scan('(?:is|are) (?:not |still |already )?[a-z]+ing', false);
+  // geçmiş edilgen: was/were (+ zarf) + V3  (kuralda V2 / Past geçtiğinde)
+  if (pastRule && !has('CONTINUOUS'))
+    scan('(?:was|were) (?:not |never |also |still |already |[a-z]+ly )?(?:been )?[a-z]+', true);
+  // yalın V2 ana fiil — yalnızca perfect olmayan, geçmiş odaklı, devrik olmayan kartlarda
+  if (pastRule && !perfect && !invertedOnly) {
+    const wre = /[A-Za-z][a-z'’-]*/g;
+    let wm, prev = '', n = 0;
+    while ((wm = wre.exec(text)) && n < 3) {
+      const w = wm[0].toLowerCase();
+      if (wm.index > 0 && !TM_VERB_SKIP.has(prev) && tmLooksLikeV2(w)) {
+        spans.push([wm.index, wm.index + wm[0].length]);
+        n++;
+      }
+      prev = w;
+    }
+  }
 
   if (!spans.length) return text;
   spans.sort((a, b) => a[0] - b[0] || b[1] - a[1]);
   const kept = [];
   let end = -1;
-  for (const s of spans) if (s[0] >= end) { kept.push(s); end = s[1]; }
+  for (const s of spans) if (s[0] >= end && kept.length < 3) { kept.push(s); end = s[1]; }
   let out = '', i = 0;
   for (const [a, b] of kept) {
     out += text.slice(i, a) + '<span class="tm-hl-verb">' + text.slice(a, b) + '</span>';
@@ -29675,10 +29712,10 @@ const TRANSITIONS_MATRIX_DATA = {
       trap: "⚠️ UYUM: Arkasından tam cümle alır. Virgülle tek başına bağlanmaz.",
       examples: [
         { tense: "Simple Present", en: "The strategy is risky; however, it offers substantial financial rewards.", tr: "Strateji risklidir; ancak büyük finansal getiriler sunar." },
-        { tense: "Simple Past", en: "The weather was stormy; nevertheless, the flight took off on schedule yesterday.", tr: "Hava fırtınalıydı; yine de uçak dün zamanında havalandı." },
-        { tense: "Present Perfect", en: "Prices have increased sharply; nonetheless, consumer demand has remained strong.", tr: "Fiyatlar keskin bir şekilde artmıştır; yine de tüketici talebi güçlü kalmıştır." },
+        { tense: "Simple Past", en: "The weather was stormy. However, the flight took off on schedule yesterday.", tr: "Hava fırtınalıydı. Ancak uçak dün zamanında havalandı." },
+        { tense: "Present Perfect", en: "Prices have increased sharply; however, consumer demand has remained strong.", tr: "Fiyatlar keskin bir şekilde artmıştır; ancak tüketici talebi güçlü kalmıştır." },
         { tense: "Future Simple", en: "Competition will be tough; however, our team will secure the contract.", tr: "Rekabet zorlu olacaktır; ancak ekibimiz sözleşmeyi alacaktır." },
-        { tense: "Modal / Passive", en: "The target seems ambitious; nevertheless, we must strive to achieve it.", tr: "Hedef iddialı görünüyor; yine de onu başarmak için çabalamalıyız." }
+        { tense: "Modal / Passive", en: "The target seems ambitious; however, we must strive to achieve it.", tr: "Hedef iddialı görünüyor; ancak onu başarmak için çabalamalıyız." }
       ]
     },
     {
@@ -29690,14 +29727,14 @@ const TRANSITIONS_MATRIX_DATA = {
       examples: [
         { en: "The trial faced budget cuts. Nevertheless, researchers proceeded.", tr: "Deneme bütçe kısıntısıyla karşılaştı. Yine de araştırmacılar devam etti." },
         { en: "Weather conditions were harsh. Nevertheless, the expedition reached the summit.", tr: "Hava koşulları sertti. Yine de keşif ekibi zirveye ulaştı." },
-        { en: "The investment carried high financial risks; nevertheless, the board authorized it.", tr: "Yatırım yüksek finansal riskler taşıyordu; yine de yönetim kurulu izin verdi." }
+        { en: "The investment carried high financial risks. Nevertheless, the board authorized it.", tr: "Yatırım yüksek finansal riskler taşıyordu. Yine de yönetim kurulu izin verdi." }
       ]
     },
     {
       term: "nonetheless",
       category: "contrast",
       meaning: "buna rağmen, her şeye karşın",
-      rule: "📐 NOKTALAMA: Cümle 1. Nonetheless, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1; nonetheless, Cümle 2.",
       trap: "⚠️ Nevertheless ile tamamen eş anlamlıdır, akademik metinlerde sık geçer.",
       examples: [
         { en: "The task was extremely difficult; nonetheless, she completed it on time.", tr: "Görev son derece zordu; buna rağmen zamanında tamamladı." },
@@ -29771,7 +29808,7 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "moreover",
       category: "addition",
       meaning: "üstelik, bundan başka",
-      rule: "📐 NOKTALAMA: Cümle 1. Moreover, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1; moreover, Cümle 2.",
       trap: "⚠️ Akışı güçlendiren ilave bilgi verir.",
       examples: [
         { en: "The car is fuel-efficient; moreover, it has top safety ratings.", tr: "Araç yakıt tasarrufludur; üstelik en yüksek güvenlik puanlarına sahiptir." },
@@ -29807,7 +29844,7 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "what is more",
       category: "addition",
       meaning: "dahası da var ki, üstelik",
-      rule: "📐 NOKTALAMA: Cümle 1. What is more, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1; what is more, Cümle 2.",
       trap: "⚠️ Konuşma ve resmi akademik metinlerde ekstra dikkat çekici eklemedir.",
       examples: [
         { en: "He passed the test; what is more, he scored the highest mark.", tr: "Sınavı geçti; dahası da var ki en yüksek puanı aldı." },
@@ -29857,7 +29894,7 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "for instance",
       category: "exemplification",
       meaning: "örneğin, misal olarak",
-      rule: "📐 NOKTALAMA: Cümle 1. For instance, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1. For instance, Cümle 2.  •  Ara söz: Cümle 1. Öğe, for instance, … (veya öncesinde ;)",
       trap: "⚠️ Cümle ortasında ara söz olarak da gelebilir.",
       examples: [
         { en: "Certain mammals have adapted to water; whales, for instance, live entirely in the sea.", tr: "Bazı memeliler suya uyum sağlamıştır; balinalar, örneğin, tamamen denizde yaşar." },
@@ -29869,7 +29906,7 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "for example",
       category: "exemplification",
       meaning: "örneğin",
-      rule: "📐 NOKTALAMA: Cümle 1. For example, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1. For example, Cümle 2.  •  Ara söz: Cümle 1. Öğe, for example, … (veya öncesinde ;)",
       trap: "⚠️ En yaygın örnekleme geçiş ifadesidir.",
       examples: [
         { en: "Many countries use green energy. Iceland, for example, relies on geothermal power.", tr: "Birçok ülke yeşil enerji kullanıyor. İzlanda, örneğin, jeotermal güce dayanmaktadır." },
@@ -29905,7 +29942,7 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "in other words",
       category: "exemplification",
       meaning: "diğer bir deyişle",
-      rule: "📐 NOKTALAMA: Cümle 1. In other words, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1; in other words, Cümle 2.",
       trap: "⚠️ Aynı fikri daha anlaşılır veya basitleştirilmiş ifadeyle tekrarlar.",
       examples: [
         { en: "The patient is completely afebrile; in other words, she has no fever.", tr: "Hasta tamamen ateşsizdir; diğer bir deyişle ateşi yoktur." },
@@ -29929,7 +29966,7 @@ const TRANSITIONS_MATRIX_DATA = {
       term: "specifically",
       category: "exemplification",
       meaning: "özel olarak, spesifik olarak",
-      rule: "📐 NOKTALAMA: Cümle 1. Specifically, Cümle 2.",
+      rule: "📐 NOKTALAMA: Cümle 1; specifically, Cümle 2.",
       trap: "⚠️ Genel bir ifadeden özel bir detay noktasına iner.",
       examples: [
         { en: "The policy targets youth unemployment; specifically, graduates under 25.", tr: "Politika genç işsizliğini hedefliyor; özel olarak 25 yaş altı mezunları." },
@@ -30474,6 +30511,91 @@ function highlightTrmText(text, category) {
   return highlighted;
 }
 
+// ── Geçiş matrisi "kural / kalıp" kutusu ────────────────────────────────────
+// item.rule ham biçimleri:
+//   "📐 NOKTALAMA: Cümle 1; moreover, Cümle 2."
+//   "📐 NOKTALAMA: Cümle 1. However, Cümle 2. OR Cümle 1; however, Cümle 2."
+//   "📐 NOKTALAMA: Cümle 1. For instance, Cümle 2.  •  Ara söz: ..."
+//   "📐 FORMÜL: Although + Özne + Fiil, Cümle"                (subordinate_preps)
+// Eski kutu ham metni tek blok basıyordu; noktalama işareti ve bağlacın kendisi
+// cümlenin içinde kayboluyordu. Yeni kutu: bağlacı kategori renginde jetona,
+// noktalama işaretlerini büyütülmüş vurgulu simgeye, "Cümle / Özne / Fiil / İsim"
+// yuvalarını nötr jetona çevirir; "OR / VEYA / ||" ile ayrılan biçimleri ayrı
+// satıra, "•" sonrası açıklamayı alt nota alır. Tanınmayan kalıp düz metne düşer.
+const TRM_RULE_SLOTS = ['Olumsuz İddia', 'Doğrulayıcı Cümle', 'Ana Cümle', 'Yan Cümle',
+  'İsim Öbeği', 'Fiil Yalın Hali', 'Ara söz', 'Past Tense',
+  'Cümle 1', 'Cümle 2', 'Öğe 1', 'Öğe 2', 'Örnek 1', 'Örnek 2',
+  'Cümle', 'Öğe', 'Örnek', 'Özne', 'Fiil', 'İsim', 'Komparatif',
+  'Sıfat/Zarf', 'Sıfat', 'Zarf', 'V-ing', 'V1', 'V2', 'V3'];
+
+function trmEsc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function trmRulePatternHTML(str, term) {
+  const original = String(str || '').trim();
+  if (!original) return '';
+  let s = original, tailNote = '';
+  const tm = s.match(/\s*\(([^()]{1,44})\)\s*$/);
+  if (tm && /\s/.test(tm[1])) { tailNote = tm[1].trim(); s = s.slice(0, tm.index).trim(); }
+
+  const esc = x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const conns = String(term || '')
+    .split(/\s*\/\s*/)
+    .map(t => t.replace(/\([^()]*\)/g, '').replace(/\.\.\..*$/, '').replace(/\+.*$/, '').trim())
+    .filter(t => t.length >= 2 && !/^(Adj|Adv|S|V|Özne|Fiil|Sıfat|Zarf|İsim)$/i.test(t))
+    .sort((a, b) => b.length - a.length);
+  const bound = '(?=$|[\\s;,.…+/=])';
+  const connAlt = conns.length ? '(' + conns.map(esc).join('|') + ')' + bound : '((?!))';
+  const slotAlt = '(' + TRM_RULE_SLOTS.map(esc).join('|') + ')' + bound;
+  const re = new RegExp(
+    connAlt + '|' + slotAlt +
+    '|([;,]|\\.{1,3}|…)' +
+    '|(\\s*\\+\\s*|\\s*/\\s*|\\s*=\\s*)' +
+    '|(\\s+)' +
+    '|([^\\s;,.…+/=]+)', 'gi');
+
+  let out = '', m, hits = 0, words = 0;
+  while ((m = re.exec(s))) {
+    if (re.lastIndex === m.index) { re.lastIndex++; continue; }
+    if (m[1]) { hits++; out += `<span class="trm-rp-conn">${trmEsc(m[1])}</span>`; }
+    else if (m[2]) { hits++; out += `<span class="trm-rp-slot">${trmEsc(m[2])}</span>`; }
+    else if (m[3]) out += `<span class="trm-rp-punc">${trmEsc(m[3])}</span>`;
+    else if (m[4]) out += `<span class="trm-rp-join">${trmEsc(m[4].trim() || '+')}</span>`;
+    else if (m[5]) out += ' ';
+    else if (m[6] != null) { words++; out += `<span class="trm-rp-txt">${trmEsc(m[6])}</span>`; }
+  }
+  if (!hits && words >= 4) return `<span class="trm-rule-prose-inline">${trmEsc(original)}</span>`;
+  if (tailNote) out += `<span class="trm-rp-tailnote">${trmEsc(tailNote)}</span>`;
+  return out;
+}
+
+function renderTrmRuleBox(rule, term, category) {
+  const rawFull = String(rule || '').replace(/->/g, '➔').trim();
+  if (!rawFull) return '';
+  let raw = rawFull, label = 'CÜMLE KALIBI';
+  const pm = rawFull.match(/^.{0,4}?(NOKTALAMA|FORM[ÜU]L|KURAL|UYUM)\s*:\s*/i);
+  if (pm) {
+    raw = rawFull.slice(pm[0].length).trim();
+    label = /FORM/i.test(pm[1]) ? 'YAPI KALIBI'
+      : /NOKTALAMA/i.test(pm[1]) ? 'NOKTALAMA KALIBI'
+      : /UYUM/i.test(pm[1]) ? 'ZAMAN UYUMU' : pm[1].toUpperCase().trim();
+  }
+  // "OR" / "VEYA" ayıraç olarak yalnız BÜYÜK harfle geçer; "or else" gibi küçük
+  // harfli "or" bölünmemeli. "||" ve satır sonu da biçim ayırır.
+  const variants = raw.split(/\s*\|\|\s*|\s+(?:OR|VEYA)\s+|\n+/).map(v => v.trim()).filter(Boolean);
+  const body = variants.map((v, i) => {
+    const segs = v.split(/\s*•\s*/);
+    const pat = trmRulePatternHTML(segs[0], term);
+    const notes = segs.slice(1).map(n => `<div class="trm-rule-note">${trmEsc(n)}</div>`).join('');
+    const alt = variants.length > 1 ? `<span class="trm-rule-alttag">${i === 0 ? 'ya' : 'ya da'}</span>` : '';
+    return `<div class="trm-rule-variant">${alt}<div class="trm-rule-pattern">${pat}</div></div>${notes}`;
+  }).join('');
+  return `<div class="trm-punc-box trm-rule--${trmEsc(category)}">` +
+    `<div class="trm-rule-label"><span class="trm-rule-label-ico">📐</span>${trmEsc(label)}</div>` +
+    body + '</div>';
+}
+
 function renderTransitionsMatrix() {
   const gridEl = document.getElementById('trm-matrix-grid');
   if (!gridEl) return;
@@ -30525,7 +30647,7 @@ function renderTransitionsMatrix() {
         </div>
 
         <p class="trm-meaning-text">👉 ${hlMeaning}</p>
-        <div class="trm-punc-box">${item.rule.replace(/\n/g, '<br>')}</div>
+        ${renderTrmRuleBox(item.rule, item.term, item.category)}
         ${item.trap ? `<div class="trm-trap-box">${item.trap}</div>` : ''}
 
         <div style="display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; color: #10b981; font-weight: 700; margin-top: 4px;">
@@ -30613,8 +30735,8 @@ function toggleTrmCard(idx) {
         "tr": "Çok az okur değişikliği fark etti. Yine de anlamı bütünüyle değiştirdi."
       },
       {
-        "en": "He apologised twice; still, the damage was done.",
-        "tr": "İki kez özür diledi; yine de zarar oluşmuştu."
+        "en": "He apologised twice. Still, the damage was done.",
+        "tr": "İki kez özür diledi. Yine de zarar oluşmuştu."
       }
     ]
   },

@@ -5541,15 +5541,116 @@ input {
   line-height: 1.4;
 }
 
+/* Kural / kalıp kutusu — bkz. renderTrmRuleBox() */
 .trm-punc-box {
-  background: var(--bg-body);
-  border: 1px dashed rgba(16, 185, 129, 0.4);
-  border-radius: var(--radius-md);
-  padding: 8px 12px;
+  --trm-accent: #10b981;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--trm-accent);
+  border-radius: 10px;
+  padding: 9px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.trm-rule--contrast          { --trm-accent: #ef4444; }
+.trm-rule--addition          { --trm-accent: #3b82f6; }
+.trm-rule--exemplification   { --trm-accent: #f59e0b; }
+.trm-rule--purpose_condition { --trm-accent: #8b5cf6; }
+.trm-rule--summary_emphasis  { --trm-accent: #10b981; }
+.trm-rule--focus_exception   { --trm-accent: #ec4899; }
+
+.trm-rule-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.trm-rule-label-ico { font-size: 0.8rem; letter-spacing: 0; }
+
+.trm-rule-variant {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.trm-rule-alttag {
+  flex: none;
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 1px 5px;
+  transform: translateY(-1px);
+}
+.trm-rule-pattern {
+  flex: 1 1 auto;
+  min-width: 0;
+  line-height: 2;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.82rem;
-  color: var(--text-primary);
-  font-family: var(--font-heading);
-  font-weight: 700;
+  color: var(--text-secondary);
+}
+.trm-rp-conn,
+.trm-rp-slot {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1px;
+}
+.trm-rp-conn {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: #fff;
+  background: var(--trm-accent);
+  border-radius: 6px;
+  padding: 1px 8px;
+}
+.trm-rp-slot {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0 6px;
+}
+.trm-rp-punc {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--trm-accent);
+  padding: 0 2px 0 1px;
+}
+.trm-rp-join { color: var(--text-muted); font-weight: 700; padding: 0 3px; }
+.trm-rp-txt  { color: var(--text-muted); font-style: italic; padding: 0 1px; }
+
+.trm-rp-tailnote,
+.trm-rule-note {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-style: normal;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-top: 3px;
+}
+.trm-rp-tailnote::before,
+.trm-rule-note::before { content: "↳ "; opacity: 0.55; }
+
+.trm-rule-prose-inline {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.55;
 }
 
 .trm-trap-box {
@@ -12226,7 +12327,7 @@ nDown 0.3s ease;
 @media (max-width: 819px) {
   /* 1. Üst Bar İyileştirmeleri (Padding ve Boyutlar) */
   .top-bar {
-    padding: 6px 12px !important;
+    padding: 6px 10px !important;
     height: 48px !important;
     box-sizing: border-box;
   }
@@ -12235,10 +12336,13 @@ nDown 0.3s ease;
     height: 32px !important;
     border-width: 1.5px !important;
   }
+  /* sol+sağ sütun 393px'e sığmıyordu (211+193 > 369): boşlukları kıs */
+  .top-bar-left { gap: 8px !important; }
+  .top-bar-right { gap: 8px !important; }
   .stat-pill {
-    padding: 3px 8px !important;
+    padding: 3px 6px !important;
     font-size: 0.75rem !important;
-    gap: 3px !important;
+    gap: 2px !important;
   }
   .stat-pill .stat-icon {
     font-size: 0.85rem !important;
@@ -12246,6 +12350,16 @@ nDown 0.3s ease;
   .top-bar-right .btn-icon {
     width: 32px !important;
     height: 32px !important;
+  }
+  .btn-social-drawer-toggle {
+    padding: 6px 10px !important;
+  }
+  .topbar-user-pill {
+    gap: 6px !important;
+    padding: 3px 8px 3px 3px !important;
+  }
+  .topbar-user-name {
+    max-width: 92px !important;
   }
   #btn-login-topbar {
     padding: 4px 10px !important;
@@ -12353,6 +12467,17 @@ nDown 0.3s ease;
   }
   .lesson-node-label.label-left {
     right: 84px !important;
+  }
+}
+
+/* Çok dar ekranlar (≤380px): kullanıcı pill'i sadece avatar — isim yazısını gizle */
+@media (max-width: 380px) {
+  .topbar-user-name {
+    display: none !important;
+  }
+  .topbar-user-pill {
+    padding: 3px !important;
+    gap: 0 !important;
   }
 }
 
