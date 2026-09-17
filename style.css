@@ -1782,7 +1782,7 @@ input {
   z-index: -1;
 }
 
-/* Ders penceresi açıkken arkadaki her şeyi hafifçe bulanıklaştıran örtü.
+/* Ders penceresi açıkken arkadaki içeriği hafifçe karartan örtü (bulanıklaştırma yok).
    #tab-content-lessons'a eklenir (popover'ın kendi transform'u fixed çocukları
    kırardı; sekme değişince bu kap display:none olur). Kapanış temizliğini
    togglePopover içindeki MutationObserver yapar.
@@ -1793,8 +1793,6 @@ input {
   inset: 0;
   z-index: 1500;
   background: rgba(15, 23, 42, 0.16);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
   animation: lessonBackdropIn 0.18s ease;
   cursor: default;
 }
