@@ -1485,12 +1485,13 @@ async function mvOnAuthenticated(session, fullName) {
       }
     }
 
-    await mvRefreshLicence();
-    // Admin mi? (admin_uids tablosu → is_admin RPC)
-    try {
-      const { data: adm } = await supabaseClient.rpc('is_admin');
-      state.isAdmin = adm === true;
-    } catch (e) { state.isAdmin = false; }
+    // Lisans yenileme ve admin kontrolü birbirinden bağımsız — paralel çalıştır.
+    await Promise.all([
+      mvRefreshLicence(),
+      supabaseClient.rpc('is_admin')
+        .then(({ data: adm }) => { state.isAdmin = adm === true; })
+        .catch(() => { state.isAdmin = false; })
+    ]);
     try { if (typeof updateLicenceUI === 'function') updateLicenceUI(); } catch (e) {}
     try { if (typeof updateAdminTabVisibility === 'function') updateAdminTabVisibility(); } catch (e) {}
     try { localStorage.setItem(STATE_KEY, JSON.stringify(state)); } catch (e) {}
@@ -6457,33 +6458,6 @@ function initAuth() {
 
 async function enterApp() {
   startHeartbeat();
-  
-  // Sync licence_key from Supabase if empty locally but exists in db
-  if (supabaseClient && state.username && !state.isGuest && !state.licenceKey) {
-    try {
-      const { data, error } = await supabaseClient
-        .from('user_states')
-        .select('licence_key')
-        .eq('username', state.username)
-        .maybeSingle();
-      if (!error && data && data.licence_key) {
-        state.licenceKey = data.licence_key;
-        saveState();
-        
-        // Re-render UI components to reflect premium status immediately
-        try {
-          updateLicenceUI();
-          renderSimulator();
-          renderLessonTree();
-          updateTopBar();
-        } catch (uiErr) {
-          console.error('UI refresh after license sync failed:', uiErr);
-        }
-      }
-    } catch (e) {
-      console.error('License sync on enterApp failed:', e);
-    }
-  }
 
   await validateLicenseDevices();
   updateStreak();
