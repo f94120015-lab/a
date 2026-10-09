@@ -7127,120 +7127,76 @@ function getLessonIllustration(lessonId, unitId) {
         <path d="M56 32C56 38.6 50.6 44 44 44H32C25.4 44 20 38.6 20 32C20 25.4 25.4 20 32 20H44C50.6 20 56 25.4 56 32Z" fill="#B597F6" stroke="#8D6EC8" stroke-width="3"/>
         <text x="38" y="36" font-family="sans-serif" font-weight="bold" font-size="11" fill="#ffffff" text-anchor="middle">Olá</text>
       </svg>
-    `,
-    family: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
-        <circle cx="24" cy="22" r="8" fill="#FFA478" stroke="#D1754B" stroke-width="3"/>
-        <path d="M12 44C12 36 18 32 24 32C30 32 36 36 36 44" fill="#FFE2D4" stroke="#D1754B" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="42" cy="28" r="6" fill="#7EB8F0" stroke="#588FC6" stroke-width="2.5"/>
-        <path d="M32 46C32 40 36 37 42 37C48 37 52 40 52 46" fill="#C2D9FF" stroke="#588FC6" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-    `,
-    soup: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
-        <path d="M24 16C24 12 26 12 26 8" stroke="#FFA478" stroke-width="3" stroke-linecap="round"/>
-        <path d="M32 16C32 10 34 10 34 6" stroke="#F9D053" stroke-width="3" stroke-linecap="round"/>
-        <path d="M40 16C40 12 42 12 42 8" stroke="#FFA478" stroke-width="3" stroke-linecap="round"/>
-        <path d="M12 28C12 28 12 48 32 48C52 48 52 28 52 28H12Z" fill="#FFA0B4" stroke="#D37388" stroke-width="4" stroke-linejoin="round"/>
-        <ellipse cx="32" cy="28" rx="20" ry="4" fill="#ffffff" stroke="#D37388" stroke-width="3"/>
-        <ellipse cx="32" cy="28" rx="18" ry="2.5" fill="#F9D053"/>
-        <path d="M42 22L50 12" stroke="#7EB8F0" stroke-width="4" stroke-linecap="round"/>
-      </svg>
-    `,
-    time: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
-        <path d="M20 48L14 54" stroke="#74DB96" stroke-width="4" stroke-linecap="round"/>
-        <path d="M44 48L50 54" stroke="#74DB96" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="18" cy="14" r="6" fill="#F9D053" stroke="#CCA024" stroke-width="3"/>
-        <circle cx="46" cy="14" r="6" fill="#F9D053" stroke="#CCA024" stroke-width="3"/>
-        <path d="M18 18L26 22" stroke="#CCA024" stroke-width="3"/>
-        <path d="M46 18L38 22" stroke="#CCA024" stroke-width="3"/>
-        <circle cx="32" cy="34" r="16" fill="#ffffff" stroke="#74DB96" stroke-width="4"/>
-        <path d="M32 34V24" stroke="#52A66F" stroke-width="3" stroke-linecap="round"/>
-        <path d="M32 34L40 38" stroke="#52A66F" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="32" cy="34" r="2.5" fill="#52A66F"/>
-      </svg>
-    `,
-    school: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
-        <path d="M12 28L32 14L52 28H12Z" fill="#FFA0B4" stroke="#D37388" stroke-width="3" stroke-linejoin="round"/>
-        <rect x="16" y="28" width="32" height="24" rx="2" fill="#ffffff" stroke="#588FC6" stroke-width="3"/>
-        <rect x="27" y="40" width="10" height="12" rx="2" fill="#FFA478" stroke="#D1754B" stroke-width="2"/>
-        <rect x="20" y="32" width="6" height="6" rx="1" fill="#C2D9FF" stroke="#588FC6" stroke-width="2"/>
-        <rect x="38" y="32" width="6" height="6" rx="1" fill="#C2D9FF" stroke="#588FC6" stroke-width="2"/>
-        <rect x="28" y="10" width="8" height="8" fill="#F9D053" stroke="#CCA024" stroke-width="2"/>
-        <circle cx="32" cy="14" r="2" fill="#ffffff"/>
-      </svg>
-    `,
-    teacher: `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="pin-svg-icon">
-        <path d="M20 48L14 56" stroke="#D1754B" stroke-width="3" stroke-linecap="round"/>
-        <path d="M44 48L50 56" stroke="#D1754B" stroke-width="3" stroke-linecap="round"/>
-        <rect x="10" y="14" width="44" height="32" rx="4" fill="#FFA478" stroke="#D1754B" stroke-width="3"/>
-        <rect x="14" y="18" width="36" height="24" rx="2" fill="#74DB96"/>
-        <path d="M32 22L34 26L38 26L35 29L36 33L32 30L28 33L29 29L26 26L30 26L32 22Z" fill="#ffffff"/>
-        <path d="M44 40L54 28" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-      </svg>
     `
   };
 
   return svgs[category] || svgs.school;
 }
 
-function isLessonNew(lesson) {
-  if (!lesson) return false;
-  const thirtySixHoursMs = 36 * 60 * 60 * 1000;
-  const now = Date.now();
+let _curriculumIndexCache = null;
 
-  const isRecent = (dateStr) => {
-    if (!dateStr) return false;
-    const parsed = Date.parse(dateStr);
-    if (isNaN(parsed)) return false;
-    const diff = now - parsed;
-    return diff <= thirtySixHoursMs && diff >= -600000;
-  };
+function invalidateCurriculumIndex() {
+  _curriculumIndexCache = null;
+}
 
-  if (lesson.createdAt && isRecent(lesson.createdAt)) {
-    return true;
-  }
+function getCurriculumIndex() {
+  if (!_curriculumIndexCache) {
+    const lessonMap = new Map();
+    const unitMap = new Map();
+    const sortedLessons = [];
+    const lessonPosMap = new Map();
 
-  if (lesson.exercises && Array.isArray(lesson.exercises)) {
-    for (const ex of lesson.exercises) {
-      if (ex.createdAt && isRecent(ex.createdAt)) {
-        return true;
-      }
-      if (ex.questions && Array.isArray(ex.questions)) {
-        for (const q of ex.questions) {
-          if (q.createdAt && isRecent(q.createdAt)) {
-            return true;
-          }
+    if (typeof units !== 'undefined' && Array.isArray(units)) {
+      units.forEach((u, uIdx) => {
+        unitMap.set(String(u.id), { unit: u, index: uIdx });
+        if (Array.isArray(u.lessons)) {
+          u.lessons.forEach(lId => {
+            lessonPosMap.set(String(lId), sortedLessons.length);
+            sortedLessons.push(String(lId));
+          });
         }
-      }
+      });
     }
-  }
 
-  if (lesson.questions && Array.isArray(lesson.questions)) {
-    for (const q of lesson.questions) {
-      if (q.createdAt && isRecent(q.createdAt)) {
-        return true;
-      }
+    if (typeof lessons !== 'undefined' && Array.isArray(lessons)) {
+      lessons.forEach(l => {
+        if (l && l.id !== undefined) {
+          lessonMap.set(String(l.id), l);
+        }
+      });
     }
-  }
 
-  return false;
+    _curriculumIndexCache = { lessonMap, unitMap, sortedLessons, lessonPosMap };
+  }
+  return _curriculumIndexCache;
+}
+
+function getLessonById(id) {
+  if (id === null || id === undefined) return null;
+  const { lessonMap } = getCurriculumIndex();
+  return lessonMap.get(String(id)) || null;
+}
+
+function getUnitById(id) {
+  if (id === null || id === undefined) return null;
+  const { unitMap } = getCurriculumIndex();
+  const info = unitMap.get(String(id));
+  return info ? info.unit : null;
 }
 
 function renderUnitPathAndNodes(pContainer, unitId) {
   if (pContainer.dataset.rendered === "true") return;
   pContainer.dataset.rendered = "true";
 
-  const unit = units.find(u => String(u.id) === String(unitId));
+  const { unitMap, lessonMap } = getCurriculumIndex();
+  const unitInfo = unitMap.get(String(unitId));
+  const unit = unitInfo ? unitInfo.unit : null;
   if (!unit) return;
 
-  const uIdx = units.findIndex(u => String(u.id) === String(unitId));
+  const uIdx = unitInfo ? unitInfo.index : -1;
   const colorIndex = uIdx === -1 ? 1 : ((uIdx % 10) + 1);
   const totalInUnit = unit.lessons.length;
-  const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
+  const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId) || state.completedLessons.includes(Number(lId))).length;
 
   const stepSize = window.innerWidth < 820 ? 95 : 130;
   const points = [];
@@ -7289,11 +7245,13 @@ function renderUnitPathAndNodes(pContainer, unitId) {
     pContainer.innerHTML = svgHTML;
   }
 
+  const nodesFragment = document.createDocumentFragment();
+
   unit.lessons.forEach((lId, idx) => {
-    const lesson = lessons.find(l => l.id === lId);
+    const lesson = lessonMap.get(String(lId));
     if (!lesson) return;
 
-    const isCompleted = state.completedLessons.includes(lId);
+    const isCompleted = state.completedLessons.includes(lId) || state.completedLessons.includes(Number(lId));
     const isActive = !isCompleted && isLessonUnlocked(lId);
     const isLocked = !isCompleted && !isActive;
 
@@ -7333,9 +7291,7 @@ function renderUnitPathAndNodes(pContainer, unitId) {
       </div>`;
     }
 
-    const isNew = isLessonNew(lesson);
-    const activeBannerContent = ''; // Simgeler üzerinden Yeni butonu kaldırıldı.
-
+    const activeBannerContent = '';
     let lessonOriginalTagHTML = '';
 
     const labelPosClass = pt.x > 50 ? 'label-left' : 'label-right';
@@ -7370,12 +7326,14 @@ function renderUnitPathAndNodes(pContainer, unitId) {
       togglePopover(btn, lId, unit.id, pt.x, pt.y);
     });
 
-    pContainer.appendChild(nodeWrapper);
+    nodesFragment.appendChild(nodeWrapper);
   });
+
+  pContainer.appendChild(nodesFragment);
 }
 
 function ensureLessonRendered(lessonId) {
-  const lesson = lessons.find(l => l.id === lessonId);
+  const lesson = getLessonById(lessonId);
   if (!lesson) return;
   const unitId = lesson.unitId;
   const pContainer = document.querySelector(`.unit-section[data-unit-id="${unitId}"] .unit-path-container`);
@@ -7383,8 +7341,6 @@ function ensureLessonRendered(lessonId) {
     renderUnitPathAndNodes(pContainer, unitId);
   }
 }
-
-
 
 function renderLessonTree() {
   const container = document.getElementById('tree-container');
@@ -7482,12 +7438,11 @@ function renderLessonTree() {
   }, observerOptions);
 
   renderedUnits.forEach((unit, uIdx) => {
-    const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId)).length;
+    const completedInUnit = unit.lessons.filter(lId => state.completedLessons.includes(lId) || state.completedLessons.includes(Number(lId))).length;
     const totalInUnit = unit.lessons.length;
-    const progressPercent = Math.round((completedInUnit / totalInUnit) * 100);
 
     const isNotUploadedUnit = unit.lessons.every(lId => {
-      const l = lessons.find(lesson => lesson.id === lId);
+      const l = getLessonById(lId);
       return !l || ((!l.exercises || l.exercises.length === 0 || l.exercises.every(ex => !ex.questions || ex.questions.length === 0)) && (!l.questions || l.questions.length === 0));
     });
     let notUploadedBadgeHTML = '';
@@ -7519,22 +7474,22 @@ function renderLessonTree() {
     let localQuestionsBadgeHTML = '';
     let localLessonsBadgeHTML = '';
 
-    const qTypes = new Set();
-    let totalQuestions = 0;
-    unit.lessons.forEach(lId => {
-      const l = lessons.find(lesson => lesson.id === lId);
-      if (l) {
-        const qs = getLessonQuestions(l);
-        totalQuestions += qs.length;
-        qs.forEach(q => {
-          if (q && q.type) {
-            qTypes.add(q.type);
-          }
-        });
-      }
-    });
-
     if (isStrictlyLocal) {
+      const qTypes = new Set();
+      let totalQuestions = 0;
+      unit.lessons.forEach(lId => {
+        const l = getLessonById(lId);
+        if (l) {
+          const qs = getLessonQuestions(l);
+          totalQuestions += qs.length;
+          qs.forEach(q => {
+            if (q && q.type) {
+              qTypes.add(q.type);
+            }
+          });
+        }
+      });
+
       if (qTypes.size > 0) {
         const typesStr = Array.from(qTypes).join(',');
         localTypesBadgeHTML = `
@@ -7609,7 +7564,11 @@ function renderLessonTree() {
     unitSection.appendChild(pathContainer);
     container.appendChild(unitSection);
 
-    renderUnitPathAndNodes(pathContainer, unit.id);
+    if (uIdx < 2) {
+      renderUnitPathAndNodes(pathContainer, unit.id);
+    } else {
+      observer.observe(unitSection);
+    }
   });
 }
 
@@ -8327,19 +8286,17 @@ function isLessonUnlocked(lessonId) {
     return true;
   }
 
-  // Find the lesson and its unit
-  const lesson = lessons.find(l => l.id === lessonId);
+  const { lessonMap, unitMap, sortedLessons, lessonPosMap } = getCurriculumIndex();
+  const sId = String(lessonId);
+  const lesson = lessonMap.get(sId);
   if (!lesson) return false;
 
-  const currentUnitId = lesson.unitId;
-
-  // Get units in their database/TOC sequence
-  const sortedUnits = [...units];
+  const currentUnitId = String(lesson.unitId);
 
   // Rule: First 3 lessons of Unit 1 are open by default
-  const firstUnit = sortedUnits[0];
+  const firstUnit = units[0];
   let isFreeLesson = false;
-  if (firstUnit && currentUnitId === firstUnit.id) {
+  if (firstUnit && currentUnitId === String(firstUnit.id)) {
     const lessonIdxInUnit = firstUnit.lessons.indexOf(lessonId);
     if (lessonIdxInUnit >= 0 && lessonIdxInUnit < 3) {
       isFreeLesson = true;
@@ -8353,28 +8310,24 @@ function isLessonUnlocked(lessonId) {
     }
   }
 
-  const sortedLessons = [];
-  sortedUnits.forEach(u => {
-    u.lessons.forEach(lId => {
-      sortedLessons.push(lId);
-    });
-  });
+  const idx = lessonPosMap.get(sId);
+  if (idx === 0 || idx === undefined) return true; // Very first lesson is always unlocked
 
-  const idx = sortedLessons.indexOf(lessonId);
-  if (idx === 0) return true; // Very first lesson is always unlocked
+  const unitInfo = unitMap.get(currentUnitId);
+  const currentUnitIndex = unitInfo ? unitInfo.index : -1;
 
   // Check if all lessons in all previous units are completed
-  const currentUnitIndex = sortedUnits.findIndex(u => u.id === currentUnitId);
   if (currentUnitIndex > 0) {
     for (let i = 0; i < currentUnitIndex; i++) {
-      const prevUnit = sortedUnits[i];
-      const allCompleted = prevUnit.lessons.every(lId => state.completedLessons.includes(lId));
+      const prevUnit = units[i];
+      const allCompleted = prevUnit.lessons.every(lId => state.completedLessons.includes(lId) || state.completedLessons.includes(Number(lId)));
       if (!allCompleted) return false;
     }
   }
 
   // Current lesson is unlocked if the previous lesson in visual progression is completed
-  return state.completedLessons.includes(sortedLessons[idx - 1]);
+  const prevLessonId = sortedLessons[idx - 1];
+  return state.completedLessons.includes(prevLessonId) || state.completedLessons.includes(Number(prevLessonId));
 }
 
 // ============================================================
@@ -21824,11 +21777,18 @@ return `
     });
   }
 
-  // ÜYELİK v2: önce Supabase oturumunu geri yükle (varsa), sonra uygulamayı aç.
-  if (supabaseClient) {
-    mvRestoreSession().then(mvAfterAuth).catch(mvAfterAuth);
-  } else {
+  // ÜYELİK v2: Anında açılış — yerel durum ile UI'yi hemen çiz (< 50ms), Supabase oturumunu arka planda senkronize et.
+  let appEntered = false;
+  const bootApp = () => {
+    if (appEntered) return;
+    appEntered = true;
     mvAfterAuth();
+  };
+
+  bootApp();
+
+  if (supabaseClient) {
+    mvRestoreSession().catch(e => console.error('Oturum senkronizasyon hatası:', e));
   }
 
   // Vagon Simülatörü kilit ekranı buton olay dinleyicileri
